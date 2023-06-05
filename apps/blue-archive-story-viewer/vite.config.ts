@@ -107,6 +107,9 @@ export default defineConfig({
     visualizer(),
   ],
   build: {
+    // rollupOptions: {
+    //   external: ['ba-story-player']
+    // },
     emptyOutDir: true,
     minify: 'terser',
     terserOptions: {
