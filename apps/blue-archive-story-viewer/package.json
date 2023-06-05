@@ -7,29 +7,10 @@
     "dev": "vite --host",
     "format": "prettier --config .prettierrc.json -uw ./src/ ./CICD/ ./public/**/*.yaml ./public/**/*.yml *.md",
     "build:json": "eslint --fix --config ./.eslintrc.json ./public/config/yaml/ && node ./CICD/build_json.js",
-    "build": "pnpm format; pnpm build:json && vue-tsc --noEmit --skipLibCheck && vite build",
+    "build": "node ./CICD/build_json.js && vue-tsc --noEmit --skipLibCheck && vite build",
     "build:github": "pnpm build; cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite build; vite preview --host",
-    "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "public/**/*.{yaml, yml}": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ],
-    "src/**/*.{ts,js,vue}": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ],
-    "CICD/**/*.{ts,js}": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ],
-    "*.md": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ]
+    "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
     "@vue/compiler-sfc": "3.x",
@@ -39,7 +20,6 @@
     "ba-story-player": "workspace:^1.0.0",
     "fastest-levenshtein": "1.0.16",
     "gsap": "^3.11.3",
-    "husky": "^8.0.3",
     "ismobilejs": "^1.1.1",
     "mitt": "^3.0.0",
     "pinia": "2.1.3",

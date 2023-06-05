@@ -34,7 +34,6 @@ importers:
       eslint-plugin-yaml: 0.5.0
       fastest-levenshtein: 1.0.16
       gsap: ^3.11.3
-      husky: ^8.0.3
       ismobilejs: ^1.1.1
       js-yaml: 4.1.0
       mitt: ^3.0.0
@@ -68,7 +67,6 @@ importers:
       ba-story-player: link:../../lib/ba-story-player
       fastest-levenshtein: 1.0.16
       gsap: 3.11.5
-      husky: 8.0.3
       ismobilejs: 1.1.1
       mitt: 3.0.0
       pinia: 2.1.3_typescript@5.0.4+vue@3.3.4
@@ -139,7 +137,6 @@ importers:
       eslint-plugin-sort-exports: ^0.8.0
       eslint-plugin-vue: ^9.9.0
       gsap: ^3.11.3
-      husky: ^8.0.3
       mitt: ^3.0.0
       pixi-spine: ^3.1.0
       pixi.js: ^6.0.0
@@ -182,7 +179,6 @@ importers:
       eslint-plugin-import: 2.27.5_eslint@8.42.0
       eslint-plugin-sort-exports: 0.8.0_eslint@8.42.0
       eslint-plugin-vue: 9.14.1_eslint@8.42.0
-      husky: 8.0.3
       prettier: 2.8.8
       rollup-plugin-node-externals: 5.1.3
       sass: 1.62.1
@@ -6039,11 +6035,6 @@ packages:
       entities: 1.0.0
       readable-stream: 1.1.14
     dev: true
-
-  /husky/8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
 
   /idb/7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}

@@ -24,18 +24,7 @@
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "format": "prettier --config .prettierrc.json -uw ./lib/ ./src/",
-    "check": "eslint --fix --config ./.eslintrc.json ./lib/ --ext .js,.ts,.vue && vue-tsc --noEmit",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "lib/**/*.{ts,js,vue}": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ],
-    "src/**/*.{ts,js,vue}": [
-      "prettier --config .prettierrc.json --write",
-      "git add"
-    ]
+    "check": "eslint --fix --config ./.eslintrc.json ./lib/ --ext .js,.ts,.vue && vue-tsc --noEmit"
   },
   "dependencies": {
     "@pixi-spine/base": "^3.1.0",
@@ -67,7 +56,6 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-sort-exports": "^0.8.0",
     "eslint-plugin-vue": "^9.9.0",
-    "husky": "^8.0.3",
     "prettier": "^2.8.4",
     "rollup-plugin-node-externals": "^5.1.2",
     "sass": "^1.57.1",
