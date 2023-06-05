@@ -1,0 +1,978 @@
+CharacterId: 20010
+translator: Lepra
+title:
+  - GroupId: 2001002
+    FavorScheduleId: 200102
+    CharacterId: 20010
+    TextJp: 修行・会席料理編
+    TextCn: 修行・会席料理篇
+    TextKr: 온천 수행 - 가이세키 요리 편
+    TextEn: 'Hot Springs Training: Kaiseki'
+    TextTh: การฝึกดูแลออนเซ็น - ภาคอาหารไคเซกิ
+    TextTw: 修行．會席料理篇
+  - GroupId: 2001003
+    FavorScheduleId: 200103
+    CharacterId: 20010
+    TextJp: 修行・お掃除編
+    TextCn: 修行・扫除篇
+    TextKr: 온천 수행 - 욕탕 정비 편
+    TextEn: 'Hot Springs Training: Bathtub Repairs'
+    TextTh: การฝึกดูแลออนเซ็น - ภาคซ่อมบำรุงบ่อออนเซ็น
+    TextTw: 修行．清掃篇
+  - GroupId: 2001005
+    FavorScheduleId: 200105
+    CharacterId: 20010
+    TextJp: 修行・礼節編
+    TextCn: 修行・礼节篇
+    TextKr: 온천 수행 - 예절 수행 편
+    TextEn: 'Hot Springs Training: Etiquette'
+    TextTh: การฝึกดูแลออนเซ็น - ภาคการฝึกมารยาท
+    TextTw: 修行．禮儀篇
+  - GroupId: 2001006
+    FavorScheduleId: 200106
+    CharacterId: 20010
+    TextJp: 修行・休息編
+    TextCn: 修行・休息篇
+    TextKr: 온천 수행 - 휴식 편
+    TextEn: 'Hot Springs Training: Rest and Relaxation'
+    TextTh: การฝึกดูแลออนเซ็น - ภาคการหยุดพักผ่อน
+    TextTw: 修行．休息篇
+content:
+  - MessageGroupId: 200100010
+    Id: 200100010
+    CharacterId: 20010
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘도 공무를 수행하시느라 대단히 수고 많으셨습니다.
+    MessageJP: 本日もお仕事、大変お疲れ様でございました
+    MessageCN: 老师今天工作也辛苦了
+    MessageEN: Great work today performing your official duties.
+    MessageTH: 'ขอบคุณที่ปฏิบัติงานอย่างหนัก
+
+      ในวันนี้นะคะ'
+    MessageTW: 您今天也工作辛苦了
+  - MessageGroupId: 200100020
+    Id: 200100020
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님만 괜찮으시다면 피곤하신 몸을 돌봐 드리고 싶은데, 어떠신지요?
+    MessageJP: 先生さえよろしければ、ぜひお疲れの身体を労わって差し上げたいのですが、いかがでございましょう？
+    MessageCN: 如果老师不介意的话，请务必让我来照顾您疲惫的身体，您觉得怎么样呢？
+    MessageEN:
+      As long as it's okay with you, I would like to take care of your tired
+      body.
+    MessageTH: 'ถ้าคุณครูไม่ว่าอะไร ฉันอยากจะ
+
+      คอยช่วยดูแลให้คุณครูคลายเหนื่อย
+
+      ว่ายังไงล่ะคะ?'
+    MessageTW: 如果老師不嫌棄的話，務必讓我照顧您疲憊的身體，您覺得怎麼樣？
+  - MessageGroupId: 200100030
+    Id: 200100030
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……이건 무슨 컨셉이야?
+    MessageJP: ……何か変な物でも食べた？
+    MessageCN: ……和香吃了什么奇怪的东西吗？
+    MessageEN: '...What are you up to?'
+    MessageTH: เอ่อ... วันนี้มาแนวไหนน่ะ?
+    MessageTW: ……吃了什麼奇怪的東西嗎？
+  - MessageGroupId: 200100040
+    Id: 200100040
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사람이 모처럼 예의를 차려 인사를 했는데 무슨 컨셉이냐니, 실례잖아요!
+    MessageJP: ただ気遣ってるだけなのに酷くないですか！？
+    MessageCN: 我就是关心老师而已，老师是不是太过分了！？
+    MessageEN: How rude! I'm just trying to be polite!
+    MessageTH: 'ฉันอุตส่าห์ทักทายอย่างสุภาพแล้ว
+
+      แท้ๆ ทำไมถึงถามอะไรแบบนั้นล่ะคะ
+
+      มันเสียมารยาทนะคะ!'
+    MessageTW: 只是關心而已，不覺得太過份了嗎！？
+  - MessageGroupId: 200100050
+    Id: 200100050
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100060
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앗
+    MessageJP: はっ
+    MessageCN: 哈
+    MessageEN: Oh!
+    MessageTH: อ๊ะ?!
+    MessageTW: 啊
+  - MessageGroupId: 200100050
+    Id: 200100060
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무것도 아니랍니다, 선생님. 호호…….
+    MessageJP: な、何でもありません。お気になさらず、おほほ……
+    MessageCN: 没、没事。请您别在意，哦呵呵……
+    MessageEN: It's nothing, Sensei. Haha...
+    MessageTH: ไม่มีอะไรหรอกค่ะคุณครู โฮะโฮะ...
+    MessageTW: 什，什麼都沒有。請不要介意，哦呵呵……
+  - MessageGroupId: 200100060
+    Id: 200100070
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……무슨 문제라도 있는 거야?
+    MessageJP: 大丈夫？何かあったの？
+    MessageCN: 还好吗？发生什么了？
+    MessageEN: '...Is there a problem?'
+    MessageTH: มีเรื่องอะไรงั้นเหรอ?
+    MessageTW: 沒事吧？發生了什麼事？
+  - MessageGroupId: 200100070
+    Id: 200100080
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 그저 심경의 변화가 생겼을 뿐이에요.
+    MessageJP: いえその、ちょっとした心境の変化と言いますか……
+    MessageCN: 没有，老师就当是我心境稍微有些变化吧……
+    MessageEN: No, I just had a change of heart.
+    MessageTH: 'เปล่าค่ะ ก็แค่เกิดการเปลี่ยนแปลงทาง
+
+      จิตใจนิดหน่อยค่ะ'
+    MessageTW: 不，該說是一點心境的變化嗎……
+  - MessageGroupId: 200100070
+    Id: 200100090
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난 온천장 운영을 통해 저는 여러 가지를 배웠답니다.
+    MessageJP: 以前の温泉郷での運営を通じて、色々なことを学んだんです
+    MessageCN: 之前经营温泉乡的时候，我学到了很多东西
+    MessageEN: I learned a lot from running the hot springs resort last time.
+    MessageTH: ฉันได้เรียนรู้หลายอย่างจากดูแลออนเซ็นครั้งที่แล้วค่ะ
+    MessageTW: 之前經營溫泉鄉的時候，學到了很多東西
+  - MessageGroupId: 200100080
+    Id: 200100100
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 탕을 깨끗하게 청소하는 법부터, 목욕용품의 재고 정리까지…….
+    MessageJP: お風呂を綺麗に掃除する方法から、様々な物品の在庫整理まで……
+    MessageCN: 从把浴室打扫干净的方法，到各种物品的库存管理……
+    MessageEN:
+      From how to clean the hot baths to how to organize the inventory of
+      bath products...
+    MessageTH: 'ตั้งแต่วิธีทำความสะอาดบ่อออนเซ็นให้
+
+      สะอาดหมดจด ไปจนถึงการจัดเรียงอุปกรณ์
+
+      อาบน้ำ...'
+    MessageTW: 從將浴室打掃乾淨的方法，到整理各種物品的庫存……
+  - MessageGroupId: 200100080
+    Id: 200100110
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 접객에는 부족함이 많았던 탓에, 온천장을 찾아 주신 손님들께 여러모로 실례를 저지른 것 같아요.
+    MessageJP: しかし特に接客では色々と至らずに、先生を始めとしてお客様方に失礼なことをしてしまった気がします
+    MessageCN: 但是我在待客方面还做得不够好，总感觉自己好像对老师还有其他客人们做了不合礼节的事情
+    MessageEN:
+      However, I lacked in the area of hospitality, so I think I may have
+      inconvenienced the guests.
+    MessageTH: 'แต่ฉันยังบกพร่องเรื่องการต้อนรับลูกค้า
+
+      อยู่มาก เหมือนฉันจะเสียมารยาทกับลูกค้า
+
+      ที่มาที่ออนเซ็นในหลายๆ เรื่องเลยค่ะ'
+    MessageTW: 但特別是接待客人這方面做得還不夠好，總覺得自己好像對老師和客人們做了失禮的事
+  - MessageGroupId: 200100080
+    Id: 200100120
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래서 다음번에는 실수하지 않도록 미리 예행연습을 해두려고요.
+    MessageJP: ですので次は失敗しないように、予行練習をしておこうと思いまして
+    MessageCN: 所以为了让下次经营不再这么失败，我想提前练习一下
+    MessageEN: So to prevent making mistakes again, I'm going to practice in advance.
+    MessageTH: ดังนั้นคราวหน้าฉันจะฝึกฝนเอาไว้ก่อน เพื่อไม่ให้เกิดความผิดพลาดอีกค่ะ
+    MessageTW: 因此，為了下次不再失敗，我想預先練習一下
+  - MessageGroupId: 200100090
+    Id: 200100130
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200102
+    NextGroupId: 200100100
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다시 말하자면…… 온천 수행입니다!
+    MessageJP: つまりはそう、修行です！
+    MessageCN: 也就是说，我要开始修行！
+    MessageEN: In other words...it's hot springs training!
+    MessageTH: 'หรือพูดอีกอย่างก็คือ...
+
+      ฉันจะไปฝึกที่ออนเซ็นค่ะ!'
+    MessageTW: 也就是說，修行！
+  - MessageGroupId: 200100100
+    Id: 200100140
+    CharacterId: 20010
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200100090
+    PreConditionFavorScheduleId: 200102
+    FavorScheduleId: 0
+    NextGroupId: 200100110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으으…… 지난번의 수행은 완전히 실패였어요.
+    MessageJP: この前の修行は完全に失敗でした
+    MessageCN: 上次我的修行完全失败了
+    MessageEN: Ugh... The training I did last time was a complete failure.
+    MessageTH: 'ฮือ... การฝึกฝนครั้งที่แล้วมัน
+
+      ล้มเหลวไม่เป็นท่าเลยค่ะ'
+    MessageTW: 之前的學習完全失敗了
+  - MessageGroupId: 200100110
+    Id: 200100150
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 설마 가이세키 요리라는 게 그렇게나 다채로운 것일 줄이야……
+    MessageJP: まさか会席料理というものが、あそこまでのものだったとは……
+    MessageCN: 没想到会席料理，居然能到那种程度……
+    MessageEN: I had no clue that kaiseki cuisine was so elaborate and diverse...
+    MessageTH: 'ไม่นึกเลยว่าอาหารสไตล์ไคเซกิ
+
+      จะสวยงามน่ากินแบบนั้น...'
+    MessageTW: 沒想到會席料理這種東西，竟然是那麼厲害的東西……
+  - MessageGroupId: 200100110
+    Id: 200100160
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 매일 배급 식품만 먹어왔던 저로서는 상상도 하지 못할 세계였어요.
+    MessageJP: ほぼ毎日配給品だけを食べてきた私としては、あまりにも未知の世界で……
+    MessageCN: 对于几乎每天都在吃配给品的我来说，那实在是太过陌生的世界了……
+    MessageEN:
+      As someone who ate rationed food everyday, it was a whole new unimaginable
+      world.
+    MessageTH: 'ในฐานะที่เป็นคนที่กินอาหารชุดที่จัดมา
+
+      ให้ทุกวันแบบฉัน มันเป็นโลกที่ฉันจินตนาการ
+
+      ไม่ถึงเลยค่ะ...'
+    MessageTW: 對於幾乎每天只吃配給品的我來說，是個太過於未知的世界……
+  - MessageGroupId: 200100120
+    Id: 200100170
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 그 덕분에 새로이 깨닫게 된 사실도 있답니다.
+    MessageJP: ですが私はめげません、まだまだやるべきことがありますから
+    MessageCN: 但是我不会气馁的，因为我还有很多事要去做
+    MessageEN: But thanks to that, I learned something new.
+    MessageTH: แต่ว่าเพราะคุณครูเลยนะคะ ทำให้ฉันได้เปิดโลกใหม่ๆ ที่ไม่เคยรู้จักค่ะ
+    MessageTW: 但是我不會氣餒，因為還有很多必須做的事
+  - MessageGroupId: 200100120
+    Id: 200100180
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 온천장에서 가장 중요한 시설은…… 욕탕이라는 사실을요!
+    MessageJP: 次に取り組むべきは、温泉郷で一番大事な施設……温泉！
+    MessageCN: 接下来我要掌握的内容，是温泉乡里最重要的设施……温泉！
+    MessageEN: The most important facility in a hot springs resort...is the hot bath!
+    MessageTH: 'อุปกรณ์ที่สำคัญที่สุดในออนเซ็น
+
+      ก็คือ... ออนเซ็นค่ะ!'
+    MessageTW: 接下來該著手的，是溫泉鄉最重要的設施……溫泉！
+  - MessageGroupId: 200100130
+    Id: 200100190
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보통은 그렇지.
+    MessageJP: なるほど
+    MessageCN: 原来如此
+    MessageEN: That's normally the case.
+    MessageTH: มันก็ต้องแบบนั้นน่ะสิ
+    MessageTW: 原來如此
+  - MessageGroupId: 200100140
+    Id: 200100200
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 온천장은 말 그대로 온천을 즐기기 위한 시설.
+    MessageJP: 温泉郷は文字通り、温泉を中心としたもの
+    MessageCN: 温泉乡，顾名思义，就是以温泉为中心的地方
+    MessageEN:
+      A hot springs resort is literally an establishment for enjoying hot
+      springs.
+    MessageTH: 'อุปกรณ์ที่จะช่วยให้เพลิดเพลินกับ
+
+      น้ำพุร้อนได้สมชื่อ'
+    MessageTW: 溫泉鄉顧名思義，是以溫泉為中心
+  - MessageGroupId: 200100140
+    Id: 200100210
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 훌륭한 욕탕을 갖추고 있다면 손님은 자연히 모여드는 법이니까요.
+    MessageJP: 立派な温泉があれば、お客様は自然と集まってきてくれるはず
+    MessageCN: 如果有出色的温泉的话，客人们就应该会自发聚集到温泉乡来的
+    MessageEN: If we have great hot baths, guests will naturally flock to us.
+    MessageTH: ถ้ามีออนเซ็นดีๆ ล่ะก็ ลูกค้าก็จะมาใช้บริการเองไงล่ะคะ
+    MessageTW: 照理來說只要有出色的溫泉，客人們自然會聚集過來
+  - MessageGroupId: 200100150
+    Id: 200100220
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래서 이번에는 욕탕을 깨끗이 정비하는 데 집중하려고요!
+    MessageJP: なので今度は、お風呂場の掃除を頑張ってみようかと！
+    MessageCN: 所以这次，我想努力打扫一下浴室！
+    MessageEN: So this time I'm going to focus on keeping the hot baths clean!
+    MessageTH: 'เพราะงั้นคราวนี้ ฉันจะเน้นที่การดูแล
+
+      รักษาความสะอาดของออนเซ็นค่ะ!'
+    MessageTW: 所以這次，要努力打掃浴室！
+  - MessageGroupId: 200100160
+    Id: 200100230
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200103
+    NextGroupId: 200100170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……어디서?
+    MessageJP: ……どこで？
+    MessageCN: ……打扫哪里？
+    MessageEN: '...Where?'
+    MessageTH: ที่ไหนนะ...?
+    MessageTW: ……掃哪裡？
+  - MessageGroupId: 200100170
+    Id: 200100240
+    CharacterId: 20010
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200100160
+    PreConditionFavorScheduleId: 200103
+    FavorScheduleId: 0
+    NextGroupId: 200100180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여러 차례의 수행을 통해 드디어 저는 깨달았답니다.
+    MessageJP: これまでの修行を経て、私は悟りました
+    MessageCN: 修行至此，我领悟了
+    MessageEN: After training several times, I finally came to a realization.
+    MessageTH: จากการฝึกฝนหลายๆ ครั้ง ในที่สุดฉันก็ได้รู้แล้วค่ะ
+    MessageTW: 經過這些修行，我領悟到了
+  - MessageGroupId: 200100180
+    Id: 200100250
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 궁극의 접객은 훌륭한 요리나 시설을 제공하는 것보다 종업원의 태도에 있다는 것을……
+    MessageJP: 接客の真髄というのは、料理や施設ではなく……従業員の態度そのものであるということに！
+    MessageCN: 接待客人的精髓，并不在于料理和设施……而是员工的态度！
+    MessageEN:
+      Hospitality ultimately lies in the attitude of the staff, rather than
+      the provision of fine cuisine or facilities...
+    MessageTH: 'การบริการที่ดีของพนักงานเป็นสิ่ง
+
+      สำคัญมากกว่าการมีอุปกรณ์ดีๆ
+
+      หรือว่าอาหารเลิศรส...'
+    MessageTW: 接待客人的精髓不是料理和設施……而是員工的態度！
+  - MessageGroupId: 200100190
+    Id: 200100260
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 맛있는 요리가 더 중요하지 않을까?
+    MessageJP: なるほど。それに美味しい料理があればバッチリだね
+    MessageCN: 原来如此。再加上美味的料理就完美了呢
+    MessageEN: Wouldn't delicious food be more important?
+    MessageTH: อาหารอร่อยๆ ไม่สำคัญกว่าเหรอ?
+    MessageTW: 原來如此。再加上好吃的料理就完美了
+  - MessageGroupId: 200100190
+    Id: 200100270
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 훌륭한 욕탕이 더 중요하지 않을까?
+    MessageJP: なるほど。それに立派な温泉があればバッチリだね
+    MessageCN: 原来如此。再加上出色的温泉就完美了呢
+    MessageEN: Wouldn't great hot baths be more important?
+    MessageTH: บ่อน้ำร้อนดีๆ ไม่สำคัญกว่าเหรอ?
+    MessageTW: 原來如此。再加上出色的溫泉就完美了
+  - MessageGroupId: 200100200
+    Id: 200100280
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100210
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하
+    MessageJP: そ、そうですね……
+    MessageCN: 是、是的呢……
+    MessageEN: Ha
+    MessageTH: เฮ้อ...
+    MessageTW: 說，說的也是……
+  - MessageGroupId: 200100210
+    Id: 200100290
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100220
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 할 수 없잖아요?
+    MessageJP: ですがその、後者はしばらく厳しいと言いますか
+    MessageCN: 所以那个，虽说后者暂时还不太能做到
+    MessageEN: But we can't do that.
+    MessageTH: แต่ช่วยไม่ได้นี่คะ
+    MessageTW: 但是，該說後者一時之間很難辦到嗎
+  - MessageGroupId: 200100210
+    Id: 200100300
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저희가 갖고 있는 돈만으로는 비싼 요리나 시설을 준비할 수는 없으니까요…….
+    MessageJP: 私たちのお金では、なかなか高い料理や豪勢な施設は用意できないので……
+    MessageCN: 因为光靠我们手上的资金，还很难提供昂贵的料理和豪华的设施……
+    MessageEN:
+      We can't prepare expensive dishes or offer great facilities with the
+      funds we have...
+    MessageTH: แต่จากเงินที่เรามีอยู่ เราเลยเตรียมอุปกรณ์ หรืออาหารราคาแพงๆ ไม่ได้น่ะค่ะ...
+    MessageTW: 因為光憑我們的資金，很難提供昂貴的料理和豪華的設施……
+  - MessageGroupId: 200100220
+    Id: 200100310
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여하튼 이번 기회에 온천장의 여주인다운 기품 있는 몸가짐을 갖출 수 있도록, 특별한 훈련을 하고자 합니다.
+    MessageJP: とにかくまずはできることから！今回は温泉の女将らしく、気品のある所作を習得したいと思います
+    MessageCN: 但总之我想先从能做到的事开始！这次我想学习真正的温泉乡的老板娘一样的，有气质的行为举止！
+    MessageEN:
+      Anyway, I would like to take this opportunity to undertake special
+      training to learn the ways of a dignified hot springs resort owner.
+    MessageTH: 'แต่คราวนี้ฉันตั้งใจว่าจะไปฝึกพิเศษ
+
+      เพื่อให้เหมาะสมกับการเป็นนายหญิง
+
+      แห่งออนเซ็นค่ะ'
+    MessageTW: 總之先從能做到的事開始！這次我想學習，像溫泉女將一樣有氣質的行為舉止
+  - MessageGroupId: 200100220
+    Id: 200100320
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200105
+    NextGroupId: 200100230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다시 말하자면…… 예절 수행입니다!
+    MessageJP: つまり、礼節の修業です！
+    MessageCN: 也就是，礼仪的学习！
+    MessageEN: In other words...it's etiquette training!
+    MessageTH: หรือก็คือ... ฉันจะไปฝึกมารยาทค่ะ
+    MessageTW: 也就是說，學習禮儀！
+  - MessageGroupId: 200100230
+    Id: 200100330
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200100220
+    PreConditionFavorScheduleId: 200105
+    FavorScheduleId: 0
+    NextGroupId: 200100240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님…….
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei...
+    MessageTH: คุณครู...
+    MessageTW: 老師
+  - MessageGroupId: 200100240
+    Id: 200100340
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 문제라도 있어?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: Is something wrong?
+    MessageTH: มีอะไรรึเปล่า?
+    MessageTW: 怎麼了？
+  - MessageGroupId: 200100250
+    Id: 200100350
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 문제는 없어요. 다만……
+    MessageJP: いえ、大したことではないのですが……
+    MessageCN: 没、没什么大事……
+    MessageEN: No, not at all. Except...
+    MessageTH: เปล่าค่ะ ไม่มีอะไรค่ะ แต่ว่า...
+    MessageTW: 不，沒什麼大不了的……
+  - MessageGroupId: 200100250
+    Id: 200100360
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 한쪽 발을 다치고 선생님께 업힐 수 있었으니
+    MessageJP: 片足を捻って先生におんぶしていただけたのであれば
+    MessageCN: 我在想，我只是扭到了一只脚，老师就来背我
+    MessageEN: Since you carried me around when I injured one of my legs,
+    MessageTH: ขาฉันเจ็บและคุณครูก็คงจะช่วยอุ้มฉันไปได้...
+    MessageTW: 只是扭了一隻腳就能讓老師背的話
+  - MessageGroupId: 200100250
+    Id: 200100370
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다른 발도 다쳤으면 더 좋은 일이 생기지 않았을까 싶어서…….
+    MessageJP: もしかしてもう片方の足も怪我したら、もっと良いことをしていただけたり……？
+    MessageCN: 如果我另一只脚也受伤了的话，老师会不会为我做出更好的事情呢……？
+    MessageEN:
+      I was thinking maybe something better would have happened if the other
+      foot was injured as well...
+    MessageTH: 'ถ้าเกิดขาอีกหนึ่งข้างเจ็บขึ้นมาล่ะก็
+
+      อาจจะทำให้เกิดเรื่องไม่ดีขึ้นก็ได้...'
+    MessageTW: 如果另一隻腳也受傷的話，老師會為我做更好的事嗎……
+  - MessageGroupId: 200100260
+    Id: 200100380
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 나쁜 생각은 하면 안 돼!
+    MessageJP: とりあえず意図的なのはやめてもらえると……
+    MessageCN: 总之请先打消这个想法……
+    MessageEN: Don't have such terrible thoughts!
+    MessageTH: อย่าคิดอะไรไม่ดีแบบนั้นสิ!
+    MessageTW: 總之，拜託先打消你那種意圖……
+  - MessageGroupId: 200100270
+    Id: 200100390
+    CharacterId: 20010
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200100260
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전에 삐끗한 발목이 좀처럼 낫지를 않네요.
+    MessageJP: あれから足は少しずつ良くなったのですが、まだ全快ではないという感じです
+    MessageCN: 从那之后，我的脚已经在一点点恢复了，但是感觉还没有完全痊愈
+    MessageEN: The ankle I sprained before isn't getting better.
+    MessageTH: 'ข้อเท้าแพลงเมื่อวันก่อนยังไม่ดี
+
+      ขึ้นเลยค่ะ'
+    MessageTW: 從那之後腳一點一點地變好了，但感覺沒有痊癒
+  - MessageGroupId: 200100280
+    Id: 200100400
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일상을 보내는 데 큰 불편은 없지만 통증이 약간 남아 있어서…….
+    MessageJP: 日常生活に支障はありませんが、いつも通り歩こうとするには少し痛くて……
+    MessageCN: 虽然对日常生活没有什么大碍，但如果和平常一样走路的话脚还是会有点痛……
+    MessageEN:
+      It doesn't really bother me during my daily routine, but it's still
+      a bit painful...
+    MessageTH: ถึงจะไม่ได้เดินลำบากอะไรแล้ว แต่ว่าก็ยังมีเจ็บอยู่บ้าง...
+    MessageTW: 雖然日常生活沒有大礙，但正常走路的話會有點痛……
+  - MessageGroupId: 200100280
+    Id: 200100410
+    CharacterId: 20010
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이대로라면 온천 수행을 하는 데 지장이 생겨버려요.
+    MessageJP: ちょっとまだ修業は難しそうですね……
+    MessageCN: 想继续修行的话，有点困难呢……
+    MessageEN: At this rate, it'll get in the way of my hot springs training.
+    MessageTH: 'ถ้าเป็นแบบนี้ มันก็จะเป็นอุปสรรค
+
+      ต่อการฝึกฝนที่ออนเซ็นค่ะ'
+    MessageTW: 要學禮儀的話還有點難啊……
+  - MessageGroupId: 200100290
+    Id: 200100420
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 근처에 탕치에 좋은 온천이 있다고 하는데……
+    MessageJP: そういえばこの間、湯治に良いっていう温泉の話を聞いたんだけど
+    MessageCN: 这么说来，我最近听说了一家以温泉疗法闻名的温泉
+    MessageEN: I heard there are hot springs for therapeutic bathing around here...
+    MessageTH: 'ครูได้ยินว่าแถวๆ นี้
+
+      มีออนเซ็นที่ช่วยบำบัดอยู่...'
+    MessageTW: 這麼說來，前陣子聽說有個溫泉很適合做溫泉治療
+  - MessageGroupId: 200100300
+    Id: 200100430
+    CharacterId: 20010
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮으면 이번 주말에 같이 가지 않을래?
+    MessageJP: 送っていくから、良かったら今週末どう？
+    MessageCN: 我送你过去，和香方便的话就这周末怎么样？
+    MessageEN: If it's okay with you, would you like to go with me this weekend?
+    MessageTH: 'ถ้าสะดวกละก็ จะไปที่นั่นกับครู
+
+      ตอนสุดสัปดาห์นี้ไหมล่ะ?'
+    MessageTW: 我送你過去，這個週末如何？
+  - MessageGroupId: 200100310
+    Id: 200100440
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 갈게요. 감사합니다.
+    MessageJP: あ、ありがとうございます
+    MessageCN: 谢、谢谢
+    MessageEN: Yes, I'll go. Thank you.
+    MessageTH: ค่ะ ฉันจะไปค่ะ ขอบคุณนะคะ
+    MessageTW: 非，非常感謝
+  - MessageGroupId: 200100320
+    Id: 200100450
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100330
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아
+    MessageJP: では週末に
+    MessageCN: 那么周末见
+    MessageEN: Oh.
+    MessageTH: อา...
+    MessageTW: 那麼，週末見
+  - MessageGroupId: 200100330
+    Id: 200100460
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100340
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ㄴ
+    MessageJP: ｍ
+    MessageCN: d
+    MessageEN: H—
+    MessageTH: คะ...
+    MessageTW: 等
+  - MessageGroupId: 200100330
+    Id: 200100470
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200100340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네ㄴ?!
+    MessageJP: まｔ
+    MessageCN: 等xia
+    MessageEN: Huhhh?!
+    MessageTH: คะะะะ?!
+    MessageTW: 等ㄧ
+  - MessageGroupId: 200100340
+    Id: 200100480
+    CharacterId: 20010
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200106
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님이랑 같이 탕에 들어간다고요?
+    MessageJP: 待ってください、先生と一緒に温泉ですか！？！？
+    MessageCN: 等下，老师的意思是要和我一起泡温泉吗！？！？
+    MessageEN: You're entering the hot bath with me, Sensei?
+    MessageTH: ไปออนเซ็นกับคุณครูเหรอคะ?
+    MessageTW: 等一下，是和老師一起泡溫泉嗎？

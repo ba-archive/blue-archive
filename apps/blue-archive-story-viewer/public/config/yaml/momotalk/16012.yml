@@ -1,0 +1,499 @@
+CharacterId: 16012
+translator: 今天早睡了吗
+title:
+  - GroupId: 1601202
+    FavorScheduleId: 160122
+    CharacterId: 16012
+    TextJp: 新年を新たな装いで！
+    TextCn: 以崭新的面貌迎接新年！
+    TextKr: 새해에는 새 옷으로!
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1601203
+    FavorScheduleId: 160123
+    CharacterId: 16012
+    TextJp: 色んな料理が食べたい！
+    TextCn: 想吃各种各样的料理！
+    TextKr: 다양한 음식이 필요해!
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1601205
+    FavorScheduleId: 160125
+    CharacterId: 16012
+    TextJp: ぬくもりをください
+    TextCn: 请给我温暖
+    TextKr: 따스함을 주세요
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 160120010
+    Id: 160120010
+    CharacterId: 16012
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오늘 바빠?
+    MessageJP: 先生、今日って忙しい？
+    MessageCN: 老师今天忙吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120020
+    Id: 160120020
+    CharacterId: 16012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 너무 바쁘지 않다면 내가 아르바이트 하는 곳에 와 볼래?
+    MessageJP: もし時間があったら、私のバイト先に来てくれない？
+    MessageCN: 如果老师有时间的话，能麻烦老师来一趟我打工的地方吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120030
+    Id: 160120030
+    CharacterId: 16012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어디였더라…… <르와조 블뢰>였던가?
+    MessageJP: 確か……「ルワゾー・ブッレ」、だったっけ？
+    MessageCN: 我记得那个地方是叫……“Loulseau Bulle”来着，应该没记错吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120040
+    Id: 160120040
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 맞아. 잘 기억하고 있네.
+    MessageJP: そうそう。っていうか、よく覚えてたわね
+    MessageCN: 对对对。说起来，老师记得还真清楚啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120040
+    Id: 160120050
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 조금, 보여 주고 싶은 게 생겼거든.
+    MessageJP: ちょっと先生に見せたいものがあるの
+    MessageCN: 我有个东西想给老师看看
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120050
+    Id: 160120060
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160122
+    NextGroupId: 160120060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 기다리고 있을 테니까!
+    MessageJP: 待ってるから、ちゃんと来てね！
+    MessageCN: 老师一定要来哦，我就在这等您！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120060
+    Id: 160120070
+    CharacterId: 16012
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 160120050
+    PreConditionFavorScheduleId: 160122
+    FavorScheduleId: 0
+    NextGroupId: 160120070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 선생님!
+    MessageJP: 先生、先生！
+    MessageCN: 老师，老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120060
+    Id: 160120080
+    CharacterId: 16012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아르바이트비를 받았어!
+    MessageJP: バイト代が入ったの！
+    MessageCN: 我拿到打工的工资啦！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120070
+    Id: 160120090
+    CharacterId: 16012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 축하해. 준코가 노력한 대가야.
+    MessageJP: ジュンコが頑張ったからだね
+    MessageCN: 毕竟纯子很努力呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120080
+    Id: 160120100
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래서 말인데
+    MessageJP: まぁね！というわけで……
+    MessageCN: 就是啊！所以……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120080
+    Id: 160120110
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 되갚아 줄 거야!
+    MessageJP: お返しの時間よ！
+    MessageCN: 现在是偿还时间哦！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120090
+    Id: 160120120
+    CharacterId: 16012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……그건 또 무슨 소리야?
+    MessageJP: ……どういうこと？
+    MessageCN: ……什么意思？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120090
+    Id: 160120130
+    CharacterId: 16012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 목숨만은 살려주세요!
+    MessageJP: ど、どうか命だけは……
+    MessageCN: 请、请务必给我留一条命……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120100
+    Id: 160120140
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후훗. 두고 보라고.
+    MessageJP: ふふっ、見てなさい
+    MessageCN: 哼哼，老师就等着吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120110
+    Id: 160120150
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이상한 짓 하려는 거 아니거든?!
+    MessageJP: 物騒なこと言わないで！
+    MessageCN: 不要说这种危险的话啊！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120120
+    Id: 160120160
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '내가 뭘 하려는지 궁금하다면 '
+    MessageJP: とにかく
+    MessageCN: 总之
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120130
+    Id: 160120170
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 저녁 시간에 맞춰 축제 거리로 찾아와.
+    MessageJP: 夕方になったら、お祭り通りに来て
+    MessageCN: 老师就在傍晚的时候到祭典大道这边来吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120140
+    Id: 160120180
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160123
+    NextGroupId: 160120150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꼭이야!
+    MessageJP: 絶対よ！
+    MessageCN: 一定要来哦！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120150
+    Id: 160120190
+    CharacterId: 16012
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 160120140
+    PreConditionFavorScheduleId: 160123
+    FavorScheduleId: 0
+    NextGroupId: 160120160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 연휴가
+    MessageJP: 連休が
+    MessageCN: 连休
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120160
+    Id: 160120200
+    CharacterId: 16012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 끝났어
+    MessageJP: 終わった
+    MessageCN: 结束了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120170
+    Id: 160120210
+    CharacterId: 16012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 끝나버렸어
+    MessageJP: 終わっちゃった……
+    MessageCN: 已经结束了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120180
+    Id: 160120220
+    CharacterId: 16012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 진정해 준코. 연휴는 일단 내일까지야.
+    MessageJP: お、落ち着いて、ジュンコ。連休は一応明日までだよ
+    MessageCN: 冷、冷静一下纯子。至少连休还有明天最后一天呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120190
+    Id: 160120230
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 정도는 알아!
+    MessageJP: 知ってるわよ！
+    MessageCN: 我当然知道！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120200
+    Id: 160120240
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 내 마음속에서 연휴는 이미 죽었어! 더는 없어!
+    MessageJP: でも私の心の中での連休は死んだ！もういない！
+    MessageCN: 但是连休在我心里已经死了！已经不在了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120200
+    Id: 160120250
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160120210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내 등에, 이 가슴에, 하나가 되어 함께 살아가지도 않아!
+    MessageJP: 私の背中にもこの胸にも、一つになって生き続けてくれない！
+    MessageCN: 它已经不能像之前那样继续活在我的心里、住在我的身体里了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 160120210
+    Id: 160120260
+    CharacterId: 16012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160125
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 남은 연휴를 이대로 보낼 순 없다고!
+    MessageJP: でもだからって、このまま終わらせるわけにはいかないの！
+    MessageCN: 但正因为这样，我不能让假期就这么结束！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

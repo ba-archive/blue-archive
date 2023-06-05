@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["dev"],
+  "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+  "schedule": ["after 8pm every weekend"],
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "stabilityDays": 7,
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["ba-story-player"],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["@pixi/*", "pixi*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "pixi.js",
+      "enabled": false
+    }
+  ],
+  "ignoreDeps": [
+    "ba-story-player",
+    "pixi.js",
+    "pixi-spine",
+    "@pixi/utils",
+    "@pixi/constants",
+    "@pixi-spine/base",
+    "@pixi/utils",
+    "@pixi/ticker",
+    "@pixi/sprite",
+    "@pixi/sound",
+    "@pixi/settings",
+    "@pixi/runner",
+    "@pixi/mesh-extras",
+    "@pixi/mesh",
+    "@pixi/math",
+    "@pixi/graphics",
+    "@pixi/filter-motion-blur",
+    "@pixi/filter-crt",
+    "@pixi/filter-color-overlay",
+    "@pixi/filter-adjustment",
+    "@pixi/extensions",
+    "@pixi/display",
+    "@pixi/core"
+  ]
+}

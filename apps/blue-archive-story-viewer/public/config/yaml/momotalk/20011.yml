@@ -1,0 +1,1059 @@
+CharacterId: 20011
+translator: Lepra
+title:
+  - GroupId: 2001102
+    FavorScheduleId: 200112
+    CharacterId: 20011
+    TextJp: 巫女さんのお勉強
+    TextCn: 巫女的学习
+    TextKr: 아르바이트 공부
+    TextEn: Part-Time Prep
+    TextTh: ศึกษางานพาร์ทไทม์
+    TextTw: 巫女的學習
+  - GroupId: 2001103
+    FavorScheduleId: 200113
+    CharacterId: 20011
+    TextJp: 巫女界のスペシャリスト
+    TextCn: 巫女界的专家
+    TextKr: 무녀계의 스페셜리스트
+    TextEn: The Miko Specialist
+    TextTh: ผู้เชี่ยวชาญเรื่องมิโกะ
+    TextTw: 巫女界的專家
+  - GroupId: 2001105
+    FavorScheduleId: 200115
+    CharacterId: 20011
+    TextJp: もう少しだけ
+    TextCn: 稍微一会就好
+    TextKr: 조금은 길지도 모르는 휴식
+    TextEn: A Slightly Extended Break
+    TextTh: การพักผ่อนที่แสนอ้อยอิ่ง
+    TextTw: 再稍微一下
+content:
+  - MessageGroupId: 200110010
+    Id: 200110010
+    CharacterId: 20011
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 혹시 무녀에 대해 잘 알아?
+    MessageJP: 先生ってもしかして、巫女さんに詳しかったりする？
+    MessageCN: 老师，您对巫女了解的多吗？
+    MessageEN: Do you know anything about mikos, Sensei?
+    MessageTH: คุณครู รู้เรื่องเกี่ยวกับมิโกะบ้างมั้ย?
+    MessageTW: 老師很了解巫女嗎？
+  - MessageGroupId: 200110020
+    Id: 200110020
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 갑자기 웬 무녀?
+    MessageJP: 詳しいかどうかは微妙だけど……どうしたの？
+    MessageCN: 我也不知道算不算了解……怎么了吗？
+    MessageEN: Huh? Why are you asking about mikos all of a sudden?
+    MessageTH: หืม? ทำไมจู่ๆ ถามถึงเรื่องมิโกะล่ะ?
+    MessageTW: 有沒有很了解不太好說……怎麼了？
+  - MessageGroupId: 200110020
+    Id: 200110030
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 물론이지! 나를 무녀 마스터라고 불러주지 않을래?
+    MessageJP: もちろん。人は私を巫女マスターと呼ぶ
+    MessageCN: 那当然。别人可都是叫我巫女大师的
+    MessageEN: Of course! You can call me the miko master!
+    MessageTH: 'ต้องรู้อยู่แล้วสิ!
+
+      เรียกครูว่าเจ้าแห่งมิโกะก็ได้นะ!'
+    MessageTW: 當然。我是人稱的巫女專家
+  - MessageGroupId: 200110030
+    Id: 200110040
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110070
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 딴 게 아니라.
+    MessageJP: あっ、実はね
+    MessageCN: 啊，其实呢
+    MessageEN: Well, it's nothing. Just that...
+    MessageTH: เอ่อ ก็ไม่มีอะไรหรอก
+    MessageTW: 啊，其實是啊
+  - MessageGroupId: 200110030
+    Id: 200110050
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그, 이번에 우연히 벌이가 좋은 아르바이트의 이야기가 들어왔는데.
+    MessageJP: その、今回偶然稼ぎのいいバイトの話が入ったんだけど
+    MessageCN: 那个，我这次碰巧接到一个挺赚钱的兼职
+    MessageEN: I, uh, happened to hear about a part-time job that pays well.
+    MessageTH: 'พอดีฉันบังเอิญได้ยิน
+
+      เรื่องงานพาร์ทไทม์ที่รายได้ดีมา'
+    MessageTW: 那個，是這次偶然有個不錯的打工機會
+  - MessageGroupId: 200110030
+    Id: 200110060
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 행사장에서 무녀를 대행하는 아르바이트…래.
+    MessageJP: イベント会場で巫女さんをやるバイト…らしいの
+    MessageCN: 看样子是……要在活动会场做巫女
+    MessageEN: It's a part-time job acting as a miko at an...event.
+    MessageTH: 'เป็นงานพาร์ทไทม์ที่ต้อง
+
+      แต่งตัวเป็นมิโกะในงานเทศกาล'
+    MessageTW: 好像是……在活動現場打扮成巫女的打工
+  - MessageGroupId: 200110040
+    Id: 200110070
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무, 무녀 마스터……?
+    MessageJP: 巫女マスター……？
+    MessageCN: 巫女大师……？
+    MessageEN: M-Miko master...?
+    MessageTH: เจ้าแห่งมิโกะ...?
+    MessageTW: 巫女專家……？
+  - MessageGroupId: 200110040
+    Id: 200110080
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니, 저기, 선생님. 무슨 의미인지 전혀 모르겠거든?
+    MessageJP: ……先生、頭大丈夫？
+    MessageCN: ……老师，你脑子没问题吧？
+    MessageEN: Um, uh, Sensei. I have no idea what you mean.
+    MessageTH: 'คุณครู... ฉันไม่เข้าใจ
+
+      ที่คุณครูพูดเลยสักนิด'
+    MessageTW: ……老師，腦袋還好吧？
+  - MessageGroupId: 200110050
+    Id: 200110090
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니라면, 무녀 마이스터라도 좋아!
+    MessageJP: あるいは巫女マイスターでも
+    MessageCN: 或者叫我巫女巨匠也行
+    MessageEN: If you don't like that, how about miko meister?!
+    MessageTH: 'ถ้าไม่ชอบจะเรียกว่า
+
+      สาวกมิโกะก็ได้นะ'
+    MessageTW: 或是叫巫女達人也可以
+  - MessageGroupId: 200110060
+    Id: 200110100
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110070
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 더욱 의미를 모르겠거든?!
+    MessageJP: もっと意味わかんないだけど！？
+    MessageCN: 给你这么一说我更不明白了啊！？
+    MessageEN: Now I REALLY have no idea what you mean!!
+    MessageTH: ยิ่งไม่เข้าใจกว่าเดิมอีก!
+    MessageTW: 更加意義不明了！？
+  - MessageGroupId: 200110060
+    Id: 200110110
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하아……. 하여간 시급이 꽤 센 아르바이트라, 기왕이면 하고 싶긴 한데.
+    MessageJP: はあ……とにかく、時給が結構良さそうな巫女さんのバイトがあったから、やってみようかなって思ってて
+    MessageCN: 唉……总之，毕竟巫女兼职的时薪相当高，我就想着要不要去试试看
+    MessageEN:
+      "*sigh* ...Anyway, the hourly wage is quite high, so I'd like to do
+      this part-time job if possible."
+    MessageTH: 'เฮ้อ... แต่ว่ามันเป็นงานพาร์ทไทม์
+
+      ที่ค่าจ้างต่อชั่วโมงสูงมาก ถ้าเป็น
+
+      ไปได้ฉันก็อยากจะไปทำ'
+    MessageTW: 呼……總之，因為這份巫女的打工，時薪還不錯，所以想試試看
+  - MessageGroupId: 200110070
+    Id: 200110120
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 막상 무녀 아르바이트라니, 뭘 해야 할지 전혀 감이 오질 않는달까.
+    MessageJP: でもいざ考えてみると、あんまり巫女さんのこととか詳しくないし……
+    MessageCN: 但是仔细想想，我对巫女也不是特别了解……
+    MessageEN: But I have no clue what to do as a part-time miko.
+    MessageTH: 'แต่ฉันไม่รู้เลยว่ามิโกะจะต้อง
+
+      ทำอะไรบ้าง'
+    MessageTW: 但是仔細想想，我不太了解巫女……
+  - MessageGroupId: 200110070
+    Id: 200110130
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 괜찮다면 선생님에게 도움을 받고 싶은데. 괜찮을까?
+    MessageJP: だからもし先生が知ってたら、教えてほしいなって思って
+    MessageCN: 所以老师要是对巫女比较了解的话，我想拜托老师教教我
+    MessageEN: If it's okay with you, I'd like your help.
+    MessageTH: 'คือถ้าคุณครูไม่ว่าอะไร ฉันอยาก
+
+      ขอให้คุณครูช่วยหน่อย ได้รึเปล่า?'
+    MessageTW: 如果老師知道的話，希望能告訴我
+  - MessageGroupId: 200110080
+    Id: 200110140
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 그런 거라면 얼마든지!
+    MessageJP: どこまで力になれるか分からないけど、任せて！
+    MessageCN: 虽然我也不知道能帮到芹香多少，但是交给我吧！
+    MessageEN: Okay, I don't mind helping you at all!
+    MessageTH: ได้เสมอ ทุกที่ทุกเวลา!
+    MessageTW: 雖然不知道能幫上多少忙，但交給我吧！
+  - MessageGroupId: 200110090
+    Id: 200110150
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200112
+    NextGroupId: 200110100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래……? 그럼 약속 장소에서 보자. 선생님!
+    MessageJP: ありがと。じゃあ後で待ち合わせの場所送るから
+    MessageCN: 谢啦。那待会我把见面地点发过去
+    MessageEN: Really...? Then I'll see you at the meeting spot, Sensei!
+    MessageTH: 'จริงเหรอ...? ถ้างั้นเจอกัน
+
+      ที่สถานที่นัดพบล่ะ คุณครู!'
+    MessageTW: 謝謝。那我稍後將碰面的地點發給你
+  - MessageGroupId: 200110100
+    Id: 200110160
+    CharacterId: 20011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200110090
+    PreConditionFavorScheduleId: 200112
+    FavorScheduleId: 0
+    NextGroupId: 200110110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이러니저러니 해도 선생님…….
+    MessageJP: えっと、先生
+    MessageCN: 那个，老师
+    MessageEN: In any case, Sensei...
+    MessageTH: ยังไงก็ตาม คุณครู...
+    MessageTW: 那個，老師
+  - MessageGroupId: 200110110
+    Id: 200110170
+    CharacterId: 20011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 상담에 응해줘서 고마워.
+    MessageJP: 今日は何だかんだで、相談に乗ってくれてありがと
+    MessageCN: 谢谢老师今天陪我商量这些
+    MessageEN: Thank you for consulting with me today.
+    MessageTH: ขอบคุณที่ให้คำปรึกษาวันนี้นะ
+    MessageTW: 今天謝謝你，陪我商量這麼多
+  - MessageGroupId: 200110120
+    Id: 200110180
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 아르바이트 시작하면 만나러 갈게. 감주도 마시고 싶고.
+    MessageJP: ううん。バイト始まったら会いに行くね、久しぶりに甘酒とか飲みたいし
+    MessageCN: 没事。等芹香开始打工了我过去看看吧，好久没喝甜酒了
+    MessageEN:
+      I'll come visit when you start your part-time job. I want to drink
+      gamju as well.
+    MessageTH: 'ถ้าเริ่มงานพาร์ทไทม์เมื่อไหร่
+
+      ครูจะไปหานะ อยากดื่มสาเกหวานด้วย'
+    MessageTW: 不會。等打工開始了我再去找你，好久沒喝甜酒了
+  - MessageGroupId: 200110130
+    Id: 200110190
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……오, 오는 건 괜찮지만. 줄 수 있는 건 평범한 감주 정도니까!
+    MessageJP: ……来るのは良いけど、嚙んだりしないからね！
+    MessageCN: ……来是可以来，但是口嚼酒想都别想！
+    MessageEN: '...Y-You can come, but gamju is the only thing I can give you!'
+    MessageTH: 'คะ...คุณครูจะมาก็ได้นะ แต่ฉันซื้อ
+
+      ให้ได้แค่สาเกหวานธรรมดานะ!'
+    MessageTW: ……你來是很好啦，但我是不會嚼的！
+  - MessageGroupId: 200110140
+    Id: 200110200
+    CharacterId: 20011
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200110130
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 새해 복 많이 받아, 선생님.
+    MessageJP: あらためてだけど先生、あけましておめでとうございます
+    MessageCN: 再次恭祝新年快乐，老师
+    MessageEN: Happy New Year, Sensei.
+    MessageTH: สวัสดีปีใหม่ คุณครู
+    MessageTW: 老師，再次祝你新年快樂
+  - MessageGroupId: 200110150
+    Id: 200110210
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110155
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 새해 복 많이 받아. 세리카.
+    MessageJP: あけましておめでとうございます。今年もよろしくね
+    MessageCN: 新年快乐。今年也请芹香多指教啦
+    MessageEN: Happy New Year, Serika.
+    MessageTH: สวัสดีปีใหม่ เซริกะ
+    MessageTW: 新年快樂。今年也請多關照
+  - MessageGroupId: 200110155
+    Id: 200110220
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아르바이트 준비는 어때? 괜찮아?
+    MessageJP: ところでセリカ、バイトの準備はどう？
+    MessageCN: 说起来，芹香打工准备的怎么样了？
+    MessageEN: How are the part-time job preparations going? Good?
+    MessageTH: 'เตรียมงานพาร์ทไทม์เป็นยังไงบ้าง?
+
+      โอเครึเปล่า?'
+    MessageTW: 話說回來，茜香，打工的準備如何？
+  - MessageGroupId: 200110160
+    Id: 200110230
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 그거라면 완벽해.
+    MessageJP: あ、うん。結構良い感じだよ
+    MessageCN: 啊，嗯。感觉还不错呢
+    MessageEN: Oh, actually, it's going very well.
+    MessageTH: ถ้าเรื่องนั้นละก็ไปได้สวยเลยล่ะ
+    MessageTW: 啊，嗯。感覺還不錯唷
+  - MessageGroupId: 200110160
+    Id: 200110240
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아직 조금 익숙지 않은 부분이 있어서 걱정은 되지만…….
+    MessageJP: まだ慣れてないから、色々不安なところもあるけど……
+    MessageCN: 但是我还没完全习惯，所以有很多事情我还不太放心……
+    MessageEN:
+      I'm a bit worried because there are some things I'm not used to yet,
+      but...
+    MessageTH: ถึงจะกังวลเพราะมีเรื่องที่ไม่คุ้นอยู่นิดหน่อยก็เถอะ...
+    MessageTW: 雖然還有些不習慣，也有很多不安的地方……
+  - MessageGroupId: 200110170
+    Id: 200110250
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 문제는 없을 것 같아.
+    MessageJP: 楽しいし、総じて問題無いかな
+    MessageCN: 不过打工的过程很开心，所以总体来说应该没什么问题吧
+    MessageEN: Yeah, I don't think there will be any problems.
+    MessageTH: แต่คิดว่าไม่น่ามีปัญหาหรอก
+    MessageTW: 但很有趣，總結來說沒有問題吧
+  - MessageGroupId: 200110180
+    Id: 200110260
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇구나. 알았어. 바로 갈게!
+    MessageJP: じゃあ今から行くね！
+    MessageCN: 那我现在就过去啦！
+    MessageEN: I see. Okay. I'll head over right now!
+    MessageTH: 'งั้นเหรอ เข้าใจแล้ว
+
+      ครูจะไปหาเดี๋ยวนี้เลย!'
+    MessageTW: 那我現在過去唷！
+  - MessageGroupId: 200110190
+    Id: 200110270
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 뭐어? 따, 딱히 찾아오라는 소리가 아니었다고?!
+    MessageJP: え、今から！？べ、別に来てほしいとか言ってないでしょ！？
+    MessageCN: 诶，现在！？我、我没说想要你过来吧！？
+    MessageEN: W-What? I wasn't t-trying to tell you to come over or anything!
+    MessageTH: 'ห๊าาา? ฉะ...ฉันไม่ได้บอก
+
+      ให้มาหาสักหน่อยนะ?!'
+    MessageTW: 咦，現在！？我，我沒有說要你來吧！？
+  - MessageGroupId: 200110200
+    Id: 200110280
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 찾아가면, 세리카가 곤란해지는 거야?
+    MessageJP: 来られると困る？
+    MessageCN: 就是说我过去的话芹香会很为难？
+    MessageEN: Serika, if I go see you, will it trouble you?
+    MessageTH: 'เซริกะจังลำบากใจ
+
+      ที่ครูจะไปหาเหรอ?'
+    MessageTW: 我去的話，你會很困擾嗎？
+  - MessageGroupId: 200110210
+    Id: 200110290
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으, 응? 아니, 딱히 그런 건 아니지만.
+    MessageJP: いや、別にそういう訳じゃないけど…
+    MessageCN: 不，也不至于，但是……
+    MessageEN: H-Huh? I mean, not really.
+    MessageTH: เปล่าหรอก มันก็ไม่ใช่แบบนั้น
+    MessageTW: 不，不是那個意思……
+  - MessageGroupId: 200110220
+    Id: 200110300
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오히려 선생님이 와주면
+    MessageJP: むしろ来てくれたら
+    MessageCN: 不如说，老师能来的话
+    MessageEN: Rather, if you came...
+    MessageTH: ถ้าคุณครูมาก็คงดีจริงๆ นั่นแหละ
+    MessageTW: 不如說希望你來
+  - MessageGroupId: 200110230
+    Id: 200110310
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아앗, 도중에 보내버렸다?! 방금 건 없던 걸로! 못 본 걸로 해!
+    MessageJP: ああもう途中で送っちゃった！今のは無し！見なかったことにして！
+    MessageCN: 啊真是的，打字打到一半就发出去了！刚才的不算！你什么都没看到！
+    MessageEN:
+      Oops! When did I send that?! Forget about what I just sent! Pretend
+      you didn't see it!
+    MessageTH: 'อ๊ะ จู่ๆ ก็เผลอส่งไปอีกแล้ว!
+
+      นึกว่าไม่เห็นข้อความเมื่อกี้ก็แล้วกันนะ!'
+    MessageTW: 啊啊，寫到一半就發出去了！剛才的不算！當作沒看見！
+  - MessageGroupId: 200110240
+    Id: 200110320
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200113
+    NextGroupId: 200110250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니까 딱히 오지 않아도 괜찮으니까!
+    MessageJP: だから、別に来なくても良いから！
+    MessageCN: 就是说啊，你不来也没关系的啦！
+    MessageEN: It's okay if you don't come over!
+    MessageTH: เพราะงั้นไม่ต้องมาก็ได้!
+    MessageTW: 所以說，不特別來也沒關係！
+  - MessageGroupId: 200110250
+    Id: 200110330
+    CharacterId: 20011
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200110240
+    PreConditionFavorScheduleId: 200113
+    FavorScheduleId: 0
+    NextGroupId: 200110260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 선생님. 혹시 한가해?
+    MessageJP: 先生、今時間ある？
+    MessageCN: 老师现在有时间吗？
+    MessageEN: Um, Sensei? Are you free?
+    MessageTH: คุณครู ตอนนี้ว่างรึเปล่า?
+    MessageTW: 老師，現在有時間嗎？
+  - MessageGroupId: 200110260
+    Id: 200110340
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무지무지 한가합니다.
+    MessageJP: うん、暇だよ
+    MessageCN: 嗯，我现在很闲哦
+    MessageEN: I am very, very free.
+    MessageTH: ตอนนี้ว่างมากๆ เลยล่ะ
+    MessageTW: 嗯，很閒唷
+  - MessageGroupId: 200110260
+    Id: 200110350
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 한가하지 않지만, 세리카를 위해서라면 한가하도록 노력할게!
+    MessageJP: 時間なら空けられるよ、どうしたの？
+    MessageCN: 有时间哦，怎么了吗？
+    MessageEN: I'm not free, but I can be for you, Serika!
+    MessageTH: 'ถึงไม่ว่าง แต่ถ้าเพื่อเซริกะ
+
+      ครูก็ว่างเสมอ!'
+    MessageTW: 可以空出點時間唷，怎麼了？
+  - MessageGroupId: 200110270
+    Id: 200110360
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그, 그래? 아니, 다른 게 아니라.
+    MessageJP: あ、そうなの……？
+    MessageCN: 啊，这样吗……？
+    MessageEN: Y-Yeah? Well, the thing is,
+    MessageTH: งะ...งั้นเหรอ? คือว่า...
+    MessageTW: 啊，是嗎……？
+  - MessageGroupId: 200110270
+    Id: 200110370
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110280
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 아르바이트가 좀 일찍 끝날 것 같아서 말이야.
+    MessageJP: 実は今日、バイトが少し早く終わりそうで
+    MessageCN: 其实，我今天的兼职可能会稍微早一点结束
+    MessageEN: I think I'll be done with my part-time job early today.
+    MessageTH: ดูเหมือนวันนี้งานพาร์ทไทม์จะเสร็จเร็วน่ะ
+    MessageTW: 其實是今天的打工好像會提早結束
+  - MessageGroupId: 200110280
+    Id: 200110380
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래서 여유시간이 좀 생길 것 같아서 말이야…….
+    MessageJP: 時間に余裕ができそうだから、その……
+    MessageCN: 所以就会空一点时间出来，然后那个……
+    MessageEN: So, I'll have some free time...
+    MessageTH: เพราะงั้นเลยมีเวลาว่างนิดหน่อย...
+    MessageTW: 因為時間很充裕，那個……
+  - MessageGroupId: 200110280
+    Id: 200110390
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아비도스의 모두에게 선물할 새해 선물을 고르고 싶어서 그런데.
+    MessageJP: アビドスのみんなに、正月っぽいお土産でも買っていこうかなって思って
+    MessageCN: 我就想，要不要给阿比多斯的大家买一点新年礼物
+    MessageEN: I want to choose New Year gifts for everyone in Abydos.
+    MessageTH: 'ฉันก็เลยอยากจะไปเลือกของขวัญ
+
+      ปีใหม่ให้กับสมาชิกทุกคนน่ะ...'
+    MessageTW: 我想給阿拜多斯的大家買點拜年禮
+  - MessageGroupId: 200110280
+    Id: 200110400
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어울려주지 않을래?
+    MessageJP: それを選ぶのに、付き合ってくれない？
+    MessageCN: 老师愿意跟我一起选礼物吗？
+    MessageEN: Can you join me?
+    MessageTH: คุณครูไปด้วยกันหน่อยได้มั้ย?
+    MessageTW: 能陪我一起挑選嗎？
+  - MessageGroupId: 200110290
+    Id: 200110410
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바로 갈게!
+    MessageJP: すぐ行く！
+    MessageCN: 我马上过去！
+    MessageEN: I'll be right there!
+    MessageTH: ครูจะไปหาเดี๋ยวนี้เลย!
+    MessageTW: 馬上過去！
+  - MessageGroupId: 200110300
+    Id: 200110420
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200115
+    NextGroupId: 200110310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 기다리고 있을게.
+    MessageJP: ありがと。待ってるね
+    MessageCN: 谢谢。我等老师哦
+    MessageEN: Okay, I'll see you soon.
+    MessageTH: อื้อ งั้นฉันจะรอนะ
+    MessageTW: 謝謝。我等著唷
+  - MessageGroupId: 200110310
+    Id: 200110430
+    CharacterId: 20011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200110300
+    PreConditionFavorScheduleId: 200115
+    FavorScheduleId: 0
+    NextGroupId: 200110320
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘, 그……. 낮에 있었던 일, 말인데. 선생님.
+    MessageJP: その……先生
+    MessageCN: 那个……老师
+    MessageEN: Today, uh... So, about what happened today...
+    MessageTH: คือว่าวันนี้... เรื่องเมื่อกลางวันน่ะ...
+    MessageTW: 那個……老師
+  - MessageGroupId: 200110320
+    Id: 200110440
+    CharacterId: 20011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 엄청 굉장한 얼굴이 되어서, 날 찾았잖아.
+    MessageJP: 今日来てくれた時、すごい息を切らしてたけど……
+    MessageCN: 老师今天跑过来的时候，上气不接下气的……
+    MessageEN: You looked for me with this expression on your face.
+    MessageTH: 'ตกใจเลยที่เห็นคุณครูตามหาฉัน
+
+      พร้อมทำสีหน้าแบบนั้นน่ะ'
+    MessageTW: 你今天來的時候，有點上氣不接下氣的樣子……
+  - MessageGroupId: 200110320
+    Id: 200110450
+    CharacterId: 20011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게, 그러니까…….
+    MessageJP: えっと……
+    MessageCN: 那个……
+    MessageEN: So, the thing is...
+    MessageTH: เรื่องนั้น คือว่า...
+    MessageTW: 那個……
+  - MessageGroupId: 200110330
+    Id: 200110460
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 신경 쓰지 마.
+    MessageJP: 大丈夫、気にしないで
+    MessageCN: 没关系，不用在意
+    MessageEN: Don't worry about it.
+    MessageTH: ไม่เป็นไร ไม่ต้องคิดมากนะ
+    MessageTW: 沒事的，別放在心上
+  - MessageGroupId: 200110340
+    Id: 200110470
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 그, 그래?
+    MessageJP: う、うん……
+    MessageCN: 啊、嗯……
+    MessageEN: Oh, y-yeah?
+    MessageTH: งะ...งั้นเหรอ?
+    MessageTW: 是，是嗎……
+  - MessageGroupId: 200110350
+    Id: 200110480
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음번에 비슷한 일이 있다면, 그때는 미리 연락해 주면 더 좋고.
+    MessageJP: もしできれば連絡くれると、膝に負担がかからなくて助かるかもってくらいで
+    MessageCN: 不过要是下次芹香遇到这种事能早点跟我说的话，我也可以帮芹香分担一点腿上的负担的
+    MessageEN:
+      If something similar happens again, it'd be nice if you could let me
+      know in advance.
+    MessageTH: 'ถ้าคราวหน้ามีเรื่องแบบนี้อีก
+
+      ติดต่อมาบอกครูหน่อยก็ดีนะ'
+    MessageTW: 只是覺得如果你能聯絡我的話，或許就不用抱著一堆貓了
+  - MessageGroupId: 200110360
+    Id: 200110490
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으, 응. 아, 알았어.
+    MessageJP: ……うん、分かった
+    MessageCN: ……嗯，我知道了
+    MessageEN: Y-Yes, o-okay.
+    MessageTH: อะ...อื้อ เข้าใจแล้ว
+    MessageTW: ……嗯，我知道了
+  - MessageGroupId: 200110360
+    Id: 200110500
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110370
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앞으로는 걱정시키지 않도록, 그, 노력할게.
+    MessageJP: 心配かけてごめんなさい
+    MessageCN: 抱歉，让老师替我担心了
+    MessageEN: I'll, uh, try my best not to worry you.
+    MessageTH: 'ต่อไปฉันจะพยายามไม่ทำ
+
+      ให้คุณครูเป็นห่วงนะ'
+    MessageTW: 讓你擔心了，對不起
+  - MessageGroupId: 200110370
+    Id: 200110510
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 늘 고마워. 선생님♡
+    MessageJP: いつもありがとう、先生♡
+    MessageCN: 一直以来谢谢你啦，老师♡
+    MessageEN: Thank you as always, Sensei ♥
+    MessageTH: ขอบคุณนะ คุณครู♡
+    MessageTW: 一直以來謝謝你了，老師♡
+  - MessageGroupId: 200110380
+    Id: 200110520
+    CharacterId: 20011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200110390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앗, 하트다.
+    MessageJP: ハートマーク……！
+    MessageCN: 爱心……！
+    MessageEN: Oh, a heart.
+    MessageTH: ว้าว มินิฮาร์ตล่ะ!
+    MessageTW: 愛心符號……！
+  - MessageGroupId: 200110390
+    Id: 200110530
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 아니, 지금 건 자동완성으로 덧붙여진 거니까!
+    MessageJP: ち、違う！今のは自動変換で付いちゃっただけで……！
+    MessageCN: 才、才不是！刚刚那个自动转换出来的……！
+    MessageEN: Uh, no! That was added by the auto-complete function!
+    MessageTH: 'ปะ...เปล่านะ ระบบออโต้
+
+      มันพิมพ์เติมไปเองต่างหากเล่า!'
+    MessageTW: 不，不是！剛才那是自動轉換加上去的……！
+  - MessageGroupId: 200110390
+    Id: 200110540
+    CharacterId: 20011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오, 오해하지 마~!
+    MessageJP: 違うからっ、絶対に違うから！
+    MessageCN: 不是你想的那样，绝对不是啊！
+    MessageEN: D-Don't get the wrong idea!
+    MessageTH: อย่าเข้าใจผิดล่ะ~!
+    MessageTW: 不是那樣的，絕對不是！

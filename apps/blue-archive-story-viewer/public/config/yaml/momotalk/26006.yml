@@ -1,0 +1,1003 @@
+CharacterId: 26006
+translator: Lepra
+title:
+  - GroupId: 2600602
+    FavorScheduleId: 260062
+    CharacterId: 26006
+    TextJp: 運が良い日
+    TextCn: 幸运日
+    TextKr: 운수 좋은 날
+    TextEn: One Lucky Day
+    TextTh: วันที่โชคดีสุดๆ
+    TextTw: 好運的一天
+  - GroupId: 2600603
+    FavorScheduleId: 260063
+    CharacterId: 26006
+    TextJp: 観察日記
+    TextCn: 观察日记
+    TextKr: 관찰일기
+    TextEn: Observational Diary
+    TextTh: บันทึกการสังเกตการณ์
+    TextTw: 觀察日記
+  - GroupId: 2600605
+    FavorScheduleId: 260065
+    CharacterId: 26006
+    TextJp: 流星群が見られる場所
+    TextCn: 能看见流星雨的地方
+    TextKr: 유성우를 볼 수 있는 곳
+    TextEn: A Place to Watch the Meteors
+    TextTh: สถานที่ที่จะดูฝนดาวตกได้
+    TextTw: 看得到流星雨的地方
+  - GroupId: 2600606
+    FavorScheduleId: 260066
+    CharacterId: 26006
+    TextJp: 流星群と願い事
+    TextCn: 流星雨和心愿
+    TextKr: 유성우와 소원
+    TextEn: When You Wish Upon a Meteor
+    TextTh: ฝนดาวตกและความปรารถนา
+    TextTw: 流星雨和願望
+  - GroupId: 2600608
+    FavorScheduleId: 260068
+    CharacterId: 26006
+    TextJp: 雲を探しに
+    TextCn: 去寻找云
+    TextKr: 구름을 찾아 떠나는 모험
+    TextEn: In Search of Clouds
+    TextTh: การออกผจญภัยเพื่อตามหาก้อนเมฆ
+    TextTw: 尋找雲朵的冒險
+content:
+  - MessageGroupId: 260060010
+    Id: 260060010
+    CharacterId: 26006
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 선생님은 운세 점괘를 얼마나 믿으시나요?
+    MessageJP: 先生は占いってどれぐらい信じてますか？
+    MessageCN: 老师有多相信占卜呢？
+    MessageEN: Do you believe in horoscopes, Sensei?
+    MessageTH: คุณครูเชื่อเรื่องการทำนายโชคชะตาไหมคะ?
+    MessageTW: 老師相信占卜嗎？
+  - MessageGroupId: 260060020
+    Id: 260060020
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제법 잘 맞는다고 생각해.
+    MessageJP: 結構信じてるよ
+    MessageCN: 我相当相信哦
+    MessageEN: I think there's some truth to them.
+    MessageTH: ครูคิดว่ามันก็น่าเชื่อถือดีนะ
+    MessageTW: 蠻相信的唷
+  - MessageGroupId: 260060020
+    Id: 260060030
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그다지 맞는 것 같지는 않은데…….
+    MessageJP: そんなに信じない方かな……
+    MessageCN: 应该不是那么相信吧……
+    MessageEN: I don't think so...
+    MessageTH: ครูคิดว่ามันไม่แม่นเท่าไหร่เลย...
+    MessageTW: 不怎麼相信吧……
+  - MessageGroupId: 260060030
+    Id: 260060040
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇군요. 나중에 선생님이 보는 운세 점괘를 제게도 알려주세요!
+    MessageJP: そうなんですね。今度先生が見ている占い、私にも教えてください！
+    MessageCN: 这样呀。下次老师请告诉我老师在看什么占卜术吧！
+    MessageEN: I see. Tell me your horoscope later, Sensei!
+    MessageTH: 'งั้นเหรอคะ ถ้างั้นคราวหน้าคุณครูช่วย
+
+      เล่าเรื่องดวงของคุณครูให้ฟังบ้างนะคะ!'
+    MessageTW: 真的啊。請老師告訴我下次看到的占卜結果！
+  - MessageGroupId: 260060040
+    Id: 260060050
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런가요? 그럼 일간 키보토스의 <오늘의 운세>를 확인해보세요.
+    MessageJP: そうなんですか？日刊キヴォトスの「今日の運勢」、お勧めですよ
+    MessageCN: 这样吗？其实我很推荐基沃托斯日刊的《今日运势》哦
+    MessageEN: Really? Then let's check the daily horoscope reading in the paper!
+    MessageTH: 'งั้นเหรอคะ? ถ้างั้นลองเช็ก
+
+      <ดวงชะตาประจำวัน> ในนิตยสาร
+
+      คิโวทอสรายสัปดาห์สิคะ'
+    MessageTW: 真的嗎？我很推薦奇普托斯日刊的「今日運勢」唷
+  - MessageGroupId: 260060040
+    Id: 260060060
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060050
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이곳의 운세 점괘는 틀린 적이 없거든요!
+    MessageJP: あの占いは、外れたことがありませんから！
+    MessageCN: 因为那个占卜，从来没出错过！
+    MessageEN: The horoscopes here have never been wrong!
+    MessageTH: 'การทำนายดวงของที่นี่ไม่เคย
+
+      พลาดเลยนะคะ'
+    MessageTW: 那個占卜從未出錯過！
+  - MessageGroupId: 260060050
+    Id: 260060070
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: <오늘의 운세>에 따르면 오늘의 저는 금전운이 좋다고 하네요!
+    MessageJP: 「今日の運勢」によると、私は金運がばっちりだそうです！
+    MessageCN: 《今日运势》上说，我今天财运很好！
+    MessageEN: According to my horoscope, I have money coming my way!
+    MessageTH: 'ถ้าตามที่ <ดวงชะตาประจำวัน>
+
+      เขียนไว้ล่ะก็... วันนี้ฉันจะมีดวงเรื่อง
+
+      โชคลาภค่ะ!'
+    MessageTW: 「今日運勢」上面寫說，我今天財運當頭！
+  - MessageGroupId: 260060060
+    Id: 260060080
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 특별반에 온 이후로 금전운이 좋다는 점괘는 나온 적이 없었는데……
+    MessageJP: 特別クラスに来てから、金運が良いという占い結果が出たのは初めてなんです……！
+    MessageCN: 这还是自从我来特别班之后，头一次占出财运好的结果……！
+    MessageEN: I haven't gotten a horoscope like this since I joined the Spec Ops...
+    MessageTH: 'หลังจากย้ายมาอยู่ที่ห้องเรียนพิเศษ
+
+      ก็ไม่ค่อยมีโชคเรื่องดวงสักเท่าไหร่...'
+    MessageTW: 來到特別班後，第一次出現財運好的占卜結果……！
+  - MessageGroupId: 260060060
+    Id: 260060090
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 벌써부터 기대가 되어서 참을 수가 없네요!
+    MessageJP: ふふ、今から楽しみで仕方ありません！
+    MessageCN: 呵呵，我从现在开始就很期待会发生什么了！
+    MessageEN: I can't wait!
+    MessageTH: ชักตื่นเต้นจนจะทนไม่ไหวแล้วค่ะ!
+    MessageTW: 呵呵，現在已經期待到不行了！
+  - MessageGroupId: 260060070
+    Id: 260060100
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋은 일이 있었으면 좋겠네.
+    MessageJP: 良いこと、起きるといいね
+    MessageCN: 希望能有好事发生呢
+    MessageEN: I hope something good happens.
+    MessageTH: ถ้ามีเรื่องดีๆ เกิดขึ้นก็คงดีนะ
+    MessageTW: 有發生好事，就好了呢
+  - MessageGroupId: 260060080
+    Id: 260060110
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260062
+    NextGroupId: 260060090
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 그러게 말이에요!
+    MessageJP: はい！
+    MessageCN: 没错！
+    MessageEN: I know, right?
+    MessageTH: ใช่แล้วล่ะค่ะ!
+    MessageTW: 是的！
+  - MessageGroupId: 260060090
+    Id: 260060120
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260060080
+    PreConditionFavorScheduleId: 260062
+    FavorScheduleId: 0
+    NextGroupId: 260060100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으으…… 아까 못 먹고 남긴 고급 스위츠가 신경 쓰여서 잠이 오질 않아요.
+    MessageJP: うう、食べきれず残してしまったあの高級スイーツが、今も頭に残って眠れません……
+    MessageCN: 呜呜，吃不下只能剩着的高级甜点，现在还浮在脑海里……根本睡不着……
+    MessageEN:
+      Ah... I can't sleep because I can't stop thinking about those fancy
+      sweets I didn't finish earlier.
+    MessageTH: 'ฉะ... ฉันนอนไม่หลับเพราะกังวลเรื่อง
+
+      ขนมแสนอร่อยที่ฉันกินเหลือไว้
+
+      เมื่อกี้น่ะค่ะ'
+    MessageTW: 嗚嗚，那些因為吃不完而剩下的高級甜點，至今還殘留在我腦裡，無法入睡……
+  - MessageGroupId: 260060090
+    Id: 260060130
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모처럼 금전운이 따랐는데도 그 기회를 살리지 못하다니, 너무 아쉬워요.
+    MessageJP: せっかくの金運だったのに、チャンスをふいに……なんてもったいないことを……
+    MessageCN: 难得走了一次财运，却让机会溜走了……真是太可惜了……
+    MessageEN: I can't believe I couldn't finish them... I'm so sad.
+    MessageTH: 'อุตส่าห์ดวงดีแล้วแท้ๆ
+
+      แต่ฉันกลับกินไม่หมด น่าเสียดายจริงๆ '
+    MessageTW: 明明是難得的財運，卻錯失了機會……真是可惜……
+  - MessageGroupId: 260060100
+    Id: 260060140
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음번에도 르와조 블뢰에서 스위츠를 사줄게.
+    MessageJP: また今度、同じお店で奢ってあげるよ
+    MessageCN: 下次我再请和香吃这家店吧
+    MessageEN: I'll buy you some sweets from L'Oiseau Bleu next time.
+    MessageTH: 'คราวหน้าครูจะซื้อขนม
+
+      จากร้านลูวาโซ บลูให้อีกนะ'
+    MessageTW: 下次我再請你吃同一家店
+  - MessageGroupId: 260060110
+    Id: 260060150
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 안 돼요! 그런 약속을 들어버리면…….
+    MessageJP: だ、ダメです！そ、そんな約束をされてしまいますと……
+    MessageCN: 不、不行！要、要是就这样约好的话……
+    MessageEN: No! If you say that...
+    MessageTH: 'มะ...ไม่ได้นะคะ! ถะ...ถ้าคุณครูสัญญา
+
+      แบบนั้นล่ะก็...'
+    MessageTW: 不，不行！如果立了那種約定的話……
+  - MessageGroupId: 260060110
+    Id: 260060160
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앞으로도 계속 잠을 잘 수 없게 되어버린다고요!
+    MessageJP: これから先そのお店に行くまで、ずっと眠れなくなってしまいます！
+    MessageCN: 下次再去这家店之前，我会一直睡不着的！
+    MessageEN: I won't be able to sleep!
+    MessageTH: 'ฉันคงเอาแต่นึกถึงสัญญาจนนอนไม่หลับ
+
+      แน่เลยค่ะ!'
+    MessageTW: 在去那家店之前，會一直睡不著覺！
+  - MessageGroupId: 260060120
+    Id: 260060170
+    CharacterId: 26006
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 260060110
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오늘은 쭉 샬레에만 계시나요?
+    MessageJP: 先生、今日はずっとシャーレにいらっしゃるんですか？
+    MessageCN: 老师，您今天一整天都在夏莱吗？
+    MessageEN: Are you going to stay at Schale today, Sensei?
+    MessageTH: 'คุณครูคะ วันนี้จะอยู่ที่ชาเล่ต์ทั้งวัน
+
+      เลยเหรอคะ?'
+    MessageTW: 老師，你今天會一直在夏萊嗎？
+  - MessageGroupId: 260060130
+    Id: 260060180
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 샬레에만 있는데. 무슨 용무라도 있어?
+    MessageJP: うん、その予定。何か用事あったりする？
+    MessageCN: 嗯，我确实是这么安排的。和香有什么事吗？
+    MessageEN: Yes, I'll be here. Do you need something?
+    MessageTH: 'อื้อ ครูอยู่ที่ชาเล่ต์ตลอดนั่นแหละ
+
+      มีเรื่องอะไรเหรอ?'
+    MessageTW: 嗯，是這麼打算。有什麼事嗎？
+  - MessageGroupId: 260060140
+    Id: 260060190
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨, 아무 일도 없어요.
+    MessageJP: いえ大丈夫です、今は特にありません
+    MessageCN: 啊没有，没什么特别的事
+    MessageEN: No, nothing.
+    MessageTH: เปล่าค่ะ ไม่มีอะไรหรอกค่ะ
+    MessageTW: 不，沒事，沒什麼特別的
+  - MessageGroupId: 260060140
+    Id: 260060200
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060150
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그냥 여쭤본 것뿐이에요. 헤헤.
+    MessageJP: ただ聞いてみただけです、えへへ
+    MessageCN: 就是想问问看而已，诶嘿嘿
+    MessageEN: I just felt like asking. Heehee.
+    MessageTH: ฉันก็แค่ถามดูเฉยๆ ค่ะ ฮิฮิ
+    MessageTW: 只是問問而已，欸嘿嘿
+  - MessageGroupId: 260060150
+    Id: 260060210
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260063
+    NextGroupId: 260060160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ???
+    MessageJP: ？？？
+    MessageCN: ？？？
+    MessageEN: ???
+    MessageTH: ???
+    MessageTW: ？？？
+  - MessageGroupId: 260060160
+    Id: 260060220
+    CharacterId: 26006
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 260060150
+    PreConditionFavorScheduleId: 260063
+    FavorScheduleId: 0
+    NextGroupId: 260060170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 그 소식 들으셨나요?
+    MessageJP: 先生、聞きましたか？
+    MessageCN: 老师，听说了吗？
+    MessageEN: Did you hear the news, Sensei?
+    MessageTH: คุณครูคะ ได้ยินข่าวรึยังคะ?
+    MessageTW: 老師，聽說了嗎？
+  - MessageGroupId: 260060170
+    Id: 260060230
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 유성우에요, 유성우!
+    MessageJP: 流星群ですよ、流星群！
+    MessageCN: 有流星雨哦，流星雨！
+    MessageEN: There's gonna be a meteor shower! A meteor shower!
+    MessageTH: เรื่องฝนดาวตกค่ะ ฝนดาวตก!
+    MessageTW: 有流星雨唷，流星雨！
+  - MessageGroupId: 260060180
+    Id: 260060240
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……유성우?
+    MessageJP: 流星群？
+    MessageCN: 流星雨？
+    MessageEN: '...A meteor shower?'
+    MessageTH: ฝนดาวตกเหรอ?
+    MessageTW: 流星雨？
+  - MessageGroupId: 260060190
+    Id: 260060250
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 신문에서 봤는데, 이번 보름에 사자자리 유성우가 찾아온대요!
+    MessageJP: はい、ニュースで見たんですが、今度の満月の日にしし座流星群が見られるみたいです！
+    MessageCN: 是的，我在新闻上看到，这次满月的时候好像能看到狮子座流星雨！
+    MessageEN:
+      Yeah, I read the newspaper and they said the Leo meteor shower will
+      happen on the next full moon!
+    MessageTH: 'ใช่ค่ะ ฉันอ่านหนังสือพิมพ์มา
+
+      เขาบอกว่าวันพระจันทร์เต็มดวงนี้
+
+      จะมีฝนดาวตกลีโอนิดส์ค่ะ'
+    MessageTW: 是的，我在新聞上看到的，這次的滿月之日似乎能看到獅子座流星雨！
+  - MessageGroupId: 260060190
+    Id: 260060260
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 게다가 이번 보름에 오는 사자자리 유성우는 붉은겨울 학원 자치구에서도 볼 수 있다고 하네요.
+    MessageJP: その上、今回のしし座流星群は、レッドウィンターの自治区でも見られるそうで！
+    MessageCN: 而且我听说，这次的狮子座流星雨在红冬自治区也能看到！
+    MessageEN:
+      The best part is that we'll be able to see it from the Red Winter Academy
+      district.
+    MessageTH: 'แล้วก็เขียนว่าฝนดาวตกลีโอนิดส์ที่จะ
+
+      มีขึ้น จะมองเห็นได้แต่ในบริเวณ
+
+      สหภาพเรดวินเทอร์ด้วยค่ะ'
+    MessageTW: 而且，這次的獅子座流星雨，也能在赤冬的自治區看到！
+  - MessageGroupId: 260060200
+    Id: 260060270
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번 유성우는 이 근처에서 관측할 수 없어서 정말 아쉬웠는데…….
+    MessageJP: この前の流星群は、この辺りでは観測できなくて本当に残念でしたが、今度こそ……！
+    MessageCN: 之前的流星雨在这片区域都观测不到，真是太可惜了，但我这次一定要……！
+    MessageEN: We couldn't see the last meteor shower from here, so I was really disappointed.
+    MessageTH: 'คราวที่แล้วแถวนี้มองไม่เห็นฝนดาว
+
+      ตกเลย ฉันเลยรู้สึกเศร้ามากๆ'
+    MessageTW: 之前的流星雨，雖然很遺憾地都沒能在這附近觀測到，不過這次一定……！
+  - MessageGroupId: 260060200
+    Id: 260060280
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 직접 보는 유성우는 얼마나 아름다울까요?
+    MessageJP: 実際に見たら、どれほど綺麗なんでしょうね？
+    MessageCN: 流星雨啊，实际看到的话，到底会有多漂亮呢？
+    MessageEN: I bet it's beautiful when you see it in person!
+    MessageTH: 'ถ้าได้เห็นฝนดาวตกกับตาตัวเองจริงๆ
+
+      จะดีแค่ไหนกันนะ'
+    MessageTW: 實際見到的話，會有多漂亮呢？
+  - MessageGroupId: 260060210
+    Id: 260060290
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260065
+    NextGroupId: 260060220
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 벌써부터 기대가 되네요!
+    MessageJP: 今から楽しみです！
+    MessageCN: 我已经开始期待起来了！
+    MessageEN: I'm excited already!
+    MessageTH: ฉันตื่นเต้นจนแทบรอไม่ไหวแล้วค่ะ!
+    MessageTW: 我已經在期待了！
+  - MessageGroupId: 260060220
+    Id: 260060300
+    CharacterId: 26006
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 260060210
+    PreConditionFavorScheduleId: 260065
+    FavorScheduleId: 0
+    NextGroupId: 260060230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님! 이번 유성우가 절정을 이루는 순간은 밤 11시래요!
+    MessageJP: 先生！今夜の流星群のピーク時は夜の11時だそうです！
+    MessageCN: 老师！听说今晚的流星雨的高峰时间是晚上11点！
+    MessageEN: Sensei! The meteor shower will be at its peak at eleven tonight!
+    MessageTH: 'คุณครู! ช่วงเวลาที่จะมีดาวตกเยอะที่
+
+      สุดคือตอนห้าทุ่มค่ะ!'
+    MessageTW: 老師！聽說今晚的流星雨高峰時間是晚上11點！
+  - MessageGroupId: 260060230
+    Id: 260060310
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니 꼭 그 전에 오셔야 해요!
+    MessageJP: ですので、それよりも前に来てくださいね！
+    MessageCN: 所以，请老师在11点之前那之前来我这边吧！
+    MessageEN: You have to come before then!
+    MessageTH: เพราะงั้นต้องมาก่อนหน้านั้นนะคะ!
+    MessageTW: 所以，請在那之前來唷！
+  - MessageGroupId: 260060240
+    Id: 260060320
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알고 있어. 여유 있게 한 시간 전에 가도록 할게.
+    MessageJP: 分かった、余裕を持って一時間前には行くようにするね
+    MessageCN: 知道了，我提前一小时过去哦
+    MessageEN: I know. I'll come an hour beforehand so we have enough time.
+    MessageTH: 'รู้แล้วล่ะ ครูจะไปถึงก่อนสัก
+
+      หนึ่งชั่วโมงแล้วกัน'
+    MessageTW: 知道了，我會保留充裕的時間，提前一個小時過去
+  - MessageGroupId: 260060250
+    Id: 260060330
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060260
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 절대로 늦으시면 안 돼요!
+    MessageJP: 遅れちゃダメですよ！
+    MessageCN: 不准迟到哦！
+    MessageEN: You can't be late!
+    MessageTH: ห้ามมาสายเด็ดขาดเลยนะคะ!
+    MessageTW: 不能遲到唷！
+  - MessageGroupId: 260060260
+    Id: 260060340
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알고 있다니까……
+    MessageJP: 分かった分かった
+    MessageCN: 知道了知道了
+    MessageEN: I said, I know...
+    MessageTH: รู้แล้วล่ะ...
+    MessageTW: 知道了知道了
+  - MessageGroupId: 260060270
+    Id: 260060350
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260066
+    NextGroupId: 260060280
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꼭이에요! 꼭!
+    MessageJP: 絶対ですよ！絶対！
+    MessageCN: 绝对哦！绝对！
+    MessageEN: You better not be! Okay?!
+    MessageTH: ห้ามสายนะคะ! ห้ามสายเด็ดขาด!
+    MessageTW: 絕對唷！絕對！
+  - MessageGroupId: 260060280
+    Id: 260060360
+    CharacterId: 26006
+    MessageCondition: FavorRankUp
+    ConditionValue: 8
+    PreConditionGroupId: 260060270
+    PreConditionFavorScheduleId: 260066
+    FavorScheduleId: 0
+    NextGroupId: 260060290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 어떤 날씨를 제일 좋아하시나요?
+    MessageJP: 先生はどんな天気が好きですか？
+    MessageCN: 老师喜欢什么样的天气呢？
+    MessageEN: What kind of weather do you like, Sensei?
+    MessageTH: 'คุณครูชอบอากาศแบบไหนที่สุด
+
+      เหรอคะ?'
+    MessageTW: 老師喜歡什麼樣的天氣呢？
+  - MessageGroupId: 260060290
+    Id: 260060370
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 맑은 날.
+    MessageJP: 晴れかな
+    MessageCN: 晴天吧
+    MessageEN: Sunny days.
+    MessageTH: วันที่อากาศแจ่มใส
+    MessageTW: 晴天吧
+  - MessageGroupId: 260060290
+    Id: 260060380
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 비 내리는 날.
+    MessageJP: 雨かな
+    MessageCN: 雨天吧
+    MessageEN: Rainy days.
+    MessageTH: วันที่ฝนตก
+    MessageTW: 雨天吧
+  - MessageGroupId: 260060300
+    Id: 260060390
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무난하네요. 다들 맑은 날을 좋아하죠.
+    MessageJP: なるほど、晴れた日が好きという人は多いですよね
+    MessageCN: 原来如此，喜欢晴天的人很多呢
+    MessageEN: That's pretty normal. Everyone likes sunny days.
+    MessageTH: 'ก็โอเคนะคะ ทุกคนชอบวันที่อากาศ
+
+      แจ่มใสกันสินะคะ'
+    MessageTW: 原來如此，喜歡晴天的人很多吧
+  - MessageGroupId: 260060310
+    Id: 260060400
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 드물긴 하지만 비 내리는 흐린 날도 인기가 많긴 하죠.
+    MessageJP: 晴れの日ほど多くはない印象ですが、雨も人気ありますよね
+    MessageCN: 不过，虽然喜欢雨天的人可能主观印象上没有喜欢晴天的人多，其实雨天派也不在少数呢
+    MessageEN:
+      It's definitely not as common, but a lot of people seem to like rainy
+      days.
+    MessageTH: 'ถึงบรรยากาศจะดูครึ้มๆ ไปบ้าง
+
+      แต่หลายๆ คนก็ดูชอบวันที่ฝนตกนะคะ'
+    MessageTW: 雖然感覺不像晴天那麼多，但雨天也很受歡迎呢
+  - MessageGroupId: 260060320
+    Id: 260060410
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 구름 하나 없이 맑은 날도, 자박자박 비가 내리는 날도 좋기는 하지만……
+    MessageJP: 私は、雲一つない晴れた空も、ポツポツと降る雨も好きですが……
+    MessageCN: 我呀，万里无云的晴空，还有淅淅沥沥的小雨，我都喜欢……
+    MessageEN: Sunny days with clear skies are great, but so are rainy days...
+    MessageTH: 'ถึงจะเป็นวันที่สดใสไม่ค่อยมีเมฆ
+
+      หรือวันที่ฝนตกหนักจนชุ่มฉ่ำ
+
+      ฉันก็ชอบทั้งหมดค่ะ'
+    MessageTW: 我喜歡萬里無雲的晴朗天空，也喜歡下得滴滴答答的雨……
+  - MessageGroupId: 260060320
+    Id: 260060420
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260068
+    NextGroupId: 260060330
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는 구름이 잔뜩 흩뿌려진 하늘이 제일 좋아요!
+    MessageJP: 実は、雲一面の空が一番好きなんです！
+    MessageCN: 其实呀，我最喜欢布满云的天空！
+    MessageEN: But my favorite days are when the sky is full of clouds!
+    MessageTH: 'แต่ว่าฉันชอบท้องฟ้าที่มีก้อนเมฆลอย
+
+      เอื่อยๆ ที่สุดเลย!'
+    MessageTW: 事實上，我最喜歡滿天雲彩的天空！
+  - MessageGroupId: 260060330
+    Id: 260060430
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260060320
+    PreConditionFavorScheduleId: 260068
+    FavorScheduleId: 0
+    NextGroupId: 260060340
+    FeedbackTimeMillisec: 1000
+    MessageType: Image
+    ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Nodoka_01
+    MessageKR: ''
+    MessageJP: ''
+    MessageCN: ''
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260060340
+    Id: 260060440
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보세요, 선생님.
+    MessageJP: 見てください、先生！
+    MessageCN: 您看，老师！
+    MessageEN: Look, Sensei.
+    MessageTH: ดูสิคะคุณครู
+    MessageTW: 請看，老師！
+  - MessageGroupId: 260060340
+    Id: 260060450
+    CharacterId: 26006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님을 위해 대신 예쁜 풍경을 찍어 왔어요. 어떤가요?
+    MessageJP: 約束の、撮ってきた写真です。どうですか？
+    MessageCN: 这是我和老师约定好给老师拍的照片哦。老师觉得怎么样？
+    MessageEN: I took a beautiful picture to show you. What do you think?
+    MessageTH: 'ฉันถ่ายรูปวิวสวยๆ มาให้คุณครูด้วยค่ะ
+
+      เป็นยังไงบ้างคะ'
+    MessageTW: 約定好要拍的照片。怎麼樣呢？
+  - MessageGroupId: 260060350
+    Id: 260060460
+    CharacterId: 26006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 예쁜 하늘인걸.
+    MessageJP: すごく綺麗だね
+    MessageCN: 非常漂亮呢
+    MessageEN: What a beautiful sky.
+    MessageTH: ท้องฟ้าสวยจังเลยนะ
+    MessageTW: 真漂亮呢
+  - MessageGroupId: 260060360
+    Id: 260060470
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇죠? 제가 구름이 많은 날을 좋아하는 이유가 바로 이거예요.
+    MessageJP: そうですよね！私が雲の多い日が好きなのは、こういった景色が好きだからなんです
+    MessageCN: 对吧！我之所以喜欢多云的日子，就是因为喜欢这样的景色
+    MessageEN: Right? This is why I love cloudy days.
+    MessageTH: 'ใช่ไหมล่ะคะ? เพราะแบบนี้ฉันถึงชอบ
+
+      วันที่มีเมฆเยอะค่ะ'
+    MessageTW: 沒錯吧！我之所以喜歡多雲的日子，就是因為喜歡這樣的景色
+  - MessageGroupId: 260060360
+    Id: 260060480
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260060370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님도 같이 왔으면 좋았을 텐데…….
+    MessageJP: 先生と一緒に行けたらもっと良かったのですが……
+    MessageCN: 要是老师也能和我一起来就更好了……
+    MessageEN: It would have been nice if you were there with me...
+    MessageTH: ถ้าได้มากับคุณครูก็คงดีมากเลยนะคะ
+    MessageTW: 如果能和老師一起去就更好了……
+  - MessageGroupId: 260060370
+    Id: 260060490
+    CharacterId: 26006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마, 마지막 문자는 신경 쓰지 마세요!
+    MessageJP: い、今のメッセージは気にしないでください！
+    MessageCN: 请、请不要在意刚刚那条信息！
+    MessageEN: Wait...forget the last message I sent you!
+    MessageTH: 'มะ...ไม่ต้องสนใจข้อความสุดท้าย
+
+      หรอกนะคะ!'
+    MessageTW: 請，請不要在意剛才的訊息！

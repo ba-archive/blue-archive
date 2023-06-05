@@ -1,0 +1,992 @@
+CharacterId: 13011
+translator: 罐子
+title:
+  - GroupId: 1301102
+    FavorScheduleId: 130112
+    CharacterId: 13011
+    TextJp: ゲーマーの日常
+    TextCn: 玩家的日常
+    TextKr: 게이머의 일상
+    TextEn: A Gamer's Day
+    TextTh: ชีวิตประจำวันของเกมเมอร์
+    TextTw: 玩家的日常
+  - GroupId: 1301103
+    FavorScheduleId: 130113
+    CharacterId: 13011
+    TextJp: 良いシナリオの条件
+    TextCn: 好剧本的条件
+    TextKr: 좋은 시나리오의 조건
+    TextEn: What Makes a Good Story
+    TextTh: เงื่อนไขของเนื้อเรื่องที่ดี
+    TextTw: 好劇情的條件
+  - GroupId: 1301105
+    FavorScheduleId: 130115
+    CharacterId: 13011
+    TextJp: ももいろメモリアル
+    TextCn: 桃红色的回忆
+    TextKr: 모모이 메모리얼!
+    TextEn: Momoi Recollection!
+    TextTh: ความทรงจำของโมโมอิ!
+    TextTw: 桃色回憶
+  - GroupId: 1301106
+    FavorScheduleId: 130116
+    CharacterId: 13011
+    TextJp: 桃色のスタンプラリー
+    TextCn: 桃红色的纪念印章收集
+    TextKr: 복숭아빛 스탬프 랠리
+    TextEn: Peachy Stamp Rally
+    TextTh: แสตมป์แรลลี่สีพีช
+    TextTw: 桃色集章活動
+content:
+  - MessageGroupId: 130110010
+    Id: 130110010
+    CharacterId: 13011
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 용사여……
+    MessageJP: 勇者よ……
+    MessageCN: 勇者哟……
+    MessageEN: Oh, brave warrior...
+    MessageTH: ท่านนักรบ...
+    MessageTW: 勇者啊……
+  - MessageGroupId: 130110020
+    Id: 130110020
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 모모톡을 받으면 곧바로 게임개발부의 부실로……
+    MessageJP: このモモトークを見たら、すぐにゲーム開発部の部室へと来たれ……
+    MessageCN: 看到这条momotalk的话，请马上来游戏开发部的活动室吧……
+    MessageEN:
+      Please come to the Game Development Department's club room as soon
+      as you get this message...
+    MessageTH: 'ถ้าเห็น MOMOTALK นี้จงรีบมาที่ห้อง
+
+      ชมรมพัฒนาเกม'
+    MessageTW: 看見這則MomoTalk後，馬上來遊戲開發部的社團教室……
+  - MessageGroupId: 130110030
+    Id: 130110030
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 바로 갈게.
+    MessageJP: うん、じゃあ今から行くね
+    MessageCN: 嗯，那我现在过去
+    MessageEN: Okay, I'll be right there.
+    MessageTH: ได้เลย จะไปเดี๋ยวนี้
+    MessageTW: 嗯，那我現在過去
+  - MessageGroupId: 130110030
+    Id: 130110040
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어……
+    MessageJP: えー……
+    MessageCN: 诶——……
+    MessageEN: Uhhh...
+    MessageTH: อืม...
+    MessageTW: 咦――……
+  - MessageGroupId: 130110040
+    Id: 130110050
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 과연, 한 치의 망설임도 없는 빠른 퀘스트 수락!
+    MessageJP: ノータイムでクエスト受注！
+    MessageCN: 立刻就接受了委托！
+    MessageEN: 'You have to accept the quest quickly, without even a moment of hesitation! '
+    MessageTH: 'รับเควสอย่างรวดเร็วโดยไม่ลังเลเลยนะ! '
+    MessageTW: 竟然毫不猶豫地接受任務！
+  - MessageGroupId: 130110040
+    Id: 130110060
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래야 선생님이지!
+    MessageJP: さっすが先生！
+    MessageCN: 不愧是老师！
+    MessageEN: That's what a teacher does!
+    MessageTH: สมกับเป็นคุณครูเลย!
+    MessageTW: 不愧是老師！
+  - MessageGroupId: 130110050
+    Id: 130110070
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐야, 그 미적지근한 반응은?! 전혀 예상 못했는데?!
+    MessageJP: ぐっ、ここでその選択肢！？これは予想してなかった……！
+    MessageCN: 咕，竟然在这里选择了这种选项！？还真是出乎意料……！
+    MessageEN: Hey, what's with the lukewarm reaction? I wasn't expecting this!
+    MessageTH: 'อะไรกัน ทำไมทำหน้าแบบนั้น?!
+
+      ไม่คิดเลยว่าจะเป็นแบบนี้!'
+    MessageTW: 唔，竟然選這個選項！？這是我沒預料到的……！
+  - MessageGroupId: 130110050
+    Id: 130110080
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니, 아니지. 시나리오에 따라선 이런 분기도 충분히 매력적……
+    MessageJP: いや、でもシナリオによってはこういう分岐もアリ……
+    MessageCN: 不对，按照剧本来看，确实可以有这种分支……
+    MessageEN:
+      No, no... Based on the scenario, this type of story branch should be
+      just fine...
+    MessageTH: 'ไม่หรอก ไม่เป็นไร บางทีบรรยากาศ
+
+      แบบนี้ก็ถือว่าดีเหมือนกัน...'
+    MessageTW: 不，按照劇本來說，也是有可能有這樣的分歧……
+  - MessageGroupId: 130110050
+    Id: 130110090
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110060
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……이 아니라!
+    MessageJP: ……じゃなくて！
+    MessageCN: ……才不是！
+    MessageEN: '...Or maybe not.'
+    MessageTH: ใช่ซะที่ไหนล่ะ!
+    MessageTW: ……不對啦！
+  - MessageGroupId: 130110060
+    Id: 130110100
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 약속했잖아! 부실에서 보기로!
+    MessageJP: 約束したじゃん！今日部室でって！
+    MessageCN: 我们之前不是约好了吗！今天在活动室见面！
+    MessageEN: You promised to meet me at the club room today!
+    MessageTH: 'เราสัญญากันไว้แล้วนี่นา! ไหนว่า
+
+      จะมาเจอกันที่ห้องไง!'
+    MessageTW: 不是約好今天要來社團教室嗎！
+  - MessageGroupId: 130110070
+    Id: 130110110
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그랬, 었나?
+    MessageJP: ……そうだっけ？
+    MessageCN: ……有吗？
+    MessageEN: Isn't that right...?
+    MessageTH: นี่สัญญาไว้แบบนั้นเหรอ...?
+    MessageTW: ……是嗎？
+  - MessageGroupId: 130110080
+    Id: 130110120
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하여간 게임개발부 부실에서 기다리고 있을 테니까!
+    MessageJP: とにかく、ゲーム開発部の部室で待ってるから！
+    MessageCN: 总之，我在游戏开发部的活动室等着！
+    MessageEN: I'll be waiting for you at the Game Development Department club room!
+    MessageTH: ฉันจะรออยู่ที่ห้องชมรมพัฒนาเกมนะ!
+    MessageTW: 總之，我在遊戲開發部的社團教室等著！
+  - MessageGroupId: 130110080
+    Id: 130110130
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130112
+    NextGroupId: 130110090
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 얼른 와!
+    MessageJP: 早く来てね！
+    MessageCN: 老师快点来！
+    MessageEN: So hurry up!
+    MessageTH: รีบๆ มาล่ะ!
+    MessageTW: 快點來！
+  - MessageGroupId: 130110090
+    Id: 130110140
+    CharacterId: 13011
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 130110080
+    PreConditionFavorScheduleId: 130112
+    FavorScheduleId: 0
+    NextGroupId: 130110100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님……
+    MessageJP: 先生ー
+    MessageCN: 老师——
+    MessageEN: Sensei...
+    MessageTH: คุณครู...
+    MessageTW: 老師──
+  - MessageGroupId: 130110100
+    Id: 130110150
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 완벽한 레트로 게임 시나리오의 조건이 뭐라고 생각해?
+    MessageJP: 最高のゲームシナリオの条件って何だと思う？
+    MessageCN: 老师觉得最棒的游戏剧本要具备什么条件？
+    MessageEN: What do you think you need for the perfect story in a retro game?
+    MessageTH: 'คุณครูคิดว่าเนื้อเรื่องเกมเรโทรที่ดี
+
+      ควรต้องประกอบด้วยอะไรบ้าง?'
+    MessageTW: 你覺得最棒的遊戲劇本要具備哪些條件？
+  - MessageGroupId: 130110110
+    Id: 130110160
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 완벽한 게임 시나리오……?
+    MessageJP: 最高のゲームシナリオ……？
+    MessageCN: 最棒的游戏剧本……？
+    MessageEN: A perfect game story...?
+    MessageTH: เนื้อเรื่องที่ดีของเกมแนวเรโทรเหรอ?
+    MessageTW: 最棒的遊戲劇本……？
+  - MessageGroupId: 130110110
+    Id: 130110170
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……뭣 때문에 그래?
+    MessageJP: 急にどうしたの？
+    MessageCN: 桃井为什么突然问这个？
+    MessageEN: "...What's the problem?"
+    MessageTH: ทำไมถึงสงสัยล่ะ?
+    MessageTW: 怎麼突然這麼問呢？
+  - MessageGroupId: 130110120
+    Id: 130110180
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 딴 게 아니라……
+    MessageJP: それは……
+    MessageCN: 因为……
+    MessageEN: It's nothing...
+    MessageTH: ก็แบบว่า...
+    MessageTW: 因為……
+  - MessageGroupId: 130110120
+    Id: 130110190
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110130
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 녀석들!
+    MessageJP: ああっ、思い出したらイライラしてきた！
+    MessageCN: 啊——，一想起来就烦！
+    MessageEN: 'Those dummies! '
+    MessageTH: เจ้าพวกนั้นน่ะ!
+    MessageTW: 啊啊！光回想起來就覺得好生氣！
+  - MessageGroupId: 130110120
+    Id: 130110200
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 멋대로 떠들고 있단 말야!
+    MessageJP: あいつら、好き放題言ってくれちゃって！
+    MessageCN: 那群家伙只会在那里乱指点！
+    MessageEN: They're just blabbing away!
+    MessageTH: พวกนั้นมักชอบพูดพล่ามไปเรื่อย!
+    MessageTW: 那些傢伙竟敢在那邊亂講話！
+  - MessageGroupId: 130110130
+    Id: 130110210
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 소재가 고리타분하다느니, 전개가 루즈하다느니.
+    MessageJP: 発想が古いとか、展開が中だるみしてるだとか
+    MessageCN: 想法太老套啊，故事发展太无聊啊，之类的
+    MessageEN:
+      The story is boring, the game mechanics aren't tight... Yada, yada,
+      yada...
+    MessageTH: "บ่นว่าเนื้อเรื่องน่าเบื่อ\n หรือการเดินเรื่องหละหลวมบ้างล่ะ... บลาๆ"
+    MessageTW: 說什麼想法過時，什麼劇情節奏崩壞
+  - MessageGroupId: 130110130
+    Id: 130110220
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안 되겠어. 선생님, 게임개발부 부실에서 봐!
+    MessageJP: もうダメ！先生、今からゲーム開発部の部室に来て！
+    MessageCN: 我已经受不了了！老师，麻烦马上来游戏开发部的活动室吧！
+    MessageEN:
+      I can't stand it. Meet me in the Game Development Department club room,
+      Sensei!
+    MessageTH: 'ฉันทนไม่ไหวแล้ว มาเจอกัน
+
+      ที่ห้องชมรมพัฒนาเกมนะคุณครู!'
+    MessageTW: 這樣不行！老師，現在到遊戲開發部的社團教室來！
+  - MessageGroupId: 130110140
+    Id: 130110230
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130113
+    NextGroupId: 130110141
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……어?
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: Huh?
+    MessageTH: หืม...?
+    MessageTW: ……？
+  - MessageGroupId: 130110141
+    Id: 130110231
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 130110140
+    PreConditionFavorScheduleId: 130113
+    FavorScheduleId: 0
+    NextGroupId: 130110142
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩌지, 선생님?!
+    MessageJP: どうしよう先生！？
+    MessageCN: 怎么办老师！？
+    MessageEN: What do I do, Sensei?!
+    MessageTH: ทำไงดีล่ะคุณครู?!
+    MessageTW: 怎麼辦，老師！？
+  - MessageGroupId: 130110141
+    Id: 130110232
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110142
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모처럼 떠오른 아이디어가 완전 모순적이라,
+    MessageJP: せっかく浮かんだアイデアが思いっきり矛盾してて、
+    MessageCN: 好不容易想到的点子却冲突了
+    MessageEN: My ideas are all so uninspired...
+    MessageTH: 'ไอเดียที่ผุดมาในหัวของฉันมันไม่
+
+      สมเหตุสมผลเอาซะเลย'
+    MessageTW: 好不容易浮現的靈感整個大矛盾
+  - MessageGroupId: 130110141
+    Id: 130110233
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110142
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그걸 타파할 다음 아이디어가 전혀 떠오르지 않아! 도와줘!!!
+    MessageJP: それを打破する次のアイデアが全然浮かばない！助けてーー！
+    MessageCN: 能打破局面的点子也完全想不出来！帮帮我——！
+    MessageEN: I can't think of anything else! Please help me!
+    MessageTH: 'แล้วก็คิดไอเดียที่จะมาต่อกันไม่ได้
+
+      เลยด้วย! ช่วยหน่อยสิ!!!'
+    MessageTW: 完全想不出下一個靈感來解困！救救我──！
+  - MessageGroupId: 130110142
+    Id: 130110234
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 우와아앙?!
+    MessageJP: うわあぁぁぁん！！！
+    MessageCN: 呜哇啊啊啊啊！！！
+    MessageEN: Waaahhh!
+    MessageTH: ว้าววว!
+    MessageTW: 嗚哇啊！！！
+  - MessageGroupId: 130110150
+    Id: 130110240
+    CharacterId: 13011
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 130110142
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 레트로 게임의 세계는 무진장 넓어, 선생님!
+    MessageJP: 先生、レトロゲームの世界はすごく広いんだよ！
+    MessageCN: 老师，复古游戏的世界是非常广阔的哦！
+    MessageEN: The world of retro games is limitless, Sensei!
+    MessageTH: โลกของเกมเรโทรช่างกว้างซะจริง!
+    MessageTW: 老師，復古遊戲的世界非常寬廣！
+  - MessageGroupId: 130110160
+    Id: 130110250
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110161
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 레트로 게임 내에서도 가장 시나리오 비중이 높은 게임이란
+    MessageJP: でもそんなレトロゲームの中でも、シナリオの比重が大きいゲームとして、
+    MessageCN: 但即使复古游戏有那么多，要说起剧情占比较大的游戏的话
+    MessageEN: But even in the retro game world, the most story-heavy games...
+    MessageTH: 'แต่ในโลกของเกมเรโทร…
+
+      เกมที่เน้นด้านเนื้อเรื่องมากที่สุด...'
+    MessageTW: 但在這些復古遊戲中，說到劇情比重大的遊戲
+  - MessageGroupId: 130110160
+    Id: 130110260
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110161
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바로 연애 시뮬레이션 게임이라 할 수 있겠지! 응!
+    MessageJP: やっぱり恋愛シミュレーションゲームは外せない！
+    MessageCN: 还是不得不提恋爱模拟游戏呢！
+    MessageEN: would be dating sims! Yeah!
+    MessageTH: ก็คือเกมจีบสาวยังไงล่ะ!
+    MessageTW: 就不得不提戀愛模擬遊戲！
+  - MessageGroupId: 130110161
+    Id: 130110270
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 연애 시뮬레이션……?
+    MessageJP: 恋愛シミュレーション……？
+    MessageCN: 恋爱模拟……？
+    MessageEN: Dating sims...?
+    MessageTH: เกมจีบสาวเหรอ...?
+    MessageTW: 戀愛模擬……？
+  - MessageGroupId: 130110170
+    Id: 130110280
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110180
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘,
+    MessageJP: だから今日は、
+    MessageCN: 所以今天，
+    MessageEN: Today...
+    MessageTH: 'วันนี้ฉันจะ.. '
+    MessageTW: 所以今天
+  - MessageGroupId: 130110180
+    Id: 130110290
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 연애 시뮬레이션을 시뮬레이션 해보려고 해!
+    MessageJP: 恋愛シミュレーションをシミュレーションしてみようと思うの！
+    MessageCN: 我想模拟一下恋爱模拟！
+    MessageEN: I'm going to "simulate" a dating sim!
+    MessageTH: จำลองสถานการณ์ของเกมจีบสาวดู
+    MessageTW: 我想要模擬戀愛模擬！
+  - MessageGroupId: 130110180
+    Id: 130110300
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 거리에서 보자, 선생님!
+    MessageJP: じゃあ後で場所は送るから、そこで待ち合わせね！先生！
+    MessageCN: 等下我把地点发过去，我们就在那碰头哦！老师！
+    MessageEN: I'll see you out on the street, Sensei!
+    MessageTH: เจอกันที่ถนนข้างนอกนะคุณครู!
+    MessageTW: 那我晚點發地點給你，在那裡碰面吧！老師！
+  - MessageGroupId: 130110190
+    Id: 130110310
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130115
+    NextGroupId: 130110200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시뮬레이션을……. 시뮬레이션……?
+    MessageJP: シミュレーションをシミュレーション……？
+    MessageCN: 模拟模拟……？
+    MessageEN: A simulation...of a simulation...?
+    MessageTH: จำลองสถานการณ์... เกมจีบสาว...?
+    MessageTW: 模擬戀愛模擬……？
+  - MessageGroupId: 130110200
+    Id: 130110320
+    CharacterId: 13011
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 130110190
+    PreConditionFavorScheduleId: 130115
+    FavorScheduleId: 0
+    NextGroupId: 130110210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오, 오늘 즐거웠어……
+    MessageJP: 先生、その……今日、楽しかった。ありがと
+    MessageCN: 老师，那个……今天，我很开心。谢谢
+    MessageEN: Today was fun, Sensei...
+    MessageTH: คุณครู วะ... วันนี้สนุกมากเลยล่ะ...
+    MessageTW: 老師，那個……今天很開心。謝謝
+  - MessageGroupId: 130110210
+    Id: 130110330
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 나도 즐거웠어.
+    MessageJP: うん、私も楽しかったよ
+    MessageCN: 嗯，我也很开心哦
+    MessageEN: I had fun too.
+    MessageTH: อื้ม ครูก็สนุกมากเลย
+    MessageTW: 嗯，我也很開心
+  - MessageGroupId: 130110220
+    Id: 130110340
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 다행이다……
+    MessageJP: そ、それは良かった
+    MessageCN: 那、那太好了
+    MessageEN: That's good to hear...
+    MessageTH: ดีจังเลยนะ
+    MessageTW: 那，那真是太好了
+  - MessageGroupId: 130110220
+    Id: 130110350
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만, 오늘 일은 그, 다른 사람들한텐 비밀이야!
+    MessageJP: でも、今日のことはその、他の人には秘密だよ！
+    MessageCN: 但是，今天的事，那个，要对别人保密哦！
+    MessageEN: We can't tell anyone what we did today!
+    MessageTH: 'แต่เรื่องที่เกิดในวันนี้ต้องเก็บเป็น
+
+      ความลับนะ!'
+    MessageTW: 但是，今天的事要和別人保密唷！
+  - MessageGroupId: 130110220
+    Id: 130110360
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 특히 미도리한테는 더욱더!
+    MessageJP: 特にミドリとかには絶対言わないで！
+    MessageCN: 特别不要对绿提起！
+    MessageEN: Especially not Midori!
+    MessageTH: โดยเฉพาะกับมิโดริ ห้ามบอกเด็ดขาด!
+    MessageTW: 特別是不能對綠說！
+  - MessageGroupId: 130110230
+    Id: 130110370
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 굳이 그럴 것까지는……
+    MessageJP: どうしてそこまで？だって確か最初はゲーム開発部で……
+    MessageCN: 为什么要做到这种程度呢？一开始桃井确实是为了游戏开发部才……
+    MessageEN: Huh? But why...
+    MessageTH: หืม? ต้องเป็นความลับเหรอ?
+    MessageTW: 為什麼要到那種程度？一開始確實是為了遊戲開發部才……
+  - MessageGroupId: 130110240
+    Id: 130110380
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부끄러우니까. 비밀!
+    MessageJP: ダメ！絶対に秘密！！
+    MessageCN: 不行！绝对要保密！！
+    MessageEN: Because it's embarrassing! It's a secret!
+    MessageTH: ก็ฉันอายนี่นา ห้ามบอกใครล่ะ!
+    MessageTW: 不行！絕對要保密！！
+  - MessageGroupId: 130110250
+    Id: 130110390
+    CharacterId: 13011
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 130110240
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 선생님!
+    MessageJP: 先生先生！
+    MessageCN: 老师老师！
+    MessageEN: Sensei, Sensei!
+    MessageTH: คุณครู... คุณครู!
+    MessageTW: 老師老師！
+  - MessageGroupId: 130110260
+    Id: 130110400
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응! 모모이모모이!
+    MessageJP: モモイが現れた！
+    MessageCN: 桃井出现了！
+    MessageEN: Yes! Momoi! Momoi!
+    MessageTH: อื้ม! ว่าไงโมโมอิ!
+    MessageTW: 桃井出現了！
+  - MessageGroupId: 130110260
+    Id: 130110410
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 왜 그래?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: What's wrong?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: 怎麼了？
+  - MessageGroupId: 130110270
+    Id: 130110420
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하루하바라에서 커다란 이벤트가 있대!
+    MessageJP: 今度、春葉原ですっごく大きなイベントがあるんだって！
+    MessageCN: 听说这次，春叶原开展了很大型的活动！
+    MessageEN: There's a big event going on at Haru Habara!
+    MessageTH: วันนี้มีงานอีเว้นท์ใหญ่ที่ฮารุฮาบะระล่ะ!
+    MessageTW: 聽說這次在春葉原有非常大的活動！
+  - MessageGroupId: 130110270
+    Id: 130110430
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110280
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무려 울트라 마린 시스터즈 40주년 스탬프 랠리가……!
+    MessageJP: なんと、ウルトラマリンシスターズ40周年スタンプラリー！
+    MessageCN: 竟然，有奥特玛琳姐妹40周年的集章拉力赛！
+    MessageEN:
+      There's a stamp rally going on for the Ultra Marine Sisters' fortieth
+      anniversary!
+    MessageTH: 'แสตมป์แรลลี่ครบรอบ 40 ปี อัลตร้า
+
+      มารีนซิสเตอร์!'
+    MessageTW: 竟然有究極瑪琳姊妹40週年集章活動！
+  - MessageGroupId: 130110280
+    Id: 130110440
+    CharacterId: 13011
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……스탬프 랠리?
+    MessageJP: スタンプラリー？
+    MessageCN: 集章拉力？
+    MessageEN: '...A stamp rally?'
+    MessageTH: แสตมป์แรลลี่เหรอ?
+    MessageTW: 集章活動？
+  - MessageGroupId: 130110290
+    Id: 130110450
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110300
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 스탬프를 전부 모으면 특제 굿즈가 선물로 나온다고 하니
+    MessageJP: スタンプを全部集めたら、プレゼントとして限定グッズを貰えるみたいなの
+    MessageCN: 收集到所有印章的话，就能拿到限定周边的奖品
+    MessageEN: If you get all the stamps, you can get special items!
+    MessageTH: 'เห็นว่าถ้าสะสมแสตมป์ครบ จะแจก
+
+      ของขวัญพิเศษด้วย'
+    MessageTW: 收集所有印章的話，就能拿到限定商品作為獎品
+  - MessageGroupId: 130110290
+    Id: 130110460
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130110300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이건 놓칠 수 없어!
+    MessageJP: これは見逃せない……！
+    MessageCN: 这可不能错过……！
+    MessageEN: We can't miss this!
+    MessageTH: เราจะพลาดไม่ได้เด็ดขาด!
+    MessageTW: 這可不能錯過……！
+  - MessageGroupId: 130110300
+    Id: 130110470
+    CharacterId: 13011
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130116
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알았지, 선생님?!
+    MessageJP: 一緒に行こ、先生！！
+    MessageCN: 我们一起去吧，老师！！
+    MessageEN: Okay, Sensei?
+    MessageTH: พร้อมลุยนะคุณครู?!
+    MessageTW: 一起去吧，老師！！

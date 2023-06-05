@@ -1,0 +1,850 @@
+CharacterId: 20023
+translator: ARUKU
+title:
+  - GroupId: 2002302
+    FavorScheduleId: 200232
+    CharacterId: 20023
+    TextJp: 局長の噂
+    TextCn: 局长的传闻
+    TextKr: 그 국장의 소문
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002303
+    FavorScheduleId: 200233
+    CharacterId: 20023
+    TextJp: 張り込みの定番
+    TextCn: 惯例的盯梢
+    TextKr: 그 국장의 업무
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002305
+    FavorScheduleId: 200235
+    CharacterId: 20023
+    TextJp: 一人、一休み
+    TextCn: 一个人，休息片刻
+    TextKr: 그 국장의 휴식
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002306
+    FavorScheduleId: 200236
+    CharacterId: 20023
+    TextJp: もう一つの道
+    TextCn: 另一条道路
+    TextKr: 그 국장의 꿈
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200230010
+    Id: 200230010
+    CharacterId: 20023
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 발키리 경찰학교 공안국의 국장, 오가타 칸나입니다.
+    MessageJP: ヴァルキューレ警察学校、公安局局長の尾刃カンナです
+    MessageCN: 我是瓦尔基里警察学校的公安局局长，尾刃康娜
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230020
+    Id: 200230020
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230030
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내일 10시 30분, 샬레의 사무실을 방문하도록 하겠습니다.
+    MessageJP: 明日の10時30分頃、シャーレの執務室を訪問させていただきます
+    MessageCN: 明天10点30分左右，我会访问夏莱的办公室。
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230030
+    Id: 200230030
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 드디어 올 것이 왔나……
+    MessageJP: ついにこの時が……
+    MessageCN: 这一天终究还是来了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230030
+    Id: 200230040
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 난 아무런 잘못도 하지 않았어!
+    MessageJP: 濡れ衣です！
+    MessageCN: 冤枉啊！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230040
+    Id: 200230050
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……그게 무슨 말씀이신지?
+    MessageJP: ……どういうことでしょうか？
+    MessageCN: ……老师这是什么意思？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230050
+    Id: 200230060
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전에 말씀드린 것처럼 샬레의 당번 업무 차 방문 예정입니다만.
+    MessageJP: 以前お約束した、シャーレの当番の話ですが……
+    MessageCN: 我说的是之前说好让我去夏莱值日的事……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230050
+    Id: 200230070
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹 내일 방문하면 곤란한 일이라도 있으신지요.
+    MessageJP: 何か困るようなことでも？
+    MessageCN: 老师那边有什么地方不方便吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230060
+    Id: 200230080
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 당번 업무 때문이었구나……
+    MessageJP: ああ、当番のことね……
+    MessageCN: 啊啊，是值日的事情啊……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230060
+    Id: 200230090
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 아무 문제도 없어.
+    MessageJP: 何も問題ないよ、大丈夫
+    MessageCN: 没什么没什么，没关系
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230070
+    Id: 200230100
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 다행입니다.
+    MessageJP: でしたら良かったのですが……
+    MessageCN: 要真是这样就好了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230080
+    Id: 200230110
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200232
+    NextGroupId: 200230090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 내일, 말씀드린 시각에 찾아 뵙겠습니다.
+    MessageJP: それでは明日、先ほどお伝えした時刻に伺います
+    MessageCN: 那么明天，我会在刚才告知的时间来访
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230090
+    Id: 200230120
+    CharacterId: 20023
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200230080
+    PreConditionFavorScheduleId: 200232
+    FavorScheduleId: 0
+    NextGroupId: 200230100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 늦은 시간에 죄송합니다, 선생님.
+    MessageJP: 先生、夜分遅くに失礼いたします
+    MessageCN: 老师，不好意思这么晚了来打搅您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230100
+    Id: 200230130
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 발키리 경찰학교의 오가타 칸나입니다.
+    MessageJP: ヴァルキューレ警察学校の尾刃カンナです
+    MessageCN: 我是瓦尔基里警察学校的尾刃康娜
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230110
+    Id: 200230140
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 康娜有什么事吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230120
+    Id: 200230150
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 괜찮으시다면
+    MessageJP: こちらの勝手で申し訳ありませんが……
+    MessageCN: 虽然很抱歉是我自作主张……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230120
+    Id: 200230160
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음주 당번 일정을 조금 변경하고자 합니다
+    MessageJP: 来週の当番、日程を変更しても良いですか？
+    MessageCN: 下周我在夏莱的值日可以改一下安排吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230130
+    Id: 200230170
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일정 변경은 문제 없지만……
+    MessageJP: それくらい問題ないよ
+    MessageCN: 这种事情当然没问题啦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230130
+    Id: 200230180
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 문제라도 있어?
+    MessageJP: 何かトラブル？
+    MessageCN: 康娜那边出什么问题了？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230140
+    Id: 200230190
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230150
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게 경비국의 머저리들이
+    MessageJP: また警備局のバカ共が……
+    MessageCN: 又是警备局那群笨蛋……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230150
+    Id: 200230200
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니
+    MessageJP: いえ
+    MessageCN: 没什么
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230160
+    Id: 200230210
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 실례했습니다
+    MessageJP: 忘れてください
+    MessageCN: 请老师忘了吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230170
+    Id: 200230220
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230180
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 경찰학교에 처리해야할 긴급한 문제가 생겨 외근을 해야 할 것 같습니다.
+    MessageJP: 緊急の要請が来たため、私も作戦に加わることになりまして
+    MessageCN: 因为我收到了紧急请求，所以也要参加作战
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230180
+    Id: 200230230
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 고생이 많네……
+    MessageJP: 大変だね……
+    MessageCN: 康娜还真是不容易啊……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230190
+    Id: 200230240
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아닙니다. 발키리 경찰학교의 간부로서 당연히 수행해야 할 업무인걸요.
+    MessageJP: これも公安局局長としての務めですので
+    MessageCN: 这也是我作为公安局局长的职责所在
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230200
+    Id: 200230250
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 변경된 일정은 메일을 통해 따로 고지드리겠습니다.
+    MessageJP: それでは、当番の日程は、別途メールで連絡いたします
+    MessageCN: 那么，我值日的日程安排就另行邮件联络了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230200
+    Id: 200230260
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200233
+    NextGroupId: 200230210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 먼저 말을 줄이겠습니다. 편안한 하루 되십시오.
+    MessageJP: 事件のことは気にせず、先生はお休みになってください
+    MessageCN: 老师不用太在意发生了什么事，请早点休息吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230210
+    Id: 200230270
+    CharacterId: 20023
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200230200
+    PreConditionFavorScheduleId: 200233
+    FavorScheduleId: 0
+    NextGroupId: 200230220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 발키리 경찰학교의 구내 식당은 가격이 저렴하고 반찬이 다양하긴 하지만
+    MessageJP: ヴァルキューレ警察学校の食堂は安価でメニューも豊富ですが
+    MessageCN: 虽说瓦尔基里警察学校的食堂既便宜，菜品也很丰富
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230220
+    Id: 200230280
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 배식 시간이 짧은 게 단점이군요.
+    MessageJP: 開いている時間が限られています
+    MessageCN: 但是只在限定时间开放
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230230
+    Id: 200230290
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 업무에 집중하고 있다 보면 배식 시간을 놓치는 일이 잦은지라
+    MessageJP: 仕事に集中していると、すでに閉まっていることも多いので
+    MessageCN: 经常出现我工作过于集中，等去食堂的时候那边已经关门的情况
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230230
+    Id: 200230300
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 종종 식사를 거르게 됩니다
+    MessageJP: しばしば食事を抜くことも……
+    MessageCN: 经常吃不上饭……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230240
+    Id: 200230310
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 구내 식당 밖에서 음식을 사 먹으면 안 되는 거야?
+    MessageJP: 外で食べるのはダメなの？
+    MessageCN: 规定不允许在外面吃吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230250
+    Id: 200230320
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 그런 규칙은 없습니다만……
+    MessageJP: いえ、そんな規則はありませんが……
+    MessageCN: 不，倒也没有这种规定……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230250
+    Id: 200230330
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200235
+    NextGroupId: 200230260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩐지 밖에서 식사를 하는 것은 꺼려져서요.
+    MessageJP: 仕事があるのに外で食事をするのは、少し気が引けるので
+    MessageCN: 但是明明工作还没做完却跑到外面吃饭，我还是有点过意不去
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230260
+    Id: 200230340
+    CharacterId: 20023
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200230250
+    PreConditionFavorScheduleId: 200235
+    FavorScheduleId: 0
+    NextGroupId: 200230270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고보니 생활안전국에는
+    MessageJP: そういえば、生活安全局には
+    MessageCN: 话说回来，生活安全局里
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230270
+    Id: 200230350
+    CharacterId: 20023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230280
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 경비국이나 수사국 전과를 희망하는 학생들이 제법 있던 모양이더군요
+    MessageJP: 警備局や捜査局に転科を希望する生徒が、それなりにいるようです
+    MessageCN: 好像有不少希望转去警备科或者搜查科的学生
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230280
+    Id: 200230360
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제법 있었지.
+    MessageJP: 聞いたことあるかも
+    MessageCN: 我应该也略有耳闻
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230280
+    Id: 200230370
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 많았었던가……?
+    MessageJP: 多いかな……？
+    MessageCN: 有很多吗……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230290
+    Id: 200230380
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고보니 칸나는 처음부터 공안국을 지망했던 거야?
+    MessageJP: そういうカンナは、最初から公安局志望だったの？
+    MessageCN: 康娜是一开始就想进公安局吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230300
+    Id: 200230390
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저 말씀이십니까?
+    MessageJP: 私ですか？
+    MessageCN: 我吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230310
+    Id: 200230400
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230320
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제 경우는
+    MessageJP: 私の場合
+    MessageCN: 我嘛
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230310
+    Id: 200230410
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 1학년 때는 생활안전국을 지망했습니다만
+    MessageJP: 1年生の時に生活安全局を志望しましたが……
+    MessageCN: 虽然一年级的时候想进生活安全局……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230320
+    Id: 200230420
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230330
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 얼굴로 민원 처리는 어려울 거라는 이야기를 들어서
+    MessageJP: その顔で市民の窓口に立つような仕事は難しいと言われ……
+    MessageCN: 但有人说我这长相很难站到接待市民的窗口前面……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230330
+    Id: 200230430
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음……
+    MessageJP: 結構な……
+    MessageCN: 还真是……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230340
+    Id: 200230440
+    CharacterId: 20023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200230350
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭔가 하실 말씀이라도?
+    MessageJP: 何か言いたいことでも？
+    MessageCN: 老师想说什么？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200230350
+    Id: 200230450
+    CharacterId: 20023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200236
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무것도 아니야!
+    MessageJP: いやっ、何でもないよ！
+    MessageCN: 没，什么也没有！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

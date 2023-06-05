@@ -1,0 +1,1068 @@
+CharacterId: 16007
+translator: 罐子
+title:
+  - GroupId: 1600702
+    FavorScheduleId: 160072
+    CharacterId: 16007
+    TextJp: 嘘と誤解
+    TextCn: 谎言与误解
+    TextKr: 오해와 거짓말
+    TextEn: Misunderstandings and Lies
+    TextTh: เรื่องเข้าใจผิดกับคำโกหก
+    TextTw: 謊言和誤解
+  - GroupId: 1600703
+    FavorScheduleId: 160073
+    CharacterId: 16007
+    TextJp: 合間合間に休憩を
+    TextCn: 间歇休息
+    TextKr: 노동은 휴식을 즐긴다
+    TextEn: Work Begets Enjoyable Rest
+    TextTh: วันพักผ่อนหรรษาของคนทำงาน
+    TextTw: 斷斷續續的休息
+  - GroupId: 1600705
+    FavorScheduleId: 160075
+    CharacterId: 16007
+    TextJp: 雪の中で
+    TextCn: 于白雪之中
+    TextKr: 눈 속의 연설
+    TextEn: A Speech in the Snow
+    TextTh: คำปราศรัยท่ามกลางหิมะ
+    TextTw: 於雪中
+  - GroupId: 1600706
+    FavorScheduleId: 160076
+    CharacterId: 16007
+    TextJp: 失敗などしてませんし、記録にもありません
+    TextCn: 没有失败，也没有记录
+    TextKr: 실패한 기록은 말살해야 한다
+    TextEn: Failure Must Be Eradicated
+    TextTh: บันทึกความล้มเหลวต้องถูกลบหายไป
+    TextTw: 並沒有失敗，也沒有記錄
+  - GroupId: 1600708
+    FavorScheduleId: 160078
+    CharacterId: 16007
+    TextJp: 微妙な嘘は、ほとんど誤りに近い
+    TextCn: 微妙的谎言，几乎等同于错误
+    TextKr: 미묘한 거짓말은 실수에 가깝다
+    TextEn: Fibs Are More like Mistakes Than Lies
+    TextTh: คำพูดหลอกลวงเล็กๆ คือความผิดพลาด
+    TextTw: 錯誤和謊言並無太大差異
+content:
+  - MessageGroupId: 160070010
+    Id: 160070010
+    CharacterId: 16007
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요, 선생님.
+    MessageJP: 先生、こんにちは
+    MessageCN: 老师，您好
+    MessageEN: Hello, Sensei.
+    MessageTH: สวัสดีค่ะคุณครู
+    MessageTW: 老師，您好
+  - MessageGroupId: 160070020
+    Id: 160070020
+    CharacterId: 16007
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 실례가 되지 않는다면 오후에 잠깐 시간을 내어주실 수 있으신가요?
+    MessageJP: もしよろしければ今日の午後、少々お時間を頂けませんでしょうか？
+    MessageCN: 如果可以的话今天的下午，能借用你一点时间吗？
+    MessageEN: If it's not too much trouble, could you spare some time in the afternoon?
+    MessageTH: 'คือว่าถ้าไม่เป็นการเสียมารยาท
+
+      ฉันจะขอรบกวนเวลาช่วงบ่าย
+
+      ของคุณครูสักหน่อยได้ไหมคะ'
+    MessageTW: 可以的話，今天下午方便占用您一點時間嗎？
+  - MessageGroupId: 160070030
+    Id: 160070030
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 무슨 일이야?
+    MessageJP: うん、良いよ。何かあったの？
+    MessageCN: 嗯，可以啊。巴有什么事吗？
+    MessageEN: Sure. What's going on?
+    MessageTH: ได้อยู่แล้ว มีอะไรเหรอ?
+    MessageTW: 嗯，好啊。發生了什麼事嗎？
+  - MessageGroupId: 160070040
+    Id: 160070040
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 붉은겨울 사무국의 업무에 필요한 물건을 구입하기 위해 샬레 근처의 상점가를 방문하려 했는데……
+    MessageJP: 実は事務局の備品補充のため、シャーレ付近にある商店街へ向かう予定なのですが……
+    MessageCN: 其实，为了补充事务局的备用品，我打算去夏莱附近的商店街……
+    MessageEN:
+      I have to visit the shopping district near Schale to buy things for
+      the Red Winter Office's work, but...
+    MessageTH: 'คือว่าฉันกำลังจะไปซื้อของใช้ที่จำเป็น
+
+      สำหรับภารกิจของสำนักเลขาธิการ
+
+      ที่ใกล้ๆ ชาเล่ต์ค่ะ...'
+    MessageTW: 其實是為了補充事務局的備品，打算去夏萊附近的商店街……
+  - MessageGroupId: 160070050
+    Id: 160070050
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 붉은겨울의 자치구를 벗어나는 건 오랜만이라, 부끄럽게도 이 근처의 길에는 익숙지가 않아서요.
+    MessageJP: お恥ずかしながら学園を離れるのは久しぶりということもあり、特にシャーレ周辺の地理には疎く……
+    MessageCN: 但说来惭愧，我好久没离开学园了，特别对夏莱周边的地理环境比较陌生……
+    MessageEN:
+      It's been a while since I left the Red Winter district, and so I'm
+      embarrassed to admit I'm not used to the roads around here.
+    MessageTH: 'คือว่าฉันไม่ได้ออกมาจากเขตเรดวินเทอร์
+
+      นานแล้ว ฉันเลยไม่ชินกับเส้นทางแถวนี้ค่ะ'
+    MessageTW: 說來慚愧，我實在很久沒有離開學園了，對夏萊附近的地理環境又特別很陌生……
+  - MessageGroupId: 160070050
+    Id: 160070060
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮으시다면 선생님께서 동행해 주셨으면 합니다.
+    MessageJP: 先生のご都合さえよろしければ、ご同行をお願いできればと
+    MessageCN: 如果老师方便的话，能否与我同行呢
+    MessageEN: If it's okay, I was hoping you could accompany me.
+    MessageTH: 'ถ้าคุณครูสะดวก ฉันจะขอรบกวน
+
+      คุณครูให้ไปด้วยกันหน่อยน่ะค่ะ'
+    MessageTW: 如果老師方便的話，希望能陪我一起去
+  - MessageGroupId: 160070060
+    Id: 160070070
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래.
+    MessageJP: なるほど、任せて
+    MessageCN: 原来如此，交给我吧
+    MessageEN: Of course!
+    MessageTH: ได้สิ
+    MessageTW: 原來如此，交給我吧
+  - MessageGroupId: 160070070
+    Id: 160070080
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 감사합니다, 선생님.
+    MessageJP: ふふっ、ありがとうございます
+    MessageCN: 呵呵，非常感谢
+    MessageEN: Thank you, Sensei.
+    MessageTH: ขอบคุณค่ะ คุณครู
+    MessageTW: 呵呵，非常感謝
+  - MessageGroupId: 160070070
+    Id: 160070090
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160072
+    NextGroupId: 160070080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 오후에 상점가 앞에서 뵙겠습니다.
+    MessageJP: では、商店街の前でお待ちしておりますね
+    MessageCN: 那么，我在商店街前面等着老师
+    MessageEN: Then I'll see you in front of the shopping district in the afternoon.
+    MessageTH: 'ถ้างั้นตอนบ่ายพบกันที่ด้านหน้าย่านการค้า
+
+      นะคะ'
+    MessageTW: 那麼，我在商店街前面等您
+  - MessageGroupId: 160070080
+    Id: 160070100
+    CharacterId: 16007
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 160070070
+    PreConditionFavorScheduleId: 160072
+    FavorScheduleId: 0
+    NextGroupId: 160070090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 늦은 시간에 실례하겠습니다.
+    MessageJP: 先生、遅い時間に失礼いたします
+    MessageCN: 老师，很抱歉这么晚了还来打扰您
+    MessageEN: Sensei, sorry for contacting you at this late hour.
+    MessageTH: 'คุณครูคะ ขออภัยที่ติดต่อ
+
+      มากลางดึกนะคะ'
+    MessageTW: 老師，請原諒我這麼晚了還打擾您
+  - MessageGroupId: 160070090
+    Id: 160070110
+    CharacterId: 16007
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070100
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 붉은겨울 학원과 관련된 샬레의 당번 보고서 처리가 늦어지고 있어서요.
+    MessageJP: 実は当学園に関わる、シャーレの当番についての報告書がまだ届いておらず……
+    MessageCN: 其实我现在还未收到关于本学园在夏莱的值班报告书……
+    MessageEN: It's just that Schale's roster report for Red Winter Academy is late.
+    MessageTH: 'คือว่าการจัดการรายงานการปฏิบัติการ
+
+      ของชาเล่ต์ที่เกี่ยวข้องกับทางสหภาพ
+
+      เรดวินเทอร์ล่าช้าไปมากน่ะค่ะ'
+    MessageTW: 其實是因為我還沒有收到本學園學生，在夏萊值日的相關報告書……
+  - MessageGroupId: 160070090
+    Id: 160070120
+    CharacterId: 16007
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘까지가 기한이었는데, 혹시 잊고 있지는 않으신지요?
+    MessageJP: 本日が期限だったのですが、大丈夫そうでしょうか？
+    MessageCN: 今天就是最后期限了，没问题吗？
+    MessageEN: Today is the deadline. Have you perhaps forgotten about it?
+    MessageTH: 'กำหนดการส่งรายงานคือวันนี้ค่ะ
+
+      คุณครูไม่ได้ลืมใช่ไหมคะ?'
+    MessageTW: 今天是最後期限了，沒關係嗎？
+  - MessageGroupId: 160070100
+    Id: 160070130
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미안, 완전히 잊고 있었어!
+    MessageJP: ごめん、完全に忘れてた……！
+    MessageCN: 抱歉，我完全忘掉了……！
+    MessageEN: Sorry, I completely forgot!
+    MessageTH: ขอโทษนะ! ครูลืมไปสนิทเลย!
+    MessageTW: 抱歉，完全忘記了……！
+  - MessageGroupId: 160070110
+    Id: 160070140
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내일까지 꼭 준비해둘게!
+    MessageJP: 明日までに絶対用意する！
+    MessageCN: 明天之前一定准备好！
+    MessageEN: I'll make sure to get it done by tomorrow!
+    MessageTH: ครูจะทำให้เสร็จภายในพรุ่งนี้นะ!
+    MessageTW: 明天之前一定會準備好！
+  - MessageGroupId: 160070120
+    Id: 160070150
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 너무 서두르지 않으셔도 괜찮답니다.
+    MessageJP: あ、いえいえ。そんなに急がなくても大丈夫ですよ
+    MessageCN: 啊，没关系的。老师不用那么急也没关系的哦
+    MessageEN: Heehee, you don't have to rush it.
+    MessageTH: ฮุฮุ ไม่ต้องรีบร้อนก็ได้นะคะ
+    MessageTW: 啊，不，不。不用那麼急也沒關係
+  - MessageGroupId: 160070120
+    Id: 160070160
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 붉은겨울 학원과 관련된 일이라면 제가 '어떻게든' 미룰 수 있으니까요.
+    MessageJP: レッドウィンターに関することでしたら、私が大抵「何とか」できますので
+    MessageCN: 和红冬相关的事情，我通常都能“想办法”处理的
+    MessageEN:
+      If it's something related to Red Winter Academy, I can somehow put
+      it off.
+    MessageTH:
+      "ถ้าเป็นเรื่องที่เกี่ยวข้องกับสหภาพเรดวินเทอร์\nไม่ว่ายังไงฉันก็สามารถ\
+      \ \"เลื่อน\"\n ออกไปได้ค่ะ"
+    MessageTW: 和赤冬有關的事，我基本上都能「有辦法」處理
+  - MessageGroupId: 160070130
+    Id: 160070170
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160073
+    NextGroupId: 160070140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……더 무서워!
+    MessageJP: ありがたいんだけど、何か怖い……
+    MessageCN: 虽然很感谢，但感觉好可怕……
+    MessageEN: That's scarier!
+    MessageTH: นะ...น่ากลัวสุดๆ!
+    MessageTW: 雖然很感謝，但感覺有些可怕……！
+  - MessageGroupId: 160070140
+    Id: 160070180
+    CharacterId: 16007
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 160070130
+    PreConditionFavorScheduleId: 160073
+    FavorScheduleId: 0
+    NextGroupId: 160070150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근 붉은겨울 학원 곳곳에 체리노 회장을 비방하는 선전물이 자주 보이는 것 같네요.
+    MessageJP: この頃レッドウィンターのあちこちで、チェリノ会長を貶めるような宣伝物が見られるようになりました
+    MessageCN: 这段时间在红冬各处都能看到贬低切里诺会长的宣传物
+    MessageEN:
+      Recently, there seems to be a lot of propaganda slandering President
+      Cherino all over Red Winter Academy.
+    MessageTH: 'เมื่อไม่นานมานี้ เหมือนว่าจะมีพวกสื่อ
+
+      โฆษณาชวนเชื่อเขียนเรื่องใส่ร้ายประธาน
+
+      กระจายไปทั่วสหภาพเรดวินเทอร์เลยค่ะ'
+    MessageTW: 最近在赤冬的各處，都能看到貶低潔莉諾會長的宣傳品
+  - MessageGroupId: 160070150
+    Id: 160070190
+    CharacterId: 16007
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……아무래도 <정기 순회 연설>을 나가야 할 때가 돌아온 것 같습니다.
+    MessageJP: どうやら、定期演説の巡回に出る時が来たようですね
+    MessageCN: 看来，到了定期巡回演讲的时候了呢
+    MessageEN: I think it's time to go on the Periodic Speech Tour.
+    MessageTH: 'ดูเหมือนคงจะถึงเวลาที่จะจัด
+
+      <การปราศรัยทั่วไปสัญจร> แล้วค่ะ'
+    MessageTW: 看來，是時候去定期巡迴演講了
+  - MessageGroupId: 160070160
+    Id: 160070200
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정기 순회 연설?
+    MessageJP: 定期演説……？
+    MessageCN: 定期演讲……？
+    MessageEN: Periodic Speech Tour?
+    MessageTH: การปราศรัยทั่วไปสัญจร?
+    MessageTW: 定期演講……？
+  - MessageGroupId: 160070170
+    Id: 160070210
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저희 학원의 순회 연설에 관심이 있으신가요, 선생님?
+    MessageJP: よろしければ、先生も聞かれますか？
+    MessageCN: 如果老师方便的话，也来听听看吧？
+    MessageEN: Are you interested in our academy's speech tours, Sensei?
+    MessageTH: 'คุณครูสนใจการปราศรัยทั่วไป
+
+      สัญจรของโรงเรียนเราเหรอคะ?'
+    MessageTW: 方便的話，老師要來聽嗎？
+  - MessageGroupId: 160070180
+    Id: 160070220
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 붉은겨울 학원의 순회 연설이란, 자치구의 곳곳을 순회하며 연설을 통해 체리노 회장님의 위대함을 널리 알리는— 일종의 행사랍니다.
+    MessageJP: レッドウィンター連邦学園におけるあちこちの自治区を巡回し、演説を通じてチェリノ会長の偉大さをあらためて伝えるというイベントなんです
+    MessageCN: 巡回演讲，就是在红冬联邦学园各个自治区进行巡回，通过演讲来再次宣传切里诺会长伟大之处的活动
+    MessageEN:
+      The Red Winter Academy's speech tour is an event where President Cherino
+      spreads her greatness by touring different parts of the district and giving
+      speeches.
+    MessageTH: 'การกล่าวปราศรัยของสหภาพ
+
+      เป็นกิจกรรมที่ช่วยเผยแพร่ความ
+
+      ยิ่งใหญ่ของท่านประธานค่ะ'
+    MessageTW: 在赤冬聯邦學園的各個自治區巡迴，透過演講重申潔利諾會長的偉大
+  - MessageGroupId: 160070180
+    Id: 160070230
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다만 자치구가 넓은 탓에 학원 전역을 순회하려면 꽤 오랜 시간이 걸리지만요.
+    MessageJP: ご存じの通り自治区がかなり広いせいで、全域に行こうとするとかなり時間はかかるのですが……
+    MessageCN: 但如您所知，自治区相当广阔，想要到所有自治区进行演讲的话相当耗时……
+    MessageEN:
+      However, it does take a while to tour the entire academy since the
+      district is so large.
+    MessageTH: 'แต่ว่าเขตปกครองของเรามีขนาดใหญ่
+
+      ดังนั้นถ้าจะไปให้ทั่วสหภาพล่ะก็
+
+      คงต้องใช้เวลาสัญจรนานมากค่ะ'
+    MessageTW: 但如您所知，由於自治區過於龐大，要巡過所有區域會花相當長的時間……
+  - MessageGroupId: 160070190
+    Id: 160070240
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께서도 괜찮으시다면 이번 순회 연설에 함께 참여하시겠어요?
+    MessageJP: いかがです？参加されませんか？
+    MessageCN: 怎么样？老师要参加吗？
+    MessageEN: Would you like to join us on the upcoming speech tour, Sensei?
+    MessageTH: 'ถ้าคุณครูสะดวกล่ะก็ สนใจเข้าร่วม
+
+      การปราศรัยทั่วไปสัญจรครั้งนี้ไหมคะ?'
+    MessageTW: 如何？要參加嗎？
+  - MessageGroupId: 160070200
+    Id: 160070250
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 괜찮은데…….
+    MessageJP: どうしよっかな……
+    MessageCN: 那怎么办呢……
+    MessageEN: I'm fine...
+    MessageTH: ครูสะดวกอยู่แล้วล่ะแต่ว่า...
+    MessageTW: 怎麼辦呢……
+  - MessageGroupId: 160070210
+    Id: 160070260
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 부디 와주셨으면 합니다.
+    MessageJP: ……いえ、聞き方を変えましょう。ぜひ来てください
+    MessageCN: ……不，让我来换个问法吧。请老师务必来听听
+    MessageEN: No, I insist.
+    MessageTH: ไม่ค่ะ ได้โปรดมาร่วมงานด้วยนะคะ
+    MessageTW: ……不，換個問法吧。請務必要來
+  - MessageGroupId: 160070210
+    Id: 160070270
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께도 들려드리고 싶은 체리노 회장님의 멋진 에피소드가 아직 잔뜩 남아 있거든요!
+    MessageJP: 先生にお聞かせしたい会長のエピソードは、まだまだ山ほど残っていますので！
+    MessageCN: 我想讲给老师听的会长的故事，依然堆积如山！
+    MessageEN:
+      I still have many wonderful stories about President Cherino I would
+      love to share with you!
+    MessageTH: 'ยังมีเรื่องที่ยอดเยี่ยมของท่านประธาน
+
+      เชริโน่มากมายที่ฉันอยากให้คุณครูฟังค่ะ!'
+    MessageTW: 因為還有很多很多有關會長的小趣事想讓老師聽！
+  - MessageGroupId: 160070220
+    Id: 160070280
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160075
+    NextGroupId: 160070230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 강제 참여냐!
+    MessageJP: なるほど、強制参加だこれ！
+    MessageCN: 原来如此，是要我强制参加对吧！
+    MessageEN: Am I being forced to participate?!
+    MessageTH: บังคับเข้างั้นเรอะ!
+    MessageTW: 原來如此，這是強迫參加！
+  - MessageGroupId: 160070230
+    Id: 160070290
+    CharacterId: 16007
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 160070220
+    PreConditionFavorScheduleId: 160075
+    FavorScheduleId: 0
+    NextGroupId: 160070240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 지금 혹시 바쁘신가요?
+    MessageJP: 先生、今はお忙しいでしょうか？
+    MessageCN: 老师，您现在忙吗？
+    MessageEN: Sensei, are you busy right now?
+    MessageTH: 'คุณครูคะ ไม่ทราบว่าตอนนี้
+
+      ยุ่งอยู่หรือเปล่าคะ?'
+    MessageTW: 老師，您現在忙嗎？
+  - MessageGroupId: 160070240
+    Id: 160070300
+    CharacterId: 16007
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 급히 선생님의 도움이 필요한 일이 있습니다.
+    MessageJP: 突然のお願いで恐縮ですが、手伝っていただきたいことがあり……
+    MessageCN: 很抱歉突然向老师提出请求，但我有件事想请您帮忙……
+    MessageEN: There's something urgent I need your help with.
+    MessageTH: คือว่าฉันมีเรื่องที่อยากให้คุณครูช่วยค่ะ
+    MessageTW: 很抱歉突然提出請求，但有件事想請您幫忙……
+  - MessageGroupId: 160070250
+    Id: 160070310
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 괜찮아.
+    MessageJP: うん、大丈夫だよ
+    MessageCN: 嗯，没问题哦
+    MessageEN: Yeah, sure.
+    MessageTH: อื้อ ได้อยู่แล้ว
+    MessageTW: 嗯，沒問題唷
+  - MessageGroupId: 160070250
+    Id: 160070320
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일이야?
+    MessageJP: 任せて、どんな内容？
+    MessageCN: 交给我吧，是什么内容？
+    MessageEN: What's going on?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 交給我，什麼內容？
+  - MessageGroupId: 160070260
+    Id: 160070330
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게, 체리노 회장님이 이번에 새로 내주신 과제가 너무 어려워서…….
+    MessageJP: 実は、チェリノ会長に関することで少々悩んでおりまして……
+    MessageCN: 其实，我有些和切里诺会长有关的烦恼……
+    MessageEN: Well, the new assignment from President Cherino is too difficult.
+    MessageTH: 'คือว่าภารกิจใหม่ที่ท่านประธาน
+
+      มอบหมายให้คราวนี้มันยากเกินไป...'
+    MessageTW: 其實，我在煩惱一件和潔莉諾會長有關的事……
+  - MessageGroupId: 160070260
+    Id: 160070340
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070270
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……어쩌면 숙청을 당할지도 모르겠습니다.
+    MessageJP: このままでは、粛清されてしまう可能性も……
+    MessageCN: 这样下去的话，也有可能会被肃清……
+    MessageEN: '...I just might get purged.'
+    MessageTH: ถึงขั้นว่าอาจจะโดนกวาดล้างได้เลยค่ะ
+    MessageTW: 這樣下去，有可能被肅清……
+  - MessageGroupId: 160070270
+    Id: 160070350
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……나는 빠지면 안 될까?
+    MessageJP: 何だか嫌な気配が……
+    MessageCN: 总觉得有种不好的预感……
+    MessageEN: '...Can you keep me out of it?'
+    MessageTH: ครูขอไม่ยุ่งได้ไหม?
+    MessageTW: 總覺得有不好的預感……
+  - MessageGroupId: 160070280
+    Id: 160070360
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안 됩니다! 이야기를 듣고 도망치려 하시다니…….
+    MessageJP: ここまで聞いておいて、逃げるのは無しですよ！
+    MessageCN: 既然听到这里，老师可逃不掉了哦！
+    MessageEN: No! I can't believe you're trying to run away after hearing this...
+    MessageTH: 'ไม่ได้ค่ะ! พอฟังแล้วก็คิดจะ
+
+      หนีเลยเหรอคะ...'
+    MessageTW: 都聽到這裡了，可不能逃跑唷！
+  - MessageGroupId: 160070280
+    Id: 160070370
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제가 만약 숙청당하게 된다면, 제 배후에 선생님이 있었다고 증언할 테니까요!
+    MessageJP: もし私が粛清されることになったら、必ずや先生も道連れにしますからね！
+    MessageCN: 如果我被肃清了的话，肯定也会带上老师一块上路的！
+    MessageEN: If I get purged, I'll testify that you were the one behind me, Sensei!
+    MessageTH: 'ถ้าฉันจะต้องถูกกวาดล้างขึ้นมา
+
+      ฉันจะซักทอดว่าคุณครูเป็นผู้ที่
+
+      อยู่เบื้องหลังฉันค่ะ!'
+    MessageTW: 如果我被肅清的話，絕對會帶上老師的！
+  - MessageGroupId: 160070290
+    Id: 160070380
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160076
+    NextGroupId: 160070300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무서워!
+    MessageJP: 覚悟が怖すぎる！
+    MessageCN: 好可怕的觉悟！
+    MessageEN: How scary!
+    MessageTH: น่ากลัว!
+    MessageTW: 好可怕的覺悟！
+  - MessageGroupId: 160070300
+    Id: 160070390
+    CharacterId: 16007
+    MessageCondition: FavorRankUp
+    ConditionValue: 8
+    PreConditionGroupId: 160070290
+    PreConditionFavorScheduleId: 160076
+    FavorScheduleId: 0
+    NextGroupId: 160070310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께서는 어떤 영화를 좋아하시나요?
+    MessageJP: 急なのですが、先生はどんな映画がお好きですか？
+    MessageCN: 虽然这么问很突然，但是老师喜欢看什么样的电影？
+    MessageEN: What kind of movies do you like, Sensei?
+    MessageTH: คุณครูชอบดูหนังประเภทไหนเหรอคะ?
+    MessageTW: 冒昧問一下，老師喜歡什麼樣的電影呢？
+  - MessageGroupId: 160070310
+    Id: 160070400
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잔잔한 인디 영화를 좋아해.
+    MessageJP: インディーズ映画とかかな
+    MessageCN: 独立电影吧
+    MessageEN: I like mellow indie movies.
+    MessageTH: ครูชอบหนังอินดี้แบบเงียบๆ
+    MessageTW: 獨立電影吧
+  - MessageGroupId: 160070310
+    Id: 160070410
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 화려한 블록버스터 영화를 좋아해.
+    MessageJP: ブロックバスター！
+    MessageCN: 我喜欢大制作！
+    MessageEN: I like flashy blockbuster movies.
+    MessageTH: ครูชอบหนังบล็อกบลัสเตอร์สนุกๆ
+    MessageTW: 強檔大片！
+  - MessageGroupId: 160070320
+    Id: 160070420
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇군요. 후후, 선생님다운 취향이시네요.
+    MessageJP: なるほど。最初は意外に思いましたが、よく考えると先生らしい好みですね
+    MessageCN: 原来如此。一开始还有些意外，但仔细想想确实很符合老师的喜好呢
+    MessageEN: Haha, I see. It's what I expected from you, Sensei.
+    MessageTH: งั้นเหรอคะ ฮุฮุ สมกับเป็นคุณครูเลยนะคะ
+    MessageTW: 原來如此。一開始覺得意外，但仔細想想，很像是老師的喜好
+  - MessageGroupId: 160070330
+    Id: 160070430
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 토모에가 제일 좋아하는 영화는 뭐야?
+    MessageJP: トモエは？どんな映画が一番好き？
+    MessageCN: 巴呢？巴最喜欢哪部电影？
+    MessageEN: What is your favorite movie, Tomoe?
+    MessageTH: 'แล้วโทโมเอะชอบหนังเรื่อง
+
+      อะไรที่สุดเหรอ?'
+    MessageTW: 智惠呢？最喜歡什麼電影？
+  - MessageGroupId: 160070340
+    Id: 160070440
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제가 제일 좋아하는 영화요?
+    MessageJP: 私の一番好きな映画、ですか？
+    MessageCN: 我最喜欢的电影吗？
+    MessageEN: My favorite movie?
+    MessageTH: หนังที่ฉันชอบที่สุดงั้นเหรอคะ?
+    MessageTW: 我最喜歡的電影嗎？
+  - MessageGroupId: 160070350
+    Id: 160070450
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070360
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는……
+    MessageJP: 私は……
+    MessageCN: 我的话……
+    MessageEN: I...
+    MessageTH: ฉัน...
+    MessageTW: 我……
+  - MessageGroupId: 160070350
+    Id: 160070460
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: <위대한 수염의 행적>이라는 영화를 제일 좋아한답니다.
+    MessageJP: 『偉大なる髭の日常』、でしょうか
+    MessageCN: 应该是《伟大胡子的日常》吧
+    MessageEN: My favorite movie is The Achievements of the Great Mustache.
+    MessageTH: ฉันชอบหนังเรื่อง <ผลงานของหนวดผู้ยิ่งใหญ่> ที่สุดเลยค่ะ
+    MessageTW: 應該是《偉大鬍子的日常》吧
+  - MessageGroupId: 160070360
+    Id: 160070470
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070370
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 처음 듣는 영화인데.
+    MessageJP: 初めて聞いたタイトルかも
+    MessageCN: 我好像第一次听说这个片名
+    MessageEN: It's my first time hearing about it.
+    MessageTH: ไม่เคยได้ยินชื่อหนังเลยแฮะ
+    MessageTW: 這可能是我第一次聽到這個片名
+  - MessageGroupId: 160070370
+    Id: 160070480
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그야 당연하지요.
+    MessageJP: はい、それはそうかと
+    MessageCN: 是的，我想也是
+    MessageEN: Well, of course it is.
+    MessageTH: แน่นอนอยู่แล้วค่ะ
+    MessageTW: 是，我想也是
+  - MessageGroupId: 160070380
+    Id: 160070490
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: <위대한 수염의 행적>은 체리노 회장님의 취향과 일상을 다룬 기록 영화로서……
+    MessageJP: 『偉大なる髭の日常』とはチェリノ会長の趣味嗜好や日頃の習慣を描いた……
+    MessageCN: 《伟大胡子的日常》是一部描述了切里诺会长兴趣爱好和日常习惯的……
+    MessageEN:
+      The Achievements of the Great Mustache is a documentary film about
+      the preferences and daily life of President Cherino...
+    MessageTH: 'หนังเรื่อง <ผลงานของหนวดผู้ยิ่งใหญ่>
+
+      เป็นหนังสารคดีเกี่ยวกับความชื่นชอบ
+
+      และชีวิตประจำวันของท่านประธานค่ะ'
+    MessageTW: 《偉大鬍子的日常》描寫了潔莉諾會長的興趣愛好和日常習慣……
+  - MessageGroupId: 160070380
+    Id: 160070500
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070390
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금부터 제가 찍을 예정인 영화니까요!
+    MessageJP: 今から私が撮る予定の、ドキュメンタリー映画ですので！
+    MessageCN: 是我打算现在开始拍摄的，纪录片电影！
+    MessageEN: It's a movie I'm planning to film starting now!
+    MessageTH: 'แล้วก็เป็นหนังที่ฉันกำลังวางแผน
+
+      ที่จะถ่ายทำต่อจากนี้ด้วยค่ะ!'
+    MessageTW: 是一部我打算現在開始拍攝的紀錄片！
+  - MessageGroupId: 160070380
+    Id: 160070510
+    CharacterId: 16007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160070390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 자, 선생님. 위대한 체리노 회장님의 행적을 기록하기 위해 저와 함께해주세요!
+    MessageJP: ということで、先生。共に会長の日常を記録するとしましょう！
+    MessageCN: 所以说，老师。一起来记录会长的日常吧！
+    MessageEN:
+      So come on, Sensei. Join me in documenting the achievements of the
+      great President Cherino!
+    MessageTH: 'คุณครูคะ มาบันทึกผลงานที่ยิ่งใหญ่
+
+      ของท่านประธานร่วมกันกับฉันเถอะค่ะ!'
+    MessageTW: 所以，老師。一起紀錄會長的日常生活吧！
+  - MessageGroupId: 160070390
+    Id: 160070520
+    CharacterId: 16007
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 160078
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번에도 강제 참여야?!
+    MessageJP: あ、今回も強制参加だ！？
+    MessageCN: 啊，这次也是强制参加吗！？
+    MessageEN: Am I being forced to participate again?!
+    MessageTH: บังคับกันอีกแล้วเรอะ?!
+    MessageTW: 啊，這次也是強制參加！？

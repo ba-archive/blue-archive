@@ -1,0 +1,994 @@
+CharacterId: 20019
+translator: 今天早睡了吗
+title:
+  - GroupId: 2001902
+    FavorScheduleId: 200192
+    CharacterId: 20019
+    TextJp: Case1. ウサギですよ？
+    TextCn: Case1. 是兔子哦？
+    TextKr: Case 1. 토끼랍니다?
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2001903
+    FavorScheduleId: 200193
+    CharacterId: 20019
+    TextJp: Case2. ゆっくり休んでください
+    TextCn: Case2. 请好好休息
+    TextKr: Case 2. 편히 쉬세요.
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2001905
+    FavorScheduleId: 200195
+    CharacterId: 20019
+    TextJp: Case3. 勉強の時間ですね？
+    TextCn: Case3. 是学习时间吧？
+    TextKr: Case 3. 공부할 시간이군요?
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2001906
+    FavorScheduleId: 200196
+    CharacterId: 20019
+    TextJp: Case4. 一日秘書、待機中です
+    TextCn: Case4. 一日秘书，待命中
+    TextKr: Case 4. 일일 비서, 대령했습니다.
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200190010
+    Id: 200190010
+    CharacterId: 20019
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요. 주인님.
+    MessageJP: おはようございます、ご主人様
+    MessageCN: 早上好，主人
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190020
+    Id: 200190020
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 메이드는 봉사하는 사람이라고 할 수 있겠죠.
+    MessageJP: メイドとは、奉仕を仕事とする者
+    MessageCN: 女仆，就是将侍奉作为工作的人
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190020
+    Id: 200190030
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 메이드복은 봉사하는 자의 의복일 거고요.
+    MessageJP: ご主人様に仕える者は、メイド服を着る……
+    MessageCN: 作为侍奉主人的人，要穿着女仆装……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190030
+    Id: 200190040
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응…… 그렇겠지?
+    MessageJP: うん……そう、かな？
+    MessageCN: 嗯……是这样，吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190040
+    Id: 200190050
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇게 생각하고 있었습니다만
+    MessageJP: そう思っていたのですが、
+    MessageCN: 虽然我是这么想的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190040
+    Id: 200190060
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근 새로운 깨달음을 얻었습니다.
+    MessageJP: 最近新しい気付きを得たのです
+    MessageCN: 但最近，我有个新发现
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190050
+    Id: 200190070
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부디, 기대해 주세요.
+    MessageJP: どうぞ、楽しみにお待ちくださいね
+    MessageCN: 请您好好期待哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190060
+    Id: 200190080
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어…… 뭐가?
+    MessageJP: う……うん？
+    MessageCN: 嗯……嗯？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190060
+    Id: 200190090
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭔지 모르겠지만 기대됩니다!
+    MessageJP: 楽しみにしておきます？
+    MessageCN: 那我就拭目以待了？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190070
+    Id: 200190100
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간이 괜찮으시다면 제 방에 한번 들러 주시겠어요?
+    MessageJP: 今度お時間がありましたら、ぜひ私の部屋に寄っていただけませんか？
+    MessageCN: 主人下次有时间的话，能请务必来一趟我的房间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190070
+    Id: 200190110
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '기다리고 있겠습니다. '
+    MessageJP: お待ちしておりますね
+    MessageCN: 我会等着您哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190080
+    Id: 200190120
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200192
+    NextGroupId: 200190090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나의 주인님.
+    MessageJP: 私のご主人様
+    MessageCN: 我的主人
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190090
+    Id: 200190130
+    CharacterId: 20019
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200190080
+    PreConditionFavorScheduleId: 200192
+    FavorScheduleId: 0
+    NextGroupId: 200190100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 예전에는 너무 실례가 많았어요.
+    MessageJP: 先日は大変失礼いたしました
+    MessageCN: 前几天真是太失礼了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190100
+    Id: 200190140
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마음이 앞선 나머지 무례를 저질렀네요.
+    MessageJP: 心が逸るあまり、ご無礼を働いてしまいました
+    MessageCN: 我因为一时冲动，做出了有违礼节的事情
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190100
+    Id: 200190150
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 죄송합니다.
+    MessageJP: 申し訳ございません
+    MessageCN: 实在是不好意思
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190110
+    Id: 200190160
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아냐…… 나야 말로 경우가 없었지.
+    MessageJP: いや……私こそごめんね
+    MessageCN: 没这回事……该道歉的应该是我
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190110
+    Id: 200190170
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오히려 감사드리고 싶을 정도입니다!
+    MessageJP: むしろ感謝の気持ちでいっぱいです！
+    MessageCN: 不如说，我反而十分感谢朱音！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190120
+    Id: 200190180
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음에…… 다시 봉사를 허락해 주실 수 있으신가요?
+    MessageJP: またご奉仕させていただけませんか？
+    MessageCN: 主人今后还能让我再度侍奉您吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190120
+    Id: 200190190
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 찬찬히 시간을 들인…… 둘만의 봉사를요.
+    MessageJP: お互い気持ちを落ち着かせて……二人だけの時間で
+    MessageCN: 让彼此都冷静下来……度过只有你我二人的时间
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190130
+    Id: 200190200
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말로 다른 뜻 없는 거 맞지?!
+    MessageJP: た、他意はないよね？
+    MessageCN: 没、没在打其他主意吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190130
+    Id: 200190210
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오히려 이쪽에서 부탁드리고 싶은데요!
+    MessageJP: ぜひお願いします！
+    MessageCN: 那请务必！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190140
+    Id: 200190220
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200193
+    NextGroupId: 200190160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네? 무슨 의미세요?
+    MessageJP: ええと……それは、どういう意味でしょうか？
+    MessageCN: 那个……主人这是，什么意思呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190150
+    Id: 200190230
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200193
+    NextGroupId: 200190160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안심했습니다…… 기다리고 있을게요.
+    MessageJP: 安心しました……お待ちしておりますね
+    MessageCN: 那我就放心了……我会等着您的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190160
+    Id: 200190240
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200190150
+    PreConditionFavorScheduleId: 200193
+    FavorScheduleId: 0
+    NextGroupId: 200190170
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 편히 주무셨나요, 주인님?
+    MessageJP: ゆっくり眠れましたか、ご主人様？
+    MessageCN: 您昨晚睡得好吗，主人？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190170
+    Id: 200190250
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 덕분에 푹 잘 수 있었어.
+    MessageJP: おかげで熟睡できたよ
+    MessageCN: 多亏有朱音，睡得很香哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190180
+    Id: 200190260
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다행이에요.
+    MessageJP: 良かったです
+    MessageCN: 太好了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190190
+    Id: 200190270
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사실 그때 드린 차에는,
+    MessageJP: 実は、あの茶葉には……
+    MessageCN: 其实，那些茶叶……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190190
+    Id: 200190280
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수면의 질이 좋아지는 릴렉스 효과가 있다고 해요……
+    MessageJP: 睡眠の質が良くなるリラックス効果があるそうで……
+    MessageCN: 好像有提升睡眠质量的放松效果……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190200
+    Id: 200190290
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 조금이라도 피로가 풀리셨다면, 차를 내린 보람이 있네요.
+    MessageJP: 少しでもお疲れが取れたのなら、淹れた甲斐がありました
+    MessageCN: 只要能让老师的疲劳减轻哪怕一点，我泡的茶也就有了意义
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190210
+    Id: 200190300
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그랬구나. 고마워.
+    MessageJP: そうだったんだね。ありがとう
+    MessageCN: 原来是这样啊。谢谢了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190220
+    Id: 200190310
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 별말씀을요.
+    MessageJP: うれしいお言葉です
+    MessageCN: 您的话真令人开心
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190220
+    Id: 200190320
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님의 행복이, 저의 행복이랍니다.
+    MessageJP: ご主人様の幸せが、私の幸せですから
+    MessageCN: 因为主人的幸福，就是我的幸福啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190230
+    Id: 200190330
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데 아카네는 샬레까지 와서, 무슨 볼일이 있었던 거야?
+    MessageJP: ところで、アカネはシャーレまで何か用事があったの？
+    MessageCN: 话说回来，朱音来夏莱有什么事吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190240
+    Id: 200190340
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니면 청소를 위해서 온 건가?
+    MessageJP: それとも掃除のため？
+    MessageCN: 还是说就是来打扫卫生？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190250
+    Id: 200190350
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190260
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 글쎄요?
+    MessageJP: どうでしょう？
+    MessageCN: 要怎么说呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190250
+    Id: 200190360
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠든 주인님의 얼굴을 볼 수 있어서,
+    MessageJP: 眠っているご主人様の顔が見られて
+    MessageCN: 只要能看到主人的睡颜
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190260
+    Id: 200190370
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 행운이었다고만 말씀드릴게요.
+    MessageJP: 幸運でした、とだけ申し上げます
+    MessageCN: 我就已经非常幸运了，仅此而已
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190270
+    Id: 200190380
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뿅뿅.
+    MessageJP: ぴょんぴょん
+    MessageCN: 蹦蹦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190280
+    Id: 200190390
+    CharacterId: 20019
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200190270
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일은 어떠세요, 주인님?
+    MessageJP: お仕事の調子はどうでしょうか、ご主人様？
+    MessageCN: 主人，您工作还顺利吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190290
+    Id: 200190400
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는 오늘 간만에 비번이랍니다.
+    MessageJP: 私は本日非番を頂きました
+    MessageCN: 我今天没有值班
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190290
+    Id: 200190410
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간이 비는 것은 오랜만이에요.
+    MessageJP: こうして時間が空くのは久しぶりです
+    MessageCN: 已经好久没有像这样空闲的时间了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190300
+    Id: 200190420
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아카네는 쉬는 날에 주로 뭘 하는 편이야?
+    MessageJP: アカネは普段のお休みは何をしているの？
+    MessageCN: 朱音平时休息的时候会做什么？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190310
+    Id: 200190430
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190320
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '글쎄요. '
+    MessageJP: そうですね
+    MessageCN: 这个嘛
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190310
+    Id: 200190440
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하고 싶은 것은 많이 있습니다만……
+    MessageJP: やりたいことはたくさんありますが……
+    MessageCN: 虽然想做的事有很多……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190320
+    Id: 200190450
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바라는 건 하나뿐이에요.
+    MessageJP: 望むことは、一つだけですね
+    MessageCN: 但是我真正想做的，只有一件事
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190320
+    Id: 200190460
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190330
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그저…… 어쩌다 우연히……
+    MessageJP: 偶然……本当に偶然でいいんです
+    MessageCN: 偶然……真的只要偶然就足够了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190330
+    Id: 200190470
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님과 만날 수 있으면 좋겠다……
+    MessageJP: ご主人様にお会いできたら嬉しいなと……
+    MessageCN: 要是能够和主人相遇，我就很开心了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190340
+    Id: 200190480
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200195
+    NextGroupId: 200190350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 생각을 하고 있었답니다.
+    MessageJP: そんなことを考えておりました
+    MessageCN: 我想的就是这些
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190350
+    Id: 200190490
+    CharacterId: 20019
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200190340
+    PreConditionFavorScheduleId: 200195
+    FavorScheduleId: 0
+    NextGroupId: 200190360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘도 야근이신가요?
+    MessageJP: こんばんは。本日も帰りが遅いのでしょうか？
+    MessageCN: 晚上好。主人今晚也很晚回家吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190360
+    Id: 200190500
+    CharacterId: 20019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님의 건강이 걱정이에요……
+    MessageJP: ご主人様の健康が心配です……
+    MessageCN: 我很担心主人的健康……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190370
+    Id: 200190510
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190380
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으헤헤…… 일 좋다…… 일 많다……
+    MessageJP: わぁい仕事……私、仕事大好き……
+    MessageCN: 哇，工作……我，我爱死工作了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190370
+    Id: 200190520
+    CharacterId: 20019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200190380
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 문서라는 걸 발명한 사람은 대체 누굴까……
+    MessageJP: この世に書類というものを生み出したのは誰なんだ……
+    MessageCN: 究竟是谁发明了文书这种东西……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200190380
+    Id: 200190530
+    CharacterId: 20019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200196
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님? 정신 차리세요, 주인님!
+    MessageJP: ご主人様！？お気を確かに！！
+    MessageCN: 主人！？请振作一点！！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

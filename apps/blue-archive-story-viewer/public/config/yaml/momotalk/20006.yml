@@ -1,0 +1,776 @@
+CharacterId: 20006
+translator: 今天早睡了吗
+title:
+  - GroupId: 2000602
+    FavorScheduleId: 200062
+    CharacterId: 20006
+    TextJp: 天才のコツ
+    TextCn: 天才的秘诀
+    TextKr: 스케이트 보드를 타는 요령
+    TextEn: Skateboarding Tips
+    TextTh: เคล็ดลับการเล่นสเก็ตบอร์ด
+    TextTw: 天才的訣竅
+  - GroupId: 2000603
+    FavorScheduleId: 200063
+    CharacterId: 20006
+    TextJp: 天才の休日
+    TextCn: 天才的休息日
+    TextKr: 천재의 휴일
+    TextEn: A Genius' Day Off
+    TextTh: วันหยุดพักผ่อนของอัจฉริยะ
+    TextTw: 天才的假日
+  - GroupId: 2000605
+    FavorScheduleId: 200065
+    CharacterId: 20006
+    TextJp: サヤのおいしいレストラン
+    TextCn: 沙耶的美味餐厅
+    TextKr: 사야의 맛있는 식당
+    TextEn: Saya's Favorite Spot
+    TextTh: ร้านอาหารแสนอร่อยของซายะ
+    TextTw: 沙耶的美味餐廳
+  - GroupId: 2000606
+    FavorScheduleId: 200066
+    CharacterId: 20006
+    TextJp: 流れ行くもの
+    TextCn: 流动的东西
+    TextKr: 유행의 법칙
+    TextEn: Laws of Trendiness
+    TextTh: 'กฎของกระแสอินเทรนด์ '
+    TextTw: 流行事物
+content:
+  - MessageGroupId: 200060010
+    Id: 200060010
+    CharacterId: 20006
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생, 이번 주 휴일에 시간 괜찮아?
+    MessageJP: 先生、今週末は時間ある？
+    MessageCN: 老师，这周末有时间吗？
+    MessageEN: Are you free this weekend, Sensei?
+    MessageTH: คุณครู สุดสัปดาห์นี้ว่างรึเปล่า?
+    MessageTW: 老師，這個週末有時間嗎？
+  - MessageGroupId: 200060020
+    Id: 200060020
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 또 이상한 약을 먹이려는 거야?
+    MessageJP: 今度は何の実験？
+    MessageCN: 这次是什么实验？
+    MessageEN: Do I have to be a lab rat again?
+    MessageTH: จะให้ครูไปเป็นหนูทดลองยาอีกเหรอ?
+    MessageTW: 這次是什麼實驗？
+  - MessageGroupId: 200060020
+    Id: 200060030
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 주말은 봐줘…….
+    MessageJP: 変な薬はそろそろ勘弁……
+    MessageCN: 如果又是让我去喝奇怪的药的话就算了吧……
+    MessageEN: Please, no more experiments...
+    MessageTH: อาทิตย์นี้ปล่อยครูไปเถอะ...
+    MessageTW: 別再叫我喝奇怪的藥了……
+  - MessageGroupId: 200060030
+    Id: 200060040
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 거 아니거든!
+    MessageJP: 違う違う、そういうのじゃないのだ！
+    MessageCN: 不是不是，不是这样的呢！
+    MessageEN: It's not like that!
+    MessageTH: ไม่ใช่แบบนั้นสักหน่อย!
+    MessageTW: 不是不是，不是那樣！
+  - MessageGroupId: 200060040
+    Id: 200060050
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전에 선생이 가고 싶다고 했던 중화요리집이 이번 주말부터 신메뉴를 내놓는다고 해서 알려주려 했던 것이다!
+    MessageJP: この前先生が言ってた中華料理屋で新メニューが出るって聞いて、教えようと思っただけなのに！
+    MessageCN: 咱只是想告诉老师，之前老师说的中餐馆好像推出了新菜单的呢！
+    MessageEN:
+      I just wanted to tell you that eastern restaurant you like is launching
+      a new menu this weekend!
+    MessageTH: 'ฉันจะบอกว่าร้านอาหารจีนที่คุณครู
+
+      อยากไปน่ะ จะเปิดขายเมนูใหม่ตั้งแต่
+
+      สุดสัปดาห์นี้ต่างหากเล่า!'
+    MessageTW: 我只是想告訴老師，上次老師說的中華料理店聽說有新菜色！
+  - MessageGroupId: 200060040
+    Id: 200060060
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모처럼 신경을 써 주었더니, 나님의 호의를 그런 눈으로 보다니……
+    MessageJP: 全部の用事が実験だと思われるのは心外なのだ！
+    MessageCN: 要是老师觉得咱只会叫老师来做实验的话，就太让人心寒的呢！
+    MessageEN: I'm trying to be nice, and this is how you repay me?
+    MessageTH: 'อุตส่าห์หวังดี ไม่คิดเลยว่าคุณครู
+
+      จะมองท่านซายะในแง่ร้ายแบบนั้น!'
+    MessageTW: 所有事情都往實驗去想，真讓人心寒！
+  - MessageGroupId: 200060050
+    Id: 200060070
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미안. 이번 휴일은 시간 괜찮아.
+    MessageJP: ごめんごめん、じゃあお詫びってわけでもないけど
+    MessageCN: 抱歉抱歉，这样，虽然也算不上道歉
+    MessageEN: Sorry. I'm free this weekend.
+    MessageTH: 'ขอโทษที่สงสัยนะ
+
+      อาทิตย์นี้ครูว่างพอดีเลย'
+    MessageTW: 抱歉抱歉，那麼就當作小小的賠罪
+  - MessageGroupId: 200060060
+    Id: 200060080
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 대신 사과의 의미로 내가 한턱 낼게.
+    MessageJP: 奢るよ、一緒に行こう
+    MessageCN: 我请你吧，一起去吃
+    MessageEN: Let me make it up to you by picking up the tab.
+    MessageTH: 'เดี๋ยวครูเลี้ยงข้าวเป็นการไถ่โทษ
+
+      แล้วกันนะ'
+    MessageTW: 我請客，一起去吧
+  - MessageGroupId: 200060070
+    Id: 200060090
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말? 그 말, 잊으면 안 되는 것이다!
+    MessageJP: 本当か！もう今さら撤回は無しだぞ！？
+    MessageCN: 真的吗！事到如今已经不能反悔了哦！？
+    MessageEN: Really? Don't forget about it!
+    MessageTH: พูดจริงเหรอ? พูดแล้วห้ามกลับคำนะ!
+    MessageTW: 真的嗎？事到如今不能反悔唷！？
+  - MessageGroupId: 200060070
+    Id: 200060100
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200062
+    NextGroupId: 200060080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 이번 주말에 전에 말했던 가게 앞에서 보자!
+    MessageJP: じゃあ今週末、お店の前で待ち合わせなのだ！
+    MessageCN: 那就这周末，咱们在店门口会合的呢！
+    MessageEN: I'll meet you there later!
+    MessageTH: 'ถ้างั้นสุดสัปดาห์นี้เจอกันที่หน้าร้านนั้น
+
+      ก็แล้วกัน!'
+    MessageTW: 那就這週末，在店的前面碰面！
+  - MessageGroupId: 200060080
+    Id: 200060110
+    CharacterId: 20006
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200060070
+    PreConditionFavorScheduleId: 200062
+    FavorScheduleId: 0
+    NextGroupId: 200060090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후우…… 천재의 삶이란 정말 고독한 것이다.
+    MessageJP: 天才は孤独なのだ……
+    MessageCN: 天才果然是孤独的呢……
+    MessageEN: Phew... The life of a genius can get pretty lonely.
+    MessageTH: 'เฮ้อ...
+
+      ชีวิตของอัจฉริยะนี่ลำบากลำบนจริงๆ'
+    MessageTW: 天才是孤獨的……
+  - MessageGroupId: 200060090
+    Id: 200060120
+    CharacterId: 20006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무리 설명하려 해도 범인들은 이해해 주질 않으니…….
+    MessageJP: いくら説明しても、理解されない……
+    MessageCN: 不管怎么说明，也不能被理解……
+    MessageEN: Average people could never understand, no matter how much I explain...
+    MessageTH: 'ถึงจะพยายามอธิบายยังไง แต่พวกคนอื่น
+
+      ก็ไม่ยอมเข้าใจสักที...'
+    MessageTW: 無論怎麼說明，也不被理解……
+  - MessageGroupId: 200060100
+    Id: 200060130
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 문제라도 있어?
+    MessageJP: 何かあったの？
+    MessageCN: 发生什么事了？
+    MessageEN: Is something wrong?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 怎麼了嗎？
+  - MessageGroupId: 200060110
+    Id: 200060140
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어, 그러니까…….
+    MessageJP: あ、そうだ、先生
+    MessageCN: 啊，对了，老师
+    MessageEN: Uh, I mean...
+    MessageTH: อ๋อ คือว่า...
+    MessageTW: 啊，對了，老師
+  - MessageGroupId: 200060110
+    Id: 200060150
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060120
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니, 아무것도 아니다!
+    MessageJP: い、いや、何でもないのだ！
+    MessageCN: 没、没什么，什么都没发生的呢！
+    MessageEN: N-Nothing!
+    MessageTH: เปล่า ไม่มีอะไรหรอก!
+    MessageTW: 不，沒有，沒事！
+  - MessageGroupId: 200060120
+    Id: 200060160
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나님 혼자서도 충분히 해결할 수 있는 문제인 것이다!
+    MessageJP: ぼく様だけでも、十分解決できる問題なのだ！
+    MessageCN: 这种问题咱一个人也足够解决了呢！
+    MessageEN: I can take care of it on my own!
+    MessageTH: 'ปัญหาแค่นี้ท่านซายะจัดการคนเดียว
+
+      ได้สบายๆ อยู่แล้ว!'
+    MessageTW: 這是我自己就能解決的問題！
+  - MessageGroupId: 200060120
+    Id: 200060170
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 산해경 제일의 수재인 나님에게 불가능이란 없으니까! 음-하-하-핫!
+    MessageJP: この山海経随一の天才であるぼく様に、不可能なんて無いからな！うーはっはっはっ！
+    MessageCN: 对于咱这种山海经首屈一指的天才来说，没有什么是不可能的！唔哈哈哈！
+    MessageEN: I'm Shanhaijing's genius! There's nothing I can't do! Hahaha!
+    MessageTH: 'อัจฉริยะแห่งซานไห่จิง ไม่มีอะไร
+
+      ที่ทำไม่ได้หรอกนะ! โฮะ-โฮะ-โฮะ!'
+    MessageTW: 對我這個山海經首屈一指的天才來說，沒有什麼不可能的！哇哈哈哈！
+  - MessageGroupId: 200060130
+    Id: 200060180
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200063
+    NextGroupId: 200060140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……뭔가 수상한데.
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: Well, THAT isn't suspicious.
+    MessageTH: แบบนั้นยิ่งน่าสงสัยนะ...
+    MessageTW: ……？
+  - MessageGroupId: 200060140
+    Id: 200060190
+    CharacterId: 20006
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200060130
+    PreConditionFavorScheduleId: 200063
+    FavorScheduleId: 0
+    NextGroupId: 200060150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생. 지난번에는 한정 메뉴 사는 걸 도와줘서 고마웠던 것이다.
+    MessageJP: 先生、この間のケーキの件はありがとうなのだ
+    MessageCN: 老师，上次帮咱买到蛋糕的事情谢谢了
+    MessageEN: Thanks for treating me last time, Sensei.
+    MessageTH: 'คุณครู ขอบคุณที่มาช่วยเรื่อง
+
+      สั่งเมนูพิเศษนะ'
+    MessageTW: 老師，上次蛋糕的事謝謝了
+  - MessageGroupId: 200060150
+    Id: 200060200
+    CharacterId: 20006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 답례의 의미로 이번에는 나님이 현무상회에서 맛있는 음식을 살게.
+    MessageJP: お返しに、今度はぼく様が何か玄武商会で美味しいものを奢ってあげる！
+    MessageCN: 作为回礼，下次咱请你去玄武商会吃点好吃的！
+    MessageEN: I'll get you something tasty from Black Tortoise Promenade in return.
+    MessageTH: 'คราวนี้ฉันจะเลี้ยงของอร่อยๆ ที่ย่านการ
+
+      ค้าเทพเต่าดำให้เป็นการตอบแทน'
+    MessageTW: 作為回禮，這次我在玄武商會請你吃好吃的！
+  - MessageGroupId: 200060150
+    Id: 200060210
+    CharacterId: 20006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생은 뭐가 먹고 싶은 것이냐?
+    MessageJP: 先生は何か食べたいものとかあるか？
+    MessageCN: 老师有什么想吃的东西吗？
+    MessageEN: What do you want Sensei?
+    MessageTH: คุณครูอยากกินอะไรล่ะ?
+    MessageTW: 老師有什麼想吃的嗎？
+  - MessageGroupId: 200060160
+    Id: 200060220
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 볶음밥이 좋겠어.
+    MessageJP: チャーハンの気分！
+    MessageCN: 炒饭！
+    MessageEN: I'll go with fried rice.
+    MessageTH: ข้าวผัดแล้วกัน
+    MessageTW: 想吃炒飯！
+  - MessageGroupId: 200060160
+    Id: 200060230
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 야키소바가 먹고 싶어!
+    MessageJP: 焼きそばの気分！
+    MessageCN: 炒面！
+    MessageEN: I want yakisoba!
+    MessageTH: ครูอยากกินยากิโซบะ!
+    MessageTW: 想吃炒麵！
+  - MessageGroupId: 200060170
+    Id: 200060240
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 그러고 보니 이번 주는 현무상회의 가게들이 새로 개발한 라멘 메뉴를 내놓는 라멘 주간인데…
+    MessageJP: あ、そういえば今週は、玄武商会のお店が次々に新しいラーメンを出す「ラーメン週間」だったのだ！
+    MessageCN: 啊，这么说来这周是玄武商会陆续推出新拉面的“拉面周”的呢!
+    MessageEN: Ah, but Black Tortoise is starting a new ramen menu this week.
+    MessageTH: 'อ่า... จะว่าไปแล้วสัปดาห์นี้เป็นสัปดาห์
+
+      ที่ร้านอาหารที่ย่านการค้าเทพเต่าดำจะ
+
+      เปิดขายเมนูราเม็งสูตรใหม่นี่นา'
+    MessageTW: 啊，這麼說來，這週是玄武商會的商家，接二連三推出新款拉麵的「拉麵週」！
+  - MessageGroupId: 200060170
+    Id: 200060250
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생! 이번 휴일은 현무상회에서 함께 라멘을 먹는 것이다!
+    MessageJP: 先生！ちょうどぼく様おすすめのお店があるから、そこに行こう！
+    MessageCN: 老师！正好商会里有咱推荐的店，咱们就去那里吧！
+    MessageEN: Sensei, let's eat ramen at Black Tortoise this weekend!
+    MessageTH: 'คุณครู! วันหยุดอาทิตย์นี้นี้ไปกิน
+
+      ราเม็งอร่อยๆ ที่ย่านการค้าด้วยกันนะ!'
+    MessageTW: 老師！正好有我推薦的店，去那裡吧！
+  - MessageGroupId: 200060180
+    Id: 200060260
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200065
+    NextGroupId: 200060190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……내 의견은 왜 물어본 거야?
+    MessageJP: 私の意見を聞いた意味は……？
+    MessageCN: 那还问我的意见干什么……？
+    MessageEN: Why even ask me what I wanted, then?
+    MessageTH: แล้วเมื่อกี้จะถามครูทำไม...
+    MessageTW: 那還需要我的意見……？
+  - MessageGroupId: 200060190
+    Id: 200060270
+    CharacterId: 20006
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200060180
+    PreConditionFavorScheduleId: 200065
+    FavorScheduleId: 0
+    NextGroupId: 200060200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으으, 으으으…….
+    MessageJP: 参ったのだ……
+    MessageCN: 真是服了……
+    MessageEN: Ugh... Uh, ugh...
+    MessageTH: อะ... อือ...
+    MessageTW: 我受不了了……
+  - MessageGroupId: 200060200
+    Id: 200060280
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 문제라도 있어?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: Is something wrong?
+    MessageTH: เกิดอะไรขึ้นงั้นเหรอ
+    MessageTW: 怎麼了？
+  - MessageGroupId: 200060210
+    Id: 200060290
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번에 개발한 특제 매운 소스가 생각 외로 큰 인기를 끄는 바람에……
+    MessageJP: この前開発した特製の激辛ソースが、思った以上に大人気で……
+    MessageCN: 之前开发的特制超辣酱汁，比想象中还要受欢迎……
+    MessageEN:
+      The special spicy sauce I made last week is much more popular than
+      I expected.
+    MessageTH: 'ซอสเผ็ดสูตรพิเศษที่ฉันคิดค้นขึ้น
+
+      คราวที่แล้วมันขายดีกว่าที่คิดเอาไว้...'
+    MessageTW: 之前開發的特製超辣醬比想像中還要受歡迎……
+  - MessageGroupId: 200060210
+    Id: 200060300
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 특제 소스를 만드느라 연구할 시간이 부족해진 것이다……
+    MessageJP: そっちに時間を取られて、研究に手が回らないのだ
+    MessageCN: 结果咱的时间都被制作辣酱占用了，根本无暇研究的呢
+    MessageEN:
+      I'm at the point where I have no time for research because I'm always
+      making sauce.
+    MessageTH: 'เพราะมัวแต่เอาเวลาไปทำซอสสูตร
+
+      พิเศษเลยทำให้ฉันมีเวลาวิจัยไม่พอแล้ว'
+    MessageTW: 結果占用了我大量的時間，根本沒空進行研究
+  - MessageGroupId: 200060210
+    Id: 200060310
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말이지, 다들 연단방을 무어라고 생각하는 것이냐?
+    MessageJP: 全く……
+    MessageCN: 真是的……
+    MessageEN: Do they even know what the Eastern Alchemy Society is?
+    MessageTH: 'ให้ตายสิ พวกคนอื่นคิดว่าชมรม
+
+      วิจัยศาสตร์การปรุงยาเป็นอะไรกันแน่เนี่ย?'
+    MessageTW: 受不了……
+  - MessageGroupId: 200060220
+    Id: 200060320
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 연단방은 불로불사의 영약을 만드는 곳이지, 소스를 만드는 곳이 아니라고!
+    MessageJP: 錬丹術研究会はあくまで「不老不死の霊薬を作ること」を目的とした場所であって、ソースを作る場所じゃないのだ！
+    MessageCN: 炼丹术研究会终究是以“制造长生不老的灵药”为目的努力的地方，才不是什么生产酱汁的作坊的呢！
+    MessageEN:
+      We're supposed to make elixirs that grant eternal life and youth, not
+      make special sauces!
+    MessageTH: 'ชมรมวิจัยศาสตร์การปรุงยาเป็นชมรม
+
+      สำหรับวิจัยยาอายุวัฒนะต่างหาก ไม่ใช่
+
+      ชมรมคิดค้นสูตรซอสสักหน่อย!'
+    MessageTW: 鍛鍊屋的目的是「製作長生不老的靈藥」，不是製作醬料的地方！
+  - MessageGroupId: 200060220
+    Id: 200060330
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 너무 바쁘다 보니 최근에는 네즈스케의 손이라도 빌리고 싶어질 정도니……
+    MessageJP: もうネズ助の手も借りたいぐらい……
+    MessageCN: 咱已经到想让助鼠之助帮我干活的程度了……
+    MessageEN: I'm so busy that I might need to ask Nezusuke for help...
+    MessageTH: 'ช่วงนี้งานยุ่งมากๆ จนอยากจะให้
+
+      เนสึซึเกะมาช่วยเลยล่ะ...'
+    MessageTW: 現在連根津助的手都想借來用了……
+  - MessageGroupId: 200060230
+    Id: 200060340
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060240
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠깐. 만약 그 방법을 사용하면…….
+    MessageJP: 良いことを思いついた！
+    MessageCN: 咱想到一个好办法！
+    MessageEN: Wait, if I use that method...
+    MessageTH: เดี๋ยวนะ ถ้าเกิดว่าใช้วิธีนั้นล่ะก็...
+    MessageTW: 我想到一個好主意！
+  - MessageGroupId: 200060240
+    Id: 200060350
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안 돼.
+    MessageJP: やめておこう
+    MessageCN: 还是别了吧
+    MessageEN: No.
+    MessageTH: ห้ามเด็ดขาดนะ
+    MessageTW: 最好不要
+  - MessageGroupId: 200060250
+    Id: 200060360
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 나님은 아직 아무 말도 하지 않았다만.
+    MessageJP: ぼく様まだ何も言ってないのに！？
+    MessageCN: 明明咱还什么都没说呢！？
+    MessageEN: Huh? I didn't even say anything yet.
+    MessageTH: หืม? ยังไม่ได้พูดอะไรสักหน่อย
+    MessageTW: 我什麼都還沒說耶！？
+  - MessageGroupId: 200060260
+    Id: 200060370
+    CharacterId: 20006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200060270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무얼 하려는지는 모르겠지만 안 돼.
+    MessageJP: なんか嫌な予感がするし……
+    MessageCN: 总有一种不祥的预感……
+    MessageEN: I don't know what you are about to say, but no.
+    MessageTH: 'ครูไม่รู้หรอกว่าซายะคิดจะทำอะไร
+
+      แต่ไม่ได้เด็ดขาด'
+    MessageTW: 總有個不好的預感……
+  - MessageGroupId: 200060270
+    Id: 200060380
+    CharacterId: 20006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200066
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 쳇, 눈치 하난 빠르긴…….
+    MessageJP: ぐっ、仕方ない……おとなしくソースを作るのだ……
+    MessageCN: 唉，真没办法……那咱还是老老实实地做酱汁的呢……
+    MessageEN: Tch. It's like you can read minds...
+    MessageTH: ชิส์ ทำอย่างกับอ่านใจฉันได้เลยนะ
+    MessageTW: 呿，沒辦法……乖乖做醬料吧……

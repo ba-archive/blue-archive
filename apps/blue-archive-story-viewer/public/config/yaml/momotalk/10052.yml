@@ -1,0 +1,852 @@
+CharacterId: 10052
+translator: 霉豆子
+title:
+  - GroupId: 1005202
+    FavorScheduleId: 100522
+    CharacterId: 10052
+    TextJp: セミナー書記ノアの細やかなる記録
+    TextCn: 研讨会书记诺雅的细致记录
+    TextKr: 세미나 서기 노아의 세심한 기록
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005203
+    FavorScheduleId: 100523
+    CharacterId: 10052
+    TextJp: セミナー書記ノアの意地悪な観察
+    TextCn: 研讨会书记诺雅的坏心眼观察
+    TextKr: 세미나 서기 노아의 짓궂은 관찰
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005205
+    FavorScheduleId: 100525
+    CharacterId: 10052
+    TextJp: セミナー書記ノアの平凡な日課
+    TextCn: 研讨会书记诺雅的平凡日常
+    TextKr: 세미나 서기 노아의 평범한 일과
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005206
+    FavorScheduleId: 100526
+    CharacterId: 10052
+    TextJp: セミナー書記ノアの退屈な休憩
+    TextCn: 研讨会书记诺雅的无趣歇息
+    TextKr: 세미나 서기 노아의 심심한 휴식
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 100520010
+    Id: 100520010
+    CharacterId: 10052
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요, 선생님.
+    MessageJP: こんにちは、先生
+    MessageCN: 您好，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520020
+    Id: 100520020
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번에 샬레의 학생 당번 업무를 맡게 된 밀레니엄 학원의 우시오 노아라고 합니다.
+    MessageJP: この度、シャーレ当番を務めることになりました、生塩ノアです
+    MessageCN: 我是这次来夏莱轮值的生盐诺雅
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520020
+    Id: 100520030
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 첫 당번 업무에 앞서 미리 인사드립니다.
+    MessageJP: 当番初回のため、ご挨拶させていただきます
+    MessageCN: 初次当值，所以想和老师事先打个招呼
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520030
+    Id: 100520040
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '나도 잘 부탁해! '
+    MessageJP: こちらこそ、よろしくね！
+    MessageCN: 我这边才要请诺雅多关照呢！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520040
+    Id: 100520050
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그나저나 샬레의 학생 당번 업무는 처음이라…
+    MessageJP: シャーレのお当番は初めてなので……
+    MessageCN: 因为我第一次去夏莱值日……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520040
+    Id: 100520060
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 당번 업무 전에 미리 준비해야 할 물건이라도 있을까요?
+    MessageJP: 何か事前に用意するものなど、ありますでしょうか？
+    MessageCN: 有什么东西需要我提前准备吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520050
+    Id: 100520070
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 준비해야 할 건 없어.
+    MessageJP: 特にないよ
+    MessageCN: 不需要特别准备什么哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520060
+    Id: 100520080
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 놀러 온다는 기분으로 가볍게 찾아와.
+    MessageJP: 遊びにくるくらいの気持ちで、気楽においで
+    MessageCN: 诺雅就当来夏莱玩，轻松点来吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520070
+    Id: 100520090
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 놀러 간다는 기분……
+    MessageJP: 遊びに……
+    MessageCN: 去玩……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520070
+    Id: 100520100
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520080
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇군요.
+    MessageJP: 分かりました
+    MessageCN: 我知道了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520080
+    Id: 100520110
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100522
+    NextGroupId: 100520090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 당일 뵙겠습니다.
+    MessageJP: それでは、当日はよろしくお願いします
+    MessageCN: 那么，值日当天就请多指教了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520090
+    Id: 100520120
+    CharacterId: 10052
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100520080
+    PreConditionFavorScheduleId: 100522
+    FavorScheduleId: 0
+    NextGroupId: 100520100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 혹시 어제의 당번 활동 때……
+    MessageJP: 先生、昨日の当番の際に……
+    MessageCN: 老师，昨天我值日的时候……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520100
+    Id: 100520130
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 신발을 새로 구매하셨었나요?
+    MessageJP: おろしたての靴を履いてませんでしたか？
+    MessageCN: 老师换了新鞋子吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520110
+    Id: 100520140
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그걸 어떻게 알아차렸어?
+    MessageJP: どうして分かったの？
+    MessageCN: 诺雅怎么知道的？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520120
+    Id: 100520150
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 같은 브랜드의 같은 제품이었는데…….
+    MessageJP: 前のと同じブランド、同じ製品だったのに……
+    MessageCN: 明明是和之前的那个是同一个牌子的相同款式啊……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520130
+    Id: 100520160
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 정답이었군요.
+    MessageJP: ふふ、やはりそうでしたか
+    MessageCN: 哼哼，果然呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520130
+    Id: 100520170
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 신발코에 항상 보이던 흠집이 보이지 않기에 알아차렸습니다.
+    MessageJP: つま先の部分に、いつもあった傷跡が無かったので
+    MessageCN: 老师鞋尖那个地方之前的一道划痕不见了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520140
+    Id: 100520180
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 워낙 낡은 신발이기도 했고, 기성품이니 수선을 하는 것보다는 새로 사는 게 훨씬 효율적이었을 테니까요.
+    MessageJP: 'ずいぶん古い靴でしたし、既製品ですから修理に出すよりは
+
+      新品を購入するのは良い選択だと思います'
+    MessageCN: 毕竟那双鞋已经相当旧了，而且也不是定制款，所以我觉得比起送去修 直接买双新的反而是个更好的选择
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520150
+    Id: 100520190
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭔가 탐정 같은 추리네.
+    MessageJP: なんか探偵みたいだね
+    MessageCN: 感觉诺雅像侦探一样呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520160
+    Id: 100520200
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 과연……
+    MessageJP: たしかに……
+    MessageCN: 确实……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520170
+    Id: 100520210
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고 보면 탐정의 활동과 서기의 활동에는 의외로 비슷한 구석이 있을지도 모르겠네요.
+    MessageJP: 言われてみれば、探偵と書記の活動は似てる部分があるかもしれません
+    MessageCN: 这么说来，侦探和书记的工作也许有相似之处呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520170
+    Id: 100520220
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '저도 당번 활동 중에는 범인을 관찰하는 탐정처럼 선생님을 열심히 지켜보고 있으니까요. '
+    MessageJP: 私も当番中は、犯人を観察する探偵のように、先生をしっかり見ておりますからね
+    MessageCN: 毕竟我值日的时候，就像观察犯人的侦探一样，一直盯着老师呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520180
+    Id: 100520230
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100523
+    NextGroupId: 100520190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭔가 무서워……!
+    MessageJP: 怖い……！
+    MessageCN: 好可怕……！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520190
+    Id: 100520240
+    CharacterId: 10052
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100520180
+    PreConditionFavorScheduleId: 100523
+    FavorScheduleId: 0
+    NextGroupId: 100520200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 밀레니엄의 학생들이 만든 발명품을 보고 있노라면 깜짝 놀랄 때가 많아요.
+    MessageJP: ミレニアム生の作った発明品を見ていると、驚くことが多いです
+    MessageCN: 看着千年的学生们制作的发明，我真是被震惊到了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520200
+    Id: 100520250
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는 생각지도 못했던 새로운 기술이나 아이디어를 매번 가져오거든요.
+    MessageJP: 私には思いもつかないような、斬新な技術やアイディアを提示してくれるんですよね
+    MessageCN: 学生们让我看到了许多我根本想不到的崭新技术和想法呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520210
+    Id: 100520260
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럴 때마다 저는 밀레니엄의 가치에 제대로 공헌하고 있는지, 스스로를 반성하게 되네요.
+    MessageJP: その都度、自分はミレニアムの価値に貢献できているのだろうかと自省します
+    MessageCN: 所以每到这个时候，我都会自我反省，我真的在为千年做出有价值的贡献吗
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520220
+    Id: 100520270
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 노아 정도면 열심히 하는 거 아냐?
+    MessageJP: ノアは、十分頑張ってると思うけど
+    MessageCN: 我觉得诺雅已经很努力了啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520230
+    Id: 100520280
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잔인한 이야기지만, 열심히 하는 것과 잘하는 것은 다르니까요.
+    MessageJP: 残酷な話ですが、頑張ってる事と優れている事は違いますから
+    MessageCN: 虽然这么说很残酷，但是努力和优秀不是一码事
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520240
+    Id: 100520290
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제게는 다른 천재들과 같은 번뜩이는 창의성도, 섬세한 손재주도 없답니다.
+    MessageJP: 他の天才のような閃きや創造力、器用な職人技も私にはありません
+    MessageCN: 我既没有其他学生那样天才般闪闪发光的创造力，也没有工匠那样的精湛手艺
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520240
+    Id: 100520300
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그나마 가지고 있는 잡기라고 해도……
+    MessageJP: 比較的、取り柄と言えるものは……
+    MessageCN: 与他们相比，我硬要说算是长处的地方……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520250
+    Id: 100520310
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……기계의 제작에 필요한 청사진을 통째로 외울 수 있는 것 정도?
+    MessageJP: ……機械の製作に必要な青図を、丸ごと覚えられること……ぐらいでしょうか
+    MessageCN: ……大概只是能完整记住制造机械所需要的蓝图……这种程度吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520260
+    Id: 100520320
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100525
+    NextGroupId: 100520270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 엄청난 스킬이잖아……
+    MessageJP: それも十分すごいスキルだよ……
+    MessageCN: 那也是很厉害的技能了啊……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520270
+    Id: 100520330
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100520260
+    PreConditionFavorScheduleId: 100525
+    FavorScheduleId: 0
+    NextGroupId: 100520280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 나쁜 소식이 있습니다.
+    MessageJP: 先生、悪いお知らせです
+    MessageCN: 老师，通知您一个坏消息
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520280
+    Id: 100520340
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전에 말씀드렸던 <선생님의 행동 패턴을 수집하여 현재 위치를 예측하는 장치>의 특허 신청이……
+    MessageJP: 先日お伝えしました「先生の行動パターンを収集し、現在の位置を予測する装置」の特許申請が……
+    MessageCN: 之前和老师说的那个《一种收集老师行为模式，并预测老师当前位置的装置》的专利申请……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520280
+    Id: 100520350
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안타깝게도 총학생회의 이의제기로 인해 반려된 모양이에요.
+    MessageJP: 無念にも、連邦生徒会の異議により差し戻しになったそうです
+    MessageCN: 非常遗憾，因为联邦学生会提出异议，申请没有通过
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520290
+    Id: 100520360
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 당연하지!
+    MessageJP: 当たり前だよ！
+    MessageCN: 这不是当然的吗！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520290
+    Id: 100520370
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 특허가 허가될 리가 없잖아.
+    MessageJP: そんな特許、許可が下りたらダメだよ
+    MessageCN: 那种专利可不能通过啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520300
+    Id: 100520380
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 특허라는 건 얼마든지 목적을 바꿔가며 같은 물건을 다시 출원할 수 있으니까요.
+    MessageJP: ですが特許というものは、目的を変更し同じものを再度出願することも可能です。
+    MessageCN: 但是专利这种东西，哪怕发明内容不变，只要使用目的变更了的话也是可以再次提出专利申请的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520310
+    Id: 100520390
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 계속해서 양식을 바꾸어 가며 특허를 신청하다 보면……
+    MessageJP: 様式を変えながら繰り返し特許を申請し続ければ……
+    MessageCN: 如果一遍改变样式一遍反复申请专利的话……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520310
+    Id: 100520400
+    CharacterId: 10052
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 언젠간 진짜 특허 등록이 될지도……?
+    MessageJP: いつかは本当に、特許登録できるかも……？
+    MessageCN: 说不定哪天真的能成功申请到……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520320
+    Id: 100520410
+    CharacterId: 10052
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제발 그만둬……!
+    MessageJP: お願いだからもうやめて……！
+    MessageCN: 算我求你了快住手吧……！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520330
+    Id: 100520420
+    CharacterId: 10052
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100520320
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오늘 오후에 예정되어 있던 정기 면담은 취소되었습니다.
+    MessageJP: 先生、今日の午後に予定していた定期面談が見送りになりました
+    MessageCN: 老师，原定今天下午的定期面谈暂时搁置了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520340
+    Id: 100520430
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100520350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모노레일 점검 중에 갑작스러운 소나기가 내리는 바람에 레일이 일부 손상된 모양이에요.
+    MessageJP: モノレール点検中、突然のにわか雨でレールの一部が損傷してしまったようで……
+    MessageCN: 在检修单轨电车的时候突然下起了阵雨，于是轨道小部分受损了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520350
+    Id: 100520440
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 때문에 일부 임원들이 아직도 학원에 발이 묶여 있다고 합니다.
+    MessageJP: そのため、一部メンバーたちが学園に足止めをされているとのことです
+    MessageCN: 因此，有部分学生被困在学园里了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100520350
+    Id: 100520450
+    CharacterId: 10052
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100526
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 관련하여 미리 연락 드리니, 혹시라도 헛걸음하는 일 없으시길 바라겠습니다.
+    MessageJP: 無駄足になっては申し訳ないので、事前連絡とさせていただきました
+    MessageCN: 要是因为这个让老师白跑一趟就实在太不好意思了，所以我来事先知会一下老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

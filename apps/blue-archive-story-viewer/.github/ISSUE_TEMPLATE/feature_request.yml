@@ -1,0 +1,33 @@
+name: 我想看到一个新功能
+description: 我觉得加上这个功能会更好。
+labels:
+  - enhancement
+title: '[Enhancement] '
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请在这里描述你的想法。如果你有示意图，请在下面的文本框中上传。
+        Please describe your problem here. If you have screenshots, please upload them in the text box below.
+  - type: textarea
+    id: description
+    attributes:
+      label: 功能描述
+      description: 在此描述你想新增的功能。
+      placeholder: 我想让背景图片随手机壳的颜色变化
+      #value:
+    validations:
+      required: true
+  - type: textarea
+    id: operation
+    attributes:
+      label: 具体操作
+      description: 如果你有更具体的操作流程的想法，请在此描述。
+      placeholder: |
+        1. 打开冰箱门
+        2. 把大象放进去
+        3. 关上冰箱门
+      #value:
+    validations:
+      required: false

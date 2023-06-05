@@ -1,0 +1,16 @@
+$main-color: #3f88f2;
+$text-layer-z-index: 50;
+$ui-layer-z-index: 20;
+
+#player__background {
+  position: relative;
+  .transition-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+  }
+  .transition-cover.out {
+    transform: rotateZ(180deg);
+  }
+}

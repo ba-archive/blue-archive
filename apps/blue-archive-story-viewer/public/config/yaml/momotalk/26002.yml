@@ -1,0 +1,1996 @@
+CharacterId: 26002
+translator: 今天早睡了吗
+title:
+  - GroupId: 2600202
+    FavorScheduleId: 260022
+    CharacterId: 26002
+    TextJp: 一番大事な調味料
+    TextCn: 最重要的调料
+    TextKr: 가장 중요한 향신료
+    TextEn: The Most Important Spice
+    TextTh: เครื่องปรุงรสที่สำคัญที่สุด
+    TextTw: 最重要的是調味料
+  - GroupId: 2600203
+    FavorScheduleId: 260023
+    CharacterId: 26002
+    TextJp: 彼女の料理
+    TextCn: 她的料理
+    TextKr: 소녀의 요리법
+    TextEn: A Girl's Recipe
+    TextTh: เคล็ดลับทำอาหารของเด็กสาว
+    TextTw: 她的料理
+  - GroupId: 2600205
+    FavorScheduleId: 260025
+    CharacterId: 26002
+    TextJp: 克服したい気持ち
+    TextCn: 想要克服的决心
+    TextKr: 소녀는 극복하고 싶어.
+    TextEn: A Girl's Determination
+    TextTh: เด็กสาวผู้ต้องการเอาชนะ
+    TextTw: 想克服的心
+  - GroupId: 2600206
+    FavorScheduleId: 260026
+    CharacterId: 26002
+    TextJp: 未熟な私にできること
+    TextCn: 不成熟的我能做的事
+    TextKr: 미숙하더라도 할 수 있는 것.
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 260020010
+    Id: 1972
+    CharacterId: 26002
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 요리에서 가장 중요한 향신료가 무엇이라고 생각하시나요?
+    MessageJP: 先生は、料理で一番重要な調味料って何だと思いますか？
+    MessageCN: 老师觉得对于烹饪来说，最重要的调料是什么呢？
+    MessageEN: Sensei, guess what the most important spice is when you're cooking.
+    MessageTH: 'คุณครูคิดว่าเครื่องปรุงกับเครื่องเทศที่
+
+      สำคัญที่สุดที่ใช้ปรุงอาหารคืออะไรคะ?'
+    MessageTW: 老師覺得料理中最重要的調味料是什麼？
+  - MessageGroupId: 260020020
+    Id: 1973
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 설탕?
+    MessageJP: 砂糖？
+    MessageCN: 砂糖？
+    MessageEN: Sugar?
+    MessageTH: น้ำตาลเหรอ?
+    MessageTW: 糖？
+  - MessageGroupId: 260020020
+    Id: 1974
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 소금?
+    MessageJP: 塩？
+    MessageCN: 盐？
+    MessageEN: Salt?
+    MessageTH: เกลือ?
+    MessageTW: 鹽？
+  - MessageGroupId: 260020030
+    Id: 1975
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 물론 그것들도 있어서 나쁠 건 없지만.
+    MessageJP: そうですね、それらも勿論大切なのですが……
+    MessageCN: 嗯，这些调料当然也很重要，但是……
+    MessageEN: Well, that's important too.
+    MessageTH: 'แน่นอนว่าการใส่เครื่องปรุงพวกนั้นก็ไม่
+
+      ได้เสียหายอะไร'
+    MessageTW: 是啊，那些當然也很重要，但是……
+  - MessageGroupId: 260020040
+    Id: 1976
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 있어서 나쁠 것 없는 수준의 이야기야?!
+    MessageJP: ですが……？
+    MessageCN: 但是……？
+    MessageEN: What could be more important than that?
+    MessageTH: 'หมายถึงพอใส่ลงไปแล้วรสชาติ
+
+      ไม่แย่งั้นเหรอ?!'
+    MessageTW: 但是……？
+  - MessageGroupId: 260020050
+    Id: 1977
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네? 하지만 그래도…….
+    MessageJP: 本当に大事な調味料……
+    MessageCN: 真正重要的调味料……
+    MessageEN: Huh? But...
+    MessageTH: คะ? แต่ว่าถึงยังไง...
+    MessageTW: 真正重要的調味料……
+  - MessageGroupId: 260020050
+    Id: 1978
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 진짜로 중요한 향신료는 따로 있는걸요.
+    MessageJP: それは、砂糖や塩など、そういった普通のものではありません
+    MessageCN: 这个啊，并不是像砂糖或者盐那样普通的东西
+    MessageEN: There's something else that's extremely important.
+    MessageTH: 'ที่จริงแล้วมีเครื่องปรุงรสที่สำคัญอยู่อีก
+
+      อย่างนึงนะคะ'
+    MessageTW: 不是糖和鹽那種普通的東西
+  - MessageGroupId: 260020050
+    Id: 1979
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정답은 바로…….
+    MessageJP: 正解は……
+    MessageCN: 正确答案是……
+    MessageEN: The answer is...
+    MessageTH: และนั่นก็คือ...
+    MessageTW: 答案是……
+  - MessageGroupId: 260020060
+    Id: 1980
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사랑이에요!
+    MessageJP: 愛情です！
+    MessageCN: 爱情！
+    MessageEN: LOVE!
+    MessageTH: ความรักยังไงล่ะคะ!
+    MessageTW: 愛！
+  - MessageGroupId: 260020070
+    Id: 1981
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사랑……?
+    MessageJP: 愛情……？
+    MessageCN: 爱情……？
+    MessageEN: Love...?
+    MessageTH: ความรัก...?
+    MessageTW: 愛……？
+  - MessageGroupId: 260020070
+    Id: 1982
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 확실히 그런 의견도 있긴 하지.
+    MessageJP: 確かに……
+    MessageCN: 确实……
+    MessageEN: Well, that's what some people say.
+    MessageTH: ก็นะ... มีคนพูดแบบนั้นอยู่ด้วยเหมือนกัน
+    MessageTW: 確實……
+  - MessageGroupId: 260020080
+    Id: 1983
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020090
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇죠?
+    MessageJP: でしょう？
+    MessageCN: 对吧？
+    MessageEN: Right?
+    MessageTH: ใช่ไหมล่ะคะ?
+    MessageTW: 是吧？
+  - MessageGroupId: 260020080
+    Id: 1984
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 그렇다면 저, 한 가지 의문이 생겼어요.
+    MessageJP: ただ、私ひとつ疑問があるんです
+    MessageCN: 但是，我还有一个疑问
+    MessageEN: But if that's the case, I have a question.
+    MessageTH: 'แต่ถึงจะเป็นแบบนั้นฉันน่ะ... มีคำถาม
+
+      เรื่องนึงค่ะ'
+    MessageTW: 但是，我有一個疑問
+  - MessageGroupId: 260020090
+    Id: 1985
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 의문?
+    MessageJP: 疑問？
+    MessageCN: 疑问？
+    MessageEN: What's your question?
+    MessageTH: คำถามเหรอ?
+    MessageTW: 疑問？
+  - MessageGroupId: 260020100
+    Id: 1986
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요리에 있어, 사랑이 최고의 향신료라는 건 의문의 여지가 없지만.
+    MessageJP: 料理にとって最高の調味料は愛情、それに異存はありません
+    MessageCN: 毫无疑问，对于菜肴来说最高级的调料就是爱情
+    MessageEN: Well, I do agree that love is the greatest spice when it comes to cooking.
+    MessageTH: 'สำหรับผู้หญิงแล้วเครื่องปรุงรสที่สำคัญที่
+
+      สุดของอาหารก็คือความรักค่ะ'
+    MessageTW: 愛是料理最佳的調味料，這一點沒有異議
+  - MessageGroupId: 260020100
+    Id: 1987
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020110
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 과연…….
+    MessageJP: それは良いとして……
+    MessageCN: 这样的话……
+    MessageEN: But then...
+    MessageTH: แต่ว่าที่จริงแล้ว...
+    MessageTW: 但就算這樣……
+  - MessageGroupId: 260020100
+    Id: 1988
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요리에 넣는 사랑은, 어느 정도가 적정량인 걸까요?
+    MessageJP: 料理に入れる愛情って、どれくらいが適量なのでしょうか？
+    MessageCN: 需要在烹调中加入的爱情，到底多少才算适量呢？
+    MessageEN: How much love do you need to put in?
+    MessageTH: 'ความรักที่เราเติมลงไปในอาหาร...
+
+      ต้องใส่ไปเท่าไหร่ถึงจะพอดีเหรอคะ?'
+    MessageTW: 在料理中要放入多少的愛才是適量的呢？
+  - MessageGroupId: 260020110
+    Id: 1989
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 적정량……?
+    MessageJP: ……適量？
+    MessageCN: ……适量？
+    MessageEN: How much love?
+    MessageTH: คะ...ความพอดีเหรอ....?
+    MessageTW: ……適量？
+  - MessageGroupId: 260020120
+    Id: 1990
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아주 약간의 스파이스가 될 정도로만?
+    MessageJP: ほんの少し、隠し味程度でしょうか？
+    MessageCN: 是加入少许，仅仅能够提鲜的程度呢？
+    MessageEN: Maybe just a teensy bit, like a spice?
+    MessageTH: 'ใส่ลงไปแค่นิดหน่อยเหมือนใส่พริกให้
+
+      รู้สึกเผ็ดร้อน?'
+    MessageTW: 微微的，提味的程度嗎？
+  - MessageGroupId: 260020120
+    Id: 1991
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니면 확실히 어필할 수 있을 정도로?
+    MessageJP: それとも、はっきりと分かるくらいに？
+    MessageCN: 还是更进一步，让味蕾充分尝到爱情的刺激呢？
+    MessageEN: Or just enough for you to be able to taste it?
+    MessageTH: 'หรือว่าจะต้องใส่ลงไปให้พอดีไม่มากเกิน
+
+      ไปเหมือนการใส่น้ำตาลกันล่ะคะ?'
+    MessageTW: 還是說要清楚明顯？
+  - MessageGroupId: 260020120
+    Id: 1992
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그것도 아니라면 잔뜩 마구 넣는 게 최고인 걸까요……?
+    MessageJP: はたまたどっさり入れた方が効果的だったり……？
+    MessageCN: 抑或是大量加入的话效果更佳呢……？
+    MessageEN: Or a whole pot-load of it?
+    MessageTH: 'หรือว่าจะต้องใส่ลงไปเยอะๆ จนล้นถึงจะ
+
+      ดีคะ?'
+    MessageTW: 或者是要多放一點，效果才會好……？
+  - MessageGroupId: 260020130
+    Id: 1993
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020140
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 신경 쓰여요!
+    MessageJP: 私、気になって夜も眠れません！
+    MessageCN: 我已经好奇到辗转难眠了！
+    MessageEN: I can't figure it out!
+    MessageTH: ฉัน...กังวลเรื่องนี้มากเลยค่ะ!
+    MessageTW: 我在意到晚上也睡不著！
+  - MessageGroupId: 260020140
+    Id: 1994
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으, 으음?
+    MessageJP: えっと、それは……
+    MessageCN: 那个，这种事情吧……
+    MessageEN: U-Um?
+    MessageTH: อะ... อืม?
+    MessageTW: 那個，那是……
+  - MessageGroupId: 260020150
+    Id: 1995
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 답을 알기 위해서라도, 절 도와주시겠어요?
+    MessageJP: その答えを探そうと思うのですが、手伝っていただけませんでしょうか？
+    MessageCN: 我想找到这个问题的答案，老师能帮忙吗？
+    MessageEN: Can you please help me figure this out?
+    MessageTH: 'คุณครูพอจะช่วยฉันหาคำตอบเรื่องนี้ให้
+
+      หน่อยได้ไหมคะ?'
+    MessageTW: 我想找到那個答案，能幫我嗎？
+  - MessageGroupId: 260020160
+    Id: 1996
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260022
+    NextGroupId: 260020170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으, 으으으음……?
+    MessageJP: うん、いいけど……
+    MessageCN: 嗯，倒也可以……
+    MessageEN: What?
+    MessageTH: หืมมมมม?
+    MessageTW: 嗯，是可以……
+  - MessageGroupId: 260020170
+    Id: 1997
+    CharacterId: 26002
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 260020160
+    PreConditionFavorScheduleId: 260022
+    FavorScheduleId: 0
+    NextGroupId: 260020180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님……. 또 야단을 맞고 말았어요.
+    MessageJP: 先生……また怒られてしまいました……
+    MessageCN: 老师……我又被骂了……
+    MessageEN: Sensei... I got in trouble again.
+    MessageTH: คุณครูคะ... ฉันโดนดุมาอีกแล้วค่ะ
+    MessageTW: 老師……我又挨罵了……
+  - MessageGroupId: 260020180
+    Id: 1998
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 야단을 맞다니, 왜?
+    MessageJP: ジュリが怒られたの？どうして？
+    MessageCN: 朱莉被骂了？发生什么了？
+    MessageEN: Huh? For what?
+    MessageTH: 'หืม? ถูกดุงั้นเหรอ? ทำไมล่ะ '
+    MessageTW: 茱莉被罵了嗎？為什麼？
+  - MessageGroupId: 260020180
+    Id: 1999
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 또라니, 무슨 소리야……?
+    MessageJP: また、って……？
+    MessageCN: “又”？
+    MessageEN: What do you mean "again"?
+    MessageTH: '"อีกแล้ว" งั้นเหรอ?
+
+      หมายถึงอะไรน่ะ?'
+    MessageTW: 又……？
+  - MessageGroupId: 260020190
+    Id: 2000
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 요리 도중에 실수로 폭발을 일으킨 바람에…….
+    MessageJP: 料理をしていたら、爆発させてしまいまして……
+    MessageCN: 做菜的时候，做到一半爆炸了……
+    MessageEN: I accidentally caused another explosion while I was cooking...
+    MessageTH: 'ตอนที่ฉันทำอาหาร ฉันเผลอทำผิด
+
+      พลาดจนเกิดระเบิดขึ้น...'
+    MessageTW: 在做料理的時候，不小心引起爆炸了……
+  - MessageGroupId: 260020200
+    Id: 2001
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠깐, 실수라고……?
+    MessageJP: それはまあ怒られるかもね……
+    MessageCN: 这被骂大概也是情理之中吧……
+    MessageEN: Accidentally?
+    MessageTH: เดี๋ยวนะ ผิดพลาดงั้นเหรอ...?
+    MessageTW: 那確實可能被罵……
+  - MessageGroupId: 260020200
+    Id: 2002
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 대체 어쩌다……?
+    MessageJP: 何があったの……？
+    MessageCN: 发生什么事了……？
+    MessageEN: But how?
+    MessageTH: เกิดอะไรขึ้นกันแน่...?
+    MessageTW: 發生了什麼事……？
+  - MessageGroupId: 260020210
+    Id: 2003
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020220
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네?
+    MessageJP: えっと……
+    MessageCN: 那个……
+    MessageEN: Yeah?
+    MessageTH: คะ?
+    MessageTW: 那個……
+  - MessageGroupId: 260020210
+    Id: 2004
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 식초에 설탕과 소금, 그리고 마요네즈를 섞다 보니 무심코……일까요?
+    MessageJP: お酢、砂糖、塩、それからマヨネーズを混ぜていたら……ボンっ！と
+    MessageCN: 我把醋、砂糖、盐和蛋黄酱混在一起……然后就，砰！
+    MessageEN: I mixed vinegar, sugar, salt, and mayonnaise. And then all of a sudden...
+    MessageTH: 'พอฉันเอาน้ำตาลกับเกลือผสมลงในน้ำส้ม
+
+      สายชู... แล้วก็ใส่มายองเนสลงไป...
+
+      มันก็...กลายเป็นแบบนั้น'
+    MessageTW: 我只不過是將醋、糖、鹽還有美乃滋混在一起就……碰！
+  - MessageGroupId: 260020220
+    Id: 2005
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게 어째서 폭발하는 거야?!
+    MessageJP: 何でそれが爆発するの！？
+    MessageCN: 为什么那东西能爆炸！？
+    MessageEN: It just exploded!
+    MessageTH: ทำไมมันถึงระเบิดได้ล่ะ?!
+    MessageTW: 那個為什麼會爆炸！？
+  - MessageGroupId: 260020220
+    Id: 2006
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 식초랑 설탕이랑 소금이랑 마요네즈를 섞었는데 폭발했다고?
+    MessageJP: その材料に爆発の要素あった！？
+    MessageCN: 那些材料居然满足爆炸的条件吗！？
+    MessageEN: Wait... You mixed vinegar, sugar, salt, and mayonnaise, and it exploded?
+    MessageTH: 'เอาน้ำตาลกับเกลือแล้วก็มายองเนส
+
+      ใส่ลงไปในน้ำส้มสายชูแล้วระเบิด?'
+    MessageTW: 那些材料有爆炸的要素！？
+  - MessageGroupId: 260020230
+    Id: 2007
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어라, 요리하다 보면 자주 일어나지 않나요?
+    MessageJP: えっ、あれっ？
+    MessageCN: 诶，老师说什么？
+    MessageEN: What, doesn't that happen when you're cooking?
+    MessageTH: 'เอ๊ะ? แต่การทำอาหารมันก็เกิดเรื่องแบบ
+
+      นี้ได้บ่อยๆ ไม่ใช่เหรอคะ?'
+    MessageTW: 耶，啊咧？
+  - MessageGroupId: 260020230
+    Id: 2008
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020250
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 폭발.
+    MessageJP: 爆発って、お料理のあるあるですよね？
+    MessageCN: 爆炸，不是做菜的时候常有的事吗？
+    MessageEN: Explosions.
+    MessageTH: ระเบิดน่ะค่ะ
+    MessageTW: 爆炸是料理中很常見的吧？
+  - MessageGroupId: 260020240
+    Id: 2009
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 맛있는 양념을 만들기 위해서였어요!
+    MessageJP: あの特製ソース、絶対に美味しくなるはずだったのに勿体ないです……！
+    MessageCN: 但是那个秘制酱料，明明绝对很好吃的……太可惜了！
+    MessageEN: I was trying to make a delicious sauce!
+    MessageTH: ฉันทำเพื่อสร้างเครื่องปรุงแสนอร่อยนะคะ!
+    MessageTW: 那個特製醬汁絕對會很好吃的，太可惜了……！
+  - MessageGroupId: 260020240
+    Id: 2010
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요즘 이 소스에 빵을 찍어 먹는 게 유행이에요!
+    MessageJP: あのソースにパンを浸けて食べるのが流行りなんですよ！
+    MessageCN: 一定会流行用面包蘸上这种酱料的吃法的！
+    MessageEN: "Everyone's been dipping their breadsticks in this sauce! "
+    MessageTH: 'ช่วงนี้ทุกคนฮิตการกินขนมปังจิ้มซอส
+
+      กันนี่คะ! '
+    MessageTW: 用麵包沾那個醬汁吃很流行的唷！
+  - MessageGroupId: 260020240
+    Id: 2011
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020250
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아마도!
+    MessageJP: ……将来的には！
+    MessageCN: ……之后一定！
+    MessageEN: At least, I think!
+    MessageTH: อาจจะนะคะ!
+    MessageTW: ……在未來的話！
+  - MessageGroupId: 260020250
+    Id: 2012
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니, 보통 폭발하진 않는 거 같은데…….
+    MessageJP: そのあるあるは、私は知らないかな……
+    MessageCN: 会不会流行我还真不知道……
+    MessageEN: Um... No, I don't think explosions are that common...
+    MessageTH: เดี๋ยวสิ... ปกติมันไม่น่าจะระเบิดนะ...
+    MessageTW: 那是很常見的嗎，我不知道耶……
+  - MessageGroupId: 260020250
+    Id: 2013
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어……. 생각보다 흔한 일인가……?! 폭발……?
+    MessageJP: そっかぁ……
+    MessageCN: 是这样啊……
+    MessageEN: Really? Maybe explosions are more common than you think...
+    MessageTH: 'เอ่อ... มีเรื่องแบบนี้เกิดขึ้นบ่อยๆ
+
+      งั้นเหรอ....?!  ระเบิด....?'
+    MessageTW: 這樣啊……
+  - MessageGroupId: 260020260
+    Id: 2014
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 흐음, 어쨌거나 곤란해요…….
+    MessageJP: うーん、困りました……
+    MessageCN: 嗯——这下头疼了……
+    MessageEN: Hm... But I'm in trouble now.
+    MessageTH: อืม... แบบนี้ก็แย่เลยนะคะ
+    MessageTW: 唔嗯，真令人困擾……
+  - MessageGroupId: 260020260
+    Id: 2015
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제 요리 방법이 대체 무엇이 잘못되었는지…….
+    MessageJP: どこが間違っていたのでしょうか……
+    MessageCN: 问题究竟出在哪里呢……
+    MessageEN: I wonder what's wrong with my cooking...
+    MessageTH: 'วิธีทำอาหารของฉันมันมีปัญหาตรงไหน
+
+      กันน้า...'
+    MessageTW: 哪裡做錯了呢……
+  - MessageGroupId: 260020260
+    Id: 2016
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혼자만으로는 알기가 어려우니…….
+    MessageJP: こういうのって、一人ではなかなか気づけないのですよね……
+    MessageCN: 不过这种事情，一个人的话也很难注意到的吧……
+    MessageEN: It's hard for me to figure this out on my own...
+    MessageTH: 'ถ้าลำพังฉันทำอาหารคนเดียวคงดูไม่
+
+      ออกแน่...'
+    MessageTW: 這種事，一個人怎麼也察覺不到吧……
+  - MessageGroupId: 260020270
+    Id: 2017
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 직접 봐줄까? 요리하는 거.
+    MessageJP: そしたら、ジュリの料理してるとこを見せてくれない？
+    MessageCN: 这样的话，我去看看朱莉做菜的过程怎么样？
+    MessageEN: Why don't I watch you while you cook?
+    MessageTH: 'ถ้างั้นให้ครูช่วยดูให้ไหม?
+
+      เรื่องทำอาหารน่ะ'
+    MessageTW: 這樣的話，能讓我看看茱莉怎麼料理的嗎？
+  - MessageGroupId: 260020280
+    Id: 2018
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020290
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어머, 정말이신가요?
+    MessageJP: あっ、ありがとうございます。お願いできますか？
+    MessageCN: 啊，实在太感谢了。可以吗？
+    MessageEN: Really?
+    MessageTH: โอ๊ะ? จริงเหรอคะ
+    MessageTW: 啊，非常感謝。可以拜託您嗎？
+  - MessageGroupId: 260020280
+    Id: 2019
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께서 봐주신다면, 확실히, 무엇이 문제점인지 알 수 있을지도…….
+    MessageJP: 先生に見ていただければ、原因が分かるかもしれません……！
+    MessageCN: 如果老师看着我做的话，也许就能知道原因了……！
+    MessageEN: If you watch me, then I'm sure we can figure out what I'm doing wrong...
+    MessageTH: 'ถ้าคุณครูคอยช่วยดูให้ล่ะก็จะต้องรู้ได้แน่ๆ
+
+      ค่ะ ว่าปัญหาอยู่ที่ตรงไหน...'
+    MessageTW: 如果讓老師看的話，可能會知道原因……！
+  - MessageGroupId: 260020290
+    Id: 2020
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260023
+    NextGroupId: 260020300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후! 그럼 부탁드릴게요!
+    MessageJP: では、お願いいたします！
+    MessageCN: 那就拜托了！
+    MessageEN: Heehee! I'll see you soon!
+    MessageTH: ฮุฮุ! ถ้างั้นก็ขอรบกวนด้วยนะคะ!
+    MessageTW: 那麼，拜託你了！
+  - MessageGroupId: 260020300
+    Id: 2021
+    CharacterId: 26002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260020290
+    PreConditionFavorScheduleId: 260023
+    FavorScheduleId: 0
+    NextGroupId: 260020310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님의 고견. 잘 들었습니다.
+    MessageJP: 先生、今日はご意見をいただきありがとうございました
+    MessageCN: 老师，十分感谢您今天提的意见
+    MessageEN: I learned a lot from you, Sensei.
+    MessageTH: ความเห็นของคุณครู ฉันทราบดีแล้วค่ะ
+    MessageTW: 老師，謝謝您今天的意見
+  - MessageGroupId: 260020300
+    Id: 2022
+    CharacterId: 26002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 과연 많은 도움이 되었어요.
+    MessageJP: とっても助かりました
+    MessageCN: 对我非常有帮助
+    MessageEN: Thank you very much.
+    MessageTH: สุดท้ายก็ให้คุณครูช่วยเยอะเลย
+    MessageTW: 真的幫了大忙
+  - MessageGroupId: 260020310
+    Id: 2023
+    CharacterId: 26002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020320
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 제가 시도한 방법은 위험하다는 걸 알았으니.
+    MessageJP: おかげさまで今日の方法は危険だと分かりましたので、
+    MessageCN: 多亏了您，我才知道今天的烹饪方式原来有危险
+    MessageEN: I finally understand that what I was doing was quite dangerous.
+    MessageTH: 'วันนี้ฉันรู้แล้วค่ะว่าวิธีทำอาหารที่ฉันทำ
+
+      มันอันตราย...'
+    MessageTW: 託你的福，我知道今天的方法很危險
+  - MessageGroupId: 260020310
+    Id: 2024
+    CharacterId: 26002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음번에는 조금 더 다른 방식으로 도전해볼게요!
+    MessageJP: 次はまた違った方法に挑戦してみようと思います！
+    MessageCN: 我下次会换种方式试试看的！
+    MessageEN: I'm going to try using a different method next time!
+    MessageTH: คราวหน้าฉันจะลองใช้วิธีอื่นดูค่ะ!
+    MessageTW: 所以下次想挑戰不同的方法！
+  - MessageGroupId: 260020320
+    Id: 2025
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그냥 정규 레시피를 지키는 게, 낫지 않을까……?
+    MessageJP: レシピ通りに作るっていうのはどうかな……？
+    MessageCN: 按照菜谱来做的话如何呢……？
+    MessageEN: Why don't you just stick to the recipe...?
+    MessageTH: 'ถ้างั้นลองทำตามสูตรปกติดู...
+
+      จะดีกว่าไหม...?'
+    MessageTW: 照著食譜做如何……？
+  - MessageGroupId: 260020330
+    Id: 2026
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요리의 길은 무궁무진해서!
+    MessageJP: 料理の道は無限にありますから！
+    MessageCN: 烹饪的道路是无限的！
+    MessageEN: 'But cooking is all about being creative! '
+    MessageTH: 'เส้นทางการทำอาหารของฉันยังอีก
+
+      ยาวไกลค่ะ!'
+    MessageTW: 料理之路是無窮無盡的！
+  - MessageGroupId: 260020330
+    Id: 2027
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020340
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그것을 추구하는 일이야말로 요리의 즐거움 중 하나라고 생각하니까요!
+    MessageJP: それを探求することこそ、料理の楽しみの一つだと思いますし！
+    MessageCN: 而且我认为探索烹饪之道，也是做菜的一大乐趣！
+    MessageEN: That's one of the greatest joys of cooking! Isn't it?
+    MessageTH: 'ฉันคิดว่าการไล่ตามเส้นทางความฝัน
+
+      การทำอาหาร มันก็เป็นความสุขในการ
+
+      ทำอาหารอย่างหนึ่งค่ะ!'
+    MessageTW: 我認為探索是料理的樂趣之一！
+  - MessageGroupId: 260020340
+    Id: 2028
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020350
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 즐거우면 그걸로 된 거지. 응…….
+    MessageJP: そっか、楽しいのは大事だからね。うん……。
+    MessageCN: 这样啊，兴趣确实很重要呢。嗯……。
+    MessageEN: Well... As long as you're having fun.
+    MessageTH: อื้อ แค่จูริสนุกไปกับมันก็พอแล้ว
+    MessageTW: 這樣啊，開心很重要呢。嗯……
+  - MessageGroupId: 260020350
+    Id: 2029
+    CharacterId: 26002
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 260020340
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 또, 혼나버렸어요…….
+    MessageJP: また怒られてしまいました……
+    MessageCN: 老师，我又被骂了……
+    MessageEN: I got in trouble again...
+    MessageTH: ฉันโดนดุอีกแล้วค่ะ...
+    MessageTW: 又挨罵了……
+  - MessageGroupId: 260020360
+    Id: 2030
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020370
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으음, 또 무슨 일이야?
+    MessageJP: 今度は何があったの？
+    MessageCN: 这次是发生什么了？
+    MessageEN: What happened this time?
+    MessageTH: หืม? มีเรื่องอะไรอีกเหรอ?
+    MessageTW: 這次發生了什麼事？
+  - MessageGroupId: 260020370
+    Id: 2031
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 점심시간에 제가 만들었던 꽁치구이가 갑자기 도망치는 바람에…….
+    MessageJP: 今日のお昼、私が作ったサンマの塩焼きが逃げてしまいまして……
+    MessageCN: 今天中午，我做的盐烤秋刀鱼跑了……
+    MessageEN: The grilled saury I made for lunch suddenly ran away...
+    MessageTH: 'จู่ๆ ปลาดาบเงินย่างที่ฉันทำไว้เป็นมื้อ
+
+      กลางวัน มันหนีไปน่ะสิคะ...'
+    MessageTW: 今天中午，我做的鹽烤秋刀魚逃跑了……
+  - MessageGroupId: 260020380
+    Id: 2032
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠깐, 뭐가 도망쳤다고?
+    MessageJP: ちょっと待って、何が逃げたって……？
+    MessageCN: 等一下，什么东西跑了？
+    MessageEN: Wait, what? It ran away?
+    MessageTH: เดี๋ยวนะ อะไรหนีไปนะ?
+    MessageTW: 等等，什麼東西逃跑了……？
+  - MessageGroupId: 260020390
+    Id: 2033
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네? 꽁치구이……인데요?
+    MessageJP: えっと、サンマの塩焼き……ですけど
+    MessageCN: 那个，就是……盐烤秋刀鱼
+    MessageEN: But it's grilled saury...
+    MessageTH: คะ? ปลาดาบเงินย่าง...ค่ะ
+    MessageTW: 那個，鹽烤秋刀魚…
+  - MessageGroupId: 260020400
+    Id: 2034
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보통, 꽁치구이가 도망치고 그래?
+    MessageJP: 焼いたサンマが、物理的に逃げるなんてことある？
+    MessageCN: 盐烤秋刀鱼，物理意义上的跑了？
+    MessageEN: Does grilled saury typically run away?
+    MessageTH: 'ปกติปลาดาบเงินที่ย่างแล้วมันหนี
+
+      ไปได้ด้วยเหรอ?'
+    MessageTW: 鹽烤秋刀魚，物理上會逃跑嗎？
+  - MessageGroupId: 260020410
+    Id: 2035
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그…….
+    MessageJP: えっと、はい……
+    MessageCN: 那个，是这样……
+    MessageEN: Um...
+    MessageTH: ก็...
+    MessageTW: 那個，是的……
+  - MessageGroupId: 260020410
+    Id: 2036
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020420
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부끄럽게도……
+    MessageJP: お恥ずかしながら……
+    MessageCN: 确实有点难以启齿……
+    MessageEN: "I'm a little embarrassed... "
+    MessageTH: 'น่าอายจัง... '
+    MessageTW: 說起來很羞恥……
+  - MessageGroupId: 260020410
+    Id: 2037
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 가끔…….
+    MessageJP: その……
+    MessageCN: 那个……
+    MessageEN: But yes...
+    MessageTH: แต่บางครั้งฉัน...
+    MessageTW: 那個……
+  - MessageGroupId: 260020410
+    Id: 2038
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020420
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일주일에 한 번 정도는…….
+    MessageJP: 一週間に一度くらいの頻度で……
+    MessageCN: 大概这种事情一周会发生一次吧……
+    MessageEN: It happens about once a week...
+    MessageTH: ประมาณอาทิตย์ละครั้ง...
+    MessageTW: 大概一個禮拜會跑掉一次……
+  - MessageGroupId: 260020420
+    Id: 2039
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게 부끄러워할…… 일인, 가?
+    MessageJP: 恥ずかしいというかなんというか……
+    MessageCN: 该说是难以启齿还是什么的……
+    MessageEN: There's no need to be embarrassed... I think?
+    MessageTH: เรื่องนั้น...เป็นเรื่องนี่น่าอายงั้นเหรอ??
+    MessageTW: 不知道該羞恥的是哪件事……
+  - MessageGroupId: 260020420
+    Id: 2040
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정기적으로 도망치는구나……!
+    MessageJP: 結構定期的に逃げるんだね
+    MessageCN: 还真能定期跑走的啊
+    MessageEN: Ah, so it happens regularly!
+    MessageTH: หนีไปประจำสินะ!
+    MessageTW: 還會定期逃跑阿
+  - MessageGroupId: 260020430
+    Id: 2041
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020440
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으음, 제가 요리를 할 때마다 어째서 이런 일이 벌어지는 건지.
+    MessageJP: どうして私が料理をすると、こうやって色んなことが起きるのでしょうか
+    MessageCN: 为什么我在做菜的时候，总是会发生这类事情呢
+    MessageEN: I don't know why things like this happen to me so often!
+    MessageTH: 'อืม... ไม่รู้ว่าทำไมเวลาฉันทำอาหารถึง
+
+      มีเรื่องแบบนี้เกิดขึ้นอยู่เรื่อย'
+    MessageTW: 為什麼我做料理的時候，都會發生這種事呢
+  - MessageGroupId: 260020430
+    Id: 2042
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020440
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩌면 좋을까요. 선생님……!
+    MessageJP: 先生、どう思いますか……？
+    MessageCN: 老师……有什么头绪吗？
+    MessageEN: What should I do, Sensei?
+    MessageTH: ทำยังไงดีคะ คุณครู...!
+    MessageTW: 老師，你覺得呢……？
+  - MessageGroupId: 260020440
+    Id: 2043
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020450
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼, 어디 한 번 실험해보자.
+    MessageJP: じゃあ、一度実験してみない？
+    MessageCN: 那，我们来实验一次？
+    MessageEN: Why don't we do an experiment?
+    MessageTH: ถ้างั้น... เรามาทดลองกันดูดีกว่า
+    MessageTW: 那我們來實驗看看吧？
+  - MessageGroupId: 260020450
+    Id: 2044
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020460
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 실험이요?
+    MessageJP: 実験……ですか？
+    MessageCN: 实验……吗？
+    MessageEN: An experiment?
+    MessageTH: ทดลองเหรอคะ?
+    MessageTW: 實驗……嗎？
+  - MessageGroupId: 260020460
+    Id: 2045
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주리가 만든 요리에서 왜 그런 일이 벌어지는지.
+    MessageJP: ジュリが作った料理が、どうしてそうなるのか
+    MessageCN: 我们来看看朱莉做的菜为什么会出现这种情况吧
+    MessageEN: An experiment to uncover why these things happen when you cook.
+    MessageTH: 'ว่าทำไมถึงเกิดเรื่องแบบนี้ขึ้นกับ
+
+      อาหารที่จูริทำไงล่ะ '
+    MessageTW: 找出茱莉做的料理為什麼會那樣
+  - MessageGroupId: 260020460
+    Id: 2046
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 실험해서 이유를 확인해보는 거야.
+    MessageJP: 条件を揃えたり実験をしてみて、原因を追究する
+    MessageCN: 控制好条件变量，进行实验，来追究原因吧
+    MessageEN: We'll figure out the cause.
+    MessageTH: ทำการทดลองเพื่อหาสาเหตุยังไงล่ะ
+    MessageTW: 透過條件匹配或實驗來找出問題的原因
+  - MessageGroupId: 260020470
+    Id: 2047
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 과연…….
+    MessageJP: なるほど……
+    MessageCN: 原来如此……
+    MessageEN: I wonder...
+    MessageTH: สุดท้าย...
+    MessageTW: 原來如此……
+  - MessageGroupId: 260020470
+    Id: 2048
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020480
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 원인을 알면, 문제도 해결할 수 있을지도 모른다.
+    MessageJP: 原因さえ分かれば、問題も解決できる……
+    MessageCN: 要是知道原因的话，就能解决问题了……
+    MessageEN: If we can figure out the cause, then we may be able to find a solution.
+    MessageTH: 'ถึงจะรู้สาเหตุแต่ก็ไม่รู้ว่าจะแก้ไขปัญหา
+
+      ได้รึเปล่า'
+    MessageTW: 只要知道原因，問題就能解決了……
+  - MessageGroupId: 260020470
+    Id: 2049
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 말씀이시군요!
+    MessageJP: 確かにそうかもしれません！
+    MessageCN: 也许确实是这样！
+    MessageEN: That's what I'm talking about!
+    MessageTH: แบบนี้นี่เองสินะคะ
+    MessageTW: 確實如此！
+  - MessageGroupId: 260020480
+    Id: 2050
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020490
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네! 알겠습니다!
+    MessageJP: ありがとうございます、ぜひよろしくお願いします！
+    MessageCN: 谢谢老师的建议，请务必拜托了！
+    MessageEN: Yes! Okay!
+    MessageTH: ค่ะ! ฉันเข้าใจแล้วค่ะ
+    MessageTW: 非常感謝，務必拜託了！
+  - MessageGroupId: 260020480
+    Id: 2051
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260025
+    NextGroupId: 260020490
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 오늘 학생식당에서 뵐게요!
+    MessageJP: では今日、学食までお越しいただけますか？よろしくお願いします！
+    MessageCN: 那么今天能请老师来一趟食堂吗？拜托了！
+    MessageEN: I'll see you at the student dining hall!
+    MessageTH: ถ้างั้นวันนี้ฉันจะรอที่โรงอาหารนะคะ!
+    MessageTW: 那麼，今天能請您來學校食堂嗎？拜託了！
+  - MessageGroupId: 260020490
+    Id: 260020010
+    CharacterId: 26002
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 260020480
+    PreConditionFavorScheduleId: 260025
+    FavorScheduleId: 0
+    NextGroupId: 260020500
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 저기…….
+    MessageJP: 先生、その
+    MessageCN: 老师，那个
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020500
+    Id: 260020020
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020510
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 주리, 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 茱莉怎么了？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020500
+    Id: 260020030
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020510
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……설마 또 혼났다거나?
+    MessageJP: また何か怒られちゃった……？
+    MessageCN: 茱莉是又被谁骂了吗……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020510
+    Id: 260020040
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앗, 아니요! 딱히 무슨 일이 있는 건 아니에요.
+    MessageJP: あっ、その、特に今回は何か怒られたわけではなく！
+    MessageCN: 啊，那个，这次并没有被骂！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020520
+    Id: 260020050
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020530
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오히려 칭찬을 받고 싶을 정도랍니다!
+    MessageJP: むしろ褒めていただきたいくらいです！
+    MessageCN: 倒不如说，我希望老师夸夸我！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020520
+    Id: 260020060
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020530
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘은 아직 요리하면서 냄비가 한 번도 폭발하지 않았거든요! 엣-헴!
+    MessageJP: 何せ、今日はまだ鍋が爆発してません！
+    MessageCN: 毕竟我今天做饭的时候，已经没有把锅炸掉了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020530
+    Id: 260020070
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020540
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으, 응, 그렇구나……. 그건 잘됐네…….
+    MessageJP: それは、良かったね……？
+    MessageCN: 那真是太好了呢……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020540
+    Id: 260020080
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020550
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 저도 점점 성장하고 있으니까요!
+    MessageJP: はい、私も日々成長してますので！
+    MessageCN: 嗯，我可是每天都在成长的！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020540
+    Id: 260020090
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020550
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 선생님께 연락을 드린 건 다름이 아니라.
+    MessageJP: あ、それでご用件なのですが
+    MessageCN: 啊，还有一件事
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020550
+    Id: 260020100
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020560
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게. 저…….
+    MessageJP: よろしければ、その
+    MessageCN: 就是，如果老师方便的话，那个
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020560
+    Id: 260020110
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020570
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 혹시 이번 주말에 시간, 괜찮으실까요?
+    MessageJP: 今週末に、お時間をいただけませんか？
+    MessageCN: 这个周末，我可以借用老师一点时间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020560
+    Id: 260020120
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020570
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마침 이번 주말은 게헨나 급양부의 정기 동아리 활동이 있는 날이니까…….
+    MessageJP: ちょうどその日は給食部の用事で学校に行くのですが
+    MessageCN: 因为那天正好供给部有点事情，所以我要去学校一趟
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020560
+    Id: 260020130
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020570
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주말에 저를 좀 도와주셨으면 해서요.
+    MessageJP: できれば先生に見せたいものがありまして
+    MessageCN: 如果可以的话，我有个东西想给老师看
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020570
+    Id: 260020140
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020580
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '그거라면 딱히 상관없지만……. '
+    MessageJP: うん、了解
+    MessageCN: 嗯，我明白了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020580
+    Id: 260020150
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020590
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후훗-! 네에!
+    MessageJP: ありがとうございます！
+    MessageCN: 十分感谢！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020580
+    Id: 260020160
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 260026
+    NextGroupId: 260020590
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 이번 주말, 학생식당에서 기다릴게요!
+    MessageJP: では、学食でお待ちしておりますね！
+    MessageCN: 那么，我到时候就在学校食堂等着老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020590
+    Id: 260020170
+    CharacterId: 26002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260020580
+    PreConditionFavorScheduleId: 260026
+    FavorScheduleId: 0
+    NextGroupId: 260020600
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오, 오늘 민폐를 끼쳐서 죄송해요. 선생님.
+    MessageJP: 今日はご迷惑をおかけしてすみません……
+    MessageCN: 对不起，今天给老师添麻烦了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020600
+    Id: 260020180
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020610
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 몸은 괜찮아? 역시 날이 너무 뜨거웠던 걸까.
+    MessageJP: ううん、気にしないで。体調は平気？陽射しのせいかな？
+    MessageCN: 没有的事，不用在意。茱莉身体还好吗？是太阳太毒了的缘故吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020610
+    Id: 260020190
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020620
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '몸은 괜찮아요! '
+    MessageJP: 身体は全然大丈夫です！
+    MessageCN: 我身体完全没问题！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020610
+    Id: 260020200
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020620
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번엔 그, 그런 게 아니라.
+    MessageJP: 恐らくですがその、聞いたところによると、もしかしたら……
+    MessageCN: 虽然也许，就我听说的情况来看，大概……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020620
+    Id: 260020210
+    CharacterId: 26002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020630
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……?
+    MessageJP: ？
+    MessageCN: ？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020630
+    Id: 260020220
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020640
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 아니요! 그, 그러니까 다음에!
+    MessageJP: いえ、やはり何でもありません！お気になさらず……！
+    MessageCN: 没、没什么！请不要在意……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020630
+    Id: 260020230
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020640
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네! 다음에 또 같이 텃밭을 가꾸도록 해요. 선생님!
+    MessageJP: ま、また今度ぜひお手伝いいただけますと嬉しいです！
+    MessageCN: 如、如果老师下次也能给我帮忙的话，我会很高兴的！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020630
+    Id: 260020240
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260020640
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그때는 그게, 햇볕이 강하지 않은 날……. 조건적으로…….
+    MessageJP: その時はえっと、陽射しがあまり強くない日の方が、条件的に……
+    MessageCN: 虽然那个，前提得是那天的太阳没今天这么大……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 260020640
+    Id: 260020250
+    CharacterId: 26002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 아무튼 앞으로도 잘 부탁드려요!
+    MessageJP: と、とにかく、引き続きお願いしますね！
+    MessageCN: 不、不管怎么说，请老师今后也多多关照！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

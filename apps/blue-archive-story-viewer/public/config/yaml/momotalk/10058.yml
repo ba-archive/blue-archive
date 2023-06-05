@@ -1,0 +1,850 @@
+CharacterId: 10058
+translator: 千叶绯绯
+title:
+  - GroupId: 1005802
+    FavorScheduleId: 100582
+    CharacterId: 10058
+    TextJp: 救護の精神
+    TextCn: 救护的精神
+    TextKr: 그 뜻을 보다 널리
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005803
+    FavorScheduleId: 100583
+    CharacterId: 10058
+    TextJp: 趣味と実益
+    TextCn: 兴趣与实际利益
+    TextKr: 취미의 영역
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005805
+    FavorScheduleId: 100585
+    CharacterId: 10058
+    TextJp: アフタヌーンティー
+    TextCn: 下午茶
+    TextKr: 애프터눈 티
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005806
+    FavorScheduleId: 100586
+    CharacterId: 10058
+    TextJp: 「救護」の在り方
+    TextCn: 「救护」应有的方式
+    TextKr: 구호가 필요한 자리
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 100580010
+    Id: 100580010
+    CharacterId: 10058
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '선생님. '
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580020
+    Id: 100580020
+    CharacterId: 10058
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮으시다면, 오늘의 시간을 저에게 할애해 주실 수 있으신지요.
+    MessageJP: お忙しいとは思いますが……よろしければ今日、少しお時間を頂けませんか？
+    MessageCN: 虽然您应该很忙……但如果可以的话，我能占用老师一点时间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580030
+    Id: 100580030
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미네의 부탁이라면야, 얼마든지!
+    MessageJP: ミネの頼みならもちろん
+    MessageCN: 既然是美弥的请求，那当然可以啦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580040
+    Id: 100580040
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 감사합니다.
+    MessageJP: ありがとうございます
+    MessageCN: 十分感谢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580050
+    Id: 100580050
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데, 무슨 일이야?
+    MessageJP: それで、どうしたの？
+    MessageCN: 那，美弥找我有什么事呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580060
+    Id: 100580060
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580070
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일인지에 대한 확인은 뒤로 미루고
+    MessageJP: よく考えてみますと
+    MessageCN: 我仔细想了想
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580060
+    Id: 100580070
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 우선 약속을 받아 주시는 그 모습……
+    MessageJP: 要件を聞かずとも、快く二つ返事でお願いを聞いてくださるなんて……
+    MessageCN: 老师居然不问我有什么事，就不假思索地答应了我的请求……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580070
+    Id: 100580080
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 저희에게 신뢰할 수 있는 소중한 분이 아닐까, 하고
+    MessageJP: もしかすると先生は、信頼できる大切な方なのではないかと
+    MessageCN: 也许老师，真的是一个值得信赖的重要之人
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580070
+    Id: 100580090
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 생각을 해 보았습니다.
+    MessageJP: そんなことを思ってしまいますね
+    MessageCN: 我是这么觉得的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580080
+    Id: 100580100
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100582
+    NextGroupId: 100580090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미네……?
+    MessageJP: ミネ……？
+    MessageCN: 美弥……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580090
+    Id: 100580110
+    CharacterId: 10058
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100580080
+    PreConditionFavorScheduleId: 100582
+    FavorScheduleId: 0
+    NextGroupId: 100580100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 드문 일입니다만
+    MessageJP: 先生、なんと珍しいことに……
+    MessageCN: 老师，好难得啊……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580100
+    Id: 100580120
+    CharacterId: 10058
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간이 남는 날입니다.
+    MessageJP: 今日は時間が空いているのです
+    MessageCN: 我今天居然有空
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580110
+    Id: 100580130
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미네에게도 그런 개념이 있었구나……
+    MessageJP: や、休むことも大切だよ！
+    MessageCN: 休、休息也是很重要的啊！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580110
+    Id: 100580140
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간이 남을 때에는, 뭘 하면서 지내?
+    MessageJP: ミネは時間がある時、何をしてるの？
+    MessageCN: 美弥在空闲的时候都会做些什么事呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580120
+    Id: 100580150
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580130
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 글쎄요.
+    MessageJP: そうですね……
+    MessageCN: 我想想……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580130
+    Id: 100580160
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 특별히 취미라고 할 것 까지는 아닙니다만.
+    MessageJP: 趣味と言っていいものか分かりませんが
+    MessageCN: 虽然不知道能不能算得上是兴趣
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580130
+    Id: 100580170
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수집한 의료용품을 바라보며 시간을 보내곤 합니다.
+    MessageJP: 集めた医療用品を眺めて、過ごしたりします
+    MessageCN: 不过我会去看看自己收集的医疗用品来消磨时间
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580140
+    Id: 100580180
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 의료용품 수집?
+    MessageJP: 医療用品を眺めて……？
+    MessageCN: 看医疗用品……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580150
+    Id: 100580190
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네.
+    MessageJP: はい
+    MessageCN: 是的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580150
+    Id: 100580200
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 효과를 비교하거나 상상해 보는 것이
+    MessageJP: それぞれの効果を比較したり、使うところを想像していると……
+    MessageCN: 一边比较不同物品的效果，一边想象着它们的使用场合，这样的话……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580150
+    Id: 100580210
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나름 즐겁습니다.
+    MessageJP: 面白くて、あっという間に時間が過ぎてしまいます
+    MessageCN: 我感觉这样很有意思，看着看着时间很快就过去了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580160
+    Id: 100580220
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 취미는 처음 들어 봐……
+    MessageJP: その趣味は初めて聞いたな……
+    MessageCN: 我还是第一次听说这种兴趣……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580170
+    Id: 100580230
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇군요.
+    MessageJP: そうでしたか
+    MessageCN: 是这样吗
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580170
+    Id: 100580240
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면, 마침 잘 된 것 같습니다.
+    MessageJP: でしたら、せっかくの機会ですので
+    MessageCN: 那么，今天难得有机会
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580180
+    Id: 100580250
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제 수집품을…… 보여드리고 싶은데요.
+    MessageJP: 私の医療用品をお見せしたいのですが……
+    MessageCN: 我想让老师看看我的医疗用品……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580180
+    Id: 100580260
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100583
+    NextGroupId: 100580190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님만 괜찮으시다면, 제 방으로 선생님을 초대 드리고 싶습니다.
+    MessageJP: お越しいただけますか？
+    MessageCN: 老师现在方便过来吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580190
+    Id: 100580270
+    CharacterId: 10058
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100580180
+    PreConditionFavorScheduleId: 100583
+    FavorScheduleId: 0
+    NextGroupId: 100580200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580200
+    Id: 100580280
+    CharacterId: 10058
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 오후, 혹시 시간이 비어 있으실지요?
+    MessageJP: 今日の午後、少々お時間を頂けないでしょうか？
+    MessageCN: 我今天下午能稍微占用老师一点时间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580210
+    Id: 100580290
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 오후라면 괜찮아.
+    MessageJP: 全然大丈夫だよ
+    MessageCN: 完全没问题
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580210
+    Id: 100580300
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 순찰입니까……?
+    MessageJP: 前の巡回救護？
+    MessageCN: 是要和之前一样去巡回救护吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580220
+    Id: 100580310
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘의 순찰은 오전으로 끝마쳤으니
+    MessageJP: 今日の分の巡回救護は午前中に終わらせましたので
+    MessageCN: 今天的巡回救护工作在上午就已经结束了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580220
+    Id: 100580320
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오후에 선생님과 함께 티타임을 가져 볼 수 있을까 해서요.
+    MessageJP: 午後は先生とティータイムを楽しめないものかと思ったのです
+    MessageCN: 所以我之后想和老师一起享受下午茶时间
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580230
+    Id: 100580330
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 없는 시간을 만들어서라도 갈게!
+    MessageJP: すぐ仕事を片付けて向かうね！
+    MessageCN: 我把工作做完就马上过去！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580240
+    Id: 100580340
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면 기다리고 있겠습니다.
+    MessageJP: ありがとうございます
+    MessageCN: 非常感谢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580240
+    Id: 100580350
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100585
+    NextGroupId: 100580250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 감사합니다.
+    MessageJP: それでは、お待ちしておりますね
+    MessageCN: 那么，我等着您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580250
+    Id: 100580360
+    CharacterId: 10058
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100580240
+    PreConditionFavorScheduleId: 100585
+    FavorScheduleId: 0
+    NextGroupId: 100580260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 샬레의 당번은 처음입니다만
+    MessageJP: シャーレのお仕事を手伝うのは初めてなのですが
+    MessageCN: 因为我是第一次去夏莱帮老师处理工作事务
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580260
+    Id: 100580370
+    CharacterId: 10058
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 특별히 준비해 두어야 할 것이 있을까요?
+    MessageJP: 何か用意しておいた方が良いものはありますでしょうか？
+    MessageCN: 所以有什么需要我这边事先准备的东西吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580270
+    Id: 100580380
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 애초에 그렇게 진지하게 생각하지 않아도 되는 일이야……
+    MessageJP: ううん、特に何も無くても大丈夫だよ
+    MessageCN: 没事，不用做什么准备也可以的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580280
+    Id: 100580390
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇습니까.
+    MessageJP: そうでしたか
+    MessageCN: 这样啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580280
+    Id: 100580400
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 제가 유의해야 할 행동거지라던가, 생활 수칙 같은 것이라도……?
+    MessageJP: でしたら、事前に注意すべき点やルールなどは……？
+    MessageCN: 那么，有什么需要我事先了解的注意事项或者规定吗……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580290
+    Id: 100580410
+    CharacterId: 10058
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니까 그렇게 진지한 게……
+    MessageJP: 細かいことは、こっちに来てから説明するね
+    MessageCN: 细节方面就等美弥过来之后再由我来说明吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580300
+    Id: 100580420
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠습니다.
+    MessageJP: 分かりました
+    MessageCN: 我明白了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580300
+    Id: 100580430
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 오늘은 샬레에서 뵙겠습니다.
+    MessageJP: それでは後ほど伺いますね
+    MessageCN: 那么我稍后就去拜访老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580310
+    Id: 100580440
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100580320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이런 말씀을 드리는 것도 생소하겠습니다만
+    MessageJP: このようなことを口にするのは恥ずかしいのですが
+    MessageCN: 那个，虽然有点难以启齿
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100580320
+    Id: 100580450
+    CharacterId: 10058
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100586
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저도, 꽤나 긴장하고 있답니다?
+    MessageJP: 実は……とても緊張しております
+    MessageCN: 但我其实……十分紧张
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

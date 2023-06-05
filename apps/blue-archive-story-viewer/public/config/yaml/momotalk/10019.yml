@@ -1,0 +1,1558 @@
+CharacterId: 10019
+translator: 瓜豆GUARDOU
+title:
+  - GroupId: 1001902
+    FavorScheduleId: 100192
+    CharacterId: 10019
+    TextJp: 秘匿事項
+    TextCn: 保密事项
+    TextKr: 비닉
+    TextEn: Incorporate
+    TextTh: การซ่อนเร้น
+    TextTw: 隱匿事項
+  - GroupId: 1001903
+    FavorScheduleId: 100193
+    CharacterId: 10019
+    TextJp: 防護
+    TextCn: 防护
+    TextKr: 방호
+    TextEn: Security
+    TextTh: การป้องกัน
+    TextTw: 防護
+  - GroupId: 1001905
+    FavorScheduleId: 100195
+    CharacterId: 10019
+    TextJp: 計画
+    TextCn: 计划
+    TextKr: 계획
+    TextEn: Plan
+    TextTh: แผนการ
+    TextTw: 計畫
+  - GroupId: 1001906
+    FavorScheduleId: 100196
+    CharacterId: 10019
+    TextJp: 射撃
+    TextCn: 射击
+    TextKr: 사격
+    TextEn: Shooting
+    TextTh: การยิงปืน
+    TextTw: 射擊
+content:
+  - MessageGroupId: 100190010
+    Id: 100190010
+    CharacterId: 10019
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 통신은 추적의 위험이 있다는 걸 확인했다.
+    MessageJP: この通信も、誰かに見られている可能性は捨てきれない
+    MessageCN: 本次通讯也不能排除正被他人监视的可能
+    MessageEN: I've confirmed there's a risk of our messages being watched.
+    MessageTH: 'ยืนยันได้ว่าการสื่อสารนี้มีความเสี่ยง
+
+      ในการถูกติดตาม'
+    MessageTW: 由於這個通訊也有可能會被第三者看到
+  - MessageGroupId: 100190020
+    Id: 100190020
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 용건만 간단히 말하겠다.
+    MessageJP: だから簡潔に用件だけ
+    MessageCN: 因此仅作简要传达
+    MessageEN: Let me get straight to the point.
+    MessageTH: ฉันจะเข้าเรื่องเลยก็แล้วกัน
+    MessageTW: 所以簡潔傳達以下要點
+  - MessageGroupId: 100190020
+    Id: 100190030
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내일 1800시. 이 MGRS좌표로 나올 것.
+    MessageJP: 明日1800、このMGRS座標にて
+    MessageCN: 明天1800，到这个MGRS坐标来
+    MessageEN: Tomorrow at 18:00. Come to these MGRS coordinates.
+    MessageTH: 'พรุ่งนี้หกโมงเย็น มาเจอกันที่พิกัด
+
+      MGRS'
+    MessageTW: 明天1800，到這個MGRS座標
+  - MessageGroupId: 100190020
+    Id: 100190040
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: TN 58XX.XXXX 17XX.XX
+    MessageJP: TN 58XX.XXXX、17XX.XX
+    MessageCN: TN 58XX.XXXX,17XX.XX
+    MessageEN: TN 58XX.XXXX 17XX.XX
+    MessageTH: TN 58XX.XXXX 17XX.XX
+    MessageTW: TN 58XX.XXXX，17XX.XX
+  - MessageGroupId: 100190030
+    Id: 100190050
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 단, 혼자서 와야 한다.
+    MessageJP: ただし一人で来ること
+    MessageCN: 但只能一个人来
+    MessageEN: You must come alone.
+    MessageTH: มาแค่คนเดียวล่ะ
+    MessageTW: 但只能一個人來
+  - MessageGroupId: 100190030
+    Id: 100190060
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이해했다면 응, 이라고 대답해라.
+    MessageJP: 頭に入れたら、「うん」とだけ応答せよ
+    MessageCN: 记住了就回答“嗯”
+    MessageEN: If you understand, reply back with "Yes."
+    MessageTH: ถ้าเข้าใจแล้ว ให้ตอบว่า อื้ม!
+    MessageTW: 懂了就回答「嗯」
+  - MessageGroupId: 100190040
+    Id: 100190070
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……아즈사?
+    MessageJP: ……アズサ？
+    MessageCN: ……梓？
+    MessageEN: '...Azusa?'
+    MessageTH: อาซึสะ...?
+    MessageTW: ……梓？
+  - MessageGroupId: 100190050
+    Id: 100190080
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바보 선생님!
+    MessageJP: バカっ！
+    MessageCN: 笨蛋！
+    MessageEN: Sensei, you dummy!
+    MessageTH: คุณครูนี่ก็!
+    MessageTW: 笨蛋！
+  - MessageGroupId: 100190050
+    Id: 100190090
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 통신의 기본은 음어 사용이라고!
+    MessageJP: 暗号は通信の基本！
+    MessageCN: 暗号是通讯的基础！
+    MessageEN: You have to speak in code!
+    MessageTH: บอกว่าให้ใช้รหัสลับสื่อสารไงล่ะ!
+    MessageTW: 暗號是通訊的基礎！
+  - MessageGroupId: 100190060
+    Id: 100190100
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이름을 말하면 정체가 탄로 나잖아!
+    MessageJP: 名前を書いたら正体がバレる！
+    MessageCN: 说出名字的话身份就暴露了！
+    MessageEN: They're gonna find out who you are if you say your name!
+    MessageTH: ถ้าพูดชื่อก็รู้หมดสิว่าเป็นใคร!
+    MessageTW: 寫名字的話會暴露真面目！
+  - MessageGroupId: 100190070
+    Id: 100190110
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 메신저에서까지 그래야 하는 거야……?
+    MessageJP: トークアプリで暗号って必要……？
+    MessageCN: 聊天软件里面有必要用暗号吗……？
+    MessageEN: Even through text messages...?
+    MessageTH: 'ต้องทำถึงขนาดนั้น
+
+      แม้แต่ในแชตด้วยเหรอ?'
+    MessageTW: 聊天軟體有需要使用暗號……？
+  - MessageGroupId: 100190080
+    Id: 100190120
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 당연하지!! 보안은 언제나 철저해야 한다고!
+    MessageJP: 当たり前だ！！セキュリティの徹底は基本！
+    MessageCN: 当然有！！全面的安全保障是基本操作！
+    MessageEN: Of course! You can never let your guard down when it comes to privacy!
+    MessageTH: 'ก็ใช่น่ะสิ!! การรักษาความปลอดภัย
+
+      เป็นเรื่องสำคัญมากนะ!'
+    MessageTW: 當然了！！安全本來就要做得徹底！
+  - MessageGroupId: 100190080
+    Id: 100190130
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠으면 응, 이라고 대답해.
+    MessageJP: 返事は？
+    MessageCN: 答复呢？
+    MessageEN: If you understand, reply back with "Yes."
+    MessageTH: ถ้าเข้าใจแล้ว ให้ตอบว่า อื้ม!
+    MessageTW: 回覆呢？
+  - MessageGroupId: 100190090
+    Id: 100190140
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응…….
+    MessageJP: うん……
+    MessageCN: 嗯……
+    MessageEN: Yes...
+    MessageTH: อื้ม...
+    MessageTW: 嗯……
+  - MessageGroupId: 100190100
+    Id: 100190150
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말이지, 손이 많이 가는 사람이야.
+    MessageJP: 全く、手のかかる人だ
+    MessageCN: 唉，还真是让人不省心
+    MessageEN: You're so high-maintenance...
+    MessageTH: ช่างเป็นคนที่ยุ่งยากซะจริงๆ...
+    MessageTW: 真是的，真令人費心
+  - MessageGroupId: 100190100
+    Id: 100190160
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190110
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 됐어.
+    MessageJP: もういい
+    MessageCN: 行吧
+    MessageEN: Forget it.
+    MessageTH: เอาเถอะ
+    MessageTW: 算了
+  - MessageGroupId: 100190110
+    Id: 100190170
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 자세한 얘기는 내일.
+    MessageJP: 詳しい話はまた明日
+    MessageCN: 具体的明天再说
+    MessageEN: We'll talk tomorrow.
+    MessageTH: ไว้จะบอกรายละเอียดให้ฟัง
+    MessageTW: 詳細情況
+  - MessageGroupId: 100190110
+    Id: 100190180
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 약속 장소에서 봐.
+    MessageJP: 約束の場所で
+    MessageCN: 就在说好的地方
+    MessageEN: Come to the meeting spot.
+    MessageTH: ตอนที่เราเจอกันพรุ่งนี้
+    MessageTW: 到明天約定地點再說
+  - MessageGroupId: 100190120
+    Id: 100190190
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100192
+    NextGroupId: 100190130
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 통신 종료.
+    MessageJP: 通信終わり
+    MessageCN: 通讯结束
+    MessageEN: End of communication.
+    MessageTH: จบการสื่อสาร
+    MessageTW: 通訊結束
+  - MessageGroupId: 100190130
+    Id: 100190200
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100190120
+    PreConditionFavorScheduleId: 100192
+    FavorScheduleId: 0
+    NextGroupId: 100190140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오리. 응답 요망.
+    MessageJP: こちらペンギン
+    MessageCN: 这里是企鹅
+    MessageEN: Duck, please respond.
+    MessageTH: เจ้าเป็ด ฉันคือเพนกวิ้น
+    MessageTW: 這裡是企鵝
+  - MessageGroupId: 100190130
+    Id: 100190210
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 펭귄이다.
+    MessageJP: アヒル、応答せよ
+    MessageCN: 鸭子请回答
+    MessageEN: This is Penguin.
+    MessageTH: ว.2 ทราบแล้วเปลี่ยน
+    MessageTW: 鴨子，請回答
+  - MessageGroupId: 100190140
+    Id: 100190220
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여기는 오리.
+    MessageJP: こちらアヒル
+    MessageCN: 这里是鸭子
+    MessageEN: This is Duck.
+    MessageTH: 'เป็ดตอบ '
+    MessageTW: 這裡是鴨子
+  - MessageGroupId: 100190140
+    Id: 100190230
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 펭귄. 기다리고 있었다.
+    MessageJP: 待っていたぞ、ペンギン
+    MessageCN: 等你很久了，企鹅
+    MessageEN: Penguin... I'm waiting.
+    MessageTH: 'เพนกวิ้น... กำลังรออยู่เลย '
+    MessageTW: 正等著呢，企鵝
+  - MessageGroupId: 100190150
+    Id: 100190240
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋다. 오리.
+    MessageJP: よし
+    MessageCN: 好
+    MessageEN: Okay. Duck.
+    MessageTH: ดีมาก เจ้าเป็ด
+    MessageTW: 很好
+  - MessageGroupId: 100190150
+    Id: 100190250
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 하달받은 임무는 극비니까 특히 보안에 주의할 것.
+    MessageJP: 今日通達した任務はトップシークレットだ。秘密保持には十分注意するように
+    MessageCN: 今天传达的任务是最高机密事项。务必做好保密
+    MessageEN: 'Our mission today is extremely confidential. You must be extra careful. '
+    MessageTH: 'ภารกิจวันนี้เป็นความลับสุดยอด
+
+      ต้องระวังให้ดีล่ะ'
+    MessageTW: 今天通知的任務是最高機密，所以要格外注意安全
+  - MessageGroupId: 100190160
+    Id: 100190260
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 통신 종료.
+    MessageJP: ペンギンからは以上
+    MessageCN: 企鹅over
+    MessageEN: End of communication.
+    MessageTH: จบการสื่อสาร
+    MessageTW: 企鵝完畢
+  - MessageGroupId: 100190160
+    Id: 100190270
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이상. 펭귄이.
+    MessageJP: 通信終わり
+    MessageCN: 通讯结束
+    MessageEN: That's all. Penguin.
+    MessageTH: แล้วเจอกันใหม่นะเจ้าเป็ด
+    MessageTW: 通訊結束
+  - MessageGroupId: 100190170
+    Id: 100190280
+    CharacterId: 10019
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100190160
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 청설모. 응답하라. 청설모.
+    MessageJP: こちらリス
+    MessageCN: 这里是松鼠
+    MessageEN: Squirrel. Please respond. Squirrel.
+    MessageTH: กระแต ทราบแล้วเปลี่ยน กระแต
+    MessageTW: 這裡是松鼠
+  - MessageGroupId: 100190180
+    Id: 100190290
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여기는 다람쥐.
+    MessageJP: ムササビ、応答せよ
+    MessageCN: 鼯鼠请回答
+    MessageEN: This is Chipmunk.
+    MessageTH: ฉันคือกระรอก
+    MessageTW: 鼯鼠，請回答
+  - MessageGroupId: 100190180
+    Id: 100190300
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금부터 청설모굴에 방문할 예정이다.
+    MessageJP: 今からのムササビの巣に向かう予定だ
+    MessageCN: 现计划向鼯鼠的巢穴行进
+    MessageEN: I'll be visiting Squirrel very soon.
+    MessageTH: ฉันจะไปหาที่โพรงกระแต
+    MessageTW: 現在打算去鼯鼠的巢穴
+  - MessageGroupId: 100190190
+    Id: 100190310
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 청설모는 굴에 있나?
+    MessageJP: ムササビ、今は巣の中にいるのか？
+    MessageCN: 鼯鼠现在是否在巢？
+    MessageEN: Is Squirrel in the cave?
+    MessageTH: กระแตอยู่ในโพรงหรือเปล่า?
+    MessageTW: 鼯鼠現在在巢穴裡嗎？
+  - MessageGroupId: 100190200
+    Id: 100190320
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아즈사는 펭귄 아니었어?
+    MessageJP: アズサはペンギンじゃなかったっけ……？
+    MessageCN: 梓的代号不是企鹅吗……？
+    MessageEN: Aren't you Penguin, Azusa?
+    MessageTH: อาซึสะไม่ได้เป็นเพนกวิ้นเหรอ?
+    MessageTW: 梓不是企鵝嗎……？
+  - MessageGroupId: 100190200
+    Id: 100190330
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 청설모가 아니라 오리인데요…….
+    MessageJP: 確かこちらはアヒルだったような……？
+    MessageCN: 我的代号好像是鸭子吧……？
+    MessageEN: I'm not Squirrel. I'm Duck...
+    MessageTH: ครูไม่ใช่กระแต แต่เป็นเป็ดไม่ใช่เหรอ...
+    MessageTW: 我記得我好像是鴨子耶……？
+  - MessageGroupId: 100190210
+    Id: 100190340
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190220
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니.
+    MessageJP: せんせ
+    MessageCN: 老sh
+    MessageEN: Nah.
+    MessageTH: เฮ้อ...
+    MessageTW: 老
+  - MessageGroupId: 100190210
+    Id: 100190350
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 아니 청설모.
+    MessageJP: いや、ムササビ
+    MessageCN: 不对，鼯鼠
+    MessageEN: Sensei...I mean, Squirrel.
+    MessageTH: คุณครู ไม่สิ กระแต
+    MessageTW: 不對，鼯鼠
+  - MessageGroupId: 100190220
+    Id: 100190360
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음어라고. 음어.
+    MessageJP: コードネームは、毎日変わるタイプのものもある
+    MessageCN: 代号也可以每天变换的
+    MessageEN: It's code. We're speaking in code.
+    MessageTH: นี่มันรหัสลับต่างหากล่ะ
+    MessageTW: 代號也有每天變換的類型
+  - MessageGroupId: 100190220
+    Id: 100190370
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음어는 매일 바뀌지 않으면 의미가 없어.
+    MessageJP: セキュリティ的な問題だ
+    MessageCN: 这是安全问题
+    MessageEN: Code is meaningless if you don't change it up every day.
+    MessageTH: รหัสลับจะไม่ลับ ถ้าเราไม่เปลี่ยนทุกวัน
+    MessageTW: 這是安全上的問題
+  - MessageGroupId: 100190230
+    Id: 100190380
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 자리에 있는 것을 확인했으니, 15분 후 방문토록 하겠다.
+    MessageJP: 席にいるのを確認した、15分後に向かう
+    MessageCN: 确认鼯鼠在巢，15分钟后出发
+    MessageEN: I've confirmed that you're in place. I'll be there in 15 minutes.
+    MessageTH: 'อยู่ที่โพรงใช่ไหม?
+
+      อีก 15 นาทีฉันจะออกไปหา'
+    MessageTW: 確認在座位上，15分鐘後過去
+  - MessageGroupId: 100190230
+    Id: 100190390
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 용무는 보안상 도착하고 나서.
+    MessageJP: 用件は到着してから伝えよう
+    MessageCN: 松鼠抵达之后再进行事项传达
+    MessageEN: I'll disclose the details in person.
+    MessageTH: แล้วจะบอกภารกิจให้เมื่อเจอกัน
+    MessageTW: 到了再傳達要事給你
+  - MessageGroupId: 100190230
+    Id: 100190400
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 펭귄이.
+    MessageJP: ペンギンからは以上
+    MessageCN: 企鹅over
+    MessageEN: Penguin.
+    MessageTH: จากเพนกวิ้น
+    MessageTW: 企鵝完畢
+  - MessageGroupId: 100190240
+    Id: 100190410
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190250
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: '...'
+    MessageTH: '...'
+    MessageTW: ……
+  - MessageGroupId: 100190240
+    Id: 100190420
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190250
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정정.
+    MessageJP: 訂正する
+    MessageCN: 更正
+    MessageEN: Correction.
+    MessageTH: ไม่สิ
+    MessageTW: 更正
+  - MessageGroupId: 100190240
+    Id: 100190430
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100193
+    NextGroupId: 100190250
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다람쥐가.
+    MessageJP: リスからは以上。通信終わり
+    MessageCN: 松鼠over。通讯结束
+    MessageEN: Squirrel.
+    MessageTH: กระรอก
+    MessageTW: 松鼠完畢，通訊結束
+  - MessageGroupId: 100190250
+    Id: 100190440
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100190240
+    PreConditionFavorScheduleId: 100193
+    FavorScheduleId: 0
+    NextGroupId: 100190260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안전은 확인했으니 우선 돌아왔어.
+    MessageJP: 気持ちよさそうに寝てたから、静かにお暇させてもらった
+    MessageCN: 老师看起来睡得很舒服，我就悄悄离开了
+    MessageEN: I've confirmed the safety, so I've returned.
+    MessageTH: ฉันเข้ามาเพราะเช็กดูแล้วว่าปลอดภัย
+    MessageTW: 看你睡得很舒服，我就悄悄離開了
+  - MessageGroupId: 100190260
+    Id: 100190450
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 방호도 중요하지만, 자신의 신체 건강도 스스로 챙기도록 해.
+    MessageJP: セキュリティもそうだけど、少しは自分の健康も大事にした方が良い
+    MessageCN: 安全固然很重要，但还请老师稍微注重一下自己的健康为好
+    MessageEN: Self-defense is important, but you have to take care of your health.
+    MessageTH: 'การป้องกันที่อยู่ก็สำคัญ แต่ก็ควร
+
+      ดูแลร่างกายและสุขภาพด้วย'
+    MessageTW: 安全固然重要，但也要照顧好自己的健康
+  - MessageGroupId: 100190260
+    Id: 100190460
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알았다면 대답은 응, 이라고 대답해. 청설모.
+    MessageJP: 頭に入れたら、「うん」とだけ応答せよ
+    MessageCN: 记住了就回答“嗯”
+    MessageEN: If you understand, reply back with "Yes." Squirrel.
+    MessageTH: ถ้ากระแตเข้าใจแล้ว ให้ตอบว่า อื้ม!
+    MessageTW: 懂了就回答「嗯」
+  - MessageGroupId: 100190270
+    Id: 100190470
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응.
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: Fine...
+    MessageTH: อื้ม
+    MessageTW: 嗯
+  - MessageGroupId: 100190280
+    Id: 100190480
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋아. 그럼 그 훈련날짜까지 기다리고 있을게.
+    MessageJP: よし、それではまた
+    MessageCN: 很好，那之后见
+    MessageEN: Good. I'll be waiting for training day.
+    MessageTH: ดีมาก แล้วฉันจะรอจนกว่าจะถึงวันฝึก
+    MessageTW: 很好，那之後再見
+  - MessageGroupId: 100190280
+    Id: 100190490
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이상. 다람쥐가.
+    MessageJP: リスからは以上。通信終わり
+    MessageCN: 松鼠over。通讯结束
+    MessageEN: That's all. Chipmunk.
+    MessageTH: แล้วเจอกัน
+    MessageTW: 松鼠完畢，通訊結束
+  - MessageGroupId: 100190290
+    Id: 100190500
+    CharacterId: 10019
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100190280
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 웰시코기가 리트리버에게.
+    MessageJP: コーギーよりレトリバーへ
+    MessageCN: 柯基呼叫猎犬
+    MessageEN: Welsh Corgi to Golden Retriever.
+    MessageTH: จากคอร์กี้ ถึงรีทรีฟเวอร์
+    MessageTW: 柯基呼叫黃金獵犬
+  - MessageGroupId: 100190300
+    Id: 100190510
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: D-Day야.
+    MessageJP: D-dayだ
+    MessageCN: 行动日到了
+    MessageEN: It's D-Day.
+    MessageTH: วันนี้คือวัน D-Day
+    MessageTW: D-day到了
+  - MessageGroupId: 100190300
+    Id: 100190520
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 설마 잊은 건 아니겠지?
+    MessageJP: まさか忘れてないだろうな？
+    MessageCN: 猎犬没有忘记吧？
+    MessageEN: You didn't forget, did you?
+    MessageTH: ยังไม่ลืมใช่ไหม?
+    MessageTW: 別告訴我你忘記了？
+  - MessageGroupId: 100190310
+    Id: 100190530
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 기억하고 있다면 응, 이라고 대답해.
+    MessageJP: 覚えていたら、うん、とだけ応答せよ
+    MessageCN: 还记得就回答“嗯”
+    MessageEN: If you remember, reply back with "Yes."
+    MessageTH: ถ้ายังจำได้อยู่ ให้ตอบว่า อื้ม!
+    MessageTW: 記得的話，就回答「嗯」
+  - MessageGroupId: 100190320
+    Id: 100190540
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: D-Day? 무슨 이야기?
+    MessageJP: D-day？何の話……？
+    MessageCN: 行动日？什么东西……？
+    MessageEN: D-Day? What are you talking about?
+    MessageTH: D-Day? หมายถึงเรื่องไหน?
+    MessageTW: D-day？什麼東西……？
+  - MessageGroupId: 100190320
+    Id: 100190550
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응.
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: Fine...
+    MessageTH: อื้ม
+    MessageTW: 嗯
+  - MessageGroupId: 100190330
+    Id: 100190560
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190350
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: '...'
+    MessageTH: '...'
+    MessageTW: ……
+  - MessageGroupId: 100190330
+    Id: 100190570
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이야기했었잖아.
+    MessageJP: この前言っただろう
+    MessageCN: 我之前说过了吧
+    MessageEN: I told you already...
+    MessageTH: เคยบอกไปแล้วไง
+    MessageTW: 之前告訴過你了吧
+  - MessageGroupId: 100190340
+    Id: 100190580
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋아. 그럼 곧바로 시작하자.
+    MessageJP: よし、ではすぐにでも始めよう
+    MessageCN: 好，那就立刻开始吧
+    MessageEN: Fine, let's begin.
+    MessageTH: ดีมาก งั้นมาเริ่มกันเลย
+    MessageTW: 好，那就馬上開始吧
+  - MessageGroupId: 100190350
+    Id: 100190590
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이곳 생활에서의 적응을 위한 적응훈련.
+    MessageJP: ここでの生活に慣れるための訓練だ
+    MessageCN: 是为了让我习惯这里的生活所做的训练
+    MessageEN: This training is designed to help me adapt to life here.
+    MessageTH: 'การฝึกปรับตัวให้เข้ากับ
+
+      ชีวิตของที่นี่'
+    MessageTW: 這是為了適應這裡的生活而進行的訓練
+  - MessageGroupId: 100190350
+    Id: 100190600
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100195
+    NextGroupId: 100190360
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 웰시코기는 준비가 됐어. 리트리버도 그러기를 바라지.
+    MessageJP: コーギーはすでに準備できている、レトリバーもそうであるといいが
+    MessageCN: 柯基准备完毕，希望猎犬也一样
+    MessageEN: Welsh Corgi is ready. Golden Retriever needs to be ready too.
+    MessageTH: 'ตอนนี้คอร์กี้พร้อมแล้ว หวังว่า
+
+      รีทรีฟเวอร์ก็จะพร้อมเหมือนกัน'
+    MessageTW: 柯基已經準備好了，希望黃金獵犬也是
+  - MessageGroupId: 100190360
+    Id: 100190610
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100190350
+    PreConditionFavorScheduleId: 100195
+    FavorScheduleId: 0
+    NextGroupId: 100190370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 리트리버.
+    MessageJP: レトリバー
+    MessageCN: 猎犬
+    MessageEN: Golden Retriever.
+    MessageTH: รีทรีฟเวอร์
+    MessageTW: 黃金獵犬
+  - MessageGroupId: 100190360
+    Id: 100190620
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여기는 웰시코기.
+    MessageJP: こちらコーギー
+    MessageCN: 这里是柯基
+    MessageEN: This is Welsh Corgi.
+    MessageTH: คอร์กี้เรียก
+    MessageTW: 這裡是柯基。
+  - MessageGroupId: 100190370
+    Id: 100190630
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190380
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: Huh? What's going on?
+    MessageTH: หืม? มีอะไรเหรอ?
+    MessageTW: 怎麼了？
+  - MessageGroupId: 100190370
+    Id: 100190640
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190380
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아직도 궁금한 게 남았어?
+    MessageJP: 何かあった？
+    MessageCN: 发生什么事了吗？
+    MessageEN: Do you have any other questions?
+    MessageTH: ยังสงสัยอะไรอีกเหรอ?
+    MessageTW: 有什麼事嗎？
+  - MessageGroupId: 100190380
+    Id: 100190650
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니.
+    MessageJP: いや
+    MessageCN: 没怎么
+    MessageEN: Nah.
+    MessageTH: เปล่าหรอก
+    MessageTW: 不
+  - MessageGroupId: 100190390
+    Id: 100190660
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190400
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……
+    MessageJP: その……
+    MessageCN: 那个……
+    MessageEN: '...'
+    MessageTH: '...'
+    MessageTW: 那個……
+  - MessageGroupId: 100190390
+    Id: 100190670
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그냥 보내 본 것뿐이야.
+    MessageJP: ただ、呼んでみただけ
+    MessageCN: 我就是，想呼叫一下试试
+    MessageEN: Nah, I just felt like texting.
+    MessageTH: แค่ส่งไปเฉยๆ น่ะ
+    MessageTW: 只是想試著呼叫一下
+  - MessageGroupId: 100190400
+    Id: 100190680
+    CharacterId: 10019
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100190390
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 10.0 10.1 9.7 9.3. 10.2 10.1
+    MessageJP: 10.0 10.1 9.7 9.3. 10.2 10.1
+    MessageCN: 10.0 10.1 9.7 9.3 10.2 10.1
+    MessageEN: 10.0 10.1 9.7 9.3. 10.2 10.1
+    MessageTH: 10.0 10.1 9.7 9.3. 10.2 10.1
+    MessageTW: 10.0 10.1 9.7 9.3. 10.2 10.1
+  - MessageGroupId: 100190410
+    Id: 100190690
+    CharacterId: 10019
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190420
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 8.9 10.4 10.3 10.0 10.2 10.7
+    MessageJP: 8.9 10.4 10.3 10.0 10.2 10.7
+    MessageCN: 8.9 10.4 10.3 10.0 10.2 10.7
+    MessageEN: 8.9 10.4 10.3 10.0 10.2 10.7
+    MessageTH: 8.9 10.4 10.3 10.0 10.2 10.7
+    MessageTW: 8.9 10.4 10.3 10.0 10.2 10.7
+  - MessageGroupId: 100190420
+    Id: 100190700
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 숫자야?
+    MessageJP: アズサ、これ何の数字……？
+    MessageCN: 梓，这是什么数字……？
+    MessageEN: What are these numbers supposed to mean?
+    MessageTH: เลขอะไรเหรอ?
+    MessageTW: 梓，這什麼數字……？
+  - MessageGroupId: 100190420
+    Id: 100190710
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……아즈사?
+    MessageJP: ……アズサ？
+    MessageCN: ……梓？
+    MessageEN: '...Azusa?'
+    MessageTH: อาซึสะ...?
+    MessageTW: ……梓？
+  - MessageGroupId: 100190430
+    Id: 100190720
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190440
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '?'
+    MessageJP: ？
+    MessageCN: ？
+    MessageEN: '...?'
+    MessageTH: '?'
+    MessageTW: ？
+  - MessageGroupId: 100190430
+    Id: 100190730
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190440
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아
+    MessageJP: あ
+    MessageCN: 啊
+    MessageEN: Oh...
+    MessageTH: อ่า...
+    MessageTW: 啊
+  - MessageGroupId: 100190440
+    Id: 100190740
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 실수야. 신경 쓸 것 없어.
+    MessageJP: 間違えた、気にしないでほしい
+    MessageCN: 发错了，不用在意
+    MessageEN: Sorry. That was a mistake.
+    MessageTH: ส่งผิดน่ะ ไม่ต้องสนใจหรอก
+    MessageTW: 弄錯了，請你不要介意
+  - MessageGroupId: 100190440
+    Id: 100190750
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190450
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 체크를 위해서 내게 쓰기를 했는데, 실수로 비둘기에게 보낸 거니까.
+    MessageJP: メモ用として自分宛てに送るはずが、間違えてハト宛てに送っていた
+    MessageCN: 本来打算发给自己备忘，但错发给鸽子了
+    MessageEN:
+      I wrote it out to check something, but I sent it to you by accident,
+      Pigeon.
+    MessageTH: 'ฉันจะส่งให้ตัวเอง แต่ดันไปกดส่งให้
+
+      นกพิราบ'
+    MessageTW: 本來是要寄給自己當作備忘的，但弄錯寄給鴿子了
+  - MessageGroupId: 100190450
+    Id: 100190760
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190460
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그리고 음어.
+    MessageJP: それから、名前
+    MessageCN: 还有就是，名字
+    MessageEN: And please use code.
+    MessageTH: มันเป็นรหัสลับน่ะ
+    MessageTW: 還有，名字
+  - MessageGroupId: 100190460
+    Id: 100190770
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 죄송합니다.
+    MessageJP: あっ、ごめん
+    MessageCN: 啊，抱歉
+    MessageEN: Oh, I'm sorry.
+    MessageTH: อ่อ เข้าใจแล้ว
+    MessageTW: 啊，抱歉
+  - MessageGroupId: 100190460
+    Id: 100190780
+    CharacterId: 10019
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무튼 그럼 아즈사는 참새?
+    MessageJP: とりあえず、スズメとかにしておく？
+    MessageCN: 就暂时用麻雀应急一下？
+    MessageEN: Are you a bird, Azusa?
+    MessageTH: ถ้างั้นอาซึสะเป็นนกกระจอกเหรอ?
+    MessageTW: 姑且先用麻雀之類的吧？
+  - MessageGroupId: 100190470
+    Id: 100190790
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음.
+    MessageJP: スズメ……
+    MessageCN: 麻雀……
+    MessageEN: Hmm.
+    MessageTH: อืม...
+    MessageTW: 麻雀……
+  - MessageGroupId: 100190470
+    Id: 100190800
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190480
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 참새인가.
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: A bird?
+    MessageTH: นกกระจอก...
+    MessageTW: 嗯
+  - MessageGroupId: 100190470
+    Id: 100190810
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100190480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나쁘지 않아. 그걸로 하지.
+    MessageJP: 悪くない、それにしよう
+    MessageCN: 不错，就用这个吧
+    MessageEN: Hmm, that's not bad. Let's just go with that.
+    MessageTH: ก็ไม่เลวนะ เอาตามนี้เลยแล้วกัน
+    MessageTW: 還不錯，就這個吧
+  - MessageGroupId: 100190480
+    Id: 100190820
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……혹시 비둘기는 궁금한 거야? 저 숫자가 뭔지.
+    MessageJP: ……あの数字、気になる？
+    MessageCN: ……鸽子在意那些数字吗？
+    MessageEN: '...Are you curious about those numbers, Pigeon?'
+    MessageTH: 'นกพิราบสงสัยเหรอว่าเลขพวกนั้น..
+
+      มันคืออะไร?'
+    MessageTW: ……那個數字，在意嗎？
+  - MessageGroupId: 100190480
+    Id: 100190830
+    CharacterId: 10019
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100196
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼……
+    MessageJP: だったら……
+    MessageCN: 那……
+    MessageEN: Yes...
+    MessageTH: ถ้างั้นก็...
+    MessageTW: 那麼……

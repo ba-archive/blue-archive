@@ -1,0 +1,898 @@
+CharacterId: 13012
+translator: 今天早睡了吗
+title:
+  - GroupId: 1301202
+    FavorScheduleId: 130122
+    CharacterId: 13012
+    TextJp: のん気な大捜査線
+    TextCn: 悠闲的大搜查线
+    TextKr: 느긋한 대수사선
+    TextEn: Relaxed Shakedown
+    TextTh: อาชญากรรมที่ไม่รีบร้อน
+    TextTw: 悠閒的大搜查線
+  - GroupId: 1301203
+    FavorScheduleId: 130123
+    CharacterId: 13012
+    TextJp: 銃声とジルコニア
+    TextCn: 枪声和氧化锆
+    TextKr: 총성과 지르코니아
+    TextEn: Gunfire and Zirconia
+    TextTh: เสียงปืนและเซอร์โคเนีย
+    TextTw: 槍聲與氧化鋯
+  - GroupId: 1301205
+    FavorScheduleId: 130125
+    CharacterId: 13012
+    TextJp: ザ・シューター/二大標的？
+    TextCn: 射手/双重目标？
+    TextKr: 더블 타겟
+    TextEn: Double Target
+    TextTh: ดับเบิ้ล ทาร์เก็ต
+    TextTw: The．Shooter／兩大目標？
+  - GroupId: 1301206
+    FavorScheduleId: 130126
+    CharacterId: 13012
+    TextJp: アイアン・コネクション
+    TextCn: 钢之连结
+    TextKr: 유치원에 간 경찰
+    TextEn: Kindergarten Going Downtown
+    TextTh: การทัศนศึกษาของเด็กอนุบาล
+    TextTw: Airon．Connection
+content:
+  - MessageGroupId: 130120010
+    Id: 130120010
+    CharacterId: 13012
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 순찰 시간입니다!
+    MessageJP: 先生、パトロールの時間ですよ！
+    MessageCN: 老师，到巡逻的时间了哦！
+    MessageEN: Sensei, it's time for patrol!
+    MessageTH: คุณครู ได้เวลาไปลาดตระเวนแล้วล่ะ!
+    MessageTW: 老師，巡邏時間到了唷！
+  - MessageGroupId: 130120020
+    Id: 130120020
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어제는 북구의 업무지구를 순찰했으니, 오늘은 중앙구의 업무지구를 순찰하도록 하죠!
+    MessageJP: 昨日は北区だったので、今日は中央区を回ることにしましょうか！
+    MessageCN: 昨天巡了北区，那我们今天就去中央区巡逻吧！
+    MessageEN:
+      We patrolled the north district last time, so let's patrol the central
+      district today!
+    MessageTH: 'เมื่อวานเราไปลาดตระเวนที่เขตธุรกิจที่
+
+      ทางเหนือแล้ว เพราะงั้นวันนี้เราไปที่เขต
+
+      ธุรกิจที่เขตกลางกันเถอะ!'
+    MessageTW: 昨天是北區，今天就去中央區巡一巡吧！
+  - MessageGroupId: 130120030
+    Id: 130120030
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 오늘은 휴일이잖아…….
+    MessageJP: 今日は、休日のはず……
+    MessageCN: 今天应该是休息日……
+    MessageEN: But today's supposed to be a day off...
+    MessageTH: แต่วันนี้มันวันหยุดนะ...
+    MessageTW: 今天不是休息日嗎……
+  - MessageGroupId: 130120030
+    Id: 130120040
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘은 쉬면 안 될까?
+    MessageJP: 今日くらいお休みにしない……？
+    MessageCN: 今天就休息一下吧……？
+    MessageEN: Why don't we take some rest?
+    MessageTH: วันนี้ขอหยุดสักวันไม่ได้เหรอ...?
+    MessageTW: 今天不休息一天嗎……？
+  - MessageGroupId: 130120040
+    Id: 130120050
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안 돼요! 사건은 회의실이 아니라 현장에서 일어나는 법이니까요.
+    MessageJP: そうはいきません！事件は会議室ではなく、現場で起きるのですから！
+    MessageCN: 那可不行！案件可不会在会议室发生，案件全部都是发生现场的！
+    MessageEN: Nope! Crime happens in the streets, not in the office.
+    MessageTH: 'ไม่ได้ค่ะ! คนร้ายไม่ได้หยุดวันเสาร์
+
+      อาทิตย์ด้วยซะหน่อย'
+    MessageTW: 不行！事件不會發生在會議室，而是在現場！
+  - MessageGroupId: 130120050
+    Id: 130120060
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저희가 이렇게 대화를 나누는 이 순간에도……
+    MessageJP: 私たちが、気持ちの良い二度寝を享受している間にも……
+    MessageCN: 哪怕在我们舒服地睡回笼觉的时候……
+    MessageEN: Even as we speak...
+    MessageTH: ในตอนที่เรากำลังคุยกันแบบนี้...
+    MessageTW: 在我們舒服地享受回籠覺的時候……
+  - MessageGroupId: 130120050
+    Id: 130120070
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시민의 손으로는 해결할 수 없는 대형 범죄가 저희를 기다리고 있다고요!
+    MessageJP: 市民の方々には解決できないような大型犯罪が、どこかで起きつつあるかもしれないんですよ！
+    MessageCN: 在某个地方也可能正发生市民们无法解决的大型犯罪！
+    MessageEN: There's crime happening that the civilians need our help to stop!
+    MessageTH: 'อาจเกิดเหตุอาชญากรรมขึ้นและชาวเมือง
+
+      ก็อาจรอให้พวกเราไปช่วยก็ได้นะคะ'
+    MessageTW: 說不定哪裡正發生著市民們無法解決的大型犯罪唷！
+  - MessageGroupId: 130120060
+    Id: 130120080
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130122
+    NextGroupId: 130120070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 더 나가고 싶지 않아…….
+    MessageJP: それなら尚のこと、あんまり行きたくないな……
+    MessageCN: 这样的话就更不想去了……
+    MessageEN: If that's supposed to convince me, it's not working.
+    MessageTH: แบบนั้นยิ่งไม่น่าออกไปใหญ่เลย...
+    MessageTW: 那就更不想去了……
+  - MessageGroupId: 130120070
+    Id: 130120090
+    CharacterId: 13012
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 130120060
+    PreConditionFavorScheduleId: 130122
+    FavorScheduleId: 0
+    NextGroupId: 130120080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 사건입니다!
+    MessageJP: 先生、事件です！
+    MessageCN: 老师，出事了！
+    MessageEN: We have a case on our hands, Sensei!
+    MessageTH: คุณครู เกิดเรื่องแล้วล่ะค่ะ!
+    MessageTW: 老師，有事件！
+  - MessageGroupId: 130120080
+    Id: 130120100
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 소식에 따르면 한 불량 학생이 시바타운의 보석상 앞에서 인질을 붙잡고 농성을 하고 있다고 합니다!
+    MessageJP: どうやら芝タウンの宝石店で、不良生徒が人質を取って立てこもっているそうです！
+    MessageCN: 听说在芝城的珠宝店，不良学生挟持了人质正与警方对峙！
+    MessageEN:
+      According to the report, a thug has taken a hostage in front of a jeweler
+      in Shiba Town.
+    MessageTH: 'ตามข่าวที่ได้ยินมา มีเด็กเกเรคนหนึ่ง
+
+      ประท้วงแล้วจับตัวประกันอยู่ที่หน้าร้าน
+
+      อัญมณีที่ชิบะ ทาวน์ค่ะ!'
+    MessageTW: 據說芝町的珠寶店內，有不良學生挾持人質與警方對峙！
+  - MessageGroupId: 130120080
+    Id: 130120110
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데 교통 정체 때문에 교섭인의 도착이 늦어지는 모양이네요.
+    MessageJP: そしてどうやら、交通渋滞で交渉人の到着が遅れているらしく……
+    MessageCN: 而且，看样子路上堵车了，谈判人员也要迟到……
+    MessageEN: But it seems the negotiator is stuck in a traffic jam.
+    MessageTH: 'แต่ว่าดูเหมือนนักเจรจาจะไปถึงที่นั่นได้
+
+      ช้าเพราะการจราจรติดขัดค่ะ...'
+    MessageTW: 而且似乎因為交通堵塞，談判專家會晚一點到場……
+  - MessageGroupId: 130120090
+    Id: 130120120
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120100
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음……
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: Um...
+    MessageTH: อืม...
+    MessageTW: ……
+  - MessageGroupId: 130120090
+    Id: 130120130
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 만약 본관이 이 기회에 현장에 먼저 도착해서 교섭을 성공시킨다면……
+    MessageJP: 本官がこの機に、先に現場へ向かって交渉を成功させたら……
+    MessageCN: 如果本官能趁此机会，先去现场成功交涉的话……
+    MessageEN: If I happen to get there first and negotiate successfully...
+    MessageTH: 'ถ้าฉันใช้โอกาสนี้ไปถึงที่เกิดเหตุและ
+
+      เกลี้ยกล่อมคนร้ายได้สำเร็จก่อน...'
+    MessageTW: 如果本官能藉此機會，先到現場並談判成功的話……
+  - MessageGroupId: 130120090
+    Id: 130120140
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 발키리의 높으신 분들도 본관의 능력을 인정해주시지 않을까요?
+    MessageJP: ヴァルキューレの上層部の方々も、本官の能力を認めてくださるでしょうか？
+    MessageCN: 瓦尔基里的高层们不就能认可本官的能力了吗？
+    MessageEN: Wouldn't the VIPs at Valkyrie value my ability?
+    MessageTH: 'เจ้าหน้าที่ระดับสูงของวัลคิรี่ก็อาจจะเล็ง
+
+      เห็นความสามารถของฉันก็ได้นะคะ?'
+    MessageTW: 女武神的上層長官們，是不是也會認可本官的能力呢？
+  - MessageGroupId: 130120100
+    Id: 130120150
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전문 교섭인이 올 때까지 기다리는 게 좋지 않을까?
+    MessageJP: プロの交渉人を待った方が良いんじゃ……？
+    MessageCN: 我们还是等等专业的谈判人员比较好……？
+    MessageEN: Wouldn't it be better to wait for a professional negotiator?
+    MessageTH: 'รอจนกว่านักเจรจาจะมาถึง
+
+      ไม่ดีกว่าเหรอ?'
+    MessageTW: 還是等專業的談判專家來比較好吧……？
+  - MessageGroupId: 130120110
+    Id: 130120160
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 지금 이 순간에도 인질은 두려움에 떨고 있을 거예요.
+    MessageJP: ……いえ、決めました。今この瞬間も人質は恐怖に震えているはずです
+    MessageCN: ……不，我决定了。此时此刻，人质一定仍在恐惧中颤抖
+    MessageEN:
+      I don't think so. Imagine what must be going through the hostage's
+      mind.
+    MessageTH: 'ไม่ได้ค่ะ เวลานี้คนที่ถูกจับเป็นตัวประกัน
+
+      ก็คงจะรู้สึกกลัวมากแน่ๆ ค่ะ'
+    MessageTW: ……不，我決定了。現在這一刻，人質應該也正害怕地發抖
+  - MessageGroupId: 130120110
+    Id: 130120170
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무리 본관이 정식 경찰은 아니라고는 하지만, 교섭은 조금도 지체할 수 없습니다!
+    MessageJP: まだ正式な警察ではないとはいえ、立ち止まってはいられません
+    MessageCN: 虽然我还不是正式的警察，但我不能就此止步
+    MessageEN:
+      I may not be an official officer, but I can't let the negotiation be
+      delayed any longer!
+    MessageTH: 'ถึงฉันจะยังไม่ได้เป็นเจ้าหน้าที่อย่าง
+
+      เป็นทางการ แต่การเจรจาจะรอช้าไม่ได้
+
+      นะคะ!'
+    MessageTW: 雖然還不是正式的警察，但也不能停下腳步
+  - MessageGroupId: 130120110
+    Id: 130120180
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130123
+    NextGroupId: 130120120
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 키리노, 출동합니다!
+    MessageJP: キリノ、出動します！
+    MessageCN: 桐乃，出动！
+    MessageEN: Kirino, at your service!
+    MessageTH: คิริโนะ พร้อมออกปฏิบัติการค่ะ!
+    MessageTW: 桐乃，出動！
+  - MessageGroupId: 130120120
+    Id: 130120190
+    CharacterId: 13012
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 130120110
+    PreConditionFavorScheduleId: 130123
+    FavorScheduleId: 0
+    NextGroupId: 130120130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 우으, 선생님……. (T_T)
+    MessageJP: うう、先生……(T_T)
+    MessageCN: 呜呜，老师……(T_T)
+    MessageEN: Ugh, Sensei... (T_T)
+    MessageTH: ฮือ... คุณครูคะ... (T_T)
+    MessageTW: 嗚嗚，老師……(T_T)
+  - MessageGroupId: 130120130
+    Id: 130120200
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번의 인질 사건 때문에 높은 분들로부터 경고를 받았습니다.
+    MessageJP: この前の人質事件のことで、上層部の方々から警告を受けてしまいました……
+    MessageCN: 之前我没有处理好人质事件，被上层警告了……
+    MessageEN: I got a warning from the VIPs for the hostage case last time.
+    MessageTH: 'ฉันได้รับจดหมายตักเตือนจากเจ้าหน้า
+
+      ที่ระดับสูงเพราะเหตุการณ์จับตัวประกัน
+
+      ครั้งก่อนด้วยค่ะ'
+    MessageTW: 因為上次的人質事件，我被上層警告了……
+  - MessageGroupId: 130120140
+    Id: 130120210
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그때 총만 제대로 쏘았더라면…….
+    MessageJP: もっと、私の銃の腕前さえ良ければ……
+    MessageCN: 如果，我的枪法能更好一些的话……
+    MessageEN: If only my aim were better.
+    MessageTH: ถ้าตอนนั้นฉันยิงปืนได้แม่นกว่านี้...
+    MessageTW: 如果我的槍法再好一點……
+  - MessageGroupId: 130120140
+    Id: 130120220
+    CharacterId: 13012
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120150
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 어떻게 하면 총을 잘 쏠 수 있을까요?
+    MessageJP: 先生、射撃の腕はどうすれば上がるのでしょうか？
+    MessageCN: 老师，怎样才能提高射击技术呢？
+    MessageEN: How do I become a better shot, Sensei?
+    MessageTH: คุณครูคะ ทำยังไงถึงจะยิงปืนได้แม่นๆ เหรอคะ?
+    MessageTW: 老師，要怎麼提升射擊技巧呢？
+  - MessageGroupId: 130120150
+    Id: 130120230
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그걸 내게 물어봐도…….
+    MessageJP: それはちょっと、私に聞かれても……
+    MessageCN: 这个桐乃就算问我也……
+    MessageEN: I don't think I can help you there...
+    MessageTH: มาถามเรื่องนั้นกับครูเนี่ยนะ...
+    MessageTW: 這問題就算問我……
+  - MessageGroupId: 130120160
+    Id: 130120240
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 최소한 본관이 사격하는 모습을 옆에서 지켜봐 주실 수는 없으신가요?
+    MessageJP: そうですね……ではせめて、今度本官が射撃をしているところを隣で見てていただけませんか？
+    MessageCN: 这样啊……那么这次至少请老师旁观一下本官射击好吗？
+    MessageEN: Then could you at least watch me practice?
+    MessageTH: 'ถ้างั้นคุณครูช่วยไปดูตอนที่ฉันฝึกยิง
+
+      ปืนหน่อยได้ไหมคะ?'
+    MessageTW: 說的也是……那麼能至少請您在旁邊看本官射擊嗎？
+  - MessageGroupId: 130120160
+    Id: 130120250
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120170
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사격 시의 나쁜 습관이나 자세를 교정하면 명중률을 올리는 데 도움이 된다고 하니까요.
+    MessageJP: 命中率を上げるためには、射撃時の悪い癖や姿勢を治すことが大事だと聞きましたので！
+    MessageCN: 毕竟我听说为了提高命中率，纠正射击时的坏习惯还有姿势是很重要的！
+    MessageEN: Stopping habits or posture could help improve my accuracy too.
+    MessageTH: 'ถ้าปรับท่าทางหรือความเคยชินที่ไม่
+
+      ดีได้ ก็จะทำให้ยิงปืนได้แม่นขึ้นก็ได้ค่ะ'
+    MessageTW: 聽說想要提升命中率，改善射擊時的壞習慣和姿勢是很重要的！
+  - MessageGroupId: 130120170
+    Id: 130120260
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그거라면 어렵지 않지.
+    MessageJP: うん、それなら喜んで
+    MessageCN: 嗯，那我十分乐意
+    MessageEN: That I can do.
+    MessageTH: เรื่องนั้นครูน่าจะช่วยได้นะ
+    MessageTW: 嗯，那我很樂意幫忙
+  - MessageGroupId: 130120180
+    Id: 130120270
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120190
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 감사합니다, 선생님!
+    MessageJP: ありがとうございます、先生！
+    MessageCN: 十分感谢，老师！
+    MessageEN: Thank you, Sensei!
+    MessageTH: ขอบคุณค่ะคุณครู!
+    MessageTW: 謝謝您，老師！
+  - MessageGroupId: 130120180
+    Id: 130120280
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130125
+    NextGroupId: 130120190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 학교의 실내 사격장에서 기다리고 있겠습니다!
+    MessageJP: では、校内の射撃場にてお待ちしております！
+    MessageCN: 那么，我在校内的射击场等您！
+    MessageEN: Then I'll meet you at the shooting range!
+    MessageTH: 'ถ้างั้นฉันจะไปรอที่ห้องซ้อมในอาคาร
+
+      ของโรงเรียนนะคะ!'
+    MessageTW: 那麼，我在校內的射擊場等您！
+  - MessageGroupId: 130120190
+    Id: 130120290
+    CharacterId: 13012
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 130120180
+    PreConditionFavorScheduleId: 130125
+    FavorScheduleId: 0
+    NextGroupId: 130120200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으으, 긴장되네요…….
+    MessageJP: 先生、すごく緊張してきました……
+    MessageCN: 老师，我好紧张……
+    MessageEN: Ugh. I'm so nervous...
+    MessageTH: ตะ... ตื่นเต้นจังเลยค่ะ...
+    MessageTW: 老師，我非常的緊張……
+  - MessageGroupId: 130120200
+    Id: 130120300
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일이라도 있어?
+    MessageJP: どうしたの？何かこの後試験とか？
+    MessageCN: 怎么了？桐乃接下来有什么考试吗？
+    MessageEN: What's the matter?
+    MessageTH: มีเรื่องอะไรงั้นเหรอ?
+    MessageTW: 怎麼了？等下有什麼考試嗎？
+  - MessageGroupId: 130120210
+    Id: 130120310
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오후에 주변 유치원의 학생들이 견학 차 발키리 경찰학교에 올 예정이라는데……
+    MessageJP: 本日の午後、近くの幼稚園の園児たちがヴァルキューレ警察学校の見学に来るそうでして……
+    MessageCN: 今天下午，附近幼儿园的孩子们似乎要来参观瓦尔基里警察学校……
+    MessageEN: Kindergarten students will be visiting Valkyrie in the afternoon...
+    MessageTH: 'บ่ายนี้เด็กนักเรียนจากโรงเรียน
+
+      อนุบาลที่อยู่ใกล้ๆ จะมาทัศนศึกษาที่
+
+      สถาบันฝึกตำรวจวัลคิรี่ค่ะ...'
+    MessageTW: 聽說今天下午，附近幼稚園的小朋友要來參觀女武神警察學園……
+  - MessageGroupId: 130120210
+    Id: 130120320
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 견학의 안내를 본관이 맡게 되어서요.
+    MessageJP: その案内を、本官が担当することになったのです
+    MessageCN: 而且，导览工作到时候会由本官负责
+    MessageEN: And I'll be their guide.
+    MessageTH: แล้วฉันก็ได้รับหน้าที่ให้เป็นคนนำเด็กๆ ดูสถานที่ต่างๆ
+    MessageTW: 到時候將由本官負責帶隊
+  - MessageGroupId: 130120220
+    Id: 130120330
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시라도 너무 긴장해서 실수를 하지는 않을까, 벌써부터 걱정이 됩니다.
+    MessageJP: 何かミスをしてしまったらどうしようと考えると、すごく不安で……
+    MessageCN: 一想到万一犯了什么错误的话该如何收场，我就非常不安……
+    MessageEN: I'm worried that I might get too nervous and make mistakes...
+    MessageTH: ฉันกลัวว่าตัวเองจะตื่นเต้นจนทำผิดพลาด ตอนนี้เลยรู้สึกกังวลมากเลยค่ะ
+    MessageTW: 一想到會不會出什麼差錯，就非常的不安……
+  - MessageGroupId: 130120230
+    Id: 130120340
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내가 실수하지 않도록 옆에서 도와줄게.
+    MessageJP: 私も行ってよければ、横でサポートしようか？
+    MessageCN: 要不要我到时候也一起去现场然后在旁边支援你？
+    MessageEN: I'll help you out, then.
+    MessageTH: 'ครูจะไปคอยช่วยอยู่ข้างๆ
+
+      ไม่ให้เธอทำพลาดเอง'
+    MessageTW: 要不要我也一起去，在一旁支援如何？
+  - MessageGroupId: 130120240
+    Id: 130120350
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……선생님께서 직접 도와주시러 오시는 건가요?
+    MessageJP: え、良いんですか？
+    MessageCN: 诶，可以吗？
+    MessageEN: You're going to come help me in person?
+    MessageTH: คุณครูจะมาช่วยฉันจริงๆ เหรอคะ?
+    MessageTW: 咦，可以嗎？
+  - MessageGroupId: 130120240
+    Id: 130120360
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 안심입니다. 감사합니다, 선생님!
+    MessageJP: それなら安心です、ありがとうございます先生！
+    MessageCN: 那样的话我就放心了，非常感谢老师！
+    MessageEN: That's a relief. Thank you, Sensei!
+    MessageTH: 'ถ้าแบบนั้นค่อยโล่งใจหน่อย
+
+      ขอบคุณนะคะคุณครู!'
+    MessageTW: 那我就安心了，非常感謝老師！
+  - MessageGroupId: 130120250
+    Id: 130120370
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩐지 의욕이 넘치는 것 같네.
+    MessageJP: 何だかすごく気合入ってそうだし、私に手伝えることがあればぜひ
+    MessageCN: 毕竟桐乃也是一幅充满干劲的样子嘛，所以如果有什么我能帮忙的请务必叫我
+    MessageEN: You seem to be taking this seriously.
+    MessageTH: พลังงานล้นเหลือจริงๆ เลยนะ
+    MessageTW: 感覺你充滿幹勁呢。如果有我能幫上忙的地方，務必再跟我說
+  - MessageGroupId: 130120260
+    Id: 130120380
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 물론이지요. 어린 학생들에게 경찰의 멋진 모습을 보여줄 수 있는 모처럼의 기회니까요!
+    MessageJP: 助かります。そうですね、せっかくの機会ですので、園児たちには警察のかっこいい姿を見せてあげたいなと思っているんです
+    MessageCN: 帮大忙了。确实机会难得，所以我想让幼儿园的孩子们见识一下警察帅气的一面
+    MessageEN:
+      Of course. This is the best opportunity to show the good side of police
+      to the young students.
+    MessageTH: 'แน่นอนค่ะ เพราะนี่เป็นโอกาสที่จะแสดง
+
+      ถึงความยอดเยี่ยมของตำรวจให้เด็กๆ
+
+      ได้เห็นค่ะ!'
+    MessageTW: 幫大忙了。就是說呢，因為是難得的機會，所以希望能讓幼稚園小朋友看到警察帥氣的樣子！
+  - MessageGroupId: 130120260
+    Id: 130120390
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 본관도 어릴 적 견학을 통해 경찰의 꿈을 갖게 되었었지요.
+    MessageJP: 何せ本官も、幼い頃に同じような見学会に行って、そこで警察官になることを志したので……
+    MessageCN: 不管怎么说，本官小时候也参加过类似的参观活动，而且就是在那时候立志成为警察的……
+    MessageEN: It was a field trip just like this that inspired me.
+    MessageTH: 'ฉันเองก็ฝันอยากเป็นตำรวจเพราะ
+
+      การได้ไปทัศนศึกษาตอนเด็กๆ ค่ะ'
+    MessageTW: 畢竟本官就是小時候有參加類似的參觀活動，才會立志成為警察……
+  - MessageGroupId: 130120260
+    Id: 130120400
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120270
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그때의 선배들처럼 멋진 모습을 보여야 할 텐데…….
+    MessageJP: あの時の警察の方々のように、カッコいい姿を見せないと……！
+    MessageCN: 我要像当时的警察那样，表现出帅气的模样……!
+    MessageEN: I want to come off as cool as the officers did back then.
+    MessageTH: 'ฉันควรจะต้องแสดงให้เด็กๆ เห็นถึง
+
+      ความยอดเยี่ยมเหมือนกับรุ่นพี่พวกนั้น...'
+    MessageTW: 要像當年的警察們一樣，展現出帥氣的模樣才行……！
+  - MessageGroupId: 130120270
+    Id: 130120410
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 키리노.
+    MessageJP: キリノ、一つだけ
+    MessageCN: 桐乃就是独一无二的桐乃呢
+    MessageEN: Kirino.
+    MessageTH: คิริโนะ
+    MessageTW: 桐乃，就一件事
+  - MessageGroupId: 130120280
+    Id: 130120420
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120290
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네?
+    MessageJP: はい、何でしょう？
+    MessageCN: 诶，老师在说什么？
+    MessageEN: Huh?
+    MessageTH: คะ?
+    MessageTW: 是的，是什麼呢？
+  - MessageGroupId: 130120290
+    Id: 130120430
+    CharacterId: 13012
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130120300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 당황하더라도 총은 꺼내면 안 돼.
+    MessageJP: 銃は取り出さないようにね。園の子たちに当たると危ないから
+    MessageCN: 可千万别拔枪哦。要是击中幼儿园的孩子们就危险了
+    MessageEN: Whatever you do, don't pull out your gun. Even in a panic.
+    MessageTH: 'ถ้ามีอะไรทำให้ตกใจก็ห้ามชักปืน
+
+      ออกมาเด็ดขาดนะ'
+    MessageTW: 別把槍拿出來。萬一打到幼稚園小朋友就不好了
+  - MessageGroupId: 130120300
+    Id: 130120440
+    CharacterId: 13012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130126
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다, 당연하지요! 본관도 그 정도는 알고 있습니다!
+    MessageJP: そ、それは……！な、何だか不本意ではありますが……はい、そうですね……
+    MessageCN: 那、那个……！虽然确实不太情愿……嗯，确实……
+    MessageEN: I-I know that! Give me some credit!
+    MessageTH: 'นะ...แน่นอนอยู่แล้วค่ะ! เรื่องแค่นั้น
+
+      ฉันรู้อยู่แล้วค่ะ!'
+    MessageTW: 那，那是……！雖，雖然不太情願……不過是的，老師說得沒錯呢……

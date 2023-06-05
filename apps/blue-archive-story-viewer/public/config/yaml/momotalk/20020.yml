@@ -1,0 +1,760 @@
+CharacterId: 20020
+translator: 罐子
+title:
+  - GroupId: 2002002
+    FavorScheduleId: 200202
+    CharacterId: 20020
+    TextJp: 天才ハッカーの嗜好
+    TextCn: 天才黑客的嗜好
+    TextKr: 천재 해커의 취향
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002003
+    FavorScheduleId: 200203
+    CharacterId: 20020
+    TextJp: 天才ハッカーの実験
+    TextCn: 天才黑客的实验
+    TextKr: 천재 해커의 실험
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002005
+    FavorScheduleId: 200205
+    CharacterId: 20020
+    TextJp: 天才ハッカーの反論
+    TextCn: 天才黑客的反驳
+    TextKr: 천재 해커의 반론
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002006
+    FavorScheduleId: 200206
+    CharacterId: 20020
+    TextJp: 天才ハッカーの繊細なセミコロン
+    TextCn: 天才黑客那纤细的分号
+    TextKr: 천재 해커의 섬세한 세미콜론
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200200010
+    Id: 200200010
+    CharacterId: 20020
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 안녕하세요. 선생님.
+    MessageJP: ふふっ。こんにちは、先生
+    MessageCN: 呵呵。您好，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200020
+    Id: 200200020
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응…?
+    MessageJP: ん？
+    MessageCN: 嗯？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200030
+    Id: 200200030
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어머, 제 연락에 감격한 나머지, 말문이 막힌 선생님의 반응.
+    MessageJP: あら。私から連絡が来て、感激のあまり言葉に詰まっているのですね
+    MessageCN: 哎呀。老师居然因为我主动发来了消息感动得说不出话了吗
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200040
+    Id: 200200040
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 전부 이해한답니다.
+    MessageJP: ええ、当然のことです
+    MessageCN: 嗯嗯，这也是理所当然
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200040
+    Id: 200200050
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저 같은 천재 미소녀에게 갑작스레 메시지를 받는다면 누구라도….
+    MessageJP: 私のような天才美少女から、いきなりメッセージが送られてきたんですもの
+    MessageCN: 毕竟这可是我这样的天才美少女突然发来的消息嘛
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200050
+    Id: 200200060
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저기, 누구세요?
+    MessageJP: すみません、どちらさまですか？
+    MessageCN: 不好意思，您是哪位？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200060
+    Id: 200200070
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200070
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네…? 선생님. 설마라고는 생각하지만, 제 연락처를 등록조차 하지 않으셨다는…?
+    MessageJP: なっ、まさかとは思いますが、私の連絡先を登録していないのですか……？
+    MessageCN: 什，不可能，难道老师没有存我的联系人……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200070
+    Id: 200200080
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아니, 미안, 농담이야. 히마리.
+    MessageJP: ごめんね。冗談だよ、ヒマリ
+    MessageCN: 抱歉抱歉。我开玩笑的，日鞠
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200080
+    Id: 200200090
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후, 후훗…. 선생님께서도 참, 그런 짓궂은 농담이시라니.
+    MessageJP: 「ぴえん」……先生ったら、そんな意地悪なご冗談を
+    MessageCN: “嘤嘤嘤”……老师真是的，居然开这种坏心眼的玩笑
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200080
+    Id: 200200100
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저 같은 천재 미소녀조차 잠시나마 <깜놀> 했답니다?
+    MessageJP: さしもの天才美少女も驚きました
+    MessageCN: 连我这个天才美少女都震惊了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200090
+    Id: 200200110
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 깜놀이라니, 히마리도 그런 유행어를 쓰는구나….
+    MessageJP: 「ぴえん」みたいな流行語をヒマリが使うとは……
+    MessageCN: 没想到日鞠居然会用“嘤嘤嘤”这样的流行语……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200100
+    Id: 200200120
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이래봬도 저는 베리타스의 부장도 겸하고 있는 몸이기에, 인터넷 문화라면 다소 교양이 있으니까요.
+    MessageJP: これでもヴェリタスの部長を兼任している身ですから、ネット文化も少々嗜んでおります
+    MessageCN: 毕竟我也兼任真理部部长，对网络文化还是稍有了解的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200100
+    Id: 200200130
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이럴 때는, 그렇죠. <의기양양한 얼굴>! 이란 걸 짓는 법이라고 했던가요?
+    MessageJP: こういう時は……「どや顔」をしながら言うべきでしたね
+    MessageCN: 这种时候就该……一边做着“得意脸”一边这么说呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200110
+    Id: 200200140
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 응….
+    MessageJP: そ、そうだね……
+    MessageCN: 确、确实……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200120
+    Id: 200200150
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 엣-헴 어쨌거나 용건을 말씀드리자면, 그렇지요.
+    MessageJP: それよりお話があるのです
+    MessageCN: 比起这个，我有些话想对老师说
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200130
+    Id: 200200160
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '사전에 샬레를 해킹…이 아니라, 조사를 해본 결과. '
+    MessageJP: 先ほどシャーレをハッキング……いえ、調査したところ
+    MessageCN: 刚才我黑进……不，是调查了一下夏莱
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200130
+    Id: 200200170
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 선생님께선 모처럼의 휴일이라고 알고 있는데, 맞을까요?
+    MessageJP: 本日はお休みとのことですが、間違いありませんか？
+    MessageCN: 老师今天应该休息，对吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200140
+    Id: 200200180
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 자연스럽게 해킹이라고 했어….
+    MessageJP: ハッキングって言っちゃったよ……
+    MessageCN: 你刚刚已经说了黑进来了哦……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200140
+    Id: 200200190
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그야 그렇기는 한데….
+    MessageJP: たしかに休みだけど……
+    MessageCN: 我今天确实休息来着……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200150
+    Id: 200200200
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 마침 잘되었네요.
+    MessageJP: ふふっ、ちょうど良かったです
+    MessageCN: 呵呵，那么正好呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200150
+    Id: 200200210
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제가 지금 있는 장소의 좌표를 보내 드릴 터이니
+    MessageJP: 後ほど座標を送りますので
+    MessageCN: 等会我把坐标发过去
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200160
+    Id: 200200220
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 밀레니엄에서 기다리고 있겠습니다. 선생님.
+    MessageJP: ミレニアムでお待ちしていますね、先生
+    MessageCN: 我在千年等你哦，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200170
+    Id: 200200230
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200202
+    NextGroupId: 200200180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 가는 건 이미 결정이구나…. 뭐어, 알았어.
+    MessageJP: 行くのはもう決定なんだ……すぐ向かうね
+    MessageCN: 这么肯定我就会过去吗……那我现在过去吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200180
+    Id: 200200240
+    CharacterId: 20020
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200200170
+    PreConditionFavorScheduleId: 200202
+    FavorScheduleId: 0
+    NextGroupId: 200200190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오늘은 샬레의 업무로 인해 밀레니엄을 방문하신다면서요?
+    MessageJP: 先生、今日はシャーレの仕事でミレニアムを訪れるのですね
+    MessageCN: 老师，您今天为了夏莱的事情来千年了吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200190
+    Id: 200200250
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 응. 그렇게 됐는데.
+    MessageJP: うん、そうだよ
+    MessageCN: 嗯，是哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200200
+    Id: 200200260
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 볼일이 끝나시면, 오후 3시쯤 해서 잠깐 저를 찾아와 주실 수 있겠나요?
+    MessageJP: では、用事が終わりましたら……そうですね、15時頃でどうでしょう？
+    MessageCN: 那么，老师事情办完后……那就，15点左右怎么样？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200200
+    Id: 200200270
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부탁드리고 싶은 것이 조금 있어서…….
+    MessageJP: ……お願いしたいことがありまして
+    MessageCN: ……我有件事想请老师帮忙
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200210
+    Id: 200200280
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알았어. 일 끝나고 바로 갈게.
+    MessageJP: 分かった。仕事が終わったらすぐに向かうね
+    MessageCN: 明白了。我工作结束后马上就过去哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200220
+    Id: 200200290
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200203
+    NextGroupId: 200200230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후후, 네, 그럼 조금 이따가 뵙겠습니다.
+    MessageJP: ふふふっ、では後ほどお会いしましょう
+    MessageCN: 呵呵，那么稍后再会吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200230
+    Id: 200200300
+    CharacterId: 20020
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200200220
+    PreConditionFavorScheduleId: 200203
+    FavorScheduleId: 0
+    NextGroupId: 200200240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 조금 큰 일이 나버린 듯해요.
+    MessageJP: 先生、少々大変なことになりまして
+    MessageCN: 老师，事情变得有些麻烦了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200240
+    Id: 200200310
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐? 무슨 일이야?! 히마리, 괜찮은 거야?!
+    MessageJP: どうしたの？大丈夫！？
+    MessageCN: 怎么了？日鞠还好吗！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200250
+    Id: 200200320
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이건, 저 혼자선 도저히 방법이 없다고 할지.
+    MessageJP: これは私一人では手の施しようがないと申しますか……
+    MessageCN: 这件事只有我一个人的话有点难做到……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200250
+    Id: 200200330
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200205
+    NextGroupId: 200200260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어서 은신처로 찾아와 주세요. 기다리고 있겠습니다.
+    MessageJP: 大至急、隠れ家に来ていただけませんか？お待ちしています
+    MessageCN: 事态非常紧急，老师能来一趟秘密基地吗？我等着您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200260
+    Id: 200200340
+    CharacterId: 20020
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200200250
+    PreConditionFavorScheduleId: 200205
+    FavorScheduleId: 0
+    NextGroupId: 200200270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 저 오늘, 특별한 보물을 손에 넣었답니다.
+    MessageJP: 先生。私、とびっきりのお宝を手に入れました
+    MessageCN: 老师。我得到了一件非常宝贵的宝物
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200270
+    Id: 200200350
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 히마리가 보물이라고 말할 정도라니…….
+    MessageJP: ヒマリがお宝って言うことは……
+    MessageCN: 居然连日鞠都说是宝物……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200270
+    Id: 200200360
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭔가 궁금하기도 하고, 걱정되기도 하고…….
+    MessageJP: 気になるような、心配になるような……
+    MessageCN: 感觉又在意，又很担心……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200280
+    Id: 200200370
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어머나, 그렇게 말씀하시다니, 조금 슬퍼라.
+    MessageJP: あら、寂しい言い方ですね
+    MessageCN: 哎呀，老师还真是不解风情呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200280
+    Id: 200200380
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이럴 게 아니라, 직접 보여드리고 싶으니, 괜찮으시다면.
+    MessageJP: こうしてる場合ではありません。すぐにでもお見せしたいのですが
+    MessageCN: 现在可不是闲聊的时候。我想马上给老师见识一下
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200290
+    Id: 200200390
+    CharacterId: 20020
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200200300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 오늘 찾아갈게.
+    MessageJP: 分かった。これから向かうね
+    MessageCN: 明白了。那我现在就过去哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200200300
+    Id: 200200400
+    CharacterId: 20020
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200206
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 네. 그럼 조금 이따가.
+    MessageJP: ふふっ、ではまた後ほど
+    MessageCN: 呵呵，那就稍后再见吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

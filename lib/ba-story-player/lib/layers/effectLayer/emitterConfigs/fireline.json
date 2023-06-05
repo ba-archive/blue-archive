@@ -1,0 +1,57 @@
+{
+  "lifetime": {
+    "min": 1,
+    "max": 1.5
+  },
+  "frequency": 0.1,
+  "maxParticles": 1000,
+  "addAtBack": false,
+  "pos": {
+    "x": 0,
+    "y": 0
+  },
+  "behaviors": [
+    {
+      "type": "textureSingle",
+      "config": {
+        "texture": null
+      }
+    },
+    {
+      "type": "scaleStatic",
+      "config": {
+        "min": 0.4,
+        "max": 0.6
+      }
+    },
+    {
+      "type": "moveSpeedStatic",
+      "config": {
+        "min": 800,
+        "max": 850
+      }
+    },
+    {
+      "type": "rotation",
+      "config": {
+        "accel": 0,
+        "minSpeed": 0,
+        "maxSpeed": 0,
+        "minStart": 230,
+        "maxStart": 300
+      }
+    },
+    {
+      "type": "spawnShape",
+      "config": {
+        "type": "rect",
+        "data": {
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 0
+        }
+      }
+    }
+  ]
+}

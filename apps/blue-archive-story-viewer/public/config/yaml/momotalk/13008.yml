@@ -1,0 +1,1072 @@
+CharacterId: 13008
+translator: Lepra
+title:
+  - GroupId: 1300802
+    FavorScheduleId: 130082
+    CharacterId: 13008
+    TextJp: アルバイトのお手伝い
+    TextCn: 打工的帮手
+    TextKr: 아르바이트 보조
+    TextEn: Part-Time Job Assistant
+    TextTh: ผู้ช่วยพาร์ทไทม์
+    TextTw: 打工的支援
+  - GroupId: 1300803
+    FavorScheduleId: 130083
+    CharacterId: 13008
+    TextJp: ハードな夜通しバイト
+    TextCn: 辛苦的夜工
+    TextKr: 하드한 밤샘 알바
+    TextEn: Hardcore All-Night Part-Time Job
+    TextTh: งานพาร์ทไทม์แสนยากตลอดทั้งคืน
+    TextTw: 硬核的通宵打工
+  - GroupId: 1300805
+    FavorScheduleId: 130085
+    CharacterId: 13008
+    TextJp: 公園で草むしり
+    TextCn: 公园除草
+    TextKr: 공원 잡초 뽑기
+    TextEn: Pulling Weeds at the Park
+    TextTh: ถอนหญ้าในสวน
+    TextTw: 公園除草
+  - GroupId: 1300806
+    FavorScheduleId: 130086
+    CharacterId: 13008
+    TextJp: 遅い悟り
+    TextCn: 迟来的醒悟
+    TextKr: 뒤늦은 깨달음
+    TextEn: A Belated Realization
+    TextTh: รู้ตัวเมื่อสาย
+    TextTw: 遲來的醒悟
+  - GroupId: 1300808
+    FavorScheduleId: 130088
+    CharacterId: 13008
+    TextJp: 思いがけない幸運
+    TextCn: 意外的幸运
+    TextKr: 뜻밖의 횡재
+    TextEn: Unexpected Luck
+    TextTh: มีโชคอย่างคาดไม่ถึง
+    TextTw: 意想不到的幸運
+  - GroupId: 1300809
+    FavorScheduleId: 130089
+    CharacterId: 13008
+    TextJp: つかの間の休息
+    TextCn: 短暂的休息
+    TextKr: 아주 잠깐의 휴식
+    TextEn: A Brief Respite
+    TextTh: ช่วงพักผ่อนสั้นๆ
+    TextTw: 極其短暫的休息
+content:
+  - MessageGroupId: 130080010
+    Id: 234
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080011
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님!
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: 'Sensei! '
+    MessageTH: 'คุณครู! '
+    MessageTW: 老師！
+  - MessageGroupId: 130080011
+    Id: 235
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080020
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선새애애앵님!!
+    MessageJP: 先生！！！！
+    MessageCN: 老师！！！！
+    MessageEN: Senseeeiii!
+    MessageTH: คุณณณครู!!
+    MessageTW: 老師！！！！
+  - MessageGroupId: 130080011
+    Id: 236
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080020
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간 있어??? 있지?
+    MessageJP: 時間ある？あるよね？？よしっ！
+    MessageCN: 有时间吗？有的吧？？好！
+    MessageEN: Do you have time? You do, right?
+    MessageTH: พอมีเวลาไหม???  มีใช่ไหม?
+    MessageTW: 有時間嗎？有吧？？好！
+  - MessageGroupId: 130080020
+    Id: 237
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어…… 어?
+    MessageJP: え、え？
+    MessageCN: 诶、诶？
+    MessageEN: Um... Huh?
+    MessageTH: อืม... เอ๊ะ?
+    MessageTW: 咦，咦？
+  - MessageGroupId: 130080030
+    Id: 238
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어차피? 한가하잖아? 그럼 나랑 알바 같이 하자!
+    MessageJP: どうせ暇でしょ？だったら私と一緒にバイトして！
+    MessageCN: 反正你很闲吧？那就跟我一起打工吧！
+    MessageEN:
+      "You don't have a lot going on, right? So do some part-time work with
+      me! "
+    MessageTH: 'ไหนๆ  ก็ไม่อะไรทำอยู่แล้ว ไปทำงาน
+
+      พิเศษกับฉันดีกว่า! '
+    MessageTW: 反正你也不忙吧？那就和我一起打工吧！
+  - MessageGroupId: 130080030
+    Id: 239
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내가 하는 거 보조만 하면 돼. 하는 거다?
+    MessageJP: 私のお手伝いをしてくれればいいから、OK？
+    MessageCN: 只要帮我打下手就可以了，OK？
+    MessageEN: I just need someone to assist me. Is that cool with you?
+    MessageTH: 'แค่ไปช่วยฉันนิดหน่อยก็พอ เอาเป็นว่า
+
+      ตกลงนะ?'
+    MessageTW: 只要幫忙我就行了，OK？
+  - MessageGroupId: 130080040
+    Id: 240
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 조금 이따가 봐!
+    MessageJP: じゃあまたあとで！
+    MessageCN: 那待会见！
+    MessageEN: Then I'll see you soon!
+    MessageTH: งั้นเดี๋ยวเจอกัน!
+    MessageTW: 那麼待會兒見！
+  - MessageGroupId: 130080050
+    Id: 241
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130082
+    NextGroupId: 130080060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……네? 저기요?
+    MessageJP: えっと……えぇ……？
+    MessageCN: 那个……诶诶……？
+    MessageEN: Huh? Excuse me?
+    MessageTH: '...หือ? ว่ายังไงนะ?'
+    MessageTW: 那個……咦咦……？
+  - MessageGroupId: 130080050
+    Id: 242
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130082
+    NextGroupId: 130080060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 세리카 씨?
+    MessageJP: セリカさん……？
+    MessageCN: 芹香同学……？
+    MessageEN: Serika?
+    MessageTH: 'เซริกะ? '
+    MessageTW: 茜香同學……？
+  - MessageGroupId: 130080060
+    Id: 243
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 130080050
+    PreConditionFavorScheduleId: 130082
+    FavorScheduleId: 0
+    NextGroupId: 130080061
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 이번에도 알바가 들어왔어. 거기서 볼까?
+    MessageJP: 先生、また別のバイトが入ったから、前のところで待ち合わせね！
+    MessageCN: 老师，我又接到新的兼职了。我们还在上次的地方碰头！
+    MessageEN: "Sensei, I've got another part-time job. See you there? "
+    MessageTH: 'คุณครู ฉันมีงานเข้ามาล่ะ ไปเจอกันที่นั่น
+
+      ไหม? '
+    MessageTW: 老師，又有一份新的打工，所以在上次的地方碰面哦！
+  - MessageGroupId: 130080061
+    Id: 244
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번엔 좀 특별한 일이야!
+    MessageJP: 今回はちょっと特殊なバイトだよ！
+    MessageCN: 这次是有点特殊的工作哦！
+    MessageEN: This time it's something kind of special!
+    MessageTH: งานครั้งนี้ค่อนข้างพิเศษเลย!
+    MessageTW: 這次是稍微特殊的打工唷！
+  - MessageGroupId: 130080070
+    Id: 245
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130083
+    NextGroupId: 130080080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 특별한 일……?
+    MessageJP: 特殊な……？
+    MessageCN: 特殊……？
+    MessageEN: Huh? Something special...
+    MessageTH: หืม? งานที่พิเศษเหรอ...?
+    MessageTW: 特殊的……？
+  - MessageGroupId: 130080080
+    Id: 246
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 130080070
+    PreConditionFavorScheduleId: 130083
+    FavorScheduleId: 0
+    NextGroupId: 130080081
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 알바가 정해졌어! 선생님도 올 거지?
+    MessageJP: 次のバイトが決まったよ！先生も来るよね？
+    MessageCN: 我下次的兼职定下来了！老师也会来的吧？
+    MessageEN: Another part-time job confirmed! Are you coming, Sensei?
+    MessageTH: 'ฉันเลือกงานพิเศษไว้แล้ว! คุณครูก็จะ
+
+      มาด้วยใช่ไหม?'
+    MessageTW: 下次的打工決定了唷！老師也會來吧？
+  - MessageGroupId: 130080081
+    Id: 247
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 휴일 오전에 공원에서 봐!
+    MessageJP: 次の休日の午前中、公園に来てね！
+    MessageCN: 那就下个休息日上午到公园来哦！
+    MessageEN: I'll see you at the park on the next morning you have off!
+    MessageTH: 'เจอกันตอนเช้าของวันหยุดที่สวนสาธา
+
+      รณะนะ!'
+    MessageTW: 下個休息日的上午，來公園吧！
+  - MessageGroupId: 130080090
+    Id: 248
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130085
+    NextGroupId: 130080100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으…… 알았어.
+    MessageJP: りょうかーい
+    MessageCN: 明白——
+    MessageEN: Ugh. All right.
+    MessageTH: กะ.. ก็ได้
+    MessageTW: 了解～
+  - MessageGroupId: 130080100
+    Id: 249
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 130080090
+    PreConditionFavorScheduleId: 130085
+    FavorScheduleId: 0
+    NextGroupId: 130080110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하루종일 고개를 숙이고 있었더니 허리가 부러질 거 같아…….
+    MessageJP: うう、腰が痛い……
+    MessageCN: 呜呜，腰好痛……
+    MessageEN: I've been bending over all day. I feel like my back is about to break...
+    MessageTH: ก้มๆ เงยๆ ทั้งวันจนปวดเอวไปหมด...
+    MessageTW: 嗚嗚，腰痛……
+  - MessageGroupId: 130080100
+    Id: 250
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 허리 안 아파?
+    MessageJP: 先生は大丈夫なの？
+    MessageCN: 老师还好吗？
+    MessageEN: "How's your back, Sensei? "
+    MessageTH: 'คุณครูไม่ปวดเอวเหรอ? '
+    MessageTW: 老師還好嗎？
+  - MessageGroupId: 130080110
+    Id: 251
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 욕조에 좀 담구고 있으면 괜찮을까 해서 지금
+    MessageJP: お風呂に浸かったらちょっとは良くなるかな思って、今
+    MessageCN: 我觉得泡个澡应该会好一点，所以现za
+    MessageEN: I thought soaking in the bathtub might help.
+    MessageTH: 'อยากไปแช่ตัวในอ่างอาบน้ำให้หายปวด
+
+      จัง'
+    MessageTW: 我想泡個澡會好一點，現在
+  - MessageGroupId: 130080110
+    Id: 252
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080120
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ㅇㅁㄴㅓㅎㅎㅎㅣㅏ
+    MessageJP: ！＠＃％％＃＾＊
+    MessageCN: ！＠＃％％＃＾＊
+    MessageEN: So, ewiks.xc,z
+    MessageTH: ไม่นะะะะ
+    MessageTW: ！＠＃％％＃＾＊
+  - MessageGroupId: 130080110
+    Id: 253
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080120
+    FeedbackTimeMillisec: 300
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ㅏㅏㅏ
+    MessageJP: ＠＃＃
+    MessageCN: ＠＃＃
+    MessageEN: AAAAAAA
+    MessageTH: เฮ่อออ!
+    MessageTW: ＠＃＃
+  - MessageGroupId: 130080120
+    Id: 254
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080130
+    FeedbackTimeMillisec: 200
+    MessageType: Image
+    ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Serika_01
+    MessageKR: ''
+    MessageJP: ''
+    MessageCN: ''
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 130080130
+    Id: 255
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080140
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 우, 우아아 폰을 욕조에 떨어트릴 뻔했어!!
+    MessageJP: 危なかった、スマホをお風呂に落とすとこだった……！！
+    MessageCN: 好险，手机差点掉浴缸里了……！！
+    MessageEN: I almost dropped my phone in the tub!
+    MessageTH: 'เกือบทำโทรศัพท์ตกไปในอ่างอาบน้ำ
+
+      แล้ว!!'
+    MessageTW: 好險，手機差點掉進浴缸裡……！！
+  - MessageGroupId: 130080130
+    Id: 256
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시 목욕할 때 폰을 가지고 오면 안 돼…….
+    MessageJP: やっぱりお風呂に入る時にスマホは良くないかも……
+    MessageCN: 果然泡澡最好还是别带着手机……
+    MessageEN: 'Bringing my phone to the bath was probably a bad idea... '
+    MessageTH: 'ไม่ควรเอาโทรศัพท์มาตอนอาบน้ำจริง
+
+      ด้วย... '
+    MessageTW: 洗澡的時候果然不能帶著手機……
+  - MessageGroupId: 130080140
+    Id: 257
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 그럼 다음에 봐.
+    MessageJP: 一旦外に置いてお風呂入るから、またあとでね
+    MessageCN: 我先把手机放外面再去泡澡，待会聊
+    MessageEN: See you later, Sensei.
+    MessageTH: คุณครู ไว้เจอกันนะ
+    MessageTW: 我先把它放在外頭並洗個澡，回頭見唷
+  - MessageGroupId: 130080150
+    Id: 258
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어…… 저기…….
+    MessageJP: その……
+    MessageCN: 那个……
+    MessageEN: Oh. Um...
+    MessageTH: เอ่อ... คือ...
+    MessageTW: 那個……
+  - MessageGroupId: 130080150
+    Id: 259
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 세리카…… 그러니까…….
+    MessageJP: セリカ、写真が……
+    MessageCN: 芹香，照片……
+    MessageEN: Serika. I, uh...
+    MessageTH: เซริกะ... แบบว่า...
+    MessageTW: 茜香，照片……
+  - MessageGroupId: 130080160
+    Id: 260
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080161
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응?
+    MessageJP: 写真？
+    MessageCN: 照片？
+    MessageEN: Huh?
+    MessageTH: หืม?
+    MessageTW: 照片？
+  - MessageGroupId: 130080161
+    Id: 261
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으아아아아아아?! 저게 왜 찍혔어?
+    MessageJP: うああああああ？！なんでこんなのが撮れてるの！？
+    MessageCN: 呜哇啊啊啊啊啊啊？！为什么会拍到这种东西啊！？
+    MessageEN: 'Ahhhhh! How did you get that photo? '
+    MessageTH: 'หาาาาาาา?! ทำไมฉันไปอยู่ตรงนั้น? '
+    MessageTW: 哇啊啊啊啊啊啊？！為什麼會拍到這個！？
+  - MessageGroupId: 130080161
+    Id: 262
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보, 보지 마! 보지마!
+    MessageJP: み、見ないで！見るなぁ！
+    MessageCN: 不、不要看！不准看啊！
+    MessageEN: D-Don't look! Don't look!
+    MessageTH: ยะ...อย่ามองนะ! ห้ามมอง!
+    MessageTW: 別，別看！別看啊！
+  - MessageGroupId: 130080161
+    Id: 263
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나중에 검사할 거야? 죽인다??????
+    MessageJP: 見たら殺す！！！！！！！！！！
+    MessageCN: 看了的话就杀了你！！！！！！！！！！
+    MessageEN: I'll kill you! I'm going to check your phone later!
+    MessageTH: ถ้าได้เจอกันล่ะก็.. โดนแน่!!!!!!!
+    MessageTW: 看了就殺了你！！！！！！！！！！
+  - MessageGroupId: 130080161
+    Id: 264
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지워!! 알았지?
+    MessageJP: まさか保存してないよね！？消して！！分かった！？
+    MessageCN: 你该不会保存了吧！快删掉！！懂了吗！？
+    MessageEN: 'Delete it! All right? '
+    MessageTH: 'ลบไปเลย!! เข้าใจไหม? '
+    MessageTW: 沒有儲存對吧！？刪除！！明白了嗎！？
+  - MessageGroupId: 130080161
+    Id: 265
+    CharacterId: 13008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나중에 검사할 거야??
+    MessageJP: ちゃんと消したかどうかあとで確認するからね！！
+    MessageCN: 我之后会检查你有没有真的删掉的！！
+    MessageEN: I'm gonna check it later!
+    MessageTH: แล้วฉันจะไปเช็กดู!
+    MessageTW: 我待會兒會確認有沒有好好刪除掉！！！
+  - MessageGroupId: 130080170
+    Id: 266
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는 아무 것도 보지 않았습니다…….
+    MessageJP: 見てないです……
+    MessageCN: 我没看……
+    MessageEN: I didn't see anything.
+    MessageTH: ครูไม่เห็นอะไรเลย...
+    MessageTW: 沒有看……
+  - MessageGroupId: 130080170
+    Id: 267
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 못 봤어요. 지웠습니다. 네.
+    MessageJP: 消しました、はい
+    MessageCN: 好的，删掉了
+    MessageEN: I didn't see it. I deleted it. It's fine.
+    MessageTH: ยังไม่ได้ดูเลย ครูลบไปแล้ว ลบแล้ว
+    MessageTW: 是，刪除了
+  - MessageGroupId: 130080180
+    Id: 268
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 130080170
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아야네 쨩이 그러는데 요즘 대책위원회 앞으로 익명 기부가 들어온대.
+    MessageJP: アヤネちゃんから聞いたんだけど、対策委員会に匿名の寄付が来たんだって
+    MessageCN: 小绫音说对策委员会收到了一笔匿名捐款来着
+    MessageEN:
+      'Ayane said the Foreclosure Task Force has been receiving anonymous
+      donations lately. '
+    MessageTH: 'อายาเนะจังบอกว่ามีคนนิรนามมาบริจาค
+
+      เงินให้คณะกรรมการแผนงานด้วย '
+    MessageTW: 我聽綾音說，對策委員會收到了匿名捐款
+  - MessageGroupId: 130080190
+    Id: 269
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 금액이 많은 건 아닌데 하루 알바 일당 정도의 돈이 가끔씩 들어오나 봐.
+    MessageJP: 金額はそんなに多くないけど、バイト一日分くらいはある金額らしくって
+    MessageCN: 金额虽然不多，但大概也相当于打一天工的钱了
+    MessageEN:
+      It's not a lot, but it's about the amount you'd expect from a day of
+      part-time work.
+    MessageTH: 'จำนวนเงินเท่าๆ กับค่าทำงานพิเศษวัน
+
+      หนึ่ง แต่บริจาคเข้ามาเรื่อยๆ เลย'
+    MessageTW: 雖然金額不多，但好像有到打工一天的金額
+  - MessageGroupId: 130080190
+    Id: 270
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시 우리의 활약을 좋게 봐준 시민들의 기부금인가. 헤헤헤.
+    MessageJP: 私たちのことを見てくれてる市民の人からなのかな、えへへ
+    MessageCN: 说不定是某位关注我们的市民捐的呢，诶嘿嘿
+    MessageEN: Maybe it's from a citizen who recognizes our accomplishments. Heeheehee.
+    MessageTH: 'นี่ต้องมาจากประชาชนที่เห็นผลงานการ
+
+      ทำงานของพวกเราแน่ ฮิฮิฮิ'
+    MessageTW: 是不是來自於關心我們的市民呢，嘿嘿
+  - MessageGroupId: 130080200
+    Id: 271
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번에도 거기서 봐, 선생님!
+    MessageJP: あ、今度も例の場所で会おうね、先生！
+    MessageCN: 啊，这次也是老地方见哦，老师！
+    MessageEN: I'll see you at the usual place, Sensei!
+    MessageTH: ครั้งนี้ก็ไปเจอกันที่เดิมนะคุณครู!
+    MessageTW: 啊，這次也在老地方見吧，老師！
+  - MessageGroupId: 130080200
+    Id: 272
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130086
+    NextGroupId: 130080210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오후에 시내에서!
+    MessageJP: また午後に！
+    MessageCN: 那就下午见！
+    MessageEN: This afternoon, downtown!
+    MessageTH: ในเมืองตอนเย็น!
+    MessageTW: 下午見！
+  - MessageGroupId: 130080210
+    Id: 273
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 8
+    PreConditionGroupId: 130080190
+    PreConditionFavorScheduleId: 130086
+    FavorScheduleId: 0
+    NextGroupId: 130080220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 이번엔 밤늦게까지 이어지는 야시장 보조야!
+    MessageJP: 先生、今度は夜の市場でアルバイトだよ！
+    MessageCN: 老师，这次我们是去夜市打工！
+    MessageEN: "This time, Sensei, it's an assistant position for the night market! "
+    MessageTH: 'คุณครู ครั้งนี้เราต้องทำงานในตลาดโต้รุ่ง
+
+      และต้องทำยาวถึงดึกเลยด้วย! '
+    MessageTW: 老師，這次是在夜市打工唷！
+  - MessageGroupId: 130080220
+    Id: 274
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 각오 단단히 해두라고!
+    MessageJP: 夜中までやるらしいから覚悟しておいてね！
+    MessageCN: 因为可能要一直干到半夜，所以老师做好心理准备哦！
+    MessageEN: Make sure you're prepared!
+    MessageTH: เตรียมตัวให้ดีล่ะ!
+    MessageTW: 也許會一路做到深夜，做好覺悟吧！
+  - MessageGroupId: 130080230
+    Id: 275
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130088
+    NextGroupId: 130080240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠습니다. 보스.
+    MessageJP: 承知いたしました、セリカさん！
+    MessageCN: 明白了，芹香同学！
+    MessageEN: You got it.
+    MessageTH: รับทราบขอรับบอส
+    MessageTW: 知道了，茜香！
+  - MessageGroupId: 130080230
+    Id: 276
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130088
+    NextGroupId: 130080240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 밤샘을 각오해야겠네.
+    MessageJP: 徹夜かもね、了解
+    MessageCN: 可能通宵对吧，了解
+    MessageEN: I'll expect to work all night.
+    MessageTH: ต้องเตรียมตัวโต้รุ่งแล้วสิ
+    MessageTW: 可能要通宵嗎，了解
+  - MessageGroupId: 130080240
+    Id: 277
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 130080210
+    PreConditionFavorScheduleId: 130088
+    FavorScheduleId: 0
+    NextGroupId: 130080250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 엄청 배불러. 오늘 장난 아니게 먹었어.
+    MessageJP: お腹いっぱーい、ちょっと食べ過ぎたかも
+    MessageCN: 肚子好撑——，好像吃得有点多了
+    MessageEN: I'm so full. I ate so much today.
+    MessageTH: 'ท้องจะแตกแล้ว วันนี้ฉันกินไปเยอะมาก
+
+      เลยล่ะ'
+    MessageTW: 肚子好飽啊，可能吃得有點多
+  - MessageGroupId: 130080240
+    Id: 278
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 작은 마을인데도 재미있는 게 꽤 많더라.
+    MessageJP: 小さい街だったけど、面白いものがたくさんあったね
+    MessageCN: 明明只是条小街道，却有很多有意思的东西呢
+    MessageEN: It was a small town, but it was full of fun stuff.
+    MessageTH: 'นี่เป็นเมืองเล็กๆ แต่มีอะไรสนุกๆ อยู่
+
+      เพียบเลย'
+    MessageTW: 雖然是個小街區，但有很多有趣的東西呢
+  - MessageGroupId: 130080240
+    Id: 279
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 그래도 우리 마을보단 크지만…….
+    MessageJP: まあ小さいって言っても、うちよりは大きかったけど……
+    MessageCN: 不过小归小，还是比我们这里大呢……
+    MessageEN: Well, I guess it was bigger than our town...
+    MessageTH: แต่ยังไงก็ใหญ่กว่าเมืองของเราอยู่ดี...
+    MessageTW: 嘛，雖然說它小，但還是比我們的大……
+  - MessageGroupId: 130080250
+    Id: 280
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 알바비 절반을 먹는데 써버렸지만……. 뭐, 가끔은 이런 것도 괜찮지 않겠어? 후후.
+    MessageJP: 結局バイト代半分近く使っちゃったけど、たまにはこういうのも良いよね？
+    MessageCN: 虽然最后花掉了将近一半的工资，但偶尔这样也挺好的对吧？
+    MessageEN:
+      "I spent half of my pay on food today... Well, I think it's okay to
+      do that every once in a while. Heehee. "
+    MessageTH: 'เงินค่าจ้างวันนี้ครึ่งหนึ่งหมดไปกับของกิน
+
+      แล้ว... แต่นานๆ ทีได้สนุกแบบนี้ก็ไม่เป็น
+
+      ไรหรอกเนอะ? ฮุฮุ'
+    MessageTW: 結果花了幾乎一半的打工薪水，但偶爾這樣也不錯吧？
+  - MessageGroupId: 130080250
+    Id: 281
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 내일 봐, 선생님.
+    MessageJP: じゃあまた明日、先生。お疲れ様
+    MessageCN: 那么明天见，老师。辛苦了
+    MessageEN: See you tomorrow, Sensei.
+    MessageTH: แล้วเจอกันพรุ่งนี้นะคุณครู
+    MessageTW: 那就明天見囉，老師。辛苦了
+  - MessageGroupId: 130080260
+    Id: 282
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 배탈 나지 않게 조심해.
+    MessageJP: すぐ横にならないほうが良いかも、ゆっくり休んでね
+    MessageCN: 吃撑了最好不要马上躺下，芹香好好休息哦
+    MessageEN: I hope you don't get a stomachache.
+    MessageTH: ระวังท้องเสียด้วยล่ะ
+    MessageTW: 最好不要馬上躺下，好好休息吧
+  - MessageGroupId: 130080260
+    Id: 283
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 푹 쉬어.
+    MessageJP: うん、お疲れ様。またね
+    MessageCN: 嗯，辛苦了。芹香明天见啦
+    MessageEN: Sleep tight.
+    MessageTH: กลับไปพักผ่อนด้วยนะ
+    MessageTW: 嗯，辛苦了。回頭見
+  - MessageGroupId: 130080270
+    Id: 284
+    CharacterId: 13008
+    MessageCondition: FavorRankUp
+    ConditionValue: 9
+    PreConditionGroupId: 130080240
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 이번엔 모처럼의 휴일 알바, 각오해야 해.
+    MessageJP: 先生。今度の休日のバイト、覚悟しておいてね
+    MessageCN: 老师。这周末的兼职，要做好准备哦
+    MessageEN: Sensei, I got us a part-time job on the weekend. Be prepared.
+    MessageTH: 'คุณครู เตรียมตัวให้พร้อมสำหรับงานพิ
+
+      เศษวันหยุดนี้ด้วยล่ะ'
+    MessageTW: 老師。這次休息日的打工，做好覺悟吧
+  - MessageGroupId: 130080280
+    Id: 285
+    CharacterId: 13008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130080290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 엄청 하드한 육체노동이니까…….
+    MessageJP: ものすごくハードな肉体労働みたいだから……
+    MessageCN: 应该是非常累的体力活……
+    MessageEN: It's gonna be hard labor...
+    MessageTH: ครั้งนี้เป็นงานใช้แรงงานซะด้วย...
+    MessageTW: 好像是非常辛苦的體力勞動……
+  - MessageGroupId: 130080290
+    Id: 286
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130089
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 덜덜덜?
+    MessageJP: 武者震いが……
+    MessageCN: 已经兴奋到开始发抖了……
+    MessageEN: I can't stop shaking!
+    MessageTH: ว่าไงนะ?
+    MessageTW: 渾身顫抖……
+  - MessageGroupId: 130080290
+    Id: 287
+    CharacterId: 13008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130089
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 각오하고 있습니다!
+    MessageJP: OK、覚悟しておくね
+    MessageCN: OK，我会做好觉悟的
+    MessageEN: But I'm ready!
+    MessageTH: จะเตรียมตัวเป็นอย่างดีเลย!
+    MessageTW: OK，我會做好覺悟的

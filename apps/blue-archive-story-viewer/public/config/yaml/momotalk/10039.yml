@@ -1,0 +1,1008 @@
+CharacterId: 10039
+translator: 今天早睡了吗
+title:
+  - GroupId: 1003902
+    FavorScheduleId: 100392
+    CharacterId: 10039
+    TextJp: RABBIT4、隠れます
+    TextCn: RABBIT4，开始隐蔽
+    TextKr: RABBIT 4, 은신합니다.
+    TextEn: RABBIT 4, Hide
+    TextTh: RABBIT 4 ซ่อนตัว
+    TextTw: RABBIT 4，要隱藏了
+  - GroupId: 1003903
+    FavorScheduleId: 100393
+    CharacterId: 10039
+    TextJp: RABBIT4、出動します
+    TextCn: RABBIT4，开始出动
+    TextKr: RABBIT 4, 출동합니다.
+    TextEn: RABBIT 4, Mobilize
+    TextTh: RABBIT 4 ออกปฏิบัติการ!
+    TextTw: RABBIT 4，要出動了
+  - GroupId: 1003905
+    FavorScheduleId: 100395
+    CharacterId: 10039
+    TextJp: RABBIT4、狙撃します
+    TextCn: RABBIT4，开始狙击
+    TextKr: RABBIT 4, 저격합니다.
+    TextEn: RABBIT 4, Shoot
+    TextTh: RABBIT 4 จะยิงแล้วนะคะ
+    TextTw: RABBIT 4，要狙擊了
+  - GroupId: 1003906
+    FavorScheduleId: 100396
+    CharacterId: 10039
+    TextJp: RABBIT4、息抜きします
+    TextCn: RABBIT4，开始休息
+    TextKr: RABBIT 4, 휴식합니다.
+    TextEn: RABBIT 4, Let's Rest
+    TextTh: RABBIT 4 หยุดพักผ่อนค่ะ
+    TextTw: RABBIT 4，要休息了
+content:
+  - MessageGroupId: 100390010
+    Id: 100390010
+    CharacterId: 10039
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 선생님
+    MessageJP: あの
+    MessageCN: 那个
+    MessageEN: Um, S-Sensei.
+    MessageTH: คือว่า... คุณครูคะ
+    MessageTW: 那個
+  - MessageGroupId: 100390020
+    Id: 100390020
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: So um...
+    MessageTH: คือ...
+    MessageTW: 老師
+  - MessageGroupId: 100390030
+    Id: 100390030
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮으시다면
+    MessageJP: よろしければ、なのですが……
+    MessageCN: 如果老师方便的话……
+    MessageEN: If y-you don't mind...
+    MessageTH: ถ้าคุณครูไม่ว่าอะไร...
+    MessageTW: 如果可以的話……
+  - MessageGroupId: 100390040
+    Id: 100390040
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 주말에 잠깐 시간을 내 주실 수 있으신가요?
+    MessageJP: 今週末、少しお時間を……
+    MessageCN: 这个周末，能否抽出一点时间……
+    MessageEN: C-Can you hang out with me this weekend?
+    MessageTH: 'ฉันขอรบกวนเวลาวันหยุดสุดสัปดาห์นี้
+
+      หน่อยได้มั้ยคะ?'
+    MessageTW: 這個周末，可以占用你一點時間嗎……
+  - MessageGroupId: 100390050
+    Id: 100390050
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 무슨 일이야?
+    MessageJP: うん、良いよ。どうしたの？
+    MessageCN: 嗯，可以呀。怎么了？
+    MessageEN: Sure. What's going on?
+    MessageTH: ได้อยู่แล้ว มีเรื่องอะไรเหรอ?
+    MessageTW: 嗯，可以哦。怎麼了嗎？
+  - MessageGroupId: 100390060
+    Id: 100390060
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게
+    MessageJP: その
+    MessageCN: 那个
+    MessageEN: Th-The thing is..
+    MessageTH: คือว่า...
+    MessageTW: 這個
+  - MessageGroupId: 100390060
+    Id: 100390070
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니까
+    MessageJP: えっと……
+    MessageCN: 就是……
+    MessageEN: Um...
+    MessageTH: คือเรื่องนั้น...
+    MessageTW: 呃……
+  - MessageGroupId: 100390070
+    Id: 100390080
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 주말에 시내의 캠핑용품 매장에 새로운 도구를 사러 가려 했는데……
+    MessageJP: アウトドアショップに、行きたいのですが……
+    MessageCN: 我想去一次户外用品店……
+    MessageEN: I-I wanna buy some stuff at the c-camping store...
+    MessageTH: 'สุดสัปดาห์นี้ ฉันว่าจะไปซื้ออุปกรณ์ใหม่ที่
+
+      ร้านขายอุปกรณ์ตั้งแคมป์ในเมืองค่ะ...'
+    MessageTW: 我想要去戶外用品店……
+  - MessageGroupId: 100390080
+    Id: 100390090
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 소대에 손이 남는 사람이 저밖에 없는 것 같아서요……
+    MessageJP: RABBIT小隊のみんなは、その……
+    MessageCN: RABBIT小队的大家，那个……
+    MessageEN: But no one in the squad is f-free...
+    MessageTH: 'ตอนนี้ในกองทหารของเรา คนที่พอจะ
+
+      ว่าง ดันมีแค่ฉันคนเดียว...'
+    MessageTW: 但是RABBIT小隊的大家都，那個……
+  - MessageGroupId: 100390080
+    Id: 100390100
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님이 좀 도와주실 수 없을까요…….
+    MessageJP: ひとりではあれなので……よろしければ、一緒に……
+    MessageCN: 如果我一个人去的话有点那个……所以如果可以的话，老师能不能，一起……
+    MessageEN: S-So...could you help me...
+    MessageTH: คุณครูพอจะช่วยฉันหน่อยได้รึเปล่าคะ?
+    MessageTW: 一個人去的話有點……如果不介意的話，可不可以一起……
+  - MessageGroupId: 100390090
+    Id: 100390110
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사야 할 물건이 많은가 보네.
+    MessageJP: 荷物持ちならまかせて！
+    MessageCN: 拿东西的活就交给我吧！
+    MessageEN: You must need a lot of supplies...
+    MessageTH: มีของที่ต้องซื้อเยอะเลยสินะ
+    MessageTW: 搬東西就交給我吧！
+  - MessageGroupId: 100390100
+    Id: 100390120
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그건 아니지만……
+    MessageJP: あ、いえ、お願いしたいのは荷物持ちではなくて……
+    MessageCN: 啊，不是，我不是想让老师帮我拿东西……
+    MessageEN: N-No... You see...
+    MessageTH: ไม่ได้เยอะอะไรมากมายหรอกค่ะ...
+    MessageTW: 啊，不，想拜託你的不是搬東西……
+  - MessageGroupId: 100390100
+    Id: 100390130
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아마 저 혼자서 물건을 사러 가면……
+    MessageJP: おそらく、私一人で行ったら……
+    MessageCN: 因为恐怕，我一个人去的话……
+    MessageEN: If I go alone...
+    MessageTH: แต่ถ้าฉันไปซื้อของคนเดียว...
+    MessageTW: 如果一個人去的話……
+  - MessageGroupId: 100390110
+    Id: 100390140
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무도 상대해 주지 않을 거예요……
+    MessageJP: 誰も相手してくれないと、思うので……
+    MessageCN: 我觉得，可能没有人会搭理我……
+    MessageEN: I'll be invisible...
+    MessageTH: อาจไม่มีใครยอมคุยด้วยเลยก็ได้ค่ะ...
+    MessageTW: 我覺得可能沒有人會理我，所以……
+  - MessageGroupId: 100390120
+    Id: 100390150
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100392
+    NextGroupId: 100390130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……그게 무슨 소리야?
+    MessageJP: ……？？？
+    MessageCN: ……？？？
+    MessageEN: '...What do you mean?'
+    MessageTH: หมายความว่ายังไงน่ะ?
+    MessageTW: ……？？？
+  - MessageGroupId: 100390130
+    Id: 100390160
+    CharacterId: 10039
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100390120
+    PreConditionFavorScheduleId: 100392
+    FavorScheduleId: 0
+    NextGroupId: 100390140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 선생님
+    MessageJP: あの、先生
+    MessageCN: 那个，老师
+    MessageEN: Um, S-Sensei.
+    MessageTH: คือ... คุณครูคะ
+    MessageTW: 那個，老師
+  - MessageGroupId: 100390140
+    Id: 100390170
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘은 그게 RABBIT 소대의 일이 일찍 끝나서
+    MessageJP: 今日、RABBIT小隊の任務が早く終わったので
+    MessageCN: 今天，RABBIT小队的任务提前结束了
+    MessageEN: R-RABBIT Squad stuff ended early today.
+    MessageTH: 'วันนี้ภารกิจของกองทหาร RABBIT
+
+      เสร็จเร็วกว่ากำหนด'
+    MessageTW: 今天RABBIT小隊的任務結束得比較早
+  - MessageGroupId: 100390140
+    Id: 100390180
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 당번 업무에 일찍 갈 수 있을 것 같아요.
+    MessageJP: 思ったより、早く到着できるかもしれません
+    MessageCN: 我们可能会比预想的早到
+    MessageEN: I-I can probably get to Schale early...
+    MessageTH: ฉันคงไปเข้าเวรได้เร็วกว่ากำหนดน่ะค่ะ
+    MessageTW: 所以應該能早一點到
+  - MessageGroupId: 100390150
+    Id: 100390190
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시
+    MessageJP: なので、その
+    MessageCN: 所以，那个
+    MessageEN: D-Do you know...
+    MessageTH: คือว่า...
+    MessageTW: 所以，那個
+  - MessageGroupId: 100390150
+    Id: 100390200
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 샬레에 방문하기 전에 따로 해야 할 일이 있을까요?
+    MessageJP: 何か買い物とか、必要なものがあれば……
+    MessageCN: 如果老师有什么需要买的，或者要我们带过去的东西的话……
+    MessageEN: Do I needa do a-anything before I go?
+    MessageTH: 'ก่อนที่จะไปชาเล่ต์ มีงานอื่นที่ต้องทำอีก
+
+      หรือเปล่าคะ?'
+    MessageTW: 如果有什麼要買的東西，或是需要什麼的話……
+  - MessageGroupId: 100390160
+    Id: 100390210
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: Um...
+    MessageTH: คือว่า...
+    MessageTW: ……？
+  - MessageGroupId: 100390160
+    Id: 100390220
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님?
+    MessageJP: えっと、先生？
+    MessageCN: 那个，老师？
+    MessageEN: Sensei?
+    MessageTH: คุณครูคะ?
+    MessageTW: 那個，老師？
+  - MessageGroupId: 100390170
+    Id: 100390230
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100393
+    NextGroupId: 100390180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 주무시나요?
+    MessageJP: お休み中でしょうか……？
+    MessageCN: 您在休息吗……?
+    MessageEN: A-Are you sleeping?
+    MessageTH: หรือว่าหลับอยู่เหรอคะ?
+    MessageTW: 睡著了嗎……？
+  - MessageGroupId: 100390180
+    Id: 100390240
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100390170
+    PreConditionFavorScheduleId: 100393
+    FavorScheduleId: 0
+    NextGroupId: 100390190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저기, 선생님
+    MessageJP: えっと、先生
+    MessageCN: 那个，老师
+    MessageEN: Umm, Sensei.
+    MessageTH: คุณครูคะ...
+    MessageTW: 那個，老師
+  - MessageGroupId: 100390190
+    Id: 100390250
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 목걸이 때문에 뭔가 큰 곤경을 겪으셨다고 들었어요…….
+    MessageJP: すみません……
+    MessageCN: 对不起……
+    MessageEN: I-I heard you got in trouble b-because of the necklace...
+    MessageTH: 'ฉันได้ยินว่าคุณครูเจอปัญหาใหญ่เพราะ
+
+      ปลอกคอนั่น...'
+    MessageTW: 不好意思……
+  - MessageGroupId: 100390190
+    Id: 100390260
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 죄송합니다……
+    MessageJP: 私のせいで、先生が誤解されてしまったそうで……
+    MessageCN: 都是因为我，老师被人误会了……
+    MessageEN: Sorry...
+    MessageTH: ขอโทษด้วยนะคะ...
+    MessageTW: 好像因為我害老師被誤會了……
+  - MessageGroupId: 100390200
+    Id: 100390270
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시 저는 쓸모없는 아이예요…….
+    MessageJP: やっぱり私は役立たずです……ごめんなさい……
+    MessageCN: 我果然很没用……对不起……
+    MessageEN: I knew it. I'm just n-no good...
+    MessageTH: คิดแล้วเชียวว่าฉันมันไร้ประโยชน์จริงๆ ค่ะ...
+    MessageTW: 我果然是個沒用的孩子……對不起……
+  - MessageGroupId: 100390210
+    Id: 100390280
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 신경 쓰지 마.
+    MessageJP: ううん、大丈夫。気にしないで
+    MessageCN: 美游不用道歉，没关系的。别往心里去
+    MessageEN: Don't worry about it.
+    MessageTH: ไม่เป็นไรนะ ไม่ต้องคิดมากหรอก
+    MessageTW: 沒關係的。別在意
+  - MessageGroupId: 100390220
+    Id: 100390290
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 그렇게 주목을 받았던 건 난생처음이라……
+    MessageJP: はい……
+    MessageCN: 嗯……
+    MessageEN: N-No one's ever noticed me like that before...
+    MessageTH: 'ตั้งแต่เกิดมาฉันเพิ่งเคยได้รับความสนใจ
+
+      มากแบบนี้เป็นครั้งแรก...'
+    MessageTW: 好的……
+  - MessageGroupId: 100390220
+    Id: 100390300
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 목걸이를 포기하는 건 조금 아쉬워요.
+    MessageJP: ですが、あんなに注目を受けたのは初めてなので、あの首輪はちょっと捨てがたく……
+    MessageCN: 但是，我还是第一次受到那么多的关注，那个项圈还有点舍不得摘掉……
+    MessageEN: So...I wanna keep the necklace...
+    MessageTH: 'ฉันเลยรู้สึกเสียดายถ้าจะต้องปล่อย
+
+      มือจากปลอกคอนี้ไปค่ะ'
+    MessageTW: 不過我還是第一次那樣受人注目，那個項圈有點難以割捨……
+  - MessageGroupId: 100390230
+    Id: 100390310
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 괜찮으시다면
+    MessageJP: 先生がよろしければ、ですが
+    MessageCN: 如果老师愿意的话
+    MessageEN: If it's okay...
+    MessageTH: ถ้าคุณครูไม่ว่าอะไร...
+    MessageTW: 如果老師願意的話
+  - MessageGroupId: 100390240
+    Id: 100390320
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최소한 샬레에 있을 때만 목걸이를 차고 있으면 안 될까요?
+    MessageJP: シャーレにいる時だけ、首輪を付けるというのは……？
+    MessageCN: 要是只在夏莱活动的话，我可以戴着项圈吗……？
+    MessageEN: C-Can...I at least wear it in Schale?
+    MessageTH: 'อย่างน้อยขอแค่ตอนอยู่ที่ชาเล่ต์ ขอใส่
+
+      ปลอกคอนี่ได้รึเปล่าคะ?'
+    MessageTW: 只在夏萊戴著項圈可以嗎……？
+  - MessageGroupId: 100390250
+    Id: 100390330
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그편이 더 큰 오해를 받을 것 같으니까 그만둬…….
+    MessageJP: 色々と危ないから、申し訳ないけどそれは無しで……
+    MessageCN: 从各种意义上都很危险，所以虽然很对不住美游但还是别了吧……
+    MessageEN: That'll make things even worse. Please don't.
+    MessageTH: 'แบบนั้นจะยิ่งถูกเข้าใจผิดไปกันใหญ่
+
+      อย่าดีกว่านะ...'
+    MessageTW: 各種方面都很危險，雖然抱歉還是放棄吧……
+  - MessageGroupId: 100390260
+    Id: 100390340
+    CharacterId: 10039
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100390250
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩐지 최근
+    MessageJP: その、先生
+    MessageCN: 那个，老师
+    MessageEN: Lately, I feel like...
+    MessageTH: ไม่รู้ว่าทำไมช่วงนี้...
+    MessageTW: 那個，老師
+  - MessageGroupId: 100390270
+    Id: 100390350
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 소대 내에서 저지르는 실수가 잦아진 것 같아서……
+    MessageJP: 何だか私、最近失敗ばっかりで……
+    MessageCN: 总觉得，我最近总是失败……
+    MessageEN: I've been making more m-mistakes than usual...
+    MessageTH: 'ฉันรู้สึกว่าทำผิดบ่อยๆ ตอนอยู่ใน
+
+      กองทหารน่ะค่ะ...'
+    MessageTW: 總覺得最近我總是在失敗……
+  - MessageGroupId: 100390270
+    Id: 100390360
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시 저는 쓸모없는 아이인가 봐요……
+    MessageJP: やっぱり私はRABBIT小隊のお荷物です、役立たずなんです……
+    MessageCN: 我果然是RABBIT小队的累赘，是没用的人……
+    MessageEN: I'm d-done for...
+    MessageTH: 'คิดแล้วเชียวว่าฉันเป็นคนที่ไร้ประโยชน์
+
+      จริงๆ ค่ะ...'
+    MessageTW: 我果然是RABBIT小隊的負擔，是沒用隊員……
+  - MessageGroupId: 100390280
+    Id: 100390370
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇지 않아.
+    MessageJP: そんなことはないよ
+    MessageCN: 没有那回事哦
+    MessageEN: That's not true.
+    MessageTH: ไม่หรอกนะ
+    MessageTW: 沒有那種事哦
+  - MessageGroupId: 100390290
+    Id: 100390380
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미유는 훌륭한 저격수니까.
+    MessageJP: ミユは立派なスナイパーなんだから
+    MessageCN: 毕竟美游是优秀的狙击手啊
+    MessageEN: You're the best sniper I've seen.
+    MessageTH: มิยุเป็นสไนเปอร์ที่เก่งมากเลย
+    MessageTW: 美優是個優秀的狙擊手
+  - MessageGroupId: 100390300
+    Id: 100390390
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만……
+    MessageJP: ですが……
+    MessageCN: 但是……
+    MessageEN: Because...
+    MessageTH: แต่ว่า...
+    MessageTW: 可是……
+  - MessageGroupId: 100390310
+    Id: 100390400
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정식 훈련을 받은 지도 너무 오래되어서……
+    MessageJP: 正式な訓練を受けてから、ずいぶん経ちますし……立派と言えるのかどうか……
+    MessageCN: 距离上次正式受训，已经过去很长时间了……我到底还算不算得上优秀呢……
+    MessageEN: I h-haven't actually trained in so long...
+    MessageTH: 'ฉันได้รับการฝึกอย่างเป็นทางการเมื่อนาน
+
+      มาแล้ว...'
+    MessageTW: 距離上次接受正式的訓練已經過了很久了……還能稱得上是優秀嗎……
+  - MessageGroupId: 100390310
+    Id: 100390410
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 예전처럼 총을 쏠 수 있을지도 모르겠어요
+    MessageJP: 昔より技術が落ちてるかもしれません……
+    MessageCN: 和以前相比，我的技术可能已经退步了……
+    MessageEN: Wh-What if I'm n-no good now?
+    MessageTH: 'ตอนนี้ไม่รู้เลยค่ะว่าจะยิงได้แม่นเหมือน
+
+      เมื่อก่อนรึเปล่า'
+    MessageTW: 技術可能已經退步很多了……
+  - MessageGroupId: 100390320
+    Id: 100390420
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……선생님, 괜찮으시다면
+    MessageJP: ……先生、よろしければ
+    MessageCN: ……老师，如果可以的话
+    MessageEN: Sensei... D-Do you think...
+    MessageTH: ถ้าคุณครูไม่ว่าอะไร...
+    MessageTW: ……老師，可以的話
+  - MessageGroupId: 100390320
+    Id: 100390430
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100395
+    NextGroupId: 100390330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 훈련, 함께해 주시겠어요?
+    MessageJP: 訓練に、付き合っていただけませんか？
+    MessageCN: 老师能，陪我一起训练吗？
+    MessageEN: You could...help me train?
+    MessageTH: ช่วยไปร่วมฝึกกับฉันหน่อยได้มั้ยคะ?
+    MessageTW: 可以陪我一起訓練嗎？
+  - MessageGroupId: 100390330
+    Id: 100390440
+    CharacterId: 10039
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100390320
+    PreConditionFavorScheduleId: 100395
+    FavorScheduleId: 0
+    NextGroupId: 100390340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번의 훈련으로
+    MessageJP: 先日の訓練は、ありがとうございました。
+    MessageCN: 十分感谢老师前几天陪我训练。
+    MessageEN: Since w-we last trained...
+    MessageTH: จากการฝึกครั้งที่แล้ว...
+    MessageTW: 之前的訓練，非常感謝你
+  - MessageGroupId: 100390340
+    Id: 100390450
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 사격 실력은 다소 좋아진 것 같지만……
+    MessageJP: 少し、精度が良くなった気がします
+    MessageCN: 我发现我的射击精度上升了一些
+    MessageEN: I think I g-got a little better.
+    MessageTH: 'ดูเหมือนทักษะการยิงของฉันจะดีขึ้นมา
+
+      นิดหน่อยค่ะ...'
+    MessageTW: 感覺準度稍微提升了一點
+  - MessageGroupId: 100390350
+    Id: 100390460
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래도 자꾸 나쁜 생각이 떠올라서 곤란해져요.
+    MessageJP: ですが……何だか最近は、色々と悪い方向に考えがちで……
+    MessageCN: 但是……不知道为什么，最近我总是往不好的方向想……
+    MessageEN: But I c-can't stop being negative...
+    MessageTH: 'แต่ฉันกลับเจอปัญหาบ่อยๆ เพราะเอาแต่
+
+      คิดแง่ลบน่ะค่ะ...'
+    MessageTW: 但是……總覺得最近，思考有點負面……
+  - MessageGroupId: 100390350
+    Id: 100390470
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 자꾸 기분도 우울해지고……
+    MessageJP: 気分も落ち込みがちなんです……
+    MessageCN: 心情也会低落……
+    MessageEN: I get r-really depressed...
+    MessageTH: รู้สึกหดหู่บ่อยๆ...
+    MessageTW: 情緒也有點低落……
+  - MessageGroupId: 100390360
+    Id: 100390480
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390370
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 취미 생활을 즐겨보는 게 어떨까?
+    MessageJP: 趣味を思いっきり楽しんでみる、とか？
+    MessageCN: 尽情享受自己的兴趣试试看吧？
+    MessageEN: Why don't you find an enjoyable hobby?
+    MessageTH: ลองหางานอดิเรกทำดีมั้ย?
+    MessageTW: 要不要盡情去做有興趣的事？
+  - MessageGroupId: 100390370
+    Id: 100390490
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 취미……
+    MessageJP: 趣味……
+    MessageCN: 兴趣……
+    MessageEN: A hobby...?
+    MessageTH: งานอดิเรก...
+    MessageTW: 興趣……
+  - MessageGroupId: 100390380
+    Id: 100390500
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390390
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇네요……
+    MessageJP: なるほど……
+    MessageCN: 原来如此……
+    MessageEN: Hm...
+    MessageTH: นั่นสินะคะ......
+    MessageTW: 原來如此……
+  - MessageGroupId: 100390380
+    Id: 100390510
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 취미 생활을 즐기면
+    MessageJP: 確かに、そうかもしれません
+    MessageCN: 确实是个办法
+    MessageEN: Maybe getting a nice hobby...
+    MessageTH: ถ้าทำงานอดิเรกละก็
+    MessageTW: 確實可能是這樣呢
+  - MessageGroupId: 100390390
+    Id: 100390520
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100396
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 체질도 조금 나아질지도 모르겠어요…….
+    MessageJP: ちょっと試してみます
+    MessageCN: 我试试看
+    MessageEN: Will make me feel b-better...
+    MessageTH: ความรู้สึกแบบนี้อาจจะหายไปก็ได้ค่ะ...
+    MessageTW: 我會試試看的

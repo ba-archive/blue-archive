@@ -1,0 +1,584 @@
+CharacterId: 10009
+translator: 螢
+title:
+  - TextJp: すっごく美味しくなる方法
+    TextCn: 让料理更加美味的方法
+    TextKr: 음식을 더욱 맛있게 먹는 법
+    TextEn: Peak Enjoyment
+    TextTh: วิธีกินอาหารให้อร่อยขึ้นกว่าเดิม
+    TextTw: 變得很美味的方法
+    GroupId: 1000902
+    FavorScheduleId: 100092
+    CharacterId: 10009
+  - TextJp: 美味しいプリン
+    TextCn: 美味的布丁
+    TextKr: 맛있는 푸딩 이야기
+    TextEn: A Tale of Delicious Pudding
+    TextTh: เรื่องราวของพุดดิ้งแสนอร่อย
+    TextTw: 美味的布丁
+    GroupId: 1000903
+    FavorScheduleId: 100093
+    CharacterId: 10009
+  - TextJp: ついつい
+    TextCn: 下意识地
+    TextKr: 나도 모르게 한 입!
+    TextEn: Mouthwatering Treats
+    TextTh: ดันเผลอชิมโดยไม่รู้ตัว!
+    TextTw: 不知不覺
+    GroupId: 1000905
+    FavorScheduleId: 100095
+    CharacterId: 10009
+  - TextJp: ホットドッグデー
+    TextCn: 热狗日
+    TextKr: 핫도그 데이
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+    GroupId: 1000920
+    FavorScheduleId: 1000920
+    CharacterId: 10009
+    unsure: false
+content:
+  - MessageKR: 선생님!
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: Sensei!
+    MessageTH: คุณครู!
+    MessageTW: 老師！
+    MessageGroupId: 100090010
+    Id: 700
+    CharacterId: 10009
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 나 어제 책에서 굉장한 걸 읽었어!
+    MessageJP: 昨日私、すごい本を読んだの！
+    MessageCN: 我昨天读了一本很厉害的书！
+    MessageEN: I read something incredible yesterday.
+    MessageTH: |-
+      เมื่อวานฉันได้อ่านเรื่องสุดยอดในหนังสือ
+      มาล่ะ!
+    MessageTW: 我昨天讀了一本很厲害的書！
+    MessageGroupId: 100090020
+    Id: 701
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 굉장한 거?
+    MessageJP: すごい本？
+    MessageCN: 很厉害的书？
+    MessageEN: Something incredible?
+    MessageTH: เรื่องสุดยอดเหรอ?
+    MessageTW: 厲害的書？
+    MessageGroupId: 100090030
+    Id: 702
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 응! 운동선수의 자서전이었는데……..
+    MessageJP: うん！アスリートの人の自伝だったんだけど……
+    MessageCN: 没错！虽然那是本运动员自传……
+    MessageEN: Yeah! I was reading this athlete's autobiography...
+    MessageTH: ใช่! มันเป็นอัตชีวประวัติของนักกีฬาน่ะ...
+    MessageTW: 嗯！雖然是運動員的自傳……
+    MessageGroupId: 100090040
+    Id: 703
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 거기에 평범한 음식을 더욱 맛있게 먹는 법이 쓰여 있던 거 있지!
+    MessageJP: そこに、食べ物がすっごく美味しくなる方法が書いてあったの！
+    MessageCN: 但是那本书里，写着让食物变得非常好吃的方法！
+    MessageEN: And there was a recipe for making ordinary food more delicious!
+    MessageTH: |-
+      ในนั้นบอกวิธีกินอาหารธรรมดาๆ ให้อร่อย
+      ขึ้นล่ะ!
+    MessageTW: 但裡面寫著如何讓食物變美味的方法！
+    MessageGroupId: 100090040
+    Id: 704
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 평범한 음식을 더욱 맛있게 먹는 법?
+    MessageJP: すっごく美味しくなる方法？
+    MessageCN: 让食物变得非常好吃的方法？
+    MessageEN: Making ordinary food more delicious?
+    MessageTH: วิธีกินอาหารธรรมดาๆ ให้อร่อยขึ้น?
+    MessageTW: 變美味的方法？
+    MessageGroupId: 100090050
+    Id: 705
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 운동선수 자서전에 왜 그런 게……?
+    MessageJP: なんでアスリートの自伝にそんなことが……？
+    MessageCN: 为什么运动员自传里面会写这个……？
+    MessageEN: Why was that in an athlete's autobiography...?
+    MessageTH: นักกีฬาจะเขียนอะไรแบบนั้นทำไม...?
+    MessageTW: 為什麼運動員的自傳會有那種東西 ……？
+    MessageGroupId: 100090050
+    Id: 706
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 이건 미식연구회의 부원으로서 그냥 넘어갈 수 없어.
+    MessageJP: これは美食研究会のメンバーとして、試さずにはいられないわね
+    MessageCN: 作为美食研究会的成员，我必须试一试！
+    MessageEN: As a member of the Gourmet Research Society, I have to look into this.
+    MessageTH: |-
+      ในฐานะเจ้าหน้าที่แห่งชมรมชิมอาหาร
+      ฉันจะปล่อยผ่านไปไม่ได้
+    MessageTW: 身為美食研究會的成員，怎麼能不試一下呢
+    MessageGroupId: 100090060
+    Id: 707
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 시험해보자. 선생님!
+    MessageJP: 善は急げだよ、先生！
+    MessageCN: 好事不宜迟，老师！
+    MessageEN: Let's test it, Sensei!
+    MessageTH: ไปลองกันดีกว่าคุณครู!
+    MessageTW: 事不宜遲，老師！
+    MessageGroupId: 100090060
+    Id: 708
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100092
+    NextGroupId: 100090070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 선생님! 선생님!
+    MessageJP: 先生！先生！
+    MessageCN: 老师！老师！
+    MessageEN: Sensei! Sensei!
+    MessageTH: คุณครู! คุณครู!
+    MessageTW: 老師！老師！
+    MessageGroupId: 100090070
+    Id: 709
+    CharacterId: 10009
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100090060
+    PreConditionFavorScheduleId: 100092
+    FavorScheduleId: 0
+    NextGroupId: 100090080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 오늘부터 게헨나 중앙광장에서 길거리 음식 페스티벌이 열린대!
+    MessageJP: 今日から中央広場で、屋台がいっぱい出店するフェスが開かれるの！
+    MessageCN: 今天起在中央广场那边，要举办摆上好多小吃摊的祭典！
+    MessageEN: Starting today, Gehenna Central Square is hosting a street food festival!
+    MessageTH: |-
+      ตั้งแต่วันนี้จะมีเทศกาลสตรีทฟูดที่จัตุรัส
+      กลางของเกเฮนน่าล่ะ!
+    MessageTW: 從今天開始，中央廣場會舉辦擠滿攤位的慶典！
+    MessageGroupId: 100090080
+    Id: 710
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 이즈미, 신났나 보네.
+    MessageJP: そうなんだ。イズミ、すごく楽しそうだね
+    MessageCN: 这样啊。泉好像很开心呢
+    MessageEN: Izumi, you look excited.
+    MessageTH: เธอดูตื่นเต้นมากเลยนะอิซุมิ
+    MessageTW: 這樣啊。泉看起來很開心
+    MessageGroupId: 100090090
+    Id: 711
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 응! 나, 쭉 오늘만을 기다려 왔어!
+    MessageJP: うん！私、ずっとこの日を待ってたの！
+    MessageCN: 嗯！我一直在等这一天！
+    MessageEN: I am! I've been waiting for today for so long!
+    MessageTH: ใช่! ฉันเฝ้ารอวันนี้มาตลอด!
+    MessageTW: 嗯！我一直等著這一天！
+    MessageGroupId: 100090100
+    Id: 712
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 오늘은 특히 푸딩으로 엄청나게 유명한 가게가 참가하거든!
+    MessageJP: 今日は特に、プリンですごく有名なあのお店が参加するし……！
+    MessageCN: 而且今天还有一家特别有名的布丁店参加……！
+    MessageEN: A famous pudding shop is gonna be there today!
+    MessageTH: |-
+      เห็นว่าวันนี้มีร้านพุดดิ้งเจ้าดังมาเปิดขาย
+      ด้วยล่ะ!
+    MessageTW: 特別是今天，有間布丁非常知名的店會參加……！
+    MessageGroupId: 100090100
+    Id: 713
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 이건 꼭 먹어봐야 해!
+    MessageJP: あれは絶対に食べないと！
+    MessageCN: 我一定要吃到那个！
+    MessageEN: I have to try it!
+    MessageTH: ต้องกินให้ได้เลย!
+    MessageTW: 絕對要吃到那個！
+    MessageGroupId: 100090110
+    Id: 714
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100093
+    NextGroupId: 100090120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 선생님! 게헨나 상점가에 라멘 가게가 새로 생긴 모양이야!
+    MessageJP: 先生！ゲヘナの商店街に新しいラーメン屋ができたんだって！
+    MessageCN: 老师！听说格黑娜的商业街好像新开了一家拉面馆！
+    MessageEN: Sensei! There's a new ramen place in the Gehenna shopping district!
+    MessageTH: |-
+      คุณครู! เห็นมีว่าร้านราเม็งมาเปิดใหม่ใน
+      ย่านการค้าเกเฮนน่าด้วยล่ะ!
+    MessageTW: 老師！聽說格黑娜的商店街新開了一家拉麵店！
+    MessageGroupId: 100090120
+    Id: 715
+    CharacterId: 10009
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100090110
+    PreConditionFavorScheduleId: 100093
+    FavorScheduleId: 100093
+    NextGroupId: 100090130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 같이 가자!
+    MessageJP: 一緒に行こう！
+    MessageCN: 我们一起去吧！
+    MessageEN: Let's go together!
+    MessageTH: ไปด้วยกันเถอะ!
+    MessageTW: 一起去吧！
+    MessageGroupId: 100090130
+    Id: 716
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 사전 조사 및 정찰이야!
+    MessageJP: 下見と、偵察に！
+    MessageCN: 我们一起去勘查和侦查一下！
+    MessageEN: We'll scope it out and do some reconnaissance!
+    MessageTH: ไปสำรวจตรวจตราล่วงหน้ากัน
+    MessageTW: 調查與偵查！
+    MessageGroupId: 100090130
+    Id: 717
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 같은 뜻 아냐……?
+    MessageJP: それ、どっちも同じ意味じゃない？
+    MessageCN: 那个，这两个词不是一个意思吗？
+    MessageEN: Isn't that redundant...?
+    MessageTH: ต้องเป็นทางการขนาดนั้นเลยเหรอ?
+    MessageTW: 這兩個不是一樣的意思嗎？
+    MessageGroupId: 100090140
+    Id: 718
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 어, 그런가?
+    MessageJP: あれっ、そうなの？
+    MessageCN: 啊，这样的吗？
+    MessageEN: Oh, is it?
+    MessageTH: แฮ่ะๆ หมายถึงไปชิมน่ะ ^^;
+    MessageTW: 啊咧，是嗎？
+    MessageGroupId: 100090150
+    Id: 719
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100095
+    NextGroupId: 100090160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+  - MessageKR: 있잖아, 선생님!
+    MessageJP: ねえ、先生！
+    MessageCN: 老师，老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090160
+    Id: 100090010
+    CharacterId: 10009
+    MessageCondition: FavorRankUp
+    ConditionValue: 20
+    PreConditionGroupId: 100090150
+    PreConditionFavorScheduleId: 100095
+    FavorScheduleId: 0
+    NextGroupId: 100090170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 선생님한테 꼭 보여 주고 싶은 것이 있어.
+    MessageJP: 先生に食べてほしいものが……
+    MessageCN: 我有个想让老师吃的……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090170
+    Id: 100090020
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 아니, 맛보게 해 주고 싶은 것이 있어!
+    MessageJP: ううん、見せたいものがあるの！
+    MessageCN: 不对，有个想给老师看的东西！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090170
+    Id: 100090030
+    CharacterId: 10009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: '이즈미가 보여 주고 싶은 것? '
+    MessageJP: 見せたいもの？
+    MessageCN: 想给我看的东西？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090180
+    Id: 100090040
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 응!
+    MessageJP: うん！
+    MessageCN: 嗯！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090190
+    Id: 100090050
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090200
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 그러니까 오늘 시간 괜찮지?
+    MessageJP: だからね先生、ちょっと来てくれる？
+    MessageCN: 所以说老师，能过来一下吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090190
+    Id: 100090060
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 이즈미의 부탁이라면야.
+    MessageJP: 分かった。行くね
+    MessageCN: 我知道了。这就来
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090200
+    Id: 100090070
+    CharacterId: 10009
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 기대되네!
+    MessageJP: やったー！
+    MessageCN: 太好了—！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090210
+    Id: 100090080
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100090220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    unsure: false
+  - MessageKR: 그러면 기다리고 있을게!
+    MessageJP: それじゃ、待ってるね！
+    MessageCN: 那么，我等着你！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+    MessageGroupId: 100090210
+    Id: 100090090
+    CharacterId: 10009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1000920
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    unsure: false

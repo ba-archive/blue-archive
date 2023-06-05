@@ -1,0 +1,625 @@
+CharacterId: 20021
+translator: 今天早睡了吗
+title:
+  - GroupId: 2002102
+    FavorScheduleId: 200212
+    CharacterId: 20021
+    TextJp: 良い子？悪い子？
+    TextCn: 好孩子？坏孩子？
+    TextKr: 착한 아이? 나쁜 아이?
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002103
+    FavorScheduleId: 200213
+    CharacterId: 20021
+    TextJp: 特訓！サンタへの道！
+    TextCn: 特训！通往圣诞老人之路！
+    TextKr: 특훈! 노려라, 산타!
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002105
+    FavorScheduleId: 200215
+    CharacterId: 20021
+    TextJp: あなたを待ちわびて
+    TextCn: 焦急地等待你
+    TextKr: 산타를 기다리며
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200210010
+    Id: 200210010
+    CharacterId: 20021
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근 고민이 생겼어요, 선생님.
+    MessageJP: 先生、実は悩みがあるんです
+    MessageCN: 老师，其实我有个烦恼
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210020
+    Id: 200210020
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내가 들어줄 수 있는 거야?
+    MessageJP: なるほど……それは、私が聞いても良いやつ？
+    MessageCN: 原来如此……那花绘可以和我说说那个烦恼吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210030
+    Id: 200210030
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 그러네요. 선생님이라면!
+    MessageJP: はい、先生になら！
+    MessageCN: 嗯，和老师说的话当然可以！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210030
+    Id: 200210040
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210040
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇지만 너무 폐를 끼치는 건 아닌지……
+    MessageJP: ですが、迷惑になってしまわないかと……
+    MessageCN: 但是，这样会不会给老师添麻烦之类的……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210040
+    Id: 200210050
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 학생의 고민을 들어주는 게 선생님이 하는 일이야.
+    MessageJP: 生徒の悩みを聞くことも、先生の役目だから
+    MessageCN: 毕竟倾听学生的烦恼也是老师的职责呀
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210050
+    Id: 200210060
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇다면 부탁드려도 괜찮을까요?
+    MessageJP: では、お願いしてもいいですか？
+    MessageCN: 那么，我可以拜托老师吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210050
+    Id: 200210070
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200212
+    NextGroupId: 200210060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제가 직접 찾아뵐게요!
+    MessageJP: 今からすぐ会いに行きますね！
+    MessageCN: 我现在马上去见老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210060
+    Id: 200210080
+    CharacterId: 20021
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200210050
+    PreConditionFavorScheduleId: 200212
+    FavorScheduleId: 0
+    NextGroupId: 200210070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 고민이란 괴롭지만 좋은 것 같아요!
+    MessageJP: 悩むのは辛いですが、良いものでもあると思うんです！
+    MessageCN: 虽然有烦恼很难受，但我觉得这也是件好事！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210070
+    Id: 200210090
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 확실한 결론을 내리지 못하더라도, 자신감을 주니까요.
+    MessageJP: 乗り越えると、自信に繋がりますし！
+    MessageCN: 因为只要克服了烦恼，就会变得自信起来！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210080
+    Id: 200210100
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 확실히 그럴지도.
+    MessageJP: 確かにそうかも。
+    MessageCN: 也许确实是这样。
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210080
+    Id: 200210110
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데, 갑자기 왜 '고민’ 이야기를……?
+    MessageJP: ところで、どうして突然「悩み」の話を……？
+    MessageCN: 话说回来，为什么花绘会突然聊到“烦恼”……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210090
+    Id: 200210120
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210100
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 쭉 고민하던 문제에 대해 나름대로 결론을 내렸거든요.
+    MessageJP: ずっと悩んでいたことについて、自分なりに結論が出せたんです
+    MessageCN: 因为对于我最近一直在烦恼的事情，我终于得出了自己的结论
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210100
+    Id: 200210130
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200213
+    NextGroupId: 200210110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께도 보여 드릴 테니 기대해 주세요!
+    MessageJP: 先生にもお見せしますので、楽しみにしていてください！
+    MessageCN: 到时候我也会给老师展示的，就请老师期待一下啦！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210110
+    Id: 200210140
+    CharacterId: 20021
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200210100
+    PreConditionFavorScheduleId: 200213
+    FavorScheduleId: 0
+    NextGroupId: 200210120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요, 선생님.
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210120
+    Id: 200210150
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뜨개질 양말을 만드는 건, 언제나 즐겁네요.
+    MessageJP: 編み物って、楽しいと思いません？
+    MessageCN: 老师不觉得织东西很有趣吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210130
+    Id: 200210160
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 양말이라니?
+    MessageJP: 編み物……靴下とか？
+    MessageCN: 织东西……织袜子之类的吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210140
+    Id: 200210170
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저한테는 일종의 의식 같은 거예요.
+    MessageJP: はい、準備をしてまして
+    MessageCN: 嗯，我在准备
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210140
+    Id: 200210180
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 매년 이 시기가 되면 만들곤 하죠.
+    MessageJP: 毎年この時期になると作るんです
+    MessageCN: 每年到了这个时候我都会织一些的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210150
+    Id: 200210190
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 점점 더 모르겠는데……
+    MessageJP: なるほど……？
+    MessageCN: 原来如此……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210160
+    Id: 200210200
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 맞다!
+    MessageJP: あ、そうだ！
+    MessageCN: 啊，对了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210170
+    Id: 200210210
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님을 제 방에 초대 드려도 될까요?
+    MessageJP: 先生、私の部屋に来てくれませんか？
+    MessageCN: 老师能来一下我的房间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210170
+    Id: 200210220
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이걸로 우린 공범이 되는 거죠!
+    MessageJP: ぜひ共犯になりましょう！
+    MessageCN: 请务必成为我的共犯！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210180
+    Id: 200210230
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200215
+    NextGroupId: 200210190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 범죄 같은 거 저지르는 건 아니지?!
+    MessageJP: 共犯！？
+    MessageCN: 共犯！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210190
+    Id: 200210240
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200210180
+    PreConditionFavorScheduleId: 200215
+    FavorScheduleId: 0
+    NextGroupId: 200210200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 선생님!
+    MessageJP: 先生、先生！
+    MessageCN: 老师，老师！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210200
+    Id: 200210250
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보세요! 산타클로스가 선물을 주고 가셨어요!
+    MessageJP: 見てください！サンタさんからのプレゼントです！
+    MessageCN: 老师快看！圣诞老人送给我礼物了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210200
+    Id: 200210260
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그리고 우유와 쿠키도 다 드셔 줬어요!
+    MessageJP: それに、牛乳とクッキーも全部食べてくれました！
+    MessageCN: 而且，圣诞老人还把牛奶和饼干全吃光了！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210210
+    Id: 200210270
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 산타클로스를 직접 보지 못했던 건 아쉽지만……
+    MessageJP: サンタさんに会えなかったのは残念ですけど……
+    MessageCN: 虽然没实际见到圣诞老人真是太可惜了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210210
+    Id: 200210280
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래도 선물의 보답을 해 드릴 수 있었던 것 같아 기뻐요. 에헤헷.
+    MessageJP: それでも、プレゼントのお礼ができたみたいで嬉しいです。えへへっ！
+    MessageCN: 不过即便如此，我好像也收到了礼物，很开心。诶嘿嘿！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210220
+    Id: 200210290
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘됐네, 하나에.
+    MessageJP: うん、良かったね
+    MessageCN: 嗯，太好了呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210230
+    Id: 200210300
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데, 선물로 소독약을 받았다는 건……
+    MessageJP: ところで、プレゼントで消毒薬をくれたということは……
+    MessageCN: 话说回来，圣诞老人给我的礼物是消毒药，就是说……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210230
+    Id: 200210310
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210240
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앞으로도 환자들의 치료를 위해 더욱 소독에 열중하라는 뜻이겠죠?
+    MessageJP: 今後も患者さんたちの治療のために、より一層消毒に励んでほしいという意味ですよね？
+    MessageCN: 圣诞老人是想鼓励我之后为了患者的治疗效果，要更加努力消毒的意思吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210240
+    Id: 200210320
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 환부 절단에는 시간이 오래 걸리니 역시 불을 써야 하나……
+    MessageJP: 患部の切断は大変ですし、こうなったらやはり火を使って
+    MessageCN: 不过因为患部的截肢很麻烦，这样的话果然还是用灼烧法吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200210250
+    Id: 200210330
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 뜻은 아니지 않을까?!
+    MessageJP: そういう意味じゃないと思うよ！？
+    MessageCN: 我觉得应该不是这个意思吧！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

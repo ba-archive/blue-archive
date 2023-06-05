@@ -1,0 +1,32 @@
+name: Issue Checker
+on:
+  issues:
+    types: [opened, edited]
+  pull_request_target:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  push:
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zzyyyl/issue-checker@v1.7
+        if: ${{ github.actor != 'renovate[bot]' }}
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/issue-checker.yml
+          not-before: 2022-08-05T00:00:00Z
+          include-title: 1
+  add_to_project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    needs: triage
+    steps:
+      - uses: actions/add-to-project@v0.4.1
+        with:
+          project-url: https://github.com/orgs/ba-archive/projects/1
+          github-token: ${{ secrets.PROJECT_AUTOMATION }}
+          labeled: 'bug, enhancement, UI, module: momotalk, module: story'
+          label-operator: OR

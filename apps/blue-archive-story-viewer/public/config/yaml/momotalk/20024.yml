@@ -1,0 +1,850 @@
+CharacterId: 20024
+translator: Lepra
+title:
+  - GroupId: 2002402
+    FavorScheduleId: 200242
+    CharacterId: 20024
+    TextJp: 午後のティータイム
+    TextCn: 午后的红茶时间
+    TextKr: 정오의 홍차
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002403
+    FavorScheduleId: 200243
+    CharacterId: 20024
+    TextJp: 言葉の乱れは心の乱れ
+    TextCn: 语乱即心乱
+    TextKr: 교양인의 말투
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002405
+    FavorScheduleId: 200245
+    CharacterId: 20024
+    TextJp: 紅茶とコク
+    TextCn: 红茶与香醇
+    TextKr: 홍차와 감칠맛
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002406
+    FavorScheduleId: 200246
+    CharacterId: 20024
+    TextJp: パンがなければ
+    TextCn: 没有面包的话
+    TextKr: 빵의 대용품
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200240010
+    Id: 200240010
+    CharacterId: 20024
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오랜만에 인사드립니다, 선생님.
+    MessageJP: ご無沙汰しております
+    MessageCN: 久疏问候
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240020
+    Id: 200240020
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그간 평안하셨는지요?
+    MessageJP: ご機嫌いかがですか、先生？
+    MessageCN: 近来如何，老师？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240030
+    Id: 200240030
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오랜만이야, 나기사.
+    MessageJP: ナギサ、久しぶり
+    MessageCN: 渚，好久不见
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240040
+    Id: 200240040
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 모처럼 연락을 드린 이유는 다름이 아니라
+    MessageJP: はい、確かにお久しぶりですね
+    MessageCN: 是的，确实好久没见呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240040
+    Id: 200240050
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 트리니티 학생들의 일로 선생님께 상담을 하고 싶은 것이 있어서요.
+    MessageJP: 実は、トリニティの生徒たちのことでご相談したいことがありまして
+    MessageCN: 其实，我想和老师讨论一下圣三一的学生们的事情
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240050
+    Id: 200240060
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240060
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무거운 사안은 아니니 점심 식사 후에 차라도 한잔하며 이야기를 나누는 게 어떠실까요?
+    MessageJP: それほど重たい内容でもありませんので、アフタヌーン・ティーでもご一緒しながらお話できればと思うのですが、いかがでしょうか？
+    MessageCN: 并不是非常沉重的内容，所以如果老师愿意赏光的话，我们可以在享用下午茶的同时谈论这个话题，您意下如何呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240060
+    Id: 200240070
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 좋아.
+    MessageJP: あ、良いね。ぜひ
+    MessageCN: 啊，不错呢。我一定来
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240070
+    Id: 200240080
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네. 그럼 좋은 홍차를 준비하고 기다리고 있겠습니다.
+    MessageJP: ふふっ
+    MessageCN: 呵呵
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240080
+    Id: 200240090
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200242
+    NextGroupId: 200240090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 날이 더우니 더위에 주의하시길.
+    MessageJP: それでは、良い茶葉をご用意してお待ちしておりますね
+    MessageCN: 那么，我就提前准备好优质茶叶静候老师的光临了哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240090
+    Id: 200240100
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200240080
+    PreConditionFavorScheduleId: 200242
+    FavorScheduleId: 0
+    NextGroupId: 200240100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 먼저 자리를 비워서 죄송합니다, 선생님.
+    MessageJP: 先に席を外してしまい、申し訳ございません。先生
+    MessageCN: 刚刚我先行离席，真的是十分抱歉，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240100
+    Id: 200240110
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부득이하게 갑자기 컨디션이 나빠지는 바람에…
+    MessageJP: 急に体調が悪くなってしまい……健康管理ができておらず申し訳ありません
+    MessageCN: 身体突然有点不适……没有做好健康管理，真的很抱歉
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240110
+    Id: 200240120
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 신경 쓰지 마.
+    MessageJP: 大丈夫だよ、気にしないで
+    MessageCN: 没关系哦，不用在意的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240120
+    Id: 200240130
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 내가 권한 홍차가 입에 맞지 않았던 거야?
+    MessageJP: ペットボトルの紅茶、もしかして口に合わなかった？
+    MessageCN: 是瓶装红茶不合渚的口味吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240120
+    Id: 200240140
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무리하게 권한 것 같아 미안하네……
+    MessageJP: 無理に勧めちゃってごめんね……
+    MessageCN: 对不起，是我硬要劝渚喝……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240130
+    Id: 200240150
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨. 대단히 흥미로운 경험이었습니다만……
+    MessageJP: いいえ、大変興味深い経験でした。ありがとうございます……
+    MessageCN: 不必道歉，这对于我而言也是非常有趣的经验。十分感谢老师……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240140
+    Id: 200240160
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240150
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음에는 조금 양을 조절하는 게 좋을 것 같네요……
+    MessageJP: ですが、今度からはいただく量を調節した方が良いかもしれませんね……
+    MessageCN: 不过，下次可能要调整一下喝的量……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240150
+    Id: 200240170
+    CharacterId: 20024
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200240140
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……다시 한번 인사드립니다, 선생님.
+    MessageJP: ……先日は失礼いたしました
+    MessageCN: ……前些日子失礼了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240160
+    Id: 200240180
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그간 평안하셨는지요?
+    MessageJP: 最近はいかがお過ごしでしょうか？
+    MessageCN: 老师近来过得如何呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240170
+    Id: 200240190
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 몸은 이제 괜찮아?
+    MessageJP: あれから体調は大丈夫？
+    MessageCN: 那之后身体还好吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240180
+    Id: 200240200
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 지난 번의 일은……
+    MessageJP: あ、先日の事でしたら……
+    MessageCN: 啊，要说前几天的事……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240180
+    Id: 200240210
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮습니다. 크게 몸이 나빴던 것도 아닌걸요.
+    MessageJP: 大丈夫です。大きく体調を崩したわけではありませんので
+    MessageCN: 没什么。也没有到特别不舒服的程度
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240190
+    Id: 200240220
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240200
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그보다, 괜찮으실 때 다시 한번 티파티의 다과회실에 방문해 주시겠습니까?
+    MessageJP: ところで、先日お話しそびれたことがありまして。よろしければ、お時間を頂けないでしょうか？
+    MessageCN: 话说回来，前几天有件事没能告诉老师。如果老师方便的话，可以占用您一点时间吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240190
+    Id: 200240230
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번에 못다 한 이야기를 계속 드리고 싶습니다.
+    MessageJP: お手すきの際で構いませんので、テラスにお越しいただければと思います
+    MessageCN: 等老师有空的时候就可以，我想请您来露台一趟
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240200
+    Id: 200240240
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번에야말로 좋은 홍차를 준비하고 기다리겠습니다.
+    MessageJP: また、紅茶をご用意しておきますので
+    MessageCN: 我还会再为老师准备红茶的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240210
+    Id: 200240250
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나도 좋아하는 홍차를 잔뜩 가져갈게!
+    MessageJP: うん、了解。私の方も前の紅茶、持っていこうか？
+    MessageCN: 嗯，明白了。那我把之前的红茶带过去吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240220
+    Id: 200240260
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200243
+    NextGroupId: 200240230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 페트병 홍차는…… 이제 괜찮습니다.
+    MessageJP: えっと、それは結構です。先日十分味わいましたので……
+    MessageCN: 那个，那就免了。前几日已经充分品味过了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240230
+    Id: 200240270
+    CharacterId: 20024
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200240220
+    PreConditionFavorScheduleId: 200243
+    FavorScheduleId: 0
+    NextGroupId: 200240240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……그간 평안하셨는지요.
+    MessageJP: ……いかがお過ごしでしょうか
+    MessageCN: ……老师最近过得还好吗
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240240
+    Id: 200240280
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저
+    MessageJP: 先日は、みっともない姿をお見せしてしまいましたが……
+    MessageCN: 前几天，让您看到了我失态的样子……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240240
+    Id: 200240290
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번에는 평정심을 잃은 탓에 선생님께 큰 실례를 저질렀습니다……
+    MessageJP: あらためましてその、決して普段からあのような言動をしているわけではなく……
+    MessageCN: 那个，我要重申一下，我平时的言行举止绝对不是那样的……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240250
+    Id: 200240300
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 신경 쓰지 않아.
+    MessageJP: 気にしないで
+    MessageCN: 不用在意
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240260
+    Id: 200240310
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240270
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 트리니티의 중책을 맡은 자가 실수를 가벼이 넘길 수는 없는 법.
+    MessageJP: そう言われましても……ティーパーティーとして、やはり失態を放っておくことはできません。
+    MessageCN: 话虽如此……作为茶会的成员，我果然还是不能将如此失态置之不顾
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240260
+    Id: 200240320
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께서 괜찮으시다면 부디 제게 실수를 만회할 기회를 주셨으면 합니다.
+    MessageJP: ……よろしければお詫びを兼ねて、もう一度お時間を頂けませんか？
+    MessageCN: ……如果可以的话，我可以再次占用老师一次时间，顺带表达我的歉意吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240270
+    Id: 200240330
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고 보니 새로 주문한 찻잎이 곧 도착할 것 같은데……
+    MessageJP: ちょうど新しく頼んだ茶葉がもうすぐ到着しますので
+    MessageCN: 正好新订的茶叶就快到了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240280
+    Id: 200240340
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 새로운 차의 시음과 겸하여 함께 다과회라도 즐기시는 게 어떠신가요?
+    MessageJP: ご馳走させてください。先生のご都合がよろしければ、ですが
+    MessageCN: 如果老师时间方便的话，请一定让我来招待您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240290
+    Id: 200240350
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋아.
+    MessageJP: それじゃあ、ご相伴に預かろうかな
+    MessageCN: 那我就去叨陪末座了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240300
+    Id: 200240360
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200245
+    NextGroupId: 200240310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네. 그럼 전의 장소에서 기다리고 있겠습니다.
+    MessageJP: ありがとうございます。それでは、テラスでお待ちしておりますね。
+    MessageCN: 非常感谢老师。那么，我在露台等您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240310
+    Id: 200240370
+    CharacterId: 20024
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200240300
+    PreConditionFavorScheduleId: 200245
+    FavorScheduleId: 0
+    NextGroupId: 200240320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋은 아침입니다, 선생님.
+    MessageJP: おはようございます、先生
+    MessageCN: 早上好，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240320
+    Id: 200240380
+    CharacterId: 20024
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240330
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아침 식사는 하고 출근하셨나요?
+    MessageJP: 一日の始まりは朝食からと言いますが……先生はもうすでに食べられましたか？
+    MessageCN: 都说一天从早餐开始……老师吃过早餐了吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240330
+    Id: 200240390
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 나기사는?
+    MessageJP: うん、ちょうどさっき。ナギサの方は？
+    MessageCN: 嗯，刚吃完。渚呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240340
+    Id: 200240400
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 조금 전에 미소시루를 먹었답니다.
+    MessageJP: 私は先ほど、お味噌汁をいただきました
+    MessageCN: 我也刚刚喝完味噌汤
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240350
+    Id: 200240410
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……의외네.
+    MessageJP: ……ちょっと意外かも
+    MessageCN: ……有点意外呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240360
+    Id: 200240420
+    CharacterId: 20024
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240370
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 티파티의 학생들은 스위츠만 먹을 것 같은 인상이었는데…….
+    MessageJP: ティーパーティーって何か、スイーツしか食べないみたいなイメージが……
+    MessageCN: 不知道为什么，我总有一种茶会里的人只会吃甜点的印象……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240370
+    Id: 200240430
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럴 리가 없잖습니까.
+    MessageJP: 何を仰るのですか……
+    MessageCN: 您在说什么呢……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240380
+    Id: 200240440
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200240390
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무리 입에 달다고 해도 한 가지 음식만 먹으면 건강을 해치는 법.
+    MessageJP: いくら何でも、甘いものばかり食べていては栄養バランスが良くありません
+    MessageCN: 而且再怎么说，只吃甜食营养也会不均衡的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200240380
+    Id: 200240450
+    CharacterId: 20024
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200246
+    NextGroupId: 200240390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저라고 해서 언제나 케이크와 과자만 먹는 건 아니랍니다.
+    MessageJP: 私たちだって、いつもケーキやお菓子ばかり食べているわけではないんです
+    MessageCN: 就算我们是茶会，也不是总吃蛋糕和点心的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

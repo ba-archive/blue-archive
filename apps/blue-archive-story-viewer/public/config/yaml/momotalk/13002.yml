@@ -1,0 +1,560 @@
+CharacterId: 13002
+translator: 今天早睡了吗
+title:
+  - GroupId: 1300202
+    FavorScheduleId: 130022
+    CharacterId: 13002
+    TextJp: ペースメーカー
+    TextCn: 佼佼者
+    TextKr: 페이스 메이커
+    TextEn: The Pacesetter
+    TextTh: ผู้นำ
+    TextTw: 配速員
+  - GroupId: 1300203
+    FavorScheduleId: 130023
+    CharacterId: 13002
+    TextJp: ニンニク抜きだなんて
+    TextCn: 竟然不放大蒜
+    TextKr: 마늘은 포기할 수 없어
+    TextEn: Garlic-A-Holic
+    TextTh: ยอมแพ้เจ้ากระเทียมไม่ได้!
+    TextTw: 竟然沒加大蒜
+  - GroupId: 1300205
+    FavorScheduleId: 130025
+    CharacterId: 13002
+    TextJp: 出禁
+    TextCn: 谢绝入内
+    TextKr: 대식가 출입 금지
+    TextEn: The Right to Refuse Gluttons
+    TextTh: นักกินจุห้ามเข้า
+    TextTw: 謝絕入場
+  - GroupId: 1300206
+    FavorScheduleId: 130026
+    CharacterId: 13002
+    TextJp: 美食家の矜持
+    TextCn: 美食家的矜持
+    TextKr: 미식가의 긍지
+    TextEn: Gourmand's Pride
+    TextTh: ศักดิ์ศรีของนักชิม
+    TextTw: 美食家的矜持
+content:
+  - MessageGroupId: 130020010
+    Id: 1223
+    CharacterId: 13002
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 문득 궁금해졌는데, 규동 가게에서는 어째서 킹 사이즈보다 큰 규동을 팔지 않는 걸까요?
+    MessageJP: どうして特盛より上の大きさの牛丼は売られていないのでしょうか？
+    MessageCN: 为什么牛丼店不能卖比特大碗分量更足的牛丼呢？
+    MessageEN:
+      You know, I've been wondering... Why don't restaurants sell beef bowls
+      larger than king size?
+    MessageTH: 'ฉันสงสัยจริงๆ ว่าทำไมร้านอุด้งไม่ขาย
+
+      อุด้งที่ชามใหญ่กว่าขนาดคิงไซซ์นะ?'
+    MessageTW: 為什麼不賣比特盛更大的牛丼呢？
+  - MessageGroupId: 130020020
+    Id: 1224
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 킹 사이즈 정도면 충분히 크지 않아?
+    MessageJP: 特盛で十分大きくない……？
+    MessageCN: 特大碗还不够大吗……？
+    MessageEN: Isn't king size big enough?
+    MessageTH: คิงไซซ์ นี่ยังใหญ่ไม่พออีกเหรอ?
+    MessageTW: 特盛還不夠大……？
+  - MessageGroupId: 130020030
+    Id: 1225
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안 돼요. 킹 사이즈 한 그릇으로는 배가 충분히 차지 않는다고요.
+    MessageJP: いえ、特盛一杯ではお腹いっぱいになれません
+    MessageCN: 不够，特大碗只吃一碗是吃不饱的
+    MessageEN: No! I can never get full on one king-sized bowl.
+    MessageTH: 'ไม่ได้นะคะ! แค่ชามคิงไซซ์ชามเดียว
+
+      ฉันยังไม่อิ่มหรอกค่ะ'
+    MessageTW: 不夠，一碗特盛吃不飽
+  - MessageGroupId: 130020040
+    Id: 1226
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아카리는 어째서 그렇게 한 번에 많은 음식을 먹는 거야?
+    MessageJP: どうしてアカリはそんなにたくさん食べるの？
+    MessageCN: 为什么明里能吃那么多？
+    MessageEN: Akari, why do you eat so much food at once?
+    MessageTH: แล้วอาคาริกินเยอะขนาดนั้นเลยเหรอ?
+    MessageTW: 為什麼亞伽里能吃那麼多？
+  - MessageGroupId: 130020050
+    Id: 1227
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후후, 우문이군요. 제가 한 번에 많은 음식을 먹는 이유는 간단하답니다.
+    MessageJP: フフッ、愚問ですね。私がたくさん食べる理由は簡単です
+    MessageCN: 呵呵，老师问了个愚钝的问题呢。我吃这么多的原因很简单
+    MessageEN: Heehee! What a silly question.
+    MessageTH: 'ฮุฮุ ถามอะไรแบบนั้นล่ะคะ เหตุผลที่ฉัน
+
+      กินอาหารเยอะๆ ก็ง่ายนิดเดียวค่ะ'
+    MessageTW: 呵呵，真是愚蠢的問題。我吃很多的理由很簡單
+  - MessageGroupId: 130020050
+    Id: 1228
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130022
+    NextGroupId: 130020060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 이유는…… 그곳에 음식이 있으니까!
+    MessageJP: なぜなら……そこに食べ物があるからです！
+    MessageCN: 因为……因为食物就在那里！
+    MessageEN: If I see food...I eat it! All of it!
+    MessageTH: นั่นก็คือ... เพราะมันมีอาหารอยู่ไงล่ะคะ!
+    MessageTW: 因為……食物在那裡！
+  - MessageGroupId: 130020060
+    Id: 1229
+    CharacterId: 13002
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 130020050
+    PreConditionFavorScheduleId: 130022
+    FavorScheduleId: 0
+    NextGroupId: 130020070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 어떤 라멘을 드실 때 면부터 드시나요, 아니면 국물부터 드시나요?
+    MessageJP: 先生はラーメンを食べる時、麺から行きますか？それともスープからです？
+    MessageCN: 老师吃拉面的时候，是吃面？还是先喝汤？
+    MessageEN: When you eat ramen, do you eat the noodles or drink the soup first?
+    MessageTH: 'เวลาที่คุณครูกินราเม็ง เริ่มกินจากเส้น
+
+      หรือว่าเริ่มซดน้ำซุปก่อนคะ?'
+    MessageTW: 老師吃拉麵的時候，是先吃麵嗎？還是先喝湯？
+  - MessageGroupId: 130020070
+    Id: 1230
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 면부터 먹어.
+    MessageJP: 麺からかな
+    MessageCN: 应该是先吃面吧
+    MessageEN: Noodles first.
+    MessageTH: กินเส้นก่อนสิ
+    MessageTW: 麵吧
+  - MessageGroupId: 130020070
+    Id: 1231
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 국물부터 마셔.
+    MessageJP: スープからかな
+    MessageCN: 应该是先喝汤吧
+    MessageEN: Soup first.
+    MessageTH: ต้องซดน้ำซุปก่อนอยู่แล้ว
+    MessageTW: 湯吧
+  - MessageGroupId: 130020080
+    Id: 1232
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020100
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 라멘의 면발을 중시하는 편이시군요.
+    MessageJP: なるほど、そうでしたか
+    MessageCN: 原来如此，老师是重视拉面面条的类型啊
+    MessageEN: So you care more about the noodles when it comes to ramen.
+    MessageTH: คุณครูเป็นพวกเน้นกินเส้นก่อนสินะคะ
+    MessageTW: 原來如此，這樣啊
+  - MessageGroupId: 130020090
+    Id: 1233
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020100
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 라멘의 국물을 중시하는 편이시군요.
+    MessageJP: なるほど、そうでしたか
+    MessageCN: 原来如此，老师是重视拉面汤头的类型啊
+    MessageEN: So you care more about the soup when it comes to ramen.
+    MessageTH: 'คุณครูเป็นพวกใส่ใจเรื่องรสชาติน้ำซุป
+
+      สินะคะ'
+    MessageTW: 原來如此，這樣啊
+  - MessageGroupId: 130020100
+    Id: 1234
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는 국물부터 마시는 걸 선호해요.
+    MessageJP: 個人的にはスープ一択ですね
+    MessageCN: 我个人比较喜欢先喝汤呢
+    MessageEN: I prefer to start with the soup.
+    MessageTH: ฉันเองก็เป็นพวกชอบชิมน้ำซุปก่อนค่ะ
+    MessageTW: 我個人會選擇湯
+  - MessageGroupId: 130020100
+    Id: 1235
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 진한 국물이야말로 라멘의 맛이 모두 담긴 정수라 할 수 있으니까요.
+    MessageJP: スープこそ、ラーメンの全てが詰まった精髄と言っても過言ではありません
+    MessageCN: 毫不夸张地说，汤才是包含拉面全部精髓的部分
+    MessageEN:
+      The thick soup of a bowl of ramen is its essence, containing its true
+      flavor.
+    MessageTH: 'เพราะน้ำซุปที่เข้มข้นคือศูนย์รวมแก่นแท้
+
+      ของราเม็งเอาไว้ยังไงล่ะคะ'
+    MessageTW: 說湯是充滿了拉麵的全部精華也不為過
+  - MessageGroupId: 130020110
+    Id: 1236
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 거기에 으깬 마늘의 알싸한 맛을 더하면…… 정말 참을 수가 없어요!
+    MessageJP: そこにすり潰したニンニクが加わった日には……ああ、なんて素晴らしい！
+    MessageCN: 如果那天的汤里还加上了捣碎的大蒜……啊，真是太棒了！
+    MessageEN:
+      When you add the pungent taste of crushed garlic... Ooh, I can't stand
+      how good it is!
+    MessageTH: 'แต่ถ้าจะใส่กระเทียมเพื่อเพิ่มรสเข้มข้นล่ะ
+
+      ก็... ฉันยอมไม่ได้เด็ดขาดค่ะ!'
+    MessageTW: 在裡面加入搗碎的大蒜的日子……啊啊，多麼美妙啊！
+  - MessageGroupId: 130020120
+    Id: 1237
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130023
+    NextGroupId: 130020130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩐지 아저씨 같은 취향인걸…….
+    MessageJP: なんだか、おじさんみたいな好みだね……
+    MessageCN: 还真是像大叔一样的喜好啊……
+    MessageEN: That sounds like something an old man would like...
+    MessageTH: ดูเหมือนจะชอบอะไรเหมือนตาลุงแก่ๆ เลยนะ...
+    MessageTW: 總覺得像是大叔一樣的喜好啊……
+  - MessageGroupId: 130020130
+    Id: 1238
+    CharacterId: 13002
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 130020120
+    PreConditionFavorScheduleId: 130023
+    FavorScheduleId: 0
+    NextGroupId: 130020140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무한리필은 정말 멋진 문화인 것 같아요.
+    MessageJP: 食べ放題というのは、本当に素敵な文化だと思います
+    MessageCN: 我觉得自助真的是很好的文化
+    MessageEN: All-you-can-eat is such a great concept.
+    MessageTH: 'ฉันว่าวัฒนธรรมบุฟเฟต์เป็นสิ่งที่ยอด
+
+      มากๆ เลยนะคะ'
+    MessageTW: 我覺得吃到飽真的是很棒的文化
+  - MessageGroupId: 130020140
+    Id: 1239
+    CharacterId: 13002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 가격에 구애받지 않고 원하는 음식을 원하는 만큼 먹을 수 있다니…….
+    MessageJP: 一定の価格で、食べたいものを好きなだけ食べられるなんて……
+    MessageCN: 价格固定，但是想吃的东西却能随意吃到饱……
+    MessageEN: You can eat as much as you want without worrying about the cost...
+    MessageTH: 'เพราะเราจะกินได้เท่าที่ต้องการโดยที่ไม่
+
+      ต้องสนใจเรื่องราคา...'
+    MessageTW: 以一定的價格，想吃什麼就吃什麼……
+  - MessageGroupId: 130020140
+    Id: 1240
+    CharacterId: 13002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 아이디어를 낸 사람은 천재(天才)일 게 분명해요!
+    MessageJP: このアイデアを出した方は、天才に違いありません！
+    MessageCN: 提出这个点子的人，一定是个天才！
+    MessageEN: The person who came up with that idea must be a genius!
+    MessageTH: 'คนที่คิดค้นเรื่องบุฟเฟต์ขึ้นมาต้องเป็น
+
+      อัจฉริยะแน่ๆ เลยค่ะ!'
+    MessageTW: 提出這個想法的人，一定是天才！
+  - MessageGroupId: 130020150
+    Id: 1241
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130025
+    NextGroupId: 130020160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어제 아카리가 방문한 무한리필 가게 주인으로서는 천재(天災)였겠지만…….
+    MessageJP: アカリをお客さんとして迎える側にとっては天災だね……
+    MessageCN: 对于接待明里的店铺来说应该是天灾吧……
+    MessageEN:
+      And to the owner of the all-you-can-eat restaurant you visited the
+      other day, you must have been a force of nature...
+    MessageTH: 'ร้านบุฟเฟต์ที่อาคาริไป เจ้าของร้าน
+
+      อาจเป็นอัจฉริยะก็จริงนะแต่ว่า...'
+    MessageTW: 對於迎接亞伽里為客人的那一方來說，是天災吧……
+  - MessageGroupId: 130020160
+    Id: 1242
+    CharacterId: 13002
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 130020150
+    PreConditionFavorScheduleId: 130025
+    FavorScheduleId: 0
+    NextGroupId: 130020170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다음 대식 대회의 대결 종목은 <카레 많이 먹기>로 정해진 모양이에요.
+    MessageJP: 次の大食い大会の種目は、「カレー」に決まったそうです
+    MessageCN: 据说下次大胃王大会的项目已经确定是“咖喱”了
+    MessageEN:
+      It looks like the challenge for the next eating contest is to eat a
+      lot of curry.
+    MessageTH: 'ดูเหมือนว่าหัวข้อแข่งขันของงานแข่งกิน
+
+      จุครั้งต่อไปจะเป็น "แข่งกินแกงกะหรี่" ค่ะ'
+    MessageTW: 聽說下次的大胃王大賽項目是「咖哩」。
+  - MessageGroupId: 130020170
+    Id: 1243
+    CharacterId: 13002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 카레는 조금 자신 없는데…… 미리 연습을 해두어야겠어요.
+    MessageJP: カレー……ちょっと自信がないので、前もって特訓しておかないとです
+    MessageCN: 咖喱……我对这个不太自信，得提前特训一下呢
+    MessageEN: I'm not so confident about curry... I should practice.
+    MessageTH: 'อาคาริไม่ค่อยมั่นใจเท่าไหร่เลย... คงจะ
+
+      ต้องฝึกไว้ล่วงหน้าซะแล้ว'
+    MessageTW: 咖哩……有點沒自信呢，需要提前特訓
+  - MessageGroupId: 130020180
+    Id: 1244
+    CharacterId: 13002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아카리도 가리는 음식이 있어?
+    MessageJP: アカリにも苦手な食べ物があるんだ？
+    MessageCN: 原来明里也有不太对付得来的食物吗？
+    MessageEN: What, there's food you don't like?
+    MessageTH: อาคาริมีอาหารที่ไม่ชอบกินรึเปล่า?
+    MessageTW: 亞伽里也有不喜歡的食物嗎？
+  - MessageGroupId: 130020190
+    Id: 1245
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 못 먹는 건 아니지만 많이 먹기 힘든 음식은 있어요.
+    MessageJP: 食べられはするのですが、大食いにはちょっと……というものはあります
+    MessageCN: 虽然不是不能吃，但是有些东西我……没办法吃太多
+    MessageEN:
+      It's not that I can't eat it, but there are certain foods that I can't
+      eat a ton of.
+    MessageTH: 'ไม่ถึงกับกินไม่ได้ แต่ว่ากินได้น้อยมาก
+
+      กว่าค่ะ'
+    MessageTW: 是能吃，但吃大量的話……有些東西沒辦法
+  - MessageGroupId: 130020200
+    Id: 1246
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 예를 들자면 아까 말했던 카레처럼 매운 음식은 자꾸 물을 마시게 되어서 배가 빨리 차거든요.
+    MessageJP: 例えばカレーですと、途中に何度もお水を飲んでしまうので……
+    MessageCN: 比如说咖喱，会让我中途喝好几次水，就……
+    MessageEN:
+      For example, I drink a lot of water when I eat spicy foods like curry,
+      so I get full really quickly.
+    MessageTH: 'อย่างเช่น อาหารที่มีรสเผ็ดร้อนเหมือน
+
+      แกงกะหรี่ที่พูดถึงเมื่อกี้นี้ มันทำให้ต้อง
+
+      กินน้ำอยู่บ่อยๆ เลยอาจจะทำให้อิ่มเร็วค่ะ'
+    MessageTW: 比如咖哩的話，中途會喝好幾次水……
+  - MessageGroupId: 130020200
+    Id: 1247
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130020210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 대신 초밥처럼 개인적으로 좋아하는 음식은 다른 음식보다 두 배는 더 먹을 수 있어요.
+    MessageJP: 逆にお寿司なんかは、私が好きなこともあって他の倍くらい食べられます
+    MessageCN: 但反过来说，如果是寿司之类我喜欢的东西的话，我能吃得比平时多一倍
+    MessageEN: But I can eat twice as much of foods I prefer, like sushi.
+    MessageTH: 'แต่ถ้าเป็นอาหารที่ฉันชอบกินอย่างพวก
+
+      ซูชิล่ะก็... ฉันจะกินได้มากกว่าอาหาร
+
+      อย่างอื่นสองเท่าเลยค่ะ'
+    MessageTW: 相反地，壽司之類的，因為有我喜歡的東西，所以能吃到其他的兩倍左右
+  - MessageGroupId: 130020210
+    Id: 1248
+    CharacterId: 13002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130026
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 대식가라고 해서 기호가 없는 건 아니랍니다!
+    MessageJP: 大食いだからといって、好き嫌いがないわけではないんですよ
+    MessageCN: 虽然我是大胃王，但并不代表我不挑食哦
+    MessageEN: Gourmands have preferences too!
+    MessageTH: 'ฉันเป็นนักกินตัวยง เพราะงั้นจะมาเลือก
+
+      ว่าชอบหรือไม่ชอบไม่ได้หรอกนะคะ!'
+    MessageTW: 雖然食量很大，但也不是沒有喜好的

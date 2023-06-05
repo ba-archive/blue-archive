@@ -1,0 +1,732 @@
+CharacterId: 20018
+translator: 今天早睡了吗
+title:
+  - GroupId: 2001802
+    FavorScheduleId: 200182
+    CharacterId: 20018
+    TextJp: Collateral Damage
+    TextCn: Collateral Damage
+    TextKr: Collateral Damage
+    TextEn: Collateral Damage
+    TextTh: ความเสียหายที่ตามมา
+    TextTw: Collateral Damage
+  - GroupId: 2001803
+    FavorScheduleId: 200183
+    CharacterId: 20018
+    TextJp: Missing in Action
+    TextCn: Missing in Action
+    TextKr: Missing in Action
+    TextEn: Missing in Action
+    TextTh: อดใจไม่ไหว
+    TextTw: Missing in Action
+  - GroupId: 2001805
+    FavorScheduleId: 200185
+    CharacterId: 20018
+    TextJp: Unexploded Ordnance
+    TextCn: Unexploded Ordnance
+    TextKr: Unexploded Ordnance
+    TextEn: Unexploded Ordinance
+    TextTh: ปุ่มที่คาดไม่ถึง
+    TextTw: Unexploded Ordnance
+  - GroupId: 2001806
+    FavorScheduleId: 200186
+    CharacterId: 20018
+    TextJp: Phase Line
+    TextCn: Phase Line
+    TextKr: Phase Line
+    TextEn: Phase Line
+    TextTh: อยู่ในใจเป็นหมื่นล้านคำ
+    TextTw: Phase Line
+content:
+  - MessageGroupId: 200180010
+    Id: 200180010
+    CharacterId: 20018
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오랜만이네, 선생님.
+    MessageJP: 先生久しぶり
+    MessageCN: 老师好久不见
+    MessageEN: Long time no see, Sensei.
+    MessageTH: ไม่เจอกันนานเลยนะ คุณครู
+    MessageTW: 老師，好久不見
+  - MessageGroupId: 200180020
+    Id: 200180020
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다른 소대원들에게 듣자 하니, 나를 찾았다고 하던데……
+    MessageJP: 私を探してたって聞いたんだけど……
+    MessageCN: 听说您在找我……
+    MessageEN: Some squad members told me you've been looking for me...
+    MessageTH: 'ได้ยินสมาชิกคนอื่นๆ บอกว่าครูตามหา
+
+      ฉันอยู่...'
+    MessageTW: 聽說你在找我……
+  - MessageGroupId: 200180020
+    Id: 200180030
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일이라도 생긴 거야?
+    MessageJP: どうしたの？
+    MessageCN: 是有什么事吗？
+    MessageEN: What's going on?
+    MessageTH: มีเรื่องอะไรงั้นเหรอ?
+    MessageTW: 怎麼了嗎？
+  - MessageGroupId: 200180030
+    Id: 200180040
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕, 모에.
+    MessageJP: こんにちは、モエ
+    MessageCN: 你好啊，萌绘
+    MessageEN: Hi, Moe.
+    MessageTH: ว่าไง โมเอะ
+    MessageTW: 你好，萌
+  - MessageGroupId: 200180030
+    Id: 200180050
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미안한데 조금 도와줬으면 하는데, 괜찮아?
+    MessageJP: ごめん、ちょっと手伝ってほしいことがあるんだけど今大丈夫かな？
+    MessageCN: 不好意思，有件事想请你帮帮忙，萌绘现在方便吗？
+    MessageEN: My bad, but can I get some help?
+    MessageTH: ขอโทษทีนะ ครูอยากให้ช่วยหน่อย สะดวกรึเปล่า?
+    MessageTW: 抱歉，我想請妳幫個忙，現在有空嗎？
+  - MessageGroupId: 200180040
+    Id: 200180060
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님을 돕는 거라면 어렵지 않지만……
+    MessageJP: 先生の手伝い？別にいいけど……
+    MessageCN: 给老师帮忙？可以是可以……
+    MessageEN: Of course I can help you, but...
+    MessageTH: 'เรื่องช่วยคุณครูมันก็ไม่ได้ยากอะไร
+
+      นักหรอก...'
+    MessageTW: 幫老師的忙？是沒問題啦……
+  - MessageGroupId: 200180040
+    Id: 200180070
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그나저나 별일이네. 선생님이 내게 도와 달라는 말을 하다니.
+    MessageJP: にしても珍しいね。先生が手伝ってほしいだなんて
+    MessageCN: 但老师找学生帮忙这种事，还真是少见啊
+    MessageEN: I'd never expect you to need my help.
+    MessageTH: 'แต่ก็น่าแปลกนะ ที่คุณครูมาขอให้ฉัน
+
+      ช่วยแบบนี้เนี่ย'
+    MessageTW: 但還真是稀奇呢。老師竟然會找我幫忙
+  - MessageGroupId: 200180050
+    Id: 200180080
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아, 특별한 의미는 없어. 뭔가 재미있는 사건의 예감이 들어서 말이지, 후후.
+    MessageJP: あ、別に深い意味はないよ。なんか面白い事件の予感するだけ……くひひ
+    MessageCN: 啊，我没有什么其他意思哦。就是有种会发生什么有趣的事的预感……咕嘻嘻
+    MessageEN:
+      Oh, it's nothing. I just have a feeling that something interesting
+      might happen.
+    MessageTH:
+      อา แต่ก็ไม่ได้มีอะไรพิเศษหรอกนะ แค่รู้สึกว่าน่าจะมีเรื่องอะไรสนุกๆ
+      ก็เท่านั้นเอง ฮิฮิ
+    MessageTW: 啊，沒有什麼特別的意思。只是有預感會發生有趣的事……咯嘻嘻
+  - MessageGroupId: 200180050
+    Id: 200180090
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200182
+    NextGroupId: 200180060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 준비하고 있을게.
+    MessageJP: じゃあ、準備してるね
+    MessageCN: 那么，我就去准备一下吧
+    MessageEN: I'll be prepared, then.
+    MessageTH: ถ้างั้นครูจะเตรียมตัวให้พร้อมไว้แล้วกัน
+    MessageTW: 那麼，我準備一下
+  - MessageGroupId: 200180060
+    Id: 200180100
+    CharacterId: 20018
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200180050
+    PreConditionFavorScheduleId: 200182
+    FavorScheduleId: 0
+    NextGroupId: 200180070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 다른 학생에게 들었는데……
+    MessageJP: 先生、ちょっと小耳に挟んだんだけど……
+    MessageCN: 虽然这是我最近听来的小道消息……但是老师
+    MessageEN: Sensei, I heard from another student...
+    MessageTH: คุณครู ฉันได้ยินมาจากนักเรียนคนอื่นๆ แหละ...
+    MessageTW: 老師，我耳聞了小道消息……
+  - MessageGroupId: 200180070
+    Id: 200180110
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 샬레에 있는 작업용 PC의 데이터가 다 날아갔다는 게 사실이야?
+    MessageJP: シャーレの作業用パソコンのデータが全部消えたって本当？
+    MessageCN: 听说夏莱的办公用电脑的所有数据全没了，是真的吗？
+    MessageEN: Is it true that the work PC at Schale lost all its data?
+    MessageTH: 'เรื่องจริงเหรอที่ข้อมูลในคอมพิวเตอร์
+
+      สำนักงานของชาเล่ต์ข้อมูลรั่วไหลน่ะ?'
+    MessageTW: 夏萊的工作用電腦的數據全都消失了，是真的嗎？
+  - MessageGroupId: 200180080
+    Id: 200180120
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 쿠히히…… 맞아……
+    MessageJP: くひひ……そうだよ……
+    MessageCN: 咕嘻嘻……是的呢……
+    MessageEN: Heeheehee... Right...
+    MessageTH: ฮิฮิฮิ... ใช่แล้ว...
+    MessageTW: 咯嘻嘻……沒錯唷……
+  - MessageGroupId: 200180080
+    Id: 200180130
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이제 다 틀렸어…… 쿠히히……
+    MessageJP: そう、これで全部おしまい……くひひ……
+    MessageCN: 没错，这么一来就全完了……咕嘻嘻……
+    MessageEN: It's all over... Heeheehee...
+    MessageTH: มันจบแล้วล่ะ... หึหึหึ...
+    MessageTW: 沒錯，一切都完了……咯嘻嘻……
+  - MessageGroupId: 200180090
+    Id: 200180140
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 우와, 선생님이 나처럼 웃고 있어.
+    MessageJP: うわ……先生が私みたいに笑ってる
+    MessageCN: 呜哇……老师竟然学我笑
+    MessageEN: Wow, Sensei is laughing like me.
+    MessageTH: ว้าว คุณครูหัวเราะเหมือนฉันด้วยแฮะ
+    MessageTW: 嗚哇……老師笑得跟我一樣
+  - MessageGroupId: 200180090
+    Id: 200180150
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무래도 문제가 심상치 않은 모양인데.
+    MessageJP: これはかなりヤバそうだね
+    MessageCN: 看样子确实情况很糟糕呢
+    MessageEN: This must be a serious problem.
+    MessageTH: แต่ดูเหมือนจะไม่ร้ายแรงอะไรนะ
+    MessageTW: 看起來相當糟糕啊
+  - MessageGroupId: 200180100
+    Id: 200180160
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 와보면 알게 될 거야……
+    MessageJP: ' まぁ、来たら分かるよ……'
+    MessageCN: 就，萌绘来了就知道了……
+    MessageEN: You'll know when you get here...
+    MessageTH: พอมาถึงเดี๋ยวก็รู้เองแหละ
+    MessageTW: 嘛，來了就知道了……
+  - MessageGroupId: 200180110
+    Id: 200180170
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200183
+    NextGroupId: 200180120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠어. 오후에 시간 날 때 샬레에 들를게.
+    MessageJP: わかった、それじゃあ昼過ぎくらいにシャーレ行くね
+    MessageCN: 明白了，那么我下午去一趟夏莱吧
+    MessageEN: Okay. I'll be at Schale in the afternoon.
+    MessageTH: 'เข้าใจแล้ว เดี๋ยวมีเวลาว่างตอนบ่าย
+
+      ฉันจะแวะไปที่ชาเล่ต์นะ'
+    MessageTW: 知道了，那我中午過後去夏萊一趟
+  - MessageGroupId: 200180120
+    Id: 200180180
+    CharacterId: 20018
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200180110
+    PreConditionFavorScheduleId: 200183
+    FavorScheduleId: 0
+    NextGroupId: 200180130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 그거 알아?
+    MessageJP: 先生、知ってる？
+    MessageCN: 老师，您知道吗？
+    MessageEN: You know what, Sensei?
+    MessageTH: คุณครู รู้จักรึเปล่า?
+    MessageTW: 老師，你知道嗎？
+  - MessageGroupId: 200180130
+    Id: 200180190
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 스위치나 버튼 위에 설치하는 안전 덮개는 흔히 <몰리 가드>라고 부르거든.
+    MessageJP: 'スイッチやボタンの上に設置する安全カバーあるじゃん。
+
+      あれ、「モリーガード」って言うんだよ'
+    MessageCN: 开关啊按钮之类的上面不是会安装一个安全罩嘛。那个东西其实学名叫做“molly guard”哦
+    MessageEN:
+      A safety cover installed over a switch or button is often called a
+      "Molly-guard."
+    MessageTH: ฝาครอบที่ใช้ครอบอยู่บนปุ่มหรือสวิชต์ไฟ เขาเรียกว่า <โมลลี่ การ์ด> ล่ะ
+    MessageTW: '不是有安置在開關和按鈕上的安全蓋嗎
+
+      那個，叫做「Molly-Guard」唷'
+  - MessageGroupId: 200180140
+    Id: 200180200
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 왜 안전 덮개에 그런 이름이 붙었느냐면
+    MessageJP: なんでそんな名前がついたかっていうと
+    MessageCN: 至于为什么叫这个名字嘛
+    MessageEN: There's a story behind its name.
+    MessageTH: ทำไมฝาครอบป้องกันความปลอดภัย ถึงต้องมีชื่อแบบนั้น...
+    MessageTW: 為什麼會有那樣的名字呢
+  - MessageGroupId: 200180140
+    Id: 200180210
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 몰리라는 아이가 비상 스위치를 자꾸 누르려 해서 발명된 덮개이기 때문이래.
+    MessageJP: モリーという子が、何度も非常ボタンを押そうとしたから発明されたカバーだからなんだって
+    MessageCN: 以前有个叫Molly的孩子经常按紧急按钮，为了不让Molly继续乱按，这个罩子就被发明出来了
+    MessageEN:
+      It was invented because of a kid named Molly kept trying to press an
+      emergency switch.
+    MessageTH: 'ได้ยินว่าเขาประดิษฐ์ฝาครอบป้องกันขึ้น
+
+      มาเพราะยัยเด็กที่ชื่อโมลลี่ชอบไปกด
+
+      สวิชต์ไฟเล่นอยู่บ่อยๆ น่ะ'
+    MessageTW: 因為有一名叫做Molly的孩子，多次想按緊急按鈕，所以才發明出這個蓋子
+  - MessageGroupId: 200180150
+    Id: 200180220
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇구나.
+    MessageJP: そうなんだ
+    MessageCN: 原来是这样啊
+    MessageEN: I see.
+    MessageTH: แบบนี้นี่เอง
+    MessageTW: 原來是這樣
+  - MessageGroupId: 200180150
+    Id: 200180230
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 흥미로운 사실이네.
+    MessageJP: 興味深い内容だね
+    MessageCN: 很有意思的故事呢
+    MessageEN: That's interesting.
+    MessageTH: ฟัน แฟกต์จริงๆ
+    MessageTW: 很有趣的故事呢
+  - MessageGroupId: 200180160
+    Id: 200180240
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 사실을 생각할 때마다 뭔가 아쉬워.
+    MessageJP: その話を聞くたびに、ちょっと残念になるんだよね
+    MessageCN: 每次听到这个故事，我都有点遗憾呢
+    MessageEN: It's kind of a shame when you think about it.
+    MessageTH: 'พอคิดเรื่องนี้ทีไร ฉันก็อดรู้สึกเสียดาย
+
+      ไม่ได้เลยน่ะ'
+    MessageTW: 每次想到這故事，都覺得有點可惜
+  - MessageGroupId: 200180160
+    Id: 200180250
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내가 몰리보다 먼저 태어났더라면
+    MessageJP: 私がモリーより先に生まれていたら
+    MessageCN: 如果我比Molly早出生的话
+    MessageEN: If I had been born earlier than Molly,
+    MessageTH: ถ้าฉันเกิดมาก่อนโมลลี่ละก็...
+    MessageTW: 要是我比Molly早出生的話
+  - MessageGroupId: 200180170
+    Id: 200180260
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금쯤 전 세계의 사람들은 안전 덮개를 <모에 가드>라고 불렀을 텐데……
+    MessageJP: 今頃、安全カバーの名前は「モエガード」になっていたのかなって……
+    MessageCN: 现在，安全护罩的名字说不定就叫“moe guard”了吧……
+    MessageEN:
+      the safety cover would have been called a "Moe-guard" by the entire
+      world.
+    MessageTH: 'คนทั่วโลกก็คงเรียกฝาครอบป้องกัน
+
+      ความปลอดภัยว่า <โมเอะ การ์ด> แล้วแท้ๆ...'
+    MessageTW: 現在，安全蓋的名字就會是「Moe-Guard」了吧……
+  - MessageGroupId: 200180180
+    Id: 200180270
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200185
+    NextGroupId: 200180190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 명예로운 호칭은 아닌 것 같은데……
+    MessageJP: 別に名誉な名前ではないと思うんだけど……
+    MessageCN: 我觉得这也不是什么光荣的名字吧……
+    MessageEN: I don't know if that'd be an honorable title...
+    MessageTH: ดูไม่น่าใช่ชื่อที่น่าชื่นชมเลยนะ...
+    MessageTW: 我覺得這不是什麼的值得光榮的名字……
+  - MessageGroupId: 200180190
+    Id: 200180280
+    CharacterId: 20018
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200180180
+    PreConditionFavorScheduleId: 200185
+    FavorScheduleId: 0
+    NextGroupId: 200180200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으음. 미안하지만 선생님……
+    MessageJP: んー、ごめん、先生……
+    MessageCN: 嗯——不好意思，老师……
+    MessageEN: Hmm, sorry, Sensei...
+    MessageTH: อืม โทษทีนะคุณครู...
+    MessageTW: 嗯──，抱歉，老師……
+  - MessageGroupId: 200180200
+    Id: 200180290
+    CharacterId: 20018
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠깐 코우사기 공원에 와주지 않을래?
+    MessageJP: ちょっと子ウサギ公園に来てくれない？
+    MessageCN: 能麻烦来一趟小兔子公园吗？
+    MessageEN: Can you come to Kousagi Park?
+    MessageTH: 'ช่วยแวะมาที่โคะอุซางิ การ์เด้นหน่อย
+
+      ได้มั้ย?'
+    MessageTW: 能來兔寶寶公園一下嗎？
+  - MessageGroupId: 200180210
+    Id: 200180300
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 상관없지만……
+    MessageJP: いいけど……
+    MessageCN: 可以是可以……
+    MessageEN: I mean, it's fine, but...
+    MessageTH: ตอนนี้ครูก็พอว่างอยู่...
+    MessageTW: 是可以啦……
+  - MessageGroupId: 200180210
+    Id: 200180310
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 갑자기 무슨 일이야?
+    MessageJP: 急にどうしたの？
+    MessageCN: 有什么急事吗？
+    MessageEN: What are you talking about?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 這麼突然，怎麼了？
+  - MessageGroupId: 200180220
+    Id: 200180320
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 전에 추가로 주문한 물자가 공원에 도착했거든.
+    MessageJP: この間、追加で注文した物資が公園に届いたの
+    MessageCN: 我最近追加下单的东西送到公园了
+    MessageEN: The additional supplies I ordered before arrived at the park.
+    MessageTH: 'พอดีพวกของใช้ที่สั่งไปมาส่งที่สวน
+
+      สาธารณะแล้วน่ะ'
+    MessageTW: 前幾天，追加訂購的物資送來公園了
+  - MessageGroupId: 200180220
+    Id: 200180330
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데 마침 다른 소대원들이 작전 중이라 혼자 정리를 해야 하는데……
+    MessageJP: でも、みんなちょうど作戦でいないから、一人で整理しなきゃいけなくて……
+    MessageCN: 但是，大家都在外面作战，所以我得一个人整理……
+    MessageEN:
+      Other squad members are in the middle of an operation, so I have to
+      organize them myself...
+    MessageTH: 'แต่ว่าตอนนี้สมาชิกคนอื่นออกไปปฎิบัติ
+
+      ภารกิจกัน ตอนนี้ฉันเลยต้องจัดของอยู่
+
+      คนเดียว...'
+    MessageTW: 但是，大家正好都在外頭作戰，所以我必須一個人整理……
+  - MessageGroupId: 200180230
+    Id: 200180340
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무거운 짐이 잔뜩 있어서 옮기기 어려운 건 둘째 치더라도
+    MessageJP: 重い荷物をたくさん動かすのはちょっと……というのはさておき
+    MessageCN: 有挺多重物要搬的，稍微有点……然后除了重物之外
+    MessageEN: There's so much heavy stuff, it's hard to move.
+    MessageTH: แต่ของหนักๆ ที่ยกคนเดียวลำบาก...
+    MessageTW: 搬不了太多重物……這暫且不說
+  - MessageGroupId: 200180230
+    Id: 200180350
+    CharacterId: 20018
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200180240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 터지기 쉬운 위험한 폭탄이 잔뜩 있어서
+    MessageJP: 引火しやすい危険な爆弾がいっぱいあるから……
+    MessageCN: 还有很多易燃危险的炸弹……
+    MessageEN: But more importantly, there are a lot of explosives...
+    MessageTH: 'แถมยังมีพวกระเบิดที่กระแทกนิดเดียว
+
+      ก็ระเบิดได้ง่ายๆ อยู่ด้วยน่ะ'
+    MessageTW: 還有不少是容易點燃的危險炸彈……
+  - MessageGroupId: 200180240
+    Id: 200180360
+    CharacterId: 20018
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200186
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금 바로 갈게
+    MessageJP: すぐ行くね
+    MessageCN: 马上到
+    MessageEN: I'll be right there.
+    MessageTH: ครูจะวิ่งไปหาเดี๋ยวนี้แหละ
+    MessageTW: 馬上過去唷

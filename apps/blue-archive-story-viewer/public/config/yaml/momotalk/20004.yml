@@ -1,0 +1,742 @@
+CharacterId: 20004
+translator: 今天早睡了吗
+title:
+  - GroupId: 2000402
+    FavorScheduleId: 200042
+    CharacterId: 20004
+    TextJp: 可愛いは正義
+    TextCn: 可爱即正义
+    TextKr: 귀여움은 정의!
+    TextEn: Cuteness is Justice!
+    TextTh: ความน่ารักคือความยุติธรรม!
+    TextTw: 可愛即是正義！
+  - GroupId: 2000403
+    FavorScheduleId: 200043
+    CharacterId: 20004
+    TextJp: 海辺の狙撃手
+    TextCn: 海边的狙击手
+    TextKr: 해변의 저격수
+    TextEn: Beach Sniper
+    TextTh: สไนเปอร์แห่งชายหาด
+    TextTw: 海邊的狙擊手
+  - GroupId: 2000405
+    FavorScheduleId: 200045
+    CharacterId: 20004
+    TextJp: 熱中症対策
+    TextCn: 应对中暑的方法
+    TextKr: 열사병 방지 대책
+    TextEn: Preventing Heatstroke
+    TextTh: วิธีป้องกันโรคลมแดด
+    TextTw: 防止中暑對策
+  - GroupId: 2000406
+    FavorScheduleId: 200046
+    CharacterId: 20004
+    TextJp: 狙撃手と煙は高いところが好き
+    TextCn: 烟和狙击手喜欢高处
+    TextKr: 연기와 저격수는 높은 곳을 좋아한다
+    TextEn: Enjoying High Places
+    TextTh: เล่นของสูง
+    TextTw: 狙擊手與煙霧皆喜歡高處
+content:
+  - MessageGroupId: 20004010
+    Id: 20004010
+    CharacterId: 20004
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 오후에 시내에서 잠깐 어울려 주실 수 있나요?
+    MessageJP: 先生。今日の午後、少し付き合っていただけないでしょうか？
+    MessageCN: 老师。今天下午能陪我一会儿吗？
+    MessageEN: Sensei, could you come with me downtown this afternoon?
+    MessageTH: 'คุณครูคะ ช่วงบ่ายช่วยออกมาในเมือง
+
+      สักครู่ได้ไหมคะ?'
+    MessageTW: 老師。今天下午能陪我一下嗎？
+  - MessageGroupId: 20004020
+    Id: 20004020
+    CharacterId: 20004
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다름이 아니라 이번 하계 훈련에 사용할 새 수영복을 사려고 해서요.
+    MessageJP: 実は今度の訓練で使う、新しい水着を買おうと思っていまして。アドバイスを頂けないかなと
+    MessageCN: 其实我想买一件下次训练用的新泳装。想让老师给点建议
+    MessageEN: I want to purchase a new swimsuit to use during summer training.
+    MessageTH: 'ฉันอยากจะไปซื้อชุดว่ายน้ำใหม่ที่จะ
+
+      ใช้ในการเข้าค่ายฤดูร้อนที่จะถึงนี้ค่ะ'
+    MessageTW: 其實我想買這次訓練用的新泳裝。希望能給我一些建議
+  - MessageGroupId: 20004030
+    Id: 20004030
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 상관없지만……
+    MessageJP: えっと、付き合ってあげたい気持ちはやまやまなんだけど……
+    MessageCN: 那个，虽然我也很想陪你去……
+    MessageEN: I mean, it's fine, but...
+    MessageTH: ครูก็ไม่ได้ติดงานอยู่หรอกนะแต่ว่า...
+    MessageTW: 那個，雖然很想陪你去……
+  - MessageGroupId: 20004040
+    Id: 20004040
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 친구가 아니라 나랑 가도 괜찮아?
+    MessageJP: お友達とかじゃなくて、私で大丈夫？
+    MessageCN: 但是真白不跟朋友去而是来找我，没关系吗？
+    MessageEN: Wouldn't you rather go with friends?
+    MessageTH: ชวนครูไปแทนเพื่อนๆ จะดีเหรอ?
+    MessageTW: 不過不是跟朋友去而是跟我，沒關係嗎？
+  - MessageGroupId: 20004050
+    Id: 20004050
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 중학교 때부터 입던 수영복이 있기는 하지만 더 입기에는 작아진 것 같아서요.
+    MessageJP: はい、ぜひ先生にお願いできればと。その、実は、中学校の時まで着ていた水着はあるのですが、少しきつくなってしまいまして……
+    MessageCN: 没关系的，请老师务必来。那个，其实，我虽然有中学时穿的泳装，但是现在已经有点穿不下了……
+    MessageEN:
+      I still have my swimsuit from middle school, but I think it's too small
+      for me now.
+    MessageTH: 'ฉันมีชุดว่ายน้ำที่ใช้ตอนอยู่ชั้นประถม
+
+      ก็จริง แต่ดูเหมือนว่ามันจะเล็กเกินไป
+
+      แล้วน่ะค่ะ'
+    MessageTW: 是的，希望能拜託老師。那個，其實，我有件從中學開始穿的泳裝，但變得有點緊……
+  - MessageGroupId: 20004050
+    Id: 20004060
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모처럼 정의실현부에 들어왔으니 다른 부원, 선배 여러분께 부끄럽지 않을 멋진 수영복을 새로 갖고 싶습니다.
+    MessageJP: せっかくなので正義実現委員会として、もっと相応しい水着が欲しいなと思っているんです
+    MessageCN: 再加上好不容易成为了正义实现委员会的一员，所以我想选一件和委员会的气质更相符的泳装
+    MessageEN:
+      I think I should get a new one that lives up to being a member of the
+      Justice Task Force.
+    MessageTH: 'อีกอย่างฉันเองก็เป็นสมาชิกของชมรม
+
+      ทวงความยุติธรรม เลยคิดว่าควรซื้อชุด
+
+      ใหม่เพื่อรักษาชื่อเสียงของรุ่นพี่ทุกคน
+
+      ด้วยค่ะ'
+    MessageTW: 因為是難得的機會，身為實現正義部的一員，想要一件更合適的泳裝
+  - MessageGroupId: 20004060
+    Id: 20004070
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 멋진 수영복을 찾을 수 있으면 좋겠네.
+    MessageJP: そ、そっか……
+    MessageCN: 这、这样吗……
+    MessageEN: I hope you can find a good one.
+    MessageTH: ถ้าเจอชุดว่ายน้ำสวยๆ ที่ถูกใจก็คงดีนะ
+    MessageTW: 這，這樣啊……
+  - MessageGroupId: 20004070
+    Id: 20004080
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네, 그러기 위해서는 선생님의 도움이 필요합니다.
+    MessageJP: はい、そのためにも先生のお力をお借りしたく
+    MessageCN: 是的，所以我想借助老师的力量
+    MessageEN: Yes, and I'll need your help with that, Sensei.
+    MessageTH: ค่ะ เพราะงั้นฉันเลยอยากให้คุณครูช่วยค่ะ
+    MessageTW: 是的，所以想借助老師的力量
+  - MessageGroupId: 20004070
+    Id: 20004090
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200042
+    NextGroupId: 20004080
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 매장에서 먼저 기다리고 있겠습니다.
+    MessageJP: では、お待ちしておりますね
+    MessageCN: 那么，我就恭候您来了
+    MessageEN: I'll be waiting for you at the store.
+    MessageTH: ถ้างั้นฉันจะไปรอคุณครูที่ร้านนะคะ
+    MessageTW: 那麼，我等著唷
+  - MessageGroupId: 20004080
+    Id: 20004100
+    CharacterId: 20004
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 20004070
+    PreConditionFavorScheduleId: 200042
+    FavorScheduleId: 0
+    NextGroupId: 20004090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 지금 바로 이 앞의 해변으로 나와주실 수 있으신가요?
+    MessageJP: 先生、今から海辺の方まで来ていただけますか？
+    MessageCN: 老师，现在能来一下海边吗？
+    MessageEN: Sensei, could you meet me on the beach?
+    MessageTH: 'คุณครู ช่วยออกมาที่ชายหาดหน่อยได้
+
+      ไหมคะ?'
+    MessageTW: 老師，現在可以來海邊嗎？
+  - MessageGroupId: 20004090
+    Id: 20004110
+    CharacterId: 20004
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께 보여드리고 싶은 옷이 있습니다.
+    MessageJP: 先生にお見せしたいものがありまして
+    MessageCN: 我有件东西想给老师看
+    MessageEN: I want to show you something.
+    MessageTH: ฉันมีชุดที่อยากให้คุณครูดูค่ะ
+    MessageTW: 有想給老師看的東西
+  - MessageGroupId: 20004100
+    Id: 20004120
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수영복 말이지?
+    MessageJP: うん、すぐ向かうね
+    MessageCN: 嗯，我马上过去
+    MessageEN: Oh, is it the swimsuit?
+    MessageTH: ว้าว จะโชว์ชุดว่ายน้ำใหม่เหรอ?
+    MessageTW: 嗯，馬上過去唷
+  - MessageGroupId: 20004110
+    Id: 20004130
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 전에 구입한 이후로 입어볼 기회가 통 없었는데, 마침 여름 훈련을 나온 참에 입어보았습니다.
+    MessageJP: この前買ってから着る機会が無かったのですが、せっかくの海辺ですし
+    MessageCN: 之前买了却一直没机会穿，好不容易来一次海边
+    MessageEN: This is my first time trying it on since we're here for summer training.
+    MessageTH: 'หลังจากที่ซื้อมาแล้วก็ยังไม่ได้ลองใส่
+
+      เลย มาเข้าค่ายฤดูร้อนครั้งนี้เลยเอามา
+
+      ใส่ดูน่ะค่ะ '
+    MessageTW: 上次買了之後一直沒機會穿，但既然難得到了海邊
+  - MessageGroupId: 20004110
+    Id: 20004140
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 옷은 백사장에서만 입을 수 있는 옷이니까요.
+    MessageJP: そもそも、こういうところでしかあまり着られないので
+    MessageCN: 原本这种东西也只能在海边穿的
+    MessageEN: I couldn't bring myself to wear it anywhere but the beach.
+    MessageTH: 'ชุดนี้เหมาะที่จะใส่บนหาดทรายสีขาว
+
+      เท่านั้นค่ะ'
+    MessageTW: 更何況，幾乎也只能在這種地方穿
+  - MessageGroupId: 20004120
+    Id: 20004150
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수영복 말이지……?
+    MessageJP: この間買った水着の話？
+    MessageCN: 是之前买的泳装吗？
+    MessageEN: Swimsuit, right...?
+    MessageTH: ชุดว่ายน้ำใช่มั้ย...?
+    MessageTW: 是在說上次買的泳裝嗎？
+  - MessageGroupId: 20004130
+    Id: 20004160
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 가급적 빨리 와주실 수 있겠습니까?
+    MessageJP: あ、できれば少し早めに来ていただけると助かります
+    MessageCN: 啊，如果老师能尽快过来的话就太好了
+    MessageEN: Could you come here as soon as you can?
+    MessageTH: แต่ว่าคุณครูช่วยรีบมาหน่อยได้ไหมคะ?
+    MessageTW: 啊，如果可以早點來的話，就幫大忙了
+  - MessageGroupId: 20004140
+    Id: 20004170
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 옷을 입고 백사장 한가운데에서 기다리는 건 꽤나 고된 일이므로……
+    MessageJP: これを着た状態で待っているのはその、少々……
+    MessageCN: 穿着这个等老师的话，还是稍微有点……
+    MessageEN: It's embarrassing waiting in the middle of the beach in this by myself...
+    MessageTH: 'พอใส่ชุดนี้แล้วยืนรออยู่กลางชายหาด
+
+      แบบนี้มันค่อนข้างน่าอายนิดๆ ค่ะ'
+    MessageTW: 要我用這身打扮等人，實在有點……
+  - MessageGroupId: 20004150
+    Id: 20004180
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200043
+    NextGroupId: 20004160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수영복 이야기하는 거 맞지?!
+    MessageJP: え、水着じゃないの！？一体何を着てるの！？
+    MessageCN: 诶，不是泳装吗！？真白现在穿着什么啊！？
+    MessageEN: You are talking about swimsuit, right?
+    MessageTH: หมายถึงชุดว่ายน้ำใช่ไหมน่ะ...?!
+    MessageTW: 咦，不是泳裝嗎！？到底穿了什麼！？
+  - MessageGroupId: 20004160
+    Id: 20004190
+    CharacterId: 20004
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 20004150
+    PreConditionFavorScheduleId: 200043
+    FavorScheduleId: 0
+    NextGroupId: 20004170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 전에 말씀드린 수영 훈련을 오늘 오후에 진행하려 합니다.
+    MessageJP: 先生。体調も回復しましたので、以前お話した通り、まずは少し水泳でもしてみようかと
+    MessageCN: 老师。因为我身体恢复了，所以想按照您之前说的先稍微游一下泳看看
+    MessageEN: I'd like to continue with the swimming lessons this afternoon, Sensei.
+    MessageTH: 'คุณครู วันนี้ตอนช่วงบ่ายเราจะไปฝึก
+
+      ว่ายน้ำกันตามที่ฉันเคยบอกไปนะคะ'
+    MessageTW: 老師。我身體已經恢復了，我想照之前說的那樣，先去稍微游泳一下
+  - MessageGroupId: 20004170
+    Id: 20004200
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마시로가 걱정되니 이번에도 따라갈게.
+    MessageJP: じゃあ、私もそっちに向かうね
+    MessageCN: 那，我也去你那边吧
+    MessageEN: I'd like to go together since I'm worried about you.
+    MessageTH: 'ครูเป็นห่วงมาชิโระนะ งั้นเดี๋ยวครูไป
+
+      ด้วยแล้วกัน'
+    MessageTW: 那麼，我也過去那邊吧
+  - MessageGroupId: 20004180
+    Id: 20004210
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오시는 건 상관없습니다만……
+    MessageJP: えっと、お越しいただけるのは嬉しいのですが……
+    MessageCN: 那个，虽然老师能来我很高兴……
+    MessageEN: It's fine if you come along...
+    MessageTH: คุณครูมาด้วยก็ได้ค่ะ แต่ว่า...
+    MessageTW: 嗯，老師能來的話是很高興啦……
+  - MessageGroupId: 20004180
+    Id: 20004220
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 훈련은 물 위에서 하는 훈련이니 열사병으로 쓰러지는 일은 없을 겁니다.
+    MessageJP: 今回はただの水泳ですし、そこまでご心配いただかなくても大丈夫ですよ……？
+    MessageCN: 这次我只是游泳而已，不必要担心到那种程度哦……？
+    MessageEN:
+      I shouldn't get heatstroke this time since this training will be in
+      the water.
+    MessageTH: 'การฝึกครั้งนี้เป็นการฝึกในน้ำ คราวนี้
+
+      คงไม่มีทางร้อนจนเป็นลมหรอกค่ะ'
+    MessageTW: 但這次只是游泳，不用那麼擔心也沒關係吧……？
+  - MessageGroupId: 20004190
+    Id: 20004230
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다만 수영을 하기 전에 백사장 위에서 가벼운 준비운동을 할까 하는데…… 이 정도는 괜찮겠지요?
+    MessageJP: 泳ぐ前に、浜辺で簡単な準備運動をするくらいで……
+    MessageCN: 游泳之前在海边做的准备活动强度也不会很高……
+    MessageEN:
+      I plan to do some warm-up exercises on the beach beforehand. That would
+      be okay, right?
+    MessageTH: 'แต่ว่าก่อนที่จะลงไปฝึกว่ายน้ำ จะต้อง
+
+      มีการวอร์มอัปบนชายหาดก่อน... คงไม่
+
+      เป็นอะไรหรอกใช่ไหมคะ?'
+    MessageTW: 而且也只是游泳前，在海邊做些簡單的準備運動……
+  - MessageGroupId: 20004200
+    Id: 20004240
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 물론이지.
+    MessageJP: 念には念をってことで。私も付き合うよ
+    MessageCN: 以防万一。我会陪着的
+    MessageEN: Of course.
+    MessageTH: ได้อยู่แล้ว
+    MessageTW: 慎重起見。我還是陪著吧
+  - MessageGroupId: 20004200
+    Id: 20004250
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수영 전의 준비운동은 중요하니까.
+    MessageJP: それにマシロが泳ぐところを見たいなって
+    MessageCN: 我还想看看真白游泳的样子呢
+    MessageEN: Warming up IS important before swimming.
+    MessageTH: 'การวอร์มอัปก่อนลงว่ายน้ำเป็น
+
+      เรื่องสำคัญนะ'
+    MessageTW: 而且我想看麻白游泳
+  - MessageGroupId: 20004210
+    Id: 20004260
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이해해 주셔서 감사합니다.
+    MessageJP: な、なるほど……そういうことでしたか
+    MessageCN: 原、原来如此……是这样啊
+    MessageEN: Thank you for understanding.
+    MessageTH: ขอบคุณที่เข้าใจนะคะ
+    MessageTW: 原，原來如此……原來是這樣啊
+  - MessageGroupId: 20004210
+    Id: 20004270
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200045
+    NextGroupId: 20004220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 해수욕장에서 뵙겠습니다!
+    MessageJP: では、お待ちしてますね
+    MessageCN: 那么，我就恭候您来啦
+    MessageEN: I'll see you on the beach, then!
+    MessageTH: ถ้างั้นเจอกันที่ชายหาดนะคะ!
+    MessageTW: 那麼，我等老師來
+  - MessageGroupId: 20004220
+    Id: 20004280
+    CharacterId: 20004
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 20004210
+    PreConditionFavorScheduleId: 200045
+    FavorScheduleId: 0
+    NextGroupId: 20004230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어제는 수고 많으셨습니다, 선생님.
+    MessageJP: 昨日はお疲れ様でした、先生
+    MessageCN: 昨天辛苦了，老师
+    MessageEN: Thank you for what you did yesterday, Sensei.
+    MessageTH: เมื่อวานขอบคุณมากนะคะคุณครู
+    MessageTW: 昨天辛苦了，老師
+  - MessageGroupId: 20004230
+    Id: 20004290
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마시로는 오늘도 훈련하러 나가는 거야?
+    MessageJP: お疲れ様。マシロは今日も訓練？
+    MessageCN: 真白也辛苦了。今天也要训练吗？
+    MessageEN: Are you going out to train today again, Mashiro?
+    MessageTH: วันนี้มาชิโระก็จะออกไปฝึกงั้นเหรอ?
+    MessageTW: 辛苦了。麻白今天也要訓練嗎？
+  - MessageGroupId: 20004240
+    Id: 20004300
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨, 오늘은 훈련 대신 해변에서 봉사활동을 할 계획입니다.
+    MessageJP: いえ、今日は訓練ではなくボランティア活動をする予定です
+    MessageCN: 不是，今天不是训练，而是准备去做志愿活动
+    MessageEN: No, I plan to do some volunteer work at the beach instead of training.
+    MessageTH: 'เปล่าค่ะ วันนี้ฉันจะไปทำกิจกรรม
+
+      จิตอาสาที่ชายหาดแทนค่ะ'
+    MessageTW: 不，今天不是訓練，而是打算做志工服務
+  - MessageGroupId: 20004250
+    Id: 20004310
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 봉사활동?
+    MessageJP: ボランティア活動？
+    MessageCN: 志愿活动？
+    MessageEN: Volunteer?
+    MessageTH: กิจกรรมจิตอาสา?
+    MessageTW: 志工服務？
+  - MessageGroupId: 20004260
+    Id: 20004320
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004270
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 예, 이곳 해변에도 도움의 손길을 기다리고 있는 일은 잔뜩 있으니까요.
+    MessageJP: はい、色々と助けが必要だと聞きまして
+    MessageCN: 是的，因为听说有很多需要帮忙的地方
+    MessageEN: Correct. There are several ways to help people at the beach as well.
+    MessageTH: 'ค่ะ ที่ชายหาดที่นี่ก็มีงานที่รอให้ไปทำ
+
+      อยู่เยอะแยะเลยค่ะ'
+    MessageTW: 是的，聽說很需要人手幫忙
+  - MessageGroupId: 20004260
+    Id: 20004330
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 쓰레기 치우기부터 길 잃은 미아를 보호하는 일까지……
+    MessageJP: ゴミ拾いや迷子の保護など、海辺にはトラブルがたくさんありますから
+    MessageCN: 比如说捡垃圾啦，护送迷路的孩子之类的，海边的问题还是挺多的
+    MessageEN: Such as picking up trash or helping lost children.
+    MessageTH: 'ตั้งแต่งานเก็บขยะไปจนถึงการพา
+
+      เด็กหลงทางไปส่ง...'
+    MessageTW: 例如撿垃圾或保護迷路的孩子等等，海邊其實會發生很多狀況
+  - MessageGroupId: 20004270
+    Id: 20004340
+    CharacterId: 20004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 20004280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 휴양지에서까지 고생이 많네.
+    MessageJP: マシロは偉いね
+    MessageCN: 真白真了不起呢
+    MessageEN: You've got a lot going on, even on vacation.
+    MessageTH: ถึงจะมาพักผ่อนก็ยังตั้งใจทำงานอยู่สินะ~
+    MessageTW: 麻白真了不起
+  - MessageGroupId: 20004280
+    Id: 20004350
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨, 제게는 그다지 수고스러운 일도 아닙니다.
+    MessageJP: いえいえ、大したことでは
+    MessageCN: 没有没有，也不是什么了不起的事情
+    MessageEN: Not really. It's nothing that I can't handle.
+    MessageTH: 'ไม่หรอกค่ะ เรื่องพวกนี้ไม่ใช่เรื่อง
+
+      ลำบากอะไรเลย'
+    MessageTW: 不，沒什麼大不了的
+  - MessageGroupId: 20004280
+    Id: 20004360
+    CharacterId: 20004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200046
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 또한 정의를 위한 일이니까요!
+    MessageJP: これもまた、正義のための行いですので！
+    MessageCN: 毕竟这也是为了贯彻正义呢！
+    MessageEN: This is for the sake of justice!
+    MessageTH: 'เพราะมันเป็นงานเพื่อความยุติธรรม
+
+      ยังไงล่ะคะ!'
+    MessageTW: 這也是為了正義所做的活動！

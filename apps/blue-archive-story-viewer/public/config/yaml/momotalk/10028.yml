@@ -1,0 +1,1434 @@
+CharacterId: 10028
+translator: 罐子
+title:
+  - GroupId: 1002802
+    FavorScheduleId: 100282
+    CharacterId: 10028
+    TextJp: アスナの生態
+    TextCn: 明日奈的生态
+    TextKr: 심야에 할 일
+    TextEn: What We Do Late at Night
+    TextTh: สิ่งที่ต้องทำในตอนกลางดึก
+    TextTw: 明日奈的生態
+  - GroupId: 1002803
+    FavorScheduleId: 100283
+    CharacterId: 10028
+    TextJp: ウサギの生態
+    TextCn: 兔子的生态
+    TextKr: 토끼의 생태
+    TextEn: Life of Rabbits
+    TextTh: การใช้ชีวิตของกระต่าย
+    TextTw: 兔子的生態
+  - GroupId: 1002805
+    FavorScheduleId: 100285
+    CharacterId: 10028
+    TextJp: バニーガールの生態
+    TextCn: 兔女郎的生态
+    TextKr: 바니걸의 생태
+    TextEn: Life of Bunny Girls
+    TextTh: การใช้ชีวิตของบันนี่เกิร์ล
+    TextTw: 兔女郎的生態
+  - GroupId: 1002820
+    FavorScheduleId: 1002820
+    CharacterId: 10028
+    TextJp: しっぽ大騒動
+    TextCn: 尾巴大骚动
+    TextKr: 토끼 꼬리 소동
+    TextEn: Rabbit Tail Ruckus
+    TextTh: ความวุ่นวายของหางกระต่าย
+    TextTw: 兔子尾巴騷動
+content:
+  - MessageGroupId: 100280010
+    Id: 100280010
+    CharacterId: 10028
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님! 지금 뭐 해? 자?
+    MessageJP: ご主人様ー！今何してる？寝てる？寝てるかー
+    MessageCN: 主人——！主人现在在做什么？睡了吗？睡着了吗——
+    MessageEN: Master! What are you doing right now? Are you sleeping?
+    MessageTH: 'นายท่าน! ทำอะไรอยู่เหรอ?
+
+      นอนอยู่เหรอ?'
+    MessageTW: 主人──！現在在做什麼？睡了嗎？睡著了啊──
+  - MessageGroupId: 100280020
+    Id: 100280020
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음~. 역시 잘 시간이려나. 좀 늦긴 했지?
+    MessageJP: もうこんな時間だもんね
+    MessageCN: 毕竟已经这个点了呢
+    MessageEN: Hmm, I guess it is pretty late, isn't it?
+    MessageTH: อืม~ ดึกเกินไปแล้ว คงจะนอนแล้วสินะ?
+    MessageTW: 已經是這個時間了呢
+  - MessageGroupId: 100280030
+    Id: 100280030
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 아직 안 자.
+    MessageJP: まだ起きてるよ、どうしたの？
+    MessageCN: 我还醒着哦，怎么了？
+    MessageEN: I'm not sleeping yet. How are you?
+    MessageTH: ไม่เป็นไร ครูยังไม่นอนน่ะ
+    MessageTW: 還醒著唷，怎麼了？
+  - MessageGroupId: 100280030
+    Id: 100280040
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나야말로 안 자?
+    MessageJP: アスナ、すごい時間まで起きてるね
+    MessageCN: 明日奈，这个点了还醒着啊
+    MessageEN: Why aren't YOU sleeping, Asuna?
+    MessageTH: ว่าแต่อาสึนะยังไม่นอนเหรอ?
+    MessageTW: 明日奈，這麼晚了還醒著啊
+  - MessageGroupId: 100280040
+    Id: 100280050
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280050
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응?
+    MessageJP: お
+    MessageCN: 哦
+    MessageEN: Huh?
+    MessageTH: หืม?
+    MessageTW: 哦
+  - MessageGroupId: 100280040
+    Id: 100280060
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나?
+    MessageJP: びっくり！起きてたんだ！
+    MessageCN: 震惊！老师居然醒着！
+    MessageEN: Me?
+    MessageTH: ฉันเหรอ?
+    MessageTW: 嚇一跳！你醒著阿！
+  - MessageGroupId: 100280050
+    Id: 100280070
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 할 일이 좀 있어서 말이지.
+    MessageJP: 私は今、ちょっとやることがあって
+    MessageCN: 我现在有点事要做
+    MessageEN: I have some things to take care of.
+    MessageTH: พอดีฉันมีเรื่องที่ต้องทำนิดหน่อยน่ะ
+    MessageTW: 我現在有點事要辦
+  - MessageGroupId: 100280050
+    Id: 100280080
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금 코인 세탁소에 있어.
+    MessageJP: 今は24時間空いてるコインランドリーにいるんだけど
+    MessageCN: 所以现在在一个24小时营业的投币洗衣店
+    MessageEN: I'm at the laundromat right now.
+    MessageTH: ฉันอยู่ที่ร้านซักผ้าหยอดเหรียญ
+    MessageTW: 現在在24小時營業的投幣式自助洗衣店裡
+  - MessageGroupId: 100280060
+    Id: 100280090
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 참고로 임무는 아니니까 걱정하지 마~.
+    MessageJP: あ、特にお仕事とかじゃないよ。それでなんとなく手持無沙汰で、連絡してみたの
+    MessageCN: 啊，并不是因为工作之类的事哦。就是在这感觉有点无聊，就试着联系老师了
+    MessageEN: I'm not here for work though, so don't worry.
+    MessageTH: อ๋อ ไม่เกี่ยวกับเรื่องงานหรอกนะ ไม่ต้องห่วง~
+    MessageTW: 啊，不是在工作唷。所以閒得發慌，就想說密你一下
+  - MessageGroupId: 100280070
+    Id: 100280100
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일이 아닌데 이 시간까지 깨어 있다……?
+    MessageJP: 仕事でもないのに、この時間までよく起きてるね……？
+    MessageCN: 居然为了不是工作的事情熬到这个点啊……？
+    MessageEN: You're up late but it's not for work?
+    MessageTH: ไม่ได้ทำงานแต่ก็ยังไม่นอนเนี่ยนะ...?
+    MessageTW: 明明不是工作，虧你這個時間還醒著呢……？
+  - MessageGroupId: 100280070
+    Id: 100280110
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나 한정으론 괜히 더 걱정되는걸.
+    MessageJP: 帰り道とか平気？誰かいる？
+    MessageCN: 明日奈回家的路安全吗？有谁陪你一起走吗？
+    MessageEN: I'd be worried if it was anyone but you.
+    MessageTH: จู่ๆ ครูก็รู้สึกเป็นห่วงอาสึนะขึ้นมาแล้วสิ
+    MessageTW: 回去的路上還好吧？有人在嗎？
+  - MessageGroupId: 100280080
+    Id: 100280120
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280090
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아하하!
+    MessageJP: あははっ！
+    MessageCN: 啊哈哈！
+    MessageEN: Ahaha!
+    MessageTH: ฮ่าฮ่าฮ่า!
+    MessageTW: 啊哈哈！
+  - MessageGroupId: 100280080
+    Id: 100280130
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 걱정해주는 거야? 하지만 정말로 괜찮으니까!
+    MessageJP: 心配してくれてありがと、でも大丈夫！
+    MessageCN: 谢谢老师担心，但是我没问题的！
+    MessageEN: You're not even a little worried? But you're right, I'm fine!
+    MessageTH: เป็นห่วงฉันเหรอ? แต่ว่าไม่ต้องห่วงหรอกนะ!
+    MessageTW: 謝謝你的關心，但是沒問題的！
+  - MessageGroupId: 100280090
+    Id: 100280140
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100282
+    NextGroupId: 100280100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 좋은 밤!
+    MessageJP: じゃあ、良い夜を！
+    MessageCN: 那么，晚安！
+    MessageEN: Good night, then!
+    MessageTH: ถ้างั้นก็กู้ดไนท์นะ!
+    MessageTW: 那麼，祝你有個愉快的夜晚！
+  - MessageGroupId: 100280100
+    Id: 100280150
+    CharacterId: 10028
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100280090
+    PreConditionFavorScheduleId: 100282
+    FavorScheduleId: 0
+    NextGroupId: 100280110
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님
+    MessageJP: ご主人様ー
+    MessageCN: 主人——
+    MessageEN: Master.
+    MessageTH: นายท่าน!
+    MessageTW: 主人──
+  - MessageGroupId: 100280110
+    Id: 100280160
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 토끼가 어떻게 사는지 알아?
+    MessageJP: ご主人様って、ウサギに詳しかったりする？
+    MessageCN: 主人对兔子了解得多吗？
+    MessageEN: Do you know how rabbits live?
+    MessageTH: 'คือว่านายท่านรู้รึเปล่า
+
+      ว่าชีวิตของกระต่ายเป็นยังไง?'
+    MessageTW: 主人對兔子了解深嗎？
+  - MessageGroupId: 100280110
+    Id: 100280170
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님은 알고 있지 않을까 싶어서
+    MessageJP: もしかしてご主人様なら知ってるかなって
+    MessageCN: 我觉得主人应该比较懂
+    MessageEN: I thought maybe you would know, Master.
+    MessageTH: ฉันมาถามเพราะเผื่อนายท่านจะรู้
+    MessageTW: 想說主人可能會知道
+  - MessageGroupId: 100280120
+    Id: 100280180
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 토끼?
+    MessageJP: ウサギ？
+    MessageCN: 兔子？
+    MessageEN: Rabbits?
+    MessageTH: กระต่ายเหรอ?
+    MessageTW: 兔子？
+  - MessageGroupId: 100280130
+    Id: 100280190
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280140
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 히히
+    MessageJP: うん！
+    MessageCN: 嗯！
+    MessageEN: Heehee
+    MessageTH: ฮิฮิ
+    MessageTW: 嗯！
+  - MessageGroupId: 100280140
+    Id: 100280200
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여기저기 찾아보고 구경도 좀 해보고 했는데 역시 좀 잘 모르겠네
+    MessageJP: 色々調べてみたんだけど、何かすとんと落ちないっていうか
+    MessageCN: 虽然我查了很多资料，但是好像得不出什么确切结论呢
+    MessageEN: I've been researching and observing them, but I'm still not sure.
+    MessageTH: 'ฉันลองไปสำรวจดูจากรอบๆ แล้ว
+
+      แต่ก็ยังไม่ค่อยเข้าใจเท่าไหร่'
+    MessageTW: 我調查了很多，但總覺得還不夠到位
+  - MessageGroupId: 100280150
+    Id: 100280210
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280160
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음
+    MessageJP: うーん
+    MessageCN: 嗯——
+    MessageEN: Um.
+    MessageTH: อืม
+    MessageTW: 唔嗯
+  - MessageGroupId: 100280150
+    Id: 100280220
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시 이럴 땐…….
+    MessageJP: こうなったらやっぱり……
+    MessageCN: 这样的话果然还得……
+    MessageEN: As always, for something like this.
+    MessageTH: เพราะงั้นในเวลาแบบนี้...
+    MessageTW: 這樣的話果然……
+  - MessageGroupId: 100280160
+    Id: 100280230
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……아스나?
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: Asuna?
+    MessageTH: อาสึนะ...?
+    MessageTW: ……？
+  - MessageGroupId: 100280170
+    Id: 100280240
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280180
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응!
+    MessageJP: 決めた！
+    MessageCN: 我决定了！
+    MessageEN: Yeah!
+    MessageTH: อื้อ!
+    MessageTW: 決定了！
+  - MessageGroupId: 100280170
+    Id: 100280250
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100283
+    NextGroupId: 100280180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 직접 확인해보는 수밖에 없겠지!
+    MessageJP: やっぱり実際に確認してみよう！
+    MessageCN: 果然还是要实际确认下才行！
+    MessageEN: You just have to check it out yourself!
+    MessageTH: เราก็ต้องไปดูให้เห็นด้วยตาตัวเองยังไงล่ะ!
+    MessageTW: 果然只能實際確認一下了！
+  - MessageGroupId: 100280180
+    Id: 100280260
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100280170
+    PreConditionFavorScheduleId: 100283
+    FavorScheduleId: 0
+    NextGroupId: 100280190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님!
+    MessageJP: ご主人様ー？
+    MessageCN: 主人——？
+    MessageEN: Master!
+    MessageTH: นายท่าน!
+    MessageTW: 主人──！
+  - MessageGroupId: 100280180
+    Id: 100280270
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어디로 간 거야, 주인님?
+    MessageJP: どこに行ったのー？
+    MessageCN: 主人去哪了呢——？
+    MessageEN: Where did you go, Master?
+    MessageTH: จะไปไหนเหรอ นายท่าน?
+    MessageTW: 去哪裡了？
+  - MessageGroupId: 100280190
+    Id: 100280280
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 갑자기 술래잡기?
+    MessageJP: もしかして、かくれんぼってこと？
+    MessageCN: 难道主人要和我玩捉迷藏吗？
+    MessageEN: Are we playing hide-and-seek now?
+    MessageTH: หรือว่าจะเล่นซ่อนหากับฉันเหรอ?
+    MessageTW: 難道是在玩捉迷藏嗎？
+  - MessageGroupId: 100280200
+    Id: 100280290
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280210
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋아
+    MessageJP: ふふっ、それならそれで任せて
+    MessageCN: 哼哼，那就看我的吧
+    MessageEN: Okay.
+    MessageTH: ดีล่ะ
+    MessageTW: 呵呵，那就交給我吧
+  - MessageGroupId: 100280200
+    Id: 100280300
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나는 포기하지 않는다고!
+    MessageJP: アスナは諦めないから！
+    MessageCN: 明日奈是不会放弃的！
+    MessageEN: I never give up!
+    MessageTH: อาสึนะไม่ยอมแพ้หรอกนะ!
+    MessageTW: 明日奈是不會放棄的！
+  - MessageGroupId: 100280210
+    Id: 100280310
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그만 포기해 주면 안 될까
+    MessageJP: 諦めてもらえると……
+    MessageCN: 还请放弃……
+    MessageEN: Do you never give up?
+    MessageTH: ยอมแพ้หน่อยไม่ได้เหรอ
+    MessageTW: 可以的話，放棄吧……
+  - MessageGroupId: 100280210
+    Id: 100280320
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꼭 그 모습으로 쓰다듬을 받아야겠니
+    MessageJP: その姿で撫でるとちょっと……
+    MessageCN: 明日奈穿成那样让我摸，有点……
+    MessageEN: Do you really need to be petted, dressed like that?
+    MessageTH: ต้องให้ครูลูบหัวตอนที่ใส่ชุดแบบนั้นจริงๆ เหรอ?
+    MessageTW: 你穿那樣要我撫摸的話，有點……
+  - MessageGroupId: 100280220
+    Id: 100280330
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응?
+    MessageJP: えー？
+    MessageCN: 诶——？
+    MessageEN: Huh?
+    MessageTH: หืม?
+    MessageTW: 耶──？
+  - MessageGroupId: 100280230
+    Id: 100280340
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280240
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음.
+    MessageJP: うーん……
+    MessageCN: 嗯——……
+    MessageEN: Hmm.
+    MessageTH: อืม
+    MessageTW: 唔嗯……
+  - MessageGroupId: 100280240
+    Id: 100280350
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280250
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응!
+    MessageJP: やーだ♪諦めないよ！
+    MessageCN: 不——要——♪我可不会放弃的哦！
+    MessageEN: Yeah!
+    MessageTH: ใช่แล้ว!
+    MessageTW: 不──要♪不會放棄的唷！
+  - MessageGroupId: 100280250
+    Id: 100280360
+    CharacterId: 10028
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100280240
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님
+    MessageJP: ご主人様ー
+    MessageCN: 主人——
+    MessageEN: Master.
+    MessageTH: นายท่าน
+    MessageTW: 主人──
+  - MessageGroupId: 100280260
+    Id: 100280370
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님 어디 있어?
+    MessageJP: 今どこにいるの？
+    MessageCN: 主人现在在哪里呢？
+    MessageEN: Master, where are you?
+    MessageTH: นายท่านอยู่ที่ไหนน่ะ?
+    MessageTW: 現在在哪裡？
+  - MessageGroupId: 100280260
+    Id: 100280380
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280270
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번에 있었던 일을 모두에게 말했더니 다들 바니걸은 토끼가 아니라고 가르쳐줬어
+    MessageJP: この前ね、みんなと話してたら「バニーガール姿とウサギは違うんじゃない？」って言われて
+    MessageCN: 前阵子和大家聊天，他们说“兔女郎和兔子还是不一样的吧？“
+    MessageEN:
+      When I told everyone what happened last time, they told me bunny girls
+      aren't rabbits.
+    MessageTH: 'ฉันเล่าเรื่องคราวก่อนให้ทุกคนฟังแล้ว
+
+      ทุกคนก็พูดเป็นเสียงเดียวกันเลยว่า
+
+      บันนี่เกิร์ลไม่ใช่กระต่าย'
+    MessageTW: 前陣子跟大家聊天，他們說「兔女郎和兔子不一樣吧？」
+  - MessageGroupId: 100280270
+    Id: 100280390
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님이 도망친 데에는 다 이유가 있었네!
+    MessageJP: だからこの間、ご主人様は逃げちゃったってこと？
+    MessageCN: 所以说主人之前才跑掉了是吗？
+    MessageEN: So that's why you ran away, Master!
+    MessageTH: 'ที่นายท่านวิ่งหนีไปก็เพราะมีเหตุผล
+
+      อยู่นี่เอง!'
+    MessageTW: 這就是為什麼主人那時候之所以逃走嗎？
+  - MessageGroupId: 100280270
+    Id: 100280400
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280280
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미안!
+    MessageJP: そういうことなの？
+    MessageCN: 是这样吗？
+    MessageEN: Sorry!
+    MessageTH: ขอโทษนะ!
+    MessageTW: 是那樣嗎？
+  - MessageGroupId: 100280280
+    Id: 100280410
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 알게 돼서 다행이구나.
+    MessageJP: だいたいそんな感じかな……
+    MessageCN: 大概就是那么回事吧……
+    MessageEN: It's okay. I'm glad you know.
+    MessageTH: ไม่เป็นไรหรอก โชคดีจังที่เธอรู้สักที...
+    MessageTW: 大概是那種感覺吧……
+  - MessageGroupId: 100280290
+    Id: 100280420
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응!
+    MessageJP: そっか！
+    MessageCN: 原来如此！
+    MessageEN: Yeah!
+    MessageTH: อื้อ!
+    MessageTW: 原來！
+  - MessageGroupId: 100280290
+    Id: 100280430
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래서 다시 물어보고 싶은 게 생겼는데…….
+    MessageJP: じゃああらためて聞きたいことがあるんだけど
+    MessageCN: 那我还有事情想再问问老师
+    MessageEN: So, I have another question I want to ask...
+    MessageTH: เพราะงั้นฉันเลยมีเรื่องอยากจะถามหน่อย
+    MessageTW: 那我想再問一件事
+  - MessageGroupId: 100280300
+    Id: 100280440
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100285
+    NextGroupId: 100280310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음~. 나중에 따로 찾아 갈게!
+    MessageJP: 後で、ご主人様のところに行くね！
+    MessageCN: 所以过一会我去主人那里哦！
+    MessageEN: Hm! I'll go find you later!
+    MessageTH: อืม~ ไว้ฉันจะไปหานายท่านนะ!
+    MessageTW: 晚點過去主人那邊唷！
+  - MessageGroupId: 100280310
+    Id: 100280450
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100280300
+    PreConditionFavorScheduleId: 100285
+    FavorScheduleId: 0
+    NextGroupId: 100280320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님, 주인님!
+    MessageJP: あ、そういえば聞くの忘れてた！
+    MessageCN: 啊，说起来忘了问了！
+    MessageEN: Master! Master!
+    MessageTH: นายท่าน... นายท่าน!
+    MessageTW: 啊，這麼說來忘了問！
+  - MessageGroupId: 100280320
+    Id: 100280460
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어땠어? 즐거웠어?
+    MessageJP: ご主人様はどう、嬉しい？楽しい？
+    MessageCN: 主人感觉怎么样，高兴吗？开心吗？
+    MessageEN: How was it? Did you have fun?
+    MessageTH: 'เป็นยังไงบ้าง?
+
+      นายท่านสนุกรึเปล่า?'
+    MessageTW: 怎麼樣呀，主人，高興嗎？開心嗎？
+  - MessageGroupId: 100280320
+    Id: 100280470
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이제 대답을 해 줄 시간이야!
+    MessageJP: 答えてくれるんでしょ？
+    MessageCN: 主人会回答我的吧？
+    MessageEN: It's time to answer!
+    MessageTH: ตอนนี้ถึงเวลาที่จะต้องตอบแล้วนะ!
+    MessageTW: 會回答我吧？
+  - MessageGroupId: 100280330
+    Id: 100280480
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 확실히 즐거웠어.
+    MessageJP: アスナといるといつも楽しいよ
+    MessageCN: 和明日奈在一起的所有时间里我都很开心哦
+    MessageEN: Yeah, it was definitely fun.
+    MessageTH: อื้อ สนุกมากเลยล่ะ
+    MessageTW: 和明日奈在一起總是很開心唷
+  - MessageGroupId: 100280330
+    Id: 100280490
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앞으로도 가끔씩 부탁해.
+    MessageJP: アスナも楽しかったら、それが一番嬉しいな
+    MessageCN: 明日奈高兴的时候，才是我最开心的时候啊
+    MessageEN: I look forward to more in the future.
+    MessageTH: ต่อไปก็รบกวนด้วยนะ
+    MessageTW: 如果明日奈也開心的話，我就很高興了
+  - MessageGroupId: 100280340
+    Id: 100280500
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280350
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: …….
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: '...'
+    MessageTH: …
+    MessageTW: ……
+  - MessageGroupId: 100280350
+    Id: 100280510
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280360
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……!!!!!
+    MessageJP: ！！
+    MessageCN: ！！
+    MessageEN: '...!'
+    MessageTH: '...!!!!!'
+    MessageTW: ！！
+  - MessageGroupId: 100280360
+    Id: 100280520
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오오오오오오오오
+    MessageJP: 分かったかも
+    MessageCN: 我好像明白了
+    MessageEN: Ohhh!
+    MessageTH: โอ๊สสสส
+    MessageTW: 好像明白了
+  - MessageGroupId: 100280360
+    Id: 100280530
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋-아! 아주 좋아! 대답이 됐어!
+    MessageJP: うん！なるほどね！
+    MessageCN: 嗯！原来如此啊！
+    MessageEN: Good! Great! Got the answer!
+    MessageTH: ดี! ดีมากเลย! ได้คำตอบแล้วล่ะ!
+    MessageTW: 嗯！原來如此呀！
+  - MessageGroupId: 100280370
+    Id: 100280540
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280380
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 고마워, 주인님!
+    MessageJP: ありがとーご主人様！これからもいっぱいいーっぱい、楽しませてあげるね！
+    MessageCN: 谢谢你——主人！从今往后我也会一直一直，让主人超级开心的哦！
+    MessageEN: Thank you, Master!
+    MessageTH: ขอบคุณนะนายท่าน!
+    MessageTW: 非常感謝──主人！今後也會帶給你很多很──多的快樂唷！
+  - MessageGroupId: 100280380
+    Id: 100280550
+    CharacterId: 10028
+    MessageCondition: FavorRankUp
+    ConditionValue: 20
+    PreConditionGroupId: 100280370
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 주인님, 주인님!
+    MessageJP: ご主人様ーー！！
+    MessageCN: 主人——！！
+    MessageEN: Master! Master!
+    MessageTH: นายท่านๆ!
+    MessageTW: 主人──！
+  - MessageGroupId: 100280390
+    Id: 100280560
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 오늘 바빠? 놀 수 있는 시간 있을까?
+    MessageJP: 今日は忙しい感じ？
+    MessageCN: 主人现在忙吗？
+    MessageEN: Are you busy today? Can we play?
+    MessageTH: 'วันนี้นายท่านยุ่งมั้ย? มีเวลาออกมาเล่น
+
+      ด้วยกันมั้ย?'
+    MessageTW: 今天忙嗎？
+  - MessageGroupId: 100280400
+    Id: 100280570
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 딱히 바쁘진 않지만…….
+    MessageJP: 全然大丈夫だよ
+    MessageCN: 完全不忙哦
+    MessageEN: I'm not too busy, but...
+    MessageTH: ที่จริงครูก็ไม่ได้ยุ่งมากมายอะไร...
+    MessageTW: 完全沒問題唷
+  - MessageGroupId: 100280400
+    Id: 100280580
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280420
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음? 무슨 일이야?
+    MessageJP: 何かあったの？
+    MessageCN: 发生什么了？
+    MessageEN: Hmm? What's up?
+    MessageTH: อืม... มีเรื่องอะไรเหรอ?
+    MessageTW: 有什麼事嗎？
+  - MessageGroupId: 100280410
+    Id: 100280590
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응응, 좋아!
+    MessageJP: やった！！
+    MessageCN: 太好啦！！
+    MessageEN: Yeah! Great!
+    MessageTH: อื้อๆ ดีเลย!
+    MessageTW: 太好了！！
+  - MessageGroupId: 100280410
+    Id: 100280600
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 결정!
+    MessageJP: じゃあ決まり！
+    MessageCN: 那就这么决定了！
+    MessageEN: Then it's decided!
+    MessageTH: ฉันตัดสินใจแล้ว!
+    MessageTW: 那就決定了！
+  - MessageGroupId: 100280420
+    Id: 100280610
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그건 조금 있다가 말해 줄게!
+    MessageJP: 細かいことは後でね
+    MessageCN: 详细情况过一会告诉主人哦
+    MessageEN: I'll tell you about it later!
+    MessageTH: ถ้างั้นเดี๋ยวเจอกันแล้วฉันจะเล่าให้ฟังนะ!
+    MessageTW: 細節之後再說
+  - MessageGroupId: 100280420
+    Id: 100280620
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응! 만나서!!
+    MessageJP: 待ってるから！
+    MessageCN: 我等主人来！
+    MessageEN: Yeah! In person!
+    MessageTH: อื้อ! ให้เจอกันก่อน!!
+    MessageTW: 我等著唷！
+  - MessageGroupId: 100280430
+    Id: 100280630
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280440
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ?????
+    MessageJP: ？？？
+    MessageCN: ？？？
+    MessageEN: ?????
+    MessageTH: ???
+    MessageTW: ？？？
+  - MessageGroupId: 100280440
+    Id: 100280640
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1002820
+    NextGroupId: 100280450
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나??
+    MessageJP: アスナ？
+    MessageCN: 明日奈？
+    MessageEN: Asuna?
+    MessageTH: อาสึนะ??
+    MessageTW: 明日奈？
+  - MessageGroupId: 100280450
+    Id: 100280650
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100280440
+    PreConditionFavorScheduleId: 1002820
+    FavorScheduleId: 0
+    NextGroupId: 100280460
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아하하하하!
+    MessageJP: ご主人様！
+    MessageCN: 主人！
+    MessageEN: Hahaha!
+    MessageTH: ฮ่ะฮ่ะฮ่ะฮ่าา!
+    MessageTW: 主人！
+  - MessageGroupId: 100280460
+    Id: 100280660
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280470
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘도 엄청 재미있었어, 주인님!
+    MessageJP: 今日もすっごく楽しかったよ！
+    MessageCN: 我今天也很开心呢！
+    MessageEN: Today was so fun, Master!
+    MessageTH: วันนี้สนุกมากเลยละนายท่าน!
+    MessageTW: 今天也非常開心唷！
+  - MessageGroupId: 100280460
+    Id: 100280670
+    CharacterId: 10028
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280470
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말이지 만날 때마다 새로운 걸 보여주는 주인님이라니까.
+    MessageJP: ご主人様と会えると、本当に毎回楽しいなぁ
+    MessageCN: 每次和主人见面，明日奈都很开心呢
+    MessageEN: You always show me something new whenever I see you.
+    MessageTH: 'เพราะทุกครั้งเวลาที่ได้เจอนายท่านจะ
+
+      ได้แสดงอะไรใหม่ๆ ให้ดูตลอดไงล่ะ'
+    MessageTW: 和主人見面，每次真的都很開心呢
+  - MessageGroupId: 100280470
+    Id: 100280680
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280480
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 가끔은 늘 보던 걸 보고 싶어
+    MessageJP: たびたび心臓も痛いけどね……そろそろ慣れたいかな
+    MessageCN: 虽然明日奈常常整得我心脏疼……不过差不多也习惯了
+    MessageEN: Sometimes, familiar is nice too though.
+    MessageTH: บางครั้งครูก็อยากดูแบบเดิมนะ
+    MessageTW: 雖然心臟有時候會痛……但也差不多該習慣了呢
+  - MessageGroupId: 100280480
+    Id: 100280690
+    CharacterId: 10028
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나가 즐겁다면 다행이지만…….
+    MessageJP: アスナが楽しかったなら良かった
+    MessageCN: 明日奈开心的话就再好不过了
+    MessageEN: I'm glad you enjoyed it, Asuna...
+    MessageTH: ครูดีใจนะที่อาสึนะสนุกน่ะ
+    MessageTW: 明日奈開心的話就太好了
+  - MessageGroupId: 100280490
+    Id: 100280700
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280500
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아하하하!!
+    MessageJP: あはは！！
+    MessageCN: 啊哈哈！！
+    MessageEN: Ahahaha!
+    MessageTH: อะฮ่ะฮ่ะฮ่า!!
+    MessageTW: 啊哈哈！！
+  - MessageGroupId: 100280490
+    Id: 100280710
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280500
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 늘 보는 게 되기 위해
+    MessageJP: じゃあそのためにもやっぱり
+    MessageCN: 那么为了明日奈能一直开心
+    MessageEN: So, for us to feel familiar to each other...
+    MessageTH: ถ้างั้นเพื่อให้นายท่านได้ดูตลอด
+    MessageTW: 那～為了讓老師開心，果然…！
+  - MessageGroupId: 100280500
+    Id: 100280720
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나가 매일 주인님을 찾아가야겠네?
+    MessageJP: アスナはこれから毎日、ご主人様に会いに行くね？
+    MessageCN: 明日奈接下来每天，都去找主人吧？
+    MessageEN: I should see you every day, Master!
+    MessageTH: 'อาสึนะคงต้องไปหานายท่านทุกวันแล้ว
+
+      ละเนอะ?'
+    MessageTW: 明日奈今後要，每天都去找主人喔！
+  - MessageGroupId: 100280500
+    Id: 100280730
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응응!
+    MessageJP: うん、決まり！
+    MessageCN: 嗯，就这么决定了！
+    MessageEN: Yeah!
+    MessageTH: อื้อ!
+    MessageTW: 嗯，決定了！
+  - MessageGroupId: 100280510
+    Id: 100280740
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아스나는 하루하루가 기대돼서 주인님과 노는 걸 포기할 수 없습니다!
+    MessageJP: そしたら、毎日が楽しくなるはずだから！
+    MessageCN: 这样以来，一定每天都能开心的！
+    MessageEN: I can't wait to play with you every day! We won't ever stop playing!
+    MessageTH: 'อาสึนะเฝ้ารอทุกวัน และไม่เคยหมดหวัง
+
+      ที่จะได้ไปเที่ยวกับนายท่านเลยนะ'
+    MessageTW: 這樣的話，每天都會變得很快樂！
+  - MessageGroupId: 100280510
+    Id: 100280750
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100280520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 앞으로도 아스나랑 계속 놀아줄 거지?
+    MessageJP: これからも、アスナと遊んでくれるよね？
+    MessageCN: 从今往后，主人也要和明日奈一起玩哦？
+    MessageEN: Promise me you'll always play with me!
+    MessageTH: 'ต่อจากนี้ไปนายท่านก็จะเล่นกับอาสึนะ
+
+      เยอะๆ เลยใช่มั้ย?'
+    MessageTW: 今後也會和明日奈一起玩吧？
+  - MessageGroupId: 100280520
+    Id: 100280760
+    CharacterId: 10028
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 내일 또 봐, 주인님!!
+    MessageJP: じゃあ明日もよろしく、ご主人様！！
+    MessageCN: 那明天也请多多指教了，主人！！
+    MessageEN: See you tomorrow, Master!
+    MessageTH: ถ้างั้นพรุ่งนี้เจอกันนะ นายท่าน!!
+    MessageTW: 那明天也拜託了，主人！！

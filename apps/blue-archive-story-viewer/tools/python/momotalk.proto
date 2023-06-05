@@ -1,0 +1,48 @@
+// See README.txt for information and build instructions.
+//
+// Note: START and END tags are used in comments to define sections used in
+// tutorials.  They are not part of the syntax for Protocol Buffers.
+//
+// To get an in-depth walkthrough of this file and the related examples, see:
+// https://developers.google.com/protocol-buffers/docs/tutorials
+
+// [START declaration]
+syntax = "proto3";
+package tutorial;
+
+enum MessageCondition {
+  NoneB = 0;
+  FavorRankUp = 1;
+  Answer = 2;
+  Feedback = 3;
+}
+
+enum MessageType {
+  NoneA = 0;
+  Text = 1;
+  Image = 2;
+}
+
+// [START messages]
+message MomotalkItem {
+  uint32 MessageGroupId = 1;
+  uint32 Id = 2;
+  uint32 CharacterId = 3;
+  MessageCondition MessageCondition = 4;
+  uint32 ConditionValue = 5;
+  uint32 PreConditionGroupId = 6;
+  uint32 PreConditionFavorScheduleId = 7;
+  uint32 FavorScheduleId = 8;
+  uint32 NextGroupId = 9;
+  uint32 FeedbackTimeMillisec = 10;
+  MessageType MessageType = 11;
+  string ImagePath = 12;
+  string MessageKR = 13;
+  string MessageJP = 14;
+}
+
+// Our address book file is just one of these.
+message MomotalkData {
+  repeated MomotalkItem DataList = 1;
+}
+// [END messages]

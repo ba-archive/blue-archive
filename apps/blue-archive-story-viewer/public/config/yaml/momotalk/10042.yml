@@ -1,0 +1,1120 @@
+CharacterId: 10042
+translator: Lepra
+title:
+  - GroupId: 1004202
+    FavorScheduleId: 100422
+    CharacterId: 10042
+    TextJp: 廃墟の中のお姫様
+    TextCn: 废墟中的公主大人
+    TextKr: 폐허 속의 공주님
+    TextEn: Princess in the Ruins
+    TextTh: องค์หญิงในพื้นที่รกร้าง
+    TextTw: 廢墟中的公主
+  - GroupId: 1004203
+    FavorScheduleId: 100423
+    CharacterId: 10042
+    TextJp: 真夜中の学校
+    TextCn: 深夜的学校
+    TextKr: 한밤중의 학원
+    TextEn: Late Night at the Academy
+    TextTh: กลางดึกคืนหนึ่งที่โรงเรียน
+    TextTw: 大半夜的學園
+  - GroupId: 1004205
+    FavorScheduleId: 100425
+    CharacterId: 10042
+    TextJp: 街の花園
+    TextCn: 街边的花园
+    TextKr: 거리의 화원
+    TextEn: Street Garden
+    TextTh: สวนดอกไม้ริมทาง
+    TextTw: 街邊的花園
+  - GroupId: 1004206
+    FavorScheduleId: 100426
+    CharacterId: 10042
+    TextJp: 今よりもっとたくさん
+    TextCn: 从今往后更多的
+    TextKr: 지금보다 더 많이
+    TextEn: Much More than Now
+    TextTh: มากกว่าในตอนนี้
+    TextTw: 比現在更多
+content:
+  - MessageGroupId: 100420010
+    Id: 100420010
+    CharacterId: 10042
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님-
+    MessageJP: 先生、いる？
+    MessageCN: 老师，在吗？
+    MessageEN: Sensei!
+    MessageTH: คุณครู...
+    MessageTW: 老師—
+  - MessageGroupId: 100420020
+    Id: 100420020
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님 있어?
+    MessageJP: 今大丈夫？このトーク届いてる？
+    MessageCN: 现在有空吗？能看到消息吗？
+    MessageEN: Sensei, are you there?
+    MessageTH: อยู่รึเปล่า...?
+    MessageTW: 老師在嗎？
+  - MessageGroupId: 100420030
+    Id: 100420030
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아츠코?
+    MessageJP: アツコ？
+    MessageCN: 亚津子？
+    MessageEN: Atsuko?
+    MessageTH: อาสึโกะ...?
+    MessageTW: 敦子？
+  - MessageGroupId: 100420040
+    Id: 100420040
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 맞아. 좋은 아침.
+    MessageJP: うん、そうだよ。おはよう
+    MessageCN: 嗯，是我。早上好
+    MessageEN: Yes. Good morning.
+    MessageTH: อื้อ ฉันเอง อรุณสวัสดิ์
+    MessageTW: 嗯。沒錯。早安。
+  - MessageGroupId: 100420050
+    Id: 100420050
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋은 아침.
+    MessageJP: おはよう
+    MessageCN: 早上好
+    MessageEN: Good morning.
+    MessageTH: อรุณสวัสดิ์นะ
+    MessageTW: 早安。
+  - MessageGroupId: 100420050
+    Id: 100420060
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지금은 아침은 아니지만.
+    MessageJP: もうそろそろ夜だけど、おはよう
+    MessageCN: 虽然差不多晚上了，早上好
+    MessageEN: It's not morning anymore though.
+    MessageTH: 'ถึงไม่เช้าแล้ว
+
+      แต่ก็อรุณสวัสดิ์นะ'
+    MessageTW: 雖然現在不是早上。
+  - MessageGroupId: 100420060
+    Id: 100420070
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님도 알겠지만 우리는 지금 여기저기를 떠돌아다니고 있어.
+    MessageJP: 私たち、今あっちこっちを転々としてて
+    MessageCN: 我们，现在在四处奔波
+    MessageEN: As you know, we're wandering around all over the place now.
+    MessageTH: 'คุณครูเองก็คงรู้แล้วว่าตอนนี้พวกเรา
+
+      ตระเวนไปที่ต่างๆ อยู่'
+    MessageTW: 雖然老師也知道，不過我們現在正在這裡遊蕩。
+  - MessageGroupId: 100420060
+    Id: 100420080
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 한곳에 오래 있으면 안 되니까.
+    MessageJP: 一つの場所に長居しちゃいけないから
+    MessageCN: 因为不能在同一个地方待太久
+    MessageEN: We can't stay in one place for long.
+    MessageTH: ก็พวกเราอยู่ที่เดิมนานๆ ไม่ได้นี่นะ
+    MessageTW: 不能待在一個地方太久。
+  - MessageGroupId: 100420070
+    Id: 100420090
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 게다가 다들 제각각 흩어져 있는 시간도 많아서
+    MessageJP: それと、みんなバラバラでいる事が多くて
+    MessageCN: 所以大家，经常分开
+    MessageEN: Not only that, but we spend a lot of time away from each other.
+    MessageTH: 'อีกอย่างตอนนี้ทุกคนก็กระจายตัว
+
+      แยกกันไปหมด'
+    MessageTW: 而且大家各自分開的時間很長，
+  - MessageGroupId: 100420070
+    Id: 100420100
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혼자 있으면 심심해.
+    MessageJP: 一人でいると、退屈なの
+    MessageCN: 一个人的时候，会很无聊
+    MessageEN: It's boring to be alone.
+    MessageTH: ฉันอยู่คนเดียวเลยรู้สึกเบื่อๆ น่ะ
+    MessageTW: 一個人的話很無聊。
+  - MessageGroupId: 100420080
+    Id: 100420110
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니까 선생님을 만나려면
+    MessageJP: だから先生に会うには
+    MessageCN: 所以我如果想见到老师但是老师不过来的话
+    MessageEN: 'So, for us to meet, '
+    MessageTH: 'เพราะงั้นถ้าจะเจอคุณครูละก็... '
+    MessageTW: '所以如果想要見到老師， '
+  - MessageGroupId: 100420080
+    Id: 100420120
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님이 여기로 와야 해.
+    MessageJP: 先生がこっちに来てくれないと難しい
+    MessageCN: 我会不高兴的
+    MessageEN: you have to come here.
+    MessageTH: คงต้องให้คุณครูเป็นฝ่ายมาที่นี่
+    MessageTW: 老師必須來到這裡。
+  - MessageGroupId: 100420090
+    Id: 100420130
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요컨대, 심심하니까 만나자는 거지……?
+    MessageJP: 要するに、退屈だから会おうって捉え方で良い……？
+    MessageCN: 总之，我可以理解成亚津子现在很无聊所以想和我见面吗……？
+    MessageEN: You want me to come see you because you're bored...?
+    MessageTH: 'สรุปคือชวนครูไปหาเพราะเบื่อ
+
+      ที่อยู่คนเดียวสินะ...?'
+    MessageTW: 總之，你是因為無聊，才要跟我見面的吧……？
+  - MessageGroupId: 100420100
+    Id: 100420140
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응.
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: Yes.
+    MessageTH: อื้อ
+    MessageTW: 嗯。
+  - MessageGroupId: 100420100
+    Id: 100420150
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정확해.
+    MessageJP: その通り
+    MessageCN: 就是这样
+    MessageEN: Exactly.
+    MessageTH: ใช่แล้ว
+    MessageTW: 正確！
+  - MessageGroupId: 100420110
+    Id: 100420160
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100422
+    NextGroupId: 100420120
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 조금 이따가 봐.
+    MessageJP: じゃあ、後で
+    MessageCN: 那么，一会见
+    MessageEN: I'll see you soon.
+    MessageTH: ถ้างั้นเดี๋ยวเจอกัน
+    MessageTW: 那等等見！
+  - MessageGroupId: 100420120
+    Id: 100420170
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100420110
+    PreConditionFavorScheduleId: 100422
+    FavorScheduleId: 0
+    NextGroupId: 100420130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님.
+    MessageJP: 先生、こんばんは
+    MessageCN: 老师，晚上好
+    MessageEN: 'Sensei. '
+    MessageTH: 'คุณครู '
+    MessageTW: '老師， '
+  - MessageGroupId: 100420130
+    Id: 100420180
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 여기를 떠나기로 했어.
+    MessageJP: 今からここを離れることになったよ
+    MessageCN: 我们马上要离开这里了哦
+    MessageEN: "I've decided to leave. "
+    MessageTH: 'พวกเราจะไปจากที่นี่แล้ว '
+    MessageTW: 我決定要離開這裡了。
+  - MessageGroupId: 100420130
+    Id: 100420190
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 다음에 봐. 위치가 바뀌면 또 연락할게.
+    MessageJP: じゃあ、また。場所が変わったら連絡する
+    MessageCN: 那么，再见。等换了地方我再和老师联系
+    MessageEN: "I'll see you later. I'll contact you if the location changes. "
+    MessageTH: 'ไว้เจอกันใหม่นะถ้าเปลี่ยนพิกัดที่อยู่อีก
+
+      จะติดต่อไปใหม่ '
+    MessageTW: 那就下次見囉。如果地點改變，我會再跟你聯絡。
+  - MessageGroupId: 100420140
+    Id: 100420200
+    CharacterId: 10042
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100420130
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 좋은 아침.
+    MessageJP: 先生、おはよう
+    MessageCN: 老师，早上好
+    MessageEN: Sensei, good morning.
+    MessageTH: อรุณสวัสดิ์ คุณครู
+    MessageTW: 老師。早安。
+  - MessageGroupId: 100420150
+    Id: 100420210
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 재미있는 곳을 발견했어.
+    MessageJP: 面白い場所を見つけたの
+    MessageCN: 我发现了一个有趣的地方
+    MessageEN: I found an interesting place.
+    MessageTH: ฉันเจอสถานที่ที่น่าสนใจด้วยล่ะ
+    MessageTW: 我發現一個有趣的地方。
+  - MessageGroupId: 100420150
+    Id: 100420220
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시간이 되면 놀러 올래?
+    MessageJP: 時間があったら、遊びに来ない？
+    MessageCN: 老师有时间的话，要来玩吗？
+    MessageEN: Stop by if you have time?
+    MessageTH: ถ้ามีเวลาอยากแวะมาเที่ยวหน่อยมั้ย?
+    MessageTW: 如果有空，要不要過來玩？
+  - MessageGroupId: 100420160
+    Id: 100420230
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응? 어떤 곳이길래?
+    MessageJP: どんな場所？
+    MessageCN: 什么样的地方？
+    MessageEN: Huh? What kind of a place?
+    MessageTH: หืม? ที่แบบไหนกันนะ?
+    MessageTW: 嗯？到底是什麼樣的地方？
+  - MessageGroupId: 100420170
+    Id: 100420240
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 학교 놀이를 할 수 있는 곳.
+    MessageJP: 学校ごっこができるところ
+    MessageCN: 可以玩学校游戏的地方
+    MessageEN: It's a place where we can play a school game.
+    MessageTH: อืม สถานที่ที่เล่นสนุกได้เหมือนที่โรงเรียน
+    MessageTW: 嗯。可以玩學校遊戲的地方。
+  - MessageGroupId: 100420170
+    Id: 100420250
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 재미있을 거 같아. 분명.
+    MessageJP: きっと、楽しいと思う
+    MessageCN: 我猜，一定会很好玩
+    MessageEN: I think it'll be fun. I guarantee it.
+    MessageTH: ดูน่าสนุกมากเลยนะ
+    MessageTW: 好像會很有趣。肯定！
+  - MessageGroupId: 100420180
+    Id: 100420260
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100423
+    NextGroupId: 100420190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아아. 알겠어.
+    MessageJP: うん、分かった。楽しみにしてるね
+    MessageCN: 嗯，我知道了。那我就期待一下啦
+    MessageEN: Oh. Okay.
+    MessageTH: อื้อ เข้าใจแล้ว
+    MessageTW: 啊啊。我知道了，
+  - MessageGroupId: 100420190
+    Id: 100420270
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100420180
+    PreConditionFavorScheduleId: 100423
+    FavorScheduleId: 0
+    NextGroupId: 100420200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師，
+  - MessageGroupId: 100420200
+    Id: 100420280
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내 취미 물었었잖아?
+    MessageJP: 私の趣味、なんだけど
+    MessageCN: 关于，我的兴趣呢
+    MessageEN: You asked me about hobbies, right?
+    MessageTH: คุณครูเคยถามถึงงานอดิเรกฉันใช่มั้ย?
+    MessageTW: 你不是問我的興趣嗎？
+  - MessageGroupId: 100420200
+    Id: 100420290
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 꽃을 좋아해.
+    MessageJP: 私、花が好き
+    MessageCN: 我，喜欢花哦
+    MessageEN: I like flowers.
+    MessageTH: ฉันชอบดอกไม้น่ะ
+    MessageTW: 我喜歡花。
+  - MessageGroupId: 100420210
+    Id: 100420300
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꽃이라……. 꽃을 기르는 거?
+    MessageJP: 花……花を育てること？
+    MessageCN: 花……是说养花吗？
+    MessageEN: You mean like...growing flowers?
+    MessageTH: 'ดอกไม้เหรอ…
+
+      หมายถึงปลูกต้นไม้งั้นเหรอ?'
+    MessageTW: 花啊……要種花嗎？
+  - MessageGroupId: 100420220
+    Id: 100420310
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 나중에 화훼 동아리라도 만들어볼까?
+    MessageJP: うん。今度、園芸部でも作ってみようかな
+    MessageCN: 嗯。这次，我想试着组建园艺部呢
+    MessageEN: Perhaps I can make a flower club one day.
+    MessageTH: 'อื้อ ไว้ตั้งชมรมจัดดอกไม้
+
+      ขึ้นมาดีมั้ย?'
+    MessageTW: 嗯。以後要不要成立個花卉社團？
+  - MessageGroupId: 100420220
+    Id: 100420320
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 부원은 나 혼자겠지만.
+    MessageJP: 部員は、私ひとりしかいないけど
+    MessageCN: 虽然，部员只有我一个人
+    MessageEN: I'm sure I'll be the only member though.
+    MessageTH: ถึงสมาชิกอาจจะมีแค่ฉันคนเดียวก็เถอะ
+    MessageTW: 雖然社員應該只有我一個人。
+  - MessageGroupId: 100420230
+    Id: 100420330
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 잘 자.
+    MessageJP: じゃあ、おやすみ
+    MessageCN: 那么，晚安
+    MessageEN: Okay. Good night.
+    MessageTH: ถ้างั้นฝันดีนะ
+    MessageTW: 那麼，晚安。
+  - MessageGroupId: 100420240
+    Id: 100420340
+    CharacterId: 10042
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100420230
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 좋은 아침.
+    MessageJP: 先生、おはよう
+    MessageCN: 老师，早上好
+    MessageEN: Sensei, good morning.
+    MessageTH: อรุณสวัสดิ์ คุณครู
+    MessageTW: 老師。早安。
+  - MessageGroupId: 100420250
+    Id: 100420350
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나 결심했어.
+    MessageJP: 私、決めた
+    MessageCN: 我，决定了
+    MessageEN: I've made a decision.
+    MessageTH: ฉันตัดสินใจแล้วล่ะ
+    MessageTW: 我決定了！
+  - MessageGroupId: 100420250
+    Id: 100420360
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꽃과 관계된 취미를 해볼까 해.
+    MessageJP: お花を、趣味にしようと思う
+    MessageCN: 我想，把花当作我的兴趣
+    MessageEN: I'm gonna get a hobby related to flowers.
+    MessageTH: 'ฉันจะลองหางานอดิเรกที่เกี่ยวกับ
+
+      ดอกไม้ดู'
+    MessageTW: 我想要培養和花有關的興趣。
+  - MessageGroupId: 100420260
+    Id: 100420370
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 꽃꽂이 같은 건가?
+    MessageJP: なるほど。生け花とか？
+    MessageCN: 原来如此。插花之类的？
+    MessageEN: Like flower arrangement?
+    MessageTH: อย่างพวกจัดดอกไม้เหรอ?
+    MessageTW: 像是插花之類的嗎？
+  - MessageGroupId: 100420260
+    Id: 100420380
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 동아리 활동 시작인가…….
+    MessageJP: 良いんじゃないかな
+    MessageCN: 挺好的呀
+    MessageEN: Is this the start of a club activity?
+    MessageTH: จะเริ่มทำกิจกรรมชมรมแล้วเหรอ...?
+    MessageTW: 社團活動開始了嗎……
+  - MessageGroupId: 100420270
+    Id: 100420390
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 행운을 빌어줘. 선생님.
+    MessageJP: 応援よろしくね、先生
+    MessageCN: 请为我加油咯，老师
+    MessageEN: Wish me good luck, Sensei.
+    MessageTH: อวยพรให้ฉันด้วยนะ คุณครู
+    MessageTW: 祝我好運吧！老師。
+  - MessageGroupId: 100420280
+    Id: 100420400
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아츠코가 좋아하는 꽃이 뭐야?
+    MessageJP: うん。アツコは好きな花とかある？
+    MessageCN: 嗯。亚津子有喜欢的花吗？
+    MessageEN: What's your favorite flower, Atsuko?
+    MessageTH: อาสึโกะชอบดอกไม้อะไรเหรอ?
+    MessageTW: 敦子喜歡的花是什麼啊？
+  - MessageGroupId: 100420290
+    Id: 100420410
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응?
+    MessageJP: ……好きな花？
+    MessageCN: ……喜欢的花？
+    MessageEN: Huh?
+    MessageTH: หืม?
+    MessageTW: 嗯？
+  - MessageGroupId: 100420290
+    Id: 100420420
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋아하는 꽃?
+    MessageJP: うーん……
+    MessageCN: 嗯——……
+    MessageEN: My favorite flower?
+    MessageTH: ดอกไม้ที่ชอบเหรอ?
+    MessageTW: 我喜歡的花？
+  - MessageGroupId: 100420290
+    Id: 100420430
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 나 꽃이라면 뭐든 좋아하지만
+    MessageJP: 私、花なら何でも好き
+    MessageCN: 我，只要是花就都喜欢
+    MessageEN: Well, I like all kinds, but...
+    MessageTH: อืม ถ้าเป็นดอกไม้ก็ชอบทั้งหมดนั่นแหละ
+    MessageTW: 嗯。雖然只要是花我都很喜歡，
+  - MessageGroupId: 100420300
+    Id: 100420440
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수국도 좋고
+    MessageJP: アジサイも好きだし
+    MessageCN: 绣球花也喜欢
+    MessageEN: I like hydrangeas
+    MessageTH: ดอกไฮเดรนเยียก็ชอบ
+    MessageTW: 繡球花也不錯，
+  - MessageGroupId: 100420300
+    Id: 100420450
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 장미도 좋아해
+    MessageJP: 薔薇も好き
+    MessageCN: 蔷薇也喜欢
+    MessageEN: and roses.
+    MessageTH: แล้วก็ชอบดอกกุหลาบด้วย
+    MessageTW: 也喜歡玫瑰。
+  - MessageGroupId: 100420310
+    Id: 100420460
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 왜?
+    MessageJP: なんで？
+    MessageCN: 怎么了吗？
+    MessageEN: What?
+    MessageTH: ทำไมเหรอ?
+    MessageTW: 怎麼了？
+  - MessageGroupId: 100420320
+    Id: 100420470
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100425
+    NextGroupId: 100420330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠어.
+    MessageJP: ううん、ありがとう
+    MessageCN: 没什么，谢谢
+    MessageEN: Okay.
+    MessageTH: เข้าใจแล้วล่ะ
+    MessageTW: 我知道了，
+  - MessageGroupId: 100420330
+    Id: 100420480
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100420320
+    PreConditionFavorScheduleId: 100425
+    FavorScheduleId: 0
+    NextGroupId: 100420340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님.
+    MessageJP: 先生、今日はお疲れ様
+    MessageCN: 老师，今天辛苦了
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師，
+  - MessageGroupId: 100420340
+    Id: 100420490
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 수고했어.
+    MessageJP: おかげで、たくさん植え替えることができた
+    MessageCN: 多亏老师帮忙，我才能移植这么多花
+    MessageEN: Great work.
+    MessageTH: วันนี้ขอบคุณมากนะ
+    MessageTW: 今天辛苦你了。
+  - MessageGroupId: 100420350
+    Id: 100420500
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420360
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 자랐으면 좋겠네.
+    MessageJP: 元気に育つといいね
+    MessageCN: 希望它们能健康长大呢
+    MessageEN: I hope it grows okay.
+    MessageTH: 'ถ้าดอกไม้พวกนั้นโตขึ้นมา
+
+      อย่างปลอดภัยก็คงดี'
+    MessageTW: 希望可以好好成長。
+  - MessageGroupId: 100420360
+    Id: 100420510
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 그러게.
+    MessageJP: うん。そうだね
+    MessageCN: 嗯。是啊
+    MessageEN: Yes, I know.
+    MessageTH: อืม นั่นสินะ
+    MessageTW: 嗯。就是說啊，
+  - MessageGroupId: 100420360
+    Id: 100420520
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그리고 고마워.
+    MessageJP: それと、ありがとう
+    MessageCN: 还有，谢谢
+    MessageEN: And, thank you.
+    MessageTH: แล้วก็ขอบคุณนะ
+    MessageTW: 還有，謝謝你。
+  - MessageGroupId: 100420370
+    Id: 100420530
+    CharacterId: 10042
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420380
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무도 모르게 간직할 거니까.
+    MessageJP: みんなには内緒で、大切にするね
+    MessageCN: 我会和大家保密，好好珍惜的
+    MessageEN: I'll keep this as my little secret.
+    MessageTH: ฉันจะเก็บเป็นความลับไว้อย่างดีเลย
+    MessageTW: 我會瞞著大家好好收藏。
+  - MessageGroupId: 100420380
+    Id: 100420540
+    CharacterId: 10042
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100420370
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님
+    MessageJP: こんにちは、先生
+    MessageCN: 您好，老师
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師
+  - MessageGroupId: 100420390
+    Id: 100420550
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어젯밤에 폭우가 몰아쳤어.
+    MessageJP: 昨夜、大雨が降った
+    MessageCN: 昨晚，下了大雨
+    MessageEN: There was a rainstorm last night.
+    MessageTH: เมื่อคืนนี้ฝนตกหนักมาก
+    MessageTW: 昨晚下了一場暴雨。
+  - MessageGroupId: 100420390
+    Id: 100420560
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 화단이 괜찮을까?
+    MessageJP: 花壇は大丈夫かな……
+    MessageCN: 花坛应该没事吧……
+    MessageEN: Do you think the flower garden is okay?
+    MessageTH: แปลงดอกไม้จะเป็นอะไรรึเปล่านะ?
+    MessageTW: 花圃沒事嗎？
+  - MessageGroupId: 100420400
+    Id: 100420570
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420410
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 확인하러 가고 싶은데 혼자서 가고 싶지가 않아.
+    MessageJP: 確認しに行きたいけど、一人じゃ不安
+    MessageCN: 我想去确认一下，但是一个人去有点不安
+    MessageEN: I need to check, but I don't wanna go alone.
+    MessageTH: ฉันอยากออกไปดูแต่ก็ไม่อยากไปคนเดียว...
+    MessageTW: 我想要去確認一下，但是不想自己一個人去
+  - MessageGroupId: 100420410
+    Id: 100420580
+    CharacterId: 10042
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100420420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 같이 가주지 않을래?
+    MessageJP: 一緒に、行ってくれる？
+    MessageCN: 可以，陪我一起去吗？
+    MessageEN: Can you go with me?
+    MessageTH: คุณครูไปกับฉันหน่อยได้มั้ย?
+    MessageTW: 你可以跟我一起去嗎？
+  - MessageGroupId: 100420420
+    Id: 100420590
+    CharacterId: 10042
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100426
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 알겠어.
+    MessageJP: もちろん、喜んで
+    MessageCN: 当然，我很乐意
+    MessageEN: Yeah, okay.
+    MessageTH: อื้อ ได้สิ
+    MessageTW: 嗯。我知道了，

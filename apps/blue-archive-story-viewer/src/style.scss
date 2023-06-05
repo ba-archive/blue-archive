@@ -1,0 +1,388 @@
+//noinspection CssUnknownTarget
+@font-face {
+  src: url('/font/bender-bold.woff2') format('woff2'),
+    url('/font/bender-bold.woff') format('woff');
+  font-family: 'Bender';
+  font-display: swap;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+  src: url('/font/AsapCondensed-BoldItalic.woff2') format('woff2'),
+    url('/font/AsapCondensed-BoldItalic.woff') format('woff');
+  font-family: 'Asap Condensed Bold Italic';
+  font-display: swap;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+  src: url('/font/AsapCondensed-Medium.woff2') format('woff2'),
+    url('/font/AsapCondensed-Medium.woff') format('woff');
+  font-family: 'Asap Condensed Medium';
+  font-display: swap;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+  src: url('/font/fusion-pixel.woff2') format('woff2'),
+    url('/font/fusion-pixel.woff') format('woff');
+  font-family: 'Fusion Pixel';
+  font-display: swap;
+}
+
+//noinspection CssUnknownTarget
+html {
+  --color-pallete-arona-blue: #3f88f2;
+  --color-pallete-warning: #ffa00c;
+  --color-pallete-danger: #ff3a30;
+
+  --color-card-background: #fff;
+
+  --color-glass-panel-border: #eff3ff;
+  --color-glass-panel-hover: #bcbfc451;
+  --color-glass-panel: #f4f7ff42;
+
+  --color-main-background: #edf4fb;
+  --color-mobile-nav-background: #ffffffd8;
+  --color-mobile-subnav-background: #ffffffb3;
+  --color-momotalk-background: #f19eaa;
+  --color-momotalk-banner-text: #fff;
+  --color-momotalk-favor-schedule-background: #fceef2;
+  --color-momotalk-user-action-border: lightgray;
+  --color-momotalk-user-reply-background: #e5ebf1;
+  --color-name-tag: #ffffffe0;
+  --color-option-button: #fff;
+  --color-player-avatar-border: #5c606e;
+  --color-primary-button: #3f88f2;
+  --color-student-filter-background: #d7d9e1b3;
+  --color-switch-track: #fff;
+
+  --color-tag-active-background: #2f2f2f;
+  --color-tag-active: #ffffff;
+  --color-tag-background: #ffffff;
+
+  --color-text-contrast: #fff;
+  --color-text-decoration: #ededed;
+  --color-text-elastic-armor: #943aa6;
+  --color-text-glass-panel: #808080;
+  --color-text-heavy-armor: #b26d1f;
+  --color-text-ingame: #344a6e;
+  --color-text-light-armor: #a70c19;
+  --color-text-main: #2f2f2f;
+  --color-text-special: #006bff;
+  --color-text-striker: #cc1a25;
+  --color-text-unarmed: #216f9c;
+
+  --color-title-container: #fcfdfe;
+
+  --color-shadow-near: hsl(210deg 55% 46% / 10%);
+  --color-shadow-far: hsl(210deg 55% 46% / 17%);
+  --color-shadow-farther: hsl(210deg 55% 66% / 20%);
+
+  --style-switch-track-shadow: inset 0.2rem 0.2rem 0.35rem #d9d9d9,
+    inset -0.15rem -0.15rem 0.3rem #fff;
+  --style-switch-texture: linear-gradient(145deg, #c3f0ff, #a4cade);
+  --style-switch-shadow: 0.1rem 0.1rem 0.4rem #8aa8ba;
+
+  --style-shadow-shallow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.08);
+  --style-shadow-near: 0.1rem 0.1rem 0.2rem var(--color-shadow-near);
+  --style-shadow-far: 0.2rem 0.2rem 0.5rem var(--color-shadow-far);
+  --style-shadow-farther: 0.2rem 0.2rem 1rem var(--color-shadow-farther);
+  --style-primary-button-inset-shadow: inset 1px 1px 2px #3a6dc7cc,
+    inset -1px -1px 2px #4f95ffcc;
+  --style-primary-inset-main: inset 5px 5px 10px #c9cfd5,
+    inset -5px -5px 10px #ffffff;
+
+  --style-background-image: url('/image/homescreen/background.webp');
+
+  --trigo-param-positive: calc((0.6rem - 1px) / 1.414);
+  --trigo-param-negative: calc((0.6rem - 1px) / -1.414);
+
+  color: var(--color-text-main);
+}
+
+//noinspection CssUnknownTarget
+html[data-theme='dark'] {
+  --color-pallete-arona-blue: #b2cffa;
+  --color-pallete-warning: #cc820a;
+  --color-pallete-danger: #cc2f27;
+
+  --color-card-background: #2f2f2f;
+  --color-glass-panel-border: #4b93dc;
+  --color-main-background: #343e50;
+
+  --color-mobile-nav-background: #343e50d8;
+  --color-mobile-subnav-background: #343e50b3;
+
+  --color-momotalk-background: #b77b84;
+  --color-momotalk-banner-text: #333;
+  --color-momotalk-favor-schedule-background: #593640;
+  --color-momotalk-user-action-border: #333;
+  --color-momotalk-user-reply-background: #39526a;
+
+  --color-name-tag: #454545e0;
+  --color-option-button: #333;
+  --color-player-avatar-border: #eee;
+  --color-primary-button: #4c7bb0;
+  --color-student-filter-background: #2a2a2ab3;
+  --color-switch-track: #333;
+
+  --color-tag-active-background: #000;
+  --color-tag-active: #eee;
+  --color-tag-background: #494949;
+
+  --color-text-decoration: #5c5c5c;
+  --color-text-glass-panel: #eee;
+  --color-text-ingame: #eee;
+  --color-text-main: #eee;
+  --color-title-container: #404040ed;
+  --color-text-heavy-armor: #d98526;
+  --color-text-light-armor: #cd0e1e;
+  --color-text-striker: #f11f2c;
+  --color-text-unarmed: #2989c0;
+
+  --color-shadow-near: #2126311f;
+  --color-shadow-far: #0c0e1219;
+  --color-shadow-farther: #0c0e123b;
+  --style-primary-button-inset-shadow: inset 1px 1px 2px #416996cc,
+    inset -1px -1px 2px #578cc9cc;
+  --style-primary-inset-main: inset 5px 5px 10px #2c3544,
+    inset -5px -5px 10px #3c475c;
+
+  --style-switch-track-shadow: inset 0.2rem 0.2rem 0.35rem #262626,
+    inset -0.15rem -0.15rem 0.3rem #000;
+  --style-switch-texture: linear-gradient(145deg, #b8b8b8, #616161);
+  --style-switch-shadow: 0.1rem 0.1rem 0.4rem #616161;
+
+  --style-background-image: url('/image/homescreen/background-dark.webp');
+}
+
+//noinspection CssOverwrittenProperties
+body {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  transition: background 0.375s ease-in-out;
+  box-sizing: border-box;
+  background: var(--style-background-image) no-repeat center;
+  background-size: cover;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, system-ui,
+    'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', BlinkMacSystemFont,
+    'Helvetica Neue', 'Hiragino Sans GB', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  transition: color 0.375s ease-in-out;
+  color: var(--color-text-main);
+}
+
+#app {
+  grid-column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-areas: 'navigation-pane main';
+  flex: 1;
+  justify-items: stretch;
+  transition: border-color 0.375s ease-in-out;
+  box-shadow: var(--style-shadow-shallow);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: var(--color-glass-panel-border);
+  border-radius: 2rem;
+  background-color: var(--color-glass-panel);
+  padding: 1rem;
+  max-width: 1920px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.acrylic {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-image: url('/src/assets/nnnoise.png');
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-width {
+  width: 100%;
+}
+
+.fill-screen {
+  flex: 1;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rounded-small {
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+}
+
+.rounded-medium {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+}
+
+.rounded-large {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+}
+
+.shadow-near {
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--color-shadow-near);
+}
+
+.shadow-far {
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--color-shadow-far);
+}
+
+.shadow-farther {
+  box-shadow: 0.2rem 0.2rem 1rem var(--color-shadow-farther);
+}
+
+.user-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.375s ease-in-out;
+  cursor: pointer;
+  background: var(--color-primary-button);
+  padding: 0.4rem 1rem;
+  color: #fff;
+  text-decoration: none;
+
+  &.warning {
+    background: var(--color-pallete-warning);
+    color: #333;
+  }
+
+  &.danger {
+    background: var(--color-pallete-danger);
+  }
+}
+
+// consistent scrollbar style on all desktop browsers
+@media screen and (min-width: 768px) {
+  html[data-scrollbar='customize'] {
+    //scrollbar-gutter: stable;
+    //scrollbar-width: thin;
+
+    ::-webkit-scrollbar {
+      border-radius: 1rem;
+      background: transparent;
+      width: 0.65rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border: 2px solid transparent;
+      border-radius: 0.65rem;
+      background: #777a7d;
+      background-clip: content-box;
+
+      &:hover {
+        background: #555;
+      }
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+}
+
+// control pwa install prompt
+//noinspection CssUnusedSymbol,CssOverwrittenProperties
+.sw-update-toast {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+
+  .sw-update-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--style-shadow-far);
+    border-radius: 1rem;
+    background: var(--color-card-background);
+    padding: 1rem;
+
+    h4 {
+      margin-bottom: 0.5rem;
+      font-weight: normal;
+    }
+
+    .sw-update-button {
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background: var(--color-primary-button);
+      padding: 0.4rem 1rem;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    height: unset;
+  }
+
+  #app {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: var(--style-shadow-shallow);
+    border-width: 0;
+    border-style: none;
+    border-color: var(--color-glass-panel-border);
+    border-radius: 0;
+    background-color: var(--color-glass-panel);
+    padding: 0;
+  }
+}

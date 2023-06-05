@@ -1,0 +1,733 @@
+CharacterId: 20022
+translator: Lepra
+title:
+  - GroupId: 2002202
+    FavorScheduleId: 200222
+    CharacterId: 20022
+    TextJp: フウカの願い事
+    TextCn: 枫香的愿望
+    TextKr: 당신의 소원은?
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002203
+    FavorScheduleId: 200223
+    CharacterId: 20022
+    TextJp: 少し遅れて
+    TextCn: 稍微晚了一些
+    TextKr: 조금 어긋나더라도
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 2002205
+    FavorScheduleId: 200225
+    CharacterId: 20022
+    TextJp: 連休最後のお出かけ
+    TextCn: 连休最后的外出
+    TextKr: 가끔은 천천히, 이대로.
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 200220010
+    Id: 200220010
+    CharacterId: 20022
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요. 선생님.
+    MessageJP: こんにちは、先生
+    MessageCN: 您好，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220020
+    Id: 200220020
+    CharacterId: 20022
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 벌써 연말연시네요.
+    MessageJP: そろそろ年越しですね
+    MessageCN: 马上就要到年关了呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220020
+    Id: 200220030
+    CharacterId: 20022
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 새해에는 좋은 일만 있으시기를 바랄게요.
+    MessageJP: 今年も一年、お世話になりました
+    MessageCN: 今年一年也承蒙老师关照了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220030
+    Id: 200220040
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후우카도 한 해 동안 수고 많았어.
+    MessageJP: こちらこそ、お世話になりました
+    MessageCN: 我才是承蒙枫香照顾了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220040
+    Id: 200220050
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 일정은 어때?
+    MessageJP: フウカは今日、何か予定とかあるの？
+    MessageCN: 枫香今天有什么安排吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220050
+    Id: 200220060
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘도 급양부 일로 바쁠 것 같아요.
+    MessageJP: 私は今日も、給食部の方で忙しくなりそうだなと……
+    MessageCN: 我今天应该也会在供给部这边忙吧……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220050
+    Id: 200220070
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 괜찮아요.
+    MessageJP: でも大丈夫です
+    MessageCN: 但是没关系
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220060
+    Id: 200220080
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200222
+    NextGroupId: 200220070
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 마지막까지 최선을 다하는 게, 제 사명인걸요.
+    MessageJP: 最後まで、全力を尽くしてきます！
+    MessageCN: 我会竭尽全力到最后的！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220070
+    Id: 200220090
+    CharacterId: 20022
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200220060
+    PreConditionFavorScheduleId: 200222
+    FavorScheduleId: 0
+    NextGroupId: 200220080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 안녕하세요. 선생님.
+    MessageJP: えっと……おはようございます
+    MessageCN: 那个……早上好
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220080
+    Id: 200220100
+    CharacterId: 20022
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저는…… 늦잠을 자 버렸답니다.
+    MessageJP: 起きたら、いつの間にこんな時間に……
+    MessageCN: 醒过来我才发现，居然已经到这个点了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220090
+    Id: 200220110
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 늦잠을 자는 후우카라니!
+    MessageJP: フウカが寝坊、珍しい……！
+    MessageCN: 枫香居然会睡懒觉，真少见……！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220100
+    Id: 200220120
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220110
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 민망한 모습을 보여드려 부끄럽네요……
+    MessageJP: お恥ずかしい限りです……
+    MessageCN: 真是不好意思……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220110
+    Id: 200220130
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런 후우카도 신선하고 귀여워.
+    MessageJP: ううん、この時期くらい良いんじゃないかな。可愛いし
+    MessageCN: 没关系哦，这个时候偷懒一下不也挺好的嘛。而且枫香这样也很可爱
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220120
+    Id: 200220140
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 정말.
+    MessageJP: も、もう
+    MessageCN: 真、真是的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220120
+    Id: 200220150
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 놀리지 말아 주세요……
+    MessageJP: からかわないでください
+    MessageCN: 老师不要捉弄我啦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220130
+    Id: 200220160
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저기, 선생님.
+    MessageJP: ところで、その……
+    MessageCN: 话说回来，那个……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220130
+    Id: 200220170
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시기는 조금 맞지 않을지도 모르지만.
+    MessageJP: もうタイミングは過ぎてしまいましたが
+    MessageCN: 虽然可能已经过了时间
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220130
+    Id: 200220180
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 토시코시소바를 함께 드시지 않으시겠어요?
+    MessageJP: よろしければ、一緒に少し遅い年越しそばを食べませんか？
+    MessageCN: 老师方便的话，我们可以一起吃迟到的跨年面吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220140
+    Id: 200220190
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후우카의 수제 소바라니! 당연히 먹어야지!
+    MessageJP: フウカの手料理！今すぐ食べたい！
+    MessageCN: 枫香亲手做的料理！我现在就想吃！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220150
+    Id: 200220200
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다, 다행이다.
+    MessageJP: あ、ありがとうございます
+    MessageCN: 谢、谢谢老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220150
+    Id: 200220210
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면 저녁에 뵈어요.
+    MessageJP: 少し準備があるので、夕方でもよろしいですか？
+    MessageCN: 我需要稍微准备一下，老师看傍晚的时候方便吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220160
+    Id: 200220220
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200223
+    NextGroupId: 200220170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 기다리겠습니다.
+    MessageJP: 食堂でお待ちしていますね
+    MessageCN: 我在食堂等您哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220170
+    Id: 200220230
+    CharacterId: 20022
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200220160
+    PreConditionFavorScheduleId: 200223
+    FavorScheduleId: 0
+    NextGroupId: 200220180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 지내고 계시나요, 선생님.
+    MessageJP: 先生は、今日もお忙しそうでしょうか？
+    MessageCN: 老师今天也在忙吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220180
+    Id: 200220240
+    CharacterId: 20022
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 연휴도…… 끝나 가네요.
+    MessageJP: そろそろ連休も終わりだな、と思いましてご連絡を……
+    MessageCN: 我想着连休也差不多要结束了，所以就联系一下老师……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220180
+    Id: 200220250
+    CharacterId: 20022
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말, 왜 이럴 때만 시간이 이렇게 빨리 갈까요?
+    MessageJP: 休みの日って、時間の進みが早いですね……
+    MessageCN: 放假的日子里，时间过得还真快呢……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220190
+    Id: 200220260
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 후우카는 연휴 잘 보냈어?
+    MessageJP: こっちはいつも通りだよ。フウカの方は？
+    MessageCN: 我这里还是老样子哦。枫香呢？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220200
+    Id: 200220270
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220210
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 모르겠어요.
+    MessageJP: えっと、ぼーっとしていたら終わってたと言いますか……
+    MessageCN: 嗯，应该说，感觉一眨眼假期就结束了吧……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220200
+    Id: 200220280
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220210
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 내일부터는 다시 급양부의 일을 위해
+    MessageJP: ですが、もう明日からは給食部の準備をする必要があるので
+    MessageCN: 但是，从明天开始就必须要为供给部做准备了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220200
+    Id: 200220290
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 식재료를 사러 가야 하네요.
+    MessageJP: 明日になったら、食材を買いに行かないと
+    MessageCN: 所以我明天要去采购食材才行
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220210
+    Id: 200220300
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220220
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면 사실상 오늘이 마지막 휴일인 거야?!
+    MessageJP: ってことは、今日が連休最終日……！？
+    MessageCN: 也就是说，今天就是连休的最后一天……！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220220
+    Id: 200220310
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220230
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어……
+    MessageJP: そ、そうですね
+    MessageCN: 是、是啊
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220220
+    Id: 200220320
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 생각해 보니 그러네요?
+    MessageJP: まあいつものことと言いますか
+    MessageCN: 不过，对我而言这是再正常不过的事情了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220220
+    Id: 200220330
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 일이니까요.
+    MessageJP: 給食部なので、仕方ありません
+    MessageCN: 毕竟是供给部，也没办法呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220230
+    Id: 200220340
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ‘일이니까요’ 하고 넘길 게 아니잖아!
+    MessageJP: 仕方なくないよ！
+    MessageCN: 别说没办法啊！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220240
+    Id: 200220350
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오후에 당장 후우카 땅을 납치하겠습니다.
+    MessageJP: こうなったら、今日はフウカをさらわないと……
+    MessageCN: 既然已经到了这个地步，今天就不得不把枫香拐走了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220250
+    Id: 200220360
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 네?!
+    MessageJP: はい！？
+    MessageCN: 啊！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220250
+    Id: 200220370
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 저, 선생님에게까지 납치당하는 건가요?!
+    MessageJP: 私、先生にまで誘拐されるんですか！？
+    MessageCN: 连、连老师都要绑架我吗！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220260
+    Id: 200220380
+    CharacterId: 20022
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200220270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 기모노를 다시 넣어두기 전에 할 일이 있으니까!
+    MessageJP: せっかくの連休最終日だからね！
+    MessageCN: 毕竟是难得的连休最后一天呢！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 200220270
+    Id: 200220390
+    CharacterId: 20022
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200225
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 점점 더 모르게 되어가고 있어요……
+    MessageJP: ど、どういうことなんですか……？
+    MessageCN: 到、到底怎么回事啊……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

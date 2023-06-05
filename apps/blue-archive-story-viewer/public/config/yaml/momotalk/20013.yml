@@ -1,0 +1,910 @@
+CharacterId: 20013
+translator: 今天早睡了吗
+title:
+  - GroupId: 2001302
+    FavorScheduleId: 200132
+    CharacterId: 20013
+    TextJp: セキュリティチェック
+    TextCn: 安全检查
+    TextKr: 일일 보안 결산
+    TextEn: Daily Security Audit
+    TextTh: สรุปการรักษาความปลอดภัยประจำวัน
+    TextTw: 安全檢查
+  - GroupId: 2001303
+    FavorScheduleId: 200133
+    CharacterId: 20013
+    TextJp: ハッキングの方法
+    TextCn: 入侵的方法
+    TextKr: 최고의 해킹 수법
+    TextEn: Ultimate Hacking Techniques
+    TextTh: วิธีการแฮ็กที่ดีที่สุด
+    TextTw: 駭入的方法
+  - GroupId: 2001305
+    FavorScheduleId: 200135
+    CharacterId: 20013
+    TextJp: メンテナンス
+    TextCn: 服务器维护
+    TextKr: 메인터넌스
+    TextEn: Maintenance
+    TextTh: ปิดปรับปรุง
+    TextTw: 伺服器維護
+  - GroupId: 2001306
+    FavorScheduleId: 200136
+    CharacterId: 20013
+    TextJp: ブラック＆ホワイト
+    TextCn: 黑与白
+    TextKr: 블랙 앤 화이트
+    TextEn: Black and White
+    TextTh: Black And White
+    TextTw: Black & White
+content:
+  - MessageGroupId: 200130010
+    Id: 200130010
+    CharacterId: 20013
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 바쁜 중에 불러내서 미안해.
+    MessageJP: 先生、忙しいところにごめん
+    MessageCN: 老师，百忙之中打扰，不好意思
+    MessageEN: Sensei, I'm sorry, I know you're busy.
+    MessageTH: คุณครู ขอโทษที่เรียกออกมาทั้งที่งานยุ่งนะ
+    MessageTW: 老師，百忙之中打擾你，真不好意思
+  - MessageGroupId: 200130020
+    Id: 200130020
+    CharacterId: 20013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근에 터진 보안 문제 때문에 샬레의 서버를 잠깐 살펴보고 싶어서.
+    MessageJP: ちょっとセキュリティ関連の問題で、シャーレのサーバーを調べたくって
+    MessageCN: 我想检查一下夏莱的服务器上是否存在安全相关的问题
+    MessageEN:
+      There was a security breach at Schale, so I'd like to take a look at
+      the servers.
+    MessageTH: 'เมื่อไม่นานนี้เกิดปัญหาเรื่องความปลอดภัย
+
+      ขึ้นน่ะ ฉันเลยอยากแวะไปดูเซิร์ฟเวอร์ของ
+
+      ทางชาเล่ต์หน่อย'
+    MessageTW: 有一些和系統安全相關的問題，所以想要調查一下夏萊的伺服器
+  - MessageGroupId: 200130020
+    Id: 200130030
+    CharacterId: 20013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: PC의 접속 비밀번호가 필요해서 그러는데, 잠깐 샬레의 집무실로 와 줄 수 없을까?
+    MessageJP: その場にあるPCを開かないといけないから、後でシャーレのオフィスで会える？
+    MessageCN: 因为到时必须使用那边的电脑，所以我们能稍后在夏莱的办公室会面吗？
+    MessageEN: I need the password for the PC. Can you come to the Schale office?
+    MessageTH: 'แต่ว่ามันต้องใส่รหัสผ่านเข้าเครื่อง
+
+      คุณครูช่วยมาที่ชาเล่ต์หน่อยได้มั้ย?'
+    MessageTW: 因為必須要使用到夏萊的電腦，稍後可以在夏萊辦公室見個面嗎？
+  - MessageGroupId: 200130030
+    Id: 200130040
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응, 잠시만 기다려줘.
+    MessageJP: あ、そしたらちょっと待ってて
+    MessageCN: 啊，那千寻稍等一下
+    MessageEN: Okay, be right there.
+    MessageTH: อื้อ รอครูแป๊ปนึงนะ
+    MessageTW: 啊，那稍等我一下
+  - MessageGroupId: 200130040
+    Id: 200130050
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 접속 비밀번호가 뭐였냐면…….
+    MessageJP: パスワードを書くから
+    MessageCN: 我把密码抄给你
+    MessageEN: The password is...
+    MessageTH: รหัสผ่านเลขอะไรนะ...
+    MessageTW: 我把密碼打出來
+  - MessageGroupId: 200130050
+    Id: 200130060
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130060
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잠깐.
+    MessageJP: 待った
+    MessageCN: 停
+    MessageEN: Wait.
+    MessageTH: เดี๋ยวก่อน
+    MessageTW: 等等
+  - MessageGroupId: 200130050
+    Id: 200130070
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130060
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일반 회선에 비밀번호를 적는 건 절대로 안 돼.
+    MessageJP: 普通の回線でパスワードを書くなんて絶対にダメ
+    MessageCN: 这种在未加密通信中提供密码的事绝对不能做
+    MessageEN: Never write passwords on an unprotected line.
+    MessageTH: 'ห้ามพิมพ์รหัสผ่านส่งมาทางเส้นทาง
+
+      สื่อสารทั่วไปเด็ดขาด'
+    MessageTW: 絕對不可以在一般的線路上把密碼打出來
+  - MessageGroupId: 200130060
+    Id: 200130080
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 모니터 아래에 비밀번호를 적은 메모지를 붙여 놨으니까 그걸 써도 돼.
+    MessageJP: モニターの下にパスワードを書いたメモがあるから、それを見ても大丈夫だよ
+    MessageCN: 那，显示器下面用便利贴贴着密码，看那个也行哦
+    MessageEN:
+      I put a sticky note with the password on it at the bottom of the monitor.
+      Use that.
+    MessageTH: 'ครูเขียนรหัสแปะไว้ที่ใต้หน้าจอแล้ว
+
+      ใช้อันนั้นเลยก็ได้นะ'
+    MessageTW: 螢幕底下有張寫著密碼的便條紙，只要看那個就可以了
+  - MessageGroupId: 200130070
+    Id: 200130090
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐?
+    MessageJP: え
+    MessageCN: 啊
+    MessageEN: Huh?!
+    MessageTH: ว่าไงนะ?
+    MessageTW: 咦
+  - MessageGroupId: 200130070
+    Id: 200130100
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200132
+    NextGroupId: 200130080
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……농담이지?
+    MessageJP: ……冗談、だよね？
+    MessageCN: ……老师是开玩笑的，吧？
+    MessageEN: Are you kidding?
+    MessageTH: ล้อเล่นใช่มั้ย...
+    MessageTW: ……你是開玩笑的，對吧？
+  - MessageGroupId: 200130080
+    Id: 200130110
+    CharacterId: 20013
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 200130070
+    PreConditionFavorScheduleId: 200132
+    FavorScheduleId: 0
+    NextGroupId: 200130090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 부탁 하나만 해도 될까?
+    MessageJP: 先生、ちょっとお願いしたいことがあって
+    MessageCN: 老师，我有件事想拜托您
+    MessageEN: Sensei, could you do me a favor?
+    MessageTH: คุณครู ฉันรบกวนเรื่องหนึ่งได้มั้ย?
+    MessageTW: 老師，有件事想拜託你
+  - MessageGroupId: 200130090
+    Id: 200130120
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 무슨 일인데?
+    MessageJP: うん、どうしたの？
+    MessageCN: 嗯，怎么了？
+    MessageEN: How can I help?
+    MessageTH: ได้สิ เรื่องอะไรเหรอ?
+    MessageTW: 嗯，怎麼了嗎
+  - MessageGroupId: 200130100
+    Id: 200130130
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 오후에 밀레니엄에 장비를 납품하는 기업에 계약을 제안하러 갈 예정이었거든.
+    MessageJP: 今日の午後、とある企業のところに行くんだけど
+    MessageCN: 今天下午，我想去拜访一家企业
+    MessageEN:
+      I'm going to present a proposal to the company delivering equipment
+      to Millennium this afternoon.
+    MessageTH: 'บ่ายนี้ฉันจะไปคุยเรื่องสัญญากับบริษัท
+
+      ที่จัดหาอุปกรณ์ให้กับทางมิลเลเนียมน่ะ'
+    MessageTW: 今天下午，我準備去拜訪某個企業
+  - MessageGroupId: 200130100
+    Id: 200130140
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그런데 사장이 워낙 완고한 사람이라, 이야기를 꺼내기 전에 미리 준비를 해 두고 싶어.
+    MessageJP: 社長が結構頑固でね、あらためて準備しておこうと思って
+    MessageCN: 但是那边的社长相当固执，我想再做一下准备
+    MessageEN:
+      But the president is very stubborn, so I want to be prepared before
+      I bring it up.
+    MessageTH: 'แต่ประธานของที่นั่นเป็นคนที่ดื้อมากๆ
+
+      เพราะงั้นเลยคิดว่าจะเตรียตัวล่วงหน้า
+
+      ก่อนที่จะไปคุยน่ะ'
+    MessageTW: 那裡的社長相當頑固，所以我想多做些準備
+  - MessageGroupId: 200130100
+    Id: 200130150
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……베리타스의 방식으로 말이지.
+    MessageJP: ヴェリタス流の準備を
+    MessageCN: 用真理部的方式
+    MessageEN: I want to do this Veritas' way.
+    MessageTH: หมายถึงวิธีในแบบของเวอริทัสน่ะ
+    MessageTW: 當然，是貝里塔斯流的準備
+  - MessageGroupId: 200130110
+    Id: 200130160
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 베리타스의 방식이라면……?
+    MessageJP: ヴェリタス流の……？
+    MessageCN: 用真理部的方式……？
+    MessageEN: What do you mean by "Veritas' way"?
+    MessageTH: วิธีของเวอริทัสเหรอ...?
+    MessageTW: 貝里塔斯流的……？
+  - MessageGroupId: 200130110
+    Id: 200130170
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그 말은 해킹을 하겠다는 거야?
+    MessageJP: ハッキング、とか？
+    MessageCN: 黑进去，之类的吗？
+    MessageEN: You mean through hacking?
+    MessageTH: หมายถึงจะแฮ็กเข้าไปงั้นเหรอ?
+    MessageTW: 駭進去，之類的？
+  - MessageGroupId: 200130120
+    Id: 200130180
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130130
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 응. 작업 전에 미리 노드에 백도어를 설치하고 싶은데, 선생님이 옆에서 도와줬으면 좋겠어.
+    MessageJP: うん。ちょっとバックドアを設置しておこうと思うんだけど、手伝ってほしくて
+    MessageCN: 嗯。我想植入一个后门，但是希望老师能帮忙
+    MessageEN:
+      Yeah. I want to install a back door on the node before I work. I'd
+      like you to help.
+    MessageTH: 'อื้อ ฉันคิดว่าจะติดตั้งแบ็กดอร์ลงบนโหนด
+
+      ก่อนจะลงมือทำงานน่ะ คุณครูมาช่วยกัน
+
+      หน่อยได้มั้ย'
+    MessageTW: 嗯。我想要設置一個後門，所以希望你能幫忙
+  - MessageGroupId: 200130130
+    Id: 200130190
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 노드……? 백도어……?
+    MessageJP: バックドア……？
+    MessageCN: 后门……？
+    MessageEN: Node? Back door?
+    MessageTH: โหนด...? แบ็กดอร์...?
+    MessageTW: 後門……？
+  - MessageGroupId: 200130130
+    Id: 200130200
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 해킹에 대해서는 아무것도 모르는데 괜찮을까?
+    MessageJP: 私ハッキングについては素人だけど、大丈夫？
+    MessageCN: 我对黑客是一窍不通，没问题吗？
+    MessageEN: How can I help? I don't know how hacking works.
+    MessageTH: ครูไม่รู้เรื่องการแฮ็กเลย ไม่เป็นไรใช่มั้ย?
+    MessageTW: 我對駭入之類的事一竅不通，沒關係嗎？
+  - MessageGroupId: 200130140
+    Id: 200130210
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130150
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아. 말은 그렇게 했지만, 선생님은 그냥 옆에 서 있기만 해도 괜찮으니까.
+    MessageJP: まあ手伝ってと言っても、先生はただそこにいてくれるだけで良いから
+    MessageCN: 虽然说是帮忙，但是老师只要在那里陪着我就可以了
+    MessageEN: It's okay. I know it sounds difficult, but you just have to be there.
+    MessageTH: 'ไม่เป็นไรหรอก ถึงจะขอให้มาช่วย
+
+      แต่คุณครูแค่มาอยู่ข้างๆ ก็พอแล้วล่ะ'
+    MessageTW: 嘛，雖然說是幫忙，不過老師只要待在我旁邊就可以了
+  - MessageGroupId: 200130140
+    Id: 200130220
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200133
+    NextGroupId: 200130150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그럼 이따가 보자.
+    MessageJP: じゃあまた後で
+    MessageCN: 那之后见
+    MessageEN: I'll see you then.
+    MessageTH: งั้นเดี๋ยวเจอกันนะ
+    MessageTW: 那麼待會見
+  - MessageGroupId: 200130150
+    Id: 200130230
+    CharacterId: 20013
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 200130140
+    PreConditionFavorScheduleId: 200133
+    FavorScheduleId: 0
+    NextGroupId: 200130160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……선생님. 전화했었어?
+    MessageJP: 先生、もしかしてさっき電話くれた？
+    MessageCN: 老师刚刚给我打电话了吗？
+    MessageEN: Sensei, did you call?
+    MessageTH: คุณครู... โทรมาเหรอ?
+    MessageTW: 老師，剛才是你打電話給我嗎？
+  - MessageGroupId: 200130160
+    Id: 200130240
+    CharacterId: 20013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 미안. 자느라 연락을 받지 못했어.
+    MessageJP: ごめん、ちょっと寝てた
+    MessageCN: 不好意思，刚刚睡了一会
+    MessageEN: I was asleep. Sorry.
+    MessageTH: โทษทีนะ ฉันนอนอยู่เลยไม่ได้รับสายน่ะ
+    MessageTW: 抱歉，我剛剛睡了一會
+  - MessageGroupId: 200130170
+    Id: 200130250
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 깨워버렸으면 미안해.
+    MessageJP: あ、うん。起こしちゃったらごめん
+    MessageCN: 啊，嗯。不好意思，把千寻吵醒了
+    MessageEN: Sorry if I woke you up.
+    MessageTH: ขอโทษที่ปลุกนะ
+    MessageTW: 啊，嗯。抱歉吵醒你了
+  - MessageGroupId: 200130170
+    Id: 200130260
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130180
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이미 낮인데, 밤이라도 샜던 거야?
+    MessageJP: もうお昼だけど、昨日は夜更かしとか？
+    MessageCN: 现在已经是中午了，难道千寻昨晚熬夜了吗？
+    MessageEN: Were you up all night?
+    MessageTH: กลางวันแล้วนะ เมื่อคืนโต้รุ่งมาเหรอ?
+    MessageTW: 已經快中午了，昨天熬夜了嗎？
+  - MessageGroupId: 200130180
+    Id: 200130270
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130190
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그게 오늘 자정에 컨설팅을 담당하고 있는 회사의 서버 정기 점검이 예정되어 있어서.
+    MessageJP: ううん。今日の深夜に、コンサルティングを担当してる会社のサーバーメンテナンスがあって
+    MessageCN: 不是。是我今天晚上要去维护一家咨询公司的服务器
+    MessageEN: Server maintenance for the consulting company is scheduled at midnight.
+    MessageTH: 'อ๋อ พอดีมีกำหนดการซ่อมบำรุง
+
+      เซิร์ฟเวอร์ของบริษัทที่ฉันให้คำปรึกษา
+
+      อยู่ตอนเที่ยงคืนน่ะ'
+    MessageTW: 不。是因為今天深夜，我擔任顧問的公司需要進行伺服器的維護
+  - MessageGroupId: 200130180
+    Id: 200130280
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130190
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 철야를 하려면 조금 일찍 잠을 자두는 게 좋을 것 같아서 말이야.
+    MessageJP: 徹夜になるだろうから、先に少し寝ておこうかなって
+    MessageCN: 因为要通宵了，所以我就想先睡一会再去
+    MessageEN: I thought I should get some sleep before pull an all-nighter.
+    MessageTH: 'ถ้าจะอยู่โต้รุ่งก็ต้องรีบนอนตุนเอาไว้
+
+      ก่อนไงล่ะ'
+    MessageTW: 我想可能需要通宵工作，所以就先睡了一下
+  - MessageGroupId: 200130190
+    Id: 200130290
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 심야의 점검이라니, 고생이네.
+    MessageJP: そうなんだ、大変だね
+    MessageCN: 这样啊，千寻还真是辛苦
+    MessageEN: Overtime maintenance... Sounds like hard work.
+    MessageTH: 'ซ่อมบำรุงจนถึงดึกเลยเหรอ
+
+      เหนื่อยน่าดูเลยนะ'
+    MessageTW: 這樣啊，真辛苦呢
+  - MessageGroupId: 200130200
+    Id: 200130300
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 혹시 괜찮다면, 견학하러 가도 괜찮아?
+    MessageJP: 良かったらそれ、見学に行ってもいい？
+    MessageCN: 要是方便的话，我也能去参观吗？
+    MessageEN: Is it okay if I come with you?
+    MessageTH: ถ้าไม่ว่าอะไร ครูไปดูด้วยได้มั้ย?
+    MessageTW: 可以的話，能讓我一起去觀摩嗎
+  - MessageGroupId: 200130210
+    Id: 200130310
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 서버 점검을 하는 걸 옆에서 견학하겠다고?
+    MessageJP: 見学？
+    MessageCN: 参观？
+    MessageEN: You wanna see how I do server maintenance?
+    MessageTH: 'จะมาดูตอนที่ฉันซ่อมบำรุงเซิร์ฟเวอร์
+
+      งั้นเหรอ?'
+    MessageTW: 觀摩？
+  - MessageGroupId: 200130210
+    Id: 200130320
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 상관은 없겠지만…… 꽤나 지루한 일일 텐데, 괜찮겠어?
+    MessageJP: 別に良いけど……結構地味だし、面白くないと思うよ？
+    MessageCN: 倒也不是不行……不过维护应该是相当枯燥的工作，不是很有趣哦？
+    MessageEN: That's fine, but it'll be boring. Are you sure?
+    MessageTH: 'ไม่มีปัญหาหรอก... แต่มันออกจะน่าเบื่อ
+
+      สักหน่อย คุณครูไม่เป็นไรแน่นะ?'
+    MessageTW: 是沒關係啦……不過挺枯燥的，我覺得不怎麼有趣哦？
+  - MessageGroupId: 200130220
+    Id: 200130330
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 괜찮아.
+    MessageJP: うん、それでも
+    MessageCN: 嗯，就算这样我也想看看
+    MessageEN: I'm sure.
+    MessageTH: ไม่เป็นไรหรอก
+    MessageTW: 嗯，沒關係
+  - MessageGroupId: 200130230
+    Id: 200130340
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠어. 그럼 오늘 자정에 내가 알려주는 주소로 찾아와.
+    MessageJP: 分かった。じゃあ今日の0時に集合で。場所は後で送る
+    MessageCN: 明白了。那我们就今天0点集合吧。我之后把地点给老师
+    MessageEN: All right. I'll send you the location. Be there by midnight.
+    MessageTH: 'เข้าใจแล้วล่ะ ถ้างั้นตอนเที่ยงคืนก็มา
+
+      เจอกันที่สถานที่ที่ฉันบอกนะ'
+    MessageTW: 我知道了。那今晚0點集合吧，地點之後再通知你
+  - MessageGroupId: 200130230
+    Id: 200130350
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다만 서버 점검이 언제 끝날지 모르니까……
+    MessageJP: ただ、今回は内容的にいつ終わるか分からないから
+    MessageCN: 但是，我不确定这次的维护要到什么时候才能结束
+    MessageEN: But I don't know how long the job will take.
+    MessageTH: 'แต่ว่าฉันบอกไม่ได้หรอกนะ
+
+      ว่าจะซ่อมเสร็จเมื่อไรน่ะ'
+    MessageTW: 不過，這次不知道會做到幾點
+  - MessageGroupId: 200130230
+    Id: 200130360
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200135
+    NextGroupId: 200130240
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생도 같이 밤을 새우려면 오후에라도 잠깐 눈을 붙여 두는 게 좋을 거야.
+    MessageJP: 徹夜覚悟だし、今のうちに少しでも寝ておいた方が良いよ
+    MessageCN: 所以老师还是做好通宵的准备，现在先睡一会比较好
+    MessageEN: Make sure to get rest beforehand, since we'll be up all night.
+    MessageTH: 'ถ้าคุณครูจะอยู่โต้รุ่งด้วยกัน ก็พักงีบ
+
+      ตอนกลางวันสักหน่อยดีกว่านะ'
+    MessageTW: 我已經做好通霄的覺悟了，老師最好也趁現在睡一下比較好哦
+  - MessageGroupId: 200130240
+    Id: 200130370
+    CharacterId: 20013
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 200130230
+    PreConditionFavorScheduleId: 200135
+    FavorScheduleId: 0
+    NextGroupId: 200130250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 베리타스의 부원들이 자꾸 멋대로 흥미 위주의 해킹을 시도해서 고민이야.
+    MessageJP: 知ってるかもしれないけどうちのヴェリタスの子たち、すぐ興味本位でハッキングとかしがちで……
+    MessageCN: 虽然老师可能早就有所耳闻，真理部的孩子们一直是出于兴趣就干出入侵行为……
+    MessageEN:
+      I'm concerned that the younger Veritas members will keep hacking just
+      for fun.
+    MessageTH: 'ฉันกังวลนิดหน่อยว่าสมาชิกของเวอริทัส
+
+      จะไปแฮ็กคอมพิวเตอร์ของที่ไหนเพราะ
+
+      ความสนุกน่ะ'
+    MessageTW: 雖然你應該也知道，我們貝里塔斯的孩子們常常出於興趣進行駭入……
+  - MessageGroupId: 200130250
+    Id: 200130380
+    CharacterId: 20013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다행히 큰 문제로 커지지는 않는 것 같지만 자꾸 이렇게 말썽을 부리다니…….
+    MessageJP: 幸いまだそれほど大きな問題にはなってないけど、しょっちゅう揉め事ばっかり起きてるんだよね
+    MessageCN: 虽然好在到现在为止都没惹上什么大麻烦，不过也经常被卷进纠纷里面呢
+    MessageEN: It hasn't gotten out of hand yet, but they do get into trouble sometimes.
+    MessageTH: 'โชคดีที่ไม่ได้มีปัญหาใหญ่อะไร
+
+      ถึงยังได้เล่นซนกันอยู่แบบนี้...'
+    MessageTW: 幸好還沒有搞出什麼大問題，不過倒是引發了一些欺負同學的事件
+  - MessageGroupId: 200130250
+    Id: 200130390
+    CharacterId: 20013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이러다간 해커 동아리로서의 이미지가 실추되겠어…….
+    MessageJP: このままだと、ハッカーとしてのイメージが……
+    MessageCN: 要是这样的话，黑客的形象就……
+    MessageEN: I'm afraid of what it could do to our club's reputation.
+    MessageTH: 'แต่ถ้าปล่อยไว้แบบนี้คงกลายเป็น
+
+      ภาพจำว่าเป็นชมรมแฮ็กเกอร์แน่ๆ'
+    MessageTW: 再這樣下去的話，駭客的形象就……
+  - MessageGroupId: 200130260
+    Id: 200130400
+    CharacterId: 20013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 해커는 그런 이미지가 있는데. ……역시 편견인가?
+    MessageJP: 結構ハッカーってそういうイメージがあったけど、やっぱりそれって偏見？
+    MessageCN: 我对黑客还真有那样的印象，果然是我有偏见吗？
+    MessageEN:
+      I thought that's what hackers were supposed to do... Or is that just
+      a stereotype?
+    MessageTH: 'แฮ็กเกอร์ก็มีภาพลักษณ์แบบนั้น
+
+      ไม่ใช่เหรอ? งั้นเหรอ...?'
+    MessageTW: 駭客好像大多都給人那種印象，果然是偏見嗎？
+  - MessageGroupId: 200130270
+    Id: 200130410
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130280
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 물론 요즈음은 <해커>라 하면 다들 그런 블랙 해커를 떠올리지만…….
+    MessageJP: もちろん特に最近は、「ハッカー」っていうとみんな「ブラックハッカー」を思い浮かべるみたいだけど……
+    MessageCN: 当然，尤其是最近一提到黑客，大家脑海中就浮现出类似“黑帽黑客”的形象……
+    MessageEN:
+      These days, people only think of black hat hackers when they hear the
+      word "hacker".
+    MessageTH: 'แน่นอนว่าถ้าพูดถึง <แฮ็กเกอร์> ละก็
+
+      ทุกคนคงนึกถึงแฮ็กเกอร์สายมืดกันหมด...'
+    MessageTW: 最近每次提到「駭客」，大家似乎都會想到「黑帽駭客」……
+  - MessageGroupId: 200130270
+    Id: 200130420
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200130280
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 원래의 해커는 지금의 화이트 해커에 가까운, 보안 전문가를 의미하는 말이었다고.
+    MessageJP: 本来の「ハッカー」はほとんど今の「ホワイトハッカー」に近い、「セキュリティの専門家」を意味する言葉だったの
+    MessageCN: 其实本来黑客的意思基本上和现在的“白帽黑客”差不多，就是“安全专家”的意思
+    MessageEN:
+      '"Hacker" used to mean something like a security expert. AKA, a white
+      hat hacker.'
+    MessageTH: 'แต่ที่จริงแล้วแฮ็กเกอร์น่ะหมายถึงผู้
+
+      เชี่ยวชาญด้านความปลอดภัย สมัยนี้คำ
+
+      ที่ใกล้ที่สุดก็คงเป็นแฮ็กเกอร์หมวกขาวน่ะ'
+    MessageTW: 不過本來的「駭客」大多比較接近現在所說的「白帽駭客」，有著「保安專家」的意思
+  - MessageGroupId: 200130280
+    Id: 200130430
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 으으, 시간이 날 때마다 부원들에게 올바른 해커 윤리에 대해 똑똑히 가르쳐주어야 했는데…….
+    MessageJP: はぁ、また時間を見つけてうちの子たちにハッカー倫理について教育しておかないと……そういう手段に頼りっぱなしじゃダメなのに……
+    MessageCN: 唉，下次再找时间教育一下这帮孩子黑客伦理吧……明明一味依靠这种手段是不行的……
+    MessageEN: I should have taught the members about hacker ethics when I had time...
+    MessageTH: 'อืม สงสัยถ้ามีเวลาก็จะอบรมจริยธรรม
+
+      ของแฮ็กเกอร์ให้พวกสมาชิกอยู่หรอก...'
+    MessageTW: 唉，得找時間教育社團的孩子們駭客倫理才行……總是依靠那種手段是不行的……
+  - MessageGroupId: 200130280
+    Id: 200130440
+    CharacterId: 20013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 200136
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바빠서 부실에 자주 들리지 못하는 게 이럴 땐 아쉽네.
+    MessageJP: 最近は忙しくて、あまり部活に顔も出せてないし……
+    MessageCN: 我最近也很忙，基本没怎么在社团活动露过脸……
+    MessageEN: I haven't visited the club room recently because I've been so busy.
+    MessageTH: 'แต่น่าเสียดายที่ช่วงนี้ฉันยุ่งมาก
+
+      จนไม่มีเวลาเลยน่ะสิ'
+    MessageTW: 最近實在有點忙，所以比較少去社團露臉……

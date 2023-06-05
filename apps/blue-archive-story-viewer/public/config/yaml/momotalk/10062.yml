@@ -1,0 +1,562 @@
+CharacterId: 10062
+translator: Soraの天空
+title:
+  - GroupId: 1006202
+    FavorScheduleId: 100622
+    CharacterId: 10062
+    TextJp: トキの日課
+    TextCn: 时的每日工作
+    TextKr: 평소의 일과
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1006203
+    FavorScheduleId: 100623
+    CharacterId: 10062
+    TextJp: 普通の学園生活
+    TextCn: 普通的校园生活
+    TextKr: 학원 생활
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1006205
+    FavorScheduleId: 100625
+    CharacterId: 10062
+    TextJp: 趣味の悩み
+    TextCn: 兴趣的烦恼
+    TextKr: 취미에 대한 고민
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1006206
+    FavorScheduleId: 100626
+    CharacterId: 10062
+    TextJp: メイドの中のメイド
+    TextCn: 女仆中的女仆
+    TextKr: 어느 날의 사소한 지각
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 100620010
+    Id: 100620010
+    CharacterId: 10062
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님께서는 오늘도 어김없이 출근이라고 들었습니다.
+    MessageJP: 先生、今日もお仕事だと聞きました
+    MessageCN: 老师，听说您今天也要工作
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620020
+    Id: 100620020
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620030
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 샬레의 업무란 언제나 혹독한 것이로군요.
+    MessageJP: シャーレはいつも大変そうですね
+    MessageCN: 夏莱的工作好像一直都很辛苦呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620030
+    Id: 100620030
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 누구……?
+    MessageJP: 誰……？
+    MessageCN: 你是……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620040
+    Id: 100620040
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 역시, 이런 일에는 보좌가 필요하다고 판단됩니다.
+    MessageJP: やはり、そんな時には補佐が必要でしょう
+    MessageCN: 在这种情况下，老师您也需要有人辅佐吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620040
+    Id: 100620050
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 곧 찾아뵙겠습니다. 선생님.
+    MessageJP: すぐにお伺いします、先生
+    MessageCN: 我马上前来拜访老师您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620050
+    Id: 100620060
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100622
+    NextGroupId: 100620060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러니까, 누구……?!
+    MessageJP: 本当に誰！？
+    MessageCN: 说真的你是谁啊！？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620060
+    Id: 100620070
+    CharacterId: 10062
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100620050
+    PreConditionFavorScheduleId: 100622
+    FavorScheduleId: 0
+    NextGroupId: 100620070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님. 지금 잠시 시간 괜찮으실지요.
+    MessageJP: 先生、今お時間よろしいですか？
+    MessageCN: 老师，现在可否占用您些时间？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620070
+    Id: 100620080
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620080
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 한 통의…… '편지'를 받았는데, 조금 곤란한 일이 되고 말았습니다.
+    MessageJP: 見慣れない手紙が届いたので、どうしたらよいものか
+    MessageCN: 我收到一封陌生的来信，不知道该怎么办才好
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620080
+    Id: 100620090
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 웬만한 일이라면 저 혼자 처리해야 하는 것이 마땅하겠습니다만.
+    MessageJP: お忙しいようでしたら、一人で解決しようかと思っておりますが……
+    MessageCN: 如果您很忙的话，我自己一个人也可以解决……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620080
+    Id: 100620100
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번 일 만큼은 어찌해야 할 지 모르겠습니다.
+    MessageJP: まずは一度ご相談を、と思い
+    MessageCN: 不过我想首先跟老师您征求一下意见
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620090
+    Id: 100620110
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 토키에게 곤란한 일이? 잠시만 기다려!
+    MessageJP: トキが困ってるの！？大丈夫？すぐ行くから！
+    MessageCN: 时遇到麻烦了吗！？没事吧？我马上就赶过来！
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620100
+    Id: 100620120
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 감사합니다.
+    MessageJP: ありがとうございます
+    MessageCN: 谢谢老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620100
+    Id: 100620130
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100623
+    NextGroupId: 100620110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면, 학교에서 뵙겠습니다.
+    MessageJP: それでは、学校まで来ていただいてもよろしいでしょうか？
+    MessageCN: 那么，可以请老师您来学校这边一趟吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620110
+    Id: 100620140
+    CharacterId: 10062
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100620100
+    PreConditionFavorScheduleId: 100623
+    FavorScheduleId: 0
+    NextGroupId: 100620120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘은 제가 샬레의 당번인 것으로 알고 있습니다만.
+    MessageJP: 今日は私がシャーレ当番の日だと伺っておりますが
+    MessageCN: 我听说今天轮到我在夏莱值日
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620120
+    Id: 100620150
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이 정보에 오류는 없을까요?
+    MessageJP: スケジュールに間違いはないでしょうか？
+    MessageCN: 我没有弄错日程安排吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620130
+    Id: 100620160
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620140
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 토키의 첫 당번인가…… 기대되네.
+    MessageJP: トキの初当番、楽しみにしてるね
+    MessageCN: 时的初次值日，我很期待哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620140
+    Id: 100620170
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……?
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620140
+    Id: 100620180
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620150
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 말씀인지는 잘 모르겠습니다만.
+    MessageJP: よく分かりませんが……
+    MessageCN: 虽然不是很懂……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620140
+    Id: 100620190
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620150
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 기대에 부응할 수 있도록, 최선을 다하겠습니다.
+    MessageJP: 先生の期待にお応えできるよう、全力で補佐いたします
+    MessageCN: 为了回应您的期待，我会全力辅助老师您的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620150
+    Id: 100620200
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100625
+    NextGroupId: 100620160
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면 샬레에서 뵙겠습니다. 선생님.
+    MessageJP: では、後ほどお会いしましょう
+    MessageCN: 那么，我们过会再见
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620160
+    Id: 100620210
+    CharacterId: 10062
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100620150
+    PreConditionFavorScheduleId: 100625
+    FavorScheduleId: 0
+    NextGroupId: 100620170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620170
+    Id: 100620220
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘은 개인적인 일이 있어, 평소보다 조금 늦을 듯합니다.
+    MessageJP: 今日は少し用事が長引いて、いつもより遅くなりそうです
+    MessageCN: 今天我被一些事情拖了时间，可能会比平时晚一点儿过来
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620180
+    Id: 100620230
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620190
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 보좌 업무를 제 때 시행해야 하는데, 송구스럽습니다.
+    MessageJP: お約束した時間通りに補佐できず、申し訳ありません
+    MessageCN: 非常抱歉，没能在约定好的时间前来辅佐您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620190
+    Id: 100620240
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620200
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: '어라, 그건 조금 놀라운 일이네. '
+    MessageJP: 大丈夫だけど、トキが遅れるなんて珍しいね
+    MessageCN: 没关系的，不过时会迟到真是少见呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620200
+    Id: 100620250
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 일이라도 있는지, 물어봐도 돼?
+    MessageJP: 何があったのか聞いてもいい？
+    MessageCN: 可以问一下发生什么事了吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620210
+    Id: 100620260
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 음.
+    MessageJP: いえ
+    MessageCN: 没
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620210
+    Id: 100620270
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 대단한 일은 아닙니다.
+    MessageJP: 大した用事ではありません
+    MessageCN: 也不是什么要紧的事情
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620220
+    Id: 100620280
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620230
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 너무 심려치 말아 주셨으면 합니다.
+    MessageJP: あまり心配なさらないでください
+    MessageCN: 不用劳烦老师您这么担心我
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100620230
+    Id: 100620290
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100626
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러면 나중에 뵙겠습니다.
+    MessageJP: では、また後ほどお会いしましょう
+    MessageCN: 那么，我们过会再见
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''

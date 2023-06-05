@@ -1,0 +1,1127 @@
+CharacterId: 10006
+translator: 今天早睡了吗
+title:
+  - GroupId: 1000602
+    FavorScheduleId: 100062
+    CharacterId: 10006
+    TextJp: 彼女の誤解
+    TextCn: 她的误解
+    TextKr: 그녀의 오해
+    TextEn: A Big Misunderstanding
+    TextTh: ความเข้าใจผิดของเด็กสาวคนนั้น
+    TextTw: 她的誤會
+  - GroupId: 1000603
+    FavorScheduleId: 100063
+    CharacterId: 10006
+    TextJp: 校庭での休憩
+    TextCn: 校园中的休息
+    TextKr: 교정에서의 휴식
+    TextEn: Resting on Campus
+    TextTh: การพักผ่อนในสนามโรงเรียน
+    TextTw: 於中庭的休息
+  - GroupId: 1000605
+    FavorScheduleId: 100065
+    CharacterId: 10006
+    TextJp: 秘密の取引
+    TextCn: 秘密交易
+    TextKr: 비밀스러운 거래
+    TextEn: A Secret Trade
+    TextTh: การแลกเปลี่ยนที่เป็นความลับ
+    TextTw: 秘密交易
+  - GroupId: 1000606
+    FavorScheduleId: 100066
+    CharacterId: 10006
+    TextJp: 優しい治療
+    TextCn: 温柔的治疗
+    TextKr: 상냥한 치료
+    TextEn: Tender Treatment
+    TextTh: การรักษาที่อ่อนโยน
+    TextTw: 溫柔的治療
+  - GroupId: 1000608
+    FavorScheduleId: 100068
+    CharacterId: 10006
+    TextJp: 先生の誤解
+    TextCn: 老师的误解
+    TextKr: 선생의 오해
+    TextEn: Sensei's Misunderstanding
+    TextTh: ความเข้าใจผิดของคุณครู
+    TextTw: 老師的誤會
+content:
+  - MessageGroupId: 100060010
+    Id: 520
+    CharacterId: 10006
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 그 소문 들었어?
+    MessageJP: 先生、あの噂聞いた？
+    MessageCN: 老师听说那个传闻了吗？
+    MessageEN: Sensei, did you hear the rumor?
+    MessageTH: คุณครู ได้ยินข่าวลือนั้นหรือยัง?
+    MessageTW: 老師，聽說那個傳聞了嗎？
+  - MessageGroupId: 100060020
+    Id: 521
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060030
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 소문?
+    MessageJP: 何の噂？
+    MessageCN: 什么传闻？
+    MessageEN: What rumor?
+    MessageTH: ข่าวลืออะไรเหรอ?
+    MessageTW: 什麼傳聞？
+  - MessageGroupId: 100060030
+    Id: 522
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 듣자 하니 최근 외진 골목길에서 여학생들의 치마 속을 훔쳐보려는 변태가 출몰한다나 봐.
+    MessageJP: 女子生徒のスカートを覗こうとするヘンタイが出没してる、って噂があって
+    MessageCN: 有传闻说，最近有个偷窥女生裙底的变态出没
+    MessageEN:
+      From what I've heard, there's a pervert hanging around the alleys,
+      trying to flip skirts.
+    MessageTH: 'ก็ช่วงนี้น่ะสิ มีโรคจิตที่พยายามแอบดูใต้
+
+      กระโปรงนักเรียนหญิงตามถนนซอยเปลี่ยว'
+    MessageTW: 有偷窺女學生裙底的變態出沒的傳聞
+  - MessageGroupId: 100060030
+    Id: 523
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 참, 세상 흉흉하기도 하지.
+    MessageJP: まったく、嘆かわしい世の中だ
+    MessageCN: 还真是世风日下啊
+    MessageEN: Ugh, what an ugly world.
+    MessageTH: โลกนี้ชักอยู่ยากขึ้นแล้ว
+    MessageTW: 真是的，這世道真可嘆
+  - MessageGroupId: 100060040
+    Id: 524
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060050
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그것참 큰일이네…….
+    MessageJP: それは大変だね
+    MessageCN: 那可真是麻烦事啊
+    MessageEN: That's terrible...
+    MessageTH: นั่นมันเรื่องใหญ่เลยนะ...
+    MessageTW: 這可不得了呢
+  - MessageGroupId: 100060050
+    Id: 525
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님도 혹시 수상한 변태를 보거든 게헨나 선도부에 바로 연락해줘.
+    MessageJP: 先生も、もし怪しいヘンタイを見かけたら、すぐ風紀委員会に連絡して
+    MessageCN: 老师如果见到了可疑的变态，也请立即联系风纪委员会
+    MessageEN:
+      If you see someone suspicious, please contact the Gehenna Prefect Team
+      right away.
+    MessageTH: 'ถ้าคุณครูเห็นโรคจิตน่าสงสัยล่ะก็
+
+      มาแจ้ง คณะกรรมการวินัยของ
+
+      เกเฮนน่าทันทีเลยนะ'
+    MessageTW: 老師如果看見了可疑的變態，請立即聯絡糾察部
+  - MessageGroupId: 100060060
+    Id: 526
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100062
+    NextGroupId: 100060070
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 알겠어, 맡겨둬.
+    MessageJP: 分かった、任せて
+    MessageCN: 明白了，交给我吧
+    MessageEN: Okay, got it.
+    MessageTH: ได้เลย ไม่ต้องห่วง
+    MessageTW: 知道了，交給我吧
+  - MessageGroupId: 100060070
+    Id: 527
+    CharacterId: 10006
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100060060
+    PreConditionFavorScheduleId: 100062
+    FavorScheduleId: 0
+    NextGroupId: 100060080
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 최근 게헨나 학원으로 자주 출장을 오던 것 같던데……
+    MessageJP: 先生最近、ゲヘナによく出張に来てるみたいだけど……
+    MessageCN: 老师最近好像经常来格黑娜出差……
+    MessageEN: Sensei, you've been coming to the Gehenna Academy a lot these days...
+    MessageTH: 'หมู่นี้คุณครูมาทำงานที่สถาบันเกเฮนน่า
+
+      บ่อยจังเลยนะ'
+    MessageTW: 老師最近好像經常來格黑娜出差……
+  - MessageGroupId: 100060080
+    Id: 528
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근 게헨나 학원과 관련된 업무가 많아져서.
+    MessageJP: このところ、ゲヘナ学園に関する仕事が多くって
+    MessageCN: 毕竟最近关于格黑娜的工作有点多
+    MessageEN: Well, I've had a lot of work to do at Gehenna lately.
+    MessageTH: 'ช่วงนี้งานเกี่ยวกับสถาบันเกเฮนน่า
+
+      มีเยอะขึ้นน่ะ'
+    MessageTW: 最近有很多關於格黑娜學園的工作
+  - MessageGroupId: 100060080
+    Id: 529
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060100
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이오리 쨩을 자주 보고 싶은 마음에 그만…….
+    MessageJP: イオリちゃんに会いたくって、つい……
+    MessageCN: 因为想见见小伊织，所以忍不住就……
+    MessageEN: I can't help wanting to see you.
+    MessageTH: 'มาบ่อยเพราะครูอยากเจออิโอริจัง
+
+      ยังไงล่ะ...'
+    MessageTW: 想和伊織醬見面，忍不住就……
+  - MessageGroupId: 100060090
+    Id: 530
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇구나……. 수고가 많네.
+    MessageJP: ……そうなんだ。お疲れ様
+    MessageCN: ……这样啊。辛苦老师了
+    MessageEN: I see... You're working hard.
+    MessageTH: แบบนี้นี่เอง... เหนื่อยน่าดูเลยนะ
+    MessageTW: ……原來如此。辛苦了
+  - MessageGroupId: 100060100
+    Id: 531
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060110
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……하아? 무슨 소리를 하는 거야?
+    MessageJP: ……は？何を言ってるんだ？
+    MessageCN: ……哈？你说什么？
+    MessageEN: '*sigh* What are you talking about?'
+    MessageTH: หืม? พูดอะไรของคุณครูน่ะ?
+    MessageTW: ……哈？說什麼呢？
+  - MessageGroupId: 100060110
+    Id: 532
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그나저나 정작 학원에서는 선생님과 마주친 일이 거의 없네.
+    MessageJP: でも実際、学園ではあまり会わないな
+    MessageCN: 但实际上，好像我没怎么在学校里和老师见过面啊
+    MessageEN: In any case, I almost never run into you at the academy.
+    MessageTH: 'จะว่าไป ไม่ค่อยได้เจอคุณครูในสถาบัน
+
+      เท่าไหร่เลย'
+    MessageTW: 但實際上，我們很少在學校內見到面呢
+  - MessageGroupId: 100060110
+    Id: 533
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 출장을 오면 주로 어디서 시간을 보내는 거야?
+    MessageJP: 出張に来る時は、どこにいるんだ？
+    MessageCN: 老师出差来这边的时候，一般都会在哪？
+    MessageEN: Where do you spend most of your time when you come here?
+    MessageTH: ปกติมาทำงานแล้วจะไปอยู่ที่ไหนเหรอ?
+    MessageTW: 來出差的時候，都去哪裡啊？
+  - MessageGroupId: 100060120
+    Id: 534
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060130
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 게헨나 학원 교정.
+    MessageJP: 校庭とか
+    MessageCN: 一般在操场旁边之类的
+    MessageEN: At Gehenna.
+    MessageTH: อยู่ในสนามน่ะ
+    MessageTW: 中庭之類的
+  - MessageGroupId: 100060130
+    Id: 535
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……교정? 거기에 뭐가 있는데?
+    MessageJP: ……校庭？何のために？
+    MessageCN: ……操场？做什么？
+    MessageEN: The campus? What's at the campus?
+    MessageTH: '...สนาม? ที่นั่นมีอะไรให้ทำงั้นเหรอ?'
+    MessageTW: ……中庭？為了什麼？
+  - MessageGroupId: 100060140
+    Id: 536
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나중에 만나게 되면 알려줄게.
+    MessageJP: 今度会った時に教えてあげるね
+    MessageCN: 下次见面的时候告诉你吧
+    MessageEN: I'll tell you in person.
+    MessageTH: ครูจะบอกตอนที่เจอกันคราวหน้านะ
+    MessageTW: 下次見面時告訴你
+  - MessageGroupId: 100060150
+    Id: 537
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100063
+    NextGroupId: 100060160
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어쩐지 수상한데…….
+    MessageJP: なんか、怪しいな……
+    MessageCN: 总觉得老师这样很可疑啊……
+    MessageEN: That's strange...
+    MessageTH: น่าสงสัยแฮะ...
+    MessageTW: 總覺得很可疑啊……
+  - MessageGroupId: 100060160
+    Id: 538
+    CharacterId: 10006
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100060150
+    PreConditionFavorScheduleId: 100063
+    FavorScheduleId: 0
+    NextGroupId: 100060170
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 최근 첩보 멤버의 보고에 따르면 블랙마켓의 밀수품 거래량이 늘어난 것 같아.
+    MessageJP: 報告だと最近、ブラックマーケットで密輸品の取引量が増えてるらしい
+    MessageCN: 根据线报，最近黑市走私商品的交易量好像增长了
+    MessageEN:
+      According to a recent report from intelligence, the volume of contraband
+      on the Black Market seems to have increased.
+    MessageTH: 'ล่าสุดหน่วยข่าวกรองเพิ่งรายงานมาว่ามี
+
+      การค้าสินค้าหนีภาษีในตลาดมืดเยอะขึ้น
+
+      กว่าเดิม'
+    MessageTW: 報告顯示，近期黑市走私品的交易量增加中
+  - MessageGroupId: 100060170
+    Id: 539
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 생활에 필요한 물건이라면 일반 마켓에서도 다 구할 수 있는데…
+    MessageJP: 生活に必要なものなら、普通のマーケットで何でも手に入るのに……
+    MessageCN: 生活必须品之类的东西，不是在普通的市场上就全都能买到吗……
+    MessageEN:
+      You can get everything you need for your daily life at the regular
+      market...
+    MessageTH: 'ถ้าเป็นของกินของใช้ทั่วไป ไปซื้อเอาใน
+
+      ตลาดธรรมดาก็น่าจะได้นี่นา...'
+    MessageTW: 如果是生活必需品，普通市場就都能買到了……
+  - MessageGroupId: 100060170
+    Id: 540
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060180
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 도대체 블랙마켓에서는 어떤 물건을 거래하는 거지?
+    MessageJP: いったいブラックマーケットで、どんな取引が行われてるんだ？
+    MessageCN: 黑市到底在进行什么交易啊？
+    MessageEN: So what's being traded on the Black Market?
+    MessageTH: ในตลาดมืดค้าขายสินค้าแบบไหนกันนะ?
+    MessageTW: 到底都在黑市進行什麼樣的交易呢？
+  - MessageGroupId: 100060180
+    Id: 541
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나는 관심이 없어서 잘 모르겠는데.
+    MessageJP: 私は知らないなあ、興味も無いし……
+    MessageCN: 不知道啊，毕竟我对那个也不感兴趣……
+    MessageEN: I'm not really interested, so I don't know much about it.
+    MessageTH: ไม่รู้สิ.. ครูไม่ค่อยสนใจเรื่องนี้เท่าไหร่
+    MessageTW: 我不知道，也沒有興趣……
+  - MessageGroupId: 100060190
+    Id: 542
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060200
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그야 그렇겠지.
+    MessageJP: それはそうだろうな
+    MessageCN: 那倒是
+    MessageEN: I can see that.
+    MessageTH: ก็คงเป็นแบบนั้น
+    MessageTW: 我想也是
+  - MessageGroupId: 100060190
+    Id: 543
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 평범한 사람이라면 블랙마켓에 발을 들일 일도 없을 테니까.
+    MessageJP: 普通の人がブラックマーケットに足を踏み入れることなんてそうそう無い
+    MessageCN: 一般人也不会做出踏足黑市的事情
+    MessageEN: A normal person has no reason to even consider the Black Market.
+    MessageTH: 'คนทั่วไปไม่มีทางเหยียบเข้าไปในตลาด
+
+      มืดอยู่แล้ว'
+    MessageTW: 普通人是不會踏入黑市的
+  - MessageGroupId: 100060190
+    Id: 544
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 가급적 선생님도 블랙마켓의 악당들과는 엮이지 않게 조심하라고.
+    MessageJP: 先生も、ブラックマーケットの悪党たちとは関わらないよう気を付けて
+    MessageCN: 老师也千万记住，别和黑市的歹徒扯上关系了
+    MessageEN: Try not to get involved with those Black Market scoundrels, Sensei.
+    MessageTH: 'คุณครูก็ระวังตัวด้วยล่ะ อย่าไปมีเรื่อง
+
+      ข้องเกี่ยวกับคนไม่ดีในตลาดมืด'
+    MessageTW: 老師也要注意不要和黑市的惡黨們扯上關係
+  - MessageGroupId: 100060200
+    Id: 545
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100065
+    NextGroupId: 100060210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 명심할게.
+    MessageJP: うん、肝に銘じるね
+    MessageCN: 嗯，铭记在心
+    MessageEN: I'll keep that in mind.
+    MessageTH: ครูจะระวังตัว
+    MessageTW: 嗯，我會銘記在心
+  - MessageGroupId: 100060210
+    Id: 546
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100060200
+    PreConditionFavorScheduleId: 100065
+    FavorScheduleId: 0
+    NextGroupId: 100060220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정말로 내 졸업 앨범을 이상한 일에 쓰려는 게 아니지?
+    MessageJP: ……先生、本当に私の卒業アルバムを変なことに使ったりしないだろうな？
+    MessageCN: ……老师，你真的没拿我的毕业相册做什么奇怪的事情吧？
+    MessageEN: Are you sure you're not gonna use my yearbook for anything weird?
+    MessageTH: 'ไม่ได้จะเอาอัลบั้มจบการศึกษาของฉันไป
+
+      ใช้ในทางที่ไม่ดีใช่ไหม?'
+    MessageTW: ……老師，真的不會把我的畢業紀念冊用在奇怪的事情上吧？
+  - MessageGroupId: 100060210
+    Id: 547
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님을 믿고 맡긴 거니까…… 다른 사람에게 보여주거나 하면 안 돼!
+    MessageJP: 先生を信じて渡したんだから……他の人に見せたりするなよ！
+    MessageCN: 我是相信老师才给你的……你可绝对不能给其他人看啊！
+    MessageEN: I trust you with it...but don't show it to anyone else!
+    MessageTH: 'นี่ฉันเชื่อใจคุณครูนะ... อย่าเอาไปให้คน
+
+      อื่นดูล่ะ!'
+    MessageTW: 我是相信老師才交給你的……不要給別人看喔！
+  - MessageGroupId: 100060220
+    Id: 548
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이오리.
+    MessageJP: ……ねえ、イオリ
+    MessageCN: ……那个，伊织
+    MessageEN: Iori.
+    MessageTH: อิโอริ
+    MessageTW: ……嘿，伊織
+  - MessageGroupId: 100060230
+    Id: 549
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어, 어? 갑자기 왜?
+    MessageJP: ん？なに？
+    MessageCN: 嗯？干什么？
+    MessageEN: H-Huh? What is it?
+    MessageTH: หืม? มีอะไรเหรอ?
+    MessageTW: 嗯？什麼？
+  - MessageGroupId: 100060240
+    Id: 550
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 초등학교 시절의 이오리도 귀엽더라.
+    MessageJP: 小学生の時のイオリも可愛い
+    MessageCN: 小学时候的伊织也很可爱呢
+    MessageEN: You were cute in elementary school too.
+    MessageTH: อิโอริสมัยเป็นเด็กประถมก็น่ารักดีนะ
+    MessageTW: 小學時期的伊織也很可愛呢
+  - MessageGroupId: 100060250
+    Id: 551
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060260
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 시끄러워! 죽어!
+    MessageJP: うるさい！死ね！
+    MessageCN: 吵死了！去死啊！
+    MessageEN: Shut up! I'll kill you!
+    MessageTH: หนวกหูน่า! หยุดพูดเลย!
+    MessageTW: 吵死了！去死！
+  - MessageGroupId: 100060260
+    Id: 552
+    CharacterId: 10006
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100060250
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 오늘 선도부 활동에서는 꽤나 신세를 졌네. 고마워.
+    MessageJP: 今日の風紀委員会の活動では世話になった、ありがとう
+    MessageCN: 非常感谢老师今天在风纪委员会的活动中给予的关照
+    MessageEN: You helped me a lot today. Thank you.
+    MessageTH: 'วันนี้คุณครูช่วยฉันในงานของคณะกรรม
+
+      การวินัยได้เยอะเลย ขอบคุณนะ'
+    MessageTW: 今天在糾察部的活動中承蒙關照，謝謝
+  - MessageGroupId: 100060270
+    Id: 553
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060271
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 나야말로
+    MessageJP: 私の方こそありがとう
+    MessageCN: 我这边才是，非常感谢
+    MessageEN: I'm the one who should be saying that.
+    MessageTH: ครูต่างหากที่ต้องขอบใจ
+    MessageTW: 我才要謝謝
+  - MessageGroupId: 100060271
+    Id: 554
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 게헨나 선도부에게 큰 도움을 받았어. 고마워.
+    MessageJP: イオリはもちろん、ゲヘナの風紀委員にも色々助けてもらったから
+    MessageCN: 伊织自不必说，格黑娜的风纪委员也帮了我很多忙
+    MessageEN: The Prefect Team is always helping me. Thank you.
+    MessageTH: 'สมาชิกคนอื่นในคณะกรรมการวินัย
+
+      ก็ช่วยครูเหมือนกัน ขอบคุณนะ'
+    MessageTW: 除了伊織，還有得到其他格黑娜糾察部成員的各種幫助
+  - MessageGroupId: 100060280
+    Id: 555
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님은 학생들과는 달리 총에 맞으면 정말로 위험할 수도 있으니까.
+    MessageJP: 先生は私たちと違って、銃で撃たれたら本当に危ないんだから
+    MessageCN: 毕竟老师和我们不一样，要是中弹的话就真的危险了
+    MessageEN: It's particularly dangerous for you if you get shot, Sensei.
+    MessageTH: 'คุณครูไม่ได้เก่งกาจเหมือนนักเรียนคนอื่น
+
+      นะ หากโดนยิงขึ้นมาก็เป็นเรื่องแน่'
+    MessageTW: 老師和我們不一樣，中彈的話就危險了
+  - MessageGroupId: 100060280
+    Id: 556
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060290
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 총을 사용하는 위험한 임무에는 우리가 함께하는 게 당연하지.
+    MessageJP: ああいう危険な任務なら、私たちが一緒に行くのは当たり前
+    MessageCN: 这种危险的任务，我们陪老师一起去也是理所当然的
+    MessageEN:
+      It only makes sense for us to join you on a dangerous mission when
+      guns are involved.
+    MessageTH: 'ภารกิจเสี่ยงอันตรายที่ต้องใช้ปืนน่ะ
+
+      ฝากให้พวกเราดีกว่า'
+    MessageTW: 如果是這麼危險的任務，我們一起去是理所當然的
+  - MessageGroupId: 100060290
+    Id: 557
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060291
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 하지만 이오리도
+    MessageJP: うん、ありがとね。そういえばイオリ、
+    MessageCN: 嗯，谢谢啦。但话说回来
+    MessageEN: But didn't you
+    MessageTH: แต่อิโอริก็...
+    MessageTW: 嗯，謝啦。話說回來
+  - MessageGroupId: 100060291
+    Id: 558
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아까 작전 중에 등을 다치지 않았어?
+    MessageJP: さっき作戦中に背中を怪我してなかった？
+    MessageCN: 伊织在刚刚的作战中背上也受伤了不是吗？
+    MessageEN: Get hurt during the mission?
+    MessageTH: เมื่อกี้เธอบาดเจ็บที่หลังมาไม่ใช่เหรอ?
+    MessageTW: 伊織在剛才的作戰中背部受傷了嗎？
+  - MessageGroupId: 100060300
+    Id: 559
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060310
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아…… 등의 그 상처 말인가.
+    MessageJP: ああ……そういえばそうだった
+    MessageCN: 啊啊……这么一说确实是
+    MessageEN: Oh... You mean the wound on my back?
+    MessageTH: อ่า... หมายถึงแผลที่หลังใช่ไหม?
+    MessageTW: 啊啊……這麼說來確實是呢
+  - MessageGroupId: 100060300
+    Id: 560
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100066
+    NextGroupId: 100060310
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 신경 쓰지 마. 대수롭지 않은 생채기일 뿐이니까.
+    MessageJP: 気にしないで、大した怪我じゃない
+    MessageCN: 别在意，不是什么严重的伤
+    MessageEN: Don't worry. It's just a scratch.
+    MessageTH: ไม่ต้องห่วงหรอก แค่รอยถลอกนิดหน่อยน่ะ
+    MessageTW: 別放在心上，不是什麼嚴重的傷
+  - MessageGroupId: 100060310
+    Id: 561
+    CharacterId: 10006
+    MessageCondition: FavorRankUp
+    ConditionValue: 8
+    PreConditionGroupId: 100060300
+    PreConditionFavorScheduleId: 100066
+    FavorScheduleId: 0
+    NextGroupId: 100060320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 이 문자를 보면 게헨나 정문 앞의 3거리 주택가로 와줘……
+    MessageJP: 先生、このメッセージを見たら、ゲヘナ正門前の住宅街3丁目に……
+    MessageCN: 老师，看到这条消息之后，请到格黑娜正门前的住宅街3号路来……
+    MessageEN:
+      Sensei, when you see this text, please come to the District 3 residential
+      area by Gehenna's main gate.
+    MessageTH: 'คุณครู ถ้าเห็นข้อความนี้ช่วยมาที่
+
+      บล็อกที่ 3 จากประตูใหญ่ของเกเฮนน่าที...'
+    MessageTW: 老師，看到這個訊息的時候，請來格黑娜正門前的住宅街3丁目……
+  - MessageGroupId: 100060320
+    Id: 562
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060330
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 조금…… 사소한 문제가 생겼어.
+    MessageJP: ちょっと……アクシデントがあって
+    MessageCN: 稍微……发生了点意外
+    MessageEN: There's...a bit of a problem.
+    MessageTH: พอดีว่า... ฉันเจอปัญหานิดหน่อยน่ะ
+    MessageTW: 發生了點……意外
+  - MessageGroupId: 100060330
+    Id: 563
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060340
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 무슨 문제인데?
+    MessageJP: アクシデントって、どんな？
+    MessageCN: 意外？什么样的意外？
+    MessageEN: What's the matter?
+    MessageTH: ปัญหาอะไรเหรอ?
+    MessageTW: 意外，哪樣的？
+  - MessageGroupId: 100060340
+    Id: 564
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무튼 묻지는 말고 빨리 와 줘!
+    MessageJP: いいから、早く来て！
+    MessageCN: 别废话了，快点过来！
+    MessageEN: Don't ask! Just get over here!
+    MessageTH: เดี๋ยวค่อยถามน่า รีบๆ มาหาก่อน!
+    MessageTW: 別管了，快來！
+  - MessageGroupId: 100060340
+    Id: 565
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100068
+    NextGroupId: 100060350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그리고 다른 학생들에게는 내가 여기 있다는 걸 절대 알리지 마!
+    MessageJP: あと！他の生徒たちには、絶対に私がここにいるって言うなよ！
+    MessageCN: 还有！绝对不许和其他学生说我在这里！
+    MessageEN: And don't tell the other students that I'm here!
+    MessageTH: แล้วก็ห้ามบอกนักเรียนคนอื่นล่ะว่าฉันอยู่ที่นี่
+    MessageTW: 還有！絕對不能告訴其他學生我在這裡！
+  - MessageGroupId: 100060350
+    Id: 566
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100060340
+    PreConditionFavorScheduleId: 100068
+    FavorScheduleId: 0
+    NextGroupId: 100060360
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님!!!
+    MessageJP: 先生！！
+    MessageCN: 老师！！
+    MessageEN: Sensei!
+    MessageTH: คุณครู!!!
+    MessageTW: 老師！！
+  - MessageGroupId: 100060350
+    Id: 567
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060360
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 방금 메일로 보낸 이 사진은 뭐야?!
+    MessageJP: さっき送られてきてたこの写真、何でまだ持ってるんだ！！
+    MessageCN: 刚刚发给我的照片你为什么还留着！！
+    MessageEN: What's with the photo you just sent to my email?!
+    MessageTH: รูปพวกนี้ที่ส่งมาทางอีเมลมันคืออะไรน่ะ?!
+    MessageTW: 剛才發來的照片，為什麼還留著！！
+  - MessageGroupId: 100060360
+    Id: 568
+    CharacterId: 10006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060370
+    FeedbackTimeMillisec: 1000
+    MessageType: Image
+    ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Iori_01
+    MessageKR: ''
+    MessageJP: ''
+    MessageCN: ''
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100060370
+    Id: 569
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060380
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 찍혔지?
+    MessageJP: よく撮れてるから、もしかしたら欲しいかなって
+    MessageCN: 因为拍得不错啊，说不定你也想要呢
+    MessageEN: That's a good shot, right?
+    MessageTH: ครูถ่ายเก่งใช่ไหมล่ะ?
+    MessageTW: 因為拍得不錯，想說你可能會想要
+  - MessageGroupId: 100060370
+    Id: 570
+    CharacterId: 10006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 귀엽지 않아?
+    MessageJP: 可愛くない？
+    MessageCN: 不可爱吗？
+    MessageEN: It's cute!
+    MessageTH: ถ่ายออกมาน่ารักดีนะว่ามั้ย?
+    MessageTW: 不覺得很可愛嗎？
+  - MessageGroupId: 100060380
+    Id: 571
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 잘 찍히긴 뭐가 잘 찍혔어!
+    MessageJP: いるか！！！！！
+    MessageCN: 要个头啊！
+    MessageEN: What do you mean it's a good shot?!
+    MessageTH: ถ่ายเก่งเกิ่งอะไรกันล่ะ!
+    MessageTW: 鬼才想要！！！！！
+  - MessageGroupId: 100060390
+    Id: 572
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 귀엽긴 뭐가 귀여워!
+    MessageJP: そういう問題じゃない！
+    MessageCN: 不是这个问题！
+    MessageEN: It's not cute at all!
+    MessageTH: แล้วก็ไม่มีส่วนไหนน่ารักเลยด้วย!
+    MessageTW: 才不是這個問題！
+  - MessageGroupId: 100060400
+    Id: 573
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060410
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내가 아까 분명히 사진은 지우라고 했잖아!
+    MessageJP: 消してって言ったじゃん！
+    MessageCN: 你不是说删了吗！
+    MessageEN: I told you to delete that photo!
+    MessageTH: ฉันบอกไปแล้วไม่ใช่เหรอว่าให้ลบรูป!
+    MessageTW: 不是說要刪掉嗎！
+  - MessageGroupId: 100060400
+    Id: 574
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060410
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 어째서 아직도 가지고 있는 거야!
+    MessageJP: 何でまだ持ってるんだ！
+    MessageCN: 为什么还留着！
+    MessageEN: Why do you still have it?!
+    MessageTH: แล้วทำไมถึงยังมีเก็บไว้อีกล่ะ!
+    MessageTW: 為什麼你還留著！
+  - MessageGroupId: 100060400
+    Id: 575
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100060410
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지워! 당장 지우라고!
+    MessageJP: 消して！今すぐ！
+    MessageCN: 删掉！现在！
+    MessageEN: Delete it! Now!
+    MessageTH: ลบเดี๋ยวนี้เลยนะ!
+    MessageTW: 刪掉！現在馬上！
+  - MessageGroupId: 100060410
+    Id: 576
+    CharacterId: 10006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 내 말 듣고 있는 거야? 빨리 지우라고!
+    MessageJP: 聞いてる！？ちょっと！！
+    MessageCN: 听到没！？喂！！
+    MessageEN: Are you listening to me? Delete it right now!
+    MessageTH: 'ฟังที่ฉันพูดอยู่หรือเปล่า? บอกให้รีบๆ
+
+      ลบยังไงล่ะ!'
+    MessageTW: 聽到了嗎！？喂！！

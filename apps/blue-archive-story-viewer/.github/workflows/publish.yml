@@ -1,0 +1,47 @@
+# workflow 工作流的名字，自定义
+name: publish
+
+# 配置触发条件
+on:
+  push: # 监听到分支的 push 动作
+    branches:
+      - master
+
+# 工作流的任务集配置
+jobs:
+  # 定义一个 job，id 为 build
+  build:
+    name: Build
+    # 指定任务执行的运行器。latest 表示是 GitHub 提供的最新稳定映像，但可能不是操作系统供应商提供的最新版本。
+    runs-on: ubuntu-latest
+
+    # 定义 job 的具体步骤
+    steps: # 每一个 step 或者是执行一个 action，或者是执行一个命令
+      - name: Checkout # 定义 step 的名字，方便作日志排查
+        uses: actions/checkout@v3 # uses 表示该步骤使用一个 action 。斜线前面的 'actions' 表示这是官方的action
+      - name: pnpm-use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.21.0
+
+      - name: Install and Build
+        run: |
+          pnpm install
+          pnpm build:github
+          tar -zcvf release.tgz ./dist/*
+      - name: Deploy to Server # 执行部署任务
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest # 第三方的 action
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          user: ${{ secrets.SERVER_USER }}
+          pass: ${{ secrets.SERVER_PASS }}
+          # 由于网络情况，很容易超时，设置为60s
+          connect_timeout: 60s
+          # 将工作目录下的文件全部拷贝到部署服务器的工作目录, scp 会自动覆盖
+          scp: |
+            ./release.tgz => ~
+          # 解压也会自动覆盖
+          last_ssh: |
+            cd ~
+            tar -xzvf release.tgz
+            cp -r ./dist/* /var/www/

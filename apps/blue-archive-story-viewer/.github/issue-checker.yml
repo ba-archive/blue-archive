@@ -1,0 +1,58 @@
+# For labels
+labels:
+  - name: bug
+    mode: add
+    content: bug
+    regexes: '[Bb]ug'
+  - name: enhancement
+    mode: add
+    content: enhancement
+    regexes: '[Ee]nhancement|[Ff]eature [Rr]equest|功能请求|新功能|(能|可以?|行)不(行|能|可以)'
+  - name: UI
+    mode: add
+    content: UI
+    regexes: '[Uu][Ii]|界面'
+  - name: momotalk
+    mode: add
+    content: 'module: momotalk'
+    regexes: '([Mm][Oo]){2}\s{0,}[Tt][Aa][Ll][Kk]'
+  - name: story
+    mode: add
+    content: 'module: story'
+    regexes: '([Ss][Tt][Oo][Rr][Yy])|故事|剧情'
+  - name: safari
+    mode: add
+    content: safari
+    regexes: '[Ss][Aa][Ff][Aa][Rr][Ii]'
+  - name: chrome
+    mode: add
+    content: chrome
+    regexes: '[Cc][Hh][Rr][Oo][Mm][Ee]|谷歌'
+  - name: firefox
+    mode: add
+    content: firefox
+    regexes: '[Ff][Ii][Rr][Ee][Ff][Oo][Xx]|火狐'
+  - name: duplicate
+    mode: add
+    content: duplicate
+    regexes: '[Dd]uplicate of #\d+|[和与跟]\s?#\d+\s?是?重复'
+  - name: wontfix
+    mode: add
+    content: wontfix
+    regexes: '没有(这个)?(想法|计划)'
+  - name: remove-question-tag
+    content:
+    regexes: '(?<!不|没|没法|没办法)(能|可以|成功|确认)复现|(?<!不|没|没法|没办法)复现了'
+  - name: remove-question
+    content: question
+    mode: remove
+    remove-if:
+      - remove-question-tag
+
+# For comments
+comments:
+  - name: Upload failed
+    regexes:
+      - "\\[Uploading"
+    content: '你有一些文件没有上传成功，请重新上传。'
+    mode: add

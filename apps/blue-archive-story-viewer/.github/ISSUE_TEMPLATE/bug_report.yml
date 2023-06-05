@@ -1,0 +1,43 @@
+name: 我要报告一个问题
+description: 它的行为好像和我预料的不太一样。
+labels:
+  - bug
+  - question
+title: '[Bug] '
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请在这里描述你的问题。如果你有截图，请在下面的文本框中上传。
+        Please describe your problem here. If you have screenshots, please upload them in the text box below.
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题描述
+      description: 在此详细描述你遇到的问题。
+      placeholder: 背景图片不能随我的手机壳颜色变化
+      #value:
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: 问题位置
+      description: 请提供问题所在的页面地址。可以口头描述，但最好能提供一个完整链接。
+      placeholder: blue-archive.io
+      #value:
+    validations:
+      required: true
+  - type: textarea
+    id: operation
+    attributes:
+      label: 复现流程
+      description: 告诉我们如何操作才有可能重现你的问题，以便我们定位和解决。
+      placeholder: |
+        1. 换一个不是蓝色的手机壳
+        2. 打开网页
+        3. 背景图片还是蓝色的
+      #value:
+    validations:
+      required: false

@@ -1,0 +1,818 @@
+CharacterId: 10053
+translator: 今天早睡了吗
+title:
+  - GroupId: 1005302
+    FavorScheduleId: 100532
+    CharacterId: 10053
+    TextJp: 朝のジョギング
+    TextCn: 晨跑
+    TextKr: 아침 조깅
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005303
+    FavorScheduleId: 100533
+    CharacterId: 10053
+    TextJp: 科学的な料理の秘訣
+    TextCn: 科学的料理秘诀
+    TextKr: 과학적인 요리 비결
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005305
+    FavorScheduleId: 100535
+    CharacterId: 10053
+    TextJp: 理性的な応援文化
+    TextCn: 理性的应援文化
+    TextKr: 이성적인 응원 문화
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+  - GroupId: 1005306
+    FavorScheduleId: 100536
+    CharacterId: 10053
+    TextJp: スポーツカード
+    TextCn: 体育集换卡
+    TextKr: 스포츠 카드
+    TextEn: ''
+    TextTh: ''
+    TextTw: ''
+content:
+  - MessageGroupId: 100530010
+    Id: 100530010
+    CharacterId: 10053
+    MessageCondition: FavorRankUp
+    ConditionValue: 2
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530020
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 선생님, 혹시 이번 달의 경비 청구서를 보내주셨나요?
+    MessageJP: 先生、今月分の請求書はどうされましたか？
+    MessageCN: 老师，这个月的账单您整理得怎么样了？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530020
+    Id: 100530020
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제출 기한이 거의 다 되었는데 아직 받지 못한 것 같아서요.
+    MessageJP: そろそろ提出期限ですが、まだ受け取っていないので
+    MessageCN: 提交账单的截止期限就要到了，但我还是没有收到
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530030
+    Id: 100530030
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530040
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 지난번에 제출한 보고서의 뒷장에 있어.
+    MessageJP: この前ユウカに渡した報告書のファイルにない？
+    MessageCN: 之前交给优香的报告书附件里面没有吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530040
+    Id: 100530040
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530050
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이런…… 미처 못 봤었네요.
+    MessageJP: あっ、見つかりました
+    MessageCN: 啊，找到了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530040
+    Id: 100530050
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530050
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요새 정신이 없어서 놓친 모양이에요. 죄송합니다.
+    MessageJP: 最近バタバタしていて……失礼しました
+    MessageCN: 最近忙得不可开交……抱歉打扰了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530050
+    Id: 100530060
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530060
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 요새 너무 바쁜 거 아냐?
+    MessageJP: 最近、特に忙しそうだよね
+    MessageCN: 最近优香好像特别忙呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530060
+    Id: 100530070
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 바쁘긴 하지만…… 어쩔 수 없어요.
+    MessageJP: たしかに忙しくはありますが……今は仕方ありません
+    MessageCN: 确实忙……但现在也没办法
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530060
+    Id: 100530080
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530070
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 밀레니엄에서 주관하는 황륜대제가 얼마 남지 않았거든요.
+    MessageJP: もうすぐミレニアム主催の[ruby=こうりんたいさい]晄輪大祭[/ruby]がありますからね
+    MessageCN: 毕竟我们千年主办的晄轮大祭就要开始了不是吗
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530070
+    Id: 100530090
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530080
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 평상시 세미나의 업무에 더해 대회 준비도 함께 진행하려면 조금 무리를 해야 해서…….
+    MessageJP: 通常のセミナーの仕事以外にも、ミレニアムとして晄輪大祭の準備も進めるとなると、休む暇もなくて……
+    MessageCN: 平时做完研讨会的工作，还要继续准备千年的晄轮大祭，基本没什么时间休息……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530080
+    Id: 100530100
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 유우카가 고생이 많네.
+    MessageJP: お疲れさま、ユウカ
+    MessageCN: 优香辛苦了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530080
+    Id: 100530110
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530090
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 황륜대제, 기대하고 있어.
+    MessageJP: 晄輪大祭、楽しみにしてるね
+    MessageCN: 那我就期待着晄轮大祭啦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530090
+    Id: 100530120
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530100
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: ……그렇게 말씀해 주시니 감사합니다.
+    MessageJP: 先生とお話してたら、少し元気が出ました
+    MessageCN: 和老师聊了一会，感觉我也有点精神了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530100
+    Id: 100530130
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 다만 이 상태로는 여러모로 문제가 생길지도 모르겠네요.
+    MessageJP: このまま無理をして倒れたら、元も子もありませんね……
+    MessageCN: 要是再这样勉强自己的话，万一累倒了就功亏一篑了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530100
+    Id: 100530140
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100532
+    NextGroupId: 100530110
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무래도 좀 관리를 해야겠어요.
+    MessageJP: きちんと健康管理にも気を配ろうと思います
+    MessageCN: 看来我也要注意一下健康管理了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530110
+    Id: 100530150
+    CharacterId: 10053
+    MessageCondition: FavorRankUp
+    ConditionValue: 3
+    PreConditionGroupId: 100530100
+    PreConditionFavorScheduleId: 100532
+    FavorScheduleId: 0
+    NextGroupId: 100530120
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고보니 이번 황륜대제 기간 중에는 교내의 카페테리아 시설을 사용하지 못하는 모양이에요.
+    MessageJP: そういえば、今回の[ruby=こうりんたいさい]晄輪大祭[/ruby]中は校内のカフェテリアを利用できないみたいです
+    MessageCN: 话说这次晄轮大祭期间，校内的自助食堂好像暂停营业了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530120
+    Id: 100530160
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530130
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 회장 밖에 노점상이 있겠지만, 실행위원 업무 중에 다녀올 시간은 없을 것 같아서……
+    MessageJP: 近くに屋台が出店されるはずですが、当日は実行委員の仕事に追われて立ち寄る時間もなさそうですし……
+    MessageCN: 虽然会场附近应该就有小吃摊，不过我当天也要忙执行委员的事情，大概也去不了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530130
+    Id: 100530170
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530140
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아무래도 이번에는 도시락을 미리 준비해야겠어요.
+    MessageJP: 今回はお弁当を作っていこうと思います
+    MessageCN: 所以这次我觉得还是自己做便当吧
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530140
+    Id: 100530180
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530150
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좋은 생각이네.
+    MessageJP: いいアイデアだね
+    MessageCN: 好主意呢
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530150
+    Id: 100530190
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530160
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 유우카는 평소에 직접 요리해?
+    MessageJP: ユウカは普段から料理するの？
+    MessageCN: 优香平时也自己做饭吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530160
+    Id: 100530200
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530170
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아뇨
+    MessageJP: いえ……
+    MessageCN: 并不……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530160
+    Id: 100530210
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530170
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 제대로 된 요리를 만들어 본 경험은 없지만……
+    MessageJP: 料理らしい料理をしたことはないんですが……
+    MessageCN: 我还没有做出过能算得上是饭的东西……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530170
+    Id: 100530220
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100533
+    NextGroupId: 100530180
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그래도 이참에 한 번 연습해보려고요.
+    MessageJP: これもいい機会ですし、練習してみようかなと
+    MessageCN: 不过这次倒也是个好机会，我想借此练习一下
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530180
+    Id: 100530230
+    CharacterId: 10053
+    MessageCondition: FavorRankUp
+    ConditionValue: 5
+    PreConditionGroupId: 100530170
+    PreConditionFavorScheduleId: 100533
+    FavorScheduleId: 0
+    NextGroupId: 100530190
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고 보니 곧 키보토스 인터하이의 지역 예선이 시작될 시즌이네요.
+    MessageJP: 先生、もうすぐキヴォトスインターハイの地区予選ですね
+    MessageCN: 老师，基沃托斯校锦赛的地区预赛好像马上要开始了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530190
+    Id: 100530240
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 밀레니엄에서도 야구부가 출전한다고 들었는데…
+    MessageJP: ミレニアムからも野球部が出場するみたいですが……
+    MessageCN: 我们千年的队伍好像会有一个棒球部出场……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530190
+    Id: 100530250
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530200
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 워낙 약팀이라 올해는 어떻게 될지 모르겠네요.
+    MessageJP: どうでしょう、なにせウチの野球部は弱小チームですし
+    MessageCN: 但是怎么说呢，我们的棒球部毕竟是个弱队
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530200
+    Id: 100530260
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530210
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 유우카는 야구 경기를 자주 관람하는 편이야?
+    MessageJP: ユウカは野球、よく見るの？
+    MessageCN: 优香平时喜欢看棒球赛吗？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530210
+    Id: 100530270
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 뭐, 그렇게 열성적인 팬이라고 하긴 어렵지만……
+    MessageJP: 'まあ、人並みには
+
+      そこまで熱心に応援しているわけではありませんが……'
+    MessageCN: 嗯，虽然我也不会像狂热球迷那样应援……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530210
+    Id: 100530280
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100535
+    NextGroupId: 100530220
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 밀레니엄의 팀이 출전할 때는 가볍게 응원 정도는 한답니다.
+    MessageJP: ミレニアムのチームが出場する時は、応援くらいしています
+    MessageCN: 但是千年的队伍出场的时候，我还是会为她们加油的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530220
+    Id: 100530290
+    CharacterId: 10053
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 100530210
+    PreConditionFavorScheduleId: 100535
+    FavorScheduleId: 0
+    NextGroupId: 100530230
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 정신없었던 황륜대제도 무사히 다 끝났네요……
+    MessageJP: 慌ただしかった[ruby=こうりんたいさい]晄輪大祭[/ruby]も、やっと終わりましたね……
+    MessageCN: 晄轮大祭里都忙得晕头转向的，不过好在终于结束了……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530230
+    Id: 100530300
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 수고 많으셨습니다, 선생님.
+    MessageJP: お疲れさまでした、先生
+    MessageCN: 辛苦了，老师
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530240
+    Id: 100530310
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 유우카도 수고 많았어.
+    MessageJP: ユウカもお疲れさま
+    MessageCN: 优香也辛苦了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530250
+    Id: 100530320
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 아녜요. 세미나의 임원으로서 당연히 해야 할 일이었는걸요.
+    MessageJP: ありがとうございます。ですが、セミナーの役員として当然のことですから
+    MessageCN: 谢谢。不过作为研讨会的干部，这种事情是我应当做的
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530260
+    Id: 100530330
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530270
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그러고 보니 샬레에 협력을 요청 드린 안건들에 대해서도 한번 정리를 해야 했는데……
+    MessageJP: '先生、そうでした
+
+      晄輪大祭で立て込んでいたので、シャーレに協力を要請した件の事務処理ができていませんでしたね'
+    MessageCN: 对了老师，因为晄轮大祭的时候实在是太忙了，所以夏莱请求我们协助的事情还没有处理……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530270
+    Id: 100530340
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 학원의 업무가 정리되면 샬레에 한번 방문하겠습니다.
+    MessageJP: 手持ちの業務を片付けたら、シャーレに伺いますね
+    MessageCN: 等手头的事情处理完了我马上就去夏莱拜访您
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530270
+    Id: 100530350
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100536
+    NextGroupId: 100530280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그때는 잘 부탁드리겠습니다.
+    MessageJP: それでは、また後ほどお願いします
+    MessageCN: 那么等下见了
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530280
+    Id: 100530360
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100530270
+    PreConditionFavorScheduleId: 100536
+    FavorScheduleId: 0
+    NextGroupId: 100530290
+    FeedbackTimeMillisec: 1500
+    MessageType: Image
+    ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Yuuka_01
+    MessageKR: ''
+    MessageJP: ''
+    MessageCN: ''
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530290
+    Id: 100530370
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 일단 적당히 문장을 써 보았는데…
+    MessageJP: 一言、添えてみたんですが……
+    MessageCN: 我在上面加了一句话……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530290
+    Id: 100530380
+    CharacterId: 10053
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: …어떠신가요?
+    MessageJP: ど、どうでしょう？
+    MessageCN: 老、老师觉得怎么样？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530300
+    Id: 100530390
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 조금 문장이 딱딱해…
+    MessageJP: もう少し可愛らしくても……
+    MessageCN: 还可以更可爱一点……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530300
+    Id: 100530400
+    CharacterId: 10053
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 좀 더 애정을 담아서 써 줘…
+    MessageJP: ちょっと堅苦しくない？
+    MessageCN: 有点太严肃了吧？
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530310
+    Id: 100530410
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 그렇게 말씀하셔도….
+    MessageJP: うーん……
+    MessageCN: 好吧……
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530320
+    Id: 100530420
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100530330
+    FeedbackTimeMillisec: 2500
+    MessageType: Image
+    ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Yuuka_02
+    MessageKR: ''
+    MessageJP: ''
+    MessageCN: ''
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
+  - MessageGroupId: 100530330
+    Id: 100530430
+    CharacterId: 10053
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ''
+    MessageKR: 이번뿐이에요.
+    MessageJP: ……先生だけですからね
+    MessageCN: ……只给老师一个人看哦
+    MessageEN: ''
+    MessageTH: ''
+    MessageTW: ''
