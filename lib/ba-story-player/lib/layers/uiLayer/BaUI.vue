@@ -9,7 +9,7 @@ import { Language, StorySummary } from "@/types/store";
 import { effectBtnMouseDown, effectBtnMouseUp } from "./utils";
 import { ShowOption } from "@/types/events";
 import { usePlayerStore } from "@/stores";
-import "./userInteract.ts";
+import "./userInteract";
 import { useThrottleFn } from "@vueuse/core";
 import { storyHandler } from "@/index";
 
