@@ -22,7 +22,6 @@
     "dev": "vite --host",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
-    "format": "prettier --config .prettierrc.json -uw ./lib/ ./src/",
     "check": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -49,13 +48,6 @@
     "@types/xxhashjs": "^0.2.2",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@vitejs/plugin-vue": "4.2.3",
-    "@vue/eslint-config-typescript": "^11.0.2",
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-sort-exports": "^0.8.0",
-    "eslint-plugin-vue": "^9.9.0",
-    "prettier": "^2.8.4",
     "rollup-plugin-node-externals": "^5.1.2",
     "sass": "1.62.1",
     "staged": "^0.0.0",
