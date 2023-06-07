@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "build:json": "eslint --fix --config ./.eslintrc.json ./public/config/yaml/ && node ./CICD/build_json.js",
-    "build": "vite build",
-    "build:github": "pnpm build; cp ./dist/index.html ./dist/404.html",
+    "build": "pnpm build:json && vite build; cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite build; vite preview --host",
     "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck"
   },
