@@ -24,7 +24,7 @@ const links: FriendLink[] = [
   },
   {
     title: '项目主页',
-    url: 'https://github.com/ba-archive/blue-archive-story-viewer',
+    url: 'https://github.com/ba-archive/blue-archive',
     logo: '/image/contributor/github-logo.svg',
     logoDescription: 'GitHub logo',
     shouldReverseOnDarkTheme: true,
