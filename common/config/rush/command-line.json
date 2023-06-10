@@ -21,6 +21,17 @@
 
       // 它将会唤起 common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "commandKind": "bulk",
+      "name": "build",
+      "summary": "Build all projects that haven't been built, or have changed since they were last built",
+      "description": "This command is similar to \"rush rebuild\", except that \"rush build\" performs...",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true,
+      "ignoreDependencyOrder": false,
+      "ignoreMissingScript": false,
+      "allowWarningsInSuccessfulBuild": true
     }
     // {
     //   /**

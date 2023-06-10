@@ -75,8 +75,6 @@ pnpm-lock.yaml
 dist
 **/config/json/
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -84,14 +82,3 @@ dist
 *.njsproj
 *.sln
 *.sw?
-stats.html
-
-public/image/homescreen/*
-!public/image/homescreen/background.webp
-!public/image/homescreen/background-dark.webp
-
-test
-public/config/json
-/public/image/ScenarioImage/
-/public/config/yaml/image/
-index.json
