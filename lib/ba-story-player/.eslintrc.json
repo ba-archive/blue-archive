@@ -3,6 +3,7 @@
     "browser": true,
     "es2021": true
   },
+  "root": true,
   "parser": "vue-eslint-parser",
   "extends": [
     "eslint:recommended",
@@ -18,13 +19,7 @@
     "eqeqeq": ["error", "always"],
     "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
     "semi": ["warn", "always"],
-    "space-before-function-paren": ["warn", {
-      "anonymous": "never",
-      "named": "never",
-      "asyncArrow": "always"
-    }],
     "comma-dangle": [
       "error",
       {
@@ -45,5 +40,12 @@
         "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.yaml", "*.yml"],
+      "plugins": ["yaml"],
+      "extends": ["plugin:yaml/recommended"]
+    }
+  ]
 }

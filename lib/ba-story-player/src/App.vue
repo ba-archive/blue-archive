@@ -4,7 +4,7 @@ import { TranslatedStoryUnit } from "../lib/types/common";
 import yuuka from "./data/yuuka.json";
 import prologue from "./data/prologue1.1.json";
 import eventBus from "../lib/eventBus";
-import { storyHandler, resourcesLoader, eventEmitter } from "../lib/index";
+import { eventEmitter, resourcesLoader, storyHandler } from "../lib/index";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";

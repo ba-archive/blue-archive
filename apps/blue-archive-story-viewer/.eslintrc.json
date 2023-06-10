@@ -3,6 +3,7 @@
     "browser": true,
     "es2021": true
   },
+  "root": true,
   "parser": "vue-eslint-parser",
   "extends": [
     "eslint:recommended",
@@ -18,7 +19,6 @@
     "eqeqeq": ["error", "always"],
     "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single", { "avoidEscape": true }],
     "semi": ["warn", "always"],
     "comma-dangle": [
       "error",
