@@ -2,6 +2,7 @@
   "name": "blue-archive-story-viewer",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build:json": "node ./CICD/build_json.js",
