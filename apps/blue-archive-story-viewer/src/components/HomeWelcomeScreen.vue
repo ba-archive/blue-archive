@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import UpdatedPortalCard from './widgets/UpdatedPortalCard.vue';
+import UpdatedPortalCard from "./widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
-  type: 'mainstory' | 'student' | 'minigame';
+  type: "mainstory" | "student" | "minigame";
   icon?: string;
   jumpTo?: string | number;
   title: string;
   startDate?: string; // yyyy/mm/dd
   endDate?: string; // yyyy/mm/dd
-  style?: 'pixelize';
+  style?: "pixelize";
 }
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
-    type: 'minigame',
-    title: '白子',
-    icon: 'https://shiroko.blue-archive.io/favicon.gif',
-    jumpTo: 'https://shiroko.blue-archive.io',
-    startDate: '2023/05/16',
-    endDate: '2023/06/30',
-    style: 'pixelize',
+    type: "minigame",
+    title: "白子",
+    icon: "https://shiroko.blue-archive.io/favicon.gif",
+    jumpTo: "https://shiroko.blue-archive.io",
+    startDate: "2023/05/16",
+    endDate: "2023/06/30",
+    style: "pixelize",
   },
   {
-    type: 'student',
+    type: "student",
     jumpTo: 10070,
-    title: '近卫 弥奈',
+    title: "近卫 弥奈",
   },
   {
-    type: 'student',
+    type: "student",
     jumpTo: 10069,
-    title: '朱城 瑠美',
+    title: "朱城 瑠美",
   },
   {
-    type: 'mainstory',
-    title: 'Vol.3 第一章',
+    type: "mainstory",
+    title: "Vol.3 第一章",
   },
 ];
 </script>
@@ -85,7 +85,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
 }
 
 #choice::after {
-  content: '左边';
+  content: "左边";
 }
 
 .navigation {
@@ -102,7 +102,13 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
 
 @media screen and (max-width: 768px) {
   #choice::after {
-    content: '右上角';
+    content: "右上角";
+  }
+  //noinspection CssOverwrittenProperties
+  .update-info-container {
+    width: calc(100vw - 2rem);
+    width: calc(100dvw - 2rem);
+    max-width: 425px;
   }
 }
 </style>
