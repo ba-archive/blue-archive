@@ -1,6 +1,6 @@
-import { distance } from 'fastest-levenshtein';
-import { AppliedFilter } from '../types/AppliedFilter';
-import { Student, StudentAttributes, StudentNames } from '../types/Student';
+import { distance } from "fastest-levenshtein";
+import { AppliedFilter } from "../types/AppliedFilter";
+import { Student, StudentAttributes, StudentNames } from "../types/Student";
 
 function similarity(s1: string, s2: string): number {
   return 1 - distance(s1, s2) / Math.max(s1.length, s2.length);
@@ -19,9 +19,9 @@ function isPossibleName(
   );
   const lowerCaseSearchString = searchString
     .toLowerCase()
-    .replaceAll(specialCharacters, '');
+    .replaceAll(specialCharacters, "");
   const lowercaseStudentNamesList = filteredNameList?.map(name => {
-    return name.toString().toLowerCase().replaceAll(specialCharacters, '');
+    return name.toString().toLowerCase().replaceAll(specialCharacters, "");
   });
   lowercaseStudentNamesList?.forEach(studentName => {
     if (studentName) {
@@ -31,7 +31,7 @@ function isPossibleName(
         studentName.includes(lowerCaseSearchString) ||
         studentName.startsWith(lowerCaseSearchString) ||
         studentName.endsWith(lowerCaseSearchString) ||
-        '' === lowerCaseSearchString
+        "" === lowerCaseSearchString
       ) {
         found = true;
       }
@@ -58,7 +58,7 @@ function filterStudents(
   studentsList: Student[]
 ): number[] {
   if (
-    '' === appliedFilters.searchString &&
+    "" === appliedFilters.searchString &&
     0 === appliedFilters.rarity.length &&
     0 === appliedFilters.club.length &&
     0 === appliedFilters.affiliation.length &&
@@ -85,31 +85,31 @@ function filterStudents(
     result = listFilteredByString;
   }
   if (0 !== appliedFilters.rarity.length) {
-    result = filterStudentsByProperty('rarity', appliedFilters.rarity, result);
+    result = filterStudentsByProperty("rarity", appliedFilters.rarity, result);
   }
   if (0 !== appliedFilters.club.length) {
-    result = filterStudentsByProperty('club', appliedFilters.club, result);
+    result = filterStudentsByProperty("club", appliedFilters.club, result);
   }
   if (0 !== appliedFilters.affiliation.length) {
     result = filterStudentsByProperty(
-      'affiliation',
+      "affiliation",
       appliedFilters.affiliation,
       result
     );
   }
   if (0 !== appliedFilters.type.length) {
-    result = filterStudentsByProperty('type', appliedFilters.type, result);
+    result = filterStudentsByProperty("type", appliedFilters.type, result);
   }
   if (0 !== appliedFilters.armorType.length) {
     result = filterStudentsByProperty(
-      'armorType',
+      "armorType",
       appliedFilters.armorType,
       result
     );
   }
   if (appliedFilters.bulletType && 0 !== appliedFilters.bulletType.length) {
     result = filterStudentsByProperty(
-      'bulletType',
+      "bulletType",
       appliedFilters.bulletType,
       result
     );

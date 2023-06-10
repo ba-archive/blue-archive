@@ -1,26 +1,26 @@
-import { defineStore } from 'pinia';
-import { Language } from '../types/Settings';
-import { StudentAttributeFilters, StudentFilters } from '../types/Student';
+import { defineStore } from "pinia";
+import { Language } from "../types/Settings";
+import { StudentAttributeFilters, StudentFilters } from "../types/Student";
 
 export const useSettingsStore = defineStore({
-  id: 'ba-main-storage',
+  id: "ba-main-storage",
   state: () => {
     return {
       settings: {
-        lang: 'cn' as Language,
-        theme: 'light' as 'light' | 'dark',
-        username: 'Sensei' as string,
+        lang: "cn" as Language,
+        theme: "light" as "light" | "dark",
+        username: "Sensei" as string,
         useMp3: false,
-        useSuperSampling: '' as '' | '2' | '4',
+        useSuperSampling: "" as "" | "2" | "4",
       },
       studentFilters: {
-        searchString: '',
+        searchString: "",
         rarity: [] as number[],
         club: [] as string[],
         affiliation: [] as string[],
-        type: [] as ('Striker' | 'Special')[],
-        armorType: [] as ('LightArmor' | 'HeavyArmor' | 'Unarmed')[],
-        bulletType: [] as ('Pierce' | 'Explode' | 'Mystic')[],
+        type: [] as ("Striker" | "Special")[],
+        armorType: [] as ("LightArmor" | "HeavyArmor" | "Unarmed")[],
+        bulletType: [] as ("Pierce" | "Explode" | "Mystic")[],
       },
     };
   },
@@ -39,17 +39,17 @@ export const useSettingsStore = defineStore({
     getUseMp3: state => state.settings.useMp3,
     getUseSuperSampling: state => {
       const shouldUseSuperSampling = state.settings.useSuperSampling;
-      if (!['', '2', '4'].includes(shouldUseSuperSampling)) {
-        return '';
+      if (!["", "2", "4"].includes(shouldUseSuperSampling)) {
+        return "";
       }
       return shouldUseSuperSampling;
     },
   },
   actions: {
-    setLang(lang: 'cn' | 'tw' | 'jp' | 'en' | 'kr' | 'th') {
+    setLang(lang: "cn" | "tw" | "jp" | "en" | "kr" | "th") {
       this.settings.lang = lang;
     },
-    setTheme(theme: 'light' | 'dark') {
+    setTheme(theme: "light" | "dark") {
       this.settings.theme = theme;
     },
     setUsername(username: string) {
@@ -65,7 +65,7 @@ export const useSettingsStore = defineStore({
       this.studentFilters.bulletType = filters.bulletType || [];
     },
     clearStudentFilters() {
-      this.studentFilters.searchString = '';
+      this.studentFilters.searchString = "";
       this.studentFilters.rarity = [];
       this.studentFilters.club = [];
       this.studentFilters.affiliation = [];
@@ -79,7 +79,7 @@ export const useSettingsStore = defineStore({
     setUseMp3(useMp3: boolean) {
       this.settings.useMp3 = useMp3;
     },
-    setUseSuperSampling(useSuperSampling: '' | '2' | '4') {
+    setUseSuperSampling(useSuperSampling: "" | "2" | "4") {
       this.settings.useSuperSampling = useSuperSampling;
     },
   },

@@ -1,5 +1,5 @@
-import { RouteRecordRaw } from 'vue-router';
-import { RouteMeta } from '../types/Routes';
+import { RouteRecordRaw } from "vue-router";
+import { RouteMeta } from "../types/Routes";
 
 export function getRouteTranslation(
   route: RouteRecordRaw,

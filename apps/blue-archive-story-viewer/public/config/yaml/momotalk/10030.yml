@@ -49,7 +49,7 @@ content:
     NextGroupId: 100300020
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 안녕하세요, 선생님.
     MessageJP: こんにちは、先生
     MessageCN: 老师，您好
@@ -67,16 +67,16 @@ content:
     NextGroupId: 100300030
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어제 당번 활동을 마치고 돌아가는 길에 보니 밤늦게까지 샬레 사무실의 불이 켜져 있더군요.
     MessageJP: 昨日、当番を終えて帰る時にもまだシャーレの電気が点いていましたが……
     MessageCN: 我昨天值完班回家的时候，看到夏莱的灯还亮着……
     MessageEN:
       Yesterday, on my way home after duty, I noticed that the Schale office
       lights were on until late.
-    MessageTH: 'เมื่อวานหลังเลิกงาน ฉันเห็นว่า
+    MessageTH: "เมื่อวานหลังเลิกงาน ฉันเห็นว่า
 
-      ไฟห้องทำงานชาเล่ต์เปิดจนดึกเลยค่ะ'
+      ไฟห้องทำงานชาเล่ต์เปิดจนดึกเลยค่ะ"
     MessageTW: 昨天值班結束回家的時候，夏萊的燈還亮著……
   - MessageGroupId: 100300030
     Id: 100300030
@@ -89,14 +89,14 @@ content:
     NextGroupId: 100300040
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 지난주 주말에도 샬레의 일 때문에 과로를 하셨다고 들었는데……
     MessageJP: 先週末も夜遅くまで残業していたとお聞きしましたし……
     MessageCN: 而且我听说老师上周末也加班到很晚……
     MessageEN: I heard that you overworked yourself last weekend as well.
-    MessageTH: 'ได้ยินว่าสุดสัปดาห์ที่แล้ว
+    MessageTH: "ได้ยินว่าสุดสัปดาห์ที่แล้ว
 
-      คุณครูก็โหมทำงานอย่างหนักด้วย...'
+      คุณครูก็โหมทำงานอย่างหนักด้วย..."
     MessageTW: 聽說上週末也加班到很晚……
   - MessageGroupId: 100300030
     Id: 100300040
@@ -109,7 +109,7 @@ content:
     NextGroupId: 100300040
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 휴식은 제대로 취하고 계시나요?
     MessageJP: お休みは、きちんと取られていますか？
     MessageCN: 老师您，有好好休息吗？
@@ -127,7 +127,7 @@ content:
     NextGroupId: 100300050
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 일이 너무 많아서 어쩔 수가 없어.
     MessageJP: 最近はなかなか……
     MessageCN: 最近工作有点多……
@@ -145,7 +145,7 @@ content:
     NextGroupId: 100300060
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 안 됩니다. 휴식도 엄연한 업무의 일부니까요.
     MessageJP: 良くありませんよ、休息もれっきとした任務の一部です
     MessageCN: 这可不行哦，休息也是任务的一部分
@@ -163,18 +163,18 @@ content:
     NextGroupId: 100300060
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 게헨나 선도부의 보건 담당으로서 선생님의 건강이 악화되는 건 묵과할 수 없습니다.
     MessageJP: ゲヘナ風紀委員会の救護担当として、これは見過ごせません
     MessageCN: 作为格黑娜风纪委员会的急救负责人，我是不会对此视而不见的
     MessageEN:
       As the head of the Medical Committee of the Gehenna Prefect Team, I
       cannot stand by and watch as your health deteriorates.
-    MessageTH: 'ในฐานะผู้รับผิดชอบด้านสาธารณสุข
+    MessageTH: "ในฐานะผู้รับผิดชอบด้านสาธารณสุข
 
       ของคณะกรรมการวินัย ฉันคงยอมให้
 
-      คุณครูเสียสุขภาพไม่ได้ค่ะ'
+      คุณครูเสียสุขภาพไม่ได้ค่ะ"
     MessageTW: 身為格黑娜糾察部的救護負責人，可不能坐視不管
   - MessageGroupId: 100300050
     Id: 100300080
@@ -187,14 +187,14 @@ content:
     NextGroupId: 100300060
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 최근 특별히 몸에 불편하신 점은 없으신가요?
     MessageJP: 最近、お体で気になるところはございませんか？
     MessageCN: 老师最近身体有什么不舒服吗？
     MessageEN: Have you felt any particular discomfort recently?
-    MessageTH: 'ช่วงนี้รู้สึกไม่สบายตัวหรือ
+    MessageTH: "ช่วงนี้รู้สึกไม่สบายตัวหรือ
 
-      มีอาการอะไรเป็นพิเศษไหมคะ?'
+      มีอาการอะไรเป็นพิเศษไหมคะ?"
     MessageTW: 最近，身體有什麼不舒服的地方嗎？
   - MessageGroupId: 100300060
     Id: 100300090
@@ -207,7 +207,7 @@ content:
     NextGroupId: 100300070
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 눈이 자주 피로한 것 같아.
     MessageJP: 最近は目が疲れてるような……
     MessageCN: 感觉最近眼睛很累……
@@ -225,7 +225,7 @@ content:
     NextGroupId: 100300070
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어깨가 자주 결리는 것 같아.
     MessageJP: 最近は肩が凝ってるような……
     MessageCN: 感觉最近肩膀很酸……
@@ -243,16 +243,16 @@ content:
     NextGroupId: 100300080
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 눈의 피로와 어깨 결림이라. 전형적인 만성 피로의 증상이군요.
     MessageJP: なるほど……典型的な慢性疲労の症状ですね
     MessageCN: 原来如此……这是慢性疲劳的典型症状呢
     MessageEN:
       Tired eyes and tense shoulders. Those are classic symptoms of chronic
       fatigue.
-    MessageTH: 'อาการตาล้าและตึงที่ไหล่ เป็นอาการ
+    MessageTH: "อาการตาล้าและตึงที่ไหล่ เป็นอาการ
 
-      ที่พบได้จากอาการเหนื่อยสะสมค่ะ'
+      ที่พบได้จากอาการเหนื่อยสะสมค่ะ"
     MessageTW: 原來如此……這是典型的慢性疲勞症狀
   - MessageGroupId: 100300070
     Id: 100300120
@@ -265,18 +265,18 @@ content:
     NextGroupId: 100300080
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그러고보니 게헨나 학원에는 피로 해소에 도움이 되는 탕이 많이 있습니다.
     MessageJP: そういえば、ゲヘナ学園には疲労回復の効果がある温泉がたくさんあるんです
     MessageCN: 说起来，我们格黑娜学园里有很多有助于缓解疲劳的温泉
     MessageEN:
       Come to think of it, Gehenna Academy has many hot baths that can help
       relieve fatigue.
-    MessageTH: 'พอนึกดูแล้ว ที่สถาบันเกเฮนน่า
+    MessageTH: "พอนึกดูแล้ว ที่สถาบันเกเฮนน่า
 
       มีโรงอาบน้ำที่ช่วยให้คลายความ
 
-      เหนื่อยล้าได้อยู่ด้วยค่ะ'
+      เหนื่อยล้าได้อยู่ด้วยค่ะ"
     MessageTW: 這麼說來，格黑娜學園有很多能緩解疲勞的溫泉
   - MessageGroupId: 100300080
     Id: 100300130
@@ -289,16 +289,16 @@ content:
     NextGroupId: 100300090
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 시간이 되실 때 게헨나 학원을 방문하셔서 온천을 즐겨보시는 건 어떠신가요?
     MessageJP: お時間がある時にでも、ゲヘナの温泉をご利用されてはいかがでしょうか？
     MessageCN: 老师有时间的话，来格黑娜泡泡温泉怎么样？
     MessageEN:
       How about visiting Gehenna Academy and enjoying the hot springs when
       you have time?
-    MessageTH: 'ถ้าคุณครูมีเวลา ลองมาผ่อนคลาย
+    MessageTH: "ถ้าคุณครูมีเวลา ลองมาผ่อนคลาย
 
-      ที่ออนเซ็นที่โรงเรียนเกเฮนน่าดูไหมคะ?'
+      ที่ออนเซ็นที่โรงเรียนเกเฮนน่าดูไหมคะ?"
     MessageTW: 有空的時候，去泡一下格黑娜的溫泉如何？
   - MessageGroupId: 100300090
     Id: 100300140
@@ -311,7 +311,7 @@ content:
     NextGroupId: 100300100
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 좋은 생각이네.
     MessageJP: そうなんだ、それは良さそう
     MessageCN: 这样啊，听起来挺不错的
@@ -329,7 +329,7 @@ content:
     NextGroupId: 100300100
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 시간 날 때 한번 들를게.
     MessageJP: 時間ある時に一度寄ってみるね
     MessageCN: 有时间的时候我去试试看哦
@@ -347,7 +347,7 @@ content:
     NextGroupId: 100300110
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 네.
     MessageJP: はい、是非
     MessageCN: 好的，请老师一定要来
@@ -365,14 +365,14 @@ content:
     NextGroupId: 100300110
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 언젠가 저희 학원을 방문하실 날을 기다리고 있겠습니다.
     MessageJP: 少しでも先生の疲れが取れますように
     MessageCN: 希望这些温泉能稍微消除老师的疲劳，哪怕只有一点也好
     MessageEN: Well then, I look forward to the day you visit our academy.
-    MessageTH: 'ถ้างั้นฉันจะรอให้คุณครู
+    MessageTH: "ถ้างั้นฉันจะรอให้คุณครู
 
-      มาที่โรงเรียนเรานะคะ'
+      มาที่โรงเรียนเรานะคะ"
     MessageTW: 希望能稍微消除老師的疲勞
   - MessageGroupId: 100300110
     Id: 100300180
@@ -385,11 +385,11 @@ content:
     NextGroupId: 100300120
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
-    MessageKR: '- 치나츠'
+    ImagePath: ""
+    MessageKR: "- 치나츠"
     MessageJP: ～チナツ～
     MessageCN: ～千夏～
-    MessageEN: '- Chinatsu'
+    MessageEN: "- Chinatsu"
     MessageTH: -ชินัตสึ
     MessageTW: ～千夏～
   - MessageGroupId: 100300120
@@ -403,7 +403,7 @@ content:
     NextGroupId: 100300130
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 안녕하세요, 선생님. 치나츠입니다.
     MessageJP: 先生、お疲れ様です
     MessageCN: 老师，您辛苦了
@@ -421,14 +421,14 @@ content:
     NextGroupId: 100300140
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 온천 휴양 중에 무언가 특별히 불편한 점은 없으신지요.
     MessageJP: 温泉に入られて、何かご不便などはありませんでしたか？
     MessageCN: 泡过温泉之后，老师还有什么不舒服的地方吗？
     MessageEN: Is there anything uncomfortable with your stay at the hot springs?
-    MessageTH: 'ในระหว่างที่พักผ่อนที่ออนเซ็น
+    MessageTH: "ในระหว่างที่พักผ่อนที่ออนเซ็น
 
-      มีเรื่องอะไรที่ไม่สะดวกบ้างรึเปล่าคะ'
+      มีเรื่องอะไรที่ไม่สะดวกบ้างรึเปล่าคะ"
     MessageTW: 泡了溫泉，有感到什麼不適的地方嗎？
   - MessageGroupId: 100300140
     Id: 100300210
@@ -441,7 +441,7 @@ content:
     NextGroupId: 100300150
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응, 문제없어.
     MessageJP: うん、大丈夫
     MessageCN: 没有哦
@@ -459,14 +459,14 @@ content:
     NextGroupId: 100300150
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 치나츠가 배려해 준 덕분이야.
     MessageJP: チナツが色々配慮してくれたおかげでバッチリ
     MessageCN: 多亏了千夏周到的考虑，我现在的状态很完美呢
     MessageEN: All thanks to you, Chinatsu.
-    MessageTH: 'ไม่มีหรอก
+    MessageTH: "ไม่มีหรอก
 
-      ชินัตสึดูแลครูดีจะตาย'
+      ชินัตสึดูแลครูดีจะตาย"
     MessageTW: 多虧有千夏關照，非常完美
   - MessageGroupId: 100300150
     Id: 100300230
@@ -479,7 +479,7 @@ content:
     NextGroupId: 100300160
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그렇다니 다행입니다.
     MessageJP: それは良かったです
     MessageCN: 那真是太好了
@@ -497,14 +497,14 @@ content:
     NextGroupId: 100300170
     FeedbackTimeMillisec: 2500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 혹시 괜찮으시다면 지금 선생님의 방에 찾아가도 괜찮겠습니까?
     MessageJP: それで、本題なのですが……今から先生のところに、お伺いしてもよろしいでしょうか？
     MessageCN: 然后，恕我冒昧……我现在可以拜访一下老师的客房吗？
     MessageEN: If it's okay with you, can I stop by your room right now?
-    MessageTH: 'คือว่าถ้าคุณครูสะดวก ฉันจะขอไป
+    MessageTH: "คือว่าถ้าคุณครูสะดวก ฉันจะขอไป
 
-      พบคุณครูตอนนี้ได้ไหมคะ?'
+      พบคุณครูตอนนี้ได้ไหมคะ?"
     MessageTW: 然後，進入正題……現在方便去老師那邊打擾一下嗎？
   - MessageGroupId: 100300160
     Id: 100300250
@@ -517,7 +517,7 @@ content:
     NextGroupId: 100300170
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그, 물론 이상한 의미로 말씀드린 게 아니라……!
     MessageJP: その、もちろん変な意味ではなく……！
     MessageCN: 那个，我肯定没有什么奇怪的意思……！
@@ -535,14 +535,14 @@ content:
     NextGroupId: 100300180
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 다름이 아니라 피로 해소에 좋은 차를 몇 가지 구해서……
     MessageJP: 疲労に効くお茶を手に入れたので、よろしければ一緒にお茶でもと思いまして
     MessageCN: 只是我弄到了一些有助于缓解疲劳的茶，如果老师方便的话，我想和您一起用茶
     MessageEN: It's just that I bought some teas that are good for relieving fatigue...
-    MessageTH: 'คือว่าฉันเพิ่งได้ชาชั้นดีที่ช่วย
+    MessageTH: "คือว่าฉันเพิ่งได้ชาชั้นดีที่ช่วย
 
-      คลายความเหนื่อยล้าได้มาค่ะ'
+      คลายความเหนื่อยล้าได้มาค่ะ"
     MessageTW: 是因為得到了恢復疲勞很有效的茶，如果可以的話，想一起喝茶
   - MessageGroupId: 100300170
     Id: 100300270
@@ -555,14 +555,14 @@ content:
     NextGroupId: 100300180
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 괜찮으시다면 함께 차라도 한 잔 어떠신가 해서요.
     MessageJP: その……いかがでしょうか？
     MessageCN: 那个……老师意下如何呢？
     MessageEN: So I was wondering if you would like to have a cup of tea together.
-    MessageTH: 'ถ้าคุณครูสะดวก ฉันก็อยากจะ
+    MessageTH: "ถ้าคุณครูสะดวก ฉันก็อยากจะ
 
-      ชวนคุณครูดื่มชาด้วยกันค่ะ'
+      ชวนคุณครูดื่มชาด้วยกันค่ะ"
     MessageTW: 那個……如何？
   - MessageGroupId: 100300180
     Id: 100300280
@@ -575,7 +575,7 @@ content:
     NextGroupId: 100300190
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 좋아.
     MessageJP: もちろん。ありがとう、待ってるね
     MessageCN: 当然。谢谢，那我就在客房等千夏了
@@ -593,7 +593,7 @@ content:
     NextGroupId: 100300200
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 네.
     MessageJP: いえそんな、こちらこそありがとうございます
     MessageCN: 没有的事，我才要向您道谢
@@ -611,7 +611,7 @@ content:
     NextGroupId: 100300200
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 곧 찾아뵙도록 하겠습니다.
     MessageJP: では、すぐにお伺いしますね
     MessageCN: 那么，我马上去拜访老师
@@ -629,11 +629,11 @@ content:
     NextGroupId: 100300210
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
-    MessageKR: '- 치나츠'
+    ImagePath: ""
+    MessageKR: "- 치나츠"
     MessageJP: ～チナツ～
     MessageCN: ～千夏～
-    MessageEN: '- Chinatsu'
+    MessageEN: "- Chinatsu"
     MessageTH: .- ชินัตสึ
     MessageTW: ～千夏～
   - MessageGroupId: 100300210
@@ -647,7 +647,7 @@ content:
     NextGroupId: 100300220
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 안녕하세요, 선생님.
     MessageJP: こんにちは、先生
     MessageCN: 老师，您好
@@ -665,18 +665,18 @@ content:
     NextGroupId: 100300230
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 혹시 괜찮으시다면 오늘 점심 식사 이후에 잠깐 시간을 내주지 않으시겠습니까?
     MessageJP: その、もしよろしければ今日の午後、少しお時間をいただけないでしょうか？
     MessageCN: 那个，如果老师方便的话，我今天下午可以稍微占用老师一点时间吗？
     MessageEN:
       If it's okay with you, could you make some time for me after lunch
       today?
-    MessageTH: 'คือว่าถ้าคุณครูสะดวก วันนี้หลัง
+    MessageTH: "คือว่าถ้าคุณครูสะดวก วันนี้หลัง
 
       ทานมื้อเที่ยงแล้ว ฉันขอรบกวน
 
-      เวลาคุณครูหน่อยได้ไหมคะ?'
+      เวลาคุณครูหน่อยได้ไหมคะ?"
     MessageTW: 那個，如果可以的話，今天下午能占用您一點時間嗎？
   - MessageGroupId: 100300220
     Id: 100300340
@@ -689,14 +689,14 @@ content:
     NextGroupId: 100300230
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님께 도움을 요청하고 싶은 일이 있습니다.
     MessageJP: 実は先生に手伝っていただきたいことがありまして……
     MessageCN: 其实，我有件事想请老师帮忙……
     MessageEN: There is something that I need your help with, Sensei.
-    MessageTH: 'ฉันมีเรื่องที่อยากจะขอ
+    MessageTH: "ฉันมีเรื่องที่อยากจะขอ
 
-      ความช่วยเหลือจากคุณครูค่ะ'
+      ความช่วยเหลือจากคุณครูค่ะ"
     MessageTW: 其實是有事情想請老師幫忙……
   - MessageGroupId: 100300230
     Id: 100300350
@@ -709,7 +709,7 @@ content:
     NextGroupId: 100300240
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응, 괜찮아.
     MessageJP: うん、任せて
     MessageCN: 嗯，交给我吧
@@ -727,7 +727,7 @@ content:
     NextGroupId: 100300240
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 치나츠의 부탁이라면 뭐든지!
     MessageJP: チナツの頼みならいくらでも！
     MessageCN: 只要是千夏的请求，不管来多少个都可以！
@@ -745,7 +745,7 @@ content:
     NextGroupId: 100300250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 감사합니다.
     MessageJP: あ、ありがとうございます
     MessageCN: 非、非常感谢
@@ -763,16 +763,16 @@ content:
     NextGroupId: 100300260
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 온천장 입구의 기념품 가게에서 기다리고 있겠습니다.
     MessageJP: それでは、お土産屋さんの前でお待ちしておりますね
     MessageCN: 那么，我在纪念品店门口等您哦
     MessageEN:
       Then I will be waiting for you at the souvenir shop at the entrance
       of the hot springs resort.
-    MessageTH: 'ถ้างั้นฉันจะรอที่ร้านขายของ
+    MessageTH: "ถ้างั้นฉันจะรอที่ร้านขายของ
 
-      ที่ระลึกตรงทางเข้าออนเซ็นนะคะ'
+      ที่ระลึกตรงทางเข้าออนเซ็นนะคะ"
     MessageTW: 那麼，我在伴手禮店的前面等您
   - MessageGroupId: 100300250
     Id: 100300390
@@ -785,7 +785,7 @@ content:
     NextGroupId: 100300260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 식사 후에 뵙겠습니다.
     MessageJP: よろしくお願いいたします
     MessageCN: 拜托老师了
@@ -803,11 +803,11 @@ content:
     NextGroupId: 100300270
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
-    MessageKR: '- 치나츠'
+    ImagePath: ""
+    MessageKR: "- 치나츠"
     MessageJP: ～チナツ～
     MessageCN: ～千夏～
-    MessageEN: '- Chinatsu'
+    MessageEN: "- Chinatsu"
     MessageTH: .- ชินัตสึ
     MessageTW: ～千夏～
   - MessageGroupId: 100300270
@@ -821,7 +821,7 @@ content:
     NextGroupId: 100300280
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님, 안녕하세요. 치나츠입니다.
     MessageJP: 先生、こんにちは
     MessageCN: 老师，您好
@@ -839,14 +839,14 @@ content:
     NextGroupId: 100300290
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 지난번에는 부원들에게 선물할 답례품을 고르며 선생님께 신세를 졌습니다.
     MessageJP: この前のお土産選びの件はありがとうございました
     MessageCN: 真的非常感谢老师之前能帮我一起挑选纪念品
     MessageEN: You helped me pick out thank you gifts for my members last time.
-    MessageTH: 'เมื่อคราวก่อนตอนเลือกของขวัญ
+    MessageTH: "เมื่อคราวก่อนตอนเลือกของขวัญ
 
-      ฉันรบกวนคุณครูเอาไว้เยอะเลยค่ะ'
+      ฉันรบกวนคุณครูเอาไว้เยอะเลยค่ะ"
     MessageTW: 之前挑選禮物的那件事，非常感謝您
   - MessageGroupId: 100300280
     Id: 100300430
@@ -859,7 +859,7 @@ content:
     NextGroupId: 100300290
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그 외에도 이것저것 잔뜩 선물을 받기도 했었고……
     MessageJP: それに、プレゼントまで頂いてしまって……
     MessageCN: 而且，我还收到了老师的礼物……
@@ -877,16 +877,16 @@ content:
     NextGroupId: 100300300
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 베풀어 주신 은혜에 보답하지 않고 넘어가는 것은 올바른 자세가 아니라고 생각되어,
     MessageJP: その、お返しのお返しというのも変なお話かもしれませんが……
     MessageCN: 那个，要说谢礼的谢礼的话可能听起来有点奇怪……
     MessageEN:
       I don't think it's right for me to keep on receiving without reciprocating
       the kindness you've shown me.
-    MessageTH: 'ฉันคิดว่ามันเป็นสิ่งที่ไม่ถูกต้อง
+    MessageTH: "ฉันคิดว่ามันเป็นสิ่งที่ไม่ถูกต้อง
 
-      ถ้าจะได้รับความช่วยเหลืออยู่ฝ่ายเดียวค่ะ'
+      ถ้าจะได้รับความช่วยเหลืออยู่ฝ่ายเดียวค่ะ"
     MessageTW: 那個，雖然回禮您的回禮聽起來可能很奇怪……
   - MessageGroupId: 100300290
     Id: 100300450
@@ -899,14 +899,14 @@ content:
     NextGroupId: 100300300
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 근처에 있는 고급 료칸의 숙박권을 예약해 두었습니다.
     MessageJP: 何か私も恩返しがしたいと思い、ある旅館の予約をしておきました
     MessageCN: 我也想做点什么来回报老师，于是预约了一家旅馆
     MessageEN: I made a reservation at a nearby luxury ryokan.
-    MessageTH: 'ฉันจองบัตรกำนัลที่พักเรียวกัง
+    MessageTH: "ฉันจองบัตรกำนัลที่พักเรียวกัง
 
-      สุดหรูที่อยู่ใกล้ๆ นี้เอาไว้แล้วค่ะ'
+      สุดหรูที่อยู่ใกล้ๆ นี้เอาไว้แล้วค่ะ"
     MessageTW: 但我也想要報答恩情，所以預約了某間旅館
   - MessageGroupId: 100300300
     Id: 100300460
@@ -919,18 +919,18 @@ content:
     NextGroupId: 100300310
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 식사나 시설이 훌륭하기로 소문난 료칸이니, 선생님께서도 분명 만족하시리라 생각합니다.
     MessageJP: 結構良いところでして、食事や施設も素晴らしいと評判のところですので、きっとご満足いただけるかと
     MessageCN: 那个旅馆相当不错，饮食和设施的评价都相当高。我想老师一定会满意的
     MessageEN:
       It's a ryokan known for its excellent food and facilities, so I'm certain
       you will enjoy it, Sensei.
-    MessageTH: 'เป็นเรียวกังที่ขึ้นชื่อเรื่องความสะดวก
+    MessageTH: "เป็นเรียวกังที่ขึ้นชื่อเรื่องความสะดวก
 
       สบายและอาหารชั้นเลิศ ฉันคิดว่าคุณครู
 
-      คงจะต้องพอใจแน่ๆ ค่ะ'
+      คงจะต้องพอใจแน่ๆ ค่ะ"
     MessageTW: 是個不錯的地方，餐點和設施都有不錯的評價，我想您一定會滿意的
   - MessageGroupId: 100300300
     Id: 100300470
@@ -943,7 +943,7 @@ content:
     NextGroupId: 100300310
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 기다리고 있겠습니다.
     MessageJP: それでは、お待ちしておりますね
     MessageCN: 那么，我等着老师
@@ -961,10 +961,10 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
-    MessageKR: '- 치나츠'
+    ImagePath: ""
+    MessageKR: "- 치나츠"
     MessageJP: ～チナツ～
     MessageCN: ～千夏～
-    MessageEN: '- Chinatsu'
+    MessageEN: "- Chinatsu"
     MessageTH: .- ชินัตสึ
     MessageTW: ～千夏～

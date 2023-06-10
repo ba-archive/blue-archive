@@ -1,32 +1,32 @@
 //noinspection CssUnknownTarget
 @font-face {
-  src: url('/font/bender-bold.woff2') format('woff2'),
-    url('/font/bender-bold.woff') format('woff');
-  font-family: 'Bender';
+  src: url("/font/bender-bold.woff2") format("woff2"),
+    url("/font/bender-bold.woff") format("woff");
+  font-family: "Bender";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url('/font/AsapCondensed-BoldItalic.woff2') format('woff2'),
-    url('/font/AsapCondensed-BoldItalic.woff') format('woff');
-  font-family: 'Asap Condensed Bold Italic';
+  src: url("/font/AsapCondensed-BoldItalic.woff2") format("woff2"),
+    url("/font/AsapCondensed-BoldItalic.woff") format("woff");
+  font-family: "Asap Condensed Bold Italic";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url('/font/AsapCondensed-Medium.woff2') format('woff2'),
-    url('/font/AsapCondensed-Medium.woff') format('woff');
-  font-family: 'Asap Condensed Medium';
+  src: url("/font/AsapCondensed-Medium.woff2") format("woff2"),
+    url("/font/AsapCondensed-Medium.woff") format("woff");
+  font-family: "Asap Condensed Medium";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url('/font/fusion-pixel.woff2') format('woff2'),
-    url('/font/fusion-pixel.woff') format('woff');
-  font-family: 'Fusion Pixel';
+  src: url("/font/fusion-pixel.woff2") format("woff2"),
+    url("/font/fusion-pixel.woff") format("woff");
+  font-family: "Fusion Pixel";
   font-display: swap;
 }
 
@@ -93,7 +93,7 @@ html {
   --style-primary-inset-main: inset 5px 5px 10px #c9cfd5,
     inset -5px -5px 10px #ffffff;
 
-  --style-background-image: url('/image/homescreen/background.webp');
+  --style-background-image: url("/image/homescreen/background.webp");
 
   --trigo-param-positive: calc((0.6rem - 1px) / 1.414);
   --trigo-param-negative: calc((0.6rem - 1px) / -1.414);
@@ -102,7 +102,7 @@ html {
 }
 
 //noinspection CssUnknownTarget
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --color-pallete-arona-blue: #b2cffa;
   --color-pallete-warning: #cc820a;
   --color-pallete-danger: #cc2f27;
@@ -154,7 +154,7 @@ html[data-theme='dark'] {
   --style-switch-texture: linear-gradient(145deg, #b8b8b8, #616161);
   --style-switch-shadow: 0.1rem 0.1rem 0.4rem #616161;
 
-  --style-background-image: url('/image/homescreen/background-dark.webp');
+  --style-background-image: url("/image/homescreen/background-dark.webp");
 }
 
 //noinspection CssOverwrittenProperties
@@ -170,9 +170,9 @@ body {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, system-ui,
-    'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', BlinkMacSystemFont,
-    'Helvetica Neue', 'Hiragino Sans GB', Arial, sans-serif;
+  font-family: "Microsoft YaHei", "PingFang SC", -apple-system, system-ui,
+    "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
+    "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
 }
 
 * {
@@ -190,7 +190,7 @@ a {
   grid-column-gap: 1.5rem;
   display: grid;
   grid-template-columns: max-content auto;
-  grid-template-areas: 'navigation-pane main';
+  grid-template-areas: "navigation-pane main";
   flex: 1;
   justify-items: stretch;
   transition: border-color 0.375s ease-in-out;
@@ -215,7 +215,7 @@ a {
 .acrylic {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-image: url('/src/assets/nnnoise.png');
+  background-image: url("/src/assets/nnnoise.png");
   background-position: center;
   background-repeat: repeat;
   overflow: hidden;
@@ -298,7 +298,7 @@ a {
 
 // consistent scrollbar style on all desktop browsers
 @media screen and (min-width: 768px) {
-  html[data-scrollbar='customize'] {
+  html[data-scrollbar="customize"] {
     //scrollbar-gutter: stable;
     //scrollbar-width: thin;
 

@@ -1,4 +1,4 @@
-import { Section, StoryBriefing } from '../types/StoryJson';
+import { Section, StoryBriefing } from "../types/StoryJson";
 
 export function getAllFlattenedStoryIndex(
   storyIndex: StoryBriefing[] | Section[] | undefined

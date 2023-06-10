@@ -1,6 +1,7 @@
 import eventBus from "@/eventBus";
 import { eventEmitter, storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
+
 const keyStatus = {} as any;
 
 // 进行下一步的定时器

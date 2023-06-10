@@ -42,9 +42,9 @@ title:
   - TextJp: 深夜のティータイム
     TextCn: 深夜的茶点时间
     TextKr: 심야의 홍차
-    TextEn: ''
-    TextTh: ''
-    TextTw: ''
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
     GroupId: 2000520
     FavorScheduleId: 2000520
     CharacterId: 20005
@@ -69,7 +69,7 @@ content:
     NextGroupId: 20005020
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 오늘 방과 후에 시바타운에 있는 대형 쇼핑몰에 수영복을 사러 가려했거든요.
     MessageJP: 放課後、芝タウンのショッピングモールで水着を買おうかなって思ってまして……
     MessageCN: 我放学之后想去芝镇的购物中心买泳装……
@@ -91,7 +91,7 @@ content:
     NextGroupId: 20005030
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 어떤 수영복이 제게 어울리는지 선생님이 꼭 봐주셨으면 좋겠어요. (≧∇≦)
     MessageJP: よろしければ、どんな水着が良いか先生に見ていただきたく……！
     MessageCN: 如果可以的话，老师能帮我一起选吗……？
@@ -111,7 +111,7 @@ content:
     NextGroupId: 20005040
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그래. 같이 가자.
     MessageJP: えっと、私で良ければ喜んで
@@ -130,7 +130,7 @@ content:
     NextGroupId: 20005050
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그나저나 전에 쓰던 수영복은 없는 거야?
     MessageJP: もしかして水着、持ってないとか……？
@@ -149,7 +149,7 @@ content:
     NextGroupId: 20005060
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 학교에서 쓰는 평범한 스쿨미즈가 있긴 하지만……
     MessageJP: 学校のスクール水着はありますが……
@@ -170,7 +170,7 @@ content:
     NextGroupId: 20005070
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 그건 너무 평범해요! 평범한 수영복으로는 안 된다고요!
     MessageJP: それではダメなんです！
     MessageCN: 但是那个不行！
@@ -190,7 +190,7 @@ content:
     NextGroupId: 20005070
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 뭐가 안 되는데……?
     MessageJP: だ、ダメなんだ……？
     MessageCN: 不、不行吗……？
@@ -208,7 +208,7 @@ content:
     NextGroupId: 20005080
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 여름의 해변은 모두가 숨겨왔던 매력을 드러내는 각축장……
     MessageJP: 夏、そして海といえば、みんなそれぞれ隠していた魅力を披露する戦場……
     MessageCN: 要说到夏天以及大海，那可是大家用来展现各自平时没有表现出来的魅力的战场……
@@ -228,7 +228,7 @@ content:
     NextGroupId: 20005090
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그곳에 평범한 수영복을 입고 가는 건 총알 없이 전장에 나가는 것과 다름없어요!
     MessageJP: なのに、そんなところにスクール水着で行くなんて、普通の子にとっては銃弾を持たずに戦場に出るのと同じです！
@@ -252,7 +252,7 @@ content:
     NextGroupId: 20005090
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: ……말하자면, 여름 데뷔예요!
     MessageJP: せっかくですし私も、夏デビューしたいんです……！
     MessageCN: 难得有这个机会，我也想在夏天第一次展示一下自己……！
@@ -272,7 +272,7 @@ content:
     NextGroupId: 20005100
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 선생님, 무이가하마 시장 근처에 알려지지 않은 예쁜 해변이 있대요.
     MessageJP: 先生、無為ヶ浜から少し離れた市場の近くに、あまり知られていない綺麗な海辺があるそうです！
     MessageCN: 老师，听说离在无为滨不远的市场附近，有一个没什么人知道的美丽海滩！
@@ -294,7 +294,7 @@ content:
     NextGroupId: 20005110
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 오후에 함께 수영하러 가지 않으시겠어요?
     MessageJP: 今日の午後、そこへ一緒に泳ぎに行きませんか？
     MessageCN: 今天下午，我们一起去那里游泳怎么样？
@@ -314,7 +314,7 @@ content:
     NextGroupId: 20005120
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 좋아.
     MessageJP: そんなところがあるんだ、それはぜひ
     MessageCN: 竟然还有那种地方啊，一起去吧
@@ -332,7 +332,7 @@ content:
     NextGroupId: 20005130
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그런데 그 근처는 버스나 전철이 다니지 않을 텐데, 어떻게 가지?
     MessageJP: でもその辺は、バスも電車も通ってないはずだけど……
@@ -353,7 +353,7 @@ content:
     NextGroupId: 20005140
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 괜찮아요. 제가 직접 모시러 갈게요.
     MessageJP: 大丈夫です
     MessageCN: 没关系
@@ -373,7 +373,7 @@ content:
     NextGroupId: 20005150
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 전차로!
     MessageJP: 私が、戦車で迎えに行きますので！
     MessageCN: 我开坦克去接您！
@@ -391,7 +391,7 @@ content:
     NextGroupId: 20005150
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 전차로?!
     MessageJP: 戦車で！？
     MessageCN: 坦克！？
@@ -409,7 +409,7 @@ content:
     NextGroupId: 20005160
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 선생님, 정말 죄송해요.
     MessageJP: 先生、今日はありがとうございました。それにすみません……
@@ -428,7 +428,7 @@ content:
     NextGroupId: 20005170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: |-
       저 때문에 괜한 고생을 하셨으니……
        (；＿；)
@@ -452,7 +452,7 @@ content:
     NextGroupId: 20005170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 괜찮아.
     MessageJP: ううん、気にしないで
     MessageCN: 没有的事，日富美别往心里去
@@ -470,7 +470,7 @@ content:
     NextGroupId: 20005180
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 수영복의 상태는 괜찮아?
     MessageJP: 水着、直せそう？
     MessageCN: 泳装，还能补好吗？
@@ -488,7 +488,7 @@ content:
     NextGroupId: 20005190
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 찢어진 수영복은 어쩔 수 없지만…… 여분의 수영복이 있으니 괜찮아요.
     MessageJP: 恐らく、何とかなるかなと……
     MessageCN: 应该，应该有办法吧……
@@ -511,7 +511,7 @@ content:
     NextGroupId: 20005200
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 다음번에는 전차가 아니라 택시를 타고 수영을 하러 가죠!
     MessageJP: 次泳ぎに行く時は、戦車ではなくタクシーで行きましょう！
     MessageCN: 下次去游泳的时候，我们就不坐坦克，改坐出租车去吧！
@@ -531,7 +531,7 @@ content:
     NextGroupId: 20005200
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 수영복을 입은 채로 택시를 타는 건 어쩐지 부끄럽지 않아?
     MessageJP: 水着姿でタクシーも、結構恥ずかしくない？
@@ -550,7 +550,7 @@ content:
     NextGroupId: 20005210
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 앗…….
     MessageJP: ……
     MessageCN: ……
@@ -568,7 +568,7 @@ content:
     NextGroupId: 20005220
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 아아앗……! ((º□º;))
     MessageJP: 確かに……！((º□º;))
     MessageCN: 确实……！((º□º;))
@@ -586,7 +586,7 @@ content:
     NextGroupId: 20005230
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 선생님, 밖에 좀 보세요!
     MessageJP: 先生！
     MessageCN: 老师！
@@ -604,7 +604,7 @@ content:
     NextGroupId: 20005240
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 구름 한 점 없이 볕이 드는 게 날씨가 아주 맑아요!
     MessageJP: 雲一つ無くて、すっごく良い天気ですよ！
     MessageCN: 今天是个万里无云的好天气呢！
@@ -622,7 +622,7 @@ content:
     NextGroupId: 20005250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 이런 날 해변에서 일광욕하면 분명 기분 좋을 거예요~
     MessageJP: せっかくこんなに晴れてますし
     MessageCN: 难得的大晴天
@@ -642,7 +642,7 @@ content:
     NextGroupId: 20005260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 괜찮으시면 일광욕을 하러 같이 해변에 나가지 않으시겠어요?
     MessageJP: 一緒に日光浴なんていかがですか？
     MessageCN: 我们一起去晒日光浴怎么样？
@@ -662,7 +662,7 @@ content:
     NextGroupId: 20005260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 좋아. 같이 나가자.
     MessageJP: 良いね、ぜひぜひ
     MessageCN: 不错诶，一起去吧
@@ -680,7 +680,7 @@ content:
     NextGroupId: 20005270
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그런데 일광욕을 하려면 장비가 필요하지 않을까?
     MessageJP: そうとなったら、色々と準備しないとね
@@ -701,7 +701,7 @@ content:
     NextGroupId: 20005280
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 괜찮아요. ヾ(•ω•`)o
     MessageJP: そこはお任せください！ヾ(•ω•`)o
     MessageCN: 准备就交给我吧！ヾ(•ω•`)o
@@ -719,7 +719,7 @@ content:
     NextGroupId: 20005290
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 저희에게 해수욕 장비는 없어도 전차는 있으니까요!
     MessageJP: 今の私たちには、クルセイダーちゃんがありますので！
     MessageCN: 我们现在可是有十字军酱在！
@@ -739,7 +739,7 @@ content:
     NextGroupId: 20005290
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 전차로 무얼 어쩌려고?!
     MessageJP: 戦車で何をどうする気！？
     MessageCN: 你想用坦克做什么啊！？
@@ -757,7 +757,7 @@ content:
     NextGroupId: 20005300
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 선생님, 점심 식사하셨나요?
     MessageJP: 先生、もうお昼は食べましたか？
     MessageCN: 老师，吃过午饭了吗？
@@ -775,7 +775,7 @@ content:
     NextGroupId: 20005310
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 아직 안 먹었어.
     MessageJP: ううん、まだこれから
     MessageCN: 还没有，正打算去吃
@@ -793,7 +793,7 @@ content:
     NextGroupId: 20005320
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 마침 잘 되었네요. 저도 지금부터 식사하려던 참이었거든요.
     MessageJP: そうでしたか！私、今からちょうどご飯を食べに行こうかなと思ってまして
@@ -814,7 +814,7 @@ content:
     NextGroupId: 20005330
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 이 앞의 바다의 집에서 맛있는 야키소바를 판다고 하던데…….
     MessageJP: 近くの海の家で、美味しい焼きそばを売ってると聞いたんですが……
@@ -835,7 +835,7 @@ content:
     NextGroupId: 20005340
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 괜찮으시다면 바다의 집에서 같이 식사하지 않으시겠어요?
     MessageJP: よろしければ、先生も一緒にいかがですか？
     MessageCN: 要是老师方便的话，就和我一起去试试看吧？
@@ -855,7 +855,7 @@ content:
     NextGroupId: 20005340
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 좋아. 같이 점심을 먹자.
     MessageJP: 焼きそば良いね、行こう！
     MessageCN: 炒面听起来不错呢，走吧！
@@ -873,7 +873,7 @@ content:
     NextGroupId: 20005350
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 네, 그럼 잠시 후에 바다의 집 앞에서 뵐게요!
     MessageJP: では、海の家の前で待ってますね！
     MessageCN: 那么，我在海之家前面等老师哦！
@@ -893,13 +893,13 @@ content:
     NextGroupId: 20005360
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
   - MessageKR: 모처럼의 바다인데……
     MessageJP: せっかくの海なのに……
     MessageCN: 明明是难得来一次海边……
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005360
     Id: 20005440
     CharacterId: 20005
@@ -911,14 +911,14 @@ content:
     NextGroupId: 20005370
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 선생님께서는 계속 바빠 보이시네요.
     MessageJP: 先生はずっとお忙しそうですね
     MessageCN: 老师好像一直都是在忙呢
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005370
     Id: 20005450
     CharacterId: 20005
@@ -930,14 +930,14 @@ content:
     NextGroupId: 20005380
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 혹시 제가 도와드릴 수 있는 일이 있을까요?
     MessageJP: 何か私にお手伝いできることはありますか？
     MessageCN: 有什么我可以帮到的地方呢？
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005370
     Id: 20005460
     CharacterId: 20005
@@ -949,14 +949,14 @@ content:
     NextGroupId: 20005380
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 고맙지만 마음만 받을게.
     MessageJP: その気持ちだけでも嬉しいよ
     MessageCN: 光是有这份心我就已经很高兴了
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005380
     Id: 20005470
     CharacterId: 20005
@@ -968,14 +968,14 @@ content:
     NextGroupId: 20005390
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 이상하게 가는 곳마다 도움을 요청하는 사람이 많아서……
     MessageJP: なぜか行く先々で頼まれ事が多くて……
     MessageCN: 不知为何经常人走到哪儿事情就跟到哪儿……
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005390
     Id: 20005480
     CharacterId: 20005
@@ -987,14 +987,14 @@ content:
     NextGroupId: 20005400
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 휴양지에서도 고생이 많으시네요……
     MessageJP: それは大変でしたね……
     MessageCN: 那还真是够辛苦的呢……
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005400
     Id: 20005490
     CharacterId: 20005
@@ -1006,14 +1006,14 @@ content:
     NextGroupId: 20005410
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 그래도 너무 무리는 하지 마세요.
     MessageJP: あまり、無理しないでくださいね
     MessageCN: 请不要太勉强自己哦
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005400
     Id: 20005500
     CharacterId: 20005
@@ -1025,14 +1025,14 @@ content:
     NextGroupId: 20005410
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: "'아무것도 하지 않고 지나간 여름만큼 슬픈 것은 없다-' 라고"
     MessageJP: 「何もせずに過ぎ去った夏ほど悲しいことはないー」と
     MessageCN: 「没有比什么都没做就让夏天悄然逝去更令人感到悲伤的事情了」
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005410
     Id: 20005510
     CharacterId: 20005
@@ -1044,14 +1044,14 @@ content:
     NextGroupId: 20005420
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: Mr.니콜라이 씨가 여름 특별세일 광고에서 말씀하셨으니까요!
     MessageJP: Mr.ニコライさんが夏の特別セールの宣伝で仰っていましたからね！
     MessageCN: 这是Mr.尼古拉先生在夏季特卖的宣传中说的！
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005410
     Id: 20005520
     CharacterId: 20005
@@ -1063,14 +1063,14 @@ content:
     NextGroupId: 20005420
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false
   - MessageKR: 명심해둘게
     MessageJP: うん、気をつけるね。ありがとう
     MessageCN: 嗯，我会注意的。谢谢你
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 20005420
     Id: 20005530
     CharacterId: 20005
@@ -1082,5 +1082,5 @@ content:
     NextGroupId: 20005430
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     unsure: false

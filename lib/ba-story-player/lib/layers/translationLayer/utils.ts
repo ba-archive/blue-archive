@@ -1,3 +1,4 @@
+import { usePlayerStore } from "@/stores";
 import {
   Speaker,
   StoryRawUnit,
@@ -6,12 +7,11 @@ import {
   TextEffect,
   TextEffectName,
 } from "@/types/common";
-import { usePlayerStore } from "@/stores";
-import { Language } from "@/types/store";
 import { PlayAudio, ShowTitleOption } from "@/types/events";
+import { CharacterNameExcelTableItem } from "@/types/excels";
+import { Language } from "@/types/store";
 import { getResourcesUrl } from "@/utils";
 import xxhash from "xxhashjs";
-import { CharacterNameExcelTableItem } from "@/types/excels";
 
 const playerStore = usePlayerStore();
 

@@ -1,13 +1,12 @@
 /**
  * 初始化背景层, 订阅player的剧情信息.
  */
-import { Sprite, LoaderResource, Application } from "pixi.js";
-import gsap from "gsap";
-
+import eventBus from "@/eventBus";
+import { usePlayerStore } from "@/stores";
 import { BgLayer } from "@/types/bgLayer";
 import { Dict } from "@/types/common";
-import { usePlayerStore } from "@/stores";
-import eventBus from "@/eventBus";
+import gsap from "gsap";
+import { Sprite, LoaderResource, Application } from "pixi.js";
 
 export function bgInit() {
   return BgLayerInstance.init();

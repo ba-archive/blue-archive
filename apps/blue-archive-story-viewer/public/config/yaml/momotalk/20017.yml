@@ -15,19 +15,19 @@ title:
     CharacterId: 20017
     TextJp: 少女はそれでも諦めない
     TextCn: 即便如此少女也不想放弃
-    TextKr: '소녀는 그래도 포기하지 않는다 '
+    TextKr: "소녀는 그래도 포기하지 않는다 "
     TextEn: "The Girl Still Doesn't Give Up "
-    TextTh: 'ถึงยังไงก็จะไม่ยอมแพ้ '
-    TextTw: '少女依然不放棄 '
+    TextTh: "ถึงยังไงก็จะไม่ยอมแพ้ "
+    TextTw: "少女依然不放棄 "
   - GroupId: 2001705
     FavorScheduleId: 200175
     CharacterId: 20017
     TextJp: 少女はそれでも知っていたい
     TextCn: 即便如此少女也想知晓
-    TextKr: '소녀는 그래도 알고 싶다 '
-    TextEn: 'The Girl Still Wants to Know '
-    TextTh: 'ถึงยังไงก็ต้องรู้ให้ได้ '
-    TextTw: '少女依然想知道 '
+    TextKr: "소녀는 그래도 알고 싶다 "
+    TextEn: "The Girl Still Wants to Know "
+    TextTh: "ถึงยังไงก็ต้องรู้ให้ได้ "
+    TextTw: "少女依然想知道 "
 content:
   - MessageGroupId: 200170010
     Id: 200170010
@@ -40,7 +40,7 @@ content:
     NextGroupId: 200170020
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 안녕하세요, 선생님. 헤헤…….
     MessageJP: 先生、こんにちは。えへへ……
     MessageCN: 老师，您好。诶嘿嘿……
@@ -58,11 +58,11 @@ content:
     NextGroupId: 200170030
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님 폰 맞죠?
     MessageJP: えっと、先生のアカウントであってますよね？
     MessageCN: 那个，这个是老师的账号对吧？
-    MessageEN: 'Is this your number? '
+    MessageEN: "Is this your number? "
     MessageTH: นี่แชตคุณครู... ใช่มั้ยคะ?
     MessageTW: 那個，這是老師的帳號對吧？
   - MessageGroupId: 200170030
@@ -76,7 +76,7 @@ content:
     NextGroupId: 200170040
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 히요리……?
     MessageJP: ヒヨリ？
     MessageCN: 日和？
@@ -94,7 +94,7 @@ content:
     NextGroupId: 200170050
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 헤헤헤…… 네. 선생님 지금 무
     MessageJP: えヘヘ……はい。ええと、いま無
     MessageCN: 欸嘿嘿……是的。那个，我现在找
@@ -112,13 +112,13 @@ content:
     NextGroupId: 200170050
     FeedbackTimeMillisec: 2500
     MessageType: Text
-    ImagePath: ''
-    MessageKR: ' '
-    MessageJP: ' '
-    MessageCN: ' '
-    MessageEN: ' '
-    MessageTH: ' '
-    MessageTW: ' '
+    ImagePath: ""
+    MessageKR: " "
+    MessageJP: " "
+    MessageCN: " "
+    MessageEN: " "
+    MessageTH: " "
+    MessageTW: " "
   - MessageGroupId: 200170050
     Id: 200170060
     CharacterId: 20017
@@ -130,12 +130,12 @@ content:
     NextGroupId: 200170060
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……?
     MessageJP: ……？
     MessageCN: ……？
-    MessageEN: '...?'
-    MessageTH: '...?'
+    MessageEN: "...?"
+    MessageTH: "...?"
     MessageTW: ……？
   - MessageGroupId: 200170050
     Id: 200170070
@@ -148,12 +148,12 @@ content:
     NextGroupId: 200170060
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……히요리?
     MessageJP: ……ヒヨリ？
     MessageCN: 日和？
-    MessageEN: '...Hiyori? '
-    MessageTH: 'ฮิโยริ...? '
+    MessageEN: "...Hiyori? "
+    MessageTH: "ฮิโยริ...? "
     MessageTW: ……日和？
   - MessageGroupId: 200170060
     Id: 200170080
@@ -166,12 +166,12 @@ content:
     NextGroupId: 200170070
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 료 와이파이를 찾았거든요…… 헤헤.
     MessageJP: 料のwifiを見つけたんです……えへへ
     MessageCN: 到了免费的wifi……欸嘿嘿
-    MessageEN: 'free Wi-Fi... Heehee... '
-    MessageTH: 'หา WIFI ฟรีใช้อยู่ค่ะ... แหะๆๆ '
+    MessageEN: "free Wi-Fi... Heehee... "
+    MessageTH: "หา WIFI ฟรีใช้อยู่ค่ะ... แหะๆๆ "
     MessageTW: 費的wifi……欸嘿嘿
   - MessageGroupId: 200170060
     Id: 200170090
@@ -184,14 +184,14 @@ content:
     NextGroupId: 200170070
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 역시 사람은 죽으라는 법은 없는 거랄까…….
     MessageJP: なんとか生き延びるすべはあるというか……
     MessageCN: 最起码能算是找到生存手段了吧……
     MessageEN: There's always a light in the darkness...
-    MessageTH: 'ว่าแล้วเชียวว่าย่อมมีแสงสว่าง
+    MessageTH: "ว่าแล้วเชียวว่าย่อมมีแสงสว่าง
 
-      ในความมืด...'
+      ในความมืด..."
     MessageTW: 該說是天無絕人之路嗎……
   - MessageGroupId: 200170060
     Id: 200170100
@@ -204,12 +204,12 @@ content:
     NextGroupId: 200170070
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님은 지금 뭐하고 계세요?
     MessageJP: えっと……それで、先生は今何をしていらっしゃいますか？
     MessageCN: 那个……所以，老师现在在做什么呢？
-    MessageEN: 'Sensei, what are you doing now? '
-    MessageTH: 'ตอนนี้คุณครูทำอะไรอยู่เหรอคะ? '
+    MessageEN: "Sensei, what are you doing now? "
+    MessageTH: "ตอนนี้คุณครูทำอะไรอยู่เหรอคะ? "
     MessageTW: 那個……老師現在在做什麼？
   - MessageGroupId: 200170060
     Id: 200170110
@@ -222,7 +222,7 @@ content:
     NextGroupId: 200170070
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님?
     MessageJP: 先生？
     MessageCN: 老师？
@@ -240,7 +240,7 @@ content:
     NextGroupId: 200170080
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님? 어째서 답을 해주지 않는 거죠?
     MessageJP: あれ、どうして答えてくれないのですか？
     MessageCN: 诶，老师为什么不回我消息呢？
@@ -258,14 +258,14 @@ content:
     NextGroupId: 200170080
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 드디어 저는 선생님에게도 버림받은 건가요?
     MessageJP: ……とうとう、私は先生にもみはなされてしまったんですか
     MessageCN: ……我终于，还是被老师抛弃了吗
-    MessageEN: 'Are you abandoning me, just like everyone else? '
-    MessageTH: 'หรือว่าสุดท้ายแล้วฉันก็ถูกคุณครูทิ้ง
+    MessageEN: "Are you abandoning me, just like everyone else? "
+    MessageTH: "หรือว่าสุดท้ายแล้วฉันก็ถูกคุณครูทิ้ง
 
-      อีกคนแล้วเหรอคะ?'
+      อีกคนแล้วเหรอคะ?"
     MessageTW: ……終於，我也被老師拋棄了嗎
   - MessageGroupId: 200170080
     Id: 200170140
@@ -278,14 +278,14 @@ content:
     NextGroupId: 200170090
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 진짜인가요? 망했어요, 진짜 망했네요. 이제 저는 끝장이에요. 으아아아앙아ㅏㅏㅏ아
     MessageJP: そういうことですよね？終わりだ、もうほんとつにおわりでふうわああいあたあい
     MessageCN: 就是这么回事吧？全完蛋了，已经完蛋了呜啊啊啊啊好痛苦
     MessageEN: Is this real? I'm done. It's over. Everything is finished. AHHHHHH!
-    MessageTH: 'เรื่องจริงเหรอคะ? แบบนี้แย่แน่ๆ แย่ที่สุด
+    MessageTH: "เรื่องจริงเหรอคะ? แบบนี้แย่แน่ๆ แย่ที่สุด
 
-      เลยค่ะ ชีวิตฉันคงจบแล้ว มุแงงงงงงง~~'
+      เลยค่ะ ชีวิตฉันคงจบแล้ว มุแงงงงงงง~~"
     MessageTW: 是這樣對吧？結束了，真的全都結束了呼嗚哇啊啊痛啊
   - MessageGroupId: 200170090
     Id: 200170150
@@ -298,7 +298,7 @@ content:
     NextGroupId: 200170100
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 진정해, 히요리. 통신상태를 확인해.
     MessageJP: ヒヨリ落ち着いて、通信状態を確認してみよう
     MessageCN: 冷静一点日和，先看看自己网络是不是有问题吧
@@ -316,14 +316,14 @@ content:
     NextGroupId: 200170100
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 무료 와이파이라서 메시지 수신에 시간이 걸리는 걸지도 모르니까.
     MessageJP: 無料のWi-Fiだとメッセージの受信に時間がかかってるのかも
     MessageCN: 免费的Wi-Fi可能接收消息要花比较久的时间
     MessageEN: "My messages take forever to send because I'm using public Wi-Fi! "
-    MessageTH: 'ข้อความอาจดีเลย์นิดหน่อย
+    MessageTH: "ข้อความอาจดีเลย์นิดหน่อย
 
-      เพราะใช้ WI-FI ฟรีก็ได้'
+      เพราะใช้ WI-FI ฟรีก็ได้"
     MessageTW: 如果是免費wifi的話，要收到訊息可能要花點時間
   - MessageGroupId: 200170100
     Id: 200170170
@@ -336,7 +336,7 @@ content:
     NextGroupId: 200170110
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아 그, 그러네요. 와이파이가 끊겨 있었네요…….
     MessageJP: あ、た、たしかに。Wi-Fiが途切れてしまってましたね……
     MessageCN: 啊，确、确实是这样。Wi-Fi断掉了呢……
@@ -354,7 +354,7 @@ content:
     NextGroupId: 200170110
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그런 거였군요…….
     MessageJP: そういうことだったんですね……
     MessageCN: 原来是这样啊……
@@ -372,7 +372,7 @@ content:
     NextGroupId: 200170120
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 죄송합니다…….
     MessageJP: すみません……
     MessageCN: 对不起……
@@ -390,12 +390,12 @@ content:
     NextGroupId: 200170130
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님…… 헤헤.
     MessageJP: 先生……えへへ、こんにちは
     MessageCN: 老师……诶嘿嘿，您好
-    MessageEN: 'Sensei... Heehee. '
-    MessageTH: 'คุณครูคะ... แหะๆๆ '
+    MessageEN: "Sensei... Heehee. "
+    MessageTH: "คุณครูคะ... แหะๆๆ "
     MessageTW: 老師……欸嘿嘿，你好
   - MessageGroupId: 200170130
     Id: 200170210
@@ -408,12 +408,12 @@ content:
     NextGroupId: 200170140
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 오늘은 운수가 좋은 날이에요.
     MessageJP: 今日は運が良い日です
     MessageCN: 我今天运气很好呢
-    MessageEN: 'I got lucky today. '
-    MessageTH: 'วันนี้เป็นวันที่โชคดีมากเลยค่ะ '
+    MessageEN: "I got lucky today. "
+    MessageTH: "วันนี้เป็นวันที่โชคดีมากเลยค่ะ "
     MessageTW: 今天運氣很好
   - MessageGroupId: 200170130
     Id: 200170220
@@ -426,18 +426,18 @@ content:
     NextGroupId: 200170140
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 상한 편의점 도시락에 핀 버섯 같은 제 인생에도 이런 일이 벌어지나 보네요.
     MessageJP: 傷んだコンビニ弁当から咲いた、キノコのような私の人生にも……こんなことが起きるんですね
     MessageCN: 哪怕我的人生已经像烂掉的便利店便当里长出的蘑菇一样……这种好事居然也能发生呢
     MessageEN:
       I never thought a day like this would come. My life always feels like
       a stale convenience store box lunch...
-    MessageTH: 'ชีวิตที่เหมือนกับเห็ดราที่งอกออกมาจาก
+    MessageTH: "ชีวิตที่เหมือนกับเห็ดราที่งอกออกมาจาก
 
       อาหารกล่องที่ถูกทิ้งไว้ในร้านค้าร้าง ก็มีเรื่อง
 
-      แบบนี้เกิดขึ้นด้วยนะคะ'
+      แบบนี้เกิดขึ้นด้วยนะคะ"
     MessageTW: 在我這和長在變質便利商店便當上的蘑菇一樣的人生裡……也會發生這種事呀
   - MessageGroupId: 200170140
     Id: 200170230
@@ -450,7 +450,7 @@ content:
     NextGroupId: 200170150
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 좋은 일이라도 있었어?
     MessageJP: 何か良いことでもあったの？
     MessageCN: 发生什么好事了吗？
@@ -468,7 +468,7 @@ content:
     NextGroupId: 200170160
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 네. 실은 오늘
     MessageJP: はい！実は今日……
     MessageCN: 是的！其实今天呢……
@@ -486,14 +486,14 @@ content:
     NextGroupId: 200170170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아아 직접 보는 게 빠르겠네요 잠시만요
     MessageJP: あ、見た方が早いかもしれません。少々お待ちください……
     MessageCN: 啊，给您实际看看可能比较快。请稍微等一下……
     MessageEN: Oh, I'll just show it to you. Hold on.
-    MessageTH: 'อา... คุณครูดูเองน่าจะเร็วกว่า
+    MessageTH: "อา... คุณครูดูเองน่าจะเร็วกว่า
 
-      สักครู่นะคะ'
+      สักครู่นะคะ"
     MessageTW: 啊，直接看可能比較快吧。請等一下……
   - MessageGroupId: 200170160
     Id: 200170260
@@ -506,12 +506,12 @@ content:
     NextGroupId: 200170170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 사진을 보낼게요.
     MessageJP: 写真を送りますね
     MessageCN: 我把照片发过去吧
     MessageEN: "I'll send you a picture. "
-    MessageTH: 'ฉันจะส่งรูปไปให้ค่ะ '
+    MessageTH: "ฉันจะส่งรูปไปให้ค่ะ "
     MessageTW: 我把照片傳給你
   - MessageGroupId: 200170170
     Id: 200170270
@@ -524,12 +524,12 @@ content:
     NextGroupId: 200170180
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님? 선생님? 보고 계신가요?
     MessageJP: 先生、これ見られますか？
     MessageCN: 老师，能看到图吗？
-    MessageEN: 'Sensei? Sensei? Are you seeing this? '
-    MessageTH: 'คุณครู คุณครูคะ? ดูอยู่รึเปล่าคะ? '
+    MessageEN: "Sensei? Sensei? Are you seeing this? "
+    MessageTH: "คุณครู คุณครูคะ? ดูอยู่รึเปล่าคะ? "
     MessageTW: 老師，能看到這個嗎？
   - MessageGroupId: 200170180
     Id: 200170280
@@ -542,16 +542,16 @@ content:
     NextGroupId: 200170190
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 왜 또 이러죠? 선생님?? 전송되지 않았습니다? 라니 무슨 소리인가요?
     MessageJP: 画像が送られてない……？あれ、どうして？
     MessageCN: 图片发送失败……？啊，为什么？
     MessageEN:
       What's going on this time? It says, "Failed to send." What does that
       mean?
-    MessageTH: 'ทำไมเป็นแบบนี้อีกแล้วล่ะ คุณครู?? รูปส่ง
+    MessageTH: "ทำไมเป็นแบบนี้อีกแล้วล่ะ คุณครู?? รูปส่ง
 
-      ไม่ไปงั้นเหรอ ทำไมเป็นแบบนี้นะ...?'
+      ไม่ไปงั้นเหรอ ทำไมเป็นแบบนี้นะ...?"
     MessageTW: 圖片沒有在傳送……？啊咧，為什麼？
   - MessageGroupId: 200170190
     Id: 200170290
@@ -564,7 +564,7 @@ content:
     NextGroupId: 200170200
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 으아아앙- 또 와이파이가 끊겼잖아요!
     MessageJP: うわぁん！またWi-Fiが途切れてます！
     MessageCN: 呜啊啊！Wi-Fi又断掉了！
@@ -582,16 +582,16 @@ content:
     NextGroupId: 200170200
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 역시 그럴 줄 알았어요. 혹시나하면 역시나예요! 괴롭네요 고통스러워요 마치
     MessageJP: まさかと思ったらそのまさかです！辛いです……まるで
     MessageCN: 怕什么还真来什么！好痛苦……简直就像
     MessageEN: I knew it. This always happens to me! I'm suffering. It's so painful!
-    MessageTH: 'คิดแล้วว่าต้องเป็นแบบนี้ สมกับเป็นฉัน
+    MessageTH: "คิดแล้วว่าต้องเป็นแบบนี้ สมกับเป็นฉัน
 
       จริงๆ เลยนะคะ ที่ต้องเจอเรื่องเจ็บปวดซ้ำ
 
-      ซากแบบนี้'
+      ซากแบบนี้"
     MessageTW: 才想會不會是這樣結果果然是！好痛苦……簡直就像
   - MessageGroupId: 200170200
     Id: 200170310
@@ -604,7 +604,7 @@ content:
     NextGroupId: 200170210
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……기다려. 만나서 얘기하자.
     MessageJP: ……待って、会って話そうか
     MessageCN: ……等一下，我们见面说吧
@@ -622,18 +622,18 @@ content:
     NextGroupId: 200170220
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 전송도 안되고 버벅이는 제 고물 휴대폰 네? 오, 오신다고요? 여길요? 지금요?
     MessageJP: 私の人生みたいな、画像の送信もろくにできないこのスマホ……って、ええ！？く、来るんですか？
     MessageCN: 就像这个跟我坏掉的人生一样的连图片都发不出去的手机……诶，诶诶！？老师要过来吗？
     MessageEN:
       "My phone sucks so bad that it can't even send a picture. Huh? You're
       gonna come here? Now? "
-    MessageTH: 'โทรศัพท์เก่าๆ ที่ส่งข้อความไม่ไป
+    MessageTH: "โทรศัพท์เก่าๆ ที่ส่งข้อความไม่ไป
 
       สัญญาณก็ติดๆ ดับๆ... คะ? คุณครูจะมาเหรอ
 
-      คะ? ที่นี่เหรอคะ? ตอนนี้เหรอคะ? '
+      คะ? ที่นี่เหรอคะ? ตอนนี้เหรอคะ? "
     MessageTW: 像我的人生一樣，連圖片都不能好好傳送的手機……咦？你，你要來嗎？
   - MessageGroupId: 200170220
     Id: 200170330
@@ -646,14 +646,14 @@ content:
     NextGroupId: 200170230
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님…… 생각해보니까 감사인사를 못 드린 거 같아서…….
     MessageJP: ……先生。私、考えてみたらお礼が言えてなかったみたいで……
     MessageCN: ……老师。我，我想了下发现还没向您道谢……
     MessageEN: Sensei... I didn't have a chance to thank you...
-    MessageTH: 'คุณครู พอมาคิดๆ ดูแล้ว... เหมือนฉันจะยัง
+    MessageTH: "คุณครู พอมาคิดๆ ดูแล้ว... เหมือนฉันจะยัง
 
-      ไม่ได้ขอบคุณคุณครูเลย...'
+      ไม่ได้ขอบคุณคุณครูเลย..."
     MessageTW: ……老師。仔細想想，我好像不曾向你道謝……
   - MessageGroupId: 200170230
     Id: 200170340
@@ -666,7 +666,7 @@ content:
     NextGroupId: 200170240
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 가, 감사해요…….
     MessageJP: あ、ありがとうございます……
     MessageCN: 非、非常感谢……
@@ -684,15 +684,15 @@ content:
     NextGroupId: 200170240
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 또 선생님한테 신세를 진 걸 알게 되면 모두에게 혼나버리기 때문에…….
     MessageJP: また先生のお世話になったことをみんなに知られたら、怒られちゃうので……
     MessageCN: 要是大家知道我又从老师那里拿东西的话可能会生气的，所以……
     MessageEN: "If the others find out I inconvenienced you again, they're gonna
       yell at me... "
-    MessageTH: 'ถ้าทุกคนรู้ว่าฉันรบกวนคุณครูอีก ทุกคนคง
+    MessageTH: "ถ้าทุกคนรู้ว่าฉันรบกวนคุณครูอีก ทุกคนคง
 
-      จะโกรธแน่ๆ... '
+      จะโกรธแน่ๆ... "
     MessageTW: 如果被大家知道又受老師照顧了的話，會被罵的……
   - MessageGroupId: 200170240
     Id: 200170360
@@ -705,14 +705,14 @@ content:
     NextGroupId: 200170250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 사주신 잡지는 저 혼자만의 비밀로 해둘게요…….
     MessageJP: 買っていただいた雑誌は、私だけの秘密にしておきますね……
     MessageCN: 老师给我买的杂志，我就当作只属于我的秘密了哦……
     MessageEN: The magazine you bought me will be my secret...
-    MessageTH: 'นะ...นิตยสารที่คุณครูซื้อให้ ฉันจะเก็บไว้
+    MessageTH: "นะ...นิตยสารที่คุณครูซื้อให้ ฉันจะเก็บไว้
 
-      เป็นความลับคนเดียวค่ะ...'
+      เป็นความลับคนเดียวค่ะ..."
     MessageTW: 你買給我的雜誌，我會當成自己的秘密的……
   - MessageGroupId: 200170250
     Id: 200170370
@@ -725,12 +725,12 @@ content:
     NextGroupId: 200170260
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이번 <ron-ro>의 최신호에는
     MessageJP: 先生！今回の「ron-ro」の最新号で……
     MessageCN: 老师！这次的《ron-ro》最新版上面……
-    MessageEN: 'In the newest issue of Ron-ro, '
-    MessageTH: 'ในนิตยสาร <ron-ro> เล่มใหม่... '
+    MessageEN: "In the newest issue of Ron-ro, "
+    MessageTH: "ในนิตยสาร <ron-ro> เล่มใหม่... "
     MessageTW: 這次《ron-ro》的最新一期裡好像有……
   - MessageGroupId: 200170260
     Id: 200170380
@@ -743,7 +743,7 @@ content:
     NextGroupId: 200170270
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: <학교에서 가르쳐주지 않는 비밀 지식 10선>
     MessageJP: 「学校では絶対教えてくれないマル秘知識10選」
     MessageCN: 好像有《学校里绝对不会教的秘密小知识10则》
@@ -761,14 +761,14 @@ content:
     NextGroupId: 200170270
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이라는 특집 기사가 나온대요!!
     MessageJP: という特集記事があるらしくて！！
     MessageCN: 的特辑！！
     MessageEN: is a special, feature article!
-    MessageTH: '<10 เคล็ดลับพิเศษที่ไม่มีสอนในโรงเรียน>
+    MessageTH: "<10 เคล็ดลับพิเศษที่ไม่มีสอนในโรงเรียน>
 
-      อยู่ด้วยละค่ะ!!'
+      อยู่ด้วยละค่ะ!!"
     MessageTW: 這樣的特別報導！！
   - MessageGroupId: 200170270
     Id: 200170400
@@ -781,7 +781,7 @@ content:
     NextGroupId: 200170280
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어…… 그래?
     MessageJP: えっと……そ、そうなんだ？
     MessageCN: 诶……这、这样吗？
@@ -799,12 +799,12 @@ content:
     NextGroupId: 200170290
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 학교에서 알려주지 않는 비밀 지식이라니,
     MessageJP: 学校では絶対教えてくれないマル秘知識だなんて……
     MessageCN: 学校里绝对不会教的秘密小知识……
     MessageEN: "Secret knowledge that schools don't teach you... "
-    MessageTH: 'เคล็ดลับพิเศษที่ไม่มีสอนในโรงเรียนเหรอ '
+    MessageTH: "เคล็ดลับพิเศษที่ไม่มีสอนในโรงเรียนเหรอ "
     MessageTW: 學校絕對不會教的秘密知識……
   - MessageGroupId: 200170280
     Id: 200170420
@@ -817,7 +817,7 @@ content:
     NextGroupId: 200170290
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그게 뭘까요? 선생님은 알고 계신가요?
     MessageJP: 一体何でしょうか……先生はご存知ですか？
     MessageCN: 到底是什么东西呢……老师知道吗？
@@ -835,7 +835,7 @@ content:
     NextGroupId: 200170300
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 나도 잘 모르는데…….
     MessageJP: 私もよく分からない……
     MessageCN: 我也不是很清楚……
@@ -853,7 +853,7 @@ content:
     NextGroupId: 200170300
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그, 글쎄…….
     MessageJP: さ、さあ……なんだろうね
     MessageCN: 谁、谁知道呢……会是什么呢
@@ -871,7 +871,7 @@ content:
     NextGroupId: 200170310
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그게 뭘까요? 뭐죠? 대체?!
     MessageJP: 先生も分からないものとは一体何でしょう！？
     MessageCN: 连老师都不知道的知识到底会是什么呢！？
@@ -889,14 +889,14 @@ content:
     NextGroupId: 200170310
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 최신호가 폐지로 나오려면 몇 달은 더 걸릴 텐데
     MessageJP: 最新号が古紙になるまで普通数ヶ月はかかるのに……
     MessageCN: 最新刊一般还要等好几个月才能在废纸回收堆里找到……
     MessageEN: It's gonna be a few months until the new issue is out.
-    MessageTH: 'ถ้าฉบับล่าสุดจะถูกยกเลิกคงจะต้องรออีก
+    MessageTH: "ถ้าฉบับล่าสุดจะถูกยกเลิกคงจะต้องรออีก
 
-      หลายเดือนแน่เลย'
+      หลายเดือนแน่เลย"
     MessageTW: 最新一期成為廢紙一般來說需要好幾個月……
   - MessageGroupId: 200170310
     Id: 200170470
@@ -909,14 +909,14 @@ content:
     NextGroupId: 200170320
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어떻게 기다려야 할까요? 망했어요, 완전 망했어요
     MessageJP: その間どうやって待てばいいんですか……終わりです、完全にこの世の終わりです
     MessageCN: 这几个月要我怎么等啊……已经完了，这个世界已经完蛋了
     MessageEN: How am I gonna wait until then? I'm desperate. This is terrible.
-    MessageTH: 'จะอดทนรอยังไงดีคะ? แย่ที่สุดเลยค่ะ
+    MessageTH: "จะอดทนรอยังไงดีคะ? แย่ที่สุดเลยค่ะ
 
-      แบบนี้เลวร้ายที่สุดเลย'
+      แบบนี้เลวร้ายที่สุดเลย"
     MessageTW: 這段期間要怎麼等下去……結束了，這個世界已經完全結束了
   - MessageGroupId: 200170320
     Id: 200170480
@@ -929,12 +929,12 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 혼자 있을 때 잡지를 읽는 것 말고는 할 것도 딱히 없는데…….
     MessageJP: 一人でいる時、雑誌を読む以外にやることないのに……
     MessageCN: 明明我一个人的时候，已经没有除了读书以外的事情可做了……
     MessageEN: I've got nothing else to do but read magazines when I'm alone...
-    MessageTH: 'ตอนที่อยู่คนเดียว ฉันก็แทบไม่มีอะไรทำ
+    MessageTH: "ตอนที่อยู่คนเดียว ฉันก็แทบไม่มีอะไรทำ
 
-      นอกจากอ่านนิตยสารแล้วแท้ๆ...'
+      นอกจากอ่านนิตยสารแล้วแท้ๆ..."
     MessageTW: 一個人的時候，除了讀雜誌也沒有什麼事情可做……

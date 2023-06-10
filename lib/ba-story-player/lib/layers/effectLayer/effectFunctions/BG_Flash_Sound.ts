@@ -1,9 +1,9 @@
-import { Sprite, AnimatedSprite } from "pixi.js";
 import { loadSpriteSheet } from "../resourcesUtils";
-import { usePlayerStore } from "@/stores";
-import { gsap } from "gsap";
-import { AdvancedBloomFilter } from "@pixi/filter-advanced-bloom";
 import eventBus from "@/eventBus";
+import { usePlayerStore } from "@/stores";
+import { AdvancedBloomFilter } from "@pixi/filter-advanced-bloom";
+import { gsap } from "gsap";
+import { Sprite, AnimatedSprite } from "pixi.js";
 
 export default async function flash_sound(resources: Sprite[]) {
   const animationName = "lightning";

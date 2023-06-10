@@ -49,7 +49,7 @@ content:
     NextGroupId: 100240020
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 한동안은 자리를 비울 예정이야.
     MessageJP: しばらく遠出する予定なの
     MessageCN: 我预计会出远门一段时间
@@ -67,7 +67,7 @@ content:
     NextGroupId: 100240030
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 모두에게도 메시지는 보내 두었으니까.
     MessageJP: みんなにもメッセージは送っておいたんだけど
     MessageCN: 和大家也已经打过招呼了
@@ -85,7 +85,7 @@ content:
     NextGroupId: 100240030
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님도 알고 있었으면 해서.
     MessageJP: 先生にも伝えておこうかなって
     MessageCN: 然后觉得也要和老师说一声比较好
@@ -103,12 +103,12 @@ content:
     NextGroupId: 100240040
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……시로코?
     MessageJP: ……遠出？
     MessageCN: ……出远门？
     MessageEN: Shiroko?
-    MessageTH: '...ชิโรโกะ?'
+    MessageTH: "...ชิโรโกะ?"
     MessageTW: ……出遠門？
   - MessageGroupId: 100240030
     Id: 100240050
@@ -121,7 +121,7 @@ content:
     NextGroupId: 100240040
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 뭐야? 갑자기 무슨 일?
     MessageJP: 急にどうしたの……？
     MessageCN: 这么突然，是发生什么事了吗……？
@@ -139,7 +139,7 @@ content:
     NextGroupId: 100240050
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 으으응. 아무것도.
     MessageJP: 大丈夫、大したことじゃない
     MessageCN: 没关系，不是什么大事
@@ -157,7 +157,7 @@ content:
     NextGroupId: 100240050
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 이만.
     MessageJP: じゃあ、またね。先生
     MessageCN: 那么，再见了。老师
@@ -175,7 +175,7 @@ content:
     NextGroupId: 100240060
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님.
     MessageJP: 先生
     MessageCN: 老师
@@ -193,7 +193,7 @@ content:
     NextGroupId: 100240060
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 쉬는 타이밍이라 연락했어.
     MessageJP: ちょうど休むタイミングだったから、連絡してみた
     MessageCN: 我现在刚好在休息，所以就试着给老师发条信息
@@ -211,7 +211,7 @@ content:
     NextGroupId: 100240070
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이렇게 곧바로?
     MessageJP: まだ数分くらいしか経ってない気が……？
     MessageCN: 感觉好像才过了几分钟吧……？
@@ -229,7 +229,7 @@ content:
     NextGroupId: 100240070
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 벌써 멀리 간 거야?
     MessageJP: もしかして、もう結構遠くまで行った感じ……？
     MessageCN: 难道说，白子已经骑了相当远了吗……？
@@ -247,7 +247,7 @@ content:
     NextGroupId: 100240080
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응?
     MessageJP: ん？
     MessageCN: 嗯？
@@ -265,14 +265,14 @@ content:
     NextGroupId: 100240090
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아니. 아직 요 앞 신호등.
     MessageJP: ううん、まださっき先生といた場所の近く
     MessageCN: 没有，我还在刚刚和老师在一起的地方附近
     MessageEN: No, I'm just at the stoplight out front.
-    MessageTH: 'ยังไปไม่ไกลเลย เพิ่งอยู่ที่ไฟแดง
+    MessageTH: "ยังไปไม่ไกลเลย เพิ่งอยู่ที่ไฟแดง
 
-      ข้างหน้านี่เอง'
+      ข้างหน้านี่เอง"
     MessageTW: 不，還在剛才和老師碰面的地點附近
   - MessageGroupId: 100240090
     Id: 100240140
@@ -285,7 +285,7 @@ content:
     NextGroupId: 100240100
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 음
     MessageJP: ちょうど信号で、足を止めたから連絡してみた
     MessageCN: 现在我正好停在这里等红灯，所以就和老师发条消息看看
@@ -303,14 +303,14 @@ content:
     NextGroupId: 100240100
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 멈출 때마다 연락하라고 해서 한 건데…….
     MessageJP: ……あれ？
     MessageCN: ……诶？
     MessageEN: I messaged you because you told me to whenever I stop.
-    MessageTH: 'ฉันส่งข้อความมาเพราะคุณครูบอกให้
+    MessageTH: "ฉันส่งข้อความมาเพราะคุณครูบอกให้
 
-      ส่งทุกครั้งที่หยุด...'
+      ส่งทุกครั้งที่หยุด..."
     MessageTW: ……咦？
   - MessageGroupId: 100240090
     Id: 100240160
@@ -323,7 +323,7 @@ content:
     NextGroupId: 100240100
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아무래도 뜻을 오해했나 봐.
     MessageJP: もしかして止まるたびにって、こういう意味じゃない？
     MessageCN: 难道老师说的停下来，不是指这个时候吗？
@@ -341,12 +341,12 @@ content:
     NextGroupId: 100240110
     FeedbackTimeMillisec: 2500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……
     MessageJP: ……ごめん、勘違いしてた
     MessageCN: 抱歉，是我弄错了
-    MessageEN: '...'
-    MessageTH: '...'
+    MessageEN: "..."
+    MessageTH: "..."
     MessageTW: ……抱歉，我誤會了
   - MessageGroupId: 100240100
     Id: 100240180
@@ -359,7 +359,7 @@ content:
     NextGroupId: 100240110
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 쉴 때 연락할게.
     MessageJP: じゃあ、えっと……休憩とかで自転車を降りたら、その度に連絡するね
     MessageCN: 那，嗯……等我下车休息的时候，再和老师联系吧
@@ -377,7 +377,7 @@ content:
     NextGroupId: 100240120
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님. 연락이야.
     MessageJP: 先生
     MessageCN: 老师
@@ -395,14 +395,14 @@ content:
     NextGroupId: 100240130
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아비도스를 완전히 빠져나왔어. 곧 있으면 해안 도로에 도착할 거야.
     MessageJP: 今アビドスを完全に抜けたところ、もうすぐ海岸道路に着きそう
     MessageCN: 我现在已经穿过了阿比多斯，马上就会骑上沿海道路了
     MessageEN: I'm outside of Abydos now. I should reach the coastal road soon.
-    MessageTH: 'ตอนนี้ออกมานอกอะบิดอสแล้วล่ะ
+    MessageTH: "ตอนนี้ออกมานอกอะบิดอสแล้วล่ะ
 
-      อีกไม่ไกลก็จะถึงถนนเลียบชายทะเลแล้ว'
+      อีกไม่ไกลก็จะถึงถนนเลียบชายทะเลแล้ว"
     MessageTW: 現在已經完全離開阿拜多斯，馬上就要到海岸道路了
   - MessageGroupId: 100240130
     Id: 100240210
@@ -415,7 +415,7 @@ content:
     NextGroupId: 100240140
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 벌써 거기까지? 대단한걸.
     MessageJP: 速いね……！？
     MessageCN: 好快……？！
@@ -433,7 +433,7 @@ content:
     NextGroupId: 100240140
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 전문가 같아.
     MessageJP: プロ選手みたいな速度だね……今のところ順調？
     MessageCN: 跟专业运动员一样的速度啊……白子现在还顺利吗？
@@ -451,7 +451,7 @@ content:
     NextGroupId: 100240150
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어……
     MessageJP: ん
     MessageCN: 嗯
@@ -469,7 +469,7 @@ content:
     NextGroupId: 100240150
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 음……
     MessageJP: あ、そういえば……
     MessageCN: 啊，说起来……
@@ -487,7 +487,7 @@ content:
     NextGroupId: 100240160
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 시로코?
     MessageJP: どうしたの？
     MessageCN: 怎么了？
@@ -505,7 +505,7 @@ content:
     NextGroupId: 100240170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아니.
     MessageJP: あ、いや
     MessageCN: 啊，没什么
@@ -523,7 +523,7 @@ content:
     NextGroupId: 100240180
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응.
     MessageJP: ごめん、やっぱり大丈夫
     MessageCN: 抱歉，果然还是算了
@@ -541,7 +541,7 @@ content:
     NextGroupId: 100240180
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 고마워.
     MessageJP: ありがとう
     MessageCN: 谢谢
@@ -559,14 +559,14 @@ content:
     NextGroupId: 100240190
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 다음엔 해안도로 중간까지 쭉 달릴 거야.
     MessageJP: この後は、海岸道路沿いにずっと走るつもり
     MessageCN: 之后我打算沿着沿海公路骑行
     MessageEN: Then I'll head straight for the coastal road.
-    MessageTH: 'ต่อไปฉันจะปั่นไปจนถึงกลางถนน
+    MessageTH: "ต่อไปฉันจะปั่นไปจนถึงกลางถนน
 
-      เลียบชายทะเลเลย'
+      เลียบชายทะเลเลย"
     MessageTW: 接下來，我打算沿著海岸道路一直騎
   - MessageGroupId: 100240180
     Id: 100240300
@@ -579,7 +579,7 @@ content:
     NextGroupId: 100240190
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 그때 다시 연락할게. 선생님.
     MessageJP: じゃあまた連絡するね、先生
     MessageCN: 那就之后再联系啦，老师
@@ -597,14 +597,14 @@ content:
     NextGroupId: 100240200
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 덕분에 계속해서 달릴 수 있었어.
     MessageJP: ありがとう、先生。色々と助かった
     MessageCN: 老师，谢谢。您帮了我很多忙
     MessageEN: I was able to stay on the move thanks to you.
-    MessageTH: 'มีคุณครูคอยช่วย ฉันเลยปั่นต่อไปได้
+    MessageTH: "มีคุณครูคอยช่วย ฉันเลยปั่นต่อไปได้
 
-      เรื่อยๆ แบบนี้'
+      เรื่อยๆ แบบนี้"
     MessageTW: 謝謝老師幫我這麼多
   - MessageGroupId: 100240190
     Id: 100240320
@@ -617,14 +617,14 @@ content:
     NextGroupId: 100240200
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 역시 가방 안에 든 것들은 시간이 지나면서 조금씩 식으니까.
     MessageJP: カバンの中に入れてると、どうしても飲み物はぬるくなっちゃうし
     MessageCN: 冷饮要是放在包里，不管用怎么保温，最后都会变成常温的
     MessageEN: Since the stuff in my bag heats up after a while
-    MessageTH: 'คิดแล้วว่าพวกของที่อยู่ในกระเป๋า
+    MessageTH: "คิดแล้วว่าพวกของที่อยู่ในกระเป๋า
 
-      พอผ่านไปมันก็จะค่อยๆ เย็นน้อยลง'
+      พอผ่านไปมันก็จะค่อยๆ เย็นน้อยลง"
     MessageTW: 飲料放在背包裡總是會變溫的
   - MessageGroupId: 100240200
     Id: 100240330
@@ -637,14 +637,14 @@ content:
     NextGroupId: 100240210
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 막 챙겨 온 드링크가 훨씬 시원한 것 같아.
     MessageJP: 持ってきてくれたドリンク、すっごく冷たくて嬉しかった
     MessageCN: 老师带过来的饮料很冰爽，我很开心
     MessageEN: The drink I just got is cooler than those.
-    MessageTH: 'เครื่องดื่มชูกำลังที่คุณครูเตรียมมาให้
+    MessageTH: "เครื่องดื่มชูกำลังที่คุณครูเตรียมมาให้
 
-      เย็นชื่นใจมากๆ เลยล่ะ'
+      เย็นชื่นใจมากๆ เลยล่ะ"
     MessageTW: 老師幫我帶來的飲料非常冰涼，我很開心
   - MessageGroupId: 100240200
     Id: 100240340
@@ -657,7 +657,7 @@ content:
     NextGroupId: 100240210
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 타올도
     MessageJP: タオルも
     MessageCN: 毛巾也是
@@ -675,7 +675,7 @@ content:
     NextGroupId: 100240220
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……아.
     MessageJP: あ
     MessageCN: 啊
@@ -693,14 +693,14 @@ content:
     NextGroupId: 100240220
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그러고 보니 나에게서 받아 간 타올은 어떻게 됐어?
     MessageJP: そういえばさっき先生に渡したタオル、良ければ……
     MessageCN: 说到这个，刚刚给老师的毛巾，要不还是……
     MessageEN: What happened to the towel I gave you before?
-    MessageTH: 'นึกขึ้นมาได้พอดี ผ้าขนหนูที่ฉันให้
+    MessageTH: "นึกขึ้นมาได้พอดี ผ้าขนหนูที่ฉันให้
 
-      คุณครูไป เป็นยังไงบ้าง?'
+      คุณครูไป เป็นยังไงบ้าง?"
     MessageTW: 這麼說來，剛才給老師的毛巾，如果可以的話……
   - MessageGroupId: 100240220
     Id: 100240370
@@ -713,7 +713,7 @@ content:
     NextGroupId: 100240230
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 세탁해서 잘 보관해뒀어.
     MessageJP: 洗濯してちゃんと保管しておいたよ。今度返すね
     MessageCN: 我洗好之后会好好保管的。下次还给你
@@ -731,7 +731,7 @@ content:
     NextGroupId: 100240240
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: ……아,
     MessageJP: えっと
     MessageCN: 那个
@@ -749,12 +749,12 @@ content:
     NextGroupId: 100240240
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응…….
     MessageJP: うん、やっぱりそうだよね……
     MessageCN: 嗯，确实是这样来着……
     MessageEN: Yes...
-    MessageTH: 'อื้ม...... '
+    MessageTH: "อื้ม...... "
     MessageTW: 嗯，果然是這樣啊……
   - MessageGroupId: 100240240
     Id: 100240400
@@ -767,7 +767,7 @@ content:
     NextGroupId: 100240250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 역시 그렇겠지. 고마워.
     MessageJP: ううん、ありがとう
     MessageCN: 没什么，谢谢老师了
@@ -785,7 +785,7 @@ content:
     NextGroupId: 100240250
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아무튼
     MessageJP: んと
     MessageCN: 嗯
@@ -803,7 +803,7 @@ content:
     NextGroupId: 100240250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 다음에 또 연락할게. 선생님.
     MessageJP: じゃあ
     MessageCN: 那
@@ -821,7 +821,7 @@ content:
     NextGroupId: 100240260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼.
     MessageJP: また連絡するね、先生
     MessageCN: 就之后再联系啦，老师
@@ -839,7 +839,7 @@ content:
     NextGroupId: 100240270
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그러고 보니 선생님.
     MessageJP: そういえば
     MessageCN: 话说起来
@@ -857,14 +857,14 @@ content:
     NextGroupId: 100240280
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 일전에 한번, 라이딩 일정 지도를 공유해달라고 했었잖아.
     MessageJP: 先生この前、行き先の予定を教えてほしいって言ってたけど
     MessageCN: 之前老师说，想让我告诉您我的行程安排
     MessageEN: You asked me to share the riding schedule and map before.
-    MessageTH: 'เมื่อวันก่อน คุณครูขอให้ฉันส่งแผนที่
+    MessageTH: "เมื่อวันก่อน คุณครูขอให้ฉันส่งแผนที่
 
-      ของกำหนดการปั่นจักรยานไปให้นี่นา'
+      ของกำหนดการปั่นจักรยานไปให้นี่นา"
     MessageTW: 老師之前，說了要我告訴你預定的目的地
   - MessageGroupId: 100240270
     Id: 100240460
@@ -877,7 +877,7 @@ content:
     NextGroupId: 100240280
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 무슨 이유로 달라고 한 거야?
     MessageJP: この情報は、何か先生の役に立つの？
     MessageCN: 这个信息对老师有什么用吗？
@@ -895,7 +895,7 @@ content:
     NextGroupId: 100240290
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 미리 쉬는 위치마다 가서 기다리게.
     MessageJP: また補給品とか持っていこうかなって
     MessageCN: 我想着可以再给你带点补充物品
@@ -913,7 +913,7 @@ content:
     NextGroupId: 100240290
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 서포터 일을 제대로 하려고.
     MessageJP: サポーターとして色々手伝えるかなと思って
     MessageCN: 作为白子的支援者，这样我应该就能在很多地方帮上白子的忙了
@@ -931,7 +931,7 @@ content:
     NextGroupId: 100240300
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아
     MessageJP: あ……
     MessageCN: 啊……
@@ -949,7 +949,7 @@ content:
     NextGroupId: 100240300
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 으음……
     MessageJP: ん、そっか
     MessageCN: 嗯，这样啊
@@ -967,7 +967,7 @@ content:
     NextGroupId: 100240300
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 괜찮아? 일도 바쁠 텐데…….
     MessageJP: でも、大丈夫？仕事も忙しいのに……
     MessageCN: 但是，没关系吗？明明老师的工作也很忙……
@@ -985,11 +985,11 @@ content:
     NextGroupId: 100240310
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아니
     MessageJP: いや、その
     MessageCN: 不是，就是
-    MessageEN: 'No'
+    MessageEN: "No"
     MessageTH: เปล่าหรอก
     MessageTW: 不，那個
   - MessageGroupId: 100240300
@@ -1003,14 +1003,14 @@ content:
     NextGroupId: 100240310
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 싫다는 건 아니야. 절대로.
     MessageJP: もちろん、嫌なわけじゃない
     MessageCN: 当然不是不喜欢的意思
     MessageEN: It's not that I mind. Really.
-    MessageTH: 'ไม่ใช่ว่าฉันไม่ชอบหรอกนะ ไม่ใช่แบบ
+    MessageTH: "ไม่ใช่ว่าฉันไม่ชอบหรอกนะ ไม่ใช่แบบ
 
-      นั้นเลย'
+      นั้นเลย"
     MessageTW: 當然，我不討厭這樣
   - MessageGroupId: 100240310
     Id: 100240540
@@ -1023,7 +1023,7 @@ content:
     NextGroupId: 100240320
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님만 괜찮다면야 나도 좋지만…….
     MessageJP: その、私はすごく嬉しいけど……
     MessageCN: 那个，我是很高兴啦……
@@ -1041,7 +1041,7 @@ content:
     NextGroupId: 100240320
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응.
     MessageJP: じゃあ、無理しない程度にお願い
     MessageCN: 那，老师也不要太勉强自己
@@ -1059,7 +1059,7 @@ content:
     NextGroupId: 100240330
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 다음 포인트에서도 만나.
     MessageJP: 次のポイントに着くの、楽しみにしてるね
     MessageCN: 我也很期待能到下个地点和老师见面呢
@@ -1077,7 +1077,7 @@ content:
     NextGroupId: 100240340
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님. 도착했어.
     MessageJP: 先生、そろそろ着きそう
     MessageCN: 老师，我快到了
@@ -1095,7 +1095,7 @@ content:
     NextGroupId: 100240350
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이제 나오면 될 것 같아.
     MessageJP: もう出てきても大丈夫
     MessageCN: 老师可以出来了
@@ -1113,7 +1113,7 @@ content:
     NextGroupId: 100240360
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 나오다니, 어디로?
     MessageJP: 出てきても大丈夫……？
     MessageCN: 可以出去……？
@@ -1131,7 +1131,7 @@ content:
     NextGroupId: 100240360
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: "'도착했다'니?"
     MessageJP: えっと、どこに着いたの？
     MessageCN: 那个，白子现在在哪？
@@ -1149,7 +1149,7 @@ content:
     NextGroupId: 100240370
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 음…….
     MessageJP: んと……
     MessageCN: 那个……
@@ -1167,7 +1167,7 @@ content:
     NextGroupId: 100240370
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 일단 나오면 알 수 있을 거야.
     MessageJP: とにかく、出てきたら分かるから
     MessageCN: 总之老师出来就知道了
@@ -1185,7 +1185,7 @@ content:
     NextGroupId: 100240380
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 기다리고 있을게.
     MessageJP: 待ってるね
     MessageCN: 我等着老师
@@ -1203,7 +1203,7 @@ content:
     NextGroupId: 100240390
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 생각해 보니
     MessageJP: そういえば
     MessageCN: 说起来
@@ -1221,14 +1221,14 @@ content:
     NextGroupId: 100240390
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이번에 키보토스 종단을 성공적으로 마쳤으니까
     MessageJP: 今回、キヴォトス縦断ができたから
     MessageCN: 因为我这次成功纵贯了基沃托斯
     MessageEN: we've covered Kivotos from north to south.
-    MessageTH: 'คราวนี้ปั่นข้ามคิโวทอสจากเหนือจรด
+    MessageTH: "คราวนี้ปั่นข้ามคิโวทอสจากเหนือจรด
 
-      ใต้สำเร็จแล้ว'
+      ใต้สำเร็จแล้ว"
     MessageTW: 因為這次是縱貫整個奇普托斯
   - MessageGroupId: 100240380
     Id: 100240660
@@ -1241,14 +1241,14 @@ content:
     NextGroupId: 100240390
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 다음번에는 키보토스 횡단을 해볼까 해.
     MessageJP: 次はキヴォトス横断をしてみようかなって
     MessageCN: 所以我就想着下次不如试试看横穿基沃托斯吧
     MessageEN: I plan on crossing Kivotos from east to west next time.
-    MessageTH: 'คราวหน้าฉันจะลองปั่นข้ามคิโวทอส
+    MessageTH: "คราวหน้าฉันจะลองปั่นข้ามคิโวทอส
 
-      จากตะวันออกไปตะวันตกบ้างนะ'
+      จากตะวันออกไปตะวันตกบ้างนะ"
     MessageTW: 所以下次想試試橫斷奇普托斯
   - MessageGroupId: 100240390
     Id: 100240670
@@ -1261,14 +1261,14 @@ content:
     NextGroupId: 100240400
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응. 진짜 횡단은 아니고 기분만 내는 거지만.
     MessageJP: これも本当の横断じゃなくて、だいたいそんな感じってだけなんだけど
     MessageCN: 当然也不是真正的横穿，只是类似横穿的感觉罢了
     MessageEN: Besides, it's more about the journey than the destination.
-    MessageTH: 'อื้อ ถึงจะไม่ได้ปั่นข้ามจริงๆ ก็เถอะ
+    MessageTH: "อื้อ ถึงจะไม่ได้ปั่นข้ามจริงๆ ก็เถอะ
 
-      แค่ให้ฟีลใกล้เคียง...'
+      แค่ให้ฟีลใกล้เคียง..."
     MessageTW: 這也不是真的要橫斷，大概只是那種感覺
   - MessageGroupId: 100240390
     Id: 100240680
@@ -1281,14 +1281,14 @@ content:
     NextGroupId: 100240400
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생님만 괜찮다면, 다음번에는 같이 달릴까 하는데…….
     MessageJP: 先生さえよかったら、その、一緒に走ったり……
     MessageCN: 老师要是没问题的话，那个，下次要不要一起……
     MessageEN: I'd like you to come with me next time if it's okay, Sensei.
-    MessageTH: 'ถ้าคุณครูโอเคล่ะก็ คราวหน้าไปปั่น
+    MessageTH: "ถ้าคุณครูโอเคล่ะก็ คราวหน้าไปปั่น
 
-      จักรยานด้วยกันไหม...'
+      จักรยานด้วยกันไหม..."
     MessageTW: 老師可以的話，那個，一起之類的……
   - MessageGroupId: 100240400
     Id: 100240690
@@ -1301,7 +1301,7 @@ content:
     NextGroupId: 100240410
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 직접 참여는 조금…….
     MessageJP: 実際の参加は、ちょっと……応援してるね
     MessageCN: 实际参加的话我稍微有点……不过我会为白子应援的
@@ -1319,7 +1319,7 @@ content:
     NextGroupId: 100240410
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 서포터로 충분합니다…….
     MessageJP: サポーターとして、全力で支えさせてもらうね……
     MessageCN: 我会作为支援者全力支持白子的……
@@ -1337,7 +1337,7 @@ content:
     NextGroupId: 100240420
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 으음……. 역시 그런가.
     MessageJP: うーん……
     MessageCN: 嗯……
@@ -1355,7 +1355,7 @@ content:
     NextGroupId: 100240420
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아쉽네.
     MessageJP: そっか、残念
     MessageCN: 这样啊，真可惜
@@ -1373,7 +1373,7 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 다음번에도 서포터로…….
     MessageJP: じゃあ……これからも、サポーターとして
     MessageCN: 那……从今天起，作为我的支援者
@@ -1391,7 +1391,7 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 잘 부탁해. 선생님.
     MessageJP: よろしくね、先生
     MessageCN: 就拜托您啦，老师

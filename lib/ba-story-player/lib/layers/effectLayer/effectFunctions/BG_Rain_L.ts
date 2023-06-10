@@ -1,3 +1,8 @@
+import {
+  emitterConfigs,
+  emitterContainer,
+  emitterStarter,
+} from "../emitterUtils";
 import { usePlayerStore } from "@/stores";
 import { BGEffectHandlerFunction } from "@/types/effectLayer";
 import {
@@ -5,11 +10,6 @@ import {
   EmitterConfigV2,
   upgradeConfig,
 } from "@pixi/particle-emitter";
-import {
-  emitterConfigs,
-  emitterContainer,
-  emitterStarter,
-} from "../emitterUtils";
 
 const handler: BGEffectHandlerFunction<"BG_Rain_L"> = async function (
   resources,

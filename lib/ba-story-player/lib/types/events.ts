@@ -1,5 +1,4 @@
 import { Character, Effect, Speaker, Text } from "./common";
-import { PlayOptions } from "@pixi/sound";
 import {
   BGEffectExcelTableItem,
   BGEffectType,
@@ -7,6 +6,7 @@ import {
   TransitionTableItem,
 } from "./excels";
 import { OtherSounds } from "./resources";
+import { PlayOptions } from "@pixi/sound";
 
 export type Events = {
   //通用

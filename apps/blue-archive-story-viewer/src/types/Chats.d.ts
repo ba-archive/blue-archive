@@ -12,13 +12,13 @@ export interface Momotalk {
   MessageGroupId: number;
   Id: number;
   CharacterId: number;
-  MessageCondition: 'None' | 'FavorRankUp' | 'Answer' | 'Feedback';
+  MessageCondition: "None" | "FavorRankUp" | "Answer" | "Feedback";
   ConditionValue: number;
   PreConditionGroupId: number;
   FavorScheduleId: number;
   NextGroupId: number;
   FeedbackTimeMillisec: number;
-  MessageType: 'Text' | 'Image' | 'None';
+  MessageType: "Text" | "Image" | "None";
   ImagePath: string | undefined;
   MessageKR?: string | undefined;
   MessageJP: string | undefined;
@@ -55,12 +55,12 @@ export interface CurrentMessageItem {
   FavorScheduleId: number;
   NextGroupId: number;
   FeedbackTimeMillisec: number;
-  MessageCondition: 'None' | 'FavorRankUp' | 'Answer' | 'Feedback';
+  MessageCondition: "None" | "FavorRankUp" | "Answer" | "Feedback";
   options?: {
     current: number;
     content: SelectionOption[];
   };
-  MessageType: 'Text' | 'Image' | 'None';
+  MessageType: "Text" | "Image" | "None";
   ImagePath: string | undefined;
   MessageJP?: string | undefined;
   MessageCN?: string | undefined;

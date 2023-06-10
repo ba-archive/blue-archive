@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { computed, onBeforeMount, onBeforeUnmount, ref } from 'vue';
-import { useRoute } from 'vue-router';
-import HomeWelcomeScreen from './components/HomeWelcomeScreen.vue';
-import DesktopMenu from './components/menu/DesktopMenu.vue';
-import MobileMenu from './components/menu/MobileMenu.vue';
-import { useSettingsStore } from './store/settings';
-import { switchTheme } from './util/userInterfaceUtils';
+import { computed, onBeforeMount, onBeforeUnmount, ref } from "vue";
+import { useRoute } from "vue-router";
+import HomeWelcomeScreen from "./components/HomeWelcomeScreen.vue";
+import DesktopMenu from "./components/menu/DesktopMenu.vue";
+import MobileMenu from "./components/menu/MobileMenu.vue";
+import { useSettingsStore } from "./store/settings";
+import { switchTheme } from "./util/userInterfaceUtils";
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
 const showMobileMenu = ref(false);
 
-const isMainPage = computed(() => route.path === '/');
+const isMainPage = computed(() => route.path === "/");
 
 const isMac = () => {
   const userAgent = navigator.userAgent;
-  return userAgent.indexOf('Mac OS X') > -1;
+  return userAgent.indexOf("Mac OS X") > -1;
 };
 
 if (!isMac()) {
-  const htmlElement = document.querySelector('html') as HTMLHtmlElement;
-  htmlElement.dataset.scrollbar = 'customize';
+  const htmlElement = document.querySelector("html") as HTMLHtmlElement;
+  htmlElement.dataset.scrollbar = "customize";
 }
 
 let ticking = false;
@@ -28,28 +28,28 @@ function handleWindowSizeChange() {
   if (ticking) return;
   ticking = true;
   window.requestAnimationFrame(() => {
-    const htmlElement = document.querySelector('html') as HTMLHtmlElement;
+    const htmlElement = document.querySelector("html") as HTMLHtmlElement;
     showMobileMenu.value = htmlElement.clientWidth <= 768;
     ticking = false;
   });
 }
 
 onBeforeMount(() => {
-  const htmlElement = document.querySelector('html') as HTMLHtmlElement;
+  const htmlElement = document.querySelector("html") as HTMLHtmlElement;
   showMobileMenu.value = htmlElement.clientWidth <= 768;
-  window.addEventListener('resize', handleWindowSizeChange);
+  window.addEventListener("resize", handleWindowSizeChange);
 
   if (
     window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+    window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
-    settingsStore.setTheme('dark');
-    switchTheme('dark');
+    settingsStore.setTheme("dark");
+    switchTheme("dark");
   }
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleWindowSizeChange);
+  window.removeEventListener("resize", handleWindowSizeChange);
 });
 </script>
 

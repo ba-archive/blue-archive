@@ -1,14 +1,14 @@
-import eventBus from "@/eventBus";
-import { usePlayerStore } from "@/stores";
-import { BGEffectHandlerFunction } from "@/types/effectLayer";
-import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
-import { Container } from "pixi.js";
 import {
   emitterConfigs,
   emitterContainer,
   emitterStarter,
 } from "../emitterUtils";
 import { loadSpriteSheet } from "../resourcesUtils";
+import eventBus from "@/eventBus";
+import { usePlayerStore } from "@/stores";
+import { BGEffectHandlerFunction } from "@/types/effectLayer";
+import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
+import { Container } from "pixi.js";
 
 const handler: BGEffectHandlerFunction<"BG_UnderFire"> = async function (
   resources,

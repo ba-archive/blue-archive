@@ -39,7 +39,7 @@
   position: relative;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-image: url('/src/assets/nnnoise.svg');
+  background-image: url("/src/assets/nnnoise.svg");
   background-position: center;
   background-repeat: repeat;
   overflow: hidden;
@@ -106,7 +106,7 @@ html {
   --color-text-ingame: #344a6e;
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --color-main-background: #343e50;
   --color-text-main: #eee;
   --color-text-ingame: #eee;

@@ -1,8 +1,8 @@
-import { defineStore } from 'pinia';
-import { Student } from '../types/Student';
+import { defineStore } from "pinia";
+import { Student } from "../types/Student";
 
 export const useStudentStore = defineStore({
-  id: 'ba-students-storage',
+  id: "ba-students-storage",
   state: () => {
     return {
       students: [] as Student[],

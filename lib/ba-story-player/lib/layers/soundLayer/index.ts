@@ -1,7 +1,7 @@
 import eventBus from "@/eventBus";
+import { usePlayerStore } from "@/stores";
 import { PlayAudio } from "@/types/events";
 import { Sound } from "@pixi/sound";
-import { usePlayerStore } from "@/stores";
 
 const audioMap = new Map<string, Sound>();
 /**

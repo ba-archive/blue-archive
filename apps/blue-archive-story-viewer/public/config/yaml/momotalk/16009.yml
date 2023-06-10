@@ -49,7 +49,7 @@ content:
     NextGroupId: 160090020
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 도-모 선생=공. 소생, 미치루라 하오
     MessageJP: ドーモ、先生殿……小生、ミチルと申す
     MessageCN: 初次见面，老师大人……小生满，参上
@@ -67,7 +67,7 @@ content:
     NextGroupId: 160090030
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 저기… 미치루? 갑자기 왜 그래?
     MessageJP: えっと……？
     MessageCN: 那个……？
@@ -85,14 +85,14 @@ content:
     NextGroupId: 160090040
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이건 우리 같은 닌자 덕후들 사이에서 대대로 통용되는 전통의 인사!
     MessageJP: ふふっ……これはねー、忍者オタクの間で代々語り継がれてきた伝統の挨拶！
     MessageCN: 哼哼……此即为，忍者迷间代代相传的传统问候方式！
     MessageEN: This is how ninja nerds like us traditionally greet each other!
-    MessageTH: 'นี่เป็นวิธีทักทายแบบดั้งเดิมที่ใช้กันมาใน
+    MessageTH: "นี่เป็นวิธีทักทายแบบดั้งเดิมที่ใช้กันมาใน
 
-      หมู่โอตาคุนินจาอย่างพวกเราน่ะ!'
+      หมู่โอตาคุนินจาอย่างพวกเราน่ะ!"
     MessageTW: 哼哼……這個呀～這是我們忍者迷之間代代相傳的傳統問候語！
   - MessageGroupId: 160090040
     Id: 160090040
@@ -105,18 +105,18 @@ content:
     NextGroupId: 160090050
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이걸 받아주지 않는다니 그러고도 선생 공이 나와 같은 닌자 덕후 동지…. <닌자 메이트>를 자처할 수 있겠어?
     MessageJP: これに返せないとは、先生殿も忍者オタク仲間……忍者メイトとしてはまだ未熟のようだね！
     MessageCN: 连这都接不上的话，说明老师大人作为忍者迷之友……忍者伙伴的修为还太浅了！
     MessageEN:
       You must accept this way of greeting to be my ninja nerd friend...and
       ultimately, my ninja companion!
-    MessageTH: 'ถึงจะไม่ยอมรับออกมาก็เถอะ แต่ท่าน
+    MessageTH: "ถึงจะไม่ยอมรับออกมาก็เถอะ แต่ท่าน
 
       อาจารย์ก็เป็นโอตาคุนินจาเหมือนกับข้า
 
-      น้อย คงเรียกว่า <คู่หูนินจา> ได้สินะ?'
+      น้อย คงเรียกว่า <คู่หูนินจา> ได้สินะ?"
     MessageTW: 而你沒辦法做出回覆，代表同樣身為忍者迷……同樣身為「忍者好夥伴」，老師大人還不成熟呢！
   - MessageGroupId: 160090050
     Id: 160090050
@@ -129,7 +129,7 @@ content:
     NextGroupId: 160090060
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아니, 그런 걸 자처했던 기억은 없는데….
     MessageJP: 忍者メイト……？
     MessageCN: 忍者伙伴……？
@@ -147,7 +147,7 @@ content:
     NextGroupId: 160090100
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 크윽…! 그, 그렇게 말하니 왠지 분한걸…!
     MessageJP: ぐっ、何か悔しい……！
     MessageCN: 咕，太不甘心了……！
@@ -165,14 +165,14 @@ content:
     NextGroupId: 160090070
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 뭐야, 선생 공…. 설마 잊은 거야?!
     MessageJP: せ、先生殿……もしかして忘れたの！？
     MessageCN: 老、老师大人……您难道忘记了吗！？
-    MessageEN: 'Come on, Sensei... Did you forget?! '
-    MessageTH: 'อะไรกัน ท่านอาจารย์... หรือว่าลืมไปแล้ว
+    MessageEN: "Come on, Sensei... Did you forget?! "
+    MessageTH: "อะไรกัน ท่านอาจารย์... หรือว่าลืมไปแล้ว
 
-      เหรอ?! '
+      เหรอ?! "
     MessageTW: 老，老師大人……你該不會忘了吧？！
   - MessageGroupId: 160090060
     Id: 160090080
@@ -185,16 +185,16 @@ content:
     NextGroupId: 160090070
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 야심한 밤……. 달밤 아래에서 나와 함께 단둘이서 앰부쉬를 했던 추억을!
     MessageJP: 草木も寝静まるあの夜更け……月夜の下で、私と一緒に二人でアンブッシュしたあの思い出を！
     MessageCN: 在草木皆眠的那个深夜……以及你我二人埋伏在月夜下的那个夜晚！
     MessageEN:
       Late at night...under the moon, talking about ambushes...just you and
       me!
-    MessageTH: 'ในกลางดึกคืนหนึ่ง ความทรงจำที่เราไป
+    MessageTH: "ในกลางดึกคืนหนึ่ง ความทรงจำที่เราไป
 
-      ซุ่มโจมตีภายใต้แสงจันทร์ด้วยกัน'
+      ซุ่มโจมตีภายใต้แสงจันทร์ด้วยกัน"
     MessageTW: 夜深人靜萬籟俱寂……在月夜下和我一起埋伏的回憶！
   - MessageGroupId: 160090070
     Id: 160090090
@@ -207,18 +207,18 @@ content:
     NextGroupId: 160090080
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아, 참고로 앰부쉬란 수풀 속에서 은밀히 행동한다는 뜻의 닌자 은어니까. 기억해두라고!
     MessageJP: あ、ちなみにアンブッシュは「茂みの中で密かに行動する」っていう意味の忍者用語だよ。覚えておいてね！
     MessageCN: 啊。顺便一提，埋伏是个忍者用语，意思是“在草丛中秘密行动”。记好了！
     MessageEN:
       Oh, just so you know, "ambush" is ninja slang for secretive movement
       in the bushes. Don't forget it!
-    MessageTH: 'อ๋อ ขยายความคำว่าซุ่มโจมตี คือการซุ่ม
+    MessageTH: "อ๋อ ขยายความคำว่าซุ่มโจมตี คือการซุ่ม
 
       โจมตีในพุ่มไม้แบบลับๆ ตามแบบฉบับของ
 
-      นินจานะ จำไว้ด้วยล่ะ!'
+      นินจานะ จำไว้ด้วยล่ะ!"
     MessageTW: 啊，順帶一提，埋伏是指「在樹叢裡隱密行動」的忍者術語給我記住！
   - MessageGroupId: 160090080
     Id: 160090100
@@ -231,7 +231,7 @@ content:
     NextGroupId: 160090090
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그런 굉장한 추억 없거든?! 앰부쉬라니, 뭐냐고!
     MessageJP: それはちょっと記憶に無いかな……？
     MessageCN: 我好像不记得有那回事啊……？
@@ -249,7 +249,7 @@ content:
     NextGroupId: 160090130
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 뭐, 사소한 건 됐고~
     MessageJP: まぁまぁ細かい事は気にしない～
     MessageCN: 好啦好啦，不用在意这些细节～
@@ -267,18 +267,18 @@ content:
     NextGroupId: 160090110
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그렇다고 너무 실망하지 마! 선생 공은 보기 드문 닌자의 재능을 가진 사람이니까.
     MessageJP: 大丈夫、ガッカリしないで！先生殿には忍者の才能がある！
     MessageCN: 没关系，不要失望！老师大人是有忍者才能的！
     MessageEN:
       Don't be disappointed, though! You have the rare potential to be a
       ninja.
-    MessageTH: 'แต่ไม่ต้องผิดหวังไปหรอกนะ!
+    MessageTH: "แต่ไม่ต้องผิดหวังไปหรอกนะ!
 
       ท่านอาจารย์มีพรสวรรค์การเป็นนินจา
 
-      มากกว่าที่คิดอีกนะ'
+      มากกว่าที่คิดอีกนะ"
     MessageTW: 沒事，不用太失望！老師大人確實擁有忍者的才華
   - MessageGroupId: 160090100
     Id: 160090130
@@ -291,16 +291,16 @@ content:
     NextGroupId: 160090110
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 장래성이 있어! 인법연구부의 부장인 내가 보증해주도록 하지!
     MessageJP: その将来性は、忍術研究部の部長であるこの私が保証するから！
     MessageCN: 作为忍术研究部部长，我可以保证老师大人的未来一片光明!
     MessageEN:
       You have a bright future! As president of the Ninjutsu Research Club,
       I can vouch for you!
-    MessageTH: 'อนาคตไกลเลยล่ะ! ในฐานะชมรมวิจัย
+    MessageTH: "อนาคตไกลเลยล่ะ! ในฐานะชมรมวิจัย
 
-      ศาสตร์นินจาข้าน้อยรับรองได้!'
+      ศาสตร์นินจาข้าน้อยรับรองได้!"
     MessageTW: 我身為忍術研究部部長，我能為你的成長掛保證！
   - MessageGroupId: 160090110
     Id: 160090140
@@ -313,7 +313,7 @@ content:
     NextGroupId: 160090120
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그, 고, 고마워…?
     MessageJP: えっと、ありがとう……？
     MessageCN: 那个，谢谢……？
@@ -331,12 +331,12 @@ content:
     NextGroupId: 160090130
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 우냐핫! 별말씀을!
     MessageJP: にゃははっ、くるしゅうない！
     MessageCN: 捏哈哈，毋需道谢！
     MessageEN: Wahaha! Don't mention it!
-    MessageTH: 'อุวะฮะฮะ! ไม่ต้องขอบคุณหรอก!  '
+    MessageTH: "อุวะฮะฮะ! ไม่ต้องขอบคุณหรอก!  "
     MessageTW: 唔哈哈！免禮！
   - MessageGroupId: 160090130
     Id: 160090160
@@ -349,7 +349,7 @@ content:
     NextGroupId: 160090140
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그래서 미치루, 무슨 일로 연락을….
     MessageJP: ところでミチル、今日はどうしたの？
     MessageCN: 对了，满，今天有什么事吗？
@@ -367,7 +367,7 @@ content:
     NextGroupId: 160090150
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아! 이러는 사이 열차 시간에 늦겠어!
     MessageJP: やば、電車の時間もうすぐじゃん
     MessageCN: 哎呀，这不是电车快来了嘛
@@ -385,18 +385,18 @@ content:
     NextGroupId: 160090160
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아, 그럼 이만! 물러나 보겠소이다! 선생 공! 또다시 만날 날을 기다리며 아디오스=SAYONARA!
     MessageJP: それでは先生殿！また会えるその日まで、アディオス=SAYONARA！
     MessageCN: 那么老师大人！在我们重逢之日来临之前，adiós=再见！
     MessageEN:
       I must take my leave! I look forward to seeing you again someday! Adios!
       Sayonara!
-    MessageTH: 'ขอตัวก่อนนะ! ข้าน้อยไปแล้วนะ!
+    MessageTH: "ขอตัวก่อนนะ! ข้าน้อยไปแล้วนะ!
 
       ท่านอาจารย์! ข้าน้อยจะรอวันที่เราได้พบ
 
-      กันใหม่! อาดิโอส = ซาโยนาระ!'
+      กันใหม่! อาดิโอส = ซาโยนาระ!"
     MessageTW: 那麼老師大人！我們後會有期，Adios=SAYONARA！
   - MessageGroupId: 160090160
     Id: 160090190
@@ -409,11 +409,11 @@ content:
     NextGroupId: 160090170
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: (퍼퍼버버벙!!) <- 연막탄을 터트리는 소리
     MessageJP: （ボンッ！！）←煙幕弾の効果音
     MessageCN: （嘣！！）←烟雾弹音效
-    MessageEN: '*pop pop pop pop* <- smoke bomb sound'
+    MessageEN: "*pop pop pop pop* <- smoke bomb sound"
     MessageTH: (ปังปังปังปัง!!) <- เสียงยิงระเบิดควัน
     MessageTW: （砰！！）←引爆煙霧彈的音效
   - MessageGroupId: 160090170
@@ -427,7 +427,7 @@ content:
     NextGroupId: 160090180
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: …어?! 효과음까지 설명해주는 거야…?!
     MessageJP: 効果音を説明してくれた……！？
     MessageCN: 连音效也要说明的吗……！？
@@ -445,14 +445,14 @@ content:
     NextGroupId: 160090190
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 음, 그러니까, 아디오스=SAYONARA!
     MessageJP: えっと……アディオス＝SAYONARA！
     MessageCN: 那个……adiós=再见！
     MessageEN: Umm, anyway, adios! Sayonara!
-    MessageTH: 'อื้อ ถ้างั้นก็..
+    MessageTH: "อื้อ ถ้างั้นก็..
 
-      อาดิโอสสสส = ซาโยนาระ!'
+      อาดิโอสสสส = ซาโยนาระ!"
     MessageTW: 嗯……Adios=SAYONARA！
   - MessageGroupId: 160090190
     Id: 160090220
@@ -465,7 +465,7 @@ content:
     NextGroupId: 160090200
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 오늘 오후, 샬레를 방문하겠다. – 닌자M
     MessageJP: 本日の午後、シャーレへ推参する　忍者M
     MessageCN: 今日午后造访夏莱 忍者M
@@ -483,7 +483,7 @@ content:
     NextGroupId: 160090210
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아니, 방문 예고를 그런 식으로 해도 말이지….
     MessageJP: 予告……！？
     MessageCN: 预告信！？
@@ -501,16 +501,16 @@ content:
     NextGroupId: 160090210
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그보다 그거, 닌자가 아니라 괴도의 방식이잖아….
     MessageJP: これは忍者ではなく怪盗では……？
     MessageCN: 这不是忍者，是怪盗吧……?
     MessageEN:
       That's not how a ninja gives notice. That's more like a mysterious
       thief...
-    MessageTH: 'แล้วอีกอย่างนั่นมันไม่ใช่วิธีของนินจา
+    MessageTH: "แล้วอีกอย่างนั่นมันไม่ใช่วิธีของนินจา
 
-      แต่เป็นจอมโจรต่างหาก'
+      แต่เป็นจอมโจรต่างหาก"
     MessageTW: 這行為不是忍者，而是怪盜吧……？
   - MessageGroupId: 160090210
     Id: 160090250
@@ -523,14 +523,14 @@ content:
     NextGroupId: 160090220
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 에이~ 세세한 건 신경 쓰지 말라고~!
     MessageJP: 細かいことは言いっこなし！
     MessageCN: 不要在意这种细节了！
     MessageEN: Come on! Don't worry about the details!
-    MessageTH: 'โธ่เอ๊ย~ เรื่องหยุมหยิมแบบนั้น อย่าไป
+    MessageTH: "โธ่เอ๊ย~ เรื่องหยุมหยิมแบบนั้น อย่าไป
 
-      ใส่ใจเลยน่า~!'
+      ใส่ใจเลยน่า~!"
     MessageTW: 別在乎那些小細節！
   - MessageGroupId: 160090210
     Id: 160090260
@@ -543,14 +543,14 @@ content:
     NextGroupId: 160090220
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 게다가 괴도라면 대충 닌자의 후예 같은 거니까. 괜찮아!
     MessageJP: 怪盗もざっくり言っちゃえば忍者みたいなものだから、大丈夫！
     MessageCN: 硬要说的话怪盗和忍者差不多，也行！
     MessageEN: Also, mysterious thieves are kind of related to ninjas, so it's okay!
-    MessageTH: 'อีกอย่างพวกจอมโจรก็เป็นผู้สืบเชื้อสาย
+    MessageTH: "อีกอย่างพวกจอมโจรก็เป็นผู้สืบเชื้อสาย
 
-      ของนินจาเหมือนกันไม่เป็นไรหรอก'
+      ของนินจาเหมือนกันไม่เป็นไรหรอก"
     MessageTW: 而且怪盜大致上也跟忍者差不多，不要緊！
   - MessageGroupId: 160090220
     Id: 160090270
@@ -563,7 +563,7 @@ content:
     NextGroupId: 160090230
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 닌자 만능론인가?!
     MessageJP: 本当にそうかな！？
     MessageCN: 这也行！？
@@ -581,14 +581,14 @@ content:
     NextGroupId: 160090240
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 우냐핫! 예고는 했소! 그러니 선생 공! 목을 씻고 기다리고 계시오!
     MessageJP: とりあえず予告はしたよ、先生殿！首を洗って待っているが良い！
     MessageCN: 不管怎么说，我已经预告过了，老师大人！洗干净脖子等着吧！
     MessageEN: Wahaha! Anyway, I gave you notice, so you shall wait for me!
-    MessageTH: 'อุวะฮะฮะ! ข้าน้อยส่งมาบอกล่วงหน้าแล้ว!
+    MessageTH: "อุวะฮะฮะ! ข้าน้อยส่งมาบอกล่วงหน้าแล้ว!
 
-      เพราะงั้นท่านอาจารย์ ตั้งตารอได้เลย!'
+      เพราะงั้นท่านอาจารย์ ตั้งตารอได้เลย!"
     MessageTW: 反正我預告過了，老師大人！把脖子洗乾淨等著吧！
   - MessageGroupId: 160090230
     Id: 160090290
@@ -601,7 +601,7 @@ content:
     NextGroupId: 160090240
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 조만간 소생이 찾아뵙겠소이다!
     MessageJP: またすぐ相まみえることになろう！
     MessageCN: 小生很快就会见到你的！
@@ -619,11 +619,11 @@ content:
     NextGroupId: 160090250
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: (퍼퍼버버벙!!) <- 연막탄을 터트린 소리
     MessageJP: （ボンッ！！）←煙幕弾の効果音
     MessageCN: （嘣！！）←烟雾弹音效
-    MessageEN: '*pop pop pop pop* <- smoke bomb sound'
+    MessageEN: "*pop pop pop pop* <- smoke bomb sound"
     MessageTH: (ปังปังปังปัง!!) <- เสียงยิงระเบิดควัน
     MessageTW: （砰！！）←引爆煙霧彈的音效
   - MessageGroupId: 160090250
@@ -637,11 +637,11 @@ content:
     NextGroupId: 160090260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: (샤샤샤샥!) <- 재빠르게 물러나는 소리
     MessageJP: （シュバババッ！）←素早く去る音
     MessageCN: （咻啪啪啪！）←快速离去的声音
-    MessageEN: '*swoosh* <- retreating quickly'
+    MessageEN: "*swoosh* <- retreating quickly"
     MessageTH: (ฉึบๆๆๆ) <- เสียงการวิ่งอย่างรวดเร็ว
     MessageTW: （沙沙沙沙！）←迅速離去的聲音
   - MessageGroupId: 160090260
@@ -655,11 +655,11 @@ content:
     NextGroupId: 160090270
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: …저기, 뭔가 더 늘지 않았어?
     MessageJP: ……毎回親切にありがとね
     MessageCN: ……谢谢满每次都这么亲切地说明呢
-    MessageEN: '...Even more sound effects?'
+    MessageEN: "...Even more sound effects?"
     MessageTH: ดูมีอะไรเพิ่มขึ้นรึเปล่านะ...?
     MessageTW: ……謝謝你總是這麼細心
   - MessageGroupId: 160090270
@@ -673,14 +673,14 @@ content:
     NextGroupId: 160090280
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 선생 공도 알다시피 난 인법연구부의 부장이잖아?
     MessageJP: 私って、忍術研究部の部長でしょ？
     MessageCN: 我是忍术研究部的部长吧？
     MessageEN: As you know, I'm president of the Ninjutsu Research Club.
-    MessageTH: 'ท่านอาจารย์ก็รู้ดีว่าข้าน้อยเป็นหัวหน้า
+    MessageTH: "ท่านอาจารย์ก็รู้ดีว่าข้าน้อยเป็นหัวหน้า
 
-      ชมรมวิจัยศาสตร์นินจาใช่ไหมล่ะ?'
+      ชมรมวิจัยศาสตร์นินจาใช่ไหมล่ะ?"
     MessageTW: 我是忍術研究部的部長，對吧？
   - MessageGroupId: 160090280
     Id: 160090340
@@ -693,7 +693,7 @@ content:
     NextGroupId: 160090290
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응, 그렇지.
     MessageJP: そうだね
     MessageCN: 是的呢
@@ -711,14 +711,14 @@ content:
     NextGroupId: 160090290
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 비공인 동아리인데, <부장>이라고 불러도 되는 걸까?
     MessageJP: そういえば非認可の部活って、「部長」って呼んで良いのかな？
     MessageCN: 话说，忍术研究部还是未经认可的部门，可以叫满“部长”吗？
     MessageEN: But it's an unofficial club. Is it okay to call yourself a president?
-    MessageTH: 'ชมรมไม่เป็นทางการ
+    MessageTH: "ชมรมไม่เป็นทางการ
 
-      เรียกว่า <หัวหน้า> ได้เหรอ?'
+      เรียกว่า <หัวหน้า> ได้เหรอ?"
     MessageTW: 話說你們是非公認社團，叫你「部長」沒問題嗎？
   - MessageGroupId: 160090290
     Id: 160090360
@@ -731,14 +731,14 @@ content:
     NextGroupId: 160090300
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 우냐악! 쓸데없이 한 마디가 더 많잖아! 당연히 되지!
     MessageJP: うぎゃっ！余計な一言が多いよ！良いんだよ！
     MessageCN: 呜哇！废话太多了！适可而止吧！
     MessageEN: Argh! What're you trying to say? Of course you can!
-    MessageTH: 'เฮือก! พูดอะไรบาดใจข้าน้อยอีกแล้ว!
+    MessageTH: "เฮือก! พูดอะไรบาดใจข้าน้อยอีกแล้ว!
 
-      ต้องเรียกได้สิ!'
+      ต้องเรียกได้สิ!"
     MessageTW: 咕喔！少說一句會怎樣！有什麼關係！
   - MessageGroupId: 160090290
     Id: 160090370
@@ -751,16 +751,16 @@ content:
     NextGroupId: 160090300
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이래 봬도 평소에 잔뜩 노력하고 있다구! 닌자 공부라거나, 콘텐츠 제작이라거나
     MessageJP: 普段からちゃんと活動してるんだから！忍者の勉強とか、動画撮影とか！
     MessageCN: 我们平时还是有好好活动的！修炼忍术啦，拍视频之类的！
     MessageEN: I work very hard all the time! Studying ninjas, creating content...
-    MessageTH: 'เห็นแบบนี้ข้าน้อยก็พยายามมากเลยนะ
+    MessageTH: "เห็นแบบนี้ข้าน้อยก็พยายามมากเลยนะ
 
       ทั้งศึกษาเรื่องนินจา ทั้งตัดต่อ
 
-      คอนเทนต์วิดีโอ...'
+      คอนเทนต์วิดีโอ..."
     MessageTW: 我們平常也有在好好活動啊！像是忍者修行，拍攝影片！
   - MessageGroupId: 160090300
     Id: 160090380
@@ -773,7 +773,7 @@ content:
     NextGroupId: 160090310
     FeedbackTimeMillisec: 2000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR:
       이렇게 하다 보면 언젠가 키보토스의 모두에게 닌자를 널리 알리고, 인법연구부가 정식 동아리로 인정받게 될 날도 올 거라고
       믿으니까!
@@ -783,13 +783,13 @@ content:
       If I keep up the good work, one day I'll be promoting ninjas to everyone
       in Kivotos and the Ninjutsu Research Club will be recognized as an official
       club!
-    MessageTH: 'ถ้าทำแบบนี้ต่อไปสักวันจะต้องทำให้
+    MessageTH: "ถ้าทำแบบนี้ต่อไปสักวันจะต้องทำให้
 
       ชาวคิโวทอสรู้เรื่องของนินจาได้มากขึ้น
 
       และวันที่จะได้รับการยอมรับว่าเป็นชมรม
 
-      อย่างเป็นทางการคงมาถึง!'
+      อย่างเป็นทางการคงมาถึง!"
     MessageTW: 只要我們繼續努力，總有一天可以讓整個奇普托斯都知道忍者的存在，而忍術研究部成為正式社團的一天也會來臨！
   - MessageGroupId: 160090310
     Id: 160090390
@@ -802,14 +802,14 @@ content:
     NextGroupId: 160090320
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응, 미치루가 노력하는 건 잘 알고 있어. 언제나 응원할게.
     MessageJP: うん、頑張ってるもんね。応援してる
     MessageCN: 嗯，很努力呢。我会支持你的
     MessageEN: Yeah, I know you're working hard, Michiru. You have my support.
-    MessageTH: 'อื้อ ครูรู้ดีว่ามิจิรุกำลังพยายาม
+    MessageTH: "อื้อ ครูรู้ดีว่ามิจิรุกำลังพยายาม
 
-      ครูเป็นกำลังใจให้เสมอนะ'
+      ครูเป็นกำลังใจให้เสมอนะ"
     MessageTW: 嗯，我知道三千留很努力，我支持你
   - MessageGroupId: 160090320
     Id: 160090400
@@ -822,16 +822,16 @@ content:
     NextGroupId: 160090330
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 우햐햣! 고마워, 선생 공! 언제나 선생 공의 응원은 내게 큰 힘이 돼
     MessageJP: ありがとう、先生殿！そう言ってもらえると、ますます頑張れるよ
     MessageCN: 谢谢老师大人！听着老师大人这番话，我会更加努力的
     MessageEN: Wahaha! Thanks, Sensei! That means a lot to me.
-    MessageTH: 'อุฮะฮะฮะ! ขอบคุณนะ ท่านอาจารย์!
+    MessageTH: "อุฮะฮะฮะ! ขอบคุณนะ ท่านอาจารย์!
 
       กำลังใจของท่านอาจารย์เป็นยาชั้นดี
 
-      สำหรับข้าน้อยเสมอ'
+      สำหรับข้าน้อยเสมอ"
     MessageTW: 謝謝你，老師大人！聽到你這麼說，我又能努力下去了
   - MessageGroupId: 160090330
     Id: 160090410
@@ -844,7 +844,7 @@ content:
     NextGroupId: 160090340
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그렇게 생각해준다면야 나도 고맙….
     MessageJP: それは良かった
     MessageCN: 那真是太好了
@@ -862,16 +862,16 @@ content:
     NextGroupId: 160090350
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그냥 하는 말이 아니라, 정말, 엄청나게 큰 힘이 되고 있어
     MessageJP: その言葉を聞いたら力が湧いてきて……
     MessageCN: 听到老师大人的话，力量就不断涌现……
     MessageEN:
       I'm not just saying that. You have no idea how much you're helping
       me.
-    MessageTH: 'ข้าน้อยไม่ได้พูดส่งๆ นะ มันเป็นกำลัง
+    MessageTH: "ข้าน้อยไม่ได้พูดส่งๆ นะ มันเป็นกำลัง
 
-      ใจให้ข้าน้อยมากจริงๆ'
+      ใจให้ข้าน้อยมากจริงๆ"
     MessageTW: 你的這番話讓我力量都來了……
   - MessageGroupId: 160090340
     Id: 160090430
@@ -884,16 +884,16 @@ content:
     NextGroupId: 160090350
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 얼마나 큰 힘이 됐냐면, 방금 선생 공이 해준 말 덕분에 망설임이 싹 가셨으니까!
     MessageJP: おかげで、迷いが無くなったよ！
     MessageCN: 托您的福，我已经不再迷茫了！
     MessageEN:
       Your support is so powerful that all of my hesitation has completely
       disappeared!
-    MessageTH: 'ถ้าให้เห็นภาพละก็... คำพูดของท่าน
+    MessageTH: "ถ้าให้เห็นภาพละก็... คำพูดของท่าน
 
-      อาจารย์เมื่อกี้ทำให้ข้าน้อยไม่ลังเลอีกแล้ว!'
+      อาจารย์เมื่อกี้ทำให้ข้าน้อยไม่ลังเลอีกแล้ว!"
     MessageTW: 這下，我不會再迷惘了！
   - MessageGroupId: 160090350
     Id: 160090440
@@ -906,7 +906,7 @@ content:
     NextGroupId: 160090360
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: …응?
     MessageJP: ……え？
     MessageCN: ……诶？
@@ -924,14 +924,14 @@ content:
     NextGroupId: 160090370
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 노력하는데 투자를 아껴선 안 되겠지?
     MessageJP: やっぱり努力のためにも、投資は惜しんじゃダメだよね
     MessageCN: 果然即使是为了努力，投资也不能小气啊
     MessageEN: I shouldn't hold back on investing into my efforts, right?
-    MessageTH: 'จะมามัวเสียดายที่จะต้องลงทุนกับการ
+    MessageTH: "จะมามัวเสียดายที่จะต้องลงทุนกับการ
 
-      ฝึกฝนไม่ได้สินะ?'
+      ฝึกฝนไม่ได้สินะ?"
     MessageTW: 為了努力，果然要放膽投資才行
   - MessageGroupId: 160090360
     Id: 160090460
@@ -944,14 +944,14 @@ content:
     NextGroupId: 160090370
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 단골 가게에 새로운 닌자 굿즈가 입고됐대.
     MessageJP: 行きつけのお店で、新しい忍者グッズが入荷されるんだって
     MessageCN: 听说我常去的那家店要进新的忍者周边了
     MessageEN: I hear new ninja merch arrived at one of my favorite stores.
-    MessageTH: 'ได้ยินว่ามีสินค้านินจาใหม่ๆ มาที่ร้านที่
+    MessageTH: "ได้ยินว่ามีสินค้านินจาใหม่ๆ มาที่ร้านที่
 
-      ข้าน้อยไปประจำด้วย'
+      ข้าน้อยไปประจำด้วย"
     MessageTW: 聽說我常去的店裡，進了新的忍者周邊
   - MessageGroupId: 160090370
     Id: 160090470
@@ -964,7 +964,7 @@ content:
     NextGroupId: 160090380
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아, 아니! 인법 도구가…!
     MessageJP: あ、違う！忍具が！
     MessageCN: 啊，不对！是忍具！
@@ -982,18 +982,18 @@ content:
     NextGroupId: 160090390
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 좀 비싸서 고민했는데, 선생 공 말을 듣고 결심했어!
     MessageJP: ちょっと高くて悩んでたんだけど、先生の言葉を聞いて踏ん切りがついたよ！
     MessageCN: 本来我还在纠结是不是有点贵，但是听了老师的话，我下定决心了！
     MessageEN:
       The stuff is kind of expensive, so I was hesitant...but now I've changed
       my mind!
-    MessageTH: 'ราคามันค่อนข้างสูงจนคิดอยู่นาน
+    MessageTH: "ราคามันค่อนข้างสูงจนคิดอยู่นาน
 
       แต่พอได้ยินที่ท่านอาจารย์พูด ข้าน้อยก็
 
-      ตัดสินใจได้!'
+      ตัดสินใจได้!"
     MessageTW: 原本我還在煩惱價錢有點高，但是聽了老師的話，我下定決心了！
   - MessageGroupId: 160090380
     Id: 160090490
@@ -1006,7 +1006,7 @@ content:
     NextGroupId: 160090390
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응! 어디까지나 미래를 위한 투자로써 말이지!
     MessageJP: そう、これは忍術研究部の未来への投資！
     MessageCN: 没错，这是对忍术研究部的未来进行的投资！
@@ -1024,7 +1024,7 @@ content:
     NextGroupId: 160090400
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어딜 봐도 욕망으로 가득하잖아….
     MessageJP: ただ自分が欲しいわけではなく……？
     MessageCN: 你真的不是自己想要……？
@@ -1042,14 +1042,14 @@ content:
     NextGroupId: 160090410
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 우냐핫! 그럼 기다리고 있을게! 선생 공!
     MessageJP: じゃあいつもの場所で待ち合わせね、先生殿！
     MessageCN: 那么我们在老地方见吧，老师大人！
     MessageEN: Wahaha! I'll be waiting for you, Sensei!
-    MessageTH: 'อะฮะฮะฮ่า! ถ้างั้นข้าน้อยจะรอนะ
+    MessageTH: "อะฮะฮะฮ่า! ถ้างั้นข้าน้อยจะรอนะ
 
-      ท่านอาจารย์!'
+      ท่านอาจารย์!"
     MessageTW: 那我們就在老地方碰面囉，老師大人！
   - MessageGroupId: 160090400
     Id: 160090520
@@ -1062,11 +1062,11 @@ content:
     NextGroupId: 160090410
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: (휘리리릭! 파바바바밧!) <- 엄청나게 멋지게 달려가는 소리
     MessageJP: （くるりっ！シュババババッ！）←ものすごくかっこよく宙返りして走っていく音
     MessageCN: （骨碌！咻啪啪啪！）←非常帅气地后空翻奔跑的声音
-    MessageEN: '*swoosh* *tatatatat* <- sound of running super fast'
+    MessageEN: "*swoosh* *tatatatat* <- sound of running super fast"
     MessageTH: (ฟึ่บๆๆ ฉับๆๆๆ) <- เสียงวิ่งอย่างสง่างาม
     MessageTW: （刷刷！咻啪啪啪啪！）←非常帥氣地後空翻奔跑的聲音
   - MessageGroupId: 160090410
@@ -1080,7 +1080,7 @@ content:
     NextGroupId: 160090420
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 으, 으응…. 알았어.
     MessageJP: りょ、了解……
     MessageCN: 明、明白……
@@ -1098,14 +1098,14 @@ content:
     NextGroupId: 160090430
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 맞다. 선생 공. 혹시 샬레의 사무실에 그게 있는지 찾아봐 줄 수 있어?
     MessageJP: そうだ先生、シャーレにあれ無い？
     MessageCN: 对了老师，夏莱有那个吗？
     MessageEN: Oh, Sensei. Can you look for that thing in the Schale office?
-    MessageTH: 'จริงด้วยท่านอาจารย์ช่วยดูให้หน่อยได้มั้ย
+    MessageTH: "จริงด้วยท่านอาจารย์ช่วยดูให้หน่อยได้มั้ย
 
-      ว่าที่ชาเล่ต์มีไอ้นั่นรึเปล่า?'
+      ว่าที่ชาเล่ต์มีไอ้นั่นรึเปล่า?"
     MessageTW: 對了老師，夏萊有沒有那個啊？
   - MessageGroupId: 160090430
     Id: 160090550
@@ -1118,7 +1118,7 @@ content:
     NextGroupId: 160090440
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그거라니? 뭘 말이야?
     MessageJP: あれって……？
     MessageCN: “那个”是指……？
@@ -1136,14 +1136,14 @@ content:
     NextGroupId: 160090450
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그러니까 그거. 내가 자주 보는 만화책- <카마보코 돌풍전> 19권 말이야
     MessageJP: 「かまぼこ突風伝」の19巻！
     MessageCN: 《鱼板疾风传》的第19卷！
     MessageEN: 'The manga I always read. "Kama-Boko Gale Battle, Volume 19." '
-    MessageTH: 'คือว่า... มังงะที่ข้าน้อยอ่านบ่อยๆ
+    MessageTH: "คือว่า... มังงะที่ข้าน้อยอ่านบ่อยๆ
 
-      <คามาโบโกะ ภาควายุสลาตัน> เล่ม 19 น่ะ'
+      <คามาโบโกะ ภาควายุสลาตัน> เล่ม 19 น่ะ"
     MessageTW: 「魚板疾風傳」第19集！
   - MessageGroupId: 160090440
     Id: 160090570
@@ -1156,16 +1156,16 @@ content:
     NextGroupId: 160090450
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 부실에서 아무리 찾아봐도 보이지 않길래. 짚이는 곳이 거기뿐이더라고
     MessageJP: 部室に無いから、あとはシャーレくらいかなって
     MessageCN: 我看活动室里没有，那应该就是在夏莱了
     MessageEN:
       I searched the club room everywhere for it but couldn't find it. It's
       gotta be in the office.
-    MessageTH: 'ข้าน้อยลองหาที่ห้องทำงานแล้วแต่ไม่เจอ
+    MessageTH: "ข้าน้อยลองหาที่ห้องทำงานแล้วแต่ไม่เจอ
 
-      แต่ข้าน้อยก็เอาไปแค่ที่นั่นเอง'
+      แต่ข้าน้อยก็เอาไปแค่ที่นั่นเอง"
     MessageTW: 我看部室裡沒有，能想到的就只有夏萊了
   - MessageGroupId: 160090450
     Id: 160090580
@@ -1178,7 +1178,7 @@ content:
     NextGroupId: 160090460
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 어느새 샬레에 그런 물건을?!
     MessageJP: いつの間に置いてたんだ……
     MessageCN: 满什么时候放到这来的……
@@ -1196,18 +1196,18 @@ content:
     NextGroupId: 160090470
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 응…? 그야 우리 부실. 일단은 임시고. 언제 백화요란 녀석들이 들이닥칠지 모르고
     MessageJP: それはその、うちの部室、あくまで仮の場所だし……いつ百花繚乱が押し寄せてくるかも分からないから……
     MessageCN: 那个，因为，我们的活动室毕竟只是暂时的……也说不定哪天哪天百花缭乱的人就进来了
     MessageEN:
       Huh...? Well, our club room is temporary, and we don't know when those
       Hyakkayouran jerks will invade.
-    MessageTH: 'หืม? ก็ห้องของชมรมเราน่ะเป็นแค่ห้อง
+    MessageTH: "หืม? ก็ห้องของชมรมเราน่ะเป็นแค่ห้อง
 
       ชั่วคราว ไม่รู้ว่าพวกเฮียกกะเรียวรันจะ
 
-      บุกมาเมื่อไรด้วย'
+      บุกมาเมื่อไรด้วย"
     MessageTW: 那是因為，我們的部室，終究只是暫借的……百花繚亂那些人不知道什麼時候會闖進來……
   - MessageGroupId: 160090460
     Id: 160090600
@@ -1220,14 +1220,14 @@ content:
     NextGroupId: 160090470
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 음양부 녀석들도 매번 시끄럽게 들쑤시고 있으니까
     MessageJP: あと陰陽部も、いつ来るか分かったもんじゃないし……
     MessageCN: 还有阴阳部那群人，也说不定什么时候会来……
     MessageEN: The Yin-Yang Club also comes in and causes commotions.
-    MessageTH: 'พวกชมรมหยินหยางเองก็ก่อเรื่องขึ้นอยู่
+    MessageTH: "พวกชมรมหยินหยางเองก็ก่อเรื่องขึ้นอยู่
 
-      ทุกครั้งเลยด้วย'
+      ทุกครั้งเลยด้วย"
     MessageTW: 然後也不知道陰陽部什麼時候會過來……
   - MessageGroupId: 160090470
     Id: 160090610
@@ -1240,14 +1240,14 @@ content:
     NextGroupId: 160090480
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 나의 닌자 두뇌를 써서 생각해 본 결과-
     MessageJP: そこで私の忍者脳で演算した結果
     MessageCN: 所以我用我的忍者脑进行了运算，得出了一个结论
     MessageEN: According to my ninja brain...
-    MessageTH: 'สมองนินจาอันชาญฉลาดของข้าน้อย
+    MessageTH: "สมองนินจาอันชาญฉลาดของข้าน้อย
 
-      ได้ข้อสรุปว่า...'
+      ได้ข้อสรุปว่า..."
     MessageTW: 於是我就用我的忍者腦袋思考……
   - MessageGroupId: 160090470
     Id: 160090620
@@ -1260,14 +1260,14 @@ content:
     NextGroupId: 160090480
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 굿즈는 샬레에 보관한다. 응. 그게 합리적이란 결론을 내렸지
     MessageJP: グッズはシャーレに保管するのが合理的、という結論に至ったの！
     MessageCN: 结论就是，把东西放在夏莱里面保管比较合理！
     MessageEN: It only made sense to keep the precious item at Schale.
-    MessageTH: 'ให้เก็บของต่างๆ ไว้ที่ชาเล่ต์ ถือเป็นการ
+    MessageTH: "ให้เก็บของต่างๆ ไว้ที่ชาเล่ต์ ถือเป็นการ
 
-      ตัดสินใจที่สมเหตุสมผลที่สุดแล้ว'
+      ตัดสินใจที่สมเหตุสมผลที่สุดแล้ว"
     MessageTW: 決定把周邊保管在夏萊，會是比較合理的結論
   - MessageGroupId: 160090480
     Id: 160090630
@@ -1280,7 +1280,7 @@ content:
     NextGroupId: 160090490
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 샬레는 창고가 아닙니다. 미치루 양….
     MessageJP: シャーレは倉庫じゃないんですよ、ミチルさん……
     MessageCN: 夏莱可不是仓库啊，满女士……
@@ -1298,18 +1298,18 @@ content:
     NextGroupId: 160090500
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 아! 심심하면 선생 공도 봐도 되니까! 추천하거든! 카마보코 시리즈!
     MessageJP: もちろん先生殿も読んで良いよ、「かまぼこ」シリーズ面白いから！
     MessageCN: 当然老师也可以读一读，毕竟《鱼板》系列非常有意思！
     MessageEN:
       Oh! If you ever get bored, you should read it! I highly recommend the
       Kama-Boko series!
-    MessageTH: 'อ้อ! ถ้าเกิดเบื่อๆ ท่านอาจารย์จะอ่านก็ได้นะ!
+    MessageTH: "อ้อ! ถ้าเกิดเบื่อๆ ท่านอาจารย์จะอ่านก็ได้นะ!
 
       ข้าน้อยแนะนำเรื่องนี้เลย คามาโบโกะ
 
-      ซีรีส์!'
+      ซีรีส์!"
     MessageTW: 老師大人想看當然也可以，魚板系列非常好看！
   - MessageGroupId: 160090490
     Id: 160090650
@@ -1322,16 +1322,16 @@ content:
     NextGroupId: 160090500
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그리고 말 나온 김에 전해두는 건데. 오늘 밤엔 공원에서 집합이니까. 까먹지 마?
     MessageJP: あ、そういえば今夜は公園に集合ね
     MessageCN: 啊，对了，今晚在公园集合吧
     MessageEN:
       Also, I should remind you we're gathering at the park tonight. Don't
       forget!
-    MessageTH: 'ไหนๆ ก็พูดเรื่องนี้แล้ว คืนนี้มีนัดรวมตัว
+    MessageTH: "ไหนๆ ก็พูดเรื่องนี้แล้ว คืนนี้มีนัดรวมตัว
 
-      กันที่สวนนะ อย่าลืมล่ะ?'
+      กันที่สวนนะ อย่าลืมล่ะ?"
     MessageTW: 嗯對了，今晚公園集合唷
   - MessageGroupId: 160090500
     Id: 160090660
@@ -1344,7 +1344,7 @@ content:
     NextGroupId: 160090510
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그럼 기다리고 있겠소이다! 선생 공!
     MessageJP: 待ってるよ、先生殿！
     MessageCN: 我等着老师大人哦！
@@ -1362,12 +1362,12 @@ content:
     NextGroupId: 160090520
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 화제 전환 빠르구만!
     MessageJP: 話が相変わらず急展開！
     MessageCN: 话题还是和以前一样急速转变！
-    MessageEN: 'What a quick change of subject! '
-    MessageTH: 'เปลี่ยนเรื่องคุยเร็วมาก! '
+    MessageEN: "What a quick change of subject! "
+    MessageTH: "เปลี่ยนเรื่องคุยเร็วมาก! "
     MessageTW: 話題還是老樣子轉真快！
   - MessageGroupId: 160090510
     Id: 160090680
@@ -1380,7 +1380,7 @@ content:
     NextGroupId: 160090520
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그건 좋은데, 오늘 밤엔 뭘 하려고…?
     MessageJP: それは良いんだけど、今夜は何をするの？
     MessageCN: 也行吧，但是今晚要做什么？
@@ -1398,11 +1398,11 @@ content:
     NextGroupId: 160090530
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: (파바바바바바밧!!!) <- 신발 끈 묶는 소리
     MessageJP: （しゅばばばばばばっ！！！）←靴ひもを結ぶ音
     MessageCN: （咻啪啪啪啪啪啪！）←系鞋带的声音
-    MessageEN: '*shwoop shwoop shwoop shwoop* <- sound of tying shoelaces'
+    MessageEN: "*shwoop shwoop shwoop shwoop* <- sound of tying shoelaces"
     MessageTH: (ฟึ่บๆๆๆ) <- เสียงผูกเชือกรองเท้า
     MessageTW: （啪沙沙沙沙沙沙）←綁鞋帶的聲音
   - MessageGroupId: 160090530
@@ -1416,7 +1416,7 @@ content:
     NextGroupId: 160090540
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 이젠 닌자의 행동조차 아니지 않아…?!
     MessageJP: もう忍者っぽいアクションですらない……！？
     MessageCN: 甚至已经不是忍者风格的动作了……！？
@@ -1434,12 +1434,12 @@ content:
     NextGroupId: 160090550
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: …선생 공, 어제 그거 때문인 건지.
     MessageJP: 先生殿、昨日のアレのせいか……
     MessageCN: 老师大人，可能是因为昨天那件事吧……
-    MessageEN: 'Sensei. I think...that yesterday... '
-    MessageTH: 'ท่านอาจารย์... คงเพราะเรื่องเมื่อวาน '
+    MessageEN: "Sensei. I think...that yesterday... "
+    MessageTH: "ท่านอาจารย์... คงเพราะเรื่องเมื่อวาน "
     MessageTW: 老師大人，大概是因為昨天的那件事……
   - MessageGroupId: 160090550
     Id: 160090720
@@ -1452,7 +1452,7 @@ content:
     NextGroupId: 160090560
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 소생……. 감기에 걸려버렸소이다….
     MessageJP: 風邪引いちゃったぁ……
     MessageCN: 小生感冒了……
@@ -1470,7 +1470,7 @@ content:
     NextGroupId: 160090570
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: …알았어. 가서 죽 만들어줄 테니까.
     MessageJP: おかゆ作りに行くね……
     MessageCN: 我给你熬点粥送过去吧……
@@ -1488,7 +1488,7 @@ content:
     NextGroupId: 160090580
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 그… 으응, 고, 고마워. 선생 공.
     MessageJP: ありがとう、先生殿……
     MessageCN: 谢谢，老师大人……
@@ -1506,7 +1506,7 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
     MessageKR: 기, 기다리고 있겠습니다아….
     MessageJP: えっと、待ってるからね……
     MessageCN: 那个，我会等您的……

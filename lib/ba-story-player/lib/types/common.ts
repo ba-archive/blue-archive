@@ -1,4 +1,3 @@
-import type { Spine } from "pixi-spine";
 import {
   PlayAudio,
   PlayEffect,
@@ -9,6 +8,8 @@ import {
 } from "./events";
 import { TransitionTableItem } from "./excels";
 import { Language, StorySummary } from "./store";
+import type { Spine } from "pixi-spine";
+
 export interface Character {
   /**
    * 人物位置

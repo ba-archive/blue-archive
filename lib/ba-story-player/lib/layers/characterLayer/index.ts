@@ -1,3 +1,9 @@
+import CharacterEffectPlayerInstance, {
+  POS_INDEX_MAP,
+  calcSpineStagePosition,
+} from "./actionPlayer";
+import CharacterEmotionPlayerInstance from "./emotionPlayer";
+import CharacterFXPlayerInstance from "./fxPlayer";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
@@ -27,12 +33,6 @@ import gsap, { Power0 } from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { IAnimationState, ISkeletonData, Spine } from "pixi-spine";
 import * as PIXI from "pixi.js";
-import CharacterEffectPlayerInstance, {
-  POS_INDEX_MAP,
-  calcSpineStagePosition,
-} from "./actionPlayer";
-import CharacterEmotionPlayerInstance from "./emotionPlayer";
-import CharacterFXPlayerInstance from "./fxPlayer";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换

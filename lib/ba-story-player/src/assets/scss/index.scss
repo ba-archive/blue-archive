@@ -6,8 +6,8 @@ $ui-layer-z-index: 20;
   position: relative;
   .transition-cover {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     z-index: 9999;
   }
   .transition-cover.out {

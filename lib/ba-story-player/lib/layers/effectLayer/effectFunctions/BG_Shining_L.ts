@@ -1,8 +1,8 @@
+import { emitterConfigs, emitterStarter } from "../emitterUtils";
+import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { usePlayerStore } from "@/stores";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
 import { Container, filters, Rectangle, Sprite, Texture } from "pixi.js";
-import { emitterConfigs, emitterStarter } from "../emitterUtils";
-import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 
 export default async function BG_Shining_L(resources: Sprite[]) {
   // 原理是波纹

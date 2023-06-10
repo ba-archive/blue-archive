@@ -1,6 +1,3 @@
-import { usePlayerStore } from "@/stores";
-import { EmitterConfigV3, Emitter } from "@pixi/particle-emitter";
-import { Container, Sprite, TilingSprite } from "pixi.js";
 import {
   emitterConfigs,
   emitterContainer,
@@ -11,6 +8,9 @@ import {
   loadSpriteSheet,
   sprite2TransParent,
 } from "../resourcesUtils";
+import { usePlayerStore } from "@/stores";
+import { EmitterConfigV3, Emitter } from "@pixi/particle-emitter";
+import { Container, Sprite, TilingSprite } from "pixi.js";
 
 export default async function BG_Dust_L(resources: Sprite[]) {
   // 原理是三个平铺图片不断移动, 加上火光粒子效果

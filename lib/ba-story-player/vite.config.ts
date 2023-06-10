@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -21,8 +21,8 @@ export default defineConfig(({ mode }) => {
         name: "BaStoryPlayer",
         fileName: "ba-story-player",
       },
-      rollupOptions:{
-        external: ['vue', 'axios']
+      rollupOptions: {
+        external: ["vue", "axios"],
       },
     },
     css: {

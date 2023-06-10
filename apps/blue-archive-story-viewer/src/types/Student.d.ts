@@ -12,21 +12,21 @@ export interface Student {
     day: number;
   };
   rarity: number;
-  type: 'Striker' | 'Special';
-  armorType: 'LightArmor' | 'HeavyArmor' | 'Unarmed';
-  bulletType?: 'Pierce' | 'Explode' | 'Mystic';
+  type: "Striker" | "Special";
+  armorType: "LightArmor" | "HeavyArmor" | "Unarmed";
+  bulletType?: "Pierce" | "Explode" | "Mystic";
   weapon:
-    | 'SG'
-    | 'SMG'
-    | 'AR'
-    | 'GL'
-    | 'HG'
-    | 'RL'
-    | 'SR'
-    | 'RG'
-    | 'MG'
-    | 'MT'
-    | 'FT';
+    | "SG"
+    | "SMG"
+    | "AR"
+    | "GL"
+    | "HG"
+    | "RL"
+    | "SR"
+    | "RG"
+    | "MG"
+    | "MT"
+    | "FT";
 }
 
 export interface StudentName {
@@ -48,21 +48,21 @@ export interface StudentAttributes {
   club: string;
   affiliation: string;
   rarity: number;
-  type: 'Striker' | 'Special';
-  armorType: 'LightArmor' | 'HeavyArmor' | 'Unarmed';
-  bulletType?: 'Pierce' | 'Explode' | 'Mystic';
+  type: "Striker" | "Special";
+  armorType: "LightArmor" | "HeavyArmor" | "Unarmed";
+  bulletType?: "Pierce" | "Explode" | "Mystic";
   weapon:
-    | 'SG'
-    | 'SMG'
-    | 'AR'
-    | 'GL'
-    | 'HG'
-    | 'RL'
-    | 'SR'
-    | 'RG'
-    | 'MG'
-    | 'MT'
-    | 'FT';
+    | "SG"
+    | "SMG"
+    | "AR"
+    | "GL"
+    | "HG"
+    | "RL"
+    | "SR"
+    | "RG"
+    | "MG"
+    | "MT"
+    | "FT";
 }
 
 export interface StudentFilters {
@@ -70,9 +70,9 @@ export interface StudentFilters {
   rarity: number[];
   club: string[];
   affiliation: string[];
-  type: ('Striker' | 'Special')[];
-  armorType: ('LightArmor' | 'HeavyArmor' | 'Unarmed')[];
-  bulletType?: ('Pierce' | 'Explode' | 'Mystic')[];
+  type: ("Striker" | "Special")[];
+  armorType: ("LightArmor" | "HeavyArmor" | "Unarmed")[];
+  bulletType?: ("Pierce" | "Explode" | "Mystic")[];
 }
 
 export interface StudentNames {

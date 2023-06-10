@@ -1,13 +1,13 @@
+import { playBGEffect, removeBGEffect } from "./bgEffectHandlers";
+import { emitterContainer } from "./emitterUtils";
 import eventBus from "@/eventBus";
+import { storyHandler } from "@/index";
+import { calcBackgroundImageSize } from "@/layers/bgLayer";
 import { usePlayerStore } from "@/stores";
 import { ZmcArgs } from "@/types/common";
 import { wait } from "@/utils";
 import gsap from "gsap";
 import { Application, Sprite, Texture } from "pixi.js";
-import { playBGEffect, removeBGEffect } from "./bgEffectHandlers";
-import { emitterContainer } from "./emitterUtils";
-import { calcBackgroundImageSize } from "@/layers/bgLayer";
-import { storyHandler } from "@/index";
 
 /**
  * 初始化特效层, 订阅player的剧情信息.

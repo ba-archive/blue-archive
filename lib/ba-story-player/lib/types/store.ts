@@ -1,5 +1,3 @@
-import { Application, Sprite } from "pixi.js";
-import { Ref } from "vue";
 import { CharacterInstance, StoryUnit } from "./common";
 import { ShowOption, ShowText } from "./events";
 import {
@@ -12,6 +10,8 @@ import {
 } from "./excels";
 import { IL2dConfig } from "./l2d";
 import { OtherSounds } from "./resources";
+import { Application, Sprite } from "pixi.js";
+import { Ref } from "vue";
 
 export type Language = "Cn" | "Jp" | "En" | "Tw";
 

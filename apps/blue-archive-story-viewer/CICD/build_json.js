@@ -1,8 +1,8 @@
-import chalk from 'chalk';
-import fs from 'fs';
-import jsYaml from 'js-yaml';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import chalk from "chalk";
+import fs from "fs";
+import jsYaml from "js-yaml";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,15 +28,15 @@ function walk(dir, callback) {
   });
 }
 
-walk(path.resolve(__dirname, '..', 'public'), pathname => {
+walk(path.resolve(__dirname, "..", "public"), pathname => {
   const startTime = new Date().getTime();
-  fs.readFile(pathname, 'utf8', (err, data) => {
+  fs.readFile(pathname, "utf8", (err, data) => {
     if (err) {
-      console.log(`[${chalk.red('ERROR')}] ${pathname}\n${chalk.red(err)}`);
+      console.log(`[${chalk.red("ERROR")}] ${pathname}\n${chalk.red(err)}`);
     } else {
       if (/\.ya?ml$/i.test(pathname)) {
         const json = jsYaml.load(data);
-        const jsonPath = pathname.replaceAll(/ya?ml/gi, 'json');
+        const jsonPath = pathname.replaceAll(/ya?ml/gi, "json");
         const jsonDir = path.dirname(jsonPath);
         if (undefined !== json) {
           if (!fs.existsSync(jsonDir)) {
@@ -45,12 +45,12 @@ walk(path.resolve(__dirname, '..', 'public'), pathname => {
           fs.writeFile(jsonPath, JSON.stringify(json, null, 0), err => {
             if (err) {
               console.log(
-                `[${chalk.red('FAILED')}] ${jsonPath}: ${chalk.red(err)}`
+                `[${chalk.red("FAILED")}] ${jsonPath}: ${chalk.red(err)}`
               );
             } else {
               const endTime = new Date().getTime();
               console.log(
-                `[${chalk.green('SUCCESS')}] ${chalk.green(
+                `[${chalk.green("SUCCESS")}] ${chalk.green(
                   jsonPath
                 )} ${chalk.gray(`${endTime - startTime}ms`)}`
               );
@@ -58,12 +58,12 @@ walk(path.resolve(__dirname, '..', 'public'), pathname => {
           });
         } else {
           console.log(
-            `[${chalk.yellowBright('SKIPPED')}] ${pathname} (empty file)`
+            `[${chalk.yellowBright("SKIPPED")}] ${pathname} (empty file)`
           );
         }
       } else {
         console.log(
-          `[${chalk.gray('IGNORED')}] ${chalk.gray(pathname + ' (not YAML)')}`
+          `[${chalk.gray("IGNORED")}] ${chalk.gray(pathname + " (not YAML)")}`
         );
       }
     }
