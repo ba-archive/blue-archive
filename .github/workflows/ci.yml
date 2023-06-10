@@ -19,6 +19,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Install
