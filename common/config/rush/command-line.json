@@ -22,17 +22,6 @@
       "ignoreMissingScript": false,
       "allowWarningsInSuccessfulBuild": true
     },
-    {
-      "commandKind": "bulk",
-      "name": "rebuild",
-      "summary": "Clean and rebuild the entire set of projects",
-      "description": "This command assumes that the package.json file for each project contains...",
-      "safeForSimultaneousRushProcesses": false,
-      "enableParallelism": true,
-      "ignoreDependencyOrder": false,
-      "ignoreMissingScript": false,
-      "allowWarningsInSuccessfulBuild": true
-    },
     // {
     //   /**
     //    * (Required) Determines the type of custom command.
