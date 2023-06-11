@@ -3,7 +3,6 @@ import gsap from "gsap";
 // 按钮激活动画
 function effectBtnMouseDown(duration = 0.15, scale = 0.94) {
   return (ev: Event) => {
-    console.log("effectBtnMouseDown");
     gsap.to(ev.currentTarget, {
       duration: duration,
       scale: scale,
@@ -16,7 +15,6 @@ function effectBtnMouseDown(duration = 0.15, scale = 0.94) {
 // 按钮失活动画
 function effectBtnMouseUp(duration = 0.3, scale = 1) {
   return (ev: Event) => {
-    console.log("effectBtnMouseUp");
     gsap.to(ev.currentTarget, {
       duration: duration,
       scale: scale,
@@ -56,7 +54,6 @@ function buttonAnimation(
   } else {
     return;
   }
-  console.log("buttonAnimation: ", elem, elems);
   elems.forEach(elem => {
     elem.addEventListener(
       "mousedown",

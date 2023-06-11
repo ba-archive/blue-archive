@@ -1,18 +1,18 @@
 <script lang="ts" setup>
+import * as PIXI from "pixi.js";
+import axios from "axios";
+import { ref, watch } from "vue";
 import BaStoryPlayer from "../lib/BaStoryPlayer.vue";
-import { TranslatedStoryUnit } from "../lib/types/common";
-import yuuka from "./data/yuuka.json";
-import prologue from "./data/prologue1.1.json";
 import eventBus from "../lib/eventBus";
 import { eventEmitter, resourcesLoader, storyHandler } from "../lib/index";
+import { changeStoryIndex } from "../lib/layers/uiLayer/userInteract";
+import { usePlayerStore } from "../lib/stores";
+import { TranslatedStoryUnit } from "../lib/types/common";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
-import { ref, watch } from "vue";
-import * as PIXI from "pixi.js";
-import { usePlayerStore } from "../lib/stores";
-import axios from "axios";
-import { changeStoryIndex } from "../lib/layers/uiLayer/userInteract";
+import prologue from "./data/prologue1.1.json";
+import yuuka from "./data/yuuka.json";
 import { useResizeObserver, useThrottleFn } from "@vueuse/core";
 
 console.log("资源加载: ", resourcesLoader);
@@ -172,14 +172,14 @@ useResizeObserver(
 
 <style scoped>
 .absolute-right-center {
-  position: absolute;
-  background-color: white;
-  text-align: center;
   display: flex;
-  flex-direction: column;
+  position: absolute;
   right: 0;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: white;
   height: 95vh;
   overflow-y: auto;
-  z-index: 1000;
+  text-align: center;
 }
 </style>

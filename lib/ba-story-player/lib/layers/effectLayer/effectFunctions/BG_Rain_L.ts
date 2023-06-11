@@ -1,9 +1,9 @@
+import { usePlayerStore } from "@/stores";
 import {
   emitterConfigs,
   emitterContainer,
   emitterStarter,
 } from "../emitterUtils";
-import { usePlayerStore } from "@/stores";
 import { BGEffectHandlerFunction } from "@/types/effectLayer";
 import {
   Emitter,

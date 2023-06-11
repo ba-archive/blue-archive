@@ -1,24 +1,25 @@
 <script lang="ts" setup>
-import BaButton from "@/layers/uiLayer/components/BaButton.vue";
-import { computed, ref, watch } from "vue";
-import BaDialog from "./components/BaDialog.vue";
-import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
-import BaSelector from "./components/BaSelector.vue";
 import eventBus from "@/eventBus";
-import { Language, StorySummary } from "@/types/store";
-import { effectBtnMouseDown, effectBtnMouseUp } from "./utils";
-import { ShowOption } from "@/types/events";
-import { usePlayerStore } from "@/stores";
-import "./userInteract";
-import { useThrottleFn } from "@vueuse/core";
 import { storyHandler } from "@/index";
+import { usePlayerStore } from "@/stores";
+import gsap from "gsap";
+import { computed, onMounted, ref, watch } from "vue";
+import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
+import BaDialog from "./components/BaDialog.vue";
+import BaSelector from "./components/BaSelector.vue";
+import BaButton from "@/layers/uiLayer/components/BaButton.vue";
+import { ShowOption } from "@/types/events";
+import { Language, StorySummary } from "@/types/store";
+import { useThrottleFn } from "@vueuse/core";
+import "./userInteract";
 
-let hiddenSummary = ref(true);
-let hiddenStoryLog = ref(true);
-let autoMode = ref(false);
-let hiddenMenu = ref(true);
-let hiddenSubMenu = ref(true);
-const playerStore = usePlayerStore();
+const showSummary = ref(false);
+const showStoryLog = ref(false);
+const autoMode = ref(false);
+const showMenu = ref(false);
+const forceShowMenu = ref(false);
+const showSubMenu = ref(false);
+const disableMenuButton = ref(false);
 
 let props = defineProps<{
   storySummary: StorySummary;
@@ -32,25 +33,26 @@ const selectOptions = ref<ShowOption[]>([]);
 const emitter = defineEmits(["update:fullScreen"]);
 
 const overrideTextContainer = computed(() =>
-  [hiddenSubMenu, hiddenSummary, hiddenStoryLog].some(it => !it.value)
+  [!showSubMenu.value, !showSummary.value, !showStoryLog.value].some(it => !it)
 );
 
 eventBus.on("hide", () => {
-  hiddenSummary.value = true;
-  hiddenStoryLog.value = true;
-  hiddenMenu.value = true;
+  showSummary.value = false;
+  showStoryLog.value = false;
+  showMenu.value = false;
 });
 eventBus.on("showStoryLog", e => {
-  hiddenStoryLog.value = !e;
+  showStoryLog.value = e;
 });
-watch(hiddenStoryLog, () => {
-  eventBus.emit("isStoryLogShow", !hiddenStoryLog.value);
+watch(showStoryLog, () => {
+  eventBus.emit("isStoryLogShow", showStoryLog.value);
 });
+
 eventBus.on("hidemenu", () => {
-  hiddenMenu.value = true;
+  showMenu.value = false;
 });
 eventBus.on("showmenu", () => {
-  hiddenMenu.value = false;
+  showMenu.value = true;
 });
 eventBus.on("option", e => (selectOptions.value = [...e]));
 eventBus.on("next", () => {
@@ -69,7 +71,7 @@ function handleBtnFullScreen() {
 function handleBtnChatLog() {
   eventBus.emit("playOtherSounds", "select");
   refreshBtnMenuTimer();
-  hiddenStoryLog.value = false;
+  showStoryLog.value = true;
   autoMode.value = false;
   eventBus.emit("stopAuto");
 }
@@ -77,13 +79,14 @@ function handleBtnSkipSummary() {
   eventBus.emit("playOtherSounds", "select");
   refreshBtnMenuTimer();
   autoMode.value = false;
-  hiddenSummary.value = false;
+  showSummary.value = true;
   eventBus.emit("stopAuto");
 }
 
 // 处理选项
 function handleBaSelector(selectionGroup: number) {
-  hiddenSubMenu.value = true;
+  showSubMenu.value = false;
+  eventBus.emit("playOtherSounds", "select");
   eventBus.emit("select", selectOptions.value[selectionGroup].SelectionGroup);
   usePlayerStore().updateLogText(selectOptions.value[selectionGroup]);
 
@@ -103,32 +106,45 @@ function handleBtnAutoMode() {
 let btnMenuTimer: number;
 
 function handleBtnMenu() {
-  if (hiddenSubMenu.value) {
-    hiddenSubMenu.value = false;
+  if (showSubMenu.value) {
+    showSubMenu.value = false;
+  } else {
+    showSubMenu.value = true;
     // 一段时间后自动影藏
     clearInterval(btnMenuTimer);
     btnMenuTimer = window.setTimeout(() => {
-      hiddenSubMenu.value = true;
+      showSubMenu.value = false;
     }, 5555);
-  } else {
-    hiddenSubMenu.value = true;
   }
 }
 
 const handleBtnMenuDebounced = useThrottleFn(handleBtnMenu, 200);
 
 function refreshBtnMenuTimer() {
-  if (!hiddenSubMenu.value) {
+  if (showSubMenu.value) {
     clearTimeout(btnMenuTimer);
     btnMenuTimer = window.setTimeout(() => {
-      hiddenSubMenu.value = true;
+      showSubMenu.value = false;
     }, 5555);
   }
 }
 
 // 子菜单按钮动画
-let handleBtnMouseDown = effectBtnMouseDown();
-let handleBtnMouseUp = effectBtnMouseUp();
+let handleBtnMouseDown = function (ev: Event) {
+  gsap.to(ev.currentTarget, {
+    duration: 0.15,
+    scale: 0.94,
+    ease: "power3.out",
+    force3D: true,
+  });
+};
+let handleBtnMouseUp = function (ev: Event) {
+  gsap.to(ev.currentTarget, {
+    duration: 0.3,
+    scale: 1,
+    force3D: true,
+  });
+};
 
 // baui em value, 根据height width计算
 const bauiem = computed(() => {
@@ -141,27 +157,27 @@ const bauiem = computed(() => {
 // #86 全屏时 UI 层鼠标不可见
 const cursorStyle = ref("auto");
 const hideCursorDelay = 3000;
-let cursorTimer = window.setTimeout(() => {
+let cursorTimer: number = window.setTimeout(() => {
   cursorStyle.value = "none";
 }, hideCursorDelay);
 
-document.addEventListener("mousemove", ev => {
+document.addEventListener("mousemove", () => {
   cursorStyle.value = "auto";
   clearTimeout(cursorTimer);
-  if (hiddenSummary.value && hiddenStoryLog.value && props.fullScreen) {
+  if (!showSummary.value && !showStoryLog.value && props.fullScreen) {
     cursorTimer = window.setTimeout(() => {
       cursorStyle.value = "none";
     }, hideCursorDelay);
   }
 });
 
-function handleBaUIClick() {
-  if (!hiddenSubMenu.value) {
-    hiddenSubMenu.value = true;
+// 点击其他地方关闭子菜单
+eventBus.on("click", function () {
+  if (showSubMenu.value) {
+    showSubMenu.value = false;
     return;
   }
-  eventBus.emit("click");
-}
+});
 
 // i18n
 const dict = {
@@ -202,34 +218,70 @@ function getI18n(key: string) {
     Reflect.get(Reflect.get(dict, props.language.toLowerCase()), key) || key
   );
 }
+
+// #97 UI层接收到隐藏UI事件后无法操作菜单
+const rightTop = ref<HTMLElement | null>();
+onMounted(() => {
+  if (rightTop.value) {
+    const el = rightTop.value;
+    let timeout: number | undefined;
+
+    let mouseEnter = function mouseEnter() {
+      forceShowMenu.value = true;
+    };
+    let mouseLeave = function mouseLeave() {
+      if (timeout) clearTimeout(timeout);
+      timeout = window.setTimeout(() => {
+        forceShowMenu.value = false;
+        timeout = undefined;
+      }, 1800);
+    };
+
+    el.addEventListener("mouseover", mouseEnter);
+    el.addEventListener("mouseleave", mouseLeave);
+    el.addEventListener(
+      "click",
+      () => {
+        mouseEnter();
+        mouseLeave();
+      },
+      { capture: true }
+    );
+  }
+});
 </script>
 
 <template>
   <div
     class="baui"
     :class="{ 'has-menu': overrideTextContainer }"
-    @click.self="handleBaUIClick"
     :style="{ 'font-size': `${bauiem}px`, cursor: cursorStyle }"
     tabindex="0"
   >
-    <div class="right-top" v-show="!hiddenMenu">
+    <div
+      class="right-top"
+      :style="{ opacity: showMenu || forceShowMenu ? 1 : 0 }"
+      ref="rightTop"
+    >
       <div class="baui-button-group">
         <BaButton
           @click="handleBtnAutoMode"
           :class="{ 'ba-button-auto': true, activated: autoMode }"
+          :disabled="disableMenuButton"
         >
           AUTO
         </BaButton>
         <BaButton
           @click="handleBtnMenuDebounced"
-          :class="{ 'ba-button-menu': true, activated: !hiddenSubMenu }"
+          :class="{ 'ba-button-menu': true, activated: showSubMenu }"
+          :disabled="disableMenuButton"
         >
           MENU
         </BaButton>
       </div>
 
       <Transition>
-        <div class="baui-menu-options lean-rect" v-if="!hiddenSubMenu">
+        <div class="baui-menu-options lean-rect" v-if="showSubMenu">
           <button
             class="button-nostyle ba-menu-option"
             @click="handleBtnFullScreen"
@@ -277,8 +329,7 @@ function getI18n(key: string) {
     <BaDialog
       id="ba-story-summary"
       :title="getI18n('summary')"
-      :show="!hiddenSummary"
-      @close="hiddenSummary = true"
+      v-model:show="showSummary"
       width="70%"
       height="85%"
     >
@@ -291,7 +342,7 @@ function getI18n(key: string) {
           <BaButton
             size="middle"
             class="polylight button-close-summary"
-            @click="hiddenSummary = true"
+            @click="showSummary = false"
             style="width: 96%"
           >
             {{ getI18n("close") }}
@@ -305,11 +356,14 @@ function getI18n(key: string) {
       :title="getI18n('log')"
       width="min(1080px, 80%)"
       height="min(650px, 86%)"
-      :show="!hiddenStoryLog"
-      @close="hiddenStoryLog = !hiddenStoryLog"
+      v-model:show="showStoryLog"
     >
-      <BaChatLog :show="!hiddenStoryLog" />
+      <BaChatLog :show="showStoryLog" />
     </BaDialog>
+
+    <!-- <BaDialog id="ba-player-setting" :show="true" width="min(1080px, 80%)" height="min(650px, 86%)">
+      <BaPlayerSetting />
+    </BaDialog> -->
   </div>
 </template>
 
@@ -325,27 +379,28 @@ function getI18n(key: string) {
 
 .button-nostyle {
   margin: 0;
-  padding: 0;
   border: none;
   background-color: initial;
+  padding: 0;
 }
 
 .right-top {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: $right-top-menu-z-index;
+  transition: opacity 0.3s ease-in-out;
   padding: 1.5%;
   user-select: none;
-  z-index: 110;
 }
 
 .baui {
-  position: absolute;
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // top: 0;
+  // overflow: hidden;
   z-index: $ui-layer-z-index;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  overflow: hidden;
   font-family: "TJL", "Microsoft YaHei", "PingFang SC", -apple-system, system-ui,
     "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
     "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
@@ -365,40 +420,40 @@ function getI18n(key: string) {
     grid-template-columns: repeat(2, 1fr);
 
     .ba-button {
-      &:hover {
+      &:hover:enabled {
         background-color: #c7c8c9;
       }
     }
 
-    .ba-button-auto.activated {
+    .ba-button-auto:enabled.activated {
       background: no-repeat right -17% bottom/contain url(./assets/Common_Btn_Normal_Y_S_Pt.webp)
         #efe34b;
     }
 
-    .ba-button-menu.activated {
-      color: #e7e8e9;
+    .ba-button-menu:enabled.activated {
       background-color: #707580b1;
+      color: #e7e8e9;
     }
   }
 
   .baui-menu-options {
-    display: grid;
     grid-gap: 0.5em;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0.56em;
-    padding: 0.6em 0.6em;
     margin: 0.5em 0.5em;
     border-radius: 0.375em;
     background-color: rgba(244, 244, 244, 0.6);
+    padding: 0.6em 0.6em;
     overflow: hidden;
 
     .ba-menu-option {
       display: block;
-      font-size: 1.5em;
-      background-color: #2c4565;
-      border-radius: 0.1875em;
-      padding: 0.25em 0.5em;
       transition: background-color 0.3s ease-out;
+      border-radius: 0.1875em;
+      background-color: #2c4565;
+      padding: 0.25em 0.5em;
+      font-size: 1.5em;
 
       &:hover {
         background-color: #243955;
@@ -411,15 +466,15 @@ function getI18n(key: string) {
   }
 
   #ba-story-log {
+    z-index: $ba-story-summary-z-index;
     color: #32363c;
-    z-index: 110;
   }
 
   #ba-story-summary {
+    z-index: $ba-story-log-z-index;
     color: #32363c;
 
     .ba-story-summary-container {
-      height: 100%;
       display: flex;
       flex-flow: nowrap column;
       background: center/contain
@@ -432,37 +487,43 @@ function getI18n(key: string) {
           ),
         80px 45% url(./assets/UITex_BGPoliLight_1.svg) rgb(164 216 237);
       background-size: 100%;
+      height: 100%;
     }
 
     .ba-story-summary-title {
       margin: 0.4em 0;
-      text-align: center;
       color: #32363c;
-      font-size: 1.5em;
       font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
     }
 
     .ba-story-summary-text {
       flex: 1;
-      border: solid #d1d7dc 2px;
       margin: 0 1em;
+      border: solid #d1d7dc 2px;
       border-radius: 0.25em;
-      overflow-y: auto;
-      padding: 0.3125em 0.4375em;
       background-color: #f0f0f0;
+      padding: 0.3125em 0.4375em;
+      overflow-y: auto;
       font-size: 1.4em;
     }
 
     .ba-story-summary-button-group {
       display: flex;
-      margin: 1em 1em 1em;
       justify-content: center;
       align-items: center;
+      margin: 1em 1em 1em;
 
       .button-close-summary {
         width: 50%;
       }
     }
+  }
+
+  #ba-player-setting {
+    z-index: $ba-player-setting-z-index;
+    color: #32363c;
   }
 }
 </style>

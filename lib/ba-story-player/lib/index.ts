@@ -1,18 +1,18 @@
+import * as utils from "@/utils";
+import eventBus from "@/eventBus";
+import { initPrivateState, usePlayerStore } from "@/stores";
+import { getOtherSoundUrls, wait } from "@/utils";
+import { Application, Loader, utils as pixiUtils, settings } from "pixi.js";
+import axios from "axios";
+import { IEventData, SpineParser } from "pixi-spine";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
-import eventBus from "@/eventBus";
 import { bgInit } from "@/layers/bgLayer";
 import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
-import { initPrivateState, usePlayerStore } from "@/stores";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
-import * as utils from "@/utils";
-import { getOtherSoundUrls, wait } from "@/utils";
-import axios from "axios";
-import { IEventData, SpineParser } from "pixi-spine";
-import { Application, Loader, utils as pixiUtils, settings } from "pixi.js";
 
 let playerStore: ReturnType<typeof usePlayerStore>;
 let privateState: ReturnType<typeof initPrivateState>;

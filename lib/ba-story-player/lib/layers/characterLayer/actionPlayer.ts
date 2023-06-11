@@ -1,6 +1,7 @@
-import { calcCharacterYAndScale, getStageSize } from "./index";
-import actionOptions from "./options/actionOptions";
 import { usePlayerStore } from "@/stores";
+import gsap from "gsap";
+import { Spine } from "pixi-spine";
+import actionOptions from "./options/actionOptions";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayer,
@@ -8,8 +9,7 @@ import {
   PositionOffset,
 } from "@/types/characterLayer";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
-import gsap from "gsap";
-import { Spine } from "pixi-spine";
+import { calcCharacterYAndScale, getStageSize } from "./index";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换

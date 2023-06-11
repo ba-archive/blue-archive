@@ -1,8 +1,8 @@
+import { Sprite } from "pixi.js";
+import type { ISkeletonData, Spine } from "pixi-spine";
 import { Character, CharacterInstance } from "@/types/common";
 import { ShowCharacter } from "@/types/events";
 import { IAnimationStateListener } from "@pixi-spine/base";
-import type { ISkeletonData, Spine } from "pixi-spine";
-import { Sprite } from "pixi.js";
 
 /**
  * 所有角色特效统一接口

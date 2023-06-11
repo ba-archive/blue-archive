@@ -1,7 +1,7 @@
+import { usePlayerStore } from "@/stores";
+import { Sprite, TilingSprite, filters } from "pixi.js";
 import { emitterStarter } from "../emitterUtils";
 import { loadSpriteSheet } from "../resourcesUtils";
-import { usePlayerStore } from "@/stores";
-import { filters, Sprite, TilingSprite } from "pixi.js";
 
 export default async function BG_SandStorm_L(resources: Sprite[]) {
   // 原理是两个平铺图片不断移动

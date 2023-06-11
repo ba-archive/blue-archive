@@ -6,6 +6,7 @@
       '--standard-font-size': standardFontSize,
       '--standard-unity-font-size': standardUnityFontSize,
     }"
+    @click="simulateUiClick"
   >
     <div
       class="container-inner"
@@ -85,6 +86,7 @@
           '--st-pos-bounds-x': `${stPositionBounds.width}`,
           '--st-pos-bounds-y': `${stPositionBounds.height}`,
         }"
+        @click="onStContainerClick"
         v-if="stText.length > 0"
       >
         <StUnit
@@ -161,24 +163,18 @@
         }"
         class="dialog"
         ref="TextDialog"
-        @click="simulateUiClick"
       >
         <div class="inner-dialog" id="player__text_inner_dialog">
           <div class="title">
-            <span :style="{ fontSize: `${fontSize(3.5)}rem` }" class="name">{{
+            <span :style="{ '--fs': `${fontSize(3.5)}rem` }" class="name">{{
               name ? name : "&emsp;"
             }}</span>
-            <span
-              :style="{ fontSize: `${fontSize(2)}rem` }"
-              class="department"
-              >{{ nickName }}</span
-            >
+            <span :style="{ '--fs': `${fontSize(2)}rem` }" class="department">{{
+              nickName
+            }}</span>
           </div>
           <hr />
-          <div
-            :style="{ '--font-size': `${standardFontSize}rem` }"
-            class="content"
-          >
+          <div class="content">
             <TypingUnit
               v-for="(e, index) in dialogText"
               :index="String(index)"
@@ -195,9 +191,10 @@
 </template>
 
 <script setup lang="ts">
-import { useThrottleFn } from "@vueuse/core";
-import TypingEmitter from "./utils/typingEmitter";
-import TypingUnit from "./components/TypingUnit.vue";
+import eventBus from "@/eventBus";
+import { usePlayerStore } from "@/stores";
+import { deepCopyObject } from "@/utils";
+import gsap from "gsap";
 import {
   Ref,
   computed,
@@ -207,19 +204,18 @@ import {
   reactive,
   ref,
 } from "vue";
-import eventBus from "@/eventBus";
+import VideoBackground from "vue-responsive-video-background-player";
+import TypingUnit from "./components/TypingUnit.vue";
+import TypingEmitter from "./utils/typingEmitter";
+import StUnit from "@/layers/textLayer/components/StUnit.vue";
+import { Text } from "@/types/common";
 import {
   ResourceLoadState,
   ShowText,
   ShowTitleOption,
   StText,
 } from "@/types/events";
-import { Text } from "@/types/common";
-import { deepCopyObject } from "@/utils";
-import { usePlayerStore } from "@/stores";
-import gsap from "gsap";
-import VideoBackground from "vue-responsive-video-background-player";
-import StUnit from "@/layers/textLayer/components/StUnit.vue";
+import { useThrottleFn } from "@vueuse/core";
 
 const textDialogWidth = ref(0);
 const TextDialog = ref<HTMLElement>() as Ref<HTMLElement>; // 文本框长度, 用于计算tooltip最大位置
@@ -711,6 +707,12 @@ function exitPreventInteract() {
 function simulateUiClick() {
   eventBus.emit("click");
 }
+function onStContainerClick() {
+  // st层和dialog同时出现的情况, 由于st会覆盖到text上面导致点击对话框无法next
+  if (stText.value.length && dialogText.value.length) {
+    simulateUiClick();
+  }
+}
 onMounted(() => {
   eventBus.on("option", doPreventInteract);
   eventBus.on("select", exitPreventInteract);
@@ -786,36 +788,35 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 * {
   box-sizing: border-box;
 }
-.name {
-  font-size: 3.5rem;
-  color: white;
-  align-self: flex-end;
-}
-
-.department {
-  margin-left: 10px;
-  font-size: 2.5rem;
-  color: rgb(156, 218, 240);
-}
 
 .dialog {
-  width: 100%;
-  padding: 3rem 8rem;
+  position: absolute;
+  bottom: 0;
+  z-index: $text-layer-z-index + $dialog-z-index;
   box-sizing: border-box;
   background-image: linear-gradient(
     to bottom,
     rgba(255, 0, 0, 0),
     rgba(19, 32, 45, 0.9) 30%
   );
-  position: absolute;
-  bottom: 0;
-  z-index: $text-layer-z-index + $dialog-z-index;
+  padding: 3rem 8rem;
+  width: 100%;
   white-space: pre-line;
 
   .inner-dialog {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
+    .name {
+      align-self: flex-end;
+      color: white;
+      font-size: max(var(--fs), var(--minimum-fs));
+    }
+    .department {
+      margin-left: 10px;
+      color: rgb(156, 218, 240);
+      font-size: var(--fs);
+    }
   }
 
   .next-image-btn {
@@ -823,11 +824,11 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     position: absolute;
     right: 0;
     bottom: 1rem;
-    width: 10px;
-    height: 10px;
+    animation: next-btn 0.6s linear alternate infinite;
     background: url("./assets/text-next.webp");
     background-size: $size $size;
-    animation: next-btn 0.6s linear alternate infinite;
+    width: 10px;
+    height: 10px;
   }
 
   @keyframes next-btn {
@@ -858,30 +859,30 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
               var(--standard-font-size)
           ) * 1rem
       ),
-      12px
+      var(--minimum-fs)
     );
     font-size: var(--font-size);
+    line-height: calc(1.5 * var(--font-size));
   }
-  line-height: calc(1.5 * var(--font-size));
 }
 
 .text-container {
+  --minimum-fs: 14px; // 最小字体大小
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
   font-family: "TJL", "Microsoft YaHei", "PingFang SC", -apple-system, system-ui,
     "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
     "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
-  position: absolute;
   user-select: none;
-  overflow: hidden;
-  pointer-events: none;
-
   hr {
     border: 0.1px rgba(255, 255, 255, 0.666) solid;
   }
 
   .container-inner {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
     pointer-events: auto;
   }
   .container-inner.prevent-interact {
@@ -889,37 +890,43 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   .title-container {
-    text-align: center;
-    opacity: 0;
-    color: white;
-    z-index: $text-layer-z-index + $title-z-index;
     $padding: 20px;
+    opacity: 0;
+    z-index: $text-layer-z-index + $title-z-index;
     padding: $padding;
+    color: white;
+    text-align: center;
     .title-border {
-      position: relative;
       --side-padding: 0px;
       $border-svg-size: 32px;
       $border-opacity: 0.5;
       $border-color: rgba(255, 255, 255, $border-opacity);
+
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
       border: 2px solid $border-color;
       border-radius: 8px;
-      // width: calc(100% - 2 * #{$padding} - 2 * var(--side-padding));
-      width: 100%;
-      height: 100%;
       background: linear-gradient(to top, white, $border-color),
         linear-gradient(to left, white, $border-color),
         linear-gradient(to top, white, $border-color),
         linear-gradient(to left, white, $border-color);
-      background-size: calc(100% - 62px) 0.5px, 0.5px calc(100% - 65px),
-        calc(100% - 62px) 0.5px, 0.5px calc(100% - 65px);
       background-position: 31px 12px, 11px 32px, 31px calc(100% - 12px),
         calc(100% - 12px) 32px;
+      background-size: calc(100% - 62px) 0.5px, 0.5px calc(100% - 65px),
+        calc(100% - 62px) 0.5px, 0.5px calc(100% - 65px);
       background-repeat: no-repeat;
+      // width: calc(100% - 2 * #{$padding} - 2 * var(--side-padding));
+      width: 100%;
+      height: 100%;
+      line-height: 1;
       img {
         position: absolute;
-        width: $border-svg-size;
-        filter: drop-shadow(0 0 0.2px white);
         opacity: $border-opacity;
+        filter: drop-shadow(0 0 0.2px white);
+        width: $border-svg-size;
 
         &:nth-child(1) {
           top: 0;
@@ -930,8 +937,8 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
           right: 0;
         }
         &:nth-child(3) {
-          bottom: 0;
           right: 0;
+          bottom: 0;
         }
         &:nth-child(4) {
           bottom: 0;
@@ -939,22 +946,11 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
       }
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-      box-sizing: border-box;
-
       .title-contain {
         --font-size: 2rem;
+        --sub-title-font-size: calc(var(--font-size) * 0.6);
         position: absolute;
         left: 0;
-        line-height: 1;
-        font-size: var(--font-size);
-        color: black;
-        font-weight: 700;
-        padding: var(--font-size) 0;
-        width: 100%;
         background: linear-gradient(
             58deg,
             rgba(240, 240, 240, 0.1) 0%,
@@ -964,12 +960,16 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
           url(../uiLayer/assets/UITex_BGPoliLight_1.svg) rgb(164 216 237)
             no-repeat 0 30%;
         background-size: 100%, 100%;
-        --sub-title-font-size: calc(var(--font-size) * 0.6);
+        padding: var(--font-size) 0;
+        width: 100%;
+        color: black;
+        font-weight: 700;
+        font-size: var(--font-size);
+        line-height: 1;
         .sub-title {
-          font-size: var(--sub-title-font-size);
           margin-bottom: calc(var(--font-size) * 0.52);
+          font-size: var(--sub-title-font-size);
           .sub-title-inner {
-            padding: 0 5px;
             background: linear-gradient(
                 0deg,
                 #f6ed7e 0%,
@@ -977,6 +977,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
                 transparent 13%
               )
               0 calc(var(--font-size) * -0.12);
+            padding: 0 5px;
           }
         }
         .main-title {
@@ -984,14 +985,14 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
         // 译者信息
         &::after {
+          position: absolute;
+          bottom: calc(-8px - min(var(--font-size, 2rem), 16px));
+          left: 0;
           width: 100%;
           content: attr(data-translator);
-          position: absolute;
-          left: 0;
-          bottom: calc(-8px - min(var(--font-size, 2rem), 16px));
-          font-size: min(var(--font-size), 16px);
-          font-weight: 400;
           color: white;
+          font-weight: 400;
+          font-size: min(var(--font-size), 16px);
           text-shadow: $text-outline;
         }
       }
@@ -1004,29 +1005,29 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   .place-container {
     --font-size: 1rem;
-    position: absolute;
-    opacity: 0;
-    left: 0;
-    top: 10%;
-    color: white;
-    z-index: $text-layer-z-index + $place-z-index;
     --padding-size: calc(var(--font-size) / 2);
+    position: absolute;
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    z-index: $text-layer-z-index + $place-z-index;
+    color: white;
     .round-place {
       position: relative;
-      line-height: var(--font-size);
       padding: var(--padding-size) 3rem var(--padding-size) 1rem;
+      line-height: var(--font-size);
 
       &:after {
-        content: "";
-        width: 100%;
-        height: 100%;
+        position: absolute;
         top: 0;
         left: -20px;
-        background-color: rgba(44, 65, 92, 0.7);
         transform: skewX(-20deg);
-        border-radius: 0 10px 10px 0;
-        position: absolute;
         z-index: -1;
+        border-radius: 0 10px 10px 0;
+        background-color: rgba(44, 65, 92, 0.7);
+        width: 100%;
+        height: 100%;
+        content: "";
       }
 
       .place-content {
@@ -1036,13 +1037,13 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         font-size: var(--font-size);
 
         &:after {
-          content: "";
-          width: 3px;
           display: block;
-          height: calc(100% - var(--font-size));
-          background-color: rgba(255, 255, 255, 0.3);
           position: absolute;
           top: var(--padding-size);
+          background-color: rgba(255, 255, 255, 0.3);
+          width: 3px;
+          height: calc(100% - var(--font-size));
+          content: "";
         }
       }
     }
@@ -1078,14 +1079,14 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .next-episode-container {
-  pointer-events: none;
   z-index: $text-layer-z-index + $next-episode-z-index;
+  pointer-events: none;
 
   .next-episode-cover {
     display: block;
-    height: 50%;
-    width: 100%;
     background-color: black;
+    width: 100%;
+    height: 50%;
 
     &:first-child {
       transform: translateY(-100%);
@@ -1098,14 +1099,14 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .to-be-continued-container {
-  pointer-events: none;
   z-index: $text-layer-z-index + $to-be-continue-z-index;
+  pointer-events: none;
 
   .to-be-continued-bg0,
   .to-be-continued-bg1 {
+    opacity: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
   }
 
   .to-be-continued-bg0 {
@@ -1124,11 +1125,11 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   .to-be-continued {
     position: absolute;
-    color: white;
-    text-shadow: $text-outline;
     right: -150px;
     bottom: 20px;
     opacity: 0;
+    color: white;
+    text-shadow: $text-outline;
   }
 }
 
@@ -1136,9 +1137,9 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   z-index: $text-layer-z-index + $image-video-z-index;
 
   .image-video-container-inner {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
 
     .image-container {
       display: flex;
@@ -1147,9 +1148,9 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       align-items: center;
 
       .image {
-        object-fit: contain;
-        height: 70%;
         transform: translateY(10%);
+        height: 70%;
+        object-fit: contain;
       }
     }
   }
@@ -1160,10 +1161,10 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   background-color: black;
   .loading-image {
     position: absolute;
-    width: 70%;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    width: 70%;
     object-fit: contain;
   }
   .loading-log {
@@ -1183,10 +1184,10 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .absolute-container {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -1,5 +1,5 @@
-import { EmitterConfigV3 } from "@pixi/particle-emitter";
 import { BaseTexture, ImageResource, Sprite, Spritesheet } from "pixi.js";
+import { EmitterConfigV3 } from "@pixi/particle-emitter";
 
 /**
  * 把黑白png图片的黑色转为透明度

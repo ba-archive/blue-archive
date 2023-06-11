@@ -1,6 +1,9 @@
-import emotionOptions from "./options/emotionOptions";
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
+import { Container, Sprite } from "pixi.js";
+import gsap, { Power4 } from "gsap";
+import { Spine } from "pixi-spine";
+import emotionOptions from "./options/emotionOptions";
 import {
   CharacterEffectInstance,
   CharacterEmotionPlayer,
@@ -9,9 +12,6 @@ import {
   PositionOffset,
   Scale,
 } from "@/types/characterLayer";
-import gsap, { Power4 } from "gsap";
-import { Spine } from "pixi-spine";
-import { Container, Sprite } from "pixi.js";
 
 const CharacterEmotionPlayerInstance: CharacterEmotionPlayer = {
   init() {

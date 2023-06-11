@@ -1,7 +1,6 @@
-import { l2dConfig } from "../l2dLayer/l2dConfig";
-import * as utils from "./utils";
-import { getText } from "./utils";
 import { usePlayerStore } from "@/stores";
+import { deepCopyObject, getResourcesUrl } from "@/utils";
+import { l2dConfig } from "../l2dLayer/l2dConfig";
 import {
   StoryRawUnit,
   StoryUnit,
@@ -9,7 +8,8 @@ import {
   ZmcArgs,
 } from "@/types/common";
 import { ShowOption, StArgs } from "@/types/events";
-import { deepCopyObject, getResourcesUrl } from "@/utils";
+import * as utils from "./utils";
+import { getText } from "./utils";
 
 type IStoryRawUnitParserFn = {
   reg: RegExp;

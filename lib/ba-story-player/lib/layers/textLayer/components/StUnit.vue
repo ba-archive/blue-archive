@@ -11,13 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import TypingUnit from "./TypingUnit.vue";
+import gsap from "gsap";
+import { StyleValue, computed, onMounted, onUnmounted, ref } from "vue";
 import { BaseTypingEvent, IEventHandlerMap } from "../types";
 import { parseStEffectToCss } from "../utils";
 import TypingEmitter from "../utils/typingEmitter";
 import { StText } from "@/types/events";
-import { computed, onMounted, onUnmounted, ref, StyleValue } from "vue";
-import gsap from "gsap";
+import TypingUnit from "./TypingUnit.vue";
 
 const props = withDefaults(defineProps<IProps>(), {
   index: "-1",
@@ -113,11 +113,14 @@ type IProps = {
 
 <style scoped lang="scss">
 .st-text-container {
-  --font-size: calc(
-    (
-        var(--param-font-size) / var(--standard-unity-font-size) *
-          var(--standard-font-size)
-      ) * 1rem
+  --font-size: max(
+    calc(
+      (
+          var(--param-font-size) / var(--standard-unity-font-size) *
+            var(--standard-font-size)
+        ) * 1rem
+    ),
+    var(--minimum-fs)
   );
   --left: calc(
     (var(--st-width-half) + var(--st-x)) * var(--st-pos-bounds-x) * 1px
@@ -125,10 +128,10 @@ type IProps = {
   --top: calc(
     (var(--st-height-half) - var(--st-y)) * var(--st-pos-bounds-y) * 1px
   );
-  line-height: var(--font-size);
   display: inline-block;
   top: calc(var(--top) - var(--font-size) / 2);
   left: var(--left);
   font-size: var(--font-size);
+  line-height: var(--font-size);
 }
 </style>

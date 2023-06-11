@@ -1,14 +1,14 @@
-import { getStandardWidth } from ".";
-import fxOptions from "./options/fxOptions";
 import { usePlayerStore } from "@/stores";
+import { Sprite } from "pixi.js";
+import gsap from "gsap";
+import fxOptions from "./options/fxOptions";
 import {
   CharacterEffectInstance,
   CharacterFXPlayer,
   PositionOffset,
 } from "@/types/characterLayer";
 import { AdjustmentFilter } from "@pixi/filter-adjustment";
-import gsap from "gsap";
-import { Sprite } from "pixi.js";
+import { getStandardWidth } from ".";
 
 const CharacterFXPlayerInstance: CharacterFXPlayer = {
   init() {
