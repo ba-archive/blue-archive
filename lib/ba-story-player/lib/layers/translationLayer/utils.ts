@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { getResourcesUrl } from "@/utils";
+import { deepCopyObject, getResourcesUrl } from "@/utils";
 import xxhash from "xxhashjs";
 import {
   Speaker,
@@ -42,32 +42,40 @@ export function compareCaseInsensive(s1: string, s2: string) {
  * @param stm 是否为stm类型文字
  * @returns
  */
-export function generateText(rawStoryUnit: StoryRawUnit, stm?: boolean) {
-  let rawText = getText(rawStoryUnit, playerStore.language)
+export function generateText(rawStoryUnit: StoryRawUnit) {
+  const rawText = getText(rawStoryUnit, playerStore.language)
     .replaceAll("[USERNAME]", playerStore.userName)
     .replaceAll("#n", "\n");
-  const result: Text[] = [];
-  if (rawText.includes("[wa")) {
-    if (!rawText.startsWith("[wa:")) {
-      rawText = "[wa:000]" + rawText;
-    }
-    //原始文字示例: "― （いや[wa:200]いや、[wa:900]いくら[wa:300]そういう[wa:300]状況だからって"
-    // いや, 200, いや, 900, いくら, 300, そういう, 300, 状況だからって
-    const textWithWait = rawText.split(/\[wa:(\d+)]/g);
-    // [wa:200]いや[wa:200]いや、[wa:900]いくら[wa:300]そういう[wa:300]状況だからって
-    // '', 200, いや, 200, いや, 900, いくら, 300, そういう, 300, 状況だからって
-    if (textWithWait[0] === "") {
-      textWithWait.splice(0, 1);
-    }
-    for (let index = 0; index < textWithWait.length; index += 2) {
-      const waitTime = Number(textWithWait[index]);
-      const parsedUnit = splitStScriptAndParseTag(textWithWait[index + 1]);
-      parsedUnit[0].waitTime = waitTime;
-      result.push(...parsedUnit);
-    }
-    return result;
-  }
-  return splitStScriptAndParseTag(rawText);
+  return splitStScriptAndParseTag(rawText)
+    .map(it => {
+      let text = it.content;
+      if (text.includes("[wa")) {
+        debugger;
+        if (!text.startsWith("[wa:")) {
+          text = "[wa:000]" + text;
+        }
+        //原始文字示例: "― （いや[wa:200]いや、[wa:900]いくら[wa:300]そういう[wa:300]状況だからって"
+        // いや, 200, いや, 900, いくら, 300, そういう, 300, 状況だからって
+        const textWithWait = text.split(/\[wa:(\d+)]/g);
+        // [wa:200]いや[wa:200]いや、[wa:900]いくら[wa:300]そういう[wa:300]状況だからって
+        // '', 200, いや, 200, いや, 900, いくら, 300, そういう, 300, 状況だからって
+        if (textWithWait[0] === "") {
+          textWithWait.splice(0, 1);
+        }
+        const result: Text[] = [];
+        for (let index = 0; index < textWithWait.length; index += 2) {
+          const waitTime = Number(textWithWait[index]);
+          result.push({
+            content: textWithWait[index + 1],
+            waitTime: waitTime,
+            effects: deepCopyObject(it.effects),
+          });
+        }
+        return result;
+      }
+      return it;
+    })
+    .flat();
 }
 
 export function generateTitleInfo(
@@ -188,6 +196,10 @@ const CustomTagParserMap: ICustomTagParserMap = {
     reg: /\[log=(.+?)](.+)\[\/log]/,
     fn(rawText: string, match: RegExpExecArray) {
       return {
+        effect: {
+          name: "log",
+          value: [match[1]],
+        },
         remain: rawText.replace(`[log=${match[1]}]`, "").replace("[/log]", ""),
       };
     },

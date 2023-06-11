@@ -106,7 +106,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         match[2] as StArgs[1],
         Number(match[3]),
       ];
-      unit.textAbout.showText.text = utils.generateText(rawUnit, true);
+      unit.textAbout.showText.text = utils.generateText(rawUnit);
       return unit;
     },
   },
@@ -594,7 +594,7 @@ function switchBaseTranslator(rawStory: StoryRawUnit[]): StoryUnit[] {
             scriptUnits[2] as StArgs[1],
             Number(scriptUnits[3]),
           ];
-          unit.textAbout.showText.text = utils.generateText(rawStoryUnit, true);
+          unit.textAbout.showText.text = utils.generateText(rawStoryUnit);
           break;
         case "#clearst":
           unit.textAbout.st = {};
