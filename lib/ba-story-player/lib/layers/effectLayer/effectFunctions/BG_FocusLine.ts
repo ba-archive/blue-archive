@@ -1,10 +1,10 @@
-import { emitterConfigs, emitterStarter } from "../emitterUtils";
-import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
+import { Container, Sprite } from "pixi.js";
+import { emitterConfigs, emitterStarter } from "../emitterUtils";
+import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3, Particle } from "@pixi/particle-emitter";
 import { BehaviorOrder } from "@pixi/particle-emitter/lib/behaviors";
-import { Container, Sprite } from "pixi.js";
 
 export default async function BG_FocusLine(resources: Sprite[]) {
   // 原理是线条 emitter

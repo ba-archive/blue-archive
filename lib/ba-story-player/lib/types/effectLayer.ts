@@ -1,5 +1,5 @@
-import { BGEffectExcelTableItem, BGEffectType } from "./excels";
 import { Sprite } from "pixi.js";
+import { BGEffectExcelTableItem, BGEffectType } from "./excels";
 
 export type BGEffectImgTable = Record<BGEffectType, string[]>;
 

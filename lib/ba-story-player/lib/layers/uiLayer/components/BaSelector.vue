@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import eventBus from "@/eventBus";
+import { deepCopyObject } from "@/utils";
 import { computed, ref } from "vue";
+import { Text } from "@/types/common";
 import { ShowOption } from "@/types/events";
 import { useElementSize } from "@vueuse/core";
-import { Text } from "@/types/common";
-import { deepCopyObject } from "@/utils";
 
 // 选项
 // const selection = ref<ShowOption[]>([]);
@@ -71,7 +70,6 @@ function handleSelectMouseLeave() {
 function handleSelect(select: number) {
   selectionCandidate.value = -1;
   selectedOption.value = select;
-  eventBus.emit("playOtherSounds", "select");
 
   setTimeout(() => {
     selectedOption.value = -1;
@@ -112,6 +110,7 @@ function parseTextEffect(_text: Text) {
     })
     .join(";");
   if (rt) {
+    // eslint-disable-next-line max-len
     text.content = `<span style="${style};" class="ruby" data-content="${rt}"><span class="rb">${text.content}</span><span class="rt">${rt}</span></span>`;
   } else {
     text.content = `<span style="${style};">${text.content}</span>`;
@@ -160,30 +159,28 @@ function parseTextEffect(_text: Text) {
 
 <style lang="scss" scoped>
 .ba-selector-container {
-  position: absolute;
   display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
+  z-index: 110;
   width: 100%;
   height: 100%;
   user-select: none;
 
   .ba-selector {
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
-    width: 80%;
-
     $font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 80%;
     .ba-selector-item {
-      text-align: center;
-      padding: 0.5em 1em;
-      font-size: $font-size;
-      color: #344a6e;
+      -webkit-tap-highlight-color: transparent;
+      transform: skewX(-10deg);
+      transition: all 0.175s ease-in-out;
       cursor: pointer;
       border: 1px solid white;
       border-radius: 4px;
-      transform: skewX(-10deg);
       background: linear-gradient(
           58deg,
           rgba(240, 240, 240, 0.1) 0%,
@@ -192,29 +189,31 @@ function parseTextEffect(_text: Text) {
         ),
         center / 100% url("../assets/UITex_BGPoliLight_1.svg") rgb(164 216 237)
           no-repeat;
-      transition: all 0.175s ease-in-out;
-      -webkit-tap-highlight-color: transparent;
+      padding: 0.5em 1em;
+      color: #344a6e;
+      font-size: max($font-size, 14px);
+      text-align: center;
       div {
         transform: skewX(10deg);
       }
       :deep(.ruby) {
-        position: relative;
         display: inline-block;
-        line-height: $font-size;
+        position: relative;
         height: $font-size;
+        line-height: $font-size;
         .rb {
           display: inline-block;
-          line-height: $font-size;
           height: $font-size;
+          line-height: $font-size;
         }
         .rt {
           position: absolute;
-          left: 0;
           top: calc(-1 * #{$font-size} * 0.5);
-          font-size: calc(#{$font-size} * 0.5);
+          left: 0;
           width: 100%;
-          text-align: center;
+          font-size: calc(#{$font-size} * 0.5);
           line-height: 1;
+          text-align: center;
         }
       }
     }

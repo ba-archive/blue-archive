@@ -9,6 +9,7 @@ const props = defineProps({
     type: String as PropType<"large" | "middle" | "small">,
     default: "small",
   },
+  disabled: Boolean,
 });
 
 const emit = defineEmits<{
@@ -33,6 +34,7 @@ onMounted(() => {
     ref="button"
     @click="handleClick"
     tabindex="-1"
+    :disabled="disabled"
   >
     <slot></slot>
   </button>
@@ -41,28 +43,28 @@ onMounted(() => {
 <style lang="scss" scoped>
 .ba-button {
   position: relative;
-  padding: 0.375em 1em;
-  margin: 0 0.4em 0 0.4em;
-  border-radius: 0.3125em;
-  border: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #2d4665;
-  background-color: #f3f5f6;
   transform: skew(-10deg);
-  box-shadow: #2c3f4a 0 1px 2px;
   transition: background-color 0.3s;
+  margin: 0 0.4em 0 0.4em;
+  box-shadow: #2c3f4a 0 1px 2px;
+  border: none;
+  border-radius: 0.3125em;
+  background-color: #f3f5f6;
+  padding: 0.375em 1em;
+  color: #2d4665;
+  font-weight: bold;
+  font-size: 1.2em;
 
   &.large {
+    border-radius: 0.625em;
     padding: 0.5em 4.25em;
     font-size: 1.5625em;
-    border-radius: 0.625em;
   }
 
   &.middle {
+    border-radius: 0.3em;
     padding: 0.32em 4em;
     font-size: 1.3em;
-    border-radius: 0.3em;
   }
 
   &.polylight {
@@ -76,6 +78,7 @@ onMounted(() => {
         ),
       url(../assets/UITex_BGPoliLight_1.svg) rgb(128, 208, 255);
   }
+
   &.polydark {
     background: no-repeat center/contain
         linear-gradient(
@@ -89,9 +92,9 @@ onMounted(() => {
   }
 
   &[class*="poly"] {
-    background-size: 140%;
-    background-position: -15px 72%;
     box-shadow: #98c0d7 0 1px 2px;
+    background-position: -15px 72%;
+    background-size: 140%;
   }
 }
 </style>

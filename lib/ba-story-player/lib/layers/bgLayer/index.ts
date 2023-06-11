@@ -3,10 +3,10 @@
  */
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
+import { Application, LoaderResource, Sprite } from "pixi.js";
+import gsap from "gsap";
 import { BgLayer } from "@/types/bgLayer";
 import { Dict } from "@/types/common";
-import gsap from "gsap";
-import { Sprite, LoaderResource, Application } from "pixi.js";
 
 export function bgInit() {
   return BgLayerInstance.init();

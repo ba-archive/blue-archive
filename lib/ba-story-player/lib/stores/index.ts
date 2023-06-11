@@ -1,4 +1,5 @@
-import { storyHandler } from "..";
+import { getResourcesUrl } from "@/utils";
+import { ref } from "vue";
 import { BGEffectImgTable } from "@/types/effectLayer";
 import {
   Actions,
@@ -8,8 +9,7 @@ import {
   PrivateStates,
   PublicStates,
 } from "@/types/store";
-import { getResourcesUrl } from "@/utils";
-import { ref } from "vue";
+import { storyHandler } from "..";
 
 // let characterNameTable = {
 //   '유우카 체육복ND': 3715128518,

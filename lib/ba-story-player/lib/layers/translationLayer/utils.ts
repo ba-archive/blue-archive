@@ -1,4 +1,6 @@
 import { usePlayerStore } from "@/stores";
+import { getResourcesUrl } from "@/utils";
+import xxhash from "xxhashjs";
 import {
   Speaker,
   StoryRawUnit,
@@ -10,8 +12,6 @@ import {
 import { PlayAudio, ShowTitleOption } from "@/types/events";
 import { CharacterNameExcelTableItem } from "@/types/excels";
 import { Language } from "@/types/store";
-import { getResourcesUrl } from "@/utils";
-import xxhash from "xxhashjs";
 
 const playerStore = usePlayerStore();
 

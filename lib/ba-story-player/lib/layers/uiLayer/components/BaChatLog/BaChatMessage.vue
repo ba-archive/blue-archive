@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { LogText } from "@/types/store";
 import { PropType, ref, watch } from "vue";
 import avatarBG from "../../assets/Deco_GachaItemBg.webp";
 import { changeStoryIndex } from "../../userInteract";
+import { LogText } from "@/types/store";
+
 const props = defineProps({
   deltaY: Number,
   chatMessage: Object as PropType<LogText>,
@@ -74,41 +75,41 @@ switch (props.chatMessage?.type) {
 
 <style lang="scss" scoped>
 .ba-chat-message {
+  display: flex;
   position: relative;
   z-index: 0;
-  display: flex;
 
   // 学生样式
   &.student > .ba-chat-message-bubble {
-    color: #373737;
     filter: drop-shadow(0 1px 2px #afb7ba);
+    color: #373737;
     .ba-chat-message-bubble-name-bg {
       background-color: white;
       .ba-chat-message-bubble-text-bg {
         background: #f0f0f0;
       }
       .ba-chat-message-bubble-bg-arrow {
+        transform: translate(calc(-100% + 2px), 2px);
         border-width: 8px 10px 8px 0;
         border-color: transparent #f0f0f0 transparent transparent;
-        transform: translate(calc(-100% + 2px), 2px);
       }
     }
   }
   // 老师样式
   &.teacher > .ba-chat-message-bubble {
-    color: #fefefe;
     filter: drop-shadow(0 1px 2px #2c3f4a);
+    color: #fefefe;
     .ba-chat-message-bubble-name-bg {
       background-color: #426487;
       .ba-chat-message-bubble-text-bg {
         background-color: #334b65;
       }
       .ba-chat-message-bubble-bg-arrow {
-        left: initial;
         right: -7px;
+        left: initial;
+        transform: translate(1px, 1px);
         border-width: 8px 0 8px 10px;
         border-color: transparent transparent transparent #334b65;
-        transform: translate(1px, 1px);
       }
     }
   }
@@ -121,8 +122,8 @@ switch (props.chatMessage?.type) {
     .ba-chat-message-bubble {
       margin: 0.5em 1.75em 0.25em 0;
       .ba-chat-message-bubble-name-bg {
-        background-color: #426487;
         visibility: hidden;
+        background-color: #426487;
         height: inherit;
         .ba-chat-message-bubble-text-bg {
           top: 0;
@@ -137,49 +138,48 @@ switch (props.chatMessage?.type) {
         display: none;
       }
       .ba-chat-message-text {
+        min-height: 1em;
         color: #fefefe;
         font-weight: bold;
-
-        min-height: 1em;
         text-align: center;
       }
     }
   }
   .ba-chat-message-avatar-border {
     position: relative;
-    height: 4.6875em;
-    width: 5em;
-    margin: 1em 1em;
-    border: solid #fff 1.3px;
-    border-radius: 1em;
-    overflow: hidden;
     transform: skewX(-10deg);
     transform-origin: center;
+    margin: 1em 1em;
     box-shadow: 0 3px 1px #777, -0.5px 0 1px #888, 0.5px 0 1px #888;
+    border: solid #fff 1.3px;
+    border-radius: 1em;
+    width: 5em;
+    height: 4.6875em;
+    overflow: hidden;
 
     .ba-chat-message-avatar {
       position: absolute;
-      height: 100%;
-      left: -10%;
       right: -10%;
+      left: -10%;
       transform: skewX(10deg);
-      background-repeat: no-repeat;
-      background-position: center;
       transform-origin: center;
+      background-position: center;
       background-size: cover, cover;
+      background-repeat: no-repeat;
+      height: 100%;
     }
   }
   .ba-chat-message-bubble {
     position: relative;
-    margin: 0.5em 1.5em 0.25em 0;
     flex: 1;
+    margin: 0.5em 1.5em 0.25em 0;
 
     .ba-chat-message-bubble-name-bg {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
       transform: skewX(-10deg);
       z-index: -2;
       border-radius: 0.3125em;
@@ -187,37 +187,37 @@ switch (props.chatMessage?.type) {
       .ba-chat-message-bubble-text-bg {
         position: absolute;
         top: 1.95em;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
         z-index: -1;
         border-radius: 0.3125em;
       }
     }
     // 小箭头
     .ba-chat-message-bubble-bg-arrow {
-      content: "";
-      position: absolute;
       display: block;
-      width: 0;
-      height: 0;
+      position: absolute;
+      top: 1.95em;
+      left: 0;
+      z-index: -3;
       border-style: solid;
 
       border-color: transparent #f5f5f5 transparent transparent;
-      z-index: -3;
-      top: 1.95em;
-      left: 0;
+      width: 0;
+      height: 0;
+      content: "";
     }
 
     .ba-chat-message-name {
-      min-height: 1.6em;
       margin: 0.25em 1.5em;
+      min-height: 1.6em;
     }
 
     .ba-chat-message-text {
-      font-size: 1.2em;
       margin: 0.5em 1.5em;
       min-height: 5em;
+      font-size: 1.2em;
     }
   }
 }

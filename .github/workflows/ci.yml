@@ -24,6 +24,8 @@ jobs:
           version: 6.0.2
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
+      - name: Rush Update
+        run: node common/scripts/install-run-rush.js update
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild

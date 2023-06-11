@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import BaChatMessage from "./BaChatMessage.vue";
 import { usePlayerStore } from "@/stores";
 import { Ref, ref, watch } from "vue";
 import { checkBgOverlap } from "@/layers/translationLayer/utils";
+import BaChatMessage from "./BaChatMessage.vue";
 
 const props = defineProps({
   show: Boolean,
@@ -83,14 +83,11 @@ watch(
 <style lang="scss" scoped>
 .ba-chat-log {
   --ba-chat-log: 0.5em;
-  width: calc(100% - 2 * var(--ba-chat-log));
-  height: calc(100% - 2 * var(--ba-chat-log));
-  background-color: #d5d5d5; // 213
-  margin: var(--ba-chat-log);
-  border-radius: 0 0 0.4375em 0.4375em;
-  overflow-y: hidden;
   position: relative;
+  margin: var(--ba-chat-log);
   box-shadow: inset #bdc8d0 0 0px 2px 1px;
+  border-radius: 0 0 0.4375em 0.4375em;
+  background-color: #d5d5d5; // 213
 
   background: no-repeat right bottom/contain
       linear-gradient(
@@ -101,19 +98,21 @@ watch(
         rgba(213, 213, 213, 0) 100%
       ),
     repeat right -30% bottom/50% url(../../assets/UITex_BGPoliLight_1.svg) rgb(201, 232, 250);
+  width: calc(100% - 2 * var(--ba-chat-log));
+  height: calc(100% - 2 * var(--ba-chat-log));
+  overflow-y: hidden;
 
   ul.ba-chat-content {
-    // position: absolute;
-    height: 100%;
-    list-style: none;
+    cursor: grab;
     margin: 0;
     padding: 0;
+    // position: absolute;
+    height: 100%;
     overflow-y: scroll;
-
-    cursor: grab;
 
     // hide scrollbar
     scrollbar-width: none;
+    list-style: none;
 
     &::-webkit-scrollbar {
       display: none;
@@ -121,8 +120,8 @@ watch(
     }
 
     &:active {
-      user-select: none;
       cursor: grabbing;
+      user-select: none;
     }
   }
 }
