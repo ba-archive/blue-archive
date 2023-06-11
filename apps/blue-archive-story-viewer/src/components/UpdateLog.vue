@@ -10,6 +10,10 @@ const updateLogs: UpdateLog[] = [
         type: "student",
         students: [{ name: "安守 实里", id: 20026 }],
       },
+      {
+        type: "fix",
+        content: "修复黑幕转场动画表现异常的问题",
+      },
     ],
   },
   {
@@ -319,7 +323,7 @@ const contributors: Contributor[] = [
     link: "https://github.com/xiaofeiTM233",
   },
   {
-    name: "JK伯爵",
+    name: "J.K.伯爵",
     role: "文案",
     avatar: "/image/contributor/jkbojue.webp",
   },
@@ -378,6 +382,16 @@ const contributors: Contributor[] = [
     name: "星之韻律",
     role: "后端",
     avatar: "/image/contributor/xingzhiyunlv.webp",
+  },
+  {
+    name: "花奈",
+    role: "前端",
+    avatar: "/image/contributor/huanai.webp",
+  },
+  {
+    name: "奶油英雄",
+    role: "AI算法-NLP",
+    avatar: "/image/contributor/naiyouyingxiong.webp",
   },
 ];
 

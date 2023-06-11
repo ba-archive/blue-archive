@@ -9,33 +9,33 @@ interface FriendLink {
 }
 const links: FriendLink[] = [
   {
-    title: '碧蓝档案资讯站',
-    url: 'https://space.bilibili.com/37507923',
-    logo: '/image/contributor/zixunzhan.webp',
-    logoDescription: '资讯站logo',
-    description: '为玩家服务的民间组织，尊重官方设定',
+    title: "碧蓝档案资讯站",
+    url: "https://space.bilibili.com/37507923",
+    logo: "/image/contributor/zixunzhan.webp",
+    logoDescription: "资讯站logo",
+    description: "为玩家服务的民间组织，尊重官方设定",
   },
   {
-    title: '项目公告板 (bilibili)',
-    url: 'https://space.bilibili.com/1413213021',
-    logo: '/favicon/apple-touch-icon.png',
-    logoDescription: '项目logo',
-    description: '更新公告等内容发布',
+    title: "项目公告板 (bilibili)",
+    url: "https://space.bilibili.com/1413213021",
+    logo: "/favicon/apple-touch-icon.png",
+    logoDescription: "项目logo",
+    description: "更新公告等内容发布",
   },
   {
-    title: '项目主页',
-    url: 'https://github.com/ba-archive/blue-archive',
-    logo: '/image/contributor/github-logo.svg',
-    logoDescription: 'GitHub logo',
+    title: "项目仓库",
+    url: "https://github.com/ba-archive/blue-archive",
+    logo: "/image/contributor/github-logo.svg",
+    logoDescription: "GitHub logo",
     shouldReverseOnDarkTheme: true,
-    description: '欢迎前端、美术、Unity等同学加入',
+    description: "欢迎前端、美术、Unity等同学加入",
   },
   {
-    title: 'CloudFlare',
-    url: 'https://www.cloudflare.com/',
-    logo: '/image/contributor/cloudflare.svg',
-    logoDescription: 'CloudFlare logo',
-    description: '为本站提供 CDN 服务',
+    title: "CloudFlare",
+    url: "https://www.cloudflare.com/",
+    logo: "/image/contributor/cloudflare.svg",
+    logoDescription: "CloudFlare logo",
+    description: "为本站提供 CDN 服务",
   },
 ];
 </script>
@@ -90,8 +90,8 @@ article {
   grid-template-rows: max-content auto;
   grid-template-columns: min-content auto;
   grid-template-areas:
-    'avatar title'
-    '. description';
+    "avatar title"
+    ". description";
   align-items: center;
   transition: all 0.375s ease-in-out;
   background-color: var(--color-card-background);
@@ -121,7 +121,7 @@ article {
   }
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   .should-reverse-on-dark {
     filter: invert(1);
   }
