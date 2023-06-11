@@ -23,17 +23,8 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   },
   {
     type: "student",
-    jumpTo: 10070,
-    title: "近卫 弥奈",
-  },
-  {
-    type: "student",
-    jumpTo: 10069,
-    title: "朱城 瑠美",
-  },
-  {
-    type: "mainstory",
-    title: "Vol.3 第一章",
+    jumpTo: 20026,
+    title: "安守 实里",
   },
 ];
 </script>
