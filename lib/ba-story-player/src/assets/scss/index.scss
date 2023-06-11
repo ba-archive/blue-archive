@@ -8,6 +8,7 @@ $ba-player-setting-z-index: 140;
 
 #player__background {
   position: relative;
+  overflow: hidden;
   .transition-cover {
     position: absolute;
     top: 0;
