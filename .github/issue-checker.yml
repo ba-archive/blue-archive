@@ -16,10 +16,14 @@ labels:
     mode: add
     content: "module: momotalk"
     regexes: '([Mm][Oo]){2}\s{0,}[Tt][Aa][Ll][Kk]'
-  - name: story
+  - name: story-player
     mode: add
-    content: "module: story"
-    regexes: "([Ss][Tt][Oo][Rr][Yy])|故事|剧情"
+    content: "module: story-player"
+    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)"
+  - name: story-editor
+    mode: add
+    content: "module: story-player"
+    regexes: "(故事|剧情)编辑"
   - name: safari
     mode: add
     content: safari
@@ -35,7 +39,7 @@ labels:
   - name: duplicate
     mode: add
     content: duplicate
-    regexes: '[Dd]uplicate of #\d+|[和与跟]\s?#\d+\s?是?重复'
+    regexes: '[Dd]uplicate (of|with) #\d+|[和与跟]\s?#\d+\s?是?重复'
   - name: wontfix
     mode: add
     content: wontfix
