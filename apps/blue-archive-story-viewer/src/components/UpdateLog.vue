@@ -4,6 +4,19 @@ import { Contributor, UpdateLog } from "../types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2013-06-14",
+    contents: [
+      {
+        type: "fix",
+        content: "修复了部分剧情无法正常播放的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了在部分 iOS 设备上进入全屏时选项位置偏移的问题",
+      },
+    ],
+  },
+  {
     date: "2013-06-11",
     contents: [
       {
