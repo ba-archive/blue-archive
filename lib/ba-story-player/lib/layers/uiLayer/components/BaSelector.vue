@@ -158,6 +158,13 @@ function parseTextEffect(_text: Text) {
 </template>
 
 <style lang="scss" scoped>
+.pseudo-fullscreen {
+  .ba-selector-container {
+    height: 100vw;
+    height: 100dvw;
+  }
+}
+
 .ba-selector-container {
   display: flex;
   position: absolute;
