@@ -16,10 +16,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import { stories } from '../index/mainStoryIndex';
-import StoryLineContainer from './story/StoryLineContainer.vue';
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import StoryLineContainer from "./story/StoryLineContainer.vue";
+import { stories } from "@index/mainStoryIndex";
 
 const route = useRoute();
 

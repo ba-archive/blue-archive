@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, onBeforeMount, onBeforeUnmount, ref } from "vue";
 import { useRoute } from "vue-router";
-import HomeWelcomeScreen from "./components/HomeWelcomeScreen.vue";
-import DesktopMenu from "./components/menu/DesktopMenu.vue";
-import MobileMenu from "./components/menu/MobileMenu.vue";
-import { useSettingsStore } from "./store/settings";
-import { switchTheme } from "./util/userInterfaceUtils";
+import HomeWelcomeScreen from "@components/HomeWelcomeScreen.vue";
+import DesktopMenu from "@components/menu/DesktopMenu.vue";
+import MobileMenu from "@components/menu/MobileMenu.vue";
+import { useSettingsStore } from "@store/settings";
+import { switchTheme } from "@util/userInterfaceUtils";
 
 const route = useRoute();
 const settingsStore = useSettingsStore();

@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted } from 'vue';
-import { useSettingsStore } from '../../store/settings';
-import { switchTheme } from '../../util/userInterfaceUtils';
-import NeuSwitch from './NeuUI/NeuSwitch.vue';
+import { computed, onMounted, onUnmounted } from "vue";
+import NeuSwitch from "./NeuUI/NeuSwitch.vue";
+import { useSettingsStore } from "@store/settings";
+import { switchTheme } from "@util/userInterfaceUtils";
 
 const settingsStore = useSettingsStore();
 const currentTheme = computed(() => settingsStore.getTheme);
 
-function toggleTheme(value: 'light' | 'dark') {
+function toggleTheme(value: "light" | "dark") {
   switchTheme(value);
   settingsStore.setTheme(value);
 }
 
 const initTheme =
   (window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches) ||
-  'dark' === currentTheme.value
-    ? 'dark'
-    : 'light';
+    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+  "dark" === currentTheme.value
+    ? "dark"
+    : "light";
 
 toggleTheme(initTheme);
 
 function handleThemeChange(event: MediaQueryListEvent) {
   const { matches } = event;
-  toggleTheme(matches ? 'dark' : 'light');
+  toggleTheme(matches ? "dark" : "light");
 }
 
 onMounted(() => {
   window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', handleThemeChange);
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", handleThemeChange);
 });
 
 onUnmounted(() => {
   window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .removeEventListener('change', handleThemeChange);
+    .matchMedia("(prefers-color-scheme: dark)")
+    .removeEventListener("change", handleThemeChange);
 });
 </script>
 
@@ -66,7 +66,7 @@ onUnmounted(() => {
   grid-gap: 0.5rem;
   display: grid;
   grid-template-columns: min-content auto min-content;
-  grid-template-areas: 'dark-mode-icon switch light-mode-icon';
+  grid-template-areas: "dark-mode-icon switch light-mode-icon";
   justify-content: space-evenly;
   align-items: center;
   width: fit-content;
@@ -91,7 +91,7 @@ onUnmounted(() => {
 input.switch {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 'track';
+  grid-template-areas: "track";
   grid-area: switch;
   align-items: center;
   justify-items: start;
@@ -116,7 +116,7 @@ input.switch {
     background: var(--style-switch-texture);
     width: 1.25rem;
     height: 1.25rem;
-    content: '';
+    content: "";
   }
 
   &:checked::after {

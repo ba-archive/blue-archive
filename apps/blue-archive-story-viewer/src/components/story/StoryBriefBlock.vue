@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { PropType, computed } from 'vue';
-import { useSettingsStore } from '../../store/settings';
-import { CommonStoryTextObject } from '../../types/StoryJson';
+import { PropType, computed } from "vue";
+import { useSettingsStore } from "@store/settings";
+import { CommonStoryTextObject } from "@types/StoryJson";
 
 const settingsStore = useSettingsStore();
 
 const props = defineProps({
   title: { type: String, required: true },
-  avatar: { type: String, required: false, default: '' },
+  avatar: { type: String, required: false, default: "" },
   description: {
     type: Object as PropType<CommonStoryTextObject>,
     required: true,
@@ -18,17 +18,17 @@ const currentLanguage = computed(() => settingsStore.getLang);
 const username = computed(() => settingsStore.getUsername);
 
 const languageMap = {
-  cn: 'TextCn',
-  en: 'TextEn',
-  jp: 'TextJp',
-  tw: 'TextTw',
-  th: 'TextTh',
-  kr: 'TextKr',
+  cn: "TextCn",
+  en: "TextEn",
+  jp: "TextJp",
+  tw: "TextTw",
+  th: "TextTh",
+  kr: "TextKr",
 };
 
 function replaceDefaultNamePlaceholder(content: string | undefined): string {
   if (!content) {
-    return '';
+    return "";
   }
   return content.replaceAll(/\[USERNAME]/gi, username.value);
 }
@@ -49,7 +49,7 @@ function getFallbackDescription() {
       return replaceDefaultNamePlaceholder(text);
     }
   }
-  return 'NoFallbackText';
+  return "NoFallbackText";
 }
 </script>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h } from "vue";
-import { Contributor, UpdateLog } from "../types/UpdateNews";
+import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {

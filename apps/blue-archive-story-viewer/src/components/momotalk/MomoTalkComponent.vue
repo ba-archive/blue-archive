@@ -40,7 +40,7 @@
 
     <div v-if="'Answer' === messageCondition" class="user-reply rounded-small">
       <div class="user-reply-banner">
-        <span>{{ getI18nString(selectedLang, 'momotalk.replyTitle') }}</span>
+        <span>{{ getI18nString(selectedLang, "momotalk.replyTitle") }}</span>
       </div>
       <div class="select-options flex-vertical">
         <div
@@ -65,7 +65,7 @@
     <div class="favor-schedule-unit rounded-small">
       <div class="favor-schedule-banner">
         <span>{{
-          getI18nString(selectedLang, 'momotalk.favorScheduleTitle')
+          getI18nString(selectedLang, "momotalk.favorScheduleTitle")
         }}</span>
       </div>
       <router-link
@@ -74,7 +74,7 @@
         @click="handleGoToScenarioButtonPressed"
       >
         {{
-          getI18nString(selectedLang, 'momotalk.goToFavorSchedule', {
+          getI18nString(selectedLang, "momotalk.goToFavorSchedule", {
             name: studentName,
           })
         }}</router-link
@@ -88,20 +88,20 @@
         class="next-message-action rounded-small shadow-near"
         @click="handleContinueReadingButtonPressed"
       >
-        {{ getI18nString(selectedLang, 'momotalk.continueReading') }}
+        {{ getI18nString(selectedLang, "momotalk.continueReading") }}
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { PropType, computed, ref, watch } from 'vue';
-import { getI18nString } from '../../i18n/getI18nString';
-import { useSettingsStore } from '../../store/settings';
-import { useStudentStore } from '../../store/students';
-import { CurrentMessageItem, MessageText } from '../../types/Chats';
-import { Language } from '../../types/Settings';
-import { StudentName } from '../../types/Student';
+import { PropType, computed, ref, watch } from "vue";
+import { getI18nString } from "@i18n/getI18nString";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
+import { CurrentMessageItem, MessageText } from "@types/Chats";
+import { Language } from "@types/Settings";
+import { StudentName } from "@types/Student";
 
 const props = defineProps({
   message: Object as PropType<CurrentMessageItem>,
@@ -124,20 +124,20 @@ const vScrollIntoView = {
     if (isInViewport(el)) {
       return;
     }
-    el.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    el.scrollIntoView({ behavior: "smooth", block: "end" });
   },
   updated(el: HTMLElement) {
     if (isInViewport(el)) {
       return;
     }
-    el.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    el.scrollIntoView({ behavior: "smooth", block: "end" });
   },
 };
 
 const settingsStore = useSettingsStore();
 const studentStore = useStudentStore();
 const selectedLang = computed(
-  () => settingsStore.getLang.replace('zh', 'cn') as Language
+  () => settingsStore.getLang.replace("zh", "cn") as Language
 );
 
 const characterId = props.message?.CharacterId || 10000;
@@ -146,13 +146,13 @@ const studentName = computed(() => {
   return (
     (studentInfo?.name[selectedLang.value as keyof StudentName] as
       | string
-      | undefined) || ''
+      | undefined) || ""
   );
 });
 const messageCondition = computed(
-  () => props.message?.MessageCondition || 'None'
+  () => props.message?.MessageCondition || "None"
 );
-const messageType = computed(() => props.message?.MessageType || 'Text');
+const messageType = computed(() => props.message?.MessageType || "Text");
 const studentAvatar = `/image/avatar_students/${characterId}.webp`;
 
 const currentSelection = ref(-1);
@@ -171,7 +171,7 @@ function animateMessage() {
 
   setTimeout(() => {
     showFavorMessageContent.value =
-      'Answer' !== messageCondition.value || -1 !== currentSelection.value;
+      "Answer" !== messageCondition.value || -1 !== currentSelection.value;
   }, feedbackTime.value + 500);
 }
 
@@ -192,16 +192,16 @@ watch(
 
 function getMessageImagePath(originPath: string | undefined): string {
   if (originPath) {
-    const fileName = originPath.split('/').pop();
+    const fileName = originPath.split("/").pop();
     return `https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/04_ScenarioImage/${fileName}.png`;
   }
-  return '';
+  return "";
 }
 
-const emit = defineEmits(['userSelect', 'nextMessage']);
+const emit = defineEmits(["userSelect", "nextMessage"]);
 
 function nextMessage(NextGroupId: number, immediate: boolean) {
-  emit('nextMessage', NextGroupId, immediate);
+  emit("nextMessage", NextGroupId, immediate);
 }
 
 function handleSelection(
@@ -218,24 +218,24 @@ function handleSelection(
   if (0 !== props.message?.FavorScheduleId) {
     return;
   }
-  emit('userSelect', Id || 0, nextGroupId);
+  emit("userSelect", Id || 0, nextGroupId);
 }
 
 function stripRubyContent(content: string | undefined): string {
   if (!content) {
-    return '';
+    return "";
   }
-  return content.replaceAll(/\[\/?ruby=?.*?]/gi, '');
+  return content.replaceAll(/\[\/?ruby=?.*?]/gi, "");
 }
 
 const languageMap = {
-  cn: 'MessageCN',
-  zh: 'MessageCN',
-  tw: 'MessageTW',
-  en: 'MessageEN',
-  jp: 'MessageJP',
-  kr: 'MessageKR',
-  th: 'MessageTH',
+  cn: "MessageCN",
+  zh: "MessageCN",
+  tw: "MessageTW",
+  en: "MessageEN",
+  jp: "MessageJP",
+  kr: "MessageKR",
+  th: "MessageTH",
 };
 
 function getFallBackText(message: MessageText | CurrentMessageItem): string {
@@ -245,7 +245,7 @@ function getFallBackText(message: MessageText | CurrentMessageItem): string {
       return text;
     }
   }
-  return 'NoFallbackText';
+  return "NoFallbackText";
 }
 
 function getTextInLang(
@@ -267,7 +267,7 @@ function getMessageText(
       return `!Fallback:${getFallBackText(messageText)}`;
     }
   }
-  return '';
+  return "";
 }
 
 const showContinueReadingButton = ref(true);
@@ -278,7 +278,7 @@ function handleGoToScenarioButtonPressed() {
 }
 
 function handleContinueReadingButtonPressed() {
-  console.log('nextGroupId: ' + props.message?.NextGroupId);
+  console.log("nextGroupId: " + props.message?.NextGroupId);
   nextMessage(props.message?.NextGroupId || 0, true);
   showContinueReadingButton.value = false;
 }
@@ -403,7 +403,7 @@ function handleContinueReadingButtonPressed() {
         background-color: #3493f9;
         width: 0.1rem;
         height: 1rem;
-        content: '';
+        content: "";
       }
     }
   }
@@ -438,7 +438,7 @@ function handleContinueReadingButtonPressed() {
   margin-left: auto;
   border: 1px solid var(--color-momotalk-user-action-border);
   background: var(--color-momotalk-favor-schedule-background)
-    url('/src/assets/heart.svg') no-repeat right -25% center;
+    url("/src/assets/heart.svg") no-repeat right -25% center;
   padding: 0.5rem;
 
   .favor-schedule-banner {
@@ -464,7 +464,7 @@ function handleContinueReadingButtonPressed() {
         background-color: #ff92a4;
         width: 0.1rem;
         height: 1rem;
-        content: '';
+        content: "";
       }
     }
   }

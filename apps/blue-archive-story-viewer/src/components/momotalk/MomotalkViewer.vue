@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { PropType, Ref, onActivated, ref } from 'vue';
-import {
-  CurrentMessageItem,
-  Momotalk,
-  SelectionOption,
-} from '../../types/Chats';
-import MomoTalkComponent from './MomoTalkComponent.vue';
+import { PropType, Ref, onActivated, ref } from "vue";
+import { CurrentMessageItem, Momotalk, SelectionOption } from "@types/Chats";
+import MomoTalkComponent from "./MomoTalkComponent.vue";
 
 const props = defineProps({
   messageGroup: Number,
   translator: {
     type: String,
-    default: '',
+    default: "",
     required: false,
   },
   content: Object as PropType<Momotalk[]>,
@@ -43,7 +39,7 @@ async function next(NextGroupId: number, id: number) {
     // NextGroupId 没有返回结果，聊天结束
     return;
   }
-  if (firstMessageGroupElement.MessageCondition === 'Answer') {
+  if (firstMessageGroupElement.MessageCondition === "Answer") {
     // 遇到玩家选项，需要合并后发送给子组件
     const options: SelectionOption[] = [];
     const answerElements = findItemsByGroupId(NextGroupId);
@@ -74,10 +70,10 @@ async function next(NextGroupId: number, id: number) {
       FavorScheduleId: favorScheduleId,
       NextGroupId: answerElements[0].NextGroupId,
       FeedbackTimeMillisec: 0,
-      MessageCondition: 'Answer',
+      MessageCondition: "Answer",
       options: { current: -1, content: options },
-      MessageType: 'Text',
-      ImagePath: '',
+      MessageType: "Text",
+      ImagePath: "",
     });
     await wait(-1000);
     return;
@@ -271,9 +267,9 @@ onActivated(() => {
     justify-content: flex-start;
     margin-left: 0.5rem;
     font-size: 1.25rem;
-    font-family: 'Asap Condensed Bold Italic', 'Microsoft YaHei', 'PingFang SC',
-      -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell,
-      'Noto Sans', BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans GB',
+    font-family: "Asap Condensed Bold Italic", "Microsoft YaHei", "PingFang SC",
+      -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell,
+      "Noto Sans", BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB",
       Arial, sans-serif;
 
     .title {
@@ -283,9 +279,9 @@ onActivated(() => {
     .credit {
       transform: skewX(-6deg);
       font-size: 0.5rem;
-      font-family: 'Asap Condensed Medium', 'Microsoft YaHei', 'PingFang SC',
-        -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell,
-        'Noto Sans', BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans GB',
+      font-family: "Asap Condensed Medium", "Microsoft YaHei", "PingFang SC",
+        -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell,
+        "Noto Sans", BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB",
         Arial, sans-serif;
 
       a {

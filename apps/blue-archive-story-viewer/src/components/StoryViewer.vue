@@ -19,7 +19,7 @@
         @positiveClick="handleConsentFormConfirm"
       >
         <template #title-before>
-          <img src="/src/assets/info.svg" />
+          <img src="@assets/info.svg" />
         </template>
         <template #content>
           <dialog-content />
@@ -105,20 +105,20 @@ import axios from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { getI18nString } from "../i18n/getI18nString";
-import { stories } from "../index/mainStoryIndex";
-import { useSettingsStore } from "../store/settings";
-import {
-  CommonStoryTextObject,
-  Section,
-  StoryContent,
-} from "../types/StoryJson";
-import { getAllFlattenedStoryIndex } from "../util/getAllFlattenedStoryIndex";
 import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
 import NeuDialog from "./widgets/NeuUI/NeuDialog.vue";
 import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
 import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
+import {
+  CommonStoryTextObject,
+  Section,
+  StoryContent,
+} from "@/types/StoryJson";
+import { getI18nString } from "@i18n/getI18nString";
+import { stories } from "@index/mainStoryIndex";
+import { useSettingsStore } from "@store/settings";
+import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
 

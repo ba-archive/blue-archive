@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { Ref, computed, ref } from 'vue';
-import { useSettingsStore } from '../../store/settings';
-import { Language } from '../../types/Settings';
-import { StoryBriefing } from '../../types/StoryJson';
-import NeuTitleBar from '../widgets/NeuUI/NeuTitleBar.vue';
-import StoryBriefBlock from './StoryBriefBlock.vue';
+import { Ref, computed, ref } from "vue";
+import NeuTitleBar from "../widgets/NeuUI/NeuTitleBar.vue";
+import { useSettingsStore } from "@store/settings";
+import { Language } from "@types/Settings";
+import { StoryBriefing } from "@types/StoryJson";
+import StoryBriefBlock from "./StoryBriefBlock.vue";
 
 const settingsStore = useSettingsStore();
 
 defineProps<{
-  title: StoryBriefing['title'];
-  avatar: StoryBriefing['avatar'];
+  title: StoryBriefing["title"];
+  avatar: StoryBriefing["avatar"];
   index: number;
-  sections: StoryBriefing['sections'];
+  sections: StoryBriefing["sections"];
 }>();
 
 const openChapters: Ref<number[]> = ref([1]);
 const language = computed(() => settingsStore.getLang);
 
 function getTitleText(
-  title: StoryBriefing['title'],
-  language: Language = 'cn'
+  title: StoryBriefing["title"],
+  language: Language = "cn"
 ) {
   return (
     Reflect.get(
       title,
       `Text${language.slice(0, 1).toUpperCase() + language.slice(1)}`
-    ) || 'NO TITLE'
+    ) || "NO TITLE"
   );
 }
 

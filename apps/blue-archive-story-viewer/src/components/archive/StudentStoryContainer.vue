@@ -38,14 +38,14 @@
 import axios, { AxiosError } from "axios";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { useSettingsStore } from "../../store/settings";
-import { useStudentStore } from "../../store/students";
-import { Language } from "../../types/Settings";
-import { CommonStoryTextObject, StoryIndex } from "../../types/StoryJson";
 import StoryBriefBlock from "../story/StoryBriefBlock.vue";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import NeuProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import StudentArchiveTitle from "../widgets/StudentArchiveTitle.vue";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
+import { Language } from "@types/Settings";
+import { CommonStoryTextObject, StoryIndex } from "@types/StoryJson";
 
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 const activeIndex = ref<number[]>([]);

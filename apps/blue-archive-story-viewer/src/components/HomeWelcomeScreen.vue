@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UpdatedPortalCard from "./widgets/UpdatedPortalCard.vue";
+import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
   type: "mainstory" | "student" | "minigame";

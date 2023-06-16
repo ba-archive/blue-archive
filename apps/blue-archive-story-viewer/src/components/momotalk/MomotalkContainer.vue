@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { Ref, computed, ref } from 'vue';
-import { useRoute } from 'vue-router';
-import { useSettingsStore } from '../../store/settings';
-import { Momotalk, Momotalks, SplitMomotalk } from '../../types/Chats';
-import ErrorScreen from '../widgets/ErrorScreen.vue';
-import ProgressBar from '../widgets/NeuUI/NeuProgressBar.vue';
-import StudentArchiveTitle from '../widgets/StudentArchiveTitle.vue';
-import MomotalkViewer from './MomotalkViewer.vue';
+import axios from "axios";
+import { Ref, computed, ref } from "vue";
+import { useRoute } from "vue-router";
+import ErrorScreen from "../widgets/ErrorScreen.vue";
+import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
+import StudentArchiveTitle from "../widgets/StudentArchiveTitle.vue";
+import { useSettingsStore } from "@store/settings";
+import { Momotalk, Momotalks, SplitMomotalk } from "@types/Chats";
+import MomotalkViewer from "./MomotalkViewer.vue";
 
 const settingsStore = useSettingsStore();
 
@@ -15,7 +15,7 @@ const language = computed(() => settingsStore.getLang);
 
 const momotalks: Ref<Momotalks> = ref({
   CharacterId: 0,
-  translate: '',
+  translate: "",
   title: [],
   content: [],
   splitMomotalk: [],
@@ -37,7 +37,7 @@ function getSplitMomotalk(momotalkContent: Momotalk[]): SplitMomotalk[] {
       splitMomotalk.push({
         FavorScheduleId: parseInt(
           chat.CharacterId.toString() +
-            chat.ConditionValue.toString().padStart(2, '0')
+            chat.ConditionValue.toString().padStart(2, "0")
         ),
         splitMomotalkContent: [chat],
       });
@@ -49,7 +49,7 @@ function getSplitMomotalk(momotalkContent: Momotalk[]): SplitMomotalk[] {
         splitMomotalk.push({
           FavorScheduleId: parseInt(
             chat.CharacterId.toString() +
-              chat.ConditionValue.toString().padStart(2, '0')
+              chat.ConditionValue.toString().padStart(2, "0")
           ),
           splitMomotalkContent: [chat],
         });
@@ -153,10 +153,10 @@ function getStudentAvatar(CharacterId: number): string {
 <style scoped lang="scss">
 .momotalk-component-container {
   grid-gap: 1rem;
+  content-visibility: auto;
   display: grid;
   grid-auto-flow: row;
   place-items: center;
-  content-visibility: auto;
   padding: 0 1rem 1rem 1rem;
 }
 

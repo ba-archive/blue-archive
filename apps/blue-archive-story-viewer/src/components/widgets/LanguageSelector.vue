@@ -1,31 +1,31 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useSettingsStore } from '../../store/settings';
+import { ref, watch } from "vue";
+import { useSettingsStore } from "@store/settings";
 
 const languages = ref([
   {
-    name: '简体中文',
-    code: 'cn',
+    name: "简体中文",
+    code: "cn",
   },
   {
-    name: '繁體中文',
-    code: 'tw',
+    name: "繁體中文",
+    code: "tw",
   },
   {
-    name: '日本語',
-    code: 'jp',
+    name: "日本語",
+    code: "jp",
   },
   {
-    name: 'English',
-    code: 'en',
+    name: "English",
+    code: "en",
   },
   {
-    name: '한국어',
-    code: 'kr',
+    name: "한국어",
+    code: "kr",
   },
   {
-    name: 'ไทย',
-    code: 'th',
+    name: "ไทย",
+    code: "th",
   },
 ]);
 
@@ -42,7 +42,7 @@ watch(
 function handleLangChange(event: Event) {
   const target = event.target as HTMLSelectElement;
   settingsStore.setLang(
-    target.value as 'cn' | 'tw' | 'jp' | 'en' | 'kr' | 'th'
+    target.value as "cn" | "tw" | "jp" | "en" | "kr" | "th"
   );
 }
 </script>

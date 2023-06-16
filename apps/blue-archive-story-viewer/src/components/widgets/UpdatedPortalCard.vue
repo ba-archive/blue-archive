@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { PropType, computed, ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { getI18nString } from '../../i18n/getI18nString';
-import { useSettingsStore } from '../../store/settings';
-import { HomeDisplayInfo } from '../HomeWelcomeScreen.vue';
-import NeuDialog from './NeuUI/NeuDialog.vue';
+import { PropType, computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { HomeDisplayInfo } from "../HomeWelcomeScreen.vue";
+import NeuDialog from "./NeuUI/NeuDialog.vue";
+import { getI18nString } from "@i18n/getI18nString";
+import { useSettingsStore } from "@store/settings";
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
@@ -17,8 +17,8 @@ const props = defineProps({
     type: Object as PropType<HomeDisplayInfo>,
     required: true,
     default: () => ({
-      type: 'mainstory',
-      title: '主线剧情',
+      type: "mainstory",
+      title: "主线剧情",
     }),
   },
 });
@@ -29,10 +29,10 @@ function isDuringDateRange(
 ) {
   const currentDate = new Date().getTime();
   const isAfterStartDate = startDate
-    ? currentDate >= new Date(startDate.replaceAll('/', '-')).getTime()
+    ? currentDate >= new Date(startDate.replaceAll("/", "-")).getTime()
     : true;
   const isBeforeEndDate = endDate
-    ? currentDate <= new Date(endDate.replaceAll('/', '-')).getTime()
+    ? currentDate <= new Date(endDate.replaceAll("/", "-")).getTime()
     : true;
   return isAfterStartDate && isBeforeEndDate;
 }
@@ -47,25 +47,25 @@ const showDialog = ref(controlShowDialog());
 
 function getDialogTitle() {
   switch (props.info.type) {
-    case 'mainstory':
-      return `${getI18nString(userLanguage.value, 'updates.updated', {
+    case "mainstory":
+      return `${getI18nString(userLanguage.value, "updates.updated", {
         title: props.info.title,
       })}`;
-    case 'student':
+    case "student":
       return `${getI18nString(
         userLanguage.value,
-        'updates.favorScheduleUpdated',
+        "updates.favorScheduleUpdated",
         {
           name: props.info.title,
         }
       )}`;
-    case 'minigame':
-      return `${getI18nString(userLanguage.value, 'updates.minigameUpdated', {
+    case "minigame":
+      return `${getI18nString(userLanguage.value, "updates.minigameUpdated", {
         name: props.info.title,
-        date: props.info.endDate || '',
+        date: props.info.endDate || "",
       })}`;
     default:
-      return `${getI18nString(userLanguage.value, 'updates.updated', {
+      return `${getI18nString(userLanguage.value, "updates.updated", {
         title: props.info.title,
       })}`;
   }
@@ -73,20 +73,20 @@ function getDialogTitle() {
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 function handleJumpToRequest() {
   switch (props.info.type) {
-    case 'mainstory':
+    case "mainstory":
       router.push({
-        name: 'MainStory',
+        name: "MainStory",
       });
       break;
-    case 'student':
+    case "student":
       router.push(`/archive/${props.info.jumpTo}/momotalk`);
       break;
-    case 'minigame':
+    case "minigame":
       window.open(
-        'string' === typeof props.info.jumpTo
+        "string" === typeof props.info.jumpTo
           ? props.info.jumpTo
           : props.info.jumpTo!.toString(),
-        '_self'
+        "_self"
       );
       break;
     default:
@@ -121,8 +121,8 @@ function handleJumpToRequest() {
 <style scoped lang="scss">
 .pixelize {
   line-height: 1.5rem;
-  font-family: 'Fusion Pixel', 'Microsoft YaHei', 'PingFang SC', -apple-system,
-    system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans',
-    BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans GB', Arial, sans-serif;
+  font-family: "Fusion Pixel", "Microsoft YaHei", "PingFang SC", -apple-system,
+    system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans",
+    BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
 }
 </style>

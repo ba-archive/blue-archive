@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useSettingsStore } from '../../store/settings';
+import { computed } from "vue";
+import { useSettingsStore } from "@store/settings";
 
 const settingsStore = useSettingsStore();
 const username = computed(() => settingsStore.getUsername);
@@ -23,9 +23,9 @@ function activeLoseFocus(event: Event) {
 
 function updateUsername(event: Event) {
   const target = event.target as HTMLInputElement;
-  const value = target.innerText ?? '';
-  const result = '' === value ? 'Sensei' : value;
-  settingsStore.setUsername(result.replaceAll(/\s/g, '').slice(0, 10));
+  const value = target.innerText ?? "";
+  const result = "" === value ? "Sensei" : value;
+  settingsStore.setUsername(result.replaceAll(/\s/g, "").slice(0, 10));
 }
 </script>
 

@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { Directive, DirectiveBinding, PropType, computed } from 'vue';
-import { useSettingsStore } from '../../store/settings';
-import { Student } from '../../types/Student';
+import { Directive, DirectiveBinding, PropType, computed } from "vue";
+import { useSettingsStore } from "@store/settings";
+import { Student } from "@types/Student";
 
 const props = defineProps({
   studentInfo: Object as PropType<Student>,
 });
 
 const settingsStore = useSettingsStore();
-const selectedLang = computed(() => settingsStore.getLang.replace('zh', 'cn'));
+const selectedLang = computed(() => settingsStore.getLang.replace("zh", "cn"));
 
 const studentName = computed(() => {
   return (
-    (props.studentInfo?.name[selectedLang.value as keyof Student['name']] as
+    (props.studentInfo?.name[selectedLang.value as keyof Student["name"]] as
       | string
-      | undefined) || ''
+      | undefined) || ""
   );
 });
 
@@ -24,7 +24,7 @@ const vLazyLoad: Directive = {
     img.src = binding.value;
     img.onload = function () {
       if (img.complete) {
-        el.setAttribute('src', binding.value);
+        el.setAttribute("src", binding.value);
       }
     };
   },
@@ -51,7 +51,7 @@ function getImagePath(id: number | undefined): string {
 .student-container {
   display: grid;
   position: relative;
-  grid-template-areas: 'avatar';
+  grid-template-areas: "avatar";
   place-items: center;
   overflow: hidden;
   user-select: none;

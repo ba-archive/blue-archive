@@ -3,7 +3,15 @@
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@index/*": ["./src/index/*"],
+      "@route/*": ["./src/route/*"],
+      "@store/*": ["./src/store/*"],
+      "@types/*": ["./src/types/*"],
+      "@util/*": ["./src/util/*"],
+      "@widgets/*": ["./src/components/widgets/*"],
+      "@NeuUI/*": ["./src/components/NeuUI/*"]
     },
     "target": "ESNext",
     "useDefineForClassFields": true,

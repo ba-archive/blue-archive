@@ -3,7 +3,7 @@
     <div class="settings-panel flex-vertical rounded-medium">
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
-          <p>{{ getI18nString(userLanguage, 'settings.language') }}</p>
+          <p>{{ getI18nString(userLanguage, "settings.language") }}</p>
         </div>
         <div class="settings-panel__row__action">
           <language-selector />
@@ -11,9 +11,9 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
-          <p>{{ getI18nString(userLanguage, 'settings.useMp3Title') }}</p>
+          <p>{{ getI18nString(userLanguage, "settings.useMp3Title") }}</p>
           <p class="settings-panel__row__text__description">
-            {{ getI18nString(userLanguage, 'settings.useMp3Description') }}
+            {{ getI18nString(userLanguage, "settings.useMp3Description") }}
           </p>
         </div>
         <div class="settings-panel__row__action">
@@ -26,13 +26,13 @@
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
           <p>
-            {{ getI18nString(userLanguage, 'settings.useSuperSamplingTitle') }}
+            {{ getI18nString(userLanguage, "settings.useSuperSamplingTitle") }}
           </p>
           <p class="settings-panel__row__text__description">
             {{
               getI18nString(
                 userLanguage,
-                'settings.useSuperSamplingDescription'
+                "settings.useSuperSamplingDescription"
               )
             }}
           </p>
@@ -63,9 +63,9 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
-          <p>{{ getI18nString(userLanguage, 'settings.clearCacheTitle') }}</p>
+          <p>{{ getI18nString(userLanguage, "settings.clearCacheTitle") }}</p>
           <p class="settings-panel__row__text__description">
-            {{ getI18nString(userLanguage, 'settings.clearCacheDescription') }}
+            {{ getI18nString(userLanguage, "settings.clearCacheDescription") }}
           </p>
         </div>
         <div class="settings-panel__row__action">
@@ -74,16 +74,16 @@
             role="button"
             @click="handleClearCache"
           >
-            {{ getI18nString(userLanguage, 'settings.clearCacheActionText') }}
+            {{ getI18nString(userLanguage, "settings.clearCacheActionText") }}
           </div>
         </div>
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
-          <p>{{ getI18nString(userLanguage, 'settings.unregisterSWTitle') }}</p>
+          <p>{{ getI18nString(userLanguage, "settings.unregisterSWTitle") }}</p>
           <p class="settings-panel__row__text__description">
             {{
-              getI18nString(userLanguage, 'settings.unregisterSWDescription')
+              getI18nString(userLanguage, "settings.unregisterSWDescription")
             }}
           </p>
         </div>
@@ -93,7 +93,7 @@
             role="button"
             @click="handleUnregisterSW"
           >
-            {{ getI18nString(userLanguage, 'settings.unregisterSWActionText') }}
+            {{ getI18nString(userLanguage, "settings.unregisterSWActionText") }}
           </div>
         </div>
       </div>
@@ -103,22 +103,22 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import isMobile from 'ismobilejs';
-import { Ref, computed, ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { getI18nString } from '../../i18n/getI18nString';
-import { useSettingsStore } from '../../store/settings';
-import LanguageSelector from '../widgets/LanguageSelector.vue';
-import NeuRadio from '../widgets/NeuUI/NeuRadio.vue';
-import NeuRadioGroup from '../widgets/NeuUI/NeuRadioGroup.vue';
-import NeuSwitch from '../widgets/NeuUI/NeuSwitch.vue';
+import isMobile from "ismobilejs";
+import { Ref, computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { getI18nString } from "@i18n/getI18nString";
+import { useSettingsStore } from "@store/settings";
+import LanguageSelector from "@widgets/LanguageSelector.vue";
+import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
+import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
+import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
 const userLanguage = computed(() => settingsStore.getLang);
 
 const useMp3SwitchValue: Ref<boolean> = ref(settingsStore.getUseMp3);
-const useSuperSamplingValue = computed<'' | '2' | '4' | undefined>(
+const useSuperSamplingValue = computed<"" | "2" | "4" | undefined>(
   () => settingsStore.getUseSuperSampling
 );
 
@@ -126,7 +126,7 @@ function handleAppleCompatibleSwitchChange(value: boolean) {
   settingsStore.setUseMp3(value);
 }
 
-function handleSuperSamplingSwitchChange(value: '' | '2' | '4') {
+function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
   settingsStore.setUseSuperSampling(value);
 }
 
@@ -134,15 +134,15 @@ function handleClearCache() {
   caches.keys().then(cacheNames => {
     const clearedCacheList: string[] = [];
     const clearableCaches = cacheNames.filter(
-      cacheName => !cacheName.startsWith('workbox')
+      cacheName => !cacheName.startsWith("workbox")
     );
     clearableCaches.forEach(cacheName => {
-      console.log('Deleting cache: ' + cacheName);
+      console.log("Deleting cache: " + cacheName);
       caches.delete(cacheName);
       clearedCacheList.push(cacheName);
     });
 
-    alert('Cache cleared!\n' + clearedCacheList.join('\n'));
+    alert("Cache cleared!\n" + clearedCacheList.join("\n"));
   });
 }
 
@@ -162,7 +162,7 @@ function handleUnregisterSW() {
       });
     })
     .then(() => {
-      alert('已重置应用状态，即将刷新页面');
+      alert("已重置应用状态，即将刷新页面");
       router.go(0);
     });
 }
