@@ -39,7 +39,7 @@
           :width="playerWidth"
           :height="playerHeight"
           data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
-          language="Cn"
+          :language="playerLanguage"
           :userName="userName"
           :story-summary="summary"
           :start-full-screen="startFullScreen"
@@ -55,24 +55,24 @@
               @click="handleReplay"
               class="user-button shadow-near rounded-small"
             >
-              {{ getI18nString(userLanguage, 'playerControl.replay') }}
+              {{ getI18nString(userLanguage, "playerControl.replay") }}
             </div>
             <a
               v-if="undefined !== findPreviousStoryId()"
               :href="`/mainStory/${findPreviousStoryId()}`"
               class="user-button shadow-near rounded-small"
-              >{{ getI18nString(userLanguage, 'routes.previous') }}</a
+              >{{ getI18nString(userLanguage, "routes.previous") }}</a
             >
             <a
               href="/mainStory"
               class="user-button shadow-near rounded-small"
-              >{{ getI18nString(userLanguage, 'routes.backToIndex') }}</a
+              >{{ getI18nString(userLanguage, "routes.backToIndex") }}</a
             >
             <a
               v-if="undefined !== findNextStoryId()"
               :href="`/mainStory/${findNextStoryId()}`"
               class="user-button shadow-near rounded-small"
-              >{{ getI18nString(userLanguage, 'routes.next') }}</a
+              >{{ getI18nString(userLanguage, "routes.next") }}</a
             >
           </div>
         </div>
@@ -80,7 +80,7 @@
           <div>
             <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
             <span>{{
-              getI18nString(userLanguage, 'settings.useMp3Title')
+              getI18nString(userLanguage, "settings.useMp3Title")
             }}</span>
           </div>
           <div class="flex-horizontal">
@@ -89,7 +89,7 @@
               @update:value="handleUseSuperSampling"
             />
             <span>{{
-              getI18nString(userLanguage, 'settings.useSuperSamplingTitle')
+              getI18nString(userLanguage, "settings.useSuperSamplingTitle")
             }}</span>
           </div>
           <!--          <div @click="changeIndex = 50">change index 50</div>-->
@@ -101,26 +101,26 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios';
-import StoryPlayer from 'ba-story-player';
-import { computed, ref, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { getI18nString } from '../i18n/getI18nString';
-import { stories } from '../index/mainStoryIndex';
-import { useSettingsStore } from '../store/settings';
+import axios from "axios";
+import StoryPlayer from "ba-story-player";
+import { computed, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { getI18nString } from "../i18n/getI18nString";
+import { stories } from "../index/mainStoryIndex";
+import { useSettingsStore } from "../store/settings";
 import {
   CommonStoryTextObject,
   Section,
   StoryContent,
-} from '../types/StoryJson';
-import { getAllFlattenedStoryIndex } from '../util/getAllFlattenedStoryIndex';
-import DialogContent from './widgets/DialogContent.vue';
-import ErrorScreen from './widgets/ErrorScreen.vue';
-import NeuDialog from './widgets/NeuUI/NeuDialog.vue';
-import NeuProgressBar from './widgets/NeuUI/NeuProgressBar.vue';
-import NeuSwitch from './widgets/NeuUI/NeuSwitch.vue';
-import { useElementSize } from '@vueuse/core';
-import 'ba-story-player/dist/style.css';
+} from "../types/StoryJson";
+import { getAllFlattenedStoryIndex } from "../util/getAllFlattenedStoryIndex";
+import DialogContent from "./widgets/DialogContent.vue";
+import ErrorScreen from "./widgets/ErrorScreen.vue";
+import NeuDialog from "./widgets/NeuUI/NeuDialog.vue";
+import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
+import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
+import { useElementSize } from "@vueuse/core";
+import "ba-story-player/dist/style.css";
 
 const changeIndex = ref(0);
 
@@ -134,6 +134,11 @@ const settingsStore = useSettingsStore();
 const userName = computed(() => settingsStore.getUsername);
 const playerContainerElement = ref<HTMLElement>();
 const userLanguage = computed(() => settingsStore.getLang);
+const playerLanguage = computed(
+  () =>
+    settingsStore.getLang.charAt(0).toUpperCase() +
+    settingsStore.getLang.slice(1)
+);
 const playEnded = ref(false);
 
 const initProgress = ref(0);
@@ -142,9 +147,9 @@ const fetchError = ref(false);
 const fetchErrorMessage = ref({});
 /* eslint-disable max-len */
 const summary = ref({
-  chapterName: '序章',
+  chapterName: "序章",
   summary:
-    '从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。',
+    "从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。",
 });
 /* eslint-enable max-len */
 axios
@@ -168,9 +173,9 @@ axios
   .catch(err => {
     fetchError.value = true;
     fetchErrorMessage.value =
-      route.params.id.toString() === '11000'
+      route.params.id.toString() === "11000"
         ? err
-        : '该剧情目前尚未开放，敬请期待！';
+        : "该剧情目前尚未开放，敬请期待！";
   })
   .finally(() => {
     ready.value = true;
@@ -186,7 +191,7 @@ const useMp3 = computed(() => settingsStore.getUseMp3);
 const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
 
 // 检测浏览器是否为 webkit，如果是则使用 mp3
-if (typeof window.webkitConvertPointFromNodeToPage === 'function') {
+if (typeof window.webkitConvertPointFromNodeToPage === "function") {
   settingsStore.setUseMp3(true);
 }
 
@@ -239,7 +244,7 @@ const currentStoryIndexUnit: Section | undefined = allStoryIndex.find(
 
 function getTextByLanguage(textObject: CommonStoryTextObject | undefined) {
   if (!textObject) {
-    return 'No corresponding text found / 未找到对应文本';
+    return "No corresponding text found / 未找到对应文本";
   }
   return (
     Reflect.get(
@@ -248,7 +253,7 @@ function getTextByLanguage(textObject: CommonStoryTextObject | undefined) {
         userLanguage.value.slice(0, 1).toUpperCase() +
         userLanguage.value.slice(1)
       }`
-    ) || 'No corresponding text found / 未找到对应文本'
+    ) || "No corresponding text found / 未找到对应文本"
   );
 }
 
@@ -276,8 +281,8 @@ function handleUseMp3(value: boolean) {
 }
 
 function handleUseSuperSampling(value: boolean) {
-  console.log('超分选项：' + value ? '2倍' : '关闭');
-  settingsStore.setUseSuperSampling(value ? '2' : '');
+  console.log("超分选项：" + value ? "2倍" : "关闭");
+  settingsStore.setUseSuperSampling(value ? "2" : "");
   reloadPlayer();
 }
 
