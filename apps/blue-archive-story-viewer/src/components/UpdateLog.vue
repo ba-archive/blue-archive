@@ -4,7 +4,23 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
-    date: "2013-06-14",
+    date: "2023-06-18",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "空崎 日奈", id: 10004 },
+          { name: "空崎 日奈（泳装）", id: 10022 },
+        ],
+      },
+      {
+        type: "chore",
+        content: "优化了 404 错误的界面展示和引导文字",
+      },
+    ],
+  },
+  {
+    date: "2023-06-14",
     contents: [
       {
         type: "fix",
@@ -17,7 +33,7 @@ const updateLogs: UpdateLog[] = [
     ],
   },
   {
-    date: "2013-06-11",
+    date: "2023-06-11",
     contents: [
       {
         type: "student",

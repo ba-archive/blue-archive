@@ -36,6 +36,12 @@
         >
           查看已有翻译
         </router-link>
+        <a
+          class="user-action-button rounded-small"
+          href="https://www.bilibili.com/read/cv24128500"
+          target="_blank"
+          >我来组成翻译!</a
+        >
       </div>
     </div>
   </div>
@@ -83,6 +89,11 @@ const isNotOpenError = computed(
   .user-action-group {
     gap: 0.5rem;
   }
+}
+
+h3,
+p {
+  transition: color 0.375s ease-in-out;
 }
 
 @media (max-width: 768px) {
