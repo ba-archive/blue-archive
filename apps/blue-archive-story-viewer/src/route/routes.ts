@@ -138,8 +138,8 @@ const routes: Array<RouteRecordRaw> = [
       //   component: () => import('../components/GroupStoryHome.vue'),
       // },
       {
-        path: "/contribute",
-        name: "Contribute",
+        path: "/updateLog",
+        name: "UpdateLog",
         meta: {
           shouldShowInNav: true,
           navOrder: 6,

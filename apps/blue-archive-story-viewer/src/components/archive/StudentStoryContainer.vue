@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-vertical" v-if="!storySelected">
+  <div class="flex-vertical fill-screen" v-if="!storySelected">
     <error-screen
       v-if="fetchError"
       :error-message="fetchErrorMessage"
@@ -35,17 +35,17 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
-import { computed, ref } from 'vue';
-import { useRoute } from 'vue-router';
-import { useSettingsStore } from '../../store/settings';
-import { useStudentStore } from '../../store/students';
-import { Language } from '../../types/Settings';
-import { CommonStoryTextObject, StoryIndex } from '../../types/StoryJson';
-import StoryBriefBlock from '../story/StoryBriefBlock.vue';
-import ErrorScreen from '../widgets/ErrorScreen.vue';
-import NeuProgressBar from '../widgets/NeuUI/NeuProgressBar.vue';
-import StudentArchiveTitle from '../widgets/StudentArchiveTitle.vue';
+import axios, { AxiosError } from "axios";
+import { computed, ref } from "vue";
+import { useRoute } from "vue-router";
+import { useSettingsStore } from "../../store/settings";
+import { useStudentStore } from "../../store/students";
+import { Language } from "../../types/Settings";
+import { CommonStoryTextObject, StoryIndex } from "../../types/StoryJson";
+import StoryBriefBlock from "../story/StoryBriefBlock.vue";
+import ErrorScreen from "../widgets/ErrorScreen.vue";
+import NeuProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
+import StudentArchiveTitle from "../widgets/StudentArchiveTitle.vue";
 
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 const activeIndex = ref<number[]>([]);
@@ -85,12 +85,17 @@ axios
   .then(res => {
     storyIndex.value = res.data;
   })
-  .catch(err => {
+  .catch((err: AxiosError) => {
     console.error(err);
     fetchError.value = true;
     fetchErrorMessage.value =
       404 === err.response.status
-        ? '学生剧情目前尚未完全开放，还请期待！'
+        ? {
+            message: "Story not found",
+            response: {
+              status: 1919,
+            },
+          }
         : err;
   })
   .finally(() => {
@@ -109,7 +114,7 @@ function getStoryTitle(userLanguage: Language, titles: CommonStoryTextObject) {
   return (
     Reflect.get(
       titles,
-      'Text' + userLanguage[0].toUpperCase() + userLanguage.slice(1)
+      "Text" + userLanguage[0].toUpperCase() + userLanguage.slice(1)
     ) || titles.TextJp
   );
 }

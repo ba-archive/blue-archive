@@ -1,5 +1,5 @@
 <template>
-  <div class="fill-width flex-vertical rounded-small">
+  <div class="fill-screen flex-vertical rounded-small">
     <div class="student-home-nav-bar">
       <router-link :to="{ name: 'Momotalk' }" class="button rounded-small"
         >momotalk</router-link

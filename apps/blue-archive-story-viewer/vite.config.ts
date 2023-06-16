@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/ban-ts-comment */
+import path from "path";
 import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -13,6 +14,13 @@ const currentTime = new Date().toISOString();
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@components": path.resolve(__dirname, "src/components"),
+    },
+  },
   define: {
     "import.meta.env.__BUILD_TIME__": JSON.stringify(currentTime),
   },

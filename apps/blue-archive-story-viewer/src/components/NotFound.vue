@@ -1,8 +1,8 @@
 <template>
   <div class="error-container">
-    <img src="/src/assets/network-error.svg" alt="Network Error" />
+    <img src="@assets/404_white_stroke_512px.webp" alt="Network Error" />
     <div class="error-message">
-      <p>页面走丢了！</p>
+      <p>页面找不到了！</p>
     </div>
     <div class="user-action-container">
       <div class="user-action-button rounded-small" @click="backToLastState">
@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 
@@ -52,19 +52,6 @@ function backToLastState() {
     display: grid;
     grid-auto-flow: column;
     margin-top: 1rem;
-
-    .user-action-button,
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background 0.375s ease-in-out;
-      cursor: pointer;
-      background: var(--color-primary-button);
-      padding: 0.4rem 1rem;
-      color: #fff;
-      text-decoration: none;
-    }
   }
 }
 
