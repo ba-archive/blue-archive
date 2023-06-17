@@ -221,6 +221,7 @@ function parseTextEffect(_text: Text) {
           font-size: calc(#{$font-size} * 0.5);
           line-height: 1;
           text-align: center;
+          white-space: nowrap;
         }
       }
     }

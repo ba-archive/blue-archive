@@ -33,22 +33,22 @@
 
 <script setup lang="ts">
 import eventBus from "@/eventBus";
-import { useThrottleFn } from "@vueuse/core";
-import { ClickOutside as vClickOutside } from "../utils/clickOutside";
-import { BaseTypingEvent, IEventHandlerMap } from "../types";
-import { collapseWhiteSpace, parseTextEffectToCss } from "../utils";
-import TypingEmitter from "../utils/typingEmitter";
-import { Text } from "@/types/common";
 import {
+  ComputedRef,
   Ref,
+  StyleValue,
   computed,
   nextTick,
   onMounted,
   onUnmounted,
   ref,
-  ComputedRef,
-  StyleValue,
 } from "vue";
+import { BaseTypingEvent, IEventHandlerMap } from "../types";
+import { collapseWhiteSpace, parseTextEffectToCss } from "../utils";
+import { ClickOutside as vClickOutside } from "../utils/clickOutside";
+import TypingEmitter from "../utils/typingEmitter";
+import { Text } from "@/types/common";
+import { useThrottleFn } from "@vueuse/core";
 
 const props = withDefaults(defineProps<IProp>(), {
   index: "-1",
@@ -319,20 +319,21 @@ type IProp = {
 <style scoped lang="scss">
 .unit {
   position: relative;
-  line-height: var(--font-size);
   height: var(--font-size);
   font-size: var(--font-size);
+  line-height: var(--font-size);
   .rt {
-    position: absolute;
     --local-font-size: calc(var(--font-size) * 0.6);
-    font-size: var(--local-font-size);
+    position: absolute;
     top: min(calc(var(--local-font-size) * var(--top-offset)), -12px);
-    text-align: center;
     left: 50%;
-    min-width: 100%;
     transform: translateX(-50%);
-    line-height: 1;
     animation: fade-in 0.25s ease-in-out;
+    min-width: 100%;
+    font-size: var(--local-font-size);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
   }
   @keyframes fade-in {
     0% {
@@ -351,8 +352,8 @@ type IProp = {
 }
 .unit.has-tooltip {
   $padding: 8px;
+  z-index: 999;
   cursor: pointer;
-  padding: 4px $padding;
   margin: -$padding;
   background: linear-gradient(
     transparent 90%,
@@ -364,10 +365,9 @@ type IProp = {
   background-position: $padding 0;
   background-size: calc(100% - #{$padding} * 2) 100%;
   background-repeat: no-repeat;
-  z-index: 999;
+  padding: 4px $padding;
 }
 .tooltip {
-  box-sizing: content-box !important;
   $bg: #0a61e5;
   $padding: 12px;
   $max-tooltip-padding: 16px;
@@ -397,36 +397,37 @@ type IProp = {
     (var(--typing-unit-offset-left) + var(--typing-unit-width) / 2) * 1px -
       var(--left) - #{$padding} - var(--tooltip-arrow-height) - 2.07px
   );
-  width: 200px;
-  left: var(--left);
-  top: var(--top);
-  background: $bg;
-  padding: $padding;
   position: absolute;
+  top: var(--top);
+  left: var(--left);
   z-index: 999;
-  border-radius: 8px;
-  color: white;
+  box-sizing: content-box !important;
   box-shadow: 0 12px 32px 4px rgba(0, 0, 0, 0.04),
     0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background: $bg;
+  padding: $padding;
+  width: 200px;
+  color: white;
   .tooltip-inner {
-    position: relative;
     --fs: max(calc(var(--font-size) * 0.8), 12px);
+    position: relative;
     font-size: var(--fs);
     line-height: calc(var(--fs) * 1.2);
     &:before {
       position: absolute;
-      width: 10px;
-      height: 10px;
-      content: " ";
-      border-bottom-right-radius: 2px;
+      bottom: calc(-#{$padding} - var(--tooltip-arrow-height));
+      left: var(--arrow-left);
+      transform: rotate(45deg);
+      z-index: -1;
       border: 1px solid $bg;
       border-top-color: transparent;
       border-left-color: transparent;
+      border-bottom-right-radius: 2px;
       background: $bg;
-      left: var(--arrow-left);
-      bottom: calc(-#{$padding} - var(--tooltip-arrow-height));
-      z-index: -1;
-      transform: rotate(45deg);
+      width: 10px;
+      height: 10px;
+      content: " ";
     }
   }
 }
