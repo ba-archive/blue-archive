@@ -57,7 +57,7 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
     case "l2dVoice":
       //arg "sound/CH0184_MemorialLobby_1_1"
       const voiceDirectory = arg.replace(
-        /.*\/([A-Z0-9]*)_MemorialLobby.*/i,
+        /(?:.*\/)?([A-Z0-9]*)_MemorialLobby.*/i,
         "JP_$1"
       );
       const voiceFilename = arg.split("/").pop();
