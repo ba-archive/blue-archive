@@ -264,4 +264,44 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  Hina_home: {
+    name: "Hina_home",
+    playQue: [
+      {
+        name: "Hina_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5,
+        fade: true,
+      },
+      {
+        name: "Hina_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      Hina_home: {
+        scale: 1.1,
+      },
+    },
+  },
+  CH0063_home: {
+    name: "CH0063_home",
+    playQue: [
+      {
+        name: "CH0063_home",
+        animation: "Start_Idle_01",
+        fadeTime: undefined,
+        fade: false,
+      },
+      {
+        name: "CH0063_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0063_home: {
+        scale: 1,
+      },
+    },
+  },
 };

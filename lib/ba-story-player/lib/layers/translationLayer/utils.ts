@@ -50,7 +50,7 @@ export function generateText(rawStoryUnit: StoryRawUnit) {
     .map(it => {
       let text = it.content;
       if (text.includes("[wa")) {
-        debugger;
+        // debugger;
         if (!text.startsWith("[wa:")) {
           text = "[wa:000]" + text;
         }
