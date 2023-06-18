@@ -28,7 +28,7 @@
       </a>
       或者
       <a
-        href="https://github.com/ba-archive/blue-archive-story-viewer/issues/new/choose"
+        href="https://github.com/ba-archive/blue-archive/issues/new/choose"
         target="_blank"
       >
         在 GitHub 上提交 issue
