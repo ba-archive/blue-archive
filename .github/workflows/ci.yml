@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "dev"]
   pull_request:
     branches: ["main"]
 jobs:
@@ -18,15 +18,44 @@ jobs:
       #          email: # Service Account's Email Address
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: "18"
       - uses: pnpm/action-setup@v2
         with:
-          version: 6.0.2
+          version: latest
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Update
         run: node common/scripts/install-run-rush.js update
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
-      - name: Rush rebuild
+      - name: Generate secret for translator
+        env:
+          YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
+          YOUDAO_APP_SECRET: ${{ secrets.YOUDAO_APP_SECRET }}
+        shell: python
+        run: |
+          import os
+          YOUDAO_APP_ID = os.getenv("YOUDAO_APP_ID")
+          YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
+          with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
+            f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
+      - name: Rush build
         run: node common/scripts/install-run-rush.js build --verbose
+      - name: Deploy toolbox
+        run: tar -zcvf toolbox.tgz ./apps/ba-online-toolbox/dist/*
+      - name: Deploy to Server # 执行部署任务
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest # 第三方的 action
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          user: ${{ secrets.SERVER_USER }}
+          pass: ${{ secrets.SERVER_PASS }}
+          # 由于网络情况，很容易超时，设置为60s
+          connect_timeout: 60s
+          # 将工作目录下的文件全部拷贝到部署服务器的工作目录, scp 会自动覆盖
+          scp: |
+            ./toolbox.tgz => ~
+          # 解压也会自动覆盖
+          last_ssh: |
+            cd ~
+            tar -xzvf toolbox.tgz
+            cp -r ./apps/ba-online-toolbox/dist/* /var/www/toolbox
