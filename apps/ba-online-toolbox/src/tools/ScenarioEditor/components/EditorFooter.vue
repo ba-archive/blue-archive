@@ -3,7 +3,7 @@
     <div class="content">
       <n-space class="translator">
         <n-space class="flex-horizontal">
-          <n-text>我是校对</n-text>
+          <n-text>我是校对：</n-text>
           <n-switch
             @click="config.setProofread(!config.isProofread)"
             :value="config.isProofread"
