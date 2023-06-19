@@ -444,3 +444,177 @@ function parseRubyText(raw: string): Text[] {
 export function splitStScriptAndParseTag(rawText: string): Text[] {
   return splitStScript(rawText).map(it => parseCustomTag(it));
 }
+
+function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
+  if (root.tag === "text") {
+    return [
+      {
+        content: root.text ?? "",
+        effects: [...effects],
+      },
+    ];
+  }
+  return (root.children ?? [])
+    .map(it => {
+      return walkNxAST(it, [
+        ...effects,
+        {
+          name: it.tag as TextEffectName,
+          value: it.attr ?? [],
+        },
+      ]);
+    })
+    .flat();
+}
+
+export function parseNxMagicTag(rawText: string): Text[] {
+  const ast = buildNxAST(rawText);
+  return walkNxAST(ast, []);
+}
+
+type NxTagMap = {
+  [key in TextEffectName]: {
+    name: key;
+    start: RegExp;
+    end: RegExp;
+  } | null;
+};
+
+const NxTags: NxTagMap = {
+  color: {
+    name: "color",
+    start: /^\[([a-fA-F0-9]{6})]/,
+    end: /^\[-]/,
+  },
+  ruby: {
+    name: "ruby",
+    start: /^\[ruby=(.*?)]/i,
+    end: /^\[\/ruby]/,
+  },
+  b: {
+    name: "b",
+    start: /^\[b]/i,
+    end: /^\[\/b]/,
+  },
+  tooltip: {
+    name: "tooltip",
+    start: /^\[tooltip=(.*?)]/i,
+    end: /^\[\/tooltip]/,
+  },
+  log: {
+    name: "log",
+    start: /^\[log=(.*?)]/i,
+    end: /^\[\/log]/,
+  },
+  fontsize: null,
+};
+const NxTagsObj = Object.values(NxTags);
+
+type NxTag = TextEffectName | "root" | "text";
+
+type NxAST = {
+  tag: NxTag;
+  text?: string;
+  children: NxAST[];
+  attr?: TextEffect["value"];
+  parent?: NxAST;
+};
+
+type NxTagParseResult = {
+  name: NxTag;
+  attr?: string[];
+};
+
+export function buildNxAST(rawText: string) {
+  let text: string | undefined = undefined;
+  const root: NxAST = {
+    tag: "root",
+    text: undefined,
+    children: [],
+    attr: [],
+    parent: undefined,
+  };
+  let currentParent = root;
+  const stack = [root];
+  while (rawText) {
+    const textEnd = rawText.indexOf("[");
+    if (textEnd === 0) {
+      const startMatch = parseStart();
+      if (startMatch) {
+        start(startMatch);
+        continue;
+      }
+      const endMatch = parseEnd();
+      if (endMatch) {
+        next(endMatch[0].length);
+        end();
+        continue;
+      }
+    }
+    if (textEnd > 0) {
+      text = rawText.substring(0, textEnd);
+    }
+    if (text) {
+      next(text.length);
+      chars(text);
+    }
+  }
+
+  function parseStart(): NxTagParseResult | undefined {
+    const start = NxTagsObj.find(it => it && rawText.match(it.start));
+    if (!start) {
+      return;
+    }
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const parse = start.start.exec(rawText)!;
+    const res = {
+      name: start.name,
+      attr: parse.filter((_, index) => index > 0),
+    };
+    next(parse[0].length);
+    return res;
+  }
+  function parseEnd() {
+    const end = NxTagsObj.find(it => it && rawText.match(it.end));
+    if (!end) {
+      return;
+    }
+    return end.end.exec(rawText);
+  }
+  function start(parsedStart: NxTagParseResult) {
+    const element = createAST(parsedStart);
+
+    currentParent = element;
+    stack.push(element);
+  }
+  function createAST(parsedStart: NxTagParseResult): NxAST {
+    return {
+      tag: parsedStart.name,
+      children: [],
+      attr: parsedStart.attr,
+    };
+  }
+  function end() {
+    const element = stack.pop();
+    currentParent = stack[stack.length - 1];
+    if (element && currentParent) {
+      element.parent = currentParent;
+      currentParent.children.push(element);
+    }
+  }
+  function chars(text: string) {
+    text = text.trim();
+    if (text.length > 0) {
+      currentParent.children.push({
+        tag: "text",
+        children: [],
+        text,
+      });
+    }
+  }
+
+  function next(len: number) {
+    rawText = rawText.substring(len);
+  }
+  return root;
+}
