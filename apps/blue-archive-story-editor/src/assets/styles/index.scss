@@ -1,0 +1,64 @@
+@import "@/assets/styles/nprogress.scss";
+@import "@/assets/styles/markdown.scss";
+@import "@/assets/styles/dark.scss";
+@import "@/assets/styles/variables.scss";
+
+@font-face {
+  font-family: "Game Font";
+  src: url("/font/U-OTF-ShinMGoUpr-Medium.woff");
+}
+@font-face {
+  font-family: "Chinese Game Font";
+  src: url("/font/ResourceHanRoundedCN-Medium.woff");
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+* {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+// 隐藏横向滚动条
+.scrollbar-hide-horizontal[class~="el-scrollbar"] {
+  .is-horizontal {
+    display: none;
+  }
+}
+
+// 点模糊背景
+.dot-bg {
+  background-image: radial-gradient(transparent 1px, #fff 1px);
+  backdrop-filter: saturate(50%) blur(4px);
+  background-size: 4px 4px;
+}
+
+// 菜单美化
+
+.custom-menu {
+  .el-sub-menu {
+    .el-menu {
+      padding: 0 16px;
+      .el-menu-item[class~="is-active"] {
+        background-color: var(--el-color-primary-light-8);
+      }
+    }
+  }
+}
+
+.dialog-body-padding-bottom-0 {
+  .el-dialog__body {
+    padding-bottom: 0;
+  }
+}
+
+.el-form-mb-0 {
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
