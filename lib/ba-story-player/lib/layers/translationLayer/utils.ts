@@ -15,6 +15,103 @@ import { Language } from "@/types/store";
 
 const playerStore = usePlayerStore();
 
+export function buildNxAST(rawText: string) {
+  let text: string | undefined = undefined;
+  const root: NxAST = {
+    tag: "root",
+    text: undefined,
+    children: [],
+    attr: [],
+    parent: undefined,
+  };
+  let currentParent = root;
+  const stack = [root];
+  while (rawText) {
+    const regMatch = rawText.match(/\[[^wa:]/);
+    const textEnd = regMatch?.index ?? -1;
+    if (textEnd === 0) {
+      const startMatch = parseStart();
+      if (startMatch) {
+        start(startMatch);
+        continue;
+      }
+      const endMatch = parseEnd();
+      if (endMatch) {
+        next(endMatch[0].length);
+        end();
+      }
+    } else if (textEnd > 0) {
+      text = rawText.substring(0, textEnd);
+      if (text) {
+        next(text.length);
+        chars(text);
+      }
+    } else {
+      // 说明是个纯text节点
+      chars(rawText);
+      next(rawText.length);
+    }
+  }
+
+  function parseStart(): NxTagParseResult | undefined {
+    const start = NxTagsObj.find(it => it && rawText.match(it.start));
+    if (!start) {
+      return;
+    }
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const parse = start.start.exec(rawText)!;
+    const res = {
+      name: start.name,
+      attr: parse.filter((_, index) => index > 0),
+    };
+    next(parse[0].length);
+    return res;
+  }
+  function parseEnd() {
+    const end = NxTagsObj.find(it => it && rawText.match(it.end));
+    if (!end) {
+      return;
+    }
+    return end.end.exec(rawText);
+  }
+  function start(parsedStart: NxTagParseResult) {
+    const element = createAST(parsedStart);
+
+    currentParent = element;
+    stack.push(element);
+  }
+  function createAST(parsedStart: NxTagParseResult): NxAST {
+    return {
+      tag: parsedStart.name,
+      children: [],
+      attr: parsedStart.attr,
+    };
+  }
+  function end() {
+    const element = stack.pop();
+    currentParent = stack[stack.length - 1];
+    if (element && currentParent) {
+      element.parent = currentParent;
+      currentParent.children.push(element);
+    }
+  }
+  function chars(text: string) {
+    text = text.trim();
+    if (text.length > 0) {
+      currentParent.children.push({
+        tag: "text",
+        children: [],
+        text,
+      });
+    }
+  }
+
+  function next(len: number) {
+    rawText = rawText.substring(len);
+  }
+  return root;
+}
+
 /**
  * 检查当前单元是否有背景覆盖变换, 有则删除该变换并返回变换的参数
  * @param unit
@@ -46,7 +143,7 @@ export function generateText(rawStoryUnit: StoryRawUnit) {
   const rawText = getText(rawStoryUnit, playerStore.language)
     .replaceAll("[USERNAME]", playerStore.userName)
     .replaceAll("#n", "\n");
-  return splitStScriptAndParseTag(rawText)
+  return parseNxMagicTag(rawText)
     .map(it => {
       let text = it.content;
       if (text.includes("[wa")) {
@@ -87,7 +184,7 @@ export function generateTitleInfo(
   // [这是514个主标题, 第114话]
   const spiltText = text.split(";").reverse();
   const rawTitle = spiltText[0];
-  const title = parseRubyText(rawTitle);
+  const title = parseNxMagicTag(rawTitle);
   return {
     title: title,
     subtitle: spiltText[1],
@@ -131,6 +228,7 @@ export function getCharacterIndex(
   }
   return characterIndex;
 }
+
 /**
  * 根据韩文名获取名字和头像
  * @param krName
@@ -148,78 +246,6 @@ export function getCharacterInfo(krName: string) {
     };
   }
 }
-
-type TypedTextEffect<effect extends TextEffectName> = {
-  name: effect;
-} & TextEffect;
-
-type CustomTagParserFnConfig<effect extends TextEffectName> = {
-  reg: RegExp;
-  fn: (
-    rawText: string,
-    match: RegExpExecArray
-  ) => { effect?: TypedTextEffect<effect>; remain: string } | undefined;
-} | null;
-
-type ICustomTagParserMap = {
-  [key in TextEffectName]: CustomTagParserFnConfig<key>;
-};
-
-const CustomTagParserMap: ICustomTagParserMap = {
-  ruby: {
-    reg: /\[ruby=(.+?)](.+)\[\/ruby]/,
-    fn(rawText: string, match: RegExpExecArray) {
-      return {
-        effect: {
-          name: "ruby",
-          value: [match[1]],
-        },
-        remain: rawText
-          .replace(`[ruby=${match[1]}]`, "")
-          .replace("[/ruby]", ""),
-      };
-    },
-  },
-  color: {
-    reg: /\[([A-Fa-f0-9]{6})](.+?)\[-]/,
-    fn(rawText: string, match: RegExpExecArray) {
-      return {
-        effect: {
-          name: "color",
-          value: [`#${match[1]}`],
-        },
-        remain: rawText.replace(`[${match[1]}]`, "").replace("[-]", ""),
-      };
-    },
-  },
-  log: {
-    reg: /\[log=(.+?)](.+)\[\/log]/,
-    fn(rawText: string, match: RegExpExecArray) {
-      return {
-        effect: {
-          name: "log",
-          value: [match[1]],
-        },
-        remain: rawText.replace(`[log=${match[1]}]`, "").replace("[/log]", ""),
-      };
-    },
-  },
-  tooltip: {
-    reg: /\[tooltip=(.+?)](.+)\[\/tooltip]/,
-    fn(rawText: string, match: RegExpExecArray) {
-      return {
-        effect: {
-          name: "tooltip",
-          value: [match[1]],
-        },
-        remain: rawText
-          .replace(`[tooltip=${match[1]}]`, "")
-          .replace("[/tooltip]", ""),
-      };
-    },
-  },
-  fontsize: null,
-};
 /**
  * 根据角色韩文名获取CharacterName
  * @param krName
@@ -227,6 +253,7 @@ const CustomTagParserMap: ICustomTagParserMap = {
 export function getCharacterName(krName: string) {
   return xxhash.h32(krName, 0).toNumber();
 }
+
 export function getEmotionName(rawName: string): string | undefined {
   const name = xxhash.h32(rawName, 0).toNumber();
   return usePlayerStore().EmotionExcelTable.get(name);
@@ -281,74 +308,89 @@ export function getText(
   );
 }
 
+function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
+  if (root.tag === "text") {
+    return [
+      {
+        content: root.text ?? "",
+        effects: [...effects],
+      },
+    ];
+  }
+  return (root.children ?? [])
+    .map(it => {
+      if (it.tag === "text") {
+        return walkNxAST(it, [...effects]);
+      }
+      return walkNxAST(it, [
+        ...effects,
+        {
+          name: it.tag as TextEffectName,
+          value: it.attr ?? [],
+        },
+      ]);
+    })
+    .flat();
+}
+
 export function getVoiceJPUrl(VoiceJp: string) {
   if (VoiceJp) {
     return getResourcesUrl("voiceJp", VoiceJp);
   }
 }
 
-/**
- * 判断是否是角色
- * @param s
- */
-export function isCharacter(s: string) {
-  //类似#3
-  return /^\d+$/.test(s);
-}
+type NxTagMap = {
+  [key in TextEffectName]: {
+    name: key;
+    start: RegExp;
+    end: RegExp;
+  } | null;
+};
 
-/**
- * 判断是否角色特效
- * @param s
- */
-export function isCharacterEffect(s: string) {
-  return /#\d/.test(s);
-}
+const NxTags: NxTagMap = {
+  color: {
+    name: "color",
+    start: /^\[([a-fA-F0-9]{6})]/,
+    end: /^\[-]/,
+  },
+  ruby: {
+    name: "ruby",
+    start: /^\[ruby=(.*?)]/i,
+    end: /^\[\/ruby]/,
+  },
+  b: {
+    name: "b",
+    start: /^\[b]/i,
+    end: /^\[\/b]/,
+  },
+  tooltip: {
+    name: "tooltip",
+    start: /^\[tooltip=(.*?)]/i,
+    end: /^\[\/tooltip]/,
+  },
+  log: {
+    name: "log",
+    start: /^\[log=(.*?)]/i,
+    end: /^\[\/log]/,
+  },
+  fontsize: null,
+};
+const NxTagsObj = Object.values(NxTags);
 
-/**
- * 判断当前字符串是否是选项
- * @param s 判断的字符串
- */
-export function isOption(s: string) {
-  // 选项字符串示例: '[s1] \"我正想着稍微散散步来着。\"\n[s2] \"优香在做什么？\"'
-  //除此之外还有[ns], [s], [ns1]等情况
-  return /\[n?s(\d{0,2})?](.+)/.test(s);
-}
+type NxTag = TextEffectName | "root" | "text";
 
-/**
- * 解析tag
- *
- * [ruby=なげ][FF6666]嘆[-][/ruby]
- *
- * [{ name: "ruby", values: ["なげ"] }, { name: "color", values: ["#FF6666"] }]
- * @param rawText 原初文本
- */
-export function parseCustomTag(rawText: string): Text {
-  let raw = rawText;
-  const effects = Object.keys(CustomTagParserMap)
-    .map(key => {
-      const parseConfig = Reflect.get(
-        CustomTagParserMap,
-        key
-      ) as CustomTagParserFnConfig<never>;
-      if (!parseConfig) {
-        return undefined;
-      }
-      const match = parseConfig.reg.exec(raw);
-      if (!match) {
-        return undefined;
-      }
-      const res = parseConfig.fn(raw, match);
-      if (res) {
-        raw = res.remain;
-      }
-      return res?.effect;
-    })
-    .filter(it => it) as TextEffect[];
-  return {
-    content: raw,
-    effects: effects,
-  };
-}
+type NxAST = {
+  tag: NxTag;
+  text?: string;
+  children: NxAST[];
+  attr?: TextEffect["value"];
+  parent?: NxAST;
+};
+
+type NxTagParseResult = {
+  name: NxTag;
+  attr?: string[];
+};
 
 /**
  * 将嵌套tag结构分割
@@ -356,91 +398,13 @@ export function parseCustomTag(rawText: string): Text {
  * [FF6666]……我々は望む、七つの[-][ruby=なげ][FF6666]嘆[-][/ruby][FF6666]きを。[-]
  *
  * [FF6666]……我々は望む、七つの[-],[ruby=なげ][FF6666]嘆[-][/ruby],[FF6666]きを。[-]
+ *
+ * [b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]
+ *
+ * [b]……我々は望む、七つの嘆[/b], [b][FF6666]きを。[-][/b]
  * @param rawText 原始结构
  */
-export function splitStScript(rawText: string): string[] {
-  const res: string[] = [];
-  let leftCount = 0;
-  let closeTag = false;
-  let tagCount = 0;
-  let startIndex = 0;
-  let tagActive = rawText[0] === "[";
-  rawText.split("").forEach((ch, index) => {
-    if (ch === "[") {
-      leftCount++;
-      if (!tagActive) {
-        res.push(rawText.substring(startIndex, index));
-        startIndex = index;
-      }
-    } else if (ch === "]") {
-      leftCount--;
-    } else if (ch === "/" || ch === "-") {
-      closeTag = true;
-    } else {
-      return;
-    }
-    if (leftCount === 0) {
-      tagCount += closeTag ? -1 : 1;
-      closeTag = false;
-      tagActive = true;
-      if (tagCount === 0) {
-        res.push(rawText.substring(startIndex, index + 1));
-        startIndex = index + 1;
-        tagActive = false;
-      }
-    }
-  });
-  // 处理尾巴情况
-  if (startIndex !== rawText.length) {
-    res.push(rawText.substring(startIndex, rawText.length + 1));
-  }
-  return res;
-}
-
-function parseRubyText(raw: string): Text[] {
-  // etc.
-  // [ruby=Hod]ホド[/ruby]……その[ruby=Path]パス[/ruby]は名誉を通じた完成。
-  // [ruby=Hod]ホド ……その[ruby=Path]パス は名誉を通じた完成。
-  const a = raw.split("[/ruby]").filter(s => s);
-  return a
-    .map(it => {
-      const rubyIndex = it.indexOf("[ruby=");
-      // は名誉を通じた完成。
-      if (rubyIndex === -1) {
-        return {
-          content: it,
-          effects: [],
-        };
-      }
-      // Hod]ホド
-      // ……その Path]パス
-      const b = it.split("[ruby=").filter(s => s);
-      return b.map(item => {
-        // ……その
-        // パス Path
-        const split = item.split("]").reverse();
-        const content = split[0];
-        const ruby = split[1];
-        const effects: TextEffect[] = [];
-        if (ruby) {
-          effects.push({
-            name: "ruby",
-            value: [ruby],
-          });
-        }
-        return {
-          content: content,
-          effects: effects,
-        };
-      });
-    })
-    .flat(1);
-}
-
-/**
- * 将ScriptKr文本结构解析成Text[]
- * @param rawText
- */
-export function splitStScriptAndParseTag(rawText: string): Text[] {
-  return splitStScript(rawText).map(it => parseCustomTag(it));
+export function parseNxMagicTag(rawText: string): Text[] {
+  const ast = buildNxAST(rawText);
+  return walkNxAST(ast, []);
 }
