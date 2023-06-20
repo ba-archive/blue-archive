@@ -314,7 +314,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
           }
           return {
             SelectionGroup: Number(parseResult[1] || "0"),
-            text: utils.splitStScriptAndParseTag(parseResult[2]),
+            text: utils.parseNxMagicTag(parseResult[2]),
           };
         })
         .filter(it => it) as ShowOption[];
@@ -328,8 +328,6 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
  * @param rawStory: 原始剧情
  */
 export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
-  debugger;
-  const res = parseNxMagicTag("[b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]");
   const content = rawStory.content;
   const playerStore = usePlayerStore();
   const parseResult: StoryUnit[] = [];
