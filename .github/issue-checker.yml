@@ -47,7 +47,7 @@ labels:
   - name: backlog
     mode: add
     content: duplicate
-    regexes: "(?i)backlog|备忘"
+    regexes: "[Bb][Aa][Cc][Kk][Ll][Oo][Gg]|备忘"
   - name: wontfix
     mode: add
     content: wontfix
