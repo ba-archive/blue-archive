@@ -7,19 +7,6 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    NButton: typeof import('naive-ui')['NButton'];
-    NCheckbox: typeof import('naive-ui')['NCheckbox'];
-    NDropdown: typeof import('naive-ui')['NDropdown'];
-    NImage: typeof import('naive-ui')['NImage'];
-    NInput: typeof import('naive-ui')['NInput'];
-    NInputGroup: typeof import('naive-ui')['NInputGroup'];
-    NRadio: typeof import('naive-ui')['NRadio'];
-    NRadioGroup: typeof import('naive-ui')['NRadioGroup'];
-    NSpace: typeof import('naive-ui')['NSpace'];
-    NSwitch: typeof import('naive-ui')['NSwitch'];
-    NTag: typeof import('naive-ui')['NTag'];
-    NText: typeof import('naive-ui')['NText'];
-    NTooltip: typeof import('naive-ui')['NTooltip'];
     RouterLink: typeof import('vue-router')['RouterLink'];
     RouterView: typeof import('vue-router')['RouterView'];
   }

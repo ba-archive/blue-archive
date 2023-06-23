@@ -23,7 +23,7 @@ labels:
   - name: story-player
     mode: add
     content: "module: story-player"
-    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)"
+    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)|(特效|[Ee][Ff]{2}[Ee][Cc][Tt])|人物重复|影(分身|流)"
   - name: story-editor
     mode: add
     content: "module: story-player"
@@ -44,6 +44,10 @@ labels:
     mode: add
     content: duplicate
     regexes: '[Dd]uplicate\s+(of|with)\s+#\d+|[和与跟]\s?#\d+\s?是?重复'
+  - name: backlog
+    mode: add
+    content: duplicate
+    regexes: "[Bb][Aa][Cc][Kk][Ll][Oo][Gg]|备忘"
   - name: wontfix
     mode: add
     content: wontfix
