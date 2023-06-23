@@ -4,6 +4,19 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-06-25",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "月雪 宫子（泳装）", id: 10071 },
+          { name: "空井 咲（泳装）", id: 10072 },
+          { name: "霞泽 美游（泳装）", id: 26010 },
+        ],
+      },
+    ],
+  },
+  {
     date: "2023-06-18",
     contents: [
       {
@@ -526,6 +539,7 @@ const contributorList: any = h(
       color: var(--color-pallete-arona-blue);
       text-decoration: underline;
     }
+
     .router-link:not(:last-child)::after {
       content: "、";
     }
