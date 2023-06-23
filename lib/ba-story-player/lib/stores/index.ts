@@ -127,7 +127,7 @@ let privateState: PrivateStates = {
   },
 
   allStoryUnit: [],
-
+  stackStoryUnit: [],
   //文字层
   logText: ref([]),
 

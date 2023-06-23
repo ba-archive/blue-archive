@@ -34,7 +34,13 @@ export function buildNxAST(rawText: string) {
   };
   let currentParent = root;
   const stack = [root];
+  let tryCount = 0;
   while (rawText) {
+    tryCount++;
+    if (tryCount > 30) {
+      console.error("翻译时出现严重错误, rowText=" + rawText);
+      return root;
+    }
     const regMatch = rawText.match(/\[[^wa:]/);
     const textEnd = regMatch?.index ?? -1;
     if (textEnd === 0) {

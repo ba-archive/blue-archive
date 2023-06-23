@@ -12,6 +12,7 @@ import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
+import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 let playerStore: ReturnType<typeof usePlayerStore>;
@@ -524,6 +525,9 @@ export async function init(
   //加载初始化资源以便翻译层进行翻译
   await resourcesLoader.init(app.loader);
   privateState.allStoryUnit = translate(props.story);
+  privateState.stackStoryUnit = buildStoryIndexStackRecord(
+    privateState.allStoryUnit
+  );
   bgInit();
   characterInit();
   soundInit();
