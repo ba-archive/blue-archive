@@ -7,12 +7,17 @@ export * from "./typingEmitter";
 const EffectToCSSMap: IEffectToCSSMap = {
   color(param) {
     return {
-      color: param.join(""),
+      color: `#${param.join("")}`,
     };
   },
   fontsize(param) {
     return {
       "--param-font-size": param.join(""),
+    };
+  },
+  b() {
+    return {
+      "font-weight": "bold",
     };
   },
 };

@@ -8,6 +8,7 @@ import { eventEmitter, resourcesLoader, storyHandler } from "../lib/index";
 import { changeStoryIndex } from "../lib/layers/uiLayer/userInteract";
 import { usePlayerStore } from "../lib/stores";
 import { TranslatedStoryUnit } from "../lib/types/common";
+import { Language } from "../lib/types/store";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
@@ -112,6 +113,18 @@ useResizeObserver(
       ({ width: width.value, height: height.value } = entry.contentRect);
   }, 1)
 );
+const languageCacheKey = "language";
+const languageList = ["Cn", "Jp", "Kr", "En", "Tw"];
+const language = ref<Language>(
+  (localStorage.getItem(languageCacheKey) as never) ?? "Cn"
+);
+watch(
+  () => language.value,
+  () => {
+    localStorage.setItem(languageCacheKey, language.value);
+    location.reload();
+  }
+);
 </script>
 
 <template>
@@ -122,7 +135,7 @@ useResizeObserver(
         data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
         :width="width"
         :height="height"
-        language="Cn"
+        :language="language"
         userName="testUser"
         :story-summary="storySummary"
         style="resize: both; overflow: hidden"
@@ -158,6 +171,10 @@ useResizeObserver(
       <input v-model="storyJsonName" />
       <button @click="changeJSON">更换故事json</button>
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
+      <label>语言</label>
+      <select v-model="language">
+        <option v-for="name in languageList">{{ name }}</option>
+      </select>
     </div>
     <ModifyEmotionOption
       class="absolute-right-center"

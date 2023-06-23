@@ -8,8 +8,9 @@
 
 ```bash
 npm install -g @microsoft/rush
-rush update
+rush update # 在 blue-archive 根目录下执行，下同
 rush update-autoinstaller --name rush-prettier
+rush install
 rush build
 ```
 

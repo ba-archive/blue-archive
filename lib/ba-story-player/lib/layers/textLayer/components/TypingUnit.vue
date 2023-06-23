@@ -147,7 +147,7 @@ function doTyping() {
       contentTypingSpeed,
       contentHandler
     );
-  }, props.text.waitTime);
+  }, props.text.waitTime ?? 0);
 }
 
 function doTyping0(
@@ -167,7 +167,7 @@ function doTyping0(
   }, speed[pointer.value]);
 }
 
-function humanizer(speed = props.speed) {
+function humanizer(speed: number = props.speed) {
   return Math.round((Math.random() * speed) / 2) + speed;
 }
 
@@ -327,7 +327,7 @@ type IProp = {
     position: absolute;
     top: min(calc(var(--local-font-size) * var(--top-offset)), -12px);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, calc(0.2 * var(--font-size)));
     animation: fade-in 0.25s ease-in-out;
     min-width: 100%;
     font-size: var(--local-font-size);
