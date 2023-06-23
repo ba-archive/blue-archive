@@ -262,6 +262,9 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         parseUnitResult,
         currentIndex
       );
+      if (characterIndex === -1) {
+        return unit;
+      }
       if (match[5] && utils.compareCaseInsensive(match[4], "em")) {
         const emotionName = utils.getEmotionName(match[5]);
         if (!emotionName) {
