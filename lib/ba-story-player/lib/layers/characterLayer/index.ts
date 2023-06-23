@@ -232,7 +232,7 @@ export const CharacterLayerInstance: CharacterLayer = {
       return false;
     }
     const { currentCharacterMap } = usePlayerStore();
-    let mapList = this.buildCharacterEffectInstance(data);
+    const mapList = this.buildCharacterEffectInstance(data);
     //将data没有但显示着的角色取消highlight
     characterMapListForeach(character => {
       if (
