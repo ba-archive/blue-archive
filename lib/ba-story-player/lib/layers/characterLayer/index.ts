@@ -217,8 +217,8 @@ export const CharacterLayerInstance: CharacterLayer = {
       character.instance.scale.set(1);
       // 设置锚点到左上角
       character.instance.pivot = {
-        x: Character_Initial_Pivot_Proportion.x * character.instance.width,
-        y: Character_Initial_Pivot_Proportion.y * character.instance.height,
+        x: Character_Initial_Pivot_Proportion.x * (character.instance.width / character.instance.scale.x),
+        y: Character_Initial_Pivot_Proportion.y * (character.instance.height / character.instance.scale.y),
       };
       // 设置缩放比列
       const { scale: defaultScale } = calcCharacterYAndScale(

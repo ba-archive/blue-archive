@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { continuePlay, dispose, init, stop } from "@/index";
+import { continuePlay, dispose, eventEmitter, init, stop, storyHandler } from "@/index";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
-import { TranslatedStoryUnit } from "@/types/common";
+import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import {
   computed,
@@ -17,7 +17,9 @@ import {
 } from "vue";
 import eventBus from "./eventBus";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
-import { usePlayerStore } from "./stores";
+import { initPrivateState, usePlayerStore } from "./stores";
+import { translate } from "@/layers/translationLayer";
+import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 
 export type PlayerProps = {
   story: TranslatedStoryUnit;
@@ -205,6 +207,52 @@ function handleFullScreenChange() {
     ![null, undefined].includes(document.webkitFullscreenElement) ||
     ![null, undefined].includes(document.mozFullScreenElement);
 }
+
+function hotReplaceStoryUnit(
+  unit: StoryRawUnit | StoryRawUnit[] | TranslatedStoryUnit,
+  index: number,
+  textOnly = true
+) {
+  const privateStore = initPrivateState();
+  if (textOnly) {
+    const translateUnit = translate({
+      GroupId: 0,
+      translator: "",
+      content: [unit as StoryRawUnit],
+    });
+    eventEmitter.actionByUnitType(translateUnit[0]);
+    return;
+  }
+  if (Object.hasOwn(unit, "ScriptKr")) {
+    const translateUnit = translate({
+      GroupId: 0,
+      translator: "",
+      content: [unit as StoryRawUnit],
+    });
+    privateStore.allStoryUnit.splice(index, 1, translateUnit[0]);
+    privateStore.stackStoryUnit = buildStoryIndexStackRecord(
+      privateStore.allStoryUnit
+    );
+    changeStoryIndex(index);
+  } else {
+    const newStory: TranslatedStoryUnit = Array.isArray(unit) ? {
+      GroupId: props.story.GroupId,
+      translator: props.story.translator,
+      content: unit,
+    } : unit as TranslatedStoryUnit;
+    privateStore.allStoryUnit = translate(newStory);
+    privateStore.stackStoryUnit = buildStoryIndexStackRecord(
+      privateStore.allStoryUnit
+    );
+    storyHandler.currentStoryIndex = 0;
+    storyHandler.isEnd = false;
+    storyHandler.storyPlay().then();
+  }
+}
+
+defineExpose({
+  hotReplaceStoryUnit,
+});
 
 /**
  * 是否经历过setup onMounted

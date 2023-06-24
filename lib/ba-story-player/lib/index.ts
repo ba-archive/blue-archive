@@ -165,7 +165,41 @@ export const eventEmitter = {
     this.showCharacter();
     this.show();
 
-    const currentStoryUnit = storyHandler.currentStoryUnit;
+    this.actionByUnitType();
+
+    const startTime = Date.now();
+    const checkEffectDone = new Promise<void>((resolve, reject) => {
+      const interval = setInterval(() => {
+        if (storyHandler.isEnd) {
+          resolve();
+        }
+        if (this.unitDone) {
+          clearInterval(interval);
+          resolve();
+        } else if (Date.now() - startTime >= 50000) {
+          for (const key of Object.keys(eventEmitter) as Array<
+            keyof typeof eventEmitter
+          >) {
+            if (key.endsWith("Done") && key !== "unitDone") {
+              if (!eventEmitter[key]) {
+                console.error(`${key}未完成: `);
+              }
+            }
+          }
+          console.warn(
+            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
+            storyHandler.currentStoryUnit
+          );
+          reject();
+          clearInterval(interval);
+        }
+      });
+    });
+    await checkEffectDone;
+  },
+
+  actionByUnitType(currentStoryUnit?: StoryUnit) {
+    currentStoryUnit = currentStoryUnit ?? storyHandler.currentStoryUnit;
     switch (currentStoryUnit.type) {
       case "title":
         this.titleDone = false;
@@ -242,36 +276,6 @@ export const eventEmitter = {
       default:
         console.log(`本体中尚未处理${currentStoryUnit.type}类型故事节点`);
     }
-
-    const startTime = Date.now();
-    const checkEffectDone = new Promise<void>((resolve, reject) => {
-      const interval = setInterval(() => {
-        if (storyHandler.isEnd) {
-          resolve();
-        }
-        if (this.unitDone) {
-          clearInterval(interval);
-          resolve();
-        } else if (Date.now() - startTime >= 50000) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
-          console.warn(
-            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
-          );
-          reject();
-          clearInterval(interval);
-        }
-      });
-    });
-    await checkEffectDone;
   },
 
   clearSt() {
@@ -315,10 +319,14 @@ export const eventEmitter = {
    */
   showCharacter(currentStoryUnit?: StoryUnit) {
     currentStoryUnit = currentStoryUnit || storyHandler.currentStoryUnit;
-    if (storyHandler.currentStoryUnit.characters.length !== 0) {
+    if (currentStoryUnit.characters.length !== 0) {
       this.characterDone = false;
       eventBus.emit("showCharacter", {
         characters: storyHandler.currentStoryUnit.characters,
+      });
+    } else {
+      setTimeout(() => {
+        eventBus.emit("characterDone");
       });
     }
   },

@@ -150,14 +150,18 @@ export const changeStoryIndex = (index?: number) => {
   const currentUnit = usePlayerStore().stackStoryUnit[index];
   eventBus.emit("removeEffect");
   eventBus.emit("hideCharacter");
+  function next() {
+    eventBus.off("characterDone", next);
+    eventBus.emit("next");
+  }
   setTimeout(() => {
     // 在 hideCharacter 后触发
+    eventBus.on("characterDone", next);
     eventEmitter.showCharacter(currentUnit);
   }, 4);
   eventEmitter.playAudio(currentUnit);
   eventEmitter.showBg(currentUnit).then(() => {
     storyHandler.currentStoryIndex = index ?? 0;
-    eventBus.emit("next");
   });
 };
 

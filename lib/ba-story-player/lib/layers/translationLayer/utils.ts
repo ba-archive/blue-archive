@@ -437,8 +437,8 @@ const IterateStoryUnitFun: IterateStoryUnit = {
   audio(prv?: PlayAudio, cur?: PlayAudio) {
     return {
       bgm: cur?.bgm ?? prv?.bgm,
-      soundUrl: cur?.soundUrl ?? prv?.soundUrl,
-      voiceJPUrl: cur?.voiceJPUrl ?? prv?.voiceJPUrl,
+      soundUrl: cur?.soundUrl ?? "",
+      voiceJPUrl: cur?.voiceJPUrl ?? "",
     };
   },
   characters(prv: Character[], cur: Character[]) {
@@ -457,17 +457,10 @@ const IterateStoryUnitFun: IterateStoryUnit = {
     // 是否隐藏 hide
 
     const filterPrv = prv
-      .filter(it => {
+      .filter((it) => {
         const actionEffect = it.effects.filter(
           effect => effect.type === "action"
         );
-        // 调整mx造成的移位
-        const moveEffect = actionEffect
-          .map(effect => /^m(\d)$/i.exec(effect.effect))
-          .filter(effect => effect) as RegExpExecArray[];
-        if (moveEffect.length > 0) {
-          it.position = Number(moveEffect[0][1]);
-        }
         // 调整特效造成的走人
         const hideEffect = actionEffect.map(
           effect =>
@@ -478,12 +471,22 @@ const IterateStoryUnitFun: IterateStoryUnit = {
         if (hideEffect.length > 0) {
           return null;
         }
-        // 所有特效防止重复播放
+        // 调整mx造成的移位
+        const moveEffect = actionEffect
+          .map(effect => /^m(\d)$/i.exec(effect.effect))
+          .filter(effect => effect) as RegExpExecArray[];
+        if (moveEffect.length > 0) {
+          it.position = Number(moveEffect[0][1]);
+        }
+        // 调整消失再出现的复制人
+        if (cur.some((ch) => ch.CharacterName === it.CharacterName && ch.position === it.position)) {
+          return null;
+        }
+        // 删除所有特效防止重复播放
         it.effects = [];
         return it;
       })
       .filter(it => it) as Character[];
-    // 之前的加上现在的
     return [...filterPrv, ...deepCopyObject(cur)];
   },
   effect(prv: PlayEffect, cur: PlayEffect) {
