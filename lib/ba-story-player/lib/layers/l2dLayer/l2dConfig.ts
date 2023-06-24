@@ -304,4 +304,64 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  CH0215_home: {
+    name: "CH0215_home",
+    playQue: [
+      {
+        name: "CH0215_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.3,
+        fade: true,
+      },
+      {
+        name: "CH0215_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0215_home: {
+        scale: 1,
+      },
+    },
+  },
+  CH0217_home: {
+    name: "CH0217_home",
+    playQue: [
+      {
+        name: "CH0217_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6,
+        fade: true,
+      },
+      {
+        name: "CH0217_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0217_home: {
+        scale: 1.8,
+      },
+    },
+  },
+  CH0218_home: {
+    name: "CH0218_home",
+    playQue: [
+      {
+        name: "CH0218_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5,
+        fade: true,
+      },
+      {
+        name: "CH0218_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0218_home: {
+        scale: 1.2,
+      },
+    },
+  },
 };
