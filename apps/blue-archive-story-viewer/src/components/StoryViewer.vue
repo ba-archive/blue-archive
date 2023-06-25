@@ -48,6 +48,12 @@
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
         />
+        <img
+          src="https://yuuka.cdn.diyigemt.com/image/ba-all-data/useSuperSampling.ico"
+          alt=""
+          v-if="useSuperSampling"
+          style="opacity: 0"
+        />
         <div v-if="playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
