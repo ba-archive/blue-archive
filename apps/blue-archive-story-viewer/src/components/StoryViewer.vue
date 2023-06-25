@@ -48,6 +48,7 @@
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
         />
+        <img :src="useSuperSamplingImgPath" alt="" style="opacity: 0" />
         <div v-if="playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
@@ -189,6 +190,12 @@ const playerHeight = ref(0);
 const startFullScreen = ref(document.body.clientWidth < 425);
 const useMp3 = computed(() => settingsStore.getUseMp3);
 const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
+const useSuperSamplingImgPath = computed(
+  () =>
+    `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${
+      useSuperSampling.value ? "use" : "noUse"
+    }SuperSampling.gif`
+);
 
 // 检测浏览器是否为 webkit，如果是则使用 mp3
 if (typeof window.webkitConvertPointFromNodeToPage === "function") {
