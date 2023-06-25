@@ -14,6 +14,11 @@ const updateLogs: UpdateLog[] = [
           { name: "霞泽 美游（泳装）", id: 26010 },
         ],
       },
+      {
+        type: "fix",
+        content:
+          "修复了 Firefox 浏览器和 Safari 浏览器在展示对话剧情和梗概弹窗时异常缓慢的问题",
+      },
     ],
   },
   {
