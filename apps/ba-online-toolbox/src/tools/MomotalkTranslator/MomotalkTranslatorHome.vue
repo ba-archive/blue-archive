@@ -114,7 +114,7 @@ function getCurrentTime() {
 function handleDownload() {
   updateTranslator(translator.value);
   const fileContent = mainStore.getFileContent;
-  const blob = new Blob([jsYaml.dump(fileContent)], {
+  const blob = new Blob([jsYaml.dump(fileContent, { quotingType: '"' })], {
     type: 'text/plain;charset=utf-8',
   });
   const proofreader = mainStore.getProofreader;
