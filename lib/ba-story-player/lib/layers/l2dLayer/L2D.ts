@@ -191,7 +191,11 @@ export function L2DInit() {
     mainItem = new Spine(l2dSpineData!);
     function playL2dVoice(entry: ITrackEntry, event: IEvent) {
       const eventName = event.data.name;
-      if (eventName !== "Talk" && eventName != currentVoice) {
+      if (
+        eventName !== "Talk" &&
+        eventName != currentVoice &&
+        !["enableobject", "disableobject"].includes(eventName.toLowerCase())
+      ) {
         currentVoice = eventName;
         eventBus.emit("playAudio", {
           voiceJPUrl: getResourcesUrl("l2dVoice", event.data.name),
