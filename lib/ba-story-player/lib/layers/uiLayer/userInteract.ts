@@ -136,36 +136,33 @@ function getLastDataFromIndex(index: number) {
 }
 
 export const changeStoryIndex = (index?: number) => {
-  index = parseInt(index + "");
-  if (typeof index !== "number") return;
+  if (typeof index !== "number") {
+    return;
+  }
   // 不允许跳到最后
-  if (index >= usePlayerStore().allStoryUnit.length - 1) return;
+  if (index >= usePlayerStore().allStoryUnit.length - 1) {
+    return;
+  }
   index -= 1;
-  if (index < 0) index = 0;
+  if (index < 0) {
+    index = 0;
+  }
+  const currentUnit = usePlayerStore().stackStoryUnit[index];
   eventBus.emit("removeEffect");
-  const { lastCharacter, lastBg, lastBgm } = getLastDataFromIndex(index);
-  const {
-    lastCharacter: curCharacter,
-    lastBg: curBg,
-    lastBgm: curBgm,
-  } = getLastDataFromIndex(storyHandler.currentStoryIndex);
-  const isSameCharacter =
-    JSON.stringify(lastCharacter?.characters?.map(i => i.CharacterName)) ===
-    JSON.stringify(curCharacter?.characters?.map(i => i.CharacterName));
-  const isSameBgm =
-    JSON.stringify(lastBgm?.audio?.bgm) === JSON.stringify(curBgm?.audio?.bgm);
-  // 如果和跳转前相同就不去除了, 避免闪动
-  if (!isSameCharacter) {
-    eventBus.emit("hideCharacter");
+  eventBus.emit("hideCharacter");
+  function next() {
+    eventBus.off("characterDone", next);
+    eventBus.emit("next");
   }
   setTimeout(() => {
     // 在 hideCharacter 后触发
-    eventEmitter.showCharacter(lastCharacter);
+    eventBus.on("characterDone", next);
+    eventEmitter.showCharacter(currentUnit);
   }, 4);
-  !isSameBgm && eventEmitter.playAudio(lastBgm);
-  eventEmitter.showBg(lastBg);
-  storyHandler.currentStoryIndex = index;
-  eventBus.emit("next");
+  eventEmitter.playAudio(currentUnit);
+  eventEmitter.showBg(currentUnit).then(() => {
+    storyHandler.currentStoryIndex = index ?? 0;
+  });
 };
 
 function interactNext() {

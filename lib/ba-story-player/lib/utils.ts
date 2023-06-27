@@ -116,6 +116,9 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
  * 字面意思, 深拷贝json
  */
 export function deepCopyObject<T>(object: T): T {
+  if (typeof object !== "object") {
+    return object;
+  }
   return JSON.parse(JSON.stringify(object));
 }
 

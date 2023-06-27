@@ -5,13 +5,13 @@
         class="player-body rounded-small"
         v-if="showPlayer"
         :story="mainStore.getScenario"
-        :change-index="targetIndex"
         :language="playerLanguage"
         :width="playerContainerWidth - 24"
         :height="playerContainerHeight - 24"
         :user-name="mainStore.getScenario.translator ?? 'Sensei'"
         :story-summary="{ chapterName: '', summary: '' }"
         data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
+        ref="StoryPlayer"
       >
       </ba-story-player>
     </div>
@@ -19,24 +19,39 @@
 </template>
 <script setup lang="ts">
 import BaStoryPlayer from 'ba-story-player';
-// import { PlayerProps } from 'ba-story-player';
 import { computed, ref, watch } from 'vue';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { Language } from '../types/content';
-import { useElementSize } from '@vueuse/core';
+import { useElementSize, watchDebounced } from '@vueuse/core';
 import 'ba-story-player/dist/style.css';
+import { StoryRawUnit, TranslatedStoryUnit } from "ba-story-player/dist/lib/types/common";
 
 const mainStore = useScenarioStore();
 const config = useGlobalConfig();
 const playerContainerElement = ref<HTMLElement>();
+const StoryPlayer = ref<{
+  hotReplaceStoryUnit(
+    unit: StoryRawUnit | StoryRawUnit[] | TranslatedStoryUnit, index: number, textOnly?: boolean
+  ): void
+}>();
 
 const { width: playerContainerWidth, height: playerContainerHeight } =
   useElementSize(playerContainerElement);
 
 // const playerLanguage = computed(() => config.getTargetLang.slice(4));
-
-const targetIndex = computed(() => config.getSelectLine);
+let lastLine = config.getSelectLine;
+watchDebounced(() => mainStore.getScenario.content[config.getSelectLine][config.getTargetLang], () => {
+  const currentLine = config.getSelectLine;
+  let textOnly = lastLine === currentLine;
+  if (!textOnly) {
+    lastLine = currentLine;
+  }
+  StoryPlayer.value && StoryPlayer.value.hotReplaceStoryUnit(mainStore.getScenario.content[config.getSelectLine],
+    config.getSelectLine, textOnly);
+}, {
+  debounce: 200,
+});
 
 const isPreviewMode = computed(() => config.getPreviewMode);
 const targetLanguage = computed(() => config.getTargetLang);

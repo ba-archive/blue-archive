@@ -431,27 +431,29 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
     parseResult.push(unit);
   }
   // 处理译者
-  const unit = parseResult[0];
-  if (unit.type === "title" && unit.textAbout.titleInfo) {
-    unit.textAbout.titleInfo.translator = rawStory.translator;
-  } else {
-    // 如果没有title 塞到place里
-    // 查找开头至第一次出现TextJp之间里有没有place
-    let index = 0;
-    for (const _index in content) {
-      if (content[_index].TextJp) {
-        index = Number(_index);
-        break;
-      }
-    }
-    const possiblePlace = parseResult
-      .slice(0, index)
-      .find(it => it.type === "place");
-    if (possiblePlace && possiblePlace.textAbout.titleInfo) {
-      possiblePlace.textAbout.titleInfo.translator = rawStory.translator;
+  if (rawStory.translator) {
+    const unit = parseResult[0];
+    if (unit.type === "title" && unit.textAbout.titleInfo) {
+      unit.textAbout.titleInfo.translator = rawStory.translator;
     } else {
-      // 没有title 没有place 只能存privateStore里了
-      usePlayerStore().setTranslator(rawStory.translator);
+      // 如果没有title 塞到place里
+      // 查找开头至第一次出现TextJp之间里有没有place
+      let index = 0;
+      for (const _index in content) {
+        if (content[_index].TextJp) {
+          index = Number(_index);
+          break;
+        }
+      }
+      const possiblePlace = parseResult
+        .slice(0, index)
+        .find(it => it.type === "place");
+      if (possiblePlace && possiblePlace.textAbout.titleInfo) {
+        possiblePlace.textAbout.titleInfo.translator = rawStory.translator;
+      } else {
+        // 没有title 没有place 只能存privateStore里了
+        usePlayerStore().setTranslator(rawStory.translator);
+      }
     }
   }
   return parseResult;
