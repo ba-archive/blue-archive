@@ -226,7 +226,9 @@ const translateHandle = () => {
       translateHash[config.getTargetLang]
     )
       .then(res => {
-        config.setTmpMachineTranslate(halfToFull((res.translation || [])[0] ?? ''));
+        config.setTmpMachineTranslate(
+          halfToFull((res.translation || [])[0] ?? '')
+        );
       })
       .catch(err => {
         console.log(err);

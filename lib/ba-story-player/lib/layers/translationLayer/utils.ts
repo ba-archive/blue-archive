@@ -295,7 +295,13 @@ export function getSoundUrl(Sound: string) {
 export function getSpeaker(
   characterInfo: CharacterNameExcelTableItem
 ): Speaker {
-  const language = playerStore.language.toUpperCase() as "CN" | "JP";
+  const language = playerStore.language.toUpperCase() as
+    | "CN"
+    | "JP"
+    | "EN"
+    | "TW"
+    | "TH"
+    | "KR";
   if (characterInfo[`Name${language}`]) {
     return {
       name: characterInfo[`Name${language}`]!,
@@ -457,7 +463,7 @@ const IterateStoryUnitFun: IterateStoryUnit = {
     // 是否隐藏 hide
 
     const filterPrv = prv
-      .filter((it) => {
+      .filter(it => {
         const actionEffect = it.effects.filter(
           effect => effect.type === "action"
         );
@@ -479,7 +485,13 @@ const IterateStoryUnitFun: IterateStoryUnit = {
           it.position = Number(moveEffect[0][1]);
         }
         // 调整消失再出现的复制人
-        if (cur.some((ch) => ch.CharacterName === it.CharacterName && ch.position === it.position)) {
+        if (
+          cur.some(
+            ch =>
+              ch.CharacterName === it.CharacterName &&
+              ch.position === it.position
+          )
+        ) {
           return null;
         }
         // 删除所有特效防止重复播放

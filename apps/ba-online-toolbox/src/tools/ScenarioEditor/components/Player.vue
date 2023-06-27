@@ -24,16 +24,21 @@ import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { Language } from '../types/content';
 import { useElementSize, watchDebounced } from '@vueuse/core';
+import {
+  StoryRawUnit,
+  TranslatedStoryUnit,
+} from 'ba-story-player/dist/lib/types/common';
 import 'ba-story-player/dist/style.css';
-import { StoryRawUnit, TranslatedStoryUnit } from "ba-story-player/dist/lib/types/common";
 
 const mainStore = useScenarioStore();
 const config = useGlobalConfig();
 const playerContainerElement = ref<HTMLElement>();
 const StoryPlayer = ref<{
   hotReplaceStoryUnit(
-    unit: StoryRawUnit | StoryRawUnit[] | TranslatedStoryUnit, index: number, textOnly?: boolean
-  ): void
+    unit: StoryRawUnit | StoryRawUnit[] | TranslatedStoryUnit,
+    index: number,
+    textOnly?: boolean
+  ): void;
 }>();
 
 const { width: playerContainerWidth, height: playerContainerHeight } =
@@ -41,17 +46,26 @@ const { width: playerContainerWidth, height: playerContainerHeight } =
 
 // const playerLanguage = computed(() => config.getTargetLang.slice(4));
 let lastLine = config.getSelectLine;
-watchDebounced(() => mainStore.getScenario.content[config.getSelectLine][config.getTargetLang], () => {
-  const currentLine = config.getSelectLine;
-  let textOnly = lastLine === currentLine;
-  if (!textOnly) {
-    lastLine = currentLine;
+watchDebounced(
+  () =>
+    mainStore.getScenario.content[config.getSelectLine][config.getTargetLang],
+  () => {
+    const currentLine = config.getSelectLine;
+    let textOnly = lastLine === currentLine;
+    if (!textOnly) {
+      lastLine = currentLine;
+    }
+    StoryPlayer.value &&
+      StoryPlayer.value.hotReplaceStoryUnit(
+        mainStore.getScenario.content[config.getSelectLine],
+        config.getSelectLine,
+        textOnly
+      );
+  },
+  {
+    debounce: 200,
   }
-  StoryPlayer.value && StoryPlayer.value.hotReplaceStoryUnit(mainStore.getScenario.content[config.getSelectLine],
-    config.getSelectLine, textOnly);
-}, {
-  debounce: 200,
-});
+);
 
 const isPreviewMode = computed(() => config.getPreviewMode);
 const targetLanguage = computed(() => config.getTargetLang);
