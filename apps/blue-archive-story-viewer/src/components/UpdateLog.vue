@@ -4,6 +4,19 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-06-27",
+    contents: [
+      {
+        type: "fix",
+        content: "修复了咲（泳装）剧情中，无法正确播放语音的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了特定浏览器无法正确弹出对话log和剧情概要的问题",
+      },
+    ],
+  },
+  {
     date: "2023-06-25",
     contents: [
       {
@@ -17,7 +30,7 @@ const updateLogs: UpdateLog[] = [
       {
         type: "fix",
         content:
-          "修复了 Firefox 浏览器和 Safari 浏览器在展示对话剧情和梗概弹窗时异常缓慢的问题",
+          "修复了 Firefox 浏览器和 Safari 浏览器在展示对话log和剧情概要时动画异常缓慢的问题",
       },
     ],
   },

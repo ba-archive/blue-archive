@@ -57,6 +57,15 @@ function handleClose() {
 </template>
 
 <style lang="scss" scoped>
+.pseudo-fullscreen {
+  .ba-dialog {
+    width: 100vh;
+    width: 100dvh;
+    height: 100vw;
+    height: 100dvw;
+  }
+}
+
 .ba-dialog {
   display: flex;
   position: absolute;
