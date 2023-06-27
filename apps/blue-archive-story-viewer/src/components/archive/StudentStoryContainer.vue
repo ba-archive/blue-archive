@@ -126,6 +126,7 @@ function getStoryTitle(userLanguage: Language, titles: CommonStoryTextObject) {
 }
 
 .story-title-container {
+  align-items: stretch;
   gap: 1rem;
   width: 30rem;
 }
