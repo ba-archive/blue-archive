@@ -1,9 +1,36 @@
 import { distance } from "fastest-levenshtein";
+import { match } from "pinyin-pro";
 import { AppliedFilter } from "@types/AppliedFilter";
 import { Student, StudentAttributes, StudentNames } from "@types/Student";
 
+const specialCharacters = new RegExp(
+  /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()（）%!~～`_\[\]\-\s]/g
+);
+
 function similarity(s1: string, s2: string): number {
   return 1 - distance(s1, s2) / Math.max(s1.length, s2.length);
+}
+
+function findPinyin(searchString: string, studentName: string) {
+  const studentNameWithoutSpecialCharacters = studentName.replaceAll(
+    specialCharacters,
+    ""
+  );
+  // only allow pinyin search if the studentName is in Chinese
+  if (
+    studentName.match(/^[\u4e00-\u9fa5]+$/) &&
+    searchString.match(/^[a-zA-Z]+$/)
+  ) {
+    const targetPinyin = match(
+      studentNameWithoutSpecialCharacters,
+      searchString,
+      { precision: "any" }
+    );
+    if (null !== targetPinyin) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function isPossibleName(
@@ -14,9 +41,6 @@ function isPossibleName(
     return res !== undefined;
   });
   let found = false;
-  const specialCharacters = new RegExp(
-    /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()%!\-\s]/g
-  );
   const lowerCaseSearchString = searchString
     .toLowerCase()
     .replaceAll(specialCharacters, "");
@@ -31,7 +55,7 @@ function isPossibleName(
         studentName.includes(lowerCaseSearchString) ||
         studentName.startsWith(lowerCaseSearchString) ||
         studentName.endsWith(lowerCaseSearchString) ||
-        "" === lowerCaseSearchString
+        findPinyin(lowerCaseSearchString, studentName)
       ) {
         found = true;
       }
