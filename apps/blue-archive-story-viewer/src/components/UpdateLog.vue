@@ -4,6 +4,27 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-07-01",
+    contents: [
+      {
+        type: "feat",
+        content: "在学生列表中，支持使用拼音搜索学生",
+      },
+      {
+        type: "fix",
+        content: "修正了剧情播放时，点击log跳转后有概率出现影分身的问题",
+      },
+      {
+        type: "fix",
+        content: "修正了剧情播放时，点击log跳转后人物位置有概率出现异常的问题",
+      },
+      {
+        type: "student",
+        students: [{ name: "空崎 日奈（泳装）", id: 10022 }],
+      },
+    ],
+  },
+  {
     date: "2023-06-27",
     contents: [
       {
@@ -39,10 +60,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "空崎 日奈", id: 10004 },
-          // { name: "空崎 日奈（泳装）", id: 10022 },
-        ],
+        students: [{ name: "空崎 日奈", id: 10004 }],
       },
       {
         type: "chore",
