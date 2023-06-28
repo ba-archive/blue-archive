@@ -129,5 +129,17 @@ export default defineConfig({
       toplevel: true,
       safari10: true,
     },
+    rollupOptions: {
+      // https://rollupjs.org/guide/en/#outputmanualchunks
+      output: {
+        manualChunks: {
+          archive: ["./src/components/archive/StudentSelector.vue"],
+          player: [
+            "./src/components/archive/StudentStoryPlayer.vue",
+            "./src/components/StoryViewer.vue",
+          ],
+        },
+      },
+    },
   },
 });

@@ -1,5 +1,4 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
-import StudentSelector from "@components/archive/StudentSelector.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -33,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
             { lang: "th", title: "เนื้อเรื่องสายใย" },
           ],
         },
-        component: StudentSelector,
+        component: () => import("../components/archive/StudentSelector.vue"),
         children: [
           {
             path: ":id",
