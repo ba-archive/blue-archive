@@ -1,9 +1,36 @@
 import { distance } from "fastest-levenshtein";
-import { AppliedFilter } from "../types/AppliedFilter";
-import { Student, StudentAttributes, StudentNames } from "../types/Student";
+import { match } from "pinyin-pro";
+import { AppliedFilter } from "@types/AppliedFilter";
+import { Student, StudentAttributes, StudentNames } from "@types/Student";
+
+const specialCharacters = new RegExp(
+  /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()（）%!~～`_\[\]\-\s]/g
+);
 
 function similarity(s1: string, s2: string): number {
   return 1 - distance(s1, s2) / Math.max(s1.length, s2.length);
+}
+
+function findPinyin(searchString: string, studentName: string) {
+  const studentNameWithoutSpecialCharacters = studentName.replaceAll(
+    specialCharacters,
+    ""
+  );
+  // only allow pinyin search if the studentName is in Chinese
+  if (
+    studentName.match(/^[\u4e00-\u9fa5]+$/) &&
+    searchString.match(/^[a-zA-Z]+$/)
+  ) {
+    const targetPinyin = match(
+      studentNameWithoutSpecialCharacters,
+      searchString,
+      { precision: "any" }
+    );
+    if (null !== targetPinyin) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function isPossibleName(
@@ -14,9 +41,6 @@ function isPossibleName(
     return res !== undefined;
   });
   let found = false;
-  const specialCharacters = new RegExp(
-    /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()%!\-\s]/g
-  );
   const lowerCaseSearchString = searchString
     .toLowerCase()
     .replaceAll(specialCharacters, "");
@@ -31,7 +55,7 @@ function isPossibleName(
         studentName.includes(lowerCaseSearchString) ||
         studentName.startsWith(lowerCaseSearchString) ||
         studentName.endsWith(lowerCaseSearchString) ||
-        "" === lowerCaseSearchString
+        findPinyin(lowerCaseSearchString, studentName)
       ) {
         found = true;
       }
@@ -42,7 +66,14 @@ function isPossibleName(
 
 function filterStudentsByProperty(
   property: string,
-  criteria: (string | number)[],
+  criteria:
+    | string
+    | ("Pierce" | "Explode" | "Mystic")[]
+    | undefined
+    | string[]
+    | ("LightArmor" | "HeavyArmor" | "Unarmed")[]
+    | ("Striker" | "Special")[]
+    | number[],
   initialList: Student[]
 ): Student[] {
   return initialList.filter((student: Student) =>
@@ -58,61 +89,37 @@ function filterStudents(
   studentsList: Student[]
 ): number[] {
   if (
-    "" === appliedFilters.searchString &&
-    0 === appliedFilters.rarity.length &&
-    0 === appliedFilters.club.length &&
-    0 === appliedFilters.affiliation.length &&
-    0 === appliedFilters.type.length &&
-    0 === appliedFilters.armorType.length &&
-    appliedFilters.bulletType &&
-    0 === appliedFilters.bulletType.length
+    Object.values(appliedFilters).every(
+      (filter: (string | number)[]) => 0 === filter.length
+    )
   ) {
     return studentsList.map(student => student.id);
   }
+
   let result = studentsList;
-  if (appliedFilters.searchString) {
-    const listFilteredByString: Student[] = [];
-    studentsList.forEach(student => {
-      if (
-        isPossibleName(
-          appliedFilters.searchString,
-          studentsNameList.find(s => s.id === student.id)?.allNames
-        )
-      ) {
-        listFilteredByString.push(student);
+  for (const key in appliedFilters) {
+    if ("searchString" === key) {
+      const listFilteredByString: Student[] = [];
+      studentsList.forEach(student => {
+        if (
+          isPossibleName(
+            appliedFilters.searchString,
+            studentsNameList.find(s => s.id === student.id)?.allNames
+          )
+        ) {
+          listFilteredByString.push(student);
+        }
+      });
+      result = listFilteredByString;
+    } else {
+      if (0 !== appliedFilters[key as keyof AppliedFilter].length) {
+        result = filterStudentsByProperty(
+          key,
+          appliedFilters[key as keyof AppliedFilter],
+          result
+        );
       }
-    });
-    result = listFilteredByString;
-  }
-  if (0 !== appliedFilters.rarity.length) {
-    result = filterStudentsByProperty("rarity", appliedFilters.rarity, result);
-  }
-  if (0 !== appliedFilters.club.length) {
-    result = filterStudentsByProperty("club", appliedFilters.club, result);
-  }
-  if (0 !== appliedFilters.affiliation.length) {
-    result = filterStudentsByProperty(
-      "affiliation",
-      appliedFilters.affiliation,
-      result
-    );
-  }
-  if (0 !== appliedFilters.type.length) {
-    result = filterStudentsByProperty("type", appliedFilters.type, result);
-  }
-  if (0 !== appliedFilters.armorType.length) {
-    result = filterStudentsByProperty(
-      "armorType",
-      appliedFilters.armorType,
-      result
-    );
-  }
-  if (appliedFilters.bulletType && 0 !== appliedFilters.bulletType.length) {
-    result = filterStudentsByProperty(
-      "bulletType",
-      appliedFilters.bulletType,
-      result
-    );
+    }
   }
 
   return result.map(student => student.id);
