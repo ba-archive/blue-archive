@@ -7,8 +7,8 @@ importers:
 
   ../../apps/ba-online-toolbox:
     specifiers:
-      '@csstools/css-parser-algorithms': ^2.1.0
-      '@csstools/css-tokenizer': ^2.1.0
+      '@csstools/css-parser-algorithms': 2.2.0
+      '@csstools/css-tokenizer': 2.1.1
       '@rushstack/eslint-patch': 1.3.2
       '@trivago/prettier-plugin-sort-imports': 4.1.1
       '@types/crypto-js': 4.1.1
@@ -18,15 +18,15 @@ importers:
       '@typescript-eslint/parser': 5.60.1
       '@vitejs/plugin-legacy': 4.0.5
       '@vitejs/plugin-vue': 4.2.3
-      '@vue/compiler-sfc': 3.x
+      '@vue/compiler-sfc': 3.3.4
       '@vue/eslint-config-typescript': 11.0.3
-      '@vueuse/core': ^10.2.0
-      '@vueuse/math': ^10.0.0
+      '@vueuse/core': 10.2.0
+      '@vueuse/math': 10.2.0
       axios: 1.4.0
       ba-story-player: workspace:*
       chalk: 5.2.0
       crypto-js: 4.1.1
-      element-plus: ^2.3.7
+      element-plus: 2.3.7
       eslint: 8.43.0
       eslint-config-prettier: 8.8.0
       eslint-plugin-import: 2.27.5
@@ -46,8 +46,8 @@ importers:
       sass: 1.63.6
       terser: 5.18.2
       typescript: 5.1.5
-      unplugin-auto-import: ^0.16.0
-      unplugin-vue-components: ^0.25.0
+      unplugin-auto-import: 0.16.4
+      unplugin-vue-components: 0.25.1
       vfonts: 0.0.3
       vite: 4.3.9
       vue: 3.3.4
@@ -106,15 +106,15 @@ importers:
 
   ../../apps/blue-archive-story-editor:
     specifiers:
-      '@commitlint/cli': ^16.1.0
-      '@commitlint/config-conventional': ^16.0.0
-      '@element-plus/icons-vue': ^2.0.10
-      '@iconify/json': ^2.0.29
-      '@intlify/vite-plugin-vue-i18n': ^6.0.0
+      '@commitlint/cli': 16.3.0
+      '@commitlint/config-conventional': 16.2.4
+      '@element-plus/icons-vue': 2.1.0
+      '@iconify/json': 2.2.80
+      '@intlify/vite-plugin-vue-i18n': 6.0.3
       '@types/express': ^4.17.15
       '@types/express-fileupload': ^1.4.1
       '@types/lodash': ^4.14.191
-      '@types/node': ^20.3.2
+      '@types/node': 20.3.2
       '@types/nprogress': ^0.2.0
       '@types/sortablejs': ^1.15.1
       '@types/svgo': ^2.6.1
@@ -122,43 +122,43 @@ importers:
       '@typescript-eslint/parser': 5.60.1
       '@vitejs/plugin-vue': 4.2.3
       '@vitejs/plugin-vue-jsx': 2.0.0
-      '@vue/runtime-core': ~3.3.4
-      '@vueuse/core': ^10.2.0
+      '@vue/runtime-core': 3.3.4
+      '@vueuse/core': 10.2.0
       axios: 1.4.0
       ba-story-player: workspace:*
-      body-parser: ^1.20.1
-      cors: ^2.8.5
-      dayjs: ^1.11.5
-      element-plus: ^2.3.7
+      body-parser: 1.20.2
+      cors: 2.8.5
+      dayjs: 1.11.8
+      element-plus: 2.3.7
       eslint: 8.43.0
       eslint-config-airbnb-base: ^15.0.0
       eslint-config-prettier: 8.8.0
       eslint-plugin-import: 2.27.5
       eslint-plugin-prettier: ^4.0.0
       eslint-plugin-vue: 9.15.1
-      express: ^4.18.2
+      express: 4.18.2
       express-fileupload: ^1.4.0
-      gantt-schedule-timeline-calendar: ^3.33.13
-      gsap: ^3.12.1
+      gantt-schedule-timeline-calendar: 3.33.15
+      gsap: 3.12.1
       lint-staged: ^12.3.2
-      lodash: ^4.17.21
+      lodash: 4.17.21
       markdown-it-link-attributes: ^4.0.0
       markdown-it-prism: ^2.2.2
-      mitt: ^3.0.0
-      nprogress: ^0.2.0
+      mitt: 3.0.0
+      nprogress: 0.2.0
       pinia: 2.1.4
       pinia-plugin-persistedstate: 3.1.0
-      pixi-spine: ^3.1.0
+      pixi-spine: 3.1.2
       pnpm: ^7.9.0
       prettier: 2.8.8
-      prism-theme-vars: ^0.2.4
+      prism-theme-vars: 0.2.4
       sass: 1.63.6
-      sortablejs: ^1.15.0
+      sortablejs: 1.15.0
       typescript: 5.1.5
-      unplugin-auto-import: ^0.16.0
-      unplugin-fonts: ^1.0.3
+      unplugin-auto-import: 0.16.4
+      unplugin-fonts: 1.0.3
       unplugin-icons: ^0.14.8
-      unplugin-vue-components: ^0.25.0
+      unplugin-vue-components: 0.25.1
       vite: 4.3.9
       vite-plugin-optimize-persist: ^0.1.2
       vite-plugin-package-config: ^0.1.1
@@ -169,8 +169,8 @@ importers:
       vite-svg-loader: ^3.4.0
       vue: 3.3.4
       vue-draggable-plus: ^0.1.3
-      vue-i18n: ^9.1.9
-      vue-responsive-video-background-player: ^2.3.1
+      vue-i18n: 9.2.2
+      vue-responsive-video-background-player: 2.3.1
       vue-router: 4.2.2
       vue-tsc: 1.8.2
     dependencies:
@@ -246,19 +246,19 @@ importers:
   ../../apps/blue-archive-story-viewer:
     specifiers:
       '@babel/preset-env': 7.22.5
-      '@csstools/css-parser-algorithms': ^2.1.0
-      '@csstools/css-tokenizer': ^2.1.0
+      '@csstools/css-parser-algorithms': 2.2.0
+      '@csstools/css-tokenizer': 2.1.1
       '@trivago/prettier-plugin-sort-imports': 4.1.1
-      '@types/node': ^20.3.2
+      '@types/node': 20.3.2
       '@types/toastify-js': 1.11.1
-      '@types/xxhashjs': ^0.2.2
+      '@types/xxhashjs': 0.2.2
       '@typescript-eslint/eslint-plugin': 5.60.1
       '@typescript-eslint/parser': 5.60.1
       '@vitejs/plugin-legacy': 4.0.5
       '@vitejs/plugin-vue': 4.2.3
-      '@vue/compiler-sfc': 3.x
+      '@vue/compiler-sfc': 3.3.4
       '@vue/eslint-config-typescript': 11.0.3
-      '@vueuse/core': ^10.2.0
+      '@vueuse/core': 10.2.0
       axios: 1.4.0
       axios-retry: 3.5.1
       ba-story-player: workspace:*
@@ -270,14 +270,14 @@ importers:
       eslint-plugin-vue: 9.15.1
       eslint-plugin-yaml: 0.5.0
       fastest-levenshtein: 1.0.16
-      gsap: ^3.12.1
-      husky: ^8.0.3
-      ismobilejs: ^1.1.1
+      gsap: 3.12.1
+      husky: 8.0.3
+      ismobilejs: 1.1.1
       js-yaml: 4.1.0
-      mitt: ^3.0.0
+      mitt: 3.0.0
       pinia: 2.1.4
       pinia-plugin-persistedstate: 3.1.0
-      pinyin-pro: ~3.15.2
+      pinyin-pro: 3.15.2
       postcss: 8.4.24
       postcss-plugin-px2rem: 0.8.1
       postcss-preset-env: 8.5.1
@@ -285,10 +285,9 @@ importers:
       sass: 1.63.6
       terser: 5.18.2
       toastify-js: 1.12.0
-      typed.js: ^2.0.12
+      typed.js: 2.0.16
       typescript: 5.1.5
       vite: 4.3.9
-      vite-plugin-clear-console: ^0.2.2
       vite-plugin-compression: 0.5.1
       vite-plugin-pwa: 0.16.4
       vue: 3.3.4
@@ -296,7 +295,7 @@ importers:
       vue-router: 4.2.2
       vue-tsc: 1.8.2
       workbox-window: 7.0.0
-      xxhashjs: ^0.2.2
+      xxhashjs: 0.2.2
     dependencies:
       '@vue/compiler-sfc': 3.3.4
       '@vueuse/core': 10.2.0_vue@3.3.4
@@ -345,7 +344,6 @@ importers:
       terser: 5.18.2
       typescript: 5.1.5
       vite: 4.3.9_a2dabcc93b52ca4a8b5c47d10a10d09c
-      vite-plugin-clear-console: 0.2.2
       vite-plugin-compression: 0.5.1_vite@4.3.9
       vite-plugin-pwa: 0.16.4_vite@4.3.9
       vue-eslint-parser: 9.3.1_eslint@8.43.0
@@ -354,21 +352,21 @@ importers:
 
   ../../lib/ba-story-player:
     specifiers:
-      '@pixi-spine/base': ^3.1.0
-      '@pixi/filter-adjustment': ^4.0.0
-      '@pixi/filter-advanced-bloom': ^4.0.0
-      '@pixi/filter-color-overlay': ^4.0.0
-      '@pixi/filter-crt': ^4.0.0
-      '@pixi/filter-motion-blur': ^4.2.0
-      '@pixi/particle-emitter': ^5.0.8
-      '@pixi/sound': <5.0.0
-      '@types/node': ^20.3.2
-      '@types/xxhashjs': ^0.2.2
+      '@pixi-spine/base': 3.1.2
+      '@pixi/filter-adjustment': 4.2.0
+      '@pixi/filter-advanced-bloom': 4.2.0
+      '@pixi/filter-color-overlay': 4.2.0
+      '@pixi/filter-crt': 4.2.0
+      '@pixi/filter-motion-blur': 4.2.0
+      '@pixi/particle-emitter': 5.0.8
+      '@pixi/sound': 4.4.0
+      '@types/node': 20.3.2
+      '@types/xxhashjs': 0.2.2
       '@typescript-eslint/eslint-plugin': 5.60.1
       '@typescript-eslint/parser': 5.60.1
       '@vitejs/plugin-vue': 4.2.3
       '@vue/eslint-config-typescript': 11.0.3
-      '@vueuse/core': ^10.2.0
+      '@vueuse/core': 10.2.0
       axios: 1.4.0
       eslint: 8.43.0
       eslint-config-prettier: 8.8.0
@@ -376,20 +374,20 @@ importers:
       eslint-plugin-sort-exports: 0.8.0
       eslint-plugin-vue: 9.15.1
       eslint-plugin-yaml: 0.5.0
-      gsap: ^3.12.1
-      mitt: ^3.0.0
-      pixi-spine: ^3.1.0
-      pixi.js: ^6.0.0
-      rollup-plugin-node-externals: ^5.1.2
+      gsap: 3.12.1
+      mitt: 3.0.0
+      pixi-spine: 3.1.2
+      pixi.js: 6.5.9
+      rollup-plugin-node-externals: 5.1.3
       sass: 1.63.6
       staged: ^0.0.0
       typescript: 5.1.5
       vite: 4.3.9
       vue: 3.3.4
       vue-eslint-parser: 9.3.1
-      vue-responsive-video-background-player: ^2.3.1
+      vue-responsive-video-background-player: 2.3.1
       vue-tsc: 1.8.2
-      xxhashjs: ^0.2.2
+      xxhashjs: 0.2.2
     dependencies:
       '@pixi-spine/base': 3.1.2
       '@pixi/filter-adjustment': 4.2.0
@@ -421,7 +419,7 @@ importers:
       eslint-plugin-sort-exports: registry.npmmirror.com/eslint-plugin-sort-exports/0.8.0_eslint@8.43.0
       eslint-plugin-vue: 9.15.1_eslint@8.43.0
       eslint-plugin-yaml: registry.npmmirror.com/eslint-plugin-yaml/0.5.0
-      rollup-plugin-node-externals: registry.npmmirror.com/rollup-plugin-node-externals/5.1.3
+      rollup-plugin-node-externals: 5.1.3
       sass: 1.63.6
       staged: 0.0.0
       typescript: 5.1.5
@@ -1025,12 +1023,12 @@ packages:
     resolution: {integrity: sha512-VLLsx06XkEYqBtE5YGPwfSGwfrjnyPP5oiGty3S8pQLFDFLaS8VwWSIxkTXpcvr5zeYLE6+MBNl2npl/YnfofA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dev: true
 
   /@babel/parser/7.22.5:
     resolution: {integrity: sha512-DFZMC9LJUG9PLOclRC32G63UXwzqS2koQC8dkx+PLdmt1xSePYpbT/NbsrJy8Q/muXz7o/h/d4A7Fuyixm559Q==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-    dev: true
 
   /@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.22.5:
     resolution: {integrity: sha512-NP1M5Rf+u2Gw9qfSO4ihjcTGW5zXTi36ITLd4/EoAcEhIZ0yjMqmftDNl3QC19CX7olhrjpyU454g/2W7X0jvQ==}
@@ -4636,19 +4634,19 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
     dev: true
 
   /@types/busboy/1.5.0:
     resolution: {integrity: sha512-ncOOhwmyFDW76c/Tuvv9MA9VGYUCn8blzyWmzYELcNGDb0WXWLSmFi7hJq25YdRBYJrmMBB5jZZwUjlJe9HCjQ==}
     dependencies:
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
     dev: true
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
     dev: true
 
   /@types/crypto-js/4.1.1:
@@ -4677,7 +4675,7 @@ packages:
   /@types/express-serve-static-core/4.17.35:
     resolution: {integrity: sha512-wALWQwrgiB2AWTT91CB62b6Yt0sNHpznUXeZEcnPU3DRdlDIz74x8Qg1UUYKSVFi+va5vKOLYRBI1bRKiLLKIg==}
     dependencies:
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
       '@types/send': 0.17.1
@@ -4747,10 +4745,6 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node/18.16.16:
-    resolution: {integrity: sha512-NpaM49IGQQAUlBhHMF82QH80J08os4ZmyF9MkpCzWAGuOHqE4gTEbhzd7L3l5LmWuZ6E0OiC1FweQ4tsiW35+g==}
-    dev: true
-
   /@types/node/20.3.2:
     resolution: {integrity: sha512-vOBLVQeCQfIcF/2Y7eKFTqrMnizK5lRNQ7ykML/5RuwVXVWxYkgwS7xbt4B6fKCUPgbSL5FSsjHQpaGQP/dQmw==}
     dev: true
@@ -4793,14 +4787,14 @@ packages:
     resolution: {integrity: sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
     dev: true
 
   /@types/serve-static/1.15.1:
     resolution: {integrity: sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==}
     dependencies:
       '@types/mime': 3.0.1
-      '@types/node': 18.16.16
+      '@types/node': 20.3.2
     dev: true
 
   /@types/sortablejs/1.15.1:
@@ -5054,7 +5048,7 @@ packages:
   /@vue/compiler-core/3.3.4:
     resolution: {integrity: sha512-cquyDNvZ6jTbf/+x+AgM2Arrp6G4Dzbb0R64jiG804HRMfRiFXWI6kqUVqZ6ZR0bQhIoQjB4+2bhNtVwndW15g==}
     dependencies:
-      '@babel/parser': 7.22.4
+      '@babel/parser': 7.22.5
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       source-map-js: 1.0.2
@@ -5068,7 +5062,7 @@ packages:
   /@vue/compiler-sfc/3.3.4:
     resolution: {integrity: sha512-6y/d8uw+5TkCuzBkgLS0v3lSM3hJDntFEiUORM11pQ/hKvkhSKZrXW6i69UyXlJQisJxuUEJKAWEqWbWsLeNKQ==}
     dependencies:
-      '@babel/parser': 7.22.4
+      '@babel/parser': 7.22.5
       '@vue/compiler-core': 3.3.4
       '@vue/compiler-dom': 3.3.4
       '@vue/compiler-ssr': 3.3.4
@@ -5132,7 +5126,7 @@ packages:
   /@vue/reactivity-transform/3.3.4:
     resolution: {integrity: sha512-MXgwjako4nu5WFLAjpBnCj/ieqcjE2aJBINUNQzkZQfzIZA4xn+0fV1tIYBJvvva3N3OvKGofRLvQIwEQPpaXw==}
     dependencies:
-      '@babel/parser': 7.22.4
+      '@babel/parser': 7.22.5
       '@vue/compiler-core': 3.3.4
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
@@ -8336,7 +8330,7 @@ packages:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
     dependencies:
-      '@babel/code-frame': 7.21.4
+      '@babel/code-frame': 7.22.5
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -9173,6 +9167,13 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rollup-plugin-node-externals/5.1.3:
+    resolution: {integrity: sha512-Q3VMjsn39r0/mjKrX++rFlC7kwL7YZdScdyU7BEo+PrEremal3mnol/1X+wQUU++7NeqC1ZNAeRYnHGtsTu9GQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.60.0 || ^3.0.0
     dev: true
 
   /rollup-plugin-terser/7.0.2_rollup@2.79.1:
@@ -10152,10 +10153,6 @@ packages:
 
   /vfonts/0.0.3:
     resolution: {integrity: sha512-nguyw8L6Un8eelg1vQ31vIU2ESxqid7EYmy8V+MDeMaHBqaRSkg3dTBToC1PR00D89UzS/SLkfYPnx0Wf23IQQ==}
-    dev: true
-
-  /vite-plugin-clear-console/0.2.2:
-    resolution: {integrity: sha512-2CjpF2hod0DOVSgeUtmGv8kljp3PBx/Tyec85qi8rjrLLopjvJ8Lvvb0FbcwguD3cyjVK2QYZRjh5ZtjXKzROQ==}
     dev: true
 
   /vite-plugin-compression/0.5.1_vite@4.3.9:
@@ -11689,15 +11686,6 @@ packages:
       is-core-module: registry.npmmirror.com/is-core-module/2.12.1
       path-parse: registry.npmmirror.com/path-parse/1.0.7
       supports-preserve-symlinks-flag: registry.npmmirror.com/supports-preserve-symlinks-flag/1.0.0
-    dev: true
-
-  registry.npmmirror.com/rollup-plugin-node-externals/5.1.3:
-    resolution: {integrity: sha512-Q3VMjsn39r0/mjKrX++rFlC7kwL7YZdScdyU7BEo+PrEremal3mnol/1X+wQUU++7NeqC1ZNAeRYnHGtsTu9GQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup-plugin-node-externals/-/rollup-plugin-node-externals-5.1.3.tgz}
-    name: rollup-plugin-node-externals
-    version: 5.1.3
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.60.0 || ^3.0.0
     dev: true
 
   registry.npmmirror.com/safe-regex-test/1.0.0:
