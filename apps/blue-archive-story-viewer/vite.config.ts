@@ -4,7 +4,6 @@ import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
-import clearConsole from "vite-plugin-clear-console";
 import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
 import legacy from "@vitejs/plugin-legacy";
@@ -114,10 +113,6 @@ export default defineConfig({
       // uncomment to unregister service worker
       selfDestroying: true,
     }),
-    {
-      ...clearConsole(),
-      apply: "build",
-    },
     // viteCompression(),
     //@ts-ignore
     visualizer(),
