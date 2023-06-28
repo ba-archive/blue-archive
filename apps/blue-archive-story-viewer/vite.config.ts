@@ -133,7 +133,7 @@ export default defineConfig({
       // https://rollupjs.org/guide/en/#outputmanualchunks
       output: {
         manualChunks: {
-          archive: ["./src/components/archive/StudentSelector.vue"],
+          // archive: ["./src/components/archive/StudentSelector.vue"],
           // 对首屏加载性能影响过大，应该单独 async import
           // player: [
           //   "./src/components/archive/StudentStoryPlayer.vue",
