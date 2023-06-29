@@ -195,7 +195,7 @@ export function generateTitleInfo(
   const text = getText(rawStoryUnit, language);
   // 第114话;这是514个主标题
   // [这是514个主标题, 第114话]
-  const spiltText = text.split(";").reverse();
+  const spiltText = text.split(/(?<!\\)[;；]/g).reverse();
   const rawTitle = spiltText[0];
   const title = parseNxMagicTag(rawTitle);
   return {
