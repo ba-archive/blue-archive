@@ -19,7 +19,7 @@ const initTheme =
     ? "dark"
     : "light";
 
-toggleTheme(initTheme);
+// toggleTheme(initTheme);
 
 function handleThemeChange(event: MediaQueryListEvent) {
   const { matches } = event;

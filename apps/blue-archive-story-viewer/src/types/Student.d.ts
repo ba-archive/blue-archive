@@ -1,5 +1,3 @@
-/* eslint-disable sort-exports/sort-exports */
-
 export interface Student {
   id: number;
   familyName: StudentName;
@@ -27,12 +25,6 @@ export interface Student {
     | "MG"
     | "MT"
     | "FT";
-}
-
-export interface StudentName {
-  cn: string;
-  jp: string;
-  en: string;
 }
 
 export interface StudentAttributeFilters {
@@ -73,6 +65,12 @@ export interface StudentFilters {
   type: ("Striker" | "Special")[];
   armorType: ("LightArmor" | "HeavyArmor" | "Unarmed")[];
   bulletType?: ("Pierce" | "Explode" | "Mystic")[];
+}
+
+export interface StudentName {
+  cn: string;
+  jp: string;
+  en: string;
 }
 
 export interface StudentNames {
