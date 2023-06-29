@@ -7,13 +7,13 @@
     @click="toggleSwitch"
     @keydown.space="toggleSwitch"
     @keydown.enter="toggleSwitch"
-    v-calculate-width="'track'"
+    ref="switchTrackElement"
     :aria-label="accessibilityLabel"
   >
     <div class="neu-switch__paddle">
       <div
         class="neu-switch__thumb"
-        v-calculate-width="'thumb'"
+        ref="switchThumbElement"
         :style="thumbPositionStyle"
       ></div>
     </div>
@@ -21,23 +21,15 @@
 </template>
 
 <script setup lang="ts">
-import { Directive, DirectiveBinding, computed, ref, watch } from 'vue';
+import { computed, ref, watch } from "vue";
+import { useElementSize } from "@vueuse/core";
 
-const switchWidth = ref({
-  track: 0,
-  thumb: 0,
-});
+const switchTrackElement = ref<HTMLElement | null>(null);
+const switchThumbElement = ref<HTMLElement | null>(null);
 
-// 计算拨片和轨道宽度，以便计算拨片位置
-const vCalculateWidth: Directive = {
-  mounted(el: HTMLElement, binding: DirectiveBinding) {
-    if ('thumb' === binding.value) {
-      switchWidth.value.thumb = el.offsetWidth;
-    } else {
-      switchWidth.value.track = el.offsetWidth;
-    }
-  },
-};
+const { width: switchTrackWidth } = useElementSize(switchTrackElement);
+const { width: switchThumbWidth } = useElementSize(switchThumbElement);
+
 const props = withDefaults(
   defineProps<{
     checked?: boolean;
@@ -49,7 +41,7 @@ const props = withDefaults(
     checked: false,
     checkedValue: true,
     uncheckedValue: false,
-    accessibilityLabel: 'Switch',
+    accessibilityLabel: "Switch",
   }
 );
 
@@ -64,15 +56,17 @@ watch(
 );
 
 const thumbPositionStyle = computed(() => {
-  const trackWidth = switchWidth.value.track;
-  const thumbWidth = switchWidth.value.thumb;
+  const trackWidth = switchTrackWidth.value;
+  const thumbWidth = switchThumbWidth.value;
   const thumbPosition = shouldSwitchOn.value ? trackWidth - thumbWidth : 0;
   return {
     transform: `translate3D(${thumbPosition}px, 0, 0)`,
   };
 });
 
-const emit = defineEmits(['update:value']);
+const emit = defineEmits<{
+  (event: "update:value", value: boolean | string | number): void;
+}>();
 
 function toggleSwitch() {
   shouldSwitchOn.value = !shouldSwitchOn.value;
@@ -81,7 +75,7 @@ function toggleSwitch() {
     emitValueFalse: props.uncheckedValue ?? false,
   };
   emit(
-    'update:value',
+    "update:value",
     shouldSwitchOn.value
       ? availableEmitValues.emitValueTrue
       : availableEmitValues.emitValueFalse
