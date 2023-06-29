@@ -16,6 +16,10 @@ const updateLogs: UpdateLog[] = [
       },
       {
         type: "fix",
+        content: "修正了 Vol. 3《伊甸条约》第一章第四话无法正常播放的问题",
+      },
+      {
+        type: "fix",
         content: "修正了剧情播放时，点击log跳转后人物位置有概率出现异常的问题",
       },
       {
