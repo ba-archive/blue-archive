@@ -110,7 +110,6 @@ export function buildNxAST(rawText: string) {
     }
   }
   function chars(text: string) {
-    text = text.trim();
     if (text.length > 0) {
       currentParent.children.push({
         tag: "text",
