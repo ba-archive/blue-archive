@@ -77,7 +77,8 @@ function filterStudentsByProperty(
   initialList: Student[]
 ): Student[] {
   return initialList.filter((student: Student) =>
-    criteria.includes(
+    criteria?.includes(
+      // @ts-ignore
       student[property as keyof StudentAttributes] as string | number
     )
   );
@@ -112,7 +113,7 @@ function filterStudents(
       });
       result = listFilteredByString;
     } else {
-      if (0 !== appliedFilters[key as keyof AppliedFilter].length) {
+      if (0 !== appliedFilters?.[key as keyof AppliedFilter]?.length) {
         result = filterStudentsByProperty(
           key,
           appliedFilters[key as keyof AppliedFilter],
