@@ -9,33 +9,20 @@ interface FriendLink {
 }
 const links: FriendLink[] = [
   {
-    title: "碧蓝档案资讯站",
-    url: "https://space.bilibili.com/37507923",
-    logo: "/image/contributor/zixunzhan.webp",
-    logoDescription: "资讯站logo",
-    description: "为玩家服务的民间组织，尊重官方设定",
+    title: "本镜像仓库",
+    url: "https://github.com/xiaofeiTM233/blue-archive",
+    logo: "/image/contributor/github-logo.svg",
+    logoDescription: "GitHub logo",
+    shouldReverseOnDarkTheme: true,
+    description: "本镜像仓库",
   },
   {
-    title: "项目公告板 (bilibili)",
-    url: "https://space.bilibili.com/1413213021",
-    logo: "/favicon/apple-touch-icon.png",
-    logoDescription: "项目logo",
-    description: "更新公告等内容发布",
-  },
-  {
-    title: "项目仓库",
+    title: "原项目仓库",
     url: "https://github.com/ba-archive/blue-archive",
     logo: "/image/contributor/github-logo.svg",
     logoDescription: "GitHub logo",
     shouldReverseOnDarkTheme: true,
-    description: "欢迎前端、美术、Unity等同学加入",
-  },
-  {
-    title: "CloudFlare",
-    url: "https://www.cloudflare.com/",
-    logo: "/image/contributor/cloudflare.svg",
-    logoDescription: "CloudFlare logo",
-    description: "为本站提供 CDN 服务",
+    description: "原项目仓库",
   },
 ];
 </script>
