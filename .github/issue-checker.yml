@@ -23,7 +23,7 @@ labels:
   - name: story-player
     mode: add
     content: "module: story-player"
-    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)|(特效|[Ee][Ff]{2}[Ee][Cc][Tt])|人物重复|影(分身|流)|[Ll]([Ii][Vv][Ee])? ?2[Dd]|[声语]音"
+    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)|(特效|[Ee][Ff]{2}[Ee][Cc][Tt])|人物重复|影(分身|流)|[Ll]([Ii][Vv][Ee])? ?2[Dd]|[声语]音|播放"
   - name: story-editor
     mode: add
     content: "module: story-editor"
