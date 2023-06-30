@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Ref, computed, ref } from "vue";
-import NeuTitleBar from "../widgets/NeuUI/NeuTitleBar.vue";
 import { useSettingsStore } from "@store/settings";
 import { Language } from "@types/Settings";
 import { StoryBriefing } from "@types/StoryJson";
+import NeuTitleBar from "@widgets/NeuUI/NeuTitleBar.vue";
 import StoryBriefBlock from "./StoryBriefBlock.vue";
 
 const settingsStore = useSettingsStore();
@@ -50,7 +50,7 @@ function handleOpenChapters(index: number) {
       @clicked="handleOpenChapters(index)"
     />
     <router-link
-      v-for="section in sections"
+      v-for="(section, storyOrder) in sections"
       :to="`/mainStory/${section.story_id}`"
       v-show="openChapters.includes(index)"
       :key="section.story_id"
@@ -58,6 +58,7 @@ function handleOpenChapters(index: number) {
       <story-brief-block
         :title="getTitleText(section.title, language)"
         :avatar="avatar"
+        :storyOrder="storyOrder"
         :description="section.summary"
       />
     </router-link>
