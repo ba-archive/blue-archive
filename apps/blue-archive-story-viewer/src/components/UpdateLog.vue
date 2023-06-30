@@ -23,6 +23,10 @@ const updateLogs: UpdateLog[] = [
         content: "修正了剧情播放时，点击log跳转后人物位置有概率出现异常的问题",
       },
       {
+        type: "fix",
+        content: "在移动端，菜单弹出时将不再重置暗色模式状态",
+      },
+      {
         type: "student",
         students: [{ name: "空崎 日奈（泳装）", id: 10022 }],
       },
