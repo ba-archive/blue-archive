@@ -15,7 +15,7 @@ defineProps<{
   sections: StoryBriefing["sections"];
 }>();
 
-const openChapters: Ref<number[]> = ref([1]);
+const openChapters: Ref<number[]> = ref([2]);
 const language = computed(() => settingsStore.getLang);
 
 function getTitleText(
