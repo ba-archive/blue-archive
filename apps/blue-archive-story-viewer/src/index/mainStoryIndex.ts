@@ -51,7 +51,7 @@ export const stories: StoryBriefing[] = [
       TextEn: "Vol.3 Eden Treaty Chapter 1",
       TextTw: "Vol.3 伊甸條約篇 第1章",
     },
-    avatar: "/image/story_cover/eden_treaty.webp",
+    avatar: "/image/story_cover/eden_treaty_chapter1.webp",
     sections: [
       {
         title: {
@@ -522,7 +522,7 @@ export const stories: StoryBriefing[] = [
       TextEn: "Vol.3 Eden Treaty Chapter 2",
       TextTw: "Vol.3 伊甸條約篇 第2章",
     },
-    avatar: "/image/story_cover/eden_treaty.webp",
+    avatar: "/image/story_cover/eden_treaty_chapter2.webp",
     sections: [
       {
         title: {
@@ -546,7 +546,8 @@ export const stories: StoryBriefing[] = [
             "彌香認為渚想利用伊甸園條約來換取一些好處，倘若想要阻止渚，他們就必須想辦法保護好梓。說完，彌香要老師自己選擇到底要相信她說的話，還是渚說的話。",
           TextEn:
             "Mika says that Nagisa is after something using the Eden Treaty. Claiming that Azusa must be protected in order to stop Nagisa, Mika asks Sensei to choose whether to trust her or to trust Nagisa.",
-          TextCn: "",
+          TextCn:
+            "未花告诉老师，渚在签订伊甸条约这件事上可能别有所图。未花说着自己的目的，并告诉老师希望他能保护好梓。最后她说，是相信渚还是要相信自己由老师自己决定。",
         },
       },
       {
@@ -572,7 +573,8 @@ export const stories: StoryBriefing[] = [
             "為了替一名碰巧被梓救下的一名學生道謝，瑪麗特地前往別館尋找補課部。當天深夜，為了討論日後的計畫，老師和日步美約好私下見面，然而最後出現在老師眼前的卻是花子，未來的走向似乎越來越令人無法捉摸。",
           TextEn:
             "Mari makes her way to the Make-Up Work Club to offer thanks on behalf of the student that Azusa recently saved. Later, Sensei is waiting to discuss the future with Hifumi when Hanako arrives and the situation takes an unexpected turn.",
-          TextCn: "",
+          TextCn:
+            "某一天，修女会的玛丽访问了补习部的合宿处。她似乎是代替某位之前被梓帮助过的学生来表达感谢的。当天晚上，日富美找老师商量之后的事情，没想到……？",
         },
       },
       {
@@ -598,7 +600,8 @@ export const stories: StoryBriefing[] = [
             "花子來找老師本來是想討論梓的事，然而她卻意外從日步美口中得知只要有人沒通過考試，他們所有人都會被退學的殘酷事實。花子認為這一切都是渚的計謀，並且誓言要幫助補課部度過難關。對於自己身為三人秘密小團體一員的事，花子顯得有些雀躍。",
           TextEn:
             "Hanako learns from Hifumi that failing will result in all of them getting expelled from school. Deducing that this was Nagisa's aim all along, Hanako declares that she will try harder going forward and is delighted that the three of them have formed a secret society.",
-          TextCn: "",
+          TextCn:
+            "花子原来是因为担心梓的情况才找老师商量这件事的。在谈话中，日富美透露了“如果三次考试不及格的话就要全部退学”，花子从这个事实中推测出了更深层的情况。听完日富美的说明后，花子宣称之后在考试中会努力不给大家添麻烦，并且看起来对这种夜晚的密会表现得很开心。然而她与日富美一起走出老师的房间时，被正要去洗手间的小春发现了……？",
         },
       },
       {
@@ -624,7 +627,8 @@ export const stories: StoryBriefing[] = [
             "因為一場突如其來的大雨，補課部的成員紛紛被淋成了落湯雞。在迫不得已的情況下，補課部決定以泳裝座談會代替原本的課程。度過了一段平凡無奇卻令人懷念的悠閒時光後，補課部的成員們決定一起去散步。",
           TextEn:
             "Rain drenches the Make-Up Work Club's laundry and they have no choice but to take a day off from studying and hold a swimsuit symposium instead. After experiencing their first enjoyable day in a while, they all decide to go out together on a nighttime walk.",
-          TextCn: "",
+          TextCn:
+            "突如其来的大雨把补习部所有人洗好的衣服全淋湿了。没有其他衣服穿的补习部成员决定一起开一个泳装派对来代替睡衣派对。彼此之间的关系比以往来得更加亲密的女生们谈论着各种事情，度过了一段学生的快乐时光。之后他们一同决定趁着合宿的大好机会，一起进行一回合宿的保留项目——在夜晚悄悄离开宿舍出去散步。",
         },
       },
       {
@@ -651,7 +655,7 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Koharu expresses pity for Hanako and Azusa when Sensei takes them to the Make-Up Work Club. However it turns out Koharu has also been transferred to the Make-Up Work Club because of her failing grades. Finally, all of the students of the Make-Up Work Club gather, including a frustrated Koharu.",
           TextCn:
-            "对于老师想把花子与梓带走的举动，正义实现委员会的小春反应十分激烈。前辈莲见学姐尝试说服小春时，小春揶揄道“加入补习部丢死人了”，结果发现自己也是补习部的一员。尽管小春自己也被自己的发言波及到，但补习部的成员总算到齐了。",
+            "老师想把花子和梓带走，却遭到了小春的强烈反对。在前辈莲见的劝说过程中，小春嘲讽道“还去补习部也太丢人了”，然而很快她就发现自己也成为了补习部的一员。就这样，加上被自己的发言伤害到的小春，补习部成员们终于到齐了。",
         },
       },
       {
