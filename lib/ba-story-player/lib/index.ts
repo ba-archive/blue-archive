@@ -544,7 +544,7 @@ export async function init(
 
   // 记录加载开始时间 优化光速加载的体验
   const startLoadTime = Date.now();
-  eventBus.emit("startLoading", props.dataUrl);
+  eventBus.emit("startLoading", { url: props.dataUrl });
   //加载剩余资源
   await resourcesLoader.addLoadResources();
   resourcesLoader.load(() => {

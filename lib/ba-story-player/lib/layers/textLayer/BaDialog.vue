@@ -28,7 +28,7 @@
               加载资源:{{ e.resourceName }}
             </span>
             <span v-else class="loading-log-item-error">
-              加载错误:{{ e.resourceName }}
+              错误:{{ e.resourceName }}
             </span>
           </div>
         </div>
@@ -210,6 +210,7 @@ import TypingEmitter from "./utils/typingEmitter";
 import StUnit from "@/layers/textLayer/components/StUnit.vue";
 import { Text } from "@/types/common";
 import {
+  LoadingImageUrl,
   ResourceLoadState,
   ShowText,
   ShowTitleOption,
@@ -618,13 +619,19 @@ function handlePopupClose() {
  * 播放加载动画
  * @param dataUrl
  */
-function handleStartLoading(dataUrl: string) {
+function handleStartLoading(url: LoadingImageUrl) {
+  loadLog.value = [];
   if (loadingImageSrc.value) {
     return;
   }
-  const loadingImageIndex = Math.floor(Math.random() * 40);
-  loadingImageSrc.value = `${dataUrl}/loading/${loadingImageIndex}.webp`;
+  if (url.restrict) {
+    loadingImageSrc.value = url.url;
+  } else {
+    const loadingImageIndex = Math.floor(Math.random() * 40);
+    loadingImageSrc.value = `${url.url}/loading/${loadingImageIndex}.webp`;
+  }
   showLoading.value = true;
+  
 }
 
 /**
@@ -638,7 +645,7 @@ function handleOneResourceLoaded(state: ResourceLoadState) {
     lastUrlPathIndex === -1 ? 0 : lastUrlPathIndex,
     state.resourceName.length
   );
-  loadLog.value.push({
+  loadLog.value.splice(0, 0, {
     type: state.type,
     resourceName: resourceName,
   });
@@ -649,6 +656,9 @@ function handleOneResourceLoaded(state: ResourceLoadState) {
  */
 function handleEndLoading() {
   showLoading.value = false;
+  nextTick(() => {
+    loadingImageSrc.value = "";
+  });
 }
 const fontSizeBounds = computed(() => props.playerHeight / 1080);
 const stWidth = 3000;
@@ -686,8 +696,7 @@ const titleBorderPadding = computed(
 );
 const loadLog = ref<ResourceLoadState[]>([]);
 const mapLoadLog = computed(() =>
-  deepCopyObject(loadLog.value)
-    .reverse()
+  loadLog.value
     .slice(0, 4)
     .map(it => it || { type: "success", resourceName: "" })
 );
@@ -705,12 +714,16 @@ function exitPreventInteract() {
   preventInteract.value = false;
 }
 function simulateUiClick() {
+  // 导致onStContainerClick和simulateUiClick事件重复发送
+  if (stText.value.length > 0) {
+    return;
+  }
   eventBus.emit("click");
 }
 function onStContainerClick() {
   // st层和dialog同时出现的情况, 由于st会覆盖到text上面导致点击对话框无法next
   if (stText.value.length && dialogText.value.length) {
-    simulateUiClick();
+    eventBus.emit("click");
   }
 }
 onMounted(() => {
@@ -1175,10 +1188,10 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     .loading-log-item {
       color: grey;
     }
-    .loading-log-item-success {
-    }
+    // .loading-log-item-success {
+    // }
     .loading-log-item-error {
-      color: red;
+      color: #FF3A30;
     }
   }
 }
