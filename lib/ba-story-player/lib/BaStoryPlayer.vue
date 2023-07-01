@@ -269,7 +269,14 @@ onMounted(() => {
       );
       emit("end");
     },
-    () => emit("error")
+    () => {
+      eventBus.emit("startLoading", { url: `${props.dataUrl}/loading/404.webp`, restrict: true });
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: "剧情对象中的 \"content\" 不能为 undefined",
+      });
+      emit("error");
+    }
   );
   if (props.startFullScreen) {
     updateFullScreenState();
