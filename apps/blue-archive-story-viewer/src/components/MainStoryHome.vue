@@ -23,7 +23,9 @@ import { stories } from "@index/mainStoryIndex";
 
 const route = useRoute();
 
-const releasedStories = stories.filter(story => story?.released);
+const releasedStories = stories.filter(story =>
+  [undefined, true].includes(story?.released)
+);
 
 const isStorySelected = computed(() => !/\/mainStory\/?$/.test(route.path));
 </script>
