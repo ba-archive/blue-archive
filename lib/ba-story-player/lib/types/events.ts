@@ -8,6 +8,17 @@ import {
 } from "./excels";
 import { OtherSounds } from "./resources";
 
+export interface BgParams {
+  /**
+   * 背景图片 url
+   */
+  url: string;
+  /**
+   * 以覆盖原来背景的方式显示新背景, 值为渐变时间
+   */
+  overlap?: number;
+}
+
 export type Events = {
   //通用
   /**
@@ -220,9 +231,9 @@ export type Events = {
   click: undefined;
   /**
    * 开始播放加载动画
-   * @param string 资源地址
+   * @param LoadingImageUrl 资源地址
    */
-  startLoading: string;
+  startLoading: LoadingImageUrl;
   /**
    * 某个资源加载完成或失败
    */
@@ -233,16 +244,33 @@ export type Events = {
   loaded: undefined;
 };
 
-export interface BgParams {
-  /**
-   * 背景图片 url
-   */
+/**
+ * url: 资源地址
+ * restrict: 是否唯一 true时只加载url, 否则加载以url为基址的随机loading图片
+ */
+export type LoadingImageUrl = {
   url: string;
-  /**
-   * 以覆盖原来背景的方式显示新背景, 值为渐变时间
-   */
-  overlap?: number;
+  restrict?: boolean;
+};
+
+export interface PlayAudio {
+  bgm?: {
+    url: string;
+    bgmArgs: BGMExcelTableItem;
+  };
+  soundUrl?: string;
+  voiceJPUrl?: string;
 }
+
+export interface PlayEffect {
+  BGEffect?: BGEffectExcelTableItem;
+  otherEffect: Effect[];
+}
+
+export type ResourceLoadState = {
+  type: "success" | "fail";
+  resourceName: string;
+};
 
 export interface ShowCharacter {
   /**
@@ -255,13 +283,17 @@ export interface ShowCharacter {
   // characterEffects: CharacterEffect[]
 }
 
-export interface PlayAudio {
-  bgm?: {
-    url: string;
-    bgmArgs: BGMExcelTableItem;
-  };
-  soundUrl?: string;
-  voiceJPUrl?: string;
+export interface ShowOption {
+  /**
+   * 剧情原始结构SelectionGroup, 请作为next的参数
+   */
+  SelectionGroup: number;
+  /**
+   * 选项文本
+   */
+  text: Text[];
+  /** 当前剧情进度 */
+  index: number;
 }
 
 export interface ShowText {
@@ -281,6 +313,12 @@ export interface ShowText {
   index?: number;
 }
 
+export interface ShowTitleOption {
+  title: Text[];
+  subtitle?: string;
+  translator?: string;
+}
+
 /**
  * st特效参数, 第一个为位置, 第二个为显示效果
  */
@@ -296,33 +334,4 @@ export interface StText {
    */
   stArgs: StArgs;
   middle: boolean;
-}
-
-export interface ShowOption {
-  /**
-   * 剧情原始结构SelectionGroup, 请作为next的参数
-   */
-  SelectionGroup: number;
-  /**
-   * 选项文本
-   */
-  text: Text[];
-  /** 当前剧情进度 */
-  index: number;
-}
-
-export interface PlayEffect {
-  BGEffect?: BGEffectExcelTableItem;
-  otherEffect: Effect[];
-}
-
-export interface ShowTitleOption {
-  title: Text[];
-  subtitle?: string;
-  translator?: string;
-}
-
-export interface ResourceLoadState {
-  type: "success" | "fail";
-  resourceName: string;
 }

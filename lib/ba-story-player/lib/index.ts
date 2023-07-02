@@ -12,6 +12,7 @@ import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
+import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 let playerStore: ReturnType<typeof usePlayerStore>;
@@ -164,7 +165,41 @@ export const eventEmitter = {
     this.showCharacter();
     this.show();
 
-    const currentStoryUnit = storyHandler.currentStoryUnit;
+    this.actionByUnitType();
+
+    const startTime = Date.now();
+    const checkEffectDone = new Promise<void>((resolve, reject) => {
+      const interval = setInterval(() => {
+        if (storyHandler.isEnd) {
+          resolve();
+        }
+        if (this.unitDone) {
+          clearInterval(interval);
+          resolve();
+        } else if (Date.now() - startTime >= 50000) {
+          for (const key of Object.keys(eventEmitter) as Array<
+            keyof typeof eventEmitter
+          >) {
+            if (key.endsWith("Done") && key !== "unitDone") {
+              if (!eventEmitter[key]) {
+                console.error(`${key}未完成: `);
+              }
+            }
+          }
+          console.warn(
+            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
+            storyHandler.currentStoryUnit
+          );
+          reject();
+          clearInterval(interval);
+        }
+      });
+    });
+    await checkEffectDone;
+  },
+
+  actionByUnitType(currentStoryUnit?: StoryUnit) {
+    currentStoryUnit = currentStoryUnit ?? storyHandler.currentStoryUnit;
     switch (currentStoryUnit.type) {
       case "title":
         this.titleDone = false;
@@ -241,36 +276,6 @@ export const eventEmitter = {
       default:
         console.log(`本体中尚未处理${currentStoryUnit.type}类型故事节点`);
     }
-
-    const startTime = Date.now();
-    const checkEffectDone = new Promise<void>((resolve, reject) => {
-      const interval = setInterval(() => {
-        if (storyHandler.isEnd) {
-          resolve();
-        }
-        if (this.unitDone) {
-          clearInterval(interval);
-          resolve();
-        } else if (Date.now() - startTime >= 50000) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
-          console.warn(
-            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
-          );
-          reject();
-          clearInterval(interval);
-        }
-      });
-    });
-    await checkEffectDone;
   },
 
   clearSt() {
@@ -314,10 +319,14 @@ export const eventEmitter = {
    */
   showCharacter(currentStoryUnit?: StoryUnit) {
     currentStoryUnit = currentStoryUnit || storyHandler.currentStoryUnit;
-    if (storyHandler.currentStoryUnit.characters.length !== 0) {
+    if (currentStoryUnit.characters.length !== 0) {
       this.characterDone = false;
       eventBus.emit("showCharacter", {
         characters: storyHandler.currentStoryUnit.characters,
+      });
+    } else {
+      setTimeout(() => {
+        eventBus.emit("characterDone");
       });
     }
   },
@@ -524,6 +533,9 @@ export async function init(
   //加载初始化资源以便翻译层进行翻译
   await resourcesLoader.init(app.loader);
   privateState.allStoryUnit = translate(props.story);
+  privateState.stackStoryUnit = buildStoryIndexStackRecord(
+    privateState.allStoryUnit
+  );
   bgInit();
   characterInit();
   soundInit();
@@ -532,7 +544,7 @@ export async function init(
 
   // 记录加载开始时间 优化光速加载的体验
   const startLoadTime = Date.now();
-  eventBus.emit("startLoading", props.dataUrl);
+  eventBus.emit("startLoading", { url: props.dataUrl });
   //加载剩余资源
   await resourcesLoader.addLoadResources();
   resourcesLoader.load(() => {

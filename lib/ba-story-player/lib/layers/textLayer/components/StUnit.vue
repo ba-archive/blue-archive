@@ -56,6 +56,9 @@ function doTyping(index?: string) {
       .then(() => {
         notifyComplete();
       });
+  } else if (props.config.text.length === 0) {
+    notifyComplete();
+    return;
   }
   TypingEmitter.emit("start", props.index + "-0");
 }

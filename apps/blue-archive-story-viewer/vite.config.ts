@@ -4,7 +4,6 @@ import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
-import clearConsole from "vite-plugin-clear-console";
 import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
 import legacy from "@vitejs/plugin-legacy";
@@ -114,10 +113,6 @@ export default defineConfig({
       // uncomment to unregister service worker
       selfDestroying: true,
     }),
-    {
-      ...clearConsole(),
-      apply: "build",
-    },
     // viteCompression(),
     //@ts-ignore
     visualizer(),
@@ -128,6 +123,19 @@ export default defineConfig({
     terserOptions: {
       toplevel: true,
       safari10: true,
+    },
+    rollupOptions: {
+      // https://rollupjs.org/guide/en/#outputmanualchunks
+      output: {
+        manualChunks: {
+          // archive: ["./src/components/archive/StudentSelector.vue"],
+          // 对首屏加载性能影响过大，应该单独 async import
+          // player: [
+          //   "./src/components/archive/StudentStoryPlayer.vue",
+          //   "./src/components/StoryViewer.vue",
+          // ],
+        },
+      },
     },
   },
 });

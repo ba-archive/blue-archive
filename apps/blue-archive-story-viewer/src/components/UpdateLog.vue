@@ -4,6 +4,53 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-07-02",
+    contents: [
+      {
+        type: "feat",
+        content: "在学生列表中，支持使用拼音搜索学生",
+      },
+      {
+        type: "fix",
+        content: "修正了剧情播放时，点击log跳转后有概率出现影分身的问题",
+      },
+      {
+        type: "fix",
+        content:
+          "修正了 Vol. 3《伊甸条约》第一章第四话和第五话无法正常播放的问题",
+      },
+      {
+        type: "fix",
+        content: "修正了剧情播放时，点击log跳转后人物位置有概率出现异常的问题",
+      },
+      {
+        type: "fix",
+        content: "在移动端，菜单弹出时将不再重置暗色模式状态",
+      },
+      {
+        type: "fix",
+        content: "修复了瑠美 live2d 转场表现异常的问题",
+      },
+      {
+        type: "student",
+        students: [{ name: "空崎 日奈（泳装）", id: 10022 }],
+      },
+    ],
+  },
+  {
+    date: "2023-06-27",
+    contents: [
+      {
+        type: "fix",
+        content: "修复了咲（泳装）剧情中，无法正确播放语音的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了特定浏览器无法正确弹出对话log和剧情概要的问题",
+      },
+    ],
+  },
+  {
     date: "2023-06-25",
     contents: [
       {
@@ -14,6 +61,11 @@ const updateLogs: UpdateLog[] = [
           { name: "霞泽 美游（泳装）", id: 26010 },
         ],
       },
+      {
+        type: "fix",
+        content:
+          "修复了 Firefox 浏览器和 Safari 浏览器在展示对话log和剧情概要时动画异常缓慢的问题",
+      },
     ],
   },
   {
@@ -21,10 +73,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "空崎 日奈", id: 10004 },
-          // { name: "空崎 日奈（泳装）", id: 10022 },
-        ],
+        students: [{ name: "空崎 日奈", id: 10004 }],
       },
       {
         type: "chore",

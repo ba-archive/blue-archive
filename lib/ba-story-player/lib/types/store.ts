@@ -37,6 +37,10 @@ export interface PrivateStates {
    */
   allStoryUnit: StoryUnit[];
   /**
+   * 累计故事, 用于跳转
+   */
+  stackStoryUnit: StoryUnit[];
+  /**
    * 用于查找l2d spinedata
    */
   l2dSpineUrl: string;

@@ -2,15 +2,23 @@ import { usePlayerStore } from "@/stores";
 import { deepCopyObject, getResourcesUrl } from "@/utils";
 import xxhash from "xxhashjs";
 import {
+  Character,
+  Effect,
   Speaker,
   StoryRawUnit,
+  StoryType,
   StoryUnit,
   Text,
   TextEffect,
   TextEffectName,
 } from "@/types/common";
-import { PlayAudio, ShowTitleOption } from "@/types/events";
-import { CharacterNameExcelTableItem } from "@/types/excels";
+import { PlayAudio, PlayEffect, ShowTitleOption } from "@/types/events";
+import {
+  BGEffectExcelTableItem,
+  BGMExcelTableItem,
+  CharacterNameExcelTableItem,
+  TransitionTableItem,
+} from "@/types/excels";
 import { Language } from "@/types/store";
 
 const playerStore = usePlayerStore();
@@ -26,7 +34,13 @@ export function buildNxAST(rawText: string) {
   };
   let currentParent = root;
   const stack = [root];
+  let tryCount = 0;
   while (rawText) {
+    tryCount++;
+    if (tryCount > 30) {
+      console.error("翻译时出现严重错误, rowText=" + rawText);
+      return root;
+    }
     const regMatch = rawText.match(/\[[^wa:]/);
     const textEnd = regMatch?.index ?? -1;
     if (textEnd === 0) {
@@ -96,7 +110,6 @@ export function buildNxAST(rawText: string) {
     }
   }
   function chars(text: string) {
-    text = text.trim();
     if (text.length > 0) {
       currentParent.children.push({
         tag: "text",
@@ -182,7 +195,7 @@ export function generateTitleInfo(
   const text = getText(rawStoryUnit, language);
   // 第114话;这是514个主标题
   // [这是514个主标题, 第114话]
-  const spiltText = text.split(";").reverse();
+  const spiltText = text.split(/(?<!\\)[;；]/g).reverse();
   const rawTitle = spiltText[0];
   const title = parseNxMagicTag(rawTitle);
   return {
@@ -281,7 +294,13 @@ export function getSoundUrl(Sound: string) {
 export function getSpeaker(
   characterInfo: CharacterNameExcelTableItem
 ): Speaker {
-  const language = playerStore.language.toUpperCase() as "CN" | "JP";
+  const language = playerStore.language.toUpperCase() as
+    | "CN"
+    | "JP"
+    | "EN"
+    | "TW"
+    | "TH"
+    | "KR";
   if (characterInfo[`Name${language}`]) {
     return {
       name: characterInfo[`Name${language}`]!,
@@ -408,4 +427,121 @@ type NxTagParseResult = {
 export function parseNxMagicTag(rawText: string): Text[] {
   const ast = buildNxAST(rawText);
   return walkNxAST(ast, []);
+}
+
+type IterateStoryUnit = {
+  [key in keyof StoryUnit]-?:
+    | ((prv: StoryUnit[key], cur: StoryUnit[key]) => StoryUnit[key] | undefined)
+    | null;
+};
+
+const IterateStoryUnitFun: IterateStoryUnit = {
+  GroupId: null,
+  PopupFileName: null,
+  SelectionGroup: null,
+  audio(prv?: PlayAudio, cur?: PlayAudio) {
+    return {
+      bgm: cur?.bgm ?? prv?.bgm,
+      soundUrl: cur?.soundUrl ?? "",
+      voiceJPUrl: cur?.voiceJPUrl ?? "",
+    };
+  },
+  characters(prv: Character[], cur: Character[]) {
+    if (!prv || prv.length === 0) {
+      return deepCopyObject(cur);
+    }
+    if (!cur || cur.length === 0) {
+      return prv;
+    }
+
+    // 判断特效并处理
+    // 是否有移位 m1/m2/m3/m4/m5
+    // 是否有倒下 falldownR/falldownL
+    // 是否移出画面 dl/dr/d
+    // 是否移入画面 al/ar/a
+    // 是否隐藏 hide
+
+    const filterPrv = prv
+      .filter(it => {
+        const actionEffect = it.effects.filter(
+          effect => effect.type === "action"
+        );
+        // 调整特效造成的走人
+        const hideEffect = actionEffect.map(
+          effect =>
+            /^falldown[RL]$/i.exec(effect.effect) ||
+            /^d[rl]?$/i.exec(effect.effect) ||
+            effect.effect === "hide"
+        );
+        if (hideEffect.length > 0) {
+          return null;
+        }
+        // 调整mx造成的移位
+        const moveEffect = actionEffect
+          .map(effect => /^m(\d)$/i.exec(effect.effect))
+          .filter(effect => effect) as RegExpExecArray[];
+        if (moveEffect.length > 0) {
+          it.position = Number(moveEffect[0][1]);
+        }
+        // 调整消失再出现的复制人
+        if (
+          cur.some(
+            ch =>
+              ch.CharacterName === it.CharacterName &&
+              ch.position === it.position
+          )
+        ) {
+          return null;
+        }
+        // 删除所有特效防止重复播放
+        it.effects = [];
+        return it;
+      })
+      .filter(it => it) as Character[];
+    return [...filterPrv, ...deepCopyObject(cur)];
+  },
+  effect(prv: PlayEffect, cur: PlayEffect) {
+    return {
+      BGEffect: prv.BGEffect ?? cur.BGEffect,
+      otherEffect: prv.otherEffect ?? cur.otherEffect,
+    };
+  },
+  fight: null,
+  hide: null,
+  l2d: null,
+  show: null,
+  textAbout: null,
+  transition: null,
+  type: null,
+  video: null,
+  bg: null,
+};
+
+function iterateStoryUnit(prv: StoryUnit, cur: StoryUnit): StoryUnit {
+  const copy = deepCopyObject(prv);
+  Object.keys(IterateStoryUnitFun).forEach(key => {
+    const fn = Reflect.get(IterateStoryUnitFun, key);
+    const prvUnit = Reflect.get(prv, key);
+    const curUnit = Reflect.get(cur, key);
+    if (fn) {
+      const res = fn(prvUnit, curUnit);
+      Reflect.set(copy, key, res);
+    } else {
+      Reflect.set(copy, key, deepCopyObject(curUnit ?? prvUnit));
+    }
+  });
+  return copy;
+}
+
+export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
+  if (!source || source.length === 0) {
+    return [];
+  }
+  let current = source[0];
+  return source
+    .filter((_, index) => index > 0)
+    .map(it => {
+      current = iterateStoryUnit(current, it);
+      return current;
+    });
 }

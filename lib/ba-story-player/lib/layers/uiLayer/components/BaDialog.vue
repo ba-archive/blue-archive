@@ -57,6 +57,15 @@ function handleClose() {
 </template>
 
 <style lang="scss" scoped>
+.pseudo-fullscreen {
+  .ba-dialog {
+    width: 100vh;
+    width: 100dvh;
+    height: 100vw;
+    height: 100dvw;
+  }
+}
+
 .ba-dialog {
   display: flex;
   position: absolute;
@@ -80,7 +89,7 @@ function handleClose() {
     display: flex;
     position: absolute;
     flex-flow: nowrap column;
-    transition: transform 1s ease-in;
+    transition: transform 0.3s ease-in;
     box-shadow: rgb(56, 56, 56) 0 2px 2px 1px;
     border-radius: 0.625em;
     background-color: #f0f0f0;

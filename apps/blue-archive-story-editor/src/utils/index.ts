@@ -43,7 +43,7 @@ export function dataFilterChain<T, Form extends object>(
   filterFn.forEach((fn, index) => {
     const key = keys[index];
     const value = Reflect.get(filterForm, key);
-    if (!value || (Array.isArray(value) && value.length === 0)) {
+    if (!value || (Array.isArray(value) && (value as any[]).length === 0)) {
       return;
     }
     data = fn(data, value);
