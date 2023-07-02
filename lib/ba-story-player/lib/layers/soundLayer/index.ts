@@ -69,17 +69,29 @@ export function soundInit() {
     SFXvolume = 1;
     Voicevolume = 1;
   })();
-
+  // bgm.stop(); 在window lose focus时不会生效
+  const pausedBgm: Sound[] = [];
+  function stopShouldStopBgm() {
+    pausedBgm.filter((it) => it.instances.some((_in) => !_in.paused)).forEach((it) => it.pause());
+    pausedBgm.splice(0, pausedBgm.length);
+  }
+  window.addEventListener("focus", stopShouldStopBgm);
   /**
    * @description 播放声音
    * @param playAudioInfo
    */
   function playAudio(playAudioInfo: PlayAudio) {
     if (playAudioInfo.bgm) {
-      // 替换BGM
+      const historySound = pausedBgm.findIndex((it) => it.url === playAudioInfo.bgm?.url);
+      if (historySound) {
+        pausedBgm.splice(historySound, 1);
+      }
+      // 如果有正在播放的BGM则停止当前播放, 替换为下一个BGM
       if (bgm) {
         bgm.stop();
-      } // 如果有正在播放的BGM则停止当前播放, 替换为下一个BGM
+        pausedBgm.push(bgm);
+      }
+      // 替换BGM
       bgm = getAudio(playAudioInfo.bgm.url);
       bgm.volume = soundSettings.BGMvolume;
       bgm.play({
@@ -87,9 +99,12 @@ export function soundInit() {
         loop: false,
         start: 0,
         end: playAudioInfo.bgm?.bgmArgs.LoopEndTime,
-        complete: function () {
+        complete: function (sound) {
+          if (bgm && bgm.url !== sound.url) {
+            return;
+          }
           // 第一次播放结束后进入loop
-          bgm?.play({
+          sound.play({
             loop: true,
             start: playAudioInfo.bgm?.bgmArgs.LoopStartTime,
             end: playAudioInfo.bgm?.bgmArgs.LoopEndTime,
@@ -159,12 +174,16 @@ export function soundInit() {
     playAudio({ soundUrl: usePlayerStore().bgEffectSoundUrl(bgEffect) });
   });
 
-  eventBus.on("dispose", () => soundDispose());
+  eventBus.on("dispose", () => {
+    window.removeEventListener("focus", stopShouldStopBgm);
+    soundDispose();
+  });
   eventBus.on("stop", () => soundDispose());
   eventBus.on("continue", () => bgm?.play());
   eventBus.on("playAudioWithConfig", ({ url, config }) => {
     getAudio(url).play(config);
   });
+  eventBus.on("end", () => soundDispose);
 }
 
 export function soundDispose() {
