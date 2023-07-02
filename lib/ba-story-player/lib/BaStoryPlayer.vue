@@ -276,6 +276,7 @@ onMounted(() => {
         () => (fullScreen.value = false),
         props.exitFullscreenTimeOut || 1000
       );
+      eventBus.emit("end");
       emit("end");
     },
     () => {

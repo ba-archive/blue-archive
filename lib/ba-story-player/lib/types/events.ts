@@ -242,6 +242,10 @@ export type Events = {
    * 所有资源加载完成
    */
   loaded: undefined;
+  /**
+   * 播放完成
+   */
+  end: undefined;
 };
 
 /**
