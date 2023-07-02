@@ -1,27 +1,37 @@
 <script lang="ts" setup>
 import { usePlayerStore } from "@/stores";
-import { Ref, ref, watch } from "vue";
+import { Ref, onMounted, ref, watch } from "vue";
 import { checkBgOverlap } from "@/layers/translationLayer/utils";
 import BaChatMessage from "./BaChatMessage.vue";
 
 const props = defineProps({
   show: Boolean,
 });
+
 const content = ref(null) as unknown as Ref<HTMLElement>;
 
 // 日志记录拖动功能
-const isDraggingDialog = ref(false);
-const dragStartY = ref(0);
 const deltaY = ref(0);
+const dragStartY = ref(0);
 const startScrollTop = ref(0);
+const isDraggingDialog = ref(false);
+
+onMounted(() => {
+  content.value.scrollTo({
+    top: content.value.scrollHeight,
+    behavior: "smooth",
+  });
+});
 
 function handleDragStart($event: MouseEvent) {
-  isDraggingDialog.value = true;
-  dragStartY.value = $event.clientY;
-  deltaY.value = 0;
+  if ($event.button === 0) {
+    isDraggingDialog.value = true;
+    dragStartY.value = $event.clientY;
+    deltaY.value = 0;
 
-  if (content.value) {
-    startScrollTop.value = content.value.scrollTop;
+    if (content.value) {
+      startScrollTop.value = content.value.scrollTop;
+    }
   }
 }
 
@@ -43,20 +53,21 @@ function handleDragEnd() {
 
 let store = usePlayerStore();
 let chatMesasages = store.logText;
-watch(
-  () => props.show,
-  newValue => {
-    if (newValue) {
-      setTimeout(() => {
-        let elem = content.value;
-        let currentScroll = elem.scrollTop;
-        let clientHeight = elem.offsetHeight;
-        let scrollHeight = elem.scrollHeight;
-        elem.scrollTo(0, scrollHeight);
-      }, 300);
-    }
-  }
-);
+// 似乎没有作用
+// watch(
+//   () => props.show,
+//   newValue => {
+//     if (newValue) {
+//       setTimeout(() => {
+//         let elem = content.value;
+//         let currentScroll = elem.scrollTop;
+//         let clientHeight = elem.offsetHeight;
+//         let scrollHeight = elem.scrollHeight;
+//         elem.scrollTo(0, scrollHeight);
+//       }, 300);
+//     }
+//   }
+// );
 </script>
 
 <template>
