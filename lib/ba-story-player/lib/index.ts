@@ -483,10 +483,13 @@ export async function init(
     !props.story.content ||
     props.story.content.length === 0
   ) {
-    eventBus.emit("startLoading", { url: `${props.dataUrl}/loading/404.webp`, restrict: true });
+    eventBus.emit("startLoading", {
+      url: `${props.dataUrl}/loading/404.webp`,
+      restrict: true,
+    });
     eventBus.emit("oneResourceLoaded", {
       type: "fail",
-      resourceName: "剧情对象中的 \"content\" 不能为 undefined",
+      resourceName: '剧情对象中的 "content" 不能为 undefined',
     });
     errorCallback();
     return;

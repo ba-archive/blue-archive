@@ -631,7 +631,6 @@ function handleStartLoading(url: LoadingImageUrl) {
     loadingImageSrc.value = `${url.url}/loading/${loadingImageIndex}.webp`;
   }
   showLoading.value = true;
-  
 }
 
 /**
@@ -1191,7 +1190,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     // .loading-log-item-success {
     // }
     .loading-log-item-error {
-      color: #FF3A30;
+      color: #ff3a30;
     }
   }
 }

@@ -255,7 +255,7 @@ export type Events = {
 export type LoadingImageUrl = {
   url: string;
   restrict?: boolean;
-}
+};
 
 export interface PlayAudio {
   bgm?: {
@@ -271,12 +271,10 @@ export interface PlayEffect {
   otherEffect: Effect[];
 }
 
-
 export type ResourceLoadState = {
   type: "success" | "fail";
   resourceName: string;
-}
-
+};
 
 export interface ShowCharacter {
   /**
@@ -288,7 +286,6 @@ export interface ShowCharacter {
    */
   // characterEffects: CharacterEffect[]
 }
-
 
 export interface ShowOption {
   /**
@@ -302,7 +299,6 @@ export interface ShowOption {
   /** 当前剧情进度 */
   index: number;
 }
-
 
 export interface ShowText {
   /**
@@ -320,7 +316,6 @@ export interface ShowText {
   /** storyUnit 位置 */
   index?: number;
 }
-
 
 export interface ShowTitleOption {
   title: Text[];

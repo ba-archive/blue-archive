@@ -29,7 +29,7 @@ function handleClose() {
 
 <template>
   <Transition name="dialog">
-    <div class="ba-dialog" v-if="show" @click.self="handleClose">
+    <div class="ba-dialog" v-if="show" @mousedown.self="handleClose">
       <div
         class="ba-dialog-container"
         :style="{ width: props.width, height: props.height }"

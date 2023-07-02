@@ -72,7 +72,9 @@ export function soundInit() {
   // bgm.stop(); 在window lose focus时不会生效
   const pausedBgm: Sound[] = [];
   function stopShouldStopBgm() {
-    pausedBgm.filter((it) => it.instances.some((_in) => !_in.paused)).forEach((it) => it.pause());
+    pausedBgm
+      .filter(it => it.instances.some(_in => !_in.paused))
+      .forEach(it => it.pause());
     pausedBgm.splice(0, pausedBgm.length);
   }
   window.addEventListener("focus", stopShouldStopBgm);
@@ -82,7 +84,9 @@ export function soundInit() {
    */
   function playAudio(playAudioInfo: PlayAudio) {
     if (playAudioInfo.bgm) {
-      const historySound = pausedBgm.findIndex((it) => it.url === playAudioInfo.bgm?.url);
+      const historySound = pausedBgm.findIndex(
+        it => it.url === playAudioInfo.bgm?.url
+      );
       if (historySound) {
         pausedBgm.splice(historySound, 1);
       }
