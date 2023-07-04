@@ -76,24 +76,10 @@
       </div>
       <div class="textLine">
         <span style="flex: 2">
-          <n-input
-            v-add-combo-key-listener
-            class="explicit-quotation-mark"
-            placeholder="暂无翻译"
-            type="textarea"
-            :value="
-              config.getSelectLine !== -1
-                ? textPrefab(
-                    mainStore.getScenario.content[config.getSelectLine][
-                      config.getTargetLang
-                    ]
-                  )
-                : ''
-            "
-            @input="inputHandle"
-            style="width: 95%; height: 120px"
-            clearable
-          ></n-input>
+          <translate-input
+            :handleGotoNextLineRequest="handleGotoNextLineRequest"
+            :handleGotoPrevLineRequest="handleGotoPrevLineRequest"
+          ></translate-input>
         </span>
         <span style="flex: 1; width: 100%">
           <n-input
@@ -162,12 +148,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import { Directive, computed, watch } from 'vue';
+import { computed, watch } from 'vue';
 import { halfToFull, translate } from '../../public/getTranslation';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine, Language } from '../types/content';
-import { useThrottleFn } from '@vueuse/core';
+import TranslateInput from './TranslateInput.vue';
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -204,14 +190,6 @@ const tagHash = [
   { label: '[wa:]', key: '[wa:]' },
   { label: '[]', key: '[]' },
 ];
-
-const inputHandle = (event: string) => {
-  if (config.getSelectLine !== -1) {
-    const line = mainStore.getScenario.content[config.getSelectLine];
-    line[config.getTargetLang] = event.replaceAll('[#n]', '#n');
-    mainStore.setContentLine(line as ContentLine, config.getSelectLine);
-  }
-};
 
 const translateHandle = () => {
   if (config.getSelectLine !== -1) {
@@ -253,35 +231,6 @@ const commentHandle = (event: string) => {
     line.comment = event;
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
-};
-
-const textPrefab = (text: string) => {
-  return text ? text.replaceAll('#n', '[#n]') : '';
-};
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-const wheelEvent = useThrottleFn((e: WheelEvent & { [key: string]: any }) => {
-  const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
-  // 触控板会有 -0 的情况
-  if (Math.abs(delta) < 1) return;
-  if (delta < 0) {
-    handleGotoNextLineRequest();
-  } else {
-    handleGotoPrevLineRequest();
-  }
-}, 400);
-const vAddComboKeyListener: Directive = {
-  mounted(el) {
-    el.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.shiftKey && e.key === 'Enter') {
-        e.preventDefault();
-        handleGotoPrevLineRequest();
-      } else if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-        e.preventDefault();
-        handleGotoNextLineRequest();
-      }
-    });
-    el.addEventListener('wheel', wheelEvent);
-  },
 };
 
 const isLastLine = computed(() => {
