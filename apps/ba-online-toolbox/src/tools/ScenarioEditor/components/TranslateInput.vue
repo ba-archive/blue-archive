@@ -19,27 +19,29 @@
       style="width: 95%; height: 120px"
       clearable
     ></n-input>
-    <div
+    <n-space
       v-if="translateStruct.translateType === TranslateType.select"
-      class="select"
+      vertical
+      :size="16"
+      align="stretch"
     >
       <div
-        v-for="(i, idx) in translateStruct.content"
+        v-for="(selection, idx) in translateStruct.content"
         class="select-item"
         :key="idx"
       >
         <n-tag :bordered="false" type="info" style="margin-right: 8px">
-          {{ i.label }}
+          {{ selection.label }}
         </n-tag>
         <n-input
-          :value="i.translated"
+          :value="selection.translated"
           type="text"
           @input="e => selectInputHandle(e, idx)"
           placeholder="请输入"
           clearable
         />
       </div>
-    </div>
+    </n-space>
   </div>
 </template>
 <script setup lang="ts">
@@ -52,11 +54,14 @@ import { useThrottleFn } from '@vueuse/core';
 enum TranslateType {
   input,
   select,
+  title,
+  nextEpisode,
 }
 const props = defineProps({
   handleGotoNextLineRequest: Function,
   handleGotoPrevLineRequest: Function,
 });
+
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
 const translateStruct = computed(() => {
@@ -67,8 +72,10 @@ const translateStruct = computed(() => {
   // 翻译后
   const curTranslated =
     mainStore.getScenario.content[config.getSelectLine][config.getTargetLang];
+
   const searchReg = /\[ns\d?\]|\[s\d?\]/g;
   const parseArr = translateText.match(searchReg);
+
   if (parseArr?.length) {
     let translatedArr = [] as string[];
     if (curTranslated) {
@@ -76,6 +83,7 @@ const translateStruct = computed(() => {
         return i.replace(searchReg, '');
       });
     }
+
     return {
       translateType: TranslateType.select,
       content: parseArr.map((i, idx) => {
@@ -92,10 +100,12 @@ const translateStruct = computed(() => {
       }),
     };
   }
+
   return {
     translateType: TranslateType.input,
   };
 });
+
 const selectInputHandle = (e: string, idx: number) => {
   const temArr = translateStruct.value.content?.map((i, curIdx) => {
     if (curIdx === idx) {
@@ -106,6 +116,7 @@ const selectInputHandle = (e: string, idx: number) => {
   const parseTranslated = temArr?.join('\n');
   inputHandle(parseTranslated || '');
 };
+
 const inputHandle = (event: string) => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
@@ -113,9 +124,11 @@ const inputHandle = (event: string) => {
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
+
 const textPrefab = (text: string) => {
   return text ? text.replaceAll('#n', '[#n]') : '';
 };
+
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const wheelEvent = useThrottleFn((e: WheelEvent & { [key: string]: any }) => {
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
@@ -127,6 +140,7 @@ const wheelEvent = useThrottleFn((e: WheelEvent & { [key: string]: any }) => {
     props.handleGotoPrevLineRequest?.();
   }
 }, 400);
+
 const vAddComboKeyListener: Directive = {
   mounted(el) {
     el.addEventListener('keydown', (e: KeyboardEvent) => {

@@ -23,7 +23,7 @@
             config.getSelectLine !== -1
               ? mainStore.getScenario.content[config.getSelectLine][
                   config.getLanguage
-                ]?.replaceAll('#n', '[#n]')
+                ]?.replaceAll('#n', '\n')
               : '请选择一行'
           "
           :placeholder="
@@ -40,16 +40,6 @@
           <n-button @click="translateHandle" type="info">翻译参考文本</n-button>
           <n-button @click="acceptHandle" type="info">接受机翻</n-button>
           <n-dropdown
-            placement="top-start"
-            trigger="hover"
-            :options="tagHash"
-            @select="config.setSelectTag($event)"
-          >
-            <n-button secondary type="info" @click="addTag()">
-              插入标签: {{ config.selectTag }}</n-button
-            >
-          </n-dropdown>
-          <n-dropdown
             trigger="hover"
             :options="langSelect"
             @select="
@@ -61,8 +51,21 @@
             <n-button secondary type="info">
               目标语言: {{ langHash[config.getTargetLang] }}
             </n-button>
-          </n-dropdown></n-space
-        >
+          </n-dropdown>
+          <n-space :size="8">
+            <n-button type="info" @click="addTag()"> 插入等待时长 </n-button>
+            <n-input-number
+              v-model:value="waitTime"
+              size="medium"
+              :default-value="0"
+              :min="0"
+              :step="10"
+              style="width: 9rem"
+            >
+              <template #suffix>毫秒</template>
+            </n-input-number>
+          </n-space>
+        </n-space>
         <span>
           <n-space>
             <n-text>显示全部语言</n-text>
@@ -148,7 +151,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { halfToFull, translate } from '../../public/getTranslation';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
@@ -183,12 +186,6 @@ const langSelect = [
   { label: '英语', key: 'TextEn' },
   { label: '韩语', key: 'TextKr' },
   { label: '泰语', key: 'TextTh' },
-];
-
-const tagHash = [
-  { label: '[#n]', key: '#n' },
-  { label: '[wa:]', key: '[wa:]' },
-  { label: '[]', key: '[]' },
 ];
 
 const translateHandle = () => {
@@ -276,15 +273,18 @@ const completion = computed(() => {
   };
 });
 
+const waitTime = ref(0);
+
 function addTag() {
   // 传统方法，如果加入了其他的textarea记得修改
+  // TODO: 改成 ref
   let textArea = document.getElementsByTagName('textarea')[1];
   let cursor = textArea.selectionStart;
   let sentence =
     mainStore.scenario.content[config.getSelectLine][config.getTargetLang];
   sentence =
     sentence.substring(0, cursor) +
-    tagHash.find(tag => tag.key === config.selectTag)?.key +
+    `[wa:${waitTime.value}]` +
     sentence.substring(cursor);
   mainStore.scenario.content[config.getSelectLine][config.getTargetLang] =
     sentence;
@@ -320,6 +320,7 @@ function addTag() {
 .textLine {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .commentInput {
