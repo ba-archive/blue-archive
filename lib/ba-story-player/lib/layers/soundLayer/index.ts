@@ -77,7 +77,6 @@ export function soundInit() {
       .forEach(it => it.pause());
     pausedBgm.splice(0, pausedBgm.length);
   }
-  window.addEventListener("focus", stopShouldStopBgm);
   /**
    * @description 播放声音
    * @param playAudioInfo
@@ -177,9 +176,9 @@ export function soundInit() {
   eventBus.on("playBgEffectSound", bgEffect => {
     playAudio({ soundUrl: usePlayerStore().bgEffectSoundUrl(bgEffect) });
   });
-
+  // 解决标签页失焦时无法停止音频的问题
+  eventBus.on("activated", stopShouldStopBgm);
   eventBus.on("dispose", () => {
-    window.removeEventListener("focus", stopShouldStopBgm);
     soundDispose();
   });
   eventBus.on("stop", () => soundDispose());
