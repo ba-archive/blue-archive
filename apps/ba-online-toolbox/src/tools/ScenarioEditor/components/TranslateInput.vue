@@ -36,16 +36,64 @@
         <n-input
           :value="selection.translated"
           type="text"
-          @input="e => selectInputHandle(e, idx)"
+          @input="(e: string) => selectInputHandle(e, idx)"
           placeholder="请输入"
           clearable
         />
       </div>
     </n-space>
+
+    <n-space v-if="translateStruct.translateType === TranslateType.title">
+      <n-tag :bordered="false" type="info" style="margin-right: 8px"
+        >标题
+      </n-tag>
+      <n-input-group>
+        <n-input
+          :default-value="translateStruct.content[0].label"
+          style="width: 8rem"
+          @input="titleInputHandle('label', $event)"
+        >
+          <template #prefix>
+            <span style="color: #999">第</span>
+          </template>
+          <template #suffix>
+            <span style="color: #999">话</span>
+          </template>
+        </n-input>
+        <n-input
+          v-add-combo-key-listener
+          class="explicit-quotation-mark"
+          placeholder="暂无翻译"
+          :value="translateStruct.content[0].translated"
+          @input="titleInputHandle('content', $event)"
+          clearable
+        ></n-input>
+      </n-input-group>
+    </n-space>
+
+    <n-space v-if="translateStruct.translateType === TranslateType.nextEpisode">
+      <n-tag :bordered="false" type="info" style="margin-right: 8px"
+        >标题
+      </n-tag>
+      <n-input-group>
+        <n-input
+          v-add-combo-key-listener
+          class="explicit-quotation-mark"
+          placeholder="暂无翻译"
+          :value="translateStruct.content[0].translated"
+          @input="titleInputHandle('content', $event)"
+          clearable
+        >
+          <template #prefix>
+            <span style="color: #999">下一话</span>
+          </template>
+        </n-input>
+      </n-input-group>
+    </n-space>
   </div>
 </template>
 <script setup lang="ts">
-import { Directive, computed } from 'vue';
+import { ComputedRef, Directive, computed } from 'vue';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine } from '../types/content';
@@ -57,6 +105,7 @@ enum TranslateType {
   title,
   nextEpisode,
 }
+
 const props = defineProps({
   handleGotoNextLineRequest: Function,
   handleGotoPrevLineRequest: Function,
@@ -64,22 +113,33 @@ const props = defineProps({
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
-const translateStruct = computed(() => {
-  if (!config.getSelectLine) return { translateType: TranslateType.input };
+// eslint-disable-next-line
+// @ts-ignore
+const translateStruct: ComputedRef<{
+  translateType: TranslateType;
+  label?: string;
+  content: Array<{ label: string; translated: string; tag?: number }>;
+}> = computed(() => {
+  if (-1 === config.getSelectLine)
+    return { translateType: TranslateType.input };
   // 翻译前
-  const translateText =
-    mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
+  const translateText = computed(
+    () =>
+      mainStore.getScenario.content[config.getSelectLine][config.getLanguage]
+  );
   // 翻译后
-  const curTranslated =
-    mainStore.getScenario.content[config.getSelectLine][config.getTargetLang];
+  const curTranslated = computed(
+    () =>
+      mainStore.getScenario.content[config.getSelectLine][config.getTargetLang]
+  );
 
-  const searchReg = /\[ns\d?\]|\[s\d?\]/g;
-  const parseArr = translateText.match(searchReg);
+  const searchReg = /\[ns\d?]|\[s\d?]/g;
+  const parseArr = translateText.value.match(searchReg);
 
   if (parseArr?.length) {
     let translatedArr = [] as string[];
-    if (curTranslated) {
-      translatedArr = curTranslated.split('\n').map(i => {
+    if (curTranslated.value) {
+      translatedArr = curTranslated.value.split('\n').map(i => {
         return i.replace(searchReg, '');
       });
     }
@@ -101,8 +161,43 @@ const translateStruct = computed(() => {
     };
   }
 
+  const titleRegex = new RegExp(
+    /^(第[\d一二三四五六七八九十]+[話话]|Episode \d)[;；]/
+  );
+  const titleMatch = translateText.value.match(titleRegex);
+  if (titleMatch?.length) {
+    return {
+      translateType: TranslateType.title,
+      content: [
+        {
+          label:
+            curTranslated.value.match(/[\d一二三四五六七八九十]+/)?.[0] ||
+            translateText.value.match(/[\d一二三四五六七八九十]+/)?.[0] ||
+            '',
+          translated: curTranslated.value.replace(titleRegex, ''),
+        },
+      ],
+    };
+  }
+
+  const nextEpisodeRegex = new RegExp(/^(次回|下一[話话]|Next Episode)[;；]/);
+  const nextEpisodeMatch = translateText.value.match(nextEpisodeRegex);
+  if (nextEpisodeMatch?.length) {
+    return {
+      translateType: TranslateType.nextEpisode,
+      content: [
+        {
+          label: '',
+          translated: curTranslated.value.replace(nextEpisodeRegex, ''),
+        },
+      ],
+    };
+  }
+
   return {
     translateType: TranslateType.input,
+    text: translateText.value,
+    content: [],
   };
 });
 
@@ -116,6 +211,30 @@ const selectInputHandle = (e: string, idx: number) => {
   const parseTranslated = temArr?.join('\n');
   inputHandle(parseTranslated || '');
 };
+
+function titleInputHandle(position: 'label' | 'content', text: string) {
+  const line = mainStore.getScenario.content[config.getSelectLine];
+  const targetLang = config.getTargetLang;
+  const type = translateStruct.value.translateType;
+  let titlePrefix = '';
+  if (TranslateType.title === type) {
+    const label =
+      'label' === position ? text : translateStruct.value.content[0].label;
+
+    titlePrefix = '第' + label;
+  } else if (TranslateType.nextEpisode === type) {
+    titlePrefix = '下一';
+  }
+
+  titlePrefix += 'TextCn' === targetLang ? '话;' : '話;';
+
+  line[targetLang] =
+    'label' === position
+      ? titlePrefix + translateStruct.value.content[0].translated
+      : titlePrefix + text;
+  console.log(line[targetLang], 'label' === position);
+  mainStore.setContentLine(line as ContentLine, config.getSelectLine);
+}
 
 const inputHandle = (event: string) => {
   if (config.getSelectLine !== -1) {
@@ -164,6 +283,7 @@ const vAddComboKeyListener: Directive = {
   padding-right: 16px;
   height: 100%;
 }
+
 .select-item {
   display: flex;
   align-items: center;

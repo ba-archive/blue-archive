@@ -62,7 +62,7 @@
               :step="10"
               style="width: 9rem"
             >
-              <template #suffix>毫秒</template>
+              <template #suffix><span style="color: #999">毫秒</span></template>
             </n-input-number>
           </n-space>
         </n-space>

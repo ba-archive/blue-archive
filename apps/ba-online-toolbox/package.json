@@ -7,8 +7,8 @@
     "dev": "vite --host",
     "dev:with-player": "rush build --to-except ba-story-player & vite --host",
     "format": "prettier --config .prettierrc.json -uw ./src/ *.md",
-    "check": "vue-tsc --noEmit; eslint --fix --config ./.eslintrc.json ./src/ --ext .js,.ts,.vue",
-    "build:json": "eslint --fix --config ./.eslintrc.json ./public/ && node ./CICD/build_json.mjs",
+    "check": "vue-tsc --noEmit; eslint --config ./.eslintrc.json ./src/ --ext .js,.ts,.vue",
+    "build:json": "eslint --config ./.eslintrc.json ./public/ && node ./CICD/build_json.mjs",
     "build": "pnpm format && pnpm build:json && vue-tsc && vite build",
     "preview": "vite preview --host"
   },
