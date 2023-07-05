@@ -10,9 +10,11 @@ declare module 'vue' {
     NButton: typeof import('naive-ui')['NButton'];
     NCheckbox: typeof import('naive-ui')['NCheckbox'];
     NDropdown: typeof import('naive-ui')['NDropdown'];
+    NIcon: typeof import('naive-ui')['NIcon'];
     NImage: typeof import('naive-ui')['NImage'];
     NInput: typeof import('naive-ui')['NInput'];
     NInputGroup: typeof import('naive-ui')['NInputGroup'];
+    NInputNumber: typeof import('naive-ui')['NInputNumber'];
     NRadio: typeof import('naive-ui')['NRadio'];
     NRadioGroup: typeof import('naive-ui')['NRadioGroup'];
     NSpace: typeof import('naive-ui')['NSpace'];
