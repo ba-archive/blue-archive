@@ -43,7 +43,11 @@
       </div>
     </n-space>
 
-    <n-space v-if="translateStruct.translateType === TranslateType.title">
+    <n-space
+      v-if="translateStruct.translateType === TranslateType.title"
+      :size="8"
+      align="center"
+    >
       <n-tag :bordered="false" type="info" style="margin-right: 8px"
         >标题
       </n-tag>
@@ -71,7 +75,11 @@
       </n-input-group>
     </n-space>
 
-    <n-space v-if="translateStruct.translateType === TranslateType.nextEpisode">
+    <n-space
+      v-if="translateStruct.translateType === TranslateType.nextEpisode"
+      align="center"
+      :size="8"
+    >
       <n-tag :bordered="false" type="info" style="margin-right: 8px"
         >标题
       </n-tag>
