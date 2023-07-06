@@ -53,7 +53,18 @@
             </n-button>
           </n-dropdown>
           <n-space :size="8">
-            <n-button type="info" @click="addTag()"> 插入等待时长 </n-button>
+            <n-tooltip>
+              <template #trigger>
+                <n-button type="info" @click="addTag()"> 插入等待时长</n-button>
+              </template>
+              <div>
+                在Live2D剧情中会看到 [wa:xxxx]
+                的标签，这些标签用于控制文字出现的等待时间。
+              </div>
+              <div>
+                在右边的输入框中输入数字，点击“插入等待时长”，即可在相应位置插入一个同样的标签。
+              </div>
+            </n-tooltip>
             <n-input-number
               v-model:value="waitTime"
               size="medium"
