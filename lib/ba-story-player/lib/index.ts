@@ -106,6 +106,16 @@ export const eventEmitter = {
       }
     });
     eventBus.on("isStoryLogShow", e => (eventEmitter.isStoryLogShow = e));
+    eventBus.on("deactivated", () => {
+      if (eventEmitter.l2dPlaying) {
+        usePlayerStore().app.ticker.speed = 0;
+      }
+    });
+    eventBus.on("activated", () => {
+      if (eventEmitter.l2dPlaying) {
+        usePlayerStore().app.ticker.speed = 1;
+      }
+    });
     eventBus.on("effectDone", () => (eventEmitter.effectDone = true));
     eventBus.on("characterDone", () => (eventEmitter.characterDone = true));
     eventBus.on("titleDone", () => (this.titleDone = true));
@@ -1016,21 +1026,23 @@ export const storyHandler = {
    */
   startAuto() {
     this.auto = true;
-    if (!this.unitPlaying) {
-      if (this.currentStoryUnit.type !== "option") {
-        this.storyIndexIncrement();
-        this.storyPlay();
-      }
-    } else {
-      //可能storyPlay正要结束但还没结束导致判断错误
-      setTimeout(() => {
-        if (!this.unitPlaying && this.auto) {
-          if (this.currentStoryUnit.type !== "option") {
-            this.storyIndexIncrement();
-            this.storyPlay();
-          }
+    if (this.currentStoryUnit.type !== "option") {
+      let retryCount = 0;
+      const interval = window.setInterval(() => {
+        retryCount++;
+        if (retryCount > 600) {
+          console.error(
+            "在auto等待当前story时完成时间过长!, index=",
+            storyHandler.currentStoryIndex
+          );
+          retryCount = 0;
         }
-      }, 2000);
+        if (!this.unitPlaying) {
+          clearInterval(interval);
+          this.storyIndexIncrement();
+          this.storyPlay();
+        }
+      }, 500);
     }
   },
 

@@ -103,6 +103,7 @@ if (props.instant) {
   subContentPointer.value = currentSubContent.value.length;
 }
 
+const mainHandler = ref(0);
 const contentHandler = ref(0);
 const subContentHandler = ref(0);
 
@@ -140,7 +141,7 @@ function doTyping() {
     typingComplete();
     return;
   }
-  setTimeout(() => {
+  mainHandler.value = window.setTimeout(() => {
     doTyping0(
       contentPointer,
       currentContent,
@@ -184,6 +185,10 @@ function skipTyping() {
   nextTick(() => {
     TypingEmitter.emit("complete", props.index);
   });
+}
+
+function pauseTypeing() {
+  doClearInterval();
 }
 
 function onUnitClick(ev: MouseEvent) {
@@ -275,6 +280,7 @@ function calcTooltipLocationParam(ev?: MouseEvent, useCache?: boolean) {
 const EventHandlerMap: IEventHandlerMap = {
   start: doTyping,
   skip: skipTyping,
+  pause: pauseTypeing,
 };
 
 function eventFilter(type: BaseTypingEvent, index?: string) {
@@ -302,6 +308,7 @@ function dispose() {
 }
 
 function doClearInterval() {
+  clearInterval(mainHandler.value);
   clearInterval(contentHandler.value);
   clearInterval(subContentHandler.value);
 }

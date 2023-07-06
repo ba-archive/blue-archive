@@ -410,9 +410,19 @@ function handleShowStEvent(e: StText) {
     function observer(index = "0") {
       if (index === String(stText.value.length - 1)) {
         TypingEmitter.off("stComplete", observer);
+        eventBus.off("deactivated", pauseSt);
+        eventBus.off("activated", resumeSt);
         eventBus.emit("stDone");
       }
     }
+    function pauseSt() {
+      TypingEmitter.emit("pause");
+    }
+    function resumeSt() {
+      TypingEmitter.emit("start", String(stText.value.length - 1));
+    }
+    eventBus.on("deactivated", pauseSt);
+    eventBus.on("activated", resumeSt);
     TypingEmitter.on("stComplete", observer);
     TypingEmitter.emit("start", String(stText.value.length - 1));
   });

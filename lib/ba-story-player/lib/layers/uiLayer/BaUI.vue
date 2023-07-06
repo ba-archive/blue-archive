@@ -96,7 +96,9 @@ function handleBaSelector(selectionGroup: number) {
 function handleBtnAutoMode() {
   autoMode.value = !autoMode.value;
   if (autoMode.value) {
-    eventBus.emit("auto");
+    setTimeout(() => {
+      eventBus.emit("auto");
+    }, 1500);
   } else {
     eventBus.emit("stopAuto");
   }
