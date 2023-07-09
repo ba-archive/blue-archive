@@ -280,14 +280,6 @@ onMounted(() => {
       emit("end");
     },
     () => {
-      eventBus.emit("startLoading", {
-        url: `${props.dataUrl}/loading/404.webp`,
-        restrict: true,
-      });
-      eventBus.emit("oneResourceLoaded", {
-        type: "fail",
-        resourceName: '剧情对象中的 "content" 不能为 undefined',
-      });
       emit("error");
     }
   );
@@ -302,7 +294,17 @@ onMounted(() => {
     );
   });
   firstMount = true;
+  window.addEventListener("blur", notifyWindowBlur);
+  window.addEventListener("focus", notifyWindowFocus);
 });
+
+function notifyWindowBlur() {
+  eventBus.emit("deactivated");
+}
+
+function notifyWindowFocus() {
+  eventBus.emit("activated");
+}
 
 onUnmounted(() => {
   dispose();
@@ -341,6 +343,8 @@ onDeactivated(() => {
     );
   });
   stop();
+  window.removeEventListener("blur", notifyWindowBlur);
+  window.removeEventListener("focus", notifyWindowFocus);
 });
 </script>
 

@@ -1,3 +1,4 @@
+import { onDeactivated } from "vue";
 import { PlayOptions } from "@pixi/sound";
 import { Character, Effect, Speaker, Text } from "./common";
 import {
@@ -246,6 +247,14 @@ export type Events = {
    * 播放完成
    */
   end: undefined;
+  /**
+   * 标签页失去焦点
+   */
+  deactivated: undefined;
+  /**
+   * 标签页获得焦点
+   */
+  activated: undefined;
 };
 
 /**
