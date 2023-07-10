@@ -4,7 +4,7 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
-    date: "2023-07-01",
+    date: "2023-07-02",
     contents: [
       {
         type: "feat",
@@ -16,7 +16,8 @@ const updateLogs: UpdateLog[] = [
       },
       {
         type: "fix",
-        content: "修正了 Vol. 3《伊甸条约》第一章第四话无法正常播放的问题",
+        content:
+          "修正了 Vol. 3《伊甸条约》第一章第四话和第五话无法正常播放的问题",
       },
       {
         type: "fix",
@@ -25,6 +26,10 @@ const updateLogs: UpdateLog[] = [
       {
         type: "fix",
         content: "在移动端，菜单弹出时将不再重置暗色模式状态",
+      },
+      {
+        type: "fix",
+        content: "修复了瑠美 live2d 转场表现异常的问题",
       },
       {
         type: "student",
