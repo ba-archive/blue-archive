@@ -23,6 +23,7 @@ importers:
       '@vueuse/core': ^10.2.1
       '@vueuse/math': ^10.2.1
       axios: ^1.4.0
+      ba-rig: workspace:*
       ba-story-player: workspace:*
       chalk: ^5.3.0
       crypto-js: ^4.1.1
@@ -81,6 +82,7 @@ importers:
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.3.4
       '@vue/compiler-sfc': 3.3.4
       '@vue/eslint-config-typescript': 11.0.3_20ce795381eb6afeee39570173c79106
+      ba-rig: link:../../lib/ba-rig
       chalk: 5.3.0
       eslint: 8.44.0
       eslint-config-prettier: 8.8.0_eslint@8.44.0
@@ -119,6 +121,7 @@ importers:
       '@vue/test-utils': ^2.4.0
       '@vueuse/core': ^10.2.1
       '@vueuse/head': ^1.1.26
+      ba-rig: workspace:*
       critters: ^0.0.16
       cross-env: ^7.0.3
       cypress: ^12.16.0
@@ -180,6 +183,7 @@ importers:
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.3.4
       '@vue-macros/volar': 0.9.8_vue-tsc@1.8.3+vue@3.3.4
       '@vue/test-utils': 2.4.0_vue@3.3.4
+      ba-rig: link:../../lib/ba-rig
       critters: 0.0.16
       cross-env: 7.0.3
       cypress: 12.16.0
@@ -236,6 +240,7 @@ importers:
       '@vue/runtime-core': ^3.3.4
       '@vueuse/core': ^10.2.1
       axios: ^1.4.0
+      ba-rig: workspace:*
       ba-story-player: workspace:*
       body-parser: ^1.20.2
       cors: ^2.8.5
@@ -327,6 +332,7 @@ importers:
       '@typescript-eslint/parser': 5.60.1_eslint@8.44.0+typescript@5.1.6
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.3.4
       '@vitejs/plugin-vue-jsx': 2.1.1_vite@4.3.9+vue@3.3.4
+      ba-rig: link:../../lib/ba-rig
       eslint: 8.44.0
       eslint-config-airbnb-base: 15.0.0_e813a63fe0cff7c4281576d9d101cdc8
       eslint-config-prettier: 8.8.0_eslint@8.44.0
@@ -372,6 +378,7 @@ importers:
       '@vueuse/core': ^10.2.1
       axios: ^1.4.0
       axios-retry: ^3.5.1
+      ba-rig: workspace:*
       ba-story-player: workspace:*
       chalk: ^5.3.0
       eslint: ^8.44.0
@@ -439,6 +446,7 @@ importers:
       '@vitejs/plugin-legacy': 4.0.5_terser@5.18.2+vite@4.3.9
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.3.4
       '@vue/eslint-config-typescript': 11.0.3_20ce795381eb6afeee39570173c79106
+      ba-rig: link:../../lib/ba-rig
       chalk: 5.3.0
       eslint: 8.44.0
       eslint-config-prettier: 8.8.0_eslint@8.44.0
@@ -461,6 +469,9 @@ importers:
       vue-tsc: 1.8.3_typescript@5.1.6
       workbox-window: 7.0.0
 
+  ../../lib/ba-rig:
+    specifiers: {}
+
   ../../lib/ba-story-player:
     specifiers:
       '@pixi-spine/base': ^3.1.2
@@ -479,6 +490,7 @@ importers:
       '@vue/eslint-config-typescript': ^11.0.3
       '@vueuse/core': ^10.2.1
       axios: ^1.4.0
+      ba-rig: workspace:*
       eslint: ^8.44.0
       eslint-config-prettier: ^8.8.0
       eslint-plugin-import: ^2.27.5
@@ -524,6 +536,7 @@ importers:
       '@typescript-eslint/parser': 5.60.1_eslint@8.44.0+typescript@5.1.6
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.3.4
       '@vue/eslint-config-typescript': 11.0.3_20ce795381eb6afeee39570173c79106
+      ba-rig: link:../ba-rig
       eslint: 8.44.0
       eslint-config-prettier: 8.8.0_eslint@8.44.0
       eslint-plugin-import: 2.27.5_eslint@8.44.0
@@ -3683,8 +3696,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.20
-      '@intlify/shared': 9.3.0-beta.20
+      '@intlify/message-compiler': 9.3.0-beta.24
+      '@intlify/shared': 9.3.0-beta.24
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.2_vue@3.3.4
@@ -3748,11 +3761,11 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /@intlify/message-compiler/9.3.0-beta.20:
-    resolution: {integrity: sha512-hwqQXyTnDzAVZ300SU31jO0+3OJbpOdfVU6iBkrmNpS7t2HRnVACo0EwcEXzJa++4EVDreqz5OeqJbt+PeSGGA==}
+  /@intlify/message-compiler/9.3.0-beta.24:
+    resolution: {integrity: sha512-prhHATkgp0mpPqoVgiAtLmUc1JMvs8fMH6w53AVEBn+VF87dLhzanfmWY5FoZWORG51ag54gBDBOoM/VFv3m3A==}
     engines: {node: '>= 16'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.20
+      '@intlify/shared': 9.3.0-beta.24
       source-map-js: 1.0.2
     dev: true
 
@@ -3766,8 +3779,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/shared/9.3.0-beta.20:
-    resolution: {integrity: sha512-RucSPqh8O9FFxlYUysQTerSw0b9HIRpyoN1Zjogpm0qLiHK+lBNSa5sh1nCJ4wSsNcjphzgpLQCyR60GZlRV8g==}
+  /@intlify/shared/9.3.0-beta.24:
+    resolution: {integrity: sha512-AKxJ8s7eKIQWkNaf4wyyoLRwf4puCuQgjSChlDJm5JBEt6T8HGgnYTJLRXu6LD/JACn3Qwu6hM/XRX1c9yvjmQ==}
     engines: {node: '>= 16'}
     dev: true
 
@@ -3820,7 +3833,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.20
+      '@intlify/shared': 9.3.0-beta.24
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
       fast-glob: 3.2.12
