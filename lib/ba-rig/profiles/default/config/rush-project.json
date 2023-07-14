@@ -1,26 +1,13 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush-project.schema.json",
   "operationSettings": [
     {
       "operationName": "_phase:build",
-      "outputFolderNames": [
-        "dist",
-        "lib",
-        "lib-amd",
-        "lib-commonjs",
-        "lib-es6",
-        "temp"
-      ]
+      "outputFolderNames": ["dist", "temp"]
     },
     {
       "operationName": "build",
-      "outputFolderNames": [
-        "dist",
-        "lib",
-        "lib-amd",
-        "lib-commonjs",
-        "lib-es6",
-        "temp"
-      ]
+      "outputFolderNames": ["dist", "temp"]
     }
   ]
 }
