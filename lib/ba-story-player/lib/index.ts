@@ -1,9 +1,16 @@
 import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
-import { getOtherSoundUrls, wait } from "@/utils";
-import { Application, Assets, LoadAsset, utils as pixiUtils, settings } from "pixijs";
+import { wait } from "@/utils";
 import axios from "axios";
+import {
+  Application,
+  Assets,
+  LoadAsset,
+  utils as pixiUtils,
+  settings,
+} from "pixijs";
+import { extensions } from "pixijs";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
 import { bgInit } from "@/layers/bgLayer";
@@ -13,7 +20,16 @@ import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
+import "@pixi/sound";
+import "pixi-spine/bundles/pixi-spine";
 import { IEventData, ISkeletonData } from "pixi-spine/packages/base";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+extensions.add(window.spineLoader);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+extensions.add(window.spineTextureAtlasLoader);
 
 let playerStore: ReturnType<typeof usePlayerStore>;
 let privateState: ReturnType<typeof initPrivateState>;
@@ -487,7 +503,9 @@ export async function init(
   }
   // TODO debug用 线上环境删掉 而且会导致HMR出问题 慎用
   // https://chrome.google.com/webstore/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon/related?hl=en
-  // globalThis.__PIXI_APP__ = privateState.app;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
   document.querySelector(`#${elementID}`)?.appendChild(app.view);
   //加载初始化资源以便翻译层进行翻译
@@ -596,14 +614,13 @@ export const resourcesLoader = {
 
       //添加l2d spine资源
       if (unit.l2d) {
-        checkloadAssetAlias(unit.l2d.spineUrl, unit.l2d.spineUrl).then((res: ISkeletonData) => {
-          if (res) {
-            this.loadL2dVoice(res.events);
+        checkloadAssetAlias(unit.l2d.spineUrl, unit.l2d.spineUrl).then(
+          (res?: { spineData: ISkeletonData }) => {
+            if (res) {
+              this.loadL2dVoice(res.spineData.events);
+            }
           }
-        });
-      }
-      this.checkAndAdd(unit.l2d, "spineUrl");
-      if (unit.l2d) {
+        );
         playerStore.curL2dConfig?.otherSpine?.forEach(i =>
           this.checkAndAdd(utils.getResourcesUrl("otherL2dSpine", i))
         );
@@ -622,6 +639,8 @@ export const resourcesLoader = {
     Promise.allSettled(this.loadTaskList).then(() => {
       //当chrome webgl inspector打开时可能导致callback被执行两次
       if (!hasLoad) {
+        this.loadTaskList.splice(0, this.loadTaskList.length);
+        this.loadedList.splice(0, this.loadedList.length);
         hasLoad = true;
         callback();
       }
@@ -652,14 +671,19 @@ export const resourcesLoader = {
     for (const emotionResources of playerStore.emotionResourcesTable.values()) {
       for (const emotionResource of emotionResources) {
         // eslint-disable-next-line max-len
-        this.loadTaskList.push(checkloadAssetAlias(emotionResource, utils.getResourcesUrl("emotionImg", emotionResource)));
+        this.loadTaskList.push(
+          checkloadAssetAlias(
+            emotionResource,
+            utils.getResourcesUrl("emotionImg", emotionResource)
+          )
+        );
       }
     }
-    for (const emotionName of playerStore.emotionResourcesTable.keys()) {
-      const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-      // eslint-disable-next-line max-len
-      this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
-    }
+    // for (const emotionName of playerStore.emotionResourcesTable.keys()) {
+    //   const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
+    //   // eslint-disable-next-line max-len
+    //   this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
+    // }
   },
 
   /**
@@ -668,7 +692,9 @@ export const resourcesLoader = {
   async addFXResources() {
     for (const fxImages of playerStore.fxImageTable.values()) {
       for (const url of fxImages) {
-        this.loadTaskList.push(checkloadAssetAlias(url, utils.getResourcesUrl("fx", url)));
+        this.loadTaskList.push(
+          checkloadAssetAlias(url, utils.getResourcesUrl("fx", url))
+        );
       }
     }
   },
@@ -692,10 +718,10 @@ export const resourcesLoader = {
    * 添加其他特效音
    */
   addOtherSounds() {
-    const otherSoundUrls = getOtherSoundUrls();
-    for (const url of otherSoundUrls) {
-      this.loadTaskList.push(checkloadAssetAlias(url, url));
-    }
+    // const otherSoundUrls = getOtherSoundUrls();
+    // for (const url of otherSoundUrls) {
+    //   this.loadTaskList.push(checkloadAssetAlias(url, url));
+    // }
   },
 
   /**
@@ -704,7 +730,9 @@ export const resourcesLoader = {
   addBGEffectImgs() {
     for (const imgs of playerStore.bgEffectImgMap.values()) {
       for (const img of imgs) {
-        this.loadTaskList.push(checkloadAssetAlias(img, utils.getResourcesUrl("bgEffectImgs", img)));
+        this.loadTaskList.push(
+          checkloadAssetAlias(img, utils.getResourcesUrl("bgEffectImgs", img))
+        );
       }
     }
   },
@@ -1070,7 +1098,9 @@ function loadAssetAlias<T = any>(alias: string | string[], url: string) {
   });
 }
 
-function loadAsset<T = any>(param: string | LoadAsset | string[] | LoadAsset[]) {
+function loadAsset<T = any>(
+  param: string | LoadAsset | string[] | LoadAsset[]
+) {
   function getResourceName(): string[] {
     if (typeof param === "string") {
       return [lastName(param as string)];
@@ -1080,7 +1110,7 @@ function loadAsset<T = any>(param: string | LoadAsset | string[] | LoadAsset[]) 
           return param as string[];
         } else {
           const tmp: LoadAsset[] = param as LoadAsset[];
-          return tmp.map((it) => (it.alias && it.alias[0]) ?? lastName(it.src));
+          return tmp.map(it => (it.alias && it.alias[0]) ?? lastName(it.src));
         }
       } else {
         return [(param.alias && param.alias[0]) ?? lastName(param.src)];
@@ -1090,17 +1120,19 @@ function loadAsset<T = any>(param: string | LoadAsset | string[] | LoadAsset[]) 
   function lastName(source: string) {
     return source.substring(source.lastIndexOf("/") + 1);
   }
-  return Assets.load<T>(param as never).then((_) => {
-    eventBus.emit("oneResourceLoaded", {
-      type: "success",
-      resourceName: getResourceName(),
+  return Assets.load<T>(param as never)
+    .then(_ => {
+      eventBus.emit("oneResourceLoaded", {
+        type: "success",
+        resourceName: getResourceName(),
+      });
+      return _;
+    })
+    .catch(err => {
+      console.error(err);
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: getResourceName(),
+      });
     });
-    return _;
-  }).catch((err) => {
-    console.error(err);
-    eventBus.emit("oneResourceLoaded", {
-      type: "fail",
-      resourceName: getResourceName(),
-    });
-  });
 }

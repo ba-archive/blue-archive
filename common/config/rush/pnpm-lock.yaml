@@ -342,7 +342,10 @@ importers:
       '@pixi/filter-color-overlay': ~5.1.1
       '@pixi/filter-crt': ~5.1.1
       '@pixi/filter-motion-blur': ~5.1.1
+      '@pixi/graphics': ~7.2.4
       '@pixi/math': ~7.2.4
+      '@pixi/mesh': ~7.2.4
+      '@pixi/mesh-extras': ~7.2.4
       '@pixi/particle-emitter': ~5.0.8
       '@pixi/sound': ~5.2.0
       '@pixi/sprite': ~7.2.4
@@ -387,7 +390,10 @@ importers:
       '@pixi/filter-color-overlay': 5.1.1_@pixi+core@7.2.4
       '@pixi/filter-crt': 5.1.1_@pixi+core@7.2.4
       '@pixi/filter-motion-blur': 5.1.1_@pixi+core@7.2.4
+      '@pixi/graphics': 7.2.4_21909aab3a617c7e48f62f47b2bcc85d
       '@pixi/math': 7.2.4
+      '@pixi/mesh': 7.2.4_44e40742d0ef8a2ce831687ffd8eb5d7
+      '@pixi/mesh-extras': 7.2.4_6fdbd742cbf28c7ea2b4c32679d06549
       '@pixi/particle-emitter': 5.0.8_dcbf1fdc21548bab2bb2be7a39d8f414
       '@pixi/sound': 5.2.0_018f010fb3913a2064b24bada1718d9a
       '@pixi/sprite': 7.2.4_44e40742d0ef8a2ce831687ffd8eb5d7
@@ -3772,7 +3778,7 @@ packages:
       colors: 1.2.5
       lodash: 4.17.21
       resolve: 1.22.2
-      semver: 7.3.7
+      semver: 7.3.8
       source-map: 0.6.1
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -4219,7 +4225,7 @@ packages:
       '@octokit/request-error': 3.0.3
       '@octokit/types': 9.3.2
       is-plain-object: 5.0.0
-      node-fetch: 2.6.7
+      node-fetch: 2.6.12
       universal-user-agent: 6.0.0
     transitivePeerDependencies:
       - encoding
@@ -4374,8 +4380,40 @@ packages:
       '@pixi/core': 7.2.4
     dev: false
 
+  /@pixi/graphics/7.2.4_21909aab3a617c7e48f62f47b2bcc85d:
+    resolution: {integrity: sha512-3A2EumTjWJgXlDLOyuBrl9b6v1Za/E+/IjOGUIX843HH4NYaf1a2sfDfljx6r3oiDvy+VhuBFmgynRcV5IyA0Q==}
+    peerDependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/display': 7.2.4
+      '@pixi/sprite': 7.2.4
+    dependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/display': 7.2.4_@pixi+core@7.2.4
+      '@pixi/sprite': 7.2.4_44e40742d0ef8a2ce831687ffd8eb5d7
+    dev: false
+
   /@pixi/math/7.2.4:
     resolution: {integrity: sha512-LJB+mozyEPllxa0EssFZrKNfVwysfaBun4b2dJKQQInp0DafgbA0j7A+WVg0oe51KhFULTJMpDqbLn/ITFc41A==}
+    dev: false
+
+  /@pixi/mesh-extras/7.2.4_6fdbd742cbf28c7ea2b4c32679d06549:
+    resolution: {integrity: sha512-Lxqq/1E2EmDgjZX8KzjhBy3VvITIQ00arr2ikyHYF1d0XtQTKEYpr8VKzhchqZ5/9DuyTDbDMYGhcxoNXQmZrQ==}
+    peerDependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/mesh': 7.2.4
+    dependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/mesh': 7.2.4_44e40742d0ef8a2ce831687ffd8eb5d7
+    dev: false
+
+  /@pixi/mesh/7.2.4_44e40742d0ef8a2ce831687ffd8eb5d7:
+    resolution: {integrity: sha512-wiALIqcRKib2BqeH9kOA5fOKWN352nqAspgbDa8gA7OyWzmNwqIedIlElixd0oLFOrIN5jOZAdzeKnoYQlt9Aw==}
+    peerDependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/display': 7.2.4
+    dependencies:
+      '@pixi/core': 7.2.4
+      '@pixi/display': 7.2.4_@pixi+core@7.2.4
     dev: false
 
   /@pixi/particle-emitter/5.0.8_dcbf1fdc21548bab2bb2be7a39d8f414:
@@ -11224,7 +11262,7 @@ packages:
       redent: 3.0.0
       trim-newlines: 3.0.1
       type-fest: 0.18.1
-      yargs-parser: 20.2.9
+      yargs-parser: 20.2.4
     dev: true
 
   /merge-descriptors/1.0.1:
@@ -11607,7 +11645,6 @@ packages:
         optional: true
     dependencies:
       whatwg-url: 5.0.0
-    dev: false
 
   /node-fetch/2.6.7:
     resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
@@ -13791,14 +13828,6 @@ packages:
 
   /semver/7.3.4:
     resolution: {integrity: sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
-  /semver/7.3.7:
-    resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -16372,11 +16401,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /yargs-parser/20.2.9:
-    resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
-    engines: {node: '>=10'}
-    dev: true
-
   /yargs-parser/21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
@@ -16392,7 +16416,7 @@ packages:
       require-directory: 2.1.1
       string-width: 4.2.3
       y18n: 5.0.8
-      yargs-parser: 20.2.9
+      yargs-parser: 20.2.4
     dev: true
 
   /yargs/17.7.2:

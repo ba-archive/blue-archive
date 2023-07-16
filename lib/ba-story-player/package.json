@@ -34,7 +34,6 @@
     "vue-responsive-video-background-player": "^2.3.1",
     "xxhashjs": "^0.2.2",
     "pixijs": "~7.1.4",
-    "pixi-spine": "workspace:*",
     "@pixi/sound": "~5.2.0",
     "@pixi/filter-adjustment": "~5.1.1",
     "@pixi/filter-advanced-bloom": "~5.1.1",
@@ -49,7 +48,11 @@
     "@pixi/utils": "~7.2.4",
     "@pixi/sprite": "~7.2.4",
     "@pixi/math": "~7.2.4",
-    "@pixi/constants": "~7.2.4"
+    "@pixi/constants": "~7.2.4",
+    "@pixi/mesh-extras": "~7.2.4",
+    "@pixi/mesh": "~7.2.4",
+    "@pixi/graphics": "~7.2.4",
+    "pixi-spine": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",

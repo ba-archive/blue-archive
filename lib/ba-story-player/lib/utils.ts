@@ -8,8 +8,6 @@ let otherSoundMap: OtherSoundsUrls;
 let oggAudioType = "ogg";
 let superSampling = "";
 
-
-
 /**
  * 字面意思, 深拷贝json
  */
@@ -20,10 +18,6 @@ export function deepCopyObject<T>(object: T): T {
   return JSON.parse(JSON.stringify(object));
 }
 
-
-
-
-
 /**
  * 获取其他特效音资源, 用于本体资源加载
  * @returns
@@ -31,10 +25,6 @@ export function deepCopyObject<T>(object: T): T {
 export function getOtherSoundUrls(): string[] {
   return Object.values(otherSoundMap);
 }
-
-
-
-
 
 /**
  * 根据资源类型和参数获取资源地址, 可根据服务器实际情况修改
@@ -108,10 +98,6 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
   }
 }
 
-
-
-
-
 /**
  * 设置数据站点
  * @param url
@@ -125,17 +111,12 @@ export function setDataUrl(url: string): void {
   };
 }
 
-
-
-
 /**
  * 设置ogg类型音频的替代音频类型
  */
 export function setOggAudioType(audioType: "mp3") {
   oggAudioType = audioType;
 }
-
-
 
 export function setSuperSampling(type: string) {
   superSampling = `-${type}x`;

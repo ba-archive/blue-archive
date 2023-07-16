@@ -1,4 +1,5 @@
 import { getResourcesUrl } from "@/utils";
+import { Assets } from "pixijs";
 import { ref } from "vue";
 import { BGEffectImgTable } from "@/types/effectLayer";
 import {
@@ -157,7 +158,7 @@ const getterFunctions: GetterFunctions = {
   },
 
   characterSpineData: () => (CharacterName: number) => {
-    return privateState.app?.loader.resources[String(CharacterName)].spineData;
+    return Assets.get(String(CharacterName)).spineData;
   },
 
   /**
@@ -193,8 +194,7 @@ const getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    const resource =
-      privateState.app?.loader.resources[privateState.l2dSpineUrl];
+    const resource = Assets.get(privateState.l2dSpineUrl);
     if (resource) return resource.spineData;
   },
 };
@@ -278,12 +278,10 @@ for (const state of Object.keys(privateState) as Array<keyof PrivateStates>) {
   }
 }
 
-
 /**
  * 返回可修改的privateState, 仅本体在初始化时可调用
  */
 export const initPrivateState = () => privateState;
-
 
 /**
  * 资源调用接口

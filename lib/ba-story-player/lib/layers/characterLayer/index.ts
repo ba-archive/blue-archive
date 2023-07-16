@@ -1,9 +1,8 @@
-import * as PIXI from "pixijs";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
+import * as PIXI from "pixijs";
 import gsap, { Power0 } from "gsap";
-import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayerInterface,
@@ -27,6 +26,12 @@ import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
 import { PixiPlugin } from "gsap/PixiPlugin";
+import {
+  IAnimationState,
+  ISkeletonData,
+  ITrackEntry,
+  Spine,
+} from "pixi-spine/bundles/pixi-spine";
 import CharacterEffectPlayerInstance, {
   POS_INDEX_MAP,
   calcSpineStagePosition,
@@ -232,6 +237,7 @@ export const CharacterLayerInstance: CharacterLayer = {
     });
   },
   showCharacter(data: ShowCharacter): boolean {
+    debugger;
     if (!this.beforeProcessShowCharacterAction(data.characters)) {
       return false;
     }

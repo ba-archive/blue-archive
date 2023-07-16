@@ -3,8 +3,8 @@
  */
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Application, Assets, LoaderResource, Sprite } from "pixijs";
 import gsap from "gsap";
+import { Application, Assets, LoaderResource, Sprite, Texture } from "pixijs";
 import { BgLayer } from "@/types/bgLayer";
 import { Dict } from "@/types/common";
 
@@ -67,13 +67,12 @@ const BgLayerInstance: BgLayer = {
   getBgSpriteFromResource(name: string) {
     const { app } = usePlayerStore();
     let sprite: Sprite | null = null;
-    const asset = Assets.get(name);
+    const asset = Assets.get<Texture>(name);
     if (!asset) {
       console.error(`can't find resource: ${name}`);
       return;
     }
-    sprite = new Sprite(asset.texture);
-
+    sprite = new Sprite(asset);
     const { x, y, scale } = calcBackgroundImageSize(sprite, app);
     sprite.position.set(x, y);
     sprite.scale.set(scale);
