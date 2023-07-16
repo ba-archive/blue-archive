@@ -639,15 +639,16 @@ function handleStartLoading(url: LoadingImageUrl) {
  */
 function handleOneResourceLoaded(state: ResourceLoadState) {
   showLoading.value = true;
-  const lastUrlPathIndex = state.resourceName.lastIndexOf("/") + 1;
-  const resourceName = state.resourceName.substring(
-    lastUrlPathIndex === -1 ? 0 : lastUrlPathIndex,
-    state.resourceName.length
-  );
-  loadLog.value.splice(0, 0, {
-    type: state.type,
-    resourceName: resourceName,
-  });
+  const tmp: ResourceLoadState[] = [];
+  if (typeof state.resourceName === "string") {
+    tmp.push(state);
+  } else {
+    tmp.push(...state.resourceName.map((it) => ({
+      type: state.type,
+      resourceName: it,
+    })));
+  }
+  loadLog.value.splice(0, 0, ...tmp);
 }
 
 /**

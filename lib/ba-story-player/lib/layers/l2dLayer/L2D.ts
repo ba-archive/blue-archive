@@ -2,7 +2,7 @@ import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
 import gsap from "gsap";
-import { IEvent, ITrackEntry, Spine } from "pixi-spine";
+import { IEvent, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 import { IL2dPlayQue } from "@/types/l2d";
 
 let disposed = true;
@@ -22,7 +22,7 @@ export function L2DInit() {
   // 背景混合或者其他播放 spine, 如普通星野和运动邮箱
   let otherItems: Spine[] = [];
   // 当前顶层的spine index
-  let currentIndex: number = 0;
+  let currentIndex = 0;
   let startAnimations: ({
     animation: string;
     spine: Spine;
@@ -153,7 +153,7 @@ export function L2DInit() {
             // 必须要先加入 app 才能播放
             timeOutArray.push(
               setTimeout(() => {
-                let e = curStartAnimations.spine.state.setAnimation(
+                const e = curStartAnimations.spine.state.setAnimation(
                   IDLE_TRACK,
                   curStartAnimations.animation,
                   !startAnimations[currentIndex] // 最后一个待机动作循环
@@ -169,7 +169,7 @@ export function L2DInit() {
           });
           // 0轨道, 空动画, 待机动画跳过
           if (
-            entry.trackIndex == 0 ||
+            entry.trackIndex === 0 ||
             entryAnimationName.includes("<empty>") ||
             /^Idle_01/.test(entryAnimationName) // Start_Idle_01 不是待机动画, Idle_01 才是
           ) {
@@ -178,7 +178,7 @@ export function L2DInit() {
 
           if (entryAnimationName.indexOf("_Talk_") >= 0) {
             // 说话动作结束后设为待机
-            let e = item.state.setAnimation(entry.trackIndex, "Idle_01", true);
+            const e = item.state.setAnimation(entry.trackIndex, "Idle_01", true);
             // 跳转到下一个动画的过场
             e!.mixDuration = 0.8;
           } else {
@@ -277,9 +277,9 @@ function calcL2DSize(
 }
 function fadeEffect() {
   if (!disposed) {
-    let player = document.querySelector("#player__main") as HTMLDivElement;
+    const player = document.querySelector("#player__main") as HTMLDivElement;
     player.style.backgroundColor = "white";
-    let playerCanvas = document.querySelector("#player canvas");
+    const playerCanvas = document.querySelector("#player canvas");
     gsap.to(playerCanvas, { alpha: 0, duration: 1 });
     setTimeout(() => {
       if (!disposed) {

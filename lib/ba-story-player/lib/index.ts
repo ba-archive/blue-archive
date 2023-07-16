@@ -2,9 +2,8 @@ import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { getOtherSoundUrls, wait } from "@/utils";
-import { Application, Loader, utils as pixiUtils, settings } from "pixi.js";
+import { Application, Assets, LoadAsset, utils as pixiUtils, settings } from "pixijs";
 import axios from "axios";
-import { IEventData, SpineParser } from "pixi-spine";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
 import { bgInit } from "@/layers/bgLayer";
@@ -14,6 +13,7 @@ import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
+import { IEventData, ISkeletonData } from "pixi-spine/packages/base";
 
 let playerStore: ReturnType<typeof usePlayerStore>;
 let privateState: ReturnType<typeof initPrivateState>;
@@ -283,7 +283,6 @@ export const eventEmitter = {
         });
       }
     }
-    // eventBus.emit('showBg', 'https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg')
   },
 
   /**
@@ -488,30 +487,11 @@ export async function init(
   }
   // TODO debug用 线上环境删掉 而且会导致HMR出问题 慎用
   // https://chrome.google.com/webstore/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon/related?hl=en
-  // (window as any).__PIXI_INSPECTOR_GLOBAL_HOOK__ && (window as any).__PIXI_INSPECTOR_GLOBAL_HOOK__.register({ PIXI: PIXI })
   // globalThis.__PIXI_APP__ = privateState.app;
-
   const app = playerStore.app;
   document.querySelector(`#${elementID}`)?.appendChild(app.view);
-  Loader.registerPlugin(SpineParser);
-
-  // 注册加载回调实现log滚动效果
-  app.loader.onLoad.add((_, resource) => {
-    eventBus.emit("oneResourceLoaded", {
-      type: "success",
-      resourceName: resource.name,
-    });
-  });
-  app.loader.onError.add((err, _, resource) => {
-    console.error(err);
-    errorCallback();
-    eventBus.emit("oneResourceLoaded", {
-      type: "fail",
-      resourceName: resource.name,
-    });
-  });
   //加载初始化资源以便翻译层进行翻译
-  await resourcesLoader.init(app.loader);
+  await resourcesLoader.init();
   privateState.allStoryUnit = translate(props.story);
   privateState.stackStoryUnit = buildStoryIndexStackRecord(
     privateState.allStoryUnit
@@ -551,13 +531,13 @@ export async function init(
  * 资源加载处理对象
  */
 export const resourcesLoader = {
-  loader: new Loader(),
+  loadTaskList: [] as Promise<unknown>[],
+  loadedList: [] as string[],
   /**
    * 初始化, 预先加载表资源供翻译层使用
    */
-  async init(loader: Loader) {
+  async init() {
     await this.loadExcels();
-    this.loader = loader;
   },
   /**
    * 添加所有资源, 有些pixi loader不能处理的资源则会调用资源处理函数, 故会返回promise
@@ -583,9 +563,13 @@ export const resourcesLoader = {
       if (unit.characters.length !== 0) {
         for (const character of unit.characters) {
           const spineUrl = character.spineUrl;
-          if (!this.loader.resources[character.CharacterName]) {
-            this.loader.add(String(character.CharacterName), spineUrl);
-          }
+          checkloadAssetAlias(String(character.CharacterName), spineUrl);
+          // TODO ? 为什么要在这里加载
+          // loadAssetAlias(String(character.CharacterName), spineUrl).then((res: ISkeletonData) => {
+          //   if (res) {
+          //     this.loadL2dVoice(res.events);
+          //   }
+          // });
         }
       }
       if (unit.audio) {
@@ -611,6 +595,13 @@ export const resourcesLoader = {
       this.checkAndAdd(unit.PopupFileName);
 
       //添加l2d spine资源
+      if (unit.l2d) {
+        checkloadAssetAlias(unit.l2d.spineUrl, unit.l2d.spineUrl).then((res: ISkeletonData) => {
+          if (res) {
+            this.loadL2dVoice(res.events);
+          }
+        });
+      }
       this.checkAndAdd(unit.l2d, "spineUrl");
       if (unit.l2d) {
         playerStore.curL2dConfig?.otherSpine?.forEach(i =>
@@ -628,22 +619,12 @@ export const resourcesLoader = {
    */
   load(callback: () => void) {
     let hasLoad = false;
-    this.loader.onError.add(error => {
-      throw error;
-    });
-    this.loader.load((loader, res) => {
-      playerStore.app.loader.load(async (loader, res) => {
-        //当chrome webgl inspector打开时可能导致callback被执行两次
-        if (!hasLoad) {
-          console.log("已加载资源:", res);
-          hasLoad = true;
-          const spineData = usePlayerStore().l2dSpineData;
-          if (spineData) {
-            await this.loadL2dVoice(spineData.events);
-          }
-          callback();
-        }
-      });
+    Promise.allSettled(this.loadTaskList).then(() => {
+      //当chrome webgl inspector打开时可能导致callback被执行两次
+      if (!hasLoad) {
+        hasLoad = true;
+        callback();
+      }
     });
   },
 
@@ -652,17 +633,15 @@ export const resourcesLoader = {
    * @param resources 检查是否存在的资源, url可为对象属性或本身
    * @param key 当resoureces为对象时指定的url属性
    */
-  checkAndAdd(resources: Object | string | undefined, key?: string) {
+  checkAndAdd(resources: object | string | undefined, key?: string) {
     let url = "";
     if (resources) {
       if (typeof resources === "string") {
         url = resources;
       } else {
-        url = Reflect.get(resources, key!);
+        url = key ? Reflect.get(resources, key) : "";
       }
-      if (!this.loader.resources[url]) {
-        this.loader.add(url, url);
-      }
+      this.loadTaskList.push(checkloadAssetAlias(url, url));
     }
   },
 
@@ -672,22 +651,14 @@ export const resourcesLoader = {
   async addEmotionResources() {
     for (const emotionResources of playerStore.emotionResourcesTable.values()) {
       for (const emotionResource of emotionResources) {
-        if (!this.loader.resources[emotionResource]) {
-          this.loader.add(
-            emotionResource,
-            utils.getResourcesUrl("emotionImg", emotionResource)
-          );
-        }
+        // eslint-disable-next-line max-len
+        this.loadTaskList.push(checkloadAssetAlias(emotionResource, utils.getResourcesUrl("emotionImg", emotionResource)));
       }
     }
     for (const emotionName of playerStore.emotionResourcesTable.keys()) {
       const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-      if (!this.loader.resources[emotionSoundName]) {
-        this.loader.add(
-          emotionSoundName,
-          utils.getResourcesUrl("emotionSound", emotionSoundName)
-        );
-      }
+      // eslint-disable-next-line max-len
+      this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
     }
   },
 
@@ -697,9 +668,7 @@ export const resourcesLoader = {
   async addFXResources() {
     for (const fxImages of playerStore.fxImageTable.values()) {
       for (const url of fxImages) {
-        if (!this.loader.resources[url]) {
-          this.loader.add(url, utils.getResourcesUrl("fx", url));
-        }
+        this.loadTaskList.push(checkloadAssetAlias(url, utils.getResourcesUrl("fx", url)));
       }
     }
   },
@@ -714,15 +683,9 @@ export const resourcesLoader = {
         !unexistL2dSoundEvent.includes(event.name)
       ) {
         const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
-        this.loader.add(voiceUrl, voiceUrl);
+        this.loadTaskList.push(loadAssetAlias(voiceUrl, voiceUrl));
       }
     }
-
-    return new Promise<void>(resolve => {
-      this.loader.load(() => {
-        resolve();
-      });
-    });
   },
 
   /**
@@ -731,9 +694,7 @@ export const resourcesLoader = {
   addOtherSounds() {
     const otherSoundUrls = getOtherSoundUrls();
     for (const url of otherSoundUrls) {
-      if (!this.loader.resources[url]) {
-        this.loader.add(url, url);
-      }
+      this.loadTaskList.push(checkloadAssetAlias(url, url));
     }
   },
 
@@ -743,9 +704,7 @@ export const resourcesLoader = {
   addBGEffectImgs() {
     for (const imgs of playerStore.bgEffectImgMap.values()) {
       for (const img of imgs) {
-        if (!this.loader.resources[img]) {
-          this.loader.add(img, utils.getResourcesUrl("bgEffectImgs", img));
-        }
+        this.loadTaskList.push(checkloadAssetAlias(img, utils.getResourcesUrl("bgEffectImgs", img)));
       }
     }
   },
@@ -1093,5 +1052,55 @@ function waitForStoryUnitPlayComplete() {
       }, 500);
     }
     restart();
+  });
+}
+
+function checkloadAssetAlias<T = any>(alias: string, url: string) {
+  if (!resourcesLoader.loadedList.includes(alias)) {
+    resourcesLoader.loadedList.push(alias);
+    return loadAssetAlias(alias, url);
+  }
+  return Promise.resolve();
+}
+
+function loadAssetAlias<T = any>(alias: string | string[], url: string) {
+  return loadAsset<T>({
+    src: url,
+    alias: Array.isArray(alias) ? alias : [alias],
+  });
+}
+
+function loadAsset<T = any>(param: string | LoadAsset | string[] | LoadAsset[]) {
+  function getResourceName(): string[] {
+    if (typeof param === "string") {
+      return [lastName(param as string)];
+    } else {
+      if (Array.isArray(param)) {
+        if (typeof param[0] === "string") {
+          return param as string[];
+        } else {
+          const tmp: LoadAsset[] = param as LoadAsset[];
+          return tmp.map((it) => (it.alias && it.alias[0]) ?? lastName(it.src));
+        }
+      } else {
+        return [(param.alias && param.alias[0]) ?? lastName(param.src)];
+      }
+    }
+  }
+  function lastName(source: string) {
+    return source.substring(source.lastIndexOf("/") + 1);
+  }
+  return Assets.load<T>(param as never).then((_) => {
+    eventBus.emit("oneResourceLoaded", {
+      type: "success",
+      resourceName: getResourceName(),
+    });
+    return _;
+  }).catch((err) => {
+    console.error(err);
+    eventBus.emit("oneResourceLoaded", {
+      type: "fail",
+      resourceName: getResourceName(),
+    });
   });
 }

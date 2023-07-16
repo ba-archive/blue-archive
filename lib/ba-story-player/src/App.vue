@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import * as PIXI from "pixi.js";
 import axios from "axios";
 import { ref, watch } from "vue";
 import BaStoryPlayer from "../lib/BaStoryPlayer.vue";
@@ -12,7 +11,6 @@ import { Language } from "../lib/types/store";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
-import prologue from "./data/prologue1.1.json";
 import yuuka from "./data/yuuka.json";
 import { useResizeObserver, useThrottleFn } from "@vueuse/core";
 
@@ -46,7 +44,6 @@ watch(toolType, () => {
   localStorage.setItem(cacheKey, toolType.value);
 });
 
-Reflect.set(window, "PIXI", PIXI);
 Reflect.set(window, "baResource", resourcesLoader);
 Reflect.set(window, "baStory", storyHandler);
 Reflect.set(window, "baStore", usePlayerStore());

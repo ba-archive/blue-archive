@@ -1,4 +1,3 @@
-import { onDeactivated } from "vue";
 import { PlayOptions } from "@pixi/sound";
 import { Character, Effect, Speaker, Text } from "./common";
 import {
@@ -282,7 +281,7 @@ export interface PlayEffect {
 
 export type ResourceLoadState = {
   type: "success" | "fail";
-  resourceName: string;
+  resourceName: string | string[];
 };
 
 export interface ShowCharacter {

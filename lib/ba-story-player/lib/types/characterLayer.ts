@@ -1,14 +1,9 @@
-import { Sprite } from "pixi.js";
-import type { ISkeletonData, Spine } from "pixi-spine";
+import { Sprite } from "pixijs";
+import type { IAnimationStateListener, ISkeletonData, Spine } from "pixi-spine/bundles/pixi-spine";
 import { Character, CharacterInstance } from "@/types/common";
 import { ShowCharacter } from "@/types/events";
-import { IAnimationStateListener } from "@pixi-spine/base";
 
-/**
- * 所有角色特效统一接口
- */
-export type BaseCharacterEffectPlayer<T extends EffectsWord> =
-  CharacterEffectPlayerInterface<T> & EffectFunction<T>;
+
 export interface ActionOptions extends BaseOptions<CharacterEffectWord> {
   a: {};
   d: {
@@ -82,6 +77,11 @@ export interface ActionOptions extends BaseOptions<CharacterEffectWord> {
   };
   hide: {};
 }
+/**
+ * 所有角色特效统一接口
+ */
+export type BaseCharacterEffectPlayer<T extends EffectsWord> =
+  CharacterEffectPlayerInterface<T> & EffectFunction<T>;
 export type BaseOptions<T extends string> = Record<T, Record<string, any>>;
 /**
  * 情绪动作的具体参数

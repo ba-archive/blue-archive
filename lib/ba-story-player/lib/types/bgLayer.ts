@@ -30,11 +30,9 @@ export interface BgLayer {
   handleResize(): void;
   /**
    * 从 Loader Resource 获取背景 Sprite
-   * @param resources loader resources
    * @param name 背景图片名
    */
   getBgSpriteFromResource(
-    resources: Dict<LoaderResource>,
     name: string
   ): Sprite | undefined;
   /**

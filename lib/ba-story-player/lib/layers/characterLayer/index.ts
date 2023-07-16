@@ -1,9 +1,9 @@
-import * as PIXI from "pixi.js";
+import * as PIXI from "pixijs";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import gsap, { Power0 } from "gsap";
-import { IAnimationState, ISkeletonData, Spine } from "pixi-spine";
+import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayerInterface,
@@ -310,6 +310,8 @@ export const CharacterLayerInstance: CharacterLayer = {
         blue: 1.15,
       });
       const motionBlurFilter = new MotionBlurFilter();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       data.instance.filters.push(crtFilter, adjustmentFilter, motionBlurFilter);
       loopCRtAnimation(crtFilter);
       const tl = gsap.timeline();
@@ -359,8 +361,11 @@ export const CharacterLayerInstance: CharacterLayer = {
       chara.alpha = 1;
       chara.visible = true;
     }
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     data.instance.filters.push(colorFilter);
 
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise<void>(async (resolve, reject) => {
       const effectListLength = data.effects.length;
       if (effectListLength === 0) {
@@ -524,7 +529,7 @@ function loopAnimationTime<AnimationState extends IAnimationState>(
       }
       let loopCount = 1;
       const listener: ILoopAnimationStateListener = {
-        complete: entry => {
+        complete: (entry: ITrackEntry) => {
           if (entry.trackIndex !== trackIndex) {
             return;
           }
