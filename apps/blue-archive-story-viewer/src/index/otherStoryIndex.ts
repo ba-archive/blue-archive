@@ -250,32 +250,6 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "쇼는 계속되어야 한다",
-          TextJp: "The show must go on.",
-          TextTh: "การแสดงต้องดำเนินต่อไป",
-          TextTw: "The show must go on.",
-          TextEn: "The Show Must Go On",
-          TextCn: "The show must go on.",
-        },
-        previous: 208,
-        story_id: 209,
-        summary: {
-          TextKr:
-            "데칼코마니와 골콩트가 관객이 없는 곳에서 퍼포먼스를 벌이는 폐쇄된 유원지의 마술사, 고즈를 설명한다.",
-          TextJp:
-            "閉鎖された遊園地、観客もいない寂れたその空間でアミューズ・ドールはパフォーマンスを続けている。ゴルコンダとデカルコマニーはその様子に対し、たとえ観客もおらず、観測されない芸術であったとしても「ショーは継続されるべき」であると告げるのだった。",
-          TextTh:
-            "ในสวนสนุกร้างผู้คนที่ปิดตัวลง เดคัลโคมานีกับโกลคอนดากล่าวแนะนำ การแสดงของนักมายากลนามว่า 'GOZ'",
-          TextTw:
-            "轉印和戈爾孔特針對魔術師高茲為什麼在沒有觀眾的廢棄遊樂園獨自表演進行說明。",
-          TextEn:
-            "Decalcomania and Golconde introduce Goz, a magician who performs without an audience at abandoned amusement parks.",
-          TextCn:
-            "在已被关闭的游乐园中，游乐园玩偶依然在没有观众的空荡场地中继续表演。对此，印花釉法和戈尔孔达宣告道，即使没有观众，即使是无法被观测到的艺术，“表演也应该继续下去”。",
-        },
-      },
-      {
-        title: {
           TextKr: "불멸성에 대한 담론",
           TextJp: "不滅性について",
           TextTh: "",
