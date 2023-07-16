@@ -60,18 +60,18 @@
             </div>
             <a
               v-if="undefined !== findPreviousStoryId()"
-              :href="`/mainStory/${findPreviousStoryId()}`"
+              :href="`/${storyQueryType}Story/${findPreviousStoryId()}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.previous") }}</a
             >
             <a
-              href="/mainStory"
+              :href="`/${storyQueryType}Story`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.backToIndex") }}</a
             >
             <a
               v-if="undefined !== findNextStoryId()"
-              :href="`/mainStory/${findNextStoryId()}`"
+              :href="`/${storyQueryType}Story/${findNextStoryId()}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.next") }}</a
             >
@@ -128,6 +128,7 @@ const changeIndex = ref(0);
 const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
+const storyQueryType = computed(() => route.query.type ?? "main");
 const consentFromConfirmed = ref(false);
 const story = ref<StoryContent>({} as StoryContent);
 
@@ -154,7 +155,7 @@ const summary = ref({
 });
 /* eslint-enable max-len */
 axios
-  .get(`/story/main/${storyId.value}.json`, {
+  .get(`/story/${storyQueryType.value}/${storyId.value}.json`, {
     onDownloadProgress: progressEvent => {
       if (progressEvent.total) {
         initProgress.value = Math.floor(
@@ -308,7 +309,10 @@ function findNextStoryId(): number | undefined {
 }
 
 function handleStoryEnd() {
-  setTimeout(() => (playEnded.value = true), 6000);
+  setTimeout(
+    () => (playEnded.value = true),
+    "main" === storyQueryType.value ? 6000 : 4
+  );
 }
 
 function handleReplay() {
