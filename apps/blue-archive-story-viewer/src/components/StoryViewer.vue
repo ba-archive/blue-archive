@@ -60,7 +60,7 @@
             </div>
             <a
               v-if="undefined !== findPreviousStoryId()"
-              :href="`/${storyQueryType}Story/${findPreviousStoryId()}`"
+              :href="`/${storyQueryType}Story/${findPreviousStoryId()}?type=${storyQueryType}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.previous") }}</a
             >
@@ -71,7 +71,7 @@
             >
             <a
               v-if="undefined !== findNextStoryId()"
-              :href="`/${storyQueryType}Story/${findNextStoryId()}`"
+              :href="`/${storyQueryType}Story/${findNextStoryId()}?type=${storyQueryType}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.next") }}</a
             >
@@ -118,6 +118,7 @@ import {
 } from "@/types/StoryJson";
 import { getI18nString } from "@i18n/getI18nString";
 import { stories } from "@index/mainStoryIndex";
+import { stories as OtherStories } from "@index/otherStoryIndex";
 import { useSettingsStore } from "@store/settings";
 import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
@@ -244,7 +245,9 @@ function reloadPlayer(forceReload = false) {
   }, 375);
 }
 
-const allStoryIndex = getAllFlattenedStoryIndex(stories);
+const allStoryIndex = getAllFlattenedStoryIndex(stories).concat(
+  getAllFlattenedStoryIndex(OtherStories)
+);
 
 const currentStoryIndexUnit: Section | undefined = allStoryIndex.find(
   story => story.story_id === parseInt(storyId.value as string)
@@ -309,9 +312,10 @@ function findNextStoryId(): number | undefined {
 }
 
 function handleStoryEnd() {
+  console.log("剧情结束");
   setTimeout(
     () => (playEnded.value = true),
-    "main" === storyQueryType.value ? 6000 : 4
+    "main" === storyQueryType.value ? 4000 : 4
   );
 }
 
