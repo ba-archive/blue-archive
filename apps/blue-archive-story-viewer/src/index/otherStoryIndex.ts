@@ -35,7 +35,7 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Rin, an officer of the General Student Council, explains the various strange events and occurrences happening around Kivotos to Sensei.",
           TextCn:
-            "联邦学生会的干部凛向老师介绍及沃托斯各地正在发生的奇怪现象。",
+            "联邦学生会的干部凛向老师介绍基沃托斯各地正在发生的奇怪现象。",
         },
       },
       {
