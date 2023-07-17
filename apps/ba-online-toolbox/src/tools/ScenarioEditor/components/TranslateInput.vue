@@ -141,7 +141,7 @@ const translateStruct: ComputedRef<{
       mainStore.getScenario.content[config.getSelectLine][config.getTargetLang]
   );
 
-  const searchReg = /\[ns\d?]|\[s\d?]/g;
+  const searchReg = /\[n?s(\d{0,2})?]/g;
   const parseArr = translateText.value.match(searchReg);
 
   if (parseArr?.length) {
