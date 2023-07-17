@@ -27,7 +27,8 @@ import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
-
+import { sound } from '@pixi/sound';
+sound.disableAutoPause = true;
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;

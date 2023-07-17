@@ -4,6 +4,7 @@ import { getResourcesUrl } from "@/utils";
 import gsap from "gsap";
 import { IEvent, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 import { IL2dPlayQue } from "@/types/l2d";
+import { Assets } from "pixijs";
 
 let disposed = true;
 const IDLE_TRACK = 1;
@@ -211,7 +212,7 @@ export function L2DInit() {
     if (curL2dConfig?.otherSpine) {
       otherItems = curL2dConfig.otherSpine.map((i, idx) => {
         const temItem = new Spine(
-          app.loader.resources[getResourcesUrl("otherL2dSpine", i)].spineData!
+          Assets.get(getResourcesUrl("otherL2dSpine", i)).spineData
         );
         temItem.name = i;
         setSpinePlayInfo({ item: temItem, zIndex: 100 + idx + 1 });

@@ -640,12 +640,22 @@ function handleStartLoading(url: LoadingImageUrl) {
 function handleOneResourceLoaded(state: ResourceLoadState) {
   showLoading.value = true;
   const tmp: ResourceLoadState[] = [];
+  function spliteUrl(str: string) {
+    const lastIndex = str.lastIndexOf("/");
+    if (lastIndex) {
+      return str.substring(lastIndex + 1);
+    }
+    return str;
+  }
   if (typeof state.resourceName === "string") {
-    tmp.push(state);
+    tmp.push({
+      type: state.type,
+      resourceName: spliteUrl(state.resourceName),
+    });
   } else {
     tmp.push(...state.resourceName.map((it) => ({
       type: state.type,
-      resourceName: it,
+      resourceName: spliteUrl(it),
     })));
   }
   loadLog.value.splice(0, 0, ...tmp);

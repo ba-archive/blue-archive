@@ -183,7 +183,7 @@ export const eventEmitter = {
 
     this.actionByUnitType();
 
-    await waitForStoryUnitPlayComplete();
+    await waitForStoryUnitPlayComplete(storyHandler.currentStoryIndex);
   },
 
   actionByUnitType(currentStoryUnit?: StoryUnit) {
@@ -703,15 +703,16 @@ export const resourcesLoader = {
    * 添加l2d语音
    */
   loadL2dVoice(audioEvents: IEventData[]) {
-    for (const event of audioEvents) {
-      if (
-        event.name.includes("MemorialLobby") &&
-        !unexistL2dSoundEvent.includes(event.name)
-      ) {
-        const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
-        this.loadTaskList.push(loadAssetAlias(voiceUrl, voiceUrl));
-      }
-    }
+    return;
+    // for (const event of audioEvents) {
+    //   if (
+    //     event.name.includes("MemorialLobby") &&
+    //     !unexistL2dSoundEvent.includes(event.name)
+    //   ) {
+    //     const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
+    //     this.loadTaskList.push(loadAssetAlias(voiceUrl, voiceUrl));
+    //   }
+    // }
   },
 
   /**
@@ -1029,7 +1030,7 @@ export const storyHandler = {
   },
 };
 
-function waitForStoryUnitPlayComplete() {
+function waitForStoryUnitPlayComplete(currentIndex: number) {
   let startTime = Date.now();
   let leftTime = 50000;
   let interval = 0;
@@ -1057,7 +1058,7 @@ function waitForStoryUnitPlayComplete() {
           end();
           resolve();
         }
-        if (eventEmitter.unitDone) {
+        if (eventEmitter.unitDone || storyHandler.currentStoryIndex !== currentIndex) {
           end();
           resolve();
         } else if (Date.now() - startTime >= leftTime) {

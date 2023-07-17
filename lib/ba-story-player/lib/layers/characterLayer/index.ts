@@ -25,7 +25,9 @@ import { AdjustmentFilter } from "@pixi/filter-adjustment";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
-import { PixiPlugin } from "gsap/PixiPlugin";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import PixiPlugin from "./gsapPixiPlugin";
 import {
   IAnimationState,
   ISkeletonData,
@@ -237,7 +239,6 @@ export const CharacterLayerInstance: CharacterLayer = {
     });
   },
   showCharacter(data: ShowCharacter): boolean {
-    debugger;
     if (!this.beforeProcessShowCharacterAction(data.characters)) {
       return false;
     }
