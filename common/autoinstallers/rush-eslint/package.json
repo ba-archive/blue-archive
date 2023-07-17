@@ -1,0 +1,29 @@
+{
+  "name": "rush-eslint",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@unocss/eslint-plugin": "^0.53.5",
+    "eslint": "^8.45.0",
+    "eslint-plugin-antfu": "~0.39.8",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-eslint-comments": "~3.2.0",
+    "eslint-plugin-html": "~7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsonc": "~2.9.0",
+    "eslint-plugin-markdown": "~3.0.0",
+    "eslint-plugin-n": "~16.0.1",
+    "eslint-plugin-no-only-tests": "~3.1.0",
+    "eslint-plugin-promise": "~6.1.1",
+    "eslint-plugin-unicorn": "~47.0.0",
+    "eslint-plugin-unused-imports": "~3.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "eslint-plugin-yml": "~1.8.0",
+    "jsonc-eslint-parser": "~2.3.0",
+    "lint-staged": "^13.2.3",
+    "vue-eslint-parser": "^9.3.1"
+  }
+}
