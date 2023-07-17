@@ -155,7 +155,7 @@ const translateStruct: ComputedRef<{
     return {
       translateType: TranslateType.select,
       content: parseArr.map((i, idx) => {
-        const curIndex = i.match(/\d/g)?.[0] || '';
+        const curIndex = i.match(/\d+/g)?.[0] || '';
         let label = '选项';
         if (/ns|s/.test(i)) {
           label = label + curIndex;
