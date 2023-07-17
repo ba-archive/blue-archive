@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@antfu/eslint-config": "^0.39.8",
+    "@unocss/eslint-config": "^0.52.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@unocss/eslint-plugin": "^0.53.5",
@@ -24,6 +25,7 @@
     "eslint-plugin-yml": "~1.8.0",
     "jsonc-eslint-parser": "~2.3.0",
     "lint-staged": "^13.2.3",
-    "vue-eslint-parser": "^9.3.1"
+    "vue-eslint-parser": "^9.3.1",
+    "typescript": "^5.1.6"
   }
 }

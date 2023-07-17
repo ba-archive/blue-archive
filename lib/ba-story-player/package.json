@@ -23,7 +23,8 @@
     "dev": "vite --host",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
-    "check": "vue-tsc --noEmit"
+    "check": "vue-tsc --noEmit",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@pixi-spine/base": "^3.1.2",
