@@ -20,7 +20,7 @@
       "shellCommand": "pretty-quick --staged"
     },
     {
-      "name": "lint-stage",
+      "name": "lint-staged",
       "commandKind": "global",
       "summary": "Used by the pre-commit Git hook. This command invokes Eslint to reformat staged changes.",
       "safeForSimultaneousRushProcesses": true,
