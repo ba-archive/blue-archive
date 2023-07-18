@@ -1,10 +1,3 @@
-import micromatch from 'micromatch'
+import extended from "./common/autoinstallers/rush-eslint/.lintstagedrc.mjs"
 
-export default {
-  '{apps,lib}/**/*.{js,jsx,ts,tsx,vue}': (files) => {
-    // from `files` filter those _NOT_ matching `*test.js`
-    const match = micromatch.not(files, './lib/ba-story-player/**/*')
-    return `eslint ${match.join(' ')} --fix --cached`
-  },
-  "*.{json,md}": "prettier --write"
-}
+export default {...extended}
