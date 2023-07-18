@@ -141,7 +141,7 @@ const translateStruct: ComputedRef<{
       mainStore.getScenario.content[config.getSelectLine][config.getTargetLang]
   );
 
-  const searchReg = /\[ns\d?]|\[s\d?]/g;
+  const searchReg = /\[n?s(\d{0,2})?]/g;
   const parseArr = translateText.value.match(searchReg);
 
   if (parseArr?.length) {
@@ -155,7 +155,7 @@ const translateStruct: ComputedRef<{
     return {
       translateType: TranslateType.select,
       content: parseArr.map((i, idx) => {
-        const curIndex = i.match(/\d/g)?.[0] || '';
+        const curIndex = i.match(/\d+/g)?.[0] || '';
         let label = '选项';
         if (/ns|s/.test(i)) {
           label = label + curIndex;

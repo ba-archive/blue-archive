@@ -51,10 +51,11 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
-    // minify: 'terser',
-    // terserOptions: {
-    //   toplevel: true,
-    //   safari10: true,
-    // },
+    chunkSizeWarningLimit: 1500,
+    minify: 'terser',
+    terserOptions: {
+      toplevel: true,
+      safari10: true,
+    },
   },
 });
