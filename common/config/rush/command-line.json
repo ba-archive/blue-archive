@@ -227,6 +227,19 @@
       "associatedCommands": [
         "lint"
       ]
+    },
+    {
+      /**
+       * (必须) 决定自定义参数的类型
+       * "flag" 类型的参数是一个布尔属性的参数
+       */
+      "parameterKind": "flag",
+      "longName": "--cached",
+      "shortName": "-c",
+      "description": "Enable eslint cache",
+      "associatedCommands": [
+        "lint"
+      ]
     }
     // {
     //   /**
