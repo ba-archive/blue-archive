@@ -9,6 +9,7 @@ import { usePlayerStore } from "../lib/stores";
 import { TranslatedStoryUnit } from "../lib/types/common";
 import { Language } from "../lib/types/store";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
+import ModifyLive2DOption from "./components/ModifyLive2DOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
 import yuuka from "./data/yuuka.json";
@@ -156,6 +157,7 @@ watch(
         <option value="emotion">人物特效测试</option>
         <option value="effect">特效层特效</option>
         <option value="test">单元测试</option>
+        <option value="live2d">live2d测试</option>
         <option value="null">无</option>
       </select>
       <label>storyIndex</label>
@@ -173,14 +175,19 @@ watch(
         <option v-for="name in languageList">{{ name }}</option>
       </select>
     </div>
-    <ModifyEmotionOption
-      class="absolute-right-center"
-      v-if="toolType === 'emotion'"
-    />
-    <Suspense>
-      <TestEffect class="absolute-right-center" v-if="toolType === 'effect'" />
-    </Suspense>
-    <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
+    <div class="absolute-right-center">
+      <ModifyEmotionOption v-if="toolType === 'emotion'" />
+      <Suspense>
+        <TestEffect
+          class="absolute-right-center"
+          v-if="toolType === 'effect'"
+        />
+      </Suspense>
+      <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
+      <KeepAlive>
+        <ModifyLive2DOption v-if="toolType === 'live2d'" />
+      </KeepAlive>
+    </div>
   </div>
 </template>
 
@@ -192,6 +199,7 @@ watch(
   flex-direction: column;
   z-index: 1000;
   background-color: white;
+  width: 180px;
   height: 95vh;
   overflow-y: auto;
   text-align: center;

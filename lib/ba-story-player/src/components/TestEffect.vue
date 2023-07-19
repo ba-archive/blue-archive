@@ -20,7 +20,9 @@
         @input="updateTransitionItem"
       />
       <datalist id="transitionNames">
-        <option v-for="name in transitionNames">{{ name }}</option>
+        <option v-for="(name, index) in transitionNames" :key="index">
+          {{ name }}
+        </option>
       </datalist>
       <label>具体参数</label>
       <textarea
@@ -31,13 +33,18 @@
     <div v-else-if="effectType === 'bgeffect'">
       <label>effectType</label>
       <select v-model="currentBGEffectType" @change="effectTypeChange">
-        <option v-for="effect in Object.keys(effectNamesTable)">
+        <option
+          v-for="(effect, index) in Object.keys(effectNamesTable)"
+          :key="index"
+        >
           {{ effect }}
         </option>
       </select>
       <label>bgEffect name</label>
       <select v-model="currentBGEffect" @change="updateBGEffectItem">
-        <option v-for="name in currentBGEffectNames">{{ name }}</option>
+        <option v-for="(name, index) in currentBGEffectNames" :key="index">
+          {{ name }}
+        </option>
       </select>
       <textarea
         :value="JSON.stringify(currentBGEffectItem, null, 2)"
@@ -76,17 +83,17 @@
 </template>
 
 <script lang="ts" setup>
-import eventBus from "../../lib/eventBus";
-import { usePlayerStore } from "../../lib/stores/index";
-import { wait } from "../../lib/utils";
 import { computed, nextTick, onMounted, ref, watch } from "vue";
-import { resizeTextareas } from "../utils";
+import eventBus from "../../lib/eventBus";
 import { resourcesLoader } from "../../lib/index";
 import { removeEffect } from "../../lib/layers/effectLayer";
 import { bgEffectHandlerOptions } from "../../lib/layers/effectLayer/bgEffectHandlers";
-import { BGEffectType } from "../../lib/types/excels";
+import { usePlayerStore } from "../../lib/stores/index";
 import { Effect, ZmcArgs } from "../../lib/types/common";
+import { BGEffectType } from "../../lib/types/excels";
+import { wait } from "../../lib/utils";
 import { setDataUrl } from "../../lib/utils";
+import { resizeTextareas } from "../utils";
 
 setDataUrl("https://yuuka.cdn.diyigemt.com/image/ba-all-data");
 await resourcesLoader.loadExcels();

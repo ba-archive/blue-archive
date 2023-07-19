@@ -254,6 +254,10 @@ export type Events = {
    * 标签页获得焦点
    */
   activated: undefined;
+  /**
+   * 用于调整live2d配置信息时重置live2d用
+   */
+  live2dDebugDispose: undefined;
 };
 
 /**

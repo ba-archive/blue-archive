@@ -2,9 +2,9 @@ import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
 import gsap from "gsap";
-import { IEvent, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
+import { Assets, Container } from "pixijs";
 import { IL2dPlayQue } from "@/types/l2d";
-import { Assets } from "pixijs";
+import { IEvent, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 
 let disposed = true;
 const IDLE_TRACK = 1;
@@ -28,14 +28,21 @@ export function L2DInit() {
     animation: string;
     spine: Spine;
   } & Partial<IL2dPlayQue>)[];
-  let timeOutArray: NodeJS.Timeout[] = [];
-  eventBus.on("dispose", () => {
+  let timeOutArray: number[] = [];
+  function dispose() {
     for (const timeout of timeOutArray) {
       clearInterval(timeout);
     }
     timeOutArray = [];
+    otherItems.forEach(it => app.stage.removeChild(it as unknown as Container));
+    startAnimations.forEach(it =>
+      app.stage.removeChild(it.spine as unknown as Container)
+    );
+    app.stage.removeChild(mainItem as unknown as Container);
     disposed = true;
-  });
+  }
+  eventBus.on("dispose", dispose);
+  eventBus.on("live2dDebugDispose", dispose);
   // 接收动画消息
   eventBus.on("changeAnimation", e => {
     const temAnimation = e.replace(/_(A|M)/, "");
@@ -100,28 +107,33 @@ export function L2DInit() {
           if (fade) {
             // 在快结束的时候触发 fade
             timeOutArray.push(
-              setTimeout(fadeEffect, (duration - fadeTime) * 1000)
+              window.setTimeout(fadeEffect, (duration - fadeTime) * 1000)
             );
             if (secondFadeTime) {
               timeOutArray.push(
-                setTimeout(fadeEffect, (duration - secondFadeTime) * 1000)
+                window.setTimeout(
+                  fadeEffect,
+                  (duration - secondFadeTime) * 1000
+                )
               );
             }
           }
           if (sounds) {
             for (const sound of sounds) {
-              timeOutArray.push(
-                setTimeout(
-                  () =>
-                    eventBus.emit("playAudioWithConfig", {
-                      url: getResourcesUrl("sound", sound.fileName),
-                      config: {
-                        volume: sound.volume || 2,
-                      },
-                    }),
-                  sound.time
-                )
-              );
+              if (sound.fileName) {
+                timeOutArray.push(
+                  window.setTimeout(
+                    () =>
+                      eventBus.emit("playAudioWithConfig", {
+                        url: getResourcesUrl("sound", sound.fileName),
+                        config: {
+                          volume: sound.volume || 2,
+                        },
+                      }),
+                    sound.time
+                  )
+                );
+              }
             }
           }
           // 如果没有播放过的话就设置播放状态为播放
@@ -137,7 +149,7 @@ export function L2DInit() {
           // 如果不是有待机动作的主 spine 就去掉
           if (item !== mainItem) {
             timeOutArray.push(
-              setTimeout(() => {
+              window.setTimeout(() => {
                 app.stage.removeChild(item);
               }, 4)
             );
@@ -153,8 +165,8 @@ export function L2DInit() {
             // 待机动画 Idle 循环播放, 为空时代表起始动画播放完成, 开始播放待机动画
             // 必须要先加入 app 才能播放
             timeOutArray.push(
-              setTimeout(() => {
-                const e = curStartAnimations.spine.state.setAnimation(
+              window.setTimeout(() => {
+                curStartAnimations.spine.state.setAnimation(
                   IDLE_TRACK,
                   curStartAnimations.animation,
                   !startAnimations[currentIndex] // 最后一个待机动作循环
@@ -179,7 +191,11 @@ export function L2DInit() {
 
           if (entryAnimationName.indexOf("_Talk_") >= 0) {
             // 说话动作结束后设为待机
-            const e = item.state.setAnimation(entry.trackIndex, "Idle_01", true);
+            const e = item.state.setAnimation(
+              entry.trackIndex,
+              "Idle_01",
+              true
+            );
             // 跳转到下一个动画的过场
             e!.mixDuration = 0.8;
           } else {
@@ -258,7 +274,9 @@ export function L2DInit() {
         curStartAnimations.animation,
         false
       );
-    } catch {}
+    } catch (e) {
+      console.log(e);
+    }
   });
 }
 /**

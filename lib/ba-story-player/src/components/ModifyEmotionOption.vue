@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref } from "vue";
 import eventBus from "../../lib/eventBus";
-import emotionOptions, {
-  emotionDescriptions,
-} from "../../lib/layers/characterLayer/options/emotionOptions";
 import actionOptions, {
   actionDescriptions,
 } from "../../lib/layers/characterLayer/options/actionOptions";
+import emotionOptions, {
+  emotionDescriptions,
+} from "../../lib/layers/characterLayer/options/emotionOptions";
 import fxOptions, {
   fxOptionsDescriptions,
 } from "../../lib/layers/characterLayer/options/fxOptions";
@@ -176,8 +176,23 @@ onMounted(() => {
         />
       </div>
     </div>
-    <button @click="showCharacter">显示人物(显示后再播放特效)</button>
-    <button @click="playEffect">播放人物特效</button>
-    <button @click="outputOptions">复制参数(可填入参数文件)</button>
+    <div class="mt-8 text-left">
+      <button @click="showCharacter">显示人物(显示后再播放特效)</button>
+    </div>
+    <div class="mt-8 text-left">
+      <button @click="playEffect">播放人物特效</button>
+    </div>
+    <div class="mt-8 text-left">
+      <button @click="outputOptions">复制参数(可填入参数文件)</button>
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.mt-8 {
+  margin-top: 8px;
+}
+.text-left {
+  text-align: left;
+}
+</style>
