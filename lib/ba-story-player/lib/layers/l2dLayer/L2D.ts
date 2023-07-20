@@ -2,9 +2,9 @@ import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
 import gsap from "gsap";
+import { IEvent, ITrackEntry, Spine } from "pixi-spine";
 import { Assets, Container } from "pixijs";
 import { IL2dPlayQue } from "@/types/l2d";
-import { IEvent, ITrackEntry, Spine } from "pixi-spine/bundles/pixi-spine";
 
 let disposed = true;
 const IDLE_TRACK = 1;

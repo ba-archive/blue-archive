@@ -3,6 +3,8 @@ import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
 import axios from "axios";
+import "pixi-spine";
+import { IEventData, ISkeletonData } from "pixi-spine";
 import {
   Application,
   Assets,
@@ -21,8 +23,6 @@ import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import "@pixi/sound";
-import "pixi-spine/bundles/pixi-spine";
-import { IEventData, ISkeletonData } from "pixi-spine/packages/base";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -1058,7 +1058,10 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           end();
           resolve();
         }
-        if (eventEmitter.unitDone || storyHandler.currentStoryIndex !== currentIndex) {
+        if (
+          eventEmitter.unitDone ||
+          storyHandler.currentStoryIndex !== currentIndex
+        ) {
           end();
           resolve();
         } else if (Date.now() - startTime >= leftTime) {

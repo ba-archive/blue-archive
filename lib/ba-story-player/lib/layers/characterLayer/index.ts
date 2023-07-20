@@ -3,6 +3,7 @@ import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import * as PIXI from "pixijs";
 import gsap, { Power0 } from "gsap";
+import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayerInterface,
@@ -25,21 +26,15 @@ import { AdjustmentFilter } from "@pixi/filter-adjustment";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import PixiPlugin from "./gsapPixiPlugin";
-import {
-  IAnimationState,
-  ISkeletonData,
-  ITrackEntry,
-  Spine,
-} from "pixi-spine/bundles/pixi-spine";
 import CharacterEffectPlayerInstance, {
   POS_INDEX_MAP,
   calcSpineStagePosition,
 } from "./actionPlayer";
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import PixiPlugin from "./gsapPixiPlugin";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
