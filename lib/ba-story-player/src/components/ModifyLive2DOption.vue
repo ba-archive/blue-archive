@@ -81,7 +81,7 @@ function outputOptions() {
   navigator.clipboard.writeText(mapOptions.value);
 }
 const mapOptions = computed({
-  get: () => JSON.stringify(currentOptions.value, null, 2),
+  get: () => `${currentOptions.value.name}: ${JSON.stringify(currentOptions.value, null, 2)}`,
   set(value) {
     currentOptions.value = JSON.parse(value);
   },
@@ -142,6 +142,9 @@ function addSpineSetting() {
 function removeSpineSetting(name: string) {
   Reflect.deleteProperty(currentOptions.value.spineSettings!, name);
 }
+function overrideLive2dConfig() {
+  state.curL2dConfig = JSON.parse(JSON.stringify(currentOptions.value));
+}
 </script>
 
 <template>
@@ -149,7 +152,7 @@ function removeSpineSetting(name: string) {
     <div v-if="showDialog" class="dialog">
       <div>
         <label for="live2d-name">name</label>
-        <input id="live2d-name" type="text" />
+        <input id="live2d-name" type="text" v-model="currentOptions.name" class="ml-4" />
       </div>
       <div>
         <label>playQue</label>
@@ -159,23 +162,23 @@ function removeSpineSetting(name: string) {
         <div v-for="(e, index) in currentOptions.playQue" :key="index" class="play-que">
           <div>
             <label :for="'playQue-name-' + index">name</label>
-            <input :id="'playQue-name-' + index" type="text" v-model="e.name" />
+            <input :id="'playQue-name-' + index" type="text" v-model="e.name" class="ml-4" />
           </div>
           <div>
             <label :for="'playQue-animation-' + index">animation</label>
-            <input :id="'playQue-animation-' + index" type="text" v-model="e.animation" />
+            <input :id="'playQue-animation-' + index" type="text" v-model="e.animation" class="ml-4" />
           </div>
           <div>
             <label :for="'playQue-fadeTime-' + index">fadeTime</label>
-            <input :id="'playQue-fadeTime-' + index" type="text" v-model="e.fadeTime" />
+            <input :id="'playQue-fadeTime-' + index" type="text" v-model="e.fadeTime" class="ml-4" />
           </div>
           <div>
             <label :for="'playQue-secondFadeTime-' + index">secondFadeTime</label>
-            <input :id="'playQue-secondFadeTime-' + index" type="text" v-model="e.secondFadeTime" />
+            <input :id="'playQue-secondFadeTime-' + index" type="text" v-model="e.secondFadeTime" class="ml-4" />
           </div>
           <div>
             <label :for="'playQue-fade-' + index">fade</label>
-            <input :id="'playQue-fade-' + index" type="checkbox" v-model="e.fade" />
+            <input :id="'playQue-fade-' + index" type="checkbox" v-model="e.fade" class="ml-4" />
           </div>
           <div>
             <label>Sound</label>
@@ -184,15 +187,15 @@ function removeSpineSetting(name: string) {
           <div v-for="(item, j) in e.sounds" :key="String(index) + j">
             <div>
               <label :for="`playQue-sounds-${j}-fileName-${index}`">fileName</label>
-              <input :id="`playQue-sounds-${j}-fileName-${index}`" type="text" v-model="item.fileName" />
+              <input :id="`playQue-sounds-${j}-fileName-${index}`" type="text" v-model="item.fileName" class="ml-4" />
             </div>
             <div>
               <label :for="`playQue-sounds-${j}-time-${index}`">time</label>
-              <input :id="`playQue-sounds-${j}-time-${index}`" type="text" v-model="item.time" />
+              <input :id="`playQue-sounds-${j}-time-${index}`" type="text" v-model="item.time" class="ml-4" />
             </div>
             <div>
               <label :for="`playQue-sounds-${j}-volume-${index}`">volume</label>
-              <input :id="`playQue-sounds-${j}-volume-${index}`" type="text" v-model="item.volume" />
+              <input :id="`playQue-sounds-${j}-volume-${index}`" type="text" v-model="item.volume" class="ml-4" />
             </div>
             <div>
               <button @click="removePlayeQueueSound(index, j)">删除Sound</button>
@@ -211,11 +214,11 @@ function removeSpineSetting(name: string) {
         <div v-for="(e, index) in mapSpineSettings" :key="index">
           <div>
             <label :for="'spine-setting-name-' + index">name</label>
-            <input :id="'spine-setting-name-' + index" type="text" v-model="e.name" />
+            <input :id="'spine-setting-name-' + index" type="text" v-model="e.name" class="ml-4" />
           </div>
           <div>
             <label :for="'spine-setting-scale-' + index">scale</label>
-            <input :id="'spine-setting-scale-' + index" type="text" v-model="e.scale" />
+            <input :id="'spine-setting-scale-' + index" type="text" v-model="e.scale" class="ml-4" />
           </div>
           <div>
             <button @click="removeSpineSetting(e.name)">删除Setting</button>
@@ -258,6 +261,9 @@ function removeSpineSetting(name: string) {
     <div v-if="targetIndex !== -1">
       <button @click="resetLive2d" class="mt-8">重置live2d</button>
     </div>
+    <div class="mt-8">
+      <button @click="overrideLive2dConfig" class="mt-8">将编辑好的参数替换目前参数</button>
+    </div>
     <div class="mt-8 text-left">
       <button @click="outputOptions">复制参数(可填入参数文件)</button>
     </div>
@@ -278,6 +284,9 @@ function removeSpineSetting(name: string) {
 .mt-8 {
   margin-top: 8px;
 }
+.ml-4 {
+  margin-left: 4px;
+}
 .dialog {
   position: absolute;
   top: 15dvh;
@@ -288,6 +297,7 @@ function removeSpineSetting(name: string) {
   background-color: #fff;
   border-radius: 3px;
   z-index: 9999;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .12);
   :deep(.play-que-container) {
     display: flex;
     flex-direction: row;
