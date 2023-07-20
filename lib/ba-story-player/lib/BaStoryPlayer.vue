@@ -23,7 +23,7 @@ import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
-import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
+import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
@@ -260,8 +260,19 @@ function hotReplaceStoryUnit(
   }
 }
 
+function resetLive2d() {
+  eventBus.emit("live2dDebugDispose");
+  const live2dIndex = initPrivateState().allStoryUnit.findIndex(
+    it => it.l2d
+  );
+  if (live2dIndex !== -1) {
+    changeStoryIndex(live2dIndex);
+  }
+}
+
 defineExpose({
   hotReplaceStoryUnit,
+  resetLive2d,
 });
 
 /**
