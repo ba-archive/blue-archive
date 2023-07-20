@@ -10,6 +10,7 @@ const message = ref("等待资源加载...");
 const messageType = ref<"info" | "error">("info");
 const state = initPrivateState();
 const targetIndex = ref(-1);
+const showDialog = ref(false);
 const currentOptions = ref<IL2dConfig[keyof IL2dConfig]>({
   name: "",
   playQue: [
@@ -42,6 +43,19 @@ eventBus.on("startLoading", () => {
     it => it.l2d
   );
   if (targetIndex.value !== -1) {
+    currentOptions.value = JSON.parse(JSON.stringify(state.curL2dConfig));
+    currentOptions.value.playQue = currentOptions.value.playQue.map((it) => {
+      if (it.sounds) {
+        it.sounds = it.sounds.map((s) => Object.assign({fileName: "",
+          time: 1,
+          volume: 2}, s));
+      }
+      return Object.assign({name: "",
+        animation: "",
+        fadeTime: 0,
+        secondFadeTime: 0,
+        fade: false}, it);
+    });
     message.value = "live2d块查找成功";
   } else {
     message.value = "没找到live2d块";
@@ -72,6 +86,8 @@ const mapOptions = computed({
     currentOptions.value = JSON.parse(value);
   },
 });
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion, max-len
+const mapSpineSettings = computed(() => Object.keys(currentOptions.value.spineSettings || {}).map((key) => ({name:key,scale:currentOptions.value.spineSettings![key].scale})));
 function addOtherSpine() {
   if (currentOptions.value.otherSpine) {
     currentOptions.value.otherSpine.push("");
@@ -103,9 +119,128 @@ function addPlayeQueue() {
 function removePlayeQueue(index: number) {
   currentOptions.value.playQue.splice(index, 1);
 }
+function addPlayeQueueSound(index: number) {
+  if (!currentOptions.value.playQue[index].sounds) {
+    Reflect.set(currentOptions.value.playQue[index], "sounds", []);
+  }
+  currentOptions.value.playQue[index].sounds?.push({
+    fileName: "",
+    time: 1,
+    volume: 2,
+  });
+}
+function removePlayeQueueSound(index: number, j: number) {
+  currentOptions.value.playQue[index].sounds?.splice(j, 1);
+}
+function addSpineSetting() {
+  if (!currentOptions.value.spineSettings) {
+    Reflect.set(currentOptions.value, "spineSettings", {});
+  }
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  Reflect.set(currentOptions.value.spineSettings!, "", {scale: 1});
+}
+function removeSpineSetting(name: string) {
+  Reflect.deleteProperty(currentOptions.value.spineSettings!, name);
+}
 </script>
 
 <template>
+  <Teleport to="body">
+    <div v-if="showDialog" class="dialog">
+      <div>
+        <label for="live2d-name">name</label>
+        <input id="live2d-name" type="text" />
+      </div>
+      <div>
+        <label>playQue</label>
+        <button @click="addPlayeQueue()">新增playQue</button>
+      </div>
+      <div class="play-que-container">
+        <div v-for="(e, index) in currentOptions.playQue" :key="index" class="play-que">
+          <div>
+            <label :for="'playQue-name-' + index">name</label>
+            <input :id="'playQue-name-' + index" type="text" v-model="e.name" />
+          </div>
+          <div>
+            <label :for="'playQue-animation-' + index">animation</label>
+            <input :id="'playQue-animation-' + index" type="text" v-model="e.animation" />
+          </div>
+          <div>
+            <label :for="'playQue-fadeTime-' + index">fadeTime</label>
+            <input :id="'playQue-fadeTime-' + index" type="text" v-model="e.fadeTime" />
+          </div>
+          <div>
+            <label :for="'playQue-secondFadeTime-' + index">secondFadeTime</label>
+            <input :id="'playQue-secondFadeTime-' + index" type="text" v-model="e.secondFadeTime" />
+          </div>
+          <div>
+            <label :for="'playQue-fade-' + index">fade</label>
+            <input :id="'playQue-fade-' + index" type="checkbox" v-model="e.fade" />
+          </div>
+          <div>
+            <label>Sound</label>
+            <button @click="addPlayeQueueSound(index)">新增Sound</button>
+          </div>
+          <div v-for="(item, j) in e.sounds" :key="String(index) + j">
+            <div>
+              <label :for="`playQue-sounds-${j}-fileName-${index}`">fileName</label>
+              <input :id="`playQue-sounds-${j}-fileName-${index}`" type="text" v-model="item.fileName" />
+            </div>
+            <div>
+              <label :for="`playQue-sounds-${j}-time-${index}`">time</label>
+              <input :id="`playQue-sounds-${j}-time-${index}`" type="text" v-model="item.time" />
+            </div>
+            <div>
+              <label :for="`playQue-sounds-${j}-volume-${index}`">volume</label>
+              <input :id="`playQue-sounds-${j}-volume-${index}`" type="text" v-model="item.volume" />
+            </div>
+            <div>
+              <button @click="removePlayeQueueSound(index, j)">删除Sound</button>
+            </div>
+          </div>
+          <div>
+            <button @click="removePlayeQueue(index)">删除playQue</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label>spineSettings</label>
+        <button @click="addSpineSetting()">新增Setting</button>
+      </div>
+      <div>
+        <div v-for="(e, index) in mapSpineSettings" :key="index">
+          <div>
+            <label :for="'spine-setting-name-' + index">name</label>
+            <input :id="'spine-setting-name-' + index" type="text" v-model="e.name" />
+          </div>
+          <div>
+            <label :for="'spine-setting-scale-' + index">scale</label>
+            <input :id="'spine-setting-scale-' + index" type="text" v-model="e.scale" />
+          </div>
+          <div>
+            <button @click="removeSpineSetting(e.name)">删除Setting</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label>otherSpines</label>
+        <button @click="addOtherSpine()">新增OtherSpine</button>
+      </div>
+      <div>
+        <div v-for="(e, index) in currentOptions.otherSpine" :key="index">
+          <div>
+            <input type="text" :value="e" @input="(e) => currentOptions.otherSpine![index] = e.target.value"
+             style="width: 200px;">
+            <button @click="removeOtherSpine(index)">删除OtherSpine</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button @click="showDialog = false">关闭窗口</button>
+        <button @click="outputOptions">复制参数(可填入参数文件)</button>
+      </div>
+    </div>
+  </Teleport>
   <div class="root">
     <div v-if="targetIndex === -1" class="mt-8">
       <div>手动指定live2d index:</div>
@@ -123,9 +258,11 @@ function removePlayeQueue(index: number) {
     <div v-if="targetIndex !== -1">
       <button @click="resetLive2d" class="mt-8">重置live2d</button>
     </div>
-    <textarea class="mt-8" v-model="mapOptions"></textarea>
     <div class="mt-8 text-left">
       <button @click="outputOptions">复制参数(可填入参数文件)</button>
+    </div>
+    <div class="mt-8 text-left">
+      <button @click="showDialog = true">打开配置窗口</button>
     </div>
   </div>
 </template>
@@ -140,5 +277,27 @@ function removePlayeQueue(index: number) {
 }
 .mt-8 {
   margin-top: 8px;
+}
+.dialog {
+  position: absolute;
+  top: 15dvh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50dvw;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 3px;
+  z-index: 9999;
+  :deep(.play-que-container) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: scroll;
+    > div {
+      padding: 4px;
+      border-radius: 3px;
+      border: 1px solid black;
+    }
+  }
 }
 </style>
