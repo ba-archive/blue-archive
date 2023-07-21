@@ -8,12 +8,18 @@ import StoryBriefBlock from "./StoryBriefBlock.vue";
 
 const settingsStore = useSettingsStore();
 
-defineProps<{
-  title: StoryBriefing["title"];
-  avatar: StoryBriefing["avatar"];
-  index: number;
-  sections: StoryBriefing["sections"];
-}>();
+withDefaults(
+  defineProps<{
+    title: StoryBriefing["title"];
+    avatar: StoryBriefing["avatar"];
+    index: number;
+    sections: StoryBriefing["sections"];
+    type?: "mainStory" | "otherStory";
+  }>(),
+  {
+    type: "mainStory",
+  }
+);
 
 const openChapters: Ref<number[]> = ref([2]);
 const language = computed(() => settingsStore.getLang);
@@ -50,8 +56,12 @@ function handleOpenChapters(index: number) {
       @clicked="handleOpenChapters(index)"
     />
     <router-link
-      v-for="(section, storyOrder) in sections"
-      :to="`/mainStory/${section.story_id}`"
+      v-for="section in sections"
+      :to="{
+        name: `${'mainStory' === type ? 'Main' : 'Other'}StoryDetails`,
+        params: { id: section.story_id },
+        query: { type: 'mainStory' === type ? 'main' : 'other' },
+      }"
       v-show="openChapters.includes(index)"
       :key="section.story_id"
     >

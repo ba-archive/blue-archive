@@ -4,6 +4,15 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-07-16",
+    contents: [
+      {
+        type: "feat",
+        content: "新增“工作剧情”。",
+      },
+    ],
+  },
+  {
     date: "2023-07-02",
     contents: [
       {
