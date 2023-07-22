@@ -1090,7 +1090,7 @@ function waitForStoryUnitPlayComplete() {
           end();
           reject();
         }
-      }, 500);
+      });
     }
     restart();
   });
