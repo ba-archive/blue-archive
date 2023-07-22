@@ -4,11 +4,28 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-07-23",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "砂狼 白子（泳装）", id: 20027 },
+          { name: "圣园 未花", id: 10059 },
+          { name: "早濑 优香（体操服）", id: 10053 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了伊甸条约第一章第七话开头的 zoom 异常问题",
+      },
+    ],
+  },
+  {
     date: "2023-07-16",
     contents: [
       {
         type: "feat",
-        content: "新增“工作剧情”。",
+        content: "新增“工作剧情”",
       },
     ],
   },
