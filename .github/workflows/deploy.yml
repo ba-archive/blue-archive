@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - main
-      - dev # TODO: 上生产环境记得删掉
 jobs:
   build:
     runs-on: ubuntu-latest
