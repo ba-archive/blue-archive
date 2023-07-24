@@ -41,7 +41,7 @@ jobs:
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
             f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --verbose
+        run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
       - name: Viewer rsync deploy
         uses: easingthemes/ssh-deploy@main
         env:
