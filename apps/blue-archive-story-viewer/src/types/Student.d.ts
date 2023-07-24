@@ -11,8 +11,8 @@ export interface Student {
   };
   rarity: number;
   type: "Striker" | "Special";
-  armorType: "LightArmor" | "HeavyArmor" | "Unarmed";
-  bulletType?: "Pierce" | "Explode" | "Mystic";
+  armorType: "LightArmor" | "HeavyArmor" | "Unarmed" | "ElasticArmor";
+  bulletType?: "Pierce" | "Explode" | "Mystic" | "Sonic";
   weapon:
     | "SG"
     | "SMG"

@@ -5,5 +5,5 @@ export interface AppliedFilter {
   affiliation: string[];
   type: ("Striker" | "Special")[];
   armorType: ("LightArmor" | "HeavyArmor" | "Unarmed")[];
-  bulletType?: ("Pierce" | "Explode" | "Mystic")[];
+  bulletType?: ("Pierce" | "Explode" | "Mystic" | "Sonic")[];
 }
