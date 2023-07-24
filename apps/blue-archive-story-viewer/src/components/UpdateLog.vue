@@ -510,6 +510,36 @@ const contributors: Contributor[] = [
     role: "AI算法-NLP",
     avatar: "/image/contributor/naiyouyingxiong.webp",
   },
+  {
+    name: "Dyin",
+    role: "PV",
+    avatar: "/image/contributor/dyin.webp",
+  },
+  {
+    name: "阿彬",
+    role: "PV",
+    avatar: "/image/contributor/abin.webp",
+  },
+  {
+    name: "水哥不sd",
+    role: "PV",
+    avatar: "/image/contributor/shuigebusd.webp",
+  },
+  {
+    name: "En_Sound",
+    role: "音乐",
+    avatar: "/image/contributor/ensound.webp",
+  },
+  {
+    name: "小白",
+    role: "音乐",
+    avatar: "/image/contributor/xiaobai.webp",
+  },
+  {
+    name: "释逸",
+    role: "原画",
+    avatar: "/image/contributor/shiyi.webp",
+  },
 ];
 
 // make vue-tsc happy
