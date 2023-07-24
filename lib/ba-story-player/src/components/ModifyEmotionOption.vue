@@ -147,11 +147,14 @@ onMounted(() => {
       <option>fx</option>
     </select>
     <select v-model="current" @change="updateType">
-      <option v-for="effect in Object.keys(optionsMap[effectType])">
+      <option
+        v-for="(effect, index) in Object.keys(optionsMap[effectType])"
+        :key="index"
+      >
         {{ effect }}
       </option>
     </select>
-    <div v-for="option in Object.keys(currentOptions)">
+    <div v-for="(option, index) in Object.keys(currentOptions)" :key="index">
       <div v-if="typeof currentOptions[option] === 'string'">
         <p :title="currentDescriptions[option]">{{ option }}</p>
         <input

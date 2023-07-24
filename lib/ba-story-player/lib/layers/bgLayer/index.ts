@@ -4,9 +4,8 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
-import { Application, Assets, LoaderResource, Sprite, Texture } from "pixijs";
+import { Application, Assets, Sprite, Texture } from "pixijs";
 import { BgLayer } from "@/types/bgLayer";
-import { Dict } from "@/types/common";
 
 export function bgInit() {
   return BgLayerInstance.init();

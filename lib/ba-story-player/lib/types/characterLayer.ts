@@ -1,8 +1,7 @@
+import type { IAnimationStateListener, ISkeletonData, Spine } from "pixi-spine";
 import { Sprite } from "pixijs";
-import type { IAnimationStateListener, ISkeletonData, Spine } from "pixi-spine/bundles/pixi-spine";
 import { Character, CharacterInstance } from "@/types/common";
 import { ShowCharacter } from "@/types/events";
-
 
 export interface ActionOptions extends BaseOptions<CharacterEffectWord> {
   a: {};

@@ -1,4 +1,5 @@
 import { Application, Sprite } from "pixijs";
+import { Loader } from "pixijs";
 import { Ref } from "vue";
 import { CharacterInstance, StoryUnit } from "./common";
 import { ShowOption, ShowText } from "./events";
@@ -12,7 +13,6 @@ import {
 } from "./excels";
 import { IL2dConfig } from "./l2d";
 import { OtherSounds } from "./resources";
-import { Loader } from "pixijs";
 
 export interface Actions {
   setBgInstance: (sprite: Sprite) => void;
@@ -42,7 +42,6 @@ export interface Actions {
   setTranslator(translator: string): void;
 }
 
-
 export interface BasicGetters {
   app: Application;
 
@@ -51,7 +50,7 @@ export interface BasicGetters {
    */
   characterSpineData: (
     CharacterName: number
-  ) => import("pixi-spine/bundles/pixi-spine").ISkeletonData | undefined;
+  ) => import("pixi-spine").ISkeletonData | undefined;
   /**
    * 获取情绪图像资源
    * @param emotionName 情绪名
@@ -76,23 +75,16 @@ export interface BasicGetters {
   /**
    * 获取L2D资源
    */
-  l2dSpineData: import("pixi-spine/bundles/pixi-spine").ISkeletonData | undefined;
+  l2dSpineData: import("pixi-spine").ISkeletonData | undefined;
 }
-
-
 
 export type GetterFunctions = {
   [Getter in keyof BasicGetters]: () => BasicGetters[Getter];
 };
 
-
-
 export type Getters = Readonly<BasicGetters>;
 
-
-
 export type Language = "Cn" | "Jp" | "En" | "Tw";
-
 
 export interface LogText {
   /**
@@ -113,7 +105,6 @@ export interface LogText {
   /** storyUnit 位置 */
   index?: number;
 }
-
 
 /**
  * 仅可通过函数修改的state

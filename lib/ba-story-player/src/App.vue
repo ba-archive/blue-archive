@@ -172,7 +172,9 @@ watch(
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
       <label>语言</label>
       <select v-model="language">
-        <option v-for="name in languageList">{{ name }}</option>
+        <option v-for="(name, index) in languageList" :key="index">
+          {{ name }}
+        </option>
       </select>
     </div>
     <div class="absolute-right-center">
@@ -185,7 +187,7 @@ watch(
       </Suspense>
       <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
       <KeepAlive>
-        <ModifyLive2DOption v-if="toolType === 'live2d'" />
+        <ModifyLive2DOption :class="{ hidden: toolType !== 'live2d' }" />
       </KeepAlive>
     </div>
   </div>
@@ -203,5 +205,8 @@ watch(
   height: 95vh;
   overflow-y: auto;
   text-align: center;
+}
+.hidden {
+  display: none;
 }
 </style>

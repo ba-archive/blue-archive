@@ -1,4 +1,4 @@
-import type { Spine } from "pixi-spine/bundles/pixi-spine";
+import type { Spine } from "pixi-spine";
 import {
   PlayAudio,
   PlayEffect,

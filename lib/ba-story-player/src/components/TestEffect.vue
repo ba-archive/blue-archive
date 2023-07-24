@@ -55,7 +55,8 @@
         :value="
           JSON.stringify(bgEffectHandlerOptions[currentBGEffectType], null, 2)
         "
-        @input="event => { bgEffectHandlerOptions[currentBGEffectType] = JSON.parse((event.target as HTMLTextAreaElement).value) }"
+        @input="event => { bgEffectHandlerOptions[currentBGEffectType] 
+          = JSON.parse((event.target as HTMLTextAreaElement).value) }"
       />
     </div>
     <div v-else-if="effectType === 'other'">
@@ -96,6 +97,8 @@ import { setDataUrl } from "../../lib/utils";
 import { resizeTextareas } from "../utils";
 
 setDataUrl("https://yuuka.cdn.diyigemt.com/image/ba-all-data");
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 await resourcesLoader.loadExcels();
 let effectType = ref<"transition" | "bgeffect" | "other">("transition");
 async function playEffect() {

@@ -43,19 +43,26 @@ eventBus.on("startLoading", () => {
     it => it.l2d
   );
   if (targetIndex.value !== -1) {
-    currentOptions.value = JSON.parse(JSON.stringify(state.curL2dConfig));
-    currentOptions.value.playQue = currentOptions.value.playQue.map((it) => {
-      if (it.sounds) {
-        it.sounds = it.sounds.map((s) => Object.assign({fileName: "",
-          time: 1,
-          volume: 2}, s));
-      }
-      return Object.assign({name: "",
-        animation: "",
-        fadeTime: 0,
-        secondFadeTime: 0,
-        fade: false}, it);
-    });
+    if (state.curL2dConfig) {
+      currentOptions.value = JSON.parse(JSON.stringify(state.curL2dConfig));
+      currentOptions.value.playQue = currentOptions.value.playQue.map(it => {
+        if (it.sounds) {
+          it.sounds = it.sounds.map(s =>
+            Object.assign({ fileName: "", time: 1, volume: 2 }, s)
+          );
+        }
+        return Object.assign(
+          {
+            name: "",
+            animation: "",
+            fadeTime: 0,
+            secondFadeTime: 0,
+            fade: false,
+          },
+          it
+        );
+      });
+    }
     message.value = "live2d块查找成功";
   } else {
     message.value = "没找到live2d块";
@@ -73,6 +80,7 @@ function skip2Live2d() {
 }
 function resetLive2d() {
   eventBus.emit("live2dDebugDispose");
+  eventBus.emit("clearSt");
   setTimeout(() => {
     skip2Live2d();
   }, 100);
@@ -81,13 +89,23 @@ function outputOptions() {
   navigator.clipboard.writeText(mapOptions.value);
 }
 const mapOptions = computed({
-  get: () => `${currentOptions.value.name}: ${JSON.stringify(currentOptions.value, null, 2)}`,
+  get: () =>
+    `${currentOptions.value.name}: ${JSON.stringify(
+      currentOptions.value,
+      null,
+      2
+    )}`,
   set(value) {
     currentOptions.value = JSON.parse(value);
   },
 });
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, max-len
-const mapSpineSettings = computed(() => Object.keys(currentOptions.value.spineSettings || {}).map((key) => ({name:key,scale:currentOptions.value.spineSettings![key].scale})));
+const mapSpineSettings = computed(() =>
+  Object.keys(currentOptions.value.spineSettings || {}).map(key => ({
+    name: key,
+    scale: currentOptions.value.spineSettings![key].scale,
+  }))
+);
 function addOtherSpine() {
   if (currentOptions.value.otherSpine) {
     currentOptions.value.otherSpine.push("");
@@ -137,7 +155,7 @@ function addSpineSetting() {
     Reflect.set(currentOptions.value, "spineSettings", {});
   }
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  Reflect.set(currentOptions.value.spineSettings!, "", {scale: 1});
+  Reflect.set(currentOptions.value.spineSettings!, "", { scale: 1 });
 }
 function removeSpineSetting(name: string) {
   Reflect.deleteProperty(currentOptions.value.spineSettings!, name);
@@ -148,127 +166,205 @@ function overrideLive2dConfig() {
 </script>
 
 <template>
-  <Teleport to="body">
-    <div v-if="showDialog" class="dialog">
-      <div>
-        <label for="live2d-name">name</label>
-        <input id="live2d-name" type="text" v-model="currentOptions.name" class="ml-4" />
-      </div>
-      <div>
-        <label>playQue</label>
-        <button @click="addPlayeQueue()">新增playQue</button>
-      </div>
-      <div class="play-que-container">
-        <div v-for="(e, index) in currentOptions.playQue" :key="index" class="play-que">
+  <div>
+    <Teleport to="body">
+      <div v-if="showDialog" class="dialog">
+        <div class="dialog-wrapper">
+          <div class="close" @click="showDialog = false">关闭</div>
           <div>
-            <label :for="'playQue-name-' + index">name</label>
-            <input :id="'playQue-name-' + index" type="text" v-model="e.name" class="ml-4" />
+            <label for="live2d-name">name</label>
+            <input
+              id="live2d-name"
+              type="text"
+              v-model="currentOptions.name"
+              class="ml-4"
+            />
           </div>
           <div>
-            <label :for="'playQue-animation-' + index">animation</label>
-            <input :id="'playQue-animation-' + index" type="text" v-model="e.animation" class="ml-4" />
+            <label>playQue</label>
+            <button @click="addPlayeQueue()">新增playQue</button>
           </div>
-          <div>
-            <label :for="'playQue-fadeTime-' + index">fadeTime</label>
-            <input :id="'playQue-fadeTime-' + index" type="text" v-model="e.fadeTime" class="ml-4" />
-          </div>
-          <div>
-            <label :for="'playQue-secondFadeTime-' + index">secondFadeTime</label>
-            <input :id="'playQue-secondFadeTime-' + index" type="text" v-model="e.secondFadeTime" class="ml-4" />
-          </div>
-          <div>
-            <label :for="'playQue-fade-' + index">fade</label>
-            <input :id="'playQue-fade-' + index" type="checkbox" v-model="e.fade" class="ml-4" />
-          </div>
-          <div>
-            <label>Sound</label>
-            <button @click="addPlayeQueueSound(index)">新增Sound</button>
-          </div>
-          <div v-for="(item, j) in e.sounds" :key="String(index) + j">
-            <div>
-              <label :for="`playQue-sounds-${j}-fileName-${index}`">fileName</label>
-              <input :id="`playQue-sounds-${j}-fileName-${index}`" type="text" v-model="item.fileName" class="ml-4" />
+          <div class="play-que-container">
+            <div
+              v-for="(e, index) in currentOptions.playQue"
+              :key="index"
+              class="play-que"
+            >
+              <div>
+                <label :for="'playQue-name-' + index">name</label>
+                <input
+                  :id="'playQue-name-' + index"
+                  type="text"
+                  v-model="e.name"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label :for="'playQue-animation-' + index">animation</label>
+                <input
+                  :id="'playQue-animation-' + index"
+                  type="text"
+                  v-model="e.animation"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label :for="'playQue-fadeTime-' + index">fadeTime</label>
+                <input
+                  :id="'playQue-fadeTime-' + index"
+                  type="text"
+                  v-model="e.fadeTime"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label :for="'playQue-secondFadeTime-' + index"
+                  >secondFadeTime</label
+                >
+                <input
+                  :id="'playQue-secondFadeTime-' + index"
+                  type="text"
+                  v-model="e.secondFadeTime"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label :for="'playQue-fade-' + index">fade</label>
+                <input
+                  :id="'playQue-fade-' + index"
+                  type="checkbox"
+                  v-model="e.fade"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label>Sound</label>
+                <button @click="addPlayeQueueSound(index)">新增Sound</button>
+              </div>
+              <div v-for="(item, j) in e.sounds" :key="String(index) + j">
+                <div>
+                  <label :for="`playQue-sounds-${j}-fileName-${index}`"
+                    >fileName</label
+                  >
+                  <input
+                    :id="`playQue-sounds-${j}-fileName-${index}`"
+                    type="text"
+                    v-model="item.fileName"
+                    class="ml-4"
+                  />
+                </div>
+                <div>
+                  <label :for="`playQue-sounds-${j}-time-${index}`">time</label>
+                  <input
+                    :id="`playQue-sounds-${j}-time-${index}`"
+                    type="text"
+                    v-model="item.time"
+                    class="ml-4"
+                  />
+                </div>
+                <div>
+                  <label :for="`playQue-sounds-${j}-volume-${index}`"
+                    >volume</label
+                  >
+                  <input
+                    :id="`playQue-sounds-${j}-volume-${index}`"
+                    type="text"
+                    v-model="item.volume"
+                    class="ml-4"
+                  />
+                </div>
+                <div>
+                  <button @click="removePlayeQueueSound(index, j)">
+                    删除Sound
+                  </button>
+                </div>
+              </div>
+              <div>
+                <button @click="removePlayeQueue(index)">删除playQue</button>
+              </div>
             </div>
-            <div>
-              <label :for="`playQue-sounds-${j}-time-${index}`">time</label>
-              <input :id="`playQue-sounds-${j}-time-${index}`" type="text" v-model="item.time" class="ml-4" />
-            </div>
-            <div>
-              <label :for="`playQue-sounds-${j}-volume-${index}`">volume</label>
-              <input :id="`playQue-sounds-${j}-volume-${index}`" type="text" v-model="item.volume" class="ml-4" />
-            </div>
-            <div>
-              <button @click="removePlayeQueueSound(index, j)">删除Sound</button>
+          </div>
+          <div>
+            <label>spineSettings</label>
+            <button @click="addSpineSetting()">新增Setting</button>
+          </div>
+          <div>
+            <div v-for="(e, index) in mapSpineSettings" :key="index">
+              <div>
+                <label :for="'spine-setting-name-' + index">name</label>
+                <input
+                  :id="'spine-setting-name-' + index"
+                  type="text"
+                  v-model="e.name"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <label :for="'spine-setting-scale-' + index">scale</label>
+                <input
+                  :id="'spine-setting-scale-' + index"
+                  type="text"
+                  v-model="e.scale"
+                  class="ml-4"
+                />
+              </div>
+              <div>
+                <button @click="removeSpineSetting(e.name)">删除Setting</button>
+              </div>
             </div>
           </div>
           <div>
-            <button @click="removePlayeQueue(index)">删除playQue</button>
+            <label>otherSpines</label>
+            <button @click="addOtherSpine()">新增OtherSpine</button>
+          </div>
+          <div>
+            <div v-for="(e, index) in currentOptions.otherSpine" :key="index">
+              <div>
+                <input
+                  type="text"
+                  :value="e"
+                  @input="(e) => currentOptions.otherSpine![index] = e.target.value"
+                  style="width: 200px"
+                />
+                <button @click="removeOtherSpine(index)">删除OtherSpine</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button @click="showDialog = false">关闭窗口</button>
+            <button @click="outputOptions">复制参数(可填入参数文件)</button>
           </div>
         </div>
       </div>
-      <div>
-        <label>spineSettings</label>
-        <button @click="addSpineSetting()">新增Setting</button>
-      </div>
-      <div>
-        <div v-for="(e, index) in mapSpineSettings" :key="index">
-          <div>
-            <label :for="'spine-setting-name-' + index">name</label>
-            <input :id="'spine-setting-name-' + index" type="text" v-model="e.name" class="ml-4" />
-          </div>
-          <div>
-            <label :for="'spine-setting-scale-' + index">scale</label>
-            <input :id="'spine-setting-scale-' + index" type="text" v-model="e.scale" class="ml-4" />
-          </div>
-          <div>
-            <button @click="removeSpineSetting(e.name)">删除Setting</button>
-          </div>
+    </Teleport>
+    <div class="root">
+      <div v-if="targetIndex === -1" class="mt-8">
+        <div>手动指定live2d index:</div>
+        <div>
+          <input
+            v-model.number="targetIndex"
+            placeholder="手动指定live2d index"
+          />
         </div>
       </div>
-      <div>
-        <label>otherSpines</label>
-        <button @click="addOtherSpine()">新增OtherSpine</button>
+      <div :class="messageType" class="mt-8">{{ message }}</div>
+      <div v-if="targetIndex !== -1">
+        <button @click="skip2Live2d" class="mt-8">快进到live2d</button>
       </div>
-      <div>
-        <div v-for="(e, index) in currentOptions.otherSpine" :key="index">
-          <div>
-            <input type="text" :value="e" @input="(e) => currentOptions.otherSpine![index] = e.target.value"
-             style="width: 200px;">
-            <button @click="removeOtherSpine(index)">删除OtherSpine</button>
-          </div>
-        </div>
+      <div v-if="targetIndex !== -1">
+        <button @click="resetLive2d" class="mt-8">重置live2d</button>
       </div>
-      <div>
-        <button @click="showDialog = false">关闭窗口</button>
+      <div class="mt-8">
+        <button @click="overrideLive2dConfig" class="mt-8">
+          将编辑好的参数替换目前参数
+        </button>
+      </div>
+      <div class="mt-8 text-left">
         <button @click="outputOptions">复制参数(可填入参数文件)</button>
       </div>
-    </div>
-  </Teleport>
-  <div class="root">
-    <div v-if="targetIndex === -1" class="mt-8">
-      <div>手动指定live2d index:</div>
-      <div>
-        <input
-          v-model.number="targetIndex"
-          placeholder="手动指定live2d index"
-        />
+      <div class="mt-8 text-left">
+        <button @click="showDialog = true">打开配置窗口</button>
       </div>
-    </div>
-    <div :class="messageType" class="mt-8">{{ message }}</div>
-    <div v-if="targetIndex !== -1">
-      <button @click="skip2Live2d" class="mt-8">快进到live2d</button>
-    </div>
-    <div v-if="targetIndex !== -1">
-      <button @click="resetLive2d" class="mt-8">重置live2d</button>
-    </div>
-    <div class="mt-8">
-      <button @click="overrideLive2dConfig" class="mt-8">将编辑好的参数替换目前参数</button>
-    </div>
-    <div class="mt-8 text-left">
-      <button @click="outputOptions">复制参数(可填入参数文件)</button>
-    </div>
-    <div class="mt-8 text-left">
-      <button @click="showDialog = true">打开配置窗口</button>
     </div>
   </div>
 </template>
@@ -292,21 +388,30 @@ function overrideLive2dConfig() {
   top: 15dvh;
   left: 50%;
   transform: translateX(-50%);
-  width: 50dvw;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 3px;
   z-index: 9999;
-  box-shadow: 0 0 12px rgba(0, 0, 0, .12);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 1rem;
+  width: 50dvw;
+  :deep(.dialog-wrapper) {
+    position: relative;
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  }
   :deep(.play-que-container) {
     display: flex;
     flex-direction: row;
     gap: 16px;
     overflow-x: scroll;
     > div {
-      padding: 4px;
-      border-radius: 3px;
       border: 1px solid black;
+      border-radius: 3px;
+      padding: 4px;
     }
   }
 }

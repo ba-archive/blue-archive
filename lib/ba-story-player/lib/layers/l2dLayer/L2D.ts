@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
@@ -210,7 +212,7 @@ export function L2DInit() {
       const eventName = event.data.name;
       if (
         eventName !== "Talk" &&
-        eventName != currentVoice &&
+        eventName !== currentVoice &&
         !["enableobject", "disableobject"].includes(eventName.toLowerCase())
       ) {
         currentVoice = eventName;
