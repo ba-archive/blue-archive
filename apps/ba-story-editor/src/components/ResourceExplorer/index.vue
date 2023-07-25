@@ -48,7 +48,6 @@ function buildItemList() {
     if (isResourceTreeState(current)) {
       itemList.value.push({
         name: current.name,
-        arrow: current.arrow,
         indentLevel: depth,
         originData: current,
       })
