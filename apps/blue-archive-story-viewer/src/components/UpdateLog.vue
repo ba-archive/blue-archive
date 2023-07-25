@@ -25,7 +25,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "feat",
-        content: "新增“工作剧情”",
+        content: "新增“任务剧情”",
       },
     ],
   },
