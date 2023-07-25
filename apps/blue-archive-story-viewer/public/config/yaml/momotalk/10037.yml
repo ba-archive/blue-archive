@@ -1,44 +1,50 @@
 CharacterId: 10037
 translator: 罐子
 title:
-  - GroupId: 1003702
-    FavorScheduleId: 100372
-    CharacterId: 10037
-    TextJp: 保安委員長の審問
+  - TextJp: 保安委員長の審問
     TextCn: 保安委员长的审问
     TextKr: 보안위원장의 심문
     TextEn: Security Committee Chair's Interrogation
     TextTh: การสอบสวนของหัวหน้าคณะฯ
     TextTw: 保安委員長的審問
-  - GroupId: 1003703
-    FavorScheduleId: 100373
+    GroupId: 1003702
+    FavorScheduleId: 100372
     CharacterId: 10037
-    TextJp: 保安委員長の推理
+  - TextJp: 保安委員長の推理
     TextCn: 保安委员长的推理
     TextKr: 보안위원장의 추리
     TextEn: Security Committee Chair's Reasoning
     TextTh: การสันนิษฐานของหัวหน้าคณะฯ
     TextTw: 保安委員長的推理
-  - GroupId: 1003705
-    FavorScheduleId: 100375
+    GroupId: 1003703
+    FavorScheduleId: 100373
     CharacterId: 10037
-    TextJp: 保安委員長の掃除
+  - TextJp: 保安委員長の掃除
     TextCn: 保安委员长的清扫
     TextKr: 보안위원장의 청소
     TextEn: Security Committee Chair's Cleaning
     TextTh: การทำความสะอาดของหัวหน้าคณะฯ
     TextTw: 保安委員長的打掃
-  - GroupId: 1003706
-    FavorScheduleId: 100376
+    GroupId: 1003705
+    FavorScheduleId: 100375
     CharacterId: 10037
-    TextJp: 保安委員長の誤解
+  - TextJp: 保安委員長の誤解
     TextCn: 保安委员长的误解
     TextKr: 보안위원장의 오해
     TextEn: Security Committee Chair's Misunderstanding
     TextTh: ความเข้าใจผิดของหัวหน้าคณะฯ
     TextTw: 保安委員長的誤會
+    GroupId: 1003706
+    FavorScheduleId: 100376
+    CharacterId: 10037
 content:
-  - MessageGroupId: 100370010
+  - MessageKR: 수상하군. 수상해…….
+    MessageJP: 何かがおかしい
+    MessageCN: 总觉得很奇怪
+    MessageEN: Suspicious...
+    MessageTH: แปลกจัง... ต้องมีอะไรแน่ๆ
+    MessageTW: 有點奇怪
+    MessageGroupId: 100370010
     Id: 100370010
     CharacterId: 10037
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수상하군. 수상해…….
-    MessageJP: 何かがおかしい
-    MessageCN: 总觉得很奇怪
-    MessageEN: Suspicious...
-    MessageTH: แปลกจัง... ต้องมีอะไรแน่ๆ
-    MessageTW: 有點奇怪
-  - MessageGroupId: 100370020
+  - MessageKR: 무슨 일이야?
+    MessageJP: ？？？
+    MessageCN: ？？？
+    MessageEN: What is?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: ？？？
+    MessageGroupId: 100370020
     Id: 100370020
     CharacterId: 10037
     MessageCondition: Answer
@@ -68,13 +74,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일이야?
-    MessageJP: ？？？
-    MessageCN: ？？？
-    MessageEN: What is?
-    MessageTH: มีอะไรเหรอ?
-    MessageTW: ？？？
-  - MessageGroupId: 100370030
+  - MessageKR: 최근 들어 급양부에 보관 중인 간식이 계속 사라지는 것 같다.
+    MessageJP: 最近、給食部で保管されていたおやつが立て続けに消えている
+    MessageCN: 最近，补给部保管的零食一直在无缘无故消失
+    MessageEN: Snacks are mysteriously disappearing from the School Lunch Club.
+    MessageTH: "หมู่นี้อาหารว่างของชมรม
+
+      โภชนาการหายไปเรื่อยๆ เลย"
+    MessageTW: 最近，保管在供給部的零食接連不斷地消失
+    MessageGroupId: 100370030
     Id: 100370030
     CharacterId: 10037
     MessageCondition: Feedback
@@ -86,27 +94,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 최근 들어 급양부에 보관 중인 간식이 계속 사라지는 것 같다.
-    MessageJP: 最近、給食部で保管されていたおやつが立て続けに消えている
-    MessageCN: 最近，补给部保管的零食一直在无缘无故消失
-    MessageEN: Snacks are mysteriously disappearing from the School Lunch Club.
-    MessageTH: "หมู่นี้อาหารว่างของชมรม
-
-      โภชนาการหายไปเรื่อยๆ เลย"
-    MessageTW: 最近，保管在供給部的零食接連不斷地消失
-  - MessageGroupId: 100370030
-    Id: 100370040
-    CharacterId: 10037
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100370040
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 특히 푸딩의 개수가 장부상에 기록된 숫자에 비해 터무니없이 부족해.
+  - MessageKR: 특히 푸딩의 개수가 장부상에 기록된 숫자에 비해 터무니없이 부족해.
     MessageJP: 特にプリンの個数が、帳簿に記録された数字と全く合わないんだ
     MessageCN: 特别布丁的数量，和账本上记录的数量完全对不上
     MessageEN:
@@ -118,7 +106,25 @@ content:
 
       มันหายไปไหนนะ"
     MessageTW: 特別是布丁的個數，和帳簿的紀錄完全對不上
-  - MessageGroupId: 100370040
+    MessageGroupId: 100370030
+    Id: 100370040
+    CharacterId: 10037
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100370040
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 개수를 잘못 센 거 아냐?
+    MessageJP: 数え間違いとかではなく……？
+    MessageCN: 没有数错吧……？
+    MessageEN: Maybe you miscounted?
+    MessageTH: ไม่ได้นับผิดหรอกเหรอ?
+    MessageTW: 不是數錯之類的……？
+    MessageGroupId: 100370040
     Id: 100370050
     CharacterId: 10037
     MessageCondition: Answer
@@ -130,13 +136,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 개수를 잘못 센 거 아냐?
-    MessageJP: 数え間違いとかではなく……？
-    MessageCN: 没有数错吧……？
-    MessageEN: Maybe you miscounted?
-    MessageTH: ไม่ได้นับผิดหรอกเหรอ?
-    MessageTW: 不是數錯之類的……？
-  - MessageGroupId: 100370040
+  - MessageKR: 누가 몰래 먹은 거 아냐?
+    MessageJP: 誰かがこっそり食べたとか？
+    MessageCN: 可能有人偷吃了？
+    MessageEN: Maybe someone ate them?
+    MessageTH: มีใครแอบกินหรือเปล่า?
+    MessageTW: 有誰偷吃之類的？
+    MessageGroupId: 100370040
     Id: 100370060
     CharacterId: 10037
     MessageCondition: Answer
@@ -148,13 +154,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 누가 몰래 먹은 거 아냐?
-    MessageJP: 誰かがこっそり食べたとか？
-    MessageCN: 可能有人偷吃了？
-    MessageEN: Maybe someone ate them?
-    MessageTH: มีใครแอบกินหรือเปล่า?
-    MessageTW: 有誰偷吃之類的？
-  - MessageGroupId: 100370050
+  - MessageKR: 아니, 그럴 리는 없다.
+    MessageJP: いや、そんなはずは無い！
+    MessageCN: 不，绝无可能！
+    MessageEN: That's impossible.
+    MessageTH: ไม่มีทาง
+    MessageTW: 不，不可能有那種事！
+    MessageGroupId: 100370050
     Id: 100370070
     CharacterId: 10037
     MessageCondition: Feedback
@@ -166,13 +172,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 그럴 리는 없다.
-    MessageJP: いや、そんなはずは無い！
-    MessageCN: 不，绝无可能！
-    MessageEN: That's impossible.
-    MessageTH: ไม่มีทาง
-    MessageTW: 不，不可能有那種事！
-  - MessageGroupId: 100370050
+  - MessageKR: 다른 보안위원들과 함께 몇 번이나 다시 세어 보았으니까!
+    MessageJP: なにせ他の保安委員たちと一緒に、何度も数え直したのだから！
+    MessageCN: 毕竟我和其他保安委员一起，清点过好几次了！
+    MessageEN:
+      I've done the math several times, along with other Security Council
+      members.
+    MessageTH: "ฉันกับสมาชิกคณะความมั่นคง
+
+      คนอื่นช่วยกันนับตั้งหลายรอบ!"
+    MessageTW: 畢竟我和其他保安委員一起重數了好幾次！
+    MessageGroupId: 100370050
     Id: 100370080
     CharacterId: 10037
     MessageCondition: Feedback
@@ -184,17 +194,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다른 보안위원들과 함께 몇 번이나 다시 세어 보았으니까!
-    MessageJP: なにせ他の保安委員たちと一緒に、何度も数え直したのだから！
-    MessageCN: 毕竟我和其他保安委员一起，清点过好几次了！
-    MessageEN:
-      I've done the math several times, along with other Security Council
-      members.
-    MessageTH: "ฉันกับสมาชิกคณะความมั่นคง
-
-      คนอื่นช่วยกันนับตั้งหลายรอบ!"
-    MessageTW: 畢竟我和其他保安委員一起重數了好幾次！
-  - MessageGroupId: 100370060
+  - MessageKR: 아니, 그럴 리는 없다.
+    MessageJP: いや、そんなはずは無い！
+    MessageCN: 不，绝无可能！
+    MessageEN: That's impossible.
+    MessageTH: ไม่มีทาง
+    MessageTW: 不，不可能有那種事！
+    MessageGroupId: 100370060
     Id: 100370090
     CharacterId: 10037
     MessageCondition: Feedback
@@ -206,13 +212,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 그럴 리는 없다.
-    MessageJP: いや、そんなはずは無い！
-    MessageCN: 不，绝无可能！
-    MessageEN: That's impossible.
-    MessageTH: ไม่มีทาง
-    MessageTW: 不，不可能有那種事！
-  - MessageGroupId: 100370060
+  - MessageKR: 급양부의 시설은 우리 보안위원들이 철통같이 지키고 있으니까!
+    MessageJP: 給食部の施設は、我々保安委員が徹底的に監視しているのだから！
+    MessageCN: 供给部的设施是由我们保安委员严格看管的！
+    MessageEN:
+      The Security Council has been watching the School Lunch Club facility
+      like hawks!
+    MessageTH: "สมาชิกคณะความมั่นคงคอยดูแล
+
+      อาหารของชมรมโภชนาการอยู่ตลอดเวลา!"
+    MessageTW: 供給部的設施，有我們保安委員徹底地監視著！
+    MessageGroupId: 100370060
     Id: 100370100
     CharacterId: 10037
     MessageCondition: Feedback
@@ -224,17 +234,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 급양부의 시설은 우리 보안위원들이 철통같이 지키고 있으니까!
-    MessageJP: 給食部の施設は、我々保安委員が徹底的に監視しているのだから！
-    MessageCN: 供给部的设施是由我们保安委员严格看管的！
-    MessageEN:
-      The Security Council has been watching the School Lunch Club facility
-      like hawks!
-    MessageTH: "สมาชิกคณะความมั่นคงคอยดูแล
+  - MessageKR: 개수를 잘못 센 것도, 누가 먹은 것도 아니라면 이는 분명……
+    MessageJP: 数え間違いでもない、誰かが食べたのでもない、だとするとこれは……
+    MessageCN: 数量也没数错，也不是被人吃了，这样的话……
+    MessageEN: So if it's not a miscount, and nobody ate them...
+    MessageTH: "ถ้าหากไม่ได้นับผิด
 
-      อาหารของชมรมโภชนาการอยู่ตลอดเวลา!"
-    MessageTW: 供給部的設施，有我們保安委員徹底地監視著！
-  - MessageGroupId: 100370070
+      แล้วก็ไม่มีใครแอบกิน ก็แสดงว่า..."
+    MessageTW: 並不是數錯，也不是誰吃掉了，既然如此……
+    MessageGroupId: 100370070
     Id: 100370110
     CharacterId: 10037
     MessageCondition: Feedback
@@ -246,15 +254,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 개수를 잘못 센 것도, 누가 먹은 것도 아니라면 이는 분명……
-    MessageJP: 数え間違いでもない、誰かが食べたのでもない、だとするとこれは……
-    MessageCN: 数量也没数错，也不是被人吃了，这样的话……
-    MessageEN: So if it's not a miscount, and nobody ate them...
-    MessageTH: "ถ้าหากไม่ได้นับผิด
+  - MessageKR: 붉은겨울 학원을 음해하려는 스파이의 사보타주 행위가 분명하다!
+    MessageJP: レッドウィンター連邦学園を攻撃しようとする、スパイによる工作行為に違いない！
+    MessageCN: 只能是妄图攻击红冬联邦学园的间谍干的好事！
+    MessageEN: There must be a spy trying to sabotage the Red Winter Academy!
+    MessageTH: "นี่เป็นฝีมือของสายลับที่จ้อง
 
-      แล้วก็ไม่มีใครแอบกิน ก็แสดงว่า..."
-    MessageTW: 並不是數錯，也不是誰吃掉了，既然如此……
-  - MessageGroupId: 100370080
+      จะทำลายสหภาพเรดวินเทอร์!"
+    MessageTW: 這一定是來自間諜的攻擊，企圖攻擊赤冬聯邦學園！
+    MessageGroupId: 100370080
     Id: 100370120
     CharacterId: 10037
     MessageCondition: Feedback
@@ -266,15 +274,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 붉은겨울 학원을 음해하려는 스파이의 사보타주 행위가 분명하다!
-    MessageJP: レッドウィンター連邦学園を攻撃しようとする、スパイによる工作行為に違いない！
-    MessageCN: 只能是妄图攻击红冬联邦学园的间谍干的好事！
-    MessageEN: There must be a spy trying to sabotage the Red Winter Academy!
-    MessageTH: "นี่เป็นฝีมือของสายลับที่จ้อง
-
-      จะทำลายสหภาพเรดวินเทอร์!"
-    MessageTW: 這一定是來自間諜的攻擊，企圖攻擊赤冬聯邦學園！
-  - MessageGroupId: 100370090
+  - MessageKR: 스파이?
+    MessageJP: ……スパイ？
+    MessageCN: ……间谍？
+    MessageEN: A spy?
+    MessageTH: สายลับ?
+    MessageTW: ……間諜？
+    MessageGroupId: 100370090
     Id: 100370130
     CharacterId: 10037
     MessageCondition: Answer
@@ -286,25 +292,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 스파이?
-    MessageJP: ……スパイ？
-    MessageCN: ……间谍？
-    MessageEN: A spy?
-    MessageTH: สายลับ?
-    MessageTW: ……間諜？
-  - MessageGroupId: 100370100
-    Id: 100370140
-    CharacterId: 10037
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100370110
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR:
+  - MessageKR:
       음. 붉은겨울 학원은 워낙 넓은 데다가, 학생기록부의 전산화가 완전히 이루어지지 않아 사무국에서 파악하지 못한 학생들도
       제법 있으니까.
     MessageJP: ああ。レッドウィンター連邦学園は敷地が広大な上に、生徒の記録簿などもあまり電子化されていない。事務局で把握できていない生徒も結構いるくらいだ
@@ -320,7 +308,27 @@ content:
 
       ที่สำนักเลขาธิการไม่สามารถระบุตัวได้"
     MessageTW: 啊啊。赤冬聯邦學園不僅腹地廣闊，學生的記錄簿等也沒什麼電子化。甚至有不少學生未被事務局所掌控
-  - MessageGroupId: 100370110
+    MessageGroupId: 100370100
+    Id: 100370140
+    CharacterId: 10037
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100370110
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그중에 외부 학원에서 보낸 스파이가 섞여 있다 하더라도 이상하지 않은 일이야.
+    MessageJP: その中に、どこか外部の学園から送られた「スパイ」が紛れ込んでるとしてもおかしくはない
+    MessageCN: 那些学生中，哪怕混有其他学校送来的“间谍”也不足为奇
+    MessageEN: It's very possible there's a spy from another academy among the students.
+    MessageTH: "จึงไม่แปลกหรอกค่ะถ้าหนึ่งในนั้น
+
+      จะเป็นสายลับที่โรงเรียนอื่นส่งมา"
+    MessageTW: 在其中，就算有從外部學園送進來的「間諜」混入也不奇怪
+    MessageGroupId: 100370110
     Id: 100370150
     CharacterId: 10037
     MessageCondition: Feedback
@@ -332,27 +340,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그중에 외부 학원에서 보낸 스파이가 섞여 있다 하더라도 이상하지 않은 일이야.
-    MessageJP: その中に、どこか外部の学園から送られた「スパイ」が紛れ込んでるとしてもおかしくはない
-    MessageCN: 那些学生中，哪怕混有其他学校送来的“间谍”也不足为奇
-    MessageEN: It's very possible there's a spy from another academy among the students.
-    MessageTH: "จึงไม่แปลกหรอกค่ะถ้าหนึ่งในนั้น
-
-      จะเป็นสายลับที่โรงเรียนอื่นส่งมา"
-    MessageTW: 在其中，就算有從外部學園送進來的「間諜」混入也不奇怪
-  - MessageGroupId: 100370120
-    Id: 100370160
-    CharacterId: 10037
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100370130
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 분명 그 스파이는 이런 허점을 노려 붉은겨울 학원에 내분을 일으키려 했던 거겠지. 괘씸한 녀석 같으니라고.
+  - MessageKR: 분명 그 스파이는 이런 허점을 노려 붉은겨울 학원에 내분을 일으키려 했던 거겠지. 괘씸한 녀석 같으니라고.
     MessageJP: きっとこういった些細な事件で様子を見つつ、遠くないうちにレッドウィンター連邦学園に内紛を巻き起こそうとしていたのだろう……
     MessageCN: 间谍一定是想利用这种琐事来监视红冬的状况，不久之后就会在红冬联邦学园里掀起内讧吧……
     MessageEN:
@@ -364,7 +352,27 @@ content:
 
       สหภาพเรดวินเทอร์ เจ้าคนน่ารังเกียจ!"
     MessageTW: 肯定想以這種瑣碎事件觀察情況，在不遠的將來於赤冬聯邦學園內捲起糾紛吧……
-  - MessageGroupId: 100370120
+    MessageGroupId: 100370120
+    Id: 100370160
+    CharacterId: 10037
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100370130
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그런고로 오늘부터…… 특별 스파이 색출 작전을 개시한다!
+    MessageJP: こうなってはやむを得まい……これより、スパイ捜索作戦を開始する！
+    MessageCN: 事到如今也只能如此了……现在开始，展开间谍搜查作战！
+    MessageEN: So starting today, a special spy search operation begins!
+    MessageTH: "ถ้างั้นตั้งแต่วันนี้เป็นต้นไปจะเริ่ม
+
+      ปฏิบัติการพิเศษสืบหาสายลับละนะ!"
+    MessageTW: 這樣的話就沒辦法了……即刻起，間諜搜索作戰開始！
+    MessageGroupId: 100370120
     Id: 100370170
     CharacterId: 10037
     MessageCondition: Feedback
@@ -376,15 +384,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런고로 오늘부터…… 특별 스파이 색출 작전을 개시한다!
-    MessageJP: こうなってはやむを得まい……これより、スパイ捜索作戦を開始する！
-    MessageCN: 事到如今也只能如此了……现在开始，展开间谍搜查作战！
-    MessageEN: So starting today, a special spy search operation begins!
-    MessageTH: "ถ้างั้นตั้งแต่วันนี้เป็นต้นไปจะเริ่ม
-
-      ปฏิบัติการพิเศษสืบหาสายลับละนะ!"
-    MessageTW: 這樣的話就沒辦法了……即刻起，間諜搜索作戰開始！
-  - MessageGroupId: 100370130
+  - MessageKR: 선생, 또 사건이다. 예의 스파이 문제야.
+    MessageJP: 先生、例のスパイについての続報だ
+    MessageCN: 老师，上次的间谍事件有了后续发展
+    MessageEN: Sensei, we've had another spy incident.
+    MessageTH: มีเรื่องอีกแล้วละครู เรื่องสายลับน่ะ
+    MessageTW: 老師，這是關於上次間諜的續報
+    MessageGroupId: 100370130
     Id: 100370180
     CharacterId: 10037
     MessageCondition: FavorRankUp
@@ -396,13 +402,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 또 사건이다. 예의 스파이 문제야.
-    MessageJP: 先生、例のスパイについての続報だ
-    MessageCN: 老师，上次的间谍事件有了后续发展
-    MessageEN: Sensei, we've had another spy incident.
-    MessageTH: มีเรื่องอีกแล้วละครู เรื่องสายลับน่ะ
-    MessageTW: 老師，這是關於上次間諜的續報
-  - MessageGroupId: 100370140
+  - MessageKR: 그 괘씸한 스파이 녀석이 이번에는 체리노 회장의 푸딩을 훔쳐 간 모양이더군.
+    MessageJP: どこぞの卑劣なスパイが、今度はチェリノ会長のプリンを盗んだようでな
+    MessageCN: 这次，不知从何而来的卑劣间谍把切里诺会长的布丁给偷走了
+    MessageEN: That disgraceful spy stole President Cherino's pudding.
+    MessageTH: "คราวนี้เหมือนสายลับที่น่ารังเกียจนั่น
+
+      จะขโมยพุดดิ้งของประธานเชริโน่ไป"
+    MessageTW: 不知在何處的卑劣間諜，這次似乎偷了潔莉諾會長的布丁
+    MessageGroupId: 100370140
     Id: 100370190
     CharacterId: 10037
     MessageCondition: None
@@ -414,15 +422,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 괘씸한 스파이 녀석이 이번에는 체리노 회장의 푸딩을 훔쳐 간 모양이더군.
-    MessageJP: どこぞの卑劣なスパイが、今度はチェリノ会長のプリンを盗んだようでな
-    MessageCN: 这次，不知从何而来的卑劣间谍把切里诺会长的布丁给偷走了
-    MessageEN: That disgraceful spy stole President Cherino's pudding.
-    MessageTH: "คราวนี้เหมือนสายลับที่น่ารังเกียจนั่น
-
-      จะขโมยพุดดิ้งของประธานเชริโน่ไป"
-    MessageTW: 不知在何處的卑劣間諜，這次似乎偷了潔莉諾會長的布丁
-  - MessageGroupId: 100370150
+  - MessageKR: 어째서 스파이의 소행이라고 단정 짓는 거야?
+    MessageJP: それ、確実にスパイの仕業なの？
+    MessageCN: 那个，确定是间谍干的吗？
+    MessageEN: How do you know it was a spy?
+    MessageTH: ทำไมถึงรีบด่วนสรุปว่าเป็นฝีมือสายลับล่ะ?
+    MessageTW: 那個，確實是間諜的所為嗎？
+    MessageGroupId: 100370150
     Id: 100370200
     CharacterId: 10037
     MessageCondition: Answer
@@ -434,13 +440,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어째서 스파이의 소행이라고 단정 짓는 거야?
-    MessageJP: それ、確実にスパイの仕業なの？
-    MessageCN: 那个，确定是间谍干的吗？
-    MessageEN: How do you know it was a spy?
-    MessageTH: ทำไมถึงรีบด่วนสรุปว่าเป็นฝีมือสายลับล่ะ?
-    MessageTW: 那個，確實是間諜的所為嗎？
-  - MessageGroupId: 100370160
+  - MessageKR: 그야 붉은겨울 학원의 보안은 언제나 완벽하기 때문이지!
+    MessageJP: ああ、そうだ。何せレッドウィンター連邦学園の保安は、いつだって完璧だからな！
+    MessageCN: 啊啊，一定是。毕竟红冬联邦学园的安保系统，无论何时都是完美的！
+    MessageEN: Because the Red Winter Academy's security system is flawless!
+    MessageTH: "ก็เพราะระบบความปลอดภัย
+
+      ของสหภาพเรดวินเทอร์สมบูรณ์
+
+      แบบเสมอไงล่ะ!"
+    MessageTW: 啊啊，沒錯。因為赤冬聯邦學園的保安，無時無刻都是完美的！
+    MessageGroupId: 100370160
     Id: 100370210
     CharacterId: 10037
     MessageCondition: Feedback
@@ -452,17 +462,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그야 붉은겨울 학원의 보안은 언제나 완벽하기 때문이지!
-    MessageJP: ああ、そうだ。何せレッドウィンター連邦学園の保安は、いつだって完璧だからな！
-    MessageCN: 啊啊，一定是。毕竟红冬联邦学园的安保系统，无论何时都是完美的！
-    MessageEN: Because the Red Winter Academy's security system is flawless!
-    MessageTH: "ก็เพราะระบบความปลอดภัย
+  - MessageKR: 스파이가 기어들어 와 사보타주라도 하지 않는 이상, 문제가 생길 다른 이유는 없어!
+    MessageJP: スパイでも忍び込んでいない限り、何か問題が起こるはずがない！
+    MessageCN: 除非有间谍潜入，否则不会发生任何问题！
+    MessageEN: Without some kind of sabotage, there's no way this could happen.
+    MessageTH: "หากไม่มีสายลับคืบคลานเข้ามา
 
-      ของสหภาพเรดวินเทอร์สมบูรณ์
+      ก่อเรื่องละก็ เราก็ไม่เห็นเหตุผลอื่น
 
-      แบบเสมอไงล่ะ!"
-    MessageTW: 啊啊，沒錯。因為赤冬聯邦學園的保安，無時無刻都是完美的！
-  - MessageGroupId: 100370160
+      ที่จะเกิดปัญหาแล้วล่ะ!"
+    MessageTW: 除非間諜潛入，不然不可能發生任何問題！
+    MessageGroupId: 100370160
     Id: 100370220
     CharacterId: 10037
     MessageCondition: Feedback
@@ -474,17 +484,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 스파이가 기어들어 와 사보타주라도 하지 않는 이상, 문제가 생길 다른 이유는 없어!
-    MessageJP: スパイでも忍び込んでいない限り、何か問題が起こるはずがない！
-    MessageCN: 除非有间谍潜入，否则不会发生任何问题！
-    MessageEN: Without some kind of sabotage, there's no way this could happen.
-    MessageTH: "หากไม่มีสายลับคืบคลานเข้ามา
+  - MessageKR: 그러니 이번 사건도 스파이의 소행임이 분명해.
+    MessageJP: だから間違いなくスパイの仕業だろう。
+    MessageCN: 所以母庸置疑，一定是间谍干的好事
+    MessageEN: So, it must be a spy.
+    MessageTH: "เพราะงั้นคราวนี้ฉันจึงมั่นใจ
 
-      ก่อเรื่องละก็ เราก็ไม่เห็นเหตุผลอื่น
-
-      ที่จะเกิดปัญหาแล้วล่ะ!"
-    MessageTW: 除非間諜潛入，不然不可能發生任何問題！
-  - MessageGroupId: 100370170
+      ว่าเป็นฝีมือของสายลับ"
+    MessageTW: 所以毫無疑問是間諜所為吧。
+    MessageGroupId: 100370170
     Id: 100370230
     CharacterId: 10037
     MessageCondition: Feedback
@@ -496,15 +504,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니 이번 사건도 스파이의 소행임이 분명해.
-    MessageJP: だから間違いなくスパイの仕業だろう。
-    MessageCN: 所以母庸置疑，一定是间谍干的好事
-    MessageEN: So, it must be a spy.
-    MessageTH: "เพราะงั้นคราวนี้ฉันจึงมั่นใจ
+  - MessageKR: ……하지만 어째서인지 체리노 회장께서는 내가 푸딩을 훔쳐 갔다고 생각하시는 것 같더군.
+    MessageJP: しかし、問題が生じていてな……どういうわけかチェリノ会長は、私がプリンを盗んだと思っておられるようなんだ
+    MessageCN: 但是，问题来了……不知为何，切里诺会长认为是我偷走了布丁
+    MessageEN: But for some reason, President Cherino thinks I'm the thief.
+    MessageTH: "แต่ท่านประธานเชริโน่ดันคิดว่า
 
-      ว่าเป็นฝีมือของสายลับ"
-    MessageTW: 所以毫無疑問是間諜所為吧。
-  - MessageGroupId: 100370170
+      ฉันเป็นคนขโมยพุดดิ้งไปกินนี่สิ..."
+    MessageTW: 不過，產生一個問題……不知為何潔莉諾會長她，似乎認為布丁是我偷的
+    MessageGroupId: 100370170
     Id: 100370240
     CharacterId: 10037
     MessageCondition: Feedback
@@ -516,15 +524,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……하지만 어째서인지 체리노 회장께서는 내가 푸딩을 훔쳐 갔다고 생각하시는 것 같더군.
-    MessageJP: しかし、問題が生じていてな……どういうわけかチェリノ会長は、私がプリンを盗んだと思っておられるようなんだ
-    MessageCN: 但是，问题来了……不知为何，切里诺会长认为是我偷走了布丁
-    MessageEN: But for some reason, President Cherino thinks I'm the thief.
-    MessageTH: "แต่ท่านประธานเชริโน่ดันคิดว่า
+  - MessageKR: 물론 짚이는 바가 없는 건 아니지만…….
+    MessageJP: もちろん、心当たりがないわけではないが……
+    MessageCN: 当然，我也并非毫无头绪……
+    MessageEN: I do have a hunch why she thinks that.
+    MessageTH: "ก็จริงอยู่ที่ท่านประธานมีสิทธิ์ที่จะ
 
-      ฉันเป็นคนขโมยพุดดิ้งไปกินนี่สิ..."
-    MessageTW: 不過，產生一個問題……不知為何潔莉諾會長她，似乎認為布丁是我偷的
-  - MessageGroupId: 100370180
+      สงสัย..."
+    MessageTW: 當然，也不是沒有頭緒……
+    MessageGroupId: 100370180
     Id: 100370250
     CharacterId: 10037
     MessageCondition: Feedback
@@ -536,15 +544,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론 짚이는 바가 없는 건 아니지만…….
-    MessageJP: もちろん、心当たりがないわけではないが……
-    MessageCN: 当然，我也并非毫无头绪……
-    MessageEN: I do have a hunch why she thinks that.
-    MessageTH: "ก็จริงอยู่ที่ท่านประธานมีสิทธิ์ที่จะ
+  - MessageKR: 이번에야말로 멋지게 스파이를 잡아 내 무죄를 증명해 내겠어!
+    MessageJP: 逆に良い機会だ。今度こそスパイを捕まえて、私の有能さと無罪を証明してやろう！
+    MessageCN: 这反而是个好机会。这次我要一举捕获间谍，证明我的能力与清白！
+    MessageEN: But I'll catch the spy and prove my innocence!
+    MessageTH: "ครั้งนี้ฉันจึงต้องจับตัวสายลับมาให้ได้
 
-      สงสัย..."
-    MessageTW: 當然，也不是沒有頭緒……
-  - MessageGroupId: 100370190
+      เพื่อพิสูจน์ความบริสุทธิ์ของตัวเอง!"
+    MessageTW: 反而是個好機會。這次一定要抓住間諜，證明我的才能和無罪！
+    MessageGroupId: 100370190
     Id: 100370260
     CharacterId: 10037
     MessageCondition: Feedback
@@ -556,15 +564,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에야말로 멋지게 스파이를 잡아 내 무죄를 증명해 내겠어!
-    MessageJP: 逆に良い機会だ。今度こそスパイを捕まえて、私の有能さと無罪を証明してやろう！
-    MessageCN: 这反而是个好机会。这次我要一举捕获间谍，证明我的能力与清白！
-    MessageEN: But I'll catch the spy and prove my innocence!
-    MessageTH: "ครั้งนี้ฉันจึงต้องจับตัวสายลับมาให้ได้
-
-      เพื่อพิสูจน์ความบริสุทธิ์ของตัวเอง!"
-    MessageTW: 反而是個好機會。這次一定要抓住間諜，證明我的才能和無罪！
-  - MessageGroupId: 100370200
+  - MessageKR: ……나쁜 소식이다, 선생.
+    MessageJP: ……聞いてくれ、先生
+    MessageCN: ……听我说，老师
+    MessageEN: Bad news, Sensei.
+    MessageTH: มีข่าวร้ายน่ะครู...
+    MessageTW: ……聽我說，老師
+    MessageGroupId: 100370200
     Id: 100370270
     CharacterId: 10037
     MessageCondition: FavorRankUp
@@ -576,13 +582,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……나쁜 소식이다, 선생.
-    MessageJP: ……聞いてくれ、先生
-    MessageCN: ……听我说，老师
-    MessageEN: Bad news, Sensei.
-    MessageTH: มีข่าวร้ายน่ะครู...
-    MessageTW: ……聽我說，老師
-  - MessageGroupId: 100370210
+  - MessageKR: 지난번에 체리노 회장님의 석상에 총격을 가한 건 때문에 중징계를 받고 말았다…….
+    MessageJP: この間チェリノ会長の石像を壊した件で、懲罰を受けているのだが……
+    MessageCN: 因为我在上次追捕过程中损坏了切里诺会长的石像，现在正在接受惩罚
+    MessageEN: I'm getting severely punished for shooting President Cherino's statue.
+    MessageTH: "ฉันถูกลงโทษหนักที่ไปยิงรูปปั้น
+
+      ท่านประธานเชริโน่..."
+    MessageTW: 上次弄壞潔莉諾會長石像的事，受到了懲罰……
+    MessageGroupId: 100370210
     Id: 100370280
     CharacterId: 10037
     MessageCondition: None
@@ -594,15 +602,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번에 체리노 회장님의 석상에 총격을 가한 건 때문에 중징계를 받고 말았다…….
-    MessageJP: この間チェリノ会長の石像を壊した件で、懲罰を受けているのだが……
-    MessageCN: 因为我在上次追捕过程中损坏了切里诺会长的石像，现在正在接受惩罚
-    MessageEN: I'm getting severely punished for shooting President Cherino's statue.
-    MessageTH: "ฉันถูกลงโทษหนักที่ไปยิงรูปปั้น
-
-      ท่านประธานเชริโน่..."
-    MessageTW: 上次弄壞潔莉諾會長石像的事，受到了懲罰……
-  - MessageGroupId: 100370220
+  - MessageKR: 구교사로 가게 된 거야?
+    MessageJP: もしかして今は、旧校舎に？
+    MessageCN: 玛丽娜现在难不成，在旧校舍？
+    MessageEN: Are you going to the former institute?
+    MessageTH: โดนให้ไปอยู่อาคารเรียนเก่าเหรอ?
+    MessageTW: 現在該不會，在舊校舍？
+    MessageGroupId: 100370220
     Id: 100370290
     CharacterId: 10037
     MessageCondition: Answer
@@ -614,13 +620,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 구교사로 가게 된 거야?
-    MessageJP: もしかして今は、旧校舎に？
-    MessageCN: 玛丽娜现在难不成，在旧校舍？
-    MessageEN: Are you going to the former institute?
-    MessageTH: โดนให้ไปอยู่อาคารเรียนเก่าเหรอ?
-    MessageTW: 現在該不會，在舊校舍？
-  - MessageGroupId: 100370220
+  - MessageKR: 가끔 면회는 갈게.
+    MessageJP: 時々会いに行くね。欲しいものがあったら言って
+    MessageCN: 我会时不时去看望一下的。有什么想要的尽管说
+    MessageEN: I'll visit you when I can.
+    MessageTH: แล้วครูจะหาเวลาไปเยี่ยมนะ
+    MessageTW: 我會不時去看妳的。有想要的東西跟我說
+    MessageGroupId: 100370220
     Id: 100370300
     CharacterId: 10037
     MessageCondition: Answer
@@ -632,13 +638,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가끔 면회는 갈게.
-    MessageJP: 時々会いに行くね。欲しいものがあったら言って
-    MessageCN: 我会时不时去看望一下的。有什么想要的尽管说
-    MessageEN: I'll visit you when I can.
-    MessageTH: แล้วครูจะหาเวลาไปเยี่ยมนะ
-    MessageTW: 我會不時去看妳的。有想要的東西跟我說
-  - MessageGroupId: 100370230
+  - MessageKR: 아니, 구교사로 가게 된 게 아니거든?!
+    MessageJP: 違う、旧校舎送りではない！！
+    MessageCN: 没有，我才没被送到旧校舍！！
+    MessageEN: No, I am not going to the former institute!
+    MessageTH: ไม่ใช่แบบนั้นสักหน่อย!!
+    MessageTW: 不是，才不是被流放至舊校舍！！
+    MessageGroupId: 100370230
     Id: 100370310
     CharacterId: 10037
     MessageCondition: Feedback
@@ -650,13 +656,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 구교사로 가게 된 게 아니거든?!
-    MessageJP: 違う、旧校舎送りではない！！
-    MessageCN: 没有，我才没被送到旧校舍！！
-    MessageEN: No, I am not going to the former institute!
-    MessageTH: ไม่ใช่แบบนั้นสักหน่อย!!
-    MessageTW: 不是，才不是被流放至舊校舍！！
-  - MessageGroupId: 100370240
+  - MessageKR: 체리노 회장님의 자비로 구교사 행은 간신히 피했지만.
+    MessageJP: チェリノ会長の慈悲のおかげで、旧校舎行きは免れたものの……
+    MessageCN: 切里诺会长慈悲为怀，免除了把我送到旧校舍的惩罚……
+    MessageEN: Thanks to President Cherino's mercy, I avoided harsh punishment.
+    MessageTH: "ฉันไม่ต้องไปอาคารเรียนเก่า
+
+      เพราะท่านประธานเชริโน่ยังเมตตาฉัน"
+    MessageTW: 多虧了潔莉諾會長的慈悲，避免被流放至舊校舍……
+    MessageGroupId: 100370240
     Id: 100370320
     CharacterId: 10037
     MessageCondition: Feedback
@@ -668,15 +676,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 체리노 회장님의 자비로 구교사 행은 간신히 피했지만.
-    MessageJP: チェリノ会長の慈悲のおかげで、旧校舎行きは免れたものの……
-    MessageCN: 切里诺会长慈悲为怀，免除了把我送到旧校舍的惩罚……
-    MessageEN: Thanks to President Cherino's mercy, I avoided harsh punishment.
-    MessageTH: "ฉันไม่ต้องไปอาคารเรียนเก่า
+  - MessageKR: 지난번처럼 화장실 청소 1주일 형을 받고 말았다…….
+    MessageJP: 以前のように、「トイレ掃除1週間」の刑を受けてしまったんだ
+    MessageCN: 于是我和之前一样，得到了“打扫厕所一周”的处罚
+    MessageEN: But I have to clean the bathroom for a week, just like last time...
+    MessageTH: "แต่ได้รับโทษทำความสะอาดห้องน้ำ
 
-      เพราะท่านประธานเชริโน่ยังเมตตาฉัน"
-    MessageTW: 多虧了潔莉諾會長的慈悲，避免被流放至舊校舍……
-  - MessageGroupId: 100370240
+      1 อาทิตย์เหมือนคราวก่อน..."
+    MessageTW: 但和以前一樣，受到了「打掃廁所1週」之刑
+    MessageGroupId: 100370240
     Id: 100370330
     CharacterId: 10037
     MessageCondition: Feedback
@@ -688,27 +696,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번처럼 화장실 청소 1주일 형을 받고 말았다…….
-    MessageJP: 以前のように、「トイレ掃除1週間」の刑を受けてしまったんだ
-    MessageCN: 于是我和之前一样，得到了“打扫厕所一周”的处罚
-    MessageEN: But I have to clean the bathroom for a week, just like last time...
-    MessageTH: "แต่ได้รับโทษทำความสะอาดห้องน้ำ
-
-      1 อาทิตย์เหมือนคราวก่อน..."
-    MessageTW: 但和以前一樣，受到了「打掃廁所1週」之刑
-  - MessageGroupId: 100370250
-    Id: 100370340
-    CharacterId: 10037
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100370260
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 수치스럽고 고된 일이지만, 체리노 회장님의 명령이라면 어쩔 수 없지.
+  - MessageKR: 수치스럽고 고된 일이지만, 체리노 회장님의 명령이라면 어쩔 수 없지.
     MessageJP: しかし、これもある意味ではチェリノ会長の命令
     MessageCN: 但是，某种意义上这也是切里诺会长的命令
     MessageEN:
@@ -720,7 +708,27 @@ content:
 
       เชริโน่ก็คงช่วยไม่ได้"
     MessageTW: 不過，這某種意義上也是潔莉諾會長的命令
-  - MessageGroupId: 100370250
+    MessageGroupId: 100370250
+    Id: 100370340
+    CharacterId: 10037
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100370260
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 불초 마리나, 전력을 다해 회장님의 명을 수행하겠다!
+    MessageJP: このマリナ、全力で会長の命令を遂行してみせる！
+    MessageCN: 本人玛丽娜，一定会全力执行会长的命令！
+    MessageEN: I will always follow our president's will!
+    MessageTH: "มารินะคนนี้จะทำตามคำสั่ง
+
+      ของท่านประธานอย่างแข็งขัน!"
+    MessageTW: 瑪麗娜我，會全力執行會長的命令的！
+    MessageGroupId: 100370250
     Id: 100370350
     CharacterId: 10037
     MessageCondition: Feedback
@@ -732,15 +740,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 불초 마리나, 전력을 다해 회장님의 명을 수행하겠다!
-    MessageJP: このマリナ、全力で会長の命令を遂行してみせる！
-    MessageCN: 本人玛丽娜，一定会全力执行会长的命令！
-    MessageEN: I will always follow our president's will!
-    MessageTH: "มารินะคนนี้จะทำตามคำสั่ง
-
-      ของท่านประธานอย่างแข็งขัน!"
-    MessageTW: 瑪麗娜我，會全力執行會長的命令的！
-  - MessageGroupId: 100370260
+  - MessageKR: 수고가 많겠네.
+    MessageJP: そっか、お疲れ様。頑張ってね
+    MessageCN: 这样啊，辛苦了。加油哦
+    MessageEN: You have a lot of work to do.
+    MessageTH: ทำคนเดียวคงเหนื่อยน่าดูเลยนะ
+    MessageTW: 是嗎，辛苦了。加油哦
+    MessageGroupId: 100370260
     Id: 100370360
     CharacterId: 10037
     MessageCondition: Answer
@@ -752,13 +758,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수고가 많겠네.
-    MessageJP: そっか、お疲れ様。頑張ってね
-    MessageCN: 这样啊，辛苦了。加油哦
-    MessageEN: You have a lot of work to do.
-    MessageTH: ทำคนเดียวคงเหนื่อยน่าดูเลยนะ
-    MessageTW: 是嗎，辛苦了。加油哦
-  - MessageGroupId: 100370270
+  - MessageKR: 응? 그게 무슨 소리지?
+    MessageJP: 何を言ってるんだ？
+    MessageCN: 说什么呢？
+    MessageEN: Huh? What do you mean?
+    MessageTH: หืม? หมายความว่าอะไร?
+    MessageTW: 你在說什麼啊？
+    MessageGroupId: 100370270
     Id: 100370370
     CharacterId: 10037
     MessageCondition: Feedback
@@ -770,13 +776,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응? 그게 무슨 소리지?
-    MessageJP: 何を言ってるんだ？
-    MessageCN: 说什么呢？
-    MessageEN: Huh? What do you mean?
-    MessageTH: หืม? หมายความว่าอะไร?
-    MessageTW: 你在說什麼啊？
-  - MessageGroupId: 100370270
+  - MessageKR: 선생도 나와 함께 화장실 청소를 하는 거다.
+    MessageJP: 先生も私と一緒に掃除をするんだぞ
+    MessageCN: 老师也要和我一起打扫
+    MessageEN: You're gonna clean the bathroom with me, Sensei.
+    MessageTH: ครูก็ต้องไปทำความสะอาดกับฉันด้วยสิ
+    MessageTW: 老師也要和我一起打掃哦
+    MessageGroupId: 100370270
     Id: 100370380
     CharacterId: 10037
     MessageCondition: Feedback
@@ -788,13 +794,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생도 나와 함께 화장실 청소를 하는 거다.
-    MessageJP: 先生も私と一緒に掃除をするんだぞ
-    MessageCN: 老师也要和我一起打扫
-    MessageEN: You're gonna clean the bathroom with me, Sensei.
-    MessageTH: ครูก็ต้องไปทำความสะอาดกับฉันด้วยสิ
-    MessageTW: 老師也要和我一起打掃哦
-  - MessageGroupId: 100370280
+  - MessageKR: 어째서?
+    MessageJP: ……え？
+    MessageCN: ……诶？
+    MessageEN: Says who?!
+    MessageTH: ไหงเป็นงั้นอะ?
+    MessageTW: ……咦？
+    MessageGroupId: 100370280
     Id: 100370390
     CharacterId: 10037
     MessageCondition: Answer
@@ -806,13 +812,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어째서?
-    MessageJP: ……え？
-    MessageCN: ……诶？
-    MessageEN: Says who?!
-    MessageTH: ไหงเป็นงั้นอะ?
-    MessageTW: ……咦？
-  - MessageGroupId: 100370290
+  - MessageKR: 그야 회장님의 석상이 깨졌을 때 선생도 함께 있었기 때문이다.
+    MessageJP: 会長の石像が割れた時、先生も一緒にいただろう
+    MessageCN: 会长的石像破损的时候，老师也和我在一起对吧
+    MessageEN: Says me, because you were there when the president's statue was destroyed.
+    MessageTH: "ก็เพราะครูอยู่กับฉันด้วย
+
+      ตอนรูปปั้นท่านประธานแตกไง"
+    MessageTW: 會長的石像打破時，老師也在吧
+    MessageGroupId: 100370290
     Id: 100370400
     CharacterId: 10037
     MessageCondition: Feedback
@@ -824,27 +832,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그야 회장님의 석상이 깨졌을 때 선생도 함께 있었기 때문이다.
-    MessageJP: 会長の石像が割れた時、先生も一緒にいただろう
-    MessageCN: 会长的石像破损的时候，老师也和我在一起对吧
-    MessageEN: Says me, because you were there when the president's statue was destroyed.
-    MessageTH: "ก็เพราะครูอยู่กับฉันด้วย
-
-      ตอนรูปปั้นท่านประธานแตกไง"
-    MessageTW: 會長的石像打破時，老師也在吧
-  - MessageGroupId: 100370300
-    Id: 100370410
-    CharacterId: 10037
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100370310
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 수염의 권위를 지키는 것은 모두의 의무. 그러니 선생도 불경죄에 대해 함께 책임을 나누어야지.
+  - MessageKR: 수염의 권위를 지키는 것은 모두의 의무. 그러니 선생도 불경죄에 대해 함께 책임을 나누어야지.
     MessageJP: 髭の権威を守ることは全員の義務。よって先生も不敬罪、責任を共に負わねばならないのは当然のこと
     MessageCN: 守护胡子的权威是全员的义务。所以老师也要我共同承担不敬之罪，这是理所当然的事
     MessageEN:
@@ -858,8 +846,8 @@ content:
 
       โทษฐานไม่ปกป้องหนวด!"
     MessageTW: 保護鬍子的權威是全員的義務。所以老師也是不敬罪，共同承擔責任是理所當然的
-  - MessageGroupId: 100370300
-    Id: 100370420
+    MessageGroupId: 100370300
+    Id: 100370410
     CharacterId: 10037
     MessageCondition: Feedback
     ConditionValue: 0
@@ -870,7 +858,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 자, 선생. 내일의 화장실 청소는 일찍 시작할 테니, 오전 7시 전까지 사무국 건물 앞에 집합하도록!
+  - MessageKR: 자, 선생. 내일의 화장실 청소는 일찍 시작할 테니, 오전 7시 전까지 사무국 건물 앞에 집합하도록!
     MessageJP: さあ先生。明日の午前7時、事務局の前に集合だ！
     MessageCN: 好了老师。明天早上7点，在事务局前集合！
     MessageEN:
@@ -882,7 +870,25 @@ content:
 
       สำนักเลขาธิการก่อน 7 โมงนะ!"
     MessageTW: 好了老師。明天早上7點，在事務局前集合！
-  - MessageGroupId: 100370310
+    MessageGroupId: 100370300
+    Id: 100370420
+    CharacterId: 10037
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100370310
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 억지야…….
+    MessageJP: 朝はっや……
+    MessageCN: 大早上的啊……
+    MessageEN: This is nonsense...
+    MessageTH: บังคับกันนี่นา...
+    MessageTW: 好早……
+    MessageGroupId: 100370310
     Id: 100370430
     CharacterId: 10037
     MessageCondition: Answer
@@ -894,13 +900,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 억지야…….
-    MessageJP: 朝はっや……
-    MessageCN: 大早上的啊……
-    MessageEN: This is nonsense...
-    MessageTH: บังคับกันนี่นา...
-    MessageTW: 好早……
-  - MessageGroupId: 100370320
+  - MessageKR: 으음…… 선생.
+    MessageJP: ……先生
+    MessageCN: ……老师
+    MessageEN: Hey, Sensei.
+    MessageTH: เอ่อ... ครู...
+    MessageTW: ……老師
+    MessageGroupId: 100370320
     Id: 100370440
     CharacterId: 10037
     MessageCondition: FavorRankUp
@@ -912,13 +918,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음…… 선생.
-    MessageJP: ……先生
-    MessageCN: ……老师
-    MessageEN: Hey, Sensei.
-    MessageTH: เอ่อ... ครู...
-    MessageTW: ……老師
-  - MessageGroupId: 100370330
+  - MessageKR: 미안하지만 내가 지정하는 장소로 잠깐 와줄 수 없겠나?
+    MessageJP: 悪いが、ちょっと今から時間をくれないか？
+    MessageCN: 不好意思，我能占用老师一点时间吗？
+    MessageEN: Could you meet somewhere?
+    MessageTH: "ขอโทษที่รบกวนนะ แต่ครูช่วยมาหา
+
+      ฉันหน่อยสิ แล้วฉันจะบอกว่าที่ไหน"
+    MessageTW: 抱歉，現在可以稍微給我一點時間嗎？
+    MessageGroupId: 100370330
     Id: 100370450
     CharacterId: 10037
     MessageCondition: None
@@ -930,15 +938,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 미안하지만 내가 지정하는 장소로 잠깐 와줄 수 없겠나?
-    MessageJP: 悪いが、ちょっと今から時間をくれないか？
-    MessageCN: 不好意思，我能占用老师一点时间吗？
-    MessageEN: Could you meet somewhere?
-    MessageTH: "ขอโทษที่รบกวนนะ แต่ครูช่วยมาหา
+  - MessageKR: 다른 사무국 위원들에게는 말할 수 없는 곤란한 일에 처해서…….
+    MessageJP: 他の事務局委員たちには話せない、困ったことが起きてな……
+    MessageCN: 我遇到了件为难的事情，而且没法和其他事务局委员说……
+    MessageEN: I'm in trouble and can't tell other Secretariat members.
+    MessageTH: "พอดีฉันเจอเรื่องน่าอายที่บอก
 
-      ฉันหน่อยสิ แล้วฉันจะบอกว่าที่ไหน"
-    MessageTW: 抱歉，現在可以稍微給我一點時間嗎？
-  - MessageGroupId: 100370330
+      สมาชิกสำนักเลขาธิการไม่ได้..."
+    MessageTW: 發生了，沒辦法和其他事務局委員說的事……
+    MessageGroupId: 100370330
     Id: 100370460
     CharacterId: 10037
     MessageCondition: None
@@ -950,15 +958,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다른 사무국 위원들에게는 말할 수 없는 곤란한 일에 처해서…….
-    MessageJP: 他の事務局委員たちには話せない、困ったことが起きてな……
-    MessageCN: 我遇到了件为难的事情，而且没法和其他事务局委员说……
-    MessageEN: I'm in trouble and can't tell other Secretariat members.
-    MessageTH: "พอดีฉันเจอเรื่องน่าอายที่บอก
-
-      สมาชิกสำนักเลขาธิการไม่ได้..."
-    MessageTW: 發生了，沒辦法和其他事務局委員說的事……
-  - MessageGroupId: 100370340
+  - MessageKR: 응, 금방 갈게.
+    MessageJP: 了解、すぐ行くね
+    MessageCN: 了解了，我马上过去
+    MessageEN: Okay, I'll be there soon.
+    MessageTH: อื้ม ครูจะไปเดี๋ยวนี้ละ
+    MessageTW: 了解，我馬上過去哦
+    MessageGroupId: 100370340
     Id: 100370470
     CharacterId: 10037
     MessageCondition: Answer
@@ -970,13 +976,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 금방 갈게.
-    MessageJP: 了解、すぐ行くね
-    MessageCN: 了解了，我马上过去
-    MessageEN: Okay, I'll be there soon.
-    MessageTH: อื้ม ครูจะไปเดี๋ยวนี้ละ
-    MessageTW: 了解，我馬上過去哦
-  - MessageGroupId: 100370350
+  - MessageKR: 무슨 일이 생긴 거야?
+    MessageJP: 何かあったの？
+    MessageCN: 发生什么了？
+    MessageEN: What happened?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 發生什麼事？
+    MessageGroupId: 100370350
     Id: 100370480
     CharacterId: 10037
     MessageCondition: Answer
@@ -988,13 +994,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일이 생긴 거야?
-    MessageJP: 何かあったの？
-    MessageCN: 发生什么了？
-    MessageEN: What happened?
-    MessageTH: มีเรื่องอะไรเหรอ?
-    MessageTW: 發生什麼事？
-  - MessageGroupId: 100370360
+  - MessageKR: 그게, 사무국에서 멀리 떨어진 장소로 불러서 미안하지만……
+    MessageJP: ああ、事務局からも離れた場所で申し訳ないのだが……
+    MessageCN: 啊啊，虽然很抱歉，但是老师得来离事务局比较远的地方……
+    MessageEN: I'm sorry to ask you to come to the Secretariat...
+    MessageTH: "เรื่องนั้น ขอโทษที่เรียกให้มาหาใน
+
+      พื้นที่ห่างไกลจากสำนักเลขาธิการนะ..."
+    MessageTW: 啊啊，不好意思我在離事務局也有一段距離的地方……
+    MessageGroupId: 100370360
     Id: 100370490
     CharacterId: 10037
     MessageCondition: Feedback
@@ -1006,15 +1014,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게, 사무국에서 멀리 떨어진 장소로 불러서 미안하지만……
-    MessageJP: ああ、事務局からも離れた場所で申し訳ないのだが……
-    MessageCN: 啊啊，虽然很抱歉，但是老师得来离事务局比较远的地方……
-    MessageEN: I'm sorry to ask you to come to the Secretariat...
-    MessageTH: "เรื่องนั้น ขอโทษที่เรียกให้มาหาใน
-
-      พื้นที่ห่างไกลจากสำนักเลขาธิการนะ..."
-    MessageTW: 啊啊，不好意思我在離事務局也有一段距離的地方……
-  - MessageGroupId: 100370360
+  - MessageKR: 보안위원들에게 체포되었다…….
+    MessageJP: 保安委員たちに、捕まえられてしまって……
+    MessageCN: 我被保安委员们给抓了……
+    MessageEN: I was arrested by the Security Council.
+    MessageTH: ฉันโดนสมาชิกคณะความมั่นคงคุมตัวอยู่น่ะ...
+    MessageTW: 被保安委員們，抓住了……
+    MessageGroupId: 100370360
     Id: 100370500
     CharacterId: 10037
     MessageCondition: Feedback
@@ -1026,13 +1032,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 보안위원들에게 체포되었다…….
-    MessageJP: 保安委員たちに、捕まえられてしまって……
-    MessageCN: 我被保安委员们给抓了……
-    MessageEN: I was arrested by the Security Council.
-    MessageTH: ฉันโดนสมาชิกคณะความมั่นคงคุมตัวอยู่น่ะ...
-    MessageTW: 被保安委員們，抓住了……
-  - MessageGroupId: 100370370
+  - MessageKR: ……진짜 무슨 일이 생긴 거야?
+    MessageJP: 一体何が……急いで行くね
+    MessageCN: 到底发生了什么……我马上过去
+    MessageEN: So you really are in trouble.
+    MessageTH: ว่าไงนะ เกิดเรื่องอะไรน่ะ?
+    MessageTW: 到底發生什麼……我馬上過去哦
+    MessageGroupId: 100370370
     Id: 100370510
     CharacterId: 10037
     MessageCondition: Answer
@@ -1044,9 +1050,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……진짜 무슨 일이 생긴 거야?
-    MessageJP: 一体何が……急いで行くね
-    MessageCN: 到底发生了什么……我马上过去
-    MessageEN: So you really are in trouble.
-    MessageTH: ว่าไงนะ เกิดเรื่องอะไรน่ะ?
-    MessageTW: 到底發生什麼……我馬上過去哦

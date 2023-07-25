@@ -1,44 +1,50 @@
 CharacterId: 16001
 translator: 今天早睡了吗
 title:
-  - GroupId: 1600102
-    FavorScheduleId: 160012
-    CharacterId: 16001
-    TextJp: マイペースな彼女
+  - TextJp: マイペースな彼女
     TextCn: 我行我素的她
     TextKr: 마이 페이스의 그녀
     TextEn: At Her Own Pace
     TextTh: เด็กสาวสายติสท์
     TextTw: 我行我素的她
-  - GroupId: 1600103
-    FavorScheduleId: 160013
+    GroupId: 1600102
+    FavorScheduleId: 160012
     CharacterId: 16001
-    TextJp: 尾行デートは偶然に
+  - TextJp: 尾行デートは偶然に
     TextCn: 偶然的跟踪约会
     TextKr: 우연한 미행 데이트
     TextEn: Date Tracking
     TextTh: เดตที่เผลอแอบตามโดยไม่ได้ตั้งใจ
     TextTw: 偶然的跟蹤約會
-  - GroupId: 1600105
-    FavorScheduleId: 160015
+    GroupId: 1600103
+    FavorScheduleId: 160013
     CharacterId: 16001
-    TextJp: メイドインサプライズ
+  - TextJp: メイドインサプライズ
     TextCn: Maid in Surprise
     TextKr: 메이드의 깜짝 선물
     TextEn: The Maid's Surprise
     TextTh: ของขวัญเซอร์ไพรส์ของเมด
     TextTw: Maid in Surprise
-  - GroupId: 1600106
-    FavorScheduleId: 160016
+    GroupId: 1600105
+    FavorScheduleId: 160015
     CharacterId: 16001
-    TextJp: 壊れたアスナ
+  - TextJp: 壊れたアスナ
     TextCn: 坏掉的明日奈
     TextKr: 고장난 아스나
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: "Asuna 404: Thought not Found"
+    TextTh: อาสึนะเครื่องรวน
+    TextTw: 壞掉的明日奈
+    GroupId: 1600106
+    FavorScheduleId: 160016
+    CharacterId: 16001
 content:
-  - MessageGroupId: 160010010
+  - MessageKR: 주인님! 혹시 지금 시간 돼?
+    MessageJP: ご主人様ー！今って時間ある？
+    MessageCN: 主人——！现在有时间吗？
+    MessageEN: Master! Do you have time right now?
+    MessageTH: นายท่าน! พอจะมีเวลาว่างบ้างไหม?
+    MessageTW: 主人──！現在有時間嗎？
+    MessageGroupId: 160010010
     Id: 2052
     CharacterId: 16001
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님! 혹시 지금 시간 돼?
-    MessageJP: ご主人様ー！今って時間ある？
-    MessageCN: 主人——！现在有时间吗？
-    MessageEN: Master! Do you have time right now?
-    MessageTH: นายท่าน! พอจะมีเวลาว่างบ้างไหม?
-    MessageTW: 主人──！現在有時間嗎？
-  - MessageGroupId: 160010020
+  - MessageKR: 카페라도 갈래?
+    MessageJP: カフェでも行かない？
+    MessageCN: 我们去咖啡馆好不好？
+    MessageEN: Do you want to go to a cafe?
+    MessageTH: เราไปที่คาเฟ่กันดีไหม?
+    MessageTW: 要去咖啡廳嗎？
+    MessageGroupId: 160010020
     Id: 2053
     CharacterId: 16001
     MessageCondition: None
@@ -68,13 +74,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 카페라도 갈래?
-    MessageJP: カフェでも行かない？
-    MessageCN: 我们去咖啡馆好不好？
-    MessageEN: Do you want to go to a cafe?
-    MessageTH: เราไปที่คาเฟ่กันดีไหม?
-    MessageTW: 要去咖啡廳嗎？
-  - MessageGroupId: 160010030
+  - MessageKR: 선생님이 아니라 주인님?
+    MessageJP: ご主人様……？
+    MessageCN: 主人……？
+    MessageEN: Master? Not "Sensei"?
+    MessageTH: "บอกว่าให้เรียกคุณครูแทนนายท่าน
+
+      ยังไงล่ะ"
+    MessageTW: 主人……？
+    MessageGroupId: 160010030
     Id: 2054
     CharacterId: 16001
     MessageCondition: Answer
@@ -86,15 +94,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님이 아니라 주인님?
-    MessageJP: ご主人様……？
-    MessageCN: 主人……？
-    MessageEN: Master? Not "Sensei"?
-    MessageTH: "บอกว่าให้เรียกคุณครูแทนนายท่าน
-
-      ยังไงล่ะ"
-    MessageTW: 主人……？
-  - MessageGroupId: 160010030
+  - MessageKR: 갑자기 웬 카페?
+    MessageJP: いきなりカフェ？
+    MessageCN: 为什么突然去咖啡馆？
+    MessageEN: Why a cafe all of a sudden?
+    MessageTH: ทำไมจู่ๆ ถึงชวนไปคาเฟ่ล่ะ?
+    MessageTW: 突然要去咖啡廳？
+    MessageGroupId: 160010030
     Id: 2055
     CharacterId: 16001
     MessageCondition: Answer
@@ -106,13 +112,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 웬 카페?
-    MessageJP: いきなりカフェ？
-    MessageCN: 为什么突然去咖啡馆？
-    MessageEN: Why a cafe all of a sudden?
-    MessageTH: ทำไมจู่ๆ ถึงชวนไปคาเฟ่ล่ะ?
-    MessageTW: 突然要去咖啡廳？
-  - MessageGroupId: 160010040
+  - MessageKR: 응?
+    MessageJP: ん？何か変？
+    MessageCN: 嗯？有什么奇怪的吗？
+    MessageEN: Huh?
+    MessageTH: หืม?
+    MessageTW: 嗯？有什麼奇怪的嗎？
+    MessageGroupId: 160010040
     Id: 2056
     CharacterId: 16001
     MessageCondition: Feedback
@@ -124,13 +130,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응?
-    MessageJP: ん？何か変？
-    MessageCN: 嗯？有什么奇怪的吗？
-    MessageEN: Huh?
-    MessageTH: หืม?
-    MessageTW: 嗯？有什麼奇怪的嗎？
-  - MessageGroupId: 160010040
+  - MessageKR: 아스나는 메이드니까 당연히 주인님이지!
+    MessageJP: 私はメイドなんだから、ご主人様でしょ！
+    MessageCN: 毕竟我是女仆啊，当然是叫您主人了！
+    MessageEN: I'm a maid, so of course you're my master!
+    MessageTH: 'อาสึนะเป็นเมดเพราะงั้นก็ต้องเรียก
+
+      "นายท่าน" ยังไงล่ะ!'
+    MessageTW: 我是女僕，所以是主人唷！
+    MessageGroupId: 160010040
     Id: 2057
     CharacterId: 16001
     MessageCondition: Feedback
@@ -142,15 +150,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아스나는 메이드니까 당연히 주인님이지!
-    MessageJP: 私はメイドなんだから、ご主人様でしょ！
-    MessageCN: 毕竟我是女仆啊，当然是叫您主人了！
-    MessageEN: I'm a maid, so of course you're my master!
-    MessageTH: 'อาสึนะเป็นเมดเพราะงั้นก็ต้องเรียก
-
-      "นายท่าน" ยังไงล่ะ!'
-    MessageTW: 我是女僕，所以是主人唷！
-  - MessageGroupId: 160010040
+  - MessageKR: ㅎㅎㅎㅎ 사소한 건 신경 쓰지 마
+    MessageJP: 細かいことは気にしない気にしない！
+    MessageCN: 不用在意细节！不用在意！
+    MessageEN: Hahaha! Don't worry about the little details.
+    MessageTH: คิคิคิ อย่าใส่ใจเรื่องเล็กน้อยเลยนะ
+    MessageTW: 細節不要在意，不要在意！
+    MessageGroupId: 160010040
     Id: 2058
     CharacterId: 16001
     MessageCondition: Feedback
@@ -162,13 +168,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ㅎㅎㅎㅎ 사소한 건 신경 쓰지 마
-    MessageJP: 細かいことは気にしない気にしない！
-    MessageCN: 不用在意细节！不用在意！
-    MessageEN: Hahaha! Don't worry about the little details.
-    MessageTH: คิคิคิ อย่าใส่ใจเรื่องเล็กน้อยเลยนะ
-    MessageTW: 細節不要在意，不要在意！
-  - MessageGroupId: 160010050
+  - MessageKR: 응! 카페!
+    MessageJP: うん！カフェ！
+    MessageCN: 嗯！咖啡馆！
+    MessageEN: Okay! A cafe it is!
+    MessageTH: อื้ม! คาเฟ่!
+    MessageTW: 嗯！咖啡廳！
+    MessageGroupId: 160010050
     Id: 2059
     CharacterId: 16001
     MessageCondition: Feedback
@@ -180,13 +186,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응! 카페!
-    MessageJP: うん！カフェ！
-    MessageCN: 嗯！咖啡馆！
-    MessageEN: Okay! A cafe it is!
-    MessageTH: อื้ม! คาเฟ่!
-    MessageTW: 嗯！咖啡廳！
-  - MessageGroupId: 160010060
+  - MessageKR: 봐 둔 카페가 있으니까, 거기서 보자!
+    MessageJP: 気になってたカフェがあるの、行こ！
+    MessageCN: 我有一家中意的咖啡馆，走吧！
+    MessageEN: There's one I've been wanting to visit, so let's go!
+    MessageTH: "มีคาเฟ่ที่ฉันเล็งไว้อยู่ ลองไปที่นั่น
+
+      กันเถอะ!"
+    MessageTW: 有間中意的咖啡廳，走吧！
+    MessageGroupId: 160010060
     Id: 2060
     CharacterId: 16001
     MessageCondition: Feedback
@@ -198,15 +206,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 봐 둔 카페가 있으니까, 거기서 보자!
-    MessageJP: 気になってたカフェがあるの、行こ！
-    MessageCN: 我有一家中意的咖啡馆，走吧！
-    MessageEN: There's one I've been wanting to visit, so let's go!
-    MessageTH: "มีคาเฟ่ที่ฉันเล็งไว้อยู่ ลองไปที่นั่น
-
-      กันเถอะ!"
-    MessageTW: 有間中意的咖啡廳，走吧！
-  - MessageGroupId: 160010060
+  - MessageKR: 그럼 기다리고 있을게
+    MessageJP: じゃあお店の前で待ってるから！
+    MessageCN: 那我就在那家店门口等您！
+    MessageEN: I'll be waiting!
+    MessageTH: แล้วฉันจะไปรอนะ
+    MessageTW: 那我在店門口等著！
+    MessageGroupId: 160010060
     Id: 2061
     CharacterId: 16001
     MessageCondition: Feedback
@@ -218,13 +224,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 기다리고 있을게
-    MessageJP: じゃあお店の前で待ってるから！
-    MessageCN: 那我就在那家店门口等您！
-    MessageEN: I'll be waiting!
-    MessageTH: แล้วฉันจะไปรอนะ
-    MessageTW: 那我在店門口等著！
-  - MessageGroupId: 160010060
+  - MessageKR: 주인님!
+    MessageJP: また後でねー！
+    MessageCN: 之后见——！
+    MessageEN: Master!
+    MessageTH: นายท่าน!
+    MessageTW: 待會兒見──！
+    MessageGroupId: 160010060
     Id: 2062
     CharacterId: 16001
     MessageCondition: Feedback
@@ -236,13 +242,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님!
-    MessageJP: また後でねー！
-    MessageCN: 之后见——！
-    MessageEN: Master!
-    MessageTH: นายท่าน!
-    MessageTW: 待會兒見──！
-  - MessageGroupId: 160010070
+  - MessageKR: 오늘 정말 고마웠어, 주인님!
+    MessageJP: 今日はありがとねーご主人様！
+    MessageCN: 今天十分感谢——主人！
+    MessageEN: Thank you so much for today!
+    MessageTH: วันนี้ขอบคุณมากนะ นายท่าน!
+    MessageTW: 今天謝啦──主人！
+    MessageGroupId: 160010070
     Id: 2063
     CharacterId: 16001
     MessageCondition: None
@@ -254,13 +260,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 정말 고마웠어, 주인님!
-    MessageJP: 今日はありがとねーご主人様！
-    MessageCN: 今天十分感谢——主人！
-    MessageEN: Thank you so much for today!
-    MessageTH: วันนี้ขอบคุณมากนะ นายท่าน!
-    MessageTW: 今天謝啦──主人！
-  - MessageGroupId: 160010070
+  - MessageKR: 덕분에 작전도 잘 풀렸네! ㅎㅎ
+    MessageJP: 任務も達成できたし、良い日だったー！
+    MessageCN: 我的任务也完成了，今天真是个好日子！
+    MessageEN: Everything went smoothly, thanks to you!
+    MessageTH: "ได้นายท่านช่วยไว้ เลยวางแผน
+
+      ได้สำเร็จ! คิคิ"
+    MessageTW: 任務也完成了，真是個好日子──！
+    MessageGroupId: 160010070
     Id: 2064
     CharacterId: 16001
     MessageCondition: None
@@ -272,15 +280,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 덕분에 작전도 잘 풀렸네! ㅎㅎ
-    MessageJP: 任務も達成できたし、良い日だったー！
-    MessageCN: 我的任务也完成了，今天真是个好日子！
-    MessageEN: Everything went smoothly, thanks to you!
-    MessageTH: "ได้นายท่านช่วยไว้ เลยวางแผน
-
-      ได้สำเร็จ! คิคิ"
-    MessageTW: 任務也完成了，真是個好日子──！
-  - MessageGroupId: 160010070
+  - MessageKR: 역시 전부 다 주인님 덕일까나?
+    MessageJP: これもご主人様がいてくれたからかな？
+    MessageCN: 这也是有主人在的缘故吧？
+    MessageEN: It's all because of you!
+    MessageTH: ทั้งหมดนี่คงเพราะได้นายท่านช่วยไว้สินะ
+    MessageTW: 這也是因為有主人在的關係嗎？
+    MessageGroupId: 160010070
     Id: 2065
     CharacterId: 16001
     MessageCondition: None
@@ -292,13 +298,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 전부 다 주인님 덕일까나?
-    MessageJP: これもご主人様がいてくれたからかな？
-    MessageCN: 这也是有主人在的缘故吧？
-    MessageEN: It's all because of you!
-    MessageTH: ทั้งหมดนี่คงเพราะได้นายท่านช่วยไว้สินะ
-    MessageTW: 這也是因為有主人在的關係嗎？
-  - MessageGroupId: 160010080
+  - MessageKR: 그럼 앞으로도 종종 연락할게. 주인님!
+    MessageJP: じゃあまた連絡するね、ご主人様！
+    MessageCN: 那之后再联络啦，主人！
+    MessageEN: I'll be contacting you every now and then, Master!
+    MessageTH: "ถ้างั้นต่อไป ฉันก็จะติดต่อนายท่าน
+
+      ไปเป็นระยะๆ เลย!"
+    MessageTW: 那下次再連絡唷，主人！
+    MessageGroupId: 160010080
     Id: 2066
     CharacterId: 16001
     MessageCondition: None
@@ -310,15 +318,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 앞으로도 종종 연락할게. 주인님!
-    MessageJP: じゃあまた連絡するね、ご主人様！
-    MessageCN: 那之后再联络啦，主人！
-    MessageEN: I'll be contacting you every now and then, Master!
-    MessageTH: "ถ้างั้นต่อไป ฉันก็จะติดต่อนายท่าน
-
-      ไปเป็นระยะๆ เลย!"
-    MessageTW: 那下次再連絡唷，主人！
-  - MessageGroupId: 160010090
+  - MessageKR: 오늘 왠지 그런 날이야
+    MessageJP: 助けてご主人様ー！！
+    MessageCN: 帮帮我主人——!!
+    MessageEN: Today is just one of those days.
+    MessageTH: ทำไมวันนี้ถึงรู้สึกดีจังน้า
+    MessageTW: 幫幫我，主人──！
+    MessageGroupId: 160010090
     Id: 2067
     CharacterId: 16001
     MessageCondition: FavorRankUp
@@ -330,13 +336,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 왠지 그런 날이야
-    MessageJP: 助けてご主人様ー！！
-    MessageCN: 帮帮我主人——!!
-    MessageEN: Today is just one of those days.
-    MessageTH: ทำไมวันนี้ถึงรู้สึกดีจังน้า
-    MessageTW: 幫幫我，主人──！
-  - MessageGroupId: 160010100
+  - MessageKR: 주인님이 있었으면 좋겠어!
+    MessageJP: ご主人様の助けが必要なの！
+    MessageCN: 我需要主人的帮助！
+    MessageEN: I really miss you, Master!
+    MessageTH: ถ้านายท่านอยู่ด้วยก็คงจะดีนะ!
+    MessageTW: 需要主人的幫助！
+    MessageGroupId: 160010100
     Id: 2068
     CharacterId: 16001
     MessageCondition: None
@@ -348,13 +354,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님이 있었으면 좋겠어!
-    MessageJP: ご主人様の助けが必要なの！
-    MessageCN: 我需要主人的帮助！
-    MessageEN: I really miss you, Master!
-    MessageTH: ถ้านายท่านอยู่ด้วยก็คงจะดีนะ!
-    MessageTW: 需要主人的幫助！
-  - MessageGroupId: 160010100
+  - MessageKR: 도움!
+    MessageJP: 多分！きっと！おそらく！
+    MessageCN: 大概！一定！恐怕需要！
+    MessageEN: Help!
+    MessageTH: ความช่วยเหลือ!
+    MessageTW: 也許！一定！可能！
+    MessageGroupId: 160010100
     Id: 2069
     CharacterId: 16001
     MessageCondition: None
@@ -366,13 +372,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도움!
-    MessageJP: 多分！きっと！おそらく！
-    MessageCN: 大概！一定！恐怕需要！
-    MessageEN: Help!
-    MessageTH: ความช่วยเหลือ!
-    MessageTW: 也許！一定！可能！
-  - MessageGroupId: 160010100
+  - MessageKR: 주인님의 도움이 필요해!
+    MessageJP: そんな感じだから、助けに来てくれる？
+    MessageCN: 就是这种感觉，所以主人能来帮帮我吗？
+    MessageEN: I need your help!
+    MessageTH: ฉันอยากให้นายท่านช่วย!
+    MessageTW: 之類的感覺，能來幫我嗎？
+    MessageGroupId: 160010100
     Id: 2070
     CharacterId: 16001
     MessageCondition: None
@@ -384,13 +390,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님의 도움이 필요해!
-    MessageJP: そんな感じだから、助けに来てくれる？
-    MessageCN: 就是这种感觉，所以主人能来帮帮我吗？
-    MessageEN: I need your help!
-    MessageTH: ฉันอยากให้นายท่านช่วย!
-    MessageTW: 之類的感覺，能來幫我嗎？
-  - MessageGroupId: 160010100
+  - MessageKR: 도와줄 거지? 그렇지?
+    MessageJP: 来てくれるよね？ね？
+    MessageCN: 主人会来的吧？会的吧？
+    MessageEN: You're going to help me, right?
+    MessageTH: จะช่วยฉันใช่ไหม? ใช่ไหมน่ะ?
+    MessageTW: 會來吧？會吧？
+    MessageGroupId: 160010100
     Id: 2071
     CharacterId: 16001
     MessageCondition: None
@@ -402,13 +408,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도와줄 거지? 그렇지?
-    MessageJP: 来てくれるよね？ね？
-    MessageCN: 主人会来的吧？会的吧？
-    MessageEN: You're going to help me, right?
-    MessageTH: จะช่วยฉันใช่ไหม? ใช่ไหมน่ะ?
-    MessageTW: 會來吧？會吧？
-  - MessageGroupId: 160010110
+  - MessageKR: 갑자기 도움?
+    MessageJP: 私の助けが必要……？
+    MessageCN: 需要我的帮助……？
+    MessageEN: What kind of help?
+    MessageTH: จู่ๆ มีอะไรให้ช่วยเหรอ?
+    MessageTW: 需要我的幫助……？
+    MessageGroupId: 160010110
     Id: 2072
     CharacterId: 16001
     MessageCondition: Answer
@@ -420,13 +426,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 도움?
-    MessageJP: 私の助けが必要……？
-    MessageCN: 需要我的帮助……？
-    MessageEN: What kind of help?
-    MessageTH: จู่ๆ มีอะไรให้ช่วยเหรอ?
-    MessageTW: 需要我的幫助……？
-  - MessageGroupId: 160010110
+  - MessageKR: 언제나처럼 갑작스럽네.
+    MessageJP: いつも通り突然だね
+    MessageCN: 明日奈还是一如既往的突然啊
+    MessageEN: You're always so spontaneous.
+    MessageTH: ชอบโผล่มาปุปปับทุกทีเลยน้า
+    MessageTW: 和往常一樣突然呀
+    MessageGroupId: 160010110
     Id: 2073
     CharacterId: 16001
     MessageCondition: Answer
@@ -438,13 +444,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 언제나처럼 갑작스럽네.
-    MessageJP: いつも通り突然だね
-    MessageCN: 明日奈还是一如既往的突然啊
-    MessageEN: You're always so spontaneous.
-    MessageTH: ชอบโผล่มาปุปปับทุกทีเลยน้า
-    MessageTW: 和往常一樣突然呀
-  - MessageGroupId: 160010120
+  - MessageKR: 응! 맞아!
+    MessageJP: うん！
+    MessageCN: 嗯！
+    MessageEN: Yes! That's right!
+    MessageTH: อื้อ! ใช่แล้วล่ะ!
+    MessageTW: 嗯！
+    MessageGroupId: 160010120
     Id: 2074
     CharacterId: 16001
     MessageCondition: Feedback
@@ -456,13 +462,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응! 맞아!
-    MessageJP: うん！
-    MessageCN: 嗯！
-    MessageEN: Yes! That's right!
-    MessageTH: อื้อ! ใช่แล้วล่ะ!
-    MessageTW: 嗯！
-  - MessageGroupId: 160010120
+  - MessageKR: 도움!
+    MessageJP: 来てくれるの？ありがとー！
+    MessageCN: 主人会来的吧？十分感谢——！
+    MessageEN: Help!
+    MessageTH: ความช่วยเหลือ!
+    MessageTW: 會來吧？謝謝──！
+    MessageGroupId: 160010120
     Id: 2075
     CharacterId: 16001
     MessageCondition: Feedback
@@ -474,13 +480,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도움!
-    MessageJP: 来てくれるの？ありがとー！
-    MessageCN: 主人会来的吧？十分感谢——！
-    MessageEN: Help!
-    MessageTH: ความช่วยเหลือ!
-    MessageTW: 會來吧？謝謝──！
-  - MessageGroupId: 160010120
+  - MessageKR: 그럼 기다리고 있을게!
+    MessageJP: じゃあ待ってるね！
+    MessageCN: 那我就等着您啦！
+    MessageEN: I'll be waiting!
+    MessageTH: ถ้างั้นฉันจะรอนะ!
+    MessageTW: 那我等著唷！
+    MessageGroupId: 160010120
     Id: 2076
     CharacterId: 16001
     MessageCondition: Feedback
@@ -492,13 +498,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 기다리고 있을게!
-    MessageJP: じゃあ待ってるね！
-    MessageCN: 那我就等着您啦！
-    MessageEN: I'll be waiting!
-    MessageTH: ถ้างั้นฉันจะรอนะ!
-    MessageTW: 那我等著唷！
-  - MessageGroupId: 160010130
+  - MessageKR: 아아~ 최고의 하루였다.
+    MessageJP: 今日は最高の一日だった！！
+    MessageCN: 今天真是最棒的一天！
+    MessageEN: Today was the best day ever!
+    MessageTH: อ่า... วันนี้เป็นวันที่ยอดเยี่ยมจริงๆ
+    MessageTW: 今天是最棒的一天！！
+    MessageGroupId: 160010130
     Id: 2077
     CharacterId: 16001
     MessageCondition: None
@@ -510,13 +516,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아아~ 최고의 하루였다.
-    MessageJP: 今日は最高の一日だった！！
-    MessageCN: 今天真是最棒的一天！
-    MessageEN: Today was the best day ever!
-    MessageTH: อ่า... วันนี้เป็นวันที่ยอดเยี่ยมจริงๆ
-    MessageTW: 今天是最棒的一天！！
-  - MessageGroupId: 160010130
+  - MessageKR: 정말 고마워, 주인님!
+    MessageJP: 本当にありがとね、ご主人様！
+    MessageCN: 十分感谢，主人！
+    MessageEN: Thanks a lot, Master!
+    MessageTH: ขอบคุณมากนะ นายท่าน!
+    MessageTW: 真的很謝謝你唷，主人！
+    MessageGroupId: 160010130
     Id: 2078
     CharacterId: 16001
     MessageCondition: None
@@ -528,13 +534,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 정말 고마워, 주인님!
-    MessageJP: 本当にありがとね、ご主人様！
-    MessageCN: 十分感谢，主人！
-    MessageEN: Thanks a lot, Master!
-    MessageTH: ขอบคุณมากนะ นายท่าน!
-    MessageTW: 真的很謝謝你唷，主人！
-  - MessageGroupId: 160010130
+  - MessageKR: 역시 주인님을 부르길 잘한 것 같아
+    MessageJP: やっぱりご主人様に連絡して正解だったよー
+    MessageCN: 果然联系主人是正确的呢——！
+    MessageEN: I knew it was a good idea to call you.
+    MessageTH: "ว่าแล้วเชียว ดีจริงๆ ที่ตัดสินใจเรียก
+
+      นายท่านมา"
+    MessageTW: 果然聯絡主人是正確的唷──
+    MessageGroupId: 160010130
     Id: 2079
     CharacterId: 16001
     MessageCondition: None
@@ -546,15 +554,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 주인님을 부르길 잘한 것 같아
-    MessageJP: やっぱりご主人様に連絡して正解だったよー
-    MessageCN: 果然联系主人是正确的呢——！
-    MessageEN: I knew it was a good idea to call you.
-    MessageTH: "ว่าแล้วเชียว ดีจริงๆ ที่ตัดสินใจเรียก
+  - MessageKR: 주인님은 아스나에게 뭔가의 부적 같은 걸지도!
+    MessageJP: ご主人様と一緒にいると、良いことばっかり！
+    MessageCN: 只要和主人在一起，好事就会不停地发生！
+    MessageEN: You're like my lucky charm!
+    MessageTH: "นายท่านเหมือนเครื่องรางศักดิ์สิทธิ์
 
-      นายท่านมา"
-    MessageTW: 果然聯絡主人是正確的唷──
-  - MessageGroupId: 160010130
+      สำหรับอาสึนะเลย!"
+    MessageTW: 和主人在一起，總是發生好事！
+    MessageGroupId: 160010130
     Id: 2080
     CharacterId: 16001
     MessageCondition: None
@@ -566,15 +574,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님은 아스나에게 뭔가의 부적 같은 걸지도!
-    MessageJP: ご主人様と一緒にいると、良いことばっかり！
-    MessageCN: 只要和主人在一起，好事就会不停地发生！
-    MessageEN: You're like my lucky charm!
-    MessageTH: "นายท่านเหมือนเครื่องรางศักดิ์สิทธิ์
-
-      สำหรับอาสึนะเลย!"
-    MessageTW: 和主人在一起，總是發生好事！
-  - MessageGroupId: 160010140
+  - MessageKR: 그럼 또 연락할게
+    MessageJP: じゃあまた！
+    MessageCN: 那之后见啦！
+    MessageEN: Talk to you next time!
+    MessageTH: แล้วฉันจะติดต่อไปใหม่นะ
+    MessageTW: 下次見囉！
+    MessageGroupId: 160010140
     Id: 2081
     CharacterId: 16001
     MessageCondition: None
@@ -586,13 +592,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 또 연락할게
-    MessageJP: じゃあまた！
-    MessageCN: 那之后见啦！
-    MessageEN: Talk to you next time!
-    MessageTH: แล้วฉันจะติดต่อไปใหม่นะ
-    MessageTW: 下次見囉！
-  - MessageGroupId: 160010140
+  - MessageKR: 좋은 하루!
+    MessageJP: 明日も良い一日になるように、アスナが祈ってるからね！
+    MessageCN: 明日奈也会祈祷的，希望明天也会是美好的一天！
+    MessageEN: Have a nice day!
+    MessageTH: ขอให้วันนี้เป็นวันที่ดี!
+    MessageTW: 明日奈會祈禱明天也是美好的一天！
+    MessageGroupId: 160010140
     Id: 2082
     CharacterId: 16001
     MessageCondition: None
@@ -604,13 +610,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 좋은 하루!
-    MessageJP: 明日も良い一日になるように、アスナが祈ってるからね！
-    MessageCN: 明日奈也会祈祷的，希望明天也会是美好的一天！
-    MessageEN: Have a nice day!
-    MessageTH: ขอให้วันนี้เป็นวันที่ดี!
-    MessageTW: 明日奈會祈禱明天也是美好的一天！
-  - MessageGroupId: 160010150
+  - MessageKR: 주인님! 지금 시간 괜찮아?
+    MessageJP: ご主人様ー！今時間ある？
+    MessageCN: 主人——！现在有时间吗？
+    MessageEN: Master! Are you free?
+    MessageTH: นายท่าน! ตอนนี้ว่างรึเปล่า?
+    MessageTW: 主人──！現在有時間嗎？
+    MessageGroupId: 160010150
     Id: 2083
     CharacterId: 16001
     MessageCondition: FavorRankUp
@@ -622,13 +628,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님! 지금 시간 괜찮아?
-    MessageJP: ご主人様ー！今時間ある？
-    MessageCN: 主人——！现在有时间吗？
-    MessageEN: Master! Are you free?
-    MessageTH: นายท่าน! ตอนนี้ว่างรึเปล่า?
-    MessageTW: 主人──！現在有時間嗎？
-  - MessageGroupId: 160010160
+  - MessageKR: 그동안의 주인님이 아스나를 많이 도와줬으니까
+    MessageJP: 今までのお礼に、
+    MessageCN: 为了回报您对我一直以来的关照，
+    MessageEN: You've helped me so much lately.
+    MessageTH: "ที่ผ่านมานายท่านช่วยเหลืออาสึนะเอาไว้
+
+      ตั้งเยอะ"
+    MessageTW: 為了感謝一直以來所做的一切
+    MessageGroupId: 160010160
     Id: 2084
     CharacterId: 16001
     MessageCondition: None
@@ -640,15 +648,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그동안의 주인님이 아스나를 많이 도와줬으니까
-    MessageJP: 今までのお礼に、
-    MessageCN: 为了回报您对我一直以来的关照，
-    MessageEN: You've helped me so much lately.
-    MessageTH: "ที่ผ่านมานายท่านช่วยเหลืออาสึนะเอาไว้
-
-      ตั้งเยอะ"
-    MessageTW: 為了感謝一直以來所做的一切
-  - MessageGroupId: 160010160
+  - MessageKR: 감사의 보답이라도 할까 하는데!
+    MessageJP: ご主人様にお礼をしたいなって！
+    MessageCN: 我给主人准备了一份回礼！
+    MessageEN: I wanted to show you my thanks!
+    MessageTH: อาสึนะเลยอยากแสดงความขอบคุณ!
+    MessageTW: 我想向主人道謝！
+    MessageGroupId: 160010160
     Id: 2085
     CharacterId: 16001
     MessageCondition: None
@@ -660,13 +666,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감사의 보답이라도 할까 하는데!
-    MessageJP: ご主人様にお礼をしたいなって！
-    MessageCN: 我给主人准备了一份回礼！
-    MessageEN: I wanted to show you my thanks!
-    MessageTH: อาสึนะเลยอยากแสดงความขอบคุณ!
-    MessageTW: 我想向主人道謝！
-  - MessageGroupId: 160010170
+  - MessageKR: 감사의 보답? 나한테?
+    MessageJP: お礼？私に？
+    MessageCN: 回礼？给我的吗？
+    MessageEN: Show your thanks? To me?
+    MessageTH: "แสดงความขอบคุณ?
+
+      ให้ครูเหรอ?"
+    MessageTW: 道謝？我嗎？
+    MessageGroupId: 160010170
     Id: 2086
     CharacterId: 16001
     MessageCondition: Answer
@@ -678,15 +686,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감사의 보답? 나한테?
-    MessageJP: お礼？私に？
-    MessageCN: 回礼？给我的吗？
-    MessageEN: Show your thanks? To me?
-    MessageTH: "แสดงความขอบคุณ?
-
-      ให้ครูเหรอ?"
-    MessageTW: 道謝？我嗎？
-  - MessageGroupId: 160010170
+  - MessageKR: 내가 뭘 했었지……?
+    MessageJP: 私、何かしてあげられたっけ……？
+    MessageCN: 我做过什么吗……？
+    MessageEN: What did I do...?
+    MessageTH: ไม่ได้ทำอะไรมากมายเลยนะ...
+    MessageTW: 我有為你做什麼嗎……？
+    MessageGroupId: 160010170
     Id: 2087
     CharacterId: 16001
     MessageCondition: Answer
@@ -698,13 +704,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 뭘 했었지……?
-    MessageJP: 私、何かしてあげられたっけ……？
-    MessageCN: 我做过什么吗……？
-    MessageEN: What did I do...?
-    MessageTH: ไม่ได้ทำอะไรมากมายเลยนะ...
-    MessageTW: 我有為你做什麼嗎……？
-  - MessageGroupId: 160010180
+  - MessageKR: 메이드의 봉사를 받을 기회는 흔치 않다고!
+    MessageJP: うん！
+    MessageCN: 嗯！
+    MessageEN: It's not every day you get offered excellent maid services!
+    MessageTH: "โอกาสที่จะได้รับการดูแลจากเมดสาว
+
+      ไม่ได้มีบ่อยๆ นะ!"
+    MessageTW: 嗯！
+    MessageGroupId: 160010180
     Id: 2088
     CharacterId: 16001
     MessageCondition: Feedback
@@ -716,15 +724,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 메이드의 봉사를 받을 기회는 흔치 않다고!
-    MessageJP: うん！
-    MessageCN: 嗯！
-    MessageEN: It's not every day you get offered excellent maid services!
-    MessageTH: "โอกาสที่จะได้รับการดูแลจากเมดสาว
-
-      ไม่ได้มีบ่อยๆ นะ!"
-    MessageTW: 嗯！
-  - MessageGroupId: 160010180
+  - MessageKR: 음
+    MessageJP: 色々あったじゃん！
+    MessageCN: 不是发生过很多事情了嘛！
+    MessageEN: Um...
+    MessageTH: อืม...
+    MessageTW: 發生過很多事了嘛！
+    MessageGroupId: 160010180
     Id: 2089
     CharacterId: 16001
     MessageCondition: Feedback
@@ -736,13 +742,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음
-    MessageJP: 色々あったじゃん！
-    MessageCN: 不是发生过很多事情了嘛！
-    MessageEN: Um...
-    MessageTH: อืม...
-    MessageTW: 發生過很多事了嘛！
-  - MessageGroupId: 160010190
+  - MessageKR: 아마도? ㅎㅎ
+    MessageJP: アスナのご奉仕を受けられる機会なんてめったにないんだからね！
+    MessageCN: 能被明日奈侍奉的机会可是非——常稀少的呢！
+    MessageEN: I think? Haha!
+    MessageTH: อาจจะนะ? คิคิ
+    MessageTW: 能被明日奈侍奉的機會可不是每次都有的唷！
+    MessageGroupId: 160010190
     Id: 2090
     CharacterId: 16001
     MessageCondition: Feedback
@@ -754,13 +760,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아마도? ㅎㅎ
-    MessageJP: アスナのご奉仕を受けられる機会なんてめったにないんだからね！
-    MessageCN: 能被明日奈侍奉的机会可是非——常稀少的呢！
-    MessageEN: I think? Haha!
-    MessageTH: อาจจะนะ? คิคิ
-    MessageTW: 能被明日奈侍奉的機會可不是每次都有的唷！
-  - MessageGroupId: 160010190
+  - MessageKR: 아무튼 나중에 찾아 갈 테니까!
+    MessageJP: とにかく後で行くから！
+    MessageCN: 总之之后我去您那里！
+    MessageEN: Anyway, I'll drop by!
+    MessageTH: เอาเป็นว่าเดี๋ยวฉันจะไปหานะ!
+    MessageTW: 總之晚點會過去！
+    MessageGroupId: 160010190
     Id: 2091
     CharacterId: 16001
     MessageCondition: Feedback
@@ -772,13 +778,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무튼 나중에 찾아 갈 테니까!
-    MessageJP: とにかく後で行くから！
-    MessageCN: 总之之后我去您那里！
-    MessageEN: Anyway, I'll drop by!
-    MessageTH: เอาเป็นว่าเดี๋ยวฉันจะไปหานะ!
-    MessageTW: 總之晚點會過去！
-  - MessageGroupId: 160010190
+  - MessageKR: 그럼 그때 보자, 주인님!
+    MessageJP: 待っててね、ご主人様！
+    MessageCN: 等着我哦，主人！
+    MessageEN: See you soon, Master!
+    MessageTH: เดี๋ยวเจอกันนะ นายท่าน!
+    MessageTW: 晚點見，主人！
+    MessageGroupId: 160010190
     Id: 2092
     CharacterId: 16001
     MessageCondition: Feedback
@@ -790,13 +796,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 그때 보자, 주인님!
-    MessageJP: 待っててね、ご主人様！
-    MessageCN: 等着我哦，主人！
-    MessageEN: See you soon, Master!
-    MessageTH: เดี๋ยวเจอกันนะ นายท่าน!
-    MessageTW: 晚點見，主人！
-  - MessageGroupId: 160010200
+  - MessageKR: ……으음.
+    MessageJP: んー……
+    MessageCN: 嗯——……
+    MessageEN: Um...
+    MessageTH: เอ่อ... อื้ม...
+    MessageTW: 嗯……
+    MessageGroupId: 160010200
     Id: 2093
     CharacterId: 16001
     MessageCondition: None
@@ -808,13 +814,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……으음.
-    MessageJP: んー……
-    MessageCN: 嗯——……
-    MessageEN: Um...
-    MessageTH: เอ่อ... อื้ม...
-    MessageTW: 嗯……
-  - MessageGroupId: 160010200
+  - MessageKR: 으음~!!
+    MessageJP: ん～～～～～！！
+    MessageCN: 嗯～～～～～！！
+    MessageEN: Ugh!
+    MessageTH: อื้อออ~!!
+    MessageTW: 嗯～～～～～！
+    MessageGroupId: 160010200
     Id: 2094
     CharacterId: 16001
     MessageCondition: None
@@ -826,13 +832,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음~!!
-    MessageJP: ん～～～～～！！
-    MessageCN: 嗯～～～～～！！
-    MessageEN: Ugh!
-    MessageTH: อื้อออ~!!
-    MessageTW: 嗯～～～～～！
-  - MessageGroupId: 160010200
+  - MessageKR: 답답해~!! 아직 뭔가 답답해!
+    MessageJP: なんかすっきりしない～！！まだ何か残ってる！
+    MessageCN: 总觉得不够痛快！还少了点什么！
+    MessageEN: I'm so frustrated! Something's not right!
+    MessageTH: อึดอัดจังเลย! รู้สึกอึดอัดแปลกๆ จัง!
+    MessageTW: 總覺得不夠痛快～！！還少了點什麼！
+    MessageGroupId: 160010200
     Id: 2095
     CharacterId: 16001
     MessageCondition: None
@@ -844,13 +850,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 답답해~!! 아직 뭔가 답답해!
-    MessageJP: なんかすっきりしない～！！まだ何か残ってる！
-    MessageCN: 总觉得不够痛快！还少了点什么！
-    MessageEN: I'm so frustrated! Something's not right!
-    MessageTH: อึดอัดจังเลย! รู้สึกอึดอัดแปลกๆ จัง!
-    MessageTW: 總覺得不夠痛快～！！還少了點什麼！
-  - MessageGroupId: 160010210
+  - MessageKR: 다음번에 다시 부탁할게! 주인님!
+    MessageJP: 今度またお願いね！ご主人様！
+    MessageCN: 下次也拜托了呢！主人！
+    MessageEN: I hope I can count on you later, Master!
+    MessageTH: คราวหน้าก็ขอรบกวนด้วยนะ นายท่าน!
+    MessageTW: 下次再拜託了！主人！
+    MessageGroupId: 160010210
     Id: 2096
     CharacterId: 16001
     MessageCondition: None
@@ -862,13 +868,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음번에 다시 부탁할게! 주인님!
-    MessageJP: 今度またお願いね！ご主人様！
-    MessageCN: 下次也拜托了呢！主人！
-    MessageEN: I hope I can count on you later, Master!
-    MessageTH: คราวหน้าก็ขอรบกวนด้วยนะ นายท่าน!
-    MessageTW: 下次再拜託了！主人！
-  - MessageGroupId: 160010210
+  - MessageKR: 그때는 거절하면 안 돼, 알았지?
+    MessageJP: 絶対だからね！
+    MessageCN: 绝对哦！
+    MessageEN: Please don't say no, okay?
+    MessageTH: "คราวหน้าห้ามปฏิเสธฉันนะ
+
+      เข้าใจรึเปล่า?"
+    MessageTW: 絕對要唷！
+    MessageGroupId: 160010210
     Id: 2097
     CharacterId: 16001
     MessageCondition: None
@@ -880,15 +888,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그때는 거절하면 안 돼, 알았지?
-    MessageJP: 絶対だからね！
-    MessageCN: 绝对哦！
-    MessageEN: Please don't say no, okay?
-    MessageTH: "คราวหน้าห้ามปฏิเสธฉันนะ
-
-      เข้าใจรึเปล่า?"
-    MessageTW: 絕對要唷！
-  - MessageGroupId: 160010210
+  - MessageKR: 아
+    MessageJP: 絶対！
+    MessageCN: 绝对！
+    MessageEN: Oh...
+    MessageTH: อ่า...
+    MessageTW: 絕對！
+    MessageGroupId: 160010210
     Id: 2098
     CharacterId: 16001
     MessageCondition: None
@@ -900,13 +906,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아
-    MessageJP: 絶対！
-    MessageCN: 绝对！
-    MessageEN: Oh...
-    MessageTH: อ่า...
-    MessageTW: 絕對！
-  - MessageGroupId: 160010220
+  - MessageKR: 배달 음식은 맛있었어.
+    MessageJP: あ、デリバリー美味しかったね
+    MessageCN: 啊，主人叫的外卖很好吃呢
+    MessageEN: Delivered food is always so delicious.
+    MessageTH: อาหารที่สั่งมาส่งนี่อร่อยจังเลย
+    MessageTW: 啊，外送很好吃呢
+    MessageGroupId: 160010220
     Id: 2099
     CharacterId: 16001
     MessageCondition: None
@@ -918,13 +924,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 배달 음식은 맛있었어.
-    MessageJP: あ、デリバリー美味しかったね
-    MessageCN: 啊，主人叫的外卖很好吃呢
-    MessageEN: Delivered food is always so delicious.
-    MessageTH: อาหารที่สั่งมาส่งนี่อร่อยจังเลย
-    MessageTW: 啊，外送很好吃呢
-  - MessageGroupId: 160010220
+  - MessageKR: 다음에 또 같이 먹자!!!
+    MessageJP: また一緒に食べよ！！
+    MessageCN: 下次也一起吃吧！
+    MessageEN: Let's eat together again sometime!
+    MessageTH: คราวหน้าไว้ไปกินด้วยกันนะ!!!
+    MessageTW: 下次再一起吃吧！！
+    MessageGroupId: 160010220
     Id: 2100
     CharacterId: 16001
     MessageCondition: None
@@ -936,13 +942,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 또 같이 먹자!!!
-    MessageJP: また一緒に食べよ！！
-    MessageCN: 下次也一起吃吧！
-    MessageEN: Let's eat together again sometime!
-    MessageTH: คราวหน้าไว้ไปกินด้วยกันนะ!!!
-    MessageTW: 下次再一起吃吧！！
-  - MessageGroupId: 160010230
+  - MessageKR: 큰 일이야, 주인님! 큰 일!
+    MessageJP: 大変！
+    MessageCN: 不好了！
+    MessageEN: We have a problem, Master! A big problem!
+    MessageTH: "เกิดเรื่องใหญ่แล้ว นายท่าน!
+
+      เรื่องใหญ่แล้ว!"
+    MessageTW: 糟了！
+    MessageGroupId: 160010230
     Id: 160010010
     CharacterId: 16001
     MessageCondition: FavorRankUp
@@ -954,13 +962,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 큰 일이야, 주인님! 큰 일!
-    MessageJP: 大変！
-    MessageCN: 不好了！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010240
+  - MessageKR: 도움이 필요해! 지금 바로!
+    MessageJP: 大変だよご主人様！今すぐ助けて！
+    MessageCN: 不好了主人！现在快来帮帮我！
+    MessageEN: I need your help! It's an emergency!
+    MessageTH: ช่วยด้วย! เดี๋ยวนี้เลย!
+    MessageTW: 糟糕了主人！快來救我！
+    MessageGroupId: 160010240
     Id: 160010020
     CharacterId: 16001
     MessageCondition: None
@@ -972,13 +980,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도움이 필요해! 지금 바로!
-    MessageJP: 大変だよご主人様！今すぐ助けて！
-    MessageCN: 不好了主人！现在快来帮帮我！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010250
+  - MessageKR: 뭔가 또 지루하거나 따분해진 거야?
+    MessageJP: ……！？
+    MessageCN: ……！？
+    MessageEN: Is the emergency that you're bored?
+    MessageTH: ตอนนี้เบื่อๆ เซ็งๆ อีกแล้วเหรอ?
+    MessageTW: ……！？
+    MessageGroupId: 160010250
     Id: 160010030
     CharacterId: 16001
     MessageCondition: Answer
@@ -990,13 +998,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 또 지루하거나 따분해진 거야?
-    MessageJP: ……！？
-    MessageCN: ……！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010250
+  - MessageKR: 어쩐지 최근 별 일 없다 싶었더니, 또……
+    MessageJP: ど、どうしたの……？
+    MessageCN: 怎、怎么了？
+    MessageEN: I guess peace is its own problem...
+    MessageTH: "กำลังคิดเลยว่าทำไมเงียบๆ ไป
+
+      มีเรื่องอีกแล้วเหรอ..."
+    MessageTW: 怎，怎麼了……？
+    MessageGroupId: 160010250
     Id: 160010040
     CharacterId: 16001
     MessageCondition: Answer
@@ -1008,13 +1018,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쩐지 최근 별 일 없다 싶었더니, 또……
-    MessageJP: ど、どうしたの……？
-    MessageCN: 怎、怎么了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010260
+  - MessageKR: ……?
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: "...?"
+    MessageTH: "...?"
+    MessageTW: ……？
+    MessageGroupId: 160010260
     Id: 160010050
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1026,13 +1036,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……?
-    MessageJP: ……？
-    MessageCN: ……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010270
+  - MessageKR: 어
+    MessageJP: え？
+    MessageCN: 诶？
+    MessageEN: Oh.
+    MessageTH: เอ๋
+    MessageTW: 咦？
+    MessageGroupId: 160010270
     Id: 160010060
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1044,13 +1054,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어
-    MessageJP: え？
-    MessageCN: 诶？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010270
+  - MessageKR: 방금 나 뭐라고 했던가? 방금 뭐라고 했었어?
+    MessageJP: 今の私、どうしたんだろ？
+    MessageCN: 我刚刚，怎么了？
+    MessageEN: What are you talking about? What am I talking about?
+    MessageTH: เมื่อกี้ว่ายังไงนะ? พูดว่าไงนะ?
+    MessageTW: 我現在怎麼了？
+    MessageGroupId: 160010270
     Id: 160010070
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1062,13 +1072,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 방금 나 뭐라고 했던가? 방금 뭐라고 했었어?
-    MessageJP: 今の私、どうしたんだろ？
-    MessageCN: 我刚刚，怎么了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010280
+  - MessageKR: ……? 예?
+    MessageJP: ……？え？
+    MessageCN: ……？诶？
+    MessageEN: "...What?"
+    MessageTH: อะไรนะ?
+    MessageTW: ……？咦？
+    MessageGroupId: 160010280
     Id: 160010080
     CharacterId: 16001
     MessageCondition: Answer
@@ -1080,13 +1090,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……? 예?
-    MessageJP: ……？え？
-    MessageCN: ……？诶？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010280
+  - MessageKR: 1분도 안 돼서 말한 걸 잊어버린 거야?
+    MessageJP: ど、どういうこと……？
+    MessageCN: 怎、怎么回事……？
+    MessageEN: Did you forget our conversation while we were still having it?
+    MessageTH: ยังไม่ถึงหนึ่งนาทีเลย ลืมแล้วเหรอ?
+    MessageTW: 怎，怎麼回事……？
+    MessageGroupId: 160010280
     Id: 160010090
     CharacterId: 16001
     MessageCondition: Answer
@@ -1098,13 +1108,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 1분도 안 돼서 말한 걸 잊어버린 거야?
-    MessageJP: ど、どういうこと……？
-    MessageCN: 怎、怎么回事……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010290
+  - MessageKR: 어어
+    MessageJP: あ
+    MessageCN: 啊
+    MessageEN: Well...
+    MessageTH: อืม...
+    MessageTW: 啊
+    MessageGroupId: 160010290
     Id: 160010100
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1116,13 +1126,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어어
-    MessageJP: あ
-    MessageCN: 啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010300
+  - MessageKR: 응
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: Yeah.
+    MessageTH: อื้อ
+    MessageTW: 嗯
+    MessageGroupId: 160010300
     Id: 160010110
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1134,13 +1144,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응
-    MessageJP: うん
-    MessageCN: 嗯
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010310
+  - MessageKR: 맞아! 그런 느낌이야!
+    MessageJP: そう！そんな感じ！
+    MessageCN: 对！就是那种感觉！
+    MessageEN: Yeah! Looks like that's exactly what happened!
+    MessageTH: ใช่แล้ว! ความรู้สึกแบบนั้นละ!
+    MessageTW: 沒錯！就是那種感覺！
+    MessageGroupId: 160010310
     Id: 160010120
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1152,13 +1162,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 맞아! 그런 느낌이야!
-    MessageJP: そう！そんな感じ！
-    MessageCN: 对！就是那种感觉！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010310
+  - MessageKR: 이번에는 진짜인 걸. 진짜라고, 진짜! 진짜 도움이
+    MessageJP: 今回は本当だよ、本当に助けが
+    MessageCN: 这回是真的，真的需要老师的
+    MessageEN: For real this time, like really real, I really need help!
+    MessageTH: "คราวนี้เรื่องจริงนะ เรื่องจริงเลยแหละ
+
+      ต้องการความช่วยเหลือจริงๆ นะ"
+    MessageTW: 這次是真的，真的需要
+    MessageGroupId: 160010310
     Id: 160010130
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1170,13 +1182,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에는 진짜인 걸. 진짜라고, 진짜! 진짜 도움이
-    MessageJP: 今回は本当だよ、本当に助けが
-    MessageCN: 这回是真的，真的需要老师的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010320
+  - MessageKR: 필요
+    MessageJP: 必要
+    MessageCN: 帮助
+    MessageEN: Needed.
+    MessageTH: จำเป็นมาก
+    MessageTW: 幫忙
+    MessageGroupId: 160010320
     Id: 160010140
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1188,13 +1200,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 필요
-    MessageJP: 必要
-    MessageCN: 帮助
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010330
+  - MessageKR: "?"
+    MessageJP: ？
+    MessageCN: ？
+    MessageEN: "?"
+    MessageTH: "?"
+    MessageTW: ？
+    MessageGroupId: 160010330
     Id: 160010150
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1206,13 +1218,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: "?"
-    MessageJP: ？
-    MessageCN: ？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010340
+  - MessageKR: 에? 무슨 일이야, 주인님?
+    MessageJP: あれ？どうしたの、ご主人様？
+    MessageCN: 诶？怎么了，主人？
+    MessageEN: Huh? What's going on?
+    MessageTH: เอ๋...? มีอะไรเหรอนายท่าน?
+    MessageTW: 咦？怎麼了嗎，主人？
+    MessageGroupId: 160010340
     Id: 160010160
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1224,13 +1236,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 에? 무슨 일이야, 주인님?
-    MessageJP: あれ？どうしたの、ご主人様？
-    MessageCN: 诶？怎么了，主人？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010350
+  - MessageKR: 무슨 일 있어?
+    MessageJP: 何かあった？
+    MessageCN: 发生什么事了？
+    MessageEN: Master?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 發生什麼事了嗎？
+    MessageGroupId: 160010350
     Id: 160010170
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1242,13 +1254,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일 있어?
-    MessageJP: 何かあった？
-    MessageCN: 发生什么事了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010360
+  - MessageKR: 집에 도착-!
+    MessageJP: とうちゃーく！
+    MessageCN: 到达——！
+    MessageEN: I'm home!
+    MessageTH: ถึงบ้านแล้ว-!
+    MessageTW: 到了～！
+    MessageGroupId: 160010360
     Id: 160010180
     CharacterId: 16001
     MessageCondition: None
@@ -1260,13 +1272,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 집에 도착-!
-    MessageJP: とうちゃーく！
-    MessageCN: 到达——！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010370
+  - MessageKR: 주인님은 잘 들어갔어? 덕분에 오늘은 완전 편했네!
+    MessageJP: ご主人様はちゃんとシャーレまで戻れた？
+    MessageCN: 主人已经回到夏莱了吗？
+    MessageEN: Did you get back okay? Everything went so well thanks to you!
+    MessageTH: "นายท่านถึงบ้างรึยัง? นายท่านอยู่ด้วย
+
+      วันนี้เลยสบายสุดๆ เลย!"
+    MessageTW: 主人平安回到夏萊了嗎？
+    MessageGroupId: 160010370
     Id: 160010190
     CharacterId: 16001
     MessageCondition: None
@@ -1278,13 +1292,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님은 잘 들어갔어? 덕분에 오늘은 완전 편했네!
-    MessageJP: ご主人様はちゃんとシャーレまで戻れた？
-    MessageCN: 主人已经回到夏莱了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010370
+  - MessageKR: 뭔가 엄청나게 도움만 받은 거 같아서 미안한걸.
+    MessageJP: 今日はおかげで助かったけど、なんて言うか、ごめんね
+    MessageCN: 今天多亏有主人，真是帮大忙了。该怎么说呢，实在是对不起
+    MessageEN: I feel guilty always relying on you.
+    MessageTH: "เหมือนให้นายท่านช่วยอยู่ฝ่ายเดียว
+
+      รู้สึกผิดจัง"
+    MessageTW: 今天雖然託你的福得救了，不過該怎麼說呢，真抱歉
+    MessageGroupId: 160010370
     Id: 160010200
     CharacterId: 16001
     MessageCondition: None
@@ -1296,13 +1312,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 엄청나게 도움만 받은 거 같아서 미안한걸.
-    MessageJP: 今日はおかげで助かったけど、なんて言うか、ごめんね
-    MessageCN: 今天多亏有主人，真是帮大忙了。该怎么说呢，实在是对不起
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010380
+  - MessageKR: 신경 쓰지 마. 그것도 내 일인걸.
+    MessageJP: 気にしないで、私はアスナの先生だから
+    MessageCN: 别在意，毕竟我是明日奈的老师啊
+    MessageEN: Don't worry about it. Being relied on is part of the job.
+    MessageTH: "ไม่ต้องคิดมากหรอก
+
+      มันเป็นหน้าที่ของครูนะ"
+    MessageTW: 不用放在心上，我是明日奈的老師呀
+    MessageGroupId: 160010380
     Id: 160010210
     CharacterId: 16001
     MessageCondition: Answer
@@ -1314,13 +1332,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 신경 쓰지 마. 그것도 내 일인걸.
-    MessageJP: 気にしないで、私はアスナの先生だから
-    MessageCN: 别在意，毕竟我是明日奈的老师啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010380
+  - MessageKR: 뭐, 아스나가 좋았다면야…….
+    MessageJP: まあ、その、怒ってないなら良かった……
+    MessageCN: 嗯，那个，明日奈没生气就太好了……
+    MessageEN: As long as you're comfortable with it.
+    MessageTH: ถ้าอาสึนะชอบ ครูก็ไม่มีปัญหาหรอก...
+    MessageTW: 嘛，那個，你沒生氣就好……
+    MessageGroupId: 160010380
     Id: 160010220
     CharacterId: 16001
     MessageCondition: Answer
@@ -1332,13 +1350,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 아스나가 좋았다면야…….
-    MessageJP: まあ、その、怒ってないなら良かった……
-    MessageCN: 嗯，那个，明日奈没生气就太好了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010385
+  - MessageKR: 근데 왜 풀린 거지? 무슨 자극이 있었던 걸까.
+    MessageJP: でも、どうして急に治ったんだろうね？
+    MessageCN: 但是，为什么突然又恢复了呢？
+    MessageEN: But why bring it up? Something on your mind?
+    MessageTH: "ว่าแต่ ทำไมถึงหายได้นะ?
+
+      โดนอะไรกระตุ้นกันนะ"
+    MessageTW: 不過，為什麼突然就治好了呢？
+    MessageGroupId: 160010385
     Id: 160010230
     CharacterId: 16001
     MessageCondition: Answer
@@ -1350,13 +1370,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 근데 왜 풀린 거지? 무슨 자극이 있었던 걸까.
-    MessageJP: でも、どうして急に治ったんだろうね？
-    MessageCN: 但是，为什么突然又恢复了呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010390
+  - MessageKR: 으음~. 글쎄…… 잘 모르겠지만
+    MessageJP: うーん、そういえばあの時……
+    MessageCN: 嗯——，这么说来，那个时候……
+    MessageEN: Hmm... I'm not entirely sure myself...
+    MessageTH: อืม~ นั่นสินะ... ไม่ค่อยจะเข้าใจเท่าไร
+    MessageTW: 唔嗯，這麼說來那個時候……
+    MessageGroupId: 160010390
     Id: 160010240
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1368,13 +1388,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음~. 글쎄…… 잘 모르겠지만
-    MessageJP: うーん、そういえばあの時……
-    MessageCN: 嗯——，这么说来，那个时候……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010390
+  - MessageKR: 어쨌든 도움받았다는 건 마찬가지지!
+    MessageJP: まあ、とりあえずご主人様のおかげで助かったことは確かだね！
+    MessageCN: 总之，主人帮了我这一点是确定的呢！
+    MessageEN: The important thing is that you helped!
+    MessageTH: "เอาเป็นว่ามันก็เหมือนกับ
+
+      ได้รับความช่วยเหลือนั่นละ!"
+    MessageTW: 總之，多虧有主人才得救這件事是真的呢！
+    MessageGroupId: 160010390
     Id: 160010250
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1386,13 +1408,19 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쨌든 도움받았다는 건 마찬가지지!
-    MessageJP: まあ、とりあえずご主人様のおかげで助かったことは確かだね！
-    MessageCN: 总之，主人帮了我这一点是确定的呢！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010400
+  - MessageKR: 뭐, 봉사하는 게 메이드의 일이니까. 앞으로 은혜 갚을 기회는 많겠지!
+    MessageJP: メイドさんとして、そのお礼のご奉仕をたくさんしないと！
+    MessageCN: 作为女仆，我的回报就是之后会为您做好多的侍奉工作！
+    MessageEN:
+      And a maid's job is to serve, so there'll be plenty of chances to repay
+      the favor! I'll make sure of it!
+    MessageTH: "การทำงานบริการก็เป็นหน้าที่ของ
+
+      สาวใช้ด้วยเหมือนกัน ต่อไปคงมีโอกาส
+
+      ตอบแทนอีกเยอะแน่นอน! "
+    MessageTW: 身為女僕，得用很多侍奉來報答才行！
+    MessageGroupId: 160010400
     Id: 160010260
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1404,13 +1432,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 봉사하는 게 메이드의 일이니까. 앞으로 은혜 갚을 기회는 많겠지!
-    MessageJP: メイドさんとして、そのお礼のご奉仕をたくさんしないと！
-    MessageCN: 作为女仆，我的回报就是之后会为您做好多的侍奉工作！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010410
+  - MessageKR: 그럼 또 봐, 주인님!
+    MessageJP: じゃあまたね、ご主人様！
+    MessageCN: 那就之后见啦，主人！
+    MessageEN: See you later, Master!
+    MessageTH: งั้นไว้เจอกันนะ นายท่าน!
+    MessageTW: 那麼再見囉，主人！
+    MessageGroupId: 160010410
     Id: 160010270
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1422,13 +1450,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 또 봐, 주인님!
-    MessageJP: じゃあまたね、ご主人様！
-    MessageCN: 那就之后见啦，主人！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 160010410
+  - MessageKR: 다시 한번 오늘 정말 고마웠어!
+    MessageJP: あらためて、今日は本当にありがとう！
+    MessageCN: 今天真的再次感谢！
+    MessageEN: Again, thank you so much!
+    MessageTH: ขอบคุณสำหรับวันนี้นะ!
+    MessageTW: 再說一次，今天真的非常感謝！
+    MessageGroupId: 160010410
     Id: 160010280
     CharacterId: 16001
     MessageCondition: Feedback
@@ -1440,9 +1468,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다시 한번 오늘 정말 고마웠어!
-    MessageJP: あらためて、今日は本当にありがとう！
-    MessageCN: 今天真的再次感谢！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

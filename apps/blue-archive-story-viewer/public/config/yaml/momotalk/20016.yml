@@ -1,44 +1,50 @@
 CharacterId: 20016
 translator: 罐子
 title:
-  - GroupId: 2001602
-    FavorScheduleId: 200162
-    CharacterId: 20016
-    TextJp: 襲来するフロイライン
+  - TextJp: 襲来するフロイライン
     TextCn: 来袭的少女
     TextKr: 습격해오는 프로일라인
     TextEn: Ambushing Fraulein
     TextTh: เด็กสาวที่บุกจู่โจมกะทันหัน
-    TextTw: 來襲的黃花閨女
-  - GroupId: 2001603
-    FavorScheduleId: 200163
+    TextTw: 來襲的少女
+    GroupId: 2001602
+    FavorScheduleId: 200162
     CharacterId: 20016
-    TextJp: 誘惑するフロイライン
+  - TextJp: 誘惑するフロイライン
     TextCn: 诱惑的少女
     TextKr: 유혹하는 프로일라인
     TextEn: Enticing Fraulein
     TextTh: เด็กสาวที่น่าดึงดูด
-    TextTw: 誘惑的黃花閨女
-  - GroupId: 2001605
-    FavorScheduleId: 200165
+    TextTw: 誘惑的少女
+    GroupId: 2001603
+    FavorScheduleId: 200163
     CharacterId: 20016
-    TextJp: 狡猾なフロイライン
+  - TextJp: 狡猾なフロイライン
     TextCn: 狡猾的少女
     TextKr: 때로는 영악한 프로일라인
     TextEn: Clever Fraulein
     TextTh: เด็กสาวที่ฉลาดเป็นกรด
-    TextTw: 狡猾的黃花閨女
-  - GroupId: 2001606
-    FavorScheduleId: 200166
+    TextTw: 狡猾的少女
+    GroupId: 2001605
+    FavorScheduleId: 200165
     CharacterId: 20016
-    TextJp: 微笑みのフロイライン
+  - TextJp: 微笑みのフロイライン
     TextCn: 微笑的少女
     TextKr: 가끔은 미소 짓는 프로일라인
     TextEn: Smiling Fraulein
     TextTh: เด็กสาวใบหน้าเปื้อนยิ้ม
-    TextTw: 微笑的黃花閨女
+    TextTw: 微笑的少女
+    GroupId: 2001606
+    FavorScheduleId: 200166
+    CharacterId: 20016
 content:
-  - MessageGroupId: 200160010
+  - MessageKR: 선생님, 샬레에 계신가요?
+    MessageJP: 先生、今はシャーレにいるんですか？
+    MessageCN: 老师，您现在在夏莱吗？
+    MessageEN: Sensei, are you at Schale?
+    MessageTH: คุณครู อยู่ที่ชาเล่ต์รึเปล่าคะ?
+    MessageTW: 老師，你現在在夏萊嗎？
+    MessageGroupId: 200160010
     Id: 200160010
     CharacterId: 20016
     MessageCondition: FavorRankUp
@@ -50,13 +56,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 샬레에 계신가요?
-    MessageJP: 先生、今はシャーレにいるんですか？
-    MessageCN: 老师，您现在在夏莱吗？
-    MessageEN: Sensei, are you at Schale?
-    MessageTH: คุณครู อยู่ที่ชาเล่ต์รึเปล่าคะ?
-    MessageTW: 老師，你現在在夏萊嗎？
-  - MessageGroupId: 200160020
+  - MessageKR: 아, 이로하. 일단은 그런데. 왜?
+    MessageJP: うん、そうだよ。どうしたの？
+    MessageCN: 嗯，在的。伊吕波有什么事吗？
+    MessageEN: Oh, Iroha. Hi. What's up?
+    MessageTH: "อ๊ะ อิโรฮะ
+
+      ใช่แล้วล่ะ มีอะไรเหรอ "
+    MessageTW: 嗯，是呀。怎麼了？
+    MessageGroupId: 200160020
     Id: 200160020
     CharacterId: 20016
     MessageCondition: Answer
@@ -68,15 +76,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 이로하. 일단은 그런데. 왜?
-    MessageJP: うん、そうだよ。どうしたの？
-    MessageCN: 嗯，在的。伊吕波有什么事吗？
-    MessageEN: Oh, Iroha. Hi. What's up?
-    MessageTH: "อ๊ะ อิโรฮะ
-
-      ใช่แล้วล่ะ มีอะไรเหรอ "
-    MessageTW: 嗯，是呀。怎麼了？
-  - MessageGroupId: 200160030
+  - MessageKR: 그럼 됐습니다.
+    MessageJP: そうですか
+    MessageCN: 这样啊
+    MessageEN: Okay, then.
+    MessageTH: โอเคค่ะ
+    MessageTW: 這樣啊。
+    MessageGroupId: 200160030
     Id: 200160030
     CharacterId: 20016
     MessageCondition: Feedback
@@ -88,13 +94,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 됐습니다.
-    MessageJP: そうですか
-    MessageCN: 这样啊
-    MessageEN: Okay, then.
-    MessageTH: โอเคค่ะ
-    MessageTW: 這樣啊。
-  - MessageGroupId: 200160040
+  - MessageKR: …이로하? 응?
+    MessageJP: ……イロハ？
+    MessageCN: ……伊吕波？
+    MessageEN: "...Iroha? What is it?"
+    MessageTH: หืม...? อิโรฮะ?
+    MessageTW: ……伊呂波？
+    MessageGroupId: 200160040
     Id: 200160040
     CharacterId: 20016
     MessageCondition: Answer
@@ -106,13 +112,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: …이로하? 응?
-    MessageJP: ……イロハ？
-    MessageCN: ……伊吕波？
-    MessageEN: "...Iroha? What is it?"
-    MessageTH: หืม...? อิโรฮะ?
-    MessageTW: ……伊呂波？
-  - MessageGroupId: 200160050
+  - MessageKR: 오늘도 그럼 땡땡이치러….
+    MessageJP: それでは今日もサボりに
+    MessageCN: 那我今天也去夏莱偷懒
+    MessageEN: I'm gonna play hooky...
+    MessageTH: ถ้างั้นวันนี้ฉันก็จะขอโดด...
+    MessageTW: 那我今天也要偷懶……
+    MessageGroupId: 200160050
     Id: 200160050
     CharacterId: 20016
     MessageCondition: FavorRankUp
@@ -124,13 +130,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘도 그럼 땡땡이치러….
-    MessageJP: それでは今日もサボりに
-    MessageCN: 那我今天也去夏莱偷懒
-    MessageEN: I'm gonna play hooky...
-    MessageTH: ถ้างั้นวันนี้ฉันก็จะขอโดด...
-    MessageTW: 那我今天也要偷懶……
-  - MessageGroupId: 200160060
+  - MessageKR: 가 아니라, 업무차 찾아뵙도록 하겠습니다.
+    MessageJP: ではなく、お仕事のことでお伺いしますね
+    MessageCN: 啊不是，去夏莱和老师商量工作事宜哦
+    MessageEN: No, I mean, I'll be there for work.
+    MessageTH: เปล่าค่ะ หมายถึงจะไปพบคุณครูเรื่องงานค่ะ
+    MessageTW: 不是，今天也要去夏萊工作
+    MessageGroupId: 200160060
     Id: 200160060
     CharacterId: 20016
     MessageCondition: None
@@ -142,13 +148,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가 아니라, 업무차 찾아뵙도록 하겠습니다.
-    MessageJP: ではなく、お仕事のことでお伺いしますね
-    MessageCN: 啊不是，去夏莱和老师商量工作事宜哦
-    MessageEN: No, I mean, I'll be there for work.
-    MessageTH: เปล่าค่ะ หมายถึงจะไปพบคุณครูเรื่องงานค่ะ
-    MessageTW: 不是，今天也要去夏萊工作
-  - MessageGroupId: 200160070
+  - MessageKR: …땡땡이? 응?
+    MessageJP: ……イロハさん、隠す気ないですよね？
+    MessageCN: ……伊吕波同学，你根本就没有打算掩饰吧？
+    MessageEN: "...Play hooky? Huh?"
+    MessageTH: "โดดงั้นเหรอ...? "
+    MessageTW: ……伊呂波同學，你完全沒在藏耶？
+    MessageGroupId: 200160070
     Id: 200160070
     CharacterId: 20016
     MessageCondition: Answer
@@ -160,13 +166,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: …땡땡이? 응?
-    MessageJP: ……イロハさん、隠す気ないですよね？
-    MessageCN: ……伊吕波同学，你根本就没有打算掩饰吧？
-    MessageEN: "...Play hooky? Huh?"
-    MessageTH: "โดดงั้นเหรอ...? "
-    MessageTW: ……伊呂波同學，你完全沒在藏耶？
-  - MessageGroupId: 200160080
+  - MessageKR: 선생님, 오늘 일정은 어떠신가요?
+    MessageJP: 先生、今日もお仕事でしょうか？
+    MessageCN: 老师今天也要工作吗？
+    MessageEN: Sensei, what's your schedule like today?
+    MessageTH: คุณครูคะ วันนี้ตารางงานเป็นยังไงบ้างคะ?
+    MessageTW: 老師，你今天也要工作對吧？
+    MessageGroupId: 200160080
     Id: 200160080
     CharacterId: 20016
     MessageCondition: FavorRankUp
@@ -178,13 +184,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 오늘 일정은 어떠신가요?
-    MessageJP: 先生、今日もお仕事でしょうか？
-    MessageCN: 老师今天也要工作吗？
-    MessageEN: Sensei, what's your schedule like today?
-    MessageTH: คุณครูคะ วันนี้ตารางงานเป็นยังไงบ้างคะ?
-    MessageTW: 老師，你今天也要工作對吧？
-  - MessageGroupId: 200160090
+  - MessageKR: 오늘도 말도 못 하게 바빠….
+    MessageJP: 膨大な量の作業が……
+    MessageCN: 有非常非常多的工作……
+    MessageEN: I'm totally swamped today...
+    MessageTH: วันนี้ยุ่งตาเหลือกเลย...
+    MessageTW: 今天也有爆大量的工作……
+    MessageGroupId: 200160090
     Id: 200160090
     CharacterId: 20016
     MessageCondition: Answer
@@ -196,13 +202,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘도 말도 못 하게 바빠….
-    MessageJP: 膨大な量の作業が……
-    MessageCN: 有非常非常多的工作……
-    MessageEN: I'm totally swamped today...
-    MessageTH: วันนี้ยุ่งตาเหลือกเลย...
-    MessageTW: 今天也有爆大量的工作……
-  - MessageGroupId: 200160100
+  - MessageKR: 아, 그 마음, 절절히 이해해요.
+    MessageJP: まあ、お気持ちは理解できます
+    MessageCN: 啊，我理解老师的感受
+    MessageEN: "Oh, I understand how you feel. "
+    MessageTH: อา... ฉันเข้าใจความรู้สึกนั้นดีเลยค่ะ
+    MessageTW: 嗯，我能理解這種感受
+    MessageGroupId: 200160100
     Id: 200160100
     CharacterId: 20016
     MessageCondition: Feedback
@@ -214,13 +220,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 그 마음, 절절히 이해해요.
-    MessageJP: まあ、お気持ちは理解できます
-    MessageCN: 啊，我理解老师的感受
-    MessageEN: "Oh, I understand how you feel. "
-    MessageTH: อา... ฉันเข้าใจความรู้สึกนั้นดีเลยค่ะ
-    MessageTW: 嗯，我能理解這種感受
-  - MessageGroupId: 200160100
+  - MessageKR: 해치웠다고 생각하면 다시 기어 나오고, 남이 할 거라고 생각한 순간.
+    MessageJP: 片付けたと思ったらまた出てくるわ、誰かがやるかと思いきや誰も手を付けないわ
+    MessageCN: 本以为已经收拾好别人留下的烂摊子了结果马上又冒出一个新的，本想着说不定会有人来接手收拾结果最后谁都没来
+    MessageEN: Just when you think you're finished, something else pops up.
+    MessageTH: "พอคิดว่าทำงานเสร็จหมดแล้ว แต่พอ
+
+      คลานกลับขึ้นไปบนเตียงกลับนึกขึ้น
+
+      ได้ว่ามีงานที่ยังเหลืออยู่อีก..."
+    MessageTW: 正覺得處理好了結果又湧出來，正想說會有其他人處理結果完全沒人去動
+    MessageGroupId: 200160100
     Id: 200160110
     CharacterId: 20016
     MessageCondition: Feedback
@@ -232,29 +242,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 해치웠다고 생각하면 다시 기어 나오고, 남이 할 거라고 생각한 순간.
-    MessageJP: 片付けたと思ったらまた出てくるわ、誰かがやるかと思いきや誰も手を付けないわ
-    MessageCN: 本以为已经收拾好别人留下的烂摊子了结果马上又冒出一个新的，本想着说不定会有人来接手收拾结果最后谁都没来
-    MessageEN: Just when you think you're finished, something else pops up.
-    MessageTH: "พอคิดว่าทำงานเสร็จหมดแล้ว แต่พอ
-
-      คลานกลับขึ้นไปบนเตียงกลับนึกขึ้น
-
-      ได้ว่ามีงานที่ยังเหลืออยู่อีก..."
-    MessageTW: 正覺得處理好了結果又湧出來，正想說會有其他人處理結果完全沒人去動
-  - MessageGroupId: 200160110
-    Id: 200160120
-    CharacterId: 20016
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200160120
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 내게 부메랑처럼 돌아오는 것. 중간관리자가 하는 일이 다 그렇죠. 뭐.
+  - MessageKR: 내게 부메랑처럼 돌아오는 것. 중간관리자가 하는 일이 다 그렇죠. 뭐.
     MessageJP: 大変ですよね、中間管理職
     MessageCN: 中层管理这个职位还真是辛苦呢
     MessageEN:
@@ -266,7 +254,25 @@ content:
 
       งานคงเป็นแบบนี้กันหมดเลยสินะคะ"
     MessageTW: 中層管理人員就是這麼辛苦
-  - MessageGroupId: 200160120
+    MessageGroupId: 200160110
+    Id: 200160120
+    CharacterId: 20016
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200160120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그런데….
+    MessageJP: ところで
+    MessageCN: 这么说来……
+    MessageEN: However...
+    MessageTH: แต่ว่า...
+    MessageTW: 話說
+    MessageGroupId: 200160120
     Id: 200160130
     CharacterId: 20016
     MessageCondition: Feedback
@@ -278,13 +284,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런데….
-    MessageJP: ところで
-    MessageCN: 这么说来……
-    MessageEN: However...
-    MessageTH: แต่ว่า...
-    MessageTW: 話說
-  - MessageGroupId: 200160130
+  - MessageKR: 뭐, 그럼 오늘 커피는 진한 아메리카노로 부탁드릴게요.
+    MessageJP: 今日は苦いのが飲みたい気分ですね
+    MessageCN: 今天有点想喝点苦的呢
+    MessageEN: Well, I'd like a strong Americano today.
+    MessageTH: "กาแฟวันนี้รบกวนขอเป็นอเมริกาโน่เข้มๆ
+
+      เลยนะคะ"
+    MessageTW: 我今天想喝些苦苦的東西
+    MessageGroupId: 200160130
     Id: 200160140
     CharacterId: 20016
     MessageCondition: Feedback
@@ -296,15 +304,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 그럼 오늘 커피는 진한 아메리카노로 부탁드릴게요.
-    MessageJP: 今日は苦いのが飲みたい気分ですね
-    MessageCN: 今天有点想喝点苦的呢
-    MessageEN: Well, I'd like a strong Americano today.
-    MessageTH: "กาแฟวันนี้รบกวนขอเป็นอเมริกาโน่เข้มๆ
+  - MessageKR: 오늘은 어쩐지 쓰디쓴 게 땡기더라구요.
+    MessageJP: 濃い目のアメリカーノでお願いします
+    MessageCN: 就麻烦老师帮我冲一杯浓美式吧
+    MessageEN: I'm kind of craving something bitter and strong.
+    MessageTH: "ไม่รู้ทำไมวันนี้ถึงอยากกินอะไรขมๆ ขึ้น
 
-      เลยนะคะ"
-    MessageTW: 我今天想喝些苦苦的東西
-  - MessageGroupId: 200160130
+      มาค่ะ"
+    MessageTW: 麻煩來一杯濃郁的美式咖啡
+    MessageGroupId: 200160130
     Id: 200160150
     CharacterId: 20016
     MessageCondition: Feedback
@@ -316,15 +324,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 어쩐지 쓰디쓴 게 땡기더라구요.
-    MessageJP: 濃い目のアメリカーノでお願いします
-    MessageCN: 就麻烦老师帮我冲一杯浓美式吧
-    MessageEN: I'm kind of craving something bitter and strong.
-    MessageTH: "ไม่รู้ทำไมวันนี้ถึงอยากกินอะไรขมๆ ขึ้น
+  - MessageKR: 이로하, 위에서 내가 한 메시지 본 거 맞지?
+    MessageJP: イロハ、上にあるメッセージ見てくれた？
+    MessageCN: 伊吕波，你看到我上面发的消息了吗？
+    MessageEN: Iroha, did you really read my message above?
+    MessageTH: "อิโรฮะ ได้อ่านข้อความ
 
-      มาค่ะ"
-    MessageTW: 麻煩來一杯濃郁的美式咖啡
-  - MessageGroupId: 200160140
+      ที่ครูบอกว่ายุ่งมั้ย..."
+    MessageTW: 伊呂波，你有看到上面的訊息嗎？
+    MessageGroupId: 200160140
     Id: 200160160
     CharacterId: 20016
     MessageCondition: Answer
@@ -336,15 +344,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이로하, 위에서 내가 한 메시지 본 거 맞지?
-    MessageJP: イロハ、上にあるメッセージ見てくれた？
-    MessageCN: 伊吕波，你看到我上面发的消息了吗？
-    MessageEN: Iroha, did you really read my message above?
-    MessageTH: "อิโรฮะ ได้อ่านข้อความ
-
-      ที่ครูบอกว่ายุ่งมั้ย..."
-    MessageTW: 伊呂波，你有看到上面的訊息嗎？
-  - MessageGroupId: 200160150
+  - MessageKR: 네? 그야 물론이죠.
+    MessageJP: はい、もちろん
+    MessageCN: 啊，当然看到了
+    MessageEN: Huh? Of course I did.
+    MessageTH: คะ? ฉันอ่านแล้วค่ะ
+    MessageTW: 是，當然
+    MessageGroupId: 200160150
     Id: 200160170
     CharacterId: 20016
     MessageCondition: Feedback
@@ -356,13 +362,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네? 그야 물론이죠.
-    MessageJP: はい、もちろん
-    MessageCN: 啊，当然看到了
-    MessageEN: Huh? Of course I did.
-    MessageTH: คะ? ฉันอ่านแล้วค่ะ
-    MessageTW: 是，當然
-  - MessageGroupId: 200160150
+  - MessageKR: 그럼 이따가 뵙겠습니다.
+    MessageJP: それではまた後で
+    MessageCN: 那么等会见
+    MessageEN: I'll see you later.
+    MessageTH: แต่เดี๋ยวฉันจะไปพบคุณครูนะคะ
+    MessageTW: 那麼待會見
+    MessageGroupId: 200160150
     Id: 200160180
     CharacterId: 20016
     MessageCondition: Feedback
@@ -374,13 +380,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 이따가 뵙겠습니다.
-    MessageJP: それではまた後で
-    MessageCN: 那么等会见
-    MessageEN: I'll see you later.
-    MessageTH: แต่เดี๋ยวฉันจะไปพบคุณครูนะคะ
-    MessageTW: 那麼待會見
-  - MessageGroupId: 200160160
+  - MessageKR: 답변이 산뜻해서 이젠 태클 걸 생각도 들지 않아….
+    MessageJP: 文脈が読めてないのは私なのかな……
+    MessageCN: 读不懂氛围的难道是我自己吗……
+    MessageEN: I don't even know what to say anymore...
+    MessageTH: พูดไม่ออกเลยแฮะ...
+    MessageTW: 難道看不懂文章脈絡的其實是我……
+    MessageGroupId: 200160160
     Id: 200160190
     CharacterId: 20016
     MessageCondition: Answer
@@ -392,13 +398,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 답변이 산뜻해서 이젠 태클 걸 생각도 들지 않아….
-    MessageJP: 文脈が読めてないのは私なのかな……
-    MessageCN: 读不懂氛围的难道是我自己吗……
-    MessageEN: I don't even know what to say anymore...
-    MessageTH: พูดไม่ออกเลยแฮะ...
-    MessageTW: 難道看不懂文章脈絡的其實是我……
-  - MessageGroupId: 200160170
+  - MessageKR: 하아… 귀찮아.
+    MessageJP: やってられません
+    MessageCN: 真是干不下去了
+    MessageEN: "*sigh* What a bother..."
+    MessageTH: เฮ้อ... น่ารำคาญจริงๆ
+    MessageTW: 我不想幹了
+    MessageGroupId: 200160170
     Id: 200160200
     CharacterId: 20016
     MessageCondition: FavorRankUp
@@ -410,13 +416,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하아… 귀찮아.
-    MessageJP: やってられません
-    MessageCN: 真是干不下去了
-    MessageEN: "*sigh* What a bother..."
-    MessageTH: เฮ้อ... น่ารำคาญจริงๆ
-    MessageTW: 我不想幹了
-  - MessageGroupId: 200160180
+  - MessageKR: 왜, 이로하. 무슨 일 있어?
+    MessageJP: イロハ、どうしたの？
+    MessageCN: 伊吕波怎么了？
+    MessageEN: Iroha, is there something wrong?
+    MessageTH: เกิดอะไรขึ้นเหรอ อิโรฮะ?
+    MessageTW: 伊呂波，怎麼了？
+    MessageGroupId: 200160180
     Id: 200160210
     CharacterId: 20016
     MessageCondition: Answer
@@ -428,13 +434,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 왜, 이로하. 무슨 일 있어?
-    MessageJP: イロハ、どうしたの？
-    MessageCN: 伊吕波怎么了？
-    MessageEN: Iroha, is there something wrong?
-    MessageTH: เกิดอะไรขึ้นเหรอ อิโรฮะ?
-    MessageTW: 伊呂波，怎麼了？
-  - MessageGroupId: 200160190
+  - MessageKR: 아뇨, 별 건 아니에요…. 그냥….
+    MessageJP: いえ、大したことではありませんが……
+    MessageCN: 没，虽然不是什么大事……
+    MessageEN: No, it's not a big deal. It's just...
+    MessageTH: เปล่าค่ะ ไม่มีอะไรหรอกค่ะ ก็แค่...
+    MessageTW: 不，沒什麼大事……
+    MessageGroupId: 200160190
     Id: 200160220
     CharacterId: 20016
     MessageCondition: Feedback
@@ -446,13 +452,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아뇨, 별 건 아니에요…. 그냥….
-    MessageJP: いえ、大したことではありませんが……
-    MessageCN: 没，虽然不是什么大事……
-    MessageEN: No, it's not a big deal. It's just...
-    MessageTH: เปล่าค่ะ ไม่มีอะไรหรอกค่ะ ก็แค่...
-    MessageTW: 不，沒什麼大事……
-  - MessageGroupId: 200160190
+  - MessageKR: 사람은 어째서 일을 해야만 살아갈 수 있는가. 하고 잠깐 생각해봤을 뿐이에요.
+    MessageJP: なぜ人はこんなに忙しく動かねばならないのだろう、と……
+    MessageCN: 我只是在想，人为什么非得累死累活地工作呢……
+    MessageEN: I was wondering why people have to work to live...
+    MessageTH: 'จู่ๆ ฉันก็คิดขึ้นมาว่า "ทำไมคนเราจะต้อง
+
+      ทำงานเพื่อให้มีชีวิตรอดกันด้วย?" น่ะค่ะ'
+    MessageTW: 只是突然覺得，為什麼人一定要如此忙碌活動呢……
+    MessageGroupId: 200160190
     Id: 200160230
     CharacterId: 20016
     MessageCondition: Feedback
@@ -464,15 +472,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 사람은 어째서 일을 해야만 살아갈 수 있는가. 하고 잠깐 생각해봤을 뿐이에요.
-    MessageJP: なぜ人はこんなに忙しく動かねばならないのだろう、と……
-    MessageCN: 我只是在想，人为什么非得累死累活地工作呢……
-    MessageEN: I was wondering why people have to work to live...
-    MessageTH: 'จู่ๆ ฉันก็คิดขึ้นมาว่า "ทำไมคนเราจะต้อง
+  - MessageKR: 선생님. 우리가 이렇게까지 하며 살아가는 데에 과연 의미가 있을까요?
+    MessageJP: 先生、我々はここまでして生きる意味があるのでしょうか？
+    MessageCN: 老师，我们活到这份上有什么意义吗？
+    MessageEN: Sensei. What's the meaning of all this hard work?
+    MessageTH: "คุณครู เราทำงานหนักแทบตายแบบนี้
 
-      ทำงานเพื่อให้มีชีวิตรอดกันด้วย?" น่ะค่ะ'
-    MessageTW: 只是突然覺得，為什麼人一定要如此忙碌活動呢……
-  - MessageGroupId: 200160200
+      ไปเพื่ออะไรงั้นเหรอคะ?"
+    MessageTW: 老師，我們活的這麼努力究竟有什麼意義呢？
+    MessageGroupId: 200160200
     Id: 200160240
     CharacterId: 20016
     MessageCondition: Feedback
@@ -484,15 +492,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 우리가 이렇게까지 하며 살아가는 데에 과연 의미가 있을까요?
-    MessageJP: 先生、我々はここまでして生きる意味があるのでしょうか？
-    MessageCN: 老师，我们活到这份上有什么意义吗？
-    MessageEN: Sensei. What's the meaning of all this hard work?
-    MessageTH: "คุณครู เราทำงานหนักแทบตายแบบนี้
+  - MessageKR: 갑자기 대화 주제가 무거워졌어! 물론 의미는 있다고 생각하지만!
+    MessageJP: 話が急にすごい重くなったけど、あると思うよ！？
+    MessageCN: 虽然不知道伊吕波突然说起这么沉重的话题，但我觉得是有的吧！？
+    MessageEN: Phew, that's a heavy subject. I do think it's meaningful, but...
+    MessageTH: "จู่ๆ เรื่องคุยก็น่ากลัวขึ้นซะงั้น!
 
-      ไปเพื่ออะไรงั้นเหรอคะ?"
-    MessageTW: 老師，我們活的這麼努力究竟有什麼意義呢？
-  - MessageGroupId: 200160210
+      แต่ว่าครูคิดว่ามันมีความหมายนะ"
+    MessageTW: 話題突然變好沉重啊！不過我覺得是有意義的！
+    MessageGroupId: 200160210
     Id: 200160250
     CharacterId: 20016
     MessageCondition: Answer
@@ -504,15 +512,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 대화 주제가 무거워졌어! 물론 의미는 있다고 생각하지만!
-    MessageJP: 話が急にすごい重くなったけど、あると思うよ！？
-    MessageCN: 虽然不知道伊吕波突然说起这么沉重的话题，但我觉得是有的吧！？
-    MessageEN: Phew, that's a heavy subject. I do think it's meaningful, but...
-    MessageTH: "จู่ๆ เรื่องคุยก็น่ากลัวขึ้นซะงั้น!
+  - MessageKR: 정말 정말 하기 싫지만. 그래도 해야만 하겠지요.
+    MessageJP: めんどくさいですが、やるしかありませんね……
+    MessageCN: 虽然觉得很麻烦，但也只能去做了呢……
+    MessageEN: Even if I really don't wanna do something, I guess I have no choice.
+    MessageTH: "ถึงเราจะไม่อยากทำมันอะไรเลย
 
-      แต่ว่าครูคิดว่ามันมีความหมายนะ"
-    MessageTW: 話題突然變好沉重啊！不過我覺得是有意義的！
-  - MessageGroupId: 200160220
+      แต่ก็คงไม่มีทางเลือกสินะคะ"
+    MessageTW: 雖然麻煩，但也只能努力呀……
+    MessageGroupId: 200160220
     Id: 200160260
     CharacterId: 20016
     MessageCondition: Feedback
@@ -524,15 +532,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 정말 정말 하기 싫지만. 그래도 해야만 하겠지요.
-    MessageJP: めんどくさいですが、やるしかありませんね……
-    MessageCN: 虽然觉得很麻烦，但也只能去做了呢……
-    MessageEN: Even if I really don't wanna do something, I guess I have no choice.
-    MessageTH: "ถึงเราจะไม่อยากทำมันอะไรเลย
-
-      แต่ก็คงไม่มีทางเลือกสินะคะ"
-    MessageTW: 雖然麻煩，但也只能努力呀……
-  - MessageGroupId: 200160220
+  - MessageKR: 네, 정말 정말 귀찮지만.
+    MessageJP: もう文字を打つのもめんどくさいです
+    MessageCN: 我已经连打字都嫌麻烦了
+    MessageEN: It's annoying though.
+    MessageTH: เข้าใจแล้วค่ะ... ถึงจะน่ารำคาญสุดๆ ก็เถอะ
+    MessageTW: 就連打字都感覺好麻煩
+    MessageGroupId: 200160220
     Id: 200160270
     CharacterId: 20016
     MessageCondition: Feedback
@@ -544,13 +550,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네, 정말 정말 귀찮지만.
-    MessageJP: もう文字を打つのもめんどくさいです
-    MessageCN: 我已经连打字都嫌麻烦了
-    MessageEN: It's annoying though.
-    MessageTH: เข้าใจแล้วค่ะ... ถึงจะน่ารำคาญสุดๆ ก็เถอะ
-    MessageTW: 就連打字都感覺好麻煩
-  - MessageGroupId: 200160230
+  - MessageKR: 어, 음. 힘내….
+    MessageJP: が、頑張って……
+    MessageCN: 加、加油……
+    MessageEN: Oh, um. Cheer up...
+    MessageTH: อะ...อื้อ สู้ๆ นะ
+    MessageTW: 不過，我加油……
+    MessageGroupId: 200160230
     Id: 200160280
     CharacterId: 20016
     MessageCondition: Answer
@@ -562,9 +568,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어, 음. 힘내….
-    MessageJP: が、頑張って……
-    MessageCN: 加、加油……
-    MessageEN: Oh, um. Cheer up...
-    MessageTH: อะ...อื้อ สู้ๆ นะ
-    MessageTW: 不過，我加油……

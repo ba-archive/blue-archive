@@ -1,44 +1,50 @@
 CharacterId: 10012
 translator: 今天早睡了吗
 title:
-  - GroupId: 1001202
-    FavorScheduleId: 100122
-    CharacterId: 10012
-    TextJp: トレーナー参上！
+  - TextJp: トレーナー参上！
     TextCn: 教练登场！
     TextKr: 트레이너 등장!
     TextEn: The Trainer Appears!
     TextTh: เทรนเนอร์ปรากฎตัว!
     TextTw: 指導員參上！
-  - GroupId: 1001203
-    FavorScheduleId: 100123
+    GroupId: 1001202
+    FavorScheduleId: 100122
     CharacterId: 10012
-    TextJp: トレーナーと共に
+  - TextJp: トレーナーと共に
     TextCn: 与教练一同
     TextKr: 트레이너와 함께
     TextEn: My Trainer and Me
     TextTh: ไปด้วยกันกับเทรนเนอร์
     TextTw: 和指導員一起
-  - GroupId: 1001205
-    FavorScheduleId: 100125
+    GroupId: 1001203
+    FavorScheduleId: 100123
     CharacterId: 10012
-    TextJp: トレーナーも一緒に
+  - TextJp: トレーナーも一緒に
     TextCn: 教练也一起
     TextKr: 트레이너도 함께
     TextEn: Quality Time with Trainer
     TextTh: ไปด้วยกันกับเทรนเนอร์
     TextTw: 指導員也一起
-  - GroupId: 1001206
-    FavorScheduleId: 100126
+    GroupId: 1001205
+    FavorScheduleId: 100125
     CharacterId: 10012
-    TextJp: デート
+  - TextJp: デート
     TextCn: 约会
     TextKr: 트레이너와 데이트
     TextEn: A Date with Trainer
     TextTh: เดตแสนหวานกับเทรนเนอร์
     TextTw: 約會
+    GroupId: 1001206
+    FavorScheduleId: 100126
+    CharacterId: 10012
 content:
-  - MessageGroupId: 100120010
+  - MessageKR: 안녕하세요. 트레이너.
+    MessageJP: おはようございます、トレーナー
+    MessageCN: 早上好，教练
+    MessageEN: Hello, Trainer.
+    MessageTH: สวัสดีค่ะ เทรนเนอร์
+    MessageTW: 早安，指導員
+    MessageGroupId: 100120010
     Id: 872
     CharacterId: 10012
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요. 트레이너.
-    MessageJP: おはようございます、トレーナー
-    MessageCN: 早上好，教练
-    MessageEN: Hello, Trainer.
-    MessageTH: สวัสดีค่ะ เทรนเนอร์
-    MessageTW: 早安，指導員
-  - MessageGroupId: 100120020
+  - MessageKR: 혹시 오늘 시간 괜찮으실까요?
+    MessageJP: 今日、お時間大丈夫でしょうか？
+    MessageCN: 您今天有时间吗？
+    MessageEN: Do you have some time today?
+    MessageTH: วันนี้พอมีเวลาว่างไหมคะ?
+    MessageTW: 今天時間上方便嗎？
+    MessageGroupId: 100120020
     Id: 873
     CharacterId: 10012
     MessageCondition: None
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 오늘 시간 괜찮으실까요?
-    MessageJP: 今日、お時間大丈夫でしょうか？
-    MessageCN: 您今天有时间吗？
-    MessageEN: Do you have some time today?
-    MessageTH: วันนี้พอมีเวลาว่างไหมคะ?
-    MessageTW: 今天時間上方便嗎？
-  - MessageGroupId: 100120030
+  - MessageKR: 응, 무슨 일이야?
+    MessageJP: うん、どうしたの？
+    MessageCN: 嗯，怎么了？
+    MessageEN: Yeah, what's going on?
+    MessageTH: อื้อ มีอะไรเหรอ?
+    MessageTW: 嗯，怎麼了？
+    MessageGroupId: 100120030
     Id: 874
     CharacterId: 10012
     MessageCondition: Answer
@@ -86,13 +92,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 무슨 일이야?
-    MessageJP: うん、どうしたの？
-    MessageCN: 嗯，怎么了？
-    MessageEN: Yeah, what's going on?
-    MessageTH: อื้อ มีอะไรเหรอ?
-    MessageTW: 嗯，怎麼了？
-  - MessageGroupId: 100120030
+  - MessageKR: 딱히 바쁘지는 않아.
+    MessageJP: 特に忙しくないから大丈夫だよ
+    MessageCN: 不是特别忙，没问题
+    MessageEN: I'm not too busy.
+    MessageTH: อืม... ก็ไม่ได้ยุ่งอะไรหรอก
+    MessageTW: 不是特別忙，所以沒問題唷
+    MessageGroupId: 100120030
     Id: 875
     CharacterId: 10012
     MessageCondition: Answer
@@ -104,13 +110,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 딱히 바쁘지는 않아.
-    MessageJP: 特に忙しくないから大丈夫だよ
-    MessageCN: 不是特别忙，没问题
-    MessageEN: I'm not too busy.
-    MessageTH: อืม... ก็ไม่ได้ยุ่งอะไรหรอก
-    MessageTW: 不是特別忙，所以沒問題唷
-  - MessageGroupId: 100120040
+  - MessageKR: 네, 다름이 아니라.
+    MessageJP: はい、実は、
+    MessageCN: 嗯，其实
+    MessageEN: Okay, I just wanted to let you know...
+    MessageTH: ค่ะ ก็คือว่า...
+    MessageTW: 嗯，其實
+    MessageGroupId: 100120040
     Id: 876
     CharacterId: 10012
     MessageCondition: Feedback
@@ -122,13 +128,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네, 다름이 아니라.
-    MessageJP: はい、実は、
-    MessageCN: 嗯，其实
-    MessageEN: Okay, I just wanted to let you know...
-    MessageTH: ค่ะ ก็คือว่า...
-    MessageTW: 嗯，其實
-  - MessageGroupId: 100120040
+  - MessageKR: 이전에 약속드렸던 트레이닝용 시간표를 준비했습니다.
+    MessageJP: この前お話していた、トレーニングメニューができたんです
+    MessageCN: 上次说的训练计划，我已经拟好了
+    MessageEN: I've prepared the training schedule that I mentioned earlier.
+    MessageTH: "ฉันเตรียมตารางการเทรนที่เคยบอก
+
+      เทรนเนอร์เอาไว้เสร็จแล้วนะคะ"
+    MessageTW: 上次說的訓練菜單已經準備好了
+    MessageGroupId: 100120040
     Id: 877
     CharacterId: 10012
     MessageCondition: Feedback
@@ -140,27 +148,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이전에 약속드렸던 트레이닝용 시간표를 준비했습니다.
-    MessageJP: この前お話していた、トレーニングメニューができたんです
-    MessageCN: 上次说的训练计划，我已经拟好了
-    MessageEN: I've prepared the training schedule that I mentioned earlier.
-    MessageTH: "ฉันเตรียมตารางการเทรนที่เคยบอก
-
-      เทรนเนอร์เอาไว้เสร็จแล้วนะคะ"
-    MessageTW: 上次說的訓練菜單已經準備好了
-  - MessageGroupId: 100120050
-    Id: 878
-    CharacterId: 10012
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100120060
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 가능하다면 오늘 확인받고 싶은데, 헬스장으로 와주실 수 있을까요?
+  - MessageKR: 가능하다면 오늘 확인받고 싶은데, 헬스장으로 와주실 수 있을까요?
     MessageJP: よろしければ確認をしていただきたくて、ジムまで来ていただけませんか？
     MessageCN: 如果教练方便的话，能来健身房确认一下吗?
     MessageEN:
@@ -172,7 +160,25 @@ content:
 
       กายได้ไหมคะ?"
     MessageTW: 如果可以的話，能請你來健身房確認一下嗎？
-  - MessageGroupId: 100120050
+    MessageGroupId: 100120050
+    Id: 878
+    CharacterId: 10012
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100120060
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 기다리고 있겠습니다.
+    MessageJP: お待ちしています！
+    MessageCN: 我在健身房等您！
+    MessageEN: I'll be waiting for you.
+    MessageTH: แล้วฉันจะรอนะคะ
+    MessageTW: 期待你的到來！
+    MessageGroupId: 100120050
     Id: 879
     CharacterId: 10012
     MessageCondition: Feedback
@@ -184,13 +190,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있겠습니다.
-    MessageJP: お待ちしています！
-    MessageCN: 我在健身房等您！
-    MessageEN: I'll be waiting for you.
-    MessageTH: แล้วฉันจะรอนะคะ
-    MessageTW: 期待你的到來！
-  - MessageGroupId: 100120060
+  - MessageKR: 트레이너, 혹시 이번 주말에 바쁘신가요?
+    MessageJP: トレーナー、今週末はお忙しいでしょうか？
+    MessageCN: 教练，这周末您忙吗？
+    MessageEN: Trainer, are you busy this weekend?
+    MessageTH: เทรนเนอร์คะ สุดสัปดาห์นี้ยุ่งรึเปล่าคะ?
+    MessageTW: 指導員，這個週末忙嗎？
+    MessageGroupId: 100120060
     Id: 880
     CharacterId: 10012
     MessageCondition: FavorRankUp
@@ -202,13 +208,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 트레이너, 혹시 이번 주말에 바쁘신가요?
-    MessageJP: トレーナー、今週末はお忙しいでしょうか？
-    MessageCN: 教练，这周末您忙吗？
-    MessageEN: Trainer, are you busy this weekend?
-    MessageTH: เทรนเนอร์คะ สุดสัปดาห์นี้ยุ่งรึเปล่าคะ?
-    MessageTW: 指導員，這個週末忙嗎？
-  - MessageGroupId: 100120070
+  - MessageKR: 괜찮으시면 저와 함께 쇼핑몰에 가지 않으시겠습니까?
+    MessageJP: よろしければ私と一緒に、ショッピングモールに行きませんか？
+    MessageCN: 如果方便的话，能和我一起去趟购物中心吗？
+    MessageEN: Would you mind coming to the mall with me?
+    MessageTH: "ถ้าไม่ยุ่งล่ะก็... ไปห้างสรรพสินค้ากับ
+
+      ฉันหน่อยได้ไหมคะ?"
+    MessageTW: 如果可以的話，要跟我一起去購物中心嗎？
+    MessageGroupId: 100120070
     Id: 881
     CharacterId: 10012
     MessageCondition: None
@@ -220,15 +228,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮으시면 저와 함께 쇼핑몰에 가지 않으시겠습니까?
-    MessageJP: よろしければ私と一緒に、ショッピングモールに行きませんか？
-    MessageCN: 如果方便的话，能和我一起去趟购物中心吗？
-    MessageEN: Would you mind coming to the mall with me?
-    MessageTH: "ถ้าไม่ยุ่งล่ะก็... ไปห้างสรรพสินค้ากับ
-
-      ฉันหน่อยได้ไหมคะ?"
-    MessageTW: 如果可以的話，要跟我一起去購物中心嗎？
-  - MessageGroupId: 100120080
+  - MessageKR: 그래, 좋아.
+    MessageJP: ぜひぜひ
+    MessageCN: 一定一定
+    MessageEN: Not at all.
+    MessageTH: เอาสิ
+    MessageTW: 當然好呀
+    MessageGroupId: 100120080
     Id: 882
     CharacterId: 10012
     MessageCondition: Answer
@@ -240,13 +246,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래, 좋아.
-    MessageJP: ぜひぜひ
-    MessageCN: 一定一定
-    MessageEN: Not at all.
-    MessageTH: เอาสิ
-    MessageTW: 當然好呀
-  - MessageGroupId: 100120080
+  - MessageKR: 무엇을 사려고?
+    MessageJP: 何を買うの？
+    MessageCN: 堇要买什么？
+    MessageEN: What are you gonna buy?
+    MessageTH: จะไปซื้ออะไรเหรอ?
+    MessageTW: 要買什麼？
+    MessageGroupId: 100120080
     Id: 883
     CharacterId: 10012
     MessageCondition: Answer
@@ -258,13 +264,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무엇을 사려고?
-    MessageJP: 何を買うの？
-    MessageCN: 堇要买什么？
-    MessageEN: What are you gonna buy?
-    MessageTH: จะไปซื้ออะไรเหรอ?
-    MessageTW: 要買什麼？
-  - MessageGroupId: 100120090
+  - MessageKR: 감사합니다, 트레이너.
+    MessageJP: ありがとうございます！
+    MessageCN: 十分感谢！
+    MessageEN: Thank you, Trainer.
+    MessageTH: ขอบคุณค่ะ เทรนเนอร์
+    MessageTW: 非常感謝！
+    MessageGroupId: 100120090
     Id: 884
     CharacterId: 10012
     MessageCondition: Feedback
@@ -276,13 +282,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감사합니다, 트레이너.
-    MessageJP: ありがとうございます！
-    MessageCN: 十分感谢！
-    MessageEN: Thank you, Trainer.
-    MessageTH: ขอบคุณค่ะ เทรนเนอร์
-    MessageTW: 非常感謝！
-  - MessageGroupId: 100120100
+  - MessageKR: 단백질 보충제를 사려고 하는 데 트레이너의 조언이 필요합니다.
+    MessageJP: プロテインを買いたいので、トレーナーからアドバイスを頂ければと
+    MessageCN: 我想买蛋白粉，所以想请教练给我点建议
+    MessageEN: I need protein supplements, and I wanted your input.
+    MessageTH: "ฉันจะไปซื้อเวย์โปรตีนเลยอยากได้คำ
+
+      แนะนำจากเทรนเนอร์สักหน่อยค่ะ"
+    MessageTW: 想買乳清蛋白，所以希望從指導員那裡得到一些建議
+    MessageGroupId: 100120100
     Id: 885
     CharacterId: 10012
     MessageCondition: Feedback
@@ -294,15 +302,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 단백질 보충제를 사려고 하는 데 트레이너의 조언이 필요합니다.
-    MessageJP: プロテインを買いたいので、トレーナーからアドバイスを頂ければと
-    MessageCN: 我想买蛋白粉，所以想请教练给我点建议
-    MessageEN: I need protein supplements, and I wanted your input.
-    MessageTH: "ฉันจะไปซื้อเวย์โปรตีนเลยอยากได้คำ
-
-      แนะนำจากเทรนเนอร์สักหน่อยค่ะ"
-    MessageTW: 想買乳清蛋白，所以希望從指導員那裡得到一些建議
-  - MessageGroupId: 100120100
+  - MessageKR: 그럼 쇼핑몰에서 기다리겠습니다.
+    MessageJP: それでは、ショッピングモールでお待ちしておりますね
+    MessageCN: 那么，我在购物中心等您
+    MessageEN: Well, then, I'll be waiting for you at the mall.
+    MessageTH: ถ้างั้นฉันจะรอที่ห้างสรรพสินค้านะคะ
+    MessageTW: 那麼，我在購物中心等著
+    MessageGroupId: 100120100
     Id: 886
     CharacterId: 10012
     MessageCondition: Feedback
@@ -314,13 +320,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 쇼핑몰에서 기다리겠습니다.
-    MessageJP: それでは、ショッピングモールでお待ちしておりますね
-    MessageCN: 那么，我在购物中心等您
-    MessageEN: Well, then, I'll be waiting for you at the mall.
-    MessageTH: ถ้างั้นฉันจะรอที่ห้างสรรพสินค้านะคะ
-    MessageTW: 那麼，我在購物中心等著
-  - MessageGroupId: 100120110
+  - MessageKR: 트레이너, 오늘은 제가 트레이너를 위해 특별히 준비한 것이 있습니다.
+    MessageJP: トレーナー。今日はトレーニングのために、特別なものを準備しました
+    MessageCN: 教练。我为今天的训练准备了点特别的东西
+    MessageEN: Trainer, I've prepared something special for you today.
+    MessageTH: "เทรนเนอร์คะ วันนี้ฉันเตรียมบางอย่างที่
+
+      พิเศษมาให้เทรนเนอร์ด้วยค่ะ"
+    MessageTW: 指導員。為了今天的訓練，我準備了特別的東西
+    MessageGroupId: 100120110
     Id: 887
     CharacterId: 10012
     MessageCondition: FavorRankUp
@@ -332,15 +340,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 트레이너, 오늘은 제가 트레이너를 위해 특별히 준비한 것이 있습니다.
-    MessageJP: トレーナー。今日はトレーニングのために、特別なものを準備しました
-    MessageCN: 教练。我为今天的训练准备了点特别的东西
-    MessageEN: Trainer, I've prepared something special for you today.
-    MessageTH: "เทรนเนอร์คะ วันนี้ฉันเตรียมบางอย่างที่
-
-      พิเศษมาให้เทรนเนอร์ด้วยค่ะ"
-    MessageTW: 指導員。為了今天的訓練，我準備了特別的東西
-  - MessageGroupId: 100120120
+  - MessageKR: 오늘 오후 헬스장에서 뵙겠습니다.
+    MessageJP: 今日の午後、ジムでお会いしましょう
+    MessageCN: 今天下午，我们在健身房见面吧
+    MessageEN: I'll see you at the gym this afternoon.
+    MessageTH: ตอนบ่ายเจอกันที่ห้องออกกำลังกายนะคะ
+    MessageTW: 今天下午，在健身房見吧
+    MessageGroupId: 100120120
     Id: 888
     CharacterId: 10012
     MessageCondition: None
@@ -352,13 +358,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 오후 헬스장에서 뵙겠습니다.
-    MessageJP: 今日の午後、ジムでお会いしましょう
-    MessageCN: 今天下午，我们在健身房见面吧
-    MessageEN: I'll see you at the gym this afternoon.
-    MessageTH: ตอนบ่ายเจอกันที่ห้องออกกำลังกายนะคะ
-    MessageTW: 今天下午，在健身房見吧
-  - MessageGroupId: 100120130
+  - MessageKR: 트레이너.
+    MessageJP: お疲れ様でした、トレーナー
+    MessageCN: 辛苦了，教练
+    MessageEN: Trainer.
+    MessageTH: เทรนเนอร์คะ
+    MessageTW: 辛苦了，指導員
+    MessageGroupId: 100120130
     Id: 889
     CharacterId: 10012
     MessageCondition: None
@@ -370,13 +376,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 트레이너.
-    MessageJP: お疲れ様でした、トレーナー
-    MessageCN: 辛苦了，教练
-    MessageEN: Trainer.
-    MessageTH: เทรนเนอร์คะ
-    MessageTW: 辛苦了，指導員
-  - MessageGroupId: 100120130
+  - MessageKR: 몸은 좀 어떠신가요?
+    MessageJP: 身体の調子はいかがですか？
+    MessageCN: 身体状况如何？
+    MessageEN: How are you feeling?
+    MessageTH: ร่างกายของเทรนเนอร์เป็นยังไงบ้างคะ?
+    MessageTW: 身體感覺怎麼樣？
+    MessageGroupId: 100120130
     Id: 890
     CharacterId: 10012
     MessageCondition: None
@@ -388,13 +394,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 몸은 좀 어떠신가요?
-    MessageJP: 身体の調子はいかがですか？
-    MessageCN: 身体状况如何？
-    MessageEN: How are you feeling?
-    MessageTH: ร่างกายของเทรนเนอร์เป็นยังไงบ้างคะ?
-    MessageTW: 身體感覺怎麼樣？
-  - MessageGroupId: 100120140
+  - MessageKR: 응. 괜찮아.
+    MessageJP: うん、何とかね
+    MessageCN: 嗯，还行吧
+    MessageEN: I'm okay.
+    MessageTH: อื้ม ไม่เป็นอะไร
+    MessageTW: 嗯，沒什麼大礙
+    MessageGroupId: 100120140
     Id: 891
     CharacterId: 10012
     MessageCondition: Answer
@@ -406,13 +412,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 괜찮아.
-    MessageJP: うん、何とかね
-    MessageCN: 嗯，还行吧
-    MessageEN: I'm okay.
-    MessageTH: อื้ม ไม่เป็นอะไร
-    MessageTW: 嗯，沒什麼大礙
-  - MessageGroupId: 100120140
+  - MessageKR: 으으윽, 근육이….
+    MessageJP: 筋肉が、悲鳴を……
+    MessageCN: 肌肉，在悲鸣……
+    MessageEN: Ugh, my muscles...
+    MessageTH: อะ...อึ่ก!  กะ...กล้ามเนื้อมัน...
+    MessageTW: 肌肉在哀號……
+    MessageGroupId: 100120140
     Id: 892
     CharacterId: 10012
     MessageCondition: Answer
@@ -424,13 +430,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으으윽, 근육이….
-    MessageJP: 筋肉が、悲鳴を……
-    MessageCN: 肌肉，在悲鸣……
-    MessageEN: Ugh, my muscles...
-    MessageTH: อะ...อึ่ก!  กะ...กล้ามเนื้อมัน...
-    MessageTW: 肌肉在哀號……
-  - MessageGroupId: 100120150
+  - MessageKR: 역시 트레이너, 건강하시군요.
+    MessageJP: さすがトレーナー、まだまだいけそうですね
+    MessageCN: 不愧是教练，看来还行啊
+    MessageEN: As expected, you're pretty strong, Trainer.
+    MessageTH: เทรนเนอร์ แข็งแรงจริงๆ ด้วย
+    MessageTW: 不愧是指導員，看來還行呀
+    MessageGroupId: 100120150
     Id: 893
     CharacterId: 10012
     MessageCondition: Feedback
@@ -442,13 +448,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 트레이너, 건강하시군요.
-    MessageJP: さすがトレーナー、まだまだいけそうですね
-    MessageCN: 不愧是教练，看来还行啊
-    MessageEN: As expected, you're pretty strong, Trainer.
-    MessageTH: เทรนเนอร์ แข็งแรงจริงๆ ด้วย
-    MessageTW: 不愧是指導員，看來還行呀
-  - MessageGroupId: 100120160
+  - MessageKR: 운동이 조금 과했나 보군요.
+    MessageJP: ちょっと強度が高かったかもしれませんね……
+    MessageCN: 可能强度有点太高了……
+    MessageEN: I guess the workout was a bit too much.
+    MessageTH: คงจะออกกำลังกายหนักแน่ๆ เลยสินะคะ
+    MessageTW: 看來強度有點太高了……
+    MessageGroupId: 100120160
     Id: 894
     CharacterId: 10012
     MessageCondition: Feedback
@@ -460,13 +466,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 운동이 조금 과했나 보군요.
-    MessageJP: ちょっと強度が高かったかもしれませんね……
-    MessageCN: 可能强度有点太高了……
-    MessageEN: I guess the workout was a bit too much.
-    MessageTH: คงจะออกกำลังกายหนักแน่ๆ เลยสินะคะ
-    MessageTW: 看來強度有點太高了……
-  - MessageGroupId: 100120160
+  - MessageKR: 다음에 만나면 제가 스트레칭을 돕겠습니다.
+    MessageJP: 次にお会いした時に、ストレッチのお手伝いをしますね
+    MessageCN: 下次见面的时候，我帮您拉伸吧
+    MessageEN: Next time, I'll help you stretch.
+    MessageTH: "ถ้าเจอกันคราวหน้า ฉันจะช่วยคุณครูยืด
+
+      เส้นเองค่ะ"
+    MessageTW: 下次見面時，會幫你做伸展運動
+    MessageGroupId: 100120160
     Id: 895
     CharacterId: 10012
     MessageCondition: Feedback
@@ -478,15 +486,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 만나면 제가 스트레칭을 돕겠습니다.
-    MessageJP: 次にお会いした時に、ストレッチのお手伝いをしますね
-    MessageCN: 下次见面的时候，我帮您拉伸吧
-    MessageEN: Next time, I'll help you stretch.
-    MessageTH: "ถ้าเจอกันคราวหน้า ฉันจะช่วยคุณครูยืด
+  - MessageKR: 참, 아마 지금쯤이면 트레이너의 사무실에
+    MessageJP: そうだ、おそらくそろそろトレーナーの事務所に、
+    MessageCN: 对了，教练的事务所那边
+    MessageEN: Oh yeah, by now, the protein supplements I sent you
+    MessageTH: "อ๊ะ ตอนนี้เวย์โปรตีนที่ฉันส่งไปให้ที่ห้อง
 
-      เส้นเองค่ะ"
-    MessageTW: 下次見面時，會幫你做伸展運動
-  - MessageGroupId: 100120170
+      พักครู"
+    MessageTW: 對了，指導員的辦公室
+    MessageGroupId: 100120170
     Id: 896
     CharacterId: 10012
     MessageCondition: Feedback
@@ -498,15 +506,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 참, 아마 지금쯤이면 트레이너의 사무실에
-    MessageJP: そうだ、おそらくそろそろトレーナーの事務所に、
-    MessageCN: 对了，教练的事务所那边
-    MessageEN: Oh yeah, by now, the protein supplements I sent you
-    MessageTH: "อ๊ะ ตอนนี้เวย์โปรตีนที่ฉันส่งไปให้ที่ห้อง
-
-      พักครู"
-    MessageTW: 對了，指導員的辦公室
-  - MessageGroupId: 100120170
+  - MessageKR: 제가 보낸 단백질 보충제가 도착했을 겁니다.
+    MessageJP: 私がお送りしたプロテインが届いてると思います
+    MessageCN: 应该已经收到我寄的蛋白粉了
+    MessageEN: should have arrived at your office.
+    MessageTH: น่าจะส่งไปถึงแล้วนะคะ
+    MessageTW: 應該已經收到我送去的乳清蛋白了
+    MessageGroupId: 100120170
     Id: 897
     CharacterId: 10012
     MessageCondition: Feedback
@@ -518,13 +524,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제가 보낸 단백질 보충제가 도착했을 겁니다.
-    MessageJP: 私がお送りしたプロテインが届いてると思います
-    MessageCN: 应该已经收到我寄的蛋白粉了
-    MessageEN: should have arrived at your office.
-    MessageTH: น่าจะส่งไปถึงแล้วนะคะ
-    MessageTW: 應該已經收到我送去的乳清蛋白了
-  - MessageGroupId: 100120180
+  - MessageKR: ""
+    MessageJP: ""
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100120180
     Id: 898
     CharacterId: 10012
     MessageCondition: Feedback
@@ -536,13 +542,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Image
     ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Sumire_01
-    MessageKR: ""
-    MessageJP: ""
-    MessageCN: ""
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100120190
+  - MessageKR: 하루에 4번, 잊지 마시고 챙겨 드시길 바랍니다.
+    MessageJP: 一日4回、忘れずに飲んでくださいね
+    MessageCN: 一天四回，不要忘记喝哦
+    MessageEN: Please don't forget to take them four times a day.
+    MessageTH: "ทานวันละ 4 ครั้ง ห้ามลืมเด็ดขาดเลย
+
+      นะคะ"
+    MessageTW: 一天4次，別忘了喝唷
+    MessageGroupId: 100120190
     Id: 899
     CharacterId: 10012
     MessageCondition: Feedback
@@ -554,15 +562,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하루에 4번, 잊지 마시고 챙겨 드시길 바랍니다.
-    MessageJP: 一日4回、忘れずに飲んでくださいね
-    MessageCN: 一天四回，不要忘记喝哦
-    MessageEN: Please don't forget to take them four times a day.
-    MessageTH: "ทานวันละ 4 ครั้ง ห้ามลืมเด็ดขาดเลย
-
-      นะคะ"
-    MessageTW: 一天4次，別忘了喝唷
-  - MessageGroupId: 100120200
+  - MessageKR: 트레이너.
+    MessageJP: トレーナー、こんにちは
+    MessageCN: 教练，早上好
+    MessageEN: Trainer.
+    MessageTH: เทรนเนอร์คะ
+    MessageTW: 指導員，你好
+    MessageGroupId: 100120200
     Id: 900
     CharacterId: 10012
     MessageCondition: FavorRankUp
@@ -574,13 +580,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 트레이너.
-    MessageJP: トレーナー、こんにちは
-    MessageCN: 教练，早上好
-    MessageEN: Trainer.
-    MessageTH: เทรนเนอร์คะ
-    MessageTW: 指導員，你好
-  - MessageGroupId: 100120210
+  - MessageKR: 괜찮다면, 이번 주말에 잠시 뵐 수 있을까요?
+    MessageJP: よかったら、今週末ちょっと会えませんか？
+    MessageCN: 教练周末方便的话，能和我见个面吗？
+    MessageEN: If it's okay, can I see you a bit this weekend?
+    MessageTH: ถ้าเทรนเนอร์ไม่ติดธุระอะไร สุดสัปดาห์นี้เรามาเจอกันหน่อยได้ไหมคะ?
+    MessageTW: 可以的話，這個週末能不能見個面？
+    MessageGroupId: 100120210
     Id: 901
     CharacterId: 10012
     MessageCondition: None
@@ -592,13 +598,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮다면, 이번 주말에 잠시 뵐 수 있을까요?
-    MessageJP: よかったら、今週末ちょっと会えませんか？
-    MessageCN: 教练周末方便的话，能和我见个面吗？
-    MessageEN: If it's okay, can I see you a bit this weekend?
-    MessageTH: ถ้าเทรนเนอร์ไม่ติดธุระอะไร สุดสัปดาห์นี้เรามาเจอกันหน่อยได้ไหมคะ?
-    MessageTW: 可以的話，這個週末能不能見個面？
-  - MessageGroupId: 100120220
+  - MessageKR: 히익! 아직 근육이….
+    MessageJP: その、まだ筋肉痛が……！
+    MessageCN: 那个，我肌肉现在还在痛……！
+    MessageEN: Eek! But my muscles are still...
+    MessageTH: อึ่ก! กะ...กล้ามเนื้อมัน...
+    MessageTW: 那個，我的肌肉還在痛……！
+    MessageGroupId: 100120220
     Id: 902
     CharacterId: 10012
     MessageCondition: Answer
@@ -610,13 +616,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 히익! 아직 근육이….
-    MessageJP: その、まだ筋肉痛が……！
-    MessageCN: 那个，我肌肉现在还在痛……！
-    MessageEN: Eek! But my muscles are still...
-    MessageTH: อึ่ก! กะ...กล้ามเนื้อมัน...
-    MessageTW: 那個，我的肌肉還在痛……！
-  - MessageGroupId: 100120220
+  - MessageKR: 운동이라면 열심히 하고 있습니다!
+    MessageJP: 運動してます！サボってません！
+    MessageCN: 我有在运动！没有偷懒！
+    MessageEN: I've been working out really hard!
+    MessageTH: "ครูเองก็ตั้งใจออกกำลังกายอยู่
+
+      เหมือนกันนะ!"
+    MessageTW: 我有在運動！沒有偷懶！
+    MessageGroupId: 100120220
     Id: 903
     CharacterId: 10012
     MessageCondition: Answer
@@ -628,15 +636,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 운동이라면 열심히 하고 있습니다!
-    MessageJP: 運動してます！サボってません！
-    MessageCN: 我有在运动！没有偷懒！
-    MessageEN: I've been working out really hard!
-    MessageTH: "ครูเองก็ตั้งใจออกกำลังกายอยู่
-
-      เหมือนกันนะ!"
-    MessageTW: 我有在運動！沒有偷懶！
-  - MessageGroupId: 100120230
+  - MessageKR: 아아…… 아뇨, 트레이너.
+    MessageJP: あ、いえ、その……
+    MessageCN: 啊，不是，那个……
+    MessageEN: Oh... That's not it, Trainer.
+    MessageTH: อา... ไม่ใช่หรอกค่ะ เทรนเนอร์
+    MessageTW: 啊，不，那個……
+    MessageGroupId: 100120230
     Id: 904
     CharacterId: 10012
     MessageCondition: Feedback
@@ -648,13 +654,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아아…… 아뇨, 트레이너.
-    MessageJP: あ、いえ、その……
-    MessageCN: 啊，不是，那个……
-    MessageEN: Oh... That's not it, Trainer.
-    MessageTH: อา... ไม่ใช่หรอกค่ะ เทรนเนอร์
-    MessageTW: 啊，不，那個……
-  - MessageGroupId: 100120230
+  - MessageKR: 운동 때문은 아닙니다.
+    MessageJP: 運動関連のお話ではなく……
+    MessageCN: 不是关于运动的事情……
+    MessageEN: This isn't about exercising.
+    MessageTH: ไม่ได้จะชวนไปออกกำลังกายหรอกค่ะ
+    MessageTW: 是跟運動無關的事……
+    MessageGroupId: 100120230
     Id: 905
     CharacterId: 10012
     MessageCondition: Feedback
@@ -666,13 +672,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 운동 때문은 아닙니다.
-    MessageJP: 運動関連のお話ではなく……
-    MessageCN: 不是关于运动的事情……
-    MessageEN: This isn't about exercising.
-    MessageTH: ไม่ได้จะชวนไปออกกำลังกายหรอกค่ะ
-    MessageTW: 是跟運動無關的事……
-  - MessageGroupId: 100120240
+  - MessageKR: 그렇다면 오케이!
+    MessageJP: なら何でもばっちこい！
+    MessageCN: 那不管什么都可以！
+    MessageEN: In that case, okay!
+    MessageTH: ถ้างั้นก็โอเคเลย!
+    MessageTW: 那你儘管說吧！
+    MessageGroupId: 100120240
     Id: 906
     CharacterId: 10012
     MessageCondition: Answer
@@ -684,13 +690,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇다면 오케이!
-    MessageJP: なら何でもばっちこい！
-    MessageCN: 那不管什么都可以！
-    MessageEN: In that case, okay!
-    MessageTH: ถ้างั้นก็โอเคเลย!
-    MessageTW: 那你儘管說吧！
-  - MessageGroupId: 100120250
+  - MessageKR: 알겠습니다.
+    MessageJP: ありがとうございます！
+    MessageCN: 十分感谢！
+    MessageEN: Got it.
+    MessageTH: เข้าใจแล้วค่ะ
+    MessageTW: 非常感謝！
+    MessageGroupId: 100120250
     Id: 907
     CharacterId: 10012
     MessageCondition: Feedback
@@ -702,13 +708,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알겠습니다.
-    MessageJP: ありがとうございます！
-    MessageCN: 十分感谢！
-    MessageEN: Got it.
-    MessageTH: เข้าใจแล้วค่ะ
-    MessageTW: 非常感謝！
-  - MessageGroupId: 100120250
+  - MessageKR: 그럼 그때 뵙겠습니다.
+    MessageJP: それでは後ほど！
+    MessageCN: 那么我们到时候见！
+    MessageEN: I'll see you then.
+    MessageTH: แล้วเจอกันนะคะ
+    MessageTW: 那就到時候見！
+    MessageGroupId: 100120250
     Id: 908
     CharacterId: 10012
     MessageCondition: Feedback
@@ -720,9 +726,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 그때 뵙겠습니다.
-    MessageJP: それでは後ほど！
-    MessageCN: 那么我们到时候见！
-    MessageEN: I'll see you then.
-    MessageTH: แล้วเจอกันนะคะ
-    MessageTW: 那就到時候見！

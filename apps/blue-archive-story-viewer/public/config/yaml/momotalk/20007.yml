@@ -1,44 +1,50 @@
 CharacterId: 20007
 translator: 今天早睡了吗
 title:
-  - GroupId: 2000702
-    FavorScheduleId: 200072
-    CharacterId: 20007
-    TextJp: バーチャル・シンガーの秘密
+  - TextJp: バーチャル・シンガーの秘密
     TextCn: 虚拟歌手的秘密
     TextKr: 버추얼 싱어의 비밀
     TextEn: The Virtual Idol's Secret
     TextTh: ความลับของนักร้องเสมือน
     TextTw: 虛擬歌手的秘密
-  - GroupId: 2000703
-    FavorScheduleId: 200073
+    GroupId: 2000702
+    FavorScheduleId: 200072
     CharacterId: 20007
-    TextJp: バーチャル・シンガーの悩み
+  - TextJp: バーチャル・シンガーの悩み
     TextCn: 虚拟歌手的烦恼
     TextKr: 버추얼 싱어의 고민
     TextEn: The Virtual Idol's Troubles
     TextTh: ความกังวลของนักร้องเสมือน
     TextTw: 虛擬歌手的煩惱
-  - GroupId: 2000705
-    FavorScheduleId: 200075
+    GroupId: 2000703
+    FavorScheduleId: 200073
     CharacterId: 20007
-    TextJp: バーチャル・シンガーの気持ち
+  - TextJp: バーチャル・シンガーの気持ち
     TextCn: 虚拟歌手的决心
     TextKr: 버추얼 싱어의 결심
     TextEn: The Virtual Idol's Resolve
     TextTh: การตัดสินใจของนักร้องเสมือน
     TextTw: 虛擬歌手的心情
-  - GroupId: 2000706
-    FavorScheduleId: 200076
+    GroupId: 2000705
+    FavorScheduleId: 200075
     CharacterId: 20007
-    TextJp: バーチャル・シンガーのステージ
+  - TextJp: バーチャル・シンガーのステージ
     TextCn: 虚拟歌手的舞台
     TextKr: 버추얼 싱어의 무대
     TextEn: The Virtual Idol's Stage
     TextTh: เวทีแสดงของนักร้องเสมือน
     TextTw: 虛擬歌手的舞台
+    GroupId: 2000706
+    FavorScheduleId: 200076
+    CharacterId: 20007
 content:
-  - MessageGroupId: 200070010
+  - MessageKR: ……당신이 샬레의 선생님이신가요?
+    MessageJP: えっと、シャーレの先生……で、合ってますか?
+    MessageCN: 那个，您是夏莱的老师……对吧？
+    MessageEN: "...Are you the Sensei from Schale?"
+    MessageTH: คุณคือคุณครูของชาเล่ต์ใช่มั้ยคะ?
+    MessageTW: 那個，夏萊的老師……對，對嗎？
+    MessageGroupId: 200070010
     Id: 200070010
     CharacterId: 20007
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……당신이 샬레의 선생님이신가요?
-    MessageJP: えっと、シャーレの先生……で、合ってますか?
-    MessageCN: 那个，您是夏莱的老师……对吧？
-    MessageEN: "...Are you the Sensei from Schale?"
-    MessageTH: คุณคือคุณครูของชาเล่ต์ใช่มั้ยคะ?
-    MessageTW: 那個，夏萊的老師……對，對嗎？
-  - MessageGroupId: 200070020
+  - MessageKR: ……누구?
+    MessageJP: どちら様……？
+    MessageCN: 请问您是……？
+    MessageEN: Who?
+    MessageTH: ใครน่ะ...?
+    MessageTW: 哪位……？
+    MessageGroupId: 200070020
     Id: 200070020
     CharacterId: 20007
     MessageCondition: Answer
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……누구?
-    MessageJP: どちら様……？
-    MessageCN: 请问您是……？
-    MessageEN: Who?
-    MessageTH: ใครน่ะ...?
-    MessageTW: 哪位……？
-  - MessageGroupId: 200070020
+  - MessageKR: 학생은 아닌 것 같은데…….
+    MessageJP: どこかで会ったことある……？
+    MessageCN: 我们在哪里见过吗……？
+    MessageEN: I don't think you're a student...
+    MessageTH: ไม่เหมือนนักเรียนของที่นี่เลยนะ...
+    MessageTW: 在哪裡見過……？
+    MessageGroupId: 200070020
     Id: 200070030
     CharacterId: 20007
     MessageCondition: Answer
@@ -86,13 +92,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 학생은 아닌 것 같은데…….
-    MessageJP: どこかで会ったことある……？
-    MessageCN: 我们在哪里见过吗……？
-    MessageEN: I don't think you're a student...
-    MessageTH: ไม่เหมือนนักเรียนของที่นี่เลยนะ...
-    MessageTW: 在哪裡見過……？
-  - MessageGroupId: 200070030
+  - MessageKR: 쉬잇.
+    MessageJP: ふふっ
+    MessageCN: 呵呵
+    MessageEN: Shush.
+    MessageTH: ชู่ว!
+    MessageTW: 呵呵
+    MessageGroupId: 200070030
     Id: 200070040
     CharacterId: 20007
     MessageCondition: Feedback
@@ -104,13 +110,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 쉬잇.
-    MessageJP: ふふっ
-    MessageCN: 呵呵
-    MessageEN: Shush.
-    MessageTH: ชู่ว!
-    MessageTW: 呵呵
-  - MessageGroupId: 200070030
+  - MessageKR: 지금 여기서는 말씀드릴 수 없어요.
+    MessageJP: できればご説明したいところなのですが……それはまた後ほど
+    MessageCN: 如果可以的话我也想向您说明情况……但还是稍后再说吧
+    MessageEN: I can't tell you right now.
+    MessageTH: ตอนนี้ฉันคงเล่าให้ฟังไม่ได้ค่ะ
+    MessageTW: 如果可以的話，我也很想說明……但晚點再說吧
+    MessageGroupId: 200070030
     Id: 200070050
     CharacterId: 20007
     MessageCondition: Feedback
@@ -122,13 +128,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 여기서는 말씀드릴 수 없어요.
-    MessageJP: できればご説明したいところなのですが……それはまた後ほど
-    MessageCN: 如果可以的话我也想向您说明情况……但还是稍后再说吧
-    MessageEN: I can't tell you right now.
-    MessageTH: ตอนนี้ฉันคงเล่าให้ฟังไม่ได้ค่ะ
-    MessageTW: 如果可以的話，我也很想說明……但晚點再說吧
-  - MessageGroupId: 200070040
+  - MessageKR: 키보토스의 해결사이자, 학생들이 믿고 의지한다는 선생님께 부탁이 있어요.
+    MessageJP: 数多くの生徒たちの信頼を集め、頼れる存在として認識されている……そして、キヴォトス全体におけるフィクサーである先生に、お願いがあるんです
+    MessageCN: 集众多学生的信赖于一身的、被认为值得依赖的……以及，以基沃托斯的调停者身份存在的老师，我想请您帮助我
+    MessageEN:
+      I have a request for you, the problem solver of Kivotos, and the Sensei
+      the students trust and depend on.
+    MessageTH: "แต่ฉันมีเรื่องที่จะขอร้องนักแก้ปัญหาของคิโวทอส
+
+      และเป็นที่นับถือของนักเรียนสักหน่อยค่ะ"
+    MessageTW: 得到了眾多學生的信賴，被認為是可以依靠的存在……因此，我想請對奇普托斯全體來說是調停者的老師幫一個忙
+    MessageGroupId: 200070040
     Id: 200070060
     CharacterId: 20007
     MessageCondition: Feedback
@@ -140,17 +150,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 키보토스의 해결사이자, 학생들이 믿고 의지한다는 선생님께 부탁이 있어요.
-    MessageJP: 数多くの生徒たちの信頼を集め、頼れる存在として認識されている……そして、キヴォトス全体におけるフィクサーである先生に、お願いがあるんです
-    MessageCN: 集众多学生的信赖于一身的、被认为值得依赖的……以及，以基沃托斯的调停者身份存在的老师，我想请您帮助我
-    MessageEN:
-      I have a request for you, the problem solver of Kivotos, and the Sensei
-      the students trust and depend on.
-    MessageTH: "แต่ฉันมีเรื่องที่จะขอร้องนักแก้ปัญหาของคิโวทอส
+  - MessageKR: 해가 진 뒤 제가 지정한 장소로 나와주세요.
+    MessageJP: 日が暮れた頃に、この後私が指定する場所に来ていただけますか？
+    MessageCN: 日落时分，能请您到我指定的地方来吗？
+    MessageEN: Please come out to the place I designated after sunset.
+    MessageTH: "หลังพระอาทิตย์ตกแล้ว รบกวนช่วยมา
 
-      และเป็นที่นับถือของนักเรียนสักหน่อยค่ะ"
-    MessageTW: 得到了眾多學生的信賴，被認為是可以依靠的存在……因此，我想請對奇普托斯全體來說是調停者的老師幫一個忙
-  - MessageGroupId: 200070040
+      ตามสถานที่ที่ฉันส่งไปด้วยนะคะ"
+    MessageTW: 日落時分，可以來我指定的地點嗎？
+    MessageGroupId: 200070040
     Id: 200070070
     CharacterId: 20007
     MessageCondition: Feedback
@@ -162,15 +170,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 해가 진 뒤 제가 지정한 장소로 나와주세요.
-    MessageJP: 日が暮れた頃に、この後私が指定する場所に来ていただけますか？
-    MessageCN: 日落时分，能请您到我指定的地方来吗？
-    MessageEN: Please come out to the place I designated after sunset.
-    MessageTH: "หลังพระอาทิตย์ตกแล้ว รบกวนช่วยมา
-
-      ตามสถานที่ที่ฉันส่งไปด้วยนะคะ"
-    MessageTW: 日落時分，可以來我指定的地點嗎？
-  - MessageGroupId: 200070050
+  - MessageKR: 다른 사람에게는 절대로 말씀하시면 안 돼요!
+    MessageJP: あ、他の方にはどうかご内密でお願いしますね！
+    MessageCN: 啊，请务必对其他人保密哦！
+    MessageEN: Do not tell anyone else about this!
+    MessageTH: ห้ามบอกใครเด็ดขาดเลยนะคะ!
+    MessageTW: 啊，請對其他人保密唷！
+    MessageGroupId: 200070050
     Id: 200070080
     CharacterId: 20007
     MessageCondition: Feedback
@@ -182,13 +188,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다른 사람에게는 절대로 말씀하시면 안 돼요!
-    MessageJP: あ、他の方にはどうかご内密でお願いしますね！
-    MessageCN: 啊，请务必对其他人保密哦！
-    MessageEN: Do not tell anyone else about this!
-    MessageTH: ห้ามบอกใครเด็ดขาดเลยนะคะ!
-    MessageTW: 啊，請對其他人保密唷！
-  - MessageGroupId: 200070060
+  - MessageKR: 선생님, 전에 연락드렸던 미쿠입니다.
+    MessageJP: 先生、こんにちは！
+    MessageCN: 老师，您好！
+    MessageEN: Sensei, this is Miku. I contacted you earlier.
+    MessageTH: "คุณครูคะ มิกุเองนะคะ
+
+      ที่เคยติดต่อไปก่อนหน้านี้ค่ะ"
+    MessageTW: 老師，你好！
+    MessageGroupId: 200070060
     Id: 200070090
     CharacterId: 20007
     MessageCondition: FavorRankUp
@@ -200,15 +208,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 전에 연락드렸던 미쿠입니다.
-    MessageJP: 先生、こんにちは！
-    MessageCN: 老师，您好！
-    MessageEN: Sensei, this is Miku. I contacted you earlier.
-    MessageTH: "คุณครูคะ มิกุเองนะคะ
-
-      ที่เคยติดต่อไปก่อนหน้านี้ค่ะ"
-    MessageTW: 老師，你好！
-  - MessageGroupId: 200070070
+  - MessageKR: 공연 준비는 잘 되어가고 있어?
+    MessageJP: あれからどう？
+    MessageCN: 在那之后怎么样了？
+    MessageEN: Are the performance preparations going well?
+    MessageTH: เตรียมการแสดงไปได้สวยรึเปล่า?
+    MessageTW: 後來怎麼樣了？
+    MessageGroupId: 200070070
     Id: 200070100
     CharacterId: 20007
     MessageCondition: Answer
@@ -220,13 +226,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 공연 준비는 잘 되어가고 있어?
-    MessageJP: あれからどう？
-    MessageCN: 在那之后怎么样了？
-    MessageEN: Are the performance preparations going well?
-    MessageTH: เตรียมการแสดงไปได้สวยรึเปล่า?
-    MessageTW: 後來怎麼樣了？
-  - MessageGroupId: 200070080
+  - MessageKR: 그럭저럭 괜찮게 진행되는 중이에요.
+    MessageJP: あ、はい。そちらの方は何とか
+    MessageCN: 啊，是这样的。演出那边我会想想办法
+    MessageEN: They're going pretty well.
+    MessageTH: ทุกอย่างเป็นไปด้วยดีเลยค่ะ
+    MessageTW: 啊，是的。我這邊會想點辦法
+    MessageGroupId: 200070080
     Id: 200070110
     CharacterId: 20007
     MessageCondition: Feedback
@@ -238,13 +244,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럭저럭 괜찮게 진행되는 중이에요.
-    MessageJP: あ、はい。そちらの方は何とか
-    MessageCN: 啊，是这样的。演出那边我会想想办法
-    MessageEN: They're going pretty well.
-    MessageTH: ทุกอย่างเป็นไปด้วยดีเลยค่ะ
-    MessageTW: 啊，是的。我這邊會想點辦法
-  - MessageGroupId: 200070080
+  - MessageKR: ……목소리가 나오지 않는 것만 제외한다면요.
+    MessageJP: まだ、声は出ませんが……
+    MessageCN: 就是，我还是发不出声音……
+    MessageEN: "...Except that my voice isn't coming out."
+    MessageTH: ยกเว้นแต่เรื่องที่ฉันเปล่งเสียงไม่ได้ค่ะ...
+    MessageTW: 雖然還發不出聲音……
+    MessageGroupId: 200070080
     Id: 200070120
     CharacterId: 20007
     MessageCondition: Feedback
@@ -256,13 +262,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……목소리가 나오지 않는 것만 제외한다면요.
-    MessageJP: まだ、声は出ませんが……
-    MessageCN: 就是，我还是发不出声音……
-    MessageEN: "...Except that my voice isn't coming out."
-    MessageTH: ยกเว้นแต่เรื่องที่ฉันเปล่งเสียงไม่ได้ค่ะ...
-    MessageTW: 雖然還發不出聲音……
-  - MessageGroupId: 200070090
+  - MessageKR: 혹시 그 이후로 목소리를 되돌리는 방법에 대해 알아내신 게 있으신가요?
+    MessageJP: あの後、何か見つかりましたか？
+    MessageCN: 老师呢，上次见面之后有找到什么办法吗？
+    MessageEN: Have you figured out a way to get my voice back since then?
+    MessageTH: "คือว่าคุณครูหาวิธีที่ช่วยทำให้เสียง
+
+      กลับมาได้เจอบ้างหรือเปล่าคะ"
+    MessageTW: 在那之後，有什麼發現嗎？
+    MessageGroupId: 200070090
     Id: 200070130
     CharacterId: 20007
     MessageCondition: Feedback
@@ -274,15 +282,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 그 이후로 목소리를 되돌리는 방법에 대해 알아내신 게 있으신가요?
-    MessageJP: あの後、何か見つかりましたか？
-    MessageCN: 老师呢，上次见面之后有找到什么办法吗？
-    MessageEN: Have you figured out a way to get my voice back since then?
-    MessageTH: "คือว่าคุณครูหาวิธีที่ช่วยทำให้เสียง
-
-      กลับมาได้เจอบ้างหรือเปล่าคะ"
-    MessageTW: 在那之後，有什麼發現嗎？
-  - MessageGroupId: 200070100
+  - MessageKR: 음, 여러 가지를 조사해 봤어.
+    MessageJP: うん。調べてみた感じ、幾つか良さそうな方法が
+    MessageCN: 嗯。我稍微调查了一下，找到了几种看起来不错的办法
+    MessageEN: Well, I did some research.
+    MessageTH: อืม... ครูลองหาดูหลายๆ วิธีแล้วนะ
+    MessageTW: 嗯。調查了一下，有幾個看起來不錯的方法
+    MessageGroupId: 200070100
     Id: 200070140
     CharacterId: 20007
     MessageCondition: Answer
@@ -294,13 +300,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음, 여러 가지를 조사해 봤어.
-    MessageJP: うん。調べてみた感じ、幾つか良さそうな方法が
-    MessageCN: 嗯。我稍微调查了一下，找到了几种看起来不错的办法
-    MessageEN: Well, I did some research.
-    MessageTH: อืม... ครูลองหาดูหลายๆ วิธีแล้วนะ
-    MessageTW: 嗯。調查了一下，有幾個看起來不錯的方法
-  - MessageGroupId: 200070110
+  - MessageKR: 역시 선생님이시네요!
+    MessageJP: 本当ですか！？さすがは先生です！
+    MessageCN: 真的吗！？不愧是老师！
+    MessageEN: I knew I could count on you!
+    MessageTH: สมกับเป็นคุณครูจริงๆ เลยค่ะ!
+    MessageTW: 真的嗎！？不愧是老師！
+    MessageGroupId: 200070110
     Id: 200070150
     CharacterId: 20007
     MessageCondition: Feedback
@@ -312,13 +318,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 선생님이시네요!
-    MessageJP: 本当ですか！？さすがは先生です！
-    MessageCN: 真的吗！？不愧是老师！
-    MessageEN: I knew I could count on you!
-    MessageTH: สมกับเป็นคุณครูจริงๆ เลยค่ะ!
-    MessageTW: 真的嗎！？不愧是老師！
-  - MessageGroupId: 200070110
+  - MessageKR: 그럼 오후 연습이 끝난 뒤에 잠깐 뵐 수 있을까요?
+    MessageJP: では、午後の練習が終わった後にでも少し会えますでしょうか？
+    MessageCN: 那么，下午我练习结束之后能和老师见个面吗？
+    MessageEN: Then can I see you once afternoon practice is over?
+    MessageTH: "ถ้างั้นหลังจากซ้อมช่วงบ่ายเสร็จแล้ว
+
+      คุณครูมาพบฉันหน่อยได้มั้ยคะ?"
+    MessageTW: 那麼，下午的練習結束後可以見個面嗎？
+    MessageGroupId: 200070110
     Id: 200070160
     CharacterId: 20007
     MessageCondition: Feedback
@@ -330,15 +338,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 오후 연습이 끝난 뒤에 잠깐 뵐 수 있을까요?
-    MessageJP: では、午後の練習が終わった後にでも少し会えますでしょうか？
-    MessageCN: 那么，下午我练习结束之后能和老师见个面吗？
-    MessageEN: Then can I see you once afternoon practice is over?
-    MessageTH: "ถ้างั้นหลังจากซ้อมช่วงบ่ายเสร็จแล้ว
-
-      คุณครูมาพบฉันหน่อยได้มั้ยคะ?"
-    MessageTW: 那麼，下午的練習結束後可以見個面嗎？
-  - MessageGroupId: 200070120
+  - MessageKR: 라이브 하우스의 대기실에서 기다리고 있겠습니다.
+    MessageJP: ライブハウスの控室で待ってますので
+    MessageCN: 我会在live house的休息室等老师的
+    MessageEN: I will be waiting for you in the waiting room of the Live House.
+    MessageTH: ฉันจะรอคุณครูอยู่ที่ห้องรับรองของไลฟ์เฮาส์นะคะ
+    MessageTW: 我在Live House的休息室等你
+    MessageGroupId: 200070120
     Id: 200070170
     CharacterId: 20007
     MessageCondition: Feedback
@@ -350,13 +356,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 라이브 하우스의 대기실에서 기다리고 있겠습니다.
-    MessageJP: ライブハウスの控室で待ってますので
-    MessageCN: 我会在live house的休息室等老师的
-    MessageEN: I will be waiting for you in the waiting room of the Live House.
-    MessageTH: ฉันจะรอคุณครูอยู่ที่ห้องรับรองของไลฟ์เฮาส์นะคะ
-    MessageTW: 我在Live House的休息室等你
-  - MessageGroupId: 200070130
+  - MessageKR: 벌써 공연이 일주일 앞으로 다가왔네요…….
+    MessageJP: ライブまで、あと一週間になってしまいました……
+    MessageCN: 距离live只剩一周了……
+    MessageEN: The show is only a week away already...
+    MessageTH: อีกหนึ่งอาทิตย์ก็จะถึงวันแสดงแล้วค่ะ...
+    MessageTW: 離現場演出只剩一週了……
+    MessageGroupId: 200070130
     Id: 200070180
     CharacterId: 20007
     MessageCondition: FavorRankUp
@@ -368,13 +374,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 벌써 공연이 일주일 앞으로 다가왔네요…….
-    MessageJP: ライブまで、あと一週間になってしまいました……
-    MessageCN: 距离live只剩一周了……
-    MessageEN: The show is only a week away already...
-    MessageTH: อีกหนึ่งอาทิตย์ก็จะถึงวันแสดงแล้วค่ะ...
-    MessageTW: 離現場演出只剩一週了……
-  - MessageGroupId: 200070140
+  - MessageKR: 노래는 여전히 부를 수 없어?
+    MessageJP: 喉の調子は変わらず？
+    MessageCN: 嗓子还是和之前一样唱不出来？
+    MessageEN: Are you still not able to sing?
+    MessageTH: ยังร้องเพลงไม่ได้เลยเหรอ?
+    MessageTW: 喉嚨還是一樣嗎？
+    MessageGroupId: 200070140
     Id: 200070190
     CharacterId: 20007
     MessageCondition: Answer
@@ -386,13 +392,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 노래는 여전히 부를 수 없어?
-    MessageJP: 喉の調子は変わらず？
-    MessageCN: 嗓子还是和之前一样唱不出来？
-    MessageEN: Are you still not able to sing?
-    MessageTH: ยังร้องเพลงไม่ได้เลยเหรอ?
-    MessageTW: 喉嚨還是一樣嗎？
-  - MessageGroupId: 200070150
+  - MessageKR: 네. 어떤 수를 써도 목소리가 돌아오질 않아서…….
+    MessageJP: はい……
+    MessageCN: 嗯……
+    MessageEN: Yes. No matter how hard I try, my voice won't come back...
+    MessageTH: "ค่ะ ไม่ว่าจะทำยังไง
+
+      ฉันก็เปล่งเสียงไม่ได้เลย..."
+    MessageTW: 是……
+    MessageGroupId: 200070150
     Id: 200070200
     CharacterId: 20007
     MessageCondition: Feedback
@@ -404,15 +412,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네. 어떤 수를 써도 목소리가 돌아오질 않아서…….
-    MessageJP: はい……
-    MessageCN: 嗯……
-    MessageEN: Yes. No matter how hard I try, my voice won't come back...
-    MessageTH: "ค่ะ ไม่ว่าจะทำยังไง
-
-      ฉันก็เปล่งเสียงไม่ได้เลย..."
-    MessageTW: 是……
-  - MessageGroupId: 200070150
+  - MessageKR: 아무래도 이번 공연은 취소해야 할 것 같네요.
+    MessageJP: やはりもう一度、中止にできないか聞いてみた方が良いでしょうか
+    MessageCN: 果然还是再问一下能不能终止演出比较好吧
+    MessageEN: It looks like we have to cancel the show.
+    MessageTH: คงจะต้องยกเลิกคอนเสิร์ตครั้งนี้แล้วค่ะ
+    MessageTW: 果然還是再問一下能不能中止比較好吧
+    MessageGroupId: 200070150
     Id: 200070210
     CharacterId: 20007
     MessageCondition: Feedback
@@ -424,13 +430,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무래도 이번 공연은 취소해야 할 것 같네요.
-    MessageJP: やはりもう一度、中止にできないか聞いてみた方が良いでしょうか
-    MessageCN: 果然还是再问一下能不能终止演出比较好吧
-    MessageEN: It looks like we have to cancel the show.
-    MessageTH: คงจะต้องยกเลิกคอนเสิร์ตครั้งนี้แล้วค่ะ
-    MessageTW: 果然還是再問一下能不能中止比較好吧
-  - MessageGroupId: 200070160
+  - MessageKR: 그건 아쉽네.
+    MessageJP: まだ何か、やり方は……
+    MessageCN: 一定会有办法的……
+    MessageEN: That's a bummer.
+    MessageTH: ถ้างั้นก็น่าเสียดายนะ
+    MessageTW: 還有什麼方法……
+    MessageGroupId: 200070160
     Id: 200070220
     CharacterId: 20007
     MessageCondition: Answer
@@ -442,13 +448,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그건 아쉽네.
-    MessageJP: まだ何か、やり方は……
-    MessageCN: 一定会有办法的……
-    MessageEN: That's a bummer.
-    MessageTH: ถ้างั้นก็น่าเสียดายนะ
-    MessageTW: 還有什麼方法……
-  - MessageGroupId: 200070160
+  - MessageKR: 나도 미쿠의 공연을 기대했는데.
+    MessageJP: 私もミクのライブが見たいし……どうにかして何か良い方法を……
+    MessageCN: 我也很期待未来的演唱会……一定会有办法的……
+    MessageEN: I was also looking forward to your show, Miku.
+    MessageTH: ครูตั้งตารอดูคอนเสิร์ตของมิกุอยู่เลย
+    MessageTW: 我也想看未來的現場演出……難道就沒有什麼好方法……
+    MessageGroupId: 200070160
     Id: 200070230
     CharacterId: 20007
     MessageCondition: Answer
@@ -460,13 +466,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나도 미쿠의 공연을 기대했는데.
-    MessageJP: 私もミクのライブが見たいし……どうにかして何か良い方法を……
-    MessageCN: 我也很期待未来的演唱会……一定会有办法的……
-    MessageEN: I was also looking forward to your show, Miku.
-    MessageTH: ครูตั้งตารอดูคอนเสิร์ตของมิกุอยู่เลย
-    MessageTW: 我也想看未來的現場演出……難道就沒有什麼好方法……
-  - MessageGroupId: 200070170
+  - MessageKR: 저, 선생님.
+    MessageJP: あの、先生
+    MessageCN: 那个，老师
+    MessageEN: Uh, Sensei?
+    MessageTH: คือ... คุณครูคะ
+    MessageTW: 那個，老師
+    MessageGroupId: 200070170
     Id: 200070240
     CharacterId: 20007
     MessageCondition: Feedback
@@ -478,13 +484,17 @@ content:
     FeedbackTimeMillisec: 2500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저, 선생님.
-    MessageJP: あの、先生
-    MessageCN: 那个，老师
-    MessageEN: Uh, Sensei?
-    MessageTH: คือ... คุณครูคะ
-    MessageTW: 那個，老師
-  - MessageGroupId: 200070170
+  - MessageKR: 괜찮으시면 시내 뒤편의 골목에서 잠깐 뵐 수 있을까요?
+    MessageJP: よろしければ今から、お会いできませんか？
+    MessageCN: 要是老师方便的话，现在可以见个面吗？
+    MessageEN:
+      If it's okay with you, can I see you for a moment in the alley behind
+      the city?
+    MessageTH: "ถ้าคุณครูสะดวก มาพบฉันที่ตรอกเล็กๆ
+
+      ตรงชานเมืองได้มั้ยคะ"
+    MessageTW: 如果可以的話，現在可以見面嗎？
+    MessageGroupId: 200070170
     Id: 200070250
     CharacterId: 20007
     MessageCondition: Feedback
@@ -496,17 +506,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮으시면 시내 뒤편의 골목에서 잠깐 뵐 수 있을까요?
-    MessageJP: よろしければ今から、お会いできませんか？
-    MessageCN: 要是老师方便的话，现在可以见个面吗？
-    MessageEN:
-      If it's okay with you, can I see you for a moment in the alley behind
-      the city?
-    MessageTH: "ถ้าคุณครูสะดวก มาพบฉันที่ตรอกเล็กๆ
-
-      ตรงชานเมืองได้มั้ยคะ"
-    MessageTW: 如果可以的話，現在可以見面嗎？
-  - MessageGroupId: 200070180
+  - MessageKR: 드리고 싶은 말씀이 있어요.
+    MessageJP: ちょっとお話したいことがありまして。路地裏でお待ちしてます
+    MessageCN: 我有些话想和老师说。我在巷子里等您
+    MessageEN: I have something I want to tell you.
+    MessageTH: ฉันมีเรื่องอยากจะบอกคุณครูค่ะ
+    MessageTW: 有點話想跟你說，我在小巷子內等著
+    MessageGroupId: 200070180
     Id: 200070260
     CharacterId: 20007
     MessageCondition: Feedback
@@ -518,13 +524,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 드리고 싶은 말씀이 있어요.
-    MessageJP: ちょっとお話したいことがありまして。路地裏でお待ちしてます
-    MessageCN: 我有些话想和老师说。我在巷子里等您
-    MessageEN: I have something I want to tell you.
-    MessageTH: ฉันมีเรื่องอยากจะบอกคุณครูค่ะ
-    MessageTW: 有點話想跟你說，我在小巷子內等著
-  - MessageGroupId: 200070190
+  - MessageKR: 선생님, 저번에 말씀하신 곡을 완성했어요.
+    MessageJP: 先生、曲が完成しました……！
+    MessageCN: 老师，我的曲子完成了……！
+    MessageEN: Sensei, I finished the song you mentioned last time.
+    MessageTH: คุณครูคะ ฉันแต่งเพลงเสรจแล้วนะคะ
+    MessageTW: 老師，曲子完成了……！
+    MessageGroupId: 200070190
     Id: 200070270
     CharacterId: 20007
     MessageCondition: FavorRankUp
@@ -536,13 +542,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 저번에 말씀하신 곡을 완성했어요.
-    MessageJP: 先生、曲が完成しました……！
-    MessageCN: 老师，我的曲子完成了……！
-    MessageEN: Sensei, I finished the song you mentioned last time.
-    MessageTH: คุณครูคะ ฉันแต่งเพลงเสรจแล้วนะคะ
-    MessageTW: 老師，曲子完成了……！
-  - MessageGroupId: 200070200
+  - MessageKR: 아직 부족한 부분이 많긴 하지만 분명 이 곡이라면……
+    MessageJP: 色々と未熟な感じではありますが……
+    MessageCN: 虽然有些青涩……
+    MessageEN: It's not perfect yet, but I'm sure with this song...
+    MessageTH: "ถึงจะยังไม่สมบูรณ์เท่าไร
+
+      แต่ถ้าเป็นเพลงนี้ล่ะก็..."
+    MessageTW: 雖然感覺還有很多不成熟的地方……
+    MessageGroupId: 200070200
     Id: 200070280
     CharacterId: 20007
     MessageCondition: None
@@ -554,15 +562,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아직 부족한 부분이 많긴 하지만 분명 이 곡이라면……
-    MessageJP: 色々と未熟な感じではありますが……
-    MessageCN: 虽然有些青涩……
-    MessageEN: It's not perfect yet, but I'm sure with this song...
-    MessageTH: "ถึงจะยังไม่สมบูรณ์เท่าไร
+  - MessageKR: 관객 여러분께 제 마음을 전달할 수 있을 거예요.
+    MessageJP: 心を込めて、作ってみました
+    MessageCN: 但这是我饱含真心创作的曲子
+    MessageEN: I'll be able to convey my feelings to the audience.
+    MessageTH: "ฉันก็คงจะถ่ายทอดความรู้สึกผ่านเสียงเพลง
 
-      แต่ถ้าเป็นเพลงนี้ล่ะก็..."
-    MessageTW: 雖然感覺還有很多不成熟的地方……
-  - MessageGroupId: 200070200
+      ไปถึงแฟนๆ ทุกคนได้แน่ค่ะ"
+    MessageTW: 但這是我傾注心力製作的
+    MessageGroupId: 200070200
     Id: 200070290
     CharacterId: 20007
     MessageCondition: None
@@ -574,15 +582,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 관객 여러분께 제 마음을 전달할 수 있을 거예요.
-    MessageJP: 心を込めて、作ってみました
-    MessageCN: 但这是我饱含真心创作的曲子
-    MessageEN: I'll be able to convey my feelings to the audience.
-    MessageTH: "ฉันก็คงจะถ่ายทอดความรู้สึกผ่านเสียงเพลง
-
-      ไปถึงแฟนๆ ทุกคนได้แน่ค่ะ"
-    MessageTW: 但這是我傾注心力製作的
-  - MessageGroupId: 200070210
+  - MessageKR: 수고 많았어.
+    MessageJP: お疲れ様！
+    MessageCN: 辛苦了！
+    MessageEN: Great job today.
+    MessageTH: พยายามได้ดีมากเลยนะ
+    MessageTW: 辛苦了！
+    MessageGroupId: 200070210
     Id: 200070300
     CharacterId: 20007
     MessageCondition: Answer
@@ -594,13 +600,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수고 많았어.
-    MessageJP: お疲れ様！
-    MessageCN: 辛苦了！
-    MessageEN: Great job today.
-    MessageTH: พยายามได้ดีมากเลยนะ
-    MessageTW: 辛苦了！
-  - MessageGroupId: 200070210
+  - MessageKR: 분명 다들 좋아할 거야.
+    MessageJP: きっと大丈夫、みんな喜んでくれるよ
+    MessageCN: 一定没问题，大家都会很高兴的哦
+    MessageEN: I'm sure everyone will love it.
+    MessageTH: ทุกคนต้องชอบแน่ๆ
+    MessageTW: 一定沒問題，大家都會很高興的唷
+    MessageGroupId: 200070210
     Id: 200070310
     CharacterId: 20007
     MessageCondition: Answer
@@ -612,13 +618,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 분명 다들 좋아할 거야.
-    MessageJP: きっと大丈夫、みんな喜んでくれるよ
-    MessageCN: 一定没问题，大家都会很高兴的哦
-    MessageEN: I'm sure everyone will love it.
-    MessageTH: ทุกคนต้องชอบแน่ๆ
-    MessageTW: 一定沒問題，大家都會很高興的唷
-  - MessageGroupId: 200070220
+  - MessageKR: 하지만 정말로 괜찮을까요?
+    MessageJP: ですが、本当に大丈夫でしょうか……？
+    MessageCN: 但是，真的没问题吗……？
+    MessageEN: Do you really think it'll be okay?
+    MessageTH: แต่จะไม่เป็นอะไรจริงๆ เหรอคะ?
+    MessageTW: 但是，真的沒問題嗎……？
+    MessageGroupId: 200070220
     Id: 200070320
     CharacterId: 20007
     MessageCondition: Feedback
@@ -630,25 +636,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 정말로 괜찮을까요?
-    MessageJP: ですが、本当に大丈夫でしょうか……？
-    MessageCN: 但是，真的没问题吗……？
-    MessageEN: Do you really think it'll be okay?
-    MessageTH: แต่จะไม่เป็นอะไรจริงๆ เหรอคะ?
-    MessageTW: 但是，真的沒問題嗎……？
-  - MessageGroupId: 200070230
-    Id: 200070330
-    CharacterId: 20007
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200070240
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 곡을 넣을 수 있는 라이브 하우스의 공연 시설이라면 엄중하게 관리되고 있을 텐데,
+  - MessageKR: 곡을 넣을 수 있는 라이브 하우스의 공연 시설이라면 엄중하게 관리되고 있을 텐데,
     MessageJP: 普通にお願いしても難しそうですし……
     MessageCN: 要是就这样申请曲目变动的话应该会很困难……
     MessageEN:
@@ -660,7 +648,25 @@ content:
 
       อย่างเข้มงวดมากแน่ๆ ค่ะ"
     MessageTW: 就這樣去拜託工作人員，好像也很困難……
-  - MessageGroupId: 200070230
+    MessageGroupId: 200070230
+    Id: 200070330
+    CharacterId: 20007
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200070240
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 지금에 와서 새로운 곡으로 바꾸는 건 어렵지 않을까요?
+    MessageJP: こっそりやるにも、セキュリティがしっかりしてますし……
+    MessageCN: 就算想悄悄改动，节目单也是有安全系统保护的……
+    MessageEN: so wouldn't it be difficult to change to a new song now?
+    MessageTH: คงเข้าไปเปลี่ยนเพลงง่ายๆ ไม่ได้หรอกนะคะ
+    MessageTW: 即使是偷偷來，保安也很嚴密……
+    MessageGroupId: 200070230
     Id: 200070340
     CharacterId: 20007
     MessageCondition: Feedback
@@ -672,13 +678,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금에 와서 새로운 곡으로 바꾸는 건 어렵지 않을까요?
-    MessageJP: こっそりやるにも、セキュリティがしっかりしてますし……
-    MessageCN: 就算想悄悄改动，节目单也是有安全系统保护的……
-    MessageEN: so wouldn't it be difficult to change to a new song now?
-    MessageTH: คงเข้าไปเปลี่ยนเพลงง่ายๆ ไม่ได้หรอกนะคะ
-    MessageTW: 即使是偷偷來，保安也很嚴密……
-  - MessageGroupId: 200070240
+  - MessageKR: 그건 걱정하지 마.
+    MessageJP: 任せて
+    MessageCN: 交给我吧
+    MessageEN: Don't worry about that.
+    MessageTH: เรื่องนั้นไม่ต้องห่วงหรอก
+    MessageTW: 交給我吧
+    MessageGroupId: 200070240
     Id: 200070350
     CharacterId: 20007
     MessageCondition: Answer
@@ -690,13 +696,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그건 걱정하지 마.
-    MessageJP: 任せて
-    MessageCN: 交给我吧
-    MessageEN: Don't worry about that.
-    MessageTH: เรื่องนั้นไม่ต้องห่วงหรอก
-    MessageTW: 交給我吧
-  - MessageGroupId: 200070240
+  - MessageKR: 샬레에는 해킹도 엔지니어링도 유능한 학생들이 잔뜩 있거든.
+    MessageJP: シャーレには、ハッキングとかエンジニアリングが得意な生徒がたくさんいるから
+    MessageCN: 毕竟夏莱也有很多对入侵和工程很擅长的学生呢
+    MessageEN:
+      There are a lot of students at Schale who are great at hacking and
+      engineering.
+    MessageTH: "ชาเล่ต์น่ะมีนักเรียนที่เก่งเรื่องวิศวกรรม
+
+      หรือเรื่องแฮ็กอยู่เยอะเลยนะ"
+    MessageTW: 別擔心，夏萊有很多擅長駭客和工程的學生
+    MessageGroupId: 200070240
     Id: 200070360
     CharacterId: 20007
     MessageCondition: Answer
@@ -708,17 +718,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레에는 해킹도 엔지니어링도 유능한 학생들이 잔뜩 있거든.
-    MessageJP: シャーレには、ハッキングとかエンジニアリングが得意な生徒がたくさんいるから
-    MessageCN: 毕竟夏莱也有很多对入侵和工程很擅长的学生呢
-    MessageEN:
-      There are a lot of students at Schale who are great at hacking and
-      engineering.
-    MessageTH: "ชาเล่ต์น่ะมีนักเรียนที่เก่งเรื่องวิศวกรรม
+  - MessageKR: 저, 지금에 와서 여쭈는 것도 이상하지만…….
+    MessageJP: えっと、今さらなのですが……
+    MessageCN: 那个，虽然现在问可能有点晚……
+    MessageEN: Um, so it's strange for me to ask about this now, but...
+    MessageTH: "คะ...คือมาถามตอนนี้ก็อาจดูเสียมารยาท
 
-      หรือเรื่องแฮ็กอยู่เยอะเลยนะ"
-    MessageTW: 別擔心，夏萊有很多擅長駭客和工程的學生
-  - MessageGroupId: 200070250
+      สักหน่อย แต่ว่า..."
+    MessageTW: 那個，事到如今才問有點晚了……
+    MessageGroupId: 200070250
     Id: 200070370
     CharacterId: 20007
     MessageCondition: Feedback
@@ -730,15 +738,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저, 지금에 와서 여쭈는 것도 이상하지만…….
-    MessageJP: えっと、今さらなのですが……
-    MessageCN: 那个，虽然现在问可能有点晚……
-    MessageEN: Um, so it's strange for me to ask about this now, but...
-    MessageTH: "คะ...คือมาถามตอนนี้ก็อาจดูเสียมารยาท
-
-      สักหน่อย แต่ว่า..."
-    MessageTW: 那個，事到如今才問有點晚了……
-  - MessageGroupId: 200070250
+  - MessageKR: 샬레는 무얼 하는 조직인가요?
+    MessageJP: シャーレって、いったい何の組織なんですか……？
+    MessageCN: 夏莱……到底是什么组织啊……？
+    MessageEN: What kind of organization is Schale?
+    MessageTH: ชาเล่ต์เป็นองค์กรแบบไหนเหรอคะ?
+    MessageTW: 夏萊，到底是什麼組織呢……？
+    MessageGroupId: 200070250
     Id: 200070380
     CharacterId: 20007
     MessageCondition: Feedback
@@ -750,9 +756,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레는 무얼 하는 조직인가요?
-    MessageJP: シャーレって、いったい何の組織なんですか……？
-    MessageCN: 夏莱……到底是什么组织啊……？
-    MessageEN: What kind of organization is Schale?
-    MessageTH: ชาเล่ต์เป็นองค์กรแบบไหนเหรอคะ?
-    MessageTW: 夏萊，到底是什麼組織呢……？

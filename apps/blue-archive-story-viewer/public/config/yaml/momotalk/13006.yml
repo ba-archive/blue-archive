@@ -1,44 +1,50 @@
 CharacterId: 13006
 translator: Lepra
 title:
-  - GroupId: 1300602
-    FavorScheduleId: 130062
-    CharacterId: 13006
-    TextJp: 小悪魔は遊ぶのがお好き
+  - TextJp: 小悪魔は遊ぶのがお好き
     TextCn: 小恶魔喜欢玩耍
     TextKr: 소악마는 노는 걸 좋아해
     TextEn: The Party Imp
     TextTh: ปีศาจน้อยชอบเล่นซุกซน
     TextTw: 小惡魔就是愛玩
-  - GroupId: 1300603
-    FavorScheduleId: 130063
+    GroupId: 1300602
+    FavorScheduleId: 130062
     CharacterId: 13006
-    TextJp: 人には言えない小悪魔の秘密
+  - TextJp: 人には言えない小悪魔の秘密
     TextCn: 小恶魔不可告人的秘密
     TextKr: 소악마의 형언할 수 없는 비밀
     TextEn: The Imp's Unspeakable Secret
     TextTh: ความลับที่พูดออกมาไม่ได้ของปีศาจน้อย
     TextTw: 小惡魔不可告人的秘密
-  - GroupId: 1300605
-    FavorScheduleId: 130065
+    GroupId: 1300603
+    FavorScheduleId: 130063
     CharacterId: 13006
-    TextJp: 小悪魔の趣味
+  - TextJp: 小悪魔の趣味
     TextCn: 小恶魔的兴趣
     TextKr: 소악마의 취미생활
     TextEn: The Imp's Hobby
     TextTh: งานอดิเรกของปีศาจน้อย
     TextTw: 小惡魔的興趣
-  - GroupId: 1300606
-    FavorScheduleId: 130066
+    GroupId: 1300605
+    FavorScheduleId: 130065
     CharacterId: 13006
-    TextJp: 誰かからの特別な依頼
+  - TextJp: 誰かからの特別な依頼
     TextCn: 来自某人的特别委托
     TextKr: 누군가의 특별한 의뢰
     TextEn: Someone's Special Request
     TextTh: คำขอพิเศษของใครบางคน
     TextTw: 來自某人的特別委託
+    GroupId: 1300606
+    FavorScheduleId: 130066
+    CharacterId: 13006
 content:
-  - MessageGroupId: 130060010
+  - MessageKR: 심심~해~! (つ ◑▽◑)つ
+    MessageJP: ひ～ま～！(つ ◑▽◑)つ
+    MessageCN: 好～无～聊～！(つ ◑▽◑)つ
+    MessageEN: I'm bored! (つ ◑▽◑)つ
+    MessageTH: เบื่อจังเลย~! (つ ◑▽◑)つ
+    MessageTW: 好～閒～！(つ ◑▽◑)つ
+    MessageGroupId: 130060010
     Id: 1072
     CharacterId: 13006
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 심심~해~! (つ ◑▽◑)つ
-    MessageJP: ひ～ま～！(つ ◑▽◑)つ
-    MessageCN: 好～无～聊～！(つ ◑▽◑)つ
-    MessageEN: I'm bored! (つ ◑▽◑)つ
-    MessageTH: เบื่อจังเลย~! (つ ◑▽◑)つ
-    MessageTW: 好～閒～！(つ ◑▽◑)つ
-  - MessageGroupId: 130060020
+  - MessageKR: 선생님, 지금 뭐 하고 있어?
+    MessageJP: 先生、今なにしてるの～？
+    MessageCN: 老师，你现在在干嘛～？
+    MessageEN: Sensei, what are you doing right now?
+    MessageTH: คุณครูทำอะไรอยู่เหรอ?
+    MessageTW: 老師，現在在做什麼～？
+    MessageGroupId: 130060020
     Id: 1073
     CharacterId: 13006
     MessageCondition: None
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 지금 뭐 하고 있어?
-    MessageJP: 先生、今なにしてるの～？
-    MessageCN: 老师，你现在在干嘛～？
-    MessageEN: Sensei, what are you doing right now?
-    MessageTH: คุณครูทำอะไรอยู่เหรอ?
-    MessageTW: 老師，現在在做什麼～？
-  - MessageGroupId: 130060030
+  - MessageKR: 업무 중이야.
+    MessageJP: 仕事中だよ
+    MessageCN: 在工作哦
+    MessageEN: I'm working.
+    MessageTH: ครูทำงานอยู่
+    MessageTW: 在工作唷
+    MessageGroupId: 130060030
     Id: 1074
     CharacterId: 13006
     MessageCondition: Answer
@@ -86,13 +92,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 업무 중이야.
-    MessageJP: 仕事中だよ
-    MessageCN: 在工作哦
-    MessageEN: I'm working.
-    MessageTH: ครูทำงานอยู่
-    MessageTW: 在工作唷
-  - MessageGroupId: 130060030
+  - MessageKR: 지금 숨 쉬고 있어.
+    MessageJP: 息してるよ
+    MessageCN: 在呼吸哦
+    MessageEN: I'm breathing.
+    MessageTH: ครูหายใจอยู่น่ะสิ
+    MessageTW: 在呼吸唷
+    MessageGroupId: 130060030
     Id: 1075
     CharacterId: 13006
     MessageCondition: Answer
@@ -104,13 +110,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 숨 쉬고 있어.
-    MessageJP: 息してるよ
-    MessageCN: 在呼吸哦
-    MessageEN: I'm breathing.
-    MessageTH: ครูหายใจอยู่น่ะสิ
-    MessageTW: 在呼吸唷
-  - MessageGroupId: 130060040
+  - MessageKR: 그래? 흐응. 그렇단 말이지.
+    MessageJP: そうなの？ふーん、そっか
+    MessageCN: 是吗？唔——嗯，这样啊
+    MessageEN: Yeah? Hm. Okay.
+    MessageTH: เหรอ? อืม... ก็น่าจะใช่นะ
+    MessageTW: 是嗎？哼嗯，這樣啊
+    MessageGroupId: 130060040
     Id: 1076
     CharacterId: 13006
     MessageCondition: Feedback
@@ -122,13 +128,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래? 흐응. 그렇단 말이지.
-    MessageJP: そうなの？ふーん、そっか
-    MessageCN: 是吗？唔——嗯，这样啊
-    MessageEN: Yeah? Hm. Okay.
-    MessageTH: เหรอ? อืม... ก็น่าจะใช่นะ
-    MessageTW: 是嗎？哼嗯，這樣啊
-  - MessageGroupId: 130060040
+  - MessageKR: 그럼 방해하면 안 되겠네.
+    MessageJP: それは邪魔しちゃダメだね
+    MessageCN: 那我就不能打扰老师了呢
+    MessageEN: Then I guess I shouldn't interrupt you.
+    MessageTH: งั้นเค้าไม่กวนดีกว่า
+    MessageTW: 那可不能打擾你呀
+    MessageGroupId: 130060040
     Id: 1077
     CharacterId: 13006
     MessageCondition: Feedback
@@ -140,13 +146,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 방해하면 안 되겠네.
-    MessageJP: それは邪魔しちゃダメだね
-    MessageCN: 那我就不能打扰老师了呢
-    MessageEN: Then I guess I shouldn't interrupt you.
-    MessageTH: งั้นเค้าไม่กวนดีกว่า
-    MessageTW: 那可不能打擾你呀
-  - MessageGroupId: 130060040
+  - MessageKR: 응, 열심히 일해. 선생님!
+    MessageJP: じゃ、頑張ってねー先生！
+    MessageCN: 那么，老师加油哦～！
+    MessageEN: All right! Work hard, Sensei!
+    MessageTH: ตั้งใจทำงานนะคุณครู!
+    MessageTW: 那麼，加油哦～老師！
+    MessageGroupId: 130060040
     Id: 1078
     CharacterId: 13006
     MessageCondition: Feedback
@@ -158,13 +164,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 열심히 일해. 선생님!
-    MessageJP: じゃ、頑張ってねー先生！
-    MessageCN: 那么，老师加油哦～！
-    MessageEN: All right! Work hard, Sensei!
-    MessageTH: ตั้งใจทำงานนะคุณครู!
-    MessageTW: 那麼，加油哦～老師！
-  - MessageGroupId: 130060050
+  - MessageKR: 아하하하!!
+    MessageJP: あははは！！
+    MessageCN: 啊哈哈哈！！
+    MessageEN: Ahahaha!
+    MessageTH: อะฮ่ะฮ่ะฮ่า!!
+    MessageTW: 啊哈哈哈！！
+    MessageGroupId: 130060050
     Id: 1079
     CharacterId: 13006
     MessageCondition: Feedback
@@ -176,13 +182,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아하하하!!
-    MessageJP: あははは！！
-    MessageCN: 啊哈哈哈！！
-    MessageEN: Ahahaha!
-    MessageTH: อะฮ่ะฮ่ะฮ่า!!
-    MessageTW: 啊哈哈哈！！
-  - MessageGroupId: 130060050
+  - MessageKR: 그렇구나~ 응! 숨 쉬는 건 완전 중요하지!
+    MessageJP: そっか～うんうん！息するのめっちゃ大事だよね！
+    MessageCN: 是吗～嗯嗯！呼吸很重要呢！
+    MessageEN: I see! Yeah, breathing is really important!
+    MessageTH: "อะไรของคุณครูเนี่ย! แต่การหายใจก็
+
+      เป็นงานสำคัญ"
+    MessageTW: 這樣啊～嗯嗯！呼吸是非常重要的！
+    MessageGroupId: 130060050
     Id: 1080
     CharacterId: 13006
     MessageCondition: Feedback
@@ -194,15 +202,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇구나~ 응! 숨 쉬는 건 완전 중요하지!
-    MessageJP: そっか～うんうん！息するのめっちゃ大事だよね！
-    MessageCN: 是吗～嗯嗯！呼吸很重要呢！
-    MessageEN: I see! Yeah, breathing is really important!
-    MessageTH: "อะไรของคุณครูเนี่ย! แต่การหายใจก็
-
-      เป็นงานสำคัญ"
-    MessageTW: 這樣啊～嗯嗯！呼吸是非常重要的！
-  - MessageGroupId: 130060050
+  - MessageKR: 나도 열심히 응원할게. 선생님.
+    MessageJP: 私も呼吸の応援、してるからね。先生♪
+    MessageCN: 我也会为老师坚持呼吸而应援的♪
+    MessageEN: I'll be cheering for you, Sensei.
+    MessageTH: เค้าเป็นกำลังใจให้นะ
+    MessageTW: 我也支持你呼吸唷。老師♪
+    MessageGroupId: 130060050
     Id: 1081
     CharacterId: 13006
     MessageCondition: Feedback
@@ -214,13 +220,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나도 열심히 응원할게. 선생님.
-    MessageJP: 私も呼吸の応援、してるからね。先生♪
-    MessageCN: 我也会为老师坚持呼吸而应援的♪
-    MessageEN: I'll be cheering for you, Sensei.
-    MessageTH: เค้าเป็นกำลังใจให้นะ
-    MessageTW: 我也支持你呼吸唷。老師♪
-  - MessageGroupId: 130060060
+  - MessageKR: 그럼 힘내!
+    MessageJP: じゃ、頑張ってねー！
+    MessageCN: 那么老师，请加油哦——！
+    MessageEN: Fight on!
+    MessageTH: สู้ๆ ล่ะ!
+    MessageTW: 那麼，加油哦～！
+    MessageGroupId: 130060060
     Id: 1082
     CharacterId: 13006
     MessageCondition: Feedback
@@ -232,13 +238,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 힘내!
-    MessageJP: じゃ、頑張ってねー！
-    MessageCN: 那么老师，请加油哦——！
-    MessageEN: Fight on!
-    MessageTH: สู้ๆ ล่ะ!
-    MessageTW: 那麼，加油哦～！
-  - MessageGroupId: 130060070
+  - MessageKR: 쿠후후.
+    MessageJP: くふふっ
+    MessageCN: 咕噗噗
+    MessageEN: Keeheehee.
+    MessageTH: หุหุหุ
+    MessageTW: 呵呵呵
+    MessageGroupId: 130060070
     Id: 1083
     CharacterId: 13006
     MessageCondition: None
@@ -250,13 +256,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 쿠후후.
-    MessageJP: くふふっ
-    MessageCN: 咕噗噗
-    MessageEN: Keeheehee.
-    MessageTH: หุหุหุ
-    MessageTW: 呵呵呵
-  - MessageGroupId: 130060070
+  - MessageKR: 오늘 재미있었어~ 선생님!
+    MessageJP: 今日は楽しかったね～、先生！
+    MessageCN: 我今天很开心呢～，老师
+    MessageEN: Today was so much fun, Sensei!
+    MessageTH: วันนี้สนุกมากเลยล่ะคุณครู
+    MessageTW: 今天很開心呢～老師！
+    MessageGroupId: 130060070
     Id: 1084
     CharacterId: 13006
     MessageCondition: None
@@ -268,13 +274,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 재미있었어~ 선생님!
-    MessageJP: 今日は楽しかったね～、先生！
-    MessageCN: 我今天很开心呢～，老师
-    MessageEN: Today was so much fun, Sensei!
-    MessageTH: วันนี้สนุกมากเลยล่ะคุณครู
-    MessageTW: 今天很開心呢～老師！
-  - MessageGroupId: 130060070
+  - MessageKR: 다음에 또 잔뜩 놀자.
+    MessageJP: また今度、たくさん遊ぼうね
+    MessageCN: 下次再一起大玩特玩吧
+    MessageEN: Let's play again next time.
+    MessageTH: คราวหน้าไปเล่นด้วยกันอีกนะ!
+    MessageTW: 下次再多玩一會兒吧
+    MessageGroupId: 130060070
     Id: 1085
     CharacterId: 13006
     MessageCondition: None
@@ -286,13 +292,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 또 잔뜩 놀자.
-    MessageJP: また今度、たくさん遊ぼうね
-    MessageCN: 下次再一起大玩特玩吧
-    MessageEN: Let's play again next time.
-    MessageTH: คราวหน้าไปเล่นด้วยกันอีกนะ!
-    MessageTW: 下次再多玩一會兒吧
-  - MessageGroupId: 130060080
+  - MessageKR: 선생님, 오늘 한가하지?
+    MessageJP: 先生、今日暇でしょ？
+    MessageCN: 老师今天很闲吧？
+    MessageEN: Sensei, you're free today, right?
+    MessageTH: วันนี้คุณครูว่างใช่ม้าา?
+    MessageTW: 老師，今天有空吧？
+    MessageGroupId: 130060080
     Id: 1086
     CharacterId: 13006
     MessageCondition: FavorRankUp
@@ -304,13 +310,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 오늘 한가하지?
-    MessageJP: 先生、今日暇でしょ？
-    MessageCN: 老师今天很闲吧？
-    MessageEN: Sensei, you're free today, right?
-    MessageTH: วันนี้คุณครูว่างใช่ม้าา?
-    MessageTW: 老師，今天有空吧？
-  - MessageGroupId: 130060090
+  - MessageKR: 아니, 바쁜데?
+    MessageJP: えっと、忙しいけど……？
+    MessageCN: 那个，我应该还挺忙的……？
+    MessageEN: No, I'm busy.
+    MessageTH: ไม่นะ ไม่ว่างเลย
+    MessageTW: 那個，很忙……？
+    MessageGroupId: 130060090
     Id: 1087
     CharacterId: 13006
     MessageCondition: Answer
@@ -322,13 +328,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 바쁜데?
-    MessageJP: えっと、忙しいけど……？
-    MessageCN: 那个，我应该还挺忙的……？
-    MessageEN: No, I'm busy.
-    MessageTH: ไม่นะ ไม่ว่างเลย
-    MessageTW: 那個，很忙……？
-  - MessageGroupId: 130060090
+  - MessageKR: 그, 그걸 어떻게 알았지?!
+    MessageJP: どうして分かったの！？
+    MessageCN: 睦月怎么知道的！？
+    MessageEN: H-How did you know that?!
+    MessageTH: รู้ได้ยังไงน่ะ?!
+    MessageTW: 你為什麼知道！？
+    MessageGroupId: 130060090
     Id: 1088
     CharacterId: 13006
     MessageCondition: Answer
@@ -340,13 +346,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그걸 어떻게 알았지?!
-    MessageJP: どうして分かったの！？
-    MessageCN: 睦月怎么知道的！？
-    MessageEN: H-How did you know that?!
-    MessageTH: รู้ได้ยังไงน่ะ?!
-    MessageTW: 你為什麼知道！？
-  - MessageGroupId: 130060100
+  - MessageKR: 으응~? 바쁘다고?
+    MessageJP: え～？忙しいの～？
+    MessageCN: 诶～？很忙吗～？
+    MessageEN: Huh? You're busy?
+    MessageTH: หืม? ไม่ว่างเหรอ?
+    MessageTW: 咦～？很忙嗎～？
+    MessageGroupId: 130060100
     Id: 1089
     CharacterId: 13006
     MessageCondition: Feedback
@@ -358,13 +364,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으응~? 바쁘다고?
-    MessageJP: え～？忙しいの～？
-    MessageCN: 诶～？很忙吗～？
-    MessageEN: Huh? You're busy?
-    MessageTH: หืม? ไม่ว่างเหรอ?
-    MessageTW: 咦～？很忙嗎～？
-  - MessageGroupId: 130060100
+  - MessageKR: 뭐, 그래도 상관없어!
+    MessageJP: まあ、でも関係ないけどね！
+    MessageCN: 好吧，不过没关系！
+    MessageEN: Well, it doesn't matter!
+    MessageTH: แต่ไม่เป็นไรหรอก
+    MessageTW: 嘛，但沒有關係！
+    MessageGroupId: 130060100
     Id: 1090
     CharacterId: 13006
     MessageCondition: Feedback
@@ -376,13 +382,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 그래도 상관없어!
-    MessageJP: まあ、でも関係ないけどね！
-    MessageCN: 好吧，不过没关系！
-    MessageEN: Well, it doesn't matter!
-    MessageTH: แต่ไม่เป็นไรหรอก
-    MessageTW: 嘛，但沒有關係！
-  - MessageGroupId: 130060100
+  - MessageKR: 처음부터 선생님에게 선택지는 없었으니까!
+    MessageJP: なぜなら、最初から先生に選択権は無いから！
+    MessageCN: 因为从一开始，老师就没有选择权！
+    MessageEN: You didn't have a choice to begin with!
+    MessageTH: เพราะคุณครูไม่มีสิทธิ์เลือกอยู่แล้วยังไงล่ะ
+    MessageTW: 因為老師從一開始就沒有選擇權！
+    MessageGroupId: 130060100
     Id: 1091
     CharacterId: 13006
     MessageCondition: Feedback
@@ -394,13 +400,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 처음부터 선생님에게 선택지는 없었으니까!
-    MessageJP: なぜなら、最初から先生に選択権は無いから！
-    MessageCN: 因为从一开始，老师就没有选择权！
-    MessageEN: You didn't have a choice to begin with!
-    MessageTH: เพราะคุณครูไม่มีสิทธิ์เลือกอยู่แล้วยังไงล่ะ
-    MessageTW: 因為老師從一開始就沒有選擇權！
-  - MessageGroupId: 130060110
+  - MessageKR: 응? 그걸 어떻게 알고 있냐고?
+    MessageJP: ん～？どうして？
+    MessageCN: 嗯～？为什么？
+    MessageEN: Huh? What do you mean, how did I know?
+    MessageTH: สงสัยว่าเค้ารู้ได้ไงน่ะเหรอ?
+    MessageTW: 嗯～？為什麼？
+    MessageGroupId: 130060110
     Id: 1092
     CharacterId: 13006
     MessageCondition: Feedback
@@ -412,13 +418,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응? 그걸 어떻게 알고 있냐고?
-    MessageJP: ん～？どうして？
-    MessageCN: 嗯～？为什么？
-    MessageEN: Huh? What do you mean, how did I know?
-    MessageTH: สงสัยว่าเค้ารู้ได้ไงน่ะเหรอ?
-    MessageTW: 嗯～？為什麼？
-  - MessageGroupId: 130060110
+  - MessageKR: 쿠후후, 우리 흥신소의 정보력을 얕보지 말라구~
+    MessageJP: ……くふふ、うちの便利屋の情報収集能力をなめちゃダメだよ～？
+    MessageCN: ……咕噗噗，可不要小瞧了我们便利屋的情报收集能力哟～？
+    MessageEN: Hehe... Don't underestimate the intel of Problem Solver!
+    MessageTH: "หุหุหุ อย่าดูถูกความสามารถของหน่วยรับ
+
+      จ้างสารพัดสิ"
+    MessageTW: ……呵呵呵，可不能小看我們徵信社的情報收集能力唷～！
+    MessageGroupId: 130060110
     Id: 1093
     CharacterId: 13006
     MessageCondition: Feedback
@@ -430,27 +438,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 쿠후후, 우리 흥신소의 정보력을 얕보지 말라구~
-    MessageJP: ……くふふ、うちの便利屋の情報収集能力をなめちゃダメだよ～？
-    MessageCN: ……咕噗噗，可不要小瞧了我们便利屋的情报收集能力哟～？
-    MessageEN: Hehe... Don't underestimate the intel of Problem Solver!
-    MessageTH: "หุหุหุ อย่าดูถูกความสามารถของหน่วยรับ
-
-      จ้างสารพัดสิ"
-    MessageTW: ……呵呵呵，可不能小看我們徵信社的情報收集能力唷～！
-  - MessageGroupId: 130060120
-    Id: 1094
-    CharacterId: 13006
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 130063
-    NextGroupId: 130060130
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: "그러니까 오늘 우리 흥신소로 놀러 와!
+  - MessageKR: "그러니까 오늘 우리 흥신소로 놀러 와!
 
       (≧∇≦)ﾉ"
     MessageJP: そういうわけで今日は、うちの便利屋に遊びに来てほしいな！(≧∇≦)ﾉ
@@ -464,7 +452,25 @@ content:
     MessageTW: "所以今天，希望你來我們徵信社玩！
 
       (≧∇≦)ﾉ"
-  - MessageGroupId: 130060130
+    MessageGroupId: 130060120
+    Id: 1094
+    CharacterId: 13006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 130063
+    NextGroupId: 130060130
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님은 혹시 취미가 있어?
+    MessageJP: 先生って、何か趣味とかあるのー？
+    MessageCN: 老师，你有什么兴趣爱好之类的吗——？
+    MessageEN: Sensei, do you have any hobbies?
+    MessageTH: คุณครูมีงานอดิเรกไหม?
+    MessageTW: 老師有什麼興趣愛好嗎？
+    MessageGroupId: 130060130
     Id: 1095
     CharacterId: 13006
     MessageCondition: FavorRankUp
@@ -476,13 +482,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님은 혹시 취미가 있어?
-    MessageJP: 先生って、何か趣味とかあるのー？
-    MessageCN: 老师，你有什么兴趣爱好之类的吗——？
-    MessageEN: Sensei, do you have any hobbies?
-    MessageTH: คุณครูมีงานอดิเรกไหม?
-    MessageTW: 老師有什麼興趣愛好嗎？
-  - MessageGroupId: 130060140
+  - MessageKR: 물론이지.
+    MessageJP: もちろん
+    MessageCN: 当然
+    MessageEN: Of course.
+    MessageTH: แน่นอนอยู่แล้ว
+    MessageTW: 當然
+    MessageGroupId: 130060140
     Id: 1096
     CharacterId: 13006
     MessageCondition: Answer
@@ -494,13 +500,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이지.
-    MessageJP: もちろん
-    MessageCN: 当然
-    MessageEN: Of course.
-    MessageTH: แน่นอนอยู่แล้ว
-    MessageTW: 當然
-  - MessageGroupId: 130060140
+  - MessageKR: 아니, 딱히 취미라고 할만한 건 없는데.
+    MessageJP: 趣味って言えるほどのものは無いかな……
+    MessageCN: 好像没有能算得上是兴趣的东西吧……
+    MessageEN: No, I don't really have anything you'd call a hobby.
+    MessageTH: อืม ครูไม่มีงานอดิเรกจริงจังหรอก
+    MessageTW: 沒有可以稱之為興趣的東西……
+    MessageGroupId: 130060140
     Id: 1097
     CharacterId: 13006
     MessageCondition: Answer
@@ -512,13 +518,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 딱히 취미라고 할만한 건 없는데.
-    MessageJP: 趣味って言えるほどのものは無いかな……
-    MessageCN: 好像没有能算得上是兴趣的东西吧……
-    MessageEN: No, I don't really have anything you'd call a hobby.
-    MessageTH: อืม ครูไม่มีงานอดิเรกจริงจังหรอก
-    MessageTW: 沒有可以稱之為興趣的東西……
-  - MessageGroupId: 130060150
+  - MessageKR: 아핫~ 역시~ 취미 생활이 있다는 건 좋은 일이야.
+    MessageJP: そっか～。やっぱり、趣味があるって良いよね～
+    MessageCN: 是吗～果然，有兴趣是好事呢～
+    MessageEN: Haha! Of course...having a hobby is great!
+    MessageTH: "ว่าแล้วเชียว~ การมีงานอดิเรกเป็นเรื่อง
+
+      ที่ดีนะ"
+    MessageTW: 這樣啊～有興趣果然很不錯呢～
+    MessageGroupId: 130060150
     Id: 1098
     CharacterId: 13006
     MessageCondition: Feedback
@@ -530,15 +538,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아핫~ 역시~ 취미 생활이 있다는 건 좋은 일이야.
-    MessageJP: そっか～。やっぱり、趣味があるって良いよね～
-    MessageCN: 是吗～果然，有兴趣是好事呢～
-    MessageEN: Haha! Of course...having a hobby is great!
-    MessageTH: "ว่าแล้วเชียว~ การมีงานอดิเรกเป็นเรื่อง
+  - MessageKR: 몰두하고 있으면 시간도 금방 지나가고.
+    MessageJP: 夢中になってると、時間もすぐに過ぎていくしー
+    MessageCN: 沉迷其中的时候，时间也会过得很快——
+    MessageEN: When I'm focused, time goes by so fast.
+    MessageTH: "ถ้าได้จดจ่อกับอะไร เวลาจะผ่านไปเร็ว
 
-      ที่ดีนะ"
-    MessageTW: 這樣啊～有興趣果然很不錯呢～
-  - MessageGroupId: 130060150
+      เลยล่ะ"
+    MessageTW: 畢竟沉迷其中的話，時間就會過得很快～
+    MessageGroupId: 130060150
     Id: 1099
     CharacterId: 13006
     MessageCondition: Feedback
@@ -550,15 +558,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 몰두하고 있으면 시간도 금방 지나가고.
-    MessageJP: 夢中になってると、時間もすぐに過ぎていくしー
-    MessageCN: 沉迷其中的时候，时间也会过得很快——
-    MessageEN: When I'm focused, time goes by so fast.
-    MessageTH: "ถ้าได้จดจ่อกับอะไร เวลาจะผ่านไปเร็ว
+  - MessageKR: 내가 좋아하는 분야에 대해 빠삭하게 알게 되었을 때의 성취감도 있고.
+    MessageJP: 好きな分野について詳しくなると、達成感もあるし？
+    MessageCN: 对自己喜欢的领域了如指掌的话，应该也会有种成就感的吧？
+    MessageEN: Becoming well-versed in an interesting subject makes me feel so accomplished.
+    MessageTH: "แถมยังรู้สึกดีเวลาได้เรียนรู้อะไรที่ชอบ
 
-      เลยล่ะ"
-    MessageTW: 畢竟沉迷其中的話，時間就會過得很快～
-  - MessageGroupId: 130060150
+      ด้วย"
+    MessageTW: 對自己喜歡的領域更加了解的話，會有成就感吧？
+    MessageGroupId: 130060150
     Id: 1100
     CharacterId: 13006
     MessageCondition: Feedback
@@ -570,15 +578,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 좋아하는 분야에 대해 빠삭하게 알게 되었을 때의 성취감도 있고.
-    MessageJP: 好きな分野について詳しくなると、達成感もあるし？
-    MessageCN: 对自己喜欢的领域了如指掌的话，应该也会有种成就感的吧？
-    MessageEN: Becoming well-versed in an interesting subject makes me feel so accomplished.
-    MessageTH: "แถมยังรู้สึกดีเวลาได้เรียนรู้อะไรที่ชอบ
-
-      ด้วย"
-    MessageTW: 對自己喜歡的領域更加了解的話，會有成就感吧？
-  - MessageGroupId: 130060150
+  - MessageKR: 응응! 즐겁지~
+    MessageJP: 楽しいよね～！
+    MessageCN: 听起来很有意思呢～！
+    MessageEN: Yeah! It's so much fun!
+    MessageTH: แบบนี้มันสนุกมากเลย!
+    MessageTW: 很有趣吧～！
+    MessageGroupId: 130060150
     Id: 1101
     CharacterId: 13006
     MessageCondition: Feedback
@@ -590,13 +596,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응응! 즐겁지~
-    MessageJP: 楽しいよね～！
-    MessageCN: 听起来很有意思呢～！
-    MessageEN: Yeah! It's so much fun!
-    MessageTH: แบบนี้มันสนุกมากเลย!
-    MessageTW: 很有趣吧～！
-  - MessageGroupId: 130060160
+  - MessageKR: 흐응, 그래애~?
+    MessageJP: ふーん、そうなんだ～？
+    MessageCN: 嗯——，这样吗～？
+    MessageEN: Oh, really?
+    MessageTH: อืม.. อย่างนั้นเหรอ?
+    MessageTW: 哼嗯，這樣啊～？
+    MessageGroupId: 130060160
     Id: 1102
     CharacterId: 13006
     MessageCondition: Feedback
@@ -608,13 +614,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흐응, 그래애~?
-    MessageJP: ふーん、そうなんだ～？
-    MessageCN: 嗯——，这样吗～？
-    MessageEN: Oh, really?
-    MessageTH: อืม.. อย่างนั้นเหรอ?
-    MessageTW: 哼嗯，這樣啊～？
-  - MessageGroupId: 130060160
+  - MessageKR: 그건 좀 아쉬울지도~
+    MessageJP: それはちょっと残念かも～
+    MessageCN: 那还真是可惜～
+    MessageEN: That might be a little disappointing...
+    MessageTH: น่าเสียดายนะ~
+    MessageTW: 這樣可能就有點可惜了～
+    MessageGroupId: 130060160
     Id: 1103
     CharacterId: 13006
     MessageCondition: Feedback
@@ -626,13 +632,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그건 좀 아쉬울지도~
-    MessageJP: それはちょっと残念かも～
-    MessageCN: 那还真是可惜～
-    MessageEN: That might be a little disappointing...
-    MessageTH: น่าเสียดายนะ~
-    MessageTW: 這樣可能就有點可惜了～
-  - MessageGroupId: 130060170
+  - MessageKR: 응, 나중에 선생님하고 취미 이야기를 하는 것도 재밌겠다~ (〇'ヮ'〇)
+    MessageJP: いつか先生とそういう趣味の話をしたいな～、面白そう！(〇'ヮ'〇)
+    MessageCN: 有机会的话我好想和老师聊聊有关兴趣的话题呢～感觉会很有趣！(〇'ヮ'〇)
+    MessageEN: Yeah, we should talk about our hobbies one of these days! (〇╹ヮ╹〇)
+    MessageTH: "แต่ต่อไปหากได้คุยกับคุณครูเรื่องงาน
+
+      อดิเรกก็น่าสนุกนะ~ (〇╹ヮ╹〇)"
+    MessageTW: 有朝一日想跟老師聊聊興趣愛好～應該會很有趣！(〇╹ヮ╹〇)
+    MessageGroupId: 130060170
     Id: 1104
     CharacterId: 13006
     MessageCondition: Feedback
@@ -644,15 +652,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 나중에 선생님하고 취미 이야기를 하는 것도 재밌겠다~ (〇'ヮ'〇)
-    MessageJP: いつか先生とそういう趣味の話をしたいな～、面白そう！(〇'ヮ'〇)
-    MessageCN: 有机会的话我好想和老师聊聊有关兴趣的话题呢～感觉会很有趣！(〇'ヮ'〇)
-    MessageEN: Yeah, we should talk about our hobbies one of these days! (〇╹ヮ╹〇)
-    MessageTH: "แต่ต่อไปหากได้คุยกับคุณครูเรื่องงาน
+  - MessageKR: 선생님, 우리 흥신소에 특별한 의뢰가 들어왔어!
+    MessageJP: 先生、うちの便利屋に変わった依頼が届いたの！
+    MessageCN: 老师，我们便利屋收到了一份奇怪的委托！
+    MessageEN: Sensei, Problem Solver has received a special request!
+    MessageTH: "มีภารกิจใหม่เข้ามาในหน่วยรับจ้าง
 
-      อดิเรกก็น่าสนุกนะ~ (〇╹ヮ╹〇)"
-    MessageTW: 有朝一日想跟老師聊聊興趣愛好～應該會很有趣！(〇╹ヮ╹〇)
-  - MessageGroupId: 130060180
+      สารพัดล่ะ!"
+    MessageTW: 老師，我們徵信社收到了一個特別的委託！
+    MessageGroupId: 130060180
     Id: 1105
     CharacterId: 13006
     MessageCondition: FavorRankUp
@@ -664,15 +672,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 우리 흥신소에 특별한 의뢰가 들어왔어!
-    MessageJP: 先生、うちの便利屋に変わった依頼が届いたの！
-    MessageCN: 老师，我们便利屋收到了一份奇怪的委托！
-    MessageEN: Sensei, Problem Solver has received a special request!
-    MessageTH: "มีภารกิจใหม่เข้ามาในหน่วยรับจ้าง
-
-      สารพัดล่ะ!"
-    MessageTW: 老師，我們徵信社收到了一個特別的委託！
-  - MessageGroupId: 130060190
+  - MessageKR: 이게 또 어마어마하거든?
+    MessageJP: これがまた、すっごい変な依頼でさ～？
+    MessageCN: 这次也是一份非～常奇怪的委托的哦～？
+    MessageEN: Another huge request?
+    MessageTH: เป็นงานใหญ่มากเลยล่ะ
+    MessageTW: 又會是非常奇怪的委託吧～？
+    MessageGroupId: 130060190
     Id: 1106
     CharacterId: 13006
     MessageCondition: None
@@ -684,13 +690,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이게 또 어마어마하거든?
-    MessageJP: これがまた、すっごい変な依頼でさ～？
-    MessageCN: 这次也是一份非～常奇怪的委托的哦～？
-    MessageEN: Another huge request?
-    MessageTH: เป็นงานใหญ่มากเลยล่ะ
-    MessageTW: 又會是非常奇怪的委託吧～？
-  - MessageGroupId: 130060190
+  - MessageKR: 거기다 또 흥미진진하거든?
+    MessageJP: でも同時にすっごく面白そうでね～？
+    MessageCN: 不过同时好像也很有趣哦～？
+    MessageEN: Another interesting request?
+    MessageTH: แถมยังน่าสนุกอีกด้วย
+    MessageTW: 但同時又會很有趣吧～？
+    MessageGroupId: 130060190
     Id: 1107
     CharacterId: 13006
     MessageCondition: None
@@ -702,13 +708,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 거기다 또 흥미진진하거든?
-    MessageJP: でも同時にすっごく面白そうでね～？
-    MessageCN: 不过同时好像也很有趣哦～？
-    MessageEN: Another interesting request?
-    MessageTH: แถมยังน่าสนุกอีกด้วย
-    MessageTW: 但同時又會很有趣吧～？
-  - MessageGroupId: 130060200
+  - MessageKR: 무츠키가 어마어마하다고 할 정도면 대체…….
+    MessageJP: ムツキがすっごい変って言うほどの依頼っていったい……
+    MessageCN: 居然能让睦月都说非常奇怪，这到底是什么委托啊……
+    MessageEN: When you say "huge," I don't know what you expect...
+    MessageTH: งานใหญ่สำหรับมุสึกิงั้นเหรอ...?
+    MessageTW: 究竟是什麼奇怪的委託能讓無月說成這樣……
+    MessageGroupId: 130060200
     Id: 1108
     CharacterId: 13006
     MessageCondition: Answer
@@ -720,13 +726,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무츠키가 어마어마하다고 할 정도면 대체…….
-    MessageJP: ムツキがすっごい変って言うほどの依頼っていったい……
-    MessageCN: 居然能让睦月都说非常奇怪，这到底是什么委托啊……
-    MessageEN: When you say "huge," I don't know what you expect...
-    MessageTH: งานใหญ่สำหรับมุสึกิงั้นเหรอ...?
-    MessageTW: 究竟是什麼奇怪的委託能讓無月說成這樣……
-  - MessageGroupId: 130060200
+  - MessageKR: 무츠키가 흥미진진하다고 할 정도면 대체…….
+    MessageJP: ムツキがすっごく面白そうって言うような依頼っていったい……
+    MessageCN: 居然能让睦月都说非常有趣，这到底是什么委托啊……
+    MessageEN: When you say "interesting," I don't know what you expect...
+    MessageTH: งานน่าสนุกสำหรับมุสึกิงั้นเหรอ...?
+    MessageTW: 究竟是什麼有趣的委託能讓無月說成這樣……
+    MessageGroupId: 130060200
     Id: 1109
     CharacterId: 13006
     MessageCondition: Answer
@@ -738,13 +744,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무츠키가 흥미진진하다고 할 정도면 대체…….
-    MessageJP: ムツキがすっごく面白そうって言うような依頼っていったい……
-    MessageCN: 居然能让睦月都说非常有趣，这到底是什么委托啊……
-    MessageEN: When you say "interesting," I don't know what you expect...
-    MessageTH: งานน่าสนุกสำหรับมุสึกิงั้นเหรอ...?
-    MessageTW: 究竟是什麼有趣的委託能讓無月說成這樣……
-  - MessageGroupId: 130060210
+  - MessageKR: 으음~! 됐으니까.
+    MessageJP: ん～、まあまあ！細かいことは置いといてさ！
+    MessageCN: 嗯～好啦好啦！老师不要在意细节啦！
+    MessageEN: Um... It's fine now.
+    MessageTH: "อื้อออ~! "
+    MessageTW: 嗯～嘛嘛！先別管細節了！
+    MessageGroupId: 130060210
     Id: 1110
     CharacterId: 13006
     MessageCondition: Feedback
@@ -756,13 +762,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음~! 됐으니까.
-    MessageJP: ん～、まあまあ！細かいことは置いといてさ！
-    MessageCN: 嗯～好啦好啦！老师不要在意细节啦！
-    MessageEN: Um... It's fine now.
-    MessageTH: "อื้อออ~! "
-    MessageTW: 嗯～嘛嘛！先別管細節了！
-  - MessageGroupId: 130060210
+  - MessageKR: 도와줘, 선생님~!
+    MessageJP: 先生に手伝ってほしいな～？
+    MessageCN: 不过我希望老师能来帮帮我诶～？
+    MessageEN: Help me, Sensei!
+    MessageTH: คุณครูก็มาช่วยหน่อยน้า~
+    MessageTW: 真希望老師能幫忙啊～？
+    MessageGroupId: 130060210
     Id: 1111
     CharacterId: 13006
     MessageCondition: Feedback
@@ -774,13 +780,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도와줘, 선생님~!
-    MessageJP: 先生に手伝ってほしいな～？
-    MessageCN: 不过我希望老师能来帮帮我诶～？
-    MessageEN: Help me, Sensei!
-    MessageTH: คุณครูก็มาช่วยหน่อยน้า~
-    MessageTW: 真希望老師能幫忙啊～？
-  - MessageGroupId: 130060220
+  - MessageKR: 오늘 하루, 즐거웠어. 선생님~!
+    MessageJP: 今日は一日楽しかったよ～先生！
+    MessageCN: 我今天一天都很开心哦～老师！
+    MessageEN: I had a lot of fun today, Sensei!
+    MessageTH: วันนี้สนุกมากเลย คุณครู~!
+    MessageTW: 今天一天過得很開心唷～老師！
+    MessageGroupId: 130060220
     Id: 1112
     CharacterId: 13006
     MessageCondition: None
@@ -792,13 +798,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 하루, 즐거웠어. 선생님~!
-    MessageJP: 今日は一日楽しかったよ～先生！
-    MessageCN: 我今天一天都很开心哦～老师！
-    MessageEN: I had a lot of fun today, Sensei!
-    MessageTH: วันนี้สนุกมากเลย คุณครู~!
-    MessageTW: 今天一天過得很開心唷～老師！
-  - MessageGroupId: 130060230
+  - MessageKR: 다음번엔 완벽하게 성공해 보일 테니까.
+    MessageJP: 次は絶っ対に成功させてみせるから、
+    MessageCN: 下次我绝对要成功
+    MessageEN: This next one will be a total success.
+    MessageTH: คราวหน้าเค้าจะทำให้สมบูรณ์แบบ
+    MessageTW: 下次絕對會成功給你看
+    MessageGroupId: 130060230
     Id: 1113
     CharacterId: 13006
     MessageCondition: None
@@ -810,13 +816,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음번엔 완벽하게 성공해 보일 테니까.
-    MessageJP: 次は絶っ対に成功させてみせるから、
-    MessageCN: 下次我绝对要成功
-    MessageEN: This next one will be a total success.
-    MessageTH: คราวหน้าเค้าจะทำให้สมบูรณ์แบบ
-    MessageTW: 下次絕對會成功給你看
-  - MessageGroupId: 130060230
+  - MessageKR: 각오하라구~! ＼( 'ω') /
+    MessageJP: 覚悟しててね～！＼( 'ω') /
+    MessageCN: 老师要做好准备哦～！＼( 'ω') /
+    MessageEN: You better watch out! ＼( ╹ω╹) /
+    MessageTH: ตั้งตารอไว้ได้เลย~! ＼( ╹ω╹) /
+    MessageTW: 做好覺悟吧～！＼( ╹ω╹) /
+    MessageGroupId: 130060230
     Id: 1114
     CharacterId: 13006
     MessageCondition: None
@@ -828,9 +834,3 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 각오하라구~! ＼( 'ω') /
-    MessageJP: 覚悟しててね～！＼( 'ω') /
-    MessageCN: 老师要做好准备哦～！＼( 'ω') /
-    MessageEN: You better watch out! ＼( ╹ω╹) /
-    MessageTH: ตั้งตารอไว้ได้เลย~! ＼( ╹ω╹) /
-    MessageTW: 做好覺悟吧～！＼( ╹ω╹) /

@@ -1,44 +1,50 @@
 CharacterId: 10050
 translator: 胡桃桃
 title:
-  - GroupId: 1005002
-    FavorScheduleId: 100502
-    CharacterId: 10050
-    TextJp: ココナちゃんじゃないです。教官なんです！
+  - TextJp: ココナちゃんじゃないです。教官なんです！
     TextCn: 别叫我小心奈。是教官！
     TextKr: 코코나 쨩이 아니에요. 교관이라구요!
     TextEn: It's not Kokona. It's Instructor Kokona!
     TextTh: ไม่ใช่โคโคน่าจังนะคะ ผู้ฝึกสอนต่างหากค่ะ!
     TextTw: 我不是心菜醬。我是教官！
-  - GroupId: 1005003
-    FavorScheduleId: 100503
+    GroupId: 1005002
+    FavorScheduleId: 100502
     CharacterId: 10050
-    TextJp: 子どもではありません。レディーなんです！
+  - TextJp: 子どもではありません。レディーなんです！
     TextCn: 才不是小孩子。是淑女！
     TextKr: 어린 아이가 아니예요. 숙녀라구요!
     TextEn: Not a Girl, but a Lady!
     TextTh: ไม่ใช่เด็กเล็กนะคะ หญิงสาวต่างหากค่ะ!
     TextTw: 我不是小孩子，我是淑女！
-  - GroupId: 1005005
-    FavorScheduleId: 100505
+    GroupId: 1005003
+    FavorScheduleId: 100503
     CharacterId: 10050
-    TextJp: いくらなんでも嫌なものは嫌なんです！
+  - TextJp: いくらなんでも嫌なものは嫌なんです！
     TextCn: 不管怎么说，讨厌就是讨厌！
     TextKr: 아무리 그래도 싫은 건 싫은 거예요!
     TextEn: I Said I Hate It!
     TextTh: ไม่ชอบก็คือไม่ชอบสิคะ!
     TextTw: 不管怎麼說，討厭的東西就是討厭！
-  - GroupId: 1005006
-    FavorScheduleId: 100506
+    GroupId: 1005005
+    FavorScheduleId: 100505
     CharacterId: 10050
-    TextJp: ……今回だけですよ。本当ですよ？
+  - TextJp: ……今回だけですよ。本当ですよ？
     TextCn: ……就这一次哦。真的哦？
     TextKr: ……이번만이에요. 정말이라구요?
     TextEn: "...Just This Once, Really!"
     TextTh: แค่ครั้งนี้ครั้งเดียวนะคะ... จริงๆ นะคะ
     TextTw: ……只有這次而已喔。真的喔。
+    GroupId: 1005006
+    FavorScheduleId: 100506
+    CharacterId: 10050
 content:
-  - MessageGroupId: 100500010
+  - MessageKR: 안녕하세요, 선생님.
+    MessageJP: こんにちは、先生
+    MessageCN: 您好，老师
+    MessageEN: Hello, Sensei.
+    MessageTH: สวัสดีค่ะ คุณครู
+    MessageTW: 你好，老師
+    MessageGroupId: 100500010
     Id: 100500010
     CharacterId: 10050
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요, 선생님.
-    MessageJP: こんにちは、先生
-    MessageCN: 您好，老师
-    MessageEN: Hello, Sensei.
-    MessageTH: สวัสดีค่ะ คุณครู
-    MessageTW: 你好，老師
-  - MessageGroupId: 100500020
+  - MessageKR: 잘 지내고 계시나요?
+    MessageJP: いかがお過ごしでしょうか？
+    MessageCN: 老师最近过得如何？
+    MessageEN: How are you?
+    MessageTH: คุณครูสบายดีรึเปล่าคะ?
+    MessageTW: 你過得還好嗎？
+    MessageGroupId: 100500020
     Id: 100500020
     CharacterId: 10050
     MessageCondition: None
@@ -68,13 +74,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 지내고 계시나요?
-    MessageJP: いかがお過ごしでしょうか？
-    MessageCN: 老师最近过得如何？
-    MessageEN: How are you?
-    MessageTH: คุณครูสบายดีรึเปล่าคะ?
-    MessageTW: 你過得還好嗎？
-  - MessageGroupId: 100500020
+  - MessageKR: 전 문제없어요. 매화원의 교관이니까요!
+    MessageJP: 私は元気です。なんたって、梅花園の教官ですから！
+    MessageCN: 我很好。毕竟我是梅花园的教官！
+    MessageEN: I'm fine, because I'm a Plum Blossom Garden instructor!
+    MessageTH: "ฉันสบายดีสุดๆ เลยค่ะ ก็ฉันคือผู้ฝึกสอน
+
+      วินัยแห่งสวนต้นบ๊วยไงล่ะคะ!"
+    MessageTW: 我很好。再怎麼說我也是梅花園的教官啊！
+    MessageGroupId: 100500020
     Id: 100500030
     CharacterId: 10050
     MessageCondition: None
@@ -86,15 +94,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전 문제없어요. 매화원의 교관이니까요!
-    MessageJP: 私は元気です。なんたって、梅花園の教官ですから！
-    MessageCN: 我很好。毕竟我是梅花园的教官！
-    MessageEN: I'm fine, because I'm a Plum Blossom Garden instructor!
-    MessageTH: "ฉันสบายดีสุดๆ เลยค่ะ ก็ฉันคือผู้ฝึกสอน
-
-      วินัยแห่งสวนต้นบ๊วยไงล่ะคะ!"
-    MessageTW: 我很好。再怎麼說我也是梅花園的教官啊！
-  - MessageGroupId: 100500030
+  - MessageKR: 교관이라…… 코코나도 큰일이네.
+    MessageJP: 教官か……ココナも大変だね
+    MessageCN: 教官吗……心奈也不容易呢
+    MessageEN: Instructor... You have a lot on your plate, Kokona.
+    MessageTH: ผู้ฝึกสอนเหรอ... โคโคน่านี่ก็สุดยอดเลยนะ
+    MessageTW: 教官啊……心菜也辛苦了呢
+    MessageGroupId: 100500030
     Id: 100500040
     CharacterId: 10050
     MessageCondition: Answer
@@ -106,13 +112,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 교관이라…… 코코나도 큰일이네.
-    MessageJP: 教官か……ココナも大変だね
-    MessageCN: 教官吗……心奈也不容易呢
-    MessageEN: Instructor... You have a lot on your plate, Kokona.
-    MessageTH: ผู้ฝึกสอนเหรอ... โคโคน่านี่ก็สุดยอดเลยนะ
-    MessageTW: 教官啊……心菜也辛苦了呢
-  - MessageGroupId: 100500030
+  - MessageKR: 힘들지 않아?
+    MessageJP: 大変じゃない？
+    MessageCN: 心奈很辛苦吧？
+    MessageEN: Isn't it hard?
+    MessageTH: ไม่เหนื่อยเหรอ?
+    MessageTW: 不辛苦嗎？
+    MessageGroupId: 100500030
     Id: 100500050
     CharacterId: 10050
     MessageCondition: Answer
@@ -124,13 +130,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 힘들지 않아?
-    MessageJP: 大変じゃない？
-    MessageCN: 心奈很辛苦吧？
-    MessageEN: Isn't it hard?
-    MessageTH: ไม่เหนื่อยเหรอ?
-    MessageTW: 不辛苦嗎？
-  - MessageGroupId: 100500040
+  - MessageKR: 힘들 때도 있지만 괜찮아요.
+    MessageJP: 大変な時もありますが、大丈夫です
+    MessageCN: 虽然有时很辛苦，但是没关系的
+    MessageEN: It can be, but I'm fine with it.
+    MessageTH: มีช่วงที่เหนื่อยบ้าง แต่ก็ไม่เป็นไรค่ะ
+    MessageTW: 雖然也有辛苦的時候，但不要緊
+    MessageGroupId: 100500040
     Id: 100500060
     CharacterId: 10050
     MessageCondition: Feedback
@@ -142,13 +148,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 힘들 때도 있지만 괜찮아요.
-    MessageJP: 大変な時もありますが、大丈夫です
-    MessageCN: 虽然有时很辛苦，但是没关系的
-    MessageEN: It can be, but I'm fine with it.
-    MessageTH: มีช่วงที่เหนื่อยบ้าง แต่ก็ไม่เป็นไรค่ะ
-    MessageTW: 雖然也有辛苦的時候，但不要緊
-  - MessageGroupId: 100500040
+  - MessageKR: 무엇보다 전 이미 어엿한 숙녀인걸요!
+    MessageJP: 何より、すでに私は立派なレディーですから！
+    MessageCN: 因为，我已经是一名优秀的淑女了！
+    MessageEN: More than anything, I'm a proper lady now!
+    MessageTH: "อีกอย่างตอนนี้ฉันก็เป็นกุลสตรีเต็มตัว
+
+      แล้วนะคะ!"
+    MessageTW: 更重要的是，我已經是名優秀的淑女了！
+    MessageGroupId: 100500040
     Id: 100500070
     CharacterId: 10050
     MessageCondition: Feedback
@@ -160,15 +168,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무엇보다 전 이미 어엿한 숙녀인걸요!
-    MessageJP: 何より、すでに私は立派なレディーですから！
-    MessageCN: 因为，我已经是一名优秀的淑女了！
-    MessageEN: More than anything, I'm a proper lady now!
-    MessageTH: "อีกอย่างตอนนี้ฉันก็เป็นกุลสตรีเต็มตัว
+  - MessageKR: 시간 나실 때 매화원에 방문해 보시겠어요?
+    MessageJP: 先生。もしお時間があったら、梅花園を訪問してみませんか？
+    MessageCN: 老师。如果老师有时间的话，能来梅花园看看吗？
+    MessageEN: Please visit the Plum Blossom Garden when you can!
+    MessageTH: "ถ้าคุณครูมีเวลาก็แวะมาที่สวนต้นบ๊วย
 
-      แล้วนะคะ!"
-    MessageTW: 更重要的是，我已經是名優秀的淑女了！
-  - MessageGroupId: 100500050
+      บ้างสิคะ?"
+    MessageTW: 老師。如果有空的話，要不要來梅花園參觀呢？
+    MessageGroupId: 100500050
     Id: 100500080
     CharacterId: 10050
     MessageCondition: Feedback
@@ -180,15 +188,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시간 나실 때 매화원에 방문해 보시겠어요?
-    MessageJP: 先生。もしお時間があったら、梅花園を訪問してみませんか？
-    MessageCN: 老师。如果老师有时间的话，能来梅花园看看吗？
-    MessageEN: Please visit the Plum Blossom Garden when you can!
-    MessageTH: "ถ้าคุณครูมีเวลาก็แวะมาที่สวนต้นบ๊วย
+  - MessageKR: 제가 교관으로서의 모습을 똑똑히 보여드리죠!
+    MessageJP: 私の教官としての姿を先生にお見せします！
+    MessageCN: 我想让老师看到我作为教官的样子！
+    MessageEN: I'll show you how I work as an instructor.
+    MessageTH: "ฉันจะแสดงให้คุณครูเห็นภาพลักษณ์
 
-      บ้างสิคะ?"
-    MessageTW: 老師。如果有空的話，要不要來梅花園參觀呢？
-  - MessageGroupId: 100500050
+      ของผู้ฝึกสอนเองค่ะ!"
+    MessageTW: 我會讓老師看看我身為教官的模樣！
+    MessageGroupId: 100500050
     Id: 100500090
     CharacterId: 10050
     MessageCondition: Feedback
@@ -200,15 +208,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제가 교관으로서의 모습을 똑똑히 보여드리죠!
-    MessageJP: 私の教官としての姿を先生にお見せします！
-    MessageCN: 我想让老师看到我作为教官的样子！
-    MessageEN: I'll show you how I work as an instructor.
-    MessageTH: "ฉันจะแสดงให้คุณครูเห็นภาพลักษณ์
-
-      ของผู้ฝึกสอนเองค่ะ!"
-    MessageTW: 我會讓老師看看我身為教官的模樣！
-  - MessageGroupId: 100500060
+  - MessageKR: 그때는 잘 들어가셨나요?
+    MessageJP: 先日は無事に帰れましたか？
+    MessageCN: 老师前几天平安回去了吗？
+    MessageEN: Did you get back safely?
+    MessageTH: ตอนนั้นกลับถึงโดยสวัสดิภาพใช่มั้ยคะ?
+    MessageTW: 前幾天有平安回去了嗎？
+    MessageGroupId: 100500060
     Id: 100500100
     CharacterId: 10050
     MessageCondition: FavorRankUp
@@ -220,13 +226,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그때는 잘 들어가셨나요?
-    MessageJP: 先日は無事に帰れましたか？
-    MessageCN: 老师前几天平安回去了吗？
-    MessageEN: Did you get back safely?
-    MessageTH: ตอนนั้นกลับถึงโดยสวัสดิภาพใช่มั้ยคะ?
-    MessageTW: 前幾天有平安回去了嗎？
-  - MessageGroupId: 100500070
+  - MessageKR: 제대로 된 모습을 못 보여드린 것 같아 죄송하네요.
+    MessageJP: まともな姿をお見せできなくて残念です
+    MessageCN: 很遗憾没能让老师看到我认真的一面
+    MessageEN: I feel bad that I didn't get to show you my best.
+    MessageTH: "ขอโทษด้วยนะคะ ที่ไม่ได้แสดงภาพ
+
+      ลักษณ์ดีๆ ให้คุณครูได้เห็นอย่างเต็มที่"
+    MessageTW: 很可惜沒能讓你看到我正經的模樣
+    MessageGroupId: 100500070
     Id: 100500110
     CharacterId: 10050
     MessageCondition: None
@@ -238,15 +246,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제대로 된 모습을 못 보여드린 것 같아 죄송하네요.
-    MessageJP: まともな姿をお見せできなくて残念です
-    MessageCN: 很遗憾没能让老师看到我认真的一面
-    MessageEN: I feel bad that I didn't get to show you my best.
-    MessageTH: "ขอโทษด้วยนะคะ ที่ไม่ได้แสดงภาพ
-
-      ลักษณ์ดีๆ ให้คุณครูได้เห็นอย่างเต็มที่"
-    MessageTW: 很可惜沒能讓你看到我正經的模樣
-  - MessageGroupId: 100500080
+  - MessageKR: 충분히 멋있었어, 코코나 쨩.
+    MessageJP: 十分にかっこよかったよ、ココナちゃん
+    MessageCN: 小心奈已经很帅气啦
+    MessageEN: You were cool, Kokona.
+    MessageTH: ครูเห็นแล้วละ สุดยอดเลยน้า โคโคน่าจัง
+    MessageTW: 已經十分帥氣囉，心菜醬
+    MessageGroupId: 100500080
     Id: 100500120
     CharacterId: 10050
     MessageCondition: Answer
@@ -258,13 +264,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 충분히 멋있었어, 코코나 쨩.
-    MessageJP: 十分にかっこよかったよ、ココナちゃん
-    MessageCN: 小心奈已经很帅气啦
-    MessageEN: You were cool, Kokona.
-    MessageTH: ครูเห็นแล้วละ สุดยอดเลยน้า โคโคน่าจัง
-    MessageTW: 已經十分帥氣囉，心菜醬
-  - MessageGroupId: 100500080
+  - MessageKR: 그 정도면 대단했어, 코코나 쨩.
+    MessageJP: 立派に教官してたよ、ココナちゃん
+    MessageCN: 小心奈已经是个出色的教官了哦
+    MessageEN: It was great, Kokona.
+    MessageTH: แค่นั้นก็สุดยอดแล้วนะ โคโคน่าจัง
+    MessageTW: 是位優秀的教官唷，心菜醬
+    MessageGroupId: 100500080
     Id: 100500130
     CharacterId: 10050
     MessageCondition: Answer
@@ -276,13 +282,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 정도면 대단했어, 코코나 쨩.
-    MessageJP: 立派に教官してたよ、ココナちゃん
-    MessageCN: 小心奈已经是个出色的教官了哦
-    MessageEN: It was great, Kokona.
-    MessageTH: แค่นั้นก็สุดยอดแล้วนะ โคโคน่าจัง
-    MessageTW: 是位優秀的教官唷，心菜醬
-  - MessageGroupId: 100500090
+  - MessageKR: 그러니까, 코코나 쨩이 아니라니까요!
+    MessageJP: だから、ココナちゃんじゃないです！
+    MessageCN: 都说了，不要叫我小心奈！
+    MessageEN: Don't call me Kokona. Call me Instructor Kokona!
+    MessageTH: บอกแล้วไงคะว่าอย่าเรียกว่าโคโคน่าจังน่ะ!
+    MessageTW: 就說了，不是心菜醬！
+    MessageGroupId: 100500090
     Id: 100500140
     CharacterId: 10050
     MessageCondition: Feedback
@@ -294,13 +300,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니까, 코코나 쨩이 아니라니까요!
-    MessageJP: だから、ココナちゃんじゃないです！
-    MessageCN: 都说了，不要叫我小心奈！
-    MessageEN: Don't call me Kokona. Call me Instructor Kokona!
-    MessageTH: บอกแล้วไงคะว่าอย่าเรียกว่าโคโคน่าจังน่ะ!
-    MessageTW: 就說了，不是心菜醬！
-  - MessageGroupId: 100500100
+  - MessageKR: 절 코코나 쨩이라고 부르실 거면,
+    MessageJP: 私をココナちゃんと呼ぶなら、
+    MessageCN: 如果老师叫我小心奈的话
+    MessageEN: If you call me Kokona,
+    MessageTH: ถ้าเรียกฉันว่าโคโคน่าจังละก็
+    MessageTW: 如果要叫我心菜醬的話，
+    MessageGroupId: 100500100
     Id: 100500150
     CharacterId: 10050
     MessageCondition: Feedback
@@ -312,13 +318,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 절 코코나 쨩이라고 부르실 거면,
-    MessageJP: 私をココナちゃんと呼ぶなら、
-    MessageCN: 如果老师叫我小心奈的话
-    MessageEN: If you call me Kokona,
-    MessageTH: ถ้าเรียกฉันว่าโคโคน่าจังละก็
-    MessageTW: 如果要叫我心菜醬的話，
-  - MessageGroupId: 100500100
+  - MessageKR: 슌 언니도 슌 쨩이라고 불러야 맞는 게 아닐까요?
+    MessageJP: シュン姉さんもシュンちゃんって呼ぶべきじゃないでしょうか？
+    MessageCN: 那叫瞬姐姐不是也要叫小瞬吗？
+    MessageEN: are you gonna address Instructor Shun the same way?
+    MessageTH: 'คุณครูก็ควรเรียกพี่ชุนว่า "ชุนจัง" ด้วย
+
+      ไม่ใช่รึไงคะ?'
+    MessageTW: 那叫旬姐姐的時候，不是也該叫旬醬嗎？
+    MessageGroupId: 100500100
     Id: 100500160
     CharacterId: 10050
     MessageCondition: Feedback
@@ -330,15 +338,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 슌 언니도 슌 쨩이라고 불러야 맞는 게 아닐까요?
-    MessageJP: シュン姉さんもシュンちゃんって呼ぶべきじゃないでしょうか？
-    MessageCN: 那叫瞬姐姐不是也要叫小瞬吗？
-    MessageEN: are you gonna address Instructor Shun the same way?
-    MessageTH: 'คุณครูก็ควรเรียกพี่ชุนว่า "ชุนจัง" ด้วย
+  - MessageKR: 슌이라면 그렇게 불리는 걸 좋아할지도 몰라.
+    MessageJP: シュンはそう呼ばれたら喜びそう
+    MessageCN: 瞬被这样叫的话好像会很开心来着
+    MessageEN: Maybe Shun would prefer that.
+    MessageTH: "ถ้าเป็นชุนละก็ เรียกแบบนั้นอาจจะชอบ
 
-      ไม่ใช่รึไงคะ?'
-    MessageTW: 那叫旬姐姐的時候，不是也該叫旬醬嗎？
-  - MessageGroupId: 100500110
+      ก็ได้นะ"
+    MessageTW: 如果是旬被那麼叫，應該會很高興呢
+    MessageGroupId: 100500110
     Id: 100500170
     CharacterId: 10050
     MessageCondition: Answer
@@ -350,15 +358,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 슌이라면 그렇게 불리는 걸 좋아할지도 몰라.
-    MessageJP: シュンはそう呼ばれたら喜びそう
-    MessageCN: 瞬被这样叫的话好像会很开心来着
-    MessageEN: Maybe Shun would prefer that.
-    MessageTH: "ถ้าเป็นชุนละก็ เรียกแบบนั้นอาจจะชอบ
-
-      ก็ได้นะ"
-    MessageTW: 如果是旬被那麼叫，應該會很高興呢
-  - MessageGroupId: 100500120
+  - MessageKR: 그게…… 무슨 말씀이세요?
+    MessageJP: えっと……それは、どういうことですか？
+    MessageCN: 嗯……这是为什么呢？
+    MessageEN: What do you mean?
+    MessageTH: ที่พูดนี่... หมายความว่ายังไงเหรอคะ?
+    MessageTW: 那個……那是什麼意思？
+    MessageGroupId: 100500120
     Id: 100500180
     CharacterId: 10050
     MessageCondition: Feedback
@@ -370,13 +376,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게…… 무슨 말씀이세요?
-    MessageJP: えっと……それは、どういうことですか？
-    MessageCN: 嗯……这是为什么呢？
-    MessageEN: What do you mean?
-    MessageTH: ที่พูดนี่... หมายความว่ายังไงเหรอคะ?
-    MessageTW: 那個……那是什麼意思？
-  - MessageGroupId: 100500130
+  - MessageKR: 아직도 입에서 쓴맛이 나요……
+    MessageJP: まだ口の中が苦いです……
+    MessageCN: 嘴里还是很苦……
+    MessageEN: I still taste the bitterness...
+    MessageTH: ในปากยังมีรสขมๆ ติดอยู่เลยค่ะ...
+    MessageTW: 嘴巴裡還有苦味……
+    MessageGroupId: 100500130
     Id: 100500190
     CharacterId: 10050
     MessageCondition: None
@@ -388,13 +394,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아직도 입에서 쓴맛이 나요……
-    MessageJP: まだ口の中が苦いです……
-    MessageCN: 嘴里还是很苦……
-    MessageEN: I still taste the bitterness...
-    MessageTH: ในปากยังมีรสขมๆ ติดอยู่เลยค่ะ...
-    MessageTW: 嘴巴裡還有苦味……
-  - MessageGroupId: 100500140
+  - MessageKR: 커피 미워요……
+    MessageJP: コーヒー、嫌いです……
+    MessageCN: 我，不喜欢咖啡……
+    MessageEN: I hate coffee...
+    MessageTH: ฉันไม่ชอบกาแฟเลยค่ะ...
+    MessageTW: 討厭咖啡……
+    MessageGroupId: 100500140
     Id: 100500200
     CharacterId: 10050
     MessageCondition: None
@@ -406,13 +412,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 커피 미워요……
-    MessageJP: コーヒー、嫌いです……
-    MessageCN: 我，不喜欢咖啡……
-    MessageEN: I hate coffee...
-    MessageTH: ฉันไม่ชอบกาแฟเลยค่ะ...
-    MessageTW: 討厭咖啡……
-  - MessageGroupId: 100500150
+  - MessageKR: 생각해 봤는데 말이예요.
+    MessageJP: 考えてみたんですが
+    MessageCN: 我想了想
+    MessageEN: I've been thinking.
+    MessageTH: แต่ฉันมาลองคิดดูแล้ว
+    MessageTW: 我想了想
+    MessageGroupId: 100500150
     Id: 100500210
     CharacterId: 10050
     MessageCondition: FavorRankUp
@@ -424,13 +430,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 생각해 봤는데 말이예요.
-    MessageJP: 考えてみたんですが
-    MessageCN: 我想了想
-    MessageEN: I've been thinking.
-    MessageTH: แต่ฉันมาลองคิดดูแล้ว
-    MessageTW: 我想了想
-  - MessageGroupId: 100500160
+  - MessageKR: 반드시 커피를 마실 줄 알아야 어른인 건 아닌 것 같아요.
+    MessageJP: 必ずしもコーヒーを飲めることが大人というのは違う気がしてきました
+    MessageCN: 不一定要能喝咖啡才能被叫作大人
+    MessageEN: I don't think enjoying coffee means you're an adult.
+    MessageTH: "ฉันไม่คิดว่าเราจะต้องดื่มกาแฟให้ได้
+
+      เพื่อให้เป็นผู้ใหญ่หรอกค่ะ"
+    MessageTW: 發現好像不是能喝咖啡就是大人了
+    MessageGroupId: 100500160
     Id: 100500220
     CharacterId: 10050
     MessageCondition: None
@@ -442,15 +450,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 반드시 커피를 마실 줄 알아야 어른인 건 아닌 것 같아요.
-    MessageJP: 必ずしもコーヒーを飲めることが大人というのは違う気がしてきました
-    MessageCN: 不一定要能喝咖啡才能被叫作大人
-    MessageEN: I don't think enjoying coffee means you're an adult.
-    MessageTH: "ฉันไม่คิดว่าเราจะต้องดื่มกาแฟให้ได้
+  - MessageKR: 커피를 마시지 않는 어른도 있지 않을까요?
+    MessageJP: コーヒーを飲まない大人もいるのではないでしょうか
+    MessageCN: 大人里面不是也有不喝咖啡的吗
+    MessageEN: I'm sure there are grown-ups who don't like coffee.
+    MessageTH: "เพราะผู้ใหญ่ที่ไม่ดื่มกาแฟก็คงมีอยู่
 
-      เพื่อให้เป็นผู้ใหญ่หรอกค่ะ"
-    MessageTW: 發現好像不是能喝咖啡就是大人了
-  - MessageGroupId: 100500160
+      เหมือนกันใช่มั้ยคะ?"
+    MessageTW: 也有不喝咖啡的大人吧
+    MessageGroupId: 100500160
     Id: 100500230
     CharacterId: 10050
     MessageCondition: None
@@ -462,15 +470,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 커피를 마시지 않는 어른도 있지 않을까요?
-    MessageJP: コーヒーを飲まない大人もいるのではないでしょうか
-    MessageCN: 大人里面不是也有不喝咖啡的吗
-    MessageEN: I'm sure there are grown-ups who don't like coffee.
-    MessageTH: "เพราะผู้ใหญ่ที่ไม่ดื่มกาแฟก็คงมีอยู่
+  - MessageKR: 숙녀에게는 아직 일렀던 모양이네, 코코나 쨩.
+    MessageJP: うん。無理に飲む必要はないからね
+    MessageCN: 嗯。心奈没必要勉强自己喝呢
+    MessageEN: Maybe it's too early for you, Kokona.
+    MessageTH: "คงยังเร็วไปที่จะได้เป็นกุลสตรีสินะ
 
-      เหมือนกันใช่มั้ยคะ?"
-    MessageTW: 也有不喝咖啡的大人吧
-  - MessageGroupId: 100500170
+      โคโคน่าจัง"
+    MessageTW: 嗯。沒有必要勉強喝
+    MessageGroupId: 100500170
     Id: 100500240
     CharacterId: 10050
     MessageCondition: Answer
@@ -482,15 +490,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 숙녀에게는 아직 일렀던 모양이네, 코코나 쨩.
-    MessageJP: うん。無理に飲む必要はないからね
-    MessageCN: 嗯。心奈没必要勉强自己喝呢
-    MessageEN: Maybe it's too early for you, Kokona.
-    MessageTH: "คงยังเร็วไปที่จะได้เป็นกุลสตรีสินะ
-
-      โคโคน่าจัง"
-    MessageTW: 嗯。沒有必要勉強喝
-  - MessageGroupId: 100500180
+  - MessageKR: 꼭 그렇다는 게 아니라요!
+    MessageJP: やはりそうですよね！
+    MessageCN: 果然是这样对吧！
+    MessageEN: I'm just saying!
+    MessageTH: ไม่ใช่แบบนั้นสักหน่อยค่ะ!
+    MessageTW: 果然是那樣啊！
+    MessageGroupId: 100500180
     Id: 100500250
     CharacterId: 10050
     MessageCondition: Feedback
@@ -502,13 +508,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 꼭 그렇다는 게 아니라요!
-    MessageJP: やはりそうですよね！
-    MessageCN: 果然是这样对吧！
-    MessageEN: I'm just saying!
-    MessageTH: ไม่ใช่แบบนั้นสักหน่อยค่ะ!
-    MessageTW: 果然是那樣啊！
-  - MessageGroupId: 100500190
+  - MessageKR: 세상에는 어떻게 해도 맞지 않는 음식이 있는 법이잖아요?
+    MessageJP: 世の中にはどうしても合わない食べ物だってありますし
+    MessageCN: 世界上总会有一些食物是合不了胃口的
+    MessageEN: You just can't acquire a taste for everything, you know?
+    MessageTH: "ยังไงในโลกนี้ก็ต้องมีอาหารที่ไม่ถูกปาก
+
+      เราอยู่เหมือนกันไม่ใช่รึไงคะ?"
+    MessageTW: 世上總有不合自己胃口的食物
+    MessageGroupId: 100500190
     Id: 100500260
     CharacterId: 10050
     MessageCondition: Feedback
@@ -520,15 +528,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 세상에는 어떻게 해도 맞지 않는 음식이 있는 법이잖아요?
-    MessageJP: 世の中にはどうしても合わない食べ物だってありますし
-    MessageCN: 世界上总会有一些食物是合不了胃口的
-    MessageEN: You just can't acquire a taste for everything, you know?
-    MessageTH: "ยังไงในโลกนี้ก็ต้องมีอาหารที่ไม่ถูกปาก
-
-      เราอยู่เหมือนกันไม่ใช่รึไงคะ?"
-    MessageTW: 世上總有不合自己胃口的食物
-  - MessageGroupId: 100500190
+  - MessageKR: 예를 들자면 저와 당근처럼 말이예요.
+    MessageJP: 例えば、私とニンジンのように
+    MessageCN: 比如说，就像胡萝卜和我一样
+    MessageEN: For example, I can't eat carrots.
+    MessageTH: อย่างเช่น ฉันไม่ถูกกับแคร์รอตค่ะ
+    MessageTW: 舉例來說，就像我之於紅蘿蔔
+    MessageGroupId: 100500190
     Id: 100500270
     CharacterId: 10050
     MessageCondition: Feedback
@@ -540,13 +546,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 예를 들자면 저와 당근처럼 말이예요.
-    MessageJP: 例えば、私とニンジンのように
-    MessageCN: 比如说，就像胡萝卜和我一样
-    MessageEN: For example, I can't eat carrots.
-    MessageTH: อย่างเช่น ฉันไม่ถูกกับแคร์รอตค่ะ
-    MessageTW: 舉例來說，就像我之於紅蘿蔔
-  - MessageGroupId: 100500200
+  - MessageKR: 다음에는 커피에 우유와 설탕을 타 줄게.
+    MessageJP: 今度はコーヒーに牛乳と砂糖を入れてあげるね
+    MessageCN: 那这次我给心奈的咖啡里加上牛奶和糖吧
+    MessageEN: I'll put milk and sugar in your coffee next time.
+    MessageTH: "เอาไว้คราวหน้า ครูจะชงกาแฟ
+
+      ใส่นมกับน้ำตาลให้นะ"
+    MessageTW: 我下次會幫你在咖啡裡面加牛奶跟砂糖的
+    MessageGroupId: 100500200
     Id: 100500280
     CharacterId: 10050
     MessageCondition: Answer
@@ -558,15 +566,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에는 커피에 우유와 설탕을 타 줄게.
-    MessageJP: 今度はコーヒーに牛乳と砂糖を入れてあげるね
-    MessageCN: 那这次我给心奈的咖啡里加上牛奶和糖吧
-    MessageEN: I'll put milk and sugar in your coffee next time.
-    MessageTH: "เอาไว้คราวหน้า ครูจะชงกาแฟ
-
-      ใส่นมกับน้ำตาลให้นะ"
-    MessageTW: 我下次會幫你在咖啡裡面加牛奶跟砂糖的
-  - MessageGroupId: 100500210
+  - MessageKR: 우유와, 설탕이요……?!
+    MessageJP: 牛乳と砂糖ですか……！？
+    MessageCN: 牛奶和糖吗……！？
+    MessageEN: Milk and sugar...?!
+    MessageTH: นมกับน้ำตาลเหรอคะ...?!
+    MessageTW: 牛奶跟砂糖嗎……！？
+    MessageGroupId: 100500210
     Id: 100500290
     CharacterId: 10050
     MessageCondition: Feedback
@@ -578,13 +584,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우유와, 설탕이요……?!
-    MessageJP: 牛乳と砂糖ですか……！？
-    MessageCN: 牛奶和糖吗……！？
-    MessageEN: Milk and sugar...?!
-    MessageTH: นมกับน้ำตาลเหรอคะ...?!
-    MessageTW: 牛奶跟砂糖嗎……！？
-  - MessageGroupId: 100500210
+  - MessageKR: 그, 그렇다면 저도 생각을 다시 해 볼 수도……?
+    MessageJP: そ、それなら考え直してもいいかも……？
+    MessageCN: 这、这样的话，也许我可以重新考虑一下……？
+    MessageEN: Th-Then I might reconsider...
+    MessageTH: "ถะ... ถ้างั้นฉันอาจจะลองคิดดูอีกครั้ง
+
+      ก็ได้..."
+    MessageTW: 那，那樣的話，好像可以重新考慮一下……？
+    MessageGroupId: 100500210
     Id: 100500300
     CharacterId: 10050
     MessageCondition: Feedback
@@ -596,15 +604,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그렇다면 저도 생각을 다시 해 볼 수도……?
-    MessageJP: そ、それなら考え直してもいいかも……？
-    MessageCN: 这、这样的话，也许我可以重新考虑一下……？
-    MessageEN: Th-Then I might reconsider...
-    MessageTH: "ถะ... ถ้างั้นฉันอาจจะลองคิดดูอีกครั้ง
-
-      ก็ได้..."
-    MessageTW: 那，那樣的話，好像可以重新考慮一下……？
-  - MessageGroupId: 100500220
+  - MessageKR: 아뇨. 역시 아니에요.
+    MessageJP: いいえ、やっぱりいいです
+    MessageCN: 不，果然还是算了
+    MessageEN: No, I don't think so.
+    MessageTH: ไม่ค่ะ ยังไงก็ไม่ดีกว่าค่ะ
+    MessageTW: 不，果然還是算了
+    MessageGroupId: 100500220
     Id: 100500310
     CharacterId: 10050
     MessageCondition: Feedback
@@ -616,13 +622,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아뇨. 역시 아니에요.
-    MessageJP: いいえ、やっぱりいいです
-    MessageCN: 不，果然还是算了
-    MessageEN: No, I don't think so.
-    MessageTH: ไม่ค่ะ ยังไงก็ไม่ดีกว่าค่ะ
-    MessageTW: 不，果然還是算了
-  - MessageGroupId: 100500220
+  - MessageKR: 전 훌륭한 숙녀니까, 그런 건 필요 없어요.
+    MessageJP: 私は立派なレディーですから、そんなものは必要ありません
+    MessageCN: 毕竟我已经是一个优秀的淑女了，不需要那种东西来证明
+    MessageEN: I'm a proper lady, so I don't need that.
+    MessageTH: "ฉันเป็นกุลสตรีที่เพียบพร้อม เรื่องแบบ
+
+      นั้นคงไม่จำเป็นหรอกค่ะ"
+    MessageTW: 我是優秀的淑女，不需要那種東西
+    MessageGroupId: 100500220
     Id: 100500320
     CharacterId: 10050
     MessageCondition: Feedback
@@ -634,15 +642,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전 훌륭한 숙녀니까, 그런 건 필요 없어요.
-    MessageJP: 私は立派なレディーですから、そんなものは必要ありません
-    MessageCN: 毕竟我已经是一个优秀的淑女了，不需要那种东西来证明
-    MessageEN: I'm a proper lady, so I don't need that.
-    MessageTH: "ฉันเป็นกุลสตรีที่เพียบพร้อม เรื่องแบบ
+  - MessageKR: 그냥 저와 커피가 안 맞는 것뿐이니까요.
+    MessageJP: ただ私とコーヒーが合わないだけですから
+    MessageCN: 单纯是我和咖啡合不来而已
+    MessageEN: I just don't like coffee, that's all.
+    MessageTH: "มันก็แค่ฉันเข้ากันกับ... กาแฟไม่ได้
 
-      นั้นคงไม่จำเป็นหรอกค่ะ"
-    MessageTW: 我是優秀的淑女，不需要那種東西
-  - MessageGroupId: 100500230
+      แค่นั้นเองค่ะ"
+    MessageTW: 就只是咖啡不適合我而已
+    MessageGroupId: 100500230
     Id: 100500330
     CharacterId: 10050
     MessageCondition: Feedback
@@ -654,15 +662,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 저와 커피가 안 맞는 것뿐이니까요.
-    MessageJP: ただ私とコーヒーが合わないだけですから
-    MessageCN: 单纯是我和咖啡合不来而已
-    MessageEN: I just don't like coffee, that's all.
-    MessageTH: "มันก็แค่ฉันเข้ากันกับ... กาแฟไม่ได้
-
-      แค่นั้นเองค่ะ"
-    MessageTW: 就只是咖啡不適合我而已
-  - MessageGroupId: 100500240
+  - MessageKR: 그럼 난 우유와 설탕을 타서 맛있는 커피를 마셔야지~
+    MessageJP: じゃあ、私は牛乳と砂糖を入れておいしいコーヒーを飲もうかな
+    MessageCN: 那我就把这杯加了牛奶和糖的好喝的咖啡喝掉咯
+    MessageEN: Then I'll just have delicious coffee with milk and sugar by myself!
+    MessageTH: ถ้างั้นเดี๋ยวครูชงกาแฟใส่นมอร่อยๆ ดื่มเองก็ได้~
+    MessageTW: 那麼，我就來喝加了牛奶和砂糖的美味咖啡吧
+    MessageGroupId: 100500240
     Id: 100500340
     CharacterId: 10050
     MessageCondition: Answer
@@ -674,13 +680,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 난 우유와 설탕을 타서 맛있는 커피를 마셔야지~
-    MessageJP: じゃあ、私は牛乳と砂糖を入れておいしいコーヒーを飲もうかな
-    MessageCN: 那我就把这杯加了牛奶和糖的好喝的咖啡喝掉咯
-    MessageEN: Then I'll just have delicious coffee with milk and sugar by myself!
-    MessageTH: ถ้างั้นเดี๋ยวครูชงกาแฟใส่นมอร่อยๆ ดื่มเองก็ได้~
-    MessageTW: 那麼，我就來喝加了牛奶和砂糖的美味咖啡吧
-  - MessageGroupId: 100500250
+  - MessageKR: 치사해요!
+    MessageJP: ずるいです！
+    MessageCN: 太狡猾了！
+    MessageEN: That's not fair!
+    MessageTH: โหดร้ายไปแล้วค่ะ!
+    MessageTW: 太狡猾了！
+    MessageGroupId: 100500250
     Id: 100500350
     CharacterId: 10050
     MessageCondition: Feedback
@@ -692,13 +698,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 치사해요!
-    MessageJP: ずるいです！
-    MessageCN: 太狡猾了！
-    MessageEN: That's not fair!
-    MessageTH: โหดร้ายไปแล้วค่ะ!
-    MessageTW: 太狡猾了！
-  - MessageGroupId: 100500250
+  - MessageKR: 어른들은 다 치사해요!
+    MessageJP: 大人はみんなずるいです！
+    MessageCN: 大人都太狡猾了！
+    MessageEN: Adults are all unfair!
+    MessageTH: พวกผู้ใหญ่นี่โหดร้ายกันสุดๆ เลย!
+    MessageTW: 大人們都很狡猾！
+    MessageGroupId: 100500250
     Id: 100500360
     CharacterId: 10050
     MessageCondition: Feedback
@@ -710,13 +716,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어른들은 다 치사해요!
-    MessageJP: 大人はみんなずるいです！
-    MessageCN: 大人都太狡猾了！
-    MessageEN: Adults are all unfair!
-    MessageTH: พวกผู้ใหญ่นี่โหดร้ายกันสุดๆ เลย!
-    MessageTW: 大人們都很狡猾！
-  - MessageGroupId: 100500260
+  - MessageKR: 아무리 생각해도 속고 있는 게 분명해요……
+    MessageJP: どう考えても騙されてるに違いないです……
+    MessageCN: 怎么想都觉得我肯定被骗了……
+    MessageEN: I feel like I'm always being lied to...
+    MessageTH: คิดดูแล้วฉันคงโดนหลอกอยู่แน่ๆ เลยค่ะ...
+    MessageTW: 怎麼想都覺得我被騙了……
+    MessageGroupId: 100500260
     Id: 100500370
     CharacterId: 10050
     MessageCondition: FavorRankUp
@@ -728,13 +734,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무리 생각해도 속고 있는 게 분명해요……
-    MessageJP: どう考えても騙されてるに違いないです……
-    MessageCN: 怎么想都觉得我肯定被骗了……
-    MessageEN: I feel like I'm always being lied to...
-    MessageTH: คิดดูแล้วฉันคงโดนหลอกอยู่แน่ๆ เลยค่ะ...
-    MessageTW: 怎麼想都覺得我被騙了……
-  - MessageGroupId: 100500270
+  - MessageKR: 당근이 맛있어질 리가 없어요……
+    MessageJP: ニンジンが美味しくなるわけないです……
+    MessageCN: 胡萝卜是不可能变得好吃的……
+    MessageEN: There's no way I'll ever like carrots...
+    MessageTH: ไม่มีทางที่แคร์รอตจะอร่อยได้แน่นอนค่ะ
+    MessageTW: 紅蘿蔔怎麼可能會變好吃……
+    MessageGroupId: 100500270
     Id: 100500380
     CharacterId: 10050
     MessageCondition: None
@@ -746,13 +752,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 당근이 맛있어질 리가 없어요……
-    MessageJP: ニンジンが美味しくなるわけないです……
-    MessageCN: 胡萝卜是不可能变得好吃的……
-    MessageEN: There's no way I'll ever like carrots...
-    MessageTH: ไม่มีทางที่แคร์รอตจะอร่อยได้แน่นอนค่ะ
-    MessageTW: 紅蘿蔔怎麼可能會變好吃……
-  - MessageGroupId: 100500280
+  - MessageKR: 맛있는 당근을 먹으러 가자!
+    MessageJP: おいしいニンジンを食べに行こう！
+    MessageCN: 我们一起去吃好吃的胡萝卜吧！
+    MessageEN: Let's go eat delicious carrots!
+    MessageTH: ไปหาแคร์รอตอร่อยๆ กินกันเถอะ!
+    MessageTW: 去吃好吃的紅蘿蔔吧！
+    MessageGroupId: 100500280
     Id: 100500390
     CharacterId: 10050
     MessageCondition: Answer
@@ -764,13 +770,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 맛있는 당근을 먹으러 가자!
-    MessageJP: おいしいニンジンを食べに行こう！
-    MessageCN: 我们一起去吃好吃的胡萝卜吧！
-    MessageEN: Let's go eat delicious carrots!
-    MessageTH: ไปหาแคร์รอตอร่อยๆ กินกันเถอะ!
-    MessageTW: 去吃好吃的紅蘿蔔吧！
-  - MessageGroupId: 100500280
+  - MessageKR: 당근 식당에 갈 준비는 됐어?
+    MessageJP: ニンジンレストランに行く準備はできた？
+    MessageCN: 心奈准备好去胡萝卜餐厅了吗？
+    MessageEN: Are you ready to go to a carrot restaurant?
+    MessageTH: เตรียมพร้อมไปร้านอาหารแคร์รอตรึยัง?
+    MessageTW: 準備好去紅蘿蔔餐廳了嗎？
+    MessageGroupId: 100500280
     Id: 100500400
     CharacterId: 10050
     MessageCondition: Answer
@@ -782,13 +788,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 당근 식당에 갈 준비는 됐어?
-    MessageJP: ニンジンレストランに行く準備はできた？
-    MessageCN: 心奈准备好去胡萝卜餐厅了吗？
-    MessageEN: Are you ready to go to a carrot restaurant?
-    MessageTH: เตรียมพร้อมไปร้านอาหารแคร์รอตรึยัง?
-    MessageTW: 準備好去紅蘿蔔餐廳了嗎？
-  - MessageGroupId: 100500290
+  - MessageKR: 가야만…… 하는…… 건가요……?
+    MessageJP: 行かないと……ダメ……ですか……？
+    MessageCN: 不能……不去……吗……？
+    MessageEN: Do I...have to go...?
+    MessageTH: แค่ไปด้วย... ก็พอแล้ว... ใช่มั้ยคะ?
+    MessageTW: 不去的話……不行……嗎……？
+    MessageGroupId: 100500290
     Id: 100500410
     CharacterId: 10050
     MessageCondition: Feedback
@@ -800,13 +806,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가야만…… 하는…… 건가요……?
-    MessageJP: 行かないと……ダメ……ですか……？
-    MessageCN: 不能……不去……吗……？
-    MessageEN: Do I...have to go...?
-    MessageTH: แค่ไปด้วย... ก็พอแล้ว... ใช่มั้ยคะ?
-    MessageTW: 不去的話……不行……嗎……？
-  - MessageGroupId: 100500300
+  - MessageKR: 우으에으에으에으에……
+    MessageJP: ううえ……うええ……うえん
+    MessageCN: 呜诶……呜诶诶……呜呜呜
+    MessageEN: Urghhhhh...
+    MessageTH: มุแงงงง
+    MessageTW: 噁……噁……噁……
+    MessageGroupId: 100500300
     Id: 100500420
     CharacterId: 10050
     MessageCondition: Feedback
@@ -818,13 +824,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우으에으에으에으에……
-    MessageJP: ううえ……うええ……うえん
-    MessageCN: 呜诶……呜诶诶……呜呜呜
-    MessageEN: Urghhhhh...
-    MessageTH: มุแงงงง
-    MessageTW: 噁……噁……噁……
-  - MessageGroupId: 100500310
+  - MessageKR: 제가 오늘 죽어버리면 선생님 때문일 거예요……
+    MessageJP: 私が今日死んでしまったら、先生のせいですからね……
+    MessageCN: 要是我今天死掉的话，就全是老师的错……
+    MessageEN: If I die today, it'll be your fault...
+    MessageTH: "ถ้าเกิดว่าวันนี้ฉันตายไปละก็เป็นเพราะ
+
+      คุณครูเลยนะคะ..."
+    MessageTW: 如果我今天死掉的話，都是老師的錯……
+    MessageGroupId: 100500310
     Id: 100500430
     CharacterId: 10050
     MessageCondition: Feedback
@@ -836,15 +844,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제가 오늘 죽어버리면 선생님 때문일 거예요……
-    MessageJP: 私が今日死んでしまったら、先生のせいですからね……
-    MessageCN: 要是我今天死掉的话，就全是老师的错……
-    MessageEN: If I die today, it'll be your fault...
-    MessageTH: "ถ้าเกิดว่าวันนี้ฉันตายไปละก็เป็นเพราะ
-
-      คุณครูเลยนะคะ..."
-    MessageTW: 如果我今天死掉的話，都是老師的錯……
-  - MessageGroupId: 100500320
+  - MessageKR: 나만 믿어.
+    MessageJP: 私を信じて
+    MessageCN: 相信我吧
+    MessageEN: Trust me.
+    MessageTH: เชื่อครูเหอะน่า
+    MessageTW: 就相信我吧
+    MessageGroupId: 100500320
     Id: 100500440
     CharacterId: 10050
     MessageCondition: Answer
@@ -856,13 +862,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나만 믿어.
-    MessageJP: 私を信じて
-    MessageCN: 相信我吧
-    MessageEN: Trust me.
-    MessageTH: เชื่อครูเหอะน่า
-    MessageTW: 就相信我吧
-  - MessageGroupId: 100500320
+  - MessageKR: 멋진 숙녀 대접을 해 줄게.
+    MessageJP: 素敵なレディー扱いをするから
+    MessageCN: 这是因为我把心奈当作一个优秀的淑女哦
+    MessageEN: I'll treat you like a proper lady.
+    MessageTH: ครูจะเลี้ยงข้าวกุลสตรีผู้เพียบพร้อมเอง
+    MessageTW: 我會把你當淑女對待的
+    MessageGroupId: 100500320
     Id: 100500450
     CharacterId: 10050
     MessageCondition: Answer
@@ -874,13 +880,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 멋진 숙녀 대접을 해 줄게.
-    MessageJP: 素敵なレディー扱いをするから
-    MessageCN: 这是因为我把心奈当作一个优秀的淑女哦
-    MessageEN: I'll treat you like a proper lady.
-    MessageTH: ครูจะเลี้ยงข้าวกุลสตรีผู้เพียบพร้อมเอง
-    MessageTW: 我會把你當淑女對待的
-  - MessageGroupId: 100500330
+  - MessageKR: 알았어요.
+    MessageJP: わかりました
+    MessageCN: 我明白了
+    MessageEN: Okay.
+    MessageTH: ก็ได้ค่ะ
+    MessageTW: 我知道了
+    MessageGroupId: 100500330
     Id: 100500460
     CharacterId: 10050
     MessageCondition: Feedback
@@ -892,13 +898,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알았어요.
-    MessageJP: わかりました
-    MessageCN: 我明白了
-    MessageEN: Okay.
-    MessageTH: ก็ได้ค่ะ
-    MessageTW: 我知道了
-  - MessageGroupId: 100500340
+  - MessageKR: 선생님만…… 믿을게요.
+    MessageJP: 先生を……信じます
+    MessageCN: 我……相信老师
+    MessageEN: I believe you.
+    MessageTH: งั้นฉันจะเชื่อ... คุณครูค่ะ
+    MessageTW: 就……相信老師了
+    MessageGroupId: 100500340
     Id: 100500470
     CharacterId: 10050
     MessageCondition: Feedback
@@ -910,9 +916,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님만…… 믿을게요.
-    MessageJP: 先生を……信じます
-    MessageCN: 我……相信老师
-    MessageEN: I believe you.
-    MessageTH: งั้นฉันจะเชื่อ... คุณครูค่ะ
-    MessageTW: 就……相信老師了

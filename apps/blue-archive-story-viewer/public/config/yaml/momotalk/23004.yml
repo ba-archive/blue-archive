@@ -1,62 +1,70 @@
 CharacterId: 23004
 translator: 今天早睡了吗
 title:
-  - GroupId: 2300402
-    FavorScheduleId: 230042
-    CharacterId: 23004
-    TextJp: 職人魂
+  - TextJp: 職人魂
     TextCn: 匠人精神
     TextKr: 장인 정신
     TextEn: Craftmanship
     TextTh: จิตวิญญาณของช่างฝีมือ
     TextTw: 職人之魂
-  - GroupId: 2300403
-    FavorScheduleId: 230043
+    GroupId: 2300402
+    FavorScheduleId: 230042
     CharacterId: 23004
-    TextJp: 弘法筆を択ばず？
+  - TextJp: 弘法筆を択ばず？
     TextCn: 善书者不择笔？
     TextKr: 장인은 도구를 가리지 않는다
     TextEn: An Indiscriminate Craftsman
     TextTh: ช่างฝีมือจะไม่เลือกอุปกรณ์
     TextTw: 善書不擇筆？
-  - GroupId: 2300405
-    FavorScheduleId: 230045
+    GroupId: 2300403
+    FavorScheduleId: 230043
     CharacterId: 23004
-    TextJp: 完璧なアニマロイド
+  - TextJp: 完璧なアニマロイド
     TextCn: 完美的宠物机器人
     TextKr: 완벽한 애니멀로이드
     TextEn: The Perfect Animaloid
     TextTh: หุ่นยนต์สัตว์ที่สมบูรณ์แบบ
     TextTw: 完美的動物機器人
-  - GroupId: 2300406
-    FavorScheduleId: 230046
+    GroupId: 2300405
+    FavorScheduleId: 230045
     CharacterId: 23004
-    TextJp: 見せられないもの
+  - TextJp: 見せられないもの
     TextCn: 难以示人的模样
     TextKr: 보이고 싶지 않은 모습
     TextEn: Don't Watch Me
     TextTh: ภาพที่ไม่อยากให้เห็น
     TextTw: 不想被看到的事物
-  - GroupId: 2300408
-    FavorScheduleId: 230048
+    GroupId: 2300406
+    FavorScheduleId: 230046
     CharacterId: 23004
-    TextJp: マイスターの勲章
+  - TextJp: マイスターの勲章
     TextCn: 工匠的勋章
     TextKr: 마이스터의 훈장
     TextEn: The Meister's Medal
     TextTh: เหรียญตราไมสเตอร์
     TextTw: 巨匠的勳章
-  - GroupId: 2300420
-    FavorScheduleId: 2300420
+    GroupId: 2300408
+    FavorScheduleId: 230048
     CharacterId: 23004
-    TextJp: 全てが入れ替わっても
+  - TextJp: 全てが入れ替わっても
     TextCn: 即使全部替换
     TextKr: 모든 것이 교체되더라도
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Even If Everything Is Replaced
+    TextTh: ต่อให้ทุกอย่างจะถูกแทนที่
+    TextTw: 就算一切都被替換
+    GroupId: 2300420
+    FavorScheduleId: 2300420
+    CharacterId: 23004
 content:
-  - MessageGroupId: 230040010
+  - MessageKR: 선생님, 아까 보니 도매 문구점의 카탈로그를 열심히 읽고 있던데…….
+    MessageJP: 先生、先ほど文房具のカタログを一生懸命に読んでたけれど……
+    MessageCN: 我刚刚看到老师在很认真地看文具的商品清单……
+    MessageEN: I saw you reading through the wholesale stationary shop's catalog before...
+    MessageTH: "เมื่อกี๊ฉันเห็นคุณครูอ่านแคตตาล็อกขาย
+
+      ส่งของร้านเครื่องเขียนอย่างตั้งใจมากเลย..."
+    MessageTW: 老師，剛剛看到你很認真地在看文具的型錄……
+    MessageGroupId: 230040010
     Id: 1582
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -68,15 +76,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 아까 보니 도매 문구점의 카탈로그를 열심히 읽고 있던데…….
-    MessageJP: 先生、先ほど文房具のカタログを一生懸命に読んでたけれど……
-    MessageCN: 我刚刚看到老师在很认真地看文具的商品清单……
-    MessageEN: I saw you reading through the wholesale stationary shop's catalog before...
-    MessageTH: "เมื่อกี๊ฉันเห็นคุณครูอ่านแคตตาล็อกขาย
-
-      ส่งของร้านเครื่องเขียนอย่างตั้งใจมากเลย..."
-    MessageTW: 老師，剛剛看到你很認真地在看文具的型錄……
-  - MessageGroupId: 230040020
+  - MessageKR: 뭔가 새로 필요한 학용품이라도 있어?
+    MessageJP: 何か必要なものでもあるのかい？
+    MessageCN: 是有什么需要的东西吗？
+    MessageEN: Is there something you need?
+    MessageTH: มีอุปกรณ์การสอนที่อยากซื้องั้นเหรอ?
+    MessageTW: 是有什麼需要的東西嗎？
+    MessageGroupId: 230040020
     Id: 1583
     CharacterId: 23004
     MessageCondition: None
@@ -88,13 +94,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 새로 필요한 학용품이라도 있어?
-    MessageJP: 何か必要なものでもあるのかい？
-    MessageCN: 是有什么需要的东西吗？
-    MessageEN: Is there something you need?
-    MessageTH: มีอุปกรณ์การสอนที่อยากซื้องั้นเหรอ?
-    MessageTW: 是有什麼需要的東西嗎？
-  - MessageGroupId: 230040030
+  - MessageKR: 새 연필꽂이를 주문하려고.
+    MessageJP: 新しいペン立てを注文しようと思って
+    MessageCN: 我想买一个新的笔筒
+    MessageEN: I want to order some new pencil holders.
+    MessageTH: ว่าจะซื้อที่ใส่ดินสอหน่อยน่ะ
+    MessageTW: 想要訂一個新的筆筒
+    MessageGroupId: 230040030
     Id: 1584
     CharacterId: 23004
     MessageCondition: Answer
@@ -106,13 +112,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 새 연필꽂이를 주문하려고.
-    MessageJP: 新しいペン立てを注文しようと思って
-    MessageCN: 我想买一个新的笔筒
-    MessageEN: I want to order some new pencil holders.
-    MessageTH: ว่าจะซื้อที่ใส่ดินสอหน่อยน่ะ
-    MessageTW: 想要訂一個新的筆筒
-  - MessageGroupId: 230040040
+  - MessageKR: 연필꽂이처럼 단순한 형태의 가구라면 부실에 있는 3D 프린터로 만드는 게 더 빠르지 않겠어?
+    MessageJP: そういった単純な形状なら、うちで作った方が早いと思うよ。どうかな？
+    MessageCN: 如果只是那种简单的形状的话，我们这边直接做一个会更快。老师觉得呢？
+    MessageEN:
+      If it's something as simple as a pencil holder, isn't it faster just
+      to make it through the 3D printer in the club room?
+    MessageTH: "ของง่ายๆ อย่างที่ใส่ดินสอนี้ใช้เครื่อง
+
+      พิมพ์สามมิติทำเอาไม่เร็วกว่าเหรอ?"
+    MessageTW: 如果是單純的款式的話，在我這裡做的話應該會更快唷。老師你覺得怎麼樣呢？
+    MessageGroupId: 230040040
     Id: 1585
     CharacterId: 23004
     MessageCondition: Feedback
@@ -124,17 +134,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 연필꽂이처럼 단순한 형태의 가구라면 부실에 있는 3D 프린터로 만드는 게 더 빠르지 않겠어?
-    MessageJP: そういった単純な形状なら、うちで作った方が早いと思うよ。どうかな？
-    MessageCN: 如果只是那种简单的形状的话，我们这边直接做一个会更快。老师觉得呢？
-    MessageEN:
-      If it's something as simple as a pencil holder, isn't it faster just
-      to make it through the 3D printer in the club room?
-    MessageTH: "ของง่ายๆ อย่างที่ใส่ดินสอนี้ใช้เครื่อง
+  - MessageKR: 3D 프린터로도 연필꽂이를 만들 수 있어?
+    MessageJP: そんな簡単に作れるの？
+    MessageCN: 原来是这么简单就能做好的东西吗？
+    MessageEN: You can make a pencil holder with a 3D printer?
+    MessageTH: "ทำที่ใส่ดินสอจากเครื่องพิมพ์สาม
 
-      พิมพ์สามมิติทำเอาไม่เร็วกว่าเหรอ?"
-    MessageTW: 如果是單純的款式的話，在我這裡做的話應該會更快唷。老師你覺得怎麼樣呢？
-  - MessageGroupId: 230040050
+      มิติได้ด้วยเหรอ?"
+    MessageTW: 這麼簡單就能做出來嗎？
+    MessageGroupId: 230040050
     Id: 1586
     CharacterId: 23004
     MessageCondition: Answer
@@ -146,15 +154,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 3D 프린터로도 연필꽂이를 만들 수 있어?
-    MessageJP: そんな簡単に作れるの？
-    MessageCN: 原来是这么简单就能做好的东西吗？
-    MessageEN: You can make a pencil holder with a 3D printer?
-    MessageTH: "ทำที่ใส่ดินสอจากเครื่องพิมพ์สาม
+  - MessageKR: 물론이야. 게다가 시중에 있는 제품보다 더 가볍고 튼튼하게 만들 수 있다고.
+    MessageJP: もちろん。おまけに市販のものよりもっと軽くて丈夫なものをね
+    MessageCN: 当然。而且我们做的还会比市面上卖的更轻更结实呢
+    MessageEN:
+      Of course! And it should be lighter and stronger than most products
+      on the market.
+    MessageTH: "ทำได้สิ แถมยังออกมาเบาและแข็งแรง
 
-      มิติได้ด้วยเหรอ?"
-    MessageTW: 這麼簡單就能做出來嗎？
-  - MessageGroupId: 230040060
+      กว่าที่ขายในร้านเครื่องเขียนซะอีก"
+    MessageTW: 當然。而且還比市面上賣得更輕更堅固
+    MessageGroupId: 230040060
     Id: 1587
     CharacterId: 23004
     MessageCondition: Feedback
@@ -166,17 +176,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이야. 게다가 시중에 있는 제품보다 더 가볍고 튼튼하게 만들 수 있다고.
-    MessageJP: もちろん。おまけに市販のものよりもっと軽くて丈夫なものをね
-    MessageCN: 当然。而且我们做的还会比市面上卖的更轻更结实呢
-    MessageEN:
-      Of course! And it should be lighter and stronger than most products
-      on the market.
-    MessageTH: "ทำได้สิ แถมยังออกมาเบาและแข็งแรง
-
-      กว่าที่ขายในร้านเครื่องเขียนซะอีก"
-    MessageTW: 當然。而且還比市面上賣得更輕更堅固
-  - MessageGroupId: 230040060
+  - MessageKR: 재료도 마침 있는데, 한번 만들어 볼까?
+    MessageJP: ちょうど材料もあるから、私の方で作ってみようか？
+    MessageCN: 我这边正好有材料，要不我先做一个看看？
+    MessageEN: I even have the materials. Should I make one for you?
+    MessageTH: ฉันมีวัสดุอยู่พอดี ลองทำดูไหม?
+    MessageTW: 正好我手邊有材料，我來幫你做怎麼樣呢？
+    MessageGroupId: 230040060
     Id: 1588
     CharacterId: 23004
     MessageCondition: Feedback
@@ -188,13 +194,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 재료도 마침 있는데, 한번 만들어 볼까?
-    MessageJP: ちょうど材料もあるから、私の方で作ってみようか？
-    MessageCN: 我这边正好有材料，要不我先做一个看看？
-    MessageEN: I even have the materials. Should I make one for you?
-    MessageTH: ฉันมีวัสดุอยู่พอดี ลองทำดูไหม?
-    MessageTW: 正好我手邊有材料，我來幫你做怎麼樣呢？
-  - MessageGroupId: 230040070
+  - MessageKR: 응, 그럼 부탁할게.
+    MessageJP: うん、じゃあお願いしようかな
+    MessageCN: 嗯，那就拜托咏叶啦
+    MessageEN: That would be great.
+    MessageTH: ดีเลย งั้นครูฝากด้วยล่ะ
+    MessageTW: 嗯，那就拜託你了
+    MessageGroupId: 230040070
     Id: 1589
     CharacterId: 23004
     MessageCondition: Answer
@@ -206,13 +212,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 그럼 부탁할게.
-    MessageJP: うん、じゃあお願いしようかな
-    MessageCN: 嗯，那就拜托咏叶啦
-    MessageEN: That would be great.
-    MessageTH: ดีเลย งั้นครูฝากด้วยล่ะ
-    MessageTW: 嗯，那就拜託你了
-  - MessageGroupId: 230040080
+  - MessageKR: 알았어. 그럼 1시간 정도 뒤에 엔지니어부의 작업실로 찾아와.
+    MessageJP: 分かった、じゃあ1時間後ぐらいにエンジニア部の作業室に来てほしい
+    MessageCN: 了解了，那么一个小时后希望老师能来一趟工程部的工作间
+    MessageEN: Okay! Come to the Engineering Club workshop in about an hour.
+    MessageTH: "ได้ หนึ่งชั่วโมงหลังจากนี้ก็แวะมาเอาที่
+
+      ห้องปฏิบัติงานของชมรมวิศวกรรมนะ"
+    MessageTW: 好的，那希望你大約1小時後到工程師部的工作室來
+    MessageGroupId: 230040080
     Id: 1590
     CharacterId: 23004
     MessageCondition: Feedback
@@ -224,15 +232,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알았어. 그럼 1시간 정도 뒤에 엔지니어부의 작업실로 찾아와.
-    MessageJP: 分かった、じゃあ1時間後ぐらいにエンジニア部の作業室に来てほしい
-    MessageCN: 了解了，那么一个小时后希望老师能来一趟工程部的工作间
-    MessageEN: Okay! Come to the Engineering Club workshop in about an hour.
-    MessageTH: "ได้ หนึ่งชั่วโมงหลังจากนี้ก็แวะมาเอาที่
+  - MessageKR: 선생님, 샬레 하우스의 화장실 불이 나간 것 같아.
+    MessageJP: 先生、シャーレのトイレの電気が切れたみたいだ
+    MessageCN: 老师，夏莱的卫生间电灯好像坏了
+    MessageEN:
+      I think the light bulb went out in the bathroom at the Schale office,
+      Sensei.
+    MessageTH: "คุณครู ฉันว่าไฟในห้องน้ำของชาเล่ต์
 
-      ห้องปฏิบัติงานของชมรมวิศวกรรมนะ"
-    MessageTW: 好的，那希望你大約1小時後到工程師部的工作室來
-  - MessageGroupId: 230040090
+      ต้องเสียแน่ๆ"
+    MessageTW: 老師，夏萊的廁所好像停電了
+    MessageGroupId: 230040090
     Id: 1591
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -244,17 +254,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 샬레 하우스의 화장실 불이 나간 것 같아.
-    MessageJP: 先生、シャーレのトイレの電気が切れたみたいだ
-    MessageCN: 老师，夏莱的卫生间电灯好像坏了
-    MessageEN:
-      I think the light bulb went out in the bathroom at the Schale office,
-      Sensei.
-    MessageTH: "คุณครู ฉันว่าไฟในห้องน้ำของชาเล่ต์
+  - MessageKR: 스위치 버튼을 눌러봤는데 불이 들어오지 않더라고.
+    MessageJP: スイッチを押したのに、明かりが点かなかった
+    MessageCN: 按了开关也不亮
+    MessageEN: I flipped the switch, but nothing happened.
+    MessageTH: "กดสวิทช์ตั้งหลายครั้งแล้ว แต่ไฟก็ไม่
 
-      ต้องเสียแน่ๆ"
-    MessageTW: 老師，夏萊的廁所好像停電了
-  - MessageGroupId: 230040100
+      ติดเลย"
+    MessageTW: 就算按了開關，燈也不會亮
+    MessageGroupId: 230040100
     Id: 1592
     CharacterId: 23004
     MessageCondition: None
@@ -266,15 +274,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 스위치 버튼을 눌러봤는데 불이 들어오지 않더라고.
-    MessageJP: スイッチを押したのに、明かりが点かなかった
-    MessageCN: 按了开关也不亮
-    MessageEN: I flipped the switch, but nothing happened.
-    MessageTH: "กดสวิทช์ตั้งหลายครั้งแล้ว แต่ไฟก็ไม่
+  - MessageKR: 그래? 수리 기사를 불러야겠네…….
+    MessageJP: あ、そうなんだ、ありがとう。修理業者を呼ばないと……
+    MessageCN: 啊，是这样吗，谢谢。这下得叫修理工了……
+    MessageEN: Really? I should call a repairman.
+    MessageTH: "ไฟเสียเหรอ?
 
-      ติดเลย"
-    MessageTW: 就算按了開關，燈也不會亮
-  - MessageGroupId: 230040110
+      งั้นต้องเรียกช่างมาซ่อม..."
+    MessageTW: 啊，這樣啊，謝謝你。得叫維修人員來才行……
+    MessageGroupId: 230040110
     Id: 1593
     CharacterId: 23004
     MessageCondition: Answer
@@ -286,15 +294,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래? 수리 기사를 불러야겠네…….
-    MessageJP: あ、そうなんだ、ありがとう。修理業者を呼ばないと……
-    MessageCN: 啊，是这样吗，谢谢。这下得叫修理工了……
-    MessageEN: Really? I should call a repairman.
-    MessageTH: "ไฟเสียเหรอ?
+  - MessageKR: 괜찮아. 전선이 끊어진 것뿐이니 간단하게 고칠 수 있어.
+    MessageJP: 大丈夫、電線が切れただけみたいだから、簡単に直せるはず
+    MessageCN: 没关系，看着像是电线断了，修理应该很简单
+    MessageEN: It's okay. The wires are just disconnected, so it's an easy fix.
+    MessageTH: "ไม่เป็นไรหรอก แค่สายไฟถูกตัดเอง
 
-      งั้นต้องเรียกช่างมาซ่อม..."
-    MessageTW: 啊，這樣啊，謝謝你。得叫維修人員來才行……
-  - MessageGroupId: 230040120
+      เราซ่อมมันเองได้ง่ายๆ"
+    MessageTW: 沒問題的，好像只是電線斷掉了而已，應該很好修的
+    MessageGroupId: 230040120
     Id: 1594
     CharacterId: 23004
     MessageCondition: Feedback
@@ -306,15 +314,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮아. 전선이 끊어진 것뿐이니 간단하게 고칠 수 있어.
-    MessageJP: 大丈夫、電線が切れただけみたいだから、簡単に直せるはず
-    MessageCN: 没关系，看着像是电线断了，修理应该很简单
-    MessageEN: It's okay. The wires are just disconnected, so it's an easy fix.
-    MessageTH: "ไม่เป็นไรหรอก แค่สายไฟถูกตัดเอง
-
-      เราซ่อมมันเองได้ง่ายๆ"
-    MessageTW: 沒問題的，好像只是電線斷掉了而已，應該很好修的
-  - MessageGroupId: 230040120
+  - MessageKR: 전선 슬리브 압착기는 어디에 있어? 내가 수리할게.
+    MessageJP: 圧着工具はどこかな？私が直すよ
+    MessageCN: 老师这边有压线钳吗？我来修理吧
+    MessageEN: Where do you keep the wire compression sleeves? I'll fix it.
+    MessageTH: มีคีมปอกสายไฟไหม? เดี๋ยวฉันซ่อมเอง
+    MessageTW: 壓接工具放在哪呢？我來修理
+    MessageGroupId: 230040120
     Id: 1595
     CharacterId: 23004
     MessageCondition: Feedback
@@ -326,13 +332,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전선 슬리브 압착기는 어디에 있어? 내가 수리할게.
-    MessageJP: 圧着工具はどこかな？私が直すよ
-    MessageCN: 老师这边有压线钳吗？我来修理吧
-    MessageEN: Where do you keep the wire compression sleeves? I'll fix it.
-    MessageTH: มีคีมปอกสายไฟไหม? เดี๋ยวฉันซ่อมเอง
-    MessageTW: 壓接工具放在哪呢？我來修理
-  - MessageGroupId: 230040130
+  - MessageKR: 그렇게 전문적인 공구는 샬레에 없는데…….
+    MessageJP: そんな専門的な工具は、シャーレにはないけど……
+    MessageCN: 夏莱应该没有这么专业的工具……
+    MessageEN: We don't have anything like that at Schale...
+    MessageTH: ในชาเล่ต์ไม่มีอุปกรณ์แบบนั้นหรอก...
+    MessageTW: 夏萊裡沒有那種專業的工具……
+    MessageGroupId: 230040130
     Id: 1596
     CharacterId: 23004
     MessageCondition: Answer
@@ -344,13 +350,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇게 전문적인 공구는 샬레에 없는데…….
-    MessageJP: そんな専門的な工具は、シャーレにはないけど……
-    MessageCN: 夏莱应该没有这么专业的工具……
-    MessageEN: We don't have anything like that at Schale...
-    MessageTH: ในชาเล่ต์ไม่มีอุปกรณ์แบบนั้นหรอก...
-    MessageTW: 夏萊裡沒有那種專業的工具……
-  - MessageGroupId: 230040140
+  - MessageKR: ……샬레에 압착기가 한 자루도 없다고?
+    MessageJP: ……無いのかい？ひとつも？
+    MessageCN: ……没有吗？一个也没有？
+    MessageEN: Schale doesn't have a single compression sleeve?
+    MessageTH: ที่ชาเล่ต์ไม่มีคีมซักอันเลยเหรอ...?
+    MessageTW: ……沒有嗎？一個也沒有？
+    MessageGroupId: 230040140
     Id: 1597
     CharacterId: 23004
     MessageCondition: Feedback
@@ -362,13 +368,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……샬레에 압착기가 한 자루도 없다고?
-    MessageJP: ……無いのかい？ひとつも？
-    MessageCN: ……没有吗？一个也没有？
-    MessageEN: Schale doesn't have a single compression sleeve?
-    MessageTH: ที่ชาเล่ต์ไม่มีคีมซักอันเลยเหรอ...?
-    MessageTW: ……沒有嗎？一個也沒有？
-  - MessageGroupId: 230040140
+  - MessageKR: ……정말?
+    MessageJP: ……そうか
+    MessageCN: ……这样啊
+    MessageEN: Really?
+    MessageTH: จริงเหรอ...?
+    MessageTW: ……這樣啊
+    MessageGroupId: 230040140
     Id: 1598
     CharacterId: 23004
     MessageCondition: Feedback
@@ -380,13 +386,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……정말?
-    MessageJP: ……そうか
-    MessageCN: ……这样啊
-    MessageEN: Really?
-    MessageTH: จริงเหรอ...?
-    MessageTW: ……這樣啊
-  - MessageGroupId: 230040150
+  - MessageKR: 선생님, 오늘 오후 당번 학생 활동도 잘 부탁해.
+    MessageJP: 先生、予定通り今日の午後は当番でシャーレに伺うよ
+    MessageCN: 老师，按照日程我下午会去夏莱值班
+    MessageEN:
+      Sensei, I'm counting on you to schedule the student activities this
+      afternoon.
+    MessageTH: "คุณครู เย็นนี้ฝากกิจกรรมตัวแทนนักเรียน
+
+      ด้วยนะ"
+    MessageTW: 老師，按照計畫，今天下午會去夏萊值班
+    MessageGroupId: 230040150
     Id: 1599
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -398,17 +408,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 오늘 오후 당번 학생 활동도 잘 부탁해.
-    MessageJP: 先生、予定通り今日の午後は当番でシャーレに伺うよ
-    MessageCN: 老师，按照日程我下午会去夏莱值班
-    MessageEN:
-      Sensei, I'm counting on you to schedule the student activities this
-      afternoon.
-    MessageTH: "คุณครู เย็นนี้ฝากกิจกรรมตัวแทนนักเรียน
+  - MessageKR: 미안. 갑작스러운 출장 일정이 잡혀서 오후에는 샬레에 없을 것 같아.
+    MessageJP: ごめん、急な予定が入って、午後シャーレにいないかも
+    MessageCN: 不好意思，我突然有点急事，下午可能不在夏莱
+    MessageEN: Sorry, I have to leave town, so I won't be at Schale this afternoon.
+    MessageTH: "ขอโทษนะ ครูมีงานด่วนเข้ามาน่ะ
 
-      ด้วยนะ"
-    MessageTW: 老師，按照計畫，今天下午會去夏萊值班
-  - MessageGroupId: 230040160
+      ตอนเย็นคงจะไม่ได้อยู่ที่ชาเล่ต์"
+    MessageTW: 抱歉，突然有急事，下午我可能不會待在夏萊
+    MessageGroupId: 230040160
     Id: 1600
     CharacterId: 23004
     MessageCondition: Answer
@@ -420,15 +428,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 미안. 갑작스러운 출장 일정이 잡혀서 오후에는 샬레에 없을 것 같아.
-    MessageJP: ごめん、急な予定が入って、午後シャーレにいないかも
-    MessageCN: 不好意思，我突然有点急事，下午可能不在夏莱
-    MessageEN: Sorry, I have to leave town, so I won't be at Schale this afternoon.
-    MessageTH: "ขอโทษนะ ครูมีงานด่วนเข้ามาน่ะ
-
-      ตอนเย็นคงจะไม่ได้อยู่ที่ชาเล่ต์"
-    MessageTW: 抱歉，突然有急事，下午我可能不會待在夏萊
-  - MessageGroupId: 230040170
+  - MessageKR: 그래? 그렇다면 어쩔 수 없지.
+    MessageJP: そうなのか。いや、それは仕方ない
+    MessageCN: 这样啊。算了，那也是没办法的事
+    MessageEN: Really? Well, I guess there's nothing I can do about it.
+    MessageTH: งานด่วนเหรอ? ถ้างั้นก็ช่วยไม่ได้
+    MessageTW: 這樣啊。不，那也沒辦法
+    MessageGroupId: 230040170
     Id: 1601
     CharacterId: 23004
     MessageCondition: Feedback
@@ -440,13 +446,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래? 그렇다면 어쩔 수 없지.
-    MessageJP: そうなのか。いや、それは仕方ない
-    MessageCN: 这样啊。算了，那也是没办法的事
-    MessageEN: Really? Well, I guess there's nothing I can do about it.
-    MessageTH: งานด่วนเหรอ? ถ้างั้นก็ช่วยไม่ได้
-    MessageTW: 這樣啊。不，那也沒辦法
-  - MessageGroupId: 230040170
+  - MessageKR: 뭔가 선생님이 없는 동안 해두어야 할 일이라도 있을까?
+    MessageJP: 何か先生がいない間に、やっておくべきことはあるかい？
+    MessageCN: 老师不在的时候，有什么需要我做的事情吗？
+    MessageEN: Is there anything I should get done while you're gone?
+    MessageTH: "มีเรื่องอะไรให้ฉันทำระหว่างที่คุณครูไม่
+
+      อยู่ไหม?"
+    MessageTW: 老師不在的時候，有什麼需要幫忙做的事嗎？
+    MessageGroupId: 230040170
     Id: 1602
     CharacterId: 23004
     MessageCondition: Feedback
@@ -458,15 +466,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 선생님이 없는 동안 해두어야 할 일이라도 있을까?
-    MessageJP: 何か先生がいない間に、やっておくべきことはあるかい？
-    MessageCN: 老师不在的时候，有什么需要我做的事情吗？
-    MessageEN: Is there anything I should get done while you're gone?
-    MessageTH: "มีเรื่องอะไรให้ฉันทำระหว่างที่คุณครูไม่
+  - MessageKR: 오후에 택배가 하나 도착할 텐데 나 대신 받아줘.
+    MessageJP: 午後に宅配が届くかもしれないから、受け取ってくれる？
+    MessageCN: 下午可能会有一个快递会到，咏叶能帮我取一下吗？
+    MessageEN: I have a package coming this afternoon. Maybe you can grab it for me.
+    MessageTH: "ช่วงเย็นจะมีพัสดุเข้ามาส่ง
 
-      อยู่ไหม?"
-    MessageTW: 老師不在的時候，有什麼需要幫忙做的事嗎？
-  - MessageGroupId: 230040180
+      เธอช่วยรับไว้หน่อยนะ"
+    MessageTW: 下午可能會有快遞送來，能幫我收一下嗎？
+    MessageGroupId: 230040180
     Id: 1603
     CharacterId: 23004
     MessageCondition: Answer
@@ -478,15 +486,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오후에 택배가 하나 도착할 텐데 나 대신 받아줘.
-    MessageJP: 午後に宅配が届くかもしれないから、受け取ってくれる？
-    MessageCN: 下午可能会有一个快递会到，咏叶能帮我取一下吗？
-    MessageEN: I have a package coming this afternoon. Maybe you can grab it for me.
-    MessageTH: "ช่วงเย็นจะมีพัสดุเข้ามาส่ง
-
-      เธอช่วยรับไว้หน่อยนะ"
-    MessageTW: 下午可能會有快遞送來，能幫我收一下嗎？
-  - MessageGroupId: 230040190
+  - MessageKR: 무슨 택배?
+    MessageJP: 宅配？どんなものが？
+    MessageCN: 快递？是什么快递？
+    MessageEN: What kind of package?
+    MessageTH: พัสดุอะไรเหรอ?
+    MessageTW: 快遞？會送來什麼呢？
+    MessageGroupId: 230040190
     Id: 1604
     CharacterId: 23004
     MessageCondition: Feedback
@@ -498,13 +504,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 택배?
-    MessageJP: 宅配？どんなものが？
-    MessageCN: 快递？是什么快递？
-    MessageEN: What kind of package?
-    MessageTH: พัสดุอะไรเหรอ?
-    MessageTW: 快遞？會送來什麼呢？
-  - MessageGroupId: 230040200
+  - MessageKR: 샬레의 놀이방에 둘 장난감 강아지 인형을 하나 주문했거든.
+    MessageJP: 犬のロボットを注文してて
+    MessageCN: 我下单了一个机器狗
+    MessageEN: I ordered a toy dog for Schale's playroom.
+    MessageTH: "ครูสั่งตุ๊กตาน้องหมาไว้น่ะ ว่าจะเอา
+
+      มาวางในห้องนั่งเล่นของชาเล่ต์"
+    MessageTW: 我訂了一隻機器狗
+    MessageGroupId: 230040200
     Id: 1605
     CharacterId: 23004
     MessageCondition: Answer
@@ -516,15 +524,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레의 놀이방에 둘 장난감 강아지 인형을 하나 주문했거든.
-    MessageJP: 犬のロボットを注文してて
-    MessageCN: 我下单了一个机器狗
-    MessageEN: I ordered a toy dog for Schale's playroom.
-    MessageTH: "ครูสั่งตุ๊กตาน้องหมาไว้น่ะ ว่าจะเอา
-
-      มาวางในห้องนั่งเล่นของชาเล่ต์"
-    MessageTW: 我訂了一隻機器狗
-  - MessageGroupId: 230040210
+  - MessageKR: 헤에, 장난감 강아지 인형이라…….
+    MessageJP: へえ、犬のロボットか……
+    MessageCN: 诶，机器狗啊……
+    MessageEN: Heehee. A toy dog...
+    MessageTH: ตุ๊กตา... น้องหมาเหรอ?
+    MessageTW: 嘿，是機器狗啊……
+    MessageGroupId: 230040210
     Id: 1606
     CharacterId: 23004
     MessageCondition: Feedback
@@ -536,13 +542,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 헤에, 장난감 강아지 인형이라…….
-    MessageJP: へえ、犬のロボットか……
-    MessageCN: 诶，机器狗啊……
-    MessageEN: Heehee. A toy dog...
-    MessageTH: ตุ๊กตา... น้องหมาเหรอ?
-    MessageTW: 嘿，是機器狗啊……
-  - MessageGroupId: 230040220
+  - MessageKR: ……혹시나 해서 말해두는 건데, 구조가 궁금하다고 먼저 뜯어보면 안 된다?
+    MessageJP: ……念のためだけど、解剖しちゃダメだよ？
+    MessageCN: ……虽然是为了以防万一，但是咏叶不能拆解哦？
+    MessageEN:
+      Um... You probably wouldn't anyway, but please don't open the package,
+      okay?
+    MessageTH: "แต่ขอบอกไว้ก่อนนะ
+
+      เธอห้ามแกะดูของก่อนเด็ดขาด"
+    MessageTW: ……以防萬一跟你說一下，不可以解剖它唷？
+    MessageGroupId: 230040220
     Id: 1607
     CharacterId: 23004
     MessageCondition: Answer
@@ -554,17 +564,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……혹시나 해서 말해두는 건데, 구조가 궁금하다고 먼저 뜯어보면 안 된다?
-    MessageJP: ……念のためだけど、解剖しちゃダメだよ？
-    MessageCN: ……虽然是为了以防万一，但是咏叶不能拆解哦？
-    MessageEN:
-      Um... You probably wouldn't anyway, but please don't open the package,
-      okay?
-    MessageTH: "แต่ขอบอกไว้ก่อนนะ
-
-      เธอห้ามแกะดูของก่อนเด็ดขาด"
-    MessageTW: ……以防萬一跟你說一下，不可以解剖它唷？
-  - MessageGroupId: 230040230
+  - MessageKR: ……우타하?
+    MessageJP: ……ウタハ？
+    MessageCN: ……咏叶？
+    MessageEN: Utaha?
+    MessageTH: อุทาฮะ...?
+    MessageTW: ……詠葉？
+    MessageGroupId: 230040230
     Id: 1608
     CharacterId: 23004
     MessageCondition: Answer
@@ -576,13 +582,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……우타하?
-    MessageJP: ……ウタハ？
-    MessageCN: ……咏叶？
-    MessageEN: Utaha?
-    MessageTH: อุทาฮะ...?
-    MessageTW: ……詠葉？
-  - MessageGroupId: 230040240
+  - MessageKR: 선생님, 지난번에 부탁했던 자전거 바퀴의 수리가 모두 끝났어.
+    MessageJP: 先生、この前頼まれた自転車の修理が終わったから
+    MessageCN: 老师，之前您拜托我们维修的自行车已经修好了
+    MessageEN: Sensei, the bicycle wheel is all fixed.
+    MessageTH: "คุณครู ฉันซ่อมล้อจักรยานที่ขอให้ช่วย
+
+      คราวก่อนเสร็จหมดแล้ว"
+    MessageTW: 老師，你之前拜託我修理的腳踏車已經修好了
+    MessageGroupId: 230040240
     Id: 1609
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -594,15 +602,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 지난번에 부탁했던 자전거 바퀴의 수리가 모두 끝났어.
-    MessageJP: 先生、この前頼まれた自転車の修理が終わったから
-    MessageCN: 老师，之前您拜托我们维修的自行车已经修好了
-    MessageEN: Sensei, the bicycle wheel is all fixed.
-    MessageTH: "คุณครู ฉันซ่อมล้อจักรยานที่ขอให้ช่วย
+  - MessageKR: 다음에 밀레니엄 학원에 올 때 엔지니어부 부실에 들러서 찾아가.
+    MessageJP: 今度ミレニアムに来た時に、エンジニア部に寄って受け取ってくれるかい？
+    MessageCN: 老师下次来千年的时候，能顺路来工程部取一下吗？
+    MessageEN:
+      Drop by the Engineering Club office the next time you're at the Millennium
+      School.
+    MessageTH: "คราวหน้าถ้ามาโรงเรียนมิลเลเนียมก็แวะ
 
-      คราวก่อนเสร็จหมดแล้ว"
-    MessageTW: 老師，你之前拜託我修理的腳踏車已經修好了
-  - MessageGroupId: 230040250
+      ไปเอาที่ห้องชมรมวิศวกรรมนะ"
+    MessageTW: 下次你來千年時，可以到工程師部這邊來拿嗎？
+    MessageGroupId: 230040250
     Id: 1610
     CharacterId: 23004
     MessageCondition: None
@@ -614,17 +624,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 밀레니엄 학원에 올 때 엔지니어부 부실에 들러서 찾아가.
-    MessageJP: 今度ミレニアムに来た時に、エンジニア部に寄って受け取ってくれるかい？
-    MessageCN: 老师下次来千年的时候，能顺路来工程部取一下吗？
-    MessageEN:
-      Drop by the Engineering Club office the next time you're at the Millennium
-      School.
-    MessageTH: "คราวหน้าถ้ามาโรงเรียนมิลเลเนียมก็แวะ
-
-      ไปเอาที่ห้องชมรมวิศวกรรมนะ"
-    MessageTW: 下次你來千年時，可以到工程師部這邊來拿嗎？
-  - MessageGroupId: 230040260
+  - MessageKR: 생각보다 빨리 끝났네.
+    MessageJP: すごい、早いね
+    MessageCN: 好快，真厉害啊
+    MessageEN: That was faster than I expected.
+    MessageTH: เสร็จเร็วกว่าที่คิดอีกแฮะ
+    MessageTW: 好厲害，動作真快
+    MessageGroupId: 230040260
     Id: 1611
     CharacterId: 23004
     MessageCondition: Answer
@@ -636,13 +642,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 생각보다 빨리 끝났네.
-    MessageJP: すごい、早いね
-    MessageCN: 好快，真厉害啊
-    MessageEN: That was faster than I expected.
-    MessageTH: เสร็จเร็วกว่าที่คิดอีกแฮะ
-    MessageTW: 好厲害，動作真快
-  - MessageGroupId: 230040260
+  - MessageKR: 역시 밀레니엄의 마이스터야!
+    MessageJP: 流石、ミレニアムのマイスター！
+    MessageCN: 不愧是千年的工匠！
+    MessageEN: I'd expect nothing less from a meister of Millennium!
+    MessageTH: สมกับเป็นไมสเตอร์แห่งมิลเลเนียม!
+    MessageTW: 不愧是千年的巨匠！
+    MessageGroupId: 230040260
     Id: 1612
     CharacterId: 23004
     MessageCondition: Answer
@@ -654,13 +660,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 밀레니엄의 마이스터야!
-    MessageJP: 流石、ミレニアムのマイスター！
-    MessageCN: 不愧是千年的工匠！
-    MessageEN: I'd expect nothing less from a meister of Millennium!
-    MessageTH: สมกับเป็นไมสเตอร์แห่งมิลเลเนียม!
-    MessageTW: 不愧是千年的巨匠！
-  - MessageGroupId: 230040270
+  - MessageKR: 뭐, 내가 아니더라도 이 정도의 고장을 수리하는 건 어려운 일이 아니니까.
+    MessageJP: まあ、私でなくてもこのくらいなら、それほど難しい修理ではないさ
+    MessageCN: 没什么的，哪怕不是我来，修自行车也没有什么难度的
+    MessageEN: This is a piece of cake for anyone at Millennium.
+    MessageTH: "ชมอะไรขนาดนั้น งานซ่อมแบบนี้ไม่ใช่
+
+      เรื่องยากหรอกนะ คนอื่นก็ทำได้"
+    MessageTW: 嘛，就算不是我來做，修起來也不算很難。
+    MessageGroupId: 230040270
     Id: 1613
     CharacterId: 23004
     MessageCondition: Feedback
@@ -672,15 +680,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 내가 아니더라도 이 정도의 고장을 수리하는 건 어려운 일이 아니니까.
-    MessageJP: まあ、私でなくてもこのくらいなら、それほど難しい修理ではないさ
-    MessageCN: 没什么的，哪怕不是我来，修自行车也没有什么难度的
-    MessageEN: This is a piece of cake for anyone at Millennium.
-    MessageTH: "ชมอะไรขนาดนั้น งานซ่อมแบบนี้ไม่ใช่
-
-      เรื่องยากหรอกนะ คนอื่นก็ทำได้"
-    MessageTW: 嘛，就算不是我來做，修起來也不算很難。
-  - MessageGroupId: 230040270
+  - MessageKR: 선생님도 나중에 직접 수리해보면 알게 될 거야.
+    MessageJP: 先生も今度、自分で修理してみたらきっと分かるよ
+    MessageCN: 老师下次试着自己修一下就知道了
+    MessageEN: You'll see when you do it yourself.
+    MessageTH: ไว้คุณครูลองซ่อมดูเองก็จะรู้ว่าไม่ยากเลย
+    MessageTW: 老師下次自己修修看的話就會知道了
+    MessageGroupId: 230040270
     Id: 1614
     CharacterId: 23004
     MessageCondition: Feedback
@@ -692,13 +698,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님도 나중에 직접 수리해보면 알게 될 거야.
-    MessageJP: 先生も今度、自分で修理してみたらきっと分かるよ
-    MessageCN: 老师下次试着自己修一下就知道了
-    MessageEN: You'll see when you do it yourself.
-    MessageTH: ไว้คุณครูลองซ่อมดูเองก็จะรู้ว่าไม่ยากเลย
-    MessageTW: 老師下次自己修修看的話就會知道了
-  - MessageGroupId: 230040280
+  - MessageKR: 우타하가 물건을 수리하는 모습을 옆에서 직접 보고 싶은데…….
+    MessageJP: むしろ、ウタハが修理するところを隣で見てたいな
+    MessageCN: 倒不如说，我想在咏叶旁边看看修理东西的样子
+    MessageEN: I want to watch you while you work...
+    MessageTH: แต่ครูอยากนั่งดูอุทาฮะซ่อมของนู่นนี่นี่นา...
+    MessageTW: 我寧願站在詠葉旁邊看著你修裡
+    MessageGroupId: 230040280
     Id: 1615
     CharacterId: 23004
     MessageCondition: Answer
@@ -710,13 +716,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우타하가 물건을 수리하는 모습을 옆에서 직접 보고 싶은데…….
-    MessageJP: むしろ、ウタハが修理するところを隣で見てたいな
-    MessageCN: 倒不如说，我想在咏叶旁边看看修理东西的样子
-    MessageEN: I want to watch you while you work...
-    MessageTH: แต่ครูอยากนั่งดูอุทาฮะซ่อมของนู่นนี่นี่นา...
-    MessageTW: 我寧願站在詠葉旁邊看著你修裡
-  - MessageGroupId: 230040290
+  - MessageKR: ……그건 곤란해. 엔지니어부의 작업실에는 위험한 물건이 많거든.
+    MessageJP: それは、どうなんだろうな……作業室には、危険なものも多いからね
+    MessageCN: 那个嘛，怎么说呢……工作间里面还是有很多危险的东西的
+    MessageEN:
+      I can't let you do that. The Engineering Club workshop is filled with
+      dangerous objects.
+    MessageTH: "ไม่ได้หรอก... เพราะในห้องชมรม
+
+      วิศวกรรมมีของอันตรายเยอะเลย..."
+    MessageTW: 這個嘛，怎麼辦才好呢……工作室裡面有很多危險的東西
+    MessageGroupId: 230040290
     Id: 1616
     CharacterId: 23004
     MessageCondition: Feedback
@@ -728,17 +738,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……그건 곤란해. 엔지니어부의 작업실에는 위험한 물건이 많거든.
-    MessageJP: それは、どうなんだろうな……作業室には、危険なものも多いからね
-    MessageCN: 那个嘛，怎么说呢……工作间里面还是有很多危险的东西的
+  - MessageKR: 게다가 수리라는 건 단순 작업의 반복이라, 옆에서 지켜봐도 별 재미도 없다고.
+    MessageJP: それに、修理は単純作業の繰り返しだ。あまり面白いものでは無いと思うよ
+    MessageCN: 还有，修理只是简单动作的重复。我觉得实在不是什么有意思的事情
     MessageEN:
-      I can't let you do that. The Engineering Club workshop is filled with
-      dangerous objects.
-    MessageTH: "ไม่ได้หรอก... เพราะในห้องชมรม
-
-      วิศวกรรมมีของอันตรายเยอะเลย..."
-    MessageTW: 這個嘛，怎麼辦才好呢……工作室裡面有很多危險的東西
-  - MessageGroupId: 230040290
+      And since a simple fix like this is just a bunch of repetition, it
+      won't be any fun to watch.
+    MessageTH: อีกอย่างงานซ่อมก็ไม่ได้สนุกขนาดนั้นด้วย
+    MessageTW: 而且，修理也不過是單純作業的反覆操作而已。我覺得不是什麼有趣的事喔
+    MessageGroupId: 230040290
     Id: 1617
     CharacterId: 23004
     MessageCondition: Feedback
@@ -750,15 +758,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 게다가 수리라는 건 단순 작업의 반복이라, 옆에서 지켜봐도 별 재미도 없다고.
-    MessageJP: それに、修理は単純作業の繰り返しだ。あまり面白いものでは無いと思うよ
-    MessageCN: 还有，修理只是简单动作的重复。我觉得实在不是什么有意思的事情
-    MessageEN:
-      And since a simple fix like this is just a bunch of repetition, it
-      won't be any fun to watch.
-    MessageTH: อีกอย่างงานซ่อมก็ไม่ได้สนุกขนาดนั้นด้วย
-    MessageTW: 而且，修理也不過是單純作業的反覆操作而已。我覺得不是什麼有趣的事喔
-  - MessageGroupId: 230040300
+  - MessageKR: 얌전히 있을 테니까 제발~.
+    MessageJP: 大人しくしてるから～
+    MessageCN: 我不会乱动的啦～
+    MessageEN: I'll be right here...
+    MessageTH: ครูจะนั่งเฉยๆ น่า~
+    MessageTW: 我會乖乖待著的嘛～
+    MessageGroupId: 230040300
     Id: 1618
     CharacterId: 23004
     MessageCondition: Answer
@@ -770,13 +776,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 얌전히 있을 테니까 제발~.
-    MessageJP: 大人しくしてるから～
-    MessageCN: 我不会乱动的啦～
-    MessageEN: I'll be right here...
-    MessageTH: ครูจะนั่งเฉยๆ น่า~
-    MessageTW: 我會乖乖待著的嘛～
-  - MessageGroupId: 230040310
+  - MessageKR: 어린 아이도 아니잖아. 떼쓰지 마.
+    MessageJP: そんな子供みたいに……
+    MessageCN: 就算老师跟个小孩子似的撒娇……
+    MessageEN: You're not a little kid. Don't push it.
+    MessageTH: ตื๊อเหมือนเด็กเลย อายุเท่าไหร่แล้วเนี่ย?
+    MessageTW: 像個小孩一樣……
+    MessageGroupId: 230040310
     Id: 1619
     CharacterId: 23004
     MessageCondition: Feedback
@@ -788,13 +794,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어린 아이도 아니잖아. 떼쓰지 마.
-    MessageJP: そんな子供みたいに……
-    MessageCN: 就算老师跟个小孩子似的撒娇……
-    MessageEN: You're not a little kid. Don't push it.
-    MessageTH: ตื๊อเหมือนเด็กเลย อายุเท่าไหร่แล้วเนี่ย?
-    MessageTW: 像個小孩一樣……
-  - MessageGroupId: 230040310
+  - MessageKR: 어차피 지금은 딱히 수리할 물건도 없으니까…… 나중에 기회가 생기면 다시 말해줄게.
+    MessageJP: どちらにせよ今は修理するものもないから……またの機会にね
+    MessageCN: 不管怎么说现在也没有需要修理的东西……有机会的话再说吧
+    MessageEN: There's nothing really to fix right now... I'll let you know next time.
+    MessageTH: "ตอนนี้ไม่มีอะไรให้ซ่อมหรอก... ต่อไป
+
+      หากต้องซ่อมอะไรฉันจะบอกเอง"
+    MessageTW: 不管怎樣，現在手邊也沒有東西需要修理……之後有機會再說吧
+    MessageGroupId: 230040310
     Id: 1620
     CharacterId: 23004
     MessageCondition: Feedback
@@ -806,15 +814,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어차피 지금은 딱히 수리할 물건도 없으니까…… 나중에 기회가 생기면 다시 말해줄게.
-    MessageJP: どちらにせよ今は修理するものもないから……またの機会にね
-    MessageCN: 不管怎么说现在也没有需要修理的东西……有机会的话再说吧
-    MessageEN: There's nothing really to fix right now... I'll let you know next time.
-    MessageTH: "ตอนนี้ไม่มีอะไรให้ซ่อมหรอก... ต่อไป
+  - MessageKR: 아까 자전거 보관소에서 봤는데 천둥이가 혼자 엎어져서 헛돌고 있던데.
+    MessageJP: そういえばさっき駐輪場で、雷ちゃんがひとりでに変な動きしてたよ
+    MessageCN: 这么说来，我刚刚看到雷酱在停车场那边做一些奇怪的动作
+    MessageEN: I passed by the bicycle storage and saw Thundergun toppled over.
+    MessageTH: "จะว่าไป เมื่อกี้เหมือนเห็นเจ้าสายฟ้า
 
-      หากต้องซ่อมอะไรฉันจะบอกเอง"
-    MessageTW: 不管怎樣，現在手邊也沒有東西需要修理……之後有機會再說吧
-  - MessageGroupId: 230040320
+      ล้มลงไปหมุนอยู่ในที่เก็บจักรยานเลย"
+    MessageTW: 這麼說來，雷醬剛剛一個人在停車場坐著奇怪的動作唷
+    MessageGroupId: 230040320
     Id: 1621
     CharacterId: 23004
     MessageCondition: Answer
@@ -826,15 +834,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아까 자전거 보관소에서 봤는데 천둥이가 혼자 엎어져서 헛돌고 있던데.
-    MessageJP: そういえばさっき駐輪場で、雷ちゃんがひとりでに変な動きしてたよ
-    MessageCN: 这么说来，我刚刚看到雷酱在停车场那边做一些奇怪的动作
-    MessageEN: I passed by the bicycle storage and saw Thundergun toppled over.
-    MessageTH: "จะว่าไป เมื่อกี้เหมือนเห็นเจ้าสายฟ้า
-
-      ล้มลงไปหมุนอยู่ในที่เก็บจักรยานเลย"
-    MessageTW: 這麼說來，雷醬剛剛一個人在停車場坐著奇怪的動作唷
-  - MessageGroupId: 230040330
+  - MessageKR: 뭐, 천둥이가?!?!
+    MessageJP: なっ、雷ちゃんが！？！？
+    MessageCN: 什么，雷酱！？！？
+    MessageEN: What? Thundergun?!
+    MessageTH: ว่าไงนะ เจ้าสายฟ้าเหรอ?!?!
+    MessageTW: 什麼，雷醬嗎！？！？
+    MessageGroupId: 230040330
     Id: 1622
     CharacterId: 23004
     MessageCondition: Feedback
@@ -846,13 +852,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 천둥이가?!?!
-    MessageJP: なっ、雷ちゃんが！？！？
-    MessageCN: 什么，雷酱！？！？
-    MessageEN: What? Thundergun?!
-    MessageTH: ว่าไงนะ เจ้าสายฟ้าเหรอ?!?!
-    MessageTW: 什麼，雷醬嗎！？！？
-  - MessageGroupId: 230040340
+  - MessageKR: <서벌>에서 새로운 작업용 장갑을 출시하려는 모양이야.
+    MessageJP: 「サーバル」から今度、新しい作業用手袋が発売されるらしい
+    MessageCN: 最近Serval好像发售了新的工作用手套
+    MessageEN: It looks like Serval is going to release some new work gloves.
+    MessageTH: "เหมือนว่า <เซอร์วัล> จะวางขายถุงมือ
+
+      ช่างแบบใหม่เลย"
+    MessageTW: 「Saval」好像要推出新的工作手套的樣子
+    MessageGroupId: 230040340
     Id: 1623
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -864,15 +872,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: <서벌>에서 새로운 작업용 장갑을 출시하려는 모양이야.
-    MessageJP: 「サーバル」から今度、新しい作業用手袋が発売されるらしい
-    MessageCN: 最近Serval好像发售了新的工作用手套
-    MessageEN: It looks like Serval is going to release some new work gloves.
-    MessageTH: "เหมือนว่า <เซอร์วัล> จะวางขายถุงมือ
+  - MessageKR: 지난번에 <마나슬루>에서 구입한 장갑은 너무 두꺼워서 새로운 것을 찾던 중이었는데…… 마침 잘 되었네.
+    MessageJP: 以前買った「マナスル」のは少々厚すぎたから、良いタイミングだ
+    MessageCN: 之前我买的Manaslu的手套有点太厚了，正好可以换新
+    MessageEN:
+      The gloves I bought from Manaslu are too thick, so I was looking for
+      something new. Perfect timing.
+    MessageTH: "ถุงมือที่ซื้อมาจาก <มานาซึรุ> คราวก่อน
 
-      ช่างแบบใหม่เลย"
-    MessageTW: 「Saval」好像要推出新的工作手套的樣子
-  - MessageGroupId: 230040350
+      หนามากเลย ฉันกำลังหาถุงมือใหม่อยู่พอดี"
+    MessageTW: 我之前買的「Manaslu」有點太厚了，真是剛好
+    MessageGroupId: 230040350
     Id: 1624
     CharacterId: 23004
     MessageCondition: None
@@ -884,17 +894,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번에 <마나슬루>에서 구입한 장갑은 너무 두꺼워서 새로운 것을 찾던 중이었는데…… 마침 잘 되었네.
-    MessageJP: 以前買った「マナスル」のは少々厚すぎたから、良いタイミングだ
-    MessageCN: 之前我买的Manaslu的手套有点太厚了，正好可以换新
-    MessageEN:
-      The gloves I bought from Manaslu are too thick, so I was looking for
-      something new. Perfect timing.
-    MessageTH: "ถุงมือที่ซื้อมาจาก <มานาซึรุ> คราวก่อน
+  - MessageKR: 그러고 보니 우타하는 실내에서도 언제나 작업용 장갑을 끼고 있네.
+    MessageJP: そういえばウタハ、屋内でもずっと手袋を着けてるね
+    MessageCN: 这么说来，咏叶在室内也一直戴着手套呢
+    MessageEN: I notice you always wear work gloves, even when you're inside, Utaha.
+    MessageTH: "เพิ่งสังเกตว่าอุทาฮะสวมถุงมือช่าง
 
-      หนามากเลย ฉันกำลังหาถุงมือใหม่อยู่พอดี"
-    MessageTW: 我之前買的「Manaslu」有點太厚了，真是剛好
-  - MessageGroupId: 230040360
+      อยู่ตลอดเวลาเลยนะ"
+    MessageTW: 這麼說來，詠葉在室內也一直帶著手套呢
+    MessageGroupId: 230040360
     Id: 1625
     CharacterId: 23004
     MessageCondition: Answer
@@ -906,15 +914,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러고 보니 우타하는 실내에서도 언제나 작업용 장갑을 끼고 있네.
-    MessageJP: そういえばウタハ、屋内でもずっと手袋を着けてるね
-    MessageCN: 这么说来，咏叶在室内也一直戴着手套呢
-    MessageEN: I notice you always wear work gloves, even when you're inside, Utaha.
-    MessageTH: "เพิ่งสังเกตว่าอุทาฮะสวมถุงมือช่าง
-
-      อยู่ตลอดเวลาเลยนะ"
-    MessageTW: 這麼說來，詠葉在室內也一直帶著手套呢
-  - MessageGroupId: 230040370
+  - MessageKR: 무슨 특별한 이유라도 있어?
+    MessageJP: 何かマイスター的に特別な理由があるの？
+    MessageCN: 有什么对于匠人而言特别的原因吗？
+    MessageEN: Can I ask why?
+    MessageTH: มีเหตุผลอะไรงั้นเหรอ?
+    MessageTW: 是有什麼特別的理由嗎？
+    MessageGroupId: 230040370
     Id: 1626
     CharacterId: 23004
     MessageCondition: Answer
@@ -926,13 +932,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 특별한 이유라도 있어?
-    MessageJP: 何かマイスター的に特別な理由があるの？
-    MessageCN: 有什么对于匠人而言特别的原因吗？
-    MessageEN: Can I ask why?
-    MessageTH: มีเหตุผลอะไรงั้นเหรอ?
-    MessageTW: 是有什麼特別的理由嗎？
-  - MessageGroupId: 230040380
+  - MessageKR: 특별한 이유라고 할 것은 없고…… 내 손가락은 그다지 예쁜 편이 아니거든.
+    MessageJP: 大した理由ではないけど、私の指はあまり人に見せられたものではないから
+    MessageCN: 也没有什么特别的原因，只是我的手指实在不太好见人
+    MessageEN: No special reason... My fingers aren't very pretty.
+    MessageTH: "ไม่มีเหตุผลอะไรเป็นพิเศษหรอก... ก็แค่
+
+      นิ้วของฉันไม่ค่อยสวยน่ะ"
+    MessageTW: 其實也沒什麼特別的理由，只是因為我的手指沒什麼好看的而已
+    MessageGroupId: 230040380
     Id: 1627
     CharacterId: 23004
     MessageCondition: Feedback
@@ -944,27 +952,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 특별한 이유라고 할 것은 없고…… 내 손가락은 그다지 예쁜 편이 아니거든.
-    MessageJP: 大した理由ではないけど、私の指はあまり人に見せられたものではないから
-    MessageCN: 也没有什么特别的原因，只是我的手指实在不太好见人
-    MessageEN: No special reason... My fingers aren't very pretty.
-    MessageTH: "ไม่มีเหตุผลอะไรเป็นพิเศษหรอก... ก็แค่
-
-      นิ้วของฉันไม่ค่อยสวยน่ะ"
-    MessageTW: 其實也沒什麼特別的理由，只是因為我的手指沒什麼好看的而已
-  - MessageGroupId: 230040380
-    Id: 1628
-    CharacterId: 23004
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230040390
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 어릴 적부터 기름과 금속을 만지고 살았더니 끝이 갈라지고 기름때가 스며들어서 보기에 흉해.
+  - MessageKR: 어릴 적부터 기름과 금속을 만지고 살았더니 끝이 갈라지고 기름때가 스며들어서 보기에 흉해.
     MessageJP: 昔からずっと油と金属を触ってきたせいで、決して綺麗とは言えない
     MessageCN: 因为以前就一直接触油和金属，所以绝对说不上是什么漂亮的手
     MessageEN:
@@ -976,7 +964,25 @@ content:
 
       ไม่น่าดูหรอก"
     MessageTW: 從以前就一直接觸到油或是金屬之類的東西，絕對稱不上好看
-  - MessageGroupId: 230040390
+    MessageGroupId: 230040380
+    Id: 1628
+    CharacterId: 23004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230040390
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그래서 장갑을 끼고 다니는 것뿐이야.
+    MessageJP: だから、ね
+    MessageCN: 所以就，一直戴着手套了
+    MessageEN: That's why I'm always wearing gloves.
+    MessageTH: ก็เลยสวมถุงมืออยู่ตลอดน่ะ
+    MessageTW: 所以，就是這樣
+    MessageGroupId: 230040390
     Id: 1629
     CharacterId: 23004
     MessageCondition: Feedback
@@ -988,13 +994,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 장갑을 끼고 다니는 것뿐이야.
-    MessageJP: だから、ね
-    MessageCN: 所以就，一直戴着手套了
-    MessageEN: That's why I'm always wearing gloves.
-    MessageTH: ก็เลยสวมถุงมืออยู่ตลอดน่ะ
-    MessageTW: 所以，就是這樣
-  - MessageGroupId: 230040400
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師
+    MessageGroupId: 230040400
     Id: 230040010
     CharacterId: 23004
     MessageCondition: FavorRankUp
@@ -1006,13 +1012,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040410
+  - MessageKR: 혹시 오늘 시간 괜찮을까.
+    MessageJP: 今日、時間はあるかい？
+    MessageCN: 今天有时间吗？
+    MessageEN: Are you free today by any chance?
+    MessageTH: วันนี้พอมีเวลาว่างรึเปล่า?
+    MessageTW: 今天有空嗎？
+    MessageGroupId: 230040410
     Id: 230040020
     CharacterId: 23004
     MessageCondition: None
@@ -1024,13 +1030,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 오늘 시간 괜찮을까.
-    MessageJP: 今日、時間はあるかい？
-    MessageCN: 今天有时间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040420
+  - MessageKR: 괜찮은데, 무슨 일이야?
+    MessageJP: 大丈夫だよ。何かあったの？
+    MessageCN: 有的，怎么了？
+    MessageEN: Sure. What's up?
+    MessageTH: อื้อ ครูว่างนะ มีอะไรเหรอ?
+    MessageTW: 沒問題唷。有什麼事嗎？
+    MessageGroupId: 230040420
     Id: 230040030
     CharacterId: 23004
     MessageCondition: Answer
@@ -1042,13 +1048,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮은데, 무슨 일이야?
-    MessageJP: 大丈夫だよ。何かあったの？
-    MessageCN: 有的，怎么了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040430
+  - MessageKR: 그냥 공구를 좀 사러 갈 일이 있어서.
+    MessageJP: ちょっと工具を新調しようと思って
+    MessageCN: 我想稍微更新一下工具
+    MessageEN: I just need to go buy some tools.
+    MessageTH: พอดีฉันต้องไปซื้ออุปกรณ์นิดหน่อยน่ะ
+    MessageTW: 我想要更新一下工具
+    MessageGroupId: 230040430
     Id: 230040040
     CharacterId: 23004
     MessageCondition: Feedback
@@ -1060,13 +1066,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 공구를 좀 사러 갈 일이 있어서.
-    MessageJP: ちょっと工具を新調しようと思って
-    MessageCN: 我想稍微更新一下工具
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040440
+  - MessageKR: 나만 아는 공구 전문점이 있는데
+    MessageJP: 私が贔屓にしてる工具専門店があるんだ
+    MessageCN: 之前我经常去的一家工具专卖店
+    MessageEN: There's a secret little hardware store I go to.
+    MessageTH: "มันมีร้านอุปกรณ์ที่มีแค่ฉันเท่านั้นที่รู้
+
+      อยู่ร้านหนึ่ง"
+    MessageTW: 有間我常去的工具專賣店
+    MessageGroupId: 230040440
     Id: 230040050
     CharacterId: 23004
     MessageCondition: Feedback
@@ -1078,13 +1086,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나만 아는 공구 전문점이 있는데
-    MessageJP: 私が贔屓にしてる工具専門店があるんだ
-    MessageCN: 之前我经常去的一家工具专卖店
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040440
+  - MessageKR: 괜찮으면, 소개해 줄까 해서.
+    MessageJP: 先生さえ良ければ、紹介しようかなと
+    MessageCN: 如果老师愿意的话，我想推荐给老师
+    MessageEN: I was wondering if you'd like to join me.
+    MessageTH: "ถ้าคุณครูว่างก็อยากแนะนำร้านนั้นให้
+
+      รู้จักน่ะ"
+    MessageTW: 老師不介意的話，我想介紹給你
+    MessageGroupId: 230040440
     Id: 230040060
     CharacterId: 23004
     MessageCondition: Feedback
@@ -1096,13 +1106,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮으면, 소개해 줄까 해서.
-    MessageJP: 先生さえ良ければ、紹介しようかなと
-    MessageCN: 如果老师愿意的话，我想推荐给老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 230040450
+  - MessageKR: 얼마든지!
+    MessageJP: 喜んで！
+    MessageCN: 感激不尽！
+    MessageEN: I'd love to!
+    MessageTH: ครูว่างเสมอแหละ!
+    MessageTW: 我很樂意！
+    MessageGroupId: 230040450
     Id: 230040070
     CharacterId: 23004
     MessageCondition: Answer
@@ -1114,9 +1124,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 얼마든지!
-    MessageJP: 喜んで！
-    MessageCN: 感激不尽！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

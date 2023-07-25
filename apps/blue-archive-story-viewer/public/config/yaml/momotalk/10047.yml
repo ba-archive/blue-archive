@@ -37,7 +37,6 @@ title:
     GroupId: 1004720
     FavorScheduleId: 1004720
     CharacterId: 10047
-    unsure: false
 content:
   - MessageKR: 선생님. 베케이-션이야.
     MessageJP: 先生、レッツバケーション
@@ -61,9 +60,7 @@ content:
     MessageJP: バケーション……？
     MessageCN: 度假……？
     MessageEN: Huh? Vacation...? What's up, Chise?
-    MessageTH: |-
-      หืม? พักร้อน?
-       หมายถึงเรื่องอะไรเหรอ?
+    MessageTH: "หืม? พักร้อน?\n หมายถึงเรื่องอะไรเหรอ?"
     MessageTW: Vacation……？
     MessageGroupId: 100470020
     Id: 100470020
@@ -225,9 +222,7 @@ content:
     MessageJP: 探すって、何を？
     MessageCN: 找东西？千世要找什么？
     MessageEN: H-Huh? Find what?
-    MessageTH: |-
-      หืม? "ไปหา" เหรอ?
-       หาอะไรล่ะ?
+    MessageTH: "หืม? \"ไปหา\" เหรอ?\n หาอะไรล่ะ?"
     MessageTW: 尋找是，指什麼？
     MessageGroupId: 100470090
     Id: 100470110
@@ -317,9 +312,7 @@ content:
     MessageJP: 先生。この間きらきらを探した時にね
     MessageCN: 老师。上次找闪闪发光的时候
     MessageEN: Sensei, I've been looking for sparkles, and...
-    MessageTH: |-
-      คุณครู ตอนที่หาประกาย
-       ระยิบระยับอยู่
+    MessageTH: "คุณครู ตอนที่หาประกาย\n ระยิบระยับอยู่"
     MessageTW: 老師。上次在尋找閃閃發亮的時候啊
     MessageGroupId: 100470130
     Id: 100470160
@@ -355,9 +348,7 @@ content:
     MessageJP: 気になる……！
     MessageCN: 好在意……！
     MessageEN: It must be really special if you think it's incredible.
-    MessageTH: |-
-      ถ้าชิเซะบอกว่ายิ่งใหญ่ละก็
-       คงเป็นของที่พิเศษมากเลยสินะ
+    MessageTH: "ถ้าชิเซะบอกว่ายิ่งใหญ่ละก็\n คงเป็นของที่พิเศษมากเลยสินะ"
     MessageTW: 好在意……！
     MessageGroupId: 100470150
     Id: 100470180
@@ -573,9 +564,9 @@ content:
     MessageJP: これからも、1日3回
     MessageCN: 之后也要，一天三次
     MessageEN: no matter what happens,
-    MessageTH: |-
-      ไม่ว่าจะมีเรื่องอะไร
-      ก็ต้องแปรงฟัน
+    MessageTH: "ไม่ว่าจะมีเรื่องอะไร
+
+      ก็ต้องแปรงฟัน"
     MessageTW: 今後也，1天3次
     MessageGroupId: 100470230
     Id: 100470300
@@ -697,7 +688,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 치세가 즐겁다니 다행이야.
     MessageJP: チセが楽しそうで何よりだよ
     MessageCN: 只要千世能开心就再好不过啦
@@ -716,7 +706,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응. 하지만….
     MessageJP: うん、でも……
     MessageCN: 嗯，但是……
@@ -735,7 +724,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 역시 혼자만 즐거운 건 아까워~
     MessageJP: やっぱり、一人で楽しむのはもったいない～
     MessageCN: 果然，光是一个人享受还是可惜了点～
@@ -754,7 +742,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아, 알 거 같아. 그 기분.
     MessageJP: 分かるかも、その気持ち
     MessageCN: 我大概能理解千世的心情
@@ -773,7 +760,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다른 사람과 함께 놀면 더 즐거워지는 법이니까.
     MessageJP: 誰かと一緒なら、もっと楽しいよね
     MessageCN: 如果和别人一起的话，会更开心的对吧
@@ -792,7 +778,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아, 좋은 생각이 났다.
     MessageJP: あ、いいこと考えた
     MessageCN: 啊，想到了个好点子
@@ -811,7 +796,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다들 바다에 올 수 없다면….
     MessageJP: みんなで海に来られないなら……
     MessageCN: 既然大家没办法来海边……
@@ -830,7 +814,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 없다면…?
     MessageJP: 来られないなら……？
     MessageCN: 没办法来海边……？
@@ -849,7 +832,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 반대로 내가 바다를 가져가면 되겠네♪
     MessageJP: 逆に、私が海を持っていけば良いんだ～
     MessageCN: 那就反过来，我把大海带回去就好啦～
@@ -868,7 +850,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 좋았어~ 가져가야지~
     MessageJP: よ～し、そうと決まればさっそく～
     MessageCN: 好～既然决定了那就赶快～
@@ -887,7 +868,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: …응? 치세? 바다를? 가져가? 으응?
     MessageJP: ……ん？チセ？海を持っていくって……？
     MessageCN: ……嗯？千世？把大海带回来是什么意思……？
@@ -906,7 +886,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼 시작~
     MessageJP: すた～と～
     MessageCN: 开始～咯～
@@ -925,7 +904,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 자, 잠깐! 치세! 바로 갈 테니까! 조금만 기다려줘!
     MessageJP: ちょ、ちょっと待って！すぐそっちに行くから！
     MessageCN: 等、等一下！我现在就去你那边！
@@ -944,4 +922,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false

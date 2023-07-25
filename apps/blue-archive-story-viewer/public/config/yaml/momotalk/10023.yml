@@ -1,44 +1,50 @@
 CharacterId: 10023
 translator: 今天早睡了吗
 title:
-  - GroupId: 1002302
-    FavorScheduleId: 100232
-    CharacterId: 10023
-    TextJp: 海でしてはいけないこと
+  - TextJp: 海でしてはいけないこと
     TextCn: 不能在海边做的事
     TextKr: 해변에서 하면 안 되는 일
     TextEn: What Not To Do At the Beach
     TextTh: สิ่งที่ห้ามทำที่ชายหาด
     TextTw: 在海邊不能做的事
-  - GroupId: 1002303
-    FavorScheduleId: 100233
+    GroupId: 1002302
+    FavorScheduleId: 100232
     CharacterId: 10023
-    TextJp: とある風紀委員の弱点
+  - TextJp: とある風紀委員の弱点
     TextCn: 某个风纪委员的弱点
     TextKr: 선도부원의 약점
     TextEn: The Prefect Team's Weakness
     TextTh: จุดอ่อนของคณะกรรมการวินัย
-    TextTw: 某糾察部成員的弱點
-  - GroupId: 1002305
-    FavorScheduleId: 100235
+    TextTw: 某風紀委員的弱點
+    GroupId: 1002303
+    FavorScheduleId: 100233
     CharacterId: 10023
-    TextJp: ちょっとしたひと時
+  - TextJp: ちょっとしたひと時
     TextCn: 一段小插曲
     TextKr: 선도부원의 가벼운 일탈
     TextEn: The Prefect Team's Change of Pace
     TextTh: การเบนความสนใจของคณะกรรมการวินัย
     TextTw: 小歇片刻
-  - GroupId: 1002306
-    FavorScheduleId: 100236
+    GroupId: 1002305
+    FavorScheduleId: 100235
     CharacterId: 10023
-    TextJp: 砂風呂
+  - TextJp: 砂風呂
     TextCn: 沙滩浴
     TextKr: 모래찜질
     TextEn: Buried in the Sand
     TextTh: การอบทรายร้อน
     TextTw: 沙浴
+    GroupId: 1002306
+    FavorScheduleId: 100236
+    CharacterId: 10023
 content:
-  - MessageGroupId: 100230010
+  - MessageKR: 선생님, 부탁 하나만 해도 될까?
+    MessageJP: 先生、ひとつお願いしても良い？
+    MessageCN: 老师，我能拜托你做件事吗？
+    MessageEN: Sensei, could you do me a favor?
+    MessageTH: คุณครู ช่วยอะไรฉันหน่อยได้ไหม?
+    MessageTW: 老師，可以拜託你一件事嗎？
+    MessageGroupId: 100230010
     Id: 100230010
     CharacterId: 10023
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 부탁 하나만 해도 될까?
-    MessageJP: 先生、ひとつお願いしても良い？
-    MessageCN: 老师，我能拜托你做件事吗？
-    MessageEN: Sensei, could you do me a favor?
-    MessageTH: คุณครู ช่วยอะไรฉันหน่อยได้ไหม?
-    MessageTW: 老師，可以拜託你一件事嗎？
-  - MessageGroupId: 100230020
+  - MessageKR: 물론이야.
+    MessageJP: もちろん、何でも言って
+    MessageCN: 当然，伊织尽管说吧
+    MessageEN: Of course.
+    MessageTH: ได้อยู่แล้ว
+    MessageTW: 當然，什麼事都可以
+    MessageGroupId: 100230020
     Id: 100230020
     CharacterId: 10023
     MessageCondition: Answer
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이야.
-    MessageJP: もちろん、何でも言って
-    MessageCN: 当然，伊织尽管说吧
-    MessageEN: Of course.
-    MessageTH: ได้อยู่แล้ว
-    MessageTW: 當然，什麼事都可以
-  - MessageGroupId: 100230020
+  - MessageKR: 무슨 부탁인데?
+    MessageJP: うん、何をすれば良い？
+    MessageCN: 嗯，伊织要我做什么？
+    MessageEN: What kind of favor?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: 嗯，我該做什麼？
+    MessageGroupId: 100230020
     Id: 100230030
     CharacterId: 10023
     MessageCondition: Answer
@@ -86,13 +92,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 부탁인데?
-    MessageJP: うん、何をすれば良い？
-    MessageCN: 嗯，伊织要我做什么？
-    MessageEN: What kind of favor?
-    MessageTH: มีอะไรเหรอ?
-    MessageTW: 嗯，我該做什麼？
-  - MessageGroupId: 100230030
+  - MessageKR: 다음번에 게헨나 학원을 방문할 때 자외선 차단제 하나만 사다 줘.
+    MessageJP: 今度ゲヘナに来るときに、日焼け止めを買ってきて欲しくて
+    MessageCN: 下次老师来格黑娜的时候，麻烦老师买一瓶防晒霜带过来
+    MessageEN: Could you bring me sunscreen next time you visit Gehenna Academy?
+    MessageTH: "คราวหน้าถ้าแวะมาที่เกเฮนน่า ช่วยซื้อ
+
+      แทนนิ่งออยล์มาให้หน่อยสิ"
+    MessageTW: 下次來格黑娜的時候，想請你幫忙買個防曬乳
+    MessageGroupId: 100230030
     Id: 100230040
     CharacterId: 10023
     MessageCondition: Feedback
@@ -104,27 +112,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음번에 게헨나 학원을 방문할 때 자외선 차단제 하나만 사다 줘.
-    MessageJP: 今度ゲヘナに来るときに、日焼け止めを買ってきて欲しくて
-    MessageCN: 下次老师来格黑娜的时候，麻烦老师买一瓶防晒霜带过来
-    MessageEN: Could you bring me sunscreen next time you visit Gehenna Academy?
-    MessageTH: "คราวหน้าถ้าแวะมาที่เกเฮนน่า ช่วยซื้อ
-
-      แทนนิ่งออยล์มาให้หน่อยสิ"
-    MessageTW: 下次來格黑娜的時候，想請你幫忙買個防曬乳
-  - MessageGroupId: 100230040
-    Id: 100230050
-    CharacterId: 10023
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100230050
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 전에 쓰던 것이 다 떨어져서 하계 합숙을 앞두고 새로 구입하려 했는데, 선도부 일이 너무 바빠서 말이야.
+  - MessageKR: 전에 쓰던 것이 다 떨어져서 하계 합숙을 앞두고 새로 구입하려 했는데, 선도부 일이 너무 바빠서 말이야.
     MessageJP: ずっと使ってたのが無くなっちゃったから、合宿前に買おうと思ってたんだけど
     MessageCN: 之前防晒霜已经用完了，本来想在合宿前再买一瓶
     MessageEN:
@@ -138,7 +126,27 @@ content:
 
       จนฉันไม่มีเวลาออกไปซื้อเลย"
     MessageTW: 因為一直使用的用完了，所以想在合宿之前添購
-  - MessageGroupId: 100230040
+    MessageGroupId: 100230040
+    Id: 100230050
+    CharacterId: 10023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 도통 시내에 나갈 틈을 낼 수가 없네.
+    MessageJP: 思ったよりも委員会の仕事が忙しくって……
+    MessageCN: 但是委员会的工作比我想得要忙……
+    MessageEN: I don't have time to go out to buy more.
+    MessageTH: "ยุ่งจนไม่มีเวลาปลีกตัวเข้าไปในเมือง
+
+      ได้เลย"
+    MessageTW: 但糾察部的工作比想像中還要忙……
+    MessageGroupId: 100230040
     Id: 100230060
     CharacterId: 10023
     MessageCondition: Feedback
@@ -150,15 +158,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도통 시내에 나갈 틈을 낼 수가 없네.
-    MessageJP: 思ったよりも委員会の仕事が忙しくって……
-    MessageCN: 但是委员会的工作比我想得要忙……
-    MessageEN: I don't have time to go out to buy more.
-    MessageTH: "ยุ่งจนไม่มีเวลาปลีกตัวเข้าไปในเมือง
-
-      ได้เลย"
-    MessageTW: 但糾察部的工作比想像中還要忙……
-  - MessageGroupId: 100230050
+  - MessageKR: 알겠어.
+    MessageJP: 大丈夫、任せて
+    MessageCN: 没关系，交给我吧
+    MessageEN: Okay.
+    MessageTH: เข้าใจแล้วล่ะ
+    MessageTW: 沒問題，交給我
+    MessageGroupId: 100230050
     Id: 100230070
     CharacterId: 10023
     MessageCondition: Answer
@@ -170,13 +176,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알겠어.
-    MessageJP: 大丈夫、任せて
-    MessageCN: 没关系，交给我吧
-    MessageEN: Okay.
-    MessageTH: เข้าใจแล้วล่ะ
-    MessageTW: 沒問題，交給我
-  - MessageGroupId: 100230055
+  - MessageKR: "'씨사이드'의 선 오일이면 되지?"
+    MessageJP: 「シーサイド」の日焼け止めだよね？
+    MessageCN: Seaside牌的防晒霜对吧？
+    MessageEN: Would sun oil from Seaside do the trick?
+    MessageTH: แทนนิ่งออยล์ของ "ซีไซด์" ใช่ไหม?
+    MessageTW: 是「Seaside」的防曬乳吧？
+    MessageGroupId: 100230055
     Id: 100230080
     CharacterId: 10023
     MessageCondition: Answer
@@ -188,13 +194,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: "'씨사이드'의 선 오일이면 되지?"
-    MessageJP: 「シーサイド」の日焼け止めだよね？
-    MessageCN: Seaside牌的防晒霜对吧？
-    MessageEN: Would sun oil from Seaside do the trick?
-    MessageTH: แทนนิ่งออยล์ของ "ซีไซด์" ใช่ไหม?
-    MessageTW: 是「Seaside」的防曬乳吧？
-  - MessageGroupId: 100230060
+  - MessageKR: 응, 그거면 괜찮아.
+    MessageJP: うん、それで合ってる
+    MessageCN: 嗯，就是那个
+    MessageEN: Yes, that's fine.
+    MessageTH: อื้อ อันนั้นก็ได้
+    MessageTW: 嗯，就是那個
+    MessageGroupId: 100230060
     Id: 100230090
     CharacterId: 10023
     MessageCondition: Feedback
@@ -206,13 +212,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 그거면 괜찮아.
-    MessageJP: うん、それで合ってる
-    MessageCN: 嗯，就是那个
-    MessageEN: Yes, that's fine.
-    MessageTH: อื้อ อันนั้นก็ได้
-    MessageTW: 嗯，就是那個
-  - MessageGroupId: 100230060
+  - MessageKR: 그럼 부탁할게.
+    MessageJP: じゃあ、よろしく
+    MessageCN: 那就拜托老师了
+    MessageEN: I'll be waiting, then.
+    MessageTH: ฝากด้วยนะ
+    MessageTW: 那麼，拜託了
+    MessageGroupId: 100230060
     Id: 100230100
     CharacterId: 10023
     MessageCondition: Feedback
@@ -224,13 +230,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 부탁할게.
-    MessageJP: じゃあ、よろしく
-    MessageCN: 那就拜托老师了
-    MessageEN: I'll be waiting, then.
-    MessageTH: ฝากด้วยนะ
-    MessageTW: 那麼，拜託了
-  - MessageGroupId: 100230070
+  - MessageKR: ……물건은 확실히 준비했겠지?
+    MessageJP: ……準備はできたか？
+    MessageCN: ……准备好了吗？
+    MessageEN: You have what I asked for, right?
+    MessageTH: "...เตรียมของพร้อมแล้วใช่ไหม?"
+    MessageTW: ……準備好了嗎？
+    MessageGroupId: 100230070
     Id: 100230110
     CharacterId: 10023
     MessageCondition: FavorRankUp
@@ -242,13 +248,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……물건은 확실히 준비했겠지?
-    MessageJP: ……準備はできたか？
-    MessageCN: ……准备好了吗？
-    MessageEN: You have what I asked for, right?
-    MessageTH: "...เตรียมของพร้อมแล้วใช่ไหม?"
-    MessageTW: ……準備好了嗎？
-  - MessageGroupId: 100230080
+  - MessageKR: 다시 한번 말하지만 다른 학생들에게는 절대로 말하면 안 돼!
+    MessageJP: 念押しになるけど、絶対に他の生徒には言うなよ！
+    MessageCN: 再强调一遍，绝对不准和其他学生说啊！
+    MessageEN: Again, you can't tell other students about it!
+    MessageTH: "ขอบอกอีกครั้งนะว่าห้ามบอกคนอื่น
+
+      เด็ดขาดเลย!"
+    MessageTW: 再提醒一次，絕對不准跟其他學生說！
+    MessageGroupId: 100230080
     Id: 100230120
     CharacterId: 10023
     MessageCondition: None
@@ -260,15 +268,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다시 한번 말하지만 다른 학생들에게는 절대로 말하면 안 돼!
-    MessageJP: 念押しになるけど、絶対に他の生徒には言うなよ！
-    MessageCN: 再强调一遍，绝对不准和其他学生说啊！
-    MessageEN: Again, you can't tell other students about it!
-    MessageTH: "ขอบอกอีกครั้งนะว่าห้ามบอกคนอื่น
-
-      เด็ดขาดเลย!"
-    MessageTW: 再提醒一次，絕對不准跟其他學生說！
-  - MessageGroupId: 100230090
+  - MessageKR: ……이오리?
+    MessageJP: ……イオリ？
+    MessageCN: ……伊织？
+    MessageEN: Iori?
+    MessageTH: "...อิโอริ?"
+    MessageTW: ……伊織？
+    MessageGroupId: 100230090
     Id: 100230130
     CharacterId: 10023
     MessageCondition: Answer
@@ -280,13 +286,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……이오리?
-    MessageJP: ……イオリ？
-    MessageCN: ……伊织？
-    MessageEN: Iori?
-    MessageTH: "...อิโอริ?"
-    MessageTW: ……伊織？
-  - MessageGroupId: 100230090
+  - MessageKR: 이거 나한테 보낸 메시지야?
+    MessageJP: これ私に送るメッセージで合ってる？
+    MessageCN: 这条消息是发给我的吗？
+    MessageEN: Did you mean to send this to me?
+    MessageTH: ข้อความนี้ส่งมาให้ครูงั้นเหรอ?
+    MessageTW: 這是要發給我的訊息嗎？
+    MessageGroupId: 100230090
     Id: 100230140
     CharacterId: 10023
     MessageCondition: Answer
@@ -298,13 +304,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이거 나한테 보낸 메시지야?
-    MessageJP: これ私に送るメッセージで合ってる？
-    MessageCN: 这条消息是发给我的吗？
-    MessageEN: Did you mean to send this to me?
-    MessageTH: ข้อความนี้ส่งมาให้ครูงั้นเหรอ?
-    MessageTW: 這是要發給我的訊息嗎？
-  - MessageGroupId: 100230100
+  - MessageKR: ……선생님?
+    MessageJP: ……は？
+    MessageCN: ……哈？
+    MessageEN: Sensei?
+    MessageTH: "...คุณครู?"
+    MessageTW: ……哈？
+    MessageGroupId: 100230100
     Id: 100230150
     CharacterId: 10023
     MessageCondition: Feedback
@@ -316,13 +322,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……선생님?
-    MessageJP: ……は？
-    MessageCN: ……哈？
-    MessageEN: Sensei?
-    MessageTH: "...คุณครู?"
-    MessageTW: ……哈？
-  - MessageGroupId: 100230110
+  - MessageKR: ㄴ야ㅣㅓㄴㅇ랴ㅣㄴ
+    MessageJP: ｊぐぁｋｌｆ
+    MessageCN: j古拉klf
+    MessageEN: afjhdaklfhdalk
+    MessageTH: "#%$@@$^&!!!!"
+    MessageTW: ｊㄎㄚｋｌｆ
+    MessageGroupId: 100230110
     Id: 100230160
     CharacterId: 10023
     MessageCondition: Feedback
@@ -334,13 +340,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ㄴ야ㅣㅓㄴㅇ랴ㅣㄴ
-    MessageJP: ｊぐぁｋｌｆ
-    MessageCN: j古拉klf
-    MessageEN: afjhdaklfhdalk
-    MessageTH: "#%$@@$^&!!!!"
-    MessageTW: ｊㄎㄚｋｌｆ
-  - MessageGroupId: 100230110
+  - MessageKR: 아, 아무것도 아니야!
+    MessageJP: やっ、何でもない！
+    MessageCN: 没、没什么！
+    MessageEN: N-Nothing!
+    MessageTH: มะ...ไม่มีอะไรหรอก!
+    MessageTW: 沒，沒事！
+    MessageGroupId: 100230110
     Id: 100230170
     CharacterId: 10023
     MessageCondition: Feedback
@@ -352,13 +358,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 아무것도 아니야!
-    MessageJP: やっ、何でもない！
-    MessageCN: 没、没什么！
-    MessageEN: N-Nothing!
-    MessageTH: มะ...ไม่มีอะไรหรอก!
-    MessageTW: 沒，沒事！
-  - MessageGroupId: 100230110
+  - MessageKR: 지금 보낸 메시지는 신경 쓰지 마.
+    MessageJP: 今送ったメッセージのことは忘れて！
+    MessageCN: 刚才发的那条消息，给我忘掉！
+    MessageEN: Ignore the message I just sent you.
+    MessageTH: ไม่ต้องสนใจข้อความพวกนั้นก็ได้
+    MessageTW: 請忘記剛才發的訊息！
+    MessageGroupId: 100230110
     Id: 100230180
     CharacterId: 10023
     MessageCondition: Feedback
@@ -370,13 +376,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 보낸 메시지는 신경 쓰지 마.
-    MessageJP: 今送ったメッセージのことは忘れて！
-    MessageCN: 刚才发的那条消息，给我忘掉！
-    MessageEN: Ignore the message I just sent you.
-    MessageTH: ไม่ต้องสนใจข้อความพวกนั้นก็ได้
-    MessageTW: 請忘記剛才發的訊息！
-  - MessageGroupId: 100230120
+  - MessageKR: 그렇게 말하니 더 신경 쓰이는데…….
+    MessageJP: そう言われると、尚更気になる……
+    MessageCN: 给你这么一说我反而更在意了……
+    MessageEN: Now I want to know even more...
+    MessageTH: พูดแบบนี้ยิ่งต้องเลื่อนขึ้นไปอ่านเลย...
+    MessageTW: 你這樣說，反而更讓人在意……
+    MessageGroupId: 100230120
     Id: 100230190
     CharacterId: 10023
     MessageCondition: Answer
@@ -388,13 +394,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇게 말하니 더 신경 쓰이는데…….
-    MessageJP: そう言われると、尚更気になる……
-    MessageCN: 给你这么一说我反而更在意了……
-    MessageEN: Now I want to know even more...
-    MessageTH: พูดแบบนี้ยิ่งต้องเลื่อนขึ้นไปอ่านเลย...
-    MessageTW: 你這樣說，反而更讓人在意……
-  - MessageGroupId: 100230130
+  - MessageKR: 아까는 수영 연습 도와줘서 고마워. 선생님.
+    MessageJP: その……泳ぎの練習、付き合ってくれてありがと。先生
+    MessageCN: 那个……谢谢你陪我练习游泳。老师
+    MessageEN: Thank you for helping with swim practice, Sensei.
+    MessageTH: เมื่อกี้ขอบคุณที่ช่วยฝึกว่ายน้ำให้นะ คุณครู
+    MessageTW: 那個……謝謝你陪我練習游泳。老師
+    MessageGroupId: 100230130
     Id: 100230200
     CharacterId: 10023
     MessageCondition: None
@@ -406,13 +412,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아까는 수영 연습 도와줘서 고마워. 선생님.
-    MessageJP: その……泳ぎの練習、付き合ってくれてありがと。先生
-    MessageCN: 那个……谢谢你陪我练习游泳。老师
-    MessageEN: Thank you for helping with swim practice, Sensei.
-    MessageTH: เมื่อกี้ขอบคุณที่ช่วยฝึกว่ายน้ำให้นะ คุณครู
-    MessageTW: 那個……謝謝你陪我練習游泳。老師
-  - MessageGroupId: 100230140
+  - MessageKR: 덕분에 능숙하지는 않지만 어느 정도는 헤엄칠 수 있게 된 것 같아.
+    MessageJP: おかげで、お世辞にも習得したとは言えないけど、何とか泳げるくらいにはなったし……
+    MessageCN: 托老师的福，虽然不能说是学会了，但至少勉强算会游的程度了……
+    MessageEN: I'm still not used to it, but I know how to swim now.
+    MessageTH: "คุณครูมาช่วยฝึกแบบนี้ ถึงจะว่ายน้ำ
+
+      ไม่แข็งเท่าไหร่ แต่ก็คงไปเล่นน้ำได้
+
+      แล้วล่ะ"
+    MessageTW: 託你的福，雖說還不是很熟練，但總算會游一點了……
+    MessageGroupId: 100230140
     Id: 100230210
     CharacterId: 10023
     MessageCondition: None
@@ -424,17 +434,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 덕분에 능숙하지는 않지만 어느 정도는 헤엄칠 수 있게 된 것 같아.
-    MessageJP: おかげで、お世辞にも習得したとは言えないけど、何とか泳げるくらいにはなったし……
-    MessageCN: 托老师的福，虽然不能说是学会了，但至少勉强算会游的程度了……
-    MessageEN: I'm still not used to it, but I know how to swim now.
-    MessageTH: "คุณครูมาช่วยฝึกแบบนี้ ถึงจะว่ายน้ำ
-
-      ไม่แข็งเท่าไหร่ แต่ก็คงไปเล่นน้ำได้
-
-      แล้วล่ะ"
-    MessageTW: 託你的福，雖說還不是很熟練，但總算會游一點了……
-  - MessageGroupId: 100230140
+  - MessageKR: 이제 보조 튜브는 필요 없겠지…….
+    MessageJP: これで合宿に浮き輪を持っていかずに済むかも
+    MessageCN: 这样一来合宿的时候或许就不用带泳圈了
+    MessageEN: I don't think I need the support tubes anymore.
+    MessageTH: คงไม่ต้องใช้ห่วงยางช่วยแล้ว...
+    MessageTW: 這樣就不用帶游泳圈去合宿了
+    MessageGroupId: 100230140
     Id: 100230220
     CharacterId: 10023
     MessageCondition: None
@@ -446,13 +452,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이제 보조 튜브는 필요 없겠지…….
-    MessageJP: これで合宿に浮き輪を持っていかずに済むかも
-    MessageCN: 这样一来合宿的时候或许就不用带泳圈了
-    MessageEN: I don't think I need the support tubes anymore.
-    MessageTH: คงไม่ต้องใช้ห่วงยางช่วยแล้ว...
-    MessageTW: 這樣就不用帶游泳圈去合宿了
-  - MessageGroupId: 100230150
+  - MessageKR: 저기, 이오리.
+    MessageJP: それは良かった。ところでイオリ
+    MessageCN: 那就好。对了伊织
+    MessageEN: Hey, Iori.
+    MessageTH: คือว่าอิโอริ...
+    MessageTW: 那真是太好了。對了，伊織
+    MessageGroupId: 100230150
     Id: 100230230
     CharacterId: 10023
     MessageCondition: Answer
@@ -464,13 +470,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저기, 이오리.
-    MessageJP: それは良かった。ところでイオリ
-    MessageCN: 那就好。对了伊织
-    MessageEN: Hey, Iori.
-    MessageTH: คือว่าอิโอริ...
-    MessageTW: 那真是太好了。對了，伊織
-  - MessageGroupId: 100230160
+  - MessageKR: ……왜?
+    MessageJP: ……何？
+    MessageCN: ……怎么了？
+    MessageEN: What?
+    MessageTH: อะไรเหรอ...?
+    MessageTW: ……怎麼了？
+    MessageGroupId: 100230160
     Id: 100230240
     CharacterId: 10023
     MessageCondition: Feedback
@@ -482,13 +488,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……왜?
-    MessageJP: ……何？
-    MessageCN: ……怎么了？
-    MessageEN: What?
-    MessageTH: อะไรเหรอ...?
-    MessageTW: ……怎麼了？
-  - MessageGroupId: 100230170
+  - MessageKR: 튜브에 그려진 귀여운 오리는 이오리의 취향이야?
+    MessageJP: 浮き輪に描かれてたけど、イオリはアヒルさんが好きなの？
+    MessageCN: 从泳圈上的图案来看……伊织是喜欢小鸭子吗？
+    MessageEN: Did you pick that tube because of the cute duck on the side?
+    MessageTH: เธอชอบห่วงยางที่มีลายเป็ดน้อยน่ารักๆ นั่นเหรอ?
+    MessageTW: 看游泳圈上的圖案，難道伊織喜歡鴨子？
+    MessageGroupId: 100230170
     Id: 100230250
     CharacterId: 10023
     MessageCondition: Answer
@@ -500,13 +506,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 튜브에 그려진 귀여운 오리는 이오리의 취향이야?
-    MessageJP: 浮き輪に描かれてたけど、イオリはアヒルさんが好きなの？
-    MessageCN: 从泳圈上的图案来看……伊织是喜欢小鸭子吗？
-    MessageEN: Did you pick that tube because of the cute duck on the side?
-    MessageTH: เธอชอบห่วงยางที่มีลายเป็ดน้อยน่ารักๆ นั่นเหรอ?
-    MessageTW: 看游泳圈上的圖案，難道伊織喜歡鴨子？
-  - MessageGroupId: 100230180
+  - MessageKR: 시끄러워! 죽어!
+    MessageJP: うるさい！死ねっ！
+    MessageCN: 烦死了！去死啊！
+    MessageEN: Shut up! I'll kill you!
+    MessageTH: หนวกหูน่า! อยากตายใช่ไหม!
+    MessageTW: 吵死了！去死！
+    MessageGroupId: 100230180
     Id: 100230260
     CharacterId: 10023
     MessageCondition: Feedback
@@ -518,13 +524,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시끄러워! 죽어!
-    MessageJP: うるさい！死ねっ！
-    MessageCN: 烦死了！去死啊！
-    MessageEN: Shut up! I'll kill you!
-    MessageTH: หนวกหูน่า! อยากตายใช่ไหม!
-    MessageTW: 吵死了！去死！
-  - MessageGroupId: 100230190
+  - MessageKR: 선생님, 출동이야!
+    MessageJP: 先生、今どこ？
+    MessageCN: 老师现在在哪？
+    MessageEN: We have a situation, Sensei!
+    MessageTH: คุณครู ต้องออกปฏิบัติการแล้ว!
+    MessageTW: 老師，你現在在哪？
+    MessageGroupId: 100230190
     Id: 100230270
     CharacterId: 10023
     MessageCondition: FavorRankUp
@@ -536,25 +542,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 출동이야!
-    MessageJP: 先生、今どこ？
-    MessageCN: 老师现在在哪？
-    MessageEN: We have a situation, Sensei!
-    MessageTH: คุณครู ต้องออกปฏิบัติการแล้ว!
-    MessageTW: 老師，你現在在哪？
-  - MessageGroupId: 100230200
-    Id: 100230280
-    CharacterId: 10023
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100230210
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 방금 들어온 신고에 따르면 바다의 집 앞에서 불량 학생들이 행패를 부리고 있나 봐.
+  - MessageKR: 방금 들어온 신고에 따르면 바다의 집 앞에서 불량 학생들이 행패를 부리고 있나 봐.
     MessageJP: 連絡が入ったんだけど、どうやら海の家の近くでチンピラたちが暴れてるらしい
     MessageCN: 这边刚刚收到消息，海之家附近似乎有混混在闹事
     MessageEN:
@@ -566,7 +554,29 @@ content:
 
       ร้านริมทะเล"
     MessageTW: 我收到聯絡，海之家附近似乎有不良分子在滋事
-  - MessageGroupId: 100230210
+    MessageGroupId: 100230200
+    Id: 100230280
+    CharacterId: 10023
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230210
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 게헨나 선도부의 스페셜리스트로서 이런 만행을 두고 볼 수는 없지!
+    MessageJP: ゲヘナの風紀委員会として、放っておくわけにはいかない
+    MessageCN: 我们格黑娜的风纪委员会不能坐视不管
+    MessageEN: I can't simply sit back as a Gehenna prefect!
+    MessageTH: "ในฐานะสมาชิกคณะกรรมการวินัย
+
+      เกเฮนน่า คงปล่อยให้เกิดเรื่องวุ่นวาย
+
+      แบบนี้ไม่ได้!"
+    MessageTW: 身為格黑娜的糾察部，可不能放任不管
+    MessageGroupId: 100230210
     Id: 100230290
     CharacterId: 10023
     MessageCondition: None
@@ -578,17 +588,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 게헨나 선도부의 스페셜리스트로서 이런 만행을 두고 볼 수는 없지!
-    MessageJP: ゲヘナの風紀委員会として、放っておくわけにはいかない
-    MessageCN: 我们格黑娜的风纪委员会不能坐视不管
-    MessageEN: I can't simply sit back as a Gehenna prefect!
-    MessageTH: "ในฐานะสมาชิกคณะกรรมการวินัย
-
-      เกเฮนน่า คงปล่อยให้เกิดเรื่องวุ่นวาย
-
-      แบบนี้ไม่ได้!"
-    MessageTW: 身為格黑娜的糾察部，可不能放任不管
-  - MessageGroupId: 100230210
+  - MessageKR: 지금 바로 바다의 집으로 따라 나와줘.
+    MessageJP: ただ相手の数も分からないし、他の風紀委員も動けないから、先生も来てほしい
+    MessageCN: 但是不清楚对方的人数，其他的风纪委员也分身乏术，所以希望老师能来帮忙
+    MessageEN: Meet me at the Beach Shack.
+    MessageTH: รีบตามฉันไปที่ร้านริมทะเลล่ะ!
+    MessageTW: 只是不知道對方的數量，其他糾察部員也無法抽身，所以希望老師能來幫忙
+    MessageGroupId: 100230210
     Id: 100230300
     CharacterId: 10023
     MessageCondition: None
@@ -600,13 +606,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 바로 바다의 집으로 따라 나와줘.
-    MessageJP: ただ相手の数も分からないし、他の風紀委員も動けないから、先生も来てほしい
-    MessageCN: 但是不清楚对方的人数，其他的风纪委员也分身乏术，所以希望老师能来帮忙
-    MessageEN: Meet me at the Beach Shack.
-    MessageTH: รีบตามฉันไปที่ร้านริมทะเลล่ะ!
-    MessageTW: 只是不知道對方的數量，其他糾察部員也無法抽身，所以希望老師能來幫忙
-  - MessageGroupId: 100230210
+  - MessageKR: 물에 들어가야 할지도 모르니 수영복 챙겨오는 것도 잊지 말고!
+    MessageJP: あ、海に落ちるかもだし、水着の方が良いと思う！
+    MessageCN: 啊，有落海的可能，所以最好穿泳装来！
+    MessageEN: We may have to go into the water, so bring your swimsuit.
+    MessageTH: "อาจจะต้องลุยน้ำก็ได้ งั้นเตรียม
+
+      ชุดว่ายน้ำมาด้วยล่ะ!"
+    MessageTW: 啊，可能會掉進海裡，我想最好穿泳衣過來！
+    MessageGroupId: 100230210
     Id: 100230310
     CharacterId: 10023
     MessageCondition: None
@@ -618,15 +626,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물에 들어가야 할지도 모르니 수영복 챙겨오는 것도 잊지 말고!
-    MessageJP: あ、海に落ちるかもだし、水着の方が良いと思う！
-    MessageCN: 啊，有落海的可能，所以最好穿泳装来！
-    MessageEN: We may have to go into the water, so bring your swimsuit.
-    MessageTH: "อาจจะต้องลุยน้ำก็ได้ งั้นเตรียม
-
-      ชุดว่ายน้ำมาด้วยล่ะ!"
-    MessageTW: 啊，可能會掉進海裡，我想最好穿泳衣過來！
-  - MessageGroupId: 100230220
+  - MessageKR: ……잠깐, 나도 가야 하는 거야?
+    MessageJP: え、待って待って！？
+    MessageCN: 诶，等等！？
+    MessageEN: Wait. Why would I have to go into the water?
+    MessageTH: "...เดี๋ยวสิ ครูต้องไปด้วยเหรอ?"
+    MessageTW: 咦，等一下等一下！？
+    MessageGroupId: 100230220
     Id: 100230320
     CharacterId: 10023
     MessageCondition: Answer
@@ -638,13 +644,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……잠깐, 나도 가야 하는 거야?
-    MessageJP: え、待って待って！？
-    MessageCN: 诶，等等！？
-    MessageEN: Wait. Why would I have to go into the water?
-    MessageTH: "...เดี๋ยวสิ ครูต้องไปด้วยเหรอ?"
-    MessageTW: 咦，等一下等一下！？
-  - MessageGroupId: 100230230
+  - MessageKR: 선생님, 아까 프런트에 물어보니 한나절 넘게 숙소에 돌아오지 않았다고 하던데…….
+    MessageJP: 先生。さっきフロントで、半日以上戻ってきてないって聞いたんだけど……
+    MessageCN: 刚刚听前台说老师已经大半天没有回来了
+    MessageEN: Sensei, the front desk told me you haven't been back in days.
+    MessageTH: "คุณครู เมื่อกี้ฉันถามพนักงานแล้ว
+
+      เขาบอกว่าพวกนั้นหายไปครึ่งวันแล้ว..."
+    MessageTW: 老師。剛才聽櫃台說你已經半天沒有回來了……
+    MessageGroupId: 100230230
     Id: 100230330
     CharacterId: 10023
     MessageCondition: FavorRankUp
@@ -656,15 +664,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 아까 프런트에 물어보니 한나절 넘게 숙소에 돌아오지 않았다고 하던데…….
-    MessageJP: 先生。さっきフロントで、半日以上戻ってきてないって聞いたんだけど……
-    MessageCN: 刚刚听前台说老师已经大半天没有回来了
-    MessageEN: Sensei, the front desk told me you haven't been back in days.
-    MessageTH: "คุณครู เมื่อกี้ฉันถามพนักงานแล้ว
-
-      เขาบอกว่าพวกนั้นหายไปครึ่งวันแล้ว..."
-    MessageTW: 老師。剛才聽櫃台說你已經半天沒有回來了……
-  - MessageGroupId: 100230240
+  - MessageKR: 지금 어디에 있어?
+    MessageJP: 今はどこにいるんだ？
+    MessageCN: 老师现在在哪？
+    MessageEN: Where are you?
+    MessageTH: ตอนนี้อยู่ที่ไหนเหรอ?
+    MessageTW: 現在在哪裡？
+    MessageGroupId: 100230240
     Id: 100230340
     CharacterId: 10023
     MessageCondition: None
@@ -676,13 +682,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 어디에 있어?
-    MessageJP: 今はどこにいるんだ？
-    MessageCN: 老师现在在哪？
-    MessageEN: Where are you?
-    MessageTH: ตอนนี้อยู่ที่ไหนเหรอ?
-    MessageTW: 現在在哪裡？
-  - MessageGroupId: 100230250
+  - MessageKR: 모래사장 위에 있어.
+    MessageJP: 砂浜に
+    MessageCN: 在沙滩
+    MessageEN: I'm at the beach.
+    MessageTH: อยู่ที่ชายหาดน่ะ
+    MessageTW: 在沙灘上
+    MessageGroupId: 100230250
     Id: 100230350
     CharacterId: 10023
     MessageCondition: Answer
@@ -694,13 +700,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모래사장 위에 있어.
-    MessageJP: 砂浜に
-    MessageCN: 在沙滩
-    MessageEN: I'm at the beach.
-    MessageTH: อยู่ที่ชายหาดน่ะ
-    MessageTW: 在沙灘上
-  - MessageGroupId: 100230260
+  - MessageKR: 모래사장? 거기서 뭘 하고 있는데?
+    MessageJP: 砂浜？砂浜で一体何を……？
+    MessageCN: 沙滩？在沙滩做什么？
+    MessageEN: The beach? What are you doing there?
+    MessageTH: ชายหาดเหรอ? ไปทำอะไรที่ชายหาดน่ะ?
+    MessageTW: 沙灘？你究竟在沙灘上做什麼……？
+    MessageGroupId: 100230260
     Id: 100230360
     CharacterId: 10023
     MessageCondition: Feedback
@@ -712,13 +718,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모래사장? 거기서 뭘 하고 있는데?
-    MessageJP: 砂浜？砂浜で一体何を……？
-    MessageCN: 沙滩？在沙滩做什么？
-    MessageEN: The beach? What are you doing there?
-    MessageTH: ชายหาดเหรอ? ไปทำอะไรที่ชายหาดน่ะ?
-    MessageTW: 沙灘？你究竟在沙灘上做什麼……？
-  - MessageGroupId: 100230270
+  - MessageKR: 그냥 누워있어.
+    MessageJP: ただ横になってる
+    MessageCN: 就是躺着
+    MessageEN: Lying on it.
+    MessageTH: ก็แค่นอนอยู่เฉยๆ
+    MessageTW: 只是躺著
+    MessageGroupId: 100230270
     Id: 100230370
     CharacterId: 10023
     MessageCondition: Answer
@@ -730,13 +736,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 누워있어.
-    MessageJP: ただ横になってる
-    MessageCN: 就是躺着
-    MessageEN: Lying on it.
-    MessageTH: ก็แค่นอนอยู่เฉยๆ
-    MessageTW: 只是躺著
-  - MessageGroupId: 100230280
+  - MessageKR: ……어째서?
+    MessageJP: は……？どうして？
+    MessageCN: 哈……？为什么？
+    MessageEN: Why?
+    MessageTH: "...ทำไมล่ะ?"
+    MessageTW: 哈……？為什麼？
+    MessageGroupId: 100230280
     Id: 100230380
     CharacterId: 10023
     MessageCondition: Feedback
@@ -748,13 +754,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……어째서?
-    MessageJP: は……？どうして？
-    MessageCN: 哈……？为什么？
-    MessageEN: Why?
-    MessageTH: "...ทำไมล่ะ?"
-    MessageTW: 哈……？為什麼？
-  - MessageGroupId: 100230280
+  - MessageKR: 아니, 말하지 않아도 알겠어.
+    MessageJP: いや、言わなくて良い。分かった
+    MessageCN: 不对，不用说了。我明白了
+    MessageEN: Actually, I think I know what's going on.
+    MessageTH: เปล่าหรอก ไม่บอกก็พอจะรู้อยู่
+    MessageTW: 不，不用說。我知道了
+    MessageGroupId: 100230280
     Id: 100230390
     CharacterId: 10023
     MessageCondition: Feedback
@@ -766,13 +772,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 말하지 않아도 알겠어.
-    MessageJP: いや、言わなくて良い。分かった
-    MessageCN: 不对，不用说了。我明白了
-    MessageEN: Actually, I think I know what's going on.
-    MessageTH: เปล่าหรอก ไม่บอกก็พอจะรู้อยู่
-    MessageTW: 不，不用說。我知道了
-  - MessageGroupId: 100230290
+  - MessageKR: 지금 체포하러 갈게.
+    MessageJP: 手錠を探してすぐ行くから、そこから動かないで
+    MessageCN: 我找到手铐之后马上过去，你就在那呆着别动
+    MessageEN: I'll be there to arrest you shortly.
+    MessageTH: จะไปจับกุมเดี๋ยวนี้ล่ะ
+    MessageTW: 我找到手銬後就馬上過去，待在那裡不要動
+    MessageGroupId: 100230290
     Id: 100230400
     CharacterId: 10023
     MessageCondition: Feedback
@@ -784,13 +790,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 체포하러 갈게.
-    MessageJP: 手錠を探してすぐ行くから、そこから動かないで
-    MessageCN: 我找到手铐之后马上过去，你就在那呆着别动
-    MessageEN: I'll be there to arrest you shortly.
-    MessageTH: จะไปจับกุมเดี๋ยวนี้ล่ะ
-    MessageTW: 我找到手銬後就馬上過去，待在那裡不要動
-  - MessageGroupId: 100230300
+  - MessageKR: 잠깐, 무슨 생각을 한 거야?
+    MessageJP: 待って、何を想像してるの？
+    MessageCN: 等等，你想到了什么啊？
+    MessageEN: Wait! What do you think I'm doing?
+    MessageTH: เดี๋ยวสิ คิดอะไรอยู่น่ะ?
+    MessageTW: 等等，你在想什麼？
+    MessageGroupId: 100230300
     Id: 100230410
     CharacterId: 10023
     MessageCondition: Answer
@@ -802,9 +808,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잠깐, 무슨 생각을 한 거야?
-    MessageJP: 待って、何を想像してるの？
-    MessageCN: 等等，你想到了什么啊？
-    MessageEN: Wait! What do you think I'm doing?
-    MessageTH: เดี๋ยวสิ คิดอะไรอยู่น่ะ?
-    MessageTW: 等等，你在想什麼？

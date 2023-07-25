@@ -1,53 +1,59 @@
 CharacterId: 23002
 translator: Lepra
 title:
-  - GroupId: 2300202
-    FavorScheduleId: 230022
-    CharacterId: 23002
-    TextJp: 痛くない注射？
+  - TextJp: 痛くない注射？
     TextCn: 无痛注射？
     TextKr: 주사를 아프지 않게 놓는 방법
     TextEn: Painless Injection Process
     TextTh: วิธีการฉีดยาโดยไม่ให้เจ็บ
     TextTw: 不會痛的注射？
-  - GroupId: 2300203
-    FavorScheduleId: 230023
+    GroupId: 2300202
+    FavorScheduleId: 230022
     CharacterId: 23002
-    TextJp: 不眠症
+  - TextJp: 不眠症
     TextCn: 失眠症
     TextKr: 불면증
     TextEn: Insomnia
     TextTh: โรคนอนไม่หลับ
     TextTw: 失眠症
-  - GroupId: 2300205
-    FavorScheduleId: 230025
+    GroupId: 2300203
+    FavorScheduleId: 230023
     CharacterId: 23002
-    TextJp: ラジオ体操
+  - TextJp: ラジオ体操
     TextCn: 广播体操
     TextKr: 라디오 체조
     TextEn: Radio Workout
     TextTh: ทำกายบริหาร
     TextTw: 廣播體操
-  - GroupId: 2300206
-    FavorScheduleId: 230026
+    GroupId: 2300205
+    FavorScheduleId: 230025
     CharacterId: 23002
-    TextJp: トリニティ式の外科手術
+  - TextJp: トリニティ式の外科手術
     TextCn: 圣三一式外科手术
     TextKr: 트리니티식 외과 수술법
     TextEn: Trinity Surgical Procedures
     TextTh: การผ่าตัดแบบฉบับของทรีนิตี้
     TextTw: 三一流外科手術
-  - GroupId: 2300208
-    FavorScheduleId: 230028
+    GroupId: 2300206
+    FavorScheduleId: 230026
     CharacterId: 23002
-    TextJp: アサガオの観察日記
+  - TextJp: アサガオの観察日記
     TextCn: 牵牛花观察日记
     TextKr: 나팔꽃 관찰일기
     TextEn: Morning Glory Diary
     TextTh: เฝ้าสังเกตดอกมอร์นิ่งกลอรี่
     TextTw: 牽牛花觀察日記
+    GroupId: 2300208
+    FavorScheduleId: 230028
+    CharacterId: 23002
 content:
-  - MessageGroupId: 230020010
+  - MessageKR: 선생님, 혹시 선생님도 주사를 무서워하시나요?
+    MessageJP: 先生は注射、怖いですか？
+    MessageCN: 老师会怕打针吗？
+    MessageEN: Are you scared of getting shots too, Sensei?
+    MessageTH: คุณครูคะ คุณครูกลัวการฉีดยาไหมคะ?
+    MessageTW: 老師會害怕打針嗎？
+    MessageGroupId: 230020010
     Id: 1502
     CharacterId: 23002
     MessageCondition: FavorRankUp
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 혹시 선생님도 주사를 무서워하시나요?
-    MessageJP: 先生は注射、怖いですか？
-    MessageCN: 老师会怕打针吗？
-    MessageEN: Are you scared of getting shots too, Sensei?
-    MessageTH: คุณครูคะ คุณครูกลัวการฉีดยาไหมคะ?
-    MessageTW: 老師會害怕打針嗎？
-  - MessageGroupId: 230020020
+  - MessageKR: 주사 정도야 문제없이 맞을 수 있지.
+    MessageJP: 平気だよ
+    MessageCN: 不怕哦
+    MessageEN: I have no problem with getting shots.
+    MessageTH: ถ้าแค่ฉีดยาล่ะก็ไม่มีปัญหาหรอก
+    MessageTW: 不怕
+    MessageGroupId: 230020020
     Id: 1503
     CharacterId: 23002
     MessageCondition: Answer
@@ -77,13 +83,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주사 정도야 문제없이 맞을 수 있지.
-    MessageJP: 平気だよ
-    MessageCN: 不怕哦
-    MessageEN: I have no problem with getting shots.
-    MessageTH: ถ้าแค่ฉีดยาล่ะก็ไม่มีปัญหาหรอก
-    MessageTW: 不怕
-  - MessageGroupId: 230020020
+  - MessageKR: 주사 무서워! 바늘 무서워!
+    MessageJP: 注射無理！針怖い！
+    MessageCN: 不要打针！针好可怕！
+    MessageEN: I hate shots! I hate needles!
+    MessageTH: ครูกลัวนะ! กลัวเข็มมากเลย!
+    MessageTW: 打針我不行！針好可怕！
+    MessageGroupId: 230020020
     Id: 1504
     CharacterId: 23002
     MessageCondition: Answer
@@ -95,13 +101,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주사 무서워! 바늘 무서워!
-    MessageJP: 注射無理！針怖い！
-    MessageCN: 不要打针！针好可怕！
-    MessageEN: I hate shots! I hate needles!
-    MessageTH: ครูกลัวนะ! กลัวเข็มมากเลย!
-    MessageTW: 打針我不行！針好可怕！
-  - MessageGroupId: 230020030
+  - MessageKR: 와, 역시 어른이시네요!
+    MessageJP: そうなんですね、さすが大人です！
+    MessageCN: 这样啊，老师不愧是大人！
+    MessageEN: Wow, and you're an adult!
+    MessageTH: ว้าว สมกับเป็นผู้ใหญ่จริงๆ ด้วย!
+    MessageTW: 這樣啊，不愧是大人！
+    MessageGroupId: 230020030
     Id: 1505
     CharacterId: 23002
     MessageCondition: Feedback
@@ -113,13 +119,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 와, 역시 어른이시네요!
-    MessageJP: そうなんですね、さすが大人です！
-    MessageCN: 这样啊，老师不愧是大人！
-    MessageEN: Wow, and you're an adult!
-    MessageTH: ว้าว สมกับเป็นผู้ใหญ่จริงๆ ด้วย!
-    MessageTW: 這樣啊，不愧是大人！
-  - MessageGroupId: 230020030
+  - MessageKR: 하지만 대부분의 학생은 뾰족한 주삿바늘을 무서워하니까요.
+    MessageJP: 生徒はみんな大抵、注射の針を怖がってしまって……
+    MessageCN: 大部分学生都很害怕注射用的针呢……
+    MessageEN: Most students are afraid of pointy needles.
+    MessageTH: "แต่ว่า นักเรียนส่วนใหญ่มักจะกลัวเจ้า
+
+      เข็มฉีดยาเล็กๆ นี่นะคะ"
+    MessageTW: 學生們大部分都害怕打針……
+    MessageGroupId: 230020030
     Id: 1506
     CharacterId: 23002
     MessageCondition: Feedback
@@ -131,15 +139,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 대부분의 학생은 뾰족한 주삿바늘을 무서워하니까요.
-    MessageJP: 生徒はみんな大抵、注射の針を怖がってしまって……
-    MessageCN: 大部分学生都很害怕注射用的针呢……
-    MessageEN: Most students are afraid of pointy needles.
-    MessageTH: "แต่ว่า นักเรียนส่วนใหญ่มักจะกลัวเจ้า
+  - MessageKR: ……역시 어른들도 주사는 무섭나 보네요.
+    MessageJP: やっぱり大人でも注射は怖いんですね……
+    MessageCN: 果然连大人也会害怕打针呢……
+    MessageEN: "...I guess even adults are scared of shots."
+    MessageTH: "อ่า... ผู้ใหญ่เองก็กลัวการฉีดยาเหมือน
 
-      เข็มฉีดยาเล็กๆ นี่นะคะ"
-    MessageTW: 學生們大部分都害怕打針……
-  - MessageGroupId: 230020040
+      กันสินะคะ"
+    MessageTW: 果然就算是大人也會害怕打針啊……
+    MessageGroupId: 230020040
     Id: 1507
     CharacterId: 23002
     MessageCondition: Feedback
@@ -151,15 +159,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……역시 어른들도 주사는 무섭나 보네요.
-    MessageJP: やっぱり大人でも注射は怖いんですね……
-    MessageCN: 果然连大人也会害怕打针呢……
-    MessageEN: "...I guess even adults are scared of shots."
-    MessageTH: "อ่า... ผู้ใหญ่เองก็กลัวการฉีดยาเหมือน
+  - MessageKR: 확실히 뾰족한 주삿바늘은 보고만 있어도 섬뜩한 기분이 드니까요.
+    MessageJP: 注射の針を見てゾッとするのは、大人も子供も関係ないのかもしれません
+    MessageCN: 看来，一看见注射的针头就会毛骨悚然这一点，可能和对象是大人还是孩子无关呢
+    MessageEN: Those needles always give me a bad feeling.
+    MessageTH: "แน่นอนว่าถ้าเห็นเข็มฉีดยาแหลมๆ นี่ก็
 
-      กันสินะคะ"
-    MessageTW: 果然就算是大人也會害怕打針啊……
-  - MessageGroupId: 230020040
+      อาจกลัวขึ้นมาได้นะคะ"
+    MessageTW: 看來一見到針頭就毛骨悚然是跟年齡無關的也說不定
+    MessageGroupId: 230020040
     Id: 1508
     CharacterId: 23002
     MessageCondition: Feedback
@@ -171,15 +179,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실히 뾰족한 주삿바늘은 보고만 있어도 섬뜩한 기분이 드니까요.
-    MessageJP: 注射の針を見てゾッとするのは、大人も子供も関係ないのかもしれません
-    MessageCN: 看来，一看见注射的针头就会毛骨悚然这一点，可能和对象是大人还是孩子无关呢
-    MessageEN: Those needles always give me a bad feeling.
-    MessageTH: "แน่นอนว่าถ้าเห็นเข็มฉีดยาแหลมๆ นี่ก็
+  - MessageKR: 그런데 선배들에게 들었는데, 능숙한 간호사들은 주사를 아프지 않게 놓을 수 있대요.
+    MessageJP: でも先輩たち曰く、ベテランの看護師さんの注射は全然痛くないそうです
+    MessageCN: 但是前辈们说过，熟练的护士打的针好像一点都不会痛
+    MessageEN:
+      The older students told me that skilled nurses know how to make shots
+      painless.
+    MessageTH: "แต่ฉันได้ยินมาจากพวกรุ่นพี่ พยาบาลที่
 
-      อาจกลัวขึ้นมาได้นะคะ"
-    MessageTW: 看來一見到針頭就毛骨悚然是跟年齡無關的也說不定
-  - MessageGroupId: 230020050
+      เชี่ยวชาญจะฉีดยาได้เบามือมากเลยค่ะ"
+    MessageTW: 但是前輩們都說，老練的護士們打的針似乎一點也不痛
+    MessageGroupId: 230020050
     Id: 1509
     CharacterId: 23002
     MessageCondition: Feedback
@@ -191,17 +201,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런데 선배들에게 들었는데, 능숙한 간호사들은 주사를 아프지 않게 놓을 수 있대요.
-    MessageJP: でも先輩たち曰く、ベテランの看護師さんの注射は全然痛くないそうです
-    MessageCN: 但是前辈们说过，熟练的护士打的针好像一点都不会痛
-    MessageEN:
-      The older students told me that skilled nurses know how to make shots
-      painless.
-    MessageTH: "แต่ฉันได้ยินมาจากพวกรุ่นพี่ พยาบาลที่
+  - MessageKR: 주사가 아프지 않다면 병원에 오는 걸 무서워하는 사람들도 줄어들 텐데…….
+    MessageJP: 注射が痛くなければ、病院を怖がる人も減りそうなのですが……
+    MessageCN: 如果打针不会痛的话，也许害怕医院的人也会变少吧……
+    MessageEN: If shots really were painless, more people would be okay with the hospital...
+    MessageTH: "เพราะถ้าฉีดยาแล้วไม่รู้สึกเจ็บ จะทำให้
 
-      เชี่ยวชาญจะฉีดยาได้เบามือมากเลยค่ะ"
-    MessageTW: 但是前輩們都說，老練的護士們打的針似乎一點也不痛
-  - MessageGroupId: 230020050
+      คนที่กลัวการมาโรงพยาบาลลดลง..."
+    MessageTW: 如果打針不會痛的話，或許害怕醫院的人也會變少吧……
+    MessageGroupId: 230020050
     Id: 1510
     CharacterId: 23002
     MessageCondition: Feedback
@@ -213,15 +221,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주사가 아프지 않다면 병원에 오는 걸 무서워하는 사람들도 줄어들 텐데…….
-    MessageJP: 注射が痛くなければ、病院を怖がる人も減りそうなのですが……
-    MessageCN: 如果打针不会痛的话，也许害怕医院的人也会变少吧……
-    MessageEN: If shots really were painless, more people would be okay with the hospital...
-    MessageTH: "เพราะถ้าฉีดยาแล้วไม่รู้สึกเจ็บ จะทำให้
-
-      คนที่กลัวการมาโรงพยาบาลลดลง..."
-    MessageTW: 如果打針不會痛的話，或許害怕醫院的人也會變少吧……
-  - MessageGroupId: 230020060
+  - MessageKR: 어떻게 하면 주사를 아프지 않게 놓을 수 있을까요?
+    MessageJP: どうすれば、痛くなくなるのでしょうか？
+    MessageCN: 要怎么做，才能让打针不痛呢？
+    MessageEN: I wonder how they make shots painless?
+    MessageTH: ต้องทำยังไงถึงจะฉีดยาได้ไม่เจ็บกันนะ...
+    MessageTW: 該怎麼做才能減輕疼痛呢？
+    MessageGroupId: 230020060
     Id: 1511
     CharacterId: 23002
     MessageCondition: Feedback
@@ -233,13 +239,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어떻게 하면 주사를 아프지 않게 놓을 수 있을까요?
-    MessageJP: どうすれば、痛くなくなるのでしょうか？
-    MessageCN: 要怎么做，才能让打针不痛呢？
-    MessageEN: I wonder how they make shots painless?
-    MessageTH: ต้องทำยังไงถึงจะฉีดยาได้ไม่เจ็บกันนะ...
-    MessageTW: 該怎麼做才能減輕疼痛呢？
-  - MessageGroupId: 230020070
+  - MessageKR: 선생님, 요새 잠은 제대로 주무시고 계시는가요?
+    MessageJP: 先生、最近きちんと眠れてますか？
+    MessageCN: 老师，最近睡得好吗？
+    MessageEN: Have you been sleeping well, Sensei?
+    MessageTH: "แล้วช่วงนี้คุณครูนอนหลับได้เป็นปกติ
+
+      รึเปล่าคะ?"
+    MessageTW: 老師，最近睡得還好嗎？
+    MessageGroupId: 230020070
     Id: 1512
     CharacterId: 23002
     MessageCondition: FavorRankUp
@@ -251,15 +259,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 요새 잠은 제대로 주무시고 계시는가요?
-    MessageJP: 先生、最近きちんと眠れてますか？
-    MessageCN: 老师，最近睡得好吗？
-    MessageEN: Have you been sleeping well, Sensei?
-    MessageTH: "แล้วช่วงนี้คุณครูนอนหลับได้เป็นปกติ
+  - MessageKR: 눈 밑에 다크서클이 진한 게, 얼굴에 피로가 가득해 보여요…….
+    MessageJP: 目の下のクマもひどかったですし、すごく疲れた顔をしていましたが
+    MessageCN: 您看上去黑眼圈很重，脸色也很憔悴
+    MessageEN:
+      Those dark circles look pretty bad, and your skin is looking pretty
+      rough...
+    MessageTH: "สีหน้าคุณครูดูอ่อนล้ามากๆ แถมใต้ตา
 
-      รึเปล่าคะ?"
-    MessageTW: 老師，最近睡得還好嗎？
-  - MessageGroupId: 230020080
+      ก็ยังดำเป็นหมีแพนด้าเลยค่ะ"
+    MessageTW: 我看你的黑眼圈很重，也總是很累的樣子
+    MessageGroupId: 230020080
     Id: 1513
     CharacterId: 23002
     MessageCondition: None
@@ -271,17 +281,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 눈 밑에 다크서클이 진한 게, 얼굴에 피로가 가득해 보여요…….
-    MessageJP: 目の下のクマもひどかったですし、すごく疲れた顔をしていましたが
-    MessageCN: 您看上去黑眼圈很重，脸色也很憔悴
-    MessageEN:
-      Those dark circles look pretty bad, and your skin is looking pretty
-      rough...
-    MessageTH: "สีหน้าคุณครูดูอ่อนล้ามากๆ แถมใต้ตา
-
-      ก็ยังดำเป็นหมีแพนด้าเลยค่ะ"
-    MessageTW: 我看你的黑眼圈很重，也總是很累的樣子
-  - MessageGroupId: 230020090
+  - MessageKR: 요새 불면증이 심해져서…….
+    MessageJP: 最近ちょっと不眠症っぽくてね……
+    MessageCN: 最近好像有点失眠……
+    MessageEN: My insomnia has gotten pretty bad...
+    MessageTH: ช่วงนี้ครูนอนไม่ค่อยหลับน่ะ...
+    MessageTW: 最近好像有點失眠……
+    MessageGroupId: 230020090
     Id: 1514
     CharacterId: 23002
     MessageCondition: Answer
@@ -293,13 +299,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 요새 불면증이 심해져서…….
-    MessageJP: 最近ちょっと不眠症っぽくてね……
-    MessageCN: 最近好像有点失眠……
-    MessageEN: My insomnia has gotten pretty bad...
-    MessageTH: ช่วงนี้ครูนอนไม่ค่อยหลับน่ะ...
-    MessageTW: 最近好像有點失眠……
-  - MessageGroupId: 230020090
+  - MessageKR: 어쩐지 밤에 잠이 잘 오질 않아…….
+    MessageJP: なんだか夜眠れなくって……
+    MessageCN: 总感觉晚上睡不着……
+    MessageEN: I just can't sleep at night.
+    MessageTH: "ไม่รู้ว่าทำไม กลางคืนนอนไม่ค่อย
+
+      หลับเลย..."
+    MessageTW: 晚上總是睡不著……
+    MessageGroupId: 230020090
     Id: 1515
     CharacterId: 23002
     MessageCondition: Answer
@@ -311,15 +319,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쩐지 밤에 잠이 잘 오질 않아…….
-    MessageJP: なんだか夜眠れなくって……
-    MessageCN: 总感觉晚上睡不着……
-    MessageEN: I just can't sleep at night.
-    MessageTH: "ไม่รู้ว่าทำไม กลางคืนนอนไม่ค่อย
-
-      หลับเลย..."
-    MessageTW: 晚上總是睡不著……
-  - MessageGroupId: 230020100
+  - MessageKR: 잠은 제때 제대로 주무셔야죠!
+    MessageJP: やっぱり、そうだったんですか
+    MessageCN: 果然是这样啊
+    MessageEN: You have to sleep at the right time every day!
+    MessageTH: ต้องนอนให้เป็นเวลานะคะ!
+    MessageTW: 果然是這樣啊
+    MessageGroupId: 230020100
     Id: 1516
     CharacterId: 23002
     MessageCondition: Feedback
@@ -331,25 +337,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잠은 제때 제대로 주무셔야죠!
-    MessageJP: やっぱり、そうだったんですか
-    MessageCN: 果然是这样啊
-    MessageEN: You have to sleep at the right time every day!
-    MessageTH: ต้องนอนให้เป็นเวลานะคะ!
-    MessageTW: 果然是這樣啊
-  - MessageGroupId: 230020100
-    Id: 1517
-    CharacterId: 23002
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230020110
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 피로는 만병의 원인! 잠을 자꾸 설치면 건강도 나빠지고, 병에 걸릴 수도 있다고요.
+  - MessageKR: 피로는 만병의 원인! 잠을 자꾸 설치면 건강도 나빠지고, 병에 걸릴 수도 있다고요.
     MessageJP: 疲れは万病のもと！きちんと睡眠をとらないと病気になってしまうかもです
     MessageCN: 疲惫是万病之源！老师没有充足的睡眠的话可能会生病的
     MessageEN:
@@ -361,19 +349,19 @@ content:
 
       สุขภาพ และอาจทำให้ป่วยเป็นโรคได้ค่ะ"
     MessageTW: 疲勞是萬病之源！如果不好好睡覺的話可是會生病的
-  - MessageGroupId: 230020110
-    Id: 1518
+    MessageGroupId: 230020100
+    Id: 1517
     CharacterId: 23002
     MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 230020120
+    NextGroupId: 230020110
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안 되겠어요. 선생님께서 잠을 푹 주무실 수 있도록 제가 좋은 방법을 준비해두고 있을 테니,
+  - MessageKR: 안 되겠어요. 선생님께서 잠을 푹 주무실 수 있도록 제가 좋은 방법을 준비해두고 있을 테니,
     MessageJP: 先生がぐっすり眠れるよう、何か良い方法を探しておきますね
     MessageCN: 为了能让老师睡个好觉，我会想想有没有什么好办法的
     MessageEN:
@@ -385,7 +373,27 @@ content:
 
       แล้วค่ะ"
     MessageTW: 為了讓老師能好好睡覺，我會想想辦法的
-  - MessageGroupId: 230020110
+    MessageGroupId: 230020110
+    Id: 1518
+    CharacterId: 23002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230020120
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 내일 점심시간에 양호실을 찾아주세요!
+    MessageJP: 明日のお昼、保健室に来てください！
+    MessageCN: 明天早上，请老师到保健室来吧！
+    MessageEN: Come to the infirmary during lunch tomorrow!
+    MessageTH: "พรุ่งนี้ตอนกลางวันช่วยมาที่ห้องพยาบาล
+
+      ด้วยนะคะ!"
+    MessageTW: 明天白天，請老師來保健室一趟！
+    MessageGroupId: 230020110
     Id: 1519
     CharacterId: 23002
     MessageCondition: Feedback
@@ -397,15 +405,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내일 점심시간에 양호실을 찾아주세요!
-    MessageJP: 明日のお昼、保健室に来てください！
-    MessageCN: 明天早上，请老师到保健室来吧！
-    MessageEN: Come to the infirmary during lunch tomorrow!
-    MessageTH: "พรุ่งนี้ตอนกลางวันช่วยมาที่ห้องพยาบาล
-
-      ด้วยนะคะ!"
-    MessageTW: 明天白天，請老師來保健室一趟！
-  - MessageGroupId: 230020120
+  - MessageKR: 역시 허브차는 잠이 오는 데까지 걸리는 시간이 너무 긴 것 같아요.
+    MessageJP: ハーブティーは良かったのですが眠るまで少し時間がかかってしまいますね
+    MessageCN: 花草茶虽然不错，不过想靠喝茶入睡的话还是要稍微花点时间呢
+    MessageEN: Herbal tea takes too long to get you to sleep.
+    MessageTH: ชาสมุนไพรทำให้ง่วงนอนได้ช้าจริงๆ ด้วย
+    MessageTW: 香草茶雖然是好東西，但是要讓人睡著還是需要花點時間呢
+    MessageGroupId: 230020120
     Id: 1520
     CharacterId: 23002
     MessageCondition: None
@@ -417,13 +423,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 허브차는 잠이 오는 데까지 걸리는 시간이 너무 긴 것 같아요.
-    MessageJP: ハーブティーは良かったのですが眠るまで少し時間がかかってしまいますね
-    MessageCN: 花草茶虽然不错，不过想靠喝茶入睡的话还是要稍微花点时间呢
-    MessageEN: Herbal tea takes too long to get you to sleep.
-    MessageTH: ชาสมุนไพรทำให้ง่วงนอนได้ช้าจริงๆ ด้วย
-    MessageTW: 香草茶雖然是好東西，但是要讓人睡著還是需要花點時間呢
-  - MessageGroupId: 230020120
+  - MessageKR: 그래서 인터넷에서 잠이 더 잘 오는 차를 조사해보았답니다.
+    MessageJP: そこで、ネットでもっと効果のあるものを見つけてきました！
+    MessageCN: 所以，我在网上找到了效果更好的东西！
+    MessageEN:
+      I'll search the internet for a tea that will make you sleepy in no
+      time.
+    MessageTH: แต่ว่าฉันหาชาที่มีสรรพคุณดีกว่าไว้แล้วค่ะ
+    MessageTW: 所以，我在網路上找到了更有效的東西！
+    MessageGroupId: 230020120
     Id: 1521
     CharacterId: 23002
     MessageCondition: None
@@ -435,15 +443,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 인터넷에서 잠이 더 잘 오는 차를 조사해보았답니다.
-    MessageJP: そこで、ネットでもっと効果のあるものを見つけてきました！
-    MessageCN: 所以，我在网上找到了效果更好的东西！
-    MessageEN:
-      I'll search the internet for a tea that will make you sleepy in no
-      time.
-    MessageTH: แต่ว่าฉันหาชาที่มีสรรพคุณดีกว่าไว้แล้วค่ะ
-    MessageTW: 所以，我在網路上找到了更有效的東西！
-  - MessageGroupId: 230020130
+  - MessageKR: 음…… 투구꽃 뿌리로 달인 차는 어떠신가요?
+    MessageJP: トリカブトの根っこ……？というもので淹れたお茶が良さそうです！
+    MessageCN: 乌头草的根……？用这个泡出来的茶好像很不错！
+    MessageEN: Hm... What about tea brewed with wolfsbane root?
+    MessageTH: "อืม... แล้วถ้าเป็นชาจากรากของต้น
+
+      วูฟส์เบนล่ะคะ?"
+    MessageTW: 烏頭屬植物的根……？用這個泡的茶好像很不錯喔！
+    MessageGroupId: 230020130
     Id: 1522
     CharacterId: 23002
     MessageCondition: None
@@ -455,15 +463,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 투구꽃 뿌리로 달인 차는 어떠신가요?
-    MessageJP: トリカブトの根っこ……？というもので淹れたお茶が良さそうです！
-    MessageCN: 乌头草的根……？用这个泡出来的茶好像很不错！
-    MessageEN: Hm... What about tea brewed with wolfsbane root?
-    MessageTH: "อืม... แล้วถ้าเป็นชาจากรากของต้น
-
-      วูฟส์เบนล่ะคะ?"
-    MessageTW: 烏頭屬植物的根……？用這個泡的茶好像很不錯喔！
-  - MessageGroupId: 230020140
+  - MessageKR: 죽일 셈이냐!
+    MessageJP: 殺す気！？
+    MessageCN: 这是想杀了我吗！？
+    MessageEN: Are you trying to kill me?!
+    MessageTH: แบบนั้นก็ตายพอดีน่ะสิ!
+    MessageTW: 你想殺了我嗎！？
+    MessageGroupId: 230020140
     Id: 1523
     CharacterId: 23002
     MessageCondition: Answer
@@ -475,13 +481,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 죽일 셈이냐!
-    MessageJP: 殺す気！？
-    MessageCN: 这是想杀了我吗！？
-    MessageEN: Are you trying to kill me?!
-    MessageTH: แบบนั้นก็ตายพอดีน่ะสิ!
-    MessageTW: 你想殺了我嗎！？
-  - MessageGroupId: 230020150
+  - MessageKR: 선생님은 주로 어디서 라디오 체조를 하시나요?
+    MessageJP: 先生は普段、どこでラジオ体操をしてるんですか？
+    MessageCN: 老师平时会在哪里做广播体操呢？
+    MessageEN: Where do you usually do your morning stretches, Sensei?
+    MessageTH: "ปกติแล้วคุณครูจะทำกายบริหารที่ไหน
+
+      เหรอคะ?"
+    MessageTW: 老師平常是在哪裡做廣播體操呢？
+    MessageGroupId: 230020150
     Id: 1524
     CharacterId: 23002
     MessageCondition: FavorRankUp
@@ -493,15 +501,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님은 주로 어디서 라디오 체조를 하시나요?
-    MessageJP: 先生は普段、どこでラジオ体操をしてるんですか？
-    MessageCN: 老师平时会在哪里做广播体操呢？
-    MessageEN: Where do you usually do your morning stretches, Sensei?
-    MessageTH: "ปกติแล้วคุณครูจะทำกายบริหารที่ไหน
+  - MessageKR: 공원? 학교? 아니면 사무실?
+    MessageJP: 公園？学校？それともシャーレで？
+    MessageCN: 公园？学校？还是在夏莱？
+    MessageEN: At the park? School? Office?
+    MessageTH: "ที่สวนเหรอคะ? หรือว่าที่โรงเรียนคะ?
 
-      เหรอคะ?"
-    MessageTW: 老師平常是在哪裡做廣播體操呢？
-  - MessageGroupId: 230020160
+      หรือว่าที่ห้องทำงานคะ?"
+    MessageTW: 是公園？學校？還是在夏萊呢？
+    MessageGroupId: 230020160
     Id: 1525
     CharacterId: 23002
     MessageCondition: None
@@ -513,15 +521,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 공원? 학교? 아니면 사무실?
-    MessageJP: 公園？学校？それともシャーレで？
-    MessageCN: 公园？学校？还是在夏莱？
-    MessageEN: At the park? School? Office?
-    MessageTH: "ที่สวนเหรอคะ? หรือว่าที่โรงเรียนคะ?
+  - MessageKR: 그러고 보니 선생님이 라디오 체조를 하는 모습은 본 적이 없는 것 같네요.
+    MessageJP: そういえば、先生がラジオ体操をしているところって見たことないですね
+    MessageCN: 说起来，我好像没见过老师做广播体操呢
+    MessageEN: Actually, I've never seen you do morning stretches before.
+    MessageTH: "จะว่าไปแล้วไม่เคยเห็นคุณครูทำกาย
 
-      หรือว่าที่ห้องทำงานคะ?"
-    MessageTW: 是公園？學校？還是在夏萊呢？
-  - MessageGroupId: 230020160
+      บริหารเลยนะคะ"
+    MessageTW: 這麼說來，我還沒看過老師做廣播體操的樣子呢
+    MessageGroupId: 230020160
     Id: 1526
     CharacterId: 23002
     MessageCondition: None
@@ -533,15 +541,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러고 보니 선생님이 라디오 체조를 하는 모습은 본 적이 없는 것 같네요.
-    MessageJP: そういえば、先生がラジオ体操をしているところって見たことないですね
-    MessageCN: 说起来，我好像没见过老师做广播体操呢
-    MessageEN: Actually, I've never seen you do morning stretches before.
-    MessageTH: "จะว่าไปแล้วไม่เคยเห็นคุณครูทำกาย
+  - MessageKR: 라디오 체조는 초등학생 이후로 해 본 일이 없는데…….
+    MessageJP: ラジオ体操なんて、小学生以来やってないなあ……
+    MessageCN: 广播体操啊，我小学之后就再也没做过了……
+    MessageEN: I don't think I've done them since elementary school...
+    MessageTH: "ทำกายบริหารเหรอ... ไม่ได้ทำมา
 
-      บริหารเลยนะคะ"
-    MessageTW: 這麼說來，我還沒看過老師做廣播體操的樣子呢
-  - MessageGroupId: 230020170
+      ตั้งแต่สมัยประถมแล้วล่ะ..."
+    MessageTW: 廣播體操什麼的，小學之後就沒做過了……
+    MessageGroupId: 230020170
     Id: 1527
     CharacterId: 23002
     MessageCondition: Answer
@@ -553,15 +561,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 라디오 체조는 초등학생 이후로 해 본 일이 없는데…….
-    MessageJP: ラジオ体操なんて、小学生以来やってないなあ……
-    MessageCN: 广播体操啊，我小学之后就再也没做过了……
-    MessageEN: I don't think I've done them since elementary school...
-    MessageTH: "ทำกายบริหารเหรอ... ไม่ได้ทำมา
-
-      ตั้งแต่สมัยประถมแล้วล่ะ..."
-    MessageTW: 廣播體操什麼的，小學之後就沒做過了……
-  - MessageGroupId: 230020180
+  - MessageKR: 네? 라디오 체조를 안 나가신다고요?
+    MessageJP: えっ、ラジオ体操やってないんですか？
+    MessageCN: 诶，老师没在做广播体操吗？
+    MessageEN: What? You don't do your morning stretches?
+    MessageTH: คะ? จะไม่ไปทำกายบริหารเหรอคะ?
+    MessageTW: 咦？沒有在做廣播體操嗎？
+    MessageGroupId: 230020180
     Id: 1528
     CharacterId: 23002
     MessageCondition: Feedback
@@ -573,13 +579,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네? 라디오 체조를 안 나가신다고요?
-    MessageJP: えっ、ラジオ体操やってないんですか？
-    MessageCN: 诶，老师没在做广播体操吗？
-    MessageEN: What? You don't do your morning stretches?
-    MessageTH: คะ? จะไม่ไปทำกายบริหารเหรอคะ?
-    MessageTW: 咦？沒有在做廣播體操嗎？
-  - MessageGroupId: 230020180
+  - MessageKR: 그럼 착한 아이 도장도 받을 수 없잖아요!
+    MessageJP: それじゃあ、はなまるスタンプがもらえないじゃないですか！
+    MessageCN: 那不是就拿不到小红花了吗！
+    MessageEN: How do you even get through the day?
+    MessageTH: "ถ้าแบบนั้นพวกเด็กๆ จะไม่ได้รับสแตมป์
+
+      สะสมนะคะ!"
+    MessageTW: 那樣的話，不就拿不到花丸印章了嗎！
+    MessageGroupId: 230020180
     Id: 1529
     CharacterId: 23002
     MessageCondition: Feedback
@@ -591,15 +599,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 착한 아이 도장도 받을 수 없잖아요!
-    MessageJP: それじゃあ、はなまるスタンプがもらえないじゃないですか！
-    MessageCN: 那不是就拿不到小红花了吗！
-    MessageEN: How do you even get through the day?
-    MessageTH: "ถ้าแบบนั้นพวกเด็กๆ จะไม่ได้รับสแตมป์
+  - MessageKR: 선생님도 제가 나가는 공원에 함께 나오셔서 같이 라디오 체조를 해요!
+    MessageJP: 先生も一緒に、私のいつもの公園に行ってラジオ体操をしましょう！
+    MessageCN: 老师和我也一起，去我平时去的公园做广播体操吧！
+    MessageEN: You should come to the park with me and stretch!
+    MessageTH: "คุณครูก็ออกไปทำกายบริหารกับฉันที่
 
-      สะสมนะคะ!"
-    MessageTW: 那樣的話，不就拿不到花丸印章了嗎！
-  - MessageGroupId: 230020190
+      สวนสาธารณะเถอะค่ะ!"
+    MessageTW: 老師也和我一起到平時去的公園做廣播體操吧！
+    MessageGroupId: 230020190
     Id: 1530
     CharacterId: 23002
     MessageCondition: Feedback
@@ -611,15 +619,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님도 제가 나가는 공원에 함께 나오셔서 같이 라디오 체조를 해요!
-    MessageJP: 先生も一緒に、私のいつもの公園に行ってラジオ体操をしましょう！
-    MessageCN: 老师和我也一起，去我平时去的公园做广播体操吧！
-    MessageEN: You should come to the park with me and stretch!
-    MessageTH: "คุณครูก็ออกไปทำกายบริหารกับฉันที่
-
-      สวนสาธารณะเถอะค่ะ!"
-    MessageTW: 老師也和我一起到平時去的公園做廣播體操吧！
-  - MessageGroupId: 230020200
+  - MessageKR: 싫어.
+    MessageJP: やだ
+    MessageCN: 不要
+    MessageEN: No.
+    MessageTH: ไม่เอาอ่ะ...
+    MessageTW: 不要
+    MessageGroupId: 230020200
     Id: 1531
     CharacterId: 23002
     MessageCondition: Answer
@@ -631,13 +637,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 싫어.
-    MessageJP: やだ
-    MessageCN: 不要
-    MessageEN: No.
-    MessageTH: ไม่เอาอ่ะ...
-    MessageTW: 不要
-  - MessageGroupId: 230020200
+  - MessageKR: 귀찮아.
+    MessageJP: 朝は眠い
+    MessageCN: 早上很困
+    MessageEN: I'm too lazy.
+    MessageTH: คือ... ขี้เกียจอ่ะ...
+    MessageTW: 早上很想睡覺
+    MessageGroupId: 230020200
     Id: 1532
     CharacterId: 23002
     MessageCondition: Answer
@@ -649,25 +655,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 귀찮아.
-    MessageJP: 朝は眠い
-    MessageCN: 早上很困
-    MessageEN: I'm too lazy.
-    MessageTH: คือ... ขี้เกียจอ่ะ...
-    MessageTW: 早上很想睡覺
-  - MessageGroupId: 230020210
-    Id: 1533
-    CharacterId: 23002
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230020220
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 안 돼요. 선생님처럼 책상 앞에 오래 앉아 있는 어른들에게 체조는 중요한 일과라고요!
+  - MessageKR: 안 돼요. 선생님처럼 책상 앞에 오래 앉아 있는 어른들에게 체조는 중요한 일과라고요!
     MessageJP: 先生みたいに座りっぱなしの大人こそ、ちゃんと身体を動かさないと！
     MessageCN: 就是像老师这样整天坐着的人，才更要好好活动身体！
     MessageEN:
@@ -679,7 +667,25 @@ content:
 
       เป็นเรื่องสำคัญมากนะคะ!"
     MessageTW: 像老師這樣老是久坐的大人，不好好活動身體可不行！
-  - MessageGroupId: 230020210
+    MessageGroupId: 230020210
+    Id: 1533
+    CharacterId: 23002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230020220
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님~!
+    MessageJP: さあ、行きましょう！
+    MessageCN: 好啦，一起去吧！
+    MessageEN: Sensei!
+    MessageTH: คุณครูคะ~!
+    MessageTW: 來，我們走吧！
+    MessageGroupId: 230020210
     Id: 1534
     CharacterId: 23002
     MessageCondition: Feedback
@@ -691,13 +697,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님~!
-    MessageJP: さあ、行きましょう！
-    MessageCN: 好啦，一起去吧！
-    MessageEN: Sensei!
-    MessageTH: คุณครูคะ~!
-    MessageTW: 來，我們走吧！
-  - MessageGroupId: 230020220
+  - MessageKR: 오랜만에 라디오 체조를 해 본 소감은 어떠신가요, 선생님?
+    MessageJP: 久しぶりのラジオ体操の感想はいかがですか、先生？
+    MessageCN: 久违的广播体操感想如何，老师？
+    MessageEN: How do you feel after doing your morning stretches, Sensei?
+    MessageTH: "ความรู้สึกหลังทำกายบริหารหลังจาก
+
+      ที่ไม่ได้ทำมานานเป็นยังไงบ้างคะ?"
+    MessageTW: 久違的廣播體操的感想怎麼樣呢，老師？
+    MessageGroupId: 230020220
     Id: 1535
     CharacterId: 23002
     MessageCondition: None
@@ -709,15 +717,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오랜만에 라디오 체조를 해 본 소감은 어떠신가요, 선생님?
-    MessageJP: 久しぶりのラジオ体操の感想はいかがですか、先生？
-    MessageCN: 久违的广播体操感想如何，老师？
-    MessageEN: How do you feel after doing your morning stretches, Sensei?
-    MessageTH: "ความรู้สึกหลังทำกายบริหารหลังจาก
+  - MessageKR: 일찍 일어나서 체조를 하니 확실히 기분이 개운해지지 않으셨나요?
+    MessageJP: 朝早く起きて体操をすると、すっきりしませんか？
+    MessageCN: 早起做体操，有没有感觉神清气爽呢？
+    MessageEN: Don't you feel so refreshed?
+    MessageTH: "ทำกายบริหารหลังจากตื่นนอนแบบนี้
 
-      ที่ไม่ได้ทำมานานเป็นยังไงบ้างคะ?"
-    MessageTW: 久違的廣播體操的感想怎麼樣呢，老師？
-  - MessageGroupId: 230020220
+      รู้สึกสดชื่นบ้างไหมคะ?"
+    MessageTW: 一早起來做體操，不覺得精神都來了嗎？
+    MessageGroupId: 230020220
     Id: 1536
     CharacterId: 23002
     MessageCondition: None
@@ -729,15 +737,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일찍 일어나서 체조를 하니 확실히 기분이 개운해지지 않으셨나요?
-    MessageJP: 朝早く起きて体操をすると、すっきりしませんか？
-    MessageCN: 早起做体操，有没有感觉神清气爽呢？
-    MessageEN: Don't you feel so refreshed?
-    MessageTH: "ทำกายบริหารหลังจากตื่นนอนแบบนี้
-
-      รู้สึกสดชื่นบ้างไหมคะ?"
-    MessageTW: 一早起來做體操，不覺得精神都來了嗎？
-  - MessageGroupId: 230020230
+  - MessageKR: 확실히 평소보다 개운한 느낌이네.
+    MessageJP: 確かに、いつもより爽やかな気分
+    MessageCN: 确实感觉比平时更清爽了
+    MessageEN: I actually do.
+    MessageTH: รู้สึกสดชื่นกว่าปกติจริงๆ ด้วยนะ
+    MessageTW: 確實，比平時更有精神了
+    MessageGroupId: 230020230
     Id: 1537
     CharacterId: 23002
     MessageCondition: Answer
@@ -749,25 +755,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실히 평소보다 개운한 느낌이네.
-    MessageJP: 確かに、いつもより爽やかな気分
-    MessageCN: 确实感觉比平时更清爽了
-    MessageEN: I actually do.
-    MessageTH: รู้สึกสดชื่นกว่าปกติจริงๆ ด้วยนะ
-    MessageTW: 確實，比平時更有精神了
-  - MessageGroupId: 230020240
-    Id: 1538
-    CharacterId: 23002
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230020250
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 그렇죠? 라디오 체조는 평소에 안 쓰는 근육을 풀어주기 때문에 건강에도 좋답니다!
+  - MessageKR: 그렇죠? 라디오 체조는 평소에 안 쓰는 근육을 풀어주기 때문에 건강에도 좋답니다!
     MessageJP: でしょう？ラジオ体操は普段使わない筋肉もほぐすので健康に良いんです！
     MessageCN: 对吧？广播体操可以放松平时没用到的肌肉，对健康很有帮助的！
     MessageEN:
@@ -779,7 +767,27 @@ content:
 
       งาน เพราะงั้นเลยดีต่อสุขภาพมากค่ะ!"
     MessageTW: 對吧？做廣播體操可以運動到平時沒用到的肌肉，對健康很好的！
-  - MessageGroupId: 230020240
+    MessageGroupId: 230020240
+    Id: 1538
+    CharacterId: 23002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230020250
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러니까 앞으로는 선생님도 매일 공원에서 진행하는 아침 라디오 체조에 참여하세요!
+    MessageJP: ですので、これからは先生も毎日、朝のラジオ体操に参加してくださいね！
+    MessageCN: 所以说，老师接下来也请每天参加早上的广播体操哦！
+    MessageEN: You should come to the park every day to do morning stretches!
+    MessageTH: "เพราะฉะนั้นต่อไปคุณครูต้องมาร่วมทำ
+
+      กายบริหารที่สวนทุกเช้าเลยนะคะ!"
+    MessageTW: 所以說，接下來每一天請都要參加早上的廣播體操喔！
+    MessageGroupId: 230020240
     Id: 1539
     CharacterId: 23002
     MessageCondition: Feedback
@@ -791,15 +799,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니까 앞으로는 선생님도 매일 공원에서 진행하는 아침 라디오 체조에 참여하세요!
-    MessageJP: ですので、これからは先生も毎日、朝のラジオ体操に参加してくださいね！
-    MessageCN: 所以说，老师接下来也请每天参加早上的广播体操哦！
-    MessageEN: You should come to the park every day to do morning stretches!
-    MessageTH: "เพราะฉะนั้นต่อไปคุณครูต้องมาร่วมทำ
+  - MessageKR: ……찾아오지 않으시면 제가 샬레 하우스로 직접 찾아갈 거예요!
+    MessageJP: もし来てなかったら、私がシャーレまで迎えに行きますから！
+    MessageCN: 如果老师没来的话，我就去夏莱接您！
+    MessageEN: If you don't come, I'm going to come pick you up from Schale!
+    MessageTH: "ถ้าคุณครูไม่มาล่ะก็... ฉันจะไปตาม
 
-      กายบริหารที่สวนทุกเช้าเลยนะคะ!"
-    MessageTW: 所以說，接下來每一天請都要參加早上的廣播體操喔！
-  - MessageGroupId: 230020250
+      คุณครูถึงบ้านเลยค่ะ!"
+    MessageTW: 如果老師沒來的話，我會去夏萊迎接你的！
+    MessageGroupId: 230020250
     Id: 1540
     CharacterId: 23002
     MessageCondition: Feedback
@@ -811,15 +819,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……찾아오지 않으시면 제가 샬레 하우스로 직접 찾아갈 거예요!
-    MessageJP: もし来てなかったら、私がシャーレまで迎えに行きますから！
-    MessageCN: 如果老师没来的话，我就去夏莱接您！
-    MessageEN: If you don't come, I'm going to come pick you up from Schale!
-    MessageTH: "ถ้าคุณครูไม่มาล่ะก็... ฉันจะไปตาม
-
-      คุณครูถึงบ้านเลยค่ะ!"
-    MessageTW: 如果老師沒來的話，我會去夏萊迎接你的！
-  - MessageGroupId: 230020260
+  - MessageKR: 휴일은 좀 봐줘…….
+    MessageJP: せめて休日は勘弁して……
+    MessageCN: 休息日就至少放过我吧……
+    MessageEN: Can I at least rest on my days off...?
+    MessageTH: ขอเว้นตอนวันหยุดได้ไหม...
+    MessageTW: 至少假日放過我吧……
+    MessageGroupId: 230020260
     Id: 1541
     CharacterId: 23002
     MessageCondition: Answer
@@ -831,25 +837,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 휴일은 좀 봐줘…….
-    MessageJP: せめて休日は勘弁して……
-    MessageCN: 休息日就至少放过我吧……
-    MessageEN: Can I at least rest on my days off...?
-    MessageTH: ขอเว้นตอนวันหยุดได้ไหม...
-    MessageTW: 至少假日放過我吧……
-  - MessageGroupId: 230020270
-    Id: 1542
-    CharacterId: 23002
-    MessageCondition: FavorRankUp
-    ConditionValue: 6
-    PreConditionGroupId: 230020260
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230020280
-    FeedbackTimeMillisec: 0
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 얼마 전에 트리니티 도서관에서 오래된 의학 서적을 발견했는데, 처음 보는 치료법이 잔뜩 적혀 있더라구요.
+  - MessageKR: 얼마 전에 트리니티 도서관에서 오래된 의학 서적을 발견했는데, 처음 보는 치료법이 잔뜩 적혀 있더라구요.
     MessageJP: 図書館で古い医学書を見つけたのですが、知らない治療法だらけでした！
     MessageCN: 我在图书馆找到了一本很旧的医学书，里面写的全是我闻所未闻的治疗方法！
     MessageEN:
@@ -863,7 +851,29 @@ content:
 
       เต็มไปหมดเลย"
     MessageTW: 我在圖書館找到了一本很舊的醫學書籍，裡面全都是我不知道的治療方法！
-  - MessageGroupId: 230020280
+    MessageGroupId: 230020270
+    Id: 1542
+    CharacterId: 23002
+    MessageCondition: FavorRankUp
+    ConditionValue: 6
+    PreConditionGroupId: 230020260
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230020280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 혹시 현대에 전승되지 못한 금단의 의술 같은 걸까요?
+    MessageJP: もしかして……現代では秘匿された、禁断の医術なのでしょうか！？
+    MessageCN: 难道这就是……在现代被隐匿起来的，禁断的医术吗！？
+    MessageEN:
+      I wonder if they're taboo techniques that were never passed down to
+      modern society?
+    MessageTH: "หรือว่ามันเป็นพวกตำรายาต้องห้ามที่ไม่ได้
+
+      รับอนุญาตให้ใช้ในปัจจุบันหรือเปล่านะ?"
+    MessageTW: 難道說……是在現代被隱藏起來的，禁斷的醫術嗎！？
+    MessageGroupId: 230020280
     Id: 1543
     CharacterId: 23002
     MessageCondition: None
@@ -875,17 +885,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 현대에 전승되지 못한 금단의 의술 같은 걸까요?
-    MessageJP: もしかして……現代では秘匿された、禁断の医術なのでしょうか！？
-    MessageCN: 难道这就是……在现代被隐匿起来的，禁断的医术吗！？
+  - MessageKR: 민간에서 전해지던 대체요법 같은 게 아닐까?
+    MessageJP: 民間療法みたいなものじゃないかな？
+    MessageCN: 应该是民间疗法之类的东西吧？
     MessageEN:
-      I wonder if they're taboo techniques that were never passed down to
-      modern society?
-    MessageTH: "หรือว่ามันเป็นพวกตำรายาต้องห้ามที่ไม่ได้
+      Maybe they were alternative methods that were used between non-medical
+      professionals?
+    MessageTH: "หรือจะเป็นการรักษาทางเลือกที่
 
-      รับอนุญาตให้ใช้ในปัจจุบันหรือเปล่านะ?"
-    MessageTW: 難道說……是在現代被隱藏起來的，禁斷的醫術嗎！？
-  - MessageGroupId: 230020290
+      สืบทอดมาจากชาวบ้านกันนะ?"
+    MessageTW: 是像民間療法那一類的東西吧？
+    MessageGroupId: 230020290
     Id: 1544
     CharacterId: 23002
     MessageCondition: Answer
@@ -897,17 +907,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 민간에서 전해지던 대체요법 같은 게 아닐까?
-    MessageJP: 民間療法みたいなものじゃないかな？
-    MessageCN: 应该是民间疗法之类的东西吧？
-    MessageEN:
-      Maybe they were alternative methods that were used between non-medical
-      professionals?
-    MessageTH: "หรือจะเป็นการรักษาทางเลือกที่
-
-      สืบทอดมาจากชาวบ้านกันนะ?"
-    MessageTW: 是像民間療法那一類的東西吧？
-  - MessageGroupId: 230020300
+  - MessageKR: 그런가요…….
+    MessageJP: そういうことでしたか……
+    MessageCN: 这样啊……
+    MessageEN: I don't know...
+    MessageTH: นั่นสิคะ...
+    MessageTW: 是這樣嗎……
+    MessageGroupId: 230020300
     Id: 1545
     CharacterId: 23002
     MessageCondition: Feedback
@@ -919,25 +925,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런가요…….
-    MessageJP: そういうことでしたか……
-    MessageCN: 这样啊……
-    MessageEN: I don't know...
-    MessageTH: นั่นสิคะ...
-    MessageTW: 是這樣嗎……
-  - MessageGroupId: 230020310
-    Id: 1546
-    CharacterId: 23002
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 230020320
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 그럼 다음에 선생님이 다치시면 여기 적힌 새로운 치료법으로 치료해 드릴게요.
+  - MessageKR: 그럼 다음에 선생님이 다치시면 여기 적힌 새로운 치료법으로 치료해 드릴게요.
     MessageJP: ですが何事も挑戦です。もし先生が今度怪我をされたら試してみましょう！
     MessageCN: 但是万事皆为挑战。如果老师下次受伤了的话，就来我这边试试看吧！
     MessageEN:
@@ -949,7 +937,25 @@ content:
 
       หนังสือเองค่ะ"
     MessageTW: 但任何事都是挑戰。如果老師哪天受傷了的話就來試試看吧！
-  - MessageGroupId: 230020310
+    MessageGroupId: 230020310
+    Id: 1546
+    CharacterId: 23002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230020320
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 기대하고 계세요!
+    MessageJP: 楽しみにしててくださいね！
+    MessageCN: 敬请期待哦！
+    MessageEN: I'm so excited!
+    MessageTH: คอยดูได้เลยค่ะ!
+    MessageTW: 敬請期待喔！
+    MessageGroupId: 230020310
     Id: 1547
     CharacterId: 23002
     MessageCondition: Feedback
@@ -961,13 +967,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기대하고 계세요!
-    MessageJP: 楽しみにしててくださいね！
-    MessageCN: 敬请期待哦！
-    MessageEN: I'm so excited!
-    MessageTH: คอยดูได้เลยค่ะ!
-    MessageTW: 敬請期待喔！
-  - MessageGroupId: 230020320
+  - MessageKR: 아니, 다치는 걸 기대하고 있어도 곤란한데…….
+    MessageJP: 怪我を楽しみにっていうのはちょっと……
+    MessageCN: 期待受伤的话有点……
+    MessageEN: I don't think you should be excited for me to get hurt...
+    MessageTH: "เดี๋ยวสิ ถ้าฮานาเอะจังรอให้ครู
+
+      บาดเจ็บ... มันยังไงๆ อยู่นะ"
+    MessageTW: 期待受傷的話有點……
+    MessageGroupId: 230020320
     Id: 1548
     CharacterId: 23002
     MessageCondition: Answer
@@ -979,15 +987,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 다치는 걸 기대하고 있어도 곤란한데…….
-    MessageJP: 怪我を楽しみにっていうのはちょっと……
-    MessageCN: 期待受伤的话有点……
-    MessageEN: I don't think you should be excited for me to get hurt...
-    MessageTH: "เดี๋ยวสิ ถ้าฮานาเอะจังรอให้ครู
+  - MessageKR: 샬레의 집무실은 어쩐지 조금 삭막한 느낌이 들어요.
+    MessageJP: シャーレの執務室はなんだか、少し殺風景な気がします
+    MessageCN: 我总感觉，夏莱的办公室有点煞风景
+    MessageEN: Schale's executive office is a bit dreary.
+    MessageTH: "รู้สึกเหมือนสำนักงานของชาเล่ต์ดูเหงาๆ
 
-      บาดเจ็บ... มันยังไงๆ อยู่นะ"
-    MessageTW: 期待受傷的話有點……
-  - MessageGroupId: 230020330
+      เลยนะคะ"
+    MessageTW: 夏萊的辦公室總感覺死氣沉沉的
+    MessageGroupId: 230020330
     Id: 1549
     CharacterId: 23002
     MessageCondition: FavorRankUp
@@ -999,15 +1007,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레의 집무실은 어쩐지 조금 삭막한 느낌이 들어요.
-    MessageJP: シャーレの執務室はなんだか、少し殺風景な気がします
-    MessageCN: 我总感觉，夏莱的办公室有点煞风景
-    MessageEN: Schale's executive office is a bit dreary.
-    MessageTH: "รู้สึกเหมือนสำนักงานของชาเล่ต์ดูเหงาๆ
-
-      เลยนะคะ"
-    MessageTW: 夏萊的辦公室總感覺死氣沉沉的
-  - MessageGroupId: 230020340
+  - MessageKR: 꽃병이라도 하나 가져다 놓으면 좋을 텐데…….
+    MessageJP: 花瓶なんか置いてみたら、素敵になるんじゃないでしょうか？
+    MessageCN: 要是放个花瓶之类的，会不会好看一些呢？
+    MessageEN: A nice vase of flowers might brighten up the place...
+    MessageTH: ถ้าเอาแจกันดอกไม้มาวางไว้คงจะดี...
+    MessageTW: 如果放個花瓶之類的東西，應該會好一點吧？
+    MessageGroupId: 230020340
     Id: 1550
     CharacterId: 23002
     MessageCondition: None
@@ -1019,13 +1025,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 꽃병이라도 하나 가져다 놓으면 좋을 텐데…….
-    MessageJP: 花瓶なんか置いてみたら、素敵になるんじゃないでしょうか？
-    MessageCN: 要是放个花瓶之类的，会不会好看一些呢？
-    MessageEN: A nice vase of flowers might brighten up the place...
-    MessageTH: ถ้าเอาแจกันดอกไม้มาวางไว้คงจะดี...
-    MessageTW: 如果放個花瓶之類的東西，應該會好一點吧？
-  - MessageGroupId: 230020350
+  - MessageKR: 선생님은 어떤 꽃을 좋아하시나요?
+    MessageJP: 先生はどんなお花が好きですか？
+    MessageCN: 老师喜欢什么样的花呢？
+    MessageEN: What kind of flowers do you like, Sensei?
+    MessageTH: คุณครูชอบดอกไม้แบบไหนเหรอคะ?
+    MessageTW: 老師喜歡哪種花呢？
+    MessageGroupId: 230020350
     Id: 1551
     CharacterId: 23002
     MessageCondition: None
@@ -1037,13 +1043,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님은 어떤 꽃을 좋아하시나요?
-    MessageJP: 先生はどんなお花が好きですか？
-    MessageCN: 老师喜欢什么样的花呢？
-    MessageEN: What kind of flowers do you like, Sensei?
-    MessageTH: คุณครูชอบดอกไม้แบบไหนเหรอคะ?
-    MessageTW: 老師喜歡哪種花呢？
-  - MessageGroupId: 230020360
+  - MessageKR: 꽃이라면 무엇이든 좋아해.
+    MessageJP: お花ならだいたい好きだよ
+    MessageCN: 基本上所有花我都喜欢哦
+    MessageEN: I like all types of flowers.
+    MessageTH: ถ้าเป็นดอกไม้ล่ะก็ชอบทุกอย่างเลย
+    MessageTW: 花的話基本上都喜歡唷
+    MessageGroupId: 230020360
     Id: 1552
     CharacterId: 23002
     MessageCondition: Answer
@@ -1055,13 +1061,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 꽃이라면 무엇이든 좋아해.
-    MessageJP: お花ならだいたい好きだよ
-    MessageCN: 基本上所有花我都喜欢哦
-    MessageEN: I like all types of flowers.
-    MessageTH: ถ้าเป็นดอกไม้ล่ะก็ชอบทุกอย่างเลย
-    MessageTW: 花的話基本上都喜歡唷
-  - MessageGroupId: 230020360
+  - MessageKR: 꽃가루가 날리지 않는 종류의 꽃.
+    MessageJP: 害のある花粉が飛ばなければ何でも
+    MessageCN: 只要是不会乱传播有害的花粉的花我都喜欢
+    MessageEN: Flowers without pollen.
+    MessageTH: ดอกไม้ที่เกสรไม่ค่อยปลิวน่ะ
+    MessageTW: 只要不會有有害的花粉亂飛的話都可以
+    MessageGroupId: 230020360
     Id: 1553
     CharacterId: 23002
     MessageCondition: Answer
@@ -1073,13 +1079,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 꽃가루가 날리지 않는 종류의 꽃.
-    MessageJP: 害のある花粉が飛ばなければ何でも
-    MessageCN: 只要是不会乱传播有害的花粉的花我都喜欢
-    MessageEN: Flowers without pollen.
-    MessageTH: ดอกไม้ที่เกสรไม่ค่อยปลิวน่ะ
-    MessageTW: 只要不會有有害的花粉亂飛的話都可以
-  - MessageGroupId: 230020370
+  - MessageKR: 그럼 제가 좋아하는 꽃 중에서 몇 가지를 찾아볼게요.
+    MessageJP: それでは、私が好きなお花をいくつか見繕ってみますね！
+    MessageCN: 这样的话，我就按照我的喜好来挑吧！
+    MessageEN: Then I'll find a few flowers that I like.
+    MessageTH: "ถ้างั้น... ฉันจะลองเลือกจากดอกไม้ที่ฉัน
+
+      ชอบดูนะคะ"
+    MessageTW: 那麼，我就按照我的喜好來處理囉！
+    MessageGroupId: 230020370
     Id: 1554
     CharacterId: 23002
     MessageCondition: Feedback
@@ -1091,15 +1099,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 제가 좋아하는 꽃 중에서 몇 가지를 찾아볼게요.
-    MessageJP: それでは、私が好きなお花をいくつか見繕ってみますね！
-    MessageCN: 这样的话，我就按照我的喜好来挑吧！
-    MessageEN: Then I'll find a few flowers that I like.
-    MessageTH: "ถ้างั้น... ฉันจะลองเลือกจากดอกไม้ที่ฉัน
-
-      ชอบดูนะคะ"
-    MessageTW: 那麼，我就按照我的喜好來處理囉！
-  - MessageGroupId: 230020380
+  - MessageKR: 하나에는 무슨 꽃을 제일 좋아해?
+    MessageJP: ハナエは何の花が一番好き？
+    MessageCN: 花绘最喜欢什么花呢？
+    MessageEN: What kind of flowers do you like, Hanae?
+    MessageTH: แล้วฮานาเอะชอบดอกไม้อะไรเหรอ?
+    MessageTW: 花繪最喜歡哪種花呢？
+    MessageGroupId: 230020380
     Id: 1555
     CharacterId: 23002
     MessageCondition: Answer
@@ -1111,13 +1117,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하나에는 무슨 꽃을 제일 좋아해?
-    MessageJP: ハナエは何の花が一番好き？
-    MessageCN: 花绘最喜欢什么花呢？
-    MessageEN: What kind of flowers do you like, Hanae?
-    MessageTH: แล้วฮานาเอะชอบดอกไม้อะไรเหรอ?
-    MessageTW: 花繪最喜歡哪種花呢？
-  - MessageGroupId: 230020390
+  - MessageKR: 음…… 저도 꽃이라면 대부분 괜찮지만, 그중에서도 나팔꽃이 제일 좋아요.
+    MessageJP: うーん……私もお花は何でも好きですが、一番はアサガオですね
+    MessageCN: 嗯——……虽然我也什么花都喜欢，但是最喜欢的还是牵牛花呢
+    MessageEN: Um... I like most flowers, but I really like morning glories.
+    MessageTH: "อืม... ถ้าเป็นดอกไม้ล่ะก็ ส่วนใหญ่ชอบ
+
+      หมดเลยค่ะ แต่ถ้าต้องเลือกก็...
+
+      ดอกมอร์นิ่งกลอรี่ค่ะ!"
+    MessageTW: 唔嗯……我也是什麼花都喜歡，但最喜歡的是牽牛花唷
+    MessageGroupId: 230020390
     Id: 1556
     CharacterId: 23002
     MessageCondition: Feedback
@@ -1129,29 +1139,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 저도 꽃이라면 대부분 괜찮지만, 그중에서도 나팔꽃이 제일 좋아요.
-    MessageJP: うーん……私もお花は何でも好きですが、一番はアサガオですね
-    MessageCN: 嗯——……虽然我也什么花都喜欢，但是最喜欢的还是牵牛花呢
-    MessageEN: Um... I like most flowers, but I really like morning glories.
-    MessageTH: "อืม... ถ้าเป็นดอกไม้ล่ะก็ ส่วนใหญ่ชอบ
-
-      หมดเลยค่ะ แต่ถ้าต้องเลือกก็...
-
-      ดอกมอร์นิ่งกลอรี่ค่ะ!"
-    MessageTW: 唔嗯……我也是什麼花都喜歡，但最喜歡的是牽牛花唷
-  - MessageGroupId: 230020390
-    Id: 1557
-    CharacterId: 23002
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 230028
-    NextGroupId: 0
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 아침에 활짝 핀 나팔꽃을 보면 아침을 알리기 위해 트럼펫을 부는 작은 천사가 떠오르거든요.
+  - MessageKR: 아침에 활짝 핀 나팔꽃을 보면 아침을 알리기 위해 트럼펫을 부는 작은 천사가 떠오르거든요.
     MessageJP: 花開いたアサガオは、まるでトランペットで朝を知らせる天使みたいです
     MessageCN: 盛开的牵牛花，简直就像是吹着小号宣告清晨来临的天使一样
     MessageEN:
@@ -1163,3 +1151,15 @@ content:
 
       ขานต้อนรับยามเช้าเลยค่ะ"
     MessageTW: 盛開的牽牛花，簡直就像是吹奏著小號傳達早晨到來的天使一樣
+    MessageGroupId: 230020390
+    Id: 1557
+    CharacterId: 23002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 230028
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""

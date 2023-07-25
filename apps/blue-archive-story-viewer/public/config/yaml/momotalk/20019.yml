@@ -1,44 +1,50 @@
 CharacterId: 20019
 translator: 今天早睡了吗
 title:
-  - GroupId: 2001902
-    FavorScheduleId: 200192
-    CharacterId: 20019
-    TextJp: Case1. ウサギですよ？
+  - TextJp: Case1. ウサギですよ？
     TextCn: Case1. 是兔子哦？
     TextKr: Case 1. 토끼랍니다?
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2001903
-    FavorScheduleId: 200193
+    TextEn: Case 1. Sensei Does not Dream of Bunny Akane
+    TextTh: Case 1. กระต่ายเหรอคะ?
+    TextTw: Case 1. 是兔子唷？
+    GroupId: 2001902
+    FavorScheduleId: 200192
     CharacterId: 20019
-    TextJp: Case2. ゆっくり休んでください
+  - TextJp: Case2. ゆっくり休んでください
     TextCn: Case2. 请好好休息
     TextKr: Case 2. 편히 쉬세요.
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2001905
-    FavorScheduleId: 200195
+    TextEn: Case 2. Best to Rest
+    TextTh: Case 2. พักให้สบายนะคะ
+    TextTw: Case 2. 請好好休息
+    GroupId: 2001903
+    FavorScheduleId: 200193
     CharacterId: 20019
-    TextJp: Case3. 勉強の時間ですね？
+  - TextJp: Case3. 勉強の時間ですね？
     TextCn: Case3. 是学习时间吧？
     TextKr: Case 3. 공부할 시간이군요?
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2001906
-    FavorScheduleId: 200196
+    TextEn: Case 3. Bunny Study
+    TextTh: Case 3. เวลาเรียนเหรอคะเนี่ย?
+    TextTw: Case 3. 是學習時間對吧？
+    GroupId: 2001905
+    FavorScheduleId: 200195
     CharacterId: 20019
-    TextJp: Case4. 一日秘書、待機中です
+  - TextJp: Case4. 一日秘書、待機中です
     TextCn: Case4. 一日秘书，待命中
     TextKr: Case 4. 일일 비서, 대령했습니다.
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Case 4. Secretary Service Straight to You
+    TextTh: Case 4. เลขาฯ ประจำวัน รอรับคำสั่งค่ะ
+    TextTw: Case 4. 一日秘書，待命中
+    GroupId: 2001906
+    FavorScheduleId: 200196
+    CharacterId: 20019
 content:
-  - MessageGroupId: 200190010
+  - MessageKR: 안녕하세요. 주인님.
+    MessageJP: おはようございます、ご主人様
+    MessageCN: 早上好，主人
+    MessageEN: Hello, Master.
+    MessageTH: สวัสดีค่ะ นายท่าน
+    MessageTW: 您好，主人
+    MessageGroupId: 200190010
     Id: 200190010
     CharacterId: 20019
     MessageCondition: FavorRankUp
@@ -50,13 +56,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요. 주인님.
-    MessageJP: おはようございます、ご主人様
-    MessageCN: 早上好，主人
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190020
+  - MessageKR: 메이드는 봉사하는 사람이라고 할 수 있겠죠.
+    MessageJP: メイドとは、奉仕を仕事とする者
+    MessageCN: 女仆，就是将侍奉作为工作的人
+    MessageEN: A maid's purpose is to serve.
+    MessageTH: "สาวใช้เองก็เรียกได้ว่าเป็นคนทำงาน
+
+      บริการเหมือนกันใช่มั้ยคะ"
+    MessageTW: 所謂女僕，是以服務為業的人
+    MessageGroupId: 200190020
     Id: 200190020
     CharacterId: 20019
     MessageCondition: None
@@ -68,13 +76,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 메이드는 봉사하는 사람이라고 할 수 있겠죠.
-    MessageJP: メイドとは、奉仕を仕事とする者
-    MessageCN: 女仆，就是将侍奉作为工作的人
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190020
+  - MessageKR: 메이드복은 봉사하는 자의 의복일 거고요.
+    MessageJP: ご主人様に仕える者は、メイド服を着る……
+    MessageCN: 作为侍奉主人的人，要穿着女仆装……
+    MessageEN: So, at its core, a maid uniform is one of service.
+    MessageTH: "ชุดสาวใช้ก็เป็นชุดของคนที่ทำงาน
+
+      บริการด้วยค่ะ"
+    MessageTW: 侍奉主人的人，就該穿著女僕裝……
+    MessageGroupId: 200190020
     Id: 200190030
     CharacterId: 20019
     MessageCondition: None
@@ -86,13 +96,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 메이드복은 봉사하는 자의 의복일 거고요.
-    MessageJP: ご主人様に仕える者は、メイド服を着る……
-    MessageCN: 作为侍奉主人的人，要穿着女仆装……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190030
+  - MessageKR: 응…… 그렇겠지?
+    MessageJP: うん……そう、かな？
+    MessageCN: 嗯……是这样，吗？
+    MessageEN: Uh...Yeah? I guess?
+    MessageTH: หืม... คงจะใช่นะ?
+    MessageTW: 嗯……應該，是吧？
+    MessageGroupId: 200190030
     Id: 200190040
     CharacterId: 20019
     MessageCondition: Answer
@@ -104,13 +114,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응…… 그렇겠지?
-    MessageJP: うん……そう、かな？
-    MessageCN: 嗯……是这样，吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190040
+  - MessageKR: 그렇게 생각하고 있었습니다만
+    MessageJP: そう思っていたのですが、
+    MessageCN: 虽然我是这么想的
+    MessageEN: Yes! I'm glad you understand, Sensei.
+    MessageTH: ฉันเองก็คิดแบบนั้นอยู่
+    MessageTW: 雖然我一直是這麼認為
+    MessageGroupId: 200190040
     Id: 200190050
     CharacterId: 20019
     MessageCondition: Feedback
@@ -122,13 +132,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇게 생각하고 있었습니다만
-    MessageJP: そう思っていたのですが、
-    MessageCN: 虽然我是这么想的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190040
+  - MessageKR: 최근 새로운 깨달음을 얻었습니다.
+    MessageJP: 最近新しい気付きを得たのです
+    MessageCN: 但最近，我有个新发现
+    MessageEN: And...I had a revelation recently.
+    MessageTH: "แต่ว่าไม่นานมานี้ ฉันเพิ่งรู้อะไรใหม่ๆ
+
+      มาค่ะ"
+    MessageTW: 但最近我有了新的想法
+    MessageGroupId: 200190040
     Id: 200190060
     CharacterId: 20019
     MessageCondition: Feedback
@@ -140,13 +152,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 최근 새로운 깨달음을 얻었습니다.
-    MessageJP: 最近新しい気付きを得たのです
-    MessageCN: 但最近，我有个新发现
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190050
+  - MessageKR: 부디, 기대해 주세요.
+    MessageJP: どうぞ、楽しみにお待ちくださいね
+    MessageCN: 请您好好期待哦
+    MessageEN: Now, now. Don't get too excited.
+    MessageTH: นายท่านตั้งตารอชมได้เลยค่ะ
+    MessageTW: 敬請期待
+    MessageGroupId: 200190050
     Id: 200190070
     CharacterId: 20019
     MessageCondition: Feedback
@@ -158,13 +170,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 부디, 기대해 주세요.
-    MessageJP: どうぞ、楽しみにお待ちくださいね
-    MessageCN: 请您好好期待哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190060
+  - MessageKR: 어…… 뭐가?
+    MessageJP: う……うん？
+    MessageCN: 嗯……嗯？
+    MessageEN: Excited...about what exactly?
+    MessageTH: หืม...? อะไรเหรอ?
+    MessageTW: 嗯……嗯？
+    MessageGroupId: 200190060
     Id: 200190080
     CharacterId: 20019
     MessageCondition: Answer
@@ -176,13 +188,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어…… 뭐가?
-    MessageJP: う……うん？
-    MessageCN: 嗯……嗯？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190060
+  - MessageKR: 뭔지 모르겠지만 기대됩니다!
+    MessageJP: 楽しみにしておきます？
+    MessageCN: 那我就拭目以待了？
+    MessageEN:
+      Well, I'm not sure what you're talking about, but I'm looking forward
+      to it!
+    MessageTH: ถึงจะไม่รู้ว่าอะไรแต่ครูจะตั้งตารอนะ!
+    MessageTW: 我很期待？
+    MessageGroupId: 200190060
     Id: 200190090
     CharacterId: 20019
     MessageCondition: Answer
@@ -194,13 +208,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔지 모르겠지만 기대됩니다!
-    MessageJP: 楽しみにしておきます？
-    MessageCN: 那我就拭目以待了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190070
+  - MessageKR: 시간이 괜찮으시다면 제 방에 한번 들러 주시겠어요?
+    MessageJP: 今度お時間がありましたら、ぜひ私の部屋に寄っていただけませんか？
+    MessageCN: 主人下次有时间的话，能请务必来一趟我的房间吗？
+    MessageEN: Can you stop by my room when you're free?
+    MessageTH: "ถ้านายท่านสะดวก รบกวนมาที่ห้อง
+
+      ของฉันหน่อยได้มั้ยคะ?"
+    MessageTW: 之後有時間的話，可以請您務必到我房裡一下嗎？
+    MessageGroupId: 200190070
     Id: 200190100
     CharacterId: 20019
     MessageCondition: Feedback
@@ -212,13 +228,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시간이 괜찮으시다면 제 방에 한번 들러 주시겠어요?
-    MessageJP: 今度お時間がありましたら、ぜひ私の部屋に寄っていただけませんか？
-    MessageCN: 主人下次有时间的话，能请务必来一趟我的房间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190070
+  - MessageKR: "기다리고 있겠습니다. "
+    MessageJP: お待ちしておりますね
+    MessageCN: 我会等着您哦
+    MessageEN: I'll be waiting,
+    MessageTH: "ฉันจะรอนะคะ "
+    MessageTW: 我會等著您的
+    MessageGroupId: 200190070
     Id: 200190110
     CharacterId: 20019
     MessageCondition: Feedback
@@ -230,13 +246,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: "기다리고 있겠습니다. "
-    MessageJP: お待ちしておりますね
-    MessageCN: 我会等着您哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190080
+  - MessageKR: 나의 주인님.
+    MessageJP: 私のご主人様
+    MessageCN: 我的主人
+    MessageEN: Master!
+    MessageTH: นายท่านของฉัน
+    MessageTW: 我的主人
+    MessageGroupId: 200190080
     Id: 200190120
     CharacterId: 20019
     MessageCondition: Feedback
@@ -248,13 +264,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나의 주인님.
-    MessageJP: 私のご主人様
-    MessageCN: 我的主人
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190090
+  - MessageKR: 예전에는 너무 실례가 많았어요.
+    MessageJP: 先日は大変失礼いたしました
+    MessageCN: 前几天真是太失礼了
+    MessageEN: I was a bit rude earlier...
+    MessageTH: ก่อนหน้านี้ฉันเสียมารยาทกับนายท่านไป
+    MessageTW: 之前真是非常失禮
+    MessageGroupId: 200190090
     Id: 200190130
     CharacterId: 20019
     MessageCondition: FavorRankUp
@@ -266,13 +282,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 예전에는 너무 실례가 많았어요.
-    MessageJP: 先日は大変失礼いたしました
-    MessageCN: 前几天真是太失礼了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190100
+  - MessageKR: 마음이 앞선 나머지 무례를 저질렀네요.
+    MessageJP: 心が逸るあまり、ご無礼を働いてしまいました
+    MessageCN: 我因为一时冲动，做出了有违礼节的事情
+    MessageEN: I got ahead of myself...
+    MessageTH: "ฉันใจร้อนเกินไปหน่อยเลยทำเรื่อง
+
+      เสียมารยาทกับนายท่านไป"
+    MessageTW: 因為太過慌張而做出了無禮的舉動
+    MessageGroupId: 200190100
     Id: 200190140
     CharacterId: 20019
     MessageCondition: None
@@ -284,13 +302,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 마음이 앞선 나머지 무례를 저질렀네요.
-    MessageJP: 心が逸るあまり、ご無礼を働いてしまいました
-    MessageCN: 我因为一时冲动，做出了有违礼节的事情
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190100
+  - MessageKR: 죄송합니다.
+    MessageJP: 申し訳ございません
+    MessageCN: 实在是不好意思
+    MessageEN: I'd like to apologize.
+    MessageTH: ขอโทษด้วยนะคะ
+    MessageTW: 非常對不起
+    MessageGroupId: 200190100
     Id: 200190150
     CharacterId: 20019
     MessageCondition: None
@@ -302,13 +320,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 죄송합니다.
-    MessageJP: 申し訳ございません
-    MessageCN: 实在是不好意思
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190110
+  - MessageKR: 아냐…… 나야 말로 경우가 없었지.
+    MessageJP: いや……私こそごめんね
+    MessageCN: 没这回事……该道歉的应该是我
+    MessageEN: No, no. You did nothing wrong.
+    MessageTH: ไม่หรอก... แทบไม่มีเรื่องแบบนั้นเลยนะ
+    MessageTW: 不……該道歉的是我
+    MessageGroupId: 200190110
     Id: 200190160
     CharacterId: 20019
     MessageCondition: Answer
@@ -320,13 +338,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아냐…… 나야 말로 경우가 없었지.
-    MessageJP: いや……私こそごめんね
-    MessageCN: 没这回事……该道歉的应该是我
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190110
+  - MessageKR: 오히려 감사드리고 싶을 정도입니다!
+    MessageJP: むしろ感謝の気持ちでいっぱいです！
+    MessageCN: 不如说，我反而十分感谢朱音！
+    MessageEN: If anything, I should be thanking you!
+    MessageTH: มีแต่เรื่องที่ครูควรขอบคุณมากกว่าอีก!
+    MessageTW: 不如該說非常感謝！
+    MessageGroupId: 200190110
     Id: 200190170
     CharacterId: 20019
     MessageCondition: Answer
@@ -338,13 +356,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오히려 감사드리고 싶을 정도입니다!
-    MessageJP: むしろ感謝の気持ちでいっぱいです！
-    MessageCN: 不如说，我反而十分感谢朱音！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190120
+  - MessageKR: 다음에…… 다시 봉사를 허락해 주실 수 있으신가요?
+    MessageJP: またご奉仕させていただけませんか？
+    MessageCN: 主人今后还能让我再度侍奉您吗？
+    MessageEN: "...Would you please let me serve you again?"
+    MessageTH: "คราวหน้า... นายท่านจะอนุญาต
+
+      ให้ฉันไปบริการอีกได้มั้ยคะ?"
+    MessageTW: 還能讓我再服務您嗎？
+    MessageGroupId: 200190120
     Id: 200190180
     CharacterId: 20019
     MessageCondition: Feedback
@@ -356,13 +376,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에…… 다시 봉사를 허락해 주실 수 있으신가요?
-    MessageJP: またご奉仕させていただけませんか？
-    MessageCN: 主人今后还能让我再度侍奉您吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190120
+  - MessageKR: 찬찬히 시간을 들인…… 둘만의 봉사를요.
+    MessageJP: お互い気持ちを落ち着かせて……二人だけの時間で
+    MessageCN: 让彼此都冷静下来……度过只有你我二人的时间
+    MessageEN: I'll provide a special, personal service. No limits.
+    MessageTH: "งานบริการของเราสองคน... ที่ค่อยๆ
+
+      ใช้เวลาไปด้วยกันน่ะค่ะ"
+    MessageTW: 在彼此都冷靜的……只屬於我們兩個人的時間
+    MessageGroupId: 200190120
     Id: 200190190
     CharacterId: 20019
     MessageCondition: Feedback
@@ -374,13 +396,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 찬찬히 시간을 들인…… 둘만의 봉사를요.
-    MessageJP: お互い気持ちを落ち着かせて……二人だけの時間で
-    MessageCN: 让彼此都冷静下来……度过只有你我二人的时间
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190130
+  - MessageKR: 정말로 다른 뜻 없는 거 맞지?!
+    MessageJP: た、他意はないよね？
+    MessageCN: 没、没在打其他主意吧？
+    MessageEN: You don't have any ulterior motives, do you?!
+    MessageTH: ไม่ได้หมายถึงเรื่องอื่นใช่มั้ย?!
+    MessageTW: 沒，沒有其他意思吧？
+    MessageGroupId: 200190130
     Id: 200190200
     CharacterId: 20019
     MessageCondition: Answer
@@ -392,13 +414,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 정말로 다른 뜻 없는 거 맞지?!
-    MessageJP: た、他意はないよね？
-    MessageCN: 没、没在打其他主意吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190130
+  - MessageKR: 오히려 이쪽에서 부탁드리고 싶은데요!
+    MessageJP: ぜひお願いします！
+    MessageCN: 那请务必！
+    MessageEN: Honestly, I should have asked that first!
+    MessageTH: ครูต่างหากที่อยากขอร้องน่ะ!
+    MessageTW: 請務必這麼做！
+    MessageGroupId: 200190130
     Id: 200190210
     CharacterId: 20019
     MessageCondition: Answer
@@ -410,13 +432,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오히려 이쪽에서 부탁드리고 싶은데요!
-    MessageJP: ぜひお願いします！
-    MessageCN: 那请务必！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190140
+  - MessageKR: 네? 무슨 의미세요?
+    MessageJP: ええと……それは、どういう意味でしょうか？
+    MessageCN: 那个……主人这是，什么意思呢？
+    MessageEN: Hm? What could you possibly mean?
+    MessageTH: คะ...? หมายถึงอะไรเหรอคะ?
+    MessageTW: 呃……那是什麼意思呢？
+    MessageGroupId: 200190140
     Id: 200190220
     CharacterId: 20019
     MessageCondition: Feedback
@@ -428,13 +450,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네? 무슨 의미세요?
-    MessageJP: ええと……それは、どういう意味でしょうか？
-    MessageCN: 那个……主人这是，什么意思呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190150
+  - MessageKR: 안심했습니다…… 기다리고 있을게요.
+    MessageJP: 安心しました……お待ちしておりますね
+    MessageCN: 那我就放心了……我会等着您的
+    MessageEN: Well... I feel a bit better. I'll be waiting for you!
+    MessageTH: แล้วฉันจะรอนะคะ...
+    MessageTW: 那我就放心了……我等著您哦
+    MessageGroupId: 200190150
     Id: 200190230
     CharacterId: 20019
     MessageCondition: Feedback
@@ -446,13 +468,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안심했습니다…… 기다리고 있을게요.
-    MessageJP: 安心しました……お待ちしておりますね
-    MessageCN: 那我就放心了……我会等着您的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190160
+  - MessageKR: 편히 주무셨나요, 주인님?
+    MessageJP: ゆっくり眠れましたか、ご主人様？
+    MessageCN: 您昨晚睡得好吗，主人？
+    MessageEN: Did you sleep well, Master?
+    MessageTH: เมื่อคืนหลับสบายรึเปล่าคะ นายท่าน?
+    MessageTW: 睡得好嗎，主人？
+    MessageGroupId: 200190160
     Id: 200190240
     CharacterId: 20019
     MessageCondition: None
@@ -464,13 +486,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 편히 주무셨나요, 주인님?
-    MessageJP: ゆっくり眠れましたか、ご主人様？
-    MessageCN: 您昨晚睡得好吗，主人？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190170
+  - MessageKR: 덕분에 푹 잘 수 있었어.
+    MessageJP: おかげで熟睡できたよ
+    MessageCN: 多亏有朱音，睡得很香哦
+    MessageEN: Like a baby, thanks to you.
+    MessageTH: ครูหลับสบายมากๆ เพราะอาคาเนะเลยนะ
+    MessageTW: 託你的福，我睡得很好
+    MessageGroupId: 200190170
     Id: 200190250
     CharacterId: 20019
     MessageCondition: Answer
@@ -482,13 +504,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 덕분에 푹 잘 수 있었어.
-    MessageJP: おかげで熟睡できたよ
-    MessageCN: 多亏有朱音，睡得很香哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190180
+  - MessageKR: 다행이에요.
+    MessageJP: 良かったです
+    MessageCN: 太好了
+    MessageEN: What a relief.
+    MessageTH: โล่งอกไปทีค่ะ...
+    MessageTW: 太好了
+    MessageGroupId: 200190180
     Id: 200190260
     CharacterId: 20019
     MessageCondition: Feedback
@@ -500,13 +522,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다행이에요.
-    MessageJP: 良かったです
-    MessageCN: 太好了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190190
+  - MessageKR: 사실 그때 드린 차에는,
+    MessageJP: 実は、あの茶葉には……
+    MessageCN: 其实，那些茶叶……
+    MessageEN: The tea I made for you...
+    MessageTH: ความจริงชาที่ฉันชงให้ตอนนั้น
+    MessageTW: 其實，那個茶葉……
+    MessageGroupId: 200190190
     Id: 200190270
     CharacterId: 20019
     MessageCondition: Feedback
@@ -518,13 +540,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 사실 그때 드린 차에는,
-    MessageJP: 実は、あの茶葉には……
-    MessageCN: 其实，那些茶叶……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190190
+  - MessageKR: 수면의 질이 좋아지는 릴렉스 효과가 있다고 해요……
+    MessageJP: 睡眠の質が良くなるリラックス効果があるそうで……
+    MessageCN: 好像有提升睡眠质量的放松效果……
+    MessageEN: It's meant to help you relax and sleep well.
+    MessageTH: "เป็นชาที่มีสรรพคุณช่วยให้ผ่อนคลาย
+
+      และทำให้หลับสบายค่ะ"
+    MessageTW: 似乎有能提高睡眠品質的放鬆效果……
+    MessageGroupId: 200190190
     Id: 200190280
     CharacterId: 20019
     MessageCondition: Feedback
@@ -536,13 +560,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수면의 질이 좋아지는 릴렉스 효과가 있다고 해요……
-    MessageJP: 睡眠の質が良くなるリラックス効果があるそうで……
-    MessageCN: 好像有提升睡眠质量的放松效果……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190200
+  - MessageKR: 조금이라도 피로가 풀리셨다면, 차를 내린 보람이 있네요.
+    MessageJP: 少しでもお疲れが取れたのなら、淹れた甲斐がありました
+    MessageCN: 只要能让老师的疲劳减轻哪怕一点，我泡的茶也就有了意义
+    MessageEN: I'm relieved it worked!
+    MessageTH: "ถ้าคุณครูรู้สึกหายเหนื่อยละก็ ถือว่า
+
+      ได้ผลแล้วละค่ะ"
+    MessageTW: 多少能消除一些疲憊的話，我泡的茶也有意義了
+    MessageGroupId: 200190200
     Id: 200190290
     CharacterId: 20019
     MessageCondition: Feedback
@@ -554,13 +580,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 조금이라도 피로가 풀리셨다면, 차를 내린 보람이 있네요.
-    MessageJP: 少しでもお疲れが取れたのなら、淹れた甲斐がありました
-    MessageCN: 只要能让老师的疲劳减轻哪怕一点，我泡的茶也就有了意义
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190210
+  - MessageKR: 그랬구나. 고마워.
+    MessageJP: そうだったんだね。ありがとう
+    MessageCN: 原来是这样啊。谢谢了
+    MessageEN: No wonder I got so drowsy! Thank you.
+    MessageTH: แบบนี้นี่เอง ขอบคุณนะ
+    MessageTW: 原來是這樣啊，謝謝
+    MessageGroupId: 200190210
     Id: 200190300
     CharacterId: 20019
     MessageCondition: Answer
@@ -572,13 +598,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그랬구나. 고마워.
-    MessageJP: そうだったんだね。ありがとう
-    MessageCN: 原来是这样啊。谢谢了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190220
+  - MessageKR: 별말씀을요.
+    MessageJP: うれしいお言葉です
+    MessageCN: 您的话真令人开心
+    MessageEN: Of course, Sensei.
+    MessageTH: ไม่เป็นไรเลยค่ะ
+    MessageTW: 您的話真令人開心
+    MessageGroupId: 200190220
     Id: 200190310
     CharacterId: 20019
     MessageCondition: Feedback
@@ -590,13 +616,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 별말씀을요.
-    MessageJP: うれしいお言葉です
-    MessageCN: 您的话真令人开心
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190220
+  - MessageKR: 주인님의 행복이, 저의 행복이랍니다.
+    MessageJP: ご主人様の幸せが、私の幸せですから
+    MessageCN: 因为主人的幸福，就是我的幸福啊
+    MessageEN: I'm elated I could be of use.
+    MessageTH: "ความสุขของนายท่านก็คือความสุข
+
+      ของฉันค่ะ"
+    MessageTW: 主人的幸福，就是我的幸福
+    MessageGroupId: 200190220
     Id: 200190320
     CharacterId: 20019
     MessageCondition: Feedback
@@ -608,13 +636,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님의 행복이, 저의 행복이랍니다.
-    MessageJP: ご主人様の幸せが、私の幸せですから
-    MessageCN: 因为主人的幸福，就是我的幸福啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190230
+  - MessageKR: 그런데 아카네는 샬레까지 와서, 무슨 볼일이 있었던 거야?
+    MessageJP: ところで、アカネはシャーレまで何か用事があったの？
+    MessageCN: 话说回来，朱音来夏莱有什么事吗？
+    MessageEN: By the way, what brought you to Schale? Errands?
+    MessageTH: "ว่าแต่ว่าอาคาเนะมาที่ชาเล่ต์
+
+      มีธุระอะไรงั้นเหรอ?"
+    MessageTW: 話說回來，朱音來到夏萊有什麼事嗎？
+    MessageGroupId: 200190230
     Id: 200190330
     CharacterId: 20019
     MessageCondition: Answer
@@ -626,13 +656,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런데 아카네는 샬레까지 와서, 무슨 볼일이 있었던 거야?
-    MessageJP: ところで、アカネはシャーレまで何か用事があったの？
-    MessageCN: 话说回来，朱音来夏莱有什么事吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190240
+  - MessageKR: 아니면 청소를 위해서 온 건가?
+    MessageJP: それとも掃除のため？
+    MessageCN: 还是说就是来打扫卫生？
+    MessageEN: Cleaning?
+    MessageTH: หรือว่ามาทำความสะอาดเหรอ?
+    MessageTW: 還是是來打掃的呢？
+    MessageGroupId: 200190240
     Id: 200190340
     CharacterId: 20019
     MessageCondition: Answer
@@ -644,13 +674,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니면 청소를 위해서 온 건가?
-    MessageJP: それとも掃除のため？
-    MessageCN: 还是说就是来打扫卫生？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190250
+  - MessageKR: 글쎄요?
+    MessageJP: どうでしょう？
+    MessageCN: 要怎么说呢？
+    MessageEN: Well...
+    MessageTH: นั่นสิคะ...
+    MessageTW: 是為什麼呢？
+    MessageGroupId: 200190250
     Id: 200190350
     CharacterId: 20019
     MessageCondition: Feedback
@@ -662,13 +692,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 글쎄요?
-    MessageJP: どうでしょう？
-    MessageCN: 要怎么说呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190250
+  - MessageKR: 잠든 주인님의 얼굴을 볼 수 있어서,
+    MessageJP: 眠っているご主人様の顔が見られて
+    MessageCN: 只要能看到主人的睡颜
+    MessageEN: Let's just say...
+    MessageTH: เอาเป็นว่าฉันรู้สึกโชคดีมาก
+    MessageTW: 能看到主人的睡臉
+    MessageGroupId: 200190250
     Id: 200190360
     CharacterId: 20019
     MessageCondition: Feedback
@@ -680,13 +710,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잠든 주인님의 얼굴을 볼 수 있어서,
-    MessageJP: 眠っているご主人様の顔が見られて
-    MessageCN: 只要能看到主人的睡颜
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190260
+  - MessageKR: 행운이었다고만 말씀드릴게요.
+    MessageJP: 幸運でした、とだけ申し上げます
+    MessageCN: 我就已经非常幸运了，仅此而已
+    MessageEN: I was very lucky to catch you sleeping.
+    MessageTH: "ที่ได้เห็นใบหน้าของนายท่าน
+
+      ตอนที่นอนหลับค่ะ"
+    MessageTW: 真是幸運，僅此而已
+    MessageGroupId: 200190260
     Id: 200190370
     CharacterId: 20019
     MessageCondition: Feedback
@@ -698,13 +730,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 행운이었다고만 말씀드릴게요.
-    MessageJP: 幸運でした、とだけ申し上げます
-    MessageCN: 我就已经非常幸运了，仅此而已
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190270
+  - MessageKR: 뿅뿅.
+    MessageJP: ぴょんぴょん
+    MessageCN: 蹦蹦
+    MessageEN: Boing, boing.
+    MessageTH: ดึ๊ง ดึ๊ง
+    MessageTW: 蹦蹦
+    MessageGroupId: 200190270
     Id: 200190380
     CharacterId: 20019
     MessageCondition: Feedback
@@ -716,13 +748,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뿅뿅.
-    MessageJP: ぴょんぴょん
-    MessageCN: 蹦蹦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190280
+  - MessageKR: 일은 어떠세요, 주인님?
+    MessageJP: お仕事の調子はどうでしょうか、ご主人様？
+    MessageCN: 主人，您工作还顺利吗？
+    MessageEN: How's work, Master?
+    MessageTH: ทำงานเป็นยังไงบ้างคะนายท่าน?
+    MessageTW: 工作怎麼樣呢，主人？
+    MessageGroupId: 200190280
     Id: 200190390
     CharacterId: 20019
     MessageCondition: FavorRankUp
@@ -734,13 +766,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일은 어떠세요, 주인님?
-    MessageJP: お仕事の調子はどうでしょうか、ご主人様？
-    MessageCN: 主人，您工作还顺利吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190290
+  - MessageKR: 저는 오늘 간만에 비번이랍니다.
+    MessageJP: 私は本日非番を頂きました
+    MessageCN: 我今天没有值班
+    MessageEN: Me? It's my first day off in quite a while.
+    MessageTH: "วันนี้เป็นวันหยุดของฉัน หลังจากที่
+
+      ไม่ได้หยุดมานานน่ะค่ะ"
+    MessageTW: 我今天不用值班
+    MessageGroupId: 200190290
     Id: 200190400
     CharacterId: 20019
     MessageCondition: None
@@ -752,13 +786,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저는 오늘 간만에 비번이랍니다.
-    MessageJP: 私は本日非番を頂きました
-    MessageCN: 我今天没有值班
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190290
+  - MessageKR: 시간이 비는 것은 오랜만이에요.
+    MessageJP: こうして時間が空くのは久しぶりです
+    MessageCN: 已经好久没有像这样空闲的时间了
+    MessageEN: I can't even recall the last time I had time to myself.
+    MessageTH: ฉันไม่ได้มีเวลาว่างมานานแล้วค่ะ
+    MessageTW: 這種空閒的時間真是久違了
+    MessageGroupId: 200190290
     Id: 200190410
     CharacterId: 20019
     MessageCondition: None
@@ -770,13 +804,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시간이 비는 것은 오랜만이에요.
-    MessageJP: こうして時間が空くのは久しぶりです
-    MessageCN: 已经好久没有像这样空闲的时间了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190300
+  - MessageKR: 아카네는 쉬는 날에 주로 뭘 하는 편이야?
+    MessageJP: アカネは普段のお休みは何をしているの？
+    MessageCN: 朱音平时休息的时候会做什么？
+    MessageEN: What will you do with your rare spare time, Akane?
+    MessageTH: "ตอนวันหยุด ส่วนใหญ่อาคาเนะ
+
+      ทำอะไรเหรอ?"
+    MessageTW: 朱音平常休息的時候都會做什麼呢？
+    MessageGroupId: 200190300
     Id: 200190420
     CharacterId: 20019
     MessageCondition: Answer
@@ -788,13 +824,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아카네는 쉬는 날에 주로 뭘 하는 편이야?
-    MessageJP: アカネは普段のお休みは何をしているの？
-    MessageCN: 朱音平时休息的时候会做什么？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190310
+  - MessageKR: "글쎄요. "
+    MessageJP: そうですね
+    MessageCN: 这个嘛
+    MessageEN: Hm...
+    MessageTH: "นั่นสิคะ... "
+    MessageTW: 這個嘛
+    MessageGroupId: 200190310
     Id: 200190430
     CharacterId: 20019
     MessageCondition: Feedback
@@ -806,13 +842,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: "글쎄요. "
-    MessageJP: そうですね
-    MessageCN: 这个嘛
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190310
+  - MessageKR: 하고 싶은 것은 많이 있습니다만……
+    MessageJP: やりたいことはたくさんありますが……
+    MessageCN: 虽然想做的事有很多……
+    MessageEN: There's quite an extensive list of things I'd like to do.
+    MessageTH: ฉันมีสิ่งที่อยากทำอยู่เยอะมาก...
+    MessageTW: 雖然有很多想做的事……
+    MessageGroupId: 200190310
     Id: 200190440
     CharacterId: 20019
     MessageCondition: Feedback
@@ -824,13 +860,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하고 싶은 것은 많이 있습니다만……
-    MessageJP: やりたいことはたくさんありますが……
-    MessageCN: 虽然想做的事有很多……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190320
+  - MessageKR: 바라는 건 하나뿐이에요.
+    MessageJP: 望むことは、一つだけですね
+    MessageCN: 但是我真正想做的，只有一件事
+    MessageEN: But there IS one thing at the veeery top...
+    MessageTH: แต่สิ่งที่หวังมีอยู่อย่างเดียวค่ะ
+    MessageTW: 但期望的只有一件事
+    MessageGroupId: 200190320
     Id: 200190450
     CharacterId: 20019
     MessageCondition: Feedback
@@ -842,13 +878,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 바라는 건 하나뿐이에요.
-    MessageJP: 望むことは、一つだけですね
-    MessageCN: 但是我真正想做的，只有一件事
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190320
+  - MessageKR: 그저…… 어쩌다 우연히……
+    MessageJP: 偶然……本当に偶然でいいんです
+    MessageCN: 偶然……真的只要偶然就足够了
+    MessageEN: Perhaps...by any chance...could I...
+    MessageTH: ฉันก็... หวังว่า...
+    MessageTW: 偶然……真的是偶然就好
+    MessageGroupId: 200190320
     Id: 200190460
     CharacterId: 20019
     MessageCondition: Feedback
@@ -860,13 +896,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그저…… 어쩌다 우연히……
-    MessageJP: 偶然……本当に偶然でいいんです
-    MessageCN: 偶然……真的只要偶然就足够了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190330
+  - MessageKR: 주인님과 만날 수 있으면 좋겠다……
+    MessageJP: ご主人様にお会いできたら嬉しいなと……
+    MessageCN: 要是能够和主人相遇，我就很开心了……
+    MessageEN: "...spend my time with you, Master?"
+    MessageTH: "ถ้าได้บังเอิญเจอกับนายท่าน
+
+      ก็คงดีค่ะ..."
+    MessageTW: 能遇到主人的話會很開心……
+    MessageGroupId: 200190330
     Id: 200190470
     CharacterId: 20019
     MessageCondition: Feedback
@@ -878,13 +916,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님과 만날 수 있으면 좋겠다……
-    MessageJP: ご主人様にお会いできたら嬉しいなと……
-    MessageCN: 要是能够和主人相遇，我就很开心了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190340
+  - MessageKR: 그런 생각을 하고 있었답니다.
+    MessageJP: そんなことを考えておりました
+    MessageCN: 我想的就是这些
+    MessageEN: That's the number one thing on my list.
+    MessageTH: ฉันคิดแบบนั้นอยู่ค่ะ
+    MessageTW: 我一直是這麼想的
+    MessageGroupId: 200190340
     Id: 200190480
     CharacterId: 20019
     MessageCondition: Feedback
@@ -896,13 +934,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런 생각을 하고 있었답니다.
-    MessageJP: そんなことを考えておりました
-    MessageCN: 我想的就是这些
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190350
+  - MessageKR: 오늘도 야근이신가요?
+    MessageJP: こんばんは。本日も帰りが遅いのでしょうか？
+    MessageCN: 晚上好。主人今晚也很晚回家吗？
+    MessageEN: Are you working late today as well?
+    MessageTH: วันนี้คุณครูก็ทำงานดึกเหรอคะ?
+    MessageTW: 晚安。今天也會晚回去嗎？
+    MessageGroupId: 200190350
     Id: 200190490
     CharacterId: 20019
     MessageCondition: FavorRankUp
@@ -914,13 +952,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘도 야근이신가요?
-    MessageJP: こんばんは。本日も帰りが遅いのでしょうか？
-    MessageCN: 晚上好。主人今晚也很晚回家吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190360
+  - MessageKR: 주인님의 건강이 걱정이에요……
+    MessageJP: ご主人様の健康が心配です……
+    MessageCN: 我很担心主人的健康……
+    MessageEN: That can't be good for your health...
+    MessageTH: ฉันเป็นห่วงสุขภาพของนายท่านค่ะ...
+    MessageTW: 真擔心主人的健康……
+    MessageGroupId: 200190360
     Id: 200190500
     CharacterId: 20019
     MessageCondition: None
@@ -932,13 +970,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님의 건강이 걱정이에요……
-    MessageJP: ご主人様の健康が心配です……
-    MessageCN: 我很担心主人的健康……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190370
+  - MessageKR: 으헤헤…… 일 좋다…… 일 많다……
+    MessageJP: わぁい仕事……私、仕事大好き……
+    MessageCN: 哇，工作……我，我爱死工作了……
+    MessageEN: Heehee...hee... I love...work... Endless piles...
+    MessageTH: แหะๆ คือว่า... งานมันเยอะน่ะ
+    MessageTW: 哇嗚，是工作……我最愛工作了……
+    MessageGroupId: 200190370
     Id: 200190510
     CharacterId: 20019
     MessageCondition: Answer
@@ -950,13 +988,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으헤헤…… 일 좋다…… 일 많다……
-    MessageJP: わぁい仕事……私、仕事大好き……
-    MessageCN: 哇，工作……我，我爱死工作了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190370
+  - MessageKR: 문서라는 걸 발명한 사람은 대체 누굴까……
+    MessageJP: この世に書類というものを生み出したのは誰なんだ……
+    MessageCN: 究竟是谁发明了文书这种东西……
+    MessageEN: Who the hell invented the document...
+    MessageTH: "ใครมันคิดค้นการทำงานเอกสาร
+
+      ขึ้นมากันนะ..."
+    MessageTW: 到底是誰發明文件這種東西的呢……
+    MessageGroupId: 200190370
     Id: 200190520
     CharacterId: 20019
     MessageCondition: Answer
@@ -968,13 +1008,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 문서라는 걸 발명한 사람은 대체 누굴까……
-    MessageJP: この世に書類というものを生み出したのは誰なんだ……
-    MessageCN: 究竟是谁发明了文书这种东西……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200190380
+  - MessageKR: 주인님? 정신 차리세요, 주인님!
+    MessageJP: ご主人様！？お気を確かに！！
+    MessageCN: 主人！？请振作一点！！
+    MessageEN: Master? Wake up, Master!
+    MessageTH: นายท่าน ทำใจดีๆ ไว้นะคะ นายท่าน!
+    MessageTW: 主人！？振作一點！！
+    MessageGroupId: 200190380
     Id: 200190530
     CharacterId: 20019
     MessageCondition: Feedback
@@ -986,9 +1026,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주인님? 정신 차리세요, 주인님!
-    MessageJP: ご主人様！？お気を確かに！！
-    MessageCN: 主人！？请振作一点！！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

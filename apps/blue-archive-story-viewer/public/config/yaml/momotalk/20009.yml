@@ -1,53 +1,59 @@
 CharacterId: 20009
 translator: 罐子
 title:
-  - GroupId: 2000902
-    FavorScheduleId: 200092
-    CharacterId: 20009
-    TextJp: とある髭の生徒会長の冬休み
+  - TextJp: とある髭の生徒会長の冬休み
     TextCn: 某位胡子学生会长的寒假
     TextKr: 학생회장의 겨울 휴가
     TextEn: The President's Winter Vacation
     TextTh: วันหยุดฤดูหนาวของประธานสภานักเรียน
-    TextTw: 某鬍鬚學生會長的寒假
-  - GroupId: 2000903
-    FavorScheduleId: 200093
+    TextTw: 某鬍子學生會長的寒假
+    GroupId: 2000902
+    FavorScheduleId: 200092
     CharacterId: 20009
-    TextJp: プリンよりも柔らかく
+  - TextJp: プリンよりも柔らかく
     TextCn: 比布丁更柔软
     TextKr: 푸딩보다 부드러운
     TextEn: Softer Than Pudding
     TextTh: นุ่มฟูกว่าพุดดิ้ง
     TextTw: 比布丁更柔軟
-  - GroupId: 2000905
-    FavorScheduleId: 200095
+    GroupId: 2000903
+    FavorScheduleId: 200093
     CharacterId: 20009
-    TextJp: 防水の髭
+  - TextJp: 防水の髭
     TextCn: 防水的胡子
     TextKr: 방수 수염
     TextEn: Waterproof Mustache
     TextTh: หนวดกันน้ำ
     TextTw: 防水鬍子
-  - GroupId: 2000906
-    FavorScheduleId: 200096
+    GroupId: 2000905
+    FavorScheduleId: 200095
     CharacterId: 20009
-    TextJp: 牛乳製の権威
+  - TextJp: 牛乳製の権威
     TextCn: 乳制品打造的权威
     TextKr: 우유로 만든 권위
     TextEn: Milk-Made Authority
     TextTh: อำนาจรสนม
     TextTw: 牛奶製的權威
-  - GroupId: 2000920
-    FavorScheduleId: 2000920
+    GroupId: 2000906
+    FavorScheduleId: 200096
     CharacterId: 20009
-    TextJp: お風呂の補佐官
+  - TextJp: お風呂の補佐官
     TextCn: 泡澡时的辅佐官
     TextKr: 목욕 보좌관
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Bath Assistant
+    TextTh: ผู้ช่วยอาบน้ำ
+    TextTw: 洗澡輔佐官
+    GroupId: 2000920
+    FavorScheduleId: 2000920
+    CharacterId: 20009
 content:
-  - MessageGroupId: 200090010
+  - MessageKR: 연말의 학원은 정말 정신없이 바쁘군.
+    MessageJP: 年末の学園は、非常に忙しく慌ただしい
+    MessageCN: 临近年末，学园事务繁忙
+    MessageEN: The academy is really hectic at the end of the year.
+    MessageTH: "โรงเรียนช่วงสิ้นปีนี่วุ่นวายดีจริงๆ "
+    MessageTW: 年末的學園，非常的匆忙
+    MessageGroupId: 200090010
     Id: 200090010
     CharacterId: 20009
     MessageCondition: FavorRankUp
@@ -59,25 +65,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 연말의 학원은 정말 정신없이 바쁘군.
-    MessageJP: 年末の学園は、非常に忙しく慌ただしい
-    MessageCN: 临近年末，学园事务繁忙
-    MessageEN: The academy is really hectic at the end of the year.
-    MessageTH: "โรงเรียนช่วงสิ้นปีนี่วุ่นวายดีจริงๆ "
-    MessageTW: 年末的學園，非常的匆忙
-  - MessageGroupId: 200090020
-    Id: 200090020
-    CharacterId: 20009
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200090030
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 초인적인 체력을 가진 이 몸조차도 계속되는 격무로 인해 피로가 쌓이는 게 느껴질 정도야.
+  - MessageKR: 초인적인 체력을 가진 이 몸조차도 계속되는 격무로 인해 피로가 쌓이는 게 느껴질 정도야.
     MessageJP: 体力にも優れたこのおいらでさえ、度重なる激務で疲労が溜まってるぐらいだ
     MessageCN: 即使是体力优异的咱，也因为处理源源不断的繁重工作积累了不少疲劳
     MessageEN:
@@ -89,7 +77,27 @@ content:
 
       ที่สะสมจากการทำงานหนักอยู่เรื่อยๆ"
     MessageTW: 就連體力超群的咱，也因為接二連三繁重的工作而累積了不少疲勞
-  - MessageGroupId: 200090020
+    MessageGroupId: 200090020
+    Id: 200090020
+    CharacterId: 20009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200090030
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그래서 이번 주말에는 업무에서 벗어나 모처럼 겨울 휴가를 즐기기로 했다네!
+    MessageJP: そこで今週末は、仕事を忘れて冬休みを楽しむことにした！
+    MessageCN: 所以说这周末，咱要把工作抛到脑后，好好享受寒假！
+    MessageEN:
+      That's why I decided to take a break from work this weekend and enjoy
+      my much-awaited winter vacation!
+    MessageTH: เพราะงั้นวันหยุดสุดสัปดาห์นี้ เราเลยตัดสินใจจะพักจากภาระงาน และไปสนุกกับวันหยุดพักผ่อนฤดูหนาวของเรา!
+    MessageTW: 因此這個週末，我決定忘記工作，享受寒假！
+    MessageGroupId: 200090020
     Id: 200090030
     CharacterId: 20009
     MessageCondition: None
@@ -101,15 +109,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 이번 주말에는 업무에서 벗어나 모처럼 겨울 휴가를 즐기기로 했다네!
-    MessageJP: そこで今週末は、仕事を忘れて冬休みを楽しむことにした！
-    MessageCN: 所以说这周末，咱要把工作抛到脑后，好好享受寒假！
+  - MessageKR: 호화로운 휴양지에서 푹 쉬고 나면 컨디션을 완전히 회복할 수 있겠지.
+    MessageJP: リゾート地でゆっくり休めば、その後の仕事の効率も良くなるはず
+    MessageCN: 在度假村好好休息之后，工作的效率应该也会提升
     MessageEN:
-      That's why I decided to take a break from work this weekend and enjoy
-      my much-awaited winter vacation!
-    MessageTH: เพราะงั้นวันหยุดสุดสัปดาห์นี้ เราเลยตัดสินใจจะพักจากภาระงาน และไปสนุกกับวันหยุดพักผ่อนฤดูหนาวของเรา!
-    MessageTW: 因此這個週末，我決定忘記工作，享受寒假！
-  - MessageGroupId: 200090030
+      I should be fully recovered after a good rest at a luxurious vacation
+      spot.
+    MessageTH: หลังจากได้พักผ่อนอย่างเต็มที่ในรีสอร์ตสุดหรู ร่างกายก็คงจะฟื้นฟูกลับมามีเอเนอจี้เหมือนเดิม
+    MessageTW: 在渡假勝地好好休息的話，之後的工作效率也會更好吧
+    MessageGroupId: 200090030
     Id: 200090040
     CharacterId: 20009
     MessageCondition: None
@@ -121,15 +129,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 호화로운 휴양지에서 푹 쉬고 나면 컨디션을 완전히 회복할 수 있겠지.
-    MessageJP: リゾート地でゆっくり休めば、その後の仕事の効率も良くなるはず
-    MessageCN: 在度假村好好休息之后，工作的效率应该也会提升
-    MessageEN:
-      I should be fully recovered after a good rest at a luxurious vacation
-      spot.
-    MessageTH: หลังจากได้พักผ่อนอย่างเต็มที่ในรีสอร์ตสุดหรู ร่างกายก็คงจะฟื้นฟูกลับมามีเอเนอจี้เหมือนเดิม
-    MessageTW: 在渡假勝地好好休息的話，之後的工作效率也會更好吧
-  - MessageGroupId: 200090040
+  - MessageKR: 휴식이라면 평소에도 충분히 하고 있지 않아?
+    MessageJP: 結構普段から休息取ってたような……？
+    MessageCN: 好像切里诺平时就在休息吧……？
+    MessageEN: Don't you already get enough rest on a daily basis?
+    MessageTH: "ถ้าเป็นการพักผ่อน ปกติก็พักผ่อน
+
+      อยู่แล้วไม่ใช่เหรอ?"
+    MessageTW: 好像平時就在休息了吧……？
+    MessageGroupId: 200090040
     Id: 200090050
     CharacterId: 20009
     MessageCondition: Answer
@@ -141,15 +149,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 휴식이라면 평소에도 충분히 하고 있지 않아?
-    MessageJP: 結構普段から休息取ってたような……？
-    MessageCN: 好像切里诺平时就在休息吧……？
-    MessageEN: Don't you already get enough rest on a daily basis?
-    MessageTH: "ถ้าเป็นการพักผ่อน ปกติก็พักผ่อน
-
-      อยู่แล้วไม่ใช่เหรอ?"
-    MessageTW: 好像平時就在休息了吧……？
-  - MessageGroupId: 200090050
+  - MessageKR: 그게 무슨 소리인가, 콤라드.
+    MessageJP: 甘いなカムラッド
+    MessageCN: 太天真了同志
+    MessageEN: What are you talking about, Comrade?
+    MessageTH: หมายความว่ายังไงน่ะสหาย
+    MessageTW: 天真的同志
+    MessageGroupId: 200090050
     Id: 200090060
     CharacterId: 20009
     MessageCondition: Feedback
@@ -161,13 +167,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게 무슨 소리인가, 콤라드.
-    MessageJP: 甘いなカムラッド
-    MessageCN: 太天真了同志
-    MessageEN: What are you talking about, Comrade?
-    MessageTH: หมายความว่ายังไงน่ะสหาย
-    MessageTW: 天真的同志
-  - MessageGroupId: 200090050
+  - MessageKR: 일과 중에 즐기는 휴식과 휴가는 엄연히 다르다고?
+    MessageJP: 仕事中の休息と休暇は、まるで違うものなんだぞ？
+    MessageCN: 工作中的休息和休假比起来，完全就是两回事吧？
+    MessageEN: There is a difference between a vacation and a good rest during work.
+    MessageTH: การพักระหว่างทำงาน กับการหยุดพักผ่อนมันต่างกันงั้นเหรอ?
+    MessageTW: 工作中的休息和休假，完全是兩碼子事吧？
+    MessageGroupId: 200090050
     Id: 200090070
     CharacterId: 20009
     MessageCondition: Feedback
@@ -179,13 +185,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일과 중에 즐기는 휴식과 휴가는 엄연히 다르다고?
-    MessageJP: 仕事中の休息と休暇は、まるで違うものなんだぞ？
-    MessageCN: 工作中的休息和休假比起来，完全就是两回事吧？
-    MessageEN: There is a difference between a vacation and a good rest during work.
-    MessageTH: การพักระหว่างทำงาน กับการหยุดพักผ่อนมันต่างกันงั้นเหรอ?
-    MessageTW: 工作中的休息和休假，完全是兩碼子事吧？
-  - MessageGroupId: 200090060
+  - MessageKR: 사무국에서 자는 짧은 낮잠으로는 피로를 완전히 씻어낼 수 없는 법!
+    MessageJP: 普段の昼寝はあくまで応急措置のようなもので、それとは別に根本的な疲れは溜まっていくからな
+    MessageCN: 平时的午睡充其量只能作为应急措施，根本性的疲劳依然会不断累积的啊
+    MessageEN:
+      The short naps I take at the Secretariat do not completely alleviate
+      my fatigue!
+    MessageTH: "การพักงีบที่สำนักเลขาธิการไม่ได้ช่วยให้
+
+      เราคลายความเหนื่อยล้าได้หมดหรอกนะ!"
+    MessageTW: 平時的午睡只不過是應急措施，根本性的疲勞可是會不斷累積的啊
+    MessageGroupId: 200090060
     Id: 200090080
     CharacterId: 20009
     MessageCondition: Feedback
@@ -197,29 +207,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 사무국에서 자는 짧은 낮잠으로는 피로를 완전히 씻어낼 수 없는 법!
-    MessageJP: 普段の昼寝はあくまで応急措置のようなもので、それとは別に根本的な疲れは溜まっていくからな
-    MessageCN: 平时的午睡充其量只能作为应急措施，根本性的疲劳依然会不断累积的啊
-    MessageEN:
-      The short naps I take at the Secretariat do not completely alleviate
-      my fatigue!
-    MessageTH: "การพักงีบที่สำนักเลขาธิการไม่ได้ช่วยให้
-
-      เราคลายความเหนื่อยล้าได้หมดหรอกนะ!"
-    MessageTW: 平時的午睡只不過是應急措施，根本性的疲勞可是會不斷累積的啊
-  - MessageGroupId: 200090070
-    Id: 200090090
-    CharacterId: 20009
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200090080
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 그런 의미에서 이번에는 휴가를 제대로 즐길 수 있도록, 호화로운 온천장을 통째로 대절했다네.
+  - MessageKR: 그런 의미에서 이번에는 휴가를 제대로 즐길 수 있도록, 호화로운 온천장을 통째로 대절했다네.
     MessageJP: というわけで休暇を堪能すべく、今回は何と温泉を貸し切ったんだ！
     MessageCN: 所以为了能好好享受休假，咱这次可是包下了整个温泉！
     MessageEN:
@@ -231,7 +219,29 @@ content:
 
       ยังไงล่ะ"
     MessageTW: 所以為了好好享受休假，這次可是包下了溫泉啊！
-  - MessageGroupId: 200090070
+    MessageGroupId: 200090070
+    Id: 200090090
+    CharacterId: 20009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200090080
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 콤라드도 피로가 쌓였다면 이 몸과 함께 겨울 휴가를 즐기는 게 어떻겠는가?
+    MessageJP: カムラッドも疲れてるなら、おいらと一緒に冬休みを満喫しないか？
+    MessageCN: 如果同志也累了的话，不如也来和咱一起享受寒假吧？
+    MessageEN:
+      If you are tired as well, how about enjoying your winter vacation with
+      me, Comrade?
+    MessageTH: "ถ้าสหายรู้สึกเหนื่อยล่ะก็ ไปพักผ่อนใน
+
+      วันหยุดฤดูหนาวกับเรามั้ย?"
+    MessageTW: 如果同志也感到疲勞的話，不如就和咱一起享受寒假吧？
+    MessageGroupId: 200090070
     Id: 200090100
     CharacterId: 20009
     MessageCondition: Feedback
@@ -243,17 +253,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드도 피로가 쌓였다면 이 몸과 함께 겨울 휴가를 즐기는 게 어떻겠는가?
-    MessageJP: カムラッドも疲れてるなら、おいらと一緒に冬休みを満喫しないか？
-    MessageCN: 如果同志也累了的话，不如也来和咱一起享受寒假吧？
-    MessageEN:
-      If you are tired as well, how about enjoying your winter vacation with
-      me, Comrade?
-    MessageTH: "ถ้าสหายรู้สึกเหนื่อยล่ะก็ ไปพักผ่อนใน
-
-      วันหยุดฤดูหนาวกับเรามั้ย?"
-    MessageTW: 如果同志也感到疲勞的話，不如就和咱一起享受寒假吧？
-  - MessageGroupId: 200090080
+  - MessageKR: 으으…… 으으…….
+    MessageJP: どうしてだ……
+    MessageCN: 为什么……
+    MessageEN: Ugh... Ugh...
+    MessageTH: อืม... อือ...
+    MessageTW: 為什麼……
+    MessageGroupId: 200090080
     Id: 200090110
     CharacterId: 20009
     MessageCondition: None
@@ -265,13 +271,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으으…… 으으…….
-    MessageJP: どうしてだ……
-    MessageCN: 为什么……
-    MessageEN: Ugh... Ugh...
-    MessageTH: อืม... อือ...
-    MessageTW: 為什麼……
-  - MessageGroupId: 200090090
+  - MessageKR: 어째서지? 이 몸의 휴가 계획은 완벽했을 텐데…….
+    MessageJP: おいらの休暇の計画は、完璧だったはずなのに……
+    MessageCN: 咱的休假计划，理应无懈可击……
+    MessageEN: Why is this happening? My vacation plan was perfect...
+    MessageTH: "ทำไมกัน? แผนการวันหยุดของเราน่าจะ
+
+      สมบูรณ์แบบแล้วแท้ๆ..."
+    MessageTW: 咱的休假計畫應該很完美才對……
+    MessageGroupId: 200090090
     Id: 200090120
     CharacterId: 20009
     MessageCondition: None
@@ -283,15 +291,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어째서지? 이 몸의 휴가 계획은 완벽했을 텐데…….
-    MessageJP: おいらの休暇の計画は、完璧だったはずなのに……
-    MessageCN: 咱的休假计划，理应无懈可击……
-    MessageEN: Why is this happening? My vacation plan was perfect...
-    MessageTH: "ทำไมกัน? แผนการวันหยุดของเราน่าจะ
+  - MessageKR: 온몸이 추를 매달아 놓은 것처럼 무거워…….
+    MessageJP: 全身が鉛のように重い……
+    MessageCN: 全身现在却像灌了铅一样沉重……
+    MessageEN: My entire body feels heavy, as if I have weights on...
+    MessageTH: "ร่างกายของเรากลับรู้สึกหนักอึ้งเหมือนมี
 
-      สมบูรณ์แบบแล้วแท้ๆ..."
-    MessageTW: 咱的休假計畫應該很完美才對……
-  - MessageGroupId: 200090090
+      ตุ้มเหล็กคล้องอยู่..."
+    MessageTW: 全身像鉛一樣重……
+    MessageGroupId: 200090090
     Id: 200090130
     CharacterId: 20009
     MessageCondition: None
@@ -303,15 +311,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 온몸이 추를 매달아 놓은 것처럼 무거워…….
-    MessageJP: 全身が鉛のように重い……
-    MessageCN: 全身现在却像灌了铅一样沉重……
-    MessageEN: My entire body feels heavy, as if I have weights on...
-    MessageTH: "ร่างกายของเรากลับรู้สึกหนักอึ้งเหมือนมี
-
-      ตุ้มเหล็กคล้องอยู่..."
-    MessageTW: 全身像鉛一樣重……
-  - MessageGroupId: 200090100
+  - MessageKR: 안 하던 운동을 하니까 그렇지.
+    MessageJP: 普段動かないのに、急にあんなに運動したらね……
+    MessageCN: 毕竟切里诺平时不怎么运动，突然做那样的剧烈运动的话当然会这样啦……
+    MessageEN: That's because you did exercise you've never done before.
+    MessageTH: เพราะไม่เคยออกกำลังกายไงล่ะ
+    MessageTW: 明明平時沒在動，突然那樣運動當然會……
+    MessageGroupId: 200090100
     Id: 200090140
     CharacterId: 20009
     MessageCondition: Answer
@@ -323,13 +329,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안 하던 운동을 하니까 그렇지.
-    MessageJP: 普段動かないのに、急にあんなに運動したらね……
-    MessageCN: 毕竟切里诺平时不怎么运动，突然做那样的剧烈运动的话当然会这样啦……
-    MessageEN: That's because you did exercise you've never done before.
-    MessageTH: เพราะไม่เคยออกกำลังกายไงล่ะ
-    MessageTW: 明明平時沒在動，突然那樣運動當然會……
-  - MessageGroupId: 200090100
+  - MessageKR: 근육통이 온 거 아냐?
+    MessageJP: 多分筋肉痛だと思う
+    MessageCN: 我觉得大概是肌肉酸痛吧
+    MessageEN: Maybe it's sore muscles?
+    MessageTH: ปวดเมื่อยกล้ามเนื้อเหรอ?
+    MessageTW: 我想可能是肌肉痠痛
+    MessageGroupId: 200090100
     Id: 200090150
     CharacterId: 20009
     MessageCondition: Answer
@@ -341,13 +347,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 근육통이 온 거 아냐?
-    MessageJP: 多分筋肉痛だと思う
-    MessageCN: 我觉得大概是肌肉酸痛吧
-    MessageEN: Maybe it's sore muscles?
-    MessageTH: ปวดเมื่อยกล้ามเนื้อเหรอ?
-    MessageTW: 我想可能是肌肉痠痛
-  - MessageGroupId: 200090110
+  - MessageKR: 이 몸은 그저 즐거운 휴가를 보내고 싶었을 뿐인데……
+    MessageJP: 何ということだ……
+    MessageCN: 怎么会这样……
+    MessageEN: All I wanted was to enjoy a nice vacation...
+    MessageTH: "เราแค่อยากสนุกกับวันหยุดพักผ่อน
+
+      ก็เท่านั้นเอง..."
+    MessageTW: 這是怎麼回事……
+    MessageGroupId: 200090110
     Id: 200090160
     CharacterId: 20009
     MessageCondition: Feedback
@@ -359,15 +367,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 몸은 그저 즐거운 휴가를 보내고 싶었을 뿐인데……
-    MessageJP: 何ということだ……
-    MessageCN: 怎么会这样……
-    MessageEN: All I wanted was to enjoy a nice vacation...
-    MessageTH: "เราแค่อยากสนุกกับวันหยุดพักผ่อน
+  - MessageKR: 아껴 둔 최고급 푸딩을 빼앗긴 것으로도 모자라, 없었던 근육통까지 생겨버리다니……
+    MessageJP: 楽しかったは楽しかったが、最高級抹茶プリンが手に入らなかった上に筋肉痛とは……
+    MessageCN: 开心倒确实挺开心的，但是不仅没能赢到最高级的抹茶布丁，全身肌肉都还在痛……
+    MessageEN:
+      Not only did I get my finest pudding taken from me, but I'm also suffering
+      from sore muscles...
+    MessageTH: "นอกจากจะต้องถูกชิงสุดยอดพุดดิ้งที่
 
-      ก็เท่านั้นเอง..."
-    MessageTW: 這是怎麼回事……
-  - MessageGroupId: 200090120
+      เก็บเอาไว้ไปแล้ว ยังจะต้องมาปวดเมื่อยกล้ามเนื้อแบบนี้อีก..."
+    MessageTW: 開心歸開心，但沒能買到最高級的抹茶布丁，再加上肌肉痠痛……
+    MessageGroupId: 200090120
     Id: 200090170
     CharacterId: 20009
     MessageCondition: Feedback
@@ -379,17 +389,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아껴 둔 최고급 푸딩을 빼앗긴 것으로도 모자라, 없었던 근육통까지 생겨버리다니……
-    MessageJP: 楽しかったは楽しかったが、最高級抹茶プリンが手に入らなかった上に筋肉痛とは……
-    MessageCN: 开心倒确实挺开心的，但是不仅没能赢到最高级的抹茶布丁，全身肌肉都还在痛……
-    MessageEN:
-      Not only did I get my finest pudding taken from me, but I'm also suffering
-      from sore muscles...
-    MessageTH: "นอกจากจะต้องถูกชิงสุดยอดพุดดิ้งที่
+  - MessageKR: 겨울 휴가, 이 얼마나 무시무시한 녀석이란 말인가…….
+    MessageJP: 冬休み、なんと恐ろしいやつ……
+    MessageCN: 寒假，太可怕了……
+    MessageEN: Winter vacation, what a terrifying time it was...
+    MessageTH: "วันหยุดฤดูหนาว...
 
-      เก็บเอาไว้ไปแล้ว ยังจะต้องมาปวดเมื่อยกล้ามเนื้อแบบนี้อีก..."
-    MessageTW: 開心歸開心，但沒能買到最高級的抹茶布丁，再加上肌肉痠痛……
-  - MessageGroupId: 200090120
+      ช่างเป็นสิ่งที่น่ากลัวเสียจริงๆ..."
+    MessageTW: 寒假，多麼可怕的傢伙……
+    MessageGroupId: 200090120
     Id: 200090180
     CharacterId: 20009
     MessageCondition: Feedback
@@ -401,15 +409,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 겨울 휴가, 이 얼마나 무시무시한 녀석이란 말인가…….
-    MessageJP: 冬休み、なんと恐ろしいやつ……
-    MessageCN: 寒假，太可怕了……
-    MessageEN: Winter vacation, what a terrifying time it was...
-    MessageTH: "วันหยุดฤดูหนาว...
-
-      ช่างเป็นสิ่งที่น่ากลัวเสียจริงๆ..."
-    MessageTW: 寒假，多麼可怕的傢伙……
-  - MessageGroupId: 200090130
+  - MessageKR: 혹시 콤라드는 온천 계란을 먹어본 적이 있는가?
+    MessageJP: カムラッドは、「温泉卵」を食べたことがあるか？
+    MessageCN: 同志，吃过“温泉蛋”吗？
+    MessageEN: Have you ever tried a hot spring boiled egg, Comrade?
+    MessageTH: สหายเคยกินไข่ต้มออนเซ็นรึเปล่า?
+    MessageTW: 同志，吃過「溫泉蛋」嗎？
+    MessageGroupId: 200090130
     Id: 200090190
     CharacterId: 20009
     MessageCondition: FavorRankUp
@@ -421,13 +427,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 콤라드는 온천 계란을 먹어본 적이 있는가?
-    MessageJP: カムラッドは、「温泉卵」を食べたことがあるか？
-    MessageCN: 同志，吃过“温泉蛋”吗？
-    MessageEN: Have you ever tried a hot spring boiled egg, Comrade?
-    MessageTH: สหายเคยกินไข่ต้มออนเซ็นรึเปล่า?
-    MessageTW: 同志，吃過「溫泉蛋」嗎？
-  - MessageGroupId: 200090140
+  - MessageKR: 평범한 계란과 온천수만으로 진미를 만든다니…….
+    MessageJP: 普通の卵と温泉水だけで生み出される珍味と聞いたが……
+    MessageCN: 听说那是只用普通的鸡蛋和温泉水就创造出的美味……
+    MessageEN:
+      I can't believe such a delicacy is made with just plain eggs and hot
+      spring water...
+    MessageTH: "ไม่อยากเชื่อเลยว่าจะต้มไข่ธรรมดาให้
+
+      อร่อยด้วยน้ำพุร้อนได้..."
+    MessageTW: 聽說光用普通的雞蛋和溫泉水就能創造出美味……
+    MessageGroupId: 200090140
     Id: 200090200
     CharacterId: 20009
     MessageCondition: None
@@ -439,17 +449,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 평범한 계란과 온천수만으로 진미를 만든다니…….
-    MessageJP: 普通の卵と温泉水だけで生み出される珍味と聞いたが……
-    MessageCN: 听说那是只用普通的鸡蛋和温泉水就创造出的美味……
-    MessageEN:
-      I can't believe such a delicacy is made with just plain eggs and hot
-      spring water...
-    MessageTH: "ไม่อยากเชื่อเลยว่าจะต้มไข่ธรรมดาให้
-
-      อร่อยด้วยน้ำพุร้อนได้..."
-    MessageTW: 聽說光用普通的雞蛋和溫泉水就能創造出美味……
-  - MessageGroupId: 200090140
+  - MessageKR: 이 몸이 온천에 대해서 문외한이라고는 하지만, 쉽게 믿기 어려운 사실이군.
+    MessageJP: おいらは温泉に詳しくないとはいえ、安易には信じられない話だ
+    MessageCN: 虽然咱对温泉不清楚，但这种事情是在是没法轻易相信啊
+    MessageEN: Even if I'm ignorant about hot springs, it's still hard to believe.
+    MessageTH:
+      ถึงเราจะไม่ค่อยรู้เรื่องออนเซ็นเท่าไหร่ แต่ก็เป็นเรื่องที่เหลือเชื่อจริงๆ
+      นะ
+    MessageTW: 雖說咱對溫泉蛋不太了解，但也不能輕易相信
+    MessageGroupId: 200090140
     Id: 200090210
     CharacterId: 20009
     MessageCondition: None
@@ -461,15 +469,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 몸이 온천에 대해서 문외한이라고는 하지만, 쉽게 믿기 어려운 사실이군.
-    MessageJP: おいらは温泉に詳しくないとはいえ、安易には信じられない話だ
-    MessageCN: 虽然咱对温泉不清楚，但这种事情是在是没法轻易相信啊
-    MessageEN: Even if I'm ignorant about hot springs, it's still hard to believe.
-    MessageTH:
-      ถึงเราจะไม่ค่อยรู้เรื่องออนเซ็นเท่าไหร่ แต่ก็เป็นเรื่องที่เหลือเชื่อจริงๆ
-      นะ
-    MessageTW: 雖說咱對溫泉蛋不太了解，但也不能輕易相信
-  - MessageGroupId: 200090150
+  - MessageKR: 온천 계란이라……
+    MessageJP: 温泉卵？
+    MessageCN: 温泉蛋？
+    MessageEN: A hot spring boiled egg...
+    MessageTH: ไข่ต้มออนเซ็นงั้นเหรอ...
+    MessageTW: 溫泉蛋？
+    MessageGroupId: 200090150
     Id: 200090220
     CharacterId: 20009
     MessageCondition: Answer
@@ -481,13 +487,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 온천 계란이라……
-    MessageJP: 温泉卵？
-    MessageCN: 温泉蛋？
-    MessageEN: A hot spring boiled egg...
-    MessageTH: ไข่ต้มออนเซ็นงั้นเหรอ...
-    MessageTW: 溫泉蛋？
-  - MessageGroupId: 200090160
+  - MessageKR: 확실히 푸딩처럼 부드럽고 맛있긴 하지.
+    MessageJP: 確かにプリンみたいに柔らかいし、美味しいよ
+    MessageCN: 确实像布丁一样柔软，很好吃哦
+    MessageEN: It's definitely as soft and delicious as a pudding.
+    MessageTH: อร่อยแล้วก็นุ่มเหมือนพุดดิ้งเลยนะ
+    MessageTW: 確實像布丁一樣柔軟，很好吃唷
+    MessageGroupId: 200090160
     Id: 200090230
     CharacterId: 20009
     MessageCondition: Answer
@@ -499,13 +505,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실히 푸딩처럼 부드럽고 맛있긴 하지.
-    MessageJP: 確かにプリンみたいに柔らかいし、美味しいよ
-    MessageCN: 确实像布丁一样柔软，很好吃哦
-    MessageEN: It's definitely as soft and delicious as a pudding.
-    MessageTH: อร่อยแล้วก็นุ่มเหมือนพุดดิ้งเลยนะ
-    MessageTW: 確實像布丁一樣柔軟，很好吃唷
-  - MessageGroupId: 200090170
+  - MessageKR: ㅍ, 푸딩?!
+    MessageJP: プリン！？
+    MessageCN: 布丁！？
+    MessageEN: P-P-Pudding?!
+    MessageTH: พะ...พุดดิ้งเหรอ?!
+    MessageTW: 布丁？！
+    MessageGroupId: 200090170
     Id: 200090240
     CharacterId: 20009
     MessageCondition: Feedback
@@ -517,13 +523,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ㅍ, 푸딩?!
-    MessageJP: プリン！？
-    MessageCN: 布丁！？
-    MessageEN: P-P-Pudding?!
-    MessageTH: พะ...พุดดิ้งเหรอ?!
-    MessageTW: 布丁？！
-  - MessageGroupId: 200090170
+  - MessageKR: 지금 푸딩이라고 했는가?
+    MessageJP: 今プリンと言ったか！？
+    MessageCN: 同志刚刚说了布丁对吧！？
+    MessageEN: Did you just say "pudding"?
+    MessageTH: เมื่อกี้พูดว่าพุดดิ้งเหรอ?
+    MessageTW: 剛剛是說布丁嗎！？
+    MessageGroupId: 200090170
     Id: 200090250
     CharacterId: 20009
     MessageCondition: Feedback
@@ -535,13 +541,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 푸딩이라고 했는가?
-    MessageJP: 今プリンと言ったか！？
-    MessageCN: 同志刚刚说了布丁对吧！？
-    MessageEN: Did you just say "pudding"?
-    MessageTH: เมื่อกี้พูดว่าพุดดิ้งเหรอ?
-    MessageTW: 剛剛是說布丁嗎！？
-  - MessageGroupId: 200090180
+  - MessageKR: 푸딩 하나를 만들기 위해서는 많은 재료가 필요한데
+    MessageJP: プリンを作るためには、たくさんの材料が必要なのに
+    MessageCN: 制作布丁明明需要大量材料
+    MessageEN: It takes a lot of ingredients to make pudding.
+    MessageTH: "การทำพุดดิ้งหนึ่งถ้วยต้องใช้ส่วนผสม
+
+      ตั้งเยอะเลยนะ"
+    MessageTW: 製作布丁的話，需要很多材料
+    MessageGroupId: 200090180
     Id: 200090260
     CharacterId: 20009
     MessageCondition: Feedback
@@ -553,15 +561,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 푸딩 하나를 만들기 위해서는 많은 재료가 필요한데
-    MessageJP: プリンを作るためには、たくさんの材料が必要なのに
-    MessageCN: 制作布丁明明需要大量材料
-    MessageEN: It takes a lot of ingredients to make pudding.
-    MessageTH: "การทำพุดดิ้งหนึ่งถ้วยต้องใช้ส่วนผสม
+  - MessageKR: 온천수와 계란만 가지고 푸딩과 같은 디저트를 만들 수 있다니…….
+    MessageJP: 温泉水と卵だけで、プリンのようなデザートが作れるだと……！？
+    MessageCN: 但是只用温泉水和鸡蛋，却能做出布丁一样的甜点吗……！？
+    MessageEN:
+      And yet, it's possible to make a dessert-like pudding with only hot
+      spring water and an egg?
+    MessageTH: "ทำขนมแสนอร่อยอย่างพุดดิ้งได้โดย
 
-      ตั้งเยอะเลยนะ"
-    MessageTW: 製作布丁的話，需要很多材料
-  - MessageGroupId: 200090180
+      ใช้น้ำพุร้อนกับไข่ไก่งั้นเหรอ..."
+    MessageTW: 只用溫泉水和雞蛋就能做出像布丁一樣的甜點……！？
+    MessageGroupId: 200090180
     Id: 200090270
     CharacterId: 20009
     MessageCondition: Feedback
@@ -573,17 +583,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 온천수와 계란만 가지고 푸딩과 같은 디저트를 만들 수 있다니…….
-    MessageJP: 温泉水と卵だけで、プリンのようなデザートが作れるだと……！？
-    MessageCN: 但是只用温泉水和鸡蛋，却能做出布丁一样的甜点吗……！？
-    MessageEN:
-      And yet, it's possible to make a dessert-like pudding with only hot
-      spring water and an egg?
-    MessageTH: "ทำขนมแสนอร่อยอย่างพุดดิ้งได้โดย
+  - MessageKR: 콤라드, 지금 이러고 있을 때가 아니다.
+    MessageJP: カムラッド、こうしてる場合じゃない
+    MessageCN: 同志，没时间磨蹭了
+    MessageEN: Comrade, there's no time to waste.
+    MessageTH: "สหาย ตอนนี้ไม่ใช่เวลามาเอ้อระเหย
 
-      ใช้น้ำพุร้อนกับไข่ไก่งั้นเหรอ..."
-    MessageTW: 只用溫泉水和雞蛋就能做出像布丁一樣的甜點……！？
-  - MessageGroupId: 200090190
+      แบบนี้นะ"
+    MessageTW: 同志，現在不是待在這的時候
+    MessageGroupId: 200090190
     Id: 200090280
     CharacterId: 20009
     MessageCondition: Feedback
@@ -595,15 +603,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드, 지금 이러고 있을 때가 아니다.
-    MessageJP: カムラッド、こうしてる場合じゃない
-    MessageCN: 同志，没时间磨蹭了
-    MessageEN: Comrade, there's no time to waste.
-    MessageTH: "สหาย ตอนนี้ไม่ใช่เวลามาเอ้อระเหย
+  - MessageKR: 지금 바로 온천 계란을 만들러 가는 거다!
+    MessageJP: 今すぐ温泉卵を作りに行くぞ！
+    MessageCN: 咱们现在马上去做温泉蛋！
+    MessageEN: Let's go make hot spring boiled eggs right now!
+    MessageTH: "ตอนนี้ถึงเวลาที่ต้องไปทำ
 
-      แบบนี้นะ"
-    MessageTW: 同志，現在不是待在這的時候
-  - MessageGroupId: 200090190
+      ไข่ต้มออนเซ็นแล้ว!"
+    MessageTW: 現在馬上去做溫泉蛋！
+    MessageGroupId: 200090190
     Id: 200090290
     CharacterId: 20009
     MessageCondition: Feedback
@@ -615,15 +623,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 바로 온천 계란을 만들러 가는 거다!
-    MessageJP: 今すぐ温泉卵を作りに行くぞ！
-    MessageCN: 咱们现在马上去做温泉蛋！
-    MessageEN: Let's go make hot spring boiled eggs right now!
-    MessageTH: "ตอนนี้ถึงเวลาที่ต้องไปทำ
-
-      ไข่ต้มออนเซ็นแล้ว!"
-    MessageTW: 現在馬上去做溫泉蛋！
-  - MessageGroupId: 200090200
+  - MessageKR: 콤라드, 혹시 이런 이야기를 알고 있는가?
+    MessageJP: カムラッド、こんな話を知っているか？
+    MessageCN: 同志听过这句话吗？
+    MessageEN: Comrade, did you know?
+    MessageTH: สหาย... เคยได้ยินเรื่องนี้รึเปล่า?
+    MessageTW: 同志，你聽過這樣的話嗎？
+    MessageGroupId: 200090200
     Id: 200090300
     CharacterId: 20009
     MessageCondition: FavorRankUp
@@ -635,25 +641,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드, 혹시 이런 이야기를 알고 있는가?
-    MessageJP: カムラッド、こんな話を知っているか？
-    MessageCN: 同志听过这句话吗？
-    MessageEN: Comrade, did you know?
-    MessageTH: สหาย... เคยได้ยินเรื่องนี้รึเปล่า?
-    MessageTW: 同志，你聽過這樣的話嗎？
-  - MessageGroupId: 200090210
-    Id: 200090310
-    CharacterId: 20009
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200090220
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 고상한 모습으로 유유히 헤엄치는 백조도 수면 아래에서는 가라앉지 않기 위해 열심히 물장구를 치고 있다는 사실을.
+  - MessageKR: 고상한 모습으로 유유히 헤엄치는 백조도 수면 아래에서는 가라앉지 않기 위해 열심히 물장구를 치고 있다는 사실을.
     MessageJP: 優雅に泳ぐ白鳥も、水面下では沈まないように一生懸命バタ足をしている……
     MessageCN: 水面上优雅游动的天鹅，在水面下也有一双为了不让自己沉入水底而拼命拍打的双蹼……
     MessageEN:
@@ -665,8 +653,8 @@ content:
 
       เพื่อไม่ให้จมน้ำ"
     MessageTW: 優雅游泳的天鵝為了不沉入水中，也拼了命地拍打著腳……
-  - MessageGroupId: 200090210
-    Id: 200090320
+    MessageGroupId: 200090210
+    Id: 200090310
     CharacterId: 20009
     MessageCondition: None
     ConditionValue: 0
@@ -674,10 +662,10 @@ content:
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200090220
-    FeedbackTimeMillisec: 1500
+    FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이처럼 고고한 존재가 되기 위해서는 보이지 않는 곳에서도 열심히 노력해야 한다네.
+  - MessageKR: 이처럼 고고한 존재가 되기 위해서는 보이지 않는 곳에서도 열심히 노력해야 한다네.
     MessageJP: つまり孤高で美しい存在になるためには、密かに努力する必要があるということだ
     MessageCN: 也就是说，为了成为孤高而美丽的存在，私下的努力也是必要的
     MessageEN:
@@ -689,19 +677,19 @@ content:
 
       กลายเป็นผู้ที่สง่างามและสูงส่งแบบเจ้าหงส์"
     MessageTW: 也就是說，為了成為孤高而美麗的存在，必須偷偷地努力
-  - MessageGroupId: 200090220
-    Id: 200090330
+    MessageGroupId: 200090210
+    Id: 200090320
     CharacterId: 20009
     MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 200090230
-    FeedbackTimeMillisec: 2000
+    NextGroupId: 200090220
+    FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 붉은겨울의 학생들도 이런 백조의 모습을 본받아 쉬는 시간에도 열심히 일해주었으면 좋으련만…….
+  - MessageKR: 붉은겨울의 학생들도 이런 백조의 모습을 본받아 쉬는 시간에도 열심히 일해주었으면 좋으련만…….
     MessageJP: 学園の生徒たちもそういった心構えで、休日にも働いてくれれば良いのだが
     MessageCN: 要是我们学园的学生们也能抱着这种心态，在休息日也加班工作就好了
     MessageEN:
@@ -713,7 +701,25 @@ content:
 
       พักผ่อนเหมือนกับเจ้าหงส์ตัวนี้บ้างก็คงจะดี..."
     MessageTW: 希望學園的學生們也抱持這樣的心態，休息日也工作就好了
-  - MessageGroupId: 200090230
+    MessageGroupId: 200090220
+    Id: 200090330
+    CharacterId: 20009
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200090230
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 체리노.
+    MessageJP: それは確かに、ある意味良い話なんだけど……
+    MessageCN: 某种意义上来说那样确实挺好的……
+    MessageEN: Cherino.
+    MessageTH: เชริโน่
+    MessageTW: 那個，確實從某種意義上來說是好事啦……
+    MessageGroupId: 200090230
     Id: 200090340
     CharacterId: 20009
     MessageCondition: Answer
@@ -725,13 +731,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 체리노.
-    MessageJP: それは確かに、ある意味良い話なんだけど……
-    MessageCN: 某种意义上来说那样确实挺好的……
-    MessageEN: Cherino.
-    MessageTH: เชริโน่
-    MessageTW: 那個，確實從某種意義上來說是好事啦……
-  - MessageGroupId: 200090240
+  - MessageKR: 응? 무언가, 콤라드.
+    MessageJP: ん？どうしたカムラッド、何か言いたいことでも？
+    MessageCN: 嗯？怎么了同志，有什么话想说吗？
+    MessageEN: Yeah? What is it, Comrade?
+    MessageTH: หืม? มีอะไรเหรอ สหาย
+    MessageTW: 嗯？怎麼了，同志，有什麼想說的嗎？
+    MessageGroupId: 200090240
     Id: 200090350
     CharacterId: 20009
     MessageCondition: Feedback
@@ -743,13 +749,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응? 무언가, 콤라드.
-    MessageJP: ん？どうしたカムラッド、何か言いたいことでも？
-    MessageCN: 嗯？怎么了同志，有什么话想说吗？
-    MessageEN: Yeah? What is it, Comrade?
-    MessageTH: หืม? มีอะไรเหรอ สหาย
-    MessageTW: 嗯？怎麼了，同志，有什麼想說的嗎？
-  - MessageGroupId: 200090250
+  - MessageKR: 백조가 물에 가라앉지 않는 이유는
+    MessageJP: この間知ったんだけど、実際の白鳥が水に沈まないのって
+    MessageCN: 其实我也是前阵子才知道，天鹅实际上是不会沉到水里的
+    MessageEN: The reason swans are able to float on water
+    MessageTH: เหตุผลที่หงส์ไม่จมน้ำน่ะ
+    MessageTW: 前陣子才得知，天鵝之所以不會沉入水中
+    MessageGroupId: 200090250
     Id: 200090360
     CharacterId: 20009
     MessageCondition: Answer
@@ -761,13 +767,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 백조가 물에 가라앉지 않는 이유는
-    MessageJP: この間知ったんだけど、実際の白鳥が水に沈まないのって
-    MessageCN: 其实我也是前阵子才知道，天鹅实际上是不会沉到水里的
-    MessageEN: The reason swans are able to float on water
-    MessageTH: เหตุผลที่หงส์ไม่จมน้ำน่ะ
-    MessageTW: 前陣子才得知，天鵝之所以不會沉入水中
-  - MessageGroupId: 200090260
+  - MessageKR: 깃털에 묻은 기름 때문이야.
+    MessageJP: 羽根に油を付けたりしてるからなんだって
+    MessageCN: 因为天鹅羽毛上附有油脂
+    MessageEN: is because of the oil on their feathers.
+    MessageTH: "เพราะว่าขนของมันมีน้ำมันเคลือบ
+
+      เอาไว้ยังไงล่ะ"
+    MessageTW: 是因為羽毛上塗了油
+    MessageGroupId: 200090260
     Id: 200090370
     CharacterId: 20009
     MessageCondition: Answer
@@ -779,15 +787,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 깃털에 묻은 기름 때문이야.
-    MessageJP: 羽根に油を付けたりしてるからなんだって
-    MessageCN: 因为天鹅羽毛上附有油脂
-    MessageEN: is because of the oil on their feathers.
-    MessageTH: "เพราะว่าขนของมันมีน้ำมันเคลือบ
-
-      เอาไว้ยังไงล่ะ"
-    MessageTW: 是因為羽毛上塗了油
-  - MessageGroupId: 200090270
+  - MessageKR: …….
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: "..."
+    MessageTH: "..."
+    MessageTW: ……
+    MessageGroupId: 200090270
     Id: 200090380
     CharacterId: 20009
     MessageCondition: Feedback
@@ -799,13 +805,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: …….
+  - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
     MessageEN: "..."
     MessageTH: "..."
     MessageTW: ……
-  - MessageGroupId: 200090280
+    MessageGroupId: 200090280
     Id: 200090390
     CharacterId: 20009
     MessageCondition: FavorRankUp
@@ -817,13 +823,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: …….
-    MessageJP: ……
-    MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "..."
-    MessageTW: ……
-  - MessageGroupId: 200090290
+  - MessageKR: 체리노?
+    MessageJP: チェリノ？
+    MessageCN: 切里诺？
+    MessageEN: Cherino?
+    MessageTH: เชริโน่?
+    MessageTW: 潔莉諾？
+    MessageGroupId: 200090290
     Id: 200090400
     CharacterId: 20009
     MessageCondition: Answer
@@ -835,13 +841,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 체리노?
-    MessageJP: チェリノ？
-    MessageCN: 切里诺？
-    MessageEN: Cherino?
-    MessageTH: เชริโน่?
-    MessageTW: 潔莉諾？
-  - MessageGroupId: 200090300
+  - MessageKR: 아니. 이 몸은 체리노가 아니라네, 콤라드.
+    MessageJP: 今のおいらをチェリノと呼んでくれるな、カムラッド……
+    MessageCN: 现在别叫咱切里诺，同志……
+    MessageEN: No, Comrade, I am not Cherino.
+    MessageTH: เปล่าหรอก ตัวเราน่ะไม่ใช่เชริโน่หรอกนะ สหาย
+    MessageTW: 現在別叫我潔莉諾，同志……
+    MessageGroupId: 200090300
     Id: 200090410
     CharacterId: 20009
     MessageCondition: Feedback
@@ -853,25 +859,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니. 이 몸은 체리노가 아니라네, 콤라드.
-    MessageJP: 今のおいらをチェリノと呼んでくれるな、カムラッド……
-    MessageCN: 现在别叫咱切里诺，同志……
-    MessageEN: No, Comrade, I am not Cherino.
-    MessageTH: เปล่าหรอก ตัวเราน่ะไม่ใช่เชริโน่หรอกนะ สหาย
-    MessageTW: 現在別叫我潔莉諾，同志……
-  - MessageGroupId: 200090300
-    Id: 200090420
-    CharacterId: 20009
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 200090310
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 수염의 권위를 갖지 못한 이 몸은 위대한 서기장이자 학생회장인 체리노가 될 수 없어.
+  - MessageKR: 수염의 권위를 갖지 못한 이 몸은 위대한 서기장이자 학생회장인 체리노가 될 수 없어.
     MessageJP: 髭の権威が無いおいらは、偉大なる指導者であるチェリノとは言えない……
     MessageCN: 失去了胡子的权威的咱，已经不配再被称为伟大的领导者切里诺了……
     MessageEN:
@@ -885,7 +873,25 @@ content:
 
       เชริโน่ได้หรอก"
     MessageTW: 沒有鬍子的權威的咱，不能被稱呼為偉大的領袖潔莉諾……
-  - MessageGroupId: 200090310
+    MessageGroupId: 200090300
+    Id: 200090420
+    CharacterId: 20009
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200090310
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그저 평범한 붉은겨울의 학생일 뿐…….
+    MessageJP: レッドウィンター連邦学園における、ただのいち生徒のようなもの……
+    MessageCN: 仅仅是红冬联邦学园中的，区区一员学生罢了……
+    MessageEN: I'm just an ordinary student of Red Winter...
+    MessageTH: เราคงจะเป็นแค่นักเรียนธรรมดาๆ ของสหภาพเรดวินเทอร์เท่านั้น...
+    MessageTW: 只不過是赤冬聯合學園的學生之一……
+    MessageGroupId: 200090310
     Id: 200090430
     CharacterId: 20009
     MessageCondition: Feedback
@@ -897,13 +903,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그저 평범한 붉은겨울의 학생일 뿐…….
-    MessageJP: レッドウィンター連邦学園における、ただのいち生徒のようなもの……
-    MessageCN: 仅仅是红冬联邦学园中的，区区一员学生罢了……
-    MessageEN: I'm just an ordinary student of Red Winter...
-    MessageTH: เราคงจะเป็นแค่นักเรียนธรรมดาๆ ของสหภาพเรดวินเทอร์เท่านั้น...
-    MessageTW: 只不過是赤冬聯合學園的學生之一……
-  - MessageGroupId: 200090320
+  - MessageKR: 수염은 아직도 세탁 중인 거야?
+    MessageJP: あの髭はまだ洗濯中？
+    MessageCN: 那个胡子还没洗干净吗？
+    MessageEN: Are you still washing your mustache?
+    MessageTH: หนวดยังซักไม่เสร็จเหรอ?
+    MessageTW: 那個鬍子還在洗嗎？
+    MessageGroupId: 200090320
     Id: 200090440
     CharacterId: 20009
     MessageCondition: Answer
@@ -915,13 +921,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수염은 아직도 세탁 중인 거야?
-    MessageJP: あの髭はまだ洗濯中？
-    MessageCN: 那个胡子还没洗干净吗？
-    MessageEN: Are you still washing your mustache?
-    MessageTH: หนวดยังซักไม่เสร็จเหรอ?
-    MessageTW: 那個鬍子還在洗嗎？
-  - MessageGroupId: 200090330
+  - MessageKR: 아니. 깨끗이 씻어보려 했지만, 토모에의 말로는 수염에 기름때가 깊이 스며들어 새것을 사는 게 좋을 정도라는군.
+    MessageJP: それがトモエ曰く、油が染み込み過ぎていて新しい物を買った方が良いと
+    MessageCN: 巴说，因为油都渗进胡子里去了，所以买个新的比较好
+    MessageEN:
+      No, I tried to wash it clean, but according to Tomoe, the grease seeped
+      so deeply into the mustache it's better to just buy a new one.
+    MessageTH:
+      ยังหรอก เราพยายามจะซักให้สะอาดแล้ว แต่โทโมเอะบอกว่าน้ำมันซึมเข้าไปในหนวดเยอะมาก
+      เพราะงั้นให้เราซื้ออันใหม่แทนจะดีกว่าน่ะ
+    MessageTW: 智惠說那個油滲得太深，最好是買新的
+    MessageGroupId: 200090330
     Id: 200090450
     CharacterId: 20009
     MessageCondition: Feedback
@@ -933,17 +943,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니. 깨끗이 씻어보려 했지만, 토모에의 말로는 수염에 기름때가 깊이 스며들어 새것을 사는 게 좋을 정도라는군.
-    MessageJP: それがトモエ曰く、油が染み込み過ぎていて新しい物を買った方が良いと
-    MessageCN: 巴说，因为油都渗进胡子里去了，所以买个新的比较好
+  - MessageKR: 하지만 새 수염을 사도 언제 도착할지 알 수 없는 노릇이고…….
+    MessageJP: しかし新しい髭を買ったとしても、それがいつ届くかも分からないし……
+    MessageCN: 但是即便定了新的胡子，也不知道什么时候才能送到……
     MessageEN:
-      No, I tried to wash it clean, but according to Tomoe, the grease seeped
-      so deeply into the mustache it's better to just buy a new one.
-    MessageTH:
-      ยังหรอก เราพยายามจะซักให้สะอาดแล้ว แต่โทโมเอะบอกว่าน้ำมันซึมเข้าไปในหนวดเยอะมาก
-      เพราะงั้นให้เราซื้ออันใหม่แทนจะดีกว่าน่ะ
-    MessageTW: 智惠說那個油滲得太深，最好是買新的
-  - MessageGroupId: 200090330
+      But even if I buy a new mustache, I don't know when it will arrive
+      and...
+    MessageTH: แต่ถึงเราจะซื้อหนวดอันใหม่ ก็ไม่รู้ว่าจะส่งมาถึงเมื่อไหร่...
+    MessageTW: 但即使買了新鬍子，也不知道什麼時候會送到……
+    MessageGroupId: 200090330
     Id: 200090460
     CharacterId: 20009
     MessageCondition: Feedback
@@ -955,15 +963,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 새 수염을 사도 언제 도착할지 알 수 없는 노릇이고…….
-    MessageJP: しかし新しい髭を買ったとしても、それがいつ届くかも分からないし……
-    MessageCN: 但是即便定了新的胡子，也不知道什么时候才能送到……
-    MessageEN:
-      But even if I buy a new mustache, I don't know when it will arrive
-      and...
-    MessageTH: แต่ถึงเราจะซื้อหนวดอันใหม่ ก็ไม่รู้ว่าจะส่งมาถึงเมื่อไหร่...
-    MessageTW: 但即使買了新鬍子，也不知道什麼時候會送到……
-  - MessageGroupId: 200090330
+  - MessageKR: 권위를 얻지 못하니 모든 것이 허무하고 우울하구나.
+    MessageJP: 権威が無いということが、これほどまでに空しくて憂鬱だとは……
+    MessageCN: 没有了权威，居然的我如此空虚且忧郁……
+    MessageEN: Without authority, everything is futile and depressing.
+    MessageTH: หากปราศจากอำนาจ ทุกอย่างก็คงไร้ความหมายและน่าเศร้าน่าดู
+    MessageTW: 沒有了權威，竟然如此空虛憂鬱……
+    MessageGroupId: 200090330
     Id: 200090470
     CharacterId: 20009
     MessageCondition: Feedback
@@ -975,13 +981,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 권위를 얻지 못하니 모든 것이 허무하고 우울하구나.
-    MessageJP: 権威が無いということが、これほどまでに空しくて憂鬱だとは……
-    MessageCN: 没有了权威，居然的我如此空虚且忧郁……
-    MessageEN: Without authority, everything is futile and depressing.
-    MessageTH: หากปราศจากอำนาจ ทุกอย่างก็คงไร้ความหมายและน่าเศร้าน่าดู
-    MessageTW: 沒有了權威，竟然如此空虛憂鬱……
-  - MessageGroupId: 200090340
+  - MessageKR: 목욕을 하면 기분이 좋아질지도 몰라.
+    MessageJP: 気分転換に、どこかの温泉に行くとかどう？
+    MessageCN: 去泡个温泉转换下心情怎么样？
+    MessageEN: Taking a bath might make you feel better.
+    MessageTH: การอาบน้ำอาจจะช่วยทำให้รู้สึกดีขึ้นก็ได้
+    MessageTW: 轉換一下心情，去泡個溫泉怎麼樣？
+    MessageGroupId: 200090340
     Id: 200090480
     CharacterId: 20009
     MessageCondition: Answer
@@ -993,13 +999,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 목욕을 하면 기분이 좋아질지도 몰라.
-    MessageJP: 気分転換に、どこかの温泉に行くとかどう？
-    MessageCN: 去泡个温泉转换下心情怎么样？
-    MessageEN: Taking a bath might make you feel better.
-    MessageTH: การอาบน้ำอาจจะช่วยทำให้รู้สึกดีขึ้นก็ได้
-    MessageTW: 轉換一下心情，去泡個溫泉怎麼樣？
-  - MessageGroupId: 200090350
+  - MessageKR: 이 몸에게 목욕은 필요 없느니라.
+    MessageJP: 今はそんな気分じゃない……
+    MessageCN: 我现在没那个心情……
+    MessageEN: This body of mine does not need a bath.
+    MessageTH: เราไม่จำเป็นต้องอาบน้ำหรอก
+    MessageTW: 現在沒有那種心情……
+    MessageGroupId: 200090350
     Id: 200090490
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1011,13 +1017,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 몸에게 목욕은 필요 없느니라.
-    MessageJP: 今はそんな気分じゃない……
-    MessageCN: 我现在没那个心情……
-    MessageEN: This body of mine does not need a bath.
-    MessageTH: เราไม่จำเป็นต้องอาบน้ำหรอก
-    MessageTW: 現在沒有那種心情……
-  - MessageGroupId: 200090350
+  - MessageKR: 나 참. 왜 그렇게 다들 뜨거운 물에 몸을 씻는 것을 좋아하는지…….
+    MessageJP: 全く、どうしてみんな熱いお湯で身体を洗うのがそんなに好きなのか……
+    MessageCN: 真是的，为什么大家都这么喜欢用热水洗身体呢……
+    MessageEN:
+      Seriously, I don't understand why everyone loves to take a bath in
+      hot water...
+    MessageTH: จริงๆ เลย ทำไมใครๆ ถึงได้ชอบการเอาน้ำร้อนๆ มาราดตัวกันนะ...
+    MessageTW: 真是的，為什麼大家那麼喜歡用熱水洗身體呢……
+    MessageGroupId: 200090350
     Id: 200090500
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1029,15 +1037,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나 참. 왜 그렇게 다들 뜨거운 물에 몸을 씻는 것을 좋아하는지…….
-    MessageJP: 全く、どうしてみんな熱いお湯で身体を洗うのがそんなに好きなのか……
-    MessageCN: 真是的，为什么大家都这么喜欢用热水洗身体呢……
-    MessageEN:
-      Seriously, I don't understand why everyone loves to take a bath in
-      hot water...
-    MessageTH: จริงๆ เลย ทำไมใครๆ ถึงได้ชอบการเอาน้ำร้อนๆ มาราดตัวกันนะ...
-    MessageTW: 真是的，為什麼大家那麼喜歡用熱水洗身體呢……
-  - MessageGroupId: 200090360
+  - MessageKR: 목욕이 끝나면 후르츠 밀크를 사줄게.
+    MessageJP: お風呂から上がったら、フルーツ牛乳買ってあげる
+    MessageCN: 泡完给你买水果牛奶
+    MessageEN: I'll buy you fruit milk after the bath.
+    MessageTH: "ถ้าอาบน้ำเสร็จแล้ว เดี๋ยวครูจะซื้อ
+
+      นมรสผลไม้ให้"
+    MessageTW: 洗完澡給你買水果牛奶
+    MessageGroupId: 200090360
     Id: 200090510
     CharacterId: 20009
     MessageCondition: Answer
@@ -1049,15 +1057,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 목욕이 끝나면 후르츠 밀크를 사줄게.
-    MessageJP: お風呂から上がったら、フルーツ牛乳買ってあげる
-    MessageCN: 泡完给你买水果牛奶
-    MessageEN: I'll buy you fruit milk after the bath.
-    MessageTH: "ถ้าอาบน้ำเสร็จแล้ว เดี๋ยวครูจะซื้อ
-
-      นมรสผลไม้ให้"
-    MessageTW: 洗完澡給你買水果牛奶
-  - MessageGroupId: 200090370
+  - MessageKR: 바로 탕으로 가겠네, 콤라드.
+    MessageJP: よし、すぐに行くぞカムラッド
+    MessageCN: 好，马上走吧同志
+    MessageEN: I'll be there in a jiffy, Comrade.
+    MessageTH: ถ้างั้นเราจะไปที่ห้องอาบน้ำก่อนนะ สหาย
+    MessageTW: 好，馬上過去，同志
+    MessageGroupId: 200090370
     Id: 200090520
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1069,13 +1075,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 바로 탕으로 가겠네, 콤라드.
-    MessageJP: よし、すぐに行くぞカムラッド
-    MessageCN: 好，马上走吧同志
-    MessageEN: I'll be there in a jiffy, Comrade.
-    MessageTH: ถ้างั้นเราจะไปที่ห้องอาบน้ำก่อนนะ สหาย
-    MessageTW: 好，馬上過去，同志
-  - MessageGroupId: 200090380
+  - MessageKR: 콤라드
+    MessageJP: カムラッド
+    MessageCN: 同志
+    MessageEN: Comrade.
+    MessageTH: สหาย
+    MessageTW: 同志
+    MessageGroupId: 200090380
     Id: 200090530
     CharacterId: 20009
     MessageCondition: FavorRankUp
@@ -1087,13 +1093,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드
-    MessageJP: カムラッド
-    MessageCN: 同志
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090390
+  - MessageKR: 콤라드!
+    MessageJP: カムラッド！？
+    MessageCN: 同志！？
+    MessageEN: Comrade!
+    MessageTH: สหาย!
+    MessageTW: 同志！？
+    MessageGroupId: 200090390
     Id: 200090540
     CharacterId: 20009
     MessageCondition: None
@@ -1105,13 +1111,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드!
-    MessageJP: カムラッド！？
-    MessageCN: 同志！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090400
+  - MessageKR: 무슨 일이야, 체리노?
+    MessageJP: チェリノ？どうかした？
+    MessageCN: 切里诺？怎么了？
+    MessageEN: What's wrong, Cherino?
+    MessageTH: มีอะไรเหรอ เชริโน่?
+    MessageTW: 潔莉諾？怎麼了嗎？
+    MessageGroupId: 200090400
     Id: 200090550
     CharacterId: 20009
     MessageCondition: Answer
@@ -1123,13 +1129,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일이야, 체리노?
-    MessageJP: チェリノ？どうかした？
-    MessageCN: 切里诺？怎么了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090410
+  - MessageKR: 으음. 무어라 이야기해야 좋을까.
+    MessageJP: おお、いたか。うむ、何から話したものか……
+    MessageCN: 哦哦，同志原来在啊。嗯，该从何说起呢……
+    MessageEN: Hmm. How should I put this...
+    MessageTH: อืม... จะว่ายังไงดีละ
+    MessageTW: 哦哦，你在呀。唔呣，該從哪說起好呢……
+    MessageGroupId: 200090410
     Id: 200090560
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1141,13 +1147,19 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음. 무어라 이야기해야 좋을까.
-    MessageJP: おお、いたか。うむ、何から話したものか……
-    MessageCN: 哦哦，同志原来在啊。嗯，该从何说起呢……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090420
+  - MessageKR: 전산국 녀석들의 실수로 약간 귀찮은 일이 발생했는데……
+    MessageJP: 電算局のミスのせいで、ちょっと面倒なことになったのだ
+    MessageCN: 因为电算局的失误，出了点麻烦事
+    MessageEN:
+      There's been, shall I say, a slight complication, due to a misstep,
+      perpetrated by the Computer Science Bureau...
+    MessageTH: "พวกสหายที่สำนักทะเบียนข้อมูล
+
+      เกิดทำเรื่องผิดพลาดจนเกิดเรื่อง
+
+      น่ารำคาญขึ้น..."
+    MessageTW: 因為電算局的失誤，發生了一點麻煩……
+    MessageGroupId: 200090420
     Id: 200090570
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1159,13 +1171,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전산국 녀석들의 실수로 약간 귀찮은 일이 발생했는데……
-    MessageJP: 電算局のミスのせいで、ちょっと面倒なことになったのだ
-    MessageCN: 因为电算局的失误，出了点麻烦事
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090430
+  - MessageKR: 본래 규정대로라면 전원을 숙청해야 마땅하지만
+    MessageJP: 本来なら規定通りに全員粛清すべきだが
+    MessageCN: 本来按照规定应该把他们全员肃清的
+    MessageEN: As stated in the rules, of course, all of their members should be purged.
+    MessageTH: "ถ้าตามกฎเดิมแล้วจะต้องกวาดล้าง
+
+      สหายพวกนั้นทั้งหมด"
+    MessageTW: 雖然本來應該依照規定肅清所有人的
+    MessageGroupId: 200090430
     Id: 200090580
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1177,13 +1191,20 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 본래 규정대로라면 전원을 숙청해야 마땅하지만
-    MessageJP: 本来なら規定通りに全員粛清すべきだが
-    MessageCN: 本来按照规定应该把他们全员肃清的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090430
+  - MessageKR: 토모에의 간언도 있고, 결과적으로는 붉은겨울 학원의 재정에 도움이 되었으니
+    MessageJP: 結果的にレッドウィンターの財政に役立ったからな
+    MessageCN: 但从结果上看，他们的失误反而对红冬的财政有正面影响
+    MessageEN:
+      However, in consideration of certain remarks that Tomoe made, as well
+      as the fact that said complication ultimately became a financial boon to Red
+      Winter Academy...
+    MessageTH: "แต่โทโมเอะคัดค้านและบอกว่าผลที่
+
+      เกิดขึ้นจากความผิดพลาดนั่นช่วยทาง
+
+      การเงินของสหภาพเรดวินเทอร์ไว้"
+    MessageTW: 但從結果上來說，對赤冬學園的經濟狀況有了幫助
+    MessageGroupId: 200090430
     Id: 200090590
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1195,13 +1216,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 토모에의 간언도 있고, 결과적으로는 붉은겨울 학원의 재정에 도움이 되었으니
-    MessageJP: 結果的にレッドウィンターの財政に役立ったからな
-    MessageCN: 但从结果上看，他们的失误反而对红冬的财政有正面影响
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090430
+  - MessageKR: 이번만큼은 근신 처분으로 넘어가 주기로 했다네.
+    MessageJP: トモエの助言もあって、今回だけは処分を免除することにしてやったんだ
+    MessageCN: 巴也替电算局那边说了好话，于是咱这次就免除处分吧
+    MessageEN:
+      It's been decided that an exception will be made, and they'll be put
+      on probation instead.
+    MessageTH: เราเลยจะหลับตาข้างหนึ่งแล้วปล่อยๆ ไป
+    MessageTW: 加上智惠也替他們求情，所以這次就免除了他們的處分
+    MessageGroupId: 200090430
     Id: 200090600
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1213,13 +1236,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번만큼은 근신 처분으로 넘어가 주기로 했다네.
-    MessageJP: トモエの助言もあって、今回だけは処分を免除することにしてやったんだ
-    MessageCN: 巴也替电算局那边说了好话，于是咱这次就免除处分吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090440
+  - MessageKR: 점점 더 영문을 모르겠는데……
+    MessageJP: いまいち話が掴めてないんだけど……
+    MessageCN: 我现在有点跟不上话题……
+    MessageEN: Now I really have no clue what you're talking about...
+    MessageTH: ครูงงไปหมดแล้ว...
+    MessageTW: 我好像沒跟上話題……
+    MessageGroupId: 200090440
     Id: 200090610
     CharacterId: 20009
     MessageCondition: Answer
@@ -1231,13 +1254,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 점점 더 영문을 모르겠는데……
-    MessageJP: いまいち話が掴めてないんだけど……
-    MessageCN: 我现在有点跟不上话题……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090450
+  - MessageKR: 으으음
+    MessageJP: むぅ
+    MessageCN: 呣
+    MessageEN: Hm...
+    MessageTH: อืมม...
+    MessageTW: 唔
+    MessageGroupId: 200090450
     Id: 200090620
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1249,13 +1272,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으으음
-    MessageJP: むぅ
-    MessageCN: 呣
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090460
+  - MessageKR: 일단 이 몸이 머무르고 있는 온천장으로 오게나.
+    MessageJP: とりあえず、おいらの温泉郷に来てくれ！
+    MessageCN: 总之，同志来一趟咱的温泉乡！
+    MessageEN: Just come join me at the hot springs resort.
+    MessageTH: "ก่อนอื่นสหายรีบมาที่ออนเซ็นที่เรา
+
+      อยู่ก่อนก็แล้วกัน"
+    MessageTW: 總之，到咱在的溫泉浴場來吧！
+    MessageGroupId: 200090460
     Id: 200090630
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1267,13 +1292,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일단 이 몸이 머무르고 있는 온천장으로 오게나.
-    MessageJP: とりあえず、おいらの温泉郷に来てくれ！
-    MessageCN: 总之，同志来一趟咱的温泉乡！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200090460
+  - MessageKR: 백 번 듣는 것보다 한 번 보는 게 낫다는 말도 있으니.
+    MessageJP: 百聞は一見に如かず！
+    MessageCN: 百闻不如一见！
+    MessageEN:
+      Perhaps it will be easier for you to see for yourself, since explaining
+      isn't working.
+    MessageTH: มาเห็นด้วยตาตัวเองน่าจะดีที่สุดน่ะ
+    MessageTW: 百聞不如一見！
+    MessageGroupId: 200090460
     Id: 200090640
     CharacterId: 20009
     MessageCondition: Feedback
@@ -1285,9 +1312,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 백 번 듣는 것보다 한 번 보는 게 낫다는 말도 있으니.
-    MessageJP: 百聞は一見に如かず！
-    MessageCN: 百闻不如一见！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

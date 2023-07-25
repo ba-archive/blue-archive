@@ -1,44 +1,50 @@
 CharacterId: 10016
 translator: 罐子
 title:
-  - GroupId: 1001602
-    FavorScheduleId: 100162
-    CharacterId: 10016
-    TextJp: 締め切りですよ、先生
+  - TextJp: 締め切りですよ、先生
     TextCn: 是截止时间哦，老师
     TextKr: 마감이에요. 선생님.
     TextEn: The Deadline's Approaching, Sensei
     TextTh: หมดเวลาแล้วล่ะค่ะ คุณครู
     TextTw: 是截止時間唷，老師
-  - GroupId: 1001603
-    FavorScheduleId: 100163
+    GroupId: 1001602
+    FavorScheduleId: 100162
     CharacterId: 10016
-    TextJp: 展示会ですよ、先生
+  - TextJp: 展示会ですよ、先生
     TextCn: 是展览会哦，老师
     TextKr: 현장실습이에요. 선생님.
     TextEn: It's Field Training, Sensei
     TextTh: นี่คือการฝึกภาคสนามค่ะ คุณครู
     TextTw: 是展覽會唷，老師
-  - GroupId: 1001605
-    FavorScheduleId: 100165
+    GroupId: 1001603
+    FavorScheduleId: 100163
     CharacterId: 10016
-    TextJp: 初回限定盤ですよ、先生
+  - TextJp: 初回限定盤ですよ、先生
     TextCn: 是首发限定盘哦，老师
     TextKr: 초회한정판이에요. 선생님.
     TextEn: It's Limited Edition, Sensei
     TextTh: รุ่นลิมิเต็ดรุ่นแรกเลยค่ะ คุณครู
-    TextTw: 是首發限定版唷，老師。
-  - GroupId: 1001606
-    FavorScheduleId: 100166
+    TextTw: 是首發限定版唷，老師
+    GroupId: 1001605
+    FavorScheduleId: 100165
     CharacterId: 10016
-    TextJp: 大切な思い出です、先生
+  - TextJp: 大切な思い出です、先生
     TextCn: 是宝贵的回忆哦，老师
     TextKr: 반짝이는 추억이에요. 선생님.
     TextEn: It's a Sparkling Memory, Sensei
     TextTh: ความทรงจำที่เปล่งประกายงดงามค่ะ คุณครู
     TextTw: 是重要的回憶，老師
+    GroupId: 1001606
+    FavorScheduleId: 100166
+    CharacterId: 10016
 content:
-  - MessageGroupId: 100160010
+  - MessageKR: 선생님, 혹시 시간 있으신가요?
+    MessageJP: 先生、今日お時間ありますか？
+    MessageCN: 老师，您今天有时间吗？
+    MessageEN: Do you have a moment, Sensei?
+    MessageTH: คุณครูพอมีเวลาสักครู่ไหมคะ?
+    MessageTW: 老師，你今天有時間嗎？
+    MessageGroupId: 100160010
     Id: 100160010
     CharacterId: 10016
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 혹시 시간 있으신가요?
-    MessageJP: 先生、今日お時間ありますか？
-    MessageCN: 老师，您今天有时间吗？
-    MessageEN: Do you have a moment, Sensei?
-    MessageTH: คุณครูพอมีเวลาสักครู่ไหมคะ?
-    MessageTW: 老師，你今天有時間嗎？
-  - MessageGroupId: 100160020
+  - MessageKR: 그게 다른 게 아니라.
+    MessageJP: 実はその、
+    MessageCN: 其实那个，
+    MessageEN: It's just...
+    MessageTH: ก็คือว่า...
+    MessageTW: 事實上，那個
+    MessageGroupId: 100160020
     Id: 100160020
     CharacterId: 10016
     MessageCondition: None
@@ -68,13 +74,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게 다른 게 아니라.
-    MessageJP: 実はその、
-    MessageCN: 其实那个，
-    MessageEN: It's just...
-    MessageTH: ก็คือว่า...
-    MessageTW: 事實上，那個
-  - MessageGroupId: 100160020
+  - MessageKR: 상담하고 싶은 게 있는데요……
+    MessageJP: 相談したいことがありまして……
+    MessageCN: 我有件事想和老师商量……
+    MessageEN: I have something I need to talk to you about...
+    MessageTH: "ฉันมีเรื่องอยากจะปรึกษาคุณครูสัก
+
+      หน่อยค่ะ"
+    MessageTW: 有想要商量的事情……
+    MessageGroupId: 100160020
     Id: 100160030
     CharacterId: 10016
     MessageCondition: None
@@ -86,15 +94,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 상담하고 싶은 게 있는데요……
-    MessageJP: 相談したいことがありまして……
-    MessageCN: 我有件事想和老师商量……
-    MessageEN: I have something I need to talk to you about...
-    MessageTH: "ฉันมีเรื่องอยากจะปรึกษาคุณครูสัก
-
-      หน่อยค่ะ"
-    MessageTW: 有想要商量的事情……
-  - MessageGroupId: 100160030
+  - MessageKR: 상담?
+    MessageJP: 相談したいこと？
+    MessageCN: 绿有事想商量？
+    MessageEN: Huh? Talk to me?
+    MessageTH: ปรึกษาเหรอ?
+    MessageTW: 想要商量的事情？
+    MessageGroupId: 100160030
     Id: 100160040
     CharacterId: 10016
     MessageCondition: Answer
@@ -106,13 +112,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 상담?
-    MessageJP: 相談したいこと？
-    MessageCN: 绿有事想商量？
-    MessageEN: Huh? Talk to me?
-    MessageTH: ปรึกษาเหรอ?
-    MessageTW: 想要商量的事情？
-  - MessageGroupId: 100160040
+  - MessageKR: 네, 넷! 저희 동아리실에서 기다리고 있을게요!
+    MessageJP: はい。私は今日ずっと部室にいますので、よろしければお願いします！
+    MessageCN: 是的。我今天一整天都在社团活动室，如果老师方便的话就拜托了！
+    MessageEN: Yeah! I'll be waiting for you in our club room!
+    MessageTH: คะ...ค่ะ! ฉันจะรออยู่ที่ห้องชมรมนะคะ!
+    MessageTW: 是的。我今天都會在社團教室，如果可以的話就麻煩老師了！
+    MessageGroupId: 100160040
     Id: 100160050
     CharacterId: 10016
     MessageCondition: Feedback
@@ -124,13 +130,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네, 넷! 저희 동아리실에서 기다리고 있을게요!
-    MessageJP: はい。私は今日ずっと部室にいますので、よろしければお願いします！
-    MessageCN: 是的。我今天一整天都在社团活动室，如果老师方便的话就拜托了！
-    MessageEN: Yeah! I'll be waiting for you in our club room!
-    MessageTH: คะ...ค่ะ! ฉันจะรออยู่ที่ห้องชมรมนะคะ!
-    MessageTW: 是的。我今天都會在社團教室，如果可以的話就麻煩老師了！
-  - MessageGroupId: 100160050
+  - MessageKR: ……죄송합니다.
+    MessageJP: ……すみません
+    MessageCN: ……非常对不起
+    MessageEN: Sorry...
+    MessageTH: ขอโทษด้วยนะคะ...
+    MessageTW: ……對不起
+    MessageGroupId: 100160050
     Id: 100160060
     CharacterId: 10016
     MessageCondition: None
@@ -142,13 +148,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……죄송합니다.
-    MessageJP: ……すみません
-    MessageCN: ……非常对不起
-    MessageEN: Sorry...
-    MessageTH: ขอโทษด้วยนะคะ...
-    MessageTW: ……對不起
-  - MessageGroupId: 100160050
+  - MessageKR: 괜히 게임으로 열이 오른 탓에 선생님에게 엄청난 민폐를……
+    MessageJP: つい熱くなってしまい、先生にご迷惑を……
+    MessageCN: 不知不觉就沉迷进去了，给老师添麻烦了……
+    MessageEN:
+      I'm just so obsessed with this game... I didn't realize I was putting
+      you through so much, Sensei...
+    MessageTH: "ความหลงใหลในเกมของฉัน ทำให้
+
+      คุณครูลำบาก..."
+    MessageTW: 不知不覺就一頭熱，給老師添麻煩了……
+    MessageGroupId: 100160050
     Id: 100160070
     CharacterId: 10016
     MessageCondition: None
@@ -160,17 +170,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜히 게임으로 열이 오른 탓에 선생님에게 엄청난 민폐를……
-    MessageJP: つい熱くなってしまい、先生にご迷惑を……
-    MessageCN: 不知不觉就沉迷进去了，给老师添麻烦了……
-    MessageEN:
-      I'm just so obsessed with this game... I didn't realize I was putting
-      you through so much, Sensei...
-    MessageTH: "ความหลงใหลในเกมของฉัน ทำให้
-
-      คุณครูลำบาก..."
-    MessageTW: 不知不覺就一頭熱，給老師添麻煩了……
-  - MessageGroupId: 100160060
+  - MessageKR: 미도리가 가진 의외의 일면을 발견했어……
+    MessageJP: ミドリの新たな一面が明らかに……
+    MessageCN: 发现了绿的另一面……
+    MessageEN: I saw a surprising new side of you, Midori...
+    MessageTH: ครูเจอด้านที่น่าทึ่งของมิโดริต่างหาก
+    MessageTW: 發現了綠的另外一面……
+    MessageGroupId: 100160060
     Id: 100160080
     CharacterId: 10016
     MessageCondition: Answer
@@ -182,13 +188,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 미도리가 가진 의외의 일면을 발견했어……
-    MessageJP: ミドリの新たな一面が明らかに……
-    MessageCN: 发现了绿的另一面……
-    MessageEN: I saw a surprising new side of you, Midori...
-    MessageTH: ครูเจอด้านที่น่าทึ่งของมิโดริต่างหาก
-    MessageTW: 發現了綠的另外一面……
-  - MessageGroupId: 100160060
+  - MessageKR: 괜찮아. 무척 재미있었으니까.
+    MessageJP: 大丈夫、すごく楽しかったよ
+    MessageCN: 没关系，我玩得很开心哦
+    MessageEN: It's okay. It was a lot of fun!
+    MessageTH: ไม่เป็นไรหรอก ครูสนุกมากๆ เลยล่ะ
+    MessageTW: 沒關係，我很開心
+    MessageGroupId: 100160060
     Id: 100160090
     CharacterId: 10016
     MessageCondition: Answer
@@ -200,13 +206,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮아. 무척 재미있었으니까.
-    MessageJP: 大丈夫、すごく楽しかったよ
-    MessageCN: 没关系，我玩得很开心哦
-    MessageEN: It's okay. It was a lot of fun!
-    MessageTH: ไม่เป็นไรหรอก ครูสนุกมากๆ เลยล่ะ
-    MessageTW: 沒關係，我很開心
-  - MessageGroupId: 100160070
+  - MessageKR: 으, 으으…… 쥐구멍이 있다면 숨고 싶어요……
+    MessageJP: う、うぅ……穴があったら入りたいです……
+    MessageCN: 呜，呜呜……要是有地缝的话好想钻进去……
+    MessageEN: Agh... I just wanna hide somewhere...
+    MessageTH: "อะ... อะ... อายจนอยากจะมุดดินหนี
+
+      เลยจริงๆ ค่ะ"
+    MessageTW: 唔，唔……有洞的話好想鑽進去……
+    MessageGroupId: 100160070
     Id: 100160100
     CharacterId: 10016
     MessageCondition: Feedback
@@ -218,15 +226,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으, 으으…… 쥐구멍이 있다면 숨고 싶어요……
-    MessageJP: う、うぅ……穴があったら入りたいです……
-    MessageCN: 呜，呜呜……要是有地缝的话好想钻进去……
-    MessageEN: Agh... I just wanna hide somewhere...
-    MessageTH: "อะ... อะ... อายจนอยากจะมุดดินหนี
+  - MessageKR: 다음번엔 대전 게임이 아닌 쪽으로…… 부탁드릴게요……
+    MessageJP: 次は対戦型ではないゲームで、お願いします……
+    MessageCN: 下次就，玩点非对战类型的游戏吧……
+    MessageEN: Next time, can we play something that's not so competitive...?
+    MessageTH: "ถ้าอย่างนั้นคราวหน้า... คุณครูช่วย
 
-      เลยจริงๆ ค่ะ"
-    MessageTW: 唔，唔……有洞的話好想鑽進去……
-  - MessageGroupId: 100160070
+      มองด้านอื่นที่ไม่ใช่... เกมด้วยนะคะ"
+    MessageTW: 下次會是對戰類型之外的遊戲，再拜託老師了……
+    MessageGroupId: 100160070
     Id: 100160110
     CharacterId: 10016
     MessageCondition: Feedback
@@ -238,15 +246,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음번엔 대전 게임이 아닌 쪽으로…… 부탁드릴게요……
-    MessageJP: 次は対戦型ではないゲームで、お願いします……
-    MessageCN: 下次就，玩点非对战类型的游戏吧……
-    MessageEN: Next time, can we play something that's not so competitive...?
-    MessageTH: "ถ้าอย่างนั้นคราวหน้า... คุณครูช่วย
+  - MessageKR: 선생님, 이번에 밀레니엄 게임 아트워크 전시회가 열린대요.
+    MessageJP: 先生。今度、ミレニアムでゲームアート展示会が開かれるそうです
+    MessageCN: 老师。我听说千年这次好像有一个游戏艺术展览会
+    MessageEN: The Millennium game artwork exhibition is opening, Sensei!
+    MessageTH: "คุณครูคะ ได้ยินว่าจะมีงานนิทรรศการ
 
-      มองด้านอื่นที่ไม่ใช่... เกมด้วยนะคะ"
-    MessageTW: 下次會是對戰類型之外的遊戲，再拜託老師了……
-  - MessageGroupId: 100160080
+      แสดงอาร์ตเวิร์กเกมของมิลเลเนียมค่ะ"
+    MessageTW: 老師。聽說這次在千年將舉辦遊戲藝術展覽會
+    MessageGroupId: 100160080
     Id: 100160120
     CharacterId: 10016
     MessageCondition: FavorRankUp
@@ -258,15 +266,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 이번에 밀레니엄 게임 아트워크 전시회가 열린대요.
-    MessageJP: 先生。今度、ミレニアムでゲームアート展示会が開かれるそうです
-    MessageCN: 老师。我听说千年这次好像有一个游戏艺术展览会
-    MessageEN: The Millennium game artwork exhibition is opening, Sensei!
-    MessageTH: "คุณครูคะ ได้ยินว่าจะมีงานนิทรรศการ
+  - MessageKR: 이번에 저와 전시회에 단둘이……
+    MessageJP: なのでその、私と二人で
+    MessageCN: 所以那个，我们两个
+    MessageEN: It'll just be you and me at the exhibition...
+    MessageTH: "คุณครูสนใจที่จะไปงานนิทรรศการ
 
-      แสดงอาร์ตเวิร์กเกมของมิลเลเนียมค่ะ"
-    MessageTW: 老師。聽說這次在千年將舉辦遊戲藝術展覽會
-  - MessageGroupId: 100160090
+      สองคนกับ..."
+    MessageTW: 所以那個，你我兩個人
+    MessageGroupId: 100160090
     Id: 100160130
     CharacterId: 10016
     MessageCondition: None
@@ -278,15 +286,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에 저와 전시회에 단둘이……
-    MessageJP: なのでその、私と二人で
-    MessageCN: 所以那个，我们两个
-    MessageEN: It'll just be you and me at the exhibition...
-    MessageTH: "คุณครูสนใจที่จะไปงานนิทรรศการ
-
-      สองคนกับ..."
-    MessageTW: 所以那個，你我兩個人
-  - MessageGroupId: 100160090
+  - MessageKR: 가 아니라!
+    MessageJP: ……じゃなくて！
+    MessageCN: ……不是！
+    MessageEN: "...I mean! "
+    MessageTH: "มะ...ไม่ใช่นะคะ! "
+    MessageTW: 不！
+    MessageGroupId: 100160090
     Id: 100160140
     CharacterId: 10016
     MessageCondition: None
@@ -298,13 +304,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가 아니라!
-    MessageJP: ……じゃなくて！
-    MessageCN: ……不是！
-    MessageEN: "...I mean! "
-    MessageTH: "มะ...ไม่ใช่นะคะ! "
-    MessageTW: 不！
-  - MessageGroupId: 100160091
+  - MessageKR: 시, 신작 게임을 개발하기 위해선 공부를 게을리하면 안되니까요!
+    MessageJP: 新しいゲームを開発するためには、勉強もしないといけませんから……！
+    MessageCN: 为了新游戏的开发，学习也是必不可少的……！
+    MessageEN: I have to do extensive research when I'm working on a new game!
+    MessageTH: "ถ้าฉันจะศึกษาเรื่องเกมอย่างจริงจัง
+
+      ก็จะมาขี้เกียจไม่ได้นี่คะ!"
+    MessageTW: 為了開發新遊戲，學習也是必要的……！
+    MessageGroupId: 100160091
     Id: 100160150
     CharacterId: 10016
     MessageCondition: None
@@ -316,15 +324,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시, 신작 게임을 개발하기 위해선 공부를 게을리하면 안되니까요!
-    MessageJP: 新しいゲームを開発するためには、勉強もしないといけませんから……！
-    MessageCN: 为了新游戏的开发，学习也是必不可少的……！
-    MessageEN: I have to do extensive research when I'm working on a new game!
-    MessageTH: "ถ้าฉันจะศึกษาเรื่องเกมอย่างจริงจัง
-
-      ก็จะมาขี้เกียจไม่ได้นี่คะ!"
-    MessageTW: 為了開發新遊戲，學習也是必要的……！
-  - MessageGroupId: 100160100
+  - MessageKR: 암, 공부는 중요하지.
+    MessageJP: 確かに、勉強は大切だね
+    MessageCN: 确实，学习很重要呢
+    MessageEN: Yeah. Research is important.
+    MessageTH: การเรียนเป็นเรื่องสำคัญนะ
+    MessageTW: 確實，學習很重要呢
+    MessageGroupId: 100160100
     Id: 100160160
     CharacterId: 10016
     MessageCondition: Answer
@@ -336,13 +342,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 암, 공부는 중요하지.
-    MessageJP: 確かに、勉強は大切だね
-    MessageCN: 确实，学习很重要呢
-    MessageEN: Yeah. Research is important.
-    MessageTH: การเรียนเป็นเรื่องสำคัญนะ
-    MessageTW: 確實，學習很重要呢
-  - MessageGroupId: 100160110
+  - MessageKR: 여, 역시 그렇죠?
+    MessageJP: や、やっぱりそうですよね！？
+    MessageCN: 对、对吧！？
+    MessageEN: "R-Right? "
+    MessageTH: "ใช่ไหมล่ะคะ "
+    MessageTW: 是，是吧？
+    MessageGroupId: 100160110
     Id: 100160170
     CharacterId: 10016
     MessageCondition: Feedback
@@ -354,13 +360,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여, 역시 그렇죠?
-    MessageJP: や、やっぱりそうですよね！？
-    MessageCN: 对、对吧！？
-    MessageEN: "R-Right? "
-    MessageTH: "ใช่ไหมล่ะคะ "
-    MessageTW: 是，是吧？
-  - MessageGroupId: 100160120
+  - MessageKR: 그, 그러니까. 그게……
+    MessageJP: え、えっと、ですからその……
+    MessageCN: 那、那个，所以说……
+    MessageEN: "Exactly. So... "
+    MessageTH: "พะ...เพราะฉะนั้น... คือว่า... "
+    MessageTW: 那個，所以說，那個……！
+    MessageGroupId: 100160120
     Id: 100160180
     CharacterId: 10016
     MessageCondition: Feedback
@@ -372,13 +378,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그러니까. 그게……
-    MessageJP: え、えっと、ですからその……
-    MessageCN: 那、那个，所以说……
-    MessageEN: "Exactly. So... "
-    MessageTH: "พะ...เพราะฉะนั้น... คือว่า... "
-    MessageTW: 那個，所以說，那個……！
-  - MessageGroupId: 100160120
+  - MessageKR: 같이 가시지 않을래요?
+    MessageJP: ……一緒に、行きませんか？
+    MessageCN: ……一起去吗？
+    MessageEN: Can you come with me?
+    MessageTH: คุณครูจะไปด้วยกันไหมคะ?
+    MessageTW: ……要一起去嗎？
+    MessageGroupId: 100160120
     Id: 100160190
     CharacterId: 10016
     MessageCondition: Feedback
@@ -390,13 +396,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 같이 가시지 않을래요?
-    MessageJP: ……一緒に、行きませんか？
-    MessageCN: ……一起去吗？
-    MessageEN: Can you come with me?
-    MessageTH: คุณครูจะไปด้วยกันไหมคะ?
-    MessageTW: ……要一起去嗎？
-  - MessageGroupId: 100160130
+  - MessageKR: 선생님! 속보예요! 속보! 어마어마한 속보요!
+    MessageJP: 先生、速報です！速報！ものすごいニュースですよ！
+    MessageCN: 老师！速报！速报！发生了不得了的事情哦！
+    MessageEN: Sensei! I have exciting news! It's crazy!
+    MessageTH: "คุณครู! ข่าวด่วนค่ะ! ข่าวด่วนมากกก
+
+      ข่าวใหญ่โตมโหฬารสุดๆ เลยค่ะ!"
+    MessageTW: 老師，速報！快報！不得了的消息唷！
+    MessageGroupId: 100160130
     Id: 100160200
     CharacterId: 10016
     MessageCondition: FavorRankUp
@@ -408,15 +416,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님! 속보예요! 속보! 어마어마한 속보요!
-    MessageJP: 先生、速報です！速報！ものすごいニュースですよ！
-    MessageCN: 老师！速报！速报！发生了不得了的事情哦！
-    MessageEN: Sensei! I have exciting news! It's crazy!
-    MessageTH: "คุณครู! ข่าวด่วนค่ะ! ข่าวด่วนมากกก
-
-      ข่าวใหญ่โตมโหฬารสุดๆ เลยค่ะ!"
-    MessageTW: 老師，速報！快報！不得了的消息唷！
-  - MessageGroupId: 100160140
+  - MessageKR: 미도리, 진정해. 컴다운.
+    MessageJP: ミドリ、落ち着いて。一回クールダウン
+    MessageCN: 绿，冷静点。深呼吸
+    MessageEN: Calm down, Midori.
+    MessageTH: มิโดริ ใจเย็นก่อน วัยรุ่น~
+    MessageTW: 綠，冷靜點。先冷靜一下
+    MessageGroupId: 100160140
     Id: 100160210
     CharacterId: 10016
     MessageCondition: Answer
@@ -428,13 +434,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 미도리, 진정해. 컴다운.
-    MessageJP: ミドリ、落ち着いて。一回クールダウン
-    MessageCN: 绿，冷静点。深呼吸
-    MessageEN: Calm down, Midori.
-    MessageTH: มิโดริ ใจเย็นก่อน วัยรุ่น~
-    MessageTW: 綠，冷靜點。先冷靜一下
-  - MessageGroupId: 100160140
+  - MessageKR: 그 정도로 속보야? 어떡하지? 폭죽을 준비할까?!
+    MessageJP: ものすごいニュース？どうしよう、花火とか用意した方が良いかな！？
+    MessageCN: 不得了的消息？怎么办，要不要我去准备点烟花！？
+    MessageEN: Exciting news? Should I get the confetti ready?!
+    MessageTH: เรื่องใหญ่ขนาดนั้นเลยเหรอ ทำยังไงดีล่ะ? ต้องเตรียมพลุด้วยไหม?!
+    MessageTW: 不得了的消息？怎麼辦，是不是該準備煙火之類的比較好！？
+    MessageGroupId: 100160140
     Id: 100160220
     CharacterId: 10016
     MessageCondition: Answer
@@ -446,13 +452,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 정도로 속보야? 어떡하지? 폭죽을 준비할까?!
-    MessageJP: ものすごいニュース？どうしよう、花火とか用意した方が良いかな！？
-    MessageCN: 不得了的消息？怎么办，要不要我去准备点烟花！？
-    MessageEN: Exciting news? Should I get the confetti ready?!
-    MessageTH: เรื่องใหญ่ขนาดนั้นเลยเหรอ ทำยังไงดีล่ะ? ต้องเตรียมพลุด้วยไหม?!
-    MessageTW: 不得了的消息？怎麼辦，是不是該準備煙火之類的比較好！？
-  - MessageGroupId: 100160150
+  - MessageKR: 후우후우, 네, 지, 진정했어요!
+    MessageJP: ……はい、深呼吸して落ち着きました！
+    MessageCN: ……好的，深呼吸之后冷静下来了！
+    MessageEN: "*deep breath* Okay, I'm calm now!"
+    MessageTH: ฟู่ววว ฟู่ววว ใจเย็นๆ  ใจเย็นแล้วค่ะ!
+    MessageTW: ……好，深呼吸後冷靜下來了！
+    MessageGroupId: 100160150
     Id: 100160230
     CharacterId: 10016
     MessageCondition: Feedback
@@ -464,13 +470,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후우후우, 네, 지, 진정했어요!
-    MessageJP: ……はい、深呼吸して落ち着きました！
-    MessageCN: ……好的，深呼吸之后冷静下来了！
-    MessageEN: "*deep breath* Okay, I'm calm now!"
-    MessageTH: ฟู่ววว ฟู่ววว ใจเย็นๆ  ใจเย็นแล้วค่ะ!
-    MessageTW: ……好，深呼吸後冷靜下來了！
-  - MessageGroupId: 100160160
+  - MessageKR: 그래서, 무슨 일이야?
+    MessageJP: 何があったの？
+    MessageCN: 发生什么了？
+    MessageEN: So what's up?
+    MessageTH: แล้วมีเรื่องอะไรล่ะ?
+    MessageTW: 發生了什麼事？
+    MessageGroupId: 100160160
     Id: 100160240
     CharacterId: 10016
     MessageCondition: Answer
@@ -482,13 +488,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서, 무슨 일이야?
-    MessageJP: 何があったの？
-    MessageCN: 发生什么了？
-    MessageEN: So what's up?
-    MessageTH: แล้วมีเรื่องอะไรล่ะ?
-    MessageTW: 發生了什麼事？
-  - MessageGroupId: 100160170
+  - MessageKR: 그, 그 정도까지 해야 할 일인가 하면, 그, 글쎄요?
+    MessageJP: えっと、流石に花火は要らないかと思いますが……！
+    MessageCN: 那个，我觉得再怎么说也用不到烟花的……！
+    MessageEN: Um... I mean it's not that crazy...
+    MessageTH: ถะ...ถ้าต้องทำแบบนั้นล่ะก็...
+    MessageTW: 那個，我想應該是不至於需要煙火啦……！
+    MessageGroupId: 100160170
     Id: 100160250
     CharacterId: 10016
     MessageCondition: Feedback
@@ -500,13 +506,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그 정도까지 해야 할 일인가 하면, 그, 글쎄요?
-    MessageJP: えっと、流石に花火は要らないかと思いますが……！
-    MessageCN: 那个，我觉得再怎么说也用不到烟花的……！
-    MessageEN: Um... I mean it's not that crazy...
-    MessageTH: ถะ...ถ้าต้องทำแบบนั้นล่ะก็...
-    MessageTW: 那個，我想應該是不至於需要煙火啦……！
-  - MessageGroupId: 100160170
+  - MessageKR: 어, 어쨌거나!
+    MessageJP: と、とにかく！
+    MessageCN: 总，总之！
+    MessageEN: Anyway!
+    MessageTH: ก็ช่วยไม่ได้ค่ะ!
+    MessageTW: 總，總之！
+    MessageGroupId: 100160170
     Id: 100160260
     CharacterId: 10016
     MessageCondition: Feedback
@@ -518,13 +524,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어, 어쨌거나!
-    MessageJP: と、とにかく！
-    MessageCN: 总，总之！
-    MessageEN: Anyway!
-    MessageTH: ก็ช่วยไม่ได้ค่ะ!
-    MessageTW: 總，總之！
-  - MessageGroupId: 100160180
+  - MessageKR: 이번에 전설의 명작 고전 게임의 후속작이 나왔대요!
+    MessageJP: 今度、伝説の名作レトロゲームの続編が出るそうです！
+    MessageCN: 这次，那个传说中的怀旧游戏名篇好像要出续作了！
+    MessageEN: They made a sequel for a legendary, classic, masterpiece of a game!
+    MessageTH: "เกมภาคต่อของเกมชื่อดังในตำนาน
+
+      ปล่อยมาแล้วค่ะ!"
+    MessageTW: 聽說傳說中的經典懷舊遊戲這次將推出續作！
+    MessageGroupId: 100160180
     Id: 100160270
     CharacterId: 10016
     MessageCondition: Feedback
@@ -536,15 +544,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에 전설의 명작 고전 게임의 후속작이 나왔대요!
-    MessageJP: 今度、伝説の名作レトロゲームの続編が出るそうです！
-    MessageCN: 这次，那个传说中的怀旧游戏名篇好像要出续作了！
-    MessageEN: They made a sequel for a legendary, classic, masterpiece of a game!
-    MessageTH: "เกมภาคต่อของเกมชื่อดังในตำนาน
+  - MessageKR: 그 게임의 초회한정판을 반드시 입수하고 싶어요.
+    MessageJP: そのゲームの初回限定盤を、絶対に手に入れたくって
+    MessageCN: 那个游戏的首发限定盘，我无论如何都想买到
+    MessageEN: I got the limited edition version!
+    MessageTH: "ฉันอยากได้เวอร์ชั่นลิมิเต็ดรุ่นแรกมากๆ
 
-      ปล่อยมาแล้วค่ะ!"
-    MessageTW: 聽說傳說中的經典懷舊遊戲這次將推出續作！
-  - MessageGroupId: 100160180
+      เลยค่ะ"
+    MessageTW: 那款遊戲的初回限定版，我無論如何都想買到
+    MessageGroupId: 100160180
     Id: 100160280
     CharacterId: 10016
     MessageCondition: Feedback
@@ -556,15 +564,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 게임의 초회한정판을 반드시 입수하고 싶어요.
-    MessageJP: そのゲームの初回限定盤を、絶対に手に入れたくって
-    MessageCN: 那个游戏的首发限定盘，我无论如何都想买到
-    MessageEN: I got the limited edition version!
-    MessageTH: "ฉันอยากได้เวอร์ชั่นลิมิเต็ดรุ่นแรกมากๆ
-
-      เลยค่ะ"
-    MessageTW: 那款遊戲的初回限定版，我無論如何都想買到
-  - MessageGroupId: 100160190
+  - MessageKR: 선생님, 어울려 주실 거죠?
+    MessageJP: 先生、付き合ってくれませんか？
+    MessageCN: 老师，能陪我一起去吗？
+    MessageEN: Will you play it with me, Sensei?
+    MessageTH: คุณครูจะไปกับฉันใช่ไหมคะ?
+    MessageTW: 老師，能陪我去嗎？
+    MessageGroupId: 100160190
     Id: 100160290
     CharacterId: 10016
     MessageCondition: Feedback
@@ -576,13 +582,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 어울려 주실 거죠?
-    MessageJP: 先生、付き合ってくれませんか？
-    MessageCN: 老师，能陪我一起去吗？
-    MessageEN: Will you play it with me, Sensei?
-    MessageTH: คุณครูจะไปกับฉันใช่ไหมคะ?
-    MessageTW: 老師，能陪我去嗎？
-  - MessageGroupId: 100160200
+  - MessageKR: 오늘 고마웠어요.
+    MessageJP: 今日はありがとうございました
+    MessageCN: 今天真是非常感谢
+    MessageEN: Thanks for today.
+    MessageTH: วันนี้ขอบคุณมากเลยนะคะ
+    MessageTW: 今天非常謝謝老師
+    MessageGroupId: 100160200
     Id: 100160300
     CharacterId: 10016
     MessageCondition: None
@@ -594,13 +600,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 고마웠어요.
-    MessageJP: 今日はありがとうございました
-    MessageCN: 今天真是非常感谢
-    MessageEN: Thanks for today.
-    MessageTH: วันนี้ขอบคุณมากเลยนะคะ
-    MessageTW: 今天非常謝謝老師
-  - MessageGroupId: 100160200
+  - MessageKR: 다음에 같이 플레이해요. 선생님.
+    MessageJP: 今度、一緒にプレイしましょうね。先生
+    MessageCN: 之后一起玩吧。老师
+    MessageEN: Let's play again next time, Sensei.
+    MessageTH: "ไว้คราวหน้ามาเล่นด้วยกันใหม่นะคะ
+
+      คุณครู"
+    MessageTW: 下次一起play吧。老師
+    MessageGroupId: 100160200
     Id: 100160310
     CharacterId: 10016
     MessageCondition: None
@@ -612,15 +620,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 같이 플레이해요. 선생님.
-    MessageJP: 今度、一緒にプレイしましょうね。先生
-    MessageCN: 之后一起玩吧。老师
-    MessageEN: Let's play again next time, Sensei.
-    MessageTH: "ไว้คราวหน้ามาเล่นด้วยกันใหม่นะคะ
-
-      คุณครู"
-    MessageTW: 下次一起play吧。老師
-  - MessageGroupId: 100160210
+  - MessageKR: 저, 오락실이라는 곳에 대해 들었는데요.
+    MessageJP: 私、聞いたことがあります
+    MessageCN: 我之前有听说过
+    MessageEN: I heard about something called an arcade.
+    MessageTH: ฉันได้ยินว่ามีร้านเกมตู้ด้วยนะคะ
+    MessageTW: 我，聽說過一句話
+    MessageGroupId: 100160210
     Id: 100160320
     CharacterId: 10016
     MessageCondition: FavorRankUp
@@ -632,13 +638,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저, 오락실이라는 곳에 대해 들었는데요.
-    MessageJP: 私、聞いたことがあります
-    MessageCN: 我之前有听说过
-    MessageEN: I heard about something called an arcade.
-    MessageTH: ฉันได้ยินว่ามีร้านเกมตู้ด้วยนะคะ
-    MessageTW: 我，聽說過一句話
-  - MessageGroupId: 100160220
+  - MessageKR: 무서운 사람들이 잔뜩 있는 곳이라고……
+    MessageJP: ゲームセンターは怖い人たちがたくさんいる場所だ、と……
+    MessageCN: 游戏中心是一个，有很多很可怕的人的地方……
+    MessageEN: They say it's filled with scary people...
+    MessageTH: "ได้ยินว่าเป็นสถานที่ที่มีคนน่ากลัว
+
+      เยอะมาก..."
+    MessageTW: 遊戲中心是個有很多可怕的人的地方……
+    MessageGroupId: 100160220
     Id: 100160330
     CharacterId: 10016
     MessageCondition: None
@@ -650,15 +658,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무서운 사람들이 잔뜩 있는 곳이라고……
-    MessageJP: ゲームセンターは怖い人たちがたくさんいる場所だ、と……
-    MessageCN: 游戏中心是一个，有很多很可怕的人的地方……
-    MessageEN: They say it's filled with scary people...
-    MessageTH: "ได้ยินว่าเป็นสถานที่ที่มีคนน่ากลัว
+  - MessageKR: 오락실은 정말 그런 장소인가요?
+    MessageJP: 本当にそうなんでしょうか？
+    MessageCN: 真的吗？
+    MessageEN: Is it really such a scary place?
+    MessageTH: "ร้านเกมตู้เป็นสถานที่แบบนั้นจริงๆ
 
-      เยอะมาก..."
-    MessageTW: 遊戲中心是個有很多可怕的人的地方……
-  - MessageGroupId: 100160220
+      เหรอคะ?"
+    MessageTW: 真的是這樣嗎？
+    MessageGroupId: 100160220
     Id: 100160340
     CharacterId: 10016
     MessageCondition: None
@@ -670,15 +678,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오락실은 정말 그런 장소인가요?
-    MessageJP: 本当にそうなんでしょうか？
-    MessageCN: 真的吗？
-    MessageEN: Is it really such a scary place?
-    MessageTH: "ร้านเกมตู้เป็นสถานที่แบบนั้นจริงๆ
+  - MessageKR: 남의 말만 듣고 편견을 가지면 안 돼.
+    MessageJP: うーん、場所によるんじゃないかな……？
+    MessageCN: 嗯——，这个应该取决于是哪里的游戏中心吧……？
+    MessageEN: You shouldn't jump to conclusions based on rumors.
+    MessageTH: "จะตัดสินใจเชื่ออะไรโดยฟังแค่คำ
 
-      เหรอคะ?"
-    MessageTW: 真的是這樣嗎？
-  - MessageGroupId: 100160230
+      ของคนอื่นไม่ได้นะ"
+    MessageTW: 唔嗯，我想是取決於地點……？
+    MessageGroupId: 100160230
     Id: 100160350
     CharacterId: 10016
     MessageCondition: Answer
@@ -690,15 +698,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 남의 말만 듣고 편견을 가지면 안 돼.
-    MessageJP: うーん、場所によるんじゃないかな……？
-    MessageCN: 嗯——，这个应该取决于是哪里的游戏中心吧……？
-    MessageEN: You shouldn't jump to conclusions based on rumors.
-    MessageTH: "จะตัดสินใจเชื่ออะไรโดยฟังแค่คำ
+  - MessageKR: 그, 그렇죠. 직접 가보기 전부터 편견부터 가지면……
+    MessageJP: そ、そうですよね。私、まだ実際に行ったことが無くて……
+    MessageCN: 这、这样啊。其实，我现在还一次都没有实际去过……
+    MessageEN: Oh, that's true. I should go and check it out for myself...
+    MessageTH: "นะ...นั่นน่ะสิ ถ้าตัดสินแบบนั้นตั้งแต่
 
-      ของคนอื่นไม่ได้นะ"
-    MessageTW: 唔嗯，我想是取決於地點……？
-  - MessageGroupId: 100160240
+      ก่อนลองไปดูล่ะก็..."
+    MessageTW: 確，確實是呢。我還沒有實際去過……
+    MessageGroupId: 100160240
     Id: 100160360
     CharacterId: 10016
     MessageCondition: Feedback
@@ -710,15 +718,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그렇죠. 직접 가보기 전부터 편견부터 가지면……
-    MessageJP: そ、そうですよね。私、まだ実際に行ったことが無くて……
-    MessageCN: 这、这样啊。其实，我现在还一次都没有实际去过……
-    MessageEN: Oh, that's true. I should go and check it out for myself...
-    MessageTH: "นะ...นั่นน่ะสิ ถ้าตัดสินแบบนั้นตั้งแต่
-
-      ก่อนลองไปดูล่ะก็..."
-    MessageTW: 確，確實是呢。我還沒有實際去過……
-  - MessageGroupId: 100160250
+  - MessageKR: 그러니 이번에 같이 가볼래?
+    MessageJP: じゃあ、今度一緒に行ってみる？
+    MessageCN: 那，下次一起去吗？
+    MessageEN: Do you wanna go together?
+    MessageTH: งั้นคราวนี้ไปด้วยกันไหม?
+    MessageTW: 那麼，下次要一起去看看嗎？
+    MessageGroupId: 100160250
     Id: 100160370
     CharacterId: 10016
     MessageCondition: Answer
@@ -730,13 +736,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니 이번에 같이 가볼래?
-    MessageJP: じゃあ、今度一緒に行ってみる？
-    MessageCN: 那，下次一起去吗？
-    MessageEN: Do you wanna go together?
-    MessageTH: งั้นคราวนี้ไปด้วยกันไหม?
-    MessageTW: 那麼，下次要一起去看看嗎？
-  - MessageGroupId: 100160260
+  - MessageKR: 오, 오락실을요?!
+    MessageJP: えっ、ゲームセンターにですか！？ぜひ！！
+    MessageCN: 诶，去游戏中心吗！？请一定要带上我！！
+    MessageEN: To the arcade?!
+    MessageTH: ร้านเกมน่ะเหรอคะ?!
+    MessageTW: 咦，遊戲中心嗎！？一定要！！
+    MessageGroupId: 100160260
     Id: 100160380
     CharacterId: 10016
     MessageCondition: Feedback
@@ -748,13 +754,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오, 오락실을요?!
-    MessageJP: えっ、ゲームセンターにですか！？ぜひ！！
-    MessageCN: 诶，去游戏中心吗！？请一定要带上我！！
-    MessageEN: To the arcade?!
-    MessageTH: ร้านเกมน่ะเหรอคะ?!
-    MessageTW: 咦，遊戲中心嗎！？一定要！！
-  - MessageGroupId: 100160270
+  - MessageKR: 오늘 어울려주셔서 감사했습니다.
+    MessageJP: 今日は付き合っていただいてありがとうございました
+    MessageCN: 今天老师能和我一起，真的非常感谢
+    MessageEN: Thanks for hanging out with me today.
+    MessageTH: วันนี้ขอบคุณที่ไปด้วยกันนะคะ
+    MessageTW: 非常謝謝老師今天來陪我
+    MessageGroupId: 100160270
     Id: 100160390
     CharacterId: 10016
     MessageCondition: None
@@ -766,13 +772,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 어울려주셔서 감사했습니다.
-    MessageJP: 今日は付き合っていただいてありがとうございました
-    MessageCN: 今天老师能和我一起，真的非常感谢
-    MessageEN: Thanks for hanging out with me today.
-    MessageTH: วันนี้ขอบคุณที่ไปด้วยกันนะคะ
-    MessageTW: 非常謝謝老師今天來陪我
-  - MessageGroupId: 100160280
+  - MessageKR: 다만, 오늘 같이 오락실을 찾았던 건
+    MessageJP: ただ、今日一緒にゲームセンターに行ったことは、
+    MessageCN: 只是，今天我们两个一起去游戏中心的事，
+    MessageEN: But the fact that we went to the arcade together...
+    MessageTH: แต่ว่า... เรื่องที่ไปร้านเกมวันนี้
+    MessageTW: 但是，今天一起去了遊戲中心的事
+    MessageGroupId: 100160280
     Id: 100160400
     CharacterId: 10016
     MessageCondition: None
@@ -784,13 +790,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다만, 오늘 같이 오락실을 찾았던 건
-    MessageJP: ただ、今日一緒にゲームセンターに行ったことは、
-    MessageCN: 只是，今天我们两个一起去游戏中心的事，
-    MessageEN: But the fact that we went to the arcade together...
-    MessageTH: แต่ว่า... เรื่องที่ไปร้านเกมวันนี้
-    MessageTW: 但是，今天一起去了遊戲中心的事
-  - MessageGroupId: 100160290
+  - MessageKR: 그게. 저……
+    MessageJP: えっと、その……
+    MessageCN: 那个，怎么说呢……
+    MessageEN: Can we...um...
+    MessageTH: เรื่องนั้น คือ....
+    MessageTW: 這個，那個……
+    MessageGroupId: 100160290
     Id: 100160410
     CharacterId: 10016
     MessageCondition: None
@@ -802,13 +808,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게. 저……
-    MessageJP: えっと、その……
-    MessageCN: 那个，怎么说呢……
-    MessageEN: Can we...um...
-    MessageTH: เรื่องนั้น คือ....
-    MessageTW: 這個，那個……
-  - MessageGroupId: 100160290
+  - MessageKR: 모두에겐 비밀이에요?
+    MessageJP: ミンナニハ　ナイショデスヨ？
+    MessageCN: YÀO HÉ DÀJIĀ BǍOMÌ O？
+    MessageEN: Can we keep it a secret?
+    MessageTH: เก็บเป็นความลับที่รู้กันแค่เราได้ไหมคะ?
+    MessageTW: Yao Siang Da Jia Bao Mi Yo？
+    MessageGroupId: 100160290
     Id: 100160420
     CharacterId: 10016
     MessageCondition: None
@@ -820,9 +826,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모두에겐 비밀이에요?
-    MessageJP: ミンナニハ　ナイショデスヨ？
-    MessageCN: YÀO HÉ DÀJIĀ BǍOMÌ O？
-    MessageEN: Can we keep it a secret?
-    MessageTH: เก็บเป็นความลับที่รู้กันแค่เราได้ไหมคะ?
-    MessageTW: Yao Siang Da Jia Bao Mi Yo？

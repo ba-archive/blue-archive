@@ -1,35 +1,41 @@
 CharacterId: 20021
 translator: 今天早睡了吗
 title:
-  - GroupId: 2002102
-    FavorScheduleId: 200212
-    CharacterId: 20021
-    TextJp: 良い子？悪い子？
+  - TextJp: 良い子？悪い子？
     TextCn: 好孩子？坏孩子？
     TextKr: 착한 아이? 나쁜 아이?
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002103
-    FavorScheduleId: 200213
+    TextEn: Naughty or Nice?
+    TextTh: เป็นเด็กดีหรือเปล่า?
+    TextTw: 乖小孩？壞小孩？
+    GroupId: 2002102
+    FavorScheduleId: 200212
     CharacterId: 20021
-    TextJp: 特訓！サンタへの道！
+  - TextJp: 特訓！サンタへの道！
     TextCn: 特训！通往圣诞老人之路！
     TextKr: 특훈! 노려라, 산타!
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002105
-    FavorScheduleId: 200215
+    TextEn: Special Training! The Target? Santa!
+    TextTh: ฝึกพิเศษ! เส้นทางสู่ซานต้า!
+    TextTw: 特訓！通往聖誕老人之路！
+    GroupId: 2002103
+    FavorScheduleId: 200213
     CharacterId: 20021
-    TextJp: あなたを待ちわびて
+  - TextJp: あなたを待ちわびて
     TextCn: 焦急地等待你
     TextKr: 산타를 기다리며
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Waiting for Santa
+    TextTh: รอซานต้า
+    TextTw: 等待你的到來
+    GroupId: 2002105
+    FavorScheduleId: 200215
+    CharacterId: 20021
 content:
-  - MessageGroupId: 200210010
+  - MessageKR: 최근 고민이 생겼어요, 선생님.
+    MessageJP: 先生、実は悩みがあるんです
+    MessageCN: 老师，其实我有个烦恼
+    MessageEN: Sensei, I have a problem!
+    MessageTH: ช่วงนี้ฉันมีเรื่องกลุ้มใจค่ะคุณครู
+    MessageTW: 老師，其實我有個煩惱
+    MessageGroupId: 200210010
     Id: 200210010
     CharacterId: 20021
     MessageCondition: FavorRankUp
@@ -41,13 +47,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 최근 고민이 생겼어요, 선생님.
-    MessageJP: 先生、実は悩みがあるんです
-    MessageCN: 老师，其实我有个烦恼
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210020
+  - MessageKR: 내가 들어줄 수 있는 거야?
+    MessageJP: なるほど……それは、私が聞いても良いやつ？
+    MessageCN: 原来如此……那花绘可以和我说说那个烦恼吗？
+    MessageEN: It helps to talk out our problems sometimes.
+    MessageTH: ครูพอจะช่วยอะไรได้ไหม?
+    MessageTW: 這樣啊……是我可以問的煩惱嗎？
+    MessageGroupId: 200210020
     Id: 200210020
     CharacterId: 20021
     MessageCondition: Answer
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 들어줄 수 있는 거야?
-    MessageJP: なるほど……それは、私が聞いても良いやつ？
-    MessageCN: 原来如此……那花绘可以和我说说那个烦恼吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210030
+  - MessageKR: 아, 그러네요. 선생님이라면!
+    MessageJP: はい、先生になら！
+    MessageCN: 嗯，和老师说的话当然可以！
+    MessageEN: Oh... You're right! Especially if it's you...
+    MessageTH: อ๊ะ นั่นสินะคะ ถ้าเป็นคุณครูละก็!
+    MessageTW: 嗯，老師當然可以！
+    MessageGroupId: 200210030
     Id: 200210030
     CharacterId: 20021
     MessageCondition: Feedback
@@ -77,13 +83,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 그러네요. 선생님이라면!
-    MessageJP: はい、先生になら！
-    MessageCN: 嗯，和老师说的话当然可以！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210030
+  - MessageKR: 그렇지만 너무 폐를 끼치는 건 아닌지……
+    MessageJP: ですが、迷惑になってしまわないかと……
+    MessageCN: 但是，这样会不会给老师添麻烦之类的……
+    MessageEN: But... But I also don't wanna inconvenience you.
+    MessageTH: "แต่นี่จะเป็นการรบกวนมากเกินไปหรือ
+
+      เปล่านะ..."
+    MessageTW: 但是，會不會給老師添麻煩呢……
+    MessageGroupId: 200210030
     Id: 200210040
     CharacterId: 20021
     MessageCondition: Feedback
@@ -95,13 +103,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇지만 너무 폐를 끼치는 건 아닌지……
-    MessageJP: ですが、迷惑になってしまわないかと……
-    MessageCN: 但是，这样会不会给老师添麻烦之类的……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210040
+  - MessageKR: 학생의 고민을 들어주는 게 선생님이 하는 일이야.
+    MessageJP: 生徒の悩みを聞くことも、先生の役目だから
+    MessageCN: 毕竟倾听学生的烦恼也是老师的职责呀
+    MessageEN: It's my job to listen to my students' problems. No matter how small.
+    MessageTH: "การฟังเรื่องกลุ้มใจของนักเรียน
+
+      คือหน้าที่ของครูอยู่แล้ว"
+    MessageTW: 傾聽學生的煩惱，是老師的職責哦
+    MessageGroupId: 200210040
     Id: 200210050
     CharacterId: 20021
     MessageCondition: Answer
@@ -113,13 +123,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 학생의 고민을 들어주는 게 선생님이 하는 일이야.
-    MessageJP: 生徒の悩みを聞くことも、先生の役目だから
-    MessageCN: 毕竟倾听学生的烦恼也是老师的职责呀
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210050
+  - MessageKR: 그렇다면 부탁드려도 괜찮을까요?
+    MessageJP: では、お願いしてもいいですか？
+    MessageCN: 那么，我可以拜托老师吗？
+    MessageEN: In that case... Yes, please!
+    MessageTH: ถ้างั้นขอรบกวนหน่อยได้ไหมคะ?
+    MessageTW: 那，可以拜託你嗎？
+    MessageGroupId: 200210050
     Id: 200210060
     CharacterId: 20021
     MessageCondition: Feedback
@@ -131,13 +141,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇다면 부탁드려도 괜찮을까요?
-    MessageJP: では、お願いしてもいいですか？
-    MessageCN: 那么，我可以拜托老师吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210050
+  - MessageKR: 제가 직접 찾아뵐게요!
+    MessageJP: 今からすぐ会いに行きますね！
+    MessageCN: 我现在马上去见老师！
+    MessageEN: I'll come to you to talk, okay?
+    MessageTH: ฉันจะไปหาคุณครูเองค่ะ!
+    MessageTW: 我現在就去找你！
+    MessageGroupId: 200210050
     Id: 200210070
     CharacterId: 20021
     MessageCondition: Feedback
@@ -149,13 +159,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제가 직접 찾아뵐게요!
-    MessageJP: 今からすぐ会いに行きますね！
-    MessageCN: 我现在马上去见老师！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210060
+  - MessageKR: 고민이란 괴롭지만 좋은 것 같아요!
+    MessageJP: 悩むのは辛いですが、良いものでもあると思うんです！
+    MessageCN: 虽然有烦恼很难受，但我觉得这也是件好事！
+    MessageEN: Solving problems is hard! But it's better for everyone if you do!
+    MessageTH: "ถึงเรื่องกลุ้มใจจะน่าปวดหัว แต่ก็ดี
+
+      เหมือนกันนะคะ!"
+    MessageTW: 雖然煩惱很讓人煎熬，但我覺得也是件好事！
+    MessageGroupId: 200210060
     Id: 200210080
     CharacterId: 20021
     MessageCondition: FavorRankUp
@@ -167,13 +179,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 고민이란 괴롭지만 좋은 것 같아요!
-    MessageJP: 悩むのは辛いですが、良いものでもあると思うんです！
-    MessageCN: 虽然有烦恼很难受，但我觉得这也是件好事！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210070
+  - MessageKR: 확실한 결론을 내리지 못하더라도, 자신감을 주니까요.
+    MessageJP: 乗り越えると、自信に繋がりますし！
+    MessageCN: 因为只要克服了烦恼，就会变得自信起来！
+    MessageEN:
+      And how I fix them might not always be the best, but it still makes
+      me feel good!
+    MessageTH: "ถึงจะไม่ได้ข้อสรุปที่ชัดเจน แต่ก็ได้
+
+      ความมั่นใจกลับมาค่ะ"
+    MessageTW: 只要能克服困難，就會更有自信！
+    MessageGroupId: 200210070
     Id: 200210090
     CharacterId: 20021
     MessageCondition: None
@@ -185,13 +201,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실한 결론을 내리지 못하더라도, 자신감을 주니까요.
-    MessageJP: 乗り越えると、自信に繋がりますし！
-    MessageCN: 因为只要克服了烦恼，就会变得自信起来！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210080
+  - MessageKR: 확실히 그럴지도.
+    MessageJP: 確かにそうかも。
+    MessageCN: 也许确实是这样。
+    MessageEN: I'm glad to hear it.
+    MessageTH: จริงแท้แน่นอนเลย
+    MessageTW: 似乎確實是那樣呢
+    MessageGroupId: 200210080
     Id: 200210100
     CharacterId: 20021
     MessageCondition: Answer
@@ -203,13 +219,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실히 그럴지도.
-    MessageJP: 確かにそうかも。
-    MessageCN: 也许确实是这样。
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210080
+  - MessageKR: 그런데, 갑자기 왜 '고민’ 이야기를……?
+    MessageJP: ところで、どうして突然「悩み」の話を……？
+    MessageCN: 话说回来，为什么花绘会突然聊到“烦恼”……？
+    MessageEN: Is there something else that is still troubling you?
+    MessageTH: ว่าแต่ ทำไมอยู่ๆ ถึงเล่า 'เรื่องกลุ้มใจ' ล่ะ...?
+    MessageTW: 話說，為什麼突然說到「煩惱」……？
+    MessageGroupId: 200210080
     Id: 200210110
     CharacterId: 20021
     MessageCondition: Answer
@@ -221,13 +237,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런데, 갑자기 왜 '고민’ 이야기를……?
-    MessageJP: ところで、どうして突然「悩み」の話を……？
-    MessageCN: 话说回来，为什么花绘会突然聊到“烦恼”……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210090
+  - MessageKR: 쭉 고민하던 문제에 대해 나름대로 결론을 내렸거든요.
+    MessageJP: ずっと悩んでいたことについて、自分なりに結論が出せたんです
+    MessageCN: 因为对于我最近一直在烦恼的事情，我终于得出了自己的结论
+    MessageEN:
+      There is something that's been bothering me for a long time, but I
+      think I've figured it out!
+    MessageTH: "ฉันได้ข้อสรุปเกี่ยวกับปัญหาที่ฉันกลุ้ม
+
+      ใจมาตลอดแล้วค่ะ"
+    MessageTW: 因為我對一直煩惱著的事情，得出了自己的結論
+    MessageGroupId: 200210090
     Id: 200210120
     CharacterId: 20021
     MessageCondition: Feedback
@@ -239,13 +259,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 쭉 고민하던 문제에 대해 나름대로 결론을 내렸거든요.
-    MessageJP: ずっと悩んでいたことについて、自分なりに結論が出せたんです
-    MessageCN: 因为对于我最近一直在烦恼的事情，我终于得出了自己的结论
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210100
+  - MessageKR: 선생님께도 보여 드릴 테니 기대해 주세요!
+    MessageJP: 先生にもお見せしますので、楽しみにしていてください！
+    MessageCN: 到时候我也会给老师展示的，就请老师期待一下啦！
+    MessageEN: I'll let you in on the details later!
+    MessageTH: "ฉันจะโชว์ให้คุณครูดูด้วย ช่วยตั้งตารอ
+
+      ด้วยนะคะ!"
+    MessageTW: 我也會讓老師看到的，敬請期待！
+    MessageGroupId: 200210100
     Id: 200210130
     CharacterId: 20021
     MessageCondition: Feedback
@@ -257,13 +279,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님께도 보여 드릴 테니 기대해 주세요!
-    MessageJP: 先生にもお見せしますので、楽しみにしていてください！
-    MessageCN: 到时候我也会给老师展示的，就请老师期待一下啦！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210110
+  - MessageKR: 안녕하세요, 선생님.
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: Hello, Sensei.
+    MessageTH: สวัสดีค่ะคุณครู
+    MessageTW: 老師！
+    MessageGroupId: 200210110
     Id: 200210140
     CharacterId: 20021
     MessageCondition: FavorRankUp
@@ -275,13 +297,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요, 선생님.
-    MessageJP: 先生！
-    MessageCN: 老师！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210120
+  - MessageKR: 뜨개질 양말을 만드는 건, 언제나 즐겁네요.
+    MessageJP: 編み物って、楽しいと思いません？
+    MessageCN: 老师不觉得织东西很有趣吗？
+    MessageEN: You know, I love making knitted socks!
+    MessageTH: "การถักนิตติ้งถุงเท้านี่ ไม่ว่าเมื่อไรมัน
+
+      ก็สนุกตลอดเลยนะคะ"
+    MessageTW: 你不覺得編織很有趣嗎？
+    MessageGroupId: 200210120
     Id: 200210150
     CharacterId: 20021
     MessageCondition: None
@@ -293,13 +317,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뜨개질 양말을 만드는 건, 언제나 즐겁네요.
-    MessageJP: 編み物って、楽しいと思いません？
-    MessageCN: 老师不觉得织东西很有趣吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210130
+  - MessageKR: 양말이라니?
+    MessageJP: 編み物……靴下とか？
+    MessageCN: 织东西……织袜子之类的吗？
+    MessageEN: Knitted...socks?
+    MessageTH: ถักถุงเท้างั้นเหรอ?
+    MessageTW: 編織……襪子之類的？
+    MessageGroupId: 200210130
     Id: 200210160
     CharacterId: 20021
     MessageCondition: Answer
@@ -311,13 +335,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 양말이라니?
-    MessageJP: 編み物……靴下とか？
-    MessageCN: 织东西……织袜子之类的吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210140
+  - MessageKR: 저한테는 일종의 의식 같은 거예요.
+    MessageJP: はい、準備をしてまして
+    MessageCN: 嗯，我在准备
+    MessageEN: Yeah! It's kinda like a ritual for me.
+    MessageTH: "สำหรับฉันแล้วมันเหมือนพิธีกรรม
+
+      อย่างหนึ่งเลยละค่ะ"
+    MessageTW: 嗯，我正在做準備
+    MessageGroupId: 200210140
     Id: 200210170
     CharacterId: 20021
     MessageCondition: Feedback
@@ -329,13 +355,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저한테는 일종의 의식 같은 거예요.
-    MessageJP: はい、準備をしてまして
-    MessageCN: 嗯，我在准备
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210140
+  - MessageKR: 매년 이 시기가 되면 만들곤 하죠.
+    MessageJP: 毎年この時期になると作るんです
+    MessageCN: 每年到了这个时候我都会织一些的
+    MessageEN: I always make them around this time of year.
+    MessageTH: "พอถึงเวลานี้ของปี ฉันก็จะถักถุงเท้า
+
+      ตลอดเลยค่ะ"
+    MessageTW: 每年的這個時期我都會製作
+    MessageGroupId: 200210140
     Id: 200210180
     CharacterId: 20021
     MessageCondition: Feedback
@@ -347,13 +375,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 매년 이 시기가 되면 만들곤 하죠.
-    MessageJP: 毎年この時期になると作るんです
-    MessageCN: 每年到了这个时候我都会织一些的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210150
+  - MessageKR: 점점 더 모르겠는데……
+    MessageJP: なるほど……？
+    MessageCN: 原来如此……？
+    MessageEN: Good... Good for you?
+    MessageTH: ว่าไงนะ...?
+    MessageTW: 原來如此……？
+    MessageGroupId: 200210150
     Id: 200210190
     CharacterId: 20021
     MessageCondition: Answer
@@ -365,13 +393,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 점점 더 모르겠는데……
-    MessageJP: なるほど……？
-    MessageCN: 原来如此……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210160
+  - MessageKR: 아, 맞다!
+    MessageJP: あ、そうだ！
+    MessageCN: 啊，对了！
+    MessageEN: Oh! Oh! I got it!
+    MessageTH: อ๊ะ จริงสิ!
+    MessageTW: 啊，對了！
+    MessageGroupId: 200210160
     Id: 200210200
     CharacterId: 20021
     MessageCondition: Feedback
@@ -383,13 +411,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 맞다!
-    MessageJP: あ、そうだ！
-    MessageCN: 啊，对了！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210170
+  - MessageKR: 선생님을 제 방에 초대 드려도 될까요?
+    MessageJP: 先生、私の部屋に来てくれませんか？
+    MessageCN: 老师能来一下我的房间吗？
+    MessageEN: Can you come to my room, Sensei?!
+    MessageTH: ฉันเชิญคุณครูมาที่ห้องได้ไหมคะ?
+    MessageTW: 老師，可以來我的房間一趟嗎？
+    MessageGroupId: 200210170
     Id: 200210210
     CharacterId: 20021
     MessageCondition: Feedback
@@ -401,13 +429,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님을 제 방에 초대 드려도 될까요?
-    MessageJP: 先生、私の部屋に来てくれませんか？
-    MessageCN: 老师能来一下我的房间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210170
+  - MessageKR: 이걸로 우린 공범이 되는 거죠!
+    MessageJP: ぜひ共犯になりましょう！
+    MessageCN: 请务必成为我的共犯！
+    MessageEN: We're gonna be partners in crime!
+    MessageTH: มาเป็นผู้สมรู้ร่วมคิดกันไงคะ!
+    MessageTW: 請務必成為我的共犯吧！
+    MessageGroupId: 200210170
     Id: 200210220
     CharacterId: 20021
     MessageCondition: Feedback
@@ -419,13 +447,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이걸로 우린 공범이 되는 거죠!
-    MessageJP: ぜひ共犯になりましょう！
-    MessageCN: 请务必成为我的共犯！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210180
+  - MessageKR: 범죄 같은 거 저지르는 건 아니지?!
+    MessageJP: 共犯！？
+    MessageCN: 共犯！？
+    MessageEN: You're planning on committing a crime?!
+    MessageTH: ไม่ได้คิดจะก่ออาชญากรรมอะไรใช่ไหม?!
+    MessageTW: 共犯！？
+    MessageGroupId: 200210180
     Id: 200210230
     CharacterId: 20021
     MessageCondition: Answer
@@ -437,13 +465,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 범죄 같은 거 저지르는 건 아니지?!
-    MessageJP: 共犯！？
-    MessageCN: 共犯！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210190
+  - MessageKR: 선생님, 선생님!
+    MessageJP: 先生、先生！
+    MessageCN: 老师，老师！
+    MessageEN: Sensei, Sensei!
+    MessageTH: คุณครูคะ! คุณครู!
+    MessageTW: 老師，老師！
+    MessageGroupId: 200210190
     Id: 200210240
     CharacterId: 20021
     MessageCondition: None
@@ -455,13 +483,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 선생님!
-    MessageJP: 先生、先生！
-    MessageCN: 老师，老师！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210200
+  - MessageKR: 보세요! 산타클로스가 선물을 주고 가셨어요!
+    MessageJP: 見てください！サンタさんからのプレゼントです！
+    MessageCN: 老师快看！圣诞老人送给我礼物了！
+    MessageEN: Look! I got a present from Santa!
+    MessageTH: "ดูนี่สิคะ! ซานตาคลอสเอาของขวัญมา
+
+      ให้ฉันด้วยค่ะ!"
+    MessageTW: 請看！是聖誕老人給我的禮物！
+    MessageGroupId: 200210200
     Id: 200210250
     CharacterId: 20021
     MessageCondition: None
@@ -473,13 +503,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 보세요! 산타클로스가 선물을 주고 가셨어요!
-    MessageJP: 見てください！サンタさんからのプレゼントです！
-    MessageCN: 老师快看！圣诞老人送给我礼物了！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210200
+  - MessageKR: 그리고 우유와 쿠키도 다 드셔 줬어요!
+    MessageJP: それに、牛乳とクッキーも全部食べてくれました！
+    MessageCN: 而且，圣诞老人还把牛奶和饼干全吃光了！
+    MessageEN: He even took all the milk and cookies!
+    MessageTH: แล้วก็กินนมกับคุกกี้ตรงนี้หมดด้วยค่ะ!
+    MessageTW: 而且，還把牛奶跟餅乾都吃光光了！
+    MessageGroupId: 200210200
     Id: 200210260
     CharacterId: 20021
     MessageCondition: None
@@ -491,13 +521,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그리고 우유와 쿠키도 다 드셔 줬어요!
-    MessageJP: それに、牛乳とクッキーも全部食べてくれました！
-    MessageCN: 而且，圣诞老人还把牛奶和饼干全吃光了！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210210
+  - MessageKR: 산타클로스를 직접 보지 못했던 건 아쉽지만……
+    MessageJP: サンタさんに会えなかったのは残念ですけど……
+    MessageCN: 虽然没实际见到圣诞老人真是太可惜了……
+    MessageEN: I'm sad I didn't get to meet him...
+    MessageTH: "น่าเสียดายจังที่ไม่ได้เจอคุณลุง
+
+      ซานตาคลอส..."
+    MessageTW: 雖然很遺憾沒見到聖誕老人……
+    MessageGroupId: 200210210
     Id: 200210270
     CharacterId: 20021
     MessageCondition: None
@@ -509,13 +541,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 산타클로스를 직접 보지 못했던 건 아쉽지만……
-    MessageJP: サンタさんに会えなかったのは残念ですけど……
-    MessageCN: 虽然没实际见到圣诞老人真是太可惜了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210210
+  - MessageKR: 그래도 선물의 보답을 해 드릴 수 있었던 것 같아 기뻐요. 에헤헷.
+    MessageJP: それでも、プレゼントのお礼ができたみたいで嬉しいです。えへへっ！
+    MessageCN: 不过即便如此，我好像也收到了礼物，很开心。诶嘿嘿！
+    MessageEN: But at least I know I gave him a gift, too! Heehee!
+    MessageTH: "แต่ฉันก็ดีใจที่ได้ตอบแทนของขวัญ
+
+      ที่ได้มาด้วยของอร่อยๆ ค่ะ แหะๆๆ!"
+    MessageTW: 但是，似乎有成功送出禮物的回禮所以很開心。耶嘿嘿！
+    MessageGroupId: 200210210
     Id: 200210280
     CharacterId: 20021
     MessageCondition: None
@@ -527,13 +561,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래도 선물의 보답을 해 드릴 수 있었던 것 같아 기뻐요. 에헤헷.
-    MessageJP: それでも、プレゼントのお礼ができたみたいで嬉しいです。えへへっ！
-    MessageCN: 不过即便如此，我好像也收到了礼物，很开心。诶嘿嘿！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210220
+  - MessageKR: 잘됐네, 하나에.
+    MessageJP: うん、良かったね
+    MessageCN: 嗯，太好了呢
+    MessageEN: That's great, Hanae.
+    MessageTH: เยี่ยมเลย ฮานาเอะ
+    MessageTW: 嗯，太好了
+    MessageGroupId: 200210220
     Id: 200210290
     CharacterId: 20021
     MessageCondition: Answer
@@ -545,13 +579,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘됐네, 하나에.
-    MessageJP: うん、良かったね
-    MessageCN: 嗯，太好了呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210230
+  - MessageKR: 그런데, 선물로 소독약을 받았다는 건……
+    MessageJP: ところで、プレゼントで消毒薬をくれたということは……
+    MessageCN: 话说回来，圣诞老人给我的礼物是消毒药，就是说……
+    MessageEN: Hm... My present was disinfectant!
+    MessageTH: แต่ว่า ของขวัญที่ฉันได้มาคือยาฆ่าเชื้อ...
+    MessageTW: 話說，收到消毒藥當禮物……
+    MessageGroupId: 200210230
     Id: 200210300
     CharacterId: 20021
     MessageCondition: Feedback
@@ -563,13 +597,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런데, 선물로 소독약을 받았다는 건……
-    MessageJP: ところで、プレゼントで消毒薬をくれたということは……
-    MessageCN: 话说回来，圣诞老人给我的礼物是消毒药，就是说……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210230
+  - MessageKR: 앞으로도 환자들의 치료를 위해 더욱 소독에 열중하라는 뜻이겠죠?
+    MessageJP: 今後も患者さんたちの治療のために、より一層消毒に励んでほしいという意味ですよね？
+    MessageCN: 圣诞老人是想鼓励我之后为了患者的治疗效果，要更加努力消毒的意思吧？
+    MessageEN:
+      Oh! Maybe this is a sign I should be more diligent about disinfecting
+      wounds properly!
+    MessageTH: "ซานตาคลอสคงอยากบอกให้ฉันใส่ใจ
+
+      กับการฆ่าเชื้อเวลารักษาผู้ป่วยสินะคะ?"
+    MessageTW: 應該是要我今後在治療傷患時，更注重消毒的意思對吧？
+    MessageGroupId: 200210230
     Id: 200210310
     CharacterId: 20021
     MessageCondition: Feedback
@@ -581,13 +619,17 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 앞으로도 환자들의 치료를 위해 더욱 소독에 열중하라는 뜻이겠죠?
-    MessageJP: 今後も患者さんたちの治療のために、より一層消毒に励んでほしいという意味ですよね？
-    MessageCN: 圣诞老人是想鼓励我之后为了患者的治疗效果，要更加努力消毒的意思吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210240
+  - MessageKR: 환부 절단에는 시간이 오래 걸리니 역시 불을 써야 하나……
+    MessageJP: 患部の切断は大変ですし、こうなったらやはり火を使って
+    MessageCN: 不过因为患部的截肢很麻烦，这样的话果然还是用灼烧法吧
+    MessageEN:
+      But... I hate taking off the infected parts... It's so tedious... Maybe
+      a blowtorch would work instead...
+    MessageTH: "แต่การตัดส่วนที่เป็นแผลต้องใช้เวลา
+
+      นาน หรือว่าต้องใช้ไฟเผาเลยนะ..."
+    MessageTW: 要切除患部相當困難，果然還是要用火來
+    MessageGroupId: 200210240
     Id: 200210320
     CharacterId: 20021
     MessageCondition: Feedback
@@ -599,13 +641,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 환부 절단에는 시간이 오래 걸리니 역시 불을 써야 하나……
-    MessageJP: 患部の切断は大変ですし、こうなったらやはり火を使って
-    MessageCN: 不过因为患部的截肢很麻烦，这样的话果然还是用灼烧法吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200210250
+  - MessageKR: 그런 뜻은 아니지 않을까?!
+    MessageJP: そういう意味じゃないと思うよ！？
+    MessageCN: 我觉得应该不是这个意思吧！？
+    MessageEN: No?! Hanae, that would not work at all!!
+    MessageTH: ไม่น่าจะหมายความแบบนั้นนะ?!
+    MessageTW: 我覺得不是那個意思唷！？
+    MessageGroupId: 200210250
     Id: 200210330
     CharacterId: 20021
     MessageCondition: Answer
@@ -617,9 +659,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런 뜻은 아니지 않을까?!
-    MessageJP: そういう意味じゃないと思うよ！？
-    MessageCN: 我觉得应该不是这个意思吧！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

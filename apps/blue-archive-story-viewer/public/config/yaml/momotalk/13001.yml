@@ -1,35 +1,41 @@
 CharacterId: 13001
 translator: 瓜豆GUARDOU
 title:
-  - GroupId: 1300102
-    FavorScheduleId: 130012
-    CharacterId: 13001
-    TextJp: 雲の香り
+  - TextJp: 雲の香り
     TextCn: 云的香气
     TextKr: 구름의 냄새
     TextEn: The Scent of Clouds
     TextTh: กลิ่นเมฆ
     TextTw: 雲的味道
-  - GroupId: 1300103
-    FavorScheduleId: 130013
+    GroupId: 1300102
+    FavorScheduleId: 130012
     CharacterId: 13001
-    TextJp: 陰陽部のアイドル
+  - TextJp: 陰陽部のアイドル
     TextCn: 阴阳部的偶像
     TextKr: 음양부의 아이돌
     TextEn: Superstar of the Yin-Yang Club
     TextTh: ไอดอลแห่งชมรมหยินหยาง
     TextTw: 陰陽部的偶像
-  - GroupId: 1300105
-    FavorScheduleId: 130015
+    GroupId: 1300103
+    FavorScheduleId: 130013
     CharacterId: 13001
-    TextJp: 月夜　作句　特別な
+  - TextJp: 月夜　作句　特別な
     TextCn: 明月夜 作一首俳句 特别的
     TextKr: 달밤, 특별한, 하이쿠짓기
     TextEn: Celestial Inspiration
     TextTh: เล่นไฮกุกลางแสงจันทร์ที่แสนพิเศษ
     TextTw: 月夜　作句　特別的
+    GroupId: 1300105
+    FavorScheduleId: 130015
+    CharacterId: 13001
 content:
-  - MessageGroupId: 130010010
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 老師
+    MessageGroupId: 130010010
     Id: 909
     CharacterId: 13001
     MessageCondition: FavorRankUp
@@ -41,13 +47,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: Sensei.
-    MessageTH: คุณครูคะ
-    MessageTW: 老師
-  - MessageGroupId: 130010020
+  - MessageKR: 이쁜 구름을 봤어.
+    MessageJP: 今日は、綺麗な雲がいっぱい
+    MessageCN: 今天，有很多美丽的云
+    MessageEN: I saw some lovely clouds.
+    MessageTH: มองเห็นก้องเมฆสวยๆ ด้วย
+    MessageTW: 今天，有很多美麗的雲
+    MessageGroupId: 130010020
     Id: 910
     CharacterId: 13001
     MessageCondition: None
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이쁜 구름을 봤어.
-    MessageJP: 今日は、綺麗な雲がいっぱい
-    MessageCN: 今天，有很多美丽的云
-    MessageEN: I saw some lovely clouds.
-    MessageTH: มองเห็นก้องเมฆสวยๆ ด้วย
-    MessageTW: 今天，有很多美麗的雲
-  - MessageGroupId: 130010030
+  - MessageKR: 구름?
+    MessageJP: 雲？
+    MessageCN: 云？
+    MessageEN: Clouds?
+    MessageTH: เมฆเหรอ?
+    MessageTW: 雲？
+    MessageGroupId: 130010030
     Id: 911
     CharacterId: 13001
     MessageCondition: Answer
@@ -77,13 +83,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 구름?
-    MessageJP: 雲？
-    MessageCN: 云？
-    MessageEN: Clouds?
-    MessageTH: เมฆเหรอ?
-    MessageTW: 雲？
-  - MessageGroupId: 130010030
+  - MessageKR: 그러게 오늘 날씨 좋지?
+    MessageJP: あ、本当だ。今日の空、良い感じだね。
+    MessageCN: 啊，真的诶。今天的天空感觉很好看呢。
+    MessageEN: It's a beautiful day today!
+    MessageTH: วันนี้อากาศดีสินะ?
+    MessageTW: 啊，真的呢。今天天空挺漂亮呢
+    MessageGroupId: 130010030
     Id: 912
     CharacterId: 13001
     MessageCondition: Answer
@@ -95,13 +101,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러게 오늘 날씨 좋지?
-    MessageJP: あ、本当だ。今日の空、良い感じだね。
-    MessageCN: 啊，真的诶。今天的天空感觉很好看呢。
-    MessageEN: It's a beautiful day today!
-    MessageTH: วันนี้อากาศดีสินะ?
-    MessageTW: 啊，真的呢。今天天空挺漂亮呢
-  - MessageGroupId: 130010040
+  - MessageKR: 응.
+    MessageJP: うん
+    MessageCN: 嗯
+    MessageEN: "Yes. "
+    MessageTH: "อื้อ "
+    MessageTW: 嗯
+    MessageGroupId: 130010040
     Id: 913
     CharacterId: 13001
     MessageCondition: Feedback
@@ -113,13 +119,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응.
-    MessageJP: うん
-    MessageCN: 嗯
-    MessageEN: "Yes. "
-    MessageTH: "อื้อ "
-    MessageTW: 嗯
-  - MessageGroupId: 130010050
+  - MessageKR: 그래서 오늘이라면
+    MessageJP: だから、もしかしたら
+    MessageCN: 所以，也许
+    MessageEN: So today...
+    MessageTH: เพราะงั้นวันนี้...
+    MessageTW: 所以，也許
+    MessageGroupId: 130010050
     Id: 914
     CharacterId: 13001
     MessageCondition: Feedback
@@ -131,13 +137,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 오늘이라면
-    MessageJP: だから、もしかしたら
-    MessageCN: 所以，也许
-    MessageEN: So today...
-    MessageTH: เพราะงั้นวันนี้...
-    MessageTW: 所以，也許
-  - MessageGroupId: 130010050
+  - MessageKR: 찾을 수 있을지도 모른다고.
+    MessageJP: 今日だったら、見つけられるかも
+    MessageCN: 在今天，说不定就能找到
+    MessageEN: I might be able to find them.
+    MessageTH: ฉันคิดว่า...
+    MessageTW: 我就想說，今天的話
+    MessageGroupId: 130010050
     Id: 915
     CharacterId: 13001
     MessageCondition: Feedback
@@ -149,13 +155,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 찾을 수 있을지도 모른다고.
-    MessageJP: 今日だったら、見つけられるかも
-    MessageCN: 在今天，说不定就能找到
-    MessageEN: I might be able to find them.
-    MessageTH: ฉันคิดว่า...
-    MessageTW: 我就想說，今天的話
-  - MessageGroupId: 130010050
+  - MessageKR: 생각했어.
+    MessageJP: そう思って
+    MessageCN: 我是这么想的
+    MessageEN: At least, I think so.
+    MessageTH: อาจจะหาเจอก็ได้น้า~
+    MessageTW: 也許能找到
+    MessageGroupId: 130010050
     Id: 916
     CharacterId: 13001
     MessageCondition: Feedback
@@ -167,13 +173,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 생각했어.
-    MessageJP: そう思って
-    MessageCN: 我是这么想的
-    MessageEN: At least, I think so.
-    MessageTH: อาจจะหาเจอก็ได้น้า~
-    MessageTW: 也許能找到
-  - MessageGroupId: 130010060
+  - MessageKR: 선생님. 찾으러 가자.
+    MessageJP: 先生、探しに行こう
+    MessageCN: 老师，一起去找吧
+    MessageEN: Sensei, let's go find them.
+    MessageTH: คุณครูคะ ไปหากันเถอะ
+    MessageTW: 老師，去找吧
+    MessageGroupId: 130010060
     Id: 917
     CharacterId: 13001
     MessageCondition: Feedback
@@ -185,13 +191,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 찾으러 가자.
-    MessageJP: 先生、探しに行こう
-    MessageCN: 老师，一起去找吧
-    MessageEN: Sensei, let's go find them.
-    MessageTH: คุณครูคะ ไปหากันเถอะ
-    MessageTW: 老師，去找吧
-  - MessageGroupId: 130010070
+  - MessageKR: 찾는다니? 뭘?
+    MessageJP: 探す？何を？
+    MessageCN: 找？千世想找什么？
+    MessageEN: Find what?
+    MessageTH: '"ไปหา" งั้นเหรอ? หาอะไรล่ะ'
+    MessageTW: 找？找什麼？
+    MessageGroupId: 130010070
     Id: 918
     CharacterId: 13001
     MessageCondition: Answer
@@ -203,13 +209,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 찾는다니? 뭘?
-    MessageJP: 探す？何を？
-    MessageCN: 找？千世想找什么？
-    MessageEN: Find what?
-    MessageTH: '"ไปหา" งั้นเหรอ? หาอะไรล่ะ'
-    MessageTW: 找？找什麼？
-  - MessageGroupId: 130010080
+  - MessageKR: 구름.
+    MessageJP: 雲
+    MessageCN: 云
+    MessageEN: Clouds.
+    MessageTH: ก้อนเมฆ
+    MessageTW: 雲
+    MessageGroupId: 130010080
     Id: 919
     CharacterId: 13001
     MessageCondition: Feedback
@@ -221,13 +227,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 구름.
-    MessageJP: 雲
-    MessageCN: 云
-    MessageEN: Clouds.
-    MessageTH: ก้อนเมฆ
-    MessageTW: 雲
-  - MessageGroupId: 130010090
+  - MessageKR: 구름……?
+    MessageJP: 雲……？
+    MessageCN: 云……？
+    MessageEN: Clouds?
+    MessageTH: เมฆ....?
+    MessageTW: 雲……？
+    MessageGroupId: 130010090
     Id: 920
     CharacterId: 13001
     MessageCondition: Answer
@@ -239,13 +245,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 구름……?
-    MessageJP: 雲……？
-    MessageCN: 云……？
-    MessageEN: Clouds?
-    MessageTH: เมฆ....?
-    MessageTW: 雲……？
-  - MessageGroupId: 130010100
+  - MessageKR: 상점가에서 기다릴게.
+    MessageJP: 商店街で待ってるね
+    MessageCN: 我在商店街等老师哦
+    MessageEN: I'll wait for you in the shopping district.
+    MessageTH: ฉันจะรอที่ย่านการค้านะคะ
+    MessageTW: 我在商店街等著唷
+    MessageGroupId: 130010100
     Id: 921
     CharacterId: 13001
     MessageCondition: Feedback
@@ -257,13 +263,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 상점가에서 기다릴게.
-    MessageJP: 商店街で待ってるね
-    MessageCN: 我在商店街等老师哦
-    MessageEN: I'll wait for you in the shopping district.
-    MessageTH: ฉันจะรอที่ย่านการค้านะคะ
-    MessageTW: 我在商店街等著唷
-  - MessageGroupId: 130010110
+  - MessageKR: 선생님, 한가, 해?
+    MessageJP: 先生は今、暇だったり、する？
+    MessageCN: 老师现在，有没有，时间？
+    MessageEN: Sensei, are you free today?
+    MessageTH: คุณครู...ว่าง... ใช่ไหมคะ?
+    MessageTW: 老師，現在有空嗎？
+    MessageGroupId: 130010110
     Id: 922
     CharacterId: 13001
     MessageCondition: FavorRankUp
@@ -275,13 +281,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 한가, 해?
-    MessageJP: 先生は今、暇だったり、する？
-    MessageCN: 老师现在，有没有，时间？
-    MessageEN: Sensei, are you free today?
-    MessageTH: คุณครู...ว่าง... ใช่ไหมคะ?
-    MessageTW: 老師，現在有空嗎？
-  - MessageGroupId: 130010120
+  - MessageKR: 하이쿠 시집 신간이 나와서 사러 가고 싶어.
+    MessageJP: 新しい俳句集が出たから、買いに行きたい
+    MessageCN: 新的俳句集出版了，我想去买一本
+    MessageEN: A new haiku book came out. I wanna go buy it.
+    MessageTH: ฉันอยากไปซื้อหนังสือรวมไฮกุเล่มใหม่
+    MessageTW: 出了新的俳句集，想去買
+    MessageGroupId: 130010120
     Id: 923
     CharacterId: 13001
     MessageCondition: None
@@ -293,13 +299,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하이쿠 시집 신간이 나와서 사러 가고 싶어.
-    MessageJP: 新しい俳句集が出たから、買いに行きたい
-    MessageCN: 新的俳句集出版了，我想去买一本
-    MessageEN: A new haiku book came out. I wanna go buy it.
-    MessageTH: ฉันอยากไปซื้อหนังสือรวมไฮกุเล่มใหม่
-    MessageTW: 出了新的俳句集，想去買
-  - MessageGroupId: 130010130
+  - MessageKR: 치세를 위해서라면 당연히 한가하지.
+    MessageJP: うん、大丈夫だよ
+    MessageCN: 嗯，没问题哦
+    MessageEN: I always have time for you, Chise.
+    MessageTH: ถ้าเพื่อชิเซะแล้ว ครูว่างเสมอเลยนะ
+    MessageTW: 嗯，沒問題唷
+    MessageGroupId: 130010130
     Id: 924
     CharacterId: 13001
     MessageCondition: Answer
@@ -311,13 +317,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 치세를 위해서라면 당연히 한가하지.
-    MessageJP: うん、大丈夫だよ
-    MessageCN: 嗯，没问题哦
-    MessageEN: I always have time for you, Chise.
-    MessageTH: ถ้าเพื่อชิเซะแล้ว ครูว่างเสมอเลยนะ
-    MessageTW: 嗯，沒問題唷
-  - MessageGroupId: 130010130
+  - MessageKR: 한가하지 않아도 치세를 위해서라면 얼마든지……!
+    MessageJP: たとえ暇じゃなかったとしても、チセのためなら……！
+    MessageCN: 就算没有时间，为了千世的话……！
+    MessageEN: And if I don't, I'll make some!
+    MessageTH: "ถึงครูจะติดงานอยู่ แต่ถ้าเพื่อชิเสะ
+
+      ล่ะก็... ได้เสมอเลย!"
+    MessageTW: 就算沒空，但只要是為了知世……！
+    MessageGroupId: 130010130
     Id: 925
     CharacterId: 13001
     MessageCondition: Answer
@@ -329,15 +337,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 한가하지 않아도 치세를 위해서라면 얼마든지……!
-    MessageJP: たとえ暇じゃなかったとしても、チセのためなら……！
-    MessageCN: 就算没有时间，为了千世的话……！
-    MessageEN: And if I don't, I'll make some!
-    MessageTH: "ถึงครูจะติดงานอยู่ แต่ถ้าเพื่อชิเสะ
-
-      ล่ะก็... ได้เสมอเลย!"
-    MessageTW: 就算沒空，但只要是為了知世……！
-  - MessageGroupId: 130010140
+  - MessageKR: 그으래?
+    MessageJP: そうなの？
+    MessageCN: 这样吗？
+    MessageEN: Really?
+    MessageTH: เหรอคะ?
+    MessageTW: 是這樣嗎？
+    MessageGroupId: 130010140
     Id: 926
     CharacterId: 13001
     MessageCondition: Feedback
@@ -349,13 +355,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그으래?
-    MessageJP: そうなの？
-    MessageCN: 这样吗？
-    MessageEN: Really?
-    MessageTH: เหรอคะ?
-    MessageTW: 是這樣嗎？
-  - MessageGroupId: 130010150
+  - MessageKR: 그럼, 같이 사러 가자.
+    MessageJP: じゃあ、行こっか
+    MessageCN: 那，一起去吧
+    MessageEN: Then let's go together.
+    MessageTH: ถ้างั้นไปกันเล๊ย~
+    MessageTW: 那麼，走吧
+    MessageGroupId: 130010150
     Id: 927
     CharacterId: 13001
     MessageCondition: Feedback
@@ -367,13 +373,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼, 같이 사러 가자.
-    MessageJP: じゃあ、行こっか
-    MessageCN: 那，一起去吧
-    MessageEN: Then let's go together.
-    MessageTH: ถ้างั้นไปกันเล๊ย~
-    MessageTW: 那麼，走吧
-  - MessageGroupId: 130010160
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 老師
+    MessageGroupId: 130010160
     Id: 928
     CharacterId: 13001
     MessageCondition: FavorRankUp
@@ -385,13 +391,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: Sensei.
-    MessageTH: คุณครูคะ
-    MessageTW: 老師
-  - MessageGroupId: 130010170
+  - MessageKR: 이머-전-시.
+    MessageJP: エマージェンシー
+    MessageCN: 紧急情况
+    MessageEN: It's an emergency.
+    MessageTH: ฉุก-เฉิน-แล้ว-ล่ะ
+    MessageTW: 緊急事件
+    MessageGroupId: 130010170
     Id: 929
     CharacterId: 13001
     MessageCondition: None
@@ -403,13 +409,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이머-전-시.
-    MessageJP: エマージェンシー
-    MessageCN: 紧急情况
-    MessageEN: It's an emergency.
-    MessageTH: ฉุก-เฉิน-แล้ว-ล่ะ
-    MessageTW: 緊急事件
-  - MessageGroupId: 130010180
+  - MessageKR: 이머전시?
+    MessageJP: エマージェンシー？
+    MessageCN: 紧急情况？
+    MessageEN: An emergency?
+    MessageTH: ฉุกเฉินเหรอ?
+    MessageTW: 緊急事件？
+    MessageGroupId: 130010180
     Id: 930
     CharacterId: 13001
     MessageCondition: Answer
@@ -421,13 +427,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이머전시?
-    MessageJP: エマージェンシー？
-    MessageCN: 紧急情况？
-    MessageEN: An emergency?
-    MessageTH: ฉุกเฉินเหรอ?
-    MessageTW: 緊急事件？
-  - MessageGroupId: 130010180
+  - MessageKR: 치세, 갑자기 무슨 일이야?
+    MessageJP: 急にどうしたの？
+    MessageCN: 突然怎么了？
+    MessageEN: Chise, what's going on?
+    MessageTH: ชิเซะ มีอะไรเหรอ?
+    MessageTW: 這麼突然，怎麼了？
+    MessageGroupId: 130010180
     Id: 931
     CharacterId: 13001
     MessageCondition: Answer
@@ -439,13 +445,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 치세, 갑자기 무슨 일이야?
-    MessageJP: 急にどうしたの？
-    MessageCN: 突然怎么了？
-    MessageEN: Chise, what's going on?
-    MessageTH: ชิเซะ มีอะไรเหรอ?
-    MessageTW: 這麼突然，怎麼了？
-  - MessageGroupId: 130010190
+  - MessageKR: 동아리 출품
+    MessageJP: 締め切りが
+    MessageCN: 截稿期限它
+    MessageEN: The club submission
+    MessageTH: ใกล้ถึงเวลา
+    MessageTW: 截止日期
+    MessageGroupId: 130010190
     Id: 932
     CharacterId: 13001
     MessageCondition: Feedback
@@ -457,13 +463,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 동아리 출품
-    MessageJP: 締め切りが
-    MessageCN: 截稿期限它
-    MessageEN: The club submission
-    MessageTH: ใกล้ถึงเวลา
-    MessageTW: 截止日期
-  - MessageGroupId: 130010190
+  - MessageKR: 마감이 코앞인데
+    MessageJP: 目の前なのに
+    MessageCN: 明明就在眼前了
+    MessageEN: deadline is almost here.
+    MessageTH: ที่ต้องส่งงานชมรมแล้ว
+    MessageTW: 迫在眼前
+    MessageGroupId: 130010190
     Id: 933
     CharacterId: 13001
     MessageCondition: Feedback
@@ -475,13 +481,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 마감이 코앞인데
-    MessageJP: 目の前なのに
-    MessageCN: 明明就在眼前了
-    MessageEN: deadline is almost here.
-    MessageTH: ที่ต้องส่งงานชมรมแล้ว
-    MessageTW: 迫在眼前
-  - MessageGroupId: 130010190
+  - MessageKR: 뭘 써야 할까?
+    MessageJP: 白めいて
+    MessageCN: 纸还是白的
+    MessageEN: What should I do?
+    MessageTH: จะเขียนอะไรดีนะ?
+    MessageTW: 一片空白
+    MessageGroupId: 130010190
     Id: 934
     CharacterId: 13001
     MessageCondition: Feedback
@@ -493,13 +499,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭘 써야 할까?
-    MessageJP: 白めいて
-    MessageCN: 纸还是白的
-    MessageEN: What should I do?
-    MessageTH: จะเขียนอะไรดีนะ?
-    MessageTW: 一片空白
-  - MessageGroupId: 130010200
+  - MessageKR: 치세……?
+    MessageJP: ……？
+    MessageCN: ……？
+    MessageEN: Chise?
+    MessageTH: ชิเซะ...?
+    MessageTW: ……？
+    MessageGroupId: 130010200
     Id: 935
     CharacterId: 13001
     MessageCondition: Answer
@@ -511,13 +517,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 치세……?
-    MessageJP: ……？
-    MessageCN: ……？
-    MessageEN: Chise?
-    MessageTH: ชิเซะ...?
-    MessageTW: ……？
-  - MessageGroupId: 130010210
+  - MessageKR: 선생님, 공원.
+    MessageJP: 公園
+    MessageCN: 公园
+    MessageEN: The park, Sensei.
+    MessageTH: คุณครู... สวน...
+    MessageTW: 公園
+    MessageGroupId: 130010210
     Id: 936
     CharacterId: 13001
     MessageCondition: Feedback
@@ -529,13 +535,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 공원.
-    MessageJP: 公園
-    MessageCN: 公园
-    MessageEN: The park, Sensei.
-    MessageTH: คุณครู... สวน...
-    MessageTW: 公園
-  - MessageGroupId: 130010220
+  - MessageKR: 기다리고 있을게.
+    MessageJP: 待ってるね
+    MessageCN: 等老师哦
+    MessageEN: I'll be waiting.
+    MessageTH: ฉันจะไปรอนะ
+    MessageTW: 等著唷
+    MessageGroupId: 130010220
     Id: 937
     CharacterId: 13001
     MessageCondition: Feedback
@@ -547,9 +553,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있을게.
-    MessageJP: 待ってるね
-    MessageCN: 等老师哦
-    MessageEN: I'll be waiting.
-    MessageTH: ฉันจะไปรอนะ
-    MessageTW: 等著唷
