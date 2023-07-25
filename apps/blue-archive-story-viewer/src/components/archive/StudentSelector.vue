@@ -2,19 +2,19 @@
 import axios from "axios";
 import { computed, onBeforeMount, onUnmounted, ref } from "vue";
 import { useRoute } from "vue-router";
-import { useSettingsStore } from "../../store/settings";
-import { useStudentStore } from "../../store/students";
-import { AppliedFilter } from "../../types/AppliedFilter";
+import ErrorScreen from "../widgets/ErrorScreen.vue";
+import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
+import StudentShowbox from "../widgets/StudentShowbox.vue";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
+import { AppliedFilter } from "@types/AppliedFilter";
 import {
   Student,
   StudentAttributeFilters,
   StudentAttributes,
   StudentNames,
-} from "../../types/Student";
-import { filterStudents } from "../../util/filterStudents";
-import ErrorScreen from "../widgets/ErrorScreen.vue";
-import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
-import StudentShowbox from "../widgets/StudentShowbox.vue";
+} from "@types/Student";
+import { filterStudents } from "@util/filterStudents";
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
@@ -698,7 +698,7 @@ onUnmounted(() => {
   }
 
   &.elasticarmor,
-  &.sound {
+  &.sonic {
     color: var(--color-text-elastic-armor);
 
     &.active {
