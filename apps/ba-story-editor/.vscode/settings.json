@@ -20,7 +20,7 @@
   "i18n-ally.sortKeys": true,
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": false
   },
   "files.associations": {
     "*.css": "postcss"
@@ -28,7 +28,7 @@
   "vue-i18n.i18nPaths": "locales",
   "editor.formatOnPaste": false, // required
   "editor.formatOnType": false, // required
-  "editor.formatOnSave": true, // optional
+  "editor.formatOnSave": false, // optional
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
   "[vue]": {
@@ -36,5 +36,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+  "vue.codeActions.enabled": false
 }

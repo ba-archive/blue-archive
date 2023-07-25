@@ -14,6 +14,7 @@ import Vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import preview from 'vite-plugin-vue-component-preview'
 
 // @ts-expect-error failed to resolve types
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -26,6 +27,7 @@ export default defineConfig({
   },
 
   plugins: [
+    (preview as any).default(),
     VueMacros({
       plugins: {
         vue: Vue({
