@@ -38,7 +38,7 @@ title:
     FavorScheduleId: 200066
     CharacterId: 20006
   - TextJp: スケートボードを選んだ理由
-    TextCn: ""
+    TextCn: 选择滑板的理由
     TextKr: 스케이트보드를 타는 이유
     TextEn: ""
     TextTh: ""
@@ -46,6 +46,7 @@ title:
     GroupId: 2000620
     FavorScheduleId: 2000620
     CharacterId: 20006
+    unsure: false
 content:
   - MessageKR: 선생, 이번 주 휴일에 시간 괜찮아?
     MessageJP: 先生、今週末は時間ある？
@@ -122,14 +123,13 @@ content:
   - MessageKR: 전에 선생이 가고 싶다고 했던 중화요리집이 이번 주말부터 신메뉴를 내놓는다고 해서 알려주려 했던 것이다!
     MessageJP: この前先生が言ってた中華料理屋で新メニューが出るって聞いて、教えようと思っただけなのに！
     MessageCN: 咱只是想告诉老师，之前老师说的中餐馆好像推出了新菜单的呢！
-    MessageEN:
-      I just wanted to tell you that eastern restaurant you like is launching
-      a new menu this weekend!
-    MessageTH: "ฉันจะบอกว่าร้านอาหารจีนที่คุณครู
-
+    MessageEN: >-
+      I just wanted to tell you that eastern restaurant you like is launching a
+      new menu this weekend!
+    MessageTH: |-
+      ฉันจะบอกว่าร้านอาหารจีนที่คุณครู
       อยากไปน่ะ จะเปิดขายเมนูใหม่ตั้งแต่
-
-      สุดสัปดาห์นี้ต่างหากเล่า!"
+      สุดสัปดาห์นี้ต่างหากเล่า!
     MessageTW: 我只是想告訴老師，上次老師說的中華料理店聽說有新菜色！
     MessageGroupId: 200060040
     Id: 200060050
@@ -147,9 +147,9 @@ content:
     MessageJP: 全部の用事が実験だと思われるのは心外なのだ！
     MessageCN: 要是老师觉得咱只会叫老师来做实验的话，就太让人心寒的呢！
     MessageEN: I'm trying to be nice, and this is how you repay me?
-    MessageTH: "อุตส่าห์หวังดี ไม่คิดเลยว่าคุณครู
-
-      จะมองท่านซายะในแง่ร้ายแบบนั้น!"
+    MessageTH: |-
+      อุตส่าห์หวังดี ไม่คิดเลยว่าคุณครู
+      จะมองท่านซายะในแง่ร้ายแบบนั้น!
     MessageTW: 所有事情都往實驗去想，真讓人心寒！
     MessageGroupId: 200060040
     Id: 200060060
@@ -167,9 +167,9 @@ content:
     MessageJP: ごめんごめん、じゃあお詫びってわけでもないけど
     MessageCN: 抱歉抱歉，这样，虽然也算不上道歉
     MessageEN: Sorry. I'm free this weekend.
-    MessageTH: "ขอโทษที่สงสัยนะ
-
-      อาทิตย์นี้ครูว่างพอดีเลย"
+    MessageTH: |-
+      ขอโทษที่สงสัยนะ
+      อาทิตย์นี้ครูว่างพอดีเลย
     MessageTW: 抱歉抱歉，那麼就當作小小的賠罪
     MessageGroupId: 200060050
     Id: 200060070
@@ -187,9 +187,9 @@ content:
     MessageJP: 奢るよ、一緒に行こう
     MessageCN: 我请你吧，一起去吃
     MessageEN: Let me make it up to you by picking up the tab.
-    MessageTH: "เดี๋ยวครูเลี้ยงข้าวเป็นการไถ่โทษ
-
-      แล้วกันนะ"
+    MessageTH: |-
+      เดี๋ยวครูเลี้ยงข้าวเป็นการไถ่โทษ
+      แล้วกันนะ
     MessageTW: 我請客，一起去吧
     MessageGroupId: 200060060
     Id: 200060080
@@ -225,9 +225,9 @@ content:
     MessageJP: じゃあ今週末、お店の前で待ち合わせなのだ！
     MessageCN: 那就这周末，咱们在店门口会合的呢！
     MessageEN: I'll meet you there later!
-    MessageTH: "ถ้างั้นสุดสัปดาห์นี้เจอกันที่หน้าร้านนั้น
-
-      ก็แล้วกัน!"
+    MessageTH: |-
+      ถ้างั้นสุดสัปดาห์นี้เจอกันที่หน้าร้านนั้น
+      ก็แล้วกัน!
     MessageTW: 那就這週末，在店的前面碰面！
     MessageGroupId: 200060070
     Id: 200060100
@@ -245,9 +245,9 @@ content:
     MessageJP: 天才は孤独なのだ……
     MessageCN: 天才果然是孤独的呢……
     MessageEN: Phew... The life of a genius can get pretty lonely.
-    MessageTH: "เฮ้อ...
-
-      ชีวิตของอัจฉริยะนี่ลำบากลำบนจริงๆ"
+    MessageTH: |-
+      เฮ้อ...
+      ชีวิตของอัจฉริยะนี่ลำบากลำบนจริงๆ
     MessageTW: 天才是孤獨的……
     MessageGroupId: 200060080
     Id: 200060110
@@ -265,9 +265,9 @@ content:
     MessageJP: いくら説明しても、理解されない……
     MessageCN: 不管怎么说明，也不能被理解……
     MessageEN: Average people could never understand, no matter how much I explain...
-    MessageTH: "ถึงจะพยายามอธิบายยังไง แต่พวกคนอื่น
-
-      ก็ไม่ยอมเข้าใจสักที..."
+    MessageTH: |-
+      ถึงจะพยายามอธิบายยังไง แต่พวกคนอื่น
+      ก็ไม่ยอมเข้าใจสักที...
     MessageTW: 無論怎麼說明，也不被理解……
     MessageGroupId: 200060090
     Id: 200060120
@@ -339,9 +339,9 @@ content:
     MessageJP: ぼく様だけでも、十分解決できる問題なのだ！
     MessageCN: 这种问题咱一个人也足够解决了呢！
     MessageEN: I can take care of it on my own!
-    MessageTH: "ปัญหาแค่นี้ท่านซายะจัดการคนเดียว
-
-      ได้สบายๆ อยู่แล้ว!"
+    MessageTH: |-
+      ปัญหาแค่นี้ท่านซายะจัดการคนเดียว
+      ได้สบายๆ อยู่แล้ว!
     MessageTW: 這是我自己就能解決的問題！
     MessageGroupId: 200060120
     Id: 200060160
@@ -359,9 +359,9 @@ content:
     MessageJP: この山海経随一の天才であるぼく様に、不可能なんて無いからな！うーはっはっはっ！
     MessageCN: 对于咱这种山海经首屈一指的天才来说，没有什么是不可能的！唔哈哈哈！
     MessageEN: I'm Shanhaijing's genius! There's nothing I can't do! Hahaha!
-    MessageTH: "อัจฉริยะแห่งซานไห่จิง ไม่มีอะไร
-
-      ที่ทำไม่ได้หรอกนะ! โฮะ-โฮะ-โฮะ!"
+    MessageTH: |-
+      อัจฉริยะแห่งซานไห่จิง ไม่มีอะไร
+      ที่ทำไม่ได้หรอกนะ! โฮะ-โฮะ-โฮะ!
     MessageTW: 對我這個山海經首屈一指的天才來說，沒有什麼不可能的！哇哈哈哈！
     MessageGroupId: 200060120
     Id: 200060170
@@ -397,9 +397,9 @@ content:
     MessageJP: 先生、この間のケーキの件はありがとうなのだ
     MessageCN: 老师，上次帮咱买到蛋糕的事情谢谢了
     MessageEN: Thanks for treating me last time, Sensei.
-    MessageTH: "คุณครู ขอบคุณที่มาช่วยเรื่อง
-
-      สั่งเมนูพิเศษนะ"
+    MessageTH: |-
+      คุณครู ขอบคุณที่มาช่วยเรื่อง
+      สั่งเมนูพิเศษนะ
     MessageTW: 老師，上次蛋糕的事謝謝了
     MessageGroupId: 200060140
     Id: 200060190
@@ -417,9 +417,9 @@ content:
     MessageJP: お返しに、今度はぼく様が何か玄武商会で美味しいものを奢ってあげる！
     MessageCN: 作为回礼，下次咱请你去玄武商会吃点好吃的！
     MessageEN: I'll get you something tasty from Black Tortoise Promenade in return.
-    MessageTH: "คราวนี้ฉันจะเลี้ยงของอร่อยๆ ที่ย่านการ
-
-      ค้าเทพเต่าดำให้เป็นการตอบแทน"
+    MessageTH: |-
+      คราวนี้ฉันจะเลี้ยงของอร่อยๆ ที่ย่านการ
+      ค้าเทพเต่าดำให้เป็นการตอบแทน
     MessageTW: 作為回禮，這次我在玄武商會請你吃好吃的！
     MessageGroupId: 200060150
     Id: 200060200
@@ -491,11 +491,10 @@ content:
     MessageJP: あ、そういえば今週は、玄武商会のお店が次々に新しいラーメンを出す「ラーメン週間」だったのだ！
     MessageCN: 啊，这么说来这周是玄武商会陆续推出新拉面的“拉面周”的呢!
     MessageEN: Ah, but Black Tortoise is starting a new ramen menu this week.
-    MessageTH: "อ่า... จะว่าไปแล้วสัปดาห์นี้เป็นสัปดาห์
-
+    MessageTH: |-
+      อ่า... จะว่าไปแล้วสัปดาห์นี้เป็นสัปดาห์
       ที่ร้านอาหารที่ย่านการค้าเทพเต่าดำจะ
-
-      เปิดขายเมนูราเม็งสูตรใหม่นี่นา"
+      เปิดขายเมนูราเม็งสูตรใหม่นี่นา
     MessageTW: 啊，這麼說來，這週是玄武商會的商家，接二連三推出新款拉麵的「拉麵週」！
     MessageGroupId: 200060170
     Id: 200060240
@@ -513,9 +512,9 @@ content:
     MessageJP: 先生！ちょうどぼく様おすすめのお店があるから、そこに行こう！
     MessageCN: 老师！正好商会里有咱推荐的店，咱们就去那里吧！
     MessageEN: Sensei, let's eat ramen at Black Tortoise this weekend!
-    MessageTH: "คุณครู! วันหยุดอาทิตย์นี้นี้ไปกิน
-
-      ราเม็งอร่อยๆ ที่ย่านการค้าด้วยกันนะ!"
+    MessageTH: |-
+      คุณครู! วันหยุดอาทิตย์นี้นี้ไปกิน
+      ราเม็งอร่อยๆ ที่ย่านการค้าด้วยกันนะ!
     MessageTW: 老師！正好有我推薦的店，去那裡吧！
     MessageGroupId: 200060170
     Id: 200060250
@@ -586,12 +585,12 @@ content:
   - MessageKR: 지난번에 개발한 특제 매운 소스가 생각 외로 큰 인기를 끄는 바람에……
     MessageJP: この前開発した特製の激辛ソースが、思った以上に大人気で……
     MessageCN: 之前开发的特制超辣酱汁，比想象中还要受欢迎……
-    MessageEN:
-      The special spicy sauce I made last week is much more popular than
-      I expected.
-    MessageTH: "ซอสเผ็ดสูตรพิเศษที่ฉันคิดค้นขึ้น
-
-      คราวที่แล้วมันขายดีกว่าที่คิดเอาไว้..."
+    MessageEN: >-
+      The special spicy sauce I made last week is much more popular than I
+      expected.
+    MessageTH: |-
+      ซอสเผ็ดสูตรพิเศษที่ฉันคิดค้นขึ้น
+      คราวที่แล้วมันขายดีกว่าที่คิดเอาไว้...
     MessageTW: 之前開發的特製超辣醬比想像中還要受歡迎……
     MessageGroupId: 200060210
     Id: 200060290
@@ -608,12 +607,12 @@ content:
   - MessageKR: 특제 소스를 만드느라 연구할 시간이 부족해진 것이다……
     MessageJP: そっちに時間を取られて、研究に手が回らないのだ
     MessageCN: 结果咱的时间都被制作辣酱占用了，根本无暇研究的呢
-    MessageEN:
+    MessageEN: >-
       I'm at the point where I have no time for research because I'm always
       making sauce.
-    MessageTH: "เพราะมัวแต่เอาเวลาไปทำซอสสูตร
-
-      พิเศษเลยทำให้ฉันมีเวลาวิจัยไม่พอแล้ว"
+    MessageTH: |-
+      เพราะมัวแต่เอาเวลาไปทำซอสสูตร
+      พิเศษเลยทำให้ฉันมีเวลาวิจัยไม่พอแล้ว
     MessageTW: 結果占用了我大量的時間，根本沒空進行研究
     MessageGroupId: 200060210
     Id: 200060300
@@ -631,9 +630,9 @@ content:
     MessageJP: 全く……
     MessageCN: 真是的……
     MessageEN: Do they even know what the Eastern Alchemy Society is?
-    MessageTH: "ให้ตายสิ พวกคนอื่นคิดว่าชมรม
-
-      วิจัยศาสตร์การปรุงยาเป็นอะไรกันแน่เนี่ย?"
+    MessageTH: |-
+      ให้ตายสิ พวกคนอื่นคิดว่าชมรม
+      วิจัยศาสตร์การปรุงยาเป็นอะไรกันแน่เนี่ย?
     MessageTW: 受不了……
     MessageGroupId: 200060210
     Id: 200060310
@@ -650,14 +649,13 @@ content:
   - MessageKR: 연단방은 불로불사의 영약을 만드는 곳이지, 소스를 만드는 곳이 아니라고!
     MessageJP: 錬丹術研究会はあくまで「不老不死の霊薬を作ること」を目的とした場所であって、ソースを作る場所じゃないのだ！
     MessageCN: 炼丹术研究会终究是以“制造长生不老的灵药”为目的努力的地方，才不是什么生产酱汁的作坊的呢！
-    MessageEN:
-      We're supposed to make elixirs that grant eternal life and youth, not
-      make special sauces!
-    MessageTH: "ชมรมวิจัยศาสตร์การปรุงยาเป็นชมรม
-
+    MessageEN: >-
+      We're supposed to make elixirs that grant eternal life and youth, not make
+      special sauces!
+    MessageTH: |-
+      ชมรมวิจัยศาสตร์การปรุงยาเป็นชมรม
       สำหรับวิจัยยาอายุวัฒนะต่างหาก ไม่ใช่
-
-      ชมรมคิดค้นสูตรซอสสักหน่อย!"
+      ชมรมคิดค้นสูตรซอสสักหน่อย!
     MessageTW: 鍛鍊屋的目的是「製作長生不老的靈藥」，不是製作醬料的地方！
     MessageGroupId: 200060220
     Id: 200060320
@@ -675,9 +673,9 @@ content:
     MessageJP: もうネズ助の手も借りたいぐらい……
     MessageCN: 咱已经到想让助鼠之助帮我干活的程度了……
     MessageEN: I'm so busy that I might need to ask Nezusuke for help...
-    MessageTH: "ช่วงนี้งานยุ่งมากๆ จนอยากจะให้
-
-      เนสึซึเกะมาช่วยเลยล่ะ..."
+    MessageTH: |-
+      ช่วงนี้งานยุ่งมากๆ จนอยากจะให้
+      เนสึซึเกะมาช่วยเลยล่ะ...
     MessageTW: 現在連根津助的手都想借來用了……
     MessageGroupId: 200060220
     Id: 200060330
@@ -749,9 +747,9 @@ content:
     MessageJP: なんか嫌な予感がするし……
     MessageCN: 总有一种不祥的预感……
     MessageEN: I don't know what you are about to say, but no.
-    MessageTH: "ครูไม่รู้หรอกว่าซายะคิดจะทำอะไร
-
-      แต่ไม่ได้เด็ดขาด"
+    MessageTH: |-
+      ครูไม่รู้หรอกว่าซายะคิดจะทำอะไร
+      แต่ไม่ได้เด็ดขาด
     MessageTW: 總有個不好的預感……
     MessageGroupId: 200060260
     Id: 200060370
@@ -785,7 +783,7 @@ content:
     ImagePath: ""
   - MessageKR: 흠흠!
     MessageJP: ふっふっふ！
-    MessageCN: ""
+    MessageCN: 哼哼哼！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -801,9 +799,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 좋은 일이다.
     MessageJP: 良いことだ
-    MessageCN: ""
+    MessageCN: 好事来啦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -819,9 +818,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 드디어 나님의 천재성을
     MessageJP: ようやくぼく様の才能に
-    MessageCN: ""
+    MessageCN: 终于有
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -837,9 +837,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 알아봐 주는 사람들이 생긴 것이다!
     MessageJP: 気づいてくれる人が現れたのだ！
-    MessageCN: ""
+    MessageCN: 赏识我才能的人出现了的呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -855,9 +856,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 오, 무슨 일이야?
     MessageJP: どうしたの？
-    MessageCN: ""
+    MessageCN: 发生什么了？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -873,9 +875,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 무슨 부탁이라도 받았어?
     MessageJP: 何か依頼があったとか？
-    MessageCN: ""
+    MessageCN: 沙耶是接到什么委托了吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -891,9 +894,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그런 것이다.
     MessageJP: そうなのだ！
-    MessageCN: ""
+    MessageCN: 是这样的呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -909,9 +913,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 모처럼의 일이니, 선생도 오는 것이다!
     MessageJP: せっかくだから、先生にも来てほしくて！
-    MessageCN: ""
+    MessageCN: 机会难得，我想让老师也来一趟！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -927,9 +932,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 함께 나님의 발명품을 지켜보도록!
     MessageJP: 一緒にぼく様の発明品を見てみるのだ！
-    MessageCN: ""
+    MessageCN: 一起看看咱的新发明的呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -945,9 +951,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 크윽
     MessageJP: うう……
-    MessageCN: ""
+    MessageCN: 呜呜……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -963,9 +970,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 생각해 보니, 방독면을 썼어야 했던 것이다
     MessageJP: よく考えれば、ガスマスクを着ければ良かったのだ
-    MessageCN: ""
+    MessageCN: 仔细想想，要是戴了防毒面具就好了的呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -981,9 +989,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 향수라고 방심해 버리다니
     MessageJP: ただの香水だと思って油断してしまうなんて……
-    MessageCN: ""
+    MessageCN: 居然能让我也以为只是普通的香水，从而掉以轻心……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -999,9 +1008,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 나님 정도 되는 사람이 이런 실수를…….
     MessageJP: いや、ぼく様の発明がすごすぎたのだ……？
-    MessageCN: ""
+    MessageCN: 不对，难道说是我的发明太厉害了的吗……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1017,9 +1027,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그래도 덕분에 모두가 즐거웠잖아.
     MessageJP: みんな喜んでくれてたね
-    MessageCN: ""
+    MessageCN: 大家都很高兴呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1035,9 +1046,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 행사는 대성공이었는걸. 사야 덕분이야.
     MessageJP: サヤのおかげで、イベントは大成功だよ
-    MessageCN: ""
+    MessageCN: 多亏了沙耶，活动圆满成功了哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1053,9 +1065,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 흥
     MessageJP: ふっふっふ
-    MessageCN: ""
+    MessageCN: 哼哼哼
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1071,9 +1084,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그건 당연한 것이다! 나님이니까!
     MessageJP: それは当たり前なのだ！
-    MessageCN: ""
+    MessageCN: 这是当然的呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1089,9 +1103,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 음
     MessageJP: だって、ぼく様なのだから！
-    MessageCN: ""
+    MessageCN: 毕竟这可是本天才大人啊！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1107,9 +1122,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그래도
     MessageJP: そうだ
-    MessageCN: ""
+    MessageCN: 对了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1125,9 +1141,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 선생
     MessageJP: 先生
-    MessageCN: ""
+    MessageCN: 老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1143,9 +1160,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 정말 고맙다.
     MessageJP: 今日は助かったのだ、ありがとう！
-    MessageCN: ""
+    MessageCN: 今天帮了大忙的呢，谢谢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1161,9 +1179,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 다음에 또 함께 하는 것이다!
     MessageJP: また次の発明も楽しみにしていてほしいのだ！
-    MessageCN: ""
+    MessageCN: 就期待我下次的发明吧！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1179,3 +1198,4 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false

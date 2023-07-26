@@ -38,7 +38,7 @@ title:
     FavorScheduleId: 100336
     CharacterId: 10033
   - TextJp: 秘めたる心
-    TextCn: ""
+    TextCn: 想要隐藏的真心
     TextKr: 감추고 싶은 것, 그러나 알려졌으면 하는 것.
     TextEn: ""
     TextTh: ""
@@ -46,6 +46,7 @@ title:
     GroupId: 1003320
     FavorScheduleId: 1003320
     CharacterId: 10033
+    unsure: false
 content:
   - MessageKR: 안녕하신가요? 선생님.
     MessageJP: うふふっ……
@@ -69,9 +70,9 @@ content:
     MessageJP: おはようございます、先生。良い朝ですね。
     MessageCN: 早上好，老师。今天是个美好的早晨呢
     MessageEN: Heehee. It's Wakamo. I wanted to ask how you're doing.
-    MessageTH: "ฮุฮุฮุ วาคาโมะส่งข้อความ
-
-      มาทักทายคุณครูค่ะ"
+    MessageTH: |-
+      ฮุฮุฮุ วาคาโมะส่งข้อความ
+      มาทักทายคุณครูค่ะ
     MessageTW: 早安，老師。真是不錯的早晨呢。
     MessageGroupId: 100330020
     Id: 100330020
@@ -125,9 +126,9 @@ content:
     MessageJP: あなた様から贈られた、この私の名前の文字を撫でるだけで……
     MessageCN: 亲爱的发来的消息里，写着我的名字呢。光是抚摸着这些文字……
     MessageEN: I keep re-reading that message.
-    MessageTH: "เพียงแค่ได้เห็นอักษรชื่อ
-
-      ของฉันที่คุณท่านเขียน..."
+    MessageTH: |-
+      เพียงแค่ได้เห็นอักษรชื่อ
+      ของฉันที่คุณท่านเขียน...
     MessageTW: 僅是撫摸這個由閣下贈予，我的名字之文字……
     MessageGroupId: 100330040
     Id: 100330050
@@ -145,9 +146,9 @@ content:
     MessageJP: いっそ暑いほどに心が温まってしまいます
     MessageCN: 我的身体就不由得渐渐发烫，心也随之温暖起来
     MessageEN: It really warms my heart.
-    MessageTH: "หัวใจของวาคาโมะผู้นี้
-
-      ก็รู้สึกอบอุ่นขึ้นมากเลยค่ะ..."
+    MessageTH: |-
+      หัวใจของวาคาโมะผู้นี้
+      ก็รู้สึกอบอุ่นขึ้นมากเลยค่ะ...
     MessageTW: 內心就感到無比溫暖熾熱
     MessageGroupId: 100330040
     Id: 100330060
@@ -165,9 +166,9 @@ content:
     MessageJP: そ、それは良かった……
     MessageCN: 那、那真是太好了……
     MessageEN: Really? Uh, thanks, I think.
-    MessageTH: "งะ...งั้นเหรอ?
-
-      ถือเป็นเรื่องดีนะ..."
+    MessageTH: |-
+      งะ...งั้นเหรอ?
+      ถือเป็นเรื่องดีนะ...
     MessageTW: 那，那真是太好了……
     MessageGroupId: 100330050
     Id: 100330070
@@ -184,12 +185,12 @@ content:
   - MessageKR: 따사로운 햇살에 절로 눈이 부실 만큼 날이 많이 풀렸습니다.
     MessageJP: 本日は日差しも暖かく、良い天気ですわね
     MessageCN: 今天的阳光也很暖和，是个好天气呢
-    MessageEN:
+    MessageEN: >-
       It's already so warm out. The sunshine is so strong that it makes me
       squint.
-    MessageTH: "วันนี้ดูเป็นวันสบายๆ เหมาะกับ
-
-      แสงแดดอบอุ่นเลยนะคะ"
+    MessageTH: |-
+      วันนี้ดูเป็นวันสบายๆ เหมาะกับ
+      แสงแดดอบอุ่นเลยนะคะ
     MessageTW: 今日陽光也很暖和，是個好天氣呢
     MessageGroupId: 100330060
     Id: 100330080
@@ -207,9 +208,9 @@ content:
     MessageJP: ですが、油断してはなりません
     MessageCN: 但是，也不能掉以轻心
     MessageEN: You should be careful when the weather gets warmer.
-    MessageTH: "แต่ว่าในวันอากาศอบอุ่นแบบนี้
-
-      ยิ่งต้องระวังนะคะ"
+    MessageTH: |-
+      แต่ว่าในวันอากาศอบอุ่นแบบนี้
+      ยิ่งต้องระวังนะคะ
     MessageTW: 不過，不可輕易疏忽
     MessageGroupId: 100330060
     Id: 100330090
@@ -226,14 +227,13 @@ content:
   - MessageKR: 계절의 급변으로 용태가 갑자기 나빠지는 불상사 또한 종종 일어나는 법.
     MessageJP: 急に気温が変わる時は、体調も崩れてしまいがちものです
     MessageCN: 气温骤变的时候，稍不注意就会生病的
-    MessageEN:
-      The temperature can change so drastically that it could have an impact
-      on your health.
-    MessageTH: "สภาพอากาศอาจเปลี่ยนแปลง
-
+    MessageEN: >-
+      The temperature can change so drastically that it could have an impact on
+      your health.
+    MessageTH: |-
+      สภาพอากาศอาจเปลี่ยนแปลง
       กะทันหันได้ตามฤดูกาลหรือ
-
-      อาจเกิดเหตุที่ไม่คาดคิดได้ค่ะ"
+      อาจเกิดเหตุที่ไม่คาดคิดได้ค่ะ
     MessageTW: 氣溫突然驟變時，身體狀況也常常會出問題
     MessageGroupId: 100330060
     Id: 100330100
@@ -287,9 +287,9 @@ content:
     MessageJP: 先生にこうして、私の身体を気遣っていただけるだなんて……
     MessageCN: 老师竟然这么关心我的身体……
     MessageEN: I'm moved that you hold so much concern for me...
-    MessageTH: "คุณครูอุตส่าห์เป็นห่วงสุขภาพ
-
-      ของวาคาโมะแบบนี้..."
+    MessageTH: |-
+      คุณครูอุตส่าห์เป็นห่วงสุขภาพ
+      ของวาคาโมะแบบนี้...
     MessageTW: 沒想到，竟然能讓老師像這樣關心我的身體……
     MessageGroupId: 100330080
     Id: 100330130
@@ -325,11 +325,10 @@ content:
     MessageJP: この記念すべき時に、モモトークだけでなんて我慢なりません
     MessageCN: 在这个值得纪念的时刻却只能和老师隔着屏幕用momotalk聊天，我实在无法忍受了
     MessageEN: This monumental moment can't just be inside Momo Talk.
-    MessageTH: "ช่างน่าเสียดายหากช่วงเวลาที่
-
+    MessageTH: |-
+      ช่างน่าเสียดายหากช่วงเวลาที่
       ตราตรึงใจเช่นนี้จะจบลงแค่เพียง
-
-      การพูดคุยใน MOMOTALK"
+      การพูดคุยใน MOMOTALK
     MessageTW: 在這值得紀念之時，只透過MomoTalk什麼的我無法忍受
     MessageGroupId: 100330080
     Id: 100330150
@@ -419,9 +418,9 @@ content:
     MessageJP: またお会いできて、私とても嬉しかったです
     MessageCN: 能和您再次见面，我非常高兴
     MessageEN: I'm so glad we got to talk today.
-    MessageTH: "การได้พบกันวันนี้ วาคาโมะผู้นี้
-
-      มีความสุขเหลือเกินค่ะ"
+    MessageTH: |-
+      การได้พบกันวันนี้ วาคาโมะผู้นี้
+      มีความสุขเหลือเกินค่ะ
     MessageTW: 又見到面，我非常的開心
     MessageGroupId: 100330120
     Id: 100330200
@@ -439,9 +438,9 @@ content:
     MessageJP: 次にお会いできる時を、心待ちにしておりますね
     MessageCN: 我衷心期待着，与您下次的相会
     MessageEN: I'm looking forward to seeing you again.
-    MessageTH: "ฉันจะเฝ้ารอวันที่ได้พบ
-
-      กับคุณท่านเช่นนี้อีกค่ะ"
+    MessageTH: |-
+      ฉันจะเฝ้ารอวันที่ได้พบ
+      กับคุณท่านเช่นนี้อีกค่ะ
     MessageTW: 我衷心期待，下次見面的時候哦
     MessageGroupId: 100330120
     Id: 100330210
@@ -459,9 +458,9 @@ content:
     MessageJP: その時は落ち着いた感じで会おうね……
     MessageCN: 下次见面的时候还是稍微冷静一点吧……
     MessageEN: I hope next time we can find a quieter spot.
-    MessageTH: "คราวหน้ามาเจอกันแบบเงียบๆ กว่านี้
-
-      หน่อยก็แล้วกันนะ"
+    MessageTH: |-
+      คราวหน้ามาเจอกันแบบเงียบๆ กว่านี้
+      หน่อยก็แล้วกันนะ
     MessageTW: 到時候以安穩的感覺見面吧……
     MessageGroupId: 100330130
     Id: 100330220
@@ -497,9 +496,9 @@ content:
     MessageJP: あなた様がそうお望みでしたら、ご随意に……！
     MessageCN: 如果亲爱的希望我这样……那就都听您的！
     MessageEN: If that's what you want, I'll make that happen!
-    MessageTH: "ถ้าคุณท่านต้องการเช่นนั้น
-
-      วาคาโมะก็จะทำเพื่อคุณท่านค่ะ!"
+    MessageTH: |-
+      ถ้าคุณท่านต้องการเช่นนั้น
+      วาคาโมะก็จะทำเพื่อคุณท่านค่ะ!
     MessageTW: 閣下是那麼希望的話，悉聽尊便……！
     MessageGroupId: 100330140
     Id: 100330240
@@ -517,9 +516,9 @@ content:
     MessageJP: 先生。本日はシャーレのお仕事、お休みですよね？
     MessageCN: 老师。您今天不用在夏莱工作吧？
     MessageEN: Sensei, you have the day off today, correct?
-    MessageTH: "คุณครูคะ วันนี้เป็นวันหยุด
-
-      ของทางชาเล่ต์ใช่มั้ยคะ?"
+    MessageTH: |-
+      คุณครูคะ วันนี้เป็นวันหยุด
+      ของทางชาเล่ต์ใช่มั้ยคะ?
     MessageTW: 老師。今日夏萊的工作，休息對吧？
     MessageGroupId: 100330150
     Id: 100330250
@@ -573,9 +572,9 @@ content:
     MessageJP: このワカモ、先生のスケジュールでしたら一寸の狂いも無く心の中に刻んでおりますので
     MessageCN: 只要是老师的日程安排，小女若藻都会分毫不差地铭记在心呢
     MessageEN: I always know your schedule, at all times of the day.
-    MessageTH: "เรื่องราวที่เกี่ยวกับคุณครู ฉันเก็บไว้
-
-      ในหัวใจเพื่อติดตามรอยของคุณครูค่ะ"
+    MessageTH: |-
+      เรื่องราวที่เกี่ยวกับคุณครู ฉันเก็บไว้
+      ในหัวใจเพื่อติดตามรอยของคุณครูค่ะ
     MessageTW: 若藻我，假如是老師的行程已經毫無一寸偏差刻在心裡了
     MessageGroupId: 100330170
     Id: 100330280
@@ -611,9 +610,9 @@ content:
     MessageJP: 日ごろからご多忙でなかなか心休まらない中、ようやく設けられた休日……
     MessageCN: 平日里您总是相当忙碌，也没机会好好放松心情，好不容易安排了休息日……
     MessageEN: This is a timely day off for a workaholic like you.
-    MessageTH: "วันนี้เป็นวันหยุดสำหรับคุณครู
-
-      ที่ทำงานหนักมาตลอด"
+    MessageTH: |-
+      วันนี้เป็นวันหยุดสำหรับคุณครู
+      ที่ทำงานหนักมาตลอด
     MessageTW: 平時總是忙碌沒辦法休息之中，好不容易設置的假日……
     MessageGroupId: 100330190
     Id: 100330300
@@ -631,9 +630,9 @@ content:
     MessageJP: どうか、安全で楽しい一日になりますよう
     MessageCN: 若藻由衷希望您能够度过平安快乐的一天
     MessageEN: I hope you have a nice day.
-    MessageTH: "ขอให้เป็นวันที่แสนสนุกและ
-
-      ปลอดภัยนะคะ"
+    MessageTH: |-
+      ขอให้เป็นวันที่แสนสนุกและ
+      ปลอดภัยนะคะ
     MessageTW: 祈望，會是安全快樂的一天
     MessageGroupId: 100330190
     Id: 100330310
@@ -651,9 +650,9 @@ content:
     MessageJP: 私、先生の後を追いつつお祈りしておりますね
     MessageCN: 我会在您身后，为您献上我的祝愿的
     MessageEN: I'll always be following you and wishing for your happiness.
-    MessageTH: "วาคาโมะผู้นี้จะคอยติดตามไป
-
-      และอวยพรให้คุณท่านเองค่ะ"
+    MessageTH: |-
+      วาคาโมะผู้นี้จะคอยติดตามไป
+      และอวยพรให้คุณท่านเองค่ะ
     MessageTW: 我，會跟隨在老師後方同時祈求哦
     MessageGroupId: 100330190
     Id: 100330320
@@ -743,9 +742,9 @@ content:
     MessageJP: この日を楽しみにしつつ、幾つの眠れない夜を明かしてきたことでしょう……
     MessageCN: 我在期待中度过了不知多少个不眠之夜，只盼着这一天的到来……
     MessageEN: You have no idea how many sleepless nights I've spent waiting for today...
-    MessageTH: "แม้กี่วันคืนที่พ้นผ่าน
-
-      ฉันเฝ้ารอวันนี้มาโดยตลอด..."
+    MessageTH: |-
+      แม้กี่วันคืนที่พ้นผ่าน
+      ฉันเฝ้ารอวันนี้มาโดยตลอด...
     MessageTW: 我期待著這一天，不知迎來了多少夜未眠的清晨呢……
     MessageGroupId: 100330220
     Id: 100330370
@@ -763,9 +762,9 @@ content:
     MessageJP: そんなときめきをどうにか抑えつつも、デートプランは完璧に立てておきました！
     MessageCN: 怀着心中这股难以抑制的悸动，我已经准备好了完美的约会计划！
     MessageEN: I've planned the perfect date for us. I can barely contain my excitement!
-    MessageTH: "ฉันต้องสะกดกลั้นความตื่นเต้นเอาไว้
-
-      และทำแผนการเดตได้สมบูรณ์แล้วค่ะ!"
+    MessageTH: |-
+      ฉันต้องสะกดกลั้นความตื่นเต้นเอาไว้
+      และทำแผนการเดตได้สมบูรณ์แล้วค่ะ!
     MessageTW: 即使想辦法壓抑著那份怦然心動，我依然制定了完美的約會計劃！
     MessageGroupId: 100330230
     Id: 100330380
@@ -801,11 +800,10 @@ content:
     MessageJP: では、約束の場所でお待ちしておりますね。ふふふっ……
     MessageCN: 那么，我在约定的地方恭候您哦。呵呵呵……
     MessageEN: I'll be waiting for you at the meeting place. Heehee.
-    MessageTH: "ถ้างั้นฉันจะรอที่
-
+    MessageTH: |-
+      ถ้างั้นฉันจะรอที่
       สถานที่นัดพบนะคะ
-
-      ฮุฮุฮุ"
+      ฮุฮุฮุ
     MessageTW: 那麼，我在約定的場所恭候您哦。哼哼哼……
     MessageGroupId: 100330250
     Id: 100330400
@@ -859,9 +857,9 @@ content:
     MessageJP: 今日一日、あなた様の貴重なお時間をいただけませんでしょうか？
     MessageCN: 今天，我能占用亲爱的一天宝贵时间吗？
     MessageEN: Do you think you could come see me today?
-    MessageTH: "ฉันจะขอรบกวนวันที่มีค่า
-
-      ของคุณครูสักวันได้ไหมคะ?"
+    MessageTH: |-
+      ฉันจะขอรบกวนวันที่มีค่า
+      ของคุณครูสักวันได้ไหมคะ?
     MessageTW: 請問，可以收下閣下今天一天貴重的時間嗎？
     MessageGroupId: 100330280
     Id: 100330430
@@ -879,9 +877,9 @@ content:
     MessageJP: あっ、ごめん……ちょっと今手が離せない仕事が……
     MessageCN: 啊，抱歉……我现在有事抽不开身……
     MessageEN: Oh, sorry. I have plans today.
-    MessageTH: "อ๊ะ ขอโทษนะ
-
-      วันนี้พอดีครูมีธุระนิดหน่อย"
+    MessageTH: |-
+      อ๊ะ ขอโทษนะ
+      วันนี้พอดีครูมีธุระนิดหน่อย
     MessageTW: 啊，抱歉……現在有點離不開手的工作……
     MessageGroupId: 100330290
     Id: 100330440
@@ -899,9 +897,9 @@ content:
     MessageJP: 左様でしたか……
     MessageCN: 原来如此……
     MessageEN: Oh, really? That's too bad...
-    MessageTH: "อา... อย่างนั้นเหรอคะ
-
-      น่าเสียดายจัง..."
+    MessageTH: |-
+      อา... อย่างนั้นเหรอคะ
+      น่าเสียดายจัง...
     MessageTW: 這樣啊……
     MessageGroupId: 100330300
     Id: 100330450
@@ -936,12 +934,12 @@ content:
   - MessageKR: 아무리 바란다고 한들, 제 고집으로 선생님을 방해해서야 언어도단.
     MessageJP: 幾ら臨んだところで、私の我儘が先生の邪魔となってはいけませんし……
     MessageCN: 不管怎么说，也不能让我的任性妨碍到老师……
-    MessageEN:
-      I desperately wanted you to come with me today, but I know I shouldn't
-      be too clingy.
-    MessageTH: "ถึงฉันจะต้องการมากแค่ไหน
-
-      แต่ก็คงจะไปขัดขวางคุณครูไม่ได้"
+    MessageEN: >-
+      I desperately wanted you to come with me today, but I know I shouldn't be
+      too clingy.
+    MessageTH: |-
+      ถึงฉันจะต้องการมากแค่ไหน
+      แต่ก็คงจะไปขัดขวางคุณครูไม่ได้
     MessageTW: 就算再怎麼奢望，也不能因我的任性而打擾老師……
     MessageGroupId: 100330310
     Id: 100330470
@@ -959,9 +957,9 @@ content:
     MessageJP: 残念ですが、本日はひとりで行ってまいります
     MessageCN: 虽然很可惜，但是今天我就一个人去吧
     MessageEN: I guess... I'll go shopping all alone today.
-    MessageTH: "น่าเสียดาย วันนี้ฉันคงจะต้อง
-
-      ไปช้อปปิ้งคนเดียวแล้วค่ะ"
+    MessageTH: |-
+      น่าเสียดาย วันนี้ฉันคงจะต้อง
+      ไปช้อปปิ้งคนเดียวแล้วค่ะ
     MessageTW: 雖然很遺憾，今日就由我隻身前往
     MessageGroupId: 100330310
     Id: 100330480
@@ -979,9 +977,9 @@ content:
     MessageJP: 何か買い物とか？
     MessageCN: 是要去购物之类的？
     MessageEN: Shopping? What are you buying?
-    MessageTH: "หืม? ช็อปปิ้ง?
-
-      จะไปซื้ออะไรเหรอ?"
+    MessageTH: |-
+      หืม? ช็อปปิ้ง?
+      จะไปซื้ออะไรเหรอ?
     MessageTW: 要買什麼東西嗎？
     MessageGroupId: 100330320
     Id: 100330490
@@ -999,11 +997,10 @@ content:
     MessageJP: はい、少々必要なものがありまして……ブラックマーケットに行ってこようかと
     MessageCN: 是的，我需要一些东西……所以想去黑市找找
     MessageEN: Oh, I need something from the black market...
-    MessageTH: "คะ? พอดีฉันมีของจำเป็น
-
+    MessageTH: |-
+      คะ? พอดีฉันมีของจำเป็น
       นิดหน่อยเลยจะแวะไปที่
-
-      ตลาดมืดค่ะ..."
+      ตลาดมืดค่ะ...
     MessageTW: 是的，稍微有些需要的東西……因此打算去一趟黑市
     MessageGroupId: 100330330
     Id: 100330500
@@ -1021,9 +1018,9 @@ content:
     MessageJP: ブラックマーケットに一人でかぁ……
     MessageCN: 一个人去黑市啊……
     MessageEN: You're going to the black market alone?!
-    MessageTH: "ตลาดมืด?!
-
-      วาคาโมะจะไปคนเดียวเนี่ยนะ?!"
+    MessageTH: |-
+      ตลาดมืด?!
+      วาคาโมะจะไปคนเดียวเนี่ยนะ?!
     MessageTW: 一個人去黑市啊……
     MessageGroupId: 100330340
     Id: 100330510
@@ -1041,9 +1038,9 @@ content:
     MessageJP: ……すぐ終わらせるから一緒に行こう。ちょっと待っててもらえる？
     MessageCN: ……我这边马上结束了，我们一起去吧。能等我一下吗？
     MessageEN: I'll go with you! I'll be right there after I'm done working!
-    MessageTH: "งั้นครูไปด้วย
-
-      เดี๋ยวเสร็จงานแล้วครูไปหา!"
+    MessageTH: |-
+      งั้นครูไปด้วย
+      เดี๋ยวเสร็จงานแล้วครูไปหา!
     MessageTW: ……馬上就結束了一起去吧。可以等我一下嗎？
     MessageGroupId: 100330350
     Id: 100330520
@@ -1151,9 +1148,9 @@ content:
     MessageJP: 本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に
     MessageCN: 真的真的真的真的真的真的真的真的真的真的真的真的真的真的真的真的
     MessageEN: Very very very very very very...
-    MessageTH: "มากมากมากมากมากมาก
-
-      มากมากมากมากมากมาก"
+    MessageTH: |-
+      มากมากมากมากมากมาก
+      มากมากมากมากมากมาก
     MessageTW: 真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是
     MessageGroupId: 100330390
     Id: 100330580
@@ -1171,9 +1168,9 @@ content:
     MessageJP: 本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に本当に
     MessageCN: 真的真的真的真的真的真的真的真的真的真的真的真的真的真的真的真的
     MessageEN: Very very very very very very...
-    MessageTH: "มากมากมากมากมากมาก
-
-      มากมากมากมากมากมาก"
+    MessageTH: |-
+      มากมากมากมากมากมาก
+      มากมากมากมากมากมาก
     MessageTW: 真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是真的是
     MessageGroupId: 100330400
     Id: 100330590
@@ -1245,9 +1242,9 @@ content:
     MessageJP: それではまた
     MessageCN: 那么再会
     MessageEN: I'll see you again next time.
-    MessageTH: "ถ้าอย่างนั้น ไว้พบกัน
-
-      ในโอกาสหน้านะคะ"
+    MessageTH: |-
+      ถ้าอย่างนั้น ไว้พบกัน
+      ในโอกาสหน้านะคะ
     MessageTW: 那麼再見
     MessageGroupId: 100330430
     Id: 100330630
@@ -1265,9 +1262,9 @@ content:
     MessageJP: 次にお会いできる日を楽しみにしておりますね
     MessageCN: 期待着和您下次见面的日子
     MessageEN: I'll be waiting for that day.
-    MessageTH: "ฉันจะเฝ้ารอวันที่เรา
-
-      จะได้พบกันใหม่ค่ะ"
+    MessageTH: |-
+      ฉันจะเฝ้ารอวันที่เรา
+      จะได้พบกันใหม่ค่ะ
     MessageTW: 我很期待下次見面的日子哦
     MessageGroupId: 100330430
     Id: 100330640
@@ -1301,7 +1298,7 @@ content:
     ImagePath: ""
   - MessageKR: 안녕하신가요. 선생님.
     MessageJP: おはようございます、先生。ご機嫌いかがでしょうか？
-    MessageCN: ""
+    MessageCN: 早上好，老师。近来身体还好吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1317,9 +1314,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 안녕. 와카모.
     MessageJP: おはよう、ワカモ
-    MessageCN: ""
+    MessageCN: 早呀，若藻
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1335,9 +1333,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 혹여나 제가 당신의 소중한 시간을 빼앗는 게 아닐지.
     MessageJP: このような連絡は、あなた様の貴重なお時間を奪ってしまうのではないかと
-    MessageCN: ""
+    MessageCN: 我担心像这样贸然与老师联络，会夺走您宝贵的时间
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1353,9 +1352,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 걱정이 되기만 합니다만…….
     MessageJP: 申し訳なくも思うのですが……
-    MessageCN: ""
+    MessageCN: 如果是这样的话真的非常抱歉……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1371,9 +1371,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아냐. 마침 나도 한가했고.
     MessageJP: ちょうど休憩中だよ、今日はどうしたの？
-    MessageCN: ""
+    MessageCN: 我正在休息哦，若藻今天找我有什么事吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1389,9 +1390,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아아, 그러신가요. 이 무슨 우연이.
     MessageJP: なんと奇遇なのでしょう
-    MessageCN: ""
+    MessageCN: 这是多么神奇的巧合啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1407,9 +1409,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 저 역시 때마침 시간이 비었던 참인데.
     MessageJP: 私もちょうど、時間が空いたところなのです
-    MessageCN: ""
+    MessageCN: 我现在也正好有空
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1425,9 +1428,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: ……후후, 그렇군요. 이 우연을 그냥 흘려보내는 건 무척이나 아쉬운 일일 터.
     MessageJP: ふふ、このような幸運に恵まれるだなんて……
-    MessageCN: ""
+    MessageCN: 呵呵，没想到竟然会如此地幸运……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1443,9 +1447,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 이 소중한 기적을 기념하기 위해.
     MessageJP: 奇跡のような瞬間を永遠にすべく……
-    MessageCN: ""
+    MessageCN: 为了让这奇迹般的瞬间成为永生难忘的纪念……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1461,9 +1466,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 저 와카모, 오늘 당신이 기뻐할 수 있도록 전력을 다해 보이겠습니다♡
     MessageJP: 本日は、あなた様のために全力を尽くさせていただきますね♡
-    MessageCN: ""
+    MessageCN: 今日，就请让我向您倾注我的所有吧♡
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1479,9 +1485,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 응? 와카모……. 저기, 그게 무슨 의미야? 어어?
     MessageJP: わ、ワカモ？それってどういう……
-    MessageCN: ""
+    MessageCN: 啊，若藻？那是什么意思……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1497,3 +1504,4 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false

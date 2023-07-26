@@ -56,7 +56,7 @@ title:
     FavorScheduleId: 130089
     CharacterId: 13008
   - TextJp: お気に入りのバッグ
-    TextCn: ""
+    TextCn: 喜欢的包包
     TextKr: 좋은 물건의 기준
     TextEn: ""
     TextTh: ""
@@ -64,6 +64,7 @@ title:
     GroupId: 1300820
     FavorScheduleId: 1300820
     CharacterId: 13008
+    unsure: false
 content:
   - MessageKR: 선생님!
     MessageJP: 先生！
@@ -140,12 +141,10 @@ content:
   - MessageKR: 어차피? 한가하잖아? 그럼 나랑 알바 같이 하자!
     MessageJP: どうせ暇でしょ？だったら私と一緒にバイトして！
     MessageCN: 反正你很闲吧？那就跟我一起打工吧！
-    MessageEN:
-      "You don't have a lot going on, right? So do some part-time work with
-      me! "
-    MessageTH: "ไหนๆ  ก็ไม่อะไรทำอยู่แล้ว ไปทำงาน
-
-      พิเศษกับฉันดีกว่า! "
+    MessageEN: "You don't have a lot going on, right? So do some part-time work with me! "
+    MessageTH: |-
+      ไหนๆ  ก็ไม่อะไรทำอยู่แล้ว ไปทำงาน
+      พิเศษกับฉันดีกว่า!
     MessageTW: 反正你也不忙吧？那就和我一起打工吧！
     MessageGroupId: 130080030
     Id: 238
@@ -163,9 +162,9 @@ content:
     MessageJP: 私のお手伝いをしてくれればいいから、OK？
     MessageCN: 只要帮我打下手就可以了，OK？
     MessageEN: I just need someone to assist me. Is that cool with you?
-    MessageTH: "แค่ไปช่วยฉันนิดหน่อยก็พอ เอาเป็นว่า
-
-      ตกลงนะ?"
+    MessageTH: |-
+      แค่ไปช่วยฉันนิดหน่อยก็พอ เอาเป็นว่า
+      ตกลงนะ?
     MessageTW: 只要幫忙我就行了，OK？
     MessageGroupId: 130080030
     Id: 239
@@ -201,7 +200,7 @@ content:
     MessageJP: えっと……えぇ……？
     MessageCN: 那个……诶诶……？
     MessageEN: Huh? Excuse me?
-    MessageTH: "...หือ? ว่ายังไงนะ?"
+    MessageTH: ...หือ? ว่ายังไงนะ?
     MessageTW: 那個……咦咦……？
     MessageGroupId: 130080050
     Id: 241
@@ -237,9 +236,9 @@ content:
     MessageJP: 先生、また別のバイトが入ったから、前のところで待ち合わせね！
     MessageCN: 老师，我又接到新的兼职了。我们还在上次的地方碰头！
     MessageEN: "Sensei, I've got another part-time job. See you there? "
-    MessageTH: "คุณครู ฉันมีงานเข้ามาล่ะ ไปเจอกันที่นั่น
-
-      ไหม? "
+    MessageTH: |-
+      คุณครู ฉันมีงานเข้ามาล่ะ ไปเจอกันที่นั่น
+      ไหม?
     MessageTW: 老師，又有一份新的打工，所以在上次的地方碰面哦！
     MessageGroupId: 130080060
     Id: 243
@@ -293,9 +292,9 @@ content:
     MessageJP: 次のバイトが決まったよ！先生も来るよね？
     MessageCN: 我下次的兼职定下来了！老师也会来的吧？
     MessageEN: Another part-time job confirmed! Are you coming, Sensei?
-    MessageTH: "ฉันเลือกงานพิเศษไว้แล้ว! คุณครูก็จะ
-
-      มาด้วยใช่ไหม?"
+    MessageTH: |-
+      ฉันเลือกงานพิเศษไว้แล้ว! คุณครูก็จะ
+      มาด้วยใช่ไหม?
     MessageTW: 下次的打工決定了唷！老師也會來吧？
     MessageGroupId: 130080080
     Id: 246
@@ -313,9 +312,9 @@ content:
     MessageJP: 次の休日の午前中、公園に来てね！
     MessageCN: 那就下个休息日上午到公园来哦！
     MessageEN: I'll see you at the park on the next morning you have off!
-    MessageTH: "เจอกันตอนเช้าของวันหยุดที่สวนสาธา
-
-      รณะนะ!"
+    MessageTH: |-
+      เจอกันตอนเช้าของวันหยุดที่สวนสาธา
+      รณะนะ!
     MessageTW: 下個休息日的上午，來公園吧！
     MessageGroupId: 130080081
     Id: 247
@@ -387,9 +386,9 @@ content:
     MessageJP: お風呂に浸かったらちょっとは良くなるかな思って、今
     MessageCN: 我觉得泡个澡应该会好一点，所以现za
     MessageEN: I thought soaking in the bathtub might help.
-    MessageTH: "อยากไปแช่ตัวในอ่างอาบน้ำให้หายปวด
-
-      จัง"
+    MessageTH: |-
+      อยากไปแช่ตัวในอ่างอาบน้ำให้หายปวด
+      จัง
     MessageTW: 我想泡個澡會好一點，現在
     MessageGroupId: 130080110
     Id: 251
@@ -461,9 +460,9 @@ content:
     MessageJP: 危なかった、スマホをお風呂に落とすとこだった……！！
     MessageCN: 好险，手机差点掉浴缸里了……！！
     MessageEN: I almost dropped my phone in the tub!
-    MessageTH: "เกือบทำโทรศัพท์ตกไปในอ่างอาบน้ำ
-
-      แล้ว!!"
+    MessageTH: |-
+      เกือบทำโทรศัพท์ตกไปในอ่างอาบน้ำ
+      แล้ว!!
     MessageTW: 好險，手機差點掉進浴缸裡……！！
     MessageGroupId: 130080130
     Id: 255
@@ -481,9 +480,9 @@ content:
     MessageJP: やっぱりお風呂に入る時にスマホは良くないかも……
     MessageCN: 果然泡澡最好还是别带着手机……
     MessageEN: "Bringing my phone to the bath was probably a bad idea... "
-    MessageTH: "ไม่ควรเอาโทรศัพท์มาตอนอาบน้ำจริง
-
-      ด้วย... "
+    MessageTH: |-
+      ไม่ควรเอาโทรศัพท์มาตอนอาบน้ำจริง
+      ด้วย...
     MessageTW: 洗澡的時候果然不能帶著手機……
     MessageGroupId: 130080130
     Id: 256
@@ -698,12 +697,12 @@ content:
   - MessageKR: 아야네 쨩이 그러는데 요즘 대책위원회 앞으로 익명 기부가 들어온대.
     MessageJP: アヤネちゃんから聞いたんだけど、対策委員会に匿名の寄付が来たんだって
     MessageCN: 小绫音说对策委员会收到了一笔匿名捐款来着
-    MessageEN:
-      "Ayane said the Foreclosure Task Force has been receiving anonymous
-      donations lately. "
-    MessageTH: "อายาเนะจังบอกว่ามีคนนิรนามมาบริจาค
-
-      เงินให้คณะกรรมการแผนงานด้วย "
+    MessageEN: >-
+      Ayane said the Foreclosure Task Force has been receiving anonymous
+      donations lately.
+    MessageTH: |-
+      อายาเนะจังบอกว่ามีคนนิรนามมาบริจาค
+      เงินให้คณะกรรมการแผนงานด้วย
     MessageTW: 我聽綾音說，對策委員會收到了匿名捐款
     MessageGroupId: 130080180
     Id: 268
@@ -720,12 +719,12 @@ content:
   - MessageKR: 금액이 많은 건 아닌데 하루 알바 일당 정도의 돈이 가끔씩 들어오나 봐.
     MessageJP: 金額はそんなに多くないけど、バイト一日分くらいはある金額らしくって
     MessageCN: 金额虽然不多，但大概也相当于打一天工的钱了
-    MessageEN:
+    MessageEN: >-
       It's not a lot, but it's about the amount you'd expect from a day of
       part-time work.
-    MessageTH: "จำนวนเงินเท่าๆ กับค่าทำงานพิเศษวัน
-
-      หนึ่ง แต่บริจาคเข้ามาเรื่อยๆ เลย"
+    MessageTH: |-
+      จำนวนเงินเท่าๆ กับค่าทำงานพิเศษวัน
+      หนึ่ง แต่บริจาคเข้ามาเรื่อยๆ เลย
     MessageTW: 雖然金額不多，但好像有到打工一天的金額
     MessageGroupId: 130080190
     Id: 269
@@ -743,9 +742,9 @@ content:
     MessageJP: 私たちのことを見てくれてる市民の人からなのかな、えへへ
     MessageCN: 说不定是某位关注我们的市民捐的呢，诶嘿嘿
     MessageEN: Maybe it's from a citizen who recognizes our accomplishments. Heeheehee.
-    MessageTH: "นี่ต้องมาจากประชาชนที่เห็นผลงานการ
-
-      ทำงานของพวกเราแน่ ฮิฮิฮิ"
+    MessageTH: |-
+      นี่ต้องมาจากประชาชนที่เห็นผลงานการ
+      ทำงานของพวกเราแน่ ฮิฮิฮิ
     MessageTW: 是不是來自於關心我們的市民呢，嘿嘿
     MessageGroupId: 130080190
     Id: 270
@@ -799,9 +798,9 @@ content:
     MessageJP: 先生、今度は夜の市場でアルバイトだよ！
     MessageCN: 老师，这次我们是去夜市打工！
     MessageEN: "This time, Sensei, it's an assistant position for the night market! "
-    MessageTH: "คุณครู ครั้งนี้เราต้องทำงานในตลาดโต้รุ่ง
-
-      และต้องทำยาวถึงดึกเลยด้วย! "
+    MessageTH: |-
+      คุณครู ครั้งนี้เราต้องทำงานในตลาดโต้รุ่ง
+      และต้องทำยาวถึงดึกเลยด้วย!
     MessageTW: 老師，這次是在夜市打工唷！
     MessageGroupId: 130080210
     Id: 273
@@ -873,9 +872,9 @@ content:
     MessageJP: お腹いっぱーい、ちょっと食べ過ぎたかも
     MessageCN: 肚子好撑——，好像吃得有点多了
     MessageEN: I'm so full. I ate so much today.
-    MessageTH: "ท้องจะแตกแล้ว วันนี้ฉันกินไปเยอะมาก
-
-      เลยล่ะ"
+    MessageTH: |-
+      ท้องจะแตกแล้ว วันนี้ฉันกินไปเยอะมาก
+      เลยล่ะ
     MessageTW: 肚子好飽啊，可能吃得有點多
     MessageGroupId: 130080240
     Id: 277
@@ -893,9 +892,9 @@ content:
     MessageJP: 小さい街だったけど、面白いものがたくさんあったね
     MessageCN: 明明只是条小街道，却有很多有意思的东西呢
     MessageEN: It was a small town, but it was full of fun stuff.
-    MessageTH: "นี่เป็นเมืองเล็กๆ แต่มีอะไรสนุกๆ อยู่
-
-      เพียบเลย"
+    MessageTH: |-
+      นี่เป็นเมืองเล็กๆ แต่มีอะไรสนุกๆ อยู่
+      เพียบเลย
     MessageTW: 雖然是個小街區，但有很多有趣的東西呢
     MessageGroupId: 130080240
     Id: 278
@@ -930,14 +929,13 @@ content:
   - MessageKR: 오늘 알바비 절반을 먹는데 써버렸지만……. 뭐, 가끔은 이런 것도 괜찮지 않겠어? 후후.
     MessageJP: 結局バイト代半分近く使っちゃったけど、たまにはこういうのも良いよね？
     MessageCN: 虽然最后花掉了将近一半的工资，但偶尔这样也挺好的对吧？
-    MessageEN:
-      "I spent half of my pay on food today... Well, I think it's okay to
-      do that every once in a while. Heehee. "
-    MessageTH: "เงินค่าจ้างวันนี้ครึ่งหนึ่งหมดไปกับของกิน
-
+    MessageEN: >-
+      I spent half of my pay on food today... Well, I think it's okay to do that
+      every once in a while. Heehee.
+    MessageTH: |-
+      เงินค่าจ้างวันนี้ครึ่งหนึ่งหมดไปกับของกิน
       แล้ว... แต่นานๆ ทีได้สนุกแบบนี้ก็ไม่เป็น
-
-      ไรหรอกเนอะ? ฮุฮุ"
+      ไรหรอกเนอะ? ฮุฮุ
     MessageTW: 結果花了幾乎一半的打工薪水，但偶爾這樣也不錯吧？
     MessageGroupId: 130080250
     Id: 280
@@ -1009,9 +1007,9 @@ content:
     MessageJP: 先生。今度の休日のバイト、覚悟しておいてね
     MessageCN: 老师。这周末的兼职，要做好准备哦
     MessageEN: Sensei, I got us a part-time job on the weekend. Be prepared.
-    MessageTH: "คุณครู เตรียมตัวให้พร้อมสำหรับงานพิ
-
-      เศษวันหยุดนี้ด้วยล่ะ"
+    MessageTH: |-
+      คุณครู เตรียมตัวให้พร้อมสำหรับงานพิ
+      เศษวันหยุดนี้ด้วยล่ะ
     MessageTW: 老師。這次休息日的打工，做好覺悟吧
     MessageGroupId: 130080270
     Id: 284
@@ -1081,7 +1079,7 @@ content:
     ImagePath: ""
   - MessageKR: 오늘 아비도스 자치구에 온다고 들었어. 선생님.
     MessageJP: 先生、今日アビドスに来るんだっけ？
-    MessageCN: ""
+    MessageCN: 老师今天要来阿比多斯吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1097,9 +1095,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 응. 그렇게 됐지.
     MessageJP: うん、そうだよ
-    MessageCN: ""
+    MessageCN: 嗯，是啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1115,9 +1114,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그래서, 선생님의 안전을 위해 내가 마중 나갈 생각인데.
     MessageJP: 道中怪我したら危ないし、迎えに行こうと思うんだけど……
-    MessageCN: ""
+    MessageCN: 要是老师路上受伤的话会很危险，我想着要不我去接你……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1133,9 +1133,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮지?
     MessageJP: いいわよね？
-    MessageCN: ""
+    MessageCN: 可以吧？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1151,9 +1152,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮지 않다고 해도 괜찮다는 뜻으로 받아들이겠어.
     MessageJP: あ、「大丈夫」は「来て大丈夫」って意味だと受け取るけど
-    MessageCN: ""
+    MessageCN: 啊，要是老师说“没关系”的话，我会理解成“让我过去接老师也没关系”的
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1169,9 +1171,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 결과는 이미 정해져 있는 것인가……
     MessageJP: 私に拒否権は無いんだね……
-    MessageCN: ""
+    MessageCN: 我没有否决权啊……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1187,9 +1190,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그래도 반가운 말이네. 고마워.
     MessageJP: でも嬉しいよ、ありがとう
-    MessageCN: ""
+    MessageCN: 不过我很高兴哦，谢谢啦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1205,9 +1209,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아니, 이건 안전상의 문제이기도 해서 말이야.
     MessageJP: いや、本当に先生が事件に巻き込まれるかもしれないから言ってるの
-    MessageCN: ""
+    MessageCN: 不是，我不是说了只是担心老师真的被卷进什么事件里去了吗
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1223,9 +1228,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 최근 우리 자치구에…… 조금, 시끄러운 녀석들이 돌아다니고 있거든.
+    unsure: false
+  - MessageKR: "최근 우리 자치구에…… 조금, 시끄러운 녀석들이 돌아다니고 있거든.\_\_"
     MessageJP: 最近うちの自治区……ちょっとうるさい連中が来てて……
-    MessageCN: ""
+    MessageCN: 最近我们自治区来了一群……很吵的人……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1241,9 +1247,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아무튼 이번만은 조심해.
     MessageJP: まぁそういうことだから、気をつけてね
-    MessageCN: ""
+    MessageCN: 嗯，就是这么回事，你要小心啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1259,9 +1266,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 여차하면 내 뒤로 숨고.
     MessageJP: いざとなったら、私の後ろに隠れてて
-    MessageCN: ""
+    MessageCN: 要是出了什么事，就躲到我身后去
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1277,3 +1285,4 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false

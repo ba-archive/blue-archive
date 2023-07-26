@@ -38,7 +38,7 @@ title:
     FavorScheduleId: 100346
     CharacterId: 10034
   - TextJp: 大和撫子の本気
-    TextCn: ""
+    TextCn: 大和抚子的认真
     TextKr: 요조숙녀의 진심
     TextEn: ""
     TextTh: ""
@@ -46,6 +46,7 @@ title:
     GroupId: 1003420
     FavorScheduleId: 1003420
     CharacterId: 10034
+    unsure: false
 content:
   - MessageKR: 선생님, 이야기를 들었답니다.
     MessageJP: 先生、聞きましたよ。
@@ -87,9 +88,9 @@ content:
     MessageJP: きちんと睡眠が取れていなくって、昨日もシャーレに遅刻してしまうほどだと伺いましたが、
     MessageCN: 忙到睡眠都不规律了，甚至我听说老师昨天去夏莱的时候还迟到了呢
     MessageEN: And that you were late yesterday because you overslept.
-    MessageTH: "เห็นว่านอนไม่พอ เมื่อวาน
-
-      เลยไปทำงานที่ชาเล่ต์สาย"
+    MessageTH: |-
+      เห็นว่านอนไม่พอ เมื่อวาน
+      เลยไปทำงานที่ชาเล่ต์สาย
     MessageTW: 沒有確實取得睡眠，聽說到了昨天去夏萊的也遲到的程度
     MessageGroupId: 100340030
     Id: 100340030
@@ -161,9 +162,9 @@ content:
     MessageJP: そうですか……分かりました。
     MessageCN: 是这样吗……我明白了。
     MessageEN: Hmm. Okay.
-    MessageTH: "งั้นเหรอคะ...
-
-      เข้าใจแล้วค่ะ"
+    MessageTH: |-
+      งั้นเหรอคะ...
+      เข้าใจแล้วค่ะ
     MessageTW: 是這樣嗎……我知道了
     MessageGroupId: 100340050
     Id: 100340070
@@ -199,9 +200,9 @@ content:
     MessageJP: 修行部の部員である私が、何とかしないといけませんね。
     MessageCN: 作为修行部成员的我，必须得做些什么呢。
     MessageEN: I'm with the Inner Discipline Club. I can't just sit back.
-    MessageTH: "เห็นทีสมาชิกชมรมฝึกฝน
-
-      อย่างฉัน ต้องออกโรงแล้วค่ะ"
+    MessageTH: |-
+      เห็นทีสมาชิกชมรมฝึกฝน
+      อย่างฉัน ต้องออกโรงแล้วค่ะ
     MessageTW: 身為修行部部員的我，必須想點辦法才行呢
     MessageGroupId: 100340050
     Id: 100340090
@@ -273,9 +274,9 @@ content:
     MessageJP: 今日はありがとう。でも、どうしてミモリが……？
     MessageCN: 今天真是谢谢三森了。但是，为什么三森会……？
     MessageEN: Yeah, but why did you come today?
-    MessageTH: "ขอบใจนะ มิโมริ
-
-      วันนี้มีอะไรเหรอ...?"
+    MessageTH: |-
+      ขอบใจนะ มิโมริ
+      วันนี้มีอะไรเหรอ...?
     MessageTW: 今天謝謝妳。不過，為什麼三森會……？
     MessageGroupId: 100340090
     Id: 100340130
@@ -310,14 +311,13 @@ content:
   - MessageKR: 그야 저 미모리. 요조숙녀를 목표로 정진하는 수행부 소속의 수행부원.
     MessageJP: 私が、大和撫子を目標として精進を重ねる、修行部の部員だからです。
     MessageCN: 我是以成为大和抚子为目标而不断精进的，修行部的部员哦。
-    MessageEN:
+    MessageEN: >-
       Well, because I'm a member of the Inner Discipline Club. I'm working
       towards becoming a proper lady.
-    MessageTH: "เอ่อ... ก็คือฉันเป็นสมาชิก
-
+    MessageTH: |-
+      เอ่อ... ก็คือฉันเป็นสมาชิก
       ของชมรมฝึกฝนที่ฝันอยาก
-
-      จะเป็นกุลสตรีที่เพียบพร้อมค่ะ"
+      จะเป็นกุลสตรีที่เพียบพร้อมค่ะ
     MessageTW: 我是，以大和撫子為目標持續精進的，修行部的部員
     MessageGroupId: 100340100
     Id: 100340150
@@ -335,9 +335,9 @@ content:
     MessageJP: そしてその一環として、今日は先生を手伝いにお伺いしました。
     MessageCN: 然后作为修行的一环，今天就由我来帮助老师。
     MessageEN: I'm here to help.
-    MessageTH: "เพราะงั้นวันนี้ฉันเลย
-
-      มาเพื่อช่วยคุณครูยังไงคะ"
+    MessageTH: |-
+      เพราะงั้นวันนี้ฉันเลย
+      มาเพื่อช่วยคุณครูยังไงคะ
     MessageTW: 然後作為那個一環，今天前去幫助老師了
     MessageGroupId: 100340100
     Id: 100340160
@@ -355,9 +355,9 @@ content:
     MessageJP: これからも困った時は、いつでもお申し付けください！
     MessageCN: 今后如果老师遇到了什么困难，请随时跟我说哦！
     MessageEN: Let me know whenever you're in trouble!
-    MessageTH: "ต่อไปถ้ามีปัญหาอะไร
-
-      ก็บอกฉันได้ตลอดนะคะ!"
+    MessageTH: |-
+      ต่อไปถ้ามีปัญหาอะไร
+      ก็บอกฉันได้ตลอดนะคะ!
     MessageTW: 今後也有困擾的時候的話，請隨時告知我！
     MessageGroupId: 100340110
     Id: 100340170
@@ -393,9 +393,9 @@ content:
     MessageJP: 理想の大和撫子になってみせますので……！
     MessageCN: 为了我能够在大家眼中成为理想的大和抚子……！
     MessageEN: It's all a part of my job!
-    MessageTH: "เพราะนี่เป็นส่วนหนึ่ง
-
-      ของการฝึกฝนค่ะ!"
+    MessageTH: |-
+      เพราะนี่เป็นส่วนหนึ่ง
+      ของการฝึกฝนค่ะ!
     MessageTW: 我會成為理想的大和撫子的……！
     MessageGroupId: 100340110
     Id: 100340190
@@ -431,9 +431,9 @@ content:
     MessageJP: あっ、もし眠れないようでしたら、私が寝かしつけで添い寝に参りましょうか？
     MessageCN: 啊，老师如果睡不着的话，我就和您一起睡，来哄您睡觉吧？
     MessageEN: Oh! I can help if you're having trouble sleeping at night.
-    MessageTH: "ถ้าเกิดนอนไม่หลับตอนกลางคืน
-
-      ให้ฉันไปช่วงกล่อมได้นะคะ"
+    MessageTH: |-
+      ถ้าเกิดนอนไม่หลับตอนกลางคืน
+      ให้ฉันไปช่วงกล่อมได้นะคะ
     MessageTW: 啊，如果睡不著的話，要我前去陪睡讓老師入睡嗎？
     MessageGroupId: 100340130
     Id: 100340210
@@ -504,12 +504,12 @@ content:
   - MessageKR: 선생님, 저번에 이어 이번엔 가정 요리를 수행해볼까 해요.
     MessageJP: 先生、前回に引き続き修行の一環として、今度は家庭料理を作ってみようと思います。
     MessageCN: 老师，作为上次跟您提到的修行的后续环节，我这次想试着做家常菜。
-    MessageEN:
+    MessageEN: >-
       Sensei, continuing our previous conversation, I'd like to work on home
       cooking.
-    MessageTH: "คุณครูคะ ครั้งนี้ฉันว่าจะฝึก
-
-      ทำอาหารโฮมคุกกิ้งดูค่ะ"
+    MessageTH: |-
+      คุณครูคะ ครั้งนี้ฉันว่าจะฝึก
+      ทำอาหารโฮมคุกกิ้งดูค่ะ
     MessageTW: 老師，作為繼上次修行的一環，這次我想試著做家庭料理
     MessageGroupId: 100340160
     Id: 100340250
@@ -545,9 +545,9 @@ content:
     MessageJP: 待って、ミモリの家庭料理……？
     MessageCN: 等一下，三森的家庭料理……？
     MessageEN: Wait. You mean YOUR home cooking?
-    MessageTH: "เดี๋ยวนะ
-
-      โฮมคุกกิ้งของมิโมริเหรอ?"
+    MessageTH: |-
+      เดี๋ยวนะ
+      โฮมคุกกิ้งของมิโมริเหรอ?
     MessageTW: 等等，三森的家庭料理……？
     MessageGroupId: 100340180
     Id: 100340270
@@ -601,9 +601,9 @@ content:
     MessageJP: それで、よろしければその修行をお手伝いしていただきたく……。
     MessageCN: 所以，如果老师方便的话，希望您能帮助我修行……。
     MessageEN: I'd like your help with it.
-    MessageTH: "ฉันอยากขอให้คุณครูมาช่วย
-
-      ในการฝึกครั้งนี้หน่อยค่ะ"
+    MessageTH: |-
+      ฉันอยากขอให้คุณครูมาช่วย
+      ในการฝึกครั้งนี้หน่อยค่ะ
     MessageTW: 所以，如果可以的話想請老師幫忙那個修行……
     MessageGroupId: 100340190
     Id: 100340300
@@ -657,9 +657,9 @@ content:
     MessageJP: あっ、はいっ！そ、それではよろしくお願いします……！
     MessageCN: 啊，好的！那、那就请多多指教……！
     MessageEN: Really? I'll be counting on you!
-    MessageTH: "จริงเหรอคะ!
-
-      ถ้างั้นก็รบกวนด้วยนะคะ..."
+    MessageTH: |-
+      จริงเหรอคะ!
+      ถ้างั้นก็รบกวนด้วยนะคะ...
     MessageTW: 啊，好的！那，那麼請多多指教……！
     MessageGroupId: 100340210
     Id: 100340330
@@ -677,9 +677,9 @@ content:
     MessageJP: 修行部の活動で今度、お掃除のボランティアに行くことになりました。
     MessageCN: 作为这次修行部的活动，我要去做扫除的志愿者了。
     MessageEN: I'm doing some volunteer work as part of my club activities.
-    MessageTH: "งานของชมรมฝึกฝนในครั้งนี้
-
-      คืองานอาสาทำความสะอาดค่ะ"
+    MessageTH: |-
+      งานของชมรมฝึกฝนในครั้งนี้
+      คืองานอาสาทำความสะอาดค่ะ
     MessageTW: 修行部這次的活動，決定去進行打掃的義工活動了
     MessageGroupId: 100340220
     Id: 100340340
@@ -715,9 +715,9 @@ content:
     MessageJP: ふふっ、ありがとうございます。料理の次は、お掃除。
     MessageCN: 呵呵，非常感谢。在料理之后，就是打扫卫生呢。
     MessageEN: Of course. I'll cook first, and then clean!
-    MessageTH: "ค่ะ ฉันฝึกทำอาหารไปแล้ว
-
-      คราวนี้ก็ต้องฝึกทำความสะอาดค่ะ"
+    MessageTH: |-
+      ค่ะ ฉันฝึกทำอาหารไปแล้ว
+      คราวนี้ก็ต้องฝึกทำความสะอาดค่ะ
     MessageTW: 呵呵，謝謝老師。料理的下一個是，打掃
     MessageGroupId: 100340240
     Id: 100340360
@@ -735,9 +735,9 @@ content:
     MessageJP: これらも立派な大和撫子に、そして素敵な花嫁になるための修行ですので。
     MessageCN: 这些也是为了我能够成为出色的大和抚子，以及出色的新娘所必需的修行。
     MessageEN: This is all part of my journey to become a proper lady.
-    MessageTH: "นี่เป็นส่วนหนึ่งของเส้นทาง
-
-      ในการฝึกเป็นเลดี้ที่เพียบพร้อมค่ะ"
+    MessageTH: |-
+      นี่เป็นส่วนหนึ่งของเส้นทาง
+      ในการฝึกเป็นเลดี้ที่เพียบพร้อมค่ะ
     MessageTW: 這些也都是為了成為出色的大和撫子，還有優秀的新娘的修行
     MessageGroupId: 100340240
     Id: 100340370
@@ -772,12 +772,12 @@ content:
   - MessageKR: 혹시 실례가 아니라면 이번 봉사활동을 도와주실 수 있으실까요?
     MessageJP: もしよろしければ先生も、そのお手伝いをしていただけませんか？
     MessageCN: 如果老师愿意的话，能烦请老师帮我一下吗？
-    MessageEN:
+    MessageEN: >-
       Would you mind helping me with my volunteer work? If it's not too much
       trouble?
-    MessageTH: "อยากรู้ว่าคุณครูจะมาช่วย
-
-      งานอาสาครั้งนี้หน่อยได้ไหมคะ?"
+    MessageTH: |-
+      อยากรู้ว่าคุณครูจะมาช่วย
+      งานอาสาครั้งนี้หน่อยได้ไหมคะ?
     MessageTW: 如果可以的話，能請老師幫忙嗎？
     MessageGroupId: 100340250
     Id: 100340390
@@ -829,11 +829,11 @@ content:
     ImagePath: ""
   - MessageKR: 선생님, 혹시 오늘 시간이 괜찮으실까요?
     MessageJP: 先生、今日お時間ありますでしょうか？
-    MessageCN: 老师今天，有时间吗？
+    MessageCN: 老师，今天有时间吗？
     MessageEN: Are you free today, Sensei?
-    MessageTH: "คุณครูคะ
-
-      วันนี้มีเวลาว่างไหมคะ?"
+    MessageTH: |-
+      คุณครูคะ
+      วันนี้มีเวลาว่างไหมคะ?
     MessageTW: 老師，請問今天有時間嗎？
     MessageGroupId: 100340280
     Id: 100340420
@@ -847,9 +847,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 미모리가 불러주는 거라면 무조건 괜찮아.
     MessageJP: ミモリのためならいつでも大丈夫だよ
-    MessageCN: 如果为了三森的话，我任何时候都有时间哦
+    MessageCN: 三森找我的话，我任何时候都有时间哦
     MessageEN: I'm always free for you, Mimori.
     MessageTH: ครูมีเวลาให้มิโมริเสมอนะ
     MessageTW: 如果是為了三森的話隨時都沒問題唷
@@ -865,6 +866,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 무슨 일 때문에 그래?
     MessageJP: どうしたの？
     MessageCN: 怎么了？
@@ -941,9 +943,9 @@ content:
     MessageJP: ちょっと、百貨店で買いたいものがありまして。
     MessageCN: 我想去百货店买点东西。
     MessageEN: There's something I've had my eye on at the store.
-    MessageTH: "ฮิฮิ พอดีฉันมีของบางอย่าง
-
-      ที่อยากไปซื้อที่ห้างสรรพสินค้า"
+    MessageTH: |-
+      ฮิฮิ พอดีฉันมีของบางอย่าง
+      ที่อยากไปซื้อที่ห้างสรรพสินค้า
     MessageTW: 稍微，在百貨店有想買的東西
     MessageGroupId: 100340320
     Id: 100340480
@@ -961,9 +963,9 @@ content:
     MessageJP: ぜひ先生と一緒に行ければと思ってご連絡したのですが……
     MessageCN: 因为想着一定要和老师一起去，所以我就联系您了……
     MessageEN: I was hoping you would come with me.
-    MessageTH: "เลยอยากให้คุณครู
-
-      ไปด้วยกันค่ะ"
+    MessageTH: |-
+      เลยอยากให้คุณครู
+      ไปด้วยกันค่ะ
     MessageTW: 想務必請老師和我一起去所以聯絡了老師……
     MessageGroupId: 100340320
     Id: 100340490
@@ -981,9 +983,9 @@ content:
     MessageJP: その、ご迷惑だったりしませんでしょうか……？
     MessageCN: 那个，应该没有给老师添麻烦吧……？
     MessageEN: Is that okay?
-    MessageTH: "หากไม่เป็นการรบกวนเกินไป
-
-      ก็อยากจะชวนคุณครูไปด้วย..."
+    MessageTH: |-
+      หากไม่เป็นการรบกวนเกินไป
+      ก็อยากจะชวนคุณครูไปด้วย...
     MessageTW: 那個，請問有造成困擾嗎……？
     MessageGroupId: 100340320
     Id: 100340500
@@ -1071,7 +1073,7 @@ content:
     ImagePath: ""
   - MessageKR: 안녕하세요. 선생님.
     MessageJP: こんにちは、先生
-    MessageCN: ""
+    MessageCN: 老师，您好
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1087,9 +1089,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 이번에 저희 백귀야행 학원에 오신다고 들었어요.
     MessageJP: 本日、百鬼夜行にいらっしゃっていると伺ったのですが
-    MessageCN: ""
+    MessageCN: 听说您今天要来百鬼夜行，是真的吗
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1105,9 +1108,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 응. 그럴 예정이야.
     MessageJP: うん、その予定だよ
-    MessageCN: ""
+    MessageCN: 嗯，是有那打算哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1123,9 +1127,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 저, 저기……
     MessageJP: え、ええと……
-    MessageCN: ""
+    MessageCN: 诶，那个……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1141,9 +1146,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그러시다면……
     MessageJP: でしたら
-    MessageCN: ""
+    MessageCN: 这样的话
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1159,9 +1165,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 오랜만에…… 선생님을 초대해 드리고 싶은데.
     MessageJP: 久しぶりに先生をご招待したいのですが
-    MessageCN: ""
+    MessageCN: 我想久违地招待老师一下
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1177,9 +1184,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮…… 으실까요?
     MessageJP: よろしい、でしょうか……？
-    MessageCN: ""
+    MessageCN: 请问，可以吗……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1195,9 +1203,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 꼭 갈게!
     MessageJP: もちろん！
-    MessageCN: ""
+    MessageCN: 当然可以哦！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1213,3 +1222,4 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
