@@ -31,7 +31,7 @@ export function continuePlay() {
 
 /**
  * 回收播放器资源, 让播放器回到初始状态
- */
+ */  
 export function dispose() {
   initPrivateState().app?.destroy();
   initPrivateState().app = null;

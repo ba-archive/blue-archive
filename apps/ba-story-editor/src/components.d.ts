@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AssetPreviewer: typeof import('./components/ResourceExplorer/AssetPreviewer.vue')['default']
+    EditorLayout: typeof import('./components/EditorLayout/index.vue')['default']
     FileItem: typeof import('./components/ResourceExplorer/FileItem.vue')['default']
     README: typeof import('./components/README.md')['default']
     ResizeableContainer: typeof import('./components/ResizeableContainer.vue')['default']
