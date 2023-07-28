@@ -12,17 +12,9 @@ declare module "vue" {
     ElCol: typeof import("element-plus/es")["ElCol"];
     ElConfigProvider: typeof import("element-plus/es")["ElConfigProvider"];
     ElDialog: typeof import("element-plus/es")["ElDialog"];
-    ElForm: typeof import("element-plus/es")["ElForm"];
-    ElFormItem: typeof import("element-plus/es")["ElFormItem"];
-    ElIcon: typeof import("element-plus/es")["ElIcon"];
-    ElInput: typeof import("element-plus/es")["ElInput"];
-    ElOption: typeof import("element-plus/es")["ElOption"];
     ElResult: typeof import("element-plus/es")["ElResult"];
     ElRow: typeof import("element-plus/es")["ElRow"];
     ElScrollbar: typeof import("element-plus/es")["ElScrollbar"];
-    ElSelect: typeof import("element-plus/es")["ElSelect"];
-    ElSelectV2: typeof import("element-plus/es")["ElSelectV2"];
-    ElText: typeof import("element-plus/es")["ElText"];
     EnProcess: typeof import("./components/EnProcess.md")["default"];
     MainAsideMenu: typeof import("./components/MainAsideMenu.vue")["default"];
     MainBanner: typeof import("./components/MainBanner.vue")["default"];

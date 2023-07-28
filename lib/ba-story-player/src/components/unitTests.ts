@@ -44,6 +44,10 @@ const unitTestCollections: UnitTestCollection[] = [
                     name: "fontsize",
                     value: ["30"],
                   },
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
+                  },
                 ],
               },
               {
@@ -52,6 +56,19 @@ const unitTestCollections: UnitTestCollection[] = [
                   {
                     name: "color",
                     value: ["red"],
+                  },
+                ],
+              },
+              {
+                content: "不存在於任何地方",
+                effects: [
+                  {
+                    name: "color",
+                    value: ["red"],
+                  },
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
                   },
                 ],
               },
@@ -105,6 +122,19 @@ const unitTestCollections: UnitTestCollection[] = [
                     value: [
                       "这是测试换行tooltip的, 顺便测试右边界, 所以它也很长长长长",
                     ],
+                  },
+                ],
+              },
+              {
+                content: "   这是用来测试tooltip和rubb一起用的",
+                effects: [
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
+                  },
+                  {
+                    name: "tooltip",
+                    value: ["这是测试中间tooltip的"],
                   },
                 ],
               },

@@ -30,6 +30,7 @@ import TranslationPart from './TranslationPane.vue';
   padding-top: 1rem;
   width: 100vw;
   width: 100dvw;
+  max-width: 1440px;
   height: calc(100vh - 48px);
   height: calc(100dvh - 48px);
   user-select: none;

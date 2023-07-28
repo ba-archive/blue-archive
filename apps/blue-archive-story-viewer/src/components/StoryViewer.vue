@@ -60,18 +60,18 @@
             </div>
             <a
               v-if="undefined !== findPreviousStoryId()"
-              :href="`/mainStory/${findPreviousStoryId()}`"
+              :href="`/${storyQueryType}Story/${findPreviousStoryId()}?type=${storyQueryType}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.previous") }}</a
             >
             <a
-              href="/mainStory"
+              :href="`/${storyQueryType}Story`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.backToIndex") }}</a
             >
             <a
               v-if="undefined !== findNextStoryId()"
-              :href="`/mainStory/${findNextStoryId()}`"
+              :href="`/${storyQueryType}Story/${findNextStoryId()}?type=${storyQueryType}`"
               class="user-button shadow-near rounded-small"
               >{{ getI18nString(userLanguage, "routes.next") }}</a
             >
@@ -118,6 +118,7 @@ import {
 } from "@/types/StoryJson";
 import { getI18nString } from "@i18n/getI18nString";
 import { stories } from "@index/mainStoryIndex";
+import { stories as OtherStories } from "@index/otherStoryIndex";
 import { useSettingsStore } from "@store/settings";
 import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
@@ -128,6 +129,7 @@ const changeIndex = ref(0);
 const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
+const storyQueryType = computed(() => route.query.type ?? "main");
 const consentFromConfirmed = ref(false);
 const story = ref<StoryContent>({} as StoryContent);
 
@@ -154,7 +156,7 @@ const summary = ref({
 });
 /* eslint-enable max-len */
 axios
-  .get(`/story/main/${storyId.value}.json`, {
+  .get(`/story/${storyQueryType.value}/${storyId.value}.json`, {
     onDownloadProgress: progressEvent => {
       if (progressEvent.total) {
         initProgress.value = Math.floor(
@@ -243,7 +245,9 @@ function reloadPlayer(forceReload = false) {
   }, 375);
 }
 
-const allStoryIndex = getAllFlattenedStoryIndex(stories);
+const allStoryIndex = getAllFlattenedStoryIndex(stories).concat(
+  getAllFlattenedStoryIndex(OtherStories)
+);
 
 const currentStoryIndexUnit: Section | undefined = allStoryIndex.find(
   story => story.story_id === parseInt(storyId.value as string)
@@ -308,7 +312,11 @@ function findNextStoryId(): number | undefined {
 }
 
 function handleStoryEnd() {
-  setTimeout(() => (playEnded.value = true), 6000);
+  console.log("剧情结束");
+  setTimeout(
+    () => (playEnded.value = true),
+    "main" === storyQueryType.value ? 4000 : 4
+  );
 }
 
 function handleReplay() {

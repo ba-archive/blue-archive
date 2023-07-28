@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-import { continuePlay, dispose, eventEmitter, init, stop, storyHandler } from "@/index";
-import BaDialog from "@/layers/textLayer/BaDialog.vue";
-import BaUI from "@/layers/uiLayer/BaUI.vue";
-import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
-import { Language, StorySummary } from "@/types/store";
+import {
+  continuePlay,
+  dispose,
+  eventEmitter,
+  init,
+  stop,
+  storyHandler,
+} from "@/index";
 import {
   computed,
   onActivated,
@@ -15,11 +18,15 @@ import {
   ref,
   watch,
 } from "vue";
-import eventBus from "./eventBus";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
-import { initPrivateState, usePlayerStore } from "./stores";
+import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
+import BaUI from "@/layers/uiLayer/BaUI.vue";
+import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
+import { Language, StorySummary } from "@/types/store";
+import eventBus from "./eventBus";
+import { initPrivateState, usePlayerStore } from "./stores";
 
 export type PlayerProps = {
   story: TranslatedStoryUnit;
@@ -235,11 +242,13 @@ function hotReplaceStoryUnit(
     );
     changeStoryIndex(index);
   } else {
-    const newStory: TranslatedStoryUnit = Array.isArray(unit) ? {
-      GroupId: props.story.GroupId,
-      translator: props.story.translator,
-      content: unit,
-    } : unit as TranslatedStoryUnit;
+    const newStory: TranslatedStoryUnit = Array.isArray(unit)
+      ? {
+          GroupId: props.story.GroupId,
+          translator: props.story.translator,
+          content: unit,
+        }
+      : (unit as TranslatedStoryUnit);
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
       privateStore.allStoryUnit
@@ -267,9 +276,12 @@ onMounted(() => {
         () => (fullScreen.value = false),
         props.exitFullscreenTimeOut || 1000
       );
+      eventBus.emit("end");
       emit("end");
     },
-    () => emit("error")
+    () => {
+      emit("error");
+    }
   );
   if (props.startFullScreen) {
     updateFullScreenState();
@@ -282,7 +294,17 @@ onMounted(() => {
     );
   });
   firstMount = true;
+  window.addEventListener("blur", notifyWindowBlur);
+  window.addEventListener("focus", notifyWindowFocus);
 });
+
+function notifyWindowBlur() {
+  eventBus.emit("deactivated");
+}
+
+function notifyWindowFocus() {
+  eventBus.emit("activated");
+}
 
 onUnmounted(() => {
   dispose();
@@ -321,6 +343,8 @@ onDeactivated(() => {
     );
   });
   stop();
+  window.removeEventListener("blur", notifyWindowBlur);
+  window.removeEventListener("focus", notifyWindowFocus);
 });
 </script>
 
@@ -358,20 +382,20 @@ onDeactivated(() => {
 @media screen and (orientation: portrait) {
   #player:fullscreen {
     #player__background {
-      transform: rotate(-90deg);
-      transform-origin: left top;
       position: absolute;
       top: v-bind(fullscreenTopOffset);
       left: 0;
+      transform: rotate(-90deg);
+      transform-origin: left top;
     }
   }
 }
 
 //noinspection CssOverwrittenProperties
 #player {
+  margin: 0;
   background-color: #080808;
   padding: 0;
-  margin: 0;
 
   &:fullscreen {
     display: flex;
@@ -390,11 +414,11 @@ onDeactivated(() => {
   // make mobile safari happy
   &.pseudo-fullscreen {
     position: fixed;
-    transform: rotate(-90deg);
     // 宽高已经设置成了屏幕宽高，所以接下来就是想办法让它居中
     top: 100vh;
     top: 100dvh;
     left: 0;
+    transform: rotate(-90deg);
     transform-origin: top left;
     z-index: 201;
 
@@ -404,8 +428,8 @@ onDeactivated(() => {
   }
 
   &__main {
-    position: relative;
     display: inline-block;
+    position: relative;
     overflow: hidden;
 
     &__canvas {

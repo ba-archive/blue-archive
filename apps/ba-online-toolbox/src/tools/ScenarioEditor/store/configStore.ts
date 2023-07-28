@@ -11,7 +11,7 @@ export const useGlobalConfig = defineStore({
     tmpMachineTranslate: '',
     switchLanguage: 0b11,
     showAllLanguage: true,
-    selectTag: '[]',
+    selectTag: '[wa:]',
     previewMode: false,
   }),
   getters: {

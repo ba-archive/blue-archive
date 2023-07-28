@@ -167,35 +167,7 @@ export const eventEmitter = {
 
     this.actionByUnitType();
 
-    const startTime = Date.now();
-    const checkEffectDone = new Promise<void>((resolve, reject) => {
-      const interval = setInterval(() => {
-        if (storyHandler.isEnd) {
-          resolve();
-        }
-        if (this.unitDone) {
-          clearInterval(interval);
-          resolve();
-        } else if (Date.now() - startTime >= 50000) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
-          console.warn(
-            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
-          );
-          reject();
-          clearInterval(interval);
-        }
-      });
-    });
-    await checkEffectDone;
+    await waitForStoryUnitPlayComplete();
   },
 
   actionByUnitType(currentStoryUnit?: StoryUnit) {
@@ -483,6 +455,14 @@ export async function init(
     !props.story.content ||
     props.story.content.length === 0
   ) {
+    eventBus.emit("startLoading", {
+      url: `${props.dataUrl}/loading/404.webp`,
+      restrict: true,
+    });
+    eventBus.emit("oneResourceLoaded", {
+      type: "fail",
+      resourceName: '剧情对象中的 "content" 不能为 undefined',
+    });
     errorCallback();
     return;
   }
@@ -544,7 +524,7 @@ export async function init(
 
   // 记录加载开始时间 优化光速加载的体验
   const startLoadTime = Date.now();
-  eventBus.emit("startLoading", props.dataUrl);
+  eventBus.emit("startLoading", { url: props.dataUrl });
   //加载剩余资源
   await resourcesLoader.addLoadResources();
   resourcesLoader.load(() => {
@@ -1061,3 +1041,57 @@ export const storyHandler = {
     this.auto = false;
   },
 };
+
+function waitForStoryUnitPlayComplete() {
+  let startTime = Date.now();
+  let leftTime = 50000;
+  let interval = 0;
+
+  return new Promise<void>((resolve, reject) => {
+    eventBus.on("activated", restart);
+    eventBus.on("deactivated", resetTime);
+    function resetTime() {
+      clearInterval(interval);
+      const now = Date.now();
+      leftTime = leftTime - (now - startTime);
+    }
+    function restart() {
+      startTime = Date.now();
+      start();
+    }
+    function end() {
+      clearInterval(interval);
+      eventBus.off("activated", restart);
+      eventBus.off("deactivated", resetTime);
+    }
+    function start() {
+      interval = window.setInterval(() => {
+        if (storyHandler.isEnd) {
+          end();
+          resolve();
+        }
+        if (eventEmitter.unitDone) {
+          end();
+          resolve();
+        } else if (Date.now() - startTime >= leftTime) {
+          for (const key of Object.keys(eventEmitter) as Array<
+            keyof typeof eventEmitter
+          >) {
+            if (key.endsWith("Done") && key !== "unitDone") {
+              if (!eventEmitter[key]) {
+                console.error(`${key}未完成: `);
+              }
+            }
+          }
+          console.warn(
+            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
+            storyHandler.currentStoryUnit
+          );
+          end();
+          reject();
+        }
+      });
+    }
+    restart();
+  });
+}

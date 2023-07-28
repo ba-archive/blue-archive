@@ -23,18 +23,18 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   },
   {
     type: "student",
-    jumpTo: 10071,
-    title: "月雪 宫子（泳装）",
+    jumpTo: 20027,
+    title: "砂狼 白子（泳装）",
   },
   {
     type: "student",
-    jumpTo: 10072,
-    title: "空井 咲（泳装）",
+    jumpTo: 10059,
+    title: "圣园 未花",
   },
   {
     type: "student",
-    jumpTo: 26010,
-    title: "霞泽 美游（泳装）",
+    jumpTo: 10053,
+    title: "早濑 优香（体操服）",
   },
 ];
 </script>
@@ -42,11 +42,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
 <template>
   <div id="home-welcome" class="center flex-vertical fill-screen">
     <div class="center flex-vertical">
-      <img
-        class="mika-sticker"
-        src="/src/assets/mika_sticker.webp"
-        alt="mika"
-      />
+      <img class="mika-sticker" src="@assets/mika_sticker.webp" alt="mika" />
       <p>先从<span id="choice"></span>选择项目哦</p>
       <div class="update-info-container">
         <updated-portal-card
