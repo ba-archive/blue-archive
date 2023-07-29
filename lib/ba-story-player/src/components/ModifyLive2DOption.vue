@@ -1,5 +1,6 @@
+<!-- eslint-disable max-len -->
 <script setup lang="ts">
-import { Ref, computed, ref } from "vue";
+import { Ref, computed, ref, watch } from "vue";
 import eventBus from "../../lib/eventBus";
 import { changeStoryIndex } from "../../lib/layers/uiLayer/userInteract";
 import { initPrivateState } from "../../lib/stores";
@@ -43,6 +44,25 @@ const currentOptions = ref<IL2dConfig[keyof IL2dConfig]>({
 });
 const mapOtherSpine = computed(() => currentOptions.value.otherSpine ?? []);
 const live2dUnit = ref<StoryUnit["l2d"]>();
+// eslint-disable-next-line
+const availableSpineName = computed(() => [currentOptions.value.name, ...((currentOptions.value.otherSpine ?? []).filter((it) => it).map((it) => {
+  return it.substring(it.lastIndexOf("/") + 1);
+}))]);
+const selectedSpineName = ref("");
+watch(() => selectedSpineName.value, (cur) => {
+  if (!cur) {
+    return;
+  }
+  const index = availableSpineName.value.indexOf(cur);
+  if (index !== 0) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-extra-non-null-assertion
+    const url = utils.getResourcesUrl("otherL2dSpine", currentOptions.value.otherSpine!![index - 1]);
+    loadAnimationNames(url);
+  } else {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-extra-non-null-assertion
+    loadAnimationNames(live2dUnit.value!!.spineUrl);
+  }
+});
 const selectedAnimationName = ref<string>();
 const availableAnimationName = ref<string[]>([]);
 let proxy: { animation: string } | undefined = undefined;
@@ -86,6 +106,7 @@ eventBus.on("startLoading", () => {
 function loadAnimationNames(url: string) {
   Assets.load({ src: url, alias: [url]}).then((res) => {
     availableAnimationName.value = res.spineData.animations.map((it) => it.name);
+    selectedAnimationName.value = "";
   });
 }
 function openAnimationSelect(_proxy: any) {
@@ -242,7 +263,8 @@ function overrideLive2dConfig() {
                   v-model="e.animation"
                   class="ml-4"
                 />
-                <button @click="openAnimationSelect(e)">选择动画</button>
+                <button @click="openAnimationSelect(e)" 
+                v-show="availableSpineName.length > 0 && availableSpineName[0]">选择动画</button>
               </div>
               <div>
                 <label :for="'playQue-fadeTime-' + index">fadeTime</label>
@@ -377,11 +399,26 @@ function overrideLive2dConfig() {
       <div v-if="showAnimationSelectDialog" class="animation-dialog dialog">
         <div class="dialog-wrapper">
           <div class="close" @click="completeAnimationSelect">关闭</div>
-          <select v-model="selectedAnimationName">
-            <option v-for="(name, index) in availableAnimationName" :key="index">
-              {{ name }}
-            </option>
-          </select>
+          <div class="mt-8">
+            <div>选择spine</div>
+            <div class="mt-8">
+              <select v-model="selectedSpineName">
+                <option v-for="(name, index) in availableSpineName" :key="index">
+                  {{ name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-8">
+            <div>选择animation</div>
+            <div class="mt-8">
+              <select v-model="selectedAnimationName">
+                <option v-for="(name, index) in availableAnimationName" :key="index">
+                  {{ name }}
+                </option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </Teleport>
@@ -441,6 +478,9 @@ function overrideLive2dConfig() {
   border-radius: 3px;
   background-color: #fff;
   padding: 1rem;
+  :deep(.mt-8) {
+    margin-top: 8px;
+  }
 }
 .live2d-dialog {
   top: 15dvh;
