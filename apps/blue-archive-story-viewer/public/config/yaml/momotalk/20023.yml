@@ -1,44 +1,54 @@
 CharacterId: 20023
 translator: ARUKU
 title:
-  - GroupId: 2002302
-    FavorScheduleId: 200232
-    CharacterId: 20023
-    TextJp: 局長の噂
+  - TextJp: 局長の噂
     TextCn: 局长的传闻
     TextKr: 그 국장의 소문
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002303
-    FavorScheduleId: 200233
+    TextEn: The Director's Rumors
+    TextTh: ข่าวลือของหัวหน้า
+    TextTw: 局長的傳聞
+    GroupId: 2002302
+    FavorScheduleId: 200232
     CharacterId: 20023
-    TextJp: 張り込みの定番
+  - TextJp: 張り込みの定番
     TextCn: 惯例的盯梢
     TextKr: 그 국장의 업무
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002305
-    FavorScheduleId: 200235
+    TextEn: The Director's Duties
+    TextTh: งานของหัวหน้า
+    TextTw: 埋伏的慣例
+    GroupId: 2002303
+    FavorScheduleId: 200233
     CharacterId: 20023
-    TextJp: 一人、一休み
+  - TextJp: 一人、一休み
     TextCn: 一个人，休息片刻
     TextKr: 그 국장의 휴식
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002306
-    FavorScheduleId: 200236
+    TextEn: The Director's Rest
+    TextTh: เวลาพักผ่อนของหัวหน้า
+    TextTw: 獨自，稍作休息
+    GroupId: 2002305
+    FavorScheduleId: 200235
     CharacterId: 20023
-    TextJp: もう一つの道
+  - TextJp: もう一つの道
     TextCn: 另一条道路
     TextKr: 그 국장의 꿈
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: The Director's Dream
+    TextTh: ความฝันของหัวหน้า
+    TextTw: 另外一條道路
+    GroupId: 2002306
+    FavorScheduleId: 200236
+    CharacterId: 20023
 content:
-  - MessageGroupId: 200230010
+  - MessageKR: 발키리 경찰학교 공안국의 국장, 오가타 칸나입니다.
+    MessageJP: ヴァルキューレ警察学校、公安局局長の尾刃カンナです
+    MessageCN: 我是瓦尔基里警察学校的公安局局长，尾刃康娜
+    MessageEN:
+      This is Ogata Kanna, director of the Valkyrie Police School Public
+      Peace Bureau.
+    MessageTH: "หัวหน้ากรมความมั่นคงสาธารณะ
+
+      สถาบันฝึกตำรวจวัลคิรี่ โอกาตะ คันนะค่ะ"
+    MessageTW: 我是女武神警察學園公安局的局長尾刃環奈
+    MessageGroupId: 200230010
     Id: 200230010
     CharacterId: 20023
     MessageCondition: FavorRankUp
@@ -50,13 +60,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 발키리 경찰학교 공안국의 국장, 오가타 칸나입니다.
-    MessageJP: ヴァルキューレ警察学校、公安局局長の尾刃カンナです
-    MessageCN: 我是瓦尔基里警察学校的公安局局长，尾刃康娜
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230020
+  - MessageKR: 내일 10시 30분, 샬레의 사무실을 방문하도록 하겠습니다.
+    MessageJP: 明日の10時30分頃、シャーレの執務室を訪問させていただきます
+    MessageCN: 明天10点30分左右，我会访问夏莱的办公室。
+    MessageEN: I'm coming to visit the Schale office at 10:30 tomorrow.
+    MessageTH: "พรุ่งนี้เวลา 10:30 น. จะไปพบที่สำนัก
+
+      งานชาเล่ต์ค่ะ"
+    MessageTW: 明天10點30分前後，我會去拜訪夏萊的辦公室
+    MessageGroupId: 200230020
     Id: 200230020
     CharacterId: 20023
     MessageCondition: None
@@ -68,13 +80,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내일 10시 30분, 샬레의 사무실을 방문하도록 하겠습니다.
-    MessageJP: 明日の10時30分頃、シャーレの執務室を訪問させていただきます
-    MessageCN: 明天10点30分左右，我会访问夏莱的办公室。
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230030
+  - MessageKR: 드디어 올 것이 왔나……
+    MessageJP: ついにこの時が……
+    MessageCN: 这一天终究还是来了……
+    MessageEN: It's finally happening...
+    MessageTH: ในที่สุดวันนี้ก็มาถึงสินะ...
+    MessageTW: 這個時候終於還是到了嗎……
+    MessageGroupId: 200230030
     Id: 200230030
     CharacterId: 20023
     MessageCondition: Answer
@@ -86,13 +98,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 드디어 올 것이 왔나……
-    MessageJP: ついにこの時が……
-    MessageCN: 这一天终究还是来了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230030
+  - MessageKR: 난 아무런 잘못도 하지 않았어!
+    MessageJP: 濡れ衣です！
+    MessageCN: 冤枉啊！
+    MessageEN: I didn't do anything wrong!
+    MessageTH: ครูไม่ได้ทำอะไรผิดเลยนะ!
+    MessageTW: 我是冤枉的！
+    MessageGroupId: 200230030
     Id: 200230040
     CharacterId: 20023
     MessageCondition: Answer
@@ -104,13 +116,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 난 아무런 잘못도 하지 않았어!
-    MessageJP: 濡れ衣です！
-    MessageCN: 冤枉啊！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230040
+  - MessageKR: ……그게 무슨 말씀이신지?
+    MessageJP: ……どういうことでしょうか？
+    MessageCN: ……老师这是什么意思？
+    MessageEN: "...What are you talking about?"
+    MessageTH: หมายความว่ายังไงน่ะ...?
+    MessageTW: ……那是什麼意思？
+    MessageGroupId: 200230040
     Id: 200230050
     CharacterId: 20023
     MessageCondition: Feedback
@@ -122,13 +134,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……그게 무슨 말씀이신지?
-    MessageJP: ……どういうことでしょうか？
-    MessageCN: ……老师这是什么意思？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230050
+  - MessageKR: 전에 말씀드린 것처럼 샬레의 당번 업무 차 방문 예정입니다만.
+    MessageJP: 以前お約束した、シャーレの当番の話ですが……
+    MessageCN: 我说的是之前说好让我去夏莱值日的事……
+    MessageEN:
+      I'll be visiting to fulfill my student duties at Schale, as I said
+      before.
+    MessageTH: "อย่างที่เคยบอกไปค่ะ ฉันจะไปทำหน้า
+
+      ที่เวรตัวแทนที่ชาเล่ต์เท่านั้นค่ะ"
+    MessageTW: 我指的是之前和您約好擔任夏萊值日生的事……
+    MessageGroupId: 200230050
     Id: 200230060
     CharacterId: 20023
     MessageCondition: Feedback
@@ -140,13 +156,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전에 말씀드린 것처럼 샬레의 당번 업무 차 방문 예정입니다만.
-    MessageJP: 以前お約束した、シャーレの当番の話ですが……
-    MessageCN: 我说的是之前说好让我去夏莱值日的事……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230050
+  - MessageKR: 혹 내일 방문하면 곤란한 일이라도 있으신지요.
+    MessageJP: 何か困るようなことでも？
+    MessageCN: 老师那边有什么地方不方便吗？
+    MessageEN: Would it be a problem if I visited tomorrow?
+    MessageTH: หรือว่าพรุ่งนี้คุณครูไม่สะดวกรึเปล่าคะ
+    MessageTW: 會造成您的困擾嗎？
+    MessageGroupId: 200230050
     Id: 200230070
     CharacterId: 20023
     MessageCondition: Feedback
@@ -158,13 +174,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹 내일 방문하면 곤란한 일이라도 있으신지요.
-    MessageJP: 何か困るようなことでも？
-    MessageCN: 老师那边有什么地方不方便吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230060
+  - MessageKR: 아, 당번 업무 때문이었구나……
+    MessageJP: ああ、当番のことね……
+    MessageCN: 啊啊，是值日的事情啊……
+    MessageEN: Oh, it's for student duties...
+    MessageTH: อ๋อ มาเข้าเวรตัวแทนนี่เอง...
+    MessageTW: 啊啊，是值日生的事啊……
+    MessageGroupId: 200230060
     Id: 200230080
     CharacterId: 20023
     MessageCondition: Answer
@@ -176,13 +192,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 당번 업무 때문이었구나……
-    MessageJP: ああ、当番のことね……
-    MessageCN: 啊啊，是值日的事情啊……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230060
+  - MessageKR: 괜찮아. 아무 문제도 없어.
+    MessageJP: 何も問題ないよ、大丈夫
+    MessageCN: 没什么没什么，没关系
+    MessageEN: It's okay. No problem.
+    MessageTH: ไม่เป็นไร ไม่มีอะไรหรอก
+    MessageTW: 沒有問題唷，沒事的
+    MessageGroupId: 200230060
     Id: 200230090
     CharacterId: 20023
     MessageCondition: Answer
@@ -194,13 +210,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮아. 아무 문제도 없어.
-    MessageJP: 何も問題ないよ、大丈夫
-    MessageCN: 没什么没什么，没关系
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230070
+  - MessageKR: 그렇다면 다행입니다.
+    MessageJP: でしたら良かったのですが……
+    MessageCN: 要真是这样就好了……
+    MessageEN: I'm glad to hear that.
+    MessageTH: ถ้าไม่มีอะไรก็ดีแล้วละค่ะ
+    MessageTW: 那就好……
+    MessageGroupId: 200230070
     Id: 200230100
     CharacterId: 20023
     MessageCondition: Feedback
@@ -212,13 +228,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇다면 다행입니다.
-    MessageJP: でしたら良かったのですが……
-    MessageCN: 要真是这样就好了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230080
+  - MessageKR: 그럼 내일, 말씀드린 시각에 찾아 뵙겠습니다.
+    MessageJP: それでは明日、先ほどお伝えした時刻に伺います
+    MessageCN: 那么明天，我会在刚才告知的时间来访
+    MessageEN: Then I'll see you tomorrow, at the scheduled time.
+    MessageTH: "ถ้างั้นพรุ่งนี้ฉันจะไปพบตามเวลาที่
+
+      แจ้งเอาไว้ค่ะ"
+    MessageTW: 那麼明天會在剛才所說的時間前去拜訪
+    MessageGroupId: 200230080
     Id: 200230110
     CharacterId: 20023
     MessageCondition: Feedback
@@ -230,13 +248,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 내일, 말씀드린 시각에 찾아 뵙겠습니다.
-    MessageJP: それでは明日、先ほどお伝えした時刻に伺います
-    MessageCN: 那么明天，我会在刚才告知的时间来访
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230090
+  - MessageKR: 늦은 시간에 죄송합니다, 선생님.
+    MessageJP: 先生、夜分遅くに失礼いたします
+    MessageCN: 老师，不好意思这么晚了来打搅您
+    MessageEN: I'm so sorry to contact you so late, Sensei.
+    MessageTH: ขอโทษที่ติดต่อมาตอนดึกค่ะคุณครู
+    MessageTW: 老師，很抱歉這麼晚打擾您
+    MessageGroupId: 200230090
     Id: 200230120
     CharacterId: 20023
     MessageCondition: FavorRankUp
@@ -248,13 +266,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 늦은 시간에 죄송합니다, 선생님.
-    MessageJP: 先生、夜分遅くに失礼いたします
-    MessageCN: 老师，不好意思这么晚了来打搅您
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230100
+  - MessageKR: 발키리 경찰학교의 오가타 칸나입니다.
+    MessageJP: ヴァルキューレ警察学校の尾刃カンナです
+    MessageCN: 我是瓦尔基里警察学校的尾刃康娜
+    MessageEN: This is Ogata Kanna of the Valkyrie Police School.
+    MessageTH: "โอกาตะ คันนะ จากสถาบันฝึกตำรวจ
+
+      วัลคิรี่ค่ะ"
+    MessageTW: 我是女武神警察學園的尾刃環奈
+    MessageGroupId: 200230100
     Id: 200230130
     CharacterId: 20023
     MessageCondition: None
@@ -266,13 +286,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 발키리 경찰학교의 오가타 칸나입니다.
-    MessageJP: ヴァルキューレ警察学校の尾刃カンナです
-    MessageCN: 我是瓦尔基里警察学校的尾刃康娜
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230110
+  - MessageKR: 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 康娜有什么事吗？
+    MessageEN: Is something wrong?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: 怎麼了嗎？
+    MessageGroupId: 200230110
     Id: 200230140
     CharacterId: 20023
     MessageCondition: Answer
@@ -284,13 +304,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일이야?
-    MessageJP: どうしたの？
-    MessageCN: 康娜有什么事吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230120
+  - MessageKR: 다름이 아니라 괜찮으시다면
+    MessageJP: こちらの勝手で申し訳ありませんが……
+    MessageCN: 虽然很抱歉是我自作主张……
+    MessageEN: If you don't mind,
+    MessageTH: คือว่าถ้าคุณครูไม่ว่าอะไร...
+    MessageTW: 很抱歉，因為我個人的一些原因……
+    MessageGroupId: 200230120
     Id: 200230150
     CharacterId: 20023
     MessageCondition: Feedback
@@ -302,13 +322,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다름이 아니라 괜찮으시다면
-    MessageJP: こちらの勝手で申し訳ありませんが……
-    MessageCN: 虽然很抱歉是我自作主张……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230120
+  - MessageKR: 다음주 당번 일정을 조금 변경하고자 합니다
+    MessageJP: 来週の当番、日程を変更しても良いですか？
+    MessageCN: 下周我在夏莱的值日可以改一下安排吗？
+    MessageEN: I'd like to reschedule for next week.
+    MessageTH: "ฉันอยากขอปรับตารางเข้าเวรตัวแทน
+
+      อาทิตย์หน้าหน่อยน่ะค่ะ"
+    MessageTW: 下週值日生的安排，可以稍做更改嗎？
+    MessageGroupId: 200230120
     Id: 200230160
     CharacterId: 20023
     MessageCondition: Feedback
@@ -320,13 +342,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음주 당번 일정을 조금 변경하고자 합니다
-    MessageJP: 来週の当番、日程を変更しても良いですか？
-    MessageCN: 下周我在夏莱的值日可以改一下安排吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230130
+  - MessageKR: 일정 변경은 문제 없지만……
+    MessageJP: それくらい問題ないよ
+    MessageCN: 这种事情当然没问题啦
+    MessageEN: That's not a problem.
+    MessageTH: เรื่องเปลี่ยนตารางน่ะไม่มีปัญหาหรอก...
+    MessageTW: 這種小事沒問題唷
+    MessageGroupId: 200230130
     Id: 200230170
     CharacterId: 20023
     MessageCondition: Answer
@@ -338,13 +360,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일정 변경은 문제 없지만……
-    MessageJP: それくらい問題ないよ
-    MessageCN: 这种事情当然没问题啦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230130
+  - MessageKR: 무슨 문제라도 있어?
+    MessageJP: 何かトラブル？
+    MessageCN: 康娜那边出什么问题了？
+    MessageEN: Is something wrong?
+    MessageTH: คันนะมีเรื่องอะไรรึเปล่า?
+    MessageTW: 發生什麼狀況了嗎？
+    MessageGroupId: 200230130
     Id: 200230180
     CharacterId: 20023
     MessageCondition: Answer
@@ -356,13 +378,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 문제라도 있어?
-    MessageJP: 何かトラブル？
-    MessageCN: 康娜那边出什么问题了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230140
+  - MessageKR: 그게 경비국의 머저리들이
+    MessageJP: また警備局のバカ共が……
+    MessageCN: 又是警备局那群笨蛋……
+    MessageEN: It's the jerks at the Security Bureau.
+    MessageTH: คือว่าพวกงี่เง่าจากสำนักความมั่นคง...
+    MessageTW: 那些警備局的笨蛋們又……
+    MessageGroupId: 200230140
     Id: 200230190
     CharacterId: 20023
     MessageCondition: Feedback
@@ -374,13 +396,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게 경비국의 머저리들이
-    MessageJP: また警備局のバカ共が……
-    MessageCN: 又是警备局那群笨蛋……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230150
+  - MessageKR: 아니
+    MessageJP: いえ
+    MessageCN: 没什么
+    MessageEN: Actually...
+    MessageTH: ไม่สิ
+    MessageTW: 不
+    MessageGroupId: 200230150
     Id: 200230200
     CharacterId: 20023
     MessageCondition: Feedback
@@ -392,13 +414,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니
-    MessageJP: いえ
-    MessageCN: 没什么
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230160
+  - MessageKR: 실례했습니다
+    MessageJP: 忘れてください
+    MessageCN: 请老师忘了吧
+    MessageEN: Excuse my language.
+    MessageTH: ขอโทษด้วยค่ะ
+    MessageTW: 請忘了吧
+    MessageGroupId: 200230160
     Id: 200230210
     CharacterId: 20023
     MessageCondition: Feedback
@@ -410,13 +432,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 실례했습니다
-    MessageJP: 忘れてください
-    MessageCN: 请老师忘了吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230170
+  - MessageKR: 경찰학교에 처리해야할 긴급한 문제가 생겨 외근을 해야 할 것 같습니다.
+    MessageJP: 緊急の要請が来たため、私も作戦に加わることになりまして
+    MessageCN: 因为我收到了紧急请求，所以也要参加作战
+    MessageEN:
+      There's an urgent problem to deal with at the Police School, so I'll
+      be on patrol duty.
+    MessageTH: "พอดีมีปัญหาด่วนที่ต้องจัดการที่
+
+      สถาบันฝึกตำรวจน่ะค่ะ"
+    MessageTW: 因為傳來了緊急要求，我必須參加作戰
+    MessageGroupId: 200230170
     Id: 200230220
     CharacterId: 20023
     MessageCondition: Feedback
@@ -428,13 +454,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 경찰학교에 처리해야할 긴급한 문제가 생겨 외근을 해야 할 것 같습니다.
-    MessageJP: 緊急の要請が来たため、私も作戦に加わることになりまして
-    MessageCN: 因为我收到了紧急请求，所以也要参加作战
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230180
+  - MessageKR: 고생이 많네……
+    MessageJP: 大変だね……
+    MessageCN: 康娜还真是不容易啊……
+    MessageEN: You have a lot on your plate...
+    MessageTH: ทำงานหนักน่าดูเลยนะ...
+    MessageTW: 真辛苦呢……
+    MessageGroupId: 200230180
     Id: 200230230
     CharacterId: 20023
     MessageCondition: Answer
@@ -446,13 +472,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 고생이 많네……
-    MessageJP: 大変だね……
-    MessageCN: 康娜还真是不容易啊……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230190
+  - MessageKR: 아닙니다. 발키리 경찰학교의 간부로서 당연히 수행해야 할 업무인걸요.
+    MessageJP: これも公安局局長としての務めですので
+    MessageCN: 这也是我作为公安局局长的职责所在
+    MessageEN: It's just my duty as an officer of the Valkyrie Police School.
+    MessageTH: "ไม่หรอกค่ะ เป็นงานที่ต้องทำในฐานะ
+
+      เจ้าหน้าที่จากสถาบันฝึกตำรวจวัลคิรี่
+
+      อยู่แล้วค่ะ"
+    MessageTW: 這是身為公安局局長應盡的義務
+    MessageGroupId: 200230190
     Id: 200230240
     CharacterId: 20023
     MessageCondition: Feedback
@@ -464,13 +494,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아닙니다. 발키리 경찰학교의 간부로서 당연히 수행해야 할 업무인걸요.
-    MessageJP: これも公安局局長としての務めですので
-    MessageCN: 这也是我作为公安局局长的职责所在
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230200
+  - MessageKR: 변경된 일정은 메일을 통해 따로 고지드리겠습니다.
+    MessageJP: それでは、当番の日程は、別途メールで連絡いたします
+    MessageCN: 那么，我值日的日程安排就另行邮件联络了
+    MessageEN: I'll email you about my new schedule.
+    MessageTH: "ฉันจะแจ้งตารางที่ปรับเปลี่ยนแล้วให้
+
+      ทราบอีกครั้งทางอีเมลนะคะ"
+    MessageTW: 那麼，關於值日生的日程我會另外發訊息聯絡您
+    MessageGroupId: 200230200
     Id: 200230250
     CharacterId: 20023
     MessageCondition: Feedback
@@ -482,13 +514,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 변경된 일정은 메일을 통해 따로 고지드리겠습니다.
-    MessageJP: それでは、当番の日程は、別途メールで連絡いたします
-    MessageCN: 那么，我值日的日程安排就另行邮件联络了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230200
+  - MessageKR: 그럼 먼저 말을 줄이겠습니다. 편안한 하루 되십시오.
+    MessageJP: 事件のことは気にせず、先生はお休みになってください
+    MessageCN: 老师不用太在意发生了什么事，请早点休息吧
+    MessageEN: That's all I have for now. Have a relaxing day.
+    MessageTH: "ถ้างั้นขอตัวก่อนนะคะ ขอให้วันนี้เป็น
+
+      วันที่ดีนะคะ"
+    MessageTW: 請老師別在意事件，好好休息
+    MessageGroupId: 200230200
     Id: 200230260
     CharacterId: 20023
     MessageCondition: Feedback
@@ -500,13 +534,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 먼저 말을 줄이겠습니다. 편안한 하루 되십시오.
-    MessageJP: 事件のことは気にせず、先生はお休みになってください
-    MessageCN: 老师不用太在意发生了什么事，请早点休息吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230210
+  - MessageKR: 발키리 경찰학교의 구내 식당은 가격이 저렴하고 반찬이 다양하긴 하지만
+    MessageJP: ヴァルキューレ警察学校の食堂は安価でメニューも豊富ですが
+    MessageCN: 虽说瓦尔基里警察学校的食堂既便宜，菜品也很丰富
+    MessageEN:
+      The Valkyrie Police School cafeteria has an inexpensive variety of
+      dishes.
+    MessageTH: "ร้านอาหารในสถาบันฝึกตำรวจวัลคิรี่
+
+      ราคาถูกและให้อาหารหลากหลายก็จริง"
+    MessageTW: 女武神警察學園的餐廳雖然便宜且選擇豐富
+    MessageGroupId: 200230210
     Id: 200230270
     CharacterId: 20023
     MessageCondition: FavorRankUp
@@ -518,13 +556,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 발키리 경찰학교의 구내 식당은 가격이 저렴하고 반찬이 다양하긴 하지만
-    MessageJP: ヴァルキューレ警察学校の食堂は安価でメニューも豊富ですが
-    MessageCN: 虽说瓦尔基里警察学校的食堂既便宜，菜品也很丰富
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230220
+  - MessageKR: 배식 시간이 짧은 게 단점이군요.
+    MessageJP: 開いている時間が限られています
+    MessageCN: 但是只在限定时间开放
+    MessageEN: Unfortunately, they are not open for long.
+    MessageTH: "แต่ก็มีข้อเสียคือมีเวลาแจกอาหารน้อย
+
+      มากๆ ค่ะ"
+    MessageTW: 不過營業時間相當有限
+    MessageGroupId: 200230220
     Id: 200230280
     CharacterId: 20023
     MessageCondition: None
@@ -536,13 +576,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 배식 시간이 짧은 게 단점이군요.
-    MessageJP: 開いている時間が限られています
-    MessageCN: 但是只在限定时间开放
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230230
+  - MessageKR: 업무에 집중하고 있다 보면 배식 시간을 놓치는 일이 잦은지라
+    MessageJP: 仕事に集中していると、すでに閉まっていることも多いので
+    MessageCN: 经常出现我工作过于集中，等去食堂的时候那边已经关门的情况
+    MessageEN: When I'm focused on work, I can often miss lunchtime.
+    MessageTH: "เวลาที่จดจ่ออยู่กับงานมากๆ ก็มักจะลืม
+
+      เวลาจนเลยเวลาแจกอาหารบ่อยๆ"
+    MessageTW: 一專注於工作就時常錯過營業時間
+    MessageGroupId: 200230230
     Id: 200230290
     CharacterId: 20023
     MessageCondition: None
@@ -554,13 +596,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 업무에 집중하고 있다 보면 배식 시간을 놓치는 일이 잦은지라
-    MessageJP: 仕事に集中していると、すでに閉まっていることも多いので
-    MessageCN: 经常出现我工作过于集中，等去食堂的时候那边已经关门的情况
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230230
+  - MessageKR: 종종 식사를 거르게 됩니다
+    MessageJP: しばしば食事を抜くことも……
+    MessageCN: 经常吃不上饭……
+    MessageEN: So I end up skipping my meal.
+    MessageTH: เลยทำให้ไม่ได้กินข้าวบ่อยๆ ค่ะ
+    MessageTW: 也經常沒有用餐……
+    MessageGroupId: 200230230
     Id: 200230300
     CharacterId: 20023
     MessageCondition: None
@@ -572,13 +614,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 종종 식사를 거르게 됩니다
-    MessageJP: しばしば食事を抜くことも……
-    MessageCN: 经常吃不上饭……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230240
+  - MessageKR: 구내 식당 밖에서 음식을 사 먹으면 안 되는 거야?
+    MessageJP: 外で食べるのはダメなの？
+    MessageCN: 规定不允许在外面吃吗？
+    MessageEN: Can't you eat something from outside the school campus?
+    MessageTH: "แล้วไปซื้ออาหารจากนอกโรงอาหาร
+
+      ไม่ได้เหรอ?"
+    MessageTW: 不能在外面吃嗎？
+    MessageGroupId: 200230240
     Id: 200230310
     CharacterId: 20023
     MessageCondition: Answer
@@ -590,13 +634,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 구내 식당 밖에서 음식을 사 먹으면 안 되는 거야?
-    MessageJP: 外で食べるのはダメなの？
-    MessageCN: 规定不允许在外面吃吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230250
+  - MessageKR: 아뇨. 그런 규칙은 없습니다만……
+    MessageJP: いえ、そんな規則はありませんが……
+    MessageCN: 不，倒也没有这种规定……
+    MessageEN: I could do that, but...
+    MessageTH: ก็ได้อยู่หรอกค่ะ ไม่มีกฏห้ามอะไร...
+    MessageTW: 不，並沒有那種規定……
+    MessageGroupId: 200230250
     Id: 200230320
     CharacterId: 20023
     MessageCondition: Feedback
@@ -608,13 +652,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아뇨. 그런 규칙은 없습니다만……
-    MessageJP: いえ、そんな規則はありませんが……
-    MessageCN: 不，倒也没有这种规定……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230250
+  - MessageKR: 어쩐지 밖에서 식사를 하는 것은 꺼려져서요.
+    MessageJP: 仕事があるのに外で食事をするのは、少し気が引けるので
+    MessageCN: 但是明明工作还没做完却跑到外面吃饭，我还是有点过意不去
+    MessageEN: I just don't feel like eating outside for some reason.
+    MessageTH: "แต่ฉันไม่ค่อยอยากออกไปกินอาหาร
+
+      ข้างนอกน่ะค่ะ"
+    MessageTW: 不過明明還有工作卻在外面用餐，會讓我有點抗拒
+    MessageGroupId: 200230250
     Id: 200230330
     CharacterId: 20023
     MessageCondition: Feedback
@@ -626,13 +672,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쩐지 밖에서 식사를 하는 것은 꺼려져서요.
-    MessageJP: 仕事があるのに外で食事をするのは、少し気が引けるので
-    MessageCN: 但是明明工作还没做完却跑到外面吃饭，我还是有点过意不去
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230260
+  - MessageKR: 그러고보니 생활안전국에는
+    MessageJP: そういえば、生活安全局には
+    MessageCN: 话说回来，生活安全局里
+    MessageEN: Come to think of it, in the Public Safety Bureau
+    MessageTH: พอดีที่สำนักรักษาความปลอดภัย
+    MessageTW: 這麼說來，在生活安全局裡
+    MessageGroupId: 200230260
     Id: 200230340
     CharacterId: 20023
     MessageCondition: FavorRankUp
@@ -644,13 +690,19 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러고보니 생활안전국에는
-    MessageJP: そういえば、生活安全局には
-    MessageCN: 话说回来，生活安全局里
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230270
+  - MessageKR: 경비국이나 수사국 전과를 희망하는 학생들이 제법 있던 모양이더군요
+    MessageJP: 警備局や捜査局に転科を希望する生徒が、それなりにいるようです
+    MessageCN: 好像有不少希望转去警备科或者搜查科的学生
+    MessageEN:
+      there were a lot of students who wanted to transfer to the Security
+      or Investigation Bureaus.
+    MessageTH: "เหมือนจะมีพวกนักเรียนที่อยากจะย้าย
+
+      มาที่สำนักความมั่นคงหรือสำนักงาน
+
+      สืบสวนอยู่ด้วยค่ะ"
+    MessageTW: 似乎有不少學生想轉調至警備局或搜查局
+    MessageGroupId: 200230270
     Id: 200230350
     CharacterId: 20023
     MessageCondition: None
@@ -662,13 +714,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 경비국이나 수사국 전과를 희망하는 학생들이 제법 있던 모양이더군요
-    MessageJP: 警備局や捜査局に転科を希望する生徒が、それなりにいるようです
-    MessageCN: 好像有不少希望转去警备科或者搜查科的学生
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230280
+  - MessageKR: 제법 있었지.
+    MessageJP: 聞いたことあるかも
+    MessageCN: 我应该也略有耳闻
+    MessageEN: There were quite a lot.
+    MessageTH: ต้องมีอยู่แล้วแหละ
+    MessageTW: 我好像也聽過
+    MessageGroupId: 200230280
     Id: 200230360
     CharacterId: 20023
     MessageCondition: Answer
@@ -680,13 +732,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제법 있었지.
-    MessageJP: 聞いたことあるかも
-    MessageCN: 我应该也略有耳闻
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230280
+  - MessageKR: 많았었던가……?
+    MessageJP: 多いかな……？
+    MessageCN: 有很多吗……？
+    MessageEN: Were there...?
+    MessageTH: มีเยอะเลยเหรอ...?
+    MessageTW: 有很多嗎……？
+    MessageGroupId: 200230280
     Id: 200230370
     CharacterId: 20023
     MessageCondition: Answer
@@ -698,13 +750,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 많았었던가……?
-    MessageJP: 多いかな……？
-    MessageCN: 有很多吗……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230290
+  - MessageKR: 그러고보니 칸나는 처음부터 공안국을 지망했던 거야?
+    MessageJP: そういうカンナは、最初から公安局志望だったの？
+    MessageCN: 康娜是一开始就想进公安局吗？
+    MessageEN: Did you want to apply for the Public Peace Bureau from the beginning?
+    MessageTH: "ว่าแต่คันนะอยากเข้ากรมความมั่นคง
+
+      สาธารณะตั้งแต่แรกเลยเหรอ?"
+    MessageTW: 話說環奈一開始就是想進入公安局嗎？
+    MessageGroupId: 200230290
     Id: 200230380
     CharacterId: 20023
     MessageCondition: Answer
@@ -716,13 +770,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러고보니 칸나는 처음부터 공안국을 지망했던 거야?
-    MessageJP: そういうカンナは、最初から公安局志望だったの？
-    MessageCN: 康娜是一开始就想进公安局吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230300
+  - MessageKR: 저 말씀이십니까?
+    MessageJP: 私ですか？
+    MessageCN: 我吗？
+    MessageEN: Me?
+    MessageTH: ฉันเหรอคะ?
+    MessageTW: 您說我嗎？
+    MessageGroupId: 200230300
     Id: 200230390
     CharacterId: 20023
     MessageCondition: Feedback
@@ -734,13 +788,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저 말씀이십니까?
-    MessageJP: 私ですか？
-    MessageCN: 我吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230310
+  - MessageKR: 제 경우는
+    MessageJP: 私の場合
+    MessageCN: 我嘛
+    MessageEN: No, actually. In my case,
+    MessageTH: กรณีของฉัน...
+    MessageTW: 我的話
+    MessageGroupId: 200230310
     Id: 200230400
     CharacterId: 20023
     MessageCondition: Feedback
@@ -752,13 +806,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제 경우는
-    MessageJP: 私の場合
-    MessageCN: 我嘛
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230310
+  - MessageKR: 1학년 때는 생활안전국을 지망했습니다만
+    MessageJP: 1年生の時に生活安全局を志望しましたが……
+    MessageCN: 虽然一年级的时候想进生活安全局……
+    MessageEN: I applied to the Public Safety Bureau my first year.
+    MessageTH: "ตอนอยู่ปี 1 ฉันเลือกสำนักรักษาความ
+
+      ปลอดภัยค่ะ"
+    MessageTW: 1年級時是想加入生活安全局的……
+    MessageGroupId: 200230310
     Id: 200230410
     CharacterId: 20023
     MessageCondition: Feedback
@@ -770,13 +826,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 1학년 때는 생활안전국을 지망했습니다만
-    MessageJP: 1年生の時に生活安全局を志望しましたが……
-    MessageCN: 虽然一年级的时候想进生活安全局……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230320
+  - MessageKR: 그 얼굴로 민원 처리는 어려울 거라는 이야기를 들어서
+    MessageJP: その顔で市民の窓口に立つような仕事は難しいと言われ……
+    MessageCN: 但有人说我这长相很难站到接待市民的窗口前面……
+    MessageEN:
+      But I was told my demeanor was ill-equipped for dealing with civil
+      complaints.
+    MessageTH: "แต่พวกเขาบอกว่าหน้าแบบฉันจะ
+
+      รับมือกับพวกชาวเมืองลำบากน่ะค่ะ"
+    MessageTW: 但被人說這張臉擔任市民窗口的工作會有困難……
+    MessageGroupId: 200230320
     Id: 200230420
     CharacterId: 20023
     MessageCondition: Feedback
@@ -788,13 +848,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 얼굴로 민원 처리는 어려울 거라는 이야기를 들어서
-    MessageJP: その顔で市民の窓口に立つような仕事は難しいと言われ……
-    MessageCN: 但有人说我这长相很难站到接待市民的窗口前面……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230330
+  - MessageKR: 음……
+    MessageJP: 結構な……
+    MessageCN: 还真是……
+    MessageEN: Um...
+    MessageTH: อืม...
+    MessageTW: 那還真是……
+    MessageGroupId: 200230330
     Id: 200230430
     CharacterId: 20023
     MessageCondition: Answer
@@ -806,13 +866,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음……
-    MessageJP: 結構な……
-    MessageCN: 还真是……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230340
+  - MessageKR: 뭔가 하실 말씀이라도?
+    MessageJP: 何か言いたいことでも？
+    MessageCN: 老师想说什么？
+    MessageEN: Did you want to say something?
+    MessageTH: คุณครูจะพูดอะไรเหรอคะ?
+    MessageTW: 您有什麼想說的嗎？
+    MessageGroupId: 200230340
     Id: 200230440
     CharacterId: 20023
     MessageCondition: Feedback
@@ -824,13 +884,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 하실 말씀이라도?
-    MessageJP: 何か言いたいことでも？
-    MessageCN: 老师想说什么？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200230350
+  - MessageKR: 아무것도 아니야!
+    MessageJP: いやっ、何でもないよ！
+    MessageCN: 没，什么也没有！
+    MessageEN: N-Nothing!
+    MessageTH: ครูไม่ได้จะพูดอะไรนะ!
+    MessageTW: 沒有，什麼都沒有！
+    MessageGroupId: 200230350
     Id: 200230450
     CharacterId: 20023
     MessageCondition: Answer
@@ -842,9 +902,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무것도 아니야!
-    MessageJP: いやっ、何でもないよ！
-    MessageCN: 没，什么也没有！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

@@ -1,44 +1,50 @@
 CharacterId: 13009
 translator: 罐子
 title:
-  - GroupId: 1300902
-    FavorScheduleId: 130092
-    CharacterId: 13009
-    TextJp: 今日も頑張ってうとうと修行
+  - TextJp: 今日も頑張ってうとうと修行
     TextCn: 今天也要慢悠悠地加油修行
     TextKr: 오늘도 열심히 꾸벅꾸벅 수행
     TextEn: Just Another Lazy Day
     TextTh: วันนี้ก็จะตั้งใจทำงานอย่างหนัก
     TextTw: 今天也努力的打盹修行
-  - GroupId: 1300903
-    FavorScheduleId: 130093
+    GroupId: 1300902
+    FavorScheduleId: 130092
     CharacterId: 13009
-    TextJp: ツバキの修行法：道具編
+  - TextJp: ツバキの修行法：道具編
     TextCn: 椿的修行法：道具篇
     TextKr: "츠바키의 수행법 : 도구편"
     TextEn: "Tsubaki's Training: Tools "
     TextTh: "วิธีฝึกฝนของสึบากิ: ใช้อุปกรณ์"
-    TextTw: "椿的修行法 : 道具篇 "
-  - GroupId: 1300905
-    FavorScheduleId: 130095
+    TextTw: 椿的修行法：道具篇
+    GroupId: 1300903
+    FavorScheduleId: 130093
     CharacterId: 13009
-    TextJp: ツバキの修行法：実践編
+  - TextJp: ツバキの修行法：実践編
     TextCn: 椿的修行法：实践篇
     TextKr: "츠바키의 수행법 : 실행편"
     TextEn: "Tsubaki's Training: Practice"
     TextTh: "วิธีฝึกฝนของสึบากิ: ลงมือฝึกจริง"
-    TextTw: "椿的修行法 : 實踐篇"
-  - GroupId: 1300906
-    FavorScheduleId: 130096
+    TextTw: 椿的修行法：實踐篇
+    GroupId: 1300905
+    FavorScheduleId: 130095
     CharacterId: 13009
-    TextJp: あなたとの修行にぴったりの
+  - TextJp: あなたとの修行にぴったりの
     TextCn: 与和你一起的修行正合适
     TextKr: 당신과 함께 수행하기 좋은 곳
     TextEn: "The Best Place to Train with You "
     TextTh: "สถานที่ที่เหมาะกับการฝึกฝนด้วยกัน "
     TextTw: 適合和你修行的
+    GroupId: 1300906
+    FavorScheduleId: 130096
+    CharacterId: 13009
 content:
-  - MessageGroupId: 130090010
+  - MessageKR: 선생님…….
+    MessageJP: 先生、どう……？
+    MessageCN: 老师，如何……？
+    MessageEN: Sensei...
+    MessageTH: คุณครู....
+    MessageTW: 老師，如何……？
+    MessageGroupId: 130090010
     Id: 1115
     CharacterId: 13009
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님…….
-    MessageJP: 先生、どう……？
-    MessageCN: 老师，如何……？
-    MessageEN: Sensei...
-    MessageTH: คุณครู....
-    MessageTW: 老師，如何……？
-  - MessageGroupId: 130090020
+  - MessageKR: 평소에도 수행 열심히 하고 있어~?
+    MessageJP: いつも通り、修行頑張ってる？
+    MessageCN: 老师有和平时一样，在加油修行吗？
+    MessageEN: Are you keeping up the hard work?
+    MessageTH: ปกติตั้งใจฝึกฝนไหม?
+    MessageTW: 和往常一樣，在努力修行嗎？
+    MessageGroupId: 130090020
     Id: 1116
     CharacterId: 13009
     MessageCondition: None
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 평소에도 수행 열심히 하고 있어~?
-    MessageJP: いつも通り、修行頑張ってる？
-    MessageCN: 老师有和平时一样，在加油修行吗？
-    MessageEN: Are you keeping up the hard work?
-    MessageTH: ปกติตั้งใจฝึกฝนไหม?
-    MessageTW: 和往常一樣，在努力修行嗎？
-  - MessageGroupId: 130090030
+  - MessageKR: 갑자기 수행이라니?
+    MessageJP: 修行って？
+    MessageCN: 修行是指？
+    MessageEN: Training so suddenly?
+    MessageTH: ทำไมจู่ๆ ก็เข้าเรื่องฝึกฝนล่ะ?
+    MessageTW: 修行？
+    MessageGroupId: 130090030
     Id: 1117
     CharacterId: 13009
     MessageCondition: Answer
@@ -86,13 +92,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 수행이라니?
-    MessageJP: 修行って？
-    MessageCN: 修行是指？
-    MessageEN: Training so suddenly?
-    MessageTH: ทำไมจู่ๆ ก็เข้าเรื่องฝึกฝนล่ะ?
-    MessageTW: 修行？
-  - MessageGroupId: 130090030
+  - MessageKR: 물론이지.
+    MessageJP: もちろん
+    MessageCN: 当然有哦
+    MessageEN: Of course.
+    MessageTH: แน่นอนอยู่แล้ว
+    MessageTW: 當然有
+    MessageGroupId: 130090030
     Id: 1118
     CharacterId: 13009
     MessageCondition: Answer
@@ -104,13 +110,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이지.
-    MessageJP: もちろん
-    MessageCN: 当然有哦
-    MessageEN: Of course.
-    MessageTH: แน่นอนอยู่แล้ว
-    MessageTW: 當然有
-  - MessageGroupId: 130090040
+  - MessageKR: 우리 수행부 고문이라면 당연히 빼놓을 수 없는 수행…….
+    MessageJP: 先生も私たち修行部の顧問なんだから、当然欠かせない修行。そう……
+    MessageCN: 老师毕竟也是我们修行部的顾问，修行当然也是必不可少的。没错……
+    MessageEN: It's essential training for any advisor of the Inner Discipline Club...
+    MessageTH: "การฝึกฝนที่ขาดไม่ได้ของที่ปรึกษา
+
+      ชมรมฝึกฝน..."
+    MessageTW: 老師也是我們修行部的顧問，修行當然是必不可少的。對……
+    MessageGroupId: 130090040
     Id: 1119
     CharacterId: 13009
     MessageCondition: Feedback
@@ -122,15 +130,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우리 수행부 고문이라면 당연히 빼놓을 수 없는 수행…….
-    MessageJP: 先生も私たち修行部の顧問なんだから、当然欠かせない修行。そう……
-    MessageCN: 老师毕竟也是我们修行部的顾问，修行当然也是必不可少的。没错……
-    MessageEN: It's essential training for any advisor of the Inner Discipline Club...
-    MessageTH: "การฝึกฝนที่ขาดไม่ได้ของที่ปรึกษา
-
-      ชมรมฝึกฝน..."
-    MessageTW: 老師也是我們修行部的顧問，修行當然是必不可少的。對……
-  - MessageGroupId: 130090040
+  - MessageKR: 잠자기 말이야.
+    MessageJP: 寝ること、だよ
+    MessageCN: 就是睡觉这件事哦
+    MessageEN: Sleeping.
+    MessageTH: คือการนอนหลับยังไงล่ะ
+    MessageTW: 也就是睡覺
+    MessageGroupId: 130090040
     Id: 1120
     CharacterId: 13009
     MessageCondition: Feedback
@@ -142,13 +148,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잠자기 말이야.
-    MessageJP: 寝ること、だよ
-    MessageCN: 就是睡觉这件事哦
-    MessageEN: Sleeping.
-    MessageTH: คือการนอนหลับยังไงล่ะ
-    MessageTW: 也就是睡覺
-  - MessageGroupId: 130090040
+  - MessageKR: 특히 선생님은 평소에 너무 바빠서 잠도 제대로 못 자고 있잖아?
+    MessageJP: 特に先生は、普段から忙しすぎてあまり寝られてないでしょ？
+    MessageCN: 特别老师平时就很忙，所以没怎么睡吧？
+    MessageEN: You never get enough sleep because you're so busy.
+    MessageTH: "แต่คุณครูงานยุ่งขนาดนี้ คงไม่ได้นอน
+
+      หลับดีๆ ใช่ไหม?"
+    MessageTW: 特別是老師平時太忙了，沒怎麼睡吧？
+    MessageGroupId: 130090040
     Id: 1121
     CharacterId: 13009
     MessageCondition: Feedback
@@ -160,15 +168,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 특히 선생님은 평소에 너무 바빠서 잠도 제대로 못 자고 있잖아?
-    MessageJP: 特に先生は、普段から忙しすぎてあまり寝られてないでしょ？
-    MessageCN: 特别老师平时就很忙，所以没怎么睡吧？
-    MessageEN: You never get enough sleep because you're so busy.
-    MessageTH: "แต่คุณครูงานยุ่งขนาดนี้ คงไม่ได้นอน
-
-      หลับดีๆ ใช่ไหม?"
-    MessageTW: 特別是老師平時太忙了，沒怎麼睡吧？
-  - MessageGroupId: 130090050
+  - MessageKR: 그래~?
+    MessageJP: 本当に～？
+    MessageCN: 真的吗～？
+    MessageEN: "Yeah? "
+    MessageTH: "อย่างนั้นเหรอ~? "
+    MessageTW: 真的嗎～？
+    MessageGroupId: 130090050
     Id: 1122
     CharacterId: 13009
     MessageCondition: Feedback
@@ -180,13 +186,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래~?
-    MessageJP: 本当に～？
-    MessageCN: 真的吗～？
-    MessageEN: "Yeah? "
-    MessageTH: "อย่างนั้นเหรอ~? "
-    MessageTW: 真的嗎～？
-  - MessageGroupId: 130090050
+  - MessageKR: 흐음, 의심스러운걸…….
+    MessageJP: うーん、怪しい……
+    MessageCN: 嗯——，很可疑……
+    MessageEN: Hmm, that's suspicious...
+    MessageTH: อืม... น่าสงสัยจัง
+    MessageTW: 唔嗯，很可疑……
+    MessageGroupId: 130090050
     Id: 1123
     CharacterId: 13009
     MessageCondition: Feedback
@@ -198,13 +204,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흐음, 의심스러운걸…….
-    MessageJP: うーん、怪しい……
-    MessageCN: 嗯——，很可疑……
-    MessageEN: Hmm, that's suspicious...
-    MessageTH: อืม... น่าสงสัยจัง
-    MessageTW: 唔嗯，很可疑……
-  - MessageGroupId: 130090060
+  - MessageKR: 응……, 기왕 이렇게 된 거 잘됐다.
+    MessageJP: うーん……こうなったらせっかくだし、よし
+    MessageCN: 嗯——……既然这样的话，机会难得，就这么办吧
+    MessageEN: Okay... Might as well...
+    MessageTH: แต่ก็ดีแล้วที่เป็นแบบนี้
+    MessageTW: 唔嗯……如果是這樣的話，好
+    MessageGroupId: 130090060
     Id: 1124
     CharacterId: 13009
     MessageCondition: Feedback
@@ -216,13 +222,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응……, 기왕 이렇게 된 거 잘됐다.
-    MessageJP: うーん……こうなったらせっかくだし、よし
-    MessageCN: 嗯——……既然这样的话，机会难得，就这么办吧
-    MessageEN: Okay... Might as well...
-    MessageTH: แต่ก็ดีแล้วที่เป็นแบบนี้
-    MessageTW: 唔嗯……如果是這樣的話，好
-  - MessageGroupId: 130090060
+  - MessageKR: 이번 기회에 내가 직접 수행의 시범을 보여줄게.
+    MessageJP: この機会に私が直接、修行のお手本を見せてあげる
+    MessageCN: 借着这次机会，我直接给老师做修行的示范吧
+    MessageEN: Let me show you how this training works.
+    MessageTH: เพราะฉันจะสาธิตการฝึกฝนให้ดูเอง
+    MessageTW: 藉此機會，我親自示範修行給你看
+    MessageGroupId: 130090060
     Id: 1125
     CharacterId: 13009
     MessageCondition: Feedback
@@ -234,13 +240,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번 기회에 내가 직접 수행의 시범을 보여줄게.
-    MessageJP: この機会に私が直接、修行のお手本を見せてあげる
-    MessageCN: 借着这次机会，我直接给老师做修行的示范吧
-    MessageEN: Let me show you how this training works.
-    MessageTH: เพราะฉันจะสาธิตการฝึกฝนให้ดูเอง
-    MessageTW: 藉此機會，我親自示範修行給你看
-  - MessageGroupId: 130090070
+  - MessageKR: 약속 장소에서 보자. 선생님~
+    MessageJP: じゃあ、約束の場所でね～、先生
+    MessageCN: 那，老师就来约好的地方哦～
+    MessageEN: I'll see you at the meeting spot, Sensei!
+    MessageTH: "แล้วมาเจอกันในที่ที่นัดไว้นะ คุณครู~ "
+    MessageTW: 那麼，去約定的地點吧～老師
+    MessageGroupId: 130090070
     Id: 1126
     CharacterId: 13009
     MessageCondition: Feedback
@@ -252,13 +258,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 약속 장소에서 보자. 선생님~
-    MessageJP: じゃあ、約束の場所でね～、先生
-    MessageCN: 那，老师就来约好的地方哦～
-    MessageEN: I'll see you at the meeting spot, Sensei!
-    MessageTH: "แล้วมาเจอกันในที่ที่นัดไว้นะ คุณครู~ "
-    MessageTW: 那麼，去約定的地點吧～老師
-  - MessageGroupId: 130090080
+  - MessageKR: 선생님…….
+    MessageJP: 先生……
+    MessageCN: 老师……
+    MessageEN: Sensei...
+    MessageTH: คุณครู....
+    MessageTW: 老師……
+    MessageGroupId: 130090080
     Id: 1127
     CharacterId: 13009
     MessageCondition: FavorRankUp
@@ -270,13 +276,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님…….
-    MessageJP: 先生……
-    MessageCN: 老师……
-    MessageEN: Sensei...
-    MessageTH: คุณครู....
-    MessageTW: 老師……
-  - MessageGroupId: 130090090
+  - MessageKR: 츠바키? 무슨 일이야?
+    MessageJP: ツバキ？どうしたの？
+    MessageCN: 椿？怎么了？
+    MessageEN: Tsubaki? What's going on?
+    MessageTH: มีเรื่องอะไรเหรอสึบากิ?
+    MessageTW: 椿？怎麼了？
+    MessageGroupId: 130090090
     Id: 1128
     CharacterId: 13009
     MessageCondition: Answer
@@ -288,13 +294,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 츠바키? 무슨 일이야?
-    MessageJP: ツバキ？どうしたの？
-    MessageCN: 椿？怎么了？
-    MessageEN: Tsubaki? What's going on?
-    MessageTH: มีเรื่องอะไรเหรอสึบากิ?
-    MessageTW: 椿？怎麼了？
-  - MessageGroupId: 130090100
+  - MessageKR: 완전히 너덜너덜해졌어…….
+    MessageJP: ボロボロになっちゃった……
+    MessageCN: 变得破破烂烂的了……
+    MessageEN: It's all worn out...
+    MessageTH: มันขาดรุ่งริ่งหมดเลย...
+    MessageTW: 變得破爛不堪了……
+    MessageGroupId: 130090100
     Id: 1129
     CharacterId: 13009
     MessageCondition: Feedback
@@ -306,13 +312,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 완전히 너덜너덜해졌어…….
-    MessageJP: ボロボロになっちゃった……
-    MessageCN: 变得破破烂烂的了……
-    MessageEN: It's all worn out...
-    MessageTH: มันขาดรุ่งริ่งหมดเลย...
-    MessageTW: 變得破爛不堪了……
-  - MessageGroupId: 130090100
+  - MessageKR: 이걸 어쩌지…….
+    MessageJP: どうしよう……
+    MessageCN: 怎么办……
+    MessageEN: What should I do...
+    MessageTH: ทำยังไงดีล่ะ...
+    MessageTW: 怎麼辦……
+    MessageGroupId: 130090100
     Id: 1130
     CharacterId: 13009
     MessageCondition: Feedback
@@ -324,13 +330,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이걸 어쩌지…….
-    MessageJP: どうしよう……
-    MessageCN: 怎么办……
-    MessageEN: What should I do...
-    MessageTH: ทำยังไงดีล่ะ...
-    MessageTW: 怎麼辦……
-  - MessageGroupId: 130090110
+  - MessageKR: 으, 응? 너덜너덜……?
+    MessageJP: え、え？ボロボロ？何が……？
+    MessageCN: 诶，诶？破破烂烂？什么东西变得破破烂烂的了……？
+    MessageEN: H-Huh? What's worn out?
+    MessageTH: หืม? อะไรขาดเหรอ...?
+    MessageTW: 耶，耶？破爛不堪？什麼東西……？
+    MessageGroupId: 130090110
     Id: 1131
     CharacterId: 13009
     MessageCondition: Answer
@@ -342,13 +348,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으, 응? 너덜너덜……?
-    MessageJP: え、え？ボロボロ？何が……？
-    MessageCN: 诶，诶？破破烂烂？什么东西变得破破烂烂的了……？
-    MessageEN: H-Huh? What's worn out?
-    MessageTH: หืม? อะไรขาดเหรอ...?
-    MessageTW: 耶，耶？破爛不堪？什麼東西……？
-  - MessageGroupId: 130090110
+  - MessageKR: 무슨 뜻이야……?
+    MessageJP: どういうこと……？
+    MessageCN: 什么意思……？
+    MessageEN: What do you mean?
+    MessageTH: หมายความว่ายังไงเหรอ?
+    MessageTW: 什麼意思……？
+    MessageGroupId: 130090110
     Id: 1132
     CharacterId: 13009
     MessageCondition: Answer
@@ -360,13 +366,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 뜻이야……?
-    MessageJP: どういうこと……？
-    MessageCN: 什么意思……？
-    MessageEN: What do you mean?
-    MessageTH: หมายความว่ายังไงเหรอ?
-    MessageTW: 什麼意思……？
-  - MessageGroupId: 130090120
+  - MessageKR: 내가 평소 아끼던 수행 도구가…….
+    MessageJP: ずっと大事にしてた、修行道具が……
+    MessageCN: 我一直很珍惜的修行道具……
+    MessageEN: My favorite training tool...
+    MessageTH: เครื่องมือที่ฉันใช้ฝึกฝนน่ะ...
+    MessageTW: 一直很珍惜的修行道具……
+    MessageGroupId: 130090120
     Id: 1133
     CharacterId: 13009
     MessageCondition: Feedback
@@ -378,13 +384,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 평소 아끼던 수행 도구가…….
-    MessageJP: ずっと大事にしてた、修行道具が……
-    MessageCN: 我一直很珍惜的修行道具……
-    MessageEN: My favorite training tool...
-    MessageTH: เครื่องมือที่ฉันใช้ฝึกฝนน่ะ...
-    MessageTW: 一直很珍惜的修行道具……
-  - MessageGroupId: 130090130
+  - MessageKR: 수, 수행 도구?
+    MessageJP: しゅ、修行道具？
+    MessageCN: 修、修行道具？
+    MessageEN: T-Training tool?
+    MessageTH: เครื่องมือ... ฝึกฝนเหรอ?
+    MessageTW: 修，修行道具？
+    MessageGroupId: 130090130
     Id: 1134
     CharacterId: 13009
     MessageCondition: Answer
@@ -396,13 +402,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수, 수행 도구?
-    MessageJP: しゅ、修行道具？
-    MessageCN: 修、修行道具？
-    MessageEN: T-Training tool?
-    MessageTH: เครื่องมือ... ฝึกฝนเหรอ?
-    MessageTW: 修，修行道具？
-  - MessageGroupId: 130090140
+  - MessageKR: 도와줘. 선생님……
+    MessageJP: 助けて、先生……
+    MessageCN: 帮帮我，老师……
+    MessageEN: Help me, Sensei...
+    MessageTH: ช่วยหน่อยนะคุณครู
+    MessageTW: 幫幫我，老師……
+    MessageGroupId: 130090140
     Id: 1135
     CharacterId: 13009
     MessageCondition: Feedback
@@ -414,13 +420,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 도와줘. 선생님……
-    MessageJP: 助けて、先生……
-    MessageCN: 帮帮我，老师……
-    MessageEN: Help me, Sensei...
-    MessageTH: ช่วยหน่อยนะคุณครู
-    MessageTW: 幫幫我，老師……
-  - MessageGroupId: 130090150
+  - MessageKR: 기다리고 있어. 츠바키. 바로 갈게!
+    MessageJP: 待っててツバキ、すぐ行くから！
+    MessageCN: 椿等一下，我马上就过去！
+    MessageEN: Hold on, Tsubaki. I'll be right there!
+    MessageTH: รออยู่ตรงนั้นน่ะสึบากิ ครูจะไปเดี๋ยวนี้!
+    MessageTW: 等著，椿，我馬上過去！
+    MessageGroupId: 130090150
     Id: 1136
     CharacterId: 13009
     MessageCondition: Answer
@@ -432,13 +438,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있어. 츠바키. 바로 갈게!
-    MessageJP: 待っててツバキ、すぐ行くから！
-    MessageCN: 椿等一下，我马上就过去！
-    MessageEN: Hold on, Tsubaki. I'll be right there!
-    MessageTH: รออยู่ตรงนั้นน่ะสึบากิ ครูจะไปเดี๋ยวนี้!
-    MessageTW: 等著，椿，我馬上過去！
-  - MessageGroupId: 130090160
+  - MessageKR: 오늘, 베개를 같이 골라줘서 고마워. 선생님.
+    MessageJP: 今日、一緒に枕を探してくれてありがとう。先生
+    MessageCN: 谢谢老师今天陪我一起买枕头。
+    MessageEN: Thanks for picking out a pillow with me today, Sensei.
+    MessageTH: "ขอบคุณที่วันนี้มาช่วยเลือกหมอนนะ
+
+      คุณครู"
+    MessageTW: 謝謝你今天幫我找枕頭。老師
+    MessageGroupId: 130090160
     Id: 1137
     CharacterId: 13009
     MessageCondition: None
@@ -450,15 +458,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘, 베개를 같이 골라줘서 고마워. 선생님.
-    MessageJP: 今日、一緒に枕を探してくれてありがとう。先生
-    MessageCN: 谢谢老师今天陪我一起买枕头。
-    MessageEN: Thanks for picking out a pillow with me today, Sensei.
-    MessageTH: "ขอบคุณที่วันนี้มาช่วยเลือกหมอนนะ
-
-      คุณครู"
-    MessageTW: 謝謝你今天幫我找枕頭。老師
-  - MessageGroupId: 130090160
+  - MessageKR: 다음번에 같이 수행하자.
+    MessageJP: また今度、一緒に修行しようね
+    MessageCN: 下次再一起修行吧
+    MessageEN: Let's train together next time.
+    MessageTH: ไว้ครั้งหน้ามาฝึกด้วยกันนะ
+    MessageTW: 下次再一起修行吧
+    MessageGroupId: 130090160
     Id: 1138
     CharacterId: 13009
     MessageCondition: None
@@ -470,13 +476,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음번에 같이 수행하자.
-    MessageJP: また今度、一緒に修行しようね
-    MessageCN: 下次再一起修行吧
-    MessageEN: Let's train together next time.
-    MessageTH: ไว้ครั้งหน้ามาฝึกด้วยกันนะ
-    MessageTW: 下次再一起修行吧
-  - MessageGroupId: 130090170
+  - MessageKR: 선생님, 까먹지 마.
+    MessageJP: 先生、覚えてるよね？
+    MessageCN: 老师还记得吧？
+    MessageEN: Sensei, don't forget.
+    MessageTH: ห้ามลืมล่ะ
+    MessageTW: 老師，你還記得吧？
+    MessageGroupId: 130090170
     Id: 1139
     CharacterId: 13009
     MessageCondition: FavorRankUp
@@ -488,13 +494,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 까먹지 마.
-    MessageJP: 先生、覚えてるよね？
-    MessageCN: 老师还记得吧？
-    MessageEN: Sensei, don't forget.
-    MessageTH: ห้ามลืมล่ะ
-    MessageTW: 老師，你還記得吧？
-  - MessageGroupId: 130090180
+  - MessageKR: 오늘은 같이 수행하기로 한 날이야.
+    MessageJP: 今日、一緒に修行する日だよ
+    MessageCN: 今天是我们一起修行的日子哦
+    MessageEN: We're supposed to train together today.
+    MessageTH: เราตกลงว่าจะไปฝึกฝนด้วยกันวันนี้ล่ะ
+    MessageTW: 今天是一起修行的日子唷
+    MessageGroupId: 130090180
     Id: 1140
     CharacterId: 13009
     MessageCondition: None
@@ -506,13 +512,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 같이 수행하기로 한 날이야.
-    MessageJP: 今日、一緒に修行する日だよ
-    MessageCN: 今天是我们一起修行的日子哦
-    MessageEN: We're supposed to train together today.
-    MessageTH: เราตกลงว่าจะไปฝึกฝนด้วยกันวันนี้ล่ะ
-    MessageTW: 今天是一起修行的日子唷
-  - MessageGroupId: 130090190
+  - MessageKR: 금시초문인데?
+    MessageJP: 初耳な気が……？
+    MessageCN: 我好像第一次听说……？
+    MessageEN: That's news to me!
+    MessageTH: ยังไม่เคยตกลงนี่?
+    MessageTW: 第一次聽說……？
+    MessageGroupId: 130090190
     Id: 1141
     CharacterId: 13009
     MessageCondition: Answer
@@ -524,13 +530,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 금시초문인데?
-    MessageJP: 初耳な気が……？
-    MessageCN: 我好像第一次听说……？
-    MessageEN: That's news to me!
-    MessageTH: ยังไม่เคยตกลงนี่?
-    MessageTW: 第一次聽說……？
-  - MessageGroupId: 130090190
+  - MessageKR: 아, 그랬었나?
+    MessageJP: あ、そうだっけ？
+    MessageCN: 啊，是吗？
+    MessageEN: Oh, really?
+    MessageTH: อ่า ตกลงไว้แล้วเหรอ?
+    MessageTW: 啊，是嗎？
+    MessageGroupId: 130090190
     Id: 1142
     CharacterId: 13009
     MessageCondition: Answer
@@ -542,13 +548,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 그랬었나?
-    MessageJP: あ、そうだっけ？
-    MessageCN: 啊，是吗？
-    MessageEN: Oh, really?
-    MessageTH: อ่า ตกลงไว้แล้วเหรอ?
-    MessageTW: 啊，是嗎？
-  - MessageGroupId: 130090200
+  - MessageKR: 어, 분명 약속했었는데.
+    MessageJP: あれ、違ったっけ。約束したと思ってたんだけど……
+    MessageCN: 哎呀，不是吗。我还以为我们约好了……
+    MessageEN: Um, I was certain we'd already agreed to it.
+    MessageTH: ใช่ คุณครูสัญญาเอาไว้แล้วด้วย
+    MessageTW: 啊咧，不是嗎。我還以為我們約好了……
+    MessageGroupId: 130090200
     Id: 1143
     CharacterId: 13009
     MessageCondition: Feedback
@@ -560,13 +566,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어, 분명 약속했었는데.
-    MessageJP: あれ、違ったっけ。約束したと思ってたんだけど……
-    MessageCN: 哎呀，不是吗。我还以为我们约好了……
-    MessageEN: Um, I was certain we'd already agreed to it.
-    MessageTH: ใช่ คุณครูสัญญาเอาไว้แล้วด้วย
-    MessageTW: 啊咧，不是嗎。我還以為我們約好了……
-  - MessageGroupId: 130090200
+  - MessageKR: 으음, 내 꿈에서 한 약속이었나?
+    MessageJP: うーん、夢の中での約束だったのかな？
+    MessageCN: 嗯——，难道是在梦里约好的吗？
+    MessageEN: Hmm, maybe that happened in a dream?
+    MessageTH: อืม... หรือว่านั่นมันในฝันของฉันนะ?
+    MessageTW: 唔嗯，是在夢中約的嗎？
+    MessageGroupId: 130090200
     Id: 1144
     CharacterId: 13009
     MessageCondition: Feedback
@@ -578,13 +584,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음, 내 꿈에서 한 약속이었나?
-    MessageJP: うーん、夢の中での約束だったのかな？
-    MessageCN: 嗯——，难道是在梦里约好的吗？
-    MessageEN: Hmm, maybe that happened in a dream?
-    MessageTH: อืม... หรือว่านั่นมันในฝันของฉันนะ?
-    MessageTW: 唔嗯，是在夢中約的嗎？
-  - MessageGroupId: 130090200
+  - MessageKR: 뭐어, 됐나~?
+    MessageJP: まあ、どっちでもいいよね？
+    MessageCN: 嗯，怎样都行吧？
+    MessageEN: Well, all right!
+    MessageTH: เอาเถอะน่า~
+    MessageTW: 嘛，怎樣都行吧？
+    MessageGroupId: 130090200
     Id: 1145
     CharacterId: 13009
     MessageCondition: Feedback
@@ -596,13 +602,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐어, 됐나~?
-    MessageJP: まあ、どっちでもいいよね？
-    MessageCN: 嗯，怎样都行吧？
-    MessageEN: Well, all right!
-    MessageTH: เอาเถอะน่า~
-    MessageTW: 嘛，怎樣都行吧？
-  - MessageGroupId: 130090210
+  - MessageKR: 응, 맞아. 그러니 샬레에서 기다리고 있어. 선생님.
+    MessageJP: うん、そうだよ。シャーレで待っててね。先生
+    MessageCN: 嗯，那就这么定了。在夏莱等我哦，老师。
+    MessageEN: That's right. Wait for me at Schale, Sensei.
+    MessageTH: อืม ใช่ รอฉันอยู่ที่ชาเล่ต์ก่อนนะคุณครู
+    MessageTW: 嗯，是啊。在夏萊等我唷。老師
+    MessageGroupId: 130090210
     Id: 1146
     CharacterId: 13009
     MessageCondition: Feedback
@@ -614,13 +620,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 맞아. 그러니 샬레에서 기다리고 있어. 선생님.
-    MessageJP: うん、そうだよ。シャーレで待っててね。先生
-    MessageCN: 嗯，那就这么定了。在夏莱等我哦，老师。
-    MessageEN: That's right. Wait for me at Schale, Sensei.
-    MessageTH: อืม ใช่ รอฉันอยู่ที่ชาเล่ต์ก่อนนะคุณครู
-    MessageTW: 嗯，是啊。在夏萊等我唷。老師
-  - MessageGroupId: 130090211
+  - MessageKR: 내가 샬레로 찾아갈게. 선생님.
+    MessageJP: 私の方からシャーレに行くから、待っててね。先生
+    MessageCN: 我自己去夏莱那边，等着我哦。老师
+    MessageEN: I'll go to Schale, Sensei.
+    MessageTH: แล้วฉันจะไปหาที่ชาเล่ต์นะ คุณครู
+    MessageTW: 我要去夏萊了，等我唷。老師
+    MessageGroupId: 130090211
     Id: 1147
     CharacterId: 13009
     MessageCondition: Feedback
@@ -632,13 +638,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 샬레로 찾아갈게. 선생님.
-    MessageJP: 私の方からシャーレに行くから、待っててね。先生
-    MessageCN: 我自己去夏莱那边，等着我哦。老师
-    MessageEN: I'll go to Schale, Sensei.
-    MessageTH: แล้วฉันจะไปหาที่ชาเล่ต์นะ คุณครู
-    MessageTW: 我要去夏萊了，等我唷。老師
-  - MessageGroupId: 130090220
+  - MessageKR: 선생님, 수행하기 좋은 장소를 발견했어.
+    MessageJP: 修行にぴったりの場所を見つけたよ、先生
+    MessageCN: 我找到适合修行的场所了哦，老师
+    MessageEN: Sensei, I found a good spot to train.
+    MessageTH: ฉันเจอที่ที่เหมาะกับการฝึกฝนแล้วล่ะ
+    MessageTW: 找到適合修行的地方了，老師
+    MessageGroupId: 130090220
     Id: 1148
     CharacterId: 13009
     MessageCondition: FavorRankUp
@@ -650,13 +656,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 수행하기 좋은 장소를 발견했어.
-    MessageJP: 修行にぴったりの場所を見つけたよ、先生
-    MessageCN: 我找到适合修行的场所了哦，老师
-    MessageEN: Sensei, I found a good spot to train.
-    MessageTH: ฉันเจอที่ที่เหมาะกับการฝึกฝนแล้วล่ะ
-    MessageTW: 找到適合修行的地方了，老師
-  - MessageGroupId: 130090230
+  - MessageKR: 수행이라면 잠자기 말이지?
+    MessageJP: 修行って、つまり寝ることだよね？
+    MessageCN: 修行，是说睡觉吧？
+    MessageEN: By training, do you mean sleeping?
+    MessageTH: การฝึกฝนที่ว่าคือการนอนหลับใช่ไหม?
+    MessageTW: 修行，也就是睡覺吧？
+    MessageGroupId: 130090230
     Id: 1149
     CharacterId: 13009
     MessageCondition: Answer
@@ -668,13 +674,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수행이라면 잠자기 말이지?
-    MessageJP: 修行って、つまり寝ることだよね？
-    MessageCN: 修行，是说睡觉吧？
-    MessageEN: By training, do you mean sleeping?
-    MessageTH: การฝึกฝนที่ว่าคือการนอนหลับใช่ไหม?
-    MessageTW: 修行，也就是睡覺吧？
-  - MessageGroupId: 130090240
+  - MessageKR: 응. 맞아~
+    MessageJP: うん、そうだよ～
+    MessageCN: 嗯，是哦～
+    MessageEN: Yeah, you're right!
+    MessageTH: อื้ม ใช่แล้ว~
+    MessageTW: 嗯，沒錯～
+    MessageGroupId: 130090240
     Id: 1150
     CharacterId: 13009
     MessageCondition: Feedback
@@ -686,13 +692,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 맞아~
-    MessageJP: うん、そうだよ～
-    MessageCN: 嗯，是哦～
-    MessageEN: Yeah, you're right!
-    MessageTH: อื้ม ใช่แล้ว~
-    MessageTW: 嗯，沒錯～
-  - MessageGroupId: 130090240
+  - MessageKR: 어디인지, 특별히 선생님에게 먼저 알려줄게.
+    MessageJP: その場所、先生に一番最初に教えてあげるね
+    MessageCN: 那个地方，我想让老师第一个知道
+    MessageEN: I won't tell anyone where it is but you.
+    MessageTH: ฉันจะบอกคุณครูเป็นคนแรกเลย
+    MessageTW: 那個地方，老師是我第一個告訴的人唷
+    MessageGroupId: 130090240
     Id: 1151
     CharacterId: 13009
     MessageCondition: Feedback
@@ -704,13 +710,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어디인지, 특별히 선생님에게 먼저 알려줄게.
-    MessageJP: その場所、先生に一番最初に教えてあげるね
-    MessageCN: 那个地方，我想让老师第一个知道
-    MessageEN: I won't tell anyone where it is but you.
-    MessageTH: ฉันจะบอกคุณครูเป็นคนแรกเลย
-    MessageTW: 那個地方，老師是我第一個告訴的人唷
-  - MessageGroupId: 130090250
+  - MessageKR: 하지만 잠자기 좋은 장소라니…….
+    MessageJP: ありがとう。でも、寝るのにちょうどいい場所って……
+    MessageCN: 谢谢。但是椿说的适合睡觉的场所到底是……
+    MessageEN: But where's a good place to sleep?
+    MessageTH: แต่ว่าที่ที่เหมาะต่อการนอนมัน...
+    MessageTW: 謝謝。不過，說到適合睡覺的地方……
+    MessageGroupId: 130090250
     Id: 1152
     CharacterId: 13009
     MessageCondition: Answer
@@ -722,13 +728,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 잠자기 좋은 장소라니…….
-    MessageJP: ありがとう。でも、寝るのにちょうどいい場所って……
-    MessageCN: 谢谢。但是椿说的适合睡觉的场所到底是……
-    MessageEN: But where's a good place to sleep?
-    MessageTH: แต่ว่าที่ที่เหมาะต่อการนอนมัน...
-    MessageTW: 謝謝。不過，說到適合睡覺的地方……
-  - MessageGroupId: 130090260
+  - MessageKR: 그게 말이야.
+    MessageJP: 実はね、
+    MessageCN: 其实呢，
+    MessageEN: Actually.
+    MessageTH: นั่นน่ะสิ
+    MessageTW: 其實呢
+    MessageGroupId: 130090260
     Id: 1153
     CharacterId: 13009
     MessageCondition: Feedback
@@ -740,13 +746,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게 말이야.
-    MessageJP: 実はね、
-    MessageCN: 其实呢，
-    MessageEN: Actually.
-    MessageTH: นั่นน่ะสิ
-    MessageTW: 其實呢
-  - MessageGroupId: 130090260
+  - MessageKR: 여기……. 엄청…….
+    MessageJP: ここ、すごく……
+    MessageCN: 这里，非常的……
+    MessageEN: This place is...so...
+    MessageTH: ที่นี่น่ะ.... มันน่า... น่า...
+    MessageTW: 這裡，非常……
+    MessageGroupId: 130090260
     Id: 1154
     CharacterId: 13009
     MessageCondition: Feedback
@@ -758,13 +764,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여기……. 엄청…….
-    MessageJP: ここ、すごく……
-    MessageCN: 这里，非常的……
-    MessageEN: This place is...so...
-    MessageTH: ที่นี่น่ะ.... มันน่า... น่า...
-    MessageTW: 這裡，非常……
-  - MessageGroupId: 130090270
+  - MessageKR: 엄청…?
+    MessageJP: すごく……？
+    MessageCN: 非常的……？
+    MessageEN: So...?
+    MessageTH: น่า...?
+    MessageTW: 非常……？
+    MessageGroupId: 130090270
     Id: 1155
     CharacterId: 13009
     MessageCondition: Answer
@@ -776,13 +782,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 엄청…?
-    MessageJP: すごく……？
-    MessageCN: 非常的……？
-    MessageEN: So...?
-    MessageTH: น่า...?
-    MessageTW: 非常……？
-  - MessageGroupId: 130090280
+  - MessageKR: 엄청……. 아, 토끼.
+    MessageJP: すっごく……あっ、ウサギ
+    MessageCN: 非常的……啊，兔子
+    MessageEN: So... Oh, a rabbit.
+    MessageTH: น่า... รักมากเลย เจ้ากระต่าย
+    MessageTW: 非常……啊，兔子
+    MessageGroupId: 130090280
     Id: 1156
     CharacterId: 13009
     MessageCondition: Feedback
@@ -794,13 +800,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 엄청……. 아, 토끼.
-    MessageJP: すっごく……あっ、ウサギ
-    MessageCN: 非常的……啊，兔子
-    MessageEN: So... Oh, a rabbit.
-    MessageTH: น่า... รักมากเลย เจ้ากระต่าย
-    MessageTW: 非常……啊，兔子
-  - MessageGroupId: 130090290
+  - MessageKR: 저기, 츠바키?
+    MessageJP: あの、ツバキ？
+    MessageCN: 那个，椿？
+    MessageEN: Excuse me, Tsubaki?
+    MessageTH: เดี๋ยวนะสึบากิ
+    MessageTW: 那個，椿？
+    MessageGroupId: 130090290
     Id: 1157
     CharacterId: 13009
     MessageCondition: Answer
@@ -812,13 +818,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저기, 츠바키?
-    MessageJP: あの、ツバキ？
-    MessageCN: 那个，椿？
-    MessageEN: Excuse me, Tsubaki?
-    MessageTH: เดี๋ยวนะสึบากิ
-    MessageTW: 那個，椿？
-  - MessageGroupId: 130090290
+  - MessageKR: 토끼라니? 저기요?
+    MessageJP: え、ウサギがどうしたの？ツバキ？ツバキ！？
+    MessageCN: 诶，兔子怎么了？椿？椿！？
+    MessageEN: What rabbit? What are you talking about?
+    MessageTH: กระต่ายงั้นเหรอ?
+    MessageTW: 耶，兔子怎麼了？椿？椿！？
+    MessageGroupId: 130090290
     Id: 1158
     CharacterId: 13009
     MessageCondition: Answer
@@ -830,9 +836,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 토끼라니? 저기요?
-    MessageJP: え、ウサギがどうしたの？ツバキ？ツバキ！？
-    MessageCN: 诶，兔子怎么了？椿？椿！？
-    MessageEN: What rabbit? What are you talking about?
-    MessageTH: กระต่ายงั้นเหรอ?
-    MessageTW: 耶，兔子怎麼了？椿？椿！？

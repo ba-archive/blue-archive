@@ -91,22 +91,23 @@ const currentSubContent = ref(filterRuby.value.join(""));
 const contentPointer = ref(-1);
 const subContentPointer = ref(-1);
 const subPadding = ref(0);
-const subContainTop = computed(() => (props.title ? "-0.45" : "-1.1"));
+const subContainTop = computed(() => (props.title ? "-0.45" : "-1"));
 const effectCSS = computed(() => ({
   ...parseTextEffectToCss(props.text.effects),
   "--padding": subPadding.value,
   "--top-offset": subContainTop.value,
 })) as unknown as ComputedRef<StyleValue[]>;
+const isTypingComplete = ref(false);
 
 if (props.instant) {
   contentPointer.value = currentContent.value.length;
   subContentPointer.value = currentSubContent.value.length;
+  isTypingComplete.value = true;
 }
 
 const contentHandler = ref(0);
 const subContentHandler = ref(0);
 
-const isTypingComplete = ref(false);
 
 const internalContent = computed(() =>
   currentContent.value.substring(0, contentPointer.value)
@@ -325,9 +326,9 @@ type IProp = {
   .rt {
     --local-font-size: calc(var(--font-size) * 0.6);
     position: absolute;
-    top: min(calc(var(--local-font-size) * var(--top-offset)), -12px);
+    top: calc(var(--local-font-size) * var(--top-offset));
     left: 50%;
-    transform: translate(-50%, calc(0.2 * var(--font-size)));
+    transform: translateX(-50%);
     animation: fade-in 0.25s ease-in-out;
     min-width: 100%;
     font-size: var(--local-font-size);
@@ -345,7 +346,6 @@ type IProp = {
   }
 }
 .unit.ruby {
-  display: inline-block;
   .body {
     display: inline-block;
   }
@@ -366,6 +366,9 @@ type IProp = {
   background-size: calc(100% - #{$padding} * 2) 100%;
   background-repeat: no-repeat;
   padding: 4px $padding;
+  .rt {
+    top: 0;
+  }
 }
 .tooltip {
   $bg: #0a61e5;

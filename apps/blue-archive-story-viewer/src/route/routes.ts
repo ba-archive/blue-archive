@@ -19,11 +19,38 @@ const routes: Array<RouteRecordRaw> = [
     },
     children: [
       {
+        path: "/mainStory",
+        name: "MainStory",
+        meta: {
+          shouldShowInNav: true,
+          navOrder: 1,
+          m17n: [
+            { lang: "cn", title: "主线剧情" },
+            { lang: "tw", title: "主線劇情" },
+            { lang: "jp", title: "メインストーリー" },
+            { lang: "en", title: "Main Story" },
+            { lang: "kr", title: "메인 스토리" },
+            { lang: "th", title: "เรื่องหลัก" },
+          ],
+        },
+        component: () => import("../components/MainStoryHome.vue"),
+        children: [
+          {
+            path: ":id",
+            name: "MainStoryDetails",
+            meta: {
+              shouldShowInNav: false,
+            },
+            component: () => import("../components/StoryViewer.vue"),
+          },
+        ],
+      },
+      {
         path: "/archive",
         name: "StudentSelector",
         meta: {
           shouldShowInNav: true,
-          navOrder: 4,
+          navOrder: 2,
           m17n: [
             { lang: "cn", title: "学生个人剧情" },
             { lang: "tw", title: "學生個人劇情" },
@@ -78,25 +105,25 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
-        path: "/mainStory",
-        name: "MainStory",
+        path: "/otherStory",
+        name: "OtherStory",
         meta: {
           shouldShowInNav: true,
-          navOrder: 1,
+          navOrder: 3,
           m17n: [
-            { lang: "cn", title: "主线剧情" },
-            { lang: "tw", title: "主線劇情" },
-            { lang: "jp", title: "メインストーリー" },
-            { lang: "en", title: "Main Story" },
-            { lang: "kr", title: "메인 스토리" },
-            { lang: "th", title: "เรื่องหลัก" },
+            { lang: "cn", title: "任务剧情" },
+            { lang: "tw", title: "任務劇情" },
+            { lang: "jp", title: "お仕事ストーリー" },
+            { lang: "en", title: "Task Stories" },
+            { lang: "kr", title: "업무 스토리" },
+            { lang: "th", title: "เนื้อเรื่องภารกิจ" },
           ],
         },
-        component: () => import("../components/MainStoryHome.vue"),
+        component: () => import("../components/OtherStoryHome.vue"),
         children: [
           {
             path: ":id",
-            name: "MainStoryDetails",
+            name: "OtherStoryDetails",
             meta: {
               shouldShowInNav: false,
             },
@@ -109,7 +136,7 @@ const routes: Array<RouteRecordRaw> = [
       //   name: 'MiniStory',
       //   meta: {
       //     shouldShowInNav: true,
-      //     navOrder: 2,
+      //     navOrder: 3,
       //     m17n: [
       //       { lang: 'cn', title: '迷你剧情' },
       //       { lang: 'tw', title: '迷你劇情' },
@@ -126,7 +153,7 @@ const routes: Array<RouteRecordRaw> = [
       //   name: 'GroupStory',
       //   meta: {
       //     shouldShowInNav: true,
-      //     navOrder: 3,
+      //     navOrder: 4,
       //     m17n: [
       //       { lang: 'cn', title: '社团剧情' },
       //       { lang: 'tw', title: '社團劇情' },

@@ -1657,7 +1657,7 @@
     tw: 鷲見
     th: สึมิ
   name:
-    cn: 芹娜(圣诞)
+    cn: 芹奈(圣诞)
     jp: セリナ（クリスマス）
     en: Serina (Christmas)
     kr: 세리나(크리스마스)
@@ -1683,13 +1683,13 @@
     en: Kurodate
     kr: 쿠로다테
     tw: 黒舘
-    th: 黒舘
+    th: คุโรดาเตะ
   name:
     cn: 晴奈(正月)
     jp: ハルナ（正月）
     en: Haruna (New Year)
     kr: 하루나(새해)
-    tw: ハルナ（正月）
+    tw: 羽留奈(正月)
     th: ฮารุนะ (ปีใหม่)
   nickname: []
   birthday:
@@ -1711,13 +1711,13 @@
     en: Aomori
     kr: 아오모리
     tw: 蒼森
-    th: 蒼森
+    th: อาโอโมริ
   name:
     cn: 美弥
     jp: ミネ
     en: Mine
     kr: 미네
-    tw: ミネ
+    tw: 美禰
     th: มิเนะ
   nickname: []
   birthday:
@@ -1739,13 +1739,13 @@
     en: Misono
     kr: 미소노
     tw: 聖園
-    th: 聖園
+    th: มิโซโนะ
   name:
     cn: 未花
     jp: ミカ
     en: Mika
     kr: 미카
-    tw: ミカ
+    tw: 彌香
     th: มิกะ
   nickname: []
   birthday:
@@ -1767,13 +1767,13 @@
     en: Shimokura
     kr: 시모쿠라
     tw: 下倉
-    th: 下倉
+    th: ชิโมคุระ
   name:
     cn: 惠
     jp: メグ
     en: Megu
     kr: 메구
-    tw: メグ
+    tw: 惠
     th: เมกุ
   nickname:
     - 大火龙
@@ -1802,8 +1802,8 @@
     jp: サクラコ
     en: Sakurako
     kr: 사쿠라코
-    tw: サクラコ
-    th: ซากุราโกะ
+    tw: 櫻子
+    th: ซากุระโกะ
   nickname:
     - 修女
     - 觉悟
@@ -1832,7 +1832,7 @@
     jp: トキ
     en: Toki
     kr: 토키
-    tw: トキ
+    tw: 季
     th: โทคิ
   nickname: []
   birthday:
@@ -1860,7 +1860,7 @@
     jp: コユキ
     en: Koyuki
     kr: 코유키
-    tw: コユキ
+    tw: 小雪
     th: โคยูกิ
   nickname: []
   birthday:
@@ -2127,6 +2127,34 @@
   armorType: HeavyArmor
   bulletType: Explosion
   weapon: MG
+- id: 10073
+  familyName:
+    cn: 古关
+    jp: 古関
+    en: Kozeki
+    kr: 코제키
+    tw: 古関
+    th: 古関
+  name:
+    cn: 忧(泳装)
+    jp: ウイ（水着）
+    en: Ui (Swimsuit)
+    kr: 우이(수영복)
+    tw: ウイ（水着）
+    th: อุย (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 4
+    day: 23
+  club: 图书委员会
+  clubCode: BookClub
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: ElasticArmor
+  bulletType: Pierce
+  weapon: SR
 - id: 13000
   familyName:
     cn: 室笠
@@ -2878,13 +2906,13 @@
     en: Akashi
     kr: 아카시
     tw: 赤司
-    th: 赤司
+    th: อาคาชิ
   name:
     cn: 纯子(正月)
     jp: ジュンコ（正月）
     en: Junko (New Year)
     kr: 준코(새해)
-    tw: ジュンコ（正月）
+    tw: 淳子(正月)
     th: จุนโกะ (ปีใหม่)
   nickname: []
   birthday:
@@ -2899,6 +2927,34 @@
   armorType: HeavyArmor
   bulletType: Mystic
   weapon: AR
+- id: 16013
+  familyName:
+    cn: 下江
+    jp: 下江
+    en: Shimoe
+    kr: 시모에
+    tw: 下江
+    th: 下江
+  name:
+    cn: 小春(泳装)
+    jp: コハル（水着）
+    en: Koharu (Swimsuit)
+    kr: 코하루(수영복)
+    tw: コハル（水着）
+    th: โคฮารุ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 4
+    day: 16
+  club: 补习部
+  clubCode: RemedialClass
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 1
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: SR
 - id: 20000
   familyName:
     cn: 猫塚
@@ -3551,13 +3607,13 @@
     en: Aikiyo
     kr: 아이키요
     tw: 愛清
-    th: 愛清
+    th: ไอกิโยะ
   name:
     cn: 枫香(正月)
     jp: フウカ（正月）
     en: Fuuka (New Year)
     kr: 후우카(새해)
-    tw: フウカ（正月）
+    tw: 風華(正月)
     th: ฟูกะ (ปีใหม่)
   nickname: []
   birthday:
@@ -3579,13 +3635,13 @@
     en: Ogata
     kr: 오가타
     tw: 尾刃
-    th: 尾刃
+    th: โอกาตะ
   name:
     cn: 康娜
     jp: カンナ
     en: Kanna
     kr: 칸나
-    tw: カンナ
+    tw: 環奈
     th: คันนะ
   nickname: []
   birthday:
@@ -3613,7 +3669,7 @@
     jp: ナギサ
     en: Nagisa
     kr: 나기사
-    tw: ナギサ
+    tw: 渚
     th: นางิสะ
   nickname: []
   birthday:
@@ -3685,6 +3741,62 @@
   armorType: Unarmed
   bulletType: Explosion
   weapon: AR
+- id: 20027
+  familyName:
+    cn: 砂狼
+    jp: 砂狼
+    en: Sunaookami
+    kr: 스나오오카미
+    tw: 砂狼
+    th: 砂狼
+  name:
+    cn: 白子(泳装)
+    jp: シロコ（水着）
+    en: Shiroko (Swimsuit)
+    kr: 시로코(수영복)
+    tw: シロコ（水着）
+    th: ชิโรโกะ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 5
+    day: 16
+  club: 对策委员会
+  clubCode: Countermeasure
+  affiliation: 阿比多斯
+  schoolCode: Abydos
+  rarity: 3
+  type: Special
+  armorType: LightArmor
+  bulletType: Mystic
+  weapon: AR
+- id: 20028
+  familyName:
+    cn: 若叶
+    jp: 若葉
+    en: Wakaba
+    kr: 와카바
+    tw: 若葉
+    th: 若葉
+  name:
+    cn: 日向(泳装)
+    jp: ヒナタ（水着）
+    en: Hinata (Swimsuit)
+    kr: 히나타(수영복)
+    tw: ヒナタ（水着）
+    th: ฮินาตะ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 5
+    day: 17
+  club: 修女会
+  clubCode: SisterHood
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Special
+  armorType: LightArmor
+  bulletType: Explosion
+  weapon: HG
 - id: 23000
   familyName:
     cn: 栗村
@@ -4038,7 +4150,7 @@
     tw: 鷲見
     th: สึมิ
   name:
-    cn: 芹娜
+    cn: 芹奈
     jp: セリナ
     en: Serina
     kr: 세리나

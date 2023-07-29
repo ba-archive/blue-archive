@@ -1,44 +1,50 @@
 CharacterId: 10046
 translator: 瓜豆GUARDOU
 title:
-  - GroupId: 1004602
-    FavorScheduleId: 100462
-    CharacterId: 10046
-    TextJp: イズナと一緒にスイカ割り！
+  - TextJp: イズナと一緒にスイカ割り！
     TextCn: 和泉奈一起打西瓜！
     TextKr: 이즈나와 함께 수박 깨기!
     TextEn: Crushing Watermelons with Izuna!
     TextTh: ตีแตงโมกับอิซุนะ!
     TextTw: 和伊樹菜一起劈西瓜！
-  - GroupId: 1004603
-    FavorScheduleId: 100463
+    GroupId: 1004602
+    FavorScheduleId: 100462
     CharacterId: 10046
-    TextJp: イズナと一緒に砂遊び！
+  - TextJp: イズナと一緒に砂遊び！
     TextCn: 和泉奈一起玩沙子！
     TextKr: 이즈나와 함께 모래 장난!
     TextEn: Sand-Play with Izuna!
     TextTh: เล่นทรายกับอิซุนะ!
     TextTw: 和伊樹菜一起玩沙！
-  - GroupId: 1004605
-    FavorScheduleId: 100465
+    GroupId: 1004603
+    FavorScheduleId: 100463
     CharacterId: 10046
-    TextJp: イズナと一緒に危機一髪！
+  - TextJp: イズナと一緒に危機一髪！
     TextCn: 和泉奈一起千钧一发！
     TextKr: 이즈나와 함께 위기탈출!
     TextEn: Escaping Crisis with Izuna!
     TextTh: หนีวิกฤตกับอิซุนะ!
     TextTw: 和伊樹菜一起千鈞一髮！
-  - GroupId: 1004606
-    FavorScheduleId: 100466
+    GroupId: 1004605
+    FavorScheduleId: 100465
     CharacterId: 10046
-    TextJp: イズナと一緒に手を取り合って
+  - TextJp: イズナと一緒に手を取り合って
     TextCn: 和泉奈一起手牵手
     TextKr: 이즈나와 함께 손을 잡고서
     TextEn: Holding Hands with Izuna
     TextTh: จับมือกับอิซุนะ
     TextTw: 和伊樹菜一起手牽手
+    GroupId: 1004606
+    FavorScheduleId: 100466
+    CharacterId: 10046
 content:
-  - MessageGroupId: 100460010
+  - MessageKR: 주군!!!
+    MessageJP: 主殿！！！！
+    MessageCN: 主公！！！！
+    MessageEN: My lord!
+    MessageTH: นายท่าน!
+    MessageTW: 主公！！！
+    MessageGroupId: 100460010
     Id: 100460010
     CharacterId: 10046
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주군!!!
-    MessageJP: 主殿！！！！
-    MessageCN: 主公！！！！
-    MessageEN: My lord!
-    MessageTH: นายท่าน!
-    MessageTW: 主公！！！
-  - MessageGroupId: 100460020
+  - MessageKR: 여름이에요. 여름!
+    MessageJP: 夏ですよ、夏！
+    MessageCN: 夏天到了哦，夏天！
+    MessageEN: It's summer. Summertime!
+    MessageTH: ฤดูร้อน! ถึงฤดูร้อนแล้วค่ะ!
+    MessageTW: 夏天到了，夏天！
+    MessageGroupId: 100460020
     Id: 100460020
     CharacterId: 10046
     MessageCondition: None
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여름이에요. 여름!
-    MessageJP: 夏ですよ、夏！
-    MessageCN: 夏天到了哦，夏天！
-    MessageEN: It's summer. Summertime!
-    MessageTH: ฤดูร้อน! ถึงฤดูร้อนแล้วค่ะ!
-    MessageTW: 夏天到了，夏天！
-  - MessageGroupId: 100460030
+  - MessageKR: 그러게 여름이네.
+    MessageJP: そうだね、夏だね
+    MessageCN: 是啊，夏天到了呢
+    MessageEN: Yeah, it's already here.
+    MessageTH: ฤดูร้อนแล้วสินะ
+    MessageTW: 是啊，夏天到了
+    MessageGroupId: 100460030
     Id: 100460030
     CharacterId: 10046
     MessageCondition: Answer
@@ -86,13 +92,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러게 여름이네.
-    MessageJP: そうだね、夏だね
-    MessageCN: 是啊，夏天到了呢
-    MessageEN: Yeah, it's already here.
-    MessageTH: ฤดูร้อนแล้วสินะ
-    MessageTW: 是啊，夏天到了
-  - MessageGroupId: 100460040
+  - MessageKR: 오늘 이곳저곳이 아지랑이로 가득한 거 있죠?
+    MessageJP: 夏なので、陽炎があちこちに見られます！
+    MessageCN: 夏天到了，到处都是热浪！
+    MessageEN: The haze was everywhere today!
+    MessageTH: ไอแดดร้อนระอุพัดไปทุกที่เลยค่ะ
+    MessageTW: 因為是夏天，到處都熱氣沖天！
+    MessageGroupId: 100460040
     Id: 100460040
     CharacterId: 10046
     MessageCondition: Feedback
@@ -104,25 +110,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 이곳저곳이 아지랑이로 가득한 거 있죠?
-    MessageJP: 夏なので、陽炎があちこちに見られます！
-    MessageCN: 夏天到了，到处都是热浪！
-    MessageEN: The haze was everywhere today!
-    MessageTH: ไอแดดร้อนระอุพัดไปทุกที่เลยค่ะ
-    MessageTW: 因為是夏天，到處都熱氣沖天！
-  - MessageGroupId: 100460040
-    Id: 100460050
-    CharacterId: 10046
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100460050
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 그게 꼭 시바견왕왕 감독의 26번째 작품! <아지랑이 혈투> 같아서…
+  - MessageKR: 그게 꼭 시바견왕왕 감독의 26번째 작품! <아지랑이 혈투> 같아서…
     MessageJP: まるであの、柴犬ワン蔵監督の26作目！『かげろうの血闘』のように！
     MessageCN: 简直就和那个柴犬汪藏导演的第26部作品！那个《阳炎的血斗》里面一模一样！
     MessageEN:
@@ -134,7 +122,25 @@ content:
 
       ชิบะชื่อดัง..."
     MessageTW: 簡直就像柴犬汪藏導演的第26部作品！《陽炎之血鬥》一樣！
-  - MessageGroupId: 100460050
+    MessageGroupId: 100460040
+    Id: 100460050
+    CharacterId: 10046
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100460050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 엄청 굉장했어요!
+    MessageJP: 本当にすごかったです！
+    MessageCN: 真的好厉害！
+    MessageEN: It was amazing!
+    MessageTH: ฉันว่ามันเจ๋งมากๆ เลยค่ะ!
+    MessageTW: 真的是太驚人了！
+    MessageGroupId: 100460050
     Id: 100460060
     CharacterId: 10046
     MessageCondition: Feedback
@@ -146,13 +152,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 엄청 굉장했어요!
-    MessageJP: 本当にすごかったです！
-    MessageCN: 真的好厉害！
-    MessageEN: It was amazing!
-    MessageTH: ฉันว่ามันเจ๋งมากๆ เลยค่ะ!
-    MessageTW: 真的是太驚人了！
-  - MessageGroupId: 100460060
+  - MessageKR: 잘은 모르겠지만, 이즈나가 즐거워 보여서 다행이네.
+    MessageJP: よく分からないけど、イズナが楽しそうでよかった
+    MessageCN: 虽然不太懂，但是泉奈开心就好
+    MessageEN: "I'm not sure what that means, but I'm glad you enjoyed it. "
+    MessageTH: "ถึงไม่ค่อยเข้าใจก็เถอะ
+
+      แต่ครูดีใจที่อิซุนะสนุกนะ "
+    MessageTW: 雖然不是很懂，但伊樹菜看起來很開心，真是太好了
+    MessageGroupId: 100460060
     Id: 100460070
     CharacterId: 10046
     MessageCondition: Answer
@@ -164,15 +172,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘은 모르겠지만, 이즈나가 즐거워 보여서 다행이네.
-    MessageJP: よく分からないけど、イズナが楽しそうでよかった
-    MessageCN: 虽然不太懂，但是泉奈开心就好
-    MessageEN: "I'm not sure what that means, but I'm glad you enjoyed it. "
-    MessageTH: "ถึงไม่ค่อยเข้าใจก็เถอะ
-
-      แต่ครูดีใจที่อิซุนะสนุกนะ "
-    MessageTW: 雖然不是很懂，但伊樹菜看起來很開心，真是太好了
-  - MessageGroupId: 100460060
+  - MessageKR: 어째 이즈나, 평소보다 더 기운 차 보이는걸.
+    MessageJP: なんだかイズナ、いつも以上に元気だね
+    MessageCN: 总觉得泉奈比平时更有精神呢
+    MessageEN: You seem more energetic than usual.
+    MessageTH: ดูอิซุนะมีพลังล้นเหลือกว่าทุกๆ วันเลย
+    MessageTW: 總覺得伊樹菜比平常更有精神呢
+    MessageGroupId: 100460060
     Id: 100460080
     CharacterId: 10046
     MessageCondition: Answer
@@ -184,13 +190,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어째 이즈나, 평소보다 더 기운 차 보이는걸.
-    MessageJP: なんだかイズナ、いつも以上に元気だね
-    MessageCN: 总觉得泉奈比平时更有精神呢
-    MessageEN: You seem more energetic than usual.
-    MessageTH: ดูอิซุนะมีพลังล้นเหลือกว่าทุกๆ วันเลย
-    MessageTW: 總覺得伊樹菜比平常更有精神呢
-  - MessageGroupId: 100460070
+  - MessageKR: 이것도 다 여름의 태양 에너지 덕분일까요?
+    MessageJP: もしかしたら、夏のお日様エネルギーのおかげかもしれません！
+    MessageCN: 也许这就是，夏天的太阳公公给泉奈的能量！
+    MessageEN: Do you think it's because of the energy of the summer sun?
+    MessageTH: "เป็นเพราะพลังแสงแดดแห่งฤดูร้อน
+
+      รึเปล่าคะ?"
+    MessageTW: 也許，是多虧了夏天的陽光能量！
+    MessageGroupId: 100460070
     Id: 100460090
     CharacterId: 10046
     MessageCondition: Feedback
@@ -202,15 +210,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이것도 다 여름의 태양 에너지 덕분일까요?
-    MessageJP: もしかしたら、夏のお日様エネルギーのおかげかもしれません！
-    MessageCN: 也许这就是，夏天的太阳公公给泉奈的能量！
-    MessageEN: Do you think it's because of the energy of the summer sun?
-    MessageTH: "เป็นเพราะพลังแสงแดดแห่งฤดูร้อน
+  - MessageKR: 아, 이러고 있을 게 아니라. 주군! 같이 바다에 나가요!
+    MessageJP: あ、こうしている場合ではありませんね。主殿、一緒に海に行きましょう！
+    MessageCN: 啊，现在不是说这些的时候呢。主公，我们一起去海边吧！
+    MessageEN: Oh, no time to dilly-dally! My lord, let's go to the beach together!
+    MessageTH: "อ๊ะ จะมามัวโอ้เอ้แบบนี้ไม่ได้แล้ว
 
-      รึเปล่าคะ?"
-    MessageTW: 也許，是多虧了夏天的陽光能量！
-  - MessageGroupId: 100460080
+      นายท่าน! ไปทะเลกันเถอะค่ะ!"
+    MessageTW: 啊，現在不是說這個的時候。主公！一起去海邊吧！
+    MessageGroupId: 100460080
     Id: 100460100
     CharacterId: 10046
     MessageCondition: Feedback
@@ -222,15 +230,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 이러고 있을 게 아니라. 주군! 같이 바다에 나가요!
-    MessageJP: あ、こうしている場合ではありませんね。主殿、一緒に海に行きましょう！
-    MessageCN: 啊，现在不是说这些的时候呢。主公，我们一起去海边吧！
-    MessageEN: Oh, no time to dilly-dally! My lord, let's go to the beach together!
-    MessageTH: "อ๊ะ จะมามัวโอ้เอ้แบบนี้ไม่ได้แล้ว
+  - MessageKR: 여름에, 그리고 바다에 적응한 닌자가 되기 위해, 수련 개시예요!
+    MessageJP: 夏、そして海に適応した忍びになるため、修行開始です！
+    MessageCN: 为了成为能适应夏天和大海的忍者，泉奈要开始修行了！
+    MessageEN:
+      I need to train to be a ninja who's well adjusted to summer and the
+      beach.
+    MessageTH: "การฝึกฝนเพื่อเป็นนินจาที่ปรับตัวเข้า
 
-      นายท่าน! ไปทะเลกันเถอะค่ะ!"
-    MessageTW: 啊，現在不是說這個的時候。主公！一起去海邊吧！
-  - MessageGroupId: 100460080
+      กับฤดูร้อนได้เริ่มขึ้นแล้วค่ะ!"
+    MessageTW: 這個夏天，為了成為能適應大海的忍者，要開始修行了！
+    MessageGroupId: 100460080
     Id: 100460110
     CharacterId: 10046
     MessageCondition: Feedback
@@ -242,17 +252,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여름에, 그리고 바다에 적응한 닌자가 되기 위해, 수련 개시예요!
-    MessageJP: 夏、そして海に適応した忍びになるため、修行開始です！
-    MessageCN: 为了成为能适应夏天和大海的忍者，泉奈要开始修行了！
-    MessageEN:
-      I need to train to be a ninja who's well adjusted to summer and the
-      beach.
-    MessageTH: "การฝึกฝนเพื่อเป็นนินจาที่ปรับตัวเข้า
-
-      กับฤดูร้อนได้เริ่มขึ้นแล้วค่ะ!"
-    MessageTW: 這個夏天，為了成為能適應大海的忍者，要開始修行了！
-  - MessageGroupId: 100460090
+  - MessageKR: 뭐, 그럼 그럴까?
+    MessageJP: うん、行こっか
+    MessageCN: 嗯，一起去吧
+    MessageEN: If you say so!
+    MessageTH: ไปกันโลด!
+    MessageTW: 嗯，走吧
+    MessageGroupId: 100460090
     Id: 100460120
     CharacterId: 10046
     MessageCondition: Answer
@@ -264,13 +270,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 그럼 그럴까?
-    MessageJP: うん、行こっか
-    MessageCN: 嗯，一起去吧
-    MessageEN: If you say so!
-    MessageTH: ไปกันโลด!
-    MessageTW: 嗯，走吧
-  - MessageGroupId: 100460100
+  - MessageKR: 에헤헷! 기다리고 있을게요!
+    MessageJP: はいっ、お待ちしてますね！
+    MessageCN: 好的，那泉奈就等着主公啦！
+    MessageEN: Heehee! I'll be waiting!
+    MessageTH: ฮิฮิฮิ ฉันกำลังรออยู่เลยค่ะ!
+    MessageTW: 好的，我會等著唷！
+    MessageGroupId: 100460100
     Id: 100460130
     CharacterId: 10046
     MessageCondition: Feedback
@@ -282,13 +288,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 에헤헷! 기다리고 있을게요!
-    MessageJP: はいっ、お待ちしてますね！
-    MessageCN: 好的，那泉奈就等着主公啦！
-    MessageEN: Heehee! I'll be waiting!
-    MessageTH: ฮิฮิฮิ ฉันกำลังรออยู่เลยค่ะ!
-    MessageTW: 好的，我會等著唷！
-  - MessageGroupId: 100460110
+  - MessageKR: 주군!
+    MessageJP: 主殿！
+    MessageCN: 主公！
+    MessageEN: "My lord! "
+    MessageTH: "นายท่านคะ! "
+    MessageTW: 主公！
+    MessageGroupId: 100460110
     Id: 100460140
     CharacterId: 10046
     MessageCondition: FavorRankUp
@@ -300,13 +306,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주군!
-    MessageJP: 主殿！
-    MessageCN: 主公！
-    MessageEN: "My lord! "
-    MessageTH: "นายท่านคะ! "
-    MessageTW: 主公！
-  - MessageGroupId: 100460120
+  - MessageKR: 혹시 오늘 시간이 괜찮으시다면…….
+    MessageJP: もし今日、お時間がありましたら
+    MessageCN: 不知道主公今天有没有时间
+    MessageEN: If you have time today...
+    MessageTH: คือว่าถ้าวันนี้นายท่านพอมีเวลา...
+    MessageTW: 今天如果有時間的話……
+    MessageGroupId: 100460120
     Id: 100460150
     CharacterId: 10046
     MessageCondition: None
@@ -318,13 +324,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 오늘 시간이 괜찮으시다면…….
-    MessageJP: もし今日、お時間がありましたら
-    MessageCN: 不知道主公今天有没有时间
-    MessageEN: If you have time today...
-    MessageTH: คือว่าถ้าวันนี้นายท่านพอมีเวลา...
-    MessageTW: 今天如果有時間的話……
-  - MessageGroupId: 100460130
+  - MessageKR: 물론이지! 이즈나가 부른다면 어디든 갈게!
+    MessageJP: イズナのためならどこへでも！
+    MessageCN: 只要是为了泉奈，我去哪都可以！
+    MessageEN: Sure! I'll go anywhere with you, Izuna!
+    MessageTH: "แน่นอน ถ้าอิซุนะเรียก
+
+      ครูจะไปแน่นอน!"
+    MessageTW: 只要是為了伊樹菜，去哪裡都行！
+    MessageGroupId: 100460130
     Id: 100460160
     CharacterId: 10046
     MessageCondition: Answer
@@ -336,15 +344,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이지! 이즈나가 부른다면 어디든 갈게!
-    MessageJP: イズナのためならどこへでも！
-    MessageCN: 只要是为了泉奈，我去哪都可以！
-    MessageEN: Sure! I'll go anywhere with you, Izuna!
-    MessageTH: "แน่นอน ถ้าอิซุนะเรียก
-
-      ครูจะไปแน่นอน!"
-    MessageTW: 只要是為了伊樹菜，去哪裡都行！
-  - MessageGroupId: 100460140
+  - MessageKR: 아……
+    MessageJP: あ
+    MessageCN: 啊
+    MessageEN: Oh...!
+    MessageTH: อ๊ะ...
+    MessageTW: 啊
+    MessageGroupId: 100460140
     Id: 100460170
     CharacterId: 10046
     MessageCondition: Feedback
@@ -356,13 +362,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아……
-    MessageJP: あ
-    MessageCN: 啊
-    MessageEN: Oh...!
-    MessageTH: อ๊ะ...
-    MessageTW: 啊
-  - MessageGroupId: 100460150
+  - MessageKR: 네!
+    MessageJP: はい！
+    MessageCN: 好的！
+    MessageEN: Okay!
+    MessageTH: ค่ะ!
+    MessageTW: 是！
+    MessageGroupId: 100460150
     Id: 100460180
     CharacterId: 10046
     MessageCondition: Feedback
@@ -374,13 +380,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네!
-    MessageJP: はい！
-    MessageCN: 好的！
-    MessageEN: Okay!
-    MessageTH: ค่ะ!
-    MessageTW: 是！
-  - MessageGroupId: 100460150
+  - MessageKR: 에헤헷!
+    MessageJP: えへへっ！
+    MessageCN: 诶嘿嘿！
+    MessageEN: Heeheehee!
+    MessageTH: ฮิฮิฮิ!
+    MessageTW: 耶嘿嘿！
+    MessageGroupId: 100460150
     Id: 100460190
     CharacterId: 10046
     MessageCondition: Feedback
@@ -392,13 +398,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 에헤헷!
-    MessageJP: えへへっ！
-    MessageCN: 诶嘿嘿！
-    MessageEN: Heeheehee!
-    MessageTH: ฮิฮิฮิ!
-    MessageTW: 耶嘿嘿！
-  - MessageGroupId: 100460160
+  - MessageKR: 네! 그럼 바닷가에서 봐요! 주군!
+    MessageJP: ありがとうございます！それでは海辺でお待ちしてますね、主殿！
+    MessageCN: 非常谢谢！那泉奈就在海边恭候啦，主公！
+    MessageEN: Okay, see you at the beach, my lord!
+    MessageTH: "ค่ะ ถ้างั้นเจอกัน
+
+      ที่ชายหาดนะคะ นายท่าน!"
+    MessageTW: 非常感謝！那我在海邊等著，主公！
+    MessageGroupId: 100460160
     Id: 100460200
     CharacterId: 10046
     MessageCondition: Feedback
@@ -410,15 +418,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네! 그럼 바닷가에서 봐요! 주군!
-    MessageJP: ありがとうございます！それでは海辺でお待ちしてますね、主殿！
-    MessageCN: 非常谢谢！那泉奈就在海边恭候啦，主公！
-    MessageEN: Okay, see you at the beach, my lord!
-    MessageTH: "ค่ะ ถ้างั้นเจอกัน
+  - MessageKR: 주군~! 오늘도 아침부터 무지막지하게 더운 거 있죠~!
+    MessageJP: 今日も朝から暑いですね、主殿！
+    MessageCN: 今天也是从早上开始就很热呢，主公！
+    MessageEN: My lord! It's been so hot since this morning!
+    MessageTH: "นายท่าน~! วันนี้ก็ร้อนสุดๆ
 
-      ที่ชายหาดนะคะ นายท่าน!"
-    MessageTW: 非常感謝！那我在海邊等著，主公！
-  - MessageGroupId: 100460170
+      ตั้งแต่เช้าเลยค่ะ~!"
+    MessageTW: 今天從早上開始就非常熱呢，主公！
+    MessageGroupId: 100460170
     Id: 100460210
     CharacterId: 10046
     MessageCondition: FavorRankUp
@@ -430,15 +438,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주군~! 오늘도 아침부터 무지막지하게 더운 거 있죠~!
-    MessageJP: 今日も朝から暑いですね、主殿！
-    MessageCN: 今天也是从早上开始就很热呢，主公！
-    MessageEN: My lord! It's been so hot since this morning!
-    MessageTH: "นายท่าน~! วันนี้ก็ร้อนสุดๆ
-
-      ตั้งแต่เช้าเลยค่ะ~!"
-    MessageTW: 今天從早上開始就非常熱呢，主公！
-  - MessageGroupId: 100460180
+  - MessageKR: 이즈나, 어찌나 더웠는지…….
+    MessageJP: あまりの暑さにイズナ、朝起きた時から汗だくでした……
+    MessageCN: 因为太热了，泉奈早上起床之后流汗就没停过……
+    MessageEN: It was so hot that...
+    MessageTH: ถ้าถามว่าอิซุนะร้อนแค่ไหน...
+    MessageTW: 實在太熱了，伊樹菜從早上起床後就汗流浹背……
+    MessageGroupId: 100460180
     Id: 100460220
     CharacterId: 10046
     MessageCondition: None
@@ -450,13 +456,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나, 어찌나 더웠는지…….
-    MessageJP: あまりの暑さにイズナ、朝起きた時から汗だくでした……
-    MessageCN: 因为太热了，泉奈早上起床之后流汗就没停过……
-    MessageEN: It was so hot that...
-    MessageTH: ถ้าถามว่าอิซุนะร้อนแค่ไหน...
-    MessageTW: 實在太熱了，伊樹菜從早上起床後就汗流浹背……
-  - MessageGroupId: 100460180
+  - MessageKR: 아침에 일어났을 땐 꼬리가 땀으로 축축해져서~
+    MessageJP: 特に尻尾が……
+    MessageCN: 特别是尾巴那里……
+    MessageEN: when I woke up, my tail was soaking wet!
+    MessageTH: "ร้อนขนาดตอนตื่นมาตอนเช้า
+
+      หางของอิซุนะก็ชุ่มเหงื่อเลยค่ะ~"
+    MessageTW: 特別是尾巴的部份……
+    MessageGroupId: 100460180
     Id: 100460230
     CharacterId: 10046
     MessageCondition: None
@@ -468,15 +476,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아침에 일어났을 땐 꼬리가 땀으로 축축해져서~
-    MessageJP: 特に尻尾が……
-    MessageCN: 特别是尾巴那里……
-    MessageEN: when I woke up, my tail was soaking wet!
-    MessageTH: "ร้อนขนาดตอนตื่นมาตอนเช้า
-
-      หางของอิซุนะก็ชุ่มเหงื่อเลยค่ะ~"
-    MessageTW: 特別是尾巴的部份……
-  - MessageGroupId: 100460190
+  - MessageKR: 우왓, 그건 엄청 큰일이었겠네.
+    MessageJP: この季節は大変そうだね……
+    MessageCN: 看来这个季节对泉奈来说很不好过啊……
+    MessageEN: Whoa, that's not pleasant.
+    MessageTH: โว้ว~ แบบนั้นก็เรื่องใหญ่เลยนะ
+    MessageTW: 這個季節真是辛苦你了……
+    MessageGroupId: 100460190
     Id: 100460240
     CharacterId: 10046
     MessageCondition: Answer
@@ -488,13 +494,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우왓, 그건 엄청 큰일이었겠네.
-    MessageJP: この季節は大変そうだね……
-    MessageCN: 看来这个季节对泉奈来说很不好过啊……
-    MessageEN: Whoa, that's not pleasant.
-    MessageTH: โว้ว~ แบบนั้นก็เรื่องใหญ่เลยนะ
-    MessageTW: 這個季節真是辛苦你了……
-  - MessageGroupId: 100460200
+  - MessageKR: 하지만! 이런 더위가 방해할지라도!
+    MessageJP: しかし、たとえどんなに暑かろうとも！
+    MessageCN: 但是，不管有多热！
+    MessageEN: But even in this heat...
+    MessageTH: แต่ว่าถึงจะร้อนแค่ไหนก็ตาม
+    MessageTW: 但是，不管有多熱！
+    MessageGroupId: 100460200
     Id: 100460250
     CharacterId: 10046
     MessageCondition: Feedback
@@ -506,13 +512,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만! 이런 더위가 방해할지라도!
-    MessageJP: しかし、たとえどんなに暑かろうとも！
-    MessageCN: 但是，不管有多热！
-    MessageEN: But even in this heat...
-    MessageTH: แต่ว่าถึงจะร้อนแค่ไหนก็ตาม
-    MessageTW: 但是，不管有多熱！
-  - MessageGroupId: 100460200
+  - MessageKR: 이즈나! 오늘도 주군과 함께! 힘차게 수련하고 싶어요!
+    MessageJP: イズナは今日も主殿と一緒に、修行に臨みたい所存です！
+    MessageCN: 泉奈今天也想和主公一起修行！
+    MessageEN: I want to train hard with you, my lord!
+    MessageTH: "วันนี้อิซุนะก็อยากออกไปฝึกฝน
+
+      กับนายท่านอีกค่ะ!"
+    MessageTW: 伊樹菜今天也想和主公一起修行！
+    MessageGroupId: 100460200
     Id: 100460260
     CharacterId: 10046
     MessageCondition: Feedback
@@ -524,15 +532,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나! 오늘도 주군과 함께! 힘차게 수련하고 싶어요!
-    MessageJP: イズナは今日も主殿と一緒に、修行に臨みたい所存です！
-    MessageCN: 泉奈今天也想和主公一起修行！
-    MessageEN: I want to train hard with you, my lord!
-    MessageTH: "วันนี้อิซุนะก็อยากออกไปฝึกฝน
-
-      กับนายท่านอีกค่ะ!"
-    MessageTW: 伊樹菜今天也想和主公一起修行！
-  - MessageGroupId: 100460210
+  - MessageKR: 그래서 말이지만, 주군-!
+    MessageJP: というわけで主殿！
+    MessageCN: 所以主公！
+    MessageEN: So on that note...!
+    MessageTH: ใช่มั้ยคะ นายท่าน-!
+    MessageTW: 所以說，主公！
+    MessageGroupId: 100460210
     Id: 100460270
     CharacterId: 10046
     MessageCondition: Feedback
@@ -544,13 +550,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 말이지만, 주군-!
-    MessageJP: というわけで主殿！
-    MessageCN: 所以主公！
-    MessageEN: So on that note...!
-    MessageTH: ใช่มั้ยคะ นายท่าน-!
-    MessageTW: 所以說，主公！
-  - MessageGroupId: 100460220
+  - MessageKR: 응. 이즈나. 그러면 거기서 만날까.
+    MessageJP: うん、じゃあ準備するね
+    MessageCN: 嗯，那我就准备一下啦
+    MessageEN: Yeah, Izuna. See you there, then?
+    MessageTH: อื้อ งั้นไปเจอกันที่ชายหาดนะ
+    MessageTW: 嗯，我準備好了
+    MessageGroupId: 100460220
     Id: 100460280
     CharacterId: 10046
     MessageCondition: Answer
@@ -562,13 +568,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 이즈나. 그러면 거기서 만날까.
-    MessageJP: うん、じゃあ準備するね
-    MessageCN: 嗯，那我就准备一下啦
-    MessageEN: Yeah, Izuna. See you there, then?
-    MessageTH: อื้อ งั้นไปเจอกันที่ชายหาดนะ
-    MessageTW: 嗯，我準備好了
-  - MessageGroupId: 100460230
+  - MessageKR: 에헤헷! 네!
+    MessageJP: えへへっ！はい！
+    MessageCN: 诶嘿嘿！好的！
+    MessageEN: Heeheehee. Yes!
+    MessageTH: ฮิฮิฮิ ค่ะ!
+    MessageTW: 耶嘿嘿！好！
+    MessageGroupId: 100460230
     Id: 100460290
     CharacterId: 10046
     MessageCondition: Feedback
@@ -580,13 +586,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 에헤헷! 네!
-    MessageJP: えへへっ！はい！
-    MessageCN: 诶嘿嘿！好的！
-    MessageEN: Heeheehee. Yes!
-    MessageTH: ฮิฮิฮิ ค่ะ!
-    MessageTW: 耶嘿嘿！好！
-  - MessageGroupId: 100460230
+  - MessageKR: 이즈나! 바로 준비하고 나갈게요!
+    MessageJP: イズナも、すぐに準備していきます！
+    MessageCN: 泉奈也马上开始准备！
+    MessageEN: I'll get ready and leave right away!
+    MessageTH: อิซุนะจะรีบเตรียมตัวออกไปเลยค่ะ!
+    MessageTW: 伊樹菜也馬上準備！
+    MessageGroupId: 100460230
     Id: 100460300
     CharacterId: 10046
     MessageCondition: Feedback
@@ -598,13 +604,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나! 바로 준비하고 나갈게요!
-    MessageJP: イズナも、すぐに準備していきます！
-    MessageCN: 泉奈也马上开始准备！
-    MessageEN: I'll get ready and leave right away!
-    MessageTH: อิซุนะจะรีบเตรียมตัวออกไปเลยค่ะ!
-    MessageTW: 伊樹菜也馬上準備！
-  - MessageGroupId: 100460240
+  - MessageKR: 아, 저기, 그게…….
+    MessageJP: その
+    MessageCN: 那个
+    MessageEN: Oh, um... So...
+    MessageTH: เอ่อ คือว่า...
+    MessageTW: 那個
+    MessageGroupId: 100460240
     Id: 100460310
     CharacterId: 10046
     MessageCondition: None
@@ -616,13 +622,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 저기, 그게…….
-    MessageJP: その
-    MessageCN: 那个
-    MessageEN: Oh, um... So...
-    MessageTH: เอ่อ คือว่า...
-    MessageTW: 那個
-  - MessageGroupId: 100460250
+  - MessageKR: 죄송해요! 주군!
+    MessageJP: すみませんでした、主殿！
+    MessageCN: 对不起，主公！
+    MessageEN: I'm sorry, my lord!
+    MessageTH: ขอโทษค่ะ นายท่าน!
+    MessageTW: 對不起，主公！
+    MessageGroupId: 100460250
     Id: 100460320
     CharacterId: 10046
     MessageCondition: None
@@ -634,13 +640,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 죄송해요! 주군!
-    MessageJP: すみませんでした、主殿！
-    MessageCN: 对不起，主公！
-    MessageEN: I'm sorry, my lord!
-    MessageTH: ขอโทษค่ะ นายท่าน!
-    MessageTW: 對不起，主公！
-  - MessageGroupId: 100460250
+  - MessageKR: 이즈나가 먼저 수련을 하자고 했는데……. 도중에 잠들어 버리다니!
+    MessageJP: イズナから修行したいと言っておいて、途中で寝てしまうなんて……！
+    MessageCN: 明明是泉奈提出想要修行，泉奈却中途就睡着了……！
+    MessageEN: I was the one who suggested training...but I fell asleep...
+    MessageTH: "อิซุนะเป็นฝ่ายชวนมาฝึกก่อนแท้ๆ...
+
+      แต่ดันเผลอหลับไประหว่างฝึกซะได้"
+    MessageTW: 明明是伊樹菜說要修行的，居然在中途就睡著了……！
+    MessageGroupId: 100460250
     Id: 100460330
     CharacterId: 10046
     MessageCondition: None
@@ -652,15 +660,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나가 먼저 수련을 하자고 했는데……. 도중에 잠들어 버리다니!
-    MessageJP: イズナから修行したいと言っておいて、途中で寝てしまうなんて……！
-    MessageCN: 明明是泉奈提出想要修行，泉奈却中途就睡着了……！
-    MessageEN: I was the one who suggested training...but I fell asleep...
-    MessageTH: "อิซุนะเป็นฝ่ายชวนมาฝึกก่อนแท้ๆ...
+  - MessageKR: 신경 쓰지 마. 모래찜질하다 보면 종종 있지. 그런 일.
+    MessageJP: 気にしないで。砂の中、気持ち良いよね
+    MessageCN: 不用在意。是因为埋在沙子里的感觉太舒服了对吧
+    MessageEN: Don't worry. It can happen when you're buried in the sand.
+    MessageTH: "ไม่ต้องคิดมาก นอนอบทรายแบบนั้น
 
-      แต่ดันเผลอหลับไประหว่างฝึกซะได้"
-    MessageTW: 明明是伊樹菜說要修行的，居然在中途就睡著了……！
-  - MessageGroupId: 100460260
+      ก็เผลอหลับได้อยู่แล้ว "
+    MessageTW: 不用放在心上。在沙子裡很舒服對吧
+    MessageGroupId: 100460260
     Id: 100460340
     CharacterId: 10046
     MessageCondition: Answer
@@ -672,15 +680,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 신경 쓰지 마. 모래찜질하다 보면 종종 있지. 그런 일.
-    MessageJP: 気にしないで。砂の中、気持ち良いよね
-    MessageCN: 不用在意。是因为埋在沙子里的感觉太舒服了对吧
-    MessageEN: Don't worry. It can happen when you're buried in the sand.
-    MessageTH: "ไม่ต้องคิดมาก นอนอบทรายแบบนั้น
-
-      ก็เผลอหลับได้อยู่แล้ว "
-    MessageTW: 不用放在心上。在沙子裡很舒服對吧
-  - MessageGroupId: 100460270
+  - MessageKR: 주군……!
+    MessageJP: 主殿……！
+    MessageCN: 主公……！
+    MessageEN: "My lord...! "
+    MessageTH: "นายท่าน...! "
+    MessageTW: 主公……！
+    MessageGroupId: 100460270
     Id: 100460350
     CharacterId: 10046
     MessageCondition: Feedback
@@ -692,13 +698,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주군……!
-    MessageJP: 主殿……！
-    MessageCN: 主公……！
-    MessageEN: "My lord...! "
-    MessageTH: "นายท่าน...! "
-    MessageTW: 主公……！
-  - MessageGroupId: 100460280
+  - MessageKR: 아직 시간은 얼마든지 있으니까. 나중에 또 하자. 수련.
+    MessageJP: まだまだ時間はあるから、大丈夫
+    MessageCN: 还有很多时间，没关系的
+    MessageEN: We have time. We can train sometime later.
+    MessageTH: "ยังพอมีเวลาอยู่
+
+      เอาไว้ค่อยมาฝึกกันใหม่นะ"
+    MessageTW: 還有時間，不要緊的
+    MessageGroupId: 100460280
     Id: 100460360
     CharacterId: 10046
     MessageCondition: Answer
@@ -710,15 +718,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아직 시간은 얼마든지 있으니까. 나중에 또 하자. 수련.
-    MessageJP: まだまだ時間はあるから、大丈夫
-    MessageCN: 还有很多时间，没关系的
-    MessageEN: We have time. We can train sometime later.
-    MessageTH: "ยังพอมีเวลาอยู่
-
-      เอาไว้ค่อยมาฝึกกันใหม่นะ"
-    MessageTW: 還有時間，不要緊的
-  - MessageGroupId: 100460290
+  - MessageKR: 앗, 네!
+    MessageJP: はい！
+    MessageCN: 嗯！
+    MessageEN: Oh, thank you!
+    MessageTH: อ๊ะ... ค่ะ!
+    MessageTW: 是！
+    MessageGroupId: 100460290
     Id: 100460370
     CharacterId: 10046
     MessageCondition: Feedback
@@ -730,13 +736,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 앗, 네!
-    MessageJP: はい！
-    MessageCN: 嗯！
-    MessageEN: Oh, thank you!
-    MessageTH: อ๊ะ... ค่ะ!
-    MessageTW: 是！
-  - MessageGroupId: 100460300
+  - MessageKR: 에헤헷! 그럼 나중에 또!
+    MessageJP: それではまた！
+    MessageCN: 那就之后再联系！
+    MessageEN: "Heehee! Next time! "
+    MessageTH: "ฮิฮิฮิ! ถ้างั้นแล้วพบกันค่ะ "
+    MessageTW: 那下次見！
+    MessageGroupId: 100460300
     Id: 100460380
     CharacterId: 10046
     MessageCondition: Feedback
@@ -748,13 +754,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 에헤헷! 그럼 나중에 또!
-    MessageJP: それではまた！
-    MessageCN: 那就之后再联系！
-    MessageEN: "Heehee! Next time! "
-    MessageTH: "ฮิฮิฮิ! ถ้างั้นแล้วพบกันค่ะ "
-    MessageTW: 那下次見！
-  - MessageGroupId: 100460300
+  - MessageKR: 그때 뵈어요! 주군!
+    MessageJP: 引き続き一緒に遊びましょうね、主殿！
+    MessageCN: 之后我们也继续一起玩吧，主公！
+    MessageEN: I'll see you then, my lord!
+    MessageTH: ไว้เจอกันใหม่นะคะ! นายท่าน!
+    MessageTW: 下次再繼續一起玩吧，主公！
+    MessageGroupId: 100460300
     Id: 100460390
     CharacterId: 10046
     MessageCondition: Feedback
@@ -766,13 +772,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그때 뵈어요! 주군!
-    MessageJP: 引き続き一緒に遊びましょうね、主殿！
-    MessageCN: 之后我们也继续一起玩吧，主公！
-    MessageEN: I'll see you then, my lord!
-    MessageTH: ไว้เจอกันใหม่นะคะ! นายท่าน!
-    MessageTW: 下次再繼續一起玩吧，主公！
-  - MessageGroupId: 100460310
+  - MessageKR: 주군! 오늘은 무얼 해볼까요?
+    MessageJP: 主殿！今日は何をしましょうか？
+    MessageCN: 主公！今天要和泉奈一起做什么呢？
+    MessageEN: My lord! What should we do today?
+    MessageTH: นายท่าน! วันนี้จะทำอะไรกันดีคะ?
+    MessageTW: 主公！今天要做什麼好呢？
+    MessageGroupId: 100460310
     Id: 100460400
     CharacterId: 10046
     MessageCondition: FavorRankUp
@@ -784,13 +790,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 주군! 오늘은 무얼 해볼까요?
-    MessageJP: 主殿！今日は何をしましょうか？
-    MessageCN: 主公！今天要和泉奈一起做什么呢？
-    MessageEN: My lord! What should we do today?
-    MessageTH: นายท่าน! วันนี้จะทำอะไรกันดีคะ?
-    MessageTW: 主公！今天要做什麼好呢？
-  - MessageGroupId: 100460320
+  - MessageKR: 이즈나! 주군과 하고 싶은 게 산더미예요!
+    MessageJP: イズナは主殿とやりたいことが、まだまだ山ほどあります！
+    MessageCN: 泉奈想和主公一起做的事情，还有很多很多！
+    MessageEN: I have so many things I wanna try with you!
+    MessageTH: "อิซุนะ! มีอะไรที่อยากทำ
+
+      กับนายท่านเยอะเลยค่ะ!"
+    MessageTW: 伊樹菜還有很多想跟主公一起做的事！
+    MessageGroupId: 100460320
     Id: 100460410
     CharacterId: 10046
     MessageCondition: None
@@ -802,15 +810,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나! 주군과 하고 싶은 게 산더미예요!
-    MessageJP: イズナは主殿とやりたいことが、まだまだ山ほどあります！
-    MessageCN: 泉奈想和主公一起做的事情，还有很多很多！
-    MessageEN: I have so many things I wanna try with you!
-    MessageTH: "อิซุนะ! มีอะไรที่อยากทำ
+  - MessageKR: 오늘도 덥네…. 오늘은 뭘 할까?
+    MessageJP: 今日も暑いね……何しよっか？
+    MessageCN: 今天也很热呢……要做什么好呢？
+    MessageEN: Today is so hot... What should we do today?
+    MessageTH: "วันนี้อากาศก็ร้อนจังเลย
 
-      กับนายท่านเยอะเลยค่ะ!"
-    MessageTW: 伊樹菜還有很多想跟主公一起做的事！
-  - MessageGroupId: 100460330
+      ทำอะไรดีนะ?"
+    MessageTW: 今天也很熱呢……做什麼好呢？
+    MessageGroupId: 100460330
     Id: 100460420
     CharacterId: 10046
     MessageCondition: Answer
@@ -822,15 +830,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘도 덥네…. 오늘은 뭘 할까?
-    MessageJP: 今日も暑いね……何しよっか？
-    MessageCN: 今天也很热呢……要做什么好呢？
-    MessageEN: Today is so hot... What should we do today?
-    MessageTH: "วันนี้อากาศก็ร้อนจังเลย
-
-      ทำอะไรดีนะ?"
-    MessageTW: 今天也很熱呢……做什麼好呢？
-  - MessageGroupId: 100460340
+  - MessageKR: 그러네요! 으음!
+    MessageJP: そうですね……！
+    MessageCN: 对啊……！
+    MessageEN: Yeah! Hmm!
+    MessageTH: นั่นสิคะ! อืมมม!
+    MessageTW: 就是說啊……！
+    MessageGroupId: 100460340
     Id: 100460430
     CharacterId: 10046
     MessageCondition: Feedback
@@ -842,13 +848,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러네요! 으음!
-    MessageJP: そうですね……！
-    MessageCN: 对啊……！
-    MessageEN: Yeah! Hmm!
-    MessageTH: นั่นสิคะ! อืมมม!
-    MessageTW: 就是說啊……！
-  - MessageGroupId: 100460350
+  - MessageKR: 수영…은 하기 싫어?
+    MessageJP: 水泳……はやめておきたい？
+    MessageCN: 游泳……还是放弃掉比较好？
+    MessageEN: How about...swimming?
+    MessageTH: ไม่อยากว่ายน้ำเหรอ?
+    MessageTW: 果然還是……不想游泳嗎？
+    MessageGroupId: 100460350
     Id: 100460440
     CharacterId: 10046
     MessageCondition: Answer
@@ -860,13 +866,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수영…은 하기 싫어?
-    MessageJP: 水泳……はやめておきたい？
-    MessageCN: 游泳……还是放弃掉比较好？
-    MessageEN: How about...swimming?
-    MessageTH: ไม่อยากว่ายน้ำเหรอ?
-    MessageTW: 果然還是……不想游泳嗎？
-  - MessageGroupId: 100460360
+  - MessageKR: 네? 아, 저기.
+    MessageJP: あ
+    MessageCN: 啊
+    MessageEN: Huh? Oh, um.
+    MessageTH: คะ? เอ่อ คือว่า...
+    MessageTW: 啊
+    MessageGroupId: 100460360
     Id: 100460450
     CharacterId: 10046
     MessageCondition: Feedback
@@ -878,13 +884,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네? 아, 저기.
-    MessageJP: あ
-    MessageCN: 啊
-    MessageEN: Huh? Oh, um.
-    MessageTH: คะ? เอ่อ คือว่า...
-    MessageTW: 啊
-  - MessageGroupId: 100460370
+  - MessageKR: 그게…. 그러니까….
+    MessageJP: えっと、その
+    MessageCN: 嗯……那个
+    MessageEN: So, um...
+    MessageTH: คือว่าเรื่องนั้น...
+    MessageTW: 呃，那個
+    MessageGroupId: 100460370
     Id: 100460460
     CharacterId: 10046
     MessageCondition: Feedback
@@ -896,13 +902,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게…. 그러니까….
-    MessageJP: えっと、その
-    MessageCN: 嗯……那个
-    MessageEN: So, um...
-    MessageTH: คือว่าเรื่องนั้น...
-    MessageTW: 呃，那個
-  - MessageGroupId: 100460380
+  - MessageKR: 이즈나는 수영하는 거, 싫어해?
+    MessageJP: イズナは泳ぐの、嫌いだったりする？
+    MessageCN: 泉奈讨厌游泳吗？
+    MessageEN: Do you not like swimming?
+    MessageTH: อิซุนะไม่ชอบว่ายน้ำเหรอ?
+    MessageTW: 伊樹菜討厭游泳嗎？
+    MessageGroupId: 100460380
     Id: 100460470
     CharacterId: 10046
     MessageCondition: Answer
@@ -914,13 +920,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나는 수영하는 거, 싫어해?
-    MessageJP: イズナは泳ぐの、嫌いだったりする？
-    MessageCN: 泉奈讨厌游泳吗？
-    MessageEN: Do you not like swimming?
-    MessageTH: อิซุนะไม่ชอบว่ายน้ำเหรอ?
-    MessageTW: 伊樹菜討厭游泳嗎？
-  - MessageGroupId: 100460390
+  - MessageKR: 아, 아, 아니, 그게. 시, 싫다고 할까….
+    MessageJP: あ、その、嫌いと言いますか……
+    MessageCN: 啊，那个，泉奈不知道算不算得上讨厌……
+    MessageEN: Oh, um, I mean...it's not that I don't like it...but...
+    MessageTH: "ปะ...เปล่าค่ะ จะเรียกว่า
+
+      ไม่ชอบได้มั้ยนะ..."
+    MessageTW: 啊，那個，該說是討厭嗎……
+    MessageGroupId: 100460390
     Id: 100460480
     CharacterId: 10046
     MessageCondition: Feedback
@@ -932,15 +940,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 아, 아니, 그게. 시, 싫다고 할까….
-    MessageJP: あ、その、嫌いと言いますか……
-    MessageCN: 啊，那个，泉奈不知道算不算得上讨厌……
-    MessageEN: Oh, um, I mean...it's not that I don't like it...but...
-    MessageTH: "ปะ...เปล่าค่ะ จะเรียกว่า
-
-      ไม่ชอบได้มั้ยนะ..."
-    MessageTW: 啊，那個，該說是討厭嗎……
-  - MessageGroupId: 100460390
+  - MessageKR: 그러니까.
+    MessageJP: えっと
+    MessageCN: 那个……
+    MessageEN: So...
+    MessageTH: คือว่า...
+    MessageTW: 那個
+    MessageGroupId: 100460390
     Id: 100460490
     CharacterId: 10046
     MessageCondition: Feedback
@@ -952,13 +958,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니까.
-    MessageJP: えっと
-    MessageCN: 那个……
-    MessageEN: So...
-    MessageTH: คือว่า...
-    MessageTW: 那個
-  - MessageGroupId: 100460390
+  - MessageKR: 이즈나는, 그게….
+    MessageJP: イズナは
+    MessageCN: 泉奈
+    MessageEN: I-I just...
+    MessageTH: อิซุนะน่ะ...
+    MessageTW: 伊樹菜……
+    MessageGroupId: 100460390
     Id: 100460500
     CharacterId: 10046
     MessageCondition: Feedback
@@ -970,13 +976,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈나는, 그게….
-    MessageJP: イズナは
-    MessageCN: 泉奈
-    MessageEN: I-I just...
-    MessageTH: อิซุนะน่ะ...
-    MessageTW: 伊樹菜……
-  - MessageGroupId: 100460400
+  - MessageKR: 이, 일단! 바, 바닷가에서 기다리고 있을게요! 주군!
+    MessageJP: と、とりあえず海でお待ちしてますね、主殿！
+    MessageCN: 总、总之，泉奈就先在海边等着哦，主公！
+    MessageEN: I-I'll be waiting at the beach, my lord!
+    MessageTH: "อะ...เอาเป็นว่า! ฉันจะรออยู่ที่
+
+      ชายหาดนะคะ นายท่าน!"
+    MessageTW: 總，總之，先去海邊等你了，主公！
+    MessageGroupId: 100460400
     Id: 100460510
     CharacterId: 10046
     MessageCondition: Feedback
@@ -988,15 +996,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이, 일단! 바, 바닷가에서 기다리고 있을게요! 주군!
-    MessageJP: と、とりあえず海でお待ちしてますね、主殿！
-    MessageCN: 总、总之，泉奈就先在海边等着哦，主公！
-    MessageEN: I-I'll be waiting at the beach, my lord!
-    MessageTH: "อะ...เอาเป็นว่า! ฉันจะรออยู่ที่
-
-      ชายหาดนะคะ นายท่าน!"
-    MessageTW: 總，總之，先去海邊等你了，主公！
-  - MessageGroupId: 100460410
+  - MessageKR: 아, 응.
+    MessageJP: りょ、了解
+    MessageCN: 了、了解
+    MessageEN: Oh, uh, okay.
+    MessageTH: อะ...อื้อ!
+    MessageTW: 了，了解
+    MessageGroupId: 100460410
     Id: 100460520
     CharacterId: 10046
     MessageCondition: Answer
@@ -1008,9 +1014,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 응.
-    MessageJP: りょ、了解
-    MessageCN: 了、了解
-    MessageEN: Oh, uh, okay.
-    MessageTH: อะ...อื้อ!
-    MessageTW: 了，了解

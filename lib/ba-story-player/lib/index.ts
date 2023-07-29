@@ -1081,7 +1081,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           end();
           reject();
         }
-      }, 500);
+      });
     }
     restart();
   });

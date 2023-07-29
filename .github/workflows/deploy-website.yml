@@ -1,9 +1,9 @@
-name: CI
+name: Deploy Website To Production
 on:
   push:
-    branches: ["main", "dev"]
-  pull_request:
-    branches: ["main"]
+    branches:
+      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,22 +40,14 @@ jobs:
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
             f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --verbose
-      - name: Deploy toolbox
-        run: tar -zcvf toolbox.tgz ./apps/ba-online-toolbox/dist/*
-      - name: Deploy to Server # 执行部署任务
-        uses: cross-the-world/ssh-scp-ssh-pipelines@latest # 第三方的 action
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          user: ${{ secrets.SERVER_USER }}
-          pass: ${{ secrets.SERVER_PASS }}
-          # 由于网络情况，很容易超时，设置为60s
-          connect_timeout: 60s
-          # 将工作目录下的文件全部拷贝到部署服务器的工作目录, scp 会自动覆盖
-          scp: |
-            ./toolbox.tgz => ~
-          # 解压也会自动覆盖
-          last_ssh: |
-            cd ~
-            tar -xzvf toolbox.tgz
-            cp -r ./apps/ba-online-toolbox/dist/* /var/www/toolbox
+        run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
+      - name: Viewer rsync deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "./apps/blue-archive-story-viewer/dist/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
+          TARGET: "/var/www/website"
+          EXCLUDE: ".git*"

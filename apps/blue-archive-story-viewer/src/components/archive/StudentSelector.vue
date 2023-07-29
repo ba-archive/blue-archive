@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { computed, onBeforeMount, onUnmounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
-import { useSettingsStore } from '../../store/settings';
-import { useStudentStore } from '../../store/students';
-import { AppliedFilter } from '../../types/AppliedFilter';
+import axios from "axios";
+import { computed, onBeforeMount, onUnmounted, ref } from "vue";
+import { useRoute } from "vue-router";
+import ErrorScreen from "../widgets/ErrorScreen.vue";
+import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
+import StudentShowbox from "../widgets/StudentShowbox.vue";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
+import { AppliedFilter } from "@types/AppliedFilter";
 import {
   Student,
   StudentAttributeFilters,
   StudentAttributes,
   StudentNames,
-} from '../../types/Student';
-import { filterStudents } from '../../util/filterStudents';
-import ErrorScreen from '../widgets/ErrorScreen.vue';
-import ProgressBar from '../widgets/NeuUI/NeuProgressBar.vue';
-import StudentShowbox from '../widgets/StudentShowbox.vue';
+} from "@types/Student";
+import { filterStudents } from "@util/filterStudents";
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
@@ -36,7 +36,7 @@ const fetchError = ref(false);
 const fetchErrorMessage = ref({});
 
 axios
-  .get('/config/json/students.json', {
+  .get("/config/json/students.json", {
     onDownloadProgress: progressEvent => {
       if (progressEvent.total) {
         initProgress.value = Math.floor(
@@ -53,8 +53,8 @@ axios
   .then(response => {
     try {
       const students = response.data.sort((a: Student, b: Student) =>
-        a.name.cn.localeCompare(b.name.cn, 'zh-Hans-CN', {
-          sensitivity: 'accent',
+        a.name.cn.localeCompare(b.name.cn, "zh-Hans-CN", {
+          sensitivity: "accent",
         })
       );
       studentStore.setStudents(students);
@@ -109,7 +109,7 @@ function getCohortAttribute(
       return filtered.sort((a, b) =>
         a
           .toString()
-          .localeCompare(b.toString(), 'zh-Hans-CN', { sensitivity: 'accent' })
+          .localeCompare(b.toString(), "zh-Hans-CN", { sensitivity: "accent" })
       );
     } catch (e) {
       return filtered;
@@ -123,10 +123,10 @@ function getCohortAttribute(
  * @summary 目前游戏内的三种装甲类型，order 字段用于排序
  */
 const armorTypes = [
-  { string: 'LightArmor', name: '轻装甲', order: 1 },
-  { string: 'HeavyArmor', name: '重装甲', order: 2 },
-  { string: 'Unarmed', name: '神秘装甲', order: 3 },
-  { string: 'ElasticArmor', name: '弹性装甲', order: 4 },
+  { string: "LightArmor", name: "轻装甲", order: 1 },
+  { string: "HeavyArmor", name: "重装甲", order: 2 },
+  { string: "Unarmed", name: "神秘装甲", order: 3 },
+  { string: "ElasticArmor", name: "弹性装甲", order: 4 },
 ];
 
 // TODO: Sound 译名待定
@@ -135,10 +135,10 @@ const armorTypes = [
  * @summary 目前游戏内的三种子弹类型，order 字段用于排序
  */
 const bulletTypes = [
-  { string: 'Explosion', name: '爆发', order: 1 },
-  { string: 'Pierce', name: '贯通', order: 2 },
-  { string: 'Mystic', name: '神秘', order: 3 },
-  { string: 'Sound', name: '振动', order: 4 },
+  { string: "Explosion", name: "爆发", order: 1 },
+  { string: "Pierce", name: "贯通", order: 2 },
+  { string: "Mystic", name: "神秘", order: 3 },
+  { string: "Sonic", name: "振动", order: 4 },
 ];
 
 // 因为约定俗成的装甲属性排列是 轻装甲-重装甲-神秘装甲，所以根据这个顺序进行排序
@@ -147,46 +147,46 @@ function sortArmorType(
   b: string | number | undefined
 ): number {
   const armorTypeA = armorTypes.find(type => type.string === a) || {
-    name: '0',
+    name: "0",
   };
   const armorTypeB = armorTypes.find(type => type.string === b) || {
-    name: '1',
+    name: "1",
   };
-  return armorTypeA.name.localeCompare(armorTypeB.name, 'zh-Hans-CN', {
-    sensitivity: 'accent',
+  return armorTypeA.name.localeCompare(armorTypeB.name, "zh-Hans-CN", {
+    sensitivity: "accent",
   });
 }
 
-// 按照 爆发-贯通-神秘子弹 进行排序
+// 按照 爆发-贯通-神秘-振动 进行排序
 function sortBulletType(
   a: string | number | undefined,
   b: string | number | undefined
 ): number {
   const bulletTypeA = bulletTypes.find(type => type.string === a) || {
-    name: '0',
+    name: "0",
   };
   const bulletTypeB = bulletTypes.find(type => type.string === b) || {
-    name: '1',
+    name: "1",
   };
-  return bulletTypeA.name.localeCompare(bulletTypeB.name, 'zh-Hans-CN', {
-    sensitivity: 'accent',
+  return bulletTypeA.name.localeCompare(bulletTypeB.name, "zh-Hans-CN", {
+    sensitivity: "accent",
   });
 }
 
 // 获取全部学生的不重复的属性用于边栏展示
 
-const studentRarities = computed(() => getCohortAttribute('rarity', false));
-const studentClubs = computed(() => getCohortAttribute('club'));
-const studentAffiliations = computed(() => getCohortAttribute('affiliation'));
-const studentTypes = computed(() => getCohortAttribute('type', false));
+const studentRarities = computed(() => getCohortAttribute("rarity", false));
+const studentClubs = computed(() => getCohortAttribute("club"));
+const studentAffiliations = computed(() => getCohortAttribute("affiliation"));
+const studentTypes = computed(() => getCohortAttribute("type", false));
 const studentArmorTypes = computed(() =>
-  getCohortAttribute('armorType', false).sort((a, b) => sortArmorType(a, b))
+  getCohortAttribute("armorType", false).sort((a, b) => sortArmorType(a, b))
 );
 const studentBulletTypes = computed(() =>
-  getCohortAttribute('bulletType', false).sort((a, b) => sortBulletType(a, b))
+  getCohortAttribute("bulletType", false).sort((a, b) => sortBulletType(a, b))
 );
 
-const studentNameFilter = ref('');
+const studentNameFilter = ref("");
 // 学生属性过滤器
 const appliedFilters = computed<AppliedFilter>(() => {
   return {
@@ -215,12 +215,12 @@ const isEmptyFilter = computed(() => {
 
 // 查询一个 tag 是否被选中
 function isActivate(property: string, value: string | number | undefined) {
-  if (undefined === value) return '';
+  if (undefined === value) return "";
   return (
     appliedFilters.value[property as keyof AppliedFilter] as (string | number)[]
   ).includes(value)
-    ? 'active'
-    : '';
+    ? "active"
+    : "";
 }
 
 // 处理学生属性过滤器的状态变化，把新的状态存入 settingsStore 并更新过滤后的学生列表
@@ -275,11 +275,11 @@ onBeforeMount(() => {
     showFilter.value = false;
   }
 
-  window.addEventListener('resize', updateShowFilter);
+  window.addEventListener("resize", updateShowFilter);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateShowFilter);
+  window.removeEventListener("resize", updateShowFilter);
 });
 </script>
 
@@ -507,8 +507,8 @@ onUnmounted(() => {
   grid-template-rows: min-content auto;
   grid-template-columns: min-content auto;
   grid-template-areas:
-    'name-filter name-filter'
-    'filter list';
+    "name-filter name-filter"
+    "filter list";
   justify-items: center;
   width: 100%;
   height: 100%;
@@ -518,7 +518,7 @@ onUnmounted(() => {
 .filter-banner {
   display: grid;
   grid-template-columns: min-content auto;
-  grid-template-areas: 'filter-icon input-area';
+  grid-template-areas: "filter-icon input-area";
   grid-area: name-filter;
   align-items: center;
   justify-items: stretch;
@@ -602,8 +602,8 @@ onUnmounted(() => {
   user-select: none;
 
   .clear-filter-button {
-    mask-image: url('/src/assets/bin.svg');
-    -webkit-mask-image: url('/src/assets/bin.svg');
+    mask-image: url("/src/assets/bin.svg");
+    -webkit-mask-image: url("/src/assets/bin.svg");
     mask-position: bottom;
     -webkit-mask-position: bottom;
     mask-size: 1rem;
@@ -698,7 +698,7 @@ onUnmounted(() => {
   }
 
   &.elasticarmor,
-  &.sound {
+  &.sonic {
     color: var(--color-text-elastic-armor);
 
     &.active {
@@ -710,12 +710,12 @@ onUnmounted(() => {
 
 #student-list {
   grid-gap: 1.5rem;
+  content-visibility: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 7rem);
   grid-auto-rows: min-content;
   grid-area: list;
   justify-content: space-between;
-  content-visibility: auto;
   padding: 0 1rem 1rem 1rem;
   width: 100%;
   overflow-y: scroll;
