@@ -38,12 +38,23 @@ let privateState: ReturnType<typeof initPrivateState>;
  */
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
+
+export function checkloadAssetAlias<T = any>(alias: string, url: string) {
+  if (!resourcesLoader.loadedList.includes(alias)) {
+    resourcesLoader.loadedList.push(alias);
+    return loadAssetAlias(alias, url);
+  }
+  return Promise.resolve();
+}
+
+
 /**
  * 继续播放
  */
 export function continuePlay() {
   eventBus.emit("continue");
 }
+
 
 /**
  * 回收播放器资源, 让播放器回到初始状态
@@ -57,6 +68,7 @@ export function dispose() {
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
 }
+
 
 /**
  * 事件发送控制对象
@@ -447,6 +459,7 @@ export const eventEmitter = {
   },
 };
 
+
 /**
  * 调用各层的初始化函数
  */
@@ -544,6 +557,7 @@ export async function init(
     });
   });
 }
+
 
 /**
  * 资源加载处理对象
@@ -820,11 +834,69 @@ export const resourcesLoader = {
   },
 };
 
+
 /**
  * 暂停播放
  */
 export function stop() {
   eventBus.emit("stop");
+}
+
+function waitForStoryUnitPlayComplete(currentIndex: number) {
+  let startTime = Date.now();
+  let leftTime = 50000;
+  let interval = 0;
+
+  return new Promise<void>((resolve, reject) => {
+    eventBus.on("activated", restart);
+    eventBus.on("deactivated", resetTime);
+    function resetTime() {
+      clearInterval(interval);
+      const now = Date.now();
+      leftTime = leftTime - (now - startTime);
+    }
+    function restart() {
+      startTime = Date.now();
+      start();
+    }
+    function end() {
+      clearInterval(interval);
+      eventBus.off("activated", restart);
+      eventBus.off("deactivated", resetTime);
+    }
+    function start() {
+      interval = window.setInterval(() => {
+        if (storyHandler.isEnd) {
+          end();
+          resolve();
+        }
+        if (
+          eventEmitter.unitDone ||
+          storyHandler.currentStoryIndex !== currentIndex
+        ) {
+          end();
+          resolve();
+        } else if (Date.now() - startTime >= leftTime) {
+          for (const key of Object.keys(eventEmitter) as Array<
+            keyof typeof eventEmitter
+          >) {
+            if (key.endsWith("Done") && key !== "unitDone") {
+              if (!eventEmitter[key]) {
+                console.error(`${key}未完成: `);
+              }
+            }
+          }
+          console.warn(
+            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
+            storyHandler.currentStoryUnit
+          );
+          end();
+          reject();
+        }
+      });
+    }
+    restart();
+  });
 }
 
 /**
@@ -1029,71 +1101,6 @@ export const storyHandler = {
     this.auto = false;
   },
 };
-
-function waitForStoryUnitPlayComplete(currentIndex: number) {
-  let startTime = Date.now();
-  let leftTime = 50000;
-  let interval = 0;
-
-  return new Promise<void>((resolve, reject) => {
-    eventBus.on("activated", restart);
-    eventBus.on("deactivated", resetTime);
-    function resetTime() {
-      clearInterval(interval);
-      const now = Date.now();
-      leftTime = leftTime - (now - startTime);
-    }
-    function restart() {
-      startTime = Date.now();
-      start();
-    }
-    function end() {
-      clearInterval(interval);
-      eventBus.off("activated", restart);
-      eventBus.off("deactivated", resetTime);
-    }
-    function start() {
-      interval = window.setInterval(() => {
-        if (storyHandler.isEnd) {
-          end();
-          resolve();
-        }
-        if (
-          eventEmitter.unitDone ||
-          storyHandler.currentStoryIndex !== currentIndex
-        ) {
-          end();
-          resolve();
-        } else if (Date.now() - startTime >= leftTime) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
-          console.warn(
-            `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
-          );
-          end();
-          reject();
-        }
-      });
-    }
-    restart();
-  });
-}
-
-function checkloadAssetAlias<T = any>(alias: string, url: string) {
-  if (!resourcesLoader.loadedList.includes(alias)) {
-    resourcesLoader.loadedList.push(alias);
-    return loadAssetAlias(alias, url);
-  }
-  return Promise.resolve();
-}
 
 function loadAssetAlias<T = any>(alias: string | string[], url: string) {
   return loadAsset<T>({

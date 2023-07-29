@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { Ref, computed, ref } from "vue";
 import eventBus from "../../lib/eventBus";
 import { changeStoryIndex } from "../../lib/layers/uiLayer/userInteract";
 import { initPrivateState } from "../../lib/stores";
 import { StoryUnit } from "../../lib/types/common";
 import { IL2dConfig } from "../../lib/types/l2d";
+import * as utils from "../../lib/utils";
+import { checkloadAssetAlias } from "../../lib/index";
+import { Assets } from "pixijs";
+import { Spine } from "pixi-spine";
 
 const message = ref("等待资源加载...");
 const messageType = ref<"info" | "error">("info");
 const state = initPrivateState();
 const targetIndex = ref(-1);
 const showDialog = ref(false);
+const showAnimationSelectDialog = ref(false);
 const currentOptions = ref<IL2dConfig[keyof IL2dConfig]>({
   name: "",
   playQue: [
@@ -37,12 +42,19 @@ const currentOptions = ref<IL2dConfig[keyof IL2dConfig]>({
   otherSpine: [],
 });
 const mapOtherSpine = computed(() => currentOptions.value.otherSpine ?? []);
+const live2dUnit = ref<StoryUnit["l2d"]>();
+const selectedAnimationName = ref<string>();
+const availableAnimationName = ref<string[]>([]);
+let proxy: { animation: string } | undefined = undefined;
 // 开始加载时资源文件已经分析完毕
 eventBus.on("startLoading", () => {
   targetIndex.value = (state.allStoryUnit as StoryUnit[]).findIndex(
     it => it.l2d
   );
   if (targetIndex.value !== -1) {
+    live2dUnit.value = state.allStoryUnit[targetIndex.value].l2d;
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-extra-non-null-assertion
+    loadAnimationNames(live2dUnit.value!!.spineUrl);
     if (state.curL2dConfig) {
       currentOptions.value = JSON.parse(JSON.stringify(state.curL2dConfig));
       currentOptions.value.playQue = currentOptions.value.playQue.map(it => {
@@ -63,12 +75,29 @@ eventBus.on("startLoading", () => {
         );
       });
     }
+    const tmp = (live2dUnit.value?.spineUrl ?? "").split("/");
+    currentOptions.value.name = tmp[tmp.length - 1].replace(".skel", "");
     message.value = "live2d块查找成功";
   } else {
     message.value = "没找到live2d块";
     messageType.value = "error";
   }
 });
+function loadAnimationNames(url: string) {
+  Assets.load({ src: url, alias: [url]}).then((res) => {
+    availableAnimationName.value = res.spineData.animations.map((it) => it.name);
+  });
+}
+function openAnimationSelect(_proxy: any) {
+  proxy = _proxy;
+  showAnimationSelectDialog.value = true;
+}
+function completeAnimationSelect() {
+  if (proxy) {
+    proxy.animation = selectedAnimationName.value as string;
+  }
+  showAnimationSelectDialog.value = false;
+}
 function skip2Live2d() {
   if (targetIndex.value !== -1) {
     changeStoryIndex(targetIndex.value);
@@ -162,13 +191,19 @@ function removeSpineSetting(name: string) {
 }
 function overrideLive2dConfig() {
   state.curL2dConfig = JSON.parse(JSON.stringify(currentOptions.value));
+  if (currentOptions.value.otherSpine) {
+    currentOptions.value.otherSpine.forEach((other) => {
+      const url = utils.getResourcesUrl("otherL2dSpine", other);
+      checkloadAssetAlias(url, url);
+    });
+  }
 }
 </script>
 
 <template>
   <div>
     <Teleport to="body">
-      <div v-if="showDialog" class="dialog">
+      <div v-if="showDialog" class="live2d-dialog dialog">
         <div class="dialog-wrapper">
           <div class="close" @click="showDialog = false">关闭</div>
           <div>
@@ -207,6 +242,7 @@ function overrideLive2dConfig() {
                   v-model="e.animation"
                   class="ml-4"
                 />
+                <button @click="openAnimationSelect(e)">选择动画</button>
               </div>
               <div>
                 <label :for="'playQue-fadeTime-' + index">fadeTime</label>
@@ -337,6 +373,18 @@ function overrideLive2dConfig() {
         </div>
       </div>
     </Teleport>
+    <Teleport to="body">
+      <div v-if="showAnimationSelectDialog" class="animation-dialog dialog">
+        <div class="dialog-wrapper">
+          <div class="close" @click="completeAnimationSelect">关闭</div>
+          <select v-model="selectedAnimationName">
+            <option v-for="(name, index) in availableAnimationName" :key="index">
+              {{ name }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </Teleport>
     <div class="root">
       <div v-if="targetIndex === -1" class="mt-8">
         <div>手动指定live2d index:</div>
@@ -385,14 +433,18 @@ function overrideLive2dConfig() {
 }
 .dialog {
   position: absolute;
-  top: 15dvh;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
   border-radius: 3px;
   background-color: #fff;
   padding: 1rem;
+}
+.live2d-dialog {
+  top: 15dvh;
+  transform: translateX(-50%);
   width: 50dvw;
   :deep(.dialog-wrapper) {
     position: relative;
@@ -412,6 +464,20 @@ function overrideLive2dConfig() {
       border: 1px solid black;
       border-radius: 3px;
       padding: 4px;
+    }
+  }
+}
+.animation-dialog {
+  position: absolute;
+  z-index: 3001;
+  width: 300px;
+  :deep(.dialog-wrapper) {
+    position: relative;
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
     }
   }
 }
