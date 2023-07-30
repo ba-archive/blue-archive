@@ -404,4 +404,55 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  CH0204_home: {
+    name: "CH0204_home",
+    playQue: [
+      {
+        name: "CH0204_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0204_home: {
+        scale: 1.25,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0205_home: {
+    name: "CH0205_home",
+    playQue: [
+      {
+        name: "CH0205_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.5,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0205_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0210_home: {
+    name: "CH0210_home",
+    playQue: [
+      {
+        name: "CH0210_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.3,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0210_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
