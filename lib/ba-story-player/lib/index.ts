@@ -23,6 +23,8 @@ import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import "@pixi/sound";
+import { watch } from "vue";
+import { useUiState } from "./stores/state";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -150,8 +152,14 @@ export const eventEmitter = {
       }
       this.textDone = true;
     });
-    eventBus.on("auto", () => storyHandler.startAuto());
-    eventBus.on("stopAuto", () => storyHandler.stopAuto());
+    const { autoMode } = useUiState();
+    watch(() => autoMode.value, (cur) => {
+      if (cur) {
+        storyHandler.startAuto();
+      } else {
+        storyHandler.stopAuto();
+      }
+    });
     eventBus.on("skip", () => storyHandler.end());
     eventBus.on("playVoiceJPDone", async () => {
       if (storyHandler.auto) {
@@ -848,8 +856,14 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
   let interval = 0;
 
   return new Promise<void>((resolve, reject) => {
-    eventBus.on("activated", restart);
-    eventBus.on("deactivated", resetTime);
+    const { tabActivated } = useUiState();
+    const watchSideEffect = watch(() => tabActivated.value, (cur) => {
+      if (cur) {
+        restart();
+      } else {
+        resetTime();
+      }
+    });
     function resetTime() {
       clearInterval(interval);
       const now = Date.now();
@@ -861,8 +875,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
     }
     function end() {
       clearInterval(interval);
-      eventBus.off("activated", restart);
-      eventBus.off("deactivated", resetTime);
+      watchSideEffect();
     }
     function start() {
       interval = window.setInterval(() => {

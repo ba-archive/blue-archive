@@ -119,14 +119,6 @@ export type Events = {
   /** 按contrl时跳过剧情 */
   skipping: undefined;
   /**
-   * 自动模式
-   */
-  auto: undefined;
-  /**
-   * 停止自动模式
-   */
-  stopAuto: undefined;
-  /**
    * 隐藏对话框
    */
   hideDialog: undefined;
@@ -246,14 +238,6 @@ export type Events = {
    * 播放完成
    */
   end: undefined;
-  /**
-   * 标签页失去焦点
-   */
-  deactivated: undefined;
-  /**
-   * 标签页获得焦点
-   */
-  activated: undefined;
   /**
    * 用于调整live2d配置信息时重置live2d用
    */

@@ -23,11 +23,12 @@ import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
-import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
+import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 import { sound } from '@pixi/sound';
+import { useUiState } from "./stores/state";
 sound.disableAutoPause = true;
 export type PlayerProps = {
   story: TranslatedStoryUnit;
@@ -310,12 +311,14 @@ onMounted(() => {
   window.addEventListener("focus", notifyWindowFocus);
 });
 
+const { tabActivated } = useUiState();
+
 function notifyWindowBlur() {
-  eventBus.emit("deactivated");
+  tabActivated.value = true;
 }
 
 function notifyWindowFocus() {
-  eventBus.emit("activated");
+  tabActivated.value = false;
 }
 
 onUnmounted(() => {

@@ -1,7 +1,9 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
+import { useUiState } from "@/stores/state";
 import { PlayAudio } from "@/types/events";
 import { Sound } from "@pixi/sound";
+import { watch } from "vue";
 
 const audioMap = new Map<string, Sound>();
 /**
@@ -184,14 +186,26 @@ export function soundInit() {
     playAudio({ soundUrl: usePlayerStore().bgEffectSoundUrl(bgEffect) });
   });
   // 解决标签页失焦时无法停止音频的问题
-  eventBus.on("activated", stopShouldStopBgm);
+  const { tabActivated } = useUiState();
+  watch(() => tabActivated.value, (cur) => {
+    if (cur) {
+      stopShouldStopBgm();
+    }
+  });
   eventBus.on("dispose", () => {
     soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
   });
-  eventBus.on("stop", () => soundDispose());
+  eventBus.on("stop", () => {
+    soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
+  });
   eventBus.on("continue", () => bgm?.play());
   eventBus.on("playAudioWithConfig", ({ url, config }) => {
     getAudio(url).play(config);
   });
-  eventBus.on("end", () => soundDispose);
+  eventBus.on("end", () => {
+    soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
+  });
 }
