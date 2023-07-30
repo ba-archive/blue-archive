@@ -8,9 +8,9 @@ import { IEventData, ISkeletonData } from "pixi-spine";
 import {
   Application,
   Assets,
+  BaseTexture,
   LoadAsset,
   utils as pixiUtils,
-  settings,
 } from "pixijs";
 import { extensions } from "pixijs";
 import { version } from "../package.json";
@@ -478,7 +478,7 @@ export async function init(
   errorCallback: () => void
 ) {
   //缓解图片缩放失真
-  settings.MIPMAP_TEXTURES = 2;
+  BaseTexture.defaultOptions.mipmap = 2;
   console.log(
     `%c ba-bug-player %c ${version} %c`,
     "background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff",
