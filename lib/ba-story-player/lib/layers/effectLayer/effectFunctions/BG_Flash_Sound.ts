@@ -1,6 +1,6 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { AnimatedSprite, Sprite } from "pixi.js";
+import { AnimatedSprite, Sprite } from "pixijs";
 import { gsap } from "gsap";
 import { loadSpriteSheet } from "../resourcesUtils";
 import { AdvancedBloomFilter } from "@pixi/filter-advanced-bloom";
@@ -26,6 +26,8 @@ export default async function flash_sound(resources: Sprite[]) {
   lightningAnimation.y = (app.screen.height * 5) / 12;
   lightningAnimation.anchor.set(0, 0.5);
   const bloomFilter = new AdvancedBloomFilter({ brightness: 1, blur: 4 });
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   lightningAnimation.filters = [bloomFilter];
   app.stage.addChild(lightningAnimation);
 

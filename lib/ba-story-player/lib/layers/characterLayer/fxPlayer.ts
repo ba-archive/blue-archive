@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite } from "pixi.js";
+import { Sprite } from "pixijs";
 import gsap from "gsap";
 import fxOptions from "./options/fxOptions";
 import {
@@ -24,13 +24,13 @@ const CharacterFXPlayerInstance: CharacterFXPlayer = {
       return Promise.reject("该effect不存在或未实现");
     }
     const { fxImages, app } = usePlayerStore();
-    let fxImageSprites: Sprite[] = [];
-    let currentFxImgs = fxImages(type);
+    const fxImageSprites: Sprite[] = [];
+    const currentFxImgs = fxImages(type);
     if (!currentFxImgs) {
       Promise.reject(`fx中${type}对应的图像资源不存在`);
     }
-    for (let imageResource of currentFxImgs!) {
-      let tempSprite = Sprite.from(imageResource);
+    for (const imageResource of currentFxImgs!) {
+      const tempSprite = Sprite.from(imageResource);
       tempSprite.visible = false;
       instance.instance.addChild(tempSprite);
       fxImageSprites.push(tempSprite);
@@ -38,18 +38,20 @@ const CharacterFXPlayerInstance: CharacterFXPlayer = {
     return fn(instance, fxOptions[type], fxImageSprites) as Promise<void>;
   },
   shot(instance, options, sprites) {
-    let scale = (options.scale * getStandardWidth()) / sprites[0].width;
+    const scale = (options.scale * getStandardWidth()) / sprites[0].width;
 
-    let tl = gsap.timeline();
-    for (let [index, sequence] of options.shotSequence.entries()) {
-      let img = Sprite.from(sprites[sequence.startImg].texture);
+    const tl = gsap.timeline();
+    for (const [index, sequence] of options.shotSequence.entries()) {
+      const img = Sprite.from(sprites[sequence.startImg].texture);
       img.scale.set(scale * sequence.scale);
       img.angle = sequence.angle;
       img.zIndex = 10;
-      let adjustmentFilter = new AdjustmentFilter({
+      const adjustmentFilter = new AdjustmentFilter({
         brightness: 3,
         alpha: 0.5,
       });
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       img.filters = [adjustmentFilter];
       img.visible = false;
       instance.instance.addChild(img);
@@ -91,8 +93,8 @@ function setPos(
   img: Sprite,
   pos: PositionOffset
 ) {
-  let standardWidth = getStandardWidth();
-  let finalPos = {
+  const standardWidth = getStandardWidth();
+  const finalPos = {
     x: standardWidth * pos.x,
     y: standardWidth * pos.y,
   };
@@ -116,7 +118,7 @@ function timelinePromise(
     timeLine
       .then(() => {
         resolve();
-        for (let img of destroyImgs) {
+        for (const img of destroyImgs) {
           img.destroy();
         }
       })

@@ -1,10 +1,9 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixi.js";
+import { Container, Sprite } from "pixijs";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3, Particle } from "@pixi/particle-emitter";
-import { BehaviorOrder } from "@pixi/particle-emitter/lib/behaviors";
 
 export default async function BG_FocusLine(resources: Sprite[]) {
   // 原理是线条 emitter
@@ -12,7 +11,7 @@ export default async function BG_FocusLine(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  let emitterContainer = new Container();
+  const emitterContainer = new Container();
   app.stage.addChild(emitterContainer);
   emitterContainer.zIndex = -1;
   const centerPoint = [appWidth / 2, appHeight / 2].map(i => parseInt(i + ""));
@@ -58,7 +57,7 @@ export default async function BG_FocusLine(resources: Sprite[]) {
     }
   }
   Emitter.registerBehavior(FocusLine);
-  let emitterConfig: EmitterConfigV3 = {
+  const emitterConfig: EmitterConfigV3 = {
     ...(emitterConfigs("focusline") as EmitterConfigV3),
   };
   const sprite = sprite2TransParent(resources[0]);

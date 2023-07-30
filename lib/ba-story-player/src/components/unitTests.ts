@@ -169,7 +169,10 @@ const unitTestCollections: UnitTestCollection[] = [
               },
               {
                 content: "喝点水吗？",
-                effects: [],
+                effects: [{
+                  name: "ruby",
+                  value: ["ruby"],
+                }],
                 waitTime: 400,
               },
             ],
@@ -199,7 +202,10 @@ const unitTestCollections: UnitTestCollection[] = [
               },
               {
                 content: "喝点水吗？",
-                effects: [],
+                effects: [{
+                  name: "tooltip",
+                  value: ["测试st tooltip的"],
+                }],
                 waitTime: 400,
               },
             ],

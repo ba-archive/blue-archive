@@ -1,56 +1,10 @@
-export interface BGNameExcelTableItem {
+export interface BGEffectExcelTableItem {
   Name: number;
-  ProductionStep: string;
-  BGFileName: string;
-  BGType: "Spine" | "Image";
-  AnimationRoot: string;
-  AnimationName: string;
-  SpineScale: number;
-  SpineLocalPosX: number;
-  SpineLocalPosY: number;
-}
-
-export interface CharacterNameExcelTableItem {
-  CharacterName: number;
-  ProductionStep: string;
-  NameKR: string;
-  NameJP: string;
-  NameCN?: string;
-  NameEN?: string;
-  NameTW?: string;
-  NameTH?: string;
-  NicknameKR: string;
-  NicknameJP: string;
-  NicknameCN?: string;
-  NicknameEN?: string;
-  NicknameTW?: string;
-  NicknameTH?: string;
-  Shape: string;
-  SpinePrefabName: string;
-  SmallPortrait: string;
-}
-
-export interface BGMExcelTableItem {
-  Id: number;
-  ProductionStep: string;
-  Path: string;
-  Volume: number;
-  LoopStartTime: number;
-  LoopEndTime: number;
-  LoopTranstionTime: number;
-  LoopOffsetTime: number;
-}
-
-export type TransitionTypes = "bgoverlap" | "fade" | "fade_white" | string;
-
-export interface TransitionTableItem {
-  Name: number;
-  TransitionOut: TransitionTypes;
-  TransitionOutDuration: number;
-  TransitionOutResource: null | string;
-  TransitionIn: TransitionTypes;
-  TransitionInDuration: number;
-  TransitionInResource: null | string;
+  Effect: BGEffectType;
+  Scroll: "None" | "Vertical" | "Horizontal";
+  ScrollTime: number;
+  ScrollFrom: number;
+  ScrollTo: number;
 }
 
 export type BGEffectType =
@@ -90,11 +44,57 @@ export type BGEffectType =
   | "BG_Fireworks_L_BGOff_01"
   | "BG_ScrollR_1.0";
 
-export interface BGEffectExcelTableItem {
-  Name: number;
-  Effect: BGEffectType;
-  Scroll: "None" | "Vertical" | "Horizontal";
-  ScrollTime: number;
-  ScrollFrom: number;
-  ScrollTo: number;
+export interface BGMExcelTableItem {
+  Id: number;
+  ProductionStep: string;
+  Path: string;
+  Volume: number;
+  LoopStartTime: number;
+  LoopEndTime: number;
+  LoopTranstionTime: number;
+  LoopOffsetTime: number;
 }
+
+export interface BGNameExcelTableItem {
+  Name: number;
+  ProductionStep: string;
+  BGFileName: string;
+  BGType: "Spine" | "Image";
+  AnimationRoot: string;
+  AnimationName: string;
+  SpineScale: number;
+  SpineLocalPosX: number;
+  SpineLocalPosY: number;
+}
+
+export interface CharacterNameExcelTableItem {
+  CharacterName: number;
+  ProductionStep: string;
+  NameKR: string;
+  NameJP: string;
+  NameCN?: string;
+  NameEN?: string;
+  NameTW?: string;
+  NameTH?: string;
+  NicknameKR: string;
+  NicknameJP: string;
+  NicknameCN?: string;
+  NicknameEN?: string;
+  NicknameTW?: string;
+  NicknameTH?: string;
+  Shape: string;
+  SpinePrefabName: string;
+  SmallPortrait: string;
+}
+
+export interface TransitionTableItem {
+  Name: number;
+  TransitionOut: TransitionTypes;
+  TransitionOutDuration: number;
+  TransitionOutResource: null | string;
+  TransitionIn: TransitionTypes;
+  TransitionInDuration: number;
+  TransitionInResource: null | string;
+}
+
+export type TransitionTypes = "bgoverlap" | "fade" | "fade_white" | string;

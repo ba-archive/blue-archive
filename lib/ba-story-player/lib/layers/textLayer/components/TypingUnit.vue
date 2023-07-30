@@ -3,7 +3,7 @@
     @click.stop="onUnitClick"
     class="unit"
     :style="effectCSS"
-    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip }"
+    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip && !st }"
     v-click-outside="onClickOutside"
     ref="TypingContainer"
   >
@@ -60,6 +60,7 @@ const props = withDefaults(defineProps<IProp>(), {
   }),
   instant: false,
   title: false,
+  st: false,
 });
 const emit = defineEmits<{ (ev: "unitClick"): void }>();
 const TypingContainer = ref<HTMLElement>() as Ref<HTMLElement>;
@@ -74,7 +75,8 @@ const selfOffsetTop = ref(0);
 const selfOffsetLeft = ref(0);
 let lineClickCache = 0; // 用于resize时确定tooltip在换行的哪个位置
 
-const showTooltip = ref(false);
+const showTooltipInternal = ref(false);
+const showTooltip = computed(() => showTooltipInternal.value && !props.st);
 const propText = ref(props.text);
 const currentContent = ref(propText.value.content);
 const filterRuby = props.text.effects.filter(it => it.name === "ruby")[0] || {
@@ -193,12 +195,12 @@ function onUnitClick(ev: MouseEvent) {
     return;
   }
   // 开始计算tooltip的具体位置
-  showTooltip.value = true;
+  showTooltipInternal.value = true;
   nextTick(() => calcTooltipLocationParam(ev));
 }
 
 function onClickOutside() {
-  showTooltip.value = false;
+  showTooltipInternal.value = false;
 }
 
 const onResize = useThrottleFn(() => {
@@ -207,7 +209,7 @@ const onResize = useThrottleFn(() => {
 }, 50);
 
 function calcTooltipLocationParam(ev?: MouseEvent, useCache?: boolean) {
-  if (!tooltip || !showTooltip.value) {
+  if (!tooltip || !showTooltip.value || props.st) {
     return;
   }
   // 为了好看的width样式, 计算渲染的tooltip内容长度是否达到200px
@@ -314,6 +316,7 @@ type IProp = {
   instant?: boolean;
   // 在title情况下(大字体)控制ruby的位置不要太过分
   title?: boolean;
+  st?: boolean;
 };
 </script>
 

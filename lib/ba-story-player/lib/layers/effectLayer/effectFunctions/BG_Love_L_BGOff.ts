@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Rectangle, Sprite, Texture, filters } from "pixi.js";
+import { Container, Sprite } from "pixijs";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -17,10 +17,10 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   backSprite.zIndex = -1;
   app.stage.addChild(backSprite);
   // 心心特效
-  let emitterContainer = new Container();
+  const emitterContainer = new Container();
   app.stage.addChild(emitterContainer);
   emitterContainer.zIndex = -1;
-  let heartConfig: EmitterConfigV3 = {
+  const heartConfig: EmitterConfigV3 = {
     ...(emitterConfigs("love_heart") as EmitterConfigV3),
   };
   heartConfig.pos = {
@@ -39,7 +39,7 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   scaleConfig.scale.list[2].value = heartBaseRatio * 0.95;
   const curEmitter = new Emitter(emitterContainer, heartConfig);
   const heartRemover = emitterStarter(curEmitter);
-  let ringConfig: EmitterConfigV3 = {
+  const ringConfig: EmitterConfigV3 = {
     ...(emitterConfigs("love_ring") as EmitterConfigV3),
   };
   const ringSprite = sprite2TransParent(resources[1]);

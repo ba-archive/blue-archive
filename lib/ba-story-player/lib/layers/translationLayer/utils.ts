@@ -3,10 +3,8 @@ import { deepCopyObject, getResourcesUrl } from "@/utils";
 import xxhash from "xxhashjs";
 import {
   Character,
-  Effect,
   Speaker,
   StoryRawUnit,
-  StoryType,
   StoryUnit,
   Text,
   TextEffect,
@@ -14,10 +12,7 @@ import {
 } from "@/types/common";
 import { PlayAudio, PlayEffect, ShowTitleOption } from "@/types/events";
 import {
-  BGEffectExcelTableItem,
-  BGMExcelTableItem,
   CharacterNameExcelTableItem,
-  TransitionTableItem,
 } from "@/types/excels";
 import { Language } from "@/types/store";
 
@@ -125,6 +120,21 @@ export function buildNxAST(rawText: string) {
   return root;
 }
 
+
+export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
+  if (!source || source.length === 0) {
+    return [];
+  }
+  let current = source[0];
+  return source
+    .filter((_, index) => index > 0)
+    .map(it => {
+      current = iterateStoryUnit(current, it);
+      return current;
+    });
+}
+
+
 /**
  * 检查当前单元是否有背景覆盖变换, 有则删除该变换并返回变换的参数
  * @param unit
@@ -138,6 +148,7 @@ export function checkBgOverlap(unit: StoryUnit) {
     }
   }
 }
+
 
 /**
  * 在大小写不敏感的情况下比较字符串
@@ -204,12 +215,14 @@ export function generateTitleInfo(
   };
 }
 
+
 export function getBgm(BGMId: number): PlayAudio["bgm"] | undefined {
   const item = playerStore.BGMExcelTable.get(BGMId);
   if (item) {
     return { url: getResourcesUrl("bgm", item.Path), bgmArgs: item };
   }
 }
+
 
 /**
  * 获取角色在unit的characters里的index, 当不存在时会自动往unit的character里加入该角色
@@ -260,6 +273,7 @@ export function getCharacterInfo(krName: string) {
     };
   }
 }
+
 /**
  * 根据角色韩文名获取CharacterName
  * @param krName
@@ -282,11 +296,13 @@ export function getL2DUrlAndName(BGFileName: string) {
   return { url: getResourcesUrl("l2dSpine", filename), name: filename };
 }
 
+
 export function getSoundUrl(Sound: string) {
   if (Sound) {
     return getResourcesUrl("sound", Sound);
   }
 }
+
 
 /**
  * 在CharacterNameExcelTableItem中获取到speaker信息
@@ -314,20 +330,6 @@ export function getSpeaker(
   }
 }
 
-/**
- * 选择文字, 当没有当前语言文字时返回日文
- */
-export function getText(
-  rawStoryUnit: StoryRawUnit,
-  language: Language
-): string {
-  const textProperty = `Text${language}` as const;
-  return (
-    String(Reflect.get(rawStoryUnit, textProperty)) ||
-    String(rawStoryUnit.TextJp)
-  );
-}
-
 function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
   if (root.tag === "text") {
     return [
@@ -353,10 +355,18 @@ function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
     .flat();
 }
 
-export function getVoiceJPUrl(VoiceJp: string) {
-  if (VoiceJp) {
-    return getResourcesUrl("voiceJp", VoiceJp);
-  }
+/**
+ * 选择文字, 当没有当前语言文字时返回日文
+ */
+export function getText(
+  rawStoryUnit: StoryRawUnit,
+  language: Language
+): string {
+  const textProperty = `Text${language}` as const;
+  return (
+    String(Reflect.get(rawStoryUnit, textProperty)) ||
+    String(rawStoryUnit.TextJp)
+  );
 }
 
 type NxTagMap = {
@@ -412,21 +422,11 @@ type NxTagParseResult = {
   attr?: string[];
 };
 
-/**
- * 将嵌套tag结构分割
- *
- * [FF6666]……我々は望む、七つの[-][ruby=なげ][FF6666]嘆[-][/ruby][FF6666]きを。[-]
- *
- * [FF6666]……我々は望む、七つの[-],[ruby=なげ][FF6666]嘆[-][/ruby],[FF6666]きを。[-]
- *
- * [b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]
- *
- * [b]……我々は望む、七つの嘆[/b], [b][FF6666]きを。[-][/b]
- * @param rawText 原始结构
- */
-export function parseNxMagicTag(rawText: string): Text[] {
-  const ast = buildNxAST(rawText);
-  return walkNxAST(ast, []);
+
+export function getVoiceJPUrl(VoiceJp: string) {
+  if (VoiceJp) {
+    return getResourcesUrl("voiceJp", VoiceJp);
+  }
 }
 
 type IterateStoryUnit = {
@@ -533,15 +533,19 @@ function iterateStoryUnit(prv: StoryUnit, cur: StoryUnit): StoryUnit {
   return copy;
 }
 
-export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
-  if (!source || source.length === 0) {
-    return [];
-  }
-  let current = source[0];
-  return source
-    .filter((_, index) => index > 0)
-    .map(it => {
-      current = iterateStoryUnit(current, it);
-      return current;
-    });
+/**
+ * 将嵌套tag结构分割
+ *
+ * [FF6666]……我々は望む、七つの[-][ruby=なげ][FF6666]嘆[-][/ruby][FF6666]きを。[-]
+ *
+ * [FF6666]……我々は望む、七つの[-],[ruby=なげ][FF6666]嘆[-][/ruby],[FF6666]きを。[-]
+ *
+ * [b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]
+ *
+ * [b]……我々は望む、七つの嘆[/b], [b][FF6666]きを。[-][/b]
+ * @param rawText 原始结构
+ */
+export function parseNxMagicTag(rawText: string): Text[] {
+  const ast = buildNxAST(rawText);
+  return walkNxAST(ast, []);
 }

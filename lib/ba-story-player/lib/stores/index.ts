@@ -1,4 +1,5 @@
 import { getResourcesUrl } from "@/utils";
+import { Assets } from "pixijs";
 import { ref } from "vue";
 import { BGEffectImgTable } from "@/types/effectLayer";
 import {
@@ -22,7 +23,7 @@ import { storyHandler } from "..";
 //   '통신모모카': 3025942184
 // }
 
-let emotionResourcesTable = {
+const emotionResourcesTable = {
   Heart: ["Emoticon_Balloon_N.png", "Emoticon_Heart.png"],
   Respond: ["Emoticon_Action.png"],
   Music: ["Emoticon_Note.png"],
@@ -45,14 +46,14 @@ let emotionResourcesTable = {
   // TODO: Upset, Music, Think, Bulb, Sigh, Steam, Zzz, Tear
 };
 
-let fxImageTable = {
+const fxImageTable = {
   shot: ["fire1.png", "fire2.png", "fire3.png"],
 };
 
 /**
  * 请在此处填入需要的图片资源的名称
  */
-let bgEffectImgTable: BGEffectImgTable = {
+const bgEffectImgTable: BGEffectImgTable = {
   "": [],
   "BG_ScrollT_0.5": [],
   BG_Filter_Red: [],
@@ -113,7 +114,9 @@ let bgEffectImgTable: BGEffectImgTable = {
   "BG_ScrollR_1.0": [],
 };
 
-let privateState: PrivateStates = {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const privateState: PrivateStates = {
   language: "Cn",
   userName: "",
   dataUrl: "",
@@ -146,7 +149,7 @@ let privateState: PrivateStates = {
   bgEffectImgMap: new Map(Object.entries(bgEffectImgTable)),
 };
 
-let getterFunctions: GetterFunctions = {
+const getterFunctions: GetterFunctions = {
   app() {
     if (privateState === null) {
       throw new Error("app实例不存在");
@@ -155,7 +158,7 @@ let getterFunctions: GetterFunctions = {
   },
 
   characterSpineData: () => (CharacterName: number) => {
-    return privateState.app?.loader.resources[String(CharacterName)].spineData;
+    return Assets.get(String(CharacterName)).spineData;
   },
 
   /**
@@ -191,13 +194,12 @@ let getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    const resource =
-      privateState.app?.loader.resources[privateState.l2dSpineUrl];
+    const resource = Assets.get(privateState.l2dSpineUrl);
     if (resource) return resource.spineData;
   },
 };
 
-let actions: Actions = {
+const actions: Actions = {
   setBgInstance(instance) {
     privateState.bgInstance = instance;
   },
@@ -211,7 +213,7 @@ let actions: Actions = {
       });
     } else {
       let text = "";
-      for (let textPart of newLog.text) {
+      for (const textPart of newLog.text) {
         text += textPart.content;
       }
       if (newLog.speaker) {
@@ -255,12 +257,12 @@ let actions: Actions = {
   },
 };
 
-let store = {
+const store = {
   currentCharacterMap: new Map(),
   ...actions,
 };
 
-for (let getter of Object.keys(getterFunctions) as Array<
+for (const getter of Object.keys(getterFunctions) as Array<
   keyof GetterFunctions
 >) {
   Reflect.defineProperty(store, getter, {
@@ -268,7 +270,7 @@ for (let getter of Object.keys(getterFunctions) as Array<
   });
 }
 
-for (let state of Object.keys(privateState) as Array<keyof PrivateStates>) {
+for (const state of Object.keys(privateState) as Array<keyof PrivateStates>) {
   if (!["app"].includes(state)) {
     Reflect.defineProperty(store, state, {
       get: () => privateState[state],
@@ -277,17 +279,17 @@ for (let state of Object.keys(privateState) as Array<keyof PrivateStates>) {
 }
 
 /**
+ * 返回可修改的privateState, 仅本体在初始化时可调用
+ */
+export const initPrivateState = () => privateState;
+
+/**
  * 资源调用接口
  * @returns 资源调用工具对象
  */
-export let usePlayerStore = () => {
+export const usePlayerStore = () => {
   return store as unknown as PublicStates &
     Getters &
     Readonly<PrivateStates> &
     Actions;
 };
-
-/**
- * 返回可修改的privateState, 仅本体在初始化时可调用
- */
-export let initPrivateState = () => privateState;

@@ -39,6 +39,7 @@ const StoryPlayer = ref<{
     index: number,
     textOnly?: boolean
   ): void;
+  resetLive2d(): void; // 将live2d重置为初始状态并且重新播放live2d
 }>();
 
 const { width: playerContainerWidth, height: playerContainerHeight } =

@@ -1,8 +1,8 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixi.js";
 import gsap, { Power4 } from "gsap";
 import { Spine } from "pixi-spine";
+import { Container, Sprite } from "pixijs";
 import emotionOptions from "./options/emotionOptions";
 import {
   CharacterEffectInstance,
