@@ -105,7 +105,7 @@ eventBus.on("startLoading", () => {
 });
 function loadAnimationNames(url: string) {
   Assets.load({ src: url, alias: [url]}).then((res) => {
-    availableAnimationName.value = res.spineData.animations.map((it) => it.name);
+    availableAnimationName.value = res.spineData.animations.map((it) => `${it.name}(${it.duration}s)`);
     selectedAnimationName.value = "";
   });
 }
