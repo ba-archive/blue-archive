@@ -24,11 +24,11 @@ import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { Language } from '../types/content';
 import { useElementSize, watchDebounced } from '@vueuse/core';
+import 'ba-story-player/dist/style.css';
 import {
   StoryRawUnit,
   TranslatedStoryUnit,
-} from 'ba-story-player/dist/lib/types/common';
-import 'ba-story-player/dist/style.css';
+} from 'ba-story-player/lib/types/common';
 
 const mainStore = useScenarioStore();
 const config = useGlobalConfig();
