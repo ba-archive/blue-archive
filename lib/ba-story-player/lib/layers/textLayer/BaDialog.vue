@@ -97,7 +97,10 @@
           :base-index="index"
         />
       </div>
-      <div class="st-tooltip-container absolute-container" v-if="stToolTip.length > 0 && stText.length > 0">
+      <div
+        class="st-tooltip-container absolute-container"
+        v-if="stToolTip.length > 0 && stText.length > 0"
+      >
         <div v-for="(e, index) in stToolTip" :key="index" class="tooltip">
           <span>{{ e[0] }}:</span>
           <span>&emsp;{{ e[1] }}</span>
@@ -246,11 +249,20 @@ const stText = ref<StText[]>([]);
 const titleText = ref<Text[]>([]);
 // st的tooltip
 const stToolTip = computed(() => {
-  return stText.value.map((it) => {
-    return it.text.map((text) => {
-      return [text.content, text.effects.filter((ef) => ef.name === "tooltip").map((ef) => ef.value).flat()[0]];
-    });
-  }).flat().filter((it) => it[1]);
+  return stText.value
+    .map(it => {
+      return it.text.map(text => {
+        return [
+          text.content,
+          text.effects
+            .filter(ef => ef.name === "tooltip")
+            .map(ef => ef.value)
+            .flat()[0],
+        ];
+      });
+    })
+    .flat()
+    .filter(it => it[1]);
 });
 
 // 外部传入播放器高度,用于动态计算字体等数值
@@ -653,11 +665,10 @@ function handleStartLoading(url: LoadingImageUrl) {
  * @param state 已加载的资源状态
  */
 function handleOneResourceLoaded(state: ResourceLoadState) {
-  showLoading.value = true;
   const tmp: ResourceLoadState[] = [];
   function spliteUrl(str: string) {
     const lastIndex = str.lastIndexOf("/");
-    if (lastIndex) {
+    if (lastIndex >= 0) {
       return str.substring(lastIndex + 1);
     }
     return str;
@@ -668,10 +679,12 @@ function handleOneResourceLoaded(state: ResourceLoadState) {
       resourceName: spliteUrl(state.resourceName),
     });
   } else {
-    tmp.push(...state.resourceName.map((it) => ({
-      type: state.type,
-      resourceName: spliteUrl(it),
-    })));
+    tmp.push(
+      ...state.resourceName.map(it => ({
+        type: state.type,
+        resourceName: spliteUrl(it),
+      }))
+    );
   }
   loadLog.value.splice(0, 0, ...tmp);
 }
@@ -1093,13 +1106,13 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     text-shadow: $text-outline;
   }
-  
+
   .st-tooltip-container {
     z-index: $text-layer-z-index + $st-tooltip-z-index;
-    text-shadow: $text-outline;
+    padding-left: 1rem;
     color: white;
+    text-shadow: $text-outline;
     .tooltip {
-      margin-top: 16px;
       --font-size: max(
         calc(
           (
@@ -1109,9 +1122,9 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         ),
         var(--minimum-fs)
       );
+      margin-top: 16px;
       font-size: var(--font-size);
     }
-    padding-left: 1rem;
   }
 
   .fade-in-out {
