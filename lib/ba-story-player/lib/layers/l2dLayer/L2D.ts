@@ -42,7 +42,9 @@ export function L2DInit() {
         app.stage.removeChild(it.spine as unknown as Container)
       );
     }
-    app.stage.removeChild(mainItem as unknown as Container);
+    if (null !== app.stage) {
+      app.stage.removeChild(mainItem as unknown as Container);
+    }
     disposed = true;
   }
   eventBus.on("dispose", dispose);
