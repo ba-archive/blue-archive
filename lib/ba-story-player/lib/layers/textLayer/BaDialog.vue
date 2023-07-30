@@ -97,7 +97,7 @@
           :base-index="index"
         />
       </div>
-      <div class="st-tooltip-container absolute-container">
+      <div class="st-tooltip-container absolute-container" v-if="stToolTip.length > 0 && stText.length > 0">
         <div v-for="(e, index) in stToolTip" :key="index" class="tooltip">
           <span>{{ e[0] }}:</span>
           <span>&emsp;{{ e[1] }}</span>

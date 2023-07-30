@@ -209,7 +209,7 @@ const onResize = useThrottleFn(() => {
 }, 50);
 
 function calcTooltipLocationParam(ev?: MouseEvent, useCache?: boolean) {
-  if (!tooltip || !showTooltip.value || !props.st) {
+  if (!tooltip || !showTooltip.value || props.st) {
     return;
   }
   // 为了好看的width样式, 计算渲染的tooltip内容长度是否达到200px
