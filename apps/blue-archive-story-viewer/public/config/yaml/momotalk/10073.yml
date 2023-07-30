@@ -1,8 +1,8 @@
 CharacterId: 10073
-translator: ""
+translator: 罐子
 title:
   - TextJp: 柄にもない格好
-    TextCn: ""
+    TextCn: 不合适的打扮
     TextKr: 어울리지 않는 모습
     TextEn: ""
     TextTh: ""
@@ -10,8 +10,9 @@ title:
     GroupId: 1007302
     FavorScheduleId: 100732
     CharacterId: 10073
+    unsure: false
   - TextJp: 森の佇む小さなカフェ
-    TextCn: ""
+    TextCn: 森林中伫立的小咖啡馆
     TextKr: 숲 속의 작은 카페
     TextEn: ""
     TextTh: ""
@@ -19,8 +20,9 @@ title:
     GroupId: 1007303
     FavorScheduleId: 100733
     CharacterId: 10073
+    unsure: false
   - TextJp: 最後の一口まで
-    TextCn: ""
+    TextCn: 直到最后一口
     TextKr: 넘어온 사람들
     TextEn: ""
     TextTh: ""
@@ -28,10 +30,11 @@ title:
     GroupId: 1007305
     FavorScheduleId: 100735
     CharacterId: 10073
+    unsure: false
 content:
   - MessageKR: 으윽
     MessageJP: うぅ
-    MessageCN: ""
+    MessageCN: 呜呜
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -47,9 +50,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 하아……. 정말 힘드네요
     MessageJP: はぁ……疲れました
-    MessageCN: ""
+    MessageCN: 唉……真累啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -65,9 +69,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 이런 복장. 이런 장소.
     MessageJP: この格好も、この場所も……
-    MessageCN: ""
+    MessageCN: 不论是这副样子，还是这个地方都……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -83,9 +88,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 무슨 일 있어?
     MessageJP: ウイ……？
-    MessageCN: ""
+    MessageCN: 忧……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -101,9 +107,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 우이……?
     MessageJP: どうしたの？
-    MessageCN: ""
+    MessageCN: 怎么了？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -119,9 +126,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아뇨
     MessageJP: あ、いえ……
-    MessageCN: ""
+    MessageCN: 啊，没有……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -137,9 +145,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아무 일도 없어요
     MessageJP: 何か問題があるわけでは……
-    MessageCN: ""
+    MessageCN: 并没有出什么问题……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -155,9 +164,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 문제가 있다면 제 쪽이니까요
     MessageJP: というよりも、問題があるとしたら、それは私の方で
-    MessageCN: ""
+    MessageCN: 不如说，就算有问题也是我的问题
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -173,9 +183,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 음
     MessageJP: はぁ
-    MessageCN: ""
+    MessageCN: 唉
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -191,9 +202,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 죄송해요. 역시 계속해서 좋을 이야긴 아니네요. 이건 여기까지
     MessageJP: すみません。聞いていて、あまり気持ちの良い話ではないですね
-    MessageCN: ""
+    MessageCN: 对不起。听我说这些，老师也开心不起来吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -209,9 +221,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아 물론 선생님 이야기는 아니에요.
     MessageJP: その……念のため、お伝えしておきますが
-    MessageCN: ""
+    MessageCN: 那个……以防万一，还是和您说一下
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -227,9 +240,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 혹시나 해서 말씀드립니다
     MessageJP: 先生のせいではありませんから、気にしないでください
-    MessageCN: ""
+    MessageCN: 这不是老师的错，请不要放在心上
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -245,9 +259,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 말씀을 듣고 나니, 조금은 이런저런 생각도 하게 됐어요
     MessageJP: 先生の話を聞いて、少し考えが変わりました
-    MessageCN: ""
+    MessageCN: 听完老师的话，我稍微改变想法了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -263,9 +278,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 뭐 약속까지는 아니지만
     MessageJP: いつも前向きに、とはいかないかもしれませんが……
-    MessageCN: ""
+    MessageCN: 虽然我应该不会一直积极乐观下去……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -281,9 +297,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 뭔가 찾거나 보게 되면
     MessageJP: なにか見つけたら
-    MessageCN: ""
+    MessageCN: 但是如果我找到了什么的话
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -299,9 +316,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 말씀드릴 게요.
     MessageJP: 連絡しますね
-    MessageCN: ""
+    MessageCN: 会联系老师的哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -317,9 +335,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 이왕 여기까지 왔으니까요.
     MessageJP: せっかく、遠くに来たのですから
-    MessageCN: ""
+    MessageCN: 毕竟，难得都跑到这么远的地方了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -335,9 +354,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 후후…….
     MessageJP: ふふ……
-    MessageCN: ""
+    MessageCN: 呵呵……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -353,9 +373,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 조금 마음이 놓이네요
     MessageJP: もう安心です
-    MessageCN: ""
+    MessageCN: 我已经安心了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -371,9 +392,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 꽤 괜찮은 장소를 찾았어요……. 훌륭합니다.
     MessageJP: 素敵な場所を、ようやく見つけました
-    MessageCN: ""
+    MessageCN: 终于找到一个绝妙的地方
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -389,9 +411,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 마음이 놓여?
     MessageJP: 安心？
-    MessageCN: ""
+    MessageCN: 安心？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -407,9 +430,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮은 장소?
     MessageJP: 素敵な場所？
-    MessageCN: ""
+    MessageCN: 绝妙的地方？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -425,9 +449,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 네. 이 정도면 훌륭해요. 완벽은 아니지만.
     MessageJP: はい、これなら問題ないでしょう
-    MessageCN: ""
+    MessageCN: 是的，这样一来就没问题了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -443,9 +468,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 인간은 늘 방법을 찾아냅니다. 저 또한, 마찬가지죠.
     MessageJP: 人は、常に生き抜く方法を見つけ出すもの
-    MessageCN: ""
+    MessageCN: 人这种动物，总是能找到生存方法的
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -461,9 +487,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 음
     MessageJP: そうですね……
-    MessageCN: ""
+    MessageCN: 我想想……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -479,9 +506,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 뭐 다른 분도 아니고 선생님이라면……. 괜찮을지도…….
     MessageJP: 先生なら、大丈夫でしょう
-    MessageCN: ""
+    MessageCN: 如果来的是老师，应该没问题吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -497,9 +525,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 한 번 보시겠어요?
     MessageJP: 一度、ご覧になりますか？
-    MessageCN: ""
+    MessageCN: 所以，老师要来参观一下吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -515,9 +544,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그
     MessageJP: その
-    MessageCN: ""
+    MessageCN: 那个
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -533,9 +563,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 선생님
     MessageJP: 先生
-    MessageCN: ""
+    MessageCN: 老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -551,9 +582,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 정말로 죄송합니다.
     MessageJP: すみません
-    MessageCN: ""
+    MessageCN: 非常抱歉
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -569,9 +601,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 생각해 보니, 그 잔…….
     MessageJP: よく考えたら、あのカップは……
-    MessageCN: ""
+    MessageCN: 仔细想想，那个杯子……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -587,9 +620,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그……. 제가 마시던 거라…….
     MessageJP: えっと……わ、私が口を……
-    MessageCN: ""
+    MessageCN: 那个……是、是我喝过……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -605,9 +639,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그게…….
     MessageJP: その、ですね……
-    MessageCN: ""
+    MessageCN: 就是，那个……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -623,9 +658,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: ……잔?
     MessageJP: ……カップ？
-    MessageCN: ""
+    MessageCN: ……杯子？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -641,9 +677,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 응? 무슨 이야기야?
     MessageJP: 何の話？
-    MessageCN: ""
+    MessageCN: 忧在说什么？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -659,9 +696,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: …….
     MessageJP: ……
-    MessageCN: ""
+    MessageCN: ……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -677,9 +715,10 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아닙니다.
     MessageJP: い、いえ……
-    MessageCN: ""
+    MessageCN: 不，没什么……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -695,9 +734,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 역시
     MessageJP: やっぱり、何でもありませんので
-    MessageCN: ""
+    MessageCN: 果然，还是算了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -713,9 +753,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아무 생각 없으셨네요.
     MessageJP: 先生は気にしないでください
-    MessageCN: ""
+    MessageCN: 请老师不要在意
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -731,9 +772,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 선생님
     MessageJP: 先生
-    MessageCN: ""
+    MessageCN: 老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -749,9 +791,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 혹시 시간 좀 괜찮으실까요?
     MessageJP: 今から少し、よろしいでしょうか
-    MessageCN: ""
+    MessageCN: 您现在，有时间吗
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -767,9 +810,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 꽤 늦은 시간이긴 하지만…….
     MessageJP: あ
-    MessageCN: ""
+    MessageCN: 啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -785,9 +829,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아
     MessageJP: す、すみません
-    MessageCN: ""
+    MessageCN: 非、非常抱歉
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -803,9 +848,10 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 역시 아니에요. 괜찮습니다…….
     MessageJP: もうこんな時間だというのに……
-    MessageCN: ""
+    MessageCN: 明明都这么晚了……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -821,9 +867,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮은데? 지금 어디?
     MessageJP: 大丈夫だよ、どこに行けばいい？
-    MessageCN: ""
+    MessageCN: 没关系的哦，我们在哪见面？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -839,9 +886,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 우이가 부르면 가야지.
     MessageJP: ウイの頼みなら、いつでも駆けつけるよ
-    MessageCN: ""
+    MessageCN: 只要是忧的请求，我随时都会赶过去哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -857,9 +905,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 흐
     MessageJP: ふふ……
-    MessageCN: ""
+    MessageCN: 呵呵……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -875,9 +924,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 뭔가 죄송하네요
     MessageJP: ありがとうございます
-    MessageCN: ""
+    MessageCN: 非常感谢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -893,9 +943,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 눈치 드리려던 게 아닌데…….
     MessageJP: では、その……
-    MessageCN: ""
+    MessageCN: 那就，嗯……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -911,9 +962,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아무튼 네
     MessageJP: 海にいるので、来ていただけると
-    MessageCN: ""
+    MessageCN: 我现在在海边，要是老师能来的话就好了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -929,9 +981,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 기다리고 있겠습니다…….
     MessageJP: お待ちしています
-    MessageCN: ""
+    MessageCN: 我等着您
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -947,9 +1000,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 음
     MessageJP: その
-    MessageCN: ""
+    MessageCN: 那个
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -965,9 +1019,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아까는 무슨 배짱으로 그런 소리들을 했나 싶은데
     MessageJP: 先ほどは、おかしな発言を……
-    MessageCN: ""
+    MessageCN: 刚才，我好像说了些奇怪的话……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -983,9 +1038,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 돌아와서 생각해 보니
     MessageJP: 冷静になったら
-    MessageCN: ""
+    MessageCN: 冷静下来想想
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1001,9 +1057,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 제정신이 아니었던 것 같네요
     MessageJP: 私は何を言っていたのかと……
-    MessageCN: ""
+    MessageCN: 我刚刚，都说了些什么啊……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1019,9 +1076,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 잊어 주셨으면 해요
     MessageJP: 忘れてください、本当に
-    MessageCN: ""
+    MessageCN: 请忘掉吧，真的
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1037,9 +1095,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그럴 수도 있지, 여름 밤인데
     MessageJP: きっと、夏だからね
-    MessageCN: ""
+    MessageCN: 一定是因为夏天吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1055,9 +1114,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그럴 땐 제정신이면 재미없는 법이야
     MessageJP: でも、そんなウイも可愛かったよ
-    MessageCN: ""
+    MessageCN: 但是，那样的忧也很可爱哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1073,9 +1133,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그렇게 나오시는군요
     MessageJP: またそんなセリフを、よく恥ずかしげもなく……
-    MessageCN: ""
+    MessageCN: 又说那种话，真亏您能脸不红心不跳地说出来……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1091,9 +1152,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 역시 선생님한테는
     MessageJP: やっぱり先生には
-    MessageCN: ""
+    MessageCN: 果然对老师来说
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1109,9 +1171,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 단 맛을 좀 더 줄여도 될 거 같
     MessageJP: 甘さ控えめくらいが、ちょうど良いですね
-    MessageCN: ""
+    MessageCN: 稍微有点甜度才刚刚好呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1127,9 +1190,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아니
     MessageJP: それとも……
-    MessageCN: ""
+    MessageCN: 还是说……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1145,9 +1209,10 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아예 무설탕으로 가야 할지도요.
     MessageJP: ノンシュガーをご希望ですか？
-    MessageCN: ""
+    MessageCN: 您想要无糖呢？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1163,3 +1228,4 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
