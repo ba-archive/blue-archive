@@ -3,19 +3,19 @@ import { h } from "vue";
 import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
-  // {
-  //   date: "2023-07-30",
-  //   contents: [
-  //     {
-  //       type: "student",
-  //       students: [
-  //         { name: "下江 小春（泳装）", id: 16013 },
-  //         { name: "古关 忧（泳装）", id: 10073 },
-  //         { name: "若叶 日向（泳装）", id: 20028 },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    date: "2023-07-30",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "下江 小春（泳装）", id: 16013 },
+          { name: "古关 忧（泳装）", id: 10073 },
+          { name: "若叶 日向（泳装）", id: 20028 },
+        ],
+      },
+    ],
+  },
   {
     date: "2023-07-23",
     contents: [
