@@ -39,8 +39,6 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: latest
-      - name: Install dependencies
-        run: npm install
 
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
