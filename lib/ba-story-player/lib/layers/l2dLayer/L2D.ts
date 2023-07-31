@@ -38,9 +38,11 @@ export function L2DInit() {
     timeOutArray = [];
     otherItems.forEach(it => app.stage.removeChild(it as unknown as Container));
     if (startAnimations) {
-      startAnimations.forEach(it =>
-        app.stage.removeChild(it.spine as unknown as Container)
-      );
+      startAnimations.forEach(it => {
+        if (null !== app.stage) {
+          app.stage.removeChild(it.spine as unknown as Container);
+        }
+      });
     }
     if (null !== app.stage) {
       app.stage.removeChild(mainItem as unknown as Container);
