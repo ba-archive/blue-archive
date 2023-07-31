@@ -27,7 +27,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://ba-archive.github.io"
+      url: https://ba-archive.github.io
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
