@@ -19,7 +19,8 @@
 </template>
 <script setup lang="ts">
 import BaStoryPlayer from 'ba-story-player';
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
+import eventBus from '../eventsSystem/eventBus';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { Language } from '../types/content';
@@ -41,6 +42,20 @@ const StoryPlayer = ref<{
   ): void;
   resetLive2d(): void; // 将live2d重置为初始状态并且重新播放live2d
 }>();
+
+onMounted(() => {
+  eventBus.on('resetLive2d', () => {
+    StoryPlayer.value && StoryPlayer.value.resetLive2d();
+  });
+  eventBus.on('refreshPlayer', () => {
+    refreshPlayer();
+  });
+});
+
+onUnmounted(() => {
+  eventBus.off('resetLive2d');
+  eventBus.off('refreshPlayer');
+});
 
 const { width: playerContainerWidth, height: playerContainerHeight } =
   useElementSize(playerContainerElement);
