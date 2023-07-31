@@ -13,8 +13,10 @@ import {
   utils as pixiUtils,
 } from "pixijs";
 import { extensions } from "pixijs";
+import { watch } from "vue";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
+import { useUiState } from "./stores/state";
 import { bgInit } from "@/layers/bgLayer";
 import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
@@ -23,8 +25,7 @@ import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import "@pixi/sound";
-import { watch } from "vue";
-import { useUiState } from "./stores/state";
+import { sound } from "@pixi/sound";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -40,7 +41,6 @@ let privateState: ReturnType<typeof initPrivateState>;
  */
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
-
 export function checkloadAssetAlias<T = any>(alias: string, url: string) {
   if (!resourcesLoader.loadedList.includes(alias)) {
     resourcesLoader.loadedList.push(alias);
@@ -49,14 +49,12 @@ export function checkloadAssetAlias<T = any>(alias: string, url: string) {
   return Promise.resolve();
 }
 
-
 /**
  * 继续播放
  */
 export function continuePlay() {
   eventBus.emit("continue");
 }
-
 
 /**
  * 回收播放器资源, 让播放器回到初始状态
@@ -70,7 +68,6 @@ export function dispose() {
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
 }
-
 
 /**
  * 事件发送控制对象
@@ -153,13 +150,16 @@ export const eventEmitter = {
       this.textDone = true;
     });
     const { autoMode } = useUiState();
-    watch(() => autoMode.value, (cur) => {
-      if (cur) {
-        storyHandler.startAuto();
-      } else {
-        storyHandler.stopAuto();
+    watch(
+      () => autoMode.value,
+      cur => {
+        if (cur) {
+          storyHandler.startAuto();
+        } else {
+          storyHandler.stopAuto();
+        }
       }
-    });
+    );
     eventBus.on("skip", () => storyHandler.end());
     eventBus.on("playVoiceJPDone", async () => {
       if (storyHandler.auto) {
@@ -467,7 +467,6 @@ export const eventEmitter = {
   },
 };
 
-
 /**
  * 调用各层的初始化函数
  */
@@ -565,7 +564,6 @@ export async function init(
     });
   });
 }
-
 
 /**
  * 资源加载处理对象
@@ -725,16 +723,18 @@ export const resourcesLoader = {
    * 添加l2d语音
    */
   loadL2dVoice(audioEvents: IEventData[]) {
-    return;
-    // for (const event of audioEvents) {
-    //   if (
-    //     event.name.includes("MemorialLobby") &&
-    //     !unexistL2dSoundEvent.includes(event.name)
-    //   ) {
-    //     const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
-    //     this.loadTaskList.push(loadAssetAlias(voiceUrl, voiceUrl));
-    //   }
-    // }
+    for (const event of audioEvents) {
+      if (
+        event.name.includes("MemorialLobby") &&
+        !unexistL2dSoundEvent.includes(event.name)
+      ) {
+        const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
+        sound.add(voiceUrl, {
+          url: voiceUrl,
+          preload: true,
+        });
+      }
+    }
   },
 
   /**
@@ -842,7 +842,6 @@ export const resourcesLoader = {
   },
 };
 
-
 /**
  * 暂停播放
  */
@@ -857,13 +856,16 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
 
   return new Promise<void>((resolve, reject) => {
     const { tabActivated } = useUiState();
-    const watchSideEffect = watch(() => tabActivated.value, (cur) => {
-      if (cur) {
-        restart();
-      } else {
-        resetTime();
+    const watchSideEffect = watch(
+      () => tabActivated.value,
+      cur => {
+        if (cur) {
+          restart();
+        } else {
+          resetTime();
+        }
       }
-    });
+    );
     function resetTime() {
       clearInterval(interval);
       const now = Date.now();
