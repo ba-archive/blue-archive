@@ -4,6 +4,11 @@ on:
     branches:
       - master
       - main
+
+concurrency:
+  group: "production-deploy"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
