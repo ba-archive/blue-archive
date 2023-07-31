@@ -1,44 +1,50 @@
 CharacterId: 10051
 translator: 今天早睡了吗
 title:
-  - GroupId: 1005102
-    FavorScheduleId: 100512
-    CharacterId: 10051
-    TextJp: 情熱の学ラン
+  - TextJp: 情熱の学ラン
     TextCn: 热情的制服
     TextKr: 불타는 단장의 가쿠란
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 1005103
-    FavorScheduleId: 100513
+    TextEn: A Captain's Fashion Passion
+    TextTh: กักคุรันของหัวหน้าสุดร้อนแรง
+    TextTw: 熱情的立領學生服
+    GroupId: 1005102
+    FavorScheduleId: 100512
     CharacterId: 10051
-    TextJp: 情熱のマスゲーム
+  - TextJp: 情熱のマスゲーム
     TextCn: 热情的团体操
     TextKr: 불타는 단장의 매스게임
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 1005105
-    FavorScheduleId: 100515
+    TextEn: A Captain's Moving Performance
+    TextTh: การแปรอักษรของหัวหน้าสุดร้อนแรง
+    TextTw: 熱情的團體操
+    GroupId: 1005103
+    FavorScheduleId: 100513
     CharacterId: 10051
-    TextJp: 情熱の応援魂
+  - TextJp: 情熱の応援魂
     TextCn: 热情的应援魂
     TextKr: 불타는 단장의 응원혼
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 1005106
-    FavorScheduleId: 100516
+    TextEn: A Captain's Heaven-Piercing Cheer
+    TextTh: สปิริตการเชียร์ของหัวหน้าสุดร้อนแรง
+    TextTw: 熱情的應援魂
+    GroupId: 1005105
+    FavorScheduleId: 100515
     CharacterId: 10051
-    TextJp: 情熱の応援歌
+  - TextJp: 情熱の応援歌
     TextCn: 热情的应援歌
     TextKr: 불타는 단장의 응원가
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: A Captain's Soul of Flaming...Passion?
+    TextTh: เพลงเชียร์ของหัวหน้าสุดร้อนแรง
+    TextTw: 熱情的應援歌
+    GroupId: 1005106
+    FavorScheduleId: 100516
+    CharacterId: 10051
 content:
-  - MessageGroupId: 100510010
+  - MessageKR: 아, 이런.
+    MessageJP: すまない、先生
+    MessageCN: 不好意思，老师
+    MessageEN: Oh. Oh, my.
+    MessageTH: อ๊ะ แย่ล่ะ...
+    MessageTW: 不好意思，老師
+    MessageGroupId: 100510010
     Id: 100510010
     CharacterId: 10051
     MessageCondition: FavorRankUp
@@ -50,13 +56,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 이런.
-    MessageJP: すまない、先生
-    MessageCN: 不好意思，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510020
+  - MessageKR: 선생님. 혹시 내 작업 가운, 샬레에 있어?
+    MessageJP: もしかして、私の白衣がシャーレにあるかい？
+    MessageCN: 我想确认一下，我的白大褂是放在夏莱了吗？
+    MessageEN: Sensei, have you seen my lab coat?
+    MessageTH: "คุณครู เสื้อกาวน์ของฉันอยู่ที่ชาเล่ต์
+
+      รึเปล่า?"
+    MessageTW: 請問我的白袍有在夏萊嗎？
+    MessageGroupId: 100510020
     Id: 100510020
     CharacterId: 10051
     MessageCondition: None
@@ -68,13 +76,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 혹시 내 작업 가운, 샬레에 있어?
-    MessageJP: もしかして、私の白衣がシャーレにあるかい？
-    MessageCN: 我想确认一下，我的白大褂是放在夏莱了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510030
+  - MessageKR: 소파 위에 있는 이 흰색 가운 말이야?
+    MessageJP: これかな？ソファーにかかってたよ
+    MessageCN: 是这个吧？挂在沙发上来着
+    MessageEN: You mean the one sprawled over the couch?
+    MessageTH: เสื้อกาวน์สีขาวบนโซฟานี่น่ะเหรอ?
+    MessageTW: 是放在沙發上的這件嗎？
+    MessageGroupId: 100510030
     Id: 100510030
     CharacterId: 10051
     MessageCondition: Answer
@@ -86,13 +94,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 소파 위에 있는 이 흰색 가운 말이야?
-    MessageJP: これかな？ソファーにかかってたよ
-    MessageCN: 是这个吧？挂在沙发上来着
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510040
+  - MessageKR: 응, 맞는 것 같네.
+    MessageJP: それだ！見つかって良かった……
+    MessageCN: 没错！太好了，终于找到了……
+    MessageEN: That sounds about right.
+    MessageTH: อื้อ คงจะใช่นั่นแหละ
+    MessageTW: 就是它！能找到真是太好了……
+    MessageGroupId: 100510040
     Id: 100510040
     CharacterId: 10051
     MessageCondition: Feedback
@@ -104,13 +112,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 맞는 것 같네.
-    MessageJP: それだ！見つかって良かった……
-    MessageCN: 没错！太好了，终于找到了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510040
+  - MessageKR: 지난번에 휴게실에 벗어 둔 걸 잊어버린 모양이야.
+    MessageJP: 休憩室で脱いだ時に忘れてしまったみたいで
+    MessageCN: 应该是我在休息室脱下来之后就忘了
+    MessageEN: I must have forgotten it there.
+    MessageTH: ฉันคงจะถอดแล้วลืมทิ้งไว้น่ะ
+    MessageTW: 大概是上次在休息室脫下後就忘了
+    MessageGroupId: 100510040
     Id: 100510050
     CharacterId: 10051
     MessageCondition: Feedback
@@ -122,13 +130,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번에 휴게실에 벗어 둔 걸 잊어버린 모양이야.
-    MessageJP: 休憩室で脱いだ時に忘れてしまったみたいで
-    MessageCN: 应该是我在休息室脱下来之后就忘了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510050
+  - MessageKR: 지금부터 작업을 시작해야 하는데 어쩌지?
+    MessageJP: これから作業を始めようと思っていたんだけど……
+    MessageCN: 虽然我现在就想开始干活……
+    MessageEN: But I need to start work already. What should I do?
+    MessageTH: "ตอนนี้ต้องเริ่มทำงานแล้วด้วยสิ
+
+      ทำยังไงดีล่ะ?"
+    MessageTW: 我現在本來是想工作的……
+    MessageGroupId: 100510050
     Id: 100510060
     CharacterId: 10051
     MessageCondition: Feedback
@@ -140,13 +150,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금부터 작업을 시작해야 하는데 어쩌지?
-    MessageJP: これから作業を始めようと思っていたんだけど……
-    MessageCN: 虽然我现在就想开始干活……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510050
+  - MessageKR: 다른 가운은 모두 세탁 중인데……
+    MessageJP: 困ったことに、替えの白衣も洗濯中なんだ
+    MessageCN: 但麻烦的是我的替换白大褂也还在洗
+    MessageEN: Everything else I could use is being washed...
+    MessageTH: ตัวอื่นก็เอาไปซักหมดแล้วด้วย...
+    MessageTW: 但麻煩的是，替換用的白袍也拿去洗了……
+    MessageGroupId: 100510050
     Id: 100510070
     CharacterId: 10051
     MessageCondition: Feedback
@@ -158,13 +168,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다른 가운은 모두 세탁 중인데……
-    MessageJP: 困ったことに、替えの白衣も洗濯中なんだ
-    MessageCN: 但麻烦的是我的替换白大褂也还在洗
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510060
+  - MessageKR: 지금 가져다줄까?
+    MessageJP: 届けにいこうか？
+    MessageCN: 要我给咏叶送过去吗？
+    MessageEN: Do you want me to bring it to you?
+    MessageTH: ให้ครูเอาไปให้มั้ย?
+    MessageTW: 要送去給你嗎？
+    MessageGroupId: 100510060
     Id: 100510080
     CharacterId: 10051
     MessageCondition: Answer
@@ -176,13 +186,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 가져다줄까?
-    MessageJP: 届けにいこうか？
-    MessageCN: 要我给咏叶送过去吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510070
+  - MessageKR: 아냐, 괜찮아.
+    MessageJP: うーん……いや、大丈夫
+    MessageCN: 嗯……不用了，没关系
+    MessageEN: No, it's okay.
+    MessageTH: ไม่ละ ไม่เป็นไร
+    MessageTW: 唔嗯……不，沒關係
+    MessageGroupId: 100510070
     Id: 100510090
     CharacterId: 10051
     MessageCondition: Feedback
@@ -194,13 +204,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아냐, 괜찮아.
-    MessageJP: うーん……いや、大丈夫
-    MessageCN: 嗯……不用了，没关系
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510070
+  - MessageKR: 적당한 대체재를 찾아볼게.
+    MessageJP: 代わりになりそうなものを探してみるさ
+    MessageCN: 我找一找替代品吧
+    MessageEN: I'll find something else to wear.
+    MessageTH: เดี๋ยวฉันลองหาอะไรที่ใส่แทนได้ก็แล้วกัน
+    MessageTW: 我找找看有沒有能頂替的
+    MessageGroupId: 100510070
     Id: 100510100
     CharacterId: 10051
     MessageCondition: Feedback
@@ -212,13 +222,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 적당한 대체재를 찾아볼게.
-    MessageJP: 代わりになりそうなものを探してみるさ
-    MessageCN: 我找一找替代品吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510080
+  - MessageKR: 지난 대운동회 때 특별 사양의 천둥이를 선보인 이후로
+    MessageJP: 前回の大運動会で特別仕様の雷ちゃんを披露しただろう？
+    MessageCN: 上次在大运动会上，我们不是展示了特别款的雷酱吗？
+    MessageEN: After debuting the special-specced Thundergun on field day,
+    MessageTH: "หลังจากเปิดตัวคุณสมบัติใหม่ล่าสุด
+
+      ของเจ้าสายฟ้าไปตอนงานกีฬา"
+    MessageTW: 上次不是在大運動會上公開了特殊規格的雷醬嗎？
+    MessageGroupId: 100510080
     Id: 100510110
     CharacterId: 10051
     MessageCondition: FavorRankUp
@@ -230,13 +242,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난 대운동회 때 특별 사양의 천둥이를 선보인 이후로
-    MessageJP: 前回の大運動会で特別仕様の雷ちゃんを披露しただろう？
-    MessageCN: 上次在大运动会上，我们不是展示了特别款的雷酱吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510090
+  - MessageKR: 여러 업체로부터 새로운 응원용 도구를 개발해달라는 요청을 받았어
+    MessageJP: あれ以来、複数の業者から応援ロボットを開発してほしい、と頼まれてね
+    MessageCN: 之后也有不少商家委托我们给他们开发应援机器人呢
+    MessageEN: we received requests for cheer bots from all over.
+    MessageTH: "เราได้รับคำขอจากหลายๆ บริษัท
+
+      ให้พัฒนาอุปกรณ์เชียร์แบบใหม่
+
+      เข้ามาเยอะเลย"
+    MessageTW: 從那之後，就有多家業者委託我開發應援機器人
+    MessageGroupId: 100510090
     Id: 100510120
     CharacterId: 10051
     MessageCondition: None
@@ -248,13 +264,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여러 업체로부터 새로운 응원용 도구를 개발해달라는 요청을 받았어
-    MessageJP: あれ以来、複数の業者から応援ロボットを開発してほしい、と頼まれてね
-    MessageCN: 之后也有不少商家委托我们给他们开发应援机器人呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510100
+  - MessageKR: 평범한 응원 도구를 만드는 것이라면 어렵지 않겠지만……
+    MessageJP: ただの応援ロボットを製作するだけなら簡単だけど……
+    MessageCN: 虽然制作应援机器人本身还是挺简单的……
+    MessageEN: Making some typical bots wouldn't be hard, but...
+    MessageTH: "ถ้าสร้างอุปกรณ์เชียร์ทั่วๆ ไป
+
+      มันก็ไม่ใช่เรื่องยากอะไร..."
+    MessageTW: 如果只是製作應援機器人的話，是不難……
+    MessageGroupId: 100510100
     Id: 100510130
     CharacterId: 10051
     MessageCondition: None
@@ -266,13 +284,19 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 평범한 응원 도구를 만드는 것이라면 어렵지 않겠지만……
-    MessageJP: ただの応援ロボットを製作するだけなら簡単だけど……
-    MessageCN: 虽然制作应援机器人本身还是挺简单的……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510100
+  - MessageKR: 모처럼 받은 개발 의뢰인데, 평범한 결과물을 내놓을 수는 없지.
+    MessageJP: わざわざ私に依頼してきたというのに、それではエンジニア部の名折れだ
+    MessageCN: 但毕竟商家们是特意委托本部来做的，如果就这么普通地交付有损工程部的名誉
+    MessageEN:
+      These are requests made directly to us. I can't just give them something
+      stock standard.
+    MessageTH: "แต่นี่เป็นคำขอให้พัฒนาอุปกรณ์เชียร์
+
+      ที่ส่งมาถึงพวกเราทั้งที คงจะทำอุปกรณ์
+
+      ธรรมดาๆ ส่งไปไม่ได้หรอก"
+    MessageTW: 但既然都特意來委託了，肯定不能壞了工程師部的名聲
+    MessageGroupId: 100510100
     Id: 100510140
     CharacterId: 10051
     MessageCondition: None
@@ -284,13 +308,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모처럼 받은 개발 의뢰인데, 평범한 결과물을 내놓을 수는 없지.
-    MessageJP: わざわざ私に依頼してきたというのに、それではエンジニア部の名折れだ
-    MessageCN: 但毕竟商家们是特意委托本部来做的，如果就这么普通地交付有损工程部的名誉
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510110
+  - MessageKR: 평범해도 괜찮지 않을까……?
+    MessageJP: 普通のロボットでも良いような……？
+    MessageCN: 普通的机器人好像也不错吧……？
+    MessageEN: Would something standard be that bad?
+    MessageTH: อุปกรณ์ทั่วไปก็น่าจะโอเคแล้วนะ?
+    MessageTW: 普通的機器人就可以了吧……？
+    MessageGroupId: 100510110
     Id: 100510150
     CharacterId: 10051
     MessageCondition: Answer
@@ -302,13 +326,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 평범해도 괜찮지 않을까……?
-    MessageJP: 普通のロボットでも良いような……？
-    MessageCN: 普通的机器人好像也不错吧……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510120
+  - MessageKR: 아니, 그럴 수는 없어.
+    MessageJP: いや、それではダメだよ
+    MessageCN: 不，这可不行
+    MessageEN: Absolutely.
+    MessageTH: ไม่ละ ทำแบบนั้นไม่ได้หรอก
+    MessageTW: 不，那可不行
+    MessageGroupId: 100510120
     Id: 100510160
     CharacterId: 10051
     MessageCondition: Feedback
@@ -320,13 +344,19 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니, 그럴 수는 없어.
-    MessageJP: いや、それではダメだよ
-    MessageCN: 不，这可不行
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510130
+  - MessageKR: 기성품을 구매하지 않고 굳이 우리에게 의뢰를 하는 고객이라면
+    MessageJP: エンジニア部として新しい発明品を開発してみせよう！
+    MessageCN: 作为工程部，我们一定要开发出新的发明让大家大开眼界！
+    MessageEN:
+      If they wanted standard, they would have picked something off the shelf.
+      Instead, they came to us.
+    MessageTH: "ถ้าเป็นลูกค้าที่ส่งคำขอมาหาพวกเรา
+
+      โดยตรง แทนที่จะซื้ออุปกรณ์ที่มีวางขาย
+
+      ทั่วไปแล้วละก็"
+    MessageTW: 身為工程師部，就要開發新的發明！
+    MessageGroupId: 100510130
     Id: 100510170
     CharacterId: 10051
     MessageCondition: Feedback
@@ -338,13 +368,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기성품을 구매하지 않고 굳이 우리에게 의뢰를 하는 고객이라면
-    MessageJP: エンジニア部として新しい発明品を開発してみせよう！
-    MessageCN: 作为工程部，我们一定要开发出新的发明让大家大开眼界！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510130
+  - MessageKR: 분명 평범하지 않은 발명품을 기대하고 있을 테니까.
+    MessageJP: 依頼主もそれを望んでいるに決まっている
+    MessageCN: 委托人肯定也是这样希望的
+    MessageEN: They expect and deserve something unique.
+    MessageTH: "พวกเขาคงคาดหวังว่าจะได้
+
+      สิ่งประดิษฐ์ใหม่ที่พิเศษอยู่แน่ๆ"
+    MessageTW: 委託人肯定也是這麼希望的
+    MessageGroupId: 100510130
     Id: 100510180
     CharacterId: 10051
     MessageCondition: Feedback
@@ -356,13 +388,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 분명 평범하지 않은 발명품을 기대하고 있을 테니까.
-    MessageJP: 依頼主もそれを望んでいるに決まっている
-    MessageCN: 委托人肯定也是这样希望的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510140
+  - MessageKR: 설득력이…… 있어?!
+    MessageJP: そ、そうなのかも……？
+    MessageCN: 大、大概是吧……？
+    MessageEN: Who knew you were so persuasive!
+    MessageTH: พูดโน้มน้าวใจเก่งมาก?!
+    MessageTW: 是，是這樣嗎……？
+    MessageGroupId: 100510140
     Id: 100510190
     CharacterId: 10051
     MessageCondition: Answer
@@ -374,13 +406,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 설득력이…… 있어?!
-    MessageJP: そ、そうなのかも……？
-    MessageCN: 大、大概是吧……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510150
+  - MessageKR: 그래서 말인데, 오후에 잠깐 시간 괜찮아?
+    MessageJP: それで相談なのだけど、この後ミレニアムに来てもらえるだろうか？
+    MessageCN: 因此我想和老师商量一下这件事，老师之后能请来一趟千年吗？
+    MessageEN: Persuasive enough for you to give me some of your time this afternoon?
+    MessageTH: เพราะงั้นคุณครู ช่วงบ่ายนี้มีเวลามั้ย?
+    MessageTW: 所以我想諮詢一下老師的意見，晚點能來趟千年嗎？
+    MessageGroupId: 100510150
     Id: 100510200
     CharacterId: 10051
     MessageCondition: Feedback
@@ -392,13 +424,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 말인데, 오후에 잠깐 시간 괜찮아?
-    MessageJP: それで相談なのだけど、この後ミレニアムに来てもらえるだろうか？
-    MessageCN: 因此我想和老师商量一下这件事，老师之后能请来一趟千年吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510150
+  - MessageKR: 시험 삼아 만든 응원 도구를 시연해보고 싶은데……
+    MessageJP: さっそく応援ロボットの試作品を試したくて……
+    MessageCN: 我想尽快测试一下应援机器人的试验品……
+    MessageEN: I want to demo a prototype I made...
+    MessageTH: "ฉันอยากทดสอบอุปกรณ์เชียร์ที่สร้าง
+
+      ขึ้นมาหน่อยน่ะ..."
+    MessageTW: 想馬上實驗一下應援機器人的試作品……
+    MessageGroupId: 100510150
     Id: 100510210
     CharacterId: 10051
     MessageCondition: Feedback
@@ -410,13 +444,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시험 삼아 만든 응원 도구를 시연해보고 싶은데……
-    MessageJP: さっそく応援ロボットの試作品を試したくて……
-    MessageCN: 我想尽快测试一下应援机器人的试验品……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510160
+  - MessageKR: 얼마나 효과가 있는지 선생님이 직접 판단해줬으면 좋겠어.
+    MessageJP: 先生にロボットを見てもらいたいんだ
+    MessageCN: 也想让老师看看这些机器人
+    MessageEN: And who better than you, Sensei, to judge it?
+    MessageTH: "ถ้าคุณครูมาช่วยตรวจสอบหน่อย
+
+      ก็คงดีนะ..."
+    MessageTW: 讓老師看看它的效果如何
+    MessageGroupId: 100510160
     Id: 100510220
     CharacterId: 10051
     MessageCondition: Feedback
@@ -428,13 +464,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 얼마나 효과가 있는지 선생님이 직접 판단해줬으면 좋겠어.
-    MessageJP: 先生にロボットを見てもらいたいんだ
-    MessageCN: 也想让老师看看这些机器人
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510170
+  - MessageKR: 큰일이네……
+    MessageJP: 参ったな……先生、今大丈夫だろうか？
+    MessageCN: 真是服了……老师，现在有时间吗？
+    MessageEN: Ugh, this is such a headache...
+    MessageTH: อึก... เรื่องใหญ่แล้วละ
+    MessageTW: 真是被打敗了……老師，現在有空嗎？
+    MessageGroupId: 100510170
     Id: 100510230
     CharacterId: 10051
     MessageCondition: FavorRankUp
@@ -446,13 +482,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 큰일이네……
-    MessageJP: 参ったな……先生、今大丈夫だろうか？
-    MessageCN: 真是服了……老师，现在有时间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510180
+  - MessageKR: 무슨 걱정이라도 있어?
+    MessageJP: 何か悩み事？
+    MessageCN: 咏叶在烦恼什么事情呢？
+    MessageEN: Worried about something?
+    MessageTH: มีเรื่องอะไรรึเปล่า?
+    MessageTW: 有什麼煩惱嗎？
+    MessageGroupId: 100510180
     Id: 100510240
     CharacterId: 10051
     MessageCondition: Answer
@@ -464,13 +500,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 걱정이라도 있어?
-    MessageJP: 何か悩み事？
-    MessageCN: 咏叶在烦恼什么事情呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510190
+  - MessageKR: 그게 지난 번에 새로운 응원용 도구의 개발을 요청받았다고 했잖아?
+    MessageJP: この間も話した応援ロボットの開発依頼でね
+    MessageCN: 就是之前我们说过的开发应援机器人的委托啊
+    MessageEN: Don't you remember my last attempt?
+    MessageTH: "จำได้มั้ยที่ฉันบอกว่ามีคำขอให้
+
+      พัฒนาอุปกรณ์เชียร์แบบใหม่น่ะ?"
+    MessageTW: 之前有說，接到了開發應援機器人的委託吧
+    MessageGroupId: 100510190
     Id: 100510250
     CharacterId: 10051
     MessageCondition: Feedback
@@ -482,13 +520,19 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게 지난 번에 새로운 응원용 도구의 개발을 요청받았다고 했잖아?
-    MessageJP: この間も話した応援ロボットの開発依頼でね
-    MessageCN: 就是之前我们说过的开发应援机器人的委托啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510200
+  - MessageKR: 그래서 음속으로 움직여도 손상되지 않도록, 로봇의 관절을 여러 가지로 개조해보았는데……
+    MessageJP: ロボットの関節強度を上げて、音速の動きにも耐え得る改造を施しているのだけど……
+    MessageCN: 虽然现在在对机器人的关节强度进行加强，让它可以承受音速运动……
+    MessageEN:
+      I tried modifying the bots so that they could handle at least Mach
+      1, but...
+    MessageTH: "ฉันลองสร้างหุ่นยนต์ที่มีข้อต่อหลายๆ ชิ้น
+
+      เพื่อให้รับแรงเสียดทานได้เวลาเคลื่อนไหว
+
+      ด้วยความเร็วแสงน่ะ"
+    MessageTW: 為了提升關節強度，我對它進行了能夠承受音速的改造……
+    MessageGroupId: 100510200
     Id: 100510260
     CharacterId: 10051
     MessageCondition: Feedback
@@ -500,13 +544,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 음속으로 움직여도 손상되지 않도록, 로봇의 관절을 여러 가지로 개조해보았는데……
-    MessageJP: ロボットの関節強度を上げて、音速の動きにも耐え得る改造を施しているのだけど……
-    MessageCN: 虽然现在在对机器人的关节强度进行加强，让它可以承受音速运动……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510200
+  - MessageKR: 아무래도 마감 기간 내에 완성하는 건 어려울 것 같아.
+    MessageJP: 期限内で完成させるのが難しそうで
+    MessageCN: 但好像很难在期限内交付了
+    MessageEN: I'm not sure I can manage it by the deadline.
+    MessageTH: "แต่ดูเหมือนคงทำให้เสร็จสมบูรณ์
+
+      ทันกำหนดยากน่ะ..."
+    MessageTW: 但好像很難在期限內完成
+    MessageGroupId: 100510200
     Id: 100510270
     CharacterId: 10051
     MessageCondition: Feedback
@@ -518,13 +564,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무래도 마감 기간 내에 완성하는 건 어려울 것 같아.
-    MessageJP: 期限内で完成させるのが難しそうで
-    MessageCN: 但好像很难在期限内交付了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510210
+  - MessageKR: 음속이 문제인게 아닐까……
+    MessageJP: 音速が無茶なんじゃ……
+    MessageCN: 音速是不是有点过头了……
+    MessageEN:
+      Maybe making bots that can handle supersonic movement is slightly too
+      ambitious...
+    MessageTH: เรื่องนี้มันยากเกินไปหน่อยรึเปล่า...
+    MessageTW: 音速什麼的沒必要吧……
+    MessageGroupId: 100510210
     Id: 100510280
     CharacterId: 10051
     MessageCondition: Answer
@@ -536,13 +584,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음속이 문제인게 아닐까……
-    MessageJP: 音速が無茶なんじゃ……
-    MessageCN: 音速是不是有点过头了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510220
+  - MessageKR: 솔직하게 말하고 양해를 구하는 게 어때?
+    MessageJP: 事情を説明して、納期を遅らせてもらうのは？
+    MessageCN: 要是和委托人说明一下情况，说不定还能允许你们延期交货呢？
+    MessageEN: Why not be honest and ask the clients for an extension?
+    MessageTH: "ขอโทษลูกค้า
+
+      แล้วขอเวลาเพิ่มดีมั้ย?"
+    MessageTW: 說明情況，推遲交貨時間呢？
+    MessageGroupId: 100510220
     Id: 100510290
     CharacterId: 10051
     MessageCondition: Answer
@@ -554,13 +604,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 솔직하게 말하고 양해를 구하는 게 어때?
-    MessageJP: 事情を説明して、納期を遅らせてもらうのは？
-    MessageCN: 要是和委托人说明一下情况，说不定还能允许你们延期交货呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510230
+  - MessageKR: 물론 그것도 하나의 방법이지만……
+    MessageJP: そうかもしれない……
+    MessageCN: 是有这种可能……
+    MessageEN: Well, that's technically an option...
+    MessageTH: ทำแบบนั้นก็ได้อยู่หรอก แต่ว่า...
+    MessageTW: 或許可以……
+    MessageGroupId: 100510230
     Id: 100510300
     CharacterId: 10051
     MessageCondition: Feedback
@@ -572,13 +622,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론 그것도 하나의 방법이지만……
-    MessageJP: そうかもしれない……
-    MessageCN: 是有这种可能……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510230
+  - MessageKR: 우리를 믿고 응원을 요청한 클라이언트들을 더 기다리게 만들 수는 없지.
+    MessageJP: けれど、私を信じて依頼してくれた依頼主の期待には応えないと
+    MessageCN: 但是，我必须回应那些委托人给予我的期待
+    MessageEN: But the clients trusted us. I don't want to repay that trust with delays.
+    MessageTH: "เราจะทำให้ลูกค้าที่ไว้วางใจเรา
+
+      รอนานกว่านี้ก็ไม่ได้หรอก"
+    MessageTW: 但是，我得回應這些相信並委託我的委託人們的期待
+    MessageGroupId: 100510230
     Id: 100510310
     CharacterId: 10051
     MessageCondition: Feedback
@@ -590,13 +642,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우리를 믿고 응원을 요청한 클라이언트들을 더 기다리게 만들 수는 없지.
-    MessageJP: けれど、私を信じて依頼してくれた依頼主の期待には応えないと
-    MessageCN: 但是，我必须回应那些委托人给予我的期待
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510240
+  - MessageKR: 비록 마이스터다운 해결법은 아니지만……
+    MessageJP: 一人のマイスターとして、褒められた話ではないが……
+    MessageCN: 虽然对于一名工匠来说做出这种事并不值得称赞……
+    MessageEN: This isn't a very meister-like solution, but...
+    MessageTH: "ถึงวิธีนี้จะไม่ใช่วิธีแก้ปัญหา
+
+      แบบไมสเตอร์ก็เถอะ..."
+    MessageTW: 身為巨匠，這麼做雖然不會受到讚揚……
+    MessageGroupId: 100510240
     Id: 100510320
     CharacterId: 10051
     MessageCondition: Feedback
@@ -608,13 +662,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 비록 마이스터다운 해결법은 아니지만……
-    MessageJP: 一人のマイスターとして、褒められた話ではないが……
-    MessageCN: 虽然对于一名工匠来说做出这种事并不值得称赞……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510240
+  - MessageKR: 이번에는 직접 몸으로 해결하는 수밖에.
+    MessageJP: こうなったら身体で解決するしか……！
+    MessageCN: 但事到如今，也只能用身体解决了……！
+    MessageEN: I'll have to solve this using my body.
+    MessageTH: "แต่คราวนี้ก็คงต้องใช้ร่างกายแก้ปัญหา
+
+      แล้วละ"
+    MessageTW: 但現在只能靠身體解決了……！
+    MessageGroupId: 100510240
     Id: 100510330
     CharacterId: 10051
     MessageCondition: Feedback
@@ -626,13 +682,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에는 직접 몸으로 해결하는 수밖에.
-    MessageJP: こうなったら身体で解決するしか……！
-    MessageCN: 但事到如今，也只能用身体解决了……！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510250
+  - MessageKR: ……몸으로?!
+    MessageJP: ……か、身体で！？
+    MessageCN: ……用、用身体！？
+    MessageEN: "....Your body?!"
+    MessageTH: ใช้ร่างกายเรอะ?!
+    MessageTW: ……靠身體！？
+    MessageGroupId: 100510250
     Id: 100510340
     CharacterId: 10051
     MessageCondition: Answer
@@ -644,13 +700,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……몸으로?!
-    MessageJP: ……か、身体で！？
-    MessageCN: ……用、用身体！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510260
+  - MessageKR: 오늘은 실례를 끼쳐버렸네……
+    MessageJP: 先生、すまない……
+    MessageCN: 老师，抱歉……
+    MessageEN: Sorry about all the trouble today...
+    MessageTH: ขอโทษนะที่รบกวนคุณครูทั้งวันเลย...
+    MessageTW: 老師，不好意思……
+    MessageGroupId: 100510260
     Id: 100510350
     CharacterId: 10051
     MessageCondition: None
@@ -662,13 +718,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 실례를 끼쳐버렸네……
-    MessageJP: 先生、すまない……
-    MessageCN: 老师，抱歉……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510270
+  - MessageKR: 아직도 목이 쉰 상태야?
+    MessageJP: まだ喉が枯れてるの？
+    MessageCN: 喉咙还哑着吗？
+    MessageEN: How's your voice?
+    MessageTH: เสียงเป็นยังไงบ้าง?
+    MessageTW: 喉嚨還很沙啞嗎？
+    MessageGroupId: 100510270
     Id: 100510360
     CharacterId: 10051
     MessageCondition: Answer
@@ -680,13 +736,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아직도 목이 쉰 상태야?
-    MessageJP: まだ喉が枯れてるの？
-    MessageCN: 喉咙还哑着吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510280
+  - MessageKR: 응, 아직도 여전하네.
+    MessageJP: うん、そうなんだ
+    MessageCN: 嗯，确实是这样
+    MessageEN: Still hoarse...
+    MessageTH: เสียงยังแหบอยู่เลย...
+    MessageTW: 嗯，還是一樣
+    MessageGroupId: 100510280
     Id: 100510370
     CharacterId: 10051
     MessageCondition: Feedback
@@ -698,13 +754,19 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 아직도 여전하네.
-    MessageJP: うん、そうなんだ
-    MessageCN: 嗯，确实是这样
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510280
+  - MessageKR: 부원들과 이야기를 하려고 해도 목소리가 나오지 않아서 여간 불편한 게 아니야.
+    MessageJP: 部員たちと話すのにも支障が出てしまってね……
+    MessageCN: 和部员们对话也有点困难了……
+    MessageEN:
+      I can barely manage to talk to the other members... Anything more than
+      a whisper is very uncomfortable.
+    MessageTH: "ฉันพยายามคุยกับสมาชิกคนอื่น
+
+      แต่ก็ไม่มีเสียงเลย แบบนี้ลำบาก
+
+      จริงๆ นะเนี่ย"
+    MessageTW: 和部員們說話也出現了障礙
+    MessageGroupId: 100510280
     Id: 100510380
     CharacterId: 10051
     MessageCondition: Feedback
@@ -716,13 +778,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 부원들과 이야기를 하려고 해도 목소리가 나오지 않아서 여간 불편한 게 아니야.
-    MessageJP: 部員たちと話すのにも支障が出てしまってね……
-    MessageCN: 和部员们对话也有点困难了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510290
+  - MessageKR: 그래서 원활한 의사소통을 도와줄 새로운 기계장치를 구상하고 있어.
+    MessageJP: そこで新型のコミュニケーション支援装置を構想しているところなんだ
+    MessageCN: 于是我在构思一种新型的通讯辅助装置
+    MessageEN: But it got me thinking about creating a new communication device...
+    MessageTH: "เพราะงั้นฉันก็เลยกำลังประกอบ
+
+      อุปกรณ์ใหม่ที่จะช่วยให้สื่อสารได้
+
+      สะดวกขึ้นอยู่น่ะ"
+    MessageTW: 所以我正在構思一種新型的交流支援裝置
+    MessageGroupId: 100510290
     Id: 100510390
     CharacterId: 10051
     MessageCondition: Feedback
@@ -734,13 +800,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 원활한 의사소통을 도와줄 새로운 기계장치를 구상하고 있어.
-    MessageJP: そこで新型のコミュニケーション支援装置を構想しているところなんだ
-    MessageCN: 于是我在构思一种新型的通讯辅助装置
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510290
+  - MessageKR: 작은 목소리로 말해도 목소리가 전달될 수 있도록
+    MessageJP: 小さな声でも届くように……
+    MessageCN: 即使小声说话，也能有一定传播距离……
+    MessageEN: Something that will make even quiet voices easily heard.
+    MessageTH: "อุปกรณ์ที่ช่วยให้ได้ยินเสียง
+
+      แม้คนพูดจะพูดเบาๆ"
+    MessageTW: 即使是小小的聲音也能傳達到……
+    MessageGroupId: 100510290
     Id: 100510400
     CharacterId: 10051
     MessageCondition: Feedback
@@ -752,13 +820,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 작은 목소리로 말해도 목소리가 전달될 수 있도록
-    MessageJP: 小さな声でも届くように……
-    MessageCN: 即使小声说话，也能有一定传播距离……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510300
+  - MessageKR: 음성을 인식하고 기록하여, 성량을 확대한 뒤에 다시 출력하는 기계 장치를……
+    MessageJP: 入力した音声を記録し、声量を拡大してから出力する仕組みさ
+    MessageCN: 这个构造能将输入的声音进行记录，输出经过放大后的声音信号
+    MessageEN:
+      Perhaps a device that recognizes and records voices, then replays them
+      loudly...
+    MessageTH: "อุปกรณ์ที่จะตรวจจับและบันทึกเสียง
+
+      ที่ได้ยิน และปรับระดับเสียงให้ดังขึ้น"
+    MessageTW: 紀錄輸入的聲音，擴大音量後再輸出
+    MessageGroupId: 100510300
     Id: 100510410
     CharacterId: 10051
     MessageCondition: Feedback
@@ -770,13 +842,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음성을 인식하고 기록하여, 성량을 확대한 뒤에 다시 출력하는 기계 장치를……
-    MessageJP: 入力した音声を記録し、声量を拡大してから出力する仕組みさ
-    MessageCN: 这个构造能将输入的声音进行记录，输出经过放大后的声音信号
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510310
+  - MessageKR: ……보통 그걸 확성기라고 부르지 않나?
+    MessageJP: ……それって拡声器だよね？
+    MessageCN: ……这个东西应该叫做扩音器吧？
+    MessageEN: "...So a loudspeaker?"
+    MessageTH: นั่นมัน...เครื่องขยายเสียงไม่ใช่เหรอ?
+    MessageTW: ……那就是擴音器吧？
+    MessageGroupId: 100510310
     Id: 100510420
     CharacterId: 10051
     MessageCondition: Answer
@@ -788,13 +860,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……보통 그걸 확성기라고 부르지 않나?
-    MessageJP: ……それって拡声器だよね？
-    MessageCN: ……这个东西应该叫做扩音器吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510320
+  - MessageKR: 최근 부원들이 뭔가 기운이 없어 보이는데.
+    MessageJP: 最近、部員たちの元気がないような気がしてね
+    MessageCN: 最近我总觉得部员们好像没什么精神呢
+    MessageEN: The club members have seemed really low-energy lately.
+    MessageTH: "รู้สึกเหมือนช่วงนี้สมาชิกชมรมเรา
+
+      ดูไม่ค่อยมีแรงกันเลย"
+    MessageTW: 感覺部員們最近沒什麼精神呢
+    MessageGroupId: 100510320
     Id: 100510430
     CharacterId: 10051
     MessageCondition: FavorRankUp
@@ -806,13 +880,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 최근 부원들이 뭔가 기운이 없어 보이는데.
-    MessageJP: 最近、部員たちの元気がないような気がしてね
-    MessageCN: 最近我总觉得部员们好像没什么精神呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510330
+  - MessageKR: 선생님, 뭔가 짐작 가는 거 있어?
+    MessageJP: 先生、何か心当たりはないかい？
+    MessageCN: 老师有什么头绪吗？
+    MessageEN: Any guesses why, Sensei?
+    MessageTH: คุณครูพอจะเดาสาเหตุได้บ้างมั้ย?
+    MessageTW: 老師有什麼頭緒嗎？
+    MessageGroupId: 100510330
     Id: 100510440
     CharacterId: 10051
     MessageCondition: None
@@ -824,13 +898,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 뭔가 짐작 가는 거 있어?
-    MessageJP: 先生、何か心当たりはないかい？
-    MessageCN: 老师有什么头绪吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510340
+  - MessageKR: 성적이 잘 안 나온 게 아닐까?
+    MessageJP: ほら、この前テストがあったから
+    MessageCN: 你想啊，之前不是有考试吗
+    MessageEN: Maybe their moods dropped with their grades?
+    MessageTH: ทำคะแนนสอบได้ไม่ดีรึเปล่า?
+    MessageTW: 你瞧，前陣子不是有考試嗎
+    MessageGroupId: 100510340
     Id: 100510450
     CharacterId: 10051
     MessageCondition: Answer
@@ -842,13 +916,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 성적이 잘 안 나온 게 아닐까?
-    MessageJP: ほら、この前テストがあったから
-    MessageCN: 你想啊，之前不是有考试吗
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510350
+  - MessageKR: 최근 시험 기간이었으니까.
+    MessageJP: 成績が良くなかったとか？
+    MessageCN: 是不是她们没考好？
+    MessageEN: Have they mentioned their test scores at all?
+    MessageTH: ช่วงนี้เป็นช่วงสอบนี่นา
+    MessageTW: 是因為成績不理想吧？
+    MessageGroupId: 100510350
     Id: 100510460
     CharacterId: 10051
     MessageCondition: Answer
@@ -860,13 +934,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 최근 시험 기간이었으니까.
-    MessageJP: 成績が良くなかったとか？
-    MessageCN: 是不是她们没考好？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510360
+  - MessageKR: ……그런가?
+    MessageJP: そうか……
+    MessageCN: 这样啊……
+    MessageEN: "...You think that's it?"
+    MessageTH: งั้นเหรอ...?
+    MessageTW: 這樣啊……
+    MessageGroupId: 100510360
     Id: 100510470
     CharacterId: 10051
     MessageCondition: Feedback
@@ -878,13 +952,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……그런가?
-    MessageJP: そうか……
-    MessageCN: 这样啊……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510360
+  - MessageKR: 전에 들었던 성적은 그리 나쁘지 않았던 것 같은데.
+    MessageJP: みんな結果は悪くなかったはずなんだが
+    MessageCN: 大家的成绩理应都不差
+    MessageEN: The grades they've mentioned didn't seem too bad...
+    MessageTH: "คะแนนสอบคราวก่อนก็ไม่ได้แย่
+
+      ขนาดนั้นนี่นา..."
+    MessageTW: 我覺得大家的成績應該都不差
+    MessageGroupId: 100510360
     Id: 100510480
     CharacterId: 10051
     MessageCondition: Feedback
@@ -896,13 +972,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 전에 들었던 성적은 그리 나쁘지 않았던 것 같은데.
-    MessageJP: みんな結果は悪くなかったはずなんだが
-    MessageCN: 大家的成绩理应都不差
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510360
+  - MessageKR: 하긴, 본인 입장에서는 만족스럽지 않을 수도 있겠지.
+    MessageJP: いや、満足できるほどではなかったということだね
+    MessageCN: 不对，应该说她们可能还对自己的成绩不太满意吧
+    MessageEN: But just because something isn't bad, doesn't mean it's not disappointing.
+    MessageTH: "แต่ก็นะ แต่ละคนก็อาจจะไม่พอใจ
+
+      คะแนนของตัวเองก็ได้"
+    MessageTW: 不，對本人來說還不夠滿意吧
+    MessageGroupId: 100510360
     Id: 100510490
     CharacterId: 10051
     MessageCondition: Feedback
@@ -914,13 +992,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하긴, 본인 입장에서는 만족스럽지 않을 수도 있겠지.
-    MessageJP: いや、満足できるほどではなかったということだね
-    MessageCN: 不对，应该说她们可能还对自己的成绩不太满意吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510370
+  - MessageKR: 뭔가 기운을 북돋아 줄 방법이 없을까?
+    MessageJP: 何か励ます方法があるといいんだけど
+    MessageCN: 要是有什么办法能鼓励她们就好了
+    MessageEN: Can you think of a good way to cheer them up?
+    MessageTH: ไม่มีวิธีให้กำลังใจทุกคนเลยเหรอ?
+    MessageTW: 有什麼能鼓勵他們的方法就好了
+    MessageGroupId: 100510370
     Id: 100510500
     CharacterId: 10051
     MessageCondition: Answer
@@ -932,13 +1010,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 기운을 북돋아 줄 방법이 없을까?
-    MessageJP: 何か励ます方法があるといいんだけど
-    MessageCN: 要是有什么办法能鼓励她们就好了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510380
+  - MessageKR: 으음……
+    MessageJP: そうだな……
+    MessageCN: 原来如此……
+    MessageEN: Hmm...
+    MessageTH: อืม...
+    MessageTW: 是啊……
+    MessageGroupId: 100510380
     Id: 100510510
     CharacterId: 10051
     MessageCondition: Feedback
@@ -950,13 +1028,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음……
-    MessageJP: そうだな……
-    MessageCN: 原来如此……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100510390
+  - MessageKR: 아무래도 부장인 내가 나서야 할 차례인 것 같네.
+    MessageJP: ここは部長の私が一肌脱ごうじゃないか
+    MessageCN: 这种时候就应该部长我出马了
+    MessageEN: Times like these are when I need to step up as their club president.
+    MessageTH: "เห็นทีหัวหน้าอย่างฉันคงจะต้อง
+
+      ออกโรงซะแล้ว"
+    MessageTW: 這時候就該部長我出面了
+    MessageGroupId: 100510390
     Id: 100510520
     CharacterId: 10051
     MessageCondition: Feedback
@@ -968,9 +1048,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무래도 부장인 내가 나서야 할 차례인 것 같네.
-    MessageJP: ここは部長の私が一肌脱ごうじゃないか
-    MessageCN: 这种时候就应该部长我出马了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

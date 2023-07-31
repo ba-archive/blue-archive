@@ -2,11 +2,15 @@
   <div>
     <label>测试集合名</label>
     <select v-model="currentCollectionName">
-      <option v-for="name in collectionNames">{{ name }}</option>
+      <option v-for="(name, index) in collectionNames" :key="index">
+        {{ name }}
+      </option>
     </select>
     <label>单元测试名</label>
     <select v-model="currentRunUnitTestName">
-      <option v-for="name in currentUnitTestNames">{{ name }}</option>
+      <option v-for="(name, index) in currentUnitTestNames" :key="index">
+        {{ name }}
+      </option>
     </select>
     <button @click="requestCapture">{{ authButtonText }}</button>
     <button @click="createScreenCapture" :disabled="!canCapture">截图</button>

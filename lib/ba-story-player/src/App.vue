@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import * as PIXI from "pixi.js";
 import axios from "axios";
 import { ref, watch } from "vue";
 import BaStoryPlayer from "../lib/BaStoryPlayer.vue";
@@ -10,9 +9,9 @@ import { usePlayerStore } from "../lib/stores";
 import { TranslatedStoryUnit } from "../lib/types/common";
 import { Language } from "../lib/types/store";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
+import ModifyLive2DOption from "./components/ModifyLive2DOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
-import prologue from "./data/prologue1.1.json";
 import yuuka from "./data/yuuka.json";
 import { useResizeObserver, useThrottleFn } from "@vueuse/core";
 
@@ -46,7 +45,6 @@ watch(toolType, () => {
   localStorage.setItem(cacheKey, toolType.value);
 });
 
-Reflect.set(window, "PIXI", PIXI);
 Reflect.set(window, "baResource", resourcesLoader);
 Reflect.set(window, "baStory", storyHandler);
 Reflect.set(window, "baStore", usePlayerStore());
@@ -159,6 +157,7 @@ watch(
         <option value="emotion">人物特效测试</option>
         <option value="effect">特效层特效</option>
         <option value="test">单元测试</option>
+        <option value="live2d">live2d测试</option>
         <option value="null">无</option>
       </select>
       <label>storyIndex</label>
@@ -173,17 +172,24 @@ watch(
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
       <label>语言</label>
       <select v-model="language">
-        <option v-for="name in languageList">{{ name }}</option>
+        <option v-for="(name, index) in languageList" :key="index">
+          {{ name }}
+        </option>
       </select>
     </div>
-    <ModifyEmotionOption
-      class="absolute-right-center"
-      v-if="toolType === 'emotion'"
-    />
-    <Suspense>
-      <TestEffect class="absolute-right-center" v-if="toolType === 'effect'" />
-    </Suspense>
-    <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
+    <div class="absolute-right-center">
+      <ModifyEmotionOption v-if="toolType === 'emotion'" />
+      <Suspense>
+        <TestEffect
+          class="absolute-right-center"
+          v-if="toolType === 'effect'"
+        />
+      </Suspense>
+      <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
+      <KeepAlive>
+        <ModifyLive2DOption :class="{ hidden: toolType !== 'live2d' }" />
+      </KeepAlive>
+    </div>
   </div>
 </template>
 
@@ -195,8 +201,12 @@ watch(
   flex-direction: column;
   z-index: 1000;
   background-color: white;
+  width: 180px;
   height: 95vh;
   overflow-y: auto;
   text-align: center;
+}
+.hidden {
+  display: none;
 }
 </style>

@@ -4,11 +4,41 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-07-30",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "下江 小春（泳装）", id: 16013 },
+          { name: "古关 忧（泳装）", id: 10073 },
+          { name: "若叶 日向（泳装）", id: 20028 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-07-23",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "砂狼 白子（泳装）", id: 20027 },
+          { name: "圣园 未花", id: 10059 },
+          { name: "早濑 优香（体操服）", id: 10053 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了伊甸条约第一章第七话开头的 zoom 异常问题",
+      },
+    ],
+  },
+  {
     date: "2023-07-16",
     contents: [
       {
         type: "feat",
-        content: "新增“工作剧情”。",
+        content: "新增“任务剧情”",
       },
     ],
   },
@@ -492,6 +522,36 @@ const contributors: Contributor[] = [
     name: "奶油英雄",
     role: "AI算法-NLP",
     avatar: "/image/contributor/naiyouyingxiong.webp",
+  },
+  {
+    name: "Dyin",
+    role: "PV",
+    avatar: "/image/contributor/dyin.webp",
+  },
+  {
+    name: "阿彬",
+    role: "PV",
+    avatar: "/image/contributor/abin.webp",
+  },
+  {
+    name: "水哥不sd",
+    role: "PV",
+    avatar: "/image/contributor/shuigebusd.webp",
+  },
+  {
+    name: "En_Sound",
+    role: "音乐",
+    avatar: "/image/contributor/ensound.webp",
+  },
+  {
+    name: "小白",
+    role: "音乐",
+    avatar: "/image/contributor/xiaobai.webp",
+  },
+  {
+    name: "释逸",
+    role: "原画",
+    avatar: "/image/contributor/shiyi.webp",
   },
 ];
 

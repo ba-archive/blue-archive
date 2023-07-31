@@ -1,44 +1,50 @@
 CharacterId: 10049
 translator: 瓜豆GUARDOU
 title:
-  - GroupId: 1004902
-    FavorScheduleId: 100492
-    CharacterId: 10049
-    TextJp: 補習授業とスイーツ
+  - TextJp: 補習授業とスイーツ
     TextCn: 补习与甜品
     TextKr: 보충수업과 디저트
     TextEn: Make-Up Work and Dessert
     TextTh: คาบเรียนเสริมกับของหวาน
     TextTw: 補課與甜點
-  - GroupId: 1004903
-    FavorScheduleId: 100493
+    GroupId: 1004902
+    FavorScheduleId: 100492
     CharacterId: 10049
-    TextJp: こう見えても放課後スイーツ部の一員
+  - TextJp: こう見えても放課後スイーツ部の一員
     TextCn: 即便这样我也是放课后甜点部的一员
     TextKr: 이래 뵈도 방과후 디저트부의 일원
     TextEn: After-School Sweets Club Member
     TextTh: เห็นอย่างนี้ก็สมาชิกชมรมของหวานฯ นะ
     TextTw: 我好歹也是放學後的甜點部成員
-  - GroupId: 1004905
-    FavorScheduleId: 100495
+    GroupId: 1004903
+    FavorScheduleId: 100493
     CharacterId: 10049
-    TextJp: バッドタイミング
+  - TextJp: バッドタイミング
     TextCn: 时不凑巧
     TextKr: 나쁜 타이밍
     TextEn: Bad Timing
     TextTh: จังหวะนรก
-    TextTw: 不湊巧
-  - GroupId: 1004906
-    FavorScheduleId: 100496
+    TextTw: Bad Timing
+    GroupId: 1004905
+    FavorScheduleId: 100495
     CharacterId: 10049
-    TextJp: 猫舌
+  - TextJp: 猫舌
     TextCn: 猫舌
     TextKr: 고양이 혀
     TextEn: The Cat's Tongue
     TextTh: ลิ้นแมว
     TextTw: 貓舌頭
+    GroupId: 1004906
+    FavorScheduleId: 100496
+    CharacterId: 10049
 content:
-  - MessageGroupId: 100490010
+  - MessageKR: 안녕하세요, 선생님. 쿄야마 카즈사입니다.
+    MessageJP: こんにちは、先生。杏山カズサです
+    MessageCN: 老师，您好。我是杏山和纱
+    MessageEN: Hello, Sensei. This is Kyoyama Kazusa.
+    MessageTH: สวัสดีค่ะ คุณครู เคียวยามะ คาซึสะค่ะ
+    MessageTW: 你好，老師。我是杏山千紗。
+    MessageGroupId: 100490010
     Id: 100490010
     CharacterId: 10049
     MessageCondition: FavorRankUp
@@ -50,13 +56,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요, 선생님. 쿄야마 카즈사입니다.
-    MessageJP: こんにちは、先生。杏山カズサです
-    MessageCN: 老师，您好。我是杏山和纱
-    MessageEN: Hello, Sensei. This is Kyoyama Kazusa.
-    MessageTH: สวัสดีค่ะ คุณครู เคียวยามะ คาซึสะค่ะ
-    MessageTW: 你好，老師。我是杏山千紗。
-  - MessageGroupId: 100490020
+  - MessageKR: 음
+    MessageJP: あー……
+    MessageCN: 啊……
+    MessageEN: Um..
+    MessageTH: อืม...
+    MessageTW: 啊──……
+    MessageGroupId: 100490020
     Id: 100490020
     CharacterId: 10049
     MessageCondition: None
@@ -68,13 +74,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음
-    MessageJP: あー……
-    MessageCN: 啊……
-    MessageEN: Um..
-    MessageTH: อืม...
-    MessageTW: 啊──……
-  - MessageGroupId: 100490020
+  - MessageKR: 혹시 지금 바쁠까? 편할 때 편하게 답장 줘.
+    MessageJP: もしかして、今忙しいかな？暇な時にお返事もらえたら
+    MessageCN: 你现在不会在忙吧？这样的话，希望老师您有空的时候能够回复一下我的消息
+    MessageEN: Are you busy right now? Let me know.
+    MessageTH: "ตอนนี้ยุ่งอยู่หรือเปล่านะ? ถ้าสะดวก
+
+      ค่อยตอบก็ได้"
+    MessageTW: 難不成你現在很忙嗎？那有空的時候再回覆我
+    MessageGroupId: 100490020
     Id: 100490030
     CharacterId: 10049
     MessageCondition: None
@@ -86,15 +94,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 지금 바쁠까? 편할 때 편하게 답장 줘.
-    MessageJP: もしかして、今忙しいかな？暇な時にお返事もらえたら
-    MessageCN: 你现在不会在忙吧？这样的话，希望老师您有空的时候能够回复一下我的消息
-    MessageEN: Are you busy right now? Let me know.
-    MessageTH: "ตอนนี้ยุ่งอยู่หรือเปล่านะ? ถ้าสะดวก
-
-      ค่อยตอบก็ได้"
-    MessageTW: 難不成你現在很忙嗎？那有空的時候再回覆我
-  - MessageGroupId: 100490030
+  - MessageKR: 그럼 기다리겠습니다.
+    MessageJP: それでは、お待ちしています
+    MessageCN: 那么，我会等着老师回复的
+    MessageEN: I'll be waiting for you. Thank you.
+    MessageTH: ฉันจะรอค่ะ
+    MessageTW: 那麼，我等您
+    MessageGroupId: 100490030
     Id: 100490040
     CharacterId: 10049
     MessageCondition: None
@@ -106,13 +112,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 기다리겠습니다.
-    MessageJP: それでは、お待ちしています
-    MessageCN: 那么，我会等着老师回复的
-    MessageEN: I'll be waiting for you. Thank you.
-    MessageTH: ฉันจะรอค่ะ
-    MessageTW: 那麼，我等您
-  - MessageGroupId: 100490040
+  - MessageKR: 예의 바르면서도 친근한 말투네.
+    MessageJP: 親しみのある話し方をするね
+    MessageCN: 和纱的说话方式很有亲近感呢
+    MessageEN: You're polite and casual at the same time.
+    MessageTH: พูดเพราะสุดๆ เลยน้า...
+    MessageTW: 說話方式很親切呢
+    MessageGroupId: 100490040
     Id: 100490050
     CharacterId: 10049
     MessageCondition: Answer
@@ -124,13 +130,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 예의 바르면서도 친근한 말투네.
-    MessageJP: 親しみのある話し方をするね
-    MessageCN: 和纱的说话方式很有亲近感呢
-    MessageEN: You're polite and casual at the same time.
-    MessageTH: พูดเพราะสุดๆ เลยน้า...
-    MessageTW: 說話方式很親切呢
-  - MessageGroupId: 100490040
+  - MessageKR: 존댓말과 반말이 섞여 있네;;
+    MessageJP: 敬語とタメ口が混ざってる……？
+    MessageCN: 敬语和口语可以混在一起用的吗……？
+    MessageEN: You're somehow formal and informal at the same time.
+    MessageTH: พูดสุภาพกับพูดธรรมดาสลับกันเลย;;
+    MessageTW: 敬語和口語混在一起……？
+    MessageGroupId: 100490040
     Id: 100490060
     CharacterId: 10049
     MessageCondition: Answer
@@ -142,13 +148,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 존댓말과 반말이 섞여 있네;;
-    MessageJP: 敬語とタメ口が混ざってる……？
-    MessageCN: 敬语和口语可以混在一起用的吗……？
-    MessageEN: You're somehow formal and informal at the same time.
-    MessageTH: พูดสุภาพกับพูดธรรมดาสลับกันเลย;;
-    MessageTW: 敬語和口語混在一起……？
-  - MessageGroupId: 100490050
+  - MessageKR: ;;;뭐야
+    MessageJP: ……なに
+    MessageCN: ……什么
+    MessageEN: Weird...
+    MessageTH: "';;' คืออะไรน่ะ"
+    MessageTW: ……什麼
+    MessageGroupId: 100490050
     Id: 100490070
     CharacterId: 10049
     MessageCondition: Feedback
@@ -160,13 +166,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ;;;뭐야
-    MessageJP: ……なに
-    MessageCN: ……什么
-    MessageEN: Weird...
-    MessageTH: "';;' คืออะไรน่ะ"
-    MessageTW: ……什麼
-  - MessageGroupId: 100490060
+  - MessageKR: 선생님이니까 나도 모르게 존댓말이 나올 때가 있는 거뿐이라고
+    MessageJP: 先生に送るトークだし、たまに敬語のほうがいいかなって思う時があるだけ
+    MessageCN: 我只是觉得毕竟消息是发给老师的，所以感觉还是偶尔用下敬语比较好
+    MessageEN: I sometimes feel like I have to be polite because you're a teacher.
+    MessageTH: "ก็เพราะคุณครูเป็นคุณครูผู้สอน บางครั้ง
+
+      ฉันเลยเผลอใช้คำสุภาพไปก็เท่านั้นเอง"
+    MessageTW: 只是覺得發給老師的對話，偶爾還是用敬語比較好
+    MessageGroupId: 100490060
     Id: 100490080
     CharacterId: 10049
     MessageCondition: Feedback
@@ -178,15 +186,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님이니까 나도 모르게 존댓말이 나올 때가 있는 거뿐이라고
-    MessageJP: 先生に送るトークだし、たまに敬語のほうがいいかなって思う時があるだけ
-    MessageCN: 我只是觉得毕竟消息是发给老师的，所以感觉还是偶尔用下敬语比较好
-    MessageEN: I sometimes feel like I have to be polite because you're a teacher.
-    MessageTH: "ก็เพราะคุณครูเป็นคุณครูผู้สอน บางครั้ง
+  - MessageKR: 아무튼 답해주는 거 보니 시간은 괜찮은 모양이네. 다행이다.
+    MessageJP: とにかく……返事してくれてるなら、時間は大丈夫みたいだね。よかった
+    MessageCN: 总之……既然老师回复我了，看来是有空的吧。太好了
+    MessageEN: Anyway, you replied, so I guess you have time?
+    MessageTH: "ดูจากที่มาแชตตอบได้ แสดงว่าคงว่าง
 
-      ฉันเลยเผลอใช้คำสุภาพไปก็เท่านั้นเอง"
-    MessageTW: 只是覺得發給老師的對話，偶爾還是用敬語比較好
-  - MessageGroupId: 100490070
+      แล้วสินะ ค่อยยังชั่ว"
+    MessageTW: 總之……既然你回覆我了，看來時間上沒問題。太好了
+    MessageGroupId: 100490070
     Id: 100490090
     CharacterId: 10049
     MessageCondition: Feedback
@@ -198,15 +206,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무튼 답해주는 거 보니 시간은 괜찮은 모양이네. 다행이다.
-    MessageJP: とにかく……返事してくれてるなら、時間は大丈夫みたいだね。よかった
-    MessageCN: 总之……既然老师回复我了，看来是有空的吧。太好了
-    MessageEN: Anyway, you replied, so I guess you have time?
-    MessageTH: "ดูจากที่มาแชตตอบได้ แสดงว่าคงว่าง
+  - MessageKR: 선생님은 바쁠 테니 근처로 내가 갈게.
+    MessageJP: 先生は忙しいだろうし、私がシャーレの近くに向かうね
+    MessageCN: 老师应该比较忙，所以就我去夏莱附近找老师吧
+    MessageEN: I know you're busy, so I'll go to you.
+    MessageTH: "คุณครูคงจะยุ่งอยู่ เดี๋ยวฉันจะแวะไป
 
-      แล้วสินะ ค่อยยังชั่ว"
-    MessageTW: 總之……既然你回覆我了，看來時間上沒問題。太好了
-  - MessageGroupId: 100490070
+      แถวนั้นแล้วกัน"
+    MessageTW: 老師應該很忙吧，我去夏萊附近
+    MessageGroupId: 100490070
     Id: 100490100
     CharacterId: 10049
     MessageCondition: Feedback
@@ -218,15 +226,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님은 바쁠 테니 근처로 내가 갈게.
-    MessageJP: 先生は忙しいだろうし、私がシャーレの近くに向かうね
-    MessageCN: 老师应该比较忙，所以就我去夏莱附近找老师吧
-    MessageEN: I know you're busy, so I'll go to you.
-    MessageTH: "คุณครูคงจะยุ่งอยู่ เดี๋ยวฉันจะแวะไป
-
-      แถวนั้นแล้วกัน"
-    MessageTW: 老師應該很忙吧，我去夏萊附近
-  - MessageGroupId: 100490080
+  - MessageKR: 그럼 가서 다시 연락하겠습니다.
+    MessageJP: それじゃあ、後でまた連絡します
+    MessageCN: 那之后见，待会再联系
+    MessageEN: I'll contact you when I'm there.
+    MessageTH: พอไปถึงฉันจะติดต่อไปอีกครั้งค่ะ
+    MessageTW: 那麼，稍後再連絡你
+    MessageGroupId: 100490080
     Id: 100490110
     CharacterId: 10049
     MessageCondition: Feedback
@@ -238,13 +244,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 가서 다시 연락하겠습니다.
-    MessageJP: それじゃあ、後でまた連絡します
-    MessageCN: 那之后见，待会再联系
-    MessageEN: I'll contact you when I'm there.
-    MessageTH: พอไปถึงฉันจะติดต่อไปอีกครั้งค่ะ
-    MessageTW: 那麼，稍後再連絡你
-  - MessageGroupId: 100490090
+  - MessageKR: 선생님. 잘 도착했어?
+    MessageJP: 先生、無事帰れた？
+    MessageCN: 老师，平安回去了吗？
+    MessageEN: Sensei, did you get back safely?
+    MessageTH: คุณครู ถึงรึยัง?
+    MessageTW: 老師，平安到家了嗎？
+    MessageGroupId: 100490090
     Id: 100490120
     CharacterId: 10049
     MessageCondition: None
@@ -256,13 +262,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 잘 도착했어?
-    MessageJP: 先生、無事帰れた？
-    MessageCN: 老师，平安回去了吗？
-    MessageEN: Sensei, did you get back safely?
-    MessageTH: คุณครู ถึงรึยัง?
-    MessageTW: 老師，平安到家了嗎？
-  - MessageGroupId: 100490100
+  - MessageKR: 나는 잘 도착했어. 방금 막 방에 왔고, 이제 슬슬 씻으려고.
+    MessageJP: 私はちゃんと部屋に戻れたよ。ちょうど今からシャワー浴びようかなと
+    MessageCN: 我已经回房间了哦。现在正想着要不要去洗个澡
+    MessageEN: I'm home. I'm in my room and gonna shower soon.
+    MessageTH: "ฉันกลับถึงห้องแล้วนะ กลับถึงแล้ว
+
+      กำลังเตรียมจะอาบน้ำแล้วล่ะ"
+    MessageTW: 我安穩地回到房間了。現在正要去洗澡
+    MessageGroupId: 100490100
     Id: 100490130
     CharacterId: 10049
     MessageCondition: None
@@ -274,15 +282,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나는 잘 도착했어. 방금 막 방에 왔고, 이제 슬슬 씻으려고.
-    MessageJP: 私はちゃんと部屋に戻れたよ。ちょうど今からシャワー浴びようかなと
-    MessageCN: 我已经回房间了哦。现在正想着要不要去洗个澡
-    MessageEN: I'm home. I'm in my room and gonna shower soon.
-    MessageTH: "ฉันกลับถึงห้องแล้วนะ กลับถึงแล้ว
-
-      กำลังเตรียมจะอาบน้ำแล้วล่ะ"
-    MessageTW: 我安穩地回到房間了。現在正要去洗澡
-  - MessageGroupId: 100490110
+  - MessageKR: 어
+    MessageJP: あ……
+    MessageCN: 啊……
+    MessageEN: Oh!
+    MessageTH: เอ่อ...
+    MessageTW: 我為什麼要特別說這些
+    MessageGroupId: 100490110
     Id: 100490140
     CharacterId: 10049
     MessageCondition: None
@@ -294,13 +300,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어
-    MessageJP: あ……
-    MessageCN: 啊……
-    MessageEN: Oh!
-    MessageTH: เอ่อ...
-    MessageTW: 我為什麼要特別說這些
-  - MessageGroupId: 100490110
+  - MessageKR: 근데 왜 이런 걸 굳이 문자로 말한 거지 나는
+    MessageJP: なんでこんな事わざわざ言っちゃったんだろ、私
+    MessageCN: 我为什么连这种事都要特意说……
+    MessageEN: Why am I texting you this?
+    MessageTH: "ทำไมฉันต้องพิมพ์บอกเรื่องแบบนั้น
+
+      ด้วยเนี่ย"
+    MessageTW: 啊……
+    MessageGroupId: 100490110
     Id: 100490150
     CharacterId: 10049
     MessageCondition: None
@@ -312,15 +320,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 근데 왜 이런 걸 굳이 문자로 말한 거지 나는
-    MessageJP: なんでこんな事わざわざ言っちゃったんだろ、私
-    MessageCN: 我为什么连这种事都要特意说……
-    MessageEN: Why am I texting you this?
-    MessageTH: "ทำไมฉันต้องพิมพ์บอกเรื่องแบบนั้น
-
-      ด้วยเนี่ย"
-    MessageTW: 啊……
-  - MessageGroupId: 100490120
+  - MessageKR: ;;;;;;;;
+    MessageJP: うーーー……
+    MessageCN: 呜————……
+    MessageEN: Haha...
+    MessageTH: ;;;;;;;;
+    MessageTW: 嗚──……
+    MessageGroupId: 100490120
     Id: 100490160
     CharacterId: 10049
     MessageCondition: None
@@ -332,13 +338,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ;;;;;;;;
-    MessageJP: うーーー……
-    MessageCN: 呜————……
-    MessageEN: Haha...
-    MessageTH: ;;;;;;;;
-    MessageTW: 嗚──……
-  - MessageGroupId: 100490130
+  - MessageKR: 뭐 신경 쓰지 마. 왠지 말해줘야 할 거 같아서 그랬으니까.
+    MessageJP: ……まあ、気にしないで。何だか言ったほうがいいかなって思っただけだから
+    MessageCN: ……算了，老师别在意。我就是觉得总该说点什么比较好而已
+    MessageEN: Well, don't worry about it. I just wanted to tell you I'm home.
+    MessageTH: "ไม่ต้องใส่ใจหรอก แค่รู้สึกว่าอยากบอก
+
+      ก็เท่านั้นน่ะ"
+    MessageTW: ……嘛，別在意。我只覺得要說點什麼才好
+    MessageGroupId: 100490130
     Id: 100490170
     CharacterId: 10049
     MessageCondition: None
@@ -350,15 +358,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐 신경 쓰지 마. 왠지 말해줘야 할 거 같아서 그랬으니까.
-    MessageJP: ……まあ、気にしないで。何だか言ったほうがいいかなって思っただけだから
-    MessageCN: ……算了，老师别在意。我就是觉得总该说点什么比较好而已
-    MessageEN: Well, don't worry about it. I just wanted to tell you I'm home.
-    MessageTH: "ไม่ต้องใส่ใจหรอก แค่รู้สึกว่าอยากบอก
-
-      ก็เท่านั้นน่ะ"
-    MessageTW: ……嘛，別在意。我只覺得要說點什麼才好
-  - MessageGroupId: 100490130
+  - MessageKR: 아무튼 오늘 일은 정말로 감사했습니다.
+    MessageJP: とにかく今日は、本当にありがとうございました！
+    MessageCN: 总之今天，真的非常感谢老师！
+    MessageEN: Thank you so much for today.
+    MessageTH: ยังไงก็ขอบคุณสำหรับวันนี้นะคะ
+    MessageTW: 總之，今天真的非常感謝！
+    MessageGroupId: 100490130
     Id: 100490180
     CharacterId: 10049
     MessageCondition: None
@@ -370,13 +376,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무튼 오늘 일은 정말로 감사했습니다.
-    MessageJP: とにかく今日は、本当にありがとうございました！
-    MessageCN: 总之今天，真的非常感谢老师！
-    MessageEN: Thank you so much for today.
-    MessageTH: ยังไงก็ขอบคุณสำหรับวันนี้นะคะ
-    MessageTW: 總之，今天真的非常感謝！
-  - MessageGroupId: 100490140
+  - MessageKR: 그럼
+    MessageJP: じゃあ
+    MessageCN: 那就
+    MessageEN: Well, then...
+    MessageTH: ถ้างั้น...
+    MessageTW: 那麼
+    MessageGroupId: 100490140
     Id: 100490190
     CharacterId: 10049
     MessageCondition: None
@@ -388,13 +394,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼
-    MessageJP: じゃあ
-    MessageCN: 那就
-    MessageEN: Well, then...
-    MessageTH: ถ้างั้น...
-    MessageTW: 那麼
-  - MessageGroupId: 100490140
+  - MessageKR: 다음에 또 봐 선생님.
+    MessageJP: またね、先生
+    MessageCN: 之后见，老师
+    MessageEN: See you later, Sensei.
+    MessageTH: ไว้เจอกันใหม่นะ คุณครู
+    MessageTW: 下次見囉，老師
+    MessageGroupId: 100490140
     Id: 100490200
     CharacterId: 10049
     MessageCondition: None
@@ -406,13 +412,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 또 봐 선생님.
-    MessageJP: またね、先生
-    MessageCN: 之后见，老师
-    MessageEN: See you later, Sensei.
-    MessageTH: ไว้เจอกันใหม่นะ คุณครู
-    MessageTW: 下次見囉，老師
-  - MessageGroupId: 100490150
+  - MessageKR: 피곤하다
+    MessageJP: 疲れた
+    MessageCN: 好累
+    MessageEN: I'm tired.
+    MessageTH: เหนื่อยจัง
+    MessageTW: 累死了
+    MessageGroupId: 100490150
     Id: 100490210
     CharacterId: 10049
     MessageCondition: FavorRankUp
@@ -424,13 +430,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 피곤하다
-    MessageJP: 疲れた
-    MessageCN: 好累
-    MessageEN: I'm tired.
-    MessageTH: เหนื่อยจัง
-    MessageTW: 累死了
-  - MessageGroupId: 100490160
+  - MessageKR: 선생님, 지금 일하는 중이야?
+    MessageJP: 先生、今仕事？
+    MessageCN: 老师在工作？
+    MessageEN: Sensei, are you working right now?
+    MessageTH: คุณครู ตอนนี้ทำงานอยู่เหรอ?
+    MessageTW: 老師，現在在工作嗎？
+    MessageGroupId: 100490160
     Id: 100490220
     CharacterId: 10049
     MessageCondition: None
@@ -442,13 +448,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 지금 일하는 중이야?
-    MessageJP: 先生、今仕事？
-    MessageCN: 老师在工作？
-    MessageEN: Sensei, are you working right now?
-    MessageTH: คุณครู ตอนนี้ทำงานอยู่เหรอ?
-    MessageTW: 老師，現在在工作嗎？
-  - MessageGroupId: 100490170
+  - MessageKR: 나야 그렇긴 한데…….
+    MessageJP: 仕事中だけど……
+    MessageCN: 确实是在工作来着……
+    MessageEN: I am...
+    MessageTH: ก็แหงอยู่แล้ว...
+    MessageTW: 是在工作沒錯……
+    MessageGroupId: 100490170
     Id: 100490230
     CharacterId: 10049
     MessageCondition: Answer
@@ -460,13 +466,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나야 그렇긴 한데…….
-    MessageJP: 仕事中だけど……
-    MessageCN: 确实是在工作来着……
-    MessageEN: I am...
-    MessageTH: ก็แหงอยู่แล้ว...
-    MessageTW: 是在工作沒錯……
-  - MessageGroupId: 100490170
+  - MessageKR: 카즈사는 아직 밖이야?
+    MessageJP: カズサはまだ外？
+    MessageCN: 和纱还在外面？
+    MessageEN: Are you still outside?
+    MessageTH: คาซึสะยังอยู่ข้างนอกเหรอ?
+    MessageTW: 千紗你還在外面嗎？
+    MessageGroupId: 100490170
     Id: 100490240
     CharacterId: 10049
     MessageCondition: Answer
@@ -478,13 +484,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 카즈사는 아직 밖이야?
-    MessageJP: カズサはまだ外？
-    MessageCN: 和纱还在外面？
-    MessageEN: Are you still outside?
-    MessageTH: คาซึสะยังอยู่ข้างนอกเหรอ?
-    MessageTW: 千紗你還在外面嗎？
-  - MessageGroupId: 100490180
+  - MessageKR: 아, 뭐 그렇지
+    MessageJP: あ、まぁそうだね……
+    MessageCN: 啊，嗯，是这样呢……
+    MessageEN: Oh, well, yeah.
+    MessageTH: อื้อ ใช่
+    MessageTW: 啊，嘛，是啊……
+    MessageGroupId: 100490180
     Id: 100490250
     CharacterId: 10049
     MessageCondition: Feedback
@@ -496,13 +502,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 뭐 그렇지
-    MessageJP: あ、まぁそうだね……
-    MessageCN: 啊，嗯，是这样呢……
-    MessageEN: Oh, well, yeah.
-    MessageTH: อื้อ ใช่
-    MessageTW: 啊，嘛，是啊……
-  - MessageGroupId: 100490180
+  - MessageKR: 오늘은 밀린 거 복습 좀 하려고 늦게까지 학교에 있었으니까
+    MessageJP: 今日は溜めてた分を一気に復習しようと思って、遅くまで学校にいたから
+    MessageCN: 我今天想把积下来的东西一口气复习完，所以就在学校待得比较晚
+    MessageEN: I stayed late at school so I could catch up on my studies.
+    MessageTH: "วันนี้จะทบทวนบทเรียนที่ค้างไว้น่ะ
+
+      เลยอยู่ที่โรงเรียนดึกหน่อย"
+    MessageTW: 今天想要一口氣複習累積下來的部份，所以在學校待到很晚
+    MessageGroupId: 100490180
     Id: 100490260
     CharacterId: 10049
     MessageCondition: Feedback
@@ -514,15 +522,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 밀린 거 복습 좀 하려고 늦게까지 학교에 있었으니까
-    MessageJP: 今日は溜めてた分を一気に復習しようと思って、遅くまで学校にいたから
-    MessageCN: 我今天想把积下来的东西一口气复习完，所以就在学校待得比较晚
-    MessageEN: I stayed late at school so I could catch up on my studies.
-    MessageTH: "วันนี้จะทบทวนบทเรียนที่ค้างไว้น่ะ
-
-      เลยอยู่ที่โรงเรียนดึกหน่อย"
-    MessageTW: 今天想要一口氣複習累積下來的部份，所以在學校待到很晚
-  - MessageGroupId: 100490190
+  - MessageKR: 이제 슬슬 돌아가려고
+    MessageJP: そろそろ帰ろうと思って
+    MessageCN: 现在差不多打算回家了
+    MessageEN: I'm about to go back now.
+    MessageTH: ตอนนี้กำลังจะกลับแล้วละ
+    MessageTW: 差不多要回去了
+    MessageGroupId: 100490190
     Id: 100490270
     CharacterId: 10049
     MessageCondition: Feedback
@@ -534,13 +540,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이제 슬슬 돌아가려고
-    MessageJP: そろそろ帰ろうと思って
-    MessageCN: 现在差不多打算回家了
-    MessageEN: I'm about to go back now.
-    MessageTH: ตอนนี้กำลังจะกลับแล้วละ
-    MessageTW: 差不多要回去了
-  - MessageGroupId: 100490190
+  - MessageKR: 그냥 돌아가는 길에 보내 본 거야. 별 뜻은 없었어
+    MessageJP: 帰り道、暇だから送ってみた。別に深い意味はないよ
+    MessageCN: 就是回家路上比较闲，所以就给老师发了消息。我可没什么特别的意思啊
+    MessageEN: I just wanted to say hi. That's all.
+    MessageTH: ระหว่างทางกลับก็แค่ส่งข้อความหาเฉยๆ ไม่มีอะไรหรอก
+    MessageTW: 因為在回去的路上很閒，所以就發送了訊息。沒什麼特別的意思
+    MessageGroupId: 100490190
     Id: 100490280
     CharacterId: 10049
     MessageCondition: Feedback
@@ -552,13 +558,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 돌아가는 길에 보내 본 거야. 별 뜻은 없었어
-    MessageJP: 帰り道、暇だから送ってみた。別に深い意味はないよ
-    MessageCN: 就是回家路上比较闲，所以就给老师发了消息。我可没什么特别的意思啊
-    MessageEN: I just wanted to say hi. That's all.
-    MessageTH: ระหว่างทางกลับก็แค่ส่งข้อความหาเฉยๆ ไม่มีอะไรหรอก
-    MessageTW: 因為在回去的路上很閒，所以就發送了訊息。沒什麼特別的意思
-  - MessageGroupId: 100490200
+  - MessageKR: 그럼 좋은 하루
+    MessageJP: それじゃあ良い一日を
+    MessageCN: 那就祝老师度过美好的一天了
+    MessageEN: Have a good one!
+    MessageTH: งั้นก็แค่นี้นะ
+    MessageTW: 祝你有個美好的一天
+    MessageGroupId: 100490200
     Id: 100490290
     CharacterId: 10049
     MessageCondition: Feedback
@@ -570,13 +576,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 좋은 하루
-    MessageJP: それじゃあ良い一日を
-    MessageCN: 那就祝老师度过美好的一天了
-    MessageEN: Have a good one!
-    MessageTH: งั้นก็แค่นี้นะ
-    MessageTW: 祝你有個美好的一天
-  - MessageGroupId: 100490210
+  - MessageKR: 아
+    MessageJP: あ、
+    MessageCN: 啊
+    MessageEN: Ah!
+    MessageTH: อา...
+    MessageTW: 啊
+    MessageGroupId: 100490210
     Id: 100490300
     CharacterId: 10049
     MessageCondition: None
@@ -588,13 +594,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아
-    MessageJP: あ、
-    MessageCN: 啊
-    MessageEN: Ah!
-    MessageTH: อา...
-    MessageTW: 啊
-  - MessageGroupId: 100490220
+  - MessageKR: 선생님
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師
+    MessageGroupId: 100490220
     Id: 100490310
     CharacterId: 10049
     MessageCondition: None
@@ -606,13 +612,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: Sensei.
-    MessageTH: คุณครู
-    MessageTW: 老師
-  - MessageGroupId: 100490230
+  - MessageKR: ……
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: "..."
+    MessageTH: "..."
+    MessageTW: ……
+    MessageGroupId: 100490230
     Id: 100490320
     CharacterId: 10049
     MessageCondition: None
@@ -624,13 +630,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……
-    MessageJP: ……
-    MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "..."
-    MessageTW: ……
-  - MessageGroupId: 100490240
+  - MessageKR: ""
+    MessageJP: ""
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100490240
     Id: 100490330
     CharacterId: 10049
     MessageCondition: None
@@ -642,13 +648,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Image
     ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_kazusa_01
-    MessageKR: ""
-    MessageJP: ""
-    MessageCN: ""
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100490250
+  - MessageKR: ??? 갑자기 사진?
+    MessageJP: 写真？
+    MessageCN: 自拍？
+    MessageEN: ??? A picture, now?
+    MessageTH: ??? จู่ๆ ก็ส่งรูปมาเหรอ???
+    MessageTW: 照片？
+    MessageGroupId: 100490250
     Id: 100490340
     CharacterId: 10049
     MessageCondition: Answer
@@ -660,13 +666,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ??? 갑자기 사진?
-    MessageJP: 写真？
-    MessageCN: 自拍？
-    MessageEN: ??? A picture, now?
-    MessageTH: ??? จู่ๆ ก็ส่งรูปมาเหรอ???
-    MessageTW: 照片？
-  - MessageGroupId: 100490250
+  - MessageKR: 잘 들어갔다는 인사야?
+    MessageJP: 無事に帰れたの？
+    MessageCN: 和纱平安到家了吗？
+    MessageEN: Does this mean you made it home safely?
+    MessageTH: รูปยืนยันว่ากลับถึงแล้วเหรอ?
+    MessageTW: 平安到家了嗎？
+    MessageGroupId: 100490250
     Id: 100490350
     CharacterId: 10049
     MessageCondition: Answer
@@ -678,13 +684,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 들어갔다는 인사야?
-    MessageJP: 無事に帰れたの？
-    MessageCN: 和纱平安到家了吗？
-    MessageEN: Does this mean you made it home safely?
-    MessageTH: รูปยืนยันว่ากลับถึงแล้วเหรอ?
-    MessageTW: 平安到家了嗎？
-  - MessageGroupId: 100490260
+  - MessageKR: 뭐
+    MessageJP: うん、まあ
+    MessageCN: 嗯，就是
+    MessageEN: Well,
+    MessageTH: ก็.....
+    MessageTW: 唔，嘛
+    MessageGroupId: 100490260
     Id: 100490360
     CharacterId: 10049
     MessageCondition: Feedback
@@ -696,13 +702,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐
-    MessageJP: うん、まあ
-    MessageCN: 嗯，就是
-    MessageEN: Well,
-    MessageTH: ก็.....
-    MessageTW: 唔，嘛
-  - MessageGroupId: 100490260
+  - MessageKR: 어쨌든 늦게 들어간 거니까
+    MessageJP: とりあえず、もう遅いし
+    MessageCN: 毕竟，已经很晚了
+    MessageEN: it was late, so...
+    MessageTH: ยังไงวันนี้ฉันก็กลับดึก
+    MessageTW: 反正已經太遲了
+    MessageGroupId: 100490260
     Id: 100490370
     CharacterId: 10049
     MessageCondition: Feedback
@@ -714,13 +720,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쨌든 늦게 들어간 거니까
-    MessageJP: とりあえず、もう遅いし
-    MessageCN: 毕竟，已经很晚了
-    MessageEN: it was late, so...
-    MessageTH: ยังไงวันนี้ฉันก็กลับดึก
-    MessageTW: 反正已經太遲了
-  - MessageGroupId: 100490270
+  - MessageKR: 뭐 그렇지
+    MessageJP: そういう事
+    MessageCN: 就是这样
+    MessageEN: Yeah.
+    MessageTH: ก็ใช่
+    MessageTW: 之所以這樣
+    MessageGroupId: 100490270
     Id: 100490380
     CharacterId: 10049
     MessageCondition: Feedback
@@ -732,13 +738,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐 그렇지
-    MessageJP: そういう事
-    MessageCN: 就是这样
-    MessageEN: Yeah.
-    MessageTH: ก็ใช่
-    MessageTW: 之所以這樣
-  - MessageGroupId: 100490280
+  - MessageKR: 그 시간까지 선생님과 같이 있었으니
+    MessageJP: あの時間まで先生と一緒にいたから
+    MessageCN: 毕竟和老师一起待到那么晚了
+    MessageEN: I was with you until late.
+    MessageTH: แต่คุณครูก็อยู่ด้วยจนถึงตอนนั้น
+    MessageTW: 是因為和老師一起待到那個時間
+    MessageGroupId: 100490280
     Id: 100490390
     CharacterId: 10049
     MessageCondition: Feedback
@@ -750,13 +756,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 시간까지 선생님과 같이 있었으니
-    MessageJP: あの時間まで先生と一緒にいたから
-    MessageCN: 毕竟和老师一起待到那么晚了
-    MessageEN: I was with you until late.
-    MessageTH: แต่คุณครูก็อยู่ด้วยจนถึงตอนนั้น
-    MessageTW: 是因為和老師一起待到那個時間
-  - MessageGroupId: 100490280
+  - MessageKR: 잘 들어갔다고 보고 정도는 제대로 해 둬야 할 거 같아서
+    MessageJP: 無事着きましたぐらい、しっかり報告しておこうかなって
+    MessageCN: 所以我觉得至少还是要和老师报告一下我平安到家的事情
+    MessageEN: So I thought I should tell you when I got home.
+    MessageTH: "เลยคิดว่าอย่างน้อยก็ควรรายงานว่า
+
+      กลับถึงแล้วน่ะ"
+    MessageTW: 想說要報告一下，表示安全抵達了
+    MessageGroupId: 100490280
     Id: 100490400
     CharacterId: 10049
     MessageCondition: Feedback
@@ -768,15 +776,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 들어갔다고 보고 정도는 제대로 해 둬야 할 거 같아서
-    MessageJP: 無事着きましたぐらい、しっかり報告しておこうかなって
-    MessageCN: 所以我觉得至少还是要和老师报告一下我平安到家的事情
-    MessageEN: So I thought I should tell you when I got home.
-    MessageTH: "เลยคิดว่าอย่างน้อยก็ควรรายงานว่า
+  - MessageKR: 근데 사진 찍는 건 그다지 익숙하지 않아 표정이 좀;;;
+    MessageJP: けど写真撮るのはあんま慣れてないから、ちょっと表情が……汗
+    MessageCN: 但还是不太习惯拍照，表情就有点……尬
+    MessageEN: But I'm not used to taking photos, so my face is weird.
+    MessageTH: "ดูสีหน้าแหยๆ เหมือนไม่ชินกับการ
 
-      กลับถึงแล้วน่ะ"
-    MessageTW: 想說要報告一下，表示安全抵達了
-  - MessageGroupId: 100490290
+      ถ่ายรูปเลยนะ;;;"
+    MessageTW: 但不太習慣拍照，所以表情有點……汗
+    MessageGroupId: 100490290
     Id: 100490410
     CharacterId: 10049
     MessageCondition: Feedback
@@ -788,15 +796,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 근데 사진 찍는 건 그다지 익숙하지 않아 표정이 좀;;;
-    MessageJP: けど写真撮るのはあんま慣れてないから、ちょっと表情が……汗
-    MessageCN: 但还是不太习惯拍照，表情就有点……尬
-    MessageEN: But I'm not used to taking photos, so my face is weird.
-    MessageTH: "ดูสีหน้าแหยๆ เหมือนไม่ชินกับการ
-
-      ถ่ายรูปเลยนะ;;;"
-    MessageTW: 但不太習慣拍照，所以表情有點……汗
-  - MessageGroupId: 100490300
+  - MessageKR: 아
+    MessageJP: だから
+    MessageCN: 所以
+    MessageEN: Ah!
+    MessageTH: อา...
+    MessageTW: 所以說
+    MessageGroupId: 100490300
     Id: 100490420
     CharacterId: 10049
     MessageCondition: Feedback
@@ -808,13 +814,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아
-    MessageJP: だから
-    MessageCN: 所以
-    MessageEN: Ah!
-    MessageTH: อา...
-    MessageTW: 所以說
-  - MessageGroupId: 100490300
+  - MessageKR: 봤으면 지워
+    MessageJP: 見たら消してね
+    MessageCN: 老师看完就删掉吧
+    MessageEN: You can delete it now.
+    MessageTH: ถ้าดูแล้วก็ลบไปเลย
+    MessageTW: 看完就刪掉吧
+    MessageGroupId: 100490300
     Id: 100490430
     CharacterId: 10049
     MessageCondition: Feedback
@@ -826,13 +832,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 봤으면 지워
-    MessageJP: 見たら消してね
-    MessageCN: 老师看完就删掉吧
-    MessageEN: You can delete it now.
-    MessageTH: ถ้าดูแล้วก็ลบไปเลย
-    MessageTW: 看完就刪掉吧
-  - MessageGroupId: 100490300
+  - MessageKR: 그럼 이만
+    MessageJP: じゃあまた
+    MessageCN: 那就之后见啦
+    MessageEN: See ya.
+    MessageTH: แค่นี้นะ
+    MessageTW: 那就下次見
+    MessageGroupId: 100490300
     Id: 100490440
     CharacterId: 10049
     MessageCondition: Feedback
@@ -844,13 +850,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 이만
-    MessageJP: じゃあまた
-    MessageCN: 那就之后见啦
-    MessageEN: See ya.
-    MessageTH: แค่นี้นะ
-    MessageTW: 那就下次見
-  - MessageGroupId: 100490310
+  - MessageKR: 선생님. 혹시 지금 바쁠까?
+    MessageJP: 先生、今もしかして忙しい？
+    MessageCN: 老师，您现在忙吗？
+    MessageEN: Sensei, are you busy right now?
+    MessageTH: คุณครู ตอนนี้ยุ่งอยู่หรือเปล่า?
+    MessageTW: 老師，現在也還忙嗎？
+    MessageGroupId: 100490310
     Id: 100490450
     CharacterId: 10049
     MessageCondition: FavorRankUp
@@ -862,13 +868,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 혹시 지금 바쁠까?
-    MessageJP: 先生、今もしかして忙しい？
-    MessageCN: 老师，您现在忙吗？
-    MessageEN: Sensei, are you busy right now?
-    MessageTH: คุณครู ตอนนี้ยุ่งอยู่หรือเปล่า?
-    MessageTW: 老師，現在也還忙嗎？
-  - MessageGroupId: 100490320
+  - MessageKR: 아니면 말고
+    MessageJP: だったら大丈夫なんだけど
+    MessageCN: 如果在忙的话就算了
+    MessageEN: It's okay if you are.
+    MessageTH: ถ้ายุ่งก็ไม่เป็นไร
+    MessageTW: 是的話也沒關係
+    MessageGroupId: 100490320
     Id: 100490460
     CharacterId: 10049
     MessageCondition: None
@@ -880,13 +886,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니면 말고
-    MessageJP: だったら大丈夫なんだけど
-    MessageCN: 如果在忙的话就算了
-    MessageEN: It's okay if you are.
-    MessageTH: ถ้ายุ่งก็ไม่เป็นไร
-    MessageTW: 是的話也沒關係
-  - MessageGroupId: 100490330
+  - MessageKR: 선생님은 뭐 특별히 좋아하는 디저트라든가 있어? 지난번의 연장인데…….
+    MessageJP: この前の続きだけど……すごく好きなスイーツとかある？
+    MessageCN: 就是上次说到一半的事情……老师有没有特别喜欢的甜品？
+    MessageEN:
+      Sensei, do you have a favorite dessert? I think we kinda talked about
+      this before.
+    MessageTH: คุณครูมีของหวานที่ชอบเป็นพิเศษรึเปล่า? ฉันอยากคุยต่อจากคราวที่แล้ว...
+    MessageTW: 接續之前的話題……有非常喜歡的甜點嗎？
+    MessageGroupId: 100490330
     Id: 100490470
     CharacterId: 10049
     MessageCondition: None
@@ -898,15 +906,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님은 뭐 특별히 좋아하는 디저트라든가 있어? 지난번의 연장인데…….
-    MessageJP: この前の続きだけど……すごく好きなスイーツとかある？
-    MessageCN: 就是上次说到一半的事情……老师有没有特别喜欢的甜品？
-    MessageEN:
-      Sensei, do you have a favorite dessert? I think we kinda talked about
-      this before.
-    MessageTH: คุณครูมีของหวานที่ชอบเป็นพิเศษรึเปล่า? ฉันอยากคุยต่อจากคราวที่แล้ว...
-    MessageTW: 接續之前的話題……有非常喜歡的甜點嗎？
-  - MessageGroupId: 100490340
+  - MessageKR: 갑자기 취향 이야기?
+    MessageJP: 好きなスイーツ？
+    MessageCN: 喜欢的甜品？
+    MessageEN: About my taste?
+    MessageTH: จู่ๆ ก็ถามเรื่องของที่ชอบเหรอ?
+    MessageTW: 喜歡的甜點？
+    MessageGroupId: 100490340
     Id: 100490480
     CharacterId: 10049
     MessageCondition: Answer
@@ -918,13 +924,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 취향 이야기?
-    MessageJP: 好きなスイーツ？
-    MessageCN: 喜欢的甜品？
-    MessageEN: About my taste?
-    MessageTH: จู่ๆ ก็ถามเรื่องของที่ชอบเหรอ?
-    MessageTW: 喜歡的甜點？
-  - MessageGroupId: 100490340
+  - MessageKR: 말하면 사주는 거야?
+    MessageJP: もしかして買ってきてくれるの？
+    MessageCN: 难道和纱要买给我吃吗？
+    MessageEN: Are you buying if I tell you?
+    MessageTH: ถ้าบอกแล้วจะซื้อให้ครูเหรอ?
+    MessageTW: 難不成要買給我嗎？
+    MessageGroupId: 100490340
     Id: 100490490
     CharacterId: 10049
     MessageCondition: Answer
@@ -936,13 +942,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 말하면 사주는 거야?
-    MessageJP: もしかして買ってきてくれるの？
-    MessageCN: 难道和纱要买给我吃吗？
-    MessageEN: Are you buying if I tell you?
-    MessageTH: ถ้าบอกแล้วจะซื้อให้ครูเหรอ?
-    MessageTW: 難不成要買給我嗎？
-  - MessageGroupId: 100490350
+  - MessageKR: 으음 역시 좀 갑작스럽나
+    MessageJP: あー、やっぱちょっと急だったかな
+    MessageCN: 啊，果然这么问还是太唐突了吗
+    MessageEN: Umm, I guess this is a bit random.
+    MessageTH: อืม กะทันหันไปสินะ
+    MessageTW: 啊──，果然有點突然啊
+    MessageGroupId: 100490350
     Id: 100490500
     CharacterId: 10049
     MessageCondition: Feedback
@@ -954,13 +960,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음 역시 좀 갑작스럽나
-    MessageJP: あー、やっぱちょっと急だったかな
-    MessageCN: 啊，果然这么问还是太唐突了吗
-    MessageEN: Umm, I guess this is a bit random.
-    MessageTH: อืม กะทันหันไปสินะ
-    MessageTW: 啊──，果然有點突然啊
-  - MessageGroupId: 100490360
+  - MessageKR: ???
+    MessageJP: ？？？何のこと？
+    MessageCN: ？？？说什么呢？
+    MessageEN: ???
+    MessageTH: ???
+    MessageTW: ？？？什麼意思？
+    MessageGroupId: 100490360
     Id: 100490510
     CharacterId: 10049
     MessageCondition: Feedback
@@ -972,13 +978,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ???
-    MessageJP: ？？？何のこと？
-    MessageCN: ？？？说什么呢？
-    MessageEN: ???
-    MessageTH: ???
-    MessageTW: ？？？什麼意思？
-  - MessageGroupId: 100490360
+  - MessageKR: 글쎄? 상황 되면?
+    MessageJP: あー、まぁ。気が向いたら買うかもね？
+    MessageCN: 啊——，不过。我心情好的话说不定真会给老师买？
+    MessageEN: Well, maybe, if I can?
+    MessageTH: ก็อาจจะนะ ถ้ามีโอกาส
+    MessageTW: 啊──，嘛。如果有中意的話可能會買吧？
+    MessageGroupId: 100490360
     Id: 100490520
     CharacterId: 10049
     MessageCondition: Feedback
@@ -990,13 +996,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 글쎄? 상황 되면?
-    MessageJP: あー、まぁ。気が向いたら買うかもね？
-    MessageCN: 啊——，不过。我心情好的话说不定真会给老师买？
-    MessageEN: Well, maybe, if I can?
-    MessageTH: ก็อาจจะนะ ถ้ามีโอกาส
-    MessageTW: 啊──，嘛。如果有中意的話可能會買吧？
-  - MessageGroupId: 100490370
+  - MessageKR: 그냥 나중에라도……. 기껏 줬는데 좋아하지 않는 거면 아쉽잖아
+    MessageJP: ほら……せっかく買っても、好みから外れたら困るじゃん
+    MessageCN: 就……买都买了，要是老师不喜欢的话不就麻烦了嘛
+    MessageEN: If I'm gonna make it, I wanna make sure you'll actually like it.
+    MessageTH: "แค่เผื่อไว้มีโอกาสน่ะ... แต่ว่าถ้าเตรียมไว้แล้ว
+
+      คุณครูไม่ชอบก็น่าเสียดายใช่มั้ยล่ะ?"
+    MessageTW: 你想啊……好不容易買了，如果不喜歡的話就麻煩了
+    MessageGroupId: 100490370
     Id: 100490530
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1008,15 +1016,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 나중에라도……. 기껏 줬는데 좋아하지 않는 거면 아쉽잖아
-    MessageJP: ほら……せっかく買っても、好みから外れたら困るじゃん
-    MessageCN: 就……买都买了，要是老师不喜欢的话不就麻烦了嘛
-    MessageEN: If I'm gonna make it, I wanna make sure you'll actually like it.
-    MessageTH: "แค่เผื่อไว้มีโอกาสน่ะ... แต่ว่าถ้าเตรียมไว้แล้ว
-
-      คุณครูไม่ชอบก็น่าเสียดายใช่มั้ยล่ะ?"
-    MessageTW: 你想啊……好不容易買了，如果不喜歡的話就麻煩了
-  - MessageGroupId: 100490380
+  - MessageKR: 음;;;;;
+    MessageJP: んー……
+    MessageCN: 嗯——……
+    MessageEN: Umm...
+    MessageTH: อืม;;;;
+    MessageTW: 嗯──……
+    MessageGroupId: 100490380
     Id: 100490540
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1028,13 +1034,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음;;;;;
-    MessageJP: んー……
-    MessageCN: 嗯——……
-    MessageEN: Umm...
-    MessageTH: อืม;;;;
-    MessageTW: 嗯──……
-  - MessageGroupId: 100490390
+  - MessageKR: 역시 됐어; 방금 건 못 들은 거로 해줘
+    MessageJP: やっぱこの話終わり
+    MessageCN: 果然这个话题还是到此为止吧
+    MessageEN: Don't worry about it. Let's just pretend you never heard from me.
+    MessageTH: ช่างเหอะ แล้วก็ทำเป็นไม่เห็น ;; ไปด้วยล่ะ
+    MessageTW: 果然還是先就此打住
+    MessageGroupId: 100490390
     Id: 100490550
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1046,13 +1052,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 됐어; 방금 건 못 들은 거로 해줘
-    MessageJP: やっぱこの話終わり
-    MessageCN: 果然这个话题还是到此为止吧
-    MessageEN: Don't worry about it. Let's just pretend you never heard from me.
-    MessageTH: ช่างเหอะ แล้วก็ทำเป็นไม่เห็น ;; ไปด้วยล่ะ
-    MessageTW: 果然還是先就此打住
-  - MessageGroupId: 100490400
+  - MessageKR: 이 이야긴 끝.
+    MessageJP: 今のは聞かなかったことにして
+    MessageCN: 刚刚聊的老师就当没看到
+    MessageEN: Let's not talk about it.
+    MessageTH: แค่นี้นะ
+    MessageTW: 剛才的當作沒有聽到
+    MessageGroupId: 100490400
     Id: 100490560
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1064,13 +1070,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 이야긴 끝.
-    MessageJP: 今のは聞かなかったことにして
-    MessageCN: 刚刚聊的老师就当没看到
-    MessageEN: Let's not talk about it.
-    MessageTH: แค่นี้นะ
-    MessageTW: 剛才的當作沒有聽到
-  - MessageGroupId: 100490410
+  - MessageKR: 선생님
+    MessageJP: 先生、もしかして
+    MessageCN: 老师，我想问一下
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師，難不成
+    MessageGroupId: 100490410
     Id: 100490570
     CharacterId: 10049
     MessageCondition: FavorRankUp
@@ -1082,13 +1088,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님
-    MessageJP: 先生、もしかして
-    MessageCN: 老师，我想问一下
-    MessageEN: Sensei.
-    MessageTH: คุณครู
-    MessageTW: 老師，難不成
-  - MessageGroupId: 100490420
+  - MessageKR: 혹시 지금 자리에 있어?
+    MessageJP: 今、席にいる？
+    MessageCN: 老师现在，在办公室吗？
+    MessageEN: Are you there?
+    MessageTH: ตอนนี้อยู่ที่ห้องรึเปล่า?
+    MessageTW: 現在，在位置上嗎？
+    MessageGroupId: 100490420
     Id: 100490580
     CharacterId: 10049
     MessageCondition: None
@@ -1100,13 +1106,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혹시 지금 자리에 있어?
-    MessageJP: 今、席にいる？
-    MessageCN: 老师现在，在办公室吗？
-    MessageEN: Are you there?
-    MessageTH: ตอนนี้อยู่ที่ห้องรึเปล่า?
-    MessageTW: 現在，在位置上嗎？
-  - MessageGroupId: 100490430
+  - MessageKR: 응. 있어.
+    MessageJP: うん。いるよ
+    MessageCN: 嗯。在的哦
+    MessageEN: Yeah, I do.
+    MessageTH: อื้อ อยู่ๆ
+    MessageTW: 嗯。我在唷。
+    MessageGroupId: 100490430
     Id: 100490590
     CharacterId: 10049
     MessageCondition: Answer
@@ -1118,13 +1124,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 있어.
-    MessageJP: うん。いるよ
-    MessageCN: 嗯。在的哦
-    MessageEN: Yeah, I do.
-    MessageTH: อื้อ อยู่ๆ
-    MessageTW: 嗯。我在唷。
-  - MessageGroupId: 100490430
+  - MessageKR: 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 和纱怎么了？
+    MessageEN: What's going on?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: 怎麼了？
+    MessageGroupId: 100490430
     Id: 100490600
     CharacterId: 10049
     MessageCondition: Answer
@@ -1136,13 +1142,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 일이야?
-    MessageJP: どうしたの？
-    MessageCN: 和纱怎么了？
-    MessageEN: What's going on?
-    MessageTH: มีอะไรเหรอ?
-    MessageTW: 怎麼了？
-  - MessageGroupId: 100490440
+  - MessageKR: 아니 뭐 대단한 건 아니고
+    MessageJP: いや、大したことじゃなくて
+    MessageCN: 没，没什么大事
+    MessageEN: It's nothing.
+    MessageTH: ก็ไม่ได้มีเรื่องอะไรหรอก
+    MessageTW: 不，沒什麼大不了的
+    MessageGroupId: 100490440
     Id: 100490610
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1154,13 +1160,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니 뭐 대단한 건 아니고
-    MessageJP: いや、大したことじゃなくて
-    MessageCN: 没，没什么大事
-    MessageEN: It's nothing.
-    MessageTH: ก็ไม่ได้มีเรื่องอะไรหรอก
-    MessageTW: 不，沒什麼大不了的
-  - MessageGroupId: 100490440
+  - MessageKR: 자리에 있으면 됐어
+    MessageJP: 席にいるならいいよ
+    MessageCN: 老师在就好
+    MessageEN: I just wanted to know if you were there.
+    MessageTH: คุณครูรออยู่ที่ห้องก็พอ
+    MessageTW: 有在位置上就好
+    MessageGroupId: 100490440
     Id: 100490620
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1172,13 +1178,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 자리에 있으면 됐어
-    MessageJP: 席にいるならいいよ
-    MessageCN: 老师在就好
-    MessageEN: I just wanted to know if you were there.
-    MessageTH: คุณครูรออยู่ที่ห้องก็พอ
-    MessageTW: 有在位置上就好
-  - MessageGroupId: 100490450
+  - MessageKR: 지금 들어갈게.
+    MessageJP: ちょっと入るよ
+    MessageCN: 那我进去一下哦
+    MessageEN: I'll go there now.
+    MessageTH: เดี๋ยวฉันไปหา
+    MessageTW: 我進去一下唷
+    MessageGroupId: 100490450
     Id: 100490630
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1190,13 +1196,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 들어갈게.
-    MessageJP: ちょっと入るよ
-    MessageCN: 那我进去一下哦
-    MessageEN: I'll go there now.
-    MessageTH: เดี๋ยวฉันไปหา
-    MessageTW: 我進去一下唷
-  - MessageGroupId: 100490460
+  - MessageKR: 그
+    MessageJP: あの、先生
+    MessageCN: 那个，老师
+    MessageEN: Um...
+    MessageTH: คือ...
+    MessageTW: 那個，老師
+    MessageGroupId: 100490460
     Id: 100490640
     CharacterId: 10049
     MessageCondition: None
@@ -1208,13 +1214,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그
-    MessageJP: あの、先生
-    MessageCN: 那个，老师
-    MessageEN: Um...
-    MessageTH: คือ...
-    MessageTW: 那個，老師
-  - MessageGroupId: 100490470
+  - MessageKR: 선생님
+    MessageJP: 念のためもう一度言うけど
+    MessageCN: 以防万一，我再说一遍
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 慎重起見，再說一遍
+    MessageGroupId: 100490470
     Id: 100490650
     CharacterId: 10049
     MessageCondition: None
@@ -1226,13 +1232,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님
-    MessageJP: 念のためもう一度言うけど
-    MessageCN: 以防万一，我再说一遍
-    MessageEN: Sensei.
-    MessageTH: คุณครู
-    MessageTW: 慎重起見，再說一遍
-  - MessageGroupId: 100490470
+  - MessageKR: 노파심에 다시 한번 말하니까 진짜 '처리' 같은 거 아냐
+    MessageJP: 本当に「処理」なんかじゃないからね
+    MessageCN: 我真的不是想让老师帮我“处理”掉之类的
+    MessageEN: I don't want you to think I was just getting it over with or anything.
+    MessageTH: ที่ฉันพูดซ้ำๆ ไปก็เพราะว่าเป็นห่วง มันไม่ใช่การ "จัดการ" จริงๆ สักหน่อย
+    MessageTW: 真的不是要你「處理」什麼的
+    MessageGroupId: 100490470
     Id: 100490660
     CharacterId: 10049
     MessageCondition: None
@@ -1244,13 +1250,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 노파심에 다시 한번 말하니까 진짜 '처리' 같은 거 아냐
-    MessageJP: 本当に「処理」なんかじゃないからね
-    MessageCN: 我真的不是想让老师帮我“处理”掉之类的
-    MessageEN: I don't want you to think I was just getting it over with or anything.
-    MessageTH: ที่ฉันพูดซ้ำๆ ไปก็เพราะว่าเป็นห่วง มันไม่ใช่การ "จัดการ" จริงๆ สักหน่อย
-    MessageTW: 真的不是要你「處理」什麼的
-  - MessageGroupId: 100490480
+  - MessageKR: 그리고 다음에는 제대로 선생님을 위한 거로 골라서 갈 테니까 말이야
+    MessageJP: でも、今度はちゃんと先生の分を選んで持って行くから
+    MessageCN: 不过，下次我会好好给老师挑一份带过去的
+    MessageEN: Next time, I'm gonna pick out something that's just for you.
+    MessageTH: "อีกอย่างคราวหน้า ฉันจะเลือกชิ้นที่
+
+      เหมาะกับคุณครูไปให้"
+    MessageTW: 不過，下次會好好地挑選老師的份帶去的
+    MessageGroupId: 100490480
     Id: 100490670
     CharacterId: 10049
     MessageCondition: None
@@ -1262,15 +1270,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그리고 다음에는 제대로 선생님을 위한 거로 골라서 갈 테니까 말이야
-    MessageJP: でも、今度はちゃんと先生の分を選んで持って行くから
-    MessageCN: 不过，下次我会好好给老师挑一份带过去的
-    MessageEN: Next time, I'm gonna pick out something that's just for you.
-    MessageTH: "อีกอย่างคราวหน้า ฉันจะเลือกชิ้นที่
-
-      เหมาะกับคุณครูไปให้"
-    MessageTW: 不過，下次會好好地挑選老師的份帶去的
-  - MessageGroupId: 100490490
+  - MessageKR: 바로 두 개의 문장이 모순됩니다만
+    MessageJP: 早速その二つの言葉が矛盾していますが
+    MessageCN: 和纱说过的话这么快就自相矛盾了吗
+    MessageEN: I don't know what to think about what you just said...
+    MessageTH: สองประโยคนี้ดูขัดแย้งกันนะ...
+    MessageTW: 一下子就說出了兩句矛盾的話
+    MessageGroupId: 100490490
     Id: 100490680
     CharacterId: 10049
     MessageCondition: Answer
@@ -1282,13 +1288,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 바로 두 개의 문장이 모순됩니다만
-    MessageJP: 早速その二つの言葉が矛盾していますが
-    MessageCN: 和纱说过的话这么快就自相矛盾了吗
-    MessageEN: I don't know what to think about what you just said...
-    MessageTH: สองประโยคนี้ดูขัดแย้งกันนะ...
-    MessageTW: 一下子就說出了兩句矛盾的話
-  - MessageGroupId: 100490490
+  - MessageKR: 괜찮아. 맛있었어
+    MessageJP: 大丈夫、おいしかったよ
+    MessageCN: 没关系啊，很好吃的
+    MessageEN: It's fine. It was good.
+    MessageTH: ไม่เป็นไรหรอก มันอร่อยดีนะ
+    MessageTW: 沒關係，很好吃唷
+    MessageGroupId: 100490490
     Id: 100490690
     CharacterId: 10049
     MessageCondition: Answer
@@ -1300,13 +1306,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮아. 맛있었어
-    MessageJP: 大丈夫、おいしかったよ
-    MessageCN: 没关系啊，很好吃的
-    MessageEN: It's fine. It was good.
-    MessageTH: ไม่เป็นไรหรอก มันอร่อยดีนะ
-    MessageTW: 沒關係，很好吃唷
-  - MessageGroupId: 100490500
+  - MessageKR: ;;;;;
+    MessageJP: ……そう
+    MessageCN: ……这样啊
+    MessageEN: Uh...
+    MessageTH: ;;;;;
+    MessageTW: ……嗚
+    MessageGroupId: 100490500
     Id: 100490700
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1318,13 +1324,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ;;;;;
-    MessageJP: ……そう
-    MessageCN: ……这样啊
-    MessageEN: Uh...
-    MessageTH: ;;;;;
-    MessageTW: ……嗚
-  - MessageGroupId: 100490510
+  - MessageKR: 으음…….
+    MessageJP: うーん……
+    MessageCN: 嗯——……
+    MessageEN: Hmm...
+    MessageTH: อืม...
+    MessageTW: 唔──嗯……
+    MessageGroupId: 100490510
     Id: 100490710
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1336,13 +1342,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음…….
-    MessageJP: うーん……
-    MessageCN: 嗯——……
-    MessageEN: Hmm...
-    MessageTH: อืม...
-    MessageTW: 唔──嗯……
-  - MessageGroupId: 100490520
+  - MessageKR: 아무튼 그리고 또 하나 더
+    MessageJP: あと、最後に
+    MessageCN: 还有，老师最后
+    MessageEN: Anyway, one more thing...
+    MessageTH: ยังไงก็เถอะ อีกอย่าง...
+    MessageTW: 還有，最後一件事
+    MessageGroupId: 100490520
     Id: 100490720
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1354,13 +1360,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아무튼 그리고 또 하나 더
-    MessageJP: あと、最後に
-    MessageCN: 还有，老师最后
-    MessageEN: Anyway, one more thing...
-    MessageTH: ยังไงก็เถอะ อีกอย่าง...
-    MessageTW: 還有，最後一件事
-  - MessageGroupId: 100490530
+  - MessageKR: 그
+    MessageJP: その、やっぱ
+    MessageCN: 就，确实
+    MessageEN: Um...
+    MessageTH: นี่
+    MessageTW: 那個，果然
+    MessageGroupId: 100490530
     Id: 100490730
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1372,13 +1378,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그
-    MessageJP: その、やっぱ
-    MessageCN: 就，确实
-    MessageEN: Um...
-    MessageTH: นี่
-    MessageTW: 那個，果然
-  - MessageGroupId: 100490530
+  - MessageKR: 역시 놀리는 거 맞았던 거지? 고양이 이야기.
+    MessageJP: からかってたんだよね？猫のくだり
+    MessageCN: 是想拿我寻开心吧？猫的那段
+    MessageEN: You were teasing me with that cat story, right?
+    MessageTH: เรื่องนั้นน่ะล้อเล่นใช่มั้ย? เรื่องแมวน่ะ
+    MessageTW: 是開玩笑的吧？貓的部份
+    MessageGroupId: 100490530
     Id: 100490740
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1390,13 +1396,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 놀리는 거 맞았던 거지? 고양이 이야기.
-    MessageJP: からかってたんだよね？猫のくだり
-    MessageCN: 是想拿我寻开心吧？猫的那段
-    MessageEN: You were teasing me with that cat story, right?
-    MessageTH: เรื่องนั้นน่ะล้อเล่นใช่มั้ย? เรื่องแมวน่ะ
-    MessageTW: 是開玩笑的吧？貓的部份
-  - MessageGroupId: 100490540
+  - MessageKR: 어라. 아직 눈치 못 챘었구나
+    MessageJP: さあ、どうだろうね
+    MessageCN: 这个嘛——到底是不是呢
+    MessageEN: Oh, you just realized?
+    MessageTH: เอ๋? ยังคงไม่รู้สินะ...
+    MessageTW: 哎呀，不知道呢
+    MessageGroupId: 100490540
     Id: 100490750
     CharacterId: 10049
     MessageCondition: Answer
@@ -1408,13 +1414,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어라. 아직 눈치 못 챘었구나
-    MessageJP: さあ、どうだろうね
-    MessageCN: 这个嘛——到底是不是呢
-    MessageEN: Oh, you just realized?
-    MessageTH: เอ๋? ยังคงไม่รู้สินะ...
-    MessageTW: 哎呀，不知道呢
-  - MessageGroupId: 100490540
+  - MessageKR: 흠. 결국 들켜버렸나.
+    MessageJP: 結局ばれちゃったね
+    MessageCN: 最后还是暴露了啊
+    MessageEN: Hmm, I guess you got me.
+    MessageTH: ฮึ่ม สุดท้ายก็โดนจับได้
+    MessageTW: 結果還是被發現了嗎
+    MessageGroupId: 100490540
     Id: 100490760
     CharacterId: 10049
     MessageCondition: Answer
@@ -1426,13 +1432,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흠. 결국 들켜버렸나.
-    MessageJP: 結局ばれちゃったね
-    MessageCN: 最后还是暴露了啊
-    MessageEN: Hmm, I guess you got me.
-    MessageTH: ฮึ่ม สุดท้ายก็โดนจับได้
-    MessageTW: 結果還是被發現了嗎
-  - MessageGroupId: 100490550
+  - MessageKR: ……
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: "..."
+    MessageTH: "..."
+    MessageTW: ……
+    MessageGroupId: 100490550
     Id: 100490770
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1444,13 +1450,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……
-    MessageJP: ……
-    MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "..."
-    MessageTW: ……
-  - MessageGroupId: 100490550
+  - MessageKR: 어이
+    MessageJP: サイテー……
+    MessageCN: 太差劲了……
+    MessageEN: Hey
+    MessageTH: นี่!
+    MessageTW: 超低級──……
+    MessageGroupId: 100490550
     Id: 100490780
     CharacterId: 10049
     MessageCondition: Feedback
@@ -1462,9 +1468,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어이
-    MessageJP: サイテー……
-    MessageCN: 太差劲了……
-    MessageEN: Hey
-    MessageTH: นี่!
-    MessageTW: 超低級──……

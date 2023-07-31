@@ -3,7 +3,7 @@
     @click.stop="onUnitClick"
     class="unit"
     :style="effectCSS"
-    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip }"
+    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip && !st }"
     v-click-outside="onClickOutside"
     ref="TypingContainer"
   >
@@ -60,6 +60,7 @@ const props = withDefaults(defineProps<IProp>(), {
   }),
   instant: false,
   title: false,
+  st: false,
 });
 const emit = defineEmits<{ (ev: "unitClick"): void }>();
 const TypingContainer = ref<HTMLElement>() as Ref<HTMLElement>;
@@ -74,7 +75,8 @@ const selfOffsetTop = ref(0);
 const selfOffsetLeft = ref(0);
 let lineClickCache = 0; // 用于resize时确定tooltip在换行的哪个位置
 
-const showTooltip = ref(false);
+const showTooltipInternal = ref(false);
+const showTooltip = computed(() => showTooltipInternal.value && !props.st);
 const propText = ref(props.text);
 const currentContent = ref(propText.value.content);
 const filterRuby = props.text.effects.filter(it => it.name === "ruby")[0] || {
@@ -91,22 +93,23 @@ const currentSubContent = ref(filterRuby.value.join(""));
 const contentPointer = ref(-1);
 const subContentPointer = ref(-1);
 const subPadding = ref(0);
-const subContainTop = computed(() => (props.title ? "-0.45" : "-1.1"));
+const subContainTop = computed(() => (props.title ? "-0.45" : "-1"));
 const effectCSS = computed(() => ({
   ...parseTextEffectToCss(props.text.effects),
   "--padding": subPadding.value,
   "--top-offset": subContainTop.value,
 })) as unknown as ComputedRef<StyleValue[]>;
+const isTypingComplete = ref(false);
 
 if (props.instant) {
   contentPointer.value = currentContent.value.length;
   subContentPointer.value = currentSubContent.value.length;
+  isTypingComplete.value = true;
 }
 
 const contentHandler = ref(0);
 const subContentHandler = ref(0);
 
-const isTypingComplete = ref(false);
 
 const internalContent = computed(() =>
   currentContent.value.substring(0, contentPointer.value)
@@ -192,12 +195,12 @@ function onUnitClick(ev: MouseEvent) {
     return;
   }
   // 开始计算tooltip的具体位置
-  showTooltip.value = true;
+  showTooltipInternal.value = true;
   nextTick(() => calcTooltipLocationParam(ev));
 }
 
 function onClickOutside() {
-  showTooltip.value = false;
+  showTooltipInternal.value = false;
 }
 
 const onResize = useThrottleFn(() => {
@@ -206,7 +209,7 @@ const onResize = useThrottleFn(() => {
 }, 50);
 
 function calcTooltipLocationParam(ev?: MouseEvent, useCache?: boolean) {
-  if (!tooltip || !showTooltip.value) {
+  if (!tooltip || !showTooltip.value || props.st) {
     return;
   }
   // 为了好看的width样式, 计算渲染的tooltip内容长度是否达到200px
@@ -313,6 +316,7 @@ type IProp = {
   instant?: boolean;
   // 在title情况下(大字体)控制ruby的位置不要太过分
   title?: boolean;
+  st?: boolean;
 };
 </script>
 
@@ -325,9 +329,9 @@ type IProp = {
   .rt {
     --local-font-size: calc(var(--font-size) * 0.6);
     position: absolute;
-    top: min(calc(var(--local-font-size) * var(--top-offset)), -12px);
+    top: calc(var(--local-font-size) * var(--top-offset));
     left: 50%;
-    transform: translate(-50%, calc(0.2 * var(--font-size)));
+    transform: translateX(-50%);
     animation: fade-in 0.25s ease-in-out;
     min-width: 100%;
     font-size: var(--local-font-size);
@@ -345,7 +349,6 @@ type IProp = {
   }
 }
 .unit.ruby {
-  display: inline-block;
   .body {
     display: inline-block;
   }
@@ -366,6 +369,9 @@ type IProp = {
   background-size: calc(100% - #{$padding} * 2) 100%;
   background-repeat: no-repeat;
   padding: 4px $padding;
+  .rt {
+    top: 0;
+  }
 }
 .tooltip {
   $bg: #0a61e5;

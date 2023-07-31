@@ -1,62 +1,68 @@
 CharacterId: 10003
 translator: 霉豆子
 title:
-  - GroupId: 1000302
-    FavorScheduleId: 100032
-    CharacterId: 10003
-    TextJp: 新作グッズ！
+  - TextJp: 新作グッズ！
     TextCn: 新周边！
     TextKr: 신상 굿즈!
     TextEn: New Merch!
     TextTh: สินค้าใหม่!
     TextTw: 新作周邊！
-  - GroupId: 1000303
-    FavorScheduleId: 100033
+    GroupId: 1000302
+    FavorScheduleId: 100032
     CharacterId: 10003
-    TextJp: バックの秘密
+  - TextJp: バックの秘密
     TextCn: 书包的秘密
     TextKr: 가방의 비밀
     TextEn: The Secret of the Bag
     TextTh: ความลับของกระเป๋า
     TextTw: 背包的秘密
-  - GroupId: 1000305
-    FavorScheduleId: 100035
+    GroupId: 1000303
+    FavorScheduleId: 100033
     CharacterId: 10003
-    TextJp: ペロロ様救出作戦
+  - TextJp: ペロロ様救出作戦
     TextCn: 佩洛洛大人救出作战
     TextKr: 페로로 님 구출 작전
     TextEn: Peroro Rescue Mission
     TextTh: ปฏิบัติการช่วยท่านเพโรโร่!
     TextTw: 佩洛洛大人救援作戰
-  - GroupId: 1000306
-    FavorScheduleId: 100036
+    GroupId: 1000305
+    FavorScheduleId: 100035
     CharacterId: 10003
-    TextJp: お悩み相談
+  - TextJp: お悩み相談
     TextCn: 烦恼咨询
     TextKr: 고민 상담
     TextEn: A Consultation
     TextTh: ปรึกษาปัญหากวนใจ
     TextTw: 煩惱諮詢
-  - GroupId: 1000308
-    FavorScheduleId: 100038
+    GroupId: 1000306
+    FavorScheduleId: 100036
     CharacterId: 10003
-    TextJp: 偶然のおでかけ
+  - TextJp: 偶然のおでかけ
     TextCn: 偶然的外出
     TextKr: 우연한 외출
     TextEn: A Casual Outing
     TextTh: การออกไปข้างนอกโดยบังเอิญ
     TextTw: 偶然的外出
-  - GroupId: 1000309
-    FavorScheduleId: 100039
+    GroupId: 1000308
+    FavorScheduleId: 100038
     CharacterId: 10003
-    TextJp: ゲリラ握手会
+  - TextJp: ゲリラ握手会
     TextCn: 出乎意料的握手会
     TextKr: 게릴라 악수회
     TextEn: Guerrilla Meet and Greet
     TextTh: งานจับมือแบบกองโจร
     TextTw: 突擊握手會
+    GroupId: 1000309
+    FavorScheduleId: 100039
+    CharacterId: 10003
 content:
-  - MessageGroupId: 100030010
+  - MessageKR: 선생님, 선생님!
+    MessageJP: 先生、先生！
+    MessageCN: 老师，老师！
+    MessageEN: Sensei, Sensei!
+    MessageTH: คุณครู... คุณครูคะ!
+    MessageTW: 老師，老師！
+    MessageGroupId: 100030010
     Id: 476
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -68,13 +74,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 선생님!
-    MessageJP: 先生、先生！
-    MessageCN: 老师，老师！
-    MessageEN: Sensei, Sensei!
-    MessageTH: คุณครู... คุณครูคะ!
-    MessageTW: 老師，老師！
-  - MessageGroupId: 100030020
+  - MessageKR: 좋은 소식이 있어요!
+    MessageJP: やりました！
+    MessageCN: 我做到了！
+    MessageEN: I have good news!
+    MessageTH: ฉันมีข่าวดีมาบอกค่ะ
+    MessageTW: 我辦到了！
+    MessageGroupId: 100030020
     Id: 477
     CharacterId: 10003
     MessageCondition: None
@@ -86,13 +92,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 좋은 소식이 있어요!
-    MessageJP: やりました！
-    MessageCN: 我做到了！
-    MessageEN: I have good news!
-    MessageTH: ฉันมีข่าวดีมาบอกค่ะ
-    MessageTW: 我辦到了！
-  - MessageGroupId: 100030020
+  - MessageKR: 이번에 경매 마켓에서 구하기 힘든 모모프렌즈 굿즈를 손에 넣었어요!
+    MessageJP: 昨日、貴重なモモフレンズのグッズを手に入れることができました！
+    MessageCN: 昨天，我终于买到很珍贵的momofriends周边啦！
+    MessageEN: I got some rare Momo Friends goods from the auction!
+    MessageTH: "คราวนี้ฉันประมูลกู้ดของ MOMO
+
+      FRIENDS ที่หายากมากๆ มาจากตลาด
+
+      ประมูลได้แล้วค่ะ!"
+    MessageTW: 昨天，入手了珍貴的Momo好友商品！
+    MessageGroupId: 100030020
     Id: 478
     CharacterId: 10003
     MessageCondition: None
@@ -104,17 +114,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에 경매 마켓에서 구하기 힘든 모모프렌즈 굿즈를 손에 넣었어요!
-    MessageJP: 昨日、貴重なモモフレンズのグッズを手に入れることができました！
-    MessageCN: 昨天，我终于买到很珍贵的momofriends周边啦！
-    MessageEN: I got some rare Momo Friends goods from the auction!
-    MessageTH: "คราวนี้ฉันประมูลกู้ดของ MOMO
-
-      FRIENDS ที่หายากมากๆ มาจากตลาด
-
-      ประมูลได้แล้วค่ะ!"
-    MessageTW: 昨天，入手了珍貴的Momo好友商品！
-  - MessageGroupId: 100030030
+  - MessageKR: 경매 마켓에서? 어떤 물건인데?
+    MessageJP: それは良かったね、どんなグッズなの？
+    MessageCN: 那太好了，日富美买了什么周边呢？
+    MessageEN: From the auction? What did you get?
+    MessageTH: ตลาดประมูลเหรอ? กู้ดอะไรเหรอ?
+    MessageTW: 那真是太好了，是什麼樣的商品？
+    MessageGroupId: 100030030
     Id: 479
     CharacterId: 10003
     MessageCondition: Answer
@@ -126,13 +132,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 경매 마켓에서? 어떤 물건인데?
-    MessageJP: それは良かったね、どんなグッズなの？
-    MessageCN: 那太好了，日富美买了什么周边呢？
-    MessageEN: From the auction? What did you get?
-    MessageTH: ตลาดประมูลเหรอ? กู้ดอะไรเหรอ?
-    MessageTW: 那真是太好了，是什麼樣的商品？
-  - MessageGroupId: 100030040
+  - MessageKR: 헤헤, 아직은 비밀이에요.
+    MessageJP: えへへ、それはまだ秘密です
+    MessageCN: 诶嘿嘿，暂时保密
+    MessageEN: Heehee, that's still a secret.
+    MessageTH: ฮิฮิ ขอเก็บเป็นความลับไว้ก่อนนะคะ
+    MessageTW: 嘿嘿嘿，這還是秘密
+    MessageGroupId: 100030040
     Id: 480
     CharacterId: 10003
     MessageCondition: Feedback
@@ -144,13 +150,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 헤헤, 아직은 비밀이에요.
-    MessageJP: えへへ、それはまだ秘密です
-    MessageCN: 诶嘿嘿，暂时保密
-    MessageEN: Heehee, that's still a secret.
-    MessageTH: ฮิฮิ ขอเก็บเป็นความลับไว้ก่อนนะคะ
-    MessageTW: 嘿嘿嘿，這還是秘密
-  - MessageGroupId: 100030040
+  - MessageKR: 만나면 직접 보여 드릴게요!
+    MessageJP: 今度会った時に直接見せますね！
+    MessageCN: 下次和老师见面的时候我再给老师看！
+    MessageEN: I'll show you the next time we meet!
+    MessageTH: ถ้าเจอคุณครูเมื่อไหร่ ฉันจะเอาให้ดูนะคะ!
+    MessageTW: 下次見面時直接拿給你看！
+    MessageGroupId: 100030040
     Id: 481
     CharacterId: 10003
     MessageCondition: Feedback
@@ -162,13 +168,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 만나면 직접 보여 드릴게요!
-    MessageJP: 今度会った時に直接見せますね！
-    MessageCN: 下次和老师见面的时候我再给老师看！
-    MessageEN: I'll show you the next time we meet!
-    MessageTH: ถ้าเจอคุณครูเมื่อไหร่ ฉันจะเอาให้ดูนะคะ!
-    MessageTW: 下次見面時直接拿給你看！
-  - MessageGroupId: 100030050
+  - MessageKR: 선생님, 모모프렌즈에서 빅 브라더님 모양의 가방이 새롭게 출시된대요!
+    MessageJP: 今度モモフレンズの、ビッグブラザー様型のバックが新しく出るそうです！
+    MessageCN: 听说这次的momofriends要推出以老大哥为样式的新款书包！
+    MessageEN: Sensei, Momo Friends is releasing a new Big Brother bag!
+    MessageTH: "คุณครูคะ คุณบิ๊กบราเธอร์ MOMO
+
+      FRIENDS มีกระเป๋าแบบใหม่ออกมาค่ะ!"
+    MessageTW: 聽說這次Momo好友要推出新的大哥款式背包！
+    MessageGroupId: 100030050
     Id: 482
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -180,15 +188,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 모모프렌즈에서 빅 브라더님 모양의 가방이 새롭게 출시된대요!
-    MessageJP: 今度モモフレンズの、ビッグブラザー様型のバックが新しく出るそうです！
-    MessageCN: 听说这次的momofriends要推出以老大哥为样式的新款书包！
-    MessageEN: Sensei, Momo Friends is releasing a new Big Brother bag!
-    MessageTH: "คุณครูคะ คุณบิ๊กบราเธอร์ MOMO
-
-      FRIENDS มีกระเป๋าแบบใหม่ออกมาค่ะ!"
-    MessageTW: 聽說這次Momo好友要推出新的大哥款式背包！
-  - MessageGroupId: 100030060
+  - MessageKR: 음…… 이것도 귀엽긴 하지만,
+    MessageJP: うーん……これも可愛くてちょっと迷ってしまうのですが……
+    MessageCN: 嗯……虽然我觉得这个也很可爱，有点犹豫要不要买……
+    MessageEN: Um... This one is cute, but...
+    MessageTH: อืม... อันนี้ก็น่ารักดีนะแต่ว่า...
+    MessageTW: 唔嗯……這個也好可愛，有點猶豫呢……
+    MessageGroupId: 100030060
     Id: 483
     CharacterId: 10003
     MessageCondition: None
@@ -200,13 +206,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 이것도 귀엽긴 하지만,
-    MessageJP: うーん……これも可愛くてちょっと迷ってしまうのですが……
-    MessageCN: 嗯……虽然我觉得这个也很可爱，有点犹豫要不要买……
-    MessageEN: Um... This one is cute, but...
-    MessageTH: อืม... อันนี้ก็น่ารักดีนะแต่ว่า...
-    MessageTW: 唔嗯……這個也好可愛，有點猶豫呢……
-  - MessageGroupId: 100030060
+  - MessageKR: 역시 제게는 페로로 님 가방이 제일이에요!
+    MessageJP: やっぱり私にとってはペロロ様のバックが一番かもしれません……！
+    MessageCN: 但对我来说，果然还是佩洛洛大人的包才是最好的！
+    MessageEN: The Peroro bag is my favorite!
+    MessageTH: "ฉันชอบกระเป๋าท่านเพโรโร่
+
+      มากกว่าค่ะ!"
+    MessageTW: 但對我來說，佩洛洛大人的背包果然還最棒的……！
+    MessageGroupId: 100030060
     Id: 484
     CharacterId: 10003
     MessageCondition: None
@@ -218,15 +226,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 제게는 페로로 님 가방이 제일이에요!
-    MessageJP: やっぱり私にとってはペロロ様のバックが一番かもしれません……！
-    MessageCN: 但对我来说，果然还是佩洛洛大人的包才是最好的！
-    MessageEN: The Peroro bag is my favorite!
-    MessageTH: "ฉันชอบกระเป๋าท่านเพโรโร่
+  - MessageKR: 그러고 보니 히후미는 언제나 같은 모양의 가방을 메고 다니네.
+    MessageJP: そういえばヒフミ、いつも同じバックを持ってるね
+    MessageCN: 话说回来，日富美一直都背着同一个包呢
+    MessageEN: Come to think of it, you're always carrying the same bag.
+    MessageTH: "พอดูดีๆ แล้ว ฮิฟุมิมักจะสะพายกระเป๋า
 
-      มากกว่าค่ะ!"
-    MessageTW: 但對我來說，佩洛洛大人的背包果然還最棒的……！
-  - MessageGroupId: 100030070
+      แบบเดิมตลอดเลยนี่นะ"
+    MessageTW: 這麼說來，日步美總是揹著同一個背包呢
+    MessageGroupId: 100030070
     Id: 485
     CharacterId: 10003
     MessageCondition: Answer
@@ -238,15 +246,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러고 보니 히후미는 언제나 같은 모양의 가방을 메고 다니네.
-    MessageJP: そういえばヒフミ、いつも同じバックを持ってるね
-    MessageCN: 话说回来，日富美一直都背着同一个包呢
-    MessageEN: Come to think of it, you're always carrying the same bag.
-    MessageTH: "พอดูดีๆ แล้ว ฮิฟุมิมักจะสะพายกระเป๋า
+  - MessageKR: 제가 메고 다니는 페로로 님 가방이요?
+    MessageJP: あ、あのペロロ様のバックですか？
+    MessageCN: 啊，老师是说那个佩洛洛大人的包吗？
+    MessageEN: You mean my Peroro bag?
+    MessageTH: "กระเป๋าท่านเพโรโร่ที่ฉันสะพายอยู่
 
-      แบบเดิมตลอดเลยนี่นะ"
-    MessageTW: 這麼說來，日步美總是揹著同一個背包呢
-  - MessageGroupId: 100030080
+      น่ะเหรอคะ?"
+    MessageTW: 啊，你說那個佩洛洛大人背包嗎？
+    MessageGroupId: 100030080
     Id: 486
     CharacterId: 10003
     MessageCondition: Feedback
@@ -258,15 +266,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제가 메고 다니는 페로로 님 가방이요?
-    MessageJP: あ、あのペロロ様のバックですか？
-    MessageCN: 啊，老师是说那个佩洛洛大人的包吗？
-    MessageEN: You mean my Peroro bag?
-    MessageTH: "กระเป๋าท่านเพโรโร่ที่ฉันสะพายอยู่
-
-      น่ะเหรอคะ?"
-    MessageTW: 啊，你說那個佩洛洛大人背包嗎？
-  - MessageGroupId: 100030080
+  - MessageKR: 헤헤, 귀엽죠?
+    MessageJP: えへへ、可愛いですよね？
+    MessageCN: 诶嘿嘿，很可爱吧？
+    MessageEN: Heehee, isn't it cute?
+    MessageTH: ฮิฮิ น่ารักใช่ไหมคะ?
+    MessageTW: 嘿嘿嘿，很可愛吧？
+    MessageGroupId: 100030080
     Id: 487
     CharacterId: 10003
     MessageCondition: Feedback
@@ -278,25 +284,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 헤헤, 귀엽죠?
-    MessageJP: えへへ、可愛いですよね？
-    MessageCN: 诶嘿嘿，很可爱吧？
-    MessageEN: Heehee, isn't it cute?
-    MessageTH: ฮิฮิ น่ารักใช่ไหมคะ?
-    MessageTW: 嘿嘿嘿，很可愛吧？
-  - MessageGroupId: 100030080
-    Id: 488
-    CharacterId: 10003
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100030090
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 이 가방은 모모프렌즈 런칭 초기에 발매한 귀중한 한정품이에요.
+  - MessageKR: 이 가방은 모모프렌즈 런칭 초기에 발매한 귀중한 한정품이에요.
     MessageJP: あれ、まだモモフレンズが始まったばかりの頃に発売された限定品なんです
     MessageCN: 那个是momofriends刚刚发售的时候出的限定周边
     MessageEN:
@@ -308,7 +296,27 @@ content:
 
       หายากมากเลยนะคะ"
     MessageTW: 那是Momo好友上市初期販售的限量品
-  - MessageGroupId: 100030080
+    MessageGroupId: 100030080
+    Id: 488
+    CharacterId: 10003
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100030090
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 수납공간도 넉넉해서 여러 가지 물건도 잔뜩 넣어둘 수 있답니다.
+    MessageJP: 収納スペースもたくさんあって、色々入るんですよ
+    MessageCN: 而且容量也很大，能装很多东西哦
+    MessageEN: It's plenty roomy, so I can carry all kinds of things.
+    MessageTH: "กระเป๋าใบนี้มีช่องเก็บของอยู่เยอะ ทำให้
+
+      ใส่ของได้เยอะมาก"
+    MessageTW: 收納空間也很足夠，能裝很多東西呢
+    MessageGroupId: 100030080
     Id: 489
     CharacterId: 10003
     MessageCondition: Feedback
@@ -320,15 +328,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 수납공간도 넉넉해서 여러 가지 물건도 잔뜩 넣어둘 수 있답니다.
-    MessageJP: 収納スペースもたくさんあって、色々入るんですよ
-    MessageCN: 而且容量也很大，能装很多东西哦
-    MessageEN: It's plenty roomy, so I can carry all kinds of things.
-    MessageTH: "กระเป๋าใบนี้มีช่องเก็บของอยู่เยอะ ทำให้
-
-      ใส่ของได้เยอะมาก"
-    MessageTW: 收納空間也很足夠，能裝很多東西呢
-  - MessageGroupId: 100030090
+  - MessageKR: 제 보물 1호예요!
+    MessageJP: 私の宝物、第1号です！
+    MessageCN: 这是我的1号宝物！
+    MessageEN: It's my treasure!
+    MessageTH: เป็นสมบัตินัมเบอร์วันของฉันเลยค่ะ!
+    MessageTW: 是我的寶物1號！
+    MessageGroupId: 100030090
     Id: 490
     CharacterId: 10003
     MessageCondition: Feedback
@@ -340,13 +346,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제 보물 1호예요!
-    MessageJP: 私の宝物、第1号です！
-    MessageCN: 这是我的1号宝物！
-    MessageEN: It's my treasure!
-    MessageTH: เป็นสมบัตินัมเบอร์วันของฉันเลยค่ะ!
-    MessageTW: 是我的寶物1號！
-  - MessageGroupId: 100030100
+  - MessageKR: 선생님, 역 앞 오락실의 뽑기 기계에
+    MessageJP: 先生、駅前のゲームセンターのクレーンゲーム！
+    MessageCN: 老师，车站前面的游戏中心的抓娃娃机！
+    MessageEN: Sensei, I heard that the arcade next to the station
+    MessageTH: "คุณครูคะ ตู้เกมคีบตุ๊กตาที่ร้านเกมข้างๆ
+
+      สถานีรถไฟ"
+    MessageTW: 老師，車站前遊戲中心的抓娃娃機！
+    MessageGroupId: 100030100
     Id: 491
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -358,15 +366,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 역 앞 오락실의 뽑기 기계에
-    MessageJP: 先生、駅前のゲームセンターのクレーンゲーム！
-    MessageCN: 老师，车站前面的游戏中心的抓娃娃机！
-    MessageEN: Sensei, I heard that the arcade next to the station
-    MessageTH: "คุณครูคะ ตู้เกมคีบตุ๊กตาที่ร้านเกมข้างๆ
+  - MessageKR: 모모프렌즈의 신상 인형이 들어왔대요!
+    MessageJP: あそこに、モモフレンズの新作のぬいぐるみが入ったみたいです！
+    MessageCN: 里面好像有momofriends的新品娃娃！
+    MessageEN: has a new Momo Friends plush in the claw machine!
+    MessageTH: "มีตุ๊กตา MOMO FRIENDS รุ่นใหม่เข้ามา
 
-      สถานีรถไฟ"
-    MessageTW: 老師，車站前遊戲中心的抓娃娃機！
-  - MessageGroupId: 100030110
+      แล้วค่ะ!"
+    MessageTW: 那裡好像放了新款的Momo好友娃娃！
+    MessageGroupId: 100030110
     Id: 492
     CharacterId: 10003
     MessageCondition: None
@@ -378,15 +386,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모모프렌즈의 신상 인형이 들어왔대요!
-    MessageJP: あそこに、モモフレンズの新作のぬいぐるみが入ったみたいです！
-    MessageCN: 里面好像有momofriends的新品娃娃！
-    MessageEN: has a new Momo Friends plush in the claw machine!
-    MessageTH: "มีตุ๊กตา MOMO FRIENDS รุ่นใหม่เข้ามา
-
-      แล้วค่ะ!"
-    MessageTW: 那裡好像放了新款的Momo好友娃娃！
-  - MessageGroupId: 100030110
+  - MessageKR: 어떤 인형이 들어와 있을까요?
+    MessageJP: どんなぬいぐるみが入ったんでしょうか？
+    MessageCN: 里面到底会有什么样的娃娃呢？
+    MessageEN: I wonder what kind of a plush it is...
+    MessageTH: จะเป็นตุ๊กตาแบบไหนกันน้า?
+    MessageTW: 到底放了什麼娃娃呢？
+    MessageGroupId: 100030110
     Id: 493
     CharacterId: 10003
     MessageCondition: None
@@ -398,13 +404,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어떤 인형이 들어와 있을까요?
-    MessageJP: どんなぬいぐるみが入ったんでしょうか？
-    MessageCN: 里面到底会有什么样的娃娃呢？
-    MessageEN: I wonder what kind of a plush it is...
-    MessageTH: จะเป็นตุ๊กตาแบบไหนกันน้า?
-    MessageTW: 到底放了什麼娃娃呢？
-  - MessageGroupId: 100030110
+  - MessageKR: 벌써부터 방과 후가 기대돼서 참을 수가 없네요!
+    MessageJP: もう今から、放課後が楽しみで仕方ありません！
+    MessageCN: 我现在就已经开始期待放学了！
+    MessageEN: Ooh, I can't wait until school is over!
+    MessageTH: "ฉันอยากให้ถึงเวลาเลิกเรียนใจจะขาด
+
+      แล้วค่ะ!"
+    MessageTW: 我已經開始期待放學後了！
+    MessageGroupId: 100030110
     Id: 494
     CharacterId: 10003
     MessageCondition: None
@@ -416,15 +424,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 벌써부터 방과 후가 기대돼서 참을 수가 없네요!
-    MessageJP: もう今から、放課後が楽しみで仕方ありません！
-    MessageCN: 我现在就已经开始期待放学了！
-    MessageEN: Ooh, I can't wait until school is over!
-    MessageTH: "ฉันอยากให้ถึงเวลาเลิกเรียนใจจะขาด
+  - MessageKR: 그렇게 신경 쓰이면 점심시간에 같이 오락실에 가볼까?
+    MessageJP: そんなに気になるならお昼の時にでも、一緒にゲームセンターに行こっか？
+    MessageCN: 日富美这么期待的话，我们中午一起去游戏中心看看吧？
+    MessageEN: If you're that curious, why don't we drop by the arcade during lunch?
+    MessageTH: "ถ้าอยากไปขนาดนั้นล่ะก็ เราออกไปร้าน
 
-      แล้วค่ะ!"
-    MessageTW: 我已經開始期待放學後了！
-  - MessageGroupId: 100030120
+      เกมกันตอนกลางวันไหม?"
+    MessageTW: 這麼在意的話，中午的時候一起去遊戲中心吧？
+    MessageGroupId: 100030120
     Id: 495
     CharacterId: 10003
     MessageCondition: Answer
@@ -436,15 +444,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇게 신경 쓰이면 점심시간에 같이 오락실에 가볼까?
-    MessageJP: そんなに気になるならお昼の時にでも、一緒にゲームセンターに行こっか？
-    MessageCN: 日富美这么期待的话，我们中午一起去游戏中心看看吧？
-    MessageEN: If you're that curious, why don't we drop by the arcade during lunch?
-    MessageTH: "ถ้าอยากไปขนาดนั้นล่ะก็ เราออกไปร้าน
-
-      เกมกันตอนกลางวันไหม?"
-    MessageTW: 這麼在意的話，中午的時候一起去遊戲中心吧？
-  - MessageGroupId: 100030130
+  - MessageKR: 정말요? 정말 그래도 괜찮은가요?
+    MessageJP: 本当ですか！？本当に良いんですか！？
+    MessageCN: 真的吗！？真的可以吗！？
+    MessageEN: Really? Are you sure that's okay?
+    MessageTH: จริงเหรอคะ? ไปได้จริงๆ เหรอคะ?
+    MessageTW: 真的嗎！？真的可以嗎！？
+    MessageGroupId: 100030130
     Id: 496
     CharacterId: 10003
     MessageCondition: Feedback
@@ -456,25 +462,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 정말요? 정말 그래도 괜찮은가요?
-    MessageJP: 本当ですか！？本当に良いんですか！？
-    MessageCN: 真的吗！？真的可以吗！？
-    MessageEN: Really? Are you sure that's okay?
-    MessageTH: จริงเหรอคะ? ไปได้จริงๆ เหรอคะ?
-    MessageTW: 真的嗎！？真的可以嗎！？
-  - MessageGroupId: 100030130
-    Id: 497
-    CharacterId: 10003
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 100035
-    NextGroupId: 100030140
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: "그럼 먼저 가서 기다리고 있을게요, 선생님!
+  - MessageKR: "그럼 먼저 가서 기다리고 있을게요, 선생님!
 
       (o^－^o)"
     MessageJP: "ありがとうございます！では待ってますね、先生！
@@ -490,7 +478,27 @@ content:
     MessageTW: "謝謝您！那我等著唷，老師！
 
       (o^－^o)"
-  - MessageGroupId: 100030140
+    MessageGroupId: 100030130
+    Id: 497
+    CharacterId: 10003
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100035
+    NextGroupId: 100030140
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 세상에는 어째서 이렇게 고통받는 사람들이 많은 걸까요?
+    MessageJP: どうして世の中には、こんなに苦しんでる人が多いのでしょうか？
+    MessageCN: 为什么世界上，会有那么多痛苦的人呢？
+    MessageEN: Why are there so many people suffering in the world?
+    MessageTH: "ทำไมในโลกนี้ถึงมีคนที่เจ็บปวดทรมาน
+
+      มากมายแบบนี้กันนะ?"
+    MessageTW: 世界上為什麼會有這麼多人在受苦呢？
+    MessageGroupId: 100030140
     Id: 498
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -502,15 +510,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 세상에는 어째서 이렇게 고통받는 사람들이 많은 걸까요?
-    MessageJP: どうして世の中には、こんなに苦しんでる人が多いのでしょうか？
-    MessageCN: 为什么世界上，会有那么多痛苦的人呢？
-    MessageEN: Why are there so many people suffering in the world?
-    MessageTH: "ทำไมในโลกนี้ถึงมีคนที่เจ็บปวดทรมาน
+  - MessageKR: 모두가 행복할 수 있다면 무엇이든 할 텐데…….
+    MessageJP: みんなが幸せになるために、できれば何かしたいのですが……
+    MessageCN: 要是我能做些什么让大家幸福起来的话就好了……
+    MessageEN: I wish I knew a way to make everyone happy...
+    MessageTH: "ถ้าจะช่วยให้ทุกคนมีความสุขได้ ฉันก็ยิน
 
-      มากมายแบบนี้กันนะ?"
-    MessageTW: 世界上為什麼會有這麼多人在受苦呢？
-  - MessageGroupId: 100030150
+      ดีทำทุกอย่าง..."
+    MessageTW: 為了讓大家幸福，如果我能做點什麼……
+    MessageGroupId: 100030150
     Id: 499
     CharacterId: 10003
     MessageCondition: None
@@ -522,15 +530,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모두가 행복할 수 있다면 무엇이든 할 텐데…….
-    MessageJP: みんなが幸せになるために、できれば何かしたいのですが……
-    MessageCN: 要是我能做些什么让大家幸福起来的话就好了……
-    MessageEN: I wish I knew a way to make everyone happy...
-    MessageTH: "ถ้าจะช่วยให้ทุกคนมีความสุขได้ ฉันก็ยิน
+  - MessageKR: 저는 아무것도 할 수 없어서, 늘 속상해요.
+    MessageJP: 私には、何もできなくて……悲しいです
+    MessageCN: 但是，我什么都做不到……好难过
+    MessageEN: It always pains me that I can't do anything to help them.
+    MessageTH: "แต่ว่าฉันทำอะไรไม่ได้ ก็เลยรู้สึกเสียใจ
 
-      ดีทำทุกอย่าง..."
-    MessageTW: 為了讓大家幸福，如果我能做點什麼……
-  - MessageGroupId: 100030150
+      อยู่ตลอดเลย"
+    MessageTW: 我什麼都做不了……真傷心
+    MessageGroupId: 100030150
     Id: 500
     CharacterId: 10003
     MessageCondition: None
@@ -542,15 +550,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저는 아무것도 할 수 없어서, 늘 속상해요.
-    MessageJP: 私には、何もできなくて……悲しいです
-    MessageCN: 但是，我什么都做不到……好难过
-    MessageEN: It always pains me that I can't do anything to help them.
-    MessageTH: "แต่ว่าฉันทำอะไรไม่ได้ ก็เลยรู้สึกเสียใจ
-
-      อยู่ตลอดเลย"
-    MessageTW: 我什麼都做不了……真傷心
-  - MessageGroupId: 100030160
+  - MessageKR: 무슨 걱정거리라도 있는 거니, 히후미?
+    MessageJP: 大丈夫？何か心配事とかあったりする？
+    MessageCN: 日富美没事吧？是有什么心事吗？
+    MessageEN: Are you worried about something, Hifumi?
+    MessageTH: กังวลอะไรอยู่เหรอ ฮิฟุมิ?
+    MessageTW: 沒事吧？有什麼擔心的事嗎？
+    MessageGroupId: 100030160
     Id: 501
     CharacterId: 10003
     MessageCondition: Answer
@@ -562,13 +568,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무슨 걱정거리라도 있는 거니, 히후미?
-    MessageJP: 大丈夫？何か心配事とかあったりする？
-    MessageCN: 日富美没事吧？是有什么心事吗？
-    MessageEN: Are you worried about something, Hifumi?
-    MessageTH: กังวลอะไรอยู่เหรอ ฮิฟุมิ?
-    MessageTW: 沒事吧？有什麼擔心的事嗎？
-  - MessageGroupId: 100030170
+  - MessageKR: 아니요. 아무것도 아니에요…….
+    MessageJP: いえ、私は大丈夫なのですが……
+    MessageCN: 没有，我没事，就是……
+    MessageEN: No, it's nothing...
+    MessageTH: เปล่าค่ะ ไม่มีอะไรหรอกค่ะ
+    MessageTW: 不，我沒事……
+    MessageGroupId: 100030170
     Id: 502
     CharacterId: 10003
     MessageCondition: Feedback
@@ -580,13 +586,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아니요. 아무것도 아니에요…….
-    MessageJP: いえ、私は大丈夫なのですが……
-    MessageCN: 没有，我没事，就是……
-    MessageEN: No, it's nothing...
-    MessageTH: เปล่าค่ะ ไม่มีอะไรหรอกค่ะ
-    MessageTW: 不，我沒事……
-  - MessageGroupId: 100030180
+  - MessageKR: 제 고민을 들어 주셔서 감사합니다, 선생님.
+    MessageJP: お話を聞いてくださってありがとうございました、先生
+    MessageCN: 谢谢老师能听我说这些
+    MessageEN: Thanks for listening to my concerns, Sensei.
+    MessageTH: "ขอบคุณที่รับฟังเรื่องกังวลใจของฉัน
+
+      นะคะ คุณครู"
+    MessageTW: 非常感謝您聽我說，老師
+    MessageGroupId: 100030180
     Id: 503
     CharacterId: 10003
     MessageCondition: None
@@ -598,15 +606,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 제 고민을 들어 주셔서 감사합니다, 선생님.
-    MessageJP: お話を聞いてくださってありがとうございました、先生
-    MessageCN: 谢谢老师能听我说这些
-    MessageEN: Thanks for listening to my concerns, Sensei.
-    MessageTH: "ขอบคุณที่รับฟังเรื่องกังวลใจของฉัน
+  - MessageKR: 가슴에 담고 있던 고민을 털어놓았더니 한결 개운해진 느낌이에요.
+    MessageJP: ずっと胸の内に押し込めていたものを打ち明けられて、すっきりしました
+    MessageCN: 能把一直压在心底的话说出来，我现在感觉很舒服
+    MessageEN: Now that I've gotten that off my chest, I feel a lot better.
+    MessageTH: "พอได้พูดสิ่งที่กังวลอยู่ในใจออกมา รู้สึก
 
-      นะคะ คุณครู"
-    MessageTW: 非常感謝您聽我說，老師
-  - MessageGroupId: 100030180
+      โล่งขึ้นเยอะเลยค่ะ"
+    MessageTW: 能將一直埋藏在心裡的事說出來，感覺暢快多了
+    MessageGroupId: 100030180
     Id: 504
     CharacterId: 10003
     MessageCondition: None
@@ -618,27 +626,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가슴에 담고 있던 고민을 털어놓았더니 한결 개운해진 느낌이에요.
-    MessageJP: ずっと胸の内に押し込めていたものを打ち明けられて、すっきりしました
-    MessageCN: 能把一直压在心底的话说出来，我现在感觉很舒服
-    MessageEN: Now that I've gotten that off my chest, I feel a lot better.
-    MessageTH: "พอได้พูดสิ่งที่กังวลอยู่ในใจออกมา รู้สึก
-
-      โล่งขึ้นเยอะเลยค่ะ"
-    MessageTW: 能將一直埋藏在心裡的事說出來，感覺暢快多了
-  - MessageGroupId: 100030190
-    Id: 505
-    CharacterId: 10003
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100030200
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 저…… 선생님께서 괜찮으시다면, 다음에 고민이 생겼을 때 또 이야기를 하러 와도 괜찮을까요?
+  - MessageKR: 저…… 선생님께서 괜찮으시다면, 다음에 고민이 생겼을 때 또 이야기를 하러 와도 괜찮을까요?
     MessageJP: あの……もしまた悩んでしまった時には、お話を聞いてくれますか？
     MessageCN: 那个……要是以后我还有烦恼的话，老师还能再听我倾诉吗？
     MessageEN:
@@ -650,7 +638,25 @@ content:
 
       ได้ไหมคะ?"
     MessageTW: 那個……如果又有煩惱的話，還能聽我訴說嗎？
-  - MessageGroupId: 100030200
+    MessageGroupId: 100030190
+    Id: 505
+    CharacterId: 10003
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100030200
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 언제든지 괜찮아.
+    MessageJP: いつでも任せて
+    MessageCN: 随时都可以
+    MessageEN: Anytime.
+    MessageTH: ฮิฟุมิมาหาครูได้ตลอดเลยนะ
+    MessageTW: 隨時都可以
+    MessageGroupId: 100030200
     Id: 506
     CharacterId: 10003
     MessageCondition: Answer
@@ -662,13 +668,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 언제든지 괜찮아.
-    MessageJP: いつでも任せて
-    MessageCN: 随时都可以
-    MessageEN: Anytime.
-    MessageTH: ฮิฟุมิมาหาครูได้ตลอดเลยนะ
-    MessageTW: 隨時都可以
-  - MessageGroupId: 100030210
+  - MessageKR: 감사합니다, 선생님.
+    MessageJP: ありがとうございます、先生
+    MessageCN: 谢谢您，老师
+    MessageEN: Thank you, Sensei.
+    MessageTH: ขอบคุณค่ะ คุณครู
+    MessageTW: 非常謝謝您，老師
+    MessageGroupId: 100030210
     Id: 507
     CharacterId: 10003
     MessageCondition: Feedback
@@ -680,13 +686,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감사합니다, 선생님.
-    MessageJP: ありがとうございます、先生
-    MessageCN: 谢谢您，老师
-    MessageEN: Thank you, Sensei.
-    MessageTH: ขอบคุณค่ะ คุณครู
-    MessageTW: 非常謝謝您，老師
-  - MessageGroupId: 100030210
+  - MessageKR: 선생님이 곁에 계셔주셔서 얼마나 다행인지 몰라요.
+    MessageJP: 先生がそばにいてくれて、本当に良かったです
+    MessageCN: 有老师在我身边，真是太好了
+    MessageEN: You have no idea how lucky I feel to have you.
+    MessageTH: "ฉันโชคดีมากจริงๆ ค่ะที่มีคุณครูอยู่
+
+      ข้างๆ แบบนี้"
+    MessageTW: 有老師在身邊，真是太好了
+    MessageGroupId: 100030210
     Id: 508
     CharacterId: 10003
     MessageCondition: Feedback
@@ -698,15 +706,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님이 곁에 계셔주셔서 얼마나 다행인지 몰라요.
-    MessageJP: 先生がそばにいてくれて、本当に良かったです
-    MessageCN: 有老师在我身边，真是太好了
-    MessageEN: You have no idea how lucky I feel to have you.
-    MessageTH: "ฉันโชคดีมากจริงๆ ค่ะที่มีคุณครูอยู่
+  - MessageKR: 선생님, 내일 오후에 예정된 샬레의 당번 활동을
+    MessageJP: 先生、明日の午後に予定していたシャーレの当番のお仕事なのですが、
+    MessageCN: 老师，我原本预定明天下午在夏莱值日的工作
+    MessageEN: Sensei, can I change the Schale duty scheduled
+    MessageTH: "คุณครูคะ งานของชาเล่ต์ที่กำหนดเอาไว้
 
-      ข้างๆ แบบนี้"
-    MessageTW: 有老師在身邊，真是太好了
-  - MessageGroupId: 100030220
+      วันพรุ่งนี้ตอนบ่าย"
+    MessageTW: 老師，明天下午原本預定的夏萊值班工作
+    MessageGroupId: 100030220
     Id: 509
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -718,15 +726,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 내일 오후에 예정된 샬레의 당번 활동을
-    MessageJP: 先生、明日の午後に予定していたシャーレの当番のお仕事なのですが、
-    MessageCN: 老师，我原本预定明天下午在夏莱值日的工作
-    MessageEN: Sensei, can I change the Schale duty scheduled
-    MessageTH: "คุณครูคะ งานของชาเล่ต์ที่กำหนดเอาไว้
-
-      วันพรุ่งนี้ตอนบ่าย"
-    MessageTW: 老師，明天下午原本預定的夏萊值班工作
-  - MessageGroupId: 100030230
+  - MessageKR: 오전으로 바꿀 수 있을까요?
+    MessageJP: 午前中に変更しても大丈夫でしょうか？
+    MessageCN: 可以改到上午吗？
+    MessageEN: for tomorrow afternoon to the morning?
+    MessageTH: ฉันขอเปลี่ยนเป็นตอนเช้าแทนได้ไหมคะ?
+    MessageTW: 可以改到上午嗎？
+    MessageGroupId: 100030230
     Id: 510
     CharacterId: 10003
     MessageCondition: None
@@ -738,13 +744,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오전으로 바꿀 수 있을까요?
-    MessageJP: 午前中に変更しても大丈夫でしょうか？
-    MessageCN: 可以改到上午吗？
-    MessageEN: for tomorrow afternoon to the morning?
-    MessageTH: ฉันขอเปลี่ยนเป็นตอนเช้าแทนได้ไหมคะ?
-    MessageTW: 可以改到上午嗎？
-  - MessageGroupId: 100030230
+  - MessageKR: 오후에 갑자기 친구들과 약속이 잡혀버려서요.
+    MessageJP: 午後にちょっと、別の予定を入れたくって……
+    MessageCN: 下午，我有一些其他的事情……
+    MessageEN: My friends suddenly made plans for the afternoon.
+    MessageTH: พอดีตอนบ่ายฉันมีนัดกับเพื่อนๆ น่ะค่ะ
+    MessageTW: 下午想安排些別的計畫……
+    MessageGroupId: 100030230
     Id: 511
     CharacterId: 10003
     MessageCondition: None
@@ -756,13 +762,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오후에 갑자기 친구들과 약속이 잡혀버려서요.
-    MessageJP: 午後にちょっと、別の予定を入れたくって……
-    MessageCN: 下午，我有一些其他的事情……
-    MessageEN: My friends suddenly made plans for the afternoon.
-    MessageTH: พอดีตอนบ่ายฉันมีนัดกับเพื่อนๆ น่ะค่ะ
-    MessageTW: 下午想安排些別的計畫……
-  - MessageGroupId: 100030240
+  - MessageKR: 괜찮아. 친구들과 무슨 약속을 했는데?
+    MessageJP: うん、大丈夫だよ。ちなみにどんな予定なの？
+    MessageCN: 嗯。没关系哦。我能顺带问问是什么事吗？
+    MessageEN: That's fine. What are you gonna do with your friends?
+    MessageTH: ได้อยู่แล้ว แล้วมีนัดอะไรกับเพื่อนๆ เหรอ?
+    MessageTW: 嗯，沒問題唷。順便問問，是什麼計劃？
+    MessageGroupId: 100030240
     Id: 512
     CharacterId: 10003
     MessageCondition: Answer
@@ -774,13 +780,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮아. 친구들과 무슨 약속을 했는데?
-    MessageJP: うん、大丈夫だよ。ちなみにどんな予定なの？
-    MessageCN: 嗯。没关系哦。我能顺带问问是什么事吗？
-    MessageEN: That's fine. What are you gonna do with your friends?
-    MessageTH: ได้อยู่แล้ว แล้วมีนัดอะไรกับเพื่อนๆ เหรอ?
-    MessageTW: 嗯，沒問題唷。順便問問，是什麼計劃？
-  - MessageGroupId: 100030250
+  - MessageKR: 방과 후에 학교 친구들과 함께 시내로 외출을 나가기로 했어요!
+    MessageJP: 学園の友達と一緒に、どこかへ遊びに行こっかというお話になりまして
+    MessageCN: 我要和学校的朋友一起商量去哪里玩
+    MessageEN: After school, my friends and I are heading into the city!
+    MessageTH: "หลังเลิกเรียน ฉันจะเข้าไปในเมืองกับ
+
+      เพื่อนๆ ในห้องหน่อยน่ะค่ะ!"
+    MessageTW: 和學校的朋友一起去哪裡玩
+    MessageGroupId: 100030250
     Id: 513
     CharacterId: 10003
     MessageCondition: Feedback
@@ -792,15 +800,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 방과 후에 학교 친구들과 함께 시내로 외출을 나가기로 했어요!
-    MessageJP: 学園の友達と一緒に、どこかへ遊びに行こっかというお話になりまして
-    MessageCN: 我要和学校的朋友一起商量去哪里玩
-    MessageEN: After school, my friends and I are heading into the city!
-    MessageTH: "หลังเลิกเรียน ฉันจะเข้าไปในเมืองกับ
+  - MessageKR: 무얼 하고 놀지 벌써부터 기대가 되네요! 헤헤…….
+    MessageJP: 何をして遊ぶか、今から楽しみです！えへへ……！
+    MessageCN: 到底会玩什么呢，我现在就很期待了！诶嘿嘿……！
+    MessageEN: I'm already looking forward to it! Heehee...
+    MessageTH: "ตื่นเต้นจังเลยว่าจะได้ไปเที่ยวเล่นอะไร
 
-      เพื่อนๆ ในห้องหน่อยน่ะค่ะ!"
-    MessageTW: 和學校的朋友一起去哪裡玩
-  - MessageGroupId: 100030250
+      บ้าง ฮิฮิ"
+    MessageTW: 到底會玩什麼呢，已經開始期待了！嘿嘿嘿……！
+    MessageGroupId: 100030250
     Id: 514
     CharacterId: 10003
     MessageCondition: Feedback
@@ -812,15 +820,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무얼 하고 놀지 벌써부터 기대가 되네요! 헤헤…….
-    MessageJP: 何をして遊ぶか、今から楽しみです！えへへ……！
-    MessageCN: 到底会玩什么呢，我现在就很期待了！诶嘿嘿……！
-    MessageEN: I'm already looking forward to it! Heehee...
-    MessageTH: "ตื่นเต้นจังเลยว่าจะได้ไปเที่ยวเล่นอะไร
-
-      บ้าง ฮิฮิ"
-    MessageTW: 到底會玩什麼呢，已經開始期待了！嘿嘿嘿……！
-  - MessageGroupId: 100030260
+  - MessageKR: 선생님, 이번 주말에 시간 괜찮으신가요?
+    MessageJP: 先生、今度の週末って空いてますか？
+    MessageCN: 老师，您下周末有空吗？
+    MessageEN: Sensei, are you free this weekend?
+    MessageTH: สุดสัปดาห์นี้มีเวลาว่างไหมคะคุณครู?
+    MessageTW: 老師，這個週末有空嗎？
+    MessageGroupId: 100030260
     Id: 515
     CharacterId: 10003
     MessageCondition: FavorRankUp
@@ -832,13 +838,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 이번 주말에 시간 괜찮으신가요?
-    MessageJP: 先生、今度の週末って空いてますか？
-    MessageCN: 老师，您下周末有空吗？
-    MessageEN: Sensei, are you free this weekend?
-    MessageTH: สุดสัปดาห์นี้มีเวลาว่างไหมคะคุณครู?
-    MessageTW: 老師，這個週末有空嗎？
-  - MessageGroupId: 100030270
+  - MessageKR: 보충수업부에서 쓸 비품을 구매하러 공용 아레나 근처에 갈 일이 있어서요.
+    MessageJP: 補習授業部で使う備品を買いに、公共アリーナ近くに行く用事がありまして
+    MessageCN: 我下周要去公共体育馆附近采购一下补习部要用的东西
+    MessageEN: I have to go by the arena to buy supplies for the Make-Up Work Club.
+    MessageTH: "พอดีฉันต้องเข้าไปในเมืองเพื่อไปซื้อ
+
+      อุปกรณ์ที่ใช้ในชมรมชั้นเรียนเสริมค่ะ"
+    MessageTW: 我要去公共圓形劇場附近購買補課部用的備品
+    MessageGroupId: 100030270
     Id: 516
     CharacterId: 10003
     MessageCondition: None
@@ -850,15 +858,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 보충수업부에서 쓸 비품을 구매하러 공용 아레나 근처에 갈 일이 있어서요.
-    MessageJP: 補習授業部で使う備品を買いに、公共アリーナ近くに行く用事がありまして
-    MessageCN: 我下周要去公共体育馆附近采购一下补习部要用的东西
-    MessageEN: I have to go by the arena to buy supplies for the Make-Up Work Club.
-    MessageTH: "พอดีฉันต้องเข้าไปในเมืองเพื่อไปซื้อ
+  - MessageKR: 괜찮으시다면 같이 쇼핑하러 가지 않으시겠어요?
+    MessageJP: よかったら一緒にそのまま、ショッピングに行きませんか？
+    MessageCN: 要是老师愿意的话，能陪我一起去买东西吗？
+    MessageEN: Would you like to come shopping with me, if you don't mind?
+    MessageTH: "ถ้าคุณครูไม่ติดธุระที่ไหน อยากไปช็อป
 
-      อุปกรณ์ที่ใช้ในชมรมชั้นเรียนเสริมค่ะ"
-    MessageTW: 我要去公共圓形劇場附近購買補課部用的備品
-  - MessageGroupId: 100030270
+      ปิ้งด้วยกันไหมคะ?"
+    MessageTW: 可以的話，要一起去購物嗎？
+    MessageGroupId: 100030270
     Id: 517
     CharacterId: 10003
     MessageCondition: None
@@ -870,15 +878,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮으시다면 같이 쇼핑하러 가지 않으시겠어요?
-    MessageJP: よかったら一緒にそのまま、ショッピングに行きませんか？
-    MessageCN: 要是老师愿意的话，能陪我一起去买东西吗？
-    MessageEN: Would you like to come shopping with me, if you don't mind?
-    MessageTH: "ถ้าคุณครูไม่ติดธุระที่ไหน อยากไปช็อป
+  - MessageKR: 좋아. 나도 마침 근처에 볼일이 있었거든.
+    MessageJP: ちょうど私もその辺りに行く用事があったから、ぜひ
+    MessageCN: 嗯，刚好我也要去那附近办事，那就一起去吧
+    MessageEN: Sounds good. I also have something to do in that area.
+    MessageTH: "ก็ได้ ครูมีธุระที่ต้องไปแถวนั้นอยู่
 
-      ปิ้งด้วยกันไหมคะ?"
-    MessageTW: 可以的話，要一起去購物嗎？
-  - MessageGroupId: 100030280
+      เหมือนกัน"
+    MessageTW: 我正好有事要去附近，務必讓我去
+    MessageGroupId: 100030280
     Id: 518
     CharacterId: 10003
     MessageCondition: Answer
@@ -890,15 +898,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 좋아. 나도 마침 근처에 볼일이 있었거든.
-    MessageJP: ちょうど私もその辺りに行く用事があったから、ぜひ
-    MessageCN: 嗯，刚好我也要去那附近办事，那就一起去吧
-    MessageEN: Sounds good. I also have something to do in that area.
-    MessageTH: "ก็ได้ ครูมีธุระที่ต้องไปแถวนั้นอยู่
+  - MessageKR: 다행이네요. 그럼 돌아오는 주말에 키보토스 공용 아레나 앞에서 뵈어요!
+    MessageJP: それは良かったです！それでは次の週末、キヴォトスの公共アリーナ前で！
+    MessageCN: 太好了！那这周末，我们在基沃托斯的公共体育馆前面见！
+    MessageEN: Great. I'll meet you in front of the Kivotos Arena next weekend!
+    MessageTH: "ดีจังเลย ถ้างั้นสุดสัปดาห์นี้เจอกันที่
 
-      เหมือนกัน"
-    MessageTW: 我正好有事要去附近，務必讓我去
-  - MessageGroupId: 100030290
+      ลานสาธารณะคิโวทอสนะคะ!"
+    MessageTW: 那太好了！那就下個週末，在奇普托斯公共圓形劇場前見！
+    MessageGroupId: 100030290
     Id: 519
     CharacterId: 10003
     MessageCondition: Feedback
@@ -910,11 +918,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다행이네요. 그럼 돌아오는 주말에 키보토스 공용 아레나 앞에서 뵈어요!
-    MessageJP: それは良かったです！それでは次の週末、キヴォトスの公共アリーナ前で！
-    MessageCN: 太好了！那这周末，我们在基沃托斯的公共体育馆前面见！
-    MessageEN: Great. I'll meet you in front of the Kivotos Arena next weekend!
-    MessageTH: "ดีจังเลย ถ้างั้นสุดสัปดาห์นี้เจอกันที่
-
-      ลานสาธารณะคิโวทอสนะคะ!"
-    MessageTW: 那太好了！那就下個週末，在奇普托斯公共圓形劇場前見！

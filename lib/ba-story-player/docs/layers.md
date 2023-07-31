@@ -111,10 +111,6 @@ UI 层负责 UI 的相关功能
 
 `skip`: 跳过剧情
 
-`auto`: 启动自动模式
-
-`stopAuto`: 自动模式停止
-
 `hideDialog`: 隐藏对话框
 
 `playOtherSound`: 参数: `select`. 播放选择时的特效音

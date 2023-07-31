@@ -7,7 +7,7 @@
     "dev": "vite --host",
     "build:json": "node ./CICD/build_json.mjs",
     "build": "pnpm build:json && vite build && cp ./dist/index.html ./dist/404.html",
-    "preview": "pnpm build:json && vite build; vite preview --host",
+    "preview": "pnpm build:json && vite preview --host",
     "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
@@ -28,7 +28,10 @@
     "typed.js": "^2.0.16",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2",
-    "xxhashjs": "^0.2.2"
+    "xxhashjs": "^0.2.2",
+    "tailwindcss": "~3.3.3",
+    "autoprefixer": "~10.4.14",
+    "dayjs": "~1.11.9"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",

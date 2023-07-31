@@ -1,15 +1,17 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite, TilingSprite, filters } from "pixi.js";
+import { Sprite, TilingSprite } from "pixijs";
 import { emitterStarter } from "../emitterUtils";
 import { loadSpriteSheet } from "../resourcesUtils";
+import { BlurFilter } from "pixijs";
+
 
 export default async function BG_SandStorm_L(resources: Sprite[]) {
   // 原理是两个平铺图片不断移动
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  let animationsName = "sandStorm";
-  let spritesheet = await loadSpriteSheet(
+  const animationsName = "sandStorm";
+  const spritesheet = await loadSpriteSheet(
     resources[0],
     { x: 1, y: 4 },
     animationsName
@@ -21,7 +23,7 @@ export default async function BG_SandStorm_L(resources: Sprite[]) {
   const width = Math.sqrt(appWidth * appWidth + appHeight * appHeight);
   const height = texture.height;
   const scale = appHeight / height;
-  const blurFilter = new filters.BlurFilter();
+  const blurFilter = new BlurFilter();
   [TextureTilingBack, TextureTilingFront].forEach(i => {
     // 避免 tiling 产生的像素
     i.clampMargin = 1.5;
@@ -36,7 +38,7 @@ export default async function BG_SandStorm_L(resources: Sprite[]) {
   TextureTilingBack.zIndex = -1;
   TextureTilingFront.tilePosition.x = appWidth * 0.05; // 错开一点
   TextureTilingFront.y = appHeight * 0.75;
-  let Remover = emitterStarter({
+  const Remover = emitterStarter({
     update: () => {
       TextureTilingBack.tilePosition.x += 1.3;
       TextureTilingFront.tilePosition.x += 1.3;

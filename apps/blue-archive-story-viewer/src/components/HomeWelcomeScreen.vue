@@ -12,34 +12,29 @@ export interface HomeDisplayInfo {
 }
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
+  // {
+  //   type: "minigame",
+  //   title: "白子",
+  //   icon: "https://shiroko.blue-archive.io/favicon.gif",
+  //   jumpTo: "https://shiroko.blue-archive.io",
+  //   startDate: "2023/05/16",
+  //   endDate: "2023/06/30",
+  //   style: "pixelize",
+  // },
   {
-    type: "minigame",
-    title: "白子",
-    icon: "https://shiroko.blue-archive.io/favicon.gif",
-    jumpTo: "https://shiroko.blue-archive.io",
-    startDate: "2023/05/16",
-    endDate: "2023/06/30",
-    style: "pixelize",
+    type: "student",
+    jumpTo: 16013,
+    title: "下江 小春（泳装）",
   },
   {
     type: "student",
-    jumpTo: 10022,
-    title: "空崎 日奈（泳装）",
+    jumpTo: 10073,
+    title: "古关 忧（泳装）",
   },
   {
     type: "student",
-    jumpTo: 10071,
-    title: "月雪 宫子（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 10072,
-    title: "空井 咲（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 26010,
-    title: "霞泽 美游（泳装）",
+    jumpTo: 20028,
+    title: "若叶 日向（泳装）",
   },
 ];
 </script>

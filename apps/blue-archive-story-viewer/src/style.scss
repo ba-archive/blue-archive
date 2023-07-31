@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 //noinspection CssUnknownTarget
 @font-face {
   src: url("/font/bender-bold.woff2") format("woff2"),

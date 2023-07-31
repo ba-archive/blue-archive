@@ -364,4 +364,112 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  CH0069_home: {
+    name: "CH0069_home",
+    playQue: [
+      {
+        name: "CH0069_home",
+        animation: "Start_Idle_01",
+        fadeTime: undefined,
+        fade: false,
+      },
+      {
+        name: "CH0069_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0069_home: {
+        scale: 1,
+      },
+    },
+  },
+  CH0188_home: {
+    name: "CH0188_home",
+    playQue: [
+      {
+        name: "CH0188_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5,
+        fade: true,
+      },
+      {
+        name: "CH0188_home",
+        animation: "Idle_01",
+      },
+    ],
+    spineSettings: {
+      CH0188_home: {
+        scale: 1,
+      },
+    },
+  },
+  CH0204_home: {
+    name: "CH0204_home",
+    playQue: [
+      {
+        name: "CH0204_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0204_home: {
+        scale: 1.25,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0205_home: {
+    name: "CH0205_home",
+    playQue: [
+      {
+        name: "CH0205_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.5,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0205_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0209_home: {
+    name: "CH0209_home",
+    playQue: [
+      {
+        name: "CH0209_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.3,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0209_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0210_home: {
+    name: "CH0210_home",
+    playQue: [
+      {
+        name: "CH0210_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.3,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0210_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };

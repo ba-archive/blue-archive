@@ -37,8 +37,10 @@
       </div>
       <div class="trans">
         <n-space>
-          <n-button @click="translateHandle" type="info">翻译参考文本</n-button>
           <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+          <n-button type="info" @click="sendRefreshPlayerSignal"
+            >刷新播放器</n-button
+          >
           <n-dropdown
             trigger="hover"
             :options="langSelect"
@@ -76,6 +78,9 @@
               <template #suffix><span style="color: #999">毫秒</span></template>
             </n-input-number>
           </n-space>
+          <n-button type="info" @click="sendResetLive2dSignal"
+            >重置 Live2D 播放状态
+          </n-button>
         </n-space>
         <span>
           <n-space>
@@ -164,6 +169,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import { halfToFull, translate } from '../../public/getTranslation';
+import eventBus from '../eventsSystem/eventBus';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine, Language } from '../types/content';
@@ -299,6 +305,14 @@ function addTag() {
     sentence.substring(cursor);
   mainStore.scenario.content[config.getSelectLine][config.getTargetLang] =
     sentence;
+}
+
+function sendResetLive2dSignal() {
+  eventBus.emit('resetLive2d');
+}
+
+function sendRefreshPlayerSignal() {
+  eventBus.emit('refreshPlayer');
 }
 </script>
 <style scoped lang="scss">

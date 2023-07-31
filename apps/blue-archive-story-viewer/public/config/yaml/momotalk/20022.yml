@@ -1,35 +1,41 @@
 CharacterId: 20022
 translator: Lepra
 title:
-  - GroupId: 2002202
-    FavorScheduleId: 200222
-    CharacterId: 20022
-    TextJp: フウカの願い事
+  - TextJp: フウカの願い事
     TextCn: 枫香的愿望
     TextKr: 당신의 소원은?
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002203
-    FavorScheduleId: 200223
+    TextEn: What's Your Wish?
+    TextTh: พรที่อยากขอ?
+    TextTw: 風華的願望
+    GroupId: 2002202
+    FavorScheduleId: 200222
     CharacterId: 20022
-    TextJp: 少し遅れて
+  - TextJp: 少し遅れて
     TextCn: 稍微晚了一些
     TextKr: 조금 어긋나더라도
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
-  - GroupId: 2002205
-    FavorScheduleId: 200225
+    TextEn: Even If It's a Little Off
+    TextTh: ถึงจะช้าไปสักหน่อย
+    TextTw: 雖遲但到
+    GroupId: 2002203
+    FavorScheduleId: 200223
     CharacterId: 20022
-    TextJp: 連休最後のお出かけ
+  - TextJp: 連休最後のお出かけ
     TextCn: 连休最后的外出
     TextKr: 가끔은 천천히, 이대로.
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Keep It Slow Like So
+    TextTh: อยากให้เป็นไปอย่างช้าๆ ในบางครั้ง
+    TextTw: 連假最後的出遊
+    GroupId: 2002205
+    FavorScheduleId: 200225
+    CharacterId: 20022
 content:
-  - MessageGroupId: 200220010
+  - MessageKR: 안녕하세요. 선생님.
+    MessageJP: こんにちは、先生
+    MessageCN: 您好，老师
+    MessageEN: Hello, Sensei.
+    MessageTH: สวัสดีค่ะคุณครู
+    MessageTW: 你好，老師
+    MessageGroupId: 200220010
     Id: 200220010
     CharacterId: 20022
     MessageCondition: FavorRankUp
@@ -41,13 +47,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요. 선생님.
-    MessageJP: こんにちは、先生
-    MessageCN: 您好，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220020
+  - MessageKR: 벌써 연말연시네요.
+    MessageJP: そろそろ年越しですね
+    MessageCN: 马上就要到年关了呢
+    MessageEN: Can you believe that it's already the end of the year?
+    MessageTH: สิ้นปีแล้วนะคะ
+    MessageTW: 快要過年了呢
+    MessageGroupId: 200220020
     Id: 200220020
     CharacterId: 20022
     MessageCondition: None
@@ -59,13 +65,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 벌써 연말연시네요.
-    MessageJP: そろそろ年越しですね
-    MessageCN: 马上就要到年关了呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220020
+  - MessageKR: 새해에는 좋은 일만 있으시기를 바랄게요.
+    MessageJP: 今年も一年、お世話になりました
+    MessageCN: 今年一年也承蒙老师关照了
+    MessageEN: I wish you all the best in the New Year!
+    MessageTH: "ขอให้มีคุณครูมีช่วงเวลาดีๆ ในตอน
+
+      สิ้นปีนะคะ"
+    MessageTW: 今年也受你照顧了
+    MessageGroupId: 200220020
     Id: 200220030
     CharacterId: 20022
     MessageCondition: None
@@ -77,13 +85,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 새해에는 좋은 일만 있으시기를 바랄게요.
-    MessageJP: 今年も一年、お世話になりました
-    MessageCN: 今年一年也承蒙老师关照了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220030
+  - MessageKR: 후우카도 한 해 동안 수고 많았어.
+    MessageJP: こちらこそ、お世話になりました
+    MessageCN: 我才是承蒙枫香照顾了
+    MessageEN: You've accomplished a lot this year, Fuuka.
+    MessageTH: ปีนี้ฟูกะก็เก่งมากเลยนะ
+    MessageTW: 彼此彼此，我也受你照顧了
+    MessageGroupId: 200220030
     Id: 200220040
     CharacterId: 20022
     MessageCondition: Answer
@@ -95,13 +103,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후우카도 한 해 동안 수고 많았어.
-    MessageJP: こちらこそ、お世話になりました
-    MessageCN: 我才是承蒙枫香照顾了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220040
+  - MessageKR: 오늘 일정은 어때?
+    MessageJP: フウカは今日、何か予定とかあるの？
+    MessageCN: 枫香今天有什么安排吗？
+    MessageEN: How's your schedule looking today?
+    MessageTH: วันนี้จะทำอะไรเหรอ?
+    MessageTW: 風華今天有什麼計畫嗎？
+    MessageGroupId: 200220040
     Id: 200220050
     CharacterId: 20022
     MessageCondition: Answer
@@ -113,13 +121,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 일정은 어때?
-    MessageJP: フウカは今日、何か予定とかあるの？
-    MessageCN: 枫香今天有什么安排吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220050
+  - MessageKR: 오늘도 급양부 일로 바쁠 것 같아요.
+    MessageJP: 私は今日も、給食部の方で忙しくなりそうだなと……
+    MessageCN: 我今天应该也会在供给部这边忙吧……
+    MessageEN: I'll be busy with my work with the School Lunch Club all day.
+    MessageTH: "วันนี้คงยุ่งกับงานของชมรมโภชนาการ
+
+      นิดหน่อยค่ะ"
+    MessageTW: 我今天應該也會忙著處理供給部的事……
+    MessageGroupId: 200220050
     Id: 200220060
     CharacterId: 20022
     MessageCondition: Feedback
@@ -131,13 +141,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘도 급양부 일로 바쁠 것 같아요.
-    MessageJP: 私は今日も、給食部の方で忙しくなりそうだなと……
-    MessageCN: 我今天应该也会在供给部这边忙吧……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220050
+  - MessageKR: 하지만 괜찮아요.
+    MessageJP: でも大丈夫です
+    MessageCN: 但是没关系
+    MessageEN: But it's not a problem.
+    MessageTH: แต่ไม่เป็นไรค่ะ
+    MessageTW: 不過不要緊
+    MessageGroupId: 200220050
     Id: 200220070
     CharacterId: 20022
     MessageCondition: Feedback
@@ -149,13 +159,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 괜찮아요.
-    MessageJP: でも大丈夫です
-    MessageCN: 但是没关系
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220060
+  - MessageKR: 마지막까지 최선을 다하는 게, 제 사명인걸요.
+    MessageJP: 最後まで、全力を尽くしてきます！
+    MessageCN: 我会竭尽全力到最后的！
+    MessageEN: After all, I aim to do my best until the very end.
+    MessageTH: "การพยายามเต็มที่ให้ถึงที่สุด
+
+      คือหน้าที่ของฉันค่ะ"
+    MessageTW: 我會全力以赴，努力到最後的！
+    MessageGroupId: 200220060
     Id: 200220080
     CharacterId: 20022
     MessageCondition: Feedback
@@ -167,13 +179,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 마지막까지 최선을 다하는 게, 제 사명인걸요.
-    MessageJP: 最後まで、全力を尽くしてきます！
-    MessageCN: 我会竭尽全力到最后的！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220070
+  - MessageKR: 안녕하세요. 선생님.
+    MessageJP: えっと……おはようございます
+    MessageCN: 那个……早上好
+    MessageEN: Hello, Sensei.
+    MessageTH: สวัสดีค่ะคุณครู
+    MessageTW: 那個……早安
+    MessageGroupId: 200220070
     Id: 200220090
     CharacterId: 20022
     MessageCondition: FavorRankUp
@@ -185,13 +197,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안녕하세요. 선생님.
-    MessageJP: えっと……おはようございます
-    MessageCN: 那个……早上好
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220080
+  - MessageKR: 저는…… 늦잠을 자 버렸답니다.
+    MessageJP: 起きたら、いつの間にこんな時間に……
+    MessageCN: 醒过来我才发现，居然已经到这个点了……
+    MessageEN: I...overslept this morning.
+    MessageTH: ฉัน... นอนตื่นสายซะแล้วค่ะ
+    MessageTW: 起來就發現已經這個時間了……
+    MessageGroupId: 200220080
     Id: 200220100
     CharacterId: 20022
     MessageCondition: None
@@ -203,13 +215,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저는…… 늦잠을 자 버렸답니다.
-    MessageJP: 起きたら、いつの間にこんな時間に……
-    MessageCN: 醒过来我才发现，居然已经到这个点了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220090
+  - MessageKR: 늦잠을 자는 후우카라니!
+    MessageJP: フウカが寝坊、珍しい……！
+    MessageCN: 枫香居然会睡懒觉，真少见……！
+    MessageEN: Really? You, Fuuka?!
+    MessageTH: ฟูกะนอนตื่นสายงั้นเรอะ!
+    MessageTW: 風華居然睡過頭，真是少見……！
+    MessageGroupId: 200220090
     Id: 200220110
     CharacterId: 20022
     MessageCondition: Answer
@@ -221,13 +233,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 늦잠을 자는 후우카라니!
-    MessageJP: フウカが寝坊、珍しい……！
-    MessageCN: 枫香居然会睡懒觉，真少见……！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220100
+  - MessageKR: 민망한 모습을 보여드려 부끄럽네요……
+    MessageJP: お恥ずかしい限りです……
+    MessageCN: 真是不好意思……
+    MessageEN: I know. I'm ashamed...
+    MessageTH: "อายจัง... ที่ให้คุณครูได้เห็นด้านที่
+
+      น่าอายแบบนี้"
+    MessageTW: 真是太丟臉了……
+    MessageGroupId: 200220100
     Id: 200220120
     CharacterId: 20022
     MessageCondition: Feedback
@@ -239,13 +253,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 민망한 모습을 보여드려 부끄럽네요……
-    MessageJP: お恥ずかしい限りです……
-    MessageCN: 真是不好意思……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220110
+  - MessageKR: 그런 후우카도 신선하고 귀여워.
+    MessageJP: ううん、この時期くらい良いんじゃないかな。可愛いし
+    MessageCN: 没关系哦，这个时候偷懒一下不也挺好的嘛。而且枫香这样也很可爱
+    MessageEN: That's as unexpected as it is adorable.
+    MessageTH: ฟูกะที่เป็นแบบนั้นก็ดูน่ารักดีนะ
+    MessageTW: 別在意，這個時期睡過頭很正常的。又很可愛
+    MessageGroupId: 200220110
     Id: 200220130
     CharacterId: 20022
     MessageCondition: Answer
@@ -257,13 +271,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런 후우카도 신선하고 귀여워.
-    MessageJP: ううん、この時期くらい良いんじゃないかな。可愛いし
-    MessageCN: 没关系哦，这个时候偷懒一下不也挺好的嘛。而且枫香这样也很可爱
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220120
+  - MessageKR: 저, 정말.
+    MessageJP: も、もう
+    MessageCN: 真、真是的
+    MessageEN: Seriously?
+    MessageTH: จะ... จริงๆ เลย
+    MessageTW: 真，真是的
+    MessageGroupId: 200220120
     Id: 200220140
     CharacterId: 20022
     MessageCondition: Feedback
@@ -275,13 +289,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저, 정말.
-    MessageJP: も、もう
-    MessageCN: 真、真是的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220120
+  - MessageKR: 놀리지 말아 주세요……
+    MessageJP: からかわないでください
+    MessageCN: 老师不要捉弄我啦
+    MessageEN: Please stop teasing me...
+    MessageTH: อย่าตกใจนะคะ...
+    MessageTW: 請別取笑我了
+    MessageGroupId: 200220120
     Id: 200220150
     CharacterId: 20022
     MessageCondition: Feedback
@@ -293,13 +307,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 놀리지 말아 주세요……
-    MessageJP: からかわないでください
-    MessageCN: 老师不要捉弄我啦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220130
+  - MessageKR: 저기, 선생님.
+    MessageJP: ところで、その……
+    MessageCN: 话说回来，那个……
+    MessageEN: Um, Sensei.
+    MessageTH: คือว่า คุณครู...
+    MessageTW: 話說回來，那個
+    MessageGroupId: 200220130
     Id: 200220160
     CharacterId: 20022
     MessageCondition: Feedback
@@ -311,13 +325,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저기, 선생님.
-    MessageJP: ところで、その……
-    MessageCN: 话说回来，那个……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220130
+  - MessageKR: 시기는 조금 맞지 않을지도 모르지만.
+    MessageJP: もうタイミングは過ぎてしまいましたが
+    MessageCN: 虽然可能已经过了时间
+    MessageEN: It's last minute, and you might be busy...
+    MessageTH: ถึงจะช้าไปสักหน่อย...
+    MessageTW: 雖然可能已經錯過時機了
+    MessageGroupId: 200220130
     Id: 200220170
     CharacterId: 20022
     MessageCondition: Feedback
@@ -329,13 +343,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 시기는 조금 맞지 않을지도 모르지만.
-    MessageJP: もうタイミングは過ぎてしまいましたが
-    MessageCN: 虽然可能已经过了时间
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220130
+  - MessageKR: 토시코시소바를 함께 드시지 않으시겠어요?
+    MessageJP: よろしければ、一緒に少し遅い年越しそばを食べませんか？
+    MessageCN: 老师方便的话，我们可以一起吃迟到的跨年面吗？
+    MessageEN: But would you like to have noodles together for New Year's Eve?
+    MessageTH: "คุณครูอยากมารับประทานโทชิโคชิ
+
+      โซบะด้วยกันมั้ยคะ?"
+    MessageTW: 方便的話，要不要一起吃稍微晚了點的跨年蕎麥麵呢？
+    MessageGroupId: 200220130
     Id: 200220180
     CharacterId: 20022
     MessageCondition: Feedback
@@ -347,13 +363,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 토시코시소바를 함께 드시지 않으시겠어요?
-    MessageJP: よろしければ、一緒に少し遅い年越しそばを食べませんか？
-    MessageCN: 老师方便的话，我们可以一起吃迟到的跨年面吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220140
+  - MessageKR: 후우카의 수제 소바라니! 당연히 먹어야지!
+    MessageJP: フウカの手料理！今すぐ食べたい！
+    MessageCN: 枫香亲手做的料理！我现在就想吃！
+    MessageEN: Of course! I couldn't miss noodles with Fuuka!
+    MessageTH: "โทชิโคชิโซบะกับฟูกะเหรอ?!
+
+      ต้องไปอยู่แล้ว!"
+    MessageTW: 風華親手做的料理！我現在就想吃！
+    MessageGroupId: 200220140
     Id: 200220190
     CharacterId: 20022
     MessageCondition: Answer
@@ -365,13 +383,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후우카의 수제 소바라니! 당연히 먹어야지!
-    MessageJP: フウカの手料理！今すぐ食べたい！
-    MessageCN: 枫香亲手做的料理！我现在就想吃！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220150
+  - MessageKR: 다, 다행이다.
+    MessageJP: あ、ありがとうございます
+    MessageCN: 谢、谢谢老师
+    MessageEN: Oh! I'm glad to hear that.
+    MessageTH: คะ... ค่อยยังชั่วหน่อยค่ะ
+    MessageTW: 謝，謝謝老師
+    MessageGroupId: 200220150
     Id: 200220200
     CharacterId: 20022
     MessageCondition: Feedback
@@ -383,13 +401,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다, 다행이다.
-    MessageJP: あ、ありがとうございます
-    MessageCN: 谢、谢谢老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220150
+  - MessageKR: 그러면 저녁에 뵈어요.
+    MessageJP: 少し準備があるので、夕方でもよろしいですか？
+    MessageCN: 我需要稍微准备一下，老师看傍晚的时候方便吗？
+    MessageEN: I'll see you this evening, then.
+    MessageTH: ถ้างั้นเจอกันตอนเย็นนะคะ
+    MessageTW: 因為還需要做些準備，傍晚左右可以嗎？
+    MessageGroupId: 200220150
     Id: 200220210
     CharacterId: 20022
     MessageCondition: Feedback
@@ -401,13 +419,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러면 저녁에 뵈어요.
-    MessageJP: 少し準備があるので、夕方でもよろしいですか？
-    MessageCN: 我需要稍微准备一下，老师看傍晚的时候方便吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220160
+  - MessageKR: 기다리겠습니다.
+    MessageJP: 食堂でお待ちしていますね
+    MessageCN: 我在食堂等您哦
+    MessageEN: I'll be waiting for you.
+    MessageTH: แล้วฉันจะรอนะคะ
+    MessageTW: 我會在食堂等你的
+    MessageGroupId: 200220160
     Id: 200220220
     CharacterId: 20022
     MessageCondition: Feedback
@@ -419,13 +437,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리겠습니다.
-    MessageJP: 食堂でお待ちしていますね
-    MessageCN: 我在食堂等您哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220170
+  - MessageKR: 잘 지내고 계시나요, 선생님.
+    MessageJP: 先生は、今日もお忙しそうでしょうか？
+    MessageCN: 老师今天也在忙吗？
+    MessageEN: How are you today, Sensei?
+    MessageTH: สบายดีรึเปล่าคะคุณครู?
+    MessageTW: 老師，你今天也很忙嗎？
+    MessageGroupId: 200220170
     Id: 200220230
     CharacterId: 20022
     MessageCondition: FavorRankUp
@@ -437,13 +455,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 지내고 계시나요, 선생님.
-    MessageJP: 先生は、今日もお忙しそうでしょうか？
-    MessageCN: 老师今天也在忙吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220180
+  - MessageKR: 연휴도…… 끝나 가네요.
+    MessageJP: そろそろ連休も終わりだな、と思いましてご連絡を……
+    MessageCN: 我想着连休也差不多要结束了，所以就联系一下老师……
+    MessageEN: I can't believe the holiday season is almost over.
+    MessageTH: วันหยุดยาว... ผ่านไปแล้วค่ะ
+    MessageTW: 我想連假也快結束了，於是就聯絡了老師……
+    MessageGroupId: 200220180
     Id: 200220240
     CharacterId: 20022
     MessageCondition: None
@@ -455,13 +473,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 연휴도…… 끝나 가네요.
-    MessageJP: そろそろ連休も終わりだな、と思いましてご連絡を……
-    MessageCN: 我想着连休也差不多要结束了，所以就联系一下老师……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220180
+  - MessageKR: 정말, 왜 이럴 때만 시간이 이렇게 빨리 갈까요?
+    MessageJP: 休みの日って、時間の進みが早いですね……
+    MessageCN: 放假的日子里，时间过得还真快呢……
+    MessageEN: Why does time always seem to go so fast during breaks?
+    MessageTH: "ทำไมช่วงเวลาแบบนี้ถึงผ่านไปเร็วจัง
+
+      เลยนะคะ?"
+    MessageTW: 休假的日子為何總是過得這麼快呢……
+    MessageGroupId: 200220180
     Id: 200220250
     CharacterId: 20022
     MessageCondition: None
@@ -473,13 +493,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 정말, 왜 이럴 때만 시간이 이렇게 빨리 갈까요?
-    MessageJP: 休みの日って、時間の進みが早いですね……
-    MessageCN: 放假的日子里，时间过得还真快呢……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220190
+  - MessageKR: 후우카는 연휴 잘 보냈어?
+    MessageJP: こっちはいつも通りだよ。フウカの方は？
+    MessageCN: 我这里还是老样子哦。枫香呢？
+    MessageEN: Did you have a good New Year, Fuuka?
+    MessageTH: ฟูกะสนุกกับวันหยุดยาวมั้ย?
+    MessageTW: 我和平時一樣唷。風華呢？
+    MessageGroupId: 200220190
     Id: 200220260
     CharacterId: 20022
     MessageCondition: Answer
@@ -491,13 +511,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후우카는 연휴 잘 보냈어?
-    MessageJP: こっちはいつも通りだよ。フウカの方は？
-    MessageCN: 我这里还是老样子哦。枫香呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220200
+  - MessageKR: 잘 모르겠어요.
+    MessageJP: えっと、ぼーっとしていたら終わってたと言いますか……
+    MessageCN: 嗯，应该说，感觉一眨眼假期就结束了吧……
+    MessageEN: I'm not sure.
+    MessageTH: ฉันก็ไม่ค่อยแน่ใจค่ะ
+    MessageTW: 那個，該說一晃眼就過去了嗎……
+    MessageGroupId: 200220200
     Id: 200220270
     CharacterId: 20022
     MessageCondition: Feedback
@@ -509,13 +529,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 모르겠어요.
-    MessageJP: えっと、ぼーっとしていたら終わってたと言いますか……
-    MessageCN: 嗯，应该说，感觉一眨眼假期就结束了吧……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220200
+  - MessageKR: 하지만 내일부터는 다시 급양부의 일을 위해
+    MessageJP: ですが、もう明日からは給食部の準備をする必要があるので
+    MessageCN: 但是，从明天开始就必须要为供给部做准备了
+    MessageEN: I need to get groceries tomorrow.
+    MessageTH: แต่ว่าวันนี้ฉันต้องออกไปซื้อวัตถุดิบ
+    MessageTW: 但是明天就要開始為供給部做準備
+    MessageGroupId: 200220200
     Id: 200220280
     CharacterId: 20022
     MessageCondition: Feedback
@@ -527,13 +547,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 내일부터는 다시 급양부의 일을 위해
-    MessageJP: ですが、もう明日からは給食部の準備をする必要があるので
-    MessageCN: 但是，从明天开始就必须要为供给部做准备了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220200
+  - MessageKR: 식재료를 사러 가야 하네요.
+    MessageJP: 明日になったら、食材を買いに行かないと
+    MessageCN: 所以我明天要去采购食材才行
+    MessageEN: For the School Lunch Club, that is.
+    MessageTH: เพื่อเตรียมงานของชมรมอีกแล้วละค่ะ
+    MessageTW: 所以明天得去購買食材才行
+    MessageGroupId: 200220200
     Id: 200220290
     CharacterId: 20022
     MessageCondition: Feedback
@@ -545,13 +565,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 식재료를 사러 가야 하네요.
-    MessageJP: 明日になったら、食材を買いに行かないと
-    MessageCN: 所以我明天要去采购食材才行
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220210
+  - MessageKR: 그러면 사실상 오늘이 마지막 휴일인 거야?!
+    MessageJP: ってことは、今日が連休最終日……！？
+    MessageCN: 也就是说，今天就是连休的最后一天……！？
+    MessageEN: So today's your last day off?
+    MessageTH: "ถ้างั้นวันนี้ก็เป็นวันหยุดวันสุดท้าย
+
+      แล้วน่ะสิ?!"
+    MessageTW: 也就是說，今天是連假的最後一天……！？
+    MessageGroupId: 200220210
     Id: 200220300
     CharacterId: 20022
     MessageCondition: Answer
@@ -563,13 +585,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러면 사실상 오늘이 마지막 휴일인 거야?!
-    MessageJP: ってことは、今日が連休最終日……！？
-    MessageCN: 也就是说，今天就是连休的最后一天……！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220220
+  - MessageKR: 어……
+    MessageJP: そ、そうですね
+    MessageCN: 是、是啊
+    MessageEN: Uhhh...
+    MessageTH: อ่า...
+    MessageTW: 確，確實是呢
+    MessageGroupId: 200220220
     Id: 200220310
     CharacterId: 20022
     MessageCondition: Feedback
@@ -581,13 +603,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어……
-    MessageJP: そ、そうですね
-    MessageCN: 是、是啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220220
+  - MessageKR: 잘 생각해 보니 그러네요?
+    MessageJP: まあいつものことと言いますか
+    MessageCN: 不过，对我而言这是再正常不过的事情了
+    MessageEN: I guess you're right.
+    MessageTH: "พอมาลองคิดๆ ดูแล้ว... ก็คงจะเป็น
+
+      แบบนั้นน่ะค่ะ"
+    MessageTW: 該說平常就這樣嗎
+    MessageGroupId: 200220220
     Id: 200220320
     CharacterId: 20022
     MessageCondition: Feedback
@@ -599,13 +623,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 생각해 보니 그러네요?
-    MessageJP: まあいつものことと言いますか
-    MessageCN: 不过，对我而言这是再正常不过的事情了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220220
+  - MessageKR: 뭐, 일이니까요.
+    MessageJP: 給食部なので、仕方ありません
+    MessageCN: 毕竟是供给部，也没办法呢
+    MessageEN: Well, that's my job.
+    MessageTH: ก็นะ มันเป็นงานนี่คะ
+    MessageTW: 畢竟是供給部，這也沒辦法
+    MessageGroupId: 200220220
     Id: 200220330
     CharacterId: 20022
     MessageCondition: Feedback
@@ -617,13 +641,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 일이니까요.
-    MessageJP: 給食部なので、仕方ありません
-    MessageCN: 毕竟是供给部，也没办法呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220230
+  - MessageKR: ‘일이니까요’ 하고 넘길 게 아니잖아!
+    MessageJP: 仕方なくないよ！
+    MessageCN: 别说没办法啊！
+    MessageEN: You can't keep saying that.
+    MessageTH: "จะบอกว่า 'เป็นงานนี่คะ' แล้วปล่อย
+
+      ผ่านไปได้ยังไงเล่า!"
+    MessageTW: 不會沒辦法唷！
+    MessageGroupId: 200220230
     Id: 200220340
     CharacterId: 20022
     MessageCondition: Answer
@@ -635,13 +661,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ‘일이니까요’ 하고 넘길 게 아니잖아!
-    MessageJP: 仕方なくないよ！
-    MessageCN: 别说没办法啊！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220240
+  - MessageKR: 오후에 당장 후우카 땅을 납치하겠습니다.
+    MessageJP: こうなったら、今日はフウカをさらわないと……
+    MessageCN: 既然已经到了这个地步，今天就不得不把枫香拐走了……
+    MessageEN: In fact, I'm going to kidnap you this afternoon.
+    MessageTH: "เดี๋ยวตอนบ่ายๆ ครูจะไปลักพาตัว
+
+      ฟูกะตันไปเอง!"
+    MessageTW: 既然如此，今天得綁架風華才行……
+    MessageGroupId: 200220240
     Id: 200220350
     CharacterId: 20022
     MessageCondition: Answer
@@ -653,13 +681,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오후에 당장 후우카 땅을 납치하겠습니다.
-    MessageJP: こうなったら、今日はフウカをさらわないと……
-    MessageCN: 既然已经到了这个地步，今天就不得不把枫香拐走了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220250
+  - MessageKR: 네?!
+    MessageJP: はい！？
+    MessageCN: 啊！？
+    MessageEN: What?!
+    MessageTH: คะ?!
+    MessageTW: 什麼！？
+    MessageGroupId: 200220250
     Id: 200220360
     CharacterId: 20022
     MessageCondition: Feedback
@@ -671,13 +699,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네?!
-    MessageJP: はい！？
-    MessageCN: 啊！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220250
+  - MessageKR: 저, 선생님에게까지 납치당하는 건가요?!
+    MessageJP: 私、先生にまで誘拐されるんですか！？
+    MessageCN: 连、连老师都要绑架我吗！？
+    MessageEN: Y-You're gonna kidnap me, Sensei?!
+    MessageTH: คุณครูจะมาลักพาตัวฉันงั้นเหรอคะ?!
+    MessageTW: 連，連老師都要綁架我嗎！？
+    MessageGroupId: 200220250
     Id: 200220370
     CharacterId: 20022
     MessageCondition: Feedback
@@ -689,13 +717,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저, 선생님에게까지 납치당하는 건가요?!
-    MessageJP: 私、先生にまで誘拐されるんですか！？
-    MessageCN: 连、连老师都要绑架我吗！？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220260
+  - MessageKR: 기모노를 다시 넣어두기 전에 할 일이 있으니까!
+    MessageJP: せっかくの連休最終日だからね！
+    MessageCN: 毕竟是难得的连休最后一天呢！
+    MessageEN: There's something we have to do before putting the kimono away!
+    MessageTH: "มีอีกอย่างหนึ่งที่ต้องทำก่อนจะผ่าน
+
+      ปีใหม่ไปไง!"
+    MessageTW: 畢竟是難得的連假最後一天啊！
+    MessageGroupId: 200220260
     Id: 200220380
     CharacterId: 20022
     MessageCondition: Answer
@@ -707,13 +737,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기모노를 다시 넣어두기 전에 할 일이 있으니까!
-    MessageJP: せっかくの連休最終日だからね！
-    MessageCN: 毕竟是难得的连休最后一天呢！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 200220270
+  - MessageKR: 점점 더 모르게 되어가고 있어요……
+    MessageJP: ど、どういうことなんですか……？
+    MessageCN: 到、到底怎么回事啊……？
+    MessageEN: I don't know what's going on anymore...
+    MessageTH: ฉันเริ่มไม่เข้าใจสถานการณ์แล้วค่ะ...
+    MessageTW: 這，這是什麼意思……？
+    MessageGroupId: 200220270
     Id: 200220390
     CharacterId: 20022
     MessageCondition: Feedback
@@ -725,9 +755,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 점점 더 모르게 되어가고 있어요……
-    MessageJP: ど、どういうことなんですか……？
-    MessageCN: 到、到底怎么回事啊……？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""

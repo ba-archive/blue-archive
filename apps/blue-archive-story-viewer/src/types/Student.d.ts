@@ -11,8 +11,8 @@ export interface Student {
   };
   rarity: number;
   type: "Striker" | "Special";
-  armorType: "LightArmor" | "HeavyArmor" | "Unarmed";
-  bulletType?: "Pierce" | "Explode" | "Mystic";
+  armorType: StudentAttributes["armorType"];
+  bulletType?: StudentAttributes["bulletType"];
   weapon:
     | "SG"
     | "SMG"
@@ -41,8 +41,8 @@ export interface StudentAttributes {
   affiliation: string;
   rarity: number;
   type: "Striker" | "Special";
-  armorType: "LightArmor" | "HeavyArmor" | "Unarmed";
-  bulletType?: "Pierce" | "Explode" | "Mystic";
+  armorType: "LightArmor" | "HeavyArmor" | "Unarmed" | "ElasticArmor";
+  bulletType?: "Pierce" | "Explode" | "Mystic" | "Sonic";
   weapon:
     | "SG"
     | "SMG"
@@ -63,8 +63,8 @@ export interface StudentFilters {
   club: string[];
   affiliation: string[];
   type: ("Striker" | "Special")[];
-  armorType: ("LightArmor" | "HeavyArmor" | "Unarmed")[];
-  bulletType?: ("Pierce" | "Explode" | "Mystic")[];
+  armorType: StudentAttributes["armorType"][];
+  bulletType?: StudentAttributes["bulletType"][];
 }
 
 export interface StudentName {

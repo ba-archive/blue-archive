@@ -6,6 +6,7 @@
       :key="i"
       :text="e"
       :instant="instant"
+      st
     />
   </div>
 </template>

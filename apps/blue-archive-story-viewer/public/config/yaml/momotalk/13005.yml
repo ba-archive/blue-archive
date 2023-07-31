@@ -1,53 +1,59 @@
 CharacterId: 13005
 translator: 罐子
 title:
-  - GroupId: 1300502
-    FavorScheduleId: 130052
-    CharacterId: 13005
-    TextJp: 抜き打ち検査
+  - TextJp: 抜き打ち検査
     TextCn: 突击检查
     TextKr: 불심검문
     TextEn: Police Interrogation
     TextTh: สอบสวนผู้ต้องสงสัย
     TextTw: 突擊檢查
-  - GroupId: 1300503
-    FavorScheduleId: 130053
+    GroupId: 1300502
+    FavorScheduleId: 130052
     CharacterId: 13005
-    TextJp: 事務所の掃除
+  - TextJp: 事務所の掃除
     TextCn: 打扫事务所
     TextKr: 사무실 청소
     TextEn: Office Cleaning
     TextTh: ทำความสะอาดสำนักงาน
     TextTw: 辦公室的清掃
-  - GroupId: 1300505
-    FavorScheduleId: 130055
+    GroupId: 1300503
+    FavorScheduleId: 130053
     CharacterId: 13005
-    TextJp: ロック・スピリッツ
+  - TextJp: ロック・スピリッツ
     TextCn: 摇滚精神
     TextKr: 락 스피릿
     TextEn: Heavy Metal Spirit
     TextTh: จิตวิญญาณชาวร็อค
-    TextTw: Rock．Spirits
-  - GroupId: 1300506
-    FavorScheduleId: 130056
+    TextTw: Rock Spirits
+    GroupId: 1300505
+    FavorScheduleId: 130055
     CharacterId: 13005
-    TextJp: 雨の降る日の路地裏
+  - TextJp: 雨の降る日の路地裏
     TextCn: 雨天的小巷
     TextKr: 비 오는 날의 골목
     TextEn: Rainy Day Alleyway
     TextTh: ตรอกเล็กๆ ในวันที่ฝนตก
     TextTw: 下雨天的巷弄
-  - GroupId: 1300508
-    FavorScheduleId: 130058
+    GroupId: 1300506
+    FavorScheduleId: 130056
     CharacterId: 13005
-    TextJp: レコード屋
+  - TextJp: レコード屋
     TextCn: 唱片店
     TextKr: 음반 매장
     TextEn: Record Store
     TextTh: ร้านขายซีดี
     TextTw: 唱片行
+    GroupId: 1300508
+    FavorScheduleId: 130058
+    CharacterId: 13005
 content:
-  - MessageGroupId: 130050010
+  - MessageKR: 선생은 인상 때문에 고민해 본 경험 있어?
+    MessageJP: 先生は、自分の外見のことで悩んだことある？
+    MessageCN: 老师，您有过对自己外表烦恼过吗？
+    MessageEN: Have you ever worried about the impression you make on others?
+    MessageTH: ครูเคยกังวลเกี่ยวกับหน้าตาบ้างไหม?
+    MessageTW: 老師有因為自己的外貌苦惱過嗎？
+    MessageGroupId: 130050010
     Id: 1039
     CharacterId: 13005
     MessageCondition: FavorRankUp
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생은 인상 때문에 고민해 본 경험 있어?
-    MessageJP: 先生は、自分の外見のことで悩んだことある？
-    MessageCN: 老师，您有过对自己外表烦恼过吗？
-    MessageEN: Have you ever worried about the impression you make on others?
-    MessageTH: ครูเคยกังวลเกี่ยวกับหน้าตาบ้างไหม?
-    MessageTW: 老師有因為自己的外貌苦惱過嗎？
-  - MessageGroupId: 130050020
+  - MessageKR: 왜 갑자기 그런 생각을 한 거야?
+    MessageJP: 急にどうしたの？
+    MessageCN: 佳代子怎么突然说这话？
+    MessageEN: What made you ask that all of a sudden?
+    MessageTH: ทำไมจู่ๆ ก็ถามแบบนี้ล่ะ?
+    MessageTW: 這麼突然，怎麼了？
+    MessageGroupId: 130050020
     Id: 1040
     CharacterId: 13005
     MessageCondition: Answer
@@ -77,13 +83,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 왜 갑자기 그런 생각을 한 거야?
-    MessageJP: 急にどうしたの？
-    MessageCN: 佳代子怎么突然说这话？
-    MessageEN: What made you ask that all of a sudden?
-    MessageTH: ทำไมจู่ๆ ก็ถามแบบนี้ล่ะ?
-    MessageTW: 這麼突然，怎麼了？
-  - MessageGroupId: 130050030
+  - MessageKR: 그게…… 선생도 알다시피 내 인상이 좀 사나운 편이잖아.
+    MessageJP: ……先生も知ってる通り私、よく第一印象が怖いって言われるから
+    MessageCN: ……老师也知道的，我经常被人说给人的第一印象很可怕
+    MessageEN: I mean... I'm sure you've noticed that I look kind of threatening.
+    MessageTH: "ก็แบบ... ครูก็รู้นี่นาว่าหน้าตาฉันออกไป
+
+      ทางดุๆ"
+    MessageTW: ……如老師知道的那樣，我經常聽人說我給人的第一印象很可怕
+    MessageGroupId: 130050030
     Id: 1041
     CharacterId: 13005
     MessageCondition: Feedback
@@ -95,15 +103,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그게…… 선생도 알다시피 내 인상이 좀 사나운 편이잖아.
-    MessageJP: ……先生も知ってる通り私、よく第一印象が怖いって言われるから
-    MessageCN: ……老师也知道的，我经常被人说给人的第一印象很可怕
-    MessageEN: I mean... I'm sure you've noticed that I look kind of threatening.
-    MessageTH: "ก็แบบ... ครูก็รู้นี่นาว่าหน้าตาฉันออกไป
-
-      ทางดุๆ"
-    MessageTW: ……如老師知道的那樣，我經常聽人說我給人的第一印象很可怕
-  - MessageGroupId: 130050030
+  - MessageKR: 그러다 보니 이상하게 시비가 걸리는 일이 잦아서 말이야.
+    MessageJP: 変なのに絡まれることも多いし
+    MessageCN: 被找麻烦的时候也不少
+    MessageEN: I think that's why I keep getting into fights.
+    MessageTH: ก็เลยมีเรื่องชวนทะเลาะก็คนอื่นอยู่เรื่อย
+    MessageTW: 經常被奇怪的人事糾纏
+    MessageGroupId: 130050030
     Id: 1042
     CharacterId: 13005
     MessageCondition: Feedback
@@ -115,13 +121,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러다 보니 이상하게 시비가 걸리는 일이 잦아서 말이야.
-    MessageJP: 変なのに絡まれることも多いし
-    MessageCN: 被找麻烦的时候也不少
-    MessageEN: I think that's why I keep getting into fights.
-    MessageTH: ก็เลยมีเรื่องชวนทะเลาะก็คนอื่นอยู่เรื่อย
-    MessageTW: 經常被奇怪的人事糾纏
-  - MessageGroupId: 130050040
+  - MessageKR: 인상이 사나워서 좋은 일은 별로 없는 것 같아.
+    MessageJP: そのおかげで得したことも……あんまり無いし
+    MessageCN: 也因为这个外表……我基本没遇到过什么好事
+    MessageEN: There's not much good that can come from a bad first impression.
+    MessageTH: การที่หน้าตาดูดุแบบนี้ไม่ใช่เรื่องดีเลย
+    MessageTW: 拜此所賜……也沒獲得過什麼好處
+    MessageGroupId: 130050040
     Id: 1043
     CharacterId: 13005
     MessageCondition: Feedback
@@ -133,13 +139,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 인상이 사나워서 좋은 일은 별로 없는 것 같아.
-    MessageJP: そのおかげで得したことも……あんまり無いし
-    MessageCN: 也因为这个外表……我基本没遇到过什么好事
-    MessageEN: There's not much good that can come from a bad first impression.
-    MessageTH: การที่หน้าตาดูดุแบบนี้ไม่ใช่เรื่องดีเลย
-    MessageTW: 拜此所賜……也沒獲得過什麼好處
-  - MessageGroupId: 130050050
+  - MessageKR: 선생, 전에 구해달라고 의뢰했던 물건이 방금 들어왔어.
+    MessageJP: 先生、前に探してほしいって言ってたの、ようやく手に入ったよ
+    MessageCN: 老师，上次您托我找的东西，我总算弄到手了哦
+    MessageEN: Sensei. The item you requested just arrived.
+    MessageTH: เราได้ของที่ได้รับภารกิจให้ตามหาแล้วล่ะ
+    MessageTW: 老師，之前說要找的東西，終於入手了唷
+    MessageGroupId: 130050050
     Id: 1044
     CharacterId: 13005
     MessageCondition: FavorRankUp
@@ -151,13 +157,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 전에 구해달라고 의뢰했던 물건이 방금 들어왔어.
-    MessageJP: 先生、前に探してほしいって言ってたの、ようやく手に入ったよ
-    MessageCN: 老师，上次您托我找的东西，我总算弄到手了哦
-    MessageEN: Sensei. The item you requested just arrived.
-    MessageTH: เราได้ของที่ได้รับภารกิจให้ตามหาแล้วล่ะ
-    MessageTW: 老師，之前說要找的東西，終於入手了唷
-  - MessageGroupId: 130050060
+  - MessageKR: 오, 드디어 들어왔구나!
+    MessageJP: やった、ありがとう！
+    MessageCN: 太好了！谢谢佳代子！
+    MessageEN: Oh, it's finally here!
+    MessageTH: จริงเหรอ? ได้มาแล้วเหรอ!?
+    MessageTW: 太好了，謝謝！
+    MessageGroupId: 130050060
     Id: 1045
     CharacterId: 13005
     MessageCondition: Answer
@@ -169,13 +175,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오, 드디어 들어왔구나!
-    MessageJP: やった、ありがとう！
-    MessageCN: 太好了！谢谢佳代子！
-    MessageEN: Oh, it's finally here!
-    MessageTH: จริงเหรอ? ได้มาแล้วเหรอ!?
-    MessageTW: 太好了，謝謝！
-  - MessageGroupId: 130050070
+  - MessageKR: 후후, 반응을 보니 오랫동안 기대했던 물건인가 보네.
+    MessageJP: その反応、相当探してたんだね。なら良かった
+    MessageCN: 看老师这个反应，想必是找了很久呢。真是太好了
+    MessageEN:
+      Heehee! Based on your reaction, you must have really been looking forward
+      to this.
+    MessageTH: ดีใจขนาดนี้ คงจะอยากได้มากเลยสินะ
+    MessageTW: 看這反應，想必是找很久了。那太好了
+    MessageGroupId: 130050070
     Id: 1046
     CharacterId: 13005
     MessageCondition: Feedback
@@ -187,15 +195,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후, 반응을 보니 오랫동안 기대했던 물건인가 보네.
-    MessageJP: その反応、相当探してたんだね。なら良かった
-    MessageCN: 看老师这个反应，想必是找了很久呢。真是太好了
+  - MessageKR: 오후에 시간 되면 우리 흥신소에 들러서 찾아가.
+    MessageJP: 今日の午後にでも、もし時間があったら便利屋に寄って受け取っていって
+    MessageCN: 如果老师今天下午有时间的话，就来便利屋这边取一下吧
     MessageEN:
-      Heehee! Based on your reaction, you must have really been looking forward
-      to this.
-    MessageTH: ดีใจขนาดนี้ คงจะอยากได้มากเลยสินะ
-    MessageTW: 看這反應，想必是找很久了。那太好了
-  - MessageGroupId: 130050070
+      If you have time this afternoon, stop by the Problem Solver office
+      to pick it up.
+    MessageTH: "ถ้ามีเวลาก็ไปรับของที่หน่วยรับจ้าง
+
+      สารพัดสิ"
+    MessageTW: 今天下午如果有空的話，可以來徵信社領取
+    MessageGroupId: 130050070
     Id: 1047
     CharacterId: 13005
     MessageCondition: Feedback
@@ -207,17 +217,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오후에 시간 되면 우리 흥신소에 들러서 찾아가.
-    MessageJP: 今日の午後にでも、もし時間があったら便利屋に寄って受け取っていって
-    MessageCN: 如果老师今天下午有时间的话，就来便利屋这边取一下吧
-    MessageEN:
-      If you have time this afternoon, stop by the Problem Solver office
-      to pick it up.
-    MessageTH: "ถ้ามีเวลาก็ไปรับของที่หน่วยรับจ้าง
-
-      สารพัดสิ"
-    MessageTW: 今天下午如果有空的話，可以來徵信社領取
-  - MessageGroupId: 130050080
+  - MessageKR: 샬레의 일이 끝나면 바로 찾아갈게.
+    MessageJP: シャーレの仕事が終わったら、すぐに行くね
+    MessageCN: 等夏莱工作结束我就马上过去哦
+    MessageEN: I'll be there as soon as I'm done with my Schale stuff.
+    MessageTH: ถ้าเสร็จงานที่ชาเล่ต์แล้วครูจะไปทันทีเลย
+    MessageTW: 夏萊的工作結束後，馬上就去
+    MessageGroupId: 130050080
     Id: 1048
     CharacterId: 13005
     MessageCondition: Answer
@@ -229,13 +235,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레의 일이 끝나면 바로 찾아갈게.
-    MessageJP: シャーレの仕事が終わったら、すぐに行くね
-    MessageCN: 等夏莱工作结束我就马上过去哦
-    MessageEN: I'll be there as soon as I'm done with my Schale stuff.
-    MessageTH: ถ้าเสร็จงานที่ชาเล่ต์แล้วครูจะไปทันทีเลย
-    MessageTW: 夏萊的工作結束後，馬上就去
-  - MessageGroupId: 130050090
+  - MessageKR: 선생은 특별히 즐겨 듣는 음악 장르가 있어?
+    MessageJP: 先生は、好きな音楽のジャンルとかある？
+    MessageCN: 老师，您有喜欢听的音乐类型之类的吗？
+    MessageEN: Is there a particular genre of music you prefer?
+    MessageTH: ครูมีแนวเพลงที่ชอบไหม?
+    MessageTW: 老師有喜歡的音樂類型嗎？
+    MessageGroupId: 130050090
     Id: 1049
     CharacterId: 13005
     MessageCondition: FavorRankUp
@@ -247,13 +253,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생은 특별히 즐겨 듣는 음악 장르가 있어?
-    MessageJP: 先生は、好きな音楽のジャンルとかある？
-    MessageCN: 老师，您有喜欢听的音乐类型之类的吗？
-    MessageEN: Is there a particular genre of music you prefer?
-    MessageTH: ครูมีแนวเพลงที่ชอบไหม?
-    MessageTW: 老師有喜歡的音樂類型嗎？
-  - MessageGroupId: 130050100
+  - MessageKR: 대중가요려나.
+    MessageJP: ポップスかな
+    MessageCN: 流行音乐应该算吧
+    MessageEN: Pop, I guess.
+    MessageTH: คิดว่าเพลงป๊อปนะ
+    MessageTW: 流行歌曲吧
+    MessageGroupId: 130050100
     Id: 1050
     CharacterId: 13005
     MessageCondition: Answer
@@ -265,13 +271,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 대중가요려나.
-    MessageJP: ポップスかな
-    MessageCN: 流行音乐应该算吧
-    MessageEN: Pop, I guess.
-    MessageTH: คิดว่าเพลงป๊อปนะ
-    MessageTW: 流行歌曲吧
-  - MessageGroupId: 130050100
+  - MessageKR: 클래식이려나.
+    MessageJP: クラシックかな
+    MessageCN: 古典音乐应该算吧
+    MessageEN: Maybe classical?
+    MessageTH: น่าจะเป็นเพลงคลาสสิก
+    MessageTW: 古典音樂吧
+    MessageGroupId: 130050100
     Id: 1051
     CharacterId: 13005
     MessageCondition: Answer
@@ -283,13 +289,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 클래식이려나.
-    MessageJP: クラシックかな
-    MessageCN: 古典音乐应该算吧
-    MessageEN: Maybe classical?
-    MessageTH: น่าจะเป็นเพลงคลาสสิก
-    MessageTW: 古典音樂吧
-  - MessageGroupId: 130050110
+  - MessageKR: 그렇구나. 무난한 편이네.
+    MessageJP: そっか、まあ似合ってると思う
+    MessageCN: 这样啊、那我和老师口味还挺挺合得来的
+    MessageEN: I see. That's a good choice.
+    MessageTH: เป็นคนฟังอะไรง่ายๆ สินะ
+    MessageTW: 這樣啊，我覺得很適合你
+    MessageGroupId: 130050110
     Id: 1052
     CharacterId: 13005
     MessageCondition: Feedback
@@ -301,13 +307,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇구나. 무난한 편이네.
-    MessageJP: そっか、まあ似合ってると思う
-    MessageCN: 这样啊、那我和老师口味还挺挺合得来的
-    MessageEN: I see. That's a good choice.
-    MessageTH: เป็นคนฟังอะไรง่ายๆ สินะ
-    MessageTW: 這樣啊，我覺得很適合你
-  - MessageGroupId: 130050120
+  - MessageKR: 카요코는 어떤 음악을 좋아해?
+    MessageJP: カヨコはどんな音楽が好きなの？
+    MessageCN: 佳代子喜欢什么样的音乐呢？
+    MessageEN: What kind of music do you like, Kayoko?
+    MessageTH: แล้วคาโยโกะล่ะชอบเพลงอะไร?
+    MessageTW: 佳世子喜歡什麼樣的音樂？
+    MessageGroupId: 130050120
     Id: 1053
     CharacterId: 13005
     MessageCondition: Answer
@@ -319,13 +325,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 카요코는 어떤 음악을 좋아해?
-    MessageJP: カヨコはどんな音楽が好きなの？
-    MessageCN: 佳代子喜欢什么样的音乐呢？
-    MessageEN: What kind of music do you like, Kayoko?
-    MessageTH: แล้วคาโยโกะล่ะชอบเพลงอะไร?
-    MessageTW: 佳世子喜歡什麼樣的音樂？
-  - MessageGroupId: 130050130
+  - MessageKR: 나도, 뭐…… 평범한 걸 좋아해서. 선생이랑 음악 취향은 비슷할 것 같아.
+    MessageJP: 私は……まあ、普通のやつ。先生と結構好み近いかも
+    MessageCN: 我嘛……啊，就普普通通的那种。应该和老师的喜好挺接近的
+    MessageEN:
+      Well... I like normal stuff, so I think our tastes are probably the
+      same.
+    MessageTH: "ฉันเองก็... อืม... ชอบเพลงฟังง่ายๆ
+
+      ชอบเหมือนที่ครูชอบเลยล่ะ"
+    MessageTW: 我……普普通通吧。可能跟老師的很接近
+    MessageGroupId: 130050130
     Id: 1054
     CharacterId: 13005
     MessageCondition: Feedback
@@ -337,17 +347,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나도, 뭐…… 평범한 걸 좋아해서. 선생이랑 음악 취향은 비슷할 것 같아.
-    MessageJP: 私は……まあ、普通のやつ。先生と結構好み近いかも
-    MessageCN: 我嘛……啊，就普普通通的那种。应该和老师的喜好挺接近的
-    MessageEN:
-      Well... I like normal stuff, so I think our tastes are probably the
-      same.
-    MessageTH: "ฉันเองก็... อืม... ชอบเพลงฟังง่ายๆ
-
-      ชอบเหมือนที่ครูชอบเลยล่ะ"
-    MessageTW: 我……普普通通吧。可能跟老師的很接近
-  - MessageGroupId: 130050140
+  - MessageKR: 선생, 내가 추천해 준 2집 앨범은 다 들었어?
+    MessageJP: あの2ndアルバム、聞き終わった？
+    MessageCN: 我之前给老师的第二张专辑，老师听完了吗？
+    MessageEN: Sensei, did you finish listening to the second album I recommended?
+    MessageTH: ครูฟังเพลงอัลบั้ม 2 ที่ฉันแนะนำไปหรือยัง?
+    MessageTW: 那個第二張專輯，聽完了嗎？
+    MessageGroupId: 130050140
     Id: 1055
     CharacterId: 13005
     MessageCondition: None
@@ -359,13 +365,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 내가 추천해 준 2집 앨범은 다 들었어?
-    MessageJP: あの2ndアルバム、聞き終わった？
-    MessageCN: 我之前给老师的第二张专辑，老师听完了吗？
-    MessageEN: Sensei, did you finish listening to the second album I recommended?
-    MessageTH: ครูฟังเพลงอัลบั้ม 2 ที่ฉันแนะนำไปหรือยัง?
-    MessageTW: 那個第二張專輯，聽完了嗎？
-  - MessageGroupId: 130050140
+  - MessageKR: 어때, 역시 블랙 데스 포이즌의 곡은 최고지?
+    MessageJP: ブラック・デス・ポイズン、最高じゃない？
+    MessageCN: 那张《黑色毒药》，是不是超棒的？
+    MessageEN: How was it? Isn't Black Death Poison the best?
+    MessageTH: "เพลงของวง 'พิษสีดำแห่งความตาย'
+
+      เพราะสุดๆ ไปเลยใช่ไหมล่ะ?"
+    MessageTW: 黑．死．毒藥，是不是很棒？
+    MessageGroupId: 130050140
     Id: 1056
     CharacterId: 13005
     MessageCondition: None
@@ -377,15 +385,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어때, 역시 블랙 데스 포이즌의 곡은 최고지?
-    MessageJP: ブラック・デス・ポイズン、最高じゃない？
-    MessageCN: 那张《黑色毒药》，是不是超棒的？
-    MessageEN: How was it? Isn't Black Death Poison the best?
-    MessageTH: "เพลงของวง 'พิษสีดำแห่งความตาย'
-
-      เพราะสุดๆ ไปเลยใช่ไหมล่ะ?"
-    MessageTW: 黑．死．毒藥，是不是很棒？
-  - MessageGroupId: 130050150
+  - MessageKR: ……뭔가 인상적이었어.
+    MessageJP: ……脳にガツン！って来る感じだった
+    MessageCN: ……感觉大脑受到了剧烈的冲击！
+    MessageEN: It was quite impressive.
+    MessageTH: อืม... เพลงน่าประทับใจดี
+    MessageTW: ……腦袋被狠狠重擊一樣的感覺
+    MessageGroupId: 130050150
     Id: 1057
     CharacterId: 13005
     MessageCondition: Answer
@@ -397,13 +403,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……뭔가 인상적이었어.
-    MessageJP: ……脳にガツン！って来る感じだった
-    MessageCN: ……感觉大脑受到了剧烈的冲击！
-    MessageEN: It was quite impressive.
-    MessageTH: อืม... เพลงน่าประทับใจดี
-    MessageTW: ……腦袋被狠狠重擊一樣的感覺
-  - MessageGroupId: 130050150
+  - MessageKR: ……뭔가 전위적이었어.
+    MessageJP: ……アバンギャルドな感じだった
+    MessageCN: ……相当前卫的感觉呢
+    MessageEN: It was quite avant-garde.
+    MessageTH: อืม... เพลงล้ำสมัยดี
+    MessageTW: ……感覺挺前衛的
+    MessageGroupId: 130050150
     Id: 1058
     CharacterId: 13005
     MessageCondition: Answer
@@ -415,13 +421,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……뭔가 전위적이었어.
-    MessageJP: ……アバンギャルドな感じだった
-    MessageCN: ……相当前卫的感觉呢
-    MessageEN: It was quite avant-garde.
-    MessageTH: อืม... เพลงล้ำสมัยดี
-    MessageTW: ……感覺挺前衛的
-  - MessageGroupId: 130050160
+  - MessageKR: 역시 선생은 그 곡의 진가를 알아보는구나. 다행이야.
+    MessageJP: さすが、先生なら分かってくれると思った
+    MessageCN: 不愧是老师。我就知道老师一定能理解这张专的价值的
+    MessageEN: I'm glad you recognize the value of their music.
+    MessageTH: "กะแล้วว่าครูต้องเข้าถึงคุณค่าของเพลงนี้
+
+      ดีจังที่ครูชอบ"
+    MessageTW: 不愧是老師，我就知道你懂
+    MessageGroupId: 130050160
     Id: 1059
     CharacterId: 13005
     MessageCondition: Feedback
@@ -433,15 +441,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 선생은 그 곡의 진가를 알아보는구나. 다행이야.
-    MessageJP: さすが、先生なら分かってくれると思った
-    MessageCN: 不愧是老师。我就知道老师一定能理解这张专的价值的
-    MessageEN: I'm glad you recognize the value of their music.
-    MessageTH: "กะแล้วว่าครูต้องเข้าถึงคุณค่าของเพลงนี้
-
-      ดีจังที่ครูชอบ"
-    MessageTW: 不愧是老師，我就知道你懂
-  - MessageGroupId: 130050170
+  - MessageKR: 2집 앨범은 1집 앨범에 비해 가사는 많이 순화되었지만,
+    MessageJP: 2ndアルバムは1stアルバムに比べて歌詞は分かりやすくなったけど、
+    MessageCN: 他们的第二张专辑歌词比第一张简单易懂了很多
+    MessageEN: Their second album's lyrics are much more refined than their first,
+    MessageTH: เนื้อเพลงอัลบั้ม 2 ดูเรียบง่ายกว่าอัลบั้ม 1
+    MessageTW: 第二張專輯的歌詞比第一張容易理解
+    MessageGroupId: 130050170
     Id: 1060
     CharacterId: 13005
     MessageCondition: Feedback
@@ -453,13 +459,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 2집 앨범은 1집 앨범에 비해 가사는 많이 순화되었지만,
-    MessageJP: 2ndアルバムは1stアルバムに比べて歌詞は分かりやすくなったけど、
-    MessageCN: 他们的第二张专辑歌词比第一张简单易懂了很多
-    MessageEN: Their second album's lyrics are much more refined than their first,
-    MessageTH: เนื้อเพลงอัลบั้ม 2 ดูเรียบง่ายกว่าอัลบั้ม 1
-    MessageTW: 第二張專輯的歌詞比第一張容易理解
-  - MessageGroupId: 130050170
+  - MessageKR: 사운드가 거칠어서 진짜 헤비메탈 팬들은 이쪽을 더 좋아하는 편이지.
+    MessageJP: サウンドはますます激しくなってるから、こっちの方が好きって人は多くて
+    MessageCN: 而且因为旋律给人一种越来越激烈的感觉，所以大部分人比较喜欢第二张专辑
+    MessageEN:
+      but the sound is really heavy, so metal fans tend to prefer the second
+      album.
+    MessageTH: "แต่แฟนๆ เฮฟวี่เมทัลชอบดนตรีบีทหนักๆ
+
+      แบบนี้"
+    MessageTW: 但聲音更加強烈，所以更多人喜歡這張
+    MessageGroupId: 130050170
     Id: 1061
     CharacterId: 13005
     MessageCondition: Feedback
@@ -471,17 +481,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 사운드가 거칠어서 진짜 헤비메탈 팬들은 이쪽을 더 좋아하는 편이지.
-    MessageJP: サウンドはますます激しくなってるから、こっちの方が好きって人は多くて
-    MessageCN: 而且因为旋律给人一种越来越激烈的感觉，所以大部分人比较喜欢第二张专辑
+  - MessageKR: 블랙 데스 포이즌의 2집이 마음에 들었다면 이번에는 3집을 빌려줄게.
+    MessageJP: もし気に入ったなら、今度3rdアルバムを貸してあげる
+    MessageCN: 要是老师喜欢的话，下次我把他们出的第三张专辑借给老师听吧
     MessageEN:
-      but the sound is really heavy, so metal fans tend to prefer the second
-      album.
-    MessageTH: "แต่แฟนๆ เฮฟวี่เมทัลชอบดนตรีบีทหนักๆ
+      "If you liked Black Death Poison's second album, I can lend you their
+      third. "
+    MessageTH: "ถ้าชอบอัลบั้ม 2 ล่ะก็ เดี๋ยวฉันจะให้ยืม
 
-      แบบนี้"
-    MessageTW: 但聲音更加強烈，所以更多人喜歡這張
-  - MessageGroupId: 130050170
+      อัลบั้ม 3 ไปฟังด้วย "
+    MessageTW: 如果喜歡的話，下次借你第三張專輯
+    MessageGroupId: 130050170
     Id: 1062
     CharacterId: 13005
     MessageCondition: Feedback
@@ -493,17 +503,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 블랙 데스 포이즌의 2집이 마음에 들었다면 이번에는 3집을 빌려줄게.
-    MessageJP: もし気に入ったなら、今度3rdアルバムを貸してあげる
-    MessageCN: 要是老师喜欢的话，下次我把他们出的第三张专辑借给老师听吧
-    MessageEN:
-      "If you liked Black Death Poison's second album, I can lend you their
-      third. "
-    MessageTH: "ถ้าชอบอัลบั้ม 2 ล่ะก็ เดี๋ยวฉันจะให้ยืม
-
-      อัลบั้ม 3 ไปฟังด้วย "
-    MessageTW: 如果喜歡的話，下次借你第三張專輯
-  - MessageGroupId: 130050180
+  - MessageKR: 헤비메탈은 이제 괜찮아…….
+    MessageJP: 考えとくね……
+    MessageCN: 容我考虑一下……
+    MessageEN: I think I've had enough heavy metal for now...
+    MessageTH: พักเพลงเฮฟวี่เมทัลก่อนดีกว่า...
+    MessageTW: 我會考慮的……
+    MessageGroupId: 130050180
     Id: 1063
     CharacterId: 13005
     MessageCondition: Answer
@@ -515,13 +521,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 헤비메탈은 이제 괜찮아…….
-    MessageJP: 考えとくね……
-    MessageCN: 容我考虑一下……
-    MessageEN: I think I've had enough heavy metal for now...
-    MessageTH: พักเพลงเฮฟวี่เมทัลก่อนดีกว่า...
-    MessageTW: 我會考慮的……
-  - MessageGroupId: 130050190
+  - MessageKR: 선생, 일기예보를 보니 오늘 오후에는 비가 온다고 하네.
+    MessageJP: 天気予報で、今日の午後は雨だって
+    MessageCN: 天气预报说今天下午有雨
+    MessageEN: Sensei, they say it's gonna rain this afternoon.
+    MessageTH: "วันนี้พยากรณ์อากาศบอกว่าช่วงบ่ายๆ
+
+      เย็นๆ ฝนจะตกล่ะ"
+    MessageTW: 氣象預報說今天下午會下雨
+    MessageGroupId: 130050190
     Id: 1064
     CharacterId: 13005
     MessageCondition: FavorRankUp
@@ -533,15 +541,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 일기예보를 보니 오늘 오후에는 비가 온다고 하네.
-    MessageJP: 天気予報で、今日の午後は雨だって
-    MessageCN: 天气预报说今天下午有雨
-    MessageEN: Sensei, they say it's gonna rain this afternoon.
-    MessageTH: "วันนี้พยากรณ์อากาศบอกว่าช่วงบ่ายๆ
+  - MessageKR: 오늘은 출근할 때 잊지 말고 우산 챙겨가.
+    MessageJP: 傘、忘れないようにね
+    MessageCN: 老师别忘了带伞哦
+    MessageEN: Don't forget your umbrella when you leave home.
+    MessageTH: "ก่อนไปทำงานก็อย่าลืมเอาร่มติดตัวไป
 
-      เย็นๆ ฝนจะตกล่ะ"
-    MessageTW: 氣象預報說今天下午會下雨
-  - MessageGroupId: 130050200
+      ด้วยนะ"
+    MessageTW: 不要忘記帶傘唷
+    MessageGroupId: 130050200
     Id: 1065
     CharacterId: 13005
     MessageCondition: None
@@ -553,15 +561,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 출근할 때 잊지 말고 우산 챙겨가.
-    MessageJP: 傘、忘れないようにね
-    MessageCN: 老师别忘了带伞哦
-    MessageEN: Don't forget your umbrella when you leave home.
-    MessageTH: "ก่อนไปทำงานก็อย่าลืมเอาร่มติดตัวไป
+  - MessageKR: 트리니티에는 세상의 모든 책을 모아 놓은 거대한 도서관이 있다고 하는데……
+    MessageJP: トリニティに世界中の全ての本を集めた巨大な図書館があるらしいけど……
+    MessageCN: 虽然圣三一那边好像有一个集齐了全世界所有的书的巨大图书馆……
+    MessageEN:
+      I've heard there's a massive library in Trinity that has every book
+      in the world...
+    MessageTH: "ได้ยินมาว่าในทรีนิตี้มีห้องสมุดใหญ่ที่รวม
 
-      ด้วยนะ"
-    MessageTW: 不要忘記帶傘唷
-  - MessageGroupId: 130050210
+      หนังสือทั่วทุกมุมโลกเอาไว้ด้วย..."
+    MessageTW: 三一好像有一座收集了世界上所有書籍的巨大圖書館……
+    MessageGroupId: 130050210
     Id: 1066
     CharacterId: 13005
     MessageCondition: FavorRankUp
@@ -573,17 +583,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 트리니티에는 세상의 모든 책을 모아 놓은 거대한 도서관이 있다고 하는데……
-    MessageJP: トリニティに世界中の全ての本を集めた巨大な図書館があるらしいけど……
-    MessageCN: 虽然圣三一那边好像有一个集齐了全世界所有的书的巨大图书馆……
-    MessageEN:
-      I've heard there's a massive library in Trinity that has every book
-      in the world...
-    MessageTH: "ได้ยินมาว่าในทรีนิตี้มีห้องสมุดใหญ่ที่รวม
+  - MessageKR: 세상의 모든 음반을 모아 놓은 음반 매장은 어디 없으려나?
+    MessageJP: 世界中のレコードを集めたレコード屋とか、どこかにないのかな
+    MessageCN: 但是不知道世界上会不会也有一个集齐了全世界所有专辑的唱片店呢
+    MessageEN: Is there a music store that has every album in the world?
+    MessageTH: "จะมีร้านซีดีที่มีอัลบั้มเพลงทั่วโลกบ้าง
 
-      หนังสือทั่วทุกมุมโลกเอาไว้ด้วย..."
-    MessageTW: 三一好像有一座收集了世界上所有書籍的巨大圖書館……
-  - MessageGroupId: 130050220
+      มั้ยนะ?"
+    MessageTW: 會不會也有唱片店收集了全世界的唱片呢？
+    MessageGroupId: 130050220
     Id: 1067
     CharacterId: 13005
     MessageCondition: None
@@ -595,15 +603,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 세상의 모든 음반을 모아 놓은 음반 매장은 어디 없으려나?
-    MessageJP: 世界中のレコードを集めたレコード屋とか、どこかにないのかな
-    MessageCN: 但是不知道世界上会不会也有一个集齐了全世界所有专辑的唱片店呢
-    MessageEN: Is there a music store that has every album in the world?
-    MessageTH: "จะมีร้านซีดีที่มีอัลบั้มเพลงทั่วโลกบ้าง
+  - MessageKR: 키보토스 상점가에 있는 <레코드 빌딩>은 어때?
+    MessageJP: 商店街の「ザ・レコードビル」とかは？
+    MessageCN: 商店街的“The Record Bill”呢？
+    MessageEN:
+      What about the Record Building in Kivotos? The one in the shopping
+      district?
+    MessageTH: "ลองไปร้าน 'เรคคอร์ดบิลดิ้ง' ในย่าน
 
-      มั้ยนะ?"
-    MessageTW: 會不會也有唱片店收集了全世界的唱片呢？
-  - MessageGroupId: 130050230
+      การค้าคิโวทอสดูสิ"
+    MessageTW: 商店街的「The．Record Building」如何？
+    MessageGroupId: 130050230
     Id: 1068
     CharacterId: 13005
     MessageCondition: Answer
@@ -615,17 +625,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 키보토스 상점가에 있는 <레코드 빌딩>은 어때?
-    MessageJP: 商店街の「ザ・レコードビル」とかは？
-    MessageCN: 商店街的“The Record Bill”呢？
+  - MessageKR: 세상의 모든 음반이 있는 건 아니지만…… 레코드 빌딩 정도면 나쁘지 않지.
+    MessageJP: あそこも世界中ってわけじゃないけど……品揃えは確かに悪くない
+    MessageCN: 虽然那里不是全世界的专辑都有……但种类确实很齐全
     MessageEN:
-      What about the Record Building in Kivotos? The one in the shopping
-      district?
-    MessageTH: "ลองไปร้าน 'เรคคอร์ดบิลดิ้ง' ในย่าน
+      I don't know if it has every album in the world, but I'm sure they've
+      got a lot.
+    MessageTH: "นี่นั่นดูไม่เลวเลย... แม้จะไม่มีซีดีเพลง
 
-      การค้าคิโวทอสดูสิ"
-    MessageTW: 商店街的「The．Record Building」如何？
-  - MessageGroupId: 130050240
+      จากทั่วโลกก็เถอะ"
+    MessageTW: 那裡雖說不到全世界……但品項確實挺齊全
+    MessageGroupId: 130050240
     Id: 1069
     CharacterId: 13005
     MessageCondition: Feedback
@@ -637,17 +647,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 세상의 모든 음반이 있는 건 아니지만…… 레코드 빌딩 정도면 나쁘지 않지.
-    MessageJP: あそこも世界中ってわけじゃないけど……品揃えは確かに悪くない
-    MessageCN: 虽然那里不是全世界的专辑都有……但种类确实很齐全
-    MessageEN:
-      I don't know if it has every album in the world, but I'm sure they've
-      got a lot.
-    MessageTH: "นี่นั่นดูไม่เลวเลย... แม้จะไม่มีซีดีเพลง
+  - MessageKR: 장르를 불문한 다양한 음반을 모아 놓고 있으니까.
+    MessageJP: ジャンルを問わず、色々なレコードが集められてるから
+    MessageCN: 毕竟那边可是各种类型的唱片都在收集的
+    MessageEN: They have all kinds of albums across every genre.
+    MessageTH: "เพราะยังไงก็มีซีดีเพลงเยอะ และไม่
 
-      จากทั่วโลกก็เถอะ"
-    MessageTW: 那裡雖說不到全世界……但品項確實挺齊全
-  - MessageGroupId: 130050240
+      จำกัดแนวเพลง"
+    MessageTW: 不分種類收集了各種類型的唱片
+    MessageGroupId: 130050240
     Id: 1070
     CharacterId: 13005
     MessageCondition: Feedback
@@ -659,15 +667,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 장르를 불문한 다양한 음반을 모아 놓고 있으니까.
-    MessageJP: ジャンルを問わず、色々なレコードが集められてるから
-    MessageCN: 毕竟那边可是各种类型的唱片都在收集的
-    MessageEN: They have all kinds of albums across every genre.
-    MessageTH: "เพราะยังไงก็มีซีดีเพลงเยอะ และไม่
-
-      จำกัดแนวเพลง"
-    MessageTW: 不分種類收集了各種類型的唱片
-  - MessageGroupId: 130050250
+  - MessageKR: 나도 휴일에는 음악을 감상하러 자주 놀러 가곤 해.
+    MessageJP: 休みの日とか、よく行く
+    MessageCN: 我休息日的时候也经常去那边
+    MessageEN: I often go there on weekends to listen to their music.
+    MessageTH: ฉันก็แวะไปฟังเพลงที่นั่นบ่อยๆ
+    MessageTW: 我假日常去
+    MessageGroupId: 130050250
     Id: 1071
     CharacterId: 13005
     MessageCondition: Feedback
@@ -679,9 +685,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나도 휴일에는 음악을 감상하러 자주 놀러 가곤 해.
-    MessageJP: 休みの日とか、よく行く
-    MessageCN: 我休息日的时候也经常去那边
-    MessageEN: I often go there on weekends to listen to their music.
-    MessageTH: ฉันก็แวะไปฟังเพลงที่นั่นบ่อยๆ
-    MessageTW: 我假日常去

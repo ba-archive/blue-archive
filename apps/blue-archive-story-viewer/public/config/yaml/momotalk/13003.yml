@@ -1,53 +1,59 @@
 CharacterId: 13003
 translator: 罐子
 title:
-  - GroupId: 1300302
-    FavorScheduleId: 130032
-    CharacterId: 13003
-    TextJp: すれ違いコミュニケーション
+  - TextJp: すれ違いコミュニケーション
     TextCn: 错位交流
     TextKr: 엇나간 커뮤니케이션
     TextEn: Major Miscommunication
     TextTh: การสื่อสารที่ผิดพลาด
     TextTw: 溝通錯位
-  - GroupId: 1300303
-    FavorScheduleId: 130033
+    GroupId: 1300302
+    FavorScheduleId: 130032
     CharacterId: 13003
-    TextJp: 気がつかなかった事実
+  - TextJp: 気がつかなかった事実
     TextCn: 没注意到的事实
     TextKr: 깨닫지 못한 사실
     TextEn: Unrealized Truth
     TextTh: ข้อเท็จจริงที่คิดไม่ถึง
     TextTw: 毫無察覺的事實
-  - GroupId: 1300305
-    FavorScheduleId: 130035
+    GroupId: 1300303
+    FavorScheduleId: 130033
     CharacterId: 13003
-    TextJp: 黄昏れの時間
+  - TextJp: 黄昏れの時間
     TextCn: 黄昏时刻
     TextKr: 황혼의 시간
     TextEn: Twilight Hour
     TextTh: ช่วงเวลาพลบค่ำ
     TextTw: 黃昏時刻
-  - GroupId: 1300306
-    FavorScheduleId: 130036
+    GroupId: 1300305
+    FavorScheduleId: 130035
     CharacterId: 13003
-    TextJp: ストレスの原因
+  - TextJp: ストレスの原因
     TextCn: 感到压力的原因
     TextKr: 스트레스의 원인
     TextEn: The Cause of Stress
     TextTh: สาเหตุของความเครียด
     TextTw: 壓力的原因
-  - GroupId: 1300308
-    FavorScheduleId: 130038
+    GroupId: 1300306
+    FavorScheduleId: 130036
     CharacterId: 13003
-    TextJp: 短いけれど贅沢な
+  - TextJp: 短いけれど贅沢な
     TextCn: 短暂而奢侈
     TextKr: 짧지만 사치스러운
     TextEn: Short but Splendid
     TextTh: ช่วงสั้นๆ ที่งดงาม
     TextTw: 雖短暫但奢侈的
+    GroupId: 1300308
+    FavorScheduleId: 130038
+    CharacterId: 13003
 content:
-  - MessageGroupId: 130030010
+  - MessageKR: 선생님.
+    MessageJP: こんにちは、先生
+    MessageCN: 老师，您好
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 您好，老師
+    MessageGroupId: 130030010
     Id: 938
     CharacterId: 13003
     MessageCondition: FavorRankUp
@@ -59,13 +65,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: こんにちは、先生
-    MessageCN: 老师，您好
-    MessageEN: Sensei.
-    MessageTH: คุณครูคะ
-    MessageTW: 您好，老師
-  - MessageGroupId: 130030020
+  - MessageKR: 개인적으로 선생님께 문의드리고 싶은 게 있습니다만,
+    MessageJP: ちょっと個人的に聞いていただきたいたいことがありまして……
+    MessageCN: 我有点私事想问问老师的意见……
+    MessageEN: There's something I'd like to ask you personally.
+    MessageTH: "ฉันมีเรื่องส่วนตัวที่อยากจะถามคุณครู
+
+      อยู่ค่ะ"
+    MessageTW: 我有點私事想要詢問您……
+    MessageGroupId: 130030020
     Id: 939
     CharacterId: 13003
     MessageCondition: None
@@ -77,15 +85,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 개인적으로 선생님께 문의드리고 싶은 게 있습니다만,
-    MessageJP: ちょっと個人的に聞いていただきたいたいことがありまして……
-    MessageCN: 我有点私事想问问老师的意见……
-    MessageEN: There's something I'd like to ask you personally.
-    MessageTH: "ฉันมีเรื่องส่วนตัวที่อยากจะถามคุณครู
+  - MessageKR: 괜찮으시면 잠깐 상담을 부탁드려도 될까요?
+    MessageJP: よろしければ、相談に乗っていただけませんでしょうか？
+    MessageCN: 如果可以的话，我能和老师当面谈一谈吗？
+    MessageEN: Is it okay if I consult you for advice?
+    MessageTH: "ถ้าคุณครูไม่ว่าอะไร ฉันจะขอคำปรึกษา
 
-      อยู่ค่ะ"
-    MessageTW: 我有點私事想要詢問您……
-  - MessageGroupId: 130030020
+      หน่อยได้ไหมคะ?"
+    MessageTW: 如果可以的話，能和您商量一下嗎？
+    MessageGroupId: 130030020
     Id: 940
     CharacterId: 13003
     MessageCondition: None
@@ -97,15 +105,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 괜찮으시면 잠깐 상담을 부탁드려도 될까요?
-    MessageJP: よろしければ、相談に乗っていただけませんでしょうか？
-    MessageCN: 如果可以的话，我能和老师当面谈一谈吗？
-    MessageEN: Is it okay if I consult you for advice?
-    MessageTH: "ถ้าคุณครูไม่ว่าอะไร ฉันจะขอคำปรึกษา
-
-      หน่อยได้ไหมคะ?"
-    MessageTW: 如果可以的話，能和您商量一下嗎？
-  - MessageGroupId: 130030030
+  - MessageKR: 물론이야. 하스미의 부탁이라면.
+    MessageJP: もちろん
+    MessageCN: 当然可以
+    MessageEN: Sure. Whatever you need, Hasumi.
+    MessageTH: ได้อยู่แล้วสิ ถ้าเป็นคำขอของฮาสุมิล่ะก็...
+    MessageTW: 當然
+    MessageGroupId: 130030030
     Id: 941
     CharacterId: 13003
     MessageCondition: Answer
@@ -117,13 +123,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이야. 하스미의 부탁이라면.
-    MessageJP: もちろん
-    MessageCN: 当然可以
-    MessageEN: Sure. Whatever you need, Hasumi.
-    MessageTH: ได้อยู่แล้วสิ ถ้าเป็นคำขอของฮาสุมิล่ะก็...
-    MessageTW: 當然
-  - MessageGroupId: 130030030
+  - MessageKR: 언제든지 불러줘.
+    MessageJP: いつでも呼んで
+    MessageCN: 随时都可以叫我哦
+    MessageEN: You can call me anytime.
+    MessageTH: บอกครูได้ตลอดเลยนะ
+    MessageTW: 隨時都能找我
+    MessageGroupId: 130030030
     Id: 942
     CharacterId: 13003
     MessageCondition: Answer
@@ -135,13 +141,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 언제든지 불러줘.
-    MessageJP: いつでも呼んで
-    MessageCN: 随时都可以叫我哦
-    MessageEN: You can call me anytime.
-    MessageTH: บอกครูได้ตลอดเลยนะ
-    MessageTW: 隨時都能找我
-  - MessageGroupId: 130030040
+  - MessageKR: 아아.
+    MessageJP: あ、ありがとうございます！
+    MessageCN: 非、非常感谢！
+    MessageEN: Oh.
+    MessageTH: อ่า...
+    MessageTW: 非，非常感謝！
+    MessageGroupId: 130030040
     Id: 943
     CharacterId: 13003
     MessageCondition: Feedback
@@ -153,13 +159,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아아.
-    MessageJP: あ、ありがとうございます！
-    MessageCN: 非、非常感谢！
-    MessageEN: Oh.
-    MessageTH: อ่า...
-    MessageTW: 非，非常感謝！
-  - MessageGroupId: 130030040
+  - MessageKR: 넵!
+    MessageJP: す、すみません、つい……
+    MessageCN: 对、对不起，一不小心就……
+    MessageEN: Great!
+    MessageTH: ค่ะ!
+    MessageTW: 不，不好意思，忍不住就……
+    MessageGroupId: 130030040
     Id: 944
     CharacterId: 13003
     MessageCondition: Feedback
@@ -171,13 +177,15 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 넵!
-    MessageJP: す、すみません、つい……
-    MessageCN: 对、对不起，一不小心就……
-    MessageEN: Great!
-    MessageTH: ค่ะ!
-    MessageTW: 不，不好意思，忍不住就……
-  - MessageGroupId: 130030040
+  - MessageKR: 감사합니다. 사실 거절당하면 어떡할까 했는데…….
+    MessageJP: その、断られてしまったらどうしようとばかり考えていましたので……
+    MessageCN: 那个，我光顾着想万一老师拒绝我的话该怎么办了……
+    MessageEN: Thank you. I was worried you would say no...
+    MessageTH: "ขอบคุณมากเลยค่ะ! ความจริง... ฉันก็
+
+      กังวลอยู่ว่าถ้าถูกปฏิเสธจะทำยังไงดี..."
+    MessageTW: 那個，一直想說如果被拒絕的話怎麼辦……
+    MessageGroupId: 130030040
     Id: 945
     CharacterId: 13003
     MessageCondition: Feedback
@@ -189,15 +197,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감사합니다. 사실 거절당하면 어떡할까 했는데…….
-    MessageJP: その、断られてしまったらどうしようとばかり考えていましたので……
-    MessageCN: 那个，我光顾着想万一老师拒绝我的话该怎么办了……
-    MessageEN: Thank you. I was worried you would say no...
-    MessageTH: "ขอบคุณมากเลยค่ะ! ความจริง... ฉันก็
-
-      กังวลอยู่ว่าถ้าถูกปฏิเสธจะทำยังไงดี..."
-    MessageTW: 那個，一直想說如果被拒絕的話怎麼辦……
-  - MessageGroupId: 130030040
+  - MessageKR: 조금 감동했습니다.
+    MessageJP: すごくホッとしました
+    MessageCN: 老师能答应下来，我也算松了一口气
+    MessageEN: I'm kind of impressed.
+    MessageTH: น่าประทับใจมากเลยค่ะ
+    MessageTW: 所以鬆了口氣
+    MessageGroupId: 130030040
     Id: 946
     CharacterId: 13003
     MessageCondition: Feedback
@@ -209,13 +215,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 조금 감동했습니다.
-    MessageJP: すごくホッとしました
-    MessageCN: 老师能答应下来，我也算松了一口气
-    MessageEN: I'm kind of impressed.
-    MessageTH: น่าประทับใจมากเลยค่ะ
-    MessageTW: 所以鬆了口氣
-  - MessageGroupId: 130030050
+  - MessageKR: 음…… 제가 무슨 소리를.
+    MessageJP: すみません、ちょっと変なことを口走ってるかもしれませんね……
+    MessageCN: 非常抱歉，我可能一不留神说了奇怪的话……
+    MessageEN: Um... I don't know what I'm saying.
+    MessageTH: อืม... ฉันพูดอะไรเนี่ย
+    MessageTW: 對不起，可能說了些奇怪的話……
+    MessageGroupId: 130030050
     Id: 947
     CharacterId: 13003
     MessageCondition: Feedback
@@ -227,13 +233,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 제가 무슨 소리를.
-    MessageJP: すみません、ちょっと変なことを口走ってるかもしれませんね……
-    MessageCN: 非常抱歉，我可能一不留神说了奇怪的话……
-    MessageEN: Um... I don't know what I'm saying.
-    MessageTH: อืม... ฉันพูดอะไรเนี่ย
-    MessageTW: 對不起，可能說了些奇怪的話……
-  - MessageGroupId: 130030050
+  - MessageKR: 그럼 잠시 후에 뵙는 걸로.
+    MessageJP: 後ほどまたご連絡します、よろしくお願いいたします
+    MessageCN: 那就之后再联系，麻烦老师了
+    MessageEN: Okay, I'll see you soon.
+    MessageTH: ถ้างั้นเดี๋ยวเจอกันนะคะ
+    MessageTW: 那就之後再聯絡，萬事拜託了
+    MessageGroupId: 130030050
     Id: 948
     CharacterId: 13003
     MessageCondition: Feedback
@@ -245,13 +251,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 잠시 후에 뵙는 걸로.
-    MessageJP: 後ほどまたご連絡します、よろしくお願いいたします
-    MessageCN: 那就之后再联系，麻烦老师了
-    MessageEN: Okay, I'll see you soon.
-    MessageTH: ถ้างั้นเดี๋ยวเจอกันนะคะ
-    MessageTW: 那就之後再聯絡，萬事拜託了
-  - MessageGroupId: 130030060
+  - MessageKR: 선생님…….
+    MessageJP: 先生、その……
+    MessageCN: 老师，那个……
+    MessageEN: Sensei...
+    MessageTH: คุณครูคะ...
+    MessageTW: 老師，那個……
+    MessageGroupId: 130030060
     Id: 949
     CharacterId: 13003
     MessageCondition: None
@@ -263,13 +269,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님…….
-    MessageJP: 先生、その……
-    MessageCN: 老师，那个……
-    MessageEN: Sensei...
-    MessageTH: คุณครูคะ...
-    MessageTW: 老師，那個……
-  - MessageGroupId: 130030070
+  - MessageKR: 아, 아무것도 아닙니다.
+    MessageJP: いえ、な、なんでもありません
+    MessageCN: 不，没、没什么
+    MessageEN: I-It's nothing.
+    MessageTH: มะ...ไม่มีอะไรหรอกค่ะ!
+    MessageTW: 不，沒，沒什麼
+    MessageGroupId: 130030070
     Id: 950
     CharacterId: 13003
     MessageCondition: None
@@ -281,13 +287,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 아무것도 아닙니다.
-    MessageJP: いえ、な、なんでもありません
-    MessageCN: 不，没、没什么
-    MessageEN: I-It's nothing.
-    MessageTH: มะ...ไม่มีอะไรหรอกค่ะ!
-    MessageTW: 不，沒，沒什麼
-  - MessageGroupId: 130030070
+  - MessageKR: 오늘 일은 잊어주세요…….
+    MessageJP: 今日のことは忘れてください……
+    MessageCN: 今天的事请老师忘掉吧……
+    MessageEN: Please forget about today...
+    MessageTH: ช่วยลืมเรื่องวันนี้ไปด้วยนะคะ...
+    MessageTW: 今天的事請忘了吧……
+    MessageGroupId: 130030070
     Id: 951
     CharacterId: 13003
     MessageCondition: None
@@ -299,13 +305,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 일은 잊어주세요…….
-    MessageJP: 今日のことは忘れてください……
-    MessageCN: 今天的事请老师忘掉吧……
-    MessageEN: Please forget about today...
-    MessageTH: ช่วยลืมเรื่องวันนี้ไปด้วยนะคะ...
-    MessageTW: 今天的事請忘了吧……
-  - MessageGroupId: 130030080
+  - MessageKR: 선생님. 제 멋대로인 부탁이지만……
+    MessageJP: 先生、我が儘を言ってしまって申し訳ないのですが……
+    MessageCN: 老师，很抱歉我这么任性
+    MessageEN: Sensei, I know this is a selfish request...
+    MessageTH: "คุณครูคะ ถึงจะเป็นคำขอที่เอาแต่ใจไป
+
+      สักนิด..."
+    MessageTW: 老師，很抱歉這麼任性，但是……
+    MessageGroupId: 130030080
     Id: 952
     CharacterId: 13003
     MessageCondition: FavorRankUp
@@ -317,15 +325,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님. 제 멋대로인 부탁이지만……
-    MessageJP: 先生、我が儘を言ってしまって申し訳ないのですが……
-    MessageCN: 老师，很抱歉我这么任性
-    MessageEN: Sensei, I know this is a selfish request...
-    MessageTH: "คุณครูคะ ถึงจะเป็นคำขอที่เอาแต่ใจไป
+  - MessageKR: 저번에 못다 한 상담을 다시 받을 수 있을까요.
+    MessageJP: 先日出来なかった相談、あらためてお願いしてもよろしいでしょうか……？
+    MessageCN: 但是前几天没能好好商量的事情，我能再拜托老师听一听吗……？
+    MessageEN: But can we continue our consultation since we didn't finish last time?
+    MessageTH: "แต่ฉันจะขอปรึกษาเรื่องที่เคยบอกคุณครู
 
-      สักนิด..."
-    MessageTW: 老師，很抱歉這麼任性，但是……
-  - MessageGroupId: 130030090
+      ไว้ได้ไหมคะ"
+    MessageTW: 前幾天沒能好好商量的事，能再拜託您嗎……？
+    MessageGroupId: 130030090
     Id: 953
     CharacterId: 13003
     MessageCondition: None
@@ -337,15 +345,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저번에 못다 한 상담을 다시 받을 수 있을까요.
-    MessageJP: 先日出来なかった相談、あらためてお願いしてもよろしいでしょうか……？
-    MessageCN: 但是前几天没能好好商量的事情，我能再拜托老师听一听吗……？
-    MessageEN: But can we continue our consultation since we didn't finish last time?
-    MessageTH: "แต่ฉันจะขอปรึกษาเรื่องที่เคยบอกคุณครู
+  - MessageKR: 응. 물론이야. 이번에야말로 상담을 끝내자.
+    MessageJP: うん。もちろん
+    MessageCN: 嗯。当然
+    MessageEN: Yes, of course. This time we'll do the full consultation.
+    MessageTH: "อื้อ ได้อยู่แล้วล่ะ คราวนี้ครูจะต้องให้
 
-      ไว้ได้ไหมคะ"
-    MessageTW: 前幾天沒能好好商量的事，能再拜託您嗎……？
-  - MessageGroupId: 130030100
+      คำปรึกษาให้ได้เลย"
+    MessageTW: 嗯。當然
+    MessageGroupId: 130030100
     Id: 954
     CharacterId: 13003
     MessageCondition: Answer
@@ -357,15 +365,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 물론이야. 이번에야말로 상담을 끝내자.
-    MessageJP: うん。もちろん
-    MessageCN: 嗯。当然
-    MessageEN: Yes, of course. This time we'll do the full consultation.
-    MessageTH: "อื้อ ได้อยู่แล้วล่ะ คราวนี้ครูจะต้องให้
-
-      คำปรึกษาให้ได้เลย"
-    MessageTW: 嗯。當然
-  - MessageGroupId: 130030110
+  - MessageKR: 아아…….
+    MessageJP: ありがとうございます！
+    MessageCN: 非常感谢！
+    MessageEN: Oh...
+    MessageTH: อ่า...
+    MessageTW: 非常感謝！
+    MessageGroupId: 130030110
     Id: 955
     CharacterId: 13003
     MessageCondition: Feedback
@@ -377,13 +383,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아아…….
-    MessageJP: ありがとうございます！
-    MessageCN: 非常感谢！
-    MessageEN: Oh...
-    MessageTH: อ่า...
-    MessageTW: 非常感謝！
-  - MessageGroupId: 130030110
+  - MessageKR: 넵. 감사합니다.
+    MessageJP: お忙しいのにすみません、よろしくお願いいたします
+    MessageCN: 很抱歉在百忙之中打扰老师，还请您多多关照
+    MessageEN: Okay. Thank you.
+    MessageTH: ค่ะ! ขอบคุณมากนะคะ!
+    MessageTW: 不好意思在百忙之中打擾您，萬事拜託了
+    MessageGroupId: 130030110
     Id: 956
     CharacterId: 13003
     MessageCondition: Feedback
@@ -395,13 +401,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 넵. 감사합니다.
-    MessageJP: お忙しいのにすみません、よろしくお願いいたします
-    MessageCN: 很抱歉在百忙之中打扰老师，还请您多多关照
-    MessageEN: Okay. Thank you.
-    MessageTH: ค่ะ! ขอบคุณมากนะคะ!
-    MessageTW: 不好意思在百忙之中打擾您，萬事拜託了
-  - MessageGroupId: 130030110
+  - MessageKR: 기다리고 있겠습니다.
+    MessageJP: えっと、では場所は……
+    MessageCN: 那个，那么地点是……
+    MessageEN: I'll be waiting for you.
+    MessageTH: แล้วฉันจะรอนะคะ
+    MessageTW: 那個，地點的話……
+    MessageGroupId: 130030110
     Id: 957
     CharacterId: 13003
     MessageCondition: Feedback
@@ -413,13 +419,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있겠습니다.
-    MessageJP: えっと、では場所は……
-    MessageCN: 那个，那么地点是……
-    MessageEN: I'll be waiting for you.
-    MessageTH: แล้วฉันจะรอนะคะ
-    MessageTW: 那個，地點的話……
-  - MessageGroupId: 130030120
+  - MessageKR: 선생님…….
+    MessageJP: 先生……
+    MessageCN: 老师……
+    MessageEN: Sensei...
+    MessageTH: คุณครูคะ...
+    MessageTW: 老師……
+    MessageGroupId: 130030120
     Id: 958
     CharacterId: 13003
     MessageCondition: None
@@ -431,13 +437,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님…….
-    MessageJP: 先生……
-    MessageCN: 老师……
-    MessageEN: Sensei...
-    MessageTH: คุณครูคะ...
-    MessageTW: 老師……
-  - MessageGroupId: 130030120
+  - MessageKR: 오늘 일도…… 잊어주세요…….
+    MessageJP: 今日のことも……忘れてください……
+    MessageCN: 今天的事情……还请您忘掉吧……
+    MessageEN: Again, please forget...about today...
+    MessageTH: เรื่องวันนี้ช่วยลืมไปด้วยเถอะนะคะ...
+    MessageTW: 今天的事……也請忘了吧……
+    MessageGroupId: 130030120
     Id: 959
     CharacterId: 13003
     MessageCondition: None
@@ -449,13 +455,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 일도…… 잊어주세요…….
-    MessageJP: 今日のことも……忘れてください……
-    MessageCN: 今天的事情……还请您忘掉吧……
-    MessageEN: Again, please forget...about today...
-    MessageTH: เรื่องวันนี้ช่วยลืมไปด้วยเถอะนะคะ...
-    MessageTW: 今天的事……也請忘了吧……
-  - MessageGroupId: 130030130
+  - MessageKR: 부탁드리겠습니다…….
+    MessageJP: お願いします……
+    MessageCN: 拜托了……
+    MessageEN: I hope you understand...
+    MessageTH: ขอร้องละค่ะ...
+    MessageTW: 拜託您了……
+    MessageGroupId: 130030130
     Id: 960
     CharacterId: 13003
     MessageCondition: None
@@ -467,13 +473,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 부탁드리겠습니다…….
-    MessageJP: お願いします……
-    MessageCN: 拜托了……
-    MessageEN: I hope you understand...
-    MessageTH: ขอร้องละค่ะ...
-    MessageTW: 拜託您了……
-  - MessageGroupId: 130030140
+  - MessageKR: 가끔은 혼자 있는 시간이 좋을 때가 있습니다.
+    MessageJP: 時々、ひとりの時間が恋しくなることってありませんか？
+    MessageCN: 老师有时候，会怀念一个人独处的时光吗？
+    MessageEN: Sometimes, it's nice to be by yourself.
+    MessageTH: "บางครั้งการได้ใช้เวลาอยู่กับตัวเองก็
+
+      ดีเหมือนกันนะคะ"
+    MessageTW: 有時候，不是會想念自己獨處的時間嗎？
+    MessageGroupId: 130030140
     Id: 961
     CharacterId: 13003
     MessageCondition: FavorRankUp
@@ -485,15 +493,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 가끔은 혼자 있는 시간이 좋을 때가 있습니다.
-    MessageJP: 時々、ひとりの時間が恋しくなることってありませんか？
-    MessageCN: 老师有时候，会怀念一个人独处的时光吗？
-    MessageEN: Sometimes, it's nice to be by yourself.
-    MessageTH: "บางครั้งการได้ใช้เวลาอยู่กับตัวเองก็
+  - MessageKR: 딱히 고독을 즐기는 성격은 아닌데도 말이죠.
+    MessageJP: 特段孤独が好きなわけではないのですが、時折そういう気持ちになるんです
+    MessageCN: 虽然我不是很喜欢孤独的感觉，但偶尔也会有这样的心情
+    MessageEN: It's not like I enjoy solitude more than others or anything.
+    MessageTH: "ถึงฉันจะไม่ใช่ประเภทที่ชอบอยู่คนเดียว
 
-      ดีเหมือนกันนะคะ"
-    MessageTW: 有時候，不是會想念自己獨處的時間嗎？
-  - MessageGroupId: 130030150
+      ก็เถอะค่ะ"
+    MessageTW: 雖然不是特別喜歡孤獨，但偶爾也有這樣的心情
+    MessageGroupId: 130030150
     Id: 962
     CharacterId: 13003
     MessageCondition: None
@@ -505,15 +513,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 딱히 고독을 즐기는 성격은 아닌데도 말이죠.
-    MessageJP: 特段孤独が好きなわけではないのですが、時折そういう気持ちになるんです
-    MessageCN: 虽然我不是很喜欢孤独的感觉，但偶尔也会有这样的心情
-    MessageEN: It's not like I enjoy solitude more than others or anything.
-    MessageTH: "ถึงฉันจะไม่ใช่ประเภทที่ชอบอยู่คนเดียว
-
-      ก็เถอะค่ะ"
-    MessageTW: 雖然不是特別喜歡孤獨，但偶爾也有這樣的心情
-  - MessageGroupId: 130030160
+  - MessageKR: 감수성이 높구나.
+    MessageJP: そういう時もあるよね、学生の頃は特に
+    MessageCN: 我也有这种时候呢，特别当我也还是学生的时候
+    MessageEN: You seem sensitive by nature.
+    MessageTH: เธอเป็นพวกอ่อนไหวง่ายสินะ
+    MessageTW: 有這樣的時候呢，特別是當學生的時期
+    MessageGroupId: 130030160
     Id: 963
     CharacterId: 13003
     MessageCondition: Answer
@@ -525,13 +531,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감수성이 높구나.
-    MessageJP: そういう時もあるよね、学生の頃は特に
-    MessageCN: 我也有这种时候呢，特别当我也还是学生的时候
-    MessageEN: You seem sensitive by nature.
-    MessageTH: เธอเป็นพวกอ่อนไหวง่ายสินะ
-    MessageTW: 有這樣的時候呢，特別是當學生的時期
-  - MessageGroupId: 130030160
+  - MessageKR: 소녀구나. 하스미는.
+    MessageJP: 思春期の乙女だね！良いと思う！
+    MessageCN: 毕竟莲见也到青春期了呢！我觉得是好事哦！
+    MessageEN: You're pretty sensitive, right, Hasumi?
+    MessageTH: ฮาสุมิเองก็เป็นเด็กผู้หญิงนี่นา...
+    MessageTW: 青春期的少女呢！我覺得很好！
+    MessageGroupId: 130030160
     Id: 964
     CharacterId: 13003
     MessageCondition: Answer
@@ -543,13 +549,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 소녀구나. 하스미는.
-    MessageJP: 思春期の乙女だね！良いと思う！
-    MessageCN: 毕竟莲见也到青春期了呢！我觉得是好事哦！
-    MessageEN: You're pretty sensitive, right, Hasumi?
-    MessageTH: ฮาสุมิเองก็เป็นเด็กผู้หญิงนี่นา...
-    MessageTW: 青春期的少女呢！我覺得很好！
-  - MessageGroupId: 130030170
+  - MessageKR: 네……? 네?!
+    MessageJP: え、あ、その……
+    MessageCN: 诶，啊，那个……
+    MessageEN: H-Huh?!
+    MessageTH: คะ...? คะ?!
+    MessageTW: 咦，啊，那個……
+    MessageGroupId: 130030170
     Id: 965
     CharacterId: 13003
     MessageCondition: Feedback
@@ -561,13 +567,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네……? 네?!
-    MessageJP: え、あ、その……
-    MessageCN: 诶，啊，那个……
-    MessageEN: H-Huh?!
-    MessageTH: คะ...? คะ?!
-    MessageTW: 咦，啊，那個……
-  - MessageGroupId: 130030170
+  - MessageKR: 그, 그런 걸까요?
+    MessageJP: すみません、何だか恥ずかしくなってしまいました……
+    MessageCN: 不好意思，不知道为什么有点害羞……
+    MessageEN: D-Do you think so?
+    MessageTH: ยะ...อย่างนั้นเหรอคะ?
+    MessageTW: 不好意思，總覺得開始感到有點羞恥……
+    MessageGroupId: 130030170
     Id: 966
     CharacterId: 13003
     MessageCondition: Feedback
@@ -579,13 +585,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그, 그런 걸까요?
-    MessageJP: すみません、何だか恥ずかしくなってしまいました……
-    MessageCN: 不好意思，不知道为什么有点害羞……
-    MessageEN: D-Do you think so?
-    MessageTH: ยะ...อย่างนั้นเหรอคะ?
-    MessageTW: 不好意思，總覺得開始感到有點羞恥……
-  - MessageGroupId: 130030180
+  - MessageKR: 뭔가 부끄럽네요. ……죄송합니다.
+    MessageJP: 自分から言い出しておいてごめんなさい……
+    MessageCN: 还是我自己主动提出的话题，对不起……
+    MessageEN: I feel kind of embarrassed... I'm sorry.
+    MessageTH: รู้สึกอายจังเลย .... ขอโทษนะคะ!
+    MessageTW: 明明是自己先提起的，真是抱歉……
+    MessageGroupId: 130030180
     Id: 967
     CharacterId: 13003
     MessageCondition: Feedback
@@ -597,13 +603,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭔가 부끄럽네요. ……죄송합니다.
-    MessageJP: 自分から言い出しておいてごめんなさい……
-    MessageCN: 还是我自己主动提出的话题，对不起……
-    MessageEN: I feel kind of embarrassed... I'm sorry.
-    MessageTH: รู้สึกอายจังเลย .... ขอโทษนะคะ!
-    MessageTW: 明明是自己先提起的，真是抱歉……
-  - MessageGroupId: 130030190
+  - MessageKR: 오늘은 고생하셨습니다.
+    MessageJP: 今日もお疲れ様でした
+    MessageCN: 今天也辛苦老师了
+    MessageEN: You did a lot today.
+    MessageTH: วันนี้เหนื่อยหน่อยนะคะ
+    MessageTW: 今天也辛苦了
+    MessageGroupId: 130030190
     Id: 968
     CharacterId: 13003
     MessageCondition: None
@@ -615,13 +621,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 고생하셨습니다.
-    MessageJP: 今日もお疲れ様でした
-    MessageCN: 今天也辛苦老师了
-    MessageEN: You did a lot today.
-    MessageTH: วันนี้เหนื่อยหน่อยนะคะ
-    MessageTW: 今天也辛苦了
-  - MessageGroupId: 130030190
+  - MessageKR: 어쩐지 아무것도 안 한 것 같지만.
+    MessageJP: なんだか今日は、何もしていないような気もしますが
+    MessageCN: 今天，虽然感觉什么都没有做
+    MessageEN: I don't feel like I did anything.
+    MessageTH: ถึงจะไม่ได้ทำอะไรมากมาย
+    MessageTW: 總覺得今天沒做什麼事
+    MessageGroupId: 130030190
     Id: 969
     CharacterId: 13003
     MessageCondition: None
@@ -633,13 +639,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쩐지 아무것도 안 한 것 같지만.
-    MessageJP: なんだか今日は、何もしていないような気もしますが
-    MessageCN: 今天，虽然感觉什么都没有做
-    MessageEN: I don't feel like I did anything.
-    MessageTH: ถึงจะไม่ได้ทำอะไรมากมาย
-    MessageTW: 總覺得今天沒做什麼事
-  - MessageGroupId: 130030200
+  - MessageKR: 그것만으로도 충분히 감사합니다.
+    MessageJP: 素敵な時間を過ごせました、ありがとうございます
+    MessageCN: 但非常感谢您陪我度过了一段很美好的时光
+    MessageEN: It was more than enough. Thank you.
+    MessageTH: แต่แค่นั้นก็ขอบคุณมากแล้วค่ะ
+    MessageTW: 但度過了美好的時光，非常感謝
+    MessageGroupId: 130030200
     Id: 970
     CharacterId: 13003
     MessageCondition: None
@@ -651,13 +657,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그것만으로도 충분히 감사합니다.
-    MessageJP: 素敵な時間を過ごせました、ありがとうございます
-    MessageCN: 但非常感谢您陪我度过了一段很美好的时光
-    MessageEN: It was more than enough. Thank you.
-    MessageTH: แต่แค่นั้นก็ขอบคุณมากแล้วค่ะ
-    MessageTW: 但度過了美好的時光，非常感謝
-  - MessageGroupId: 130030210
+  - MessageKR: 음……. 요즘 잠을 잘 못 자고 있는데요.
+    MessageJP: 最近あまり眠れてなくって……
+    MessageCN: 最近我不太能睡得着……
+    MessageEN: Hmm... I haven't been sleeping well lately.
+    MessageTH: อืม... ช่วงนี้ฉันนอนไม่ค่อยหลับค่ะ
+    MessageTW: 最近睡不太著……
+    MessageGroupId: 130030210
     Id: 971
     CharacterId: 13003
     MessageCondition: FavorRankUp
@@ -669,13 +675,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음……. 요즘 잠을 잘 못 자고 있는데요.
-    MessageJP: 最近あまり眠れてなくって……
-    MessageCN: 最近我不太能睡得着……
-    MessageEN: Hmm... I haven't been sleeping well lately.
-    MessageTH: อืม... ช่วงนี้ฉันนอนไม่ค่อยหลับค่ะ
-    MessageTW: 最近睡不太著……
-  - MessageGroupId: 130030220
+  - MessageKR: 두통도 있고……. 원인이 뭘까요.
+    MessageJP: 頭痛もひどくって、原因も分からないんですよね……
+    MessageCN: 头疼也很严重，原因也不太清楚……
+    MessageEN: I have a headache too... I wonder why.
+    MessageTH: รู้สึกปวดหัวนิดๆ... เพราะอะไรกันนะ
+    MessageTW: 頭痛得很厲害，也不知道原因呢……
+    MessageGroupId: 130030220
     Id: 972
     CharacterId: 13003
     MessageCondition: None
@@ -687,13 +693,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 두통도 있고……. 원인이 뭘까요.
-    MessageJP: 頭痛もひどくって、原因も分からないんですよね……
-    MessageCN: 头疼也很严重，原因也不太清楚……
-    MessageEN: I have a headache too... I wonder why.
-    MessageTH: รู้สึกปวดหัวนิดๆ... เพราะอะไรกันนะ
-    MessageTW: 頭痛得很厲害，也不知道原因呢……
-  - MessageGroupId: 130030230
+  - MessageKR: 음…… 글쎄. 병원을 가보는 게 좋지 않을까?
+    MessageJP: 病院に行ってみた方が良いかも……？
+    MessageCN: 也许去医院看看比较好……？
+    MessageEN: Hmm... I don't know. Maybe you should see a doctor?
+    MessageTH: "อืม... งั้นเหรอ
+
+      ลองไปหาหมอดูหน่อยดีไหม"
+    MessageTW: 也許去醫院看看比較好……？
+    MessageGroupId: 130030230
     Id: 973
     CharacterId: 13003
     MessageCondition: Answer
@@ -705,15 +713,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 글쎄. 병원을 가보는 게 좋지 않을까?
-    MessageJP: 病院に行ってみた方が良いかも……？
-    MessageCN: 也许去医院看看比较好……？
-    MessageEN: Hmm... I don't know. Maybe you should see a doctor?
-    MessageTH: "อืม... งั้นเหรอ
-
-      ลองไปหาหมอดูหน่อยดีไหม"
-    MessageTW: 也許去醫院看看比較好……？
-  - MessageGroupId: 130030240
+  - MessageKR: 네…… 역시 그게 맞지만……
+    MessageJP: やっぱりそうですよね……
+    MessageCN: 我想也是……
+    MessageEN: "Yeah... That would be the right thing to do, but... "
+    MessageTH: "ค่ะ แบบนั้นน่าจะดีกว่า... "
+    MessageTW: 我想也是呢……
+    MessageGroupId: 130030240
     Id: 974
     CharacterId: 13003
     MessageCondition: Feedback
@@ -725,13 +731,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 네…… 역시 그게 맞지만……
-    MessageJP: やっぱりそうですよね……
-    MessageCN: 我想也是……
-    MessageEN: "Yeah... That would be the right thing to do, but... "
-    MessageTH: "ค่ะ แบบนั้นน่าจะดีกว่า... "
-    MessageTW: 我想也是呢……
-  - MessageGroupId: 130030240
+  - MessageKR: 이런 일로 자리를 비울 수는 없는 노릇이라…….
+    MessageJP: ただ、今は委員会の仕事も立て込んでいてなかなか席を外せず……
+    MessageCN: 只是，现在委员会的工作安排也很紧张，我也很难走得开……
+    MessageEN: "I can't be absent for something like that... "
+    MessageTH: "แค่ปวดหัวอย่างเดียวฉันคงลางานไม่ได้
+
+      หรอกค่ะ..."
+    MessageTW: 但是，現在社團的工作也忙得不可開交，很難離開崗位……
+    MessageGroupId: 130030240
     Id: 975
     CharacterId: 13003
     MessageCondition: Feedback
@@ -743,15 +751,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이런 일로 자리를 비울 수는 없는 노릇이라…….
-    MessageJP: ただ、今は委員会の仕事も立て込んでいてなかなか席を外せず……
-    MessageCN: 只是，现在委员会的工作安排也很紧张，我也很难走得开……
-    MessageEN: "I can't be absent for something like that... "
-    MessageTH: "แค่ปวดหัวอย่างเดียวฉันคงลางานไม่ได้
-
-      หรอกค่ะ..."
-    MessageTW: 但是，現在社團的工作也忙得不可開交，很難離開崗位……
-  - MessageGroupId: 130030250
+  - MessageKR: 역시 아무것도 아닙니다. 선생님.
+    MessageJP: すみません、ご心配をおかけしてしまいました
+    MessageCN: 让老师担心了，非常抱歉
+    MessageEN: It's nothing serious, Sensei.
+    MessageTH: ไม่ใช่เรื่องใหญ่หรอกค่ะ คุณครู
+    MessageTW: 不好意思，讓您擔心了
+    MessageGroupId: 130030250
     Id: 976
     CharacterId: 13003
     MessageCondition: Feedback
@@ -763,13 +769,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 아무것도 아닙니다. 선생님.
-    MessageJP: すみません、ご心配をおかけしてしまいました
-    MessageCN: 让老师担心了，非常抱歉
-    MessageEN: It's nothing serious, Sensei.
-    MessageTH: ไม่ใช่เรื่องใหญ่หรอกค่ะ คุณครู
-    MessageTW: 不好意思，讓您擔心了
-  - MessageGroupId: 130030250
+  - MessageKR: 또 심려를 끼쳐드렸네요.
+    MessageJP: ありがとうございます、先生
+    MessageCN: 谢谢老师
+    MessageEN: I made you worry again.
+    MessageTH: ฉันทำให้คุณครูเป็นห่วงอีกแล้วสินะคะ
+    MessageTW: 謝謝您，老師
+    MessageGroupId: 130030250
     Id: 977
     CharacterId: 13003
     MessageCondition: Feedback
@@ -781,13 +787,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 또 심려를 끼쳐드렸네요.
-    MessageJP: ありがとうございます、先生
-    MessageCN: 谢谢老师
-    MessageEN: I made you worry again.
-    MessageTH: ฉันทำให้คุณครูเป็นห่วงอีกแล้วสินะคะ
-    MessageTW: 謝謝您，老師
-  - MessageGroupId: 130030260
+  - MessageKR: 하지만 다이어트를 그만두진 않겠어요.
+    MessageJP: 今日はありがとうございました、先生
+    MessageCN: 今天真的非常感谢老师
+    MessageEN: But I'm not going to stop my diet.
+    MessageTH: แต่ฉันจะไม่เลิกไดเอ็ตหรอกนะคะ
+    MessageTW: 今天非常謝謝您，老師
+    MessageGroupId: 130030260
     Id: 978
     CharacterId: 13003
     MessageCondition: None
@@ -799,13 +805,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 다이어트를 그만두진 않겠어요.
-    MessageJP: 今日はありがとうございました、先生
-    MessageCN: 今天真的非常感谢老师
-    MessageEN: But I'm not going to stop my diet.
-    MessageTH: แต่ฉันจะไม่เลิกไดเอ็ตหรอกนะคะ
-    MessageTW: 今天非常謝謝您，老師
-  - MessageGroupId: 130030260
+  - MessageKR: 잘 설명은 할 수 없지만…….
+    MessageJP: でも、ダイエットはまだ諦めません
+    MessageCN: 但是，我还是不会放弃减肥的
+    MessageEN: I can't really explain it, but...
+    MessageTH: ฉันอธิบายไม่ค่อยถูก...
+    MessageTW: 但是，我還是不會放棄減肥的
+    MessageGroupId: 130030260
     Id: 979
     CharacterId: 13003
     MessageCondition: None
@@ -817,13 +823,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 설명은 할 수 없지만…….
-    MessageJP: でも、ダイエットはまだ諦めません
-    MessageCN: 但是，我还是不会放弃减肥的
-    MessageEN: I can't really explain it, but...
-    MessageTH: ฉันอธิบายไม่ค่อยถูก...
-    MessageTW: 但是，我還是不會放棄減肥的
-  - MessageGroupId: 130030260
+  - MessageKR: 이대로라면 스스로에게 지는 느낌이 드니까요.
+    MessageJP: 何と言いますか、このままでは自分に負けてしまったような気がしますので
+    MessageCN: 怎么说呢，总觉得这样下去的话就要输给自己了
+    MessageEN: If I do, I feel like I'll be losing the fight with myself.
+    MessageTH: "แต่ถ้าปล่อยไปเรื่อยๆ ฉันรู้สึกเหมือนน้ำ
+
+      หนักมันขึ้นเองตลอดเลยค่ะ"
+    MessageTW: 怎麼說呢，覺得這樣下去會輸給自己
+    MessageGroupId: 130030260
     Id: 980
     CharacterId: 13003
     MessageCondition: None
@@ -835,15 +843,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이대로라면 스스로에게 지는 느낌이 드니까요.
-    MessageJP: 何と言いますか、このままでは自分に負けてしまったような気がしますので
-    MessageCN: 怎么说呢，总觉得这样下去的话就要输给自己了
-    MessageEN: If I do, I feel like I'll be losing the fight with myself.
-    MessageTH: "แต่ถ้าปล่อยไปเรื่อยๆ ฉันรู้สึกเหมือนน้ำ
+  - MessageKR: ………하스미가 괜찮다면 괜찮은 거겠지.
+    MessageJP: あんまり自分を追い詰め過ぎないようにね……
+    MessageCN: 不要把自己逼得太紧啊……
+    MessageEN: "...I trust your judgment, Hasumi."
+    MessageTH: "ถ้าฮาสุมิบอกว่าไม่เป็นไร
 
-      หนักมันขึ้นเองตลอดเลยค่ะ"
-    MessageTW: 怎麼說呢，覺得這樣下去會輸給自己
-  - MessageGroupId: 130030270
+      ก็คงไม่เป็นไรแล้วล่ะ"
+    MessageTW: 別把自己逼得太緊……
+    MessageGroupId: 130030270
     Id: 981
     CharacterId: 13003
     MessageCondition: Answer
@@ -855,15 +863,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ………하스미가 괜찮다면 괜찮은 거겠지.
-    MessageJP: あんまり自分を追い詰め過ぎないようにね……
-    MessageCN: 不要把自己逼得太紧啊……
-    MessageEN: "...I trust your judgment, Hasumi."
-    MessageTH: "ถ้าฮาสุมิบอกว่าไม่เป็นไร
-
-      ก็คงไม่เป็นไรแล้วล่ะ"
-    MessageTW: 別把自己逼得太緊……
-  - MessageGroupId: 130030270
+  - MessageKR: 복잡하구나. 마음이라는 건…….
+    MessageJP: 乙女心は複雑だもんね……無理だけはしないでほしいな
+    MessageCN: 少女心还真是复杂啊……莲见可不要勉强自己哦
+    MessageEN: Navigating your own mind can be complicated...
+    MessageTH: ซับซ้อนจริงๆ เลยนะ จิตใจคนเนี่ย...
+    MessageTW: 少女的心真是複雜啊……希望你別太勉強自己
+    MessageGroupId: 130030270
     Id: 982
     CharacterId: 13003
     MessageCondition: Answer
@@ -875,13 +881,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 복잡하구나. 마음이라는 건…….
-    MessageJP: 乙女心は複雑だもんね……無理だけはしないでほしいな
-    MessageCN: 少女心还真是复杂啊……莲见可不要勉强自己哦
-    MessageEN: Navigating your own mind can be complicated...
-    MessageTH: ซับซ้อนจริงๆ เลยนะ จิตใจคนเนี่ย...
-    MessageTW: 少女的心真是複雜啊……希望你別太勉強自己
-  - MessageGroupId: 130030280
+  - MessageKR: 요즘 늦게까지 동아리 업무가 이어지고 있어서…….
+    MessageJP: この頃連日のように、遅くまで委員会の仕事が終わらなくって……
+    MessageCN: 连着好几天了，委员会的工作做到很晚也做不完……
+    MessageEN: These days, I've been busy with club work until late...
+    MessageTH: ช่วงนี้ฉันต้องอยู่ทำงานของชมรมจนดึกบ่อยๆ...
+    MessageTW: 這幾天，社團的工作經常到很晚都還沒結束……
+    MessageGroupId: 130030280
     Id: 983
     CharacterId: 13003
     MessageCondition: FavorRankUp
@@ -893,13 +899,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 요즘 늦게까지 동아리 업무가 이어지고 있어서…….
-    MessageJP: この頃連日のように、遅くまで委員会の仕事が終わらなくって……
-    MessageCN: 连着好几天了，委员会的工作做到很晚也做不完……
-    MessageEN: These days, I've been busy with club work until late...
-    MessageTH: ช่วงนี้ฉันต้องอยู่ทำงานของชมรมจนดึกบ่อยๆ...
-    MessageTW: 這幾天，社團的工作經常到很晚都還沒結束……
-  - MessageGroupId: 130030290
+  - MessageKR: 선생님도 야근이 잦으시죠?
+    MessageJP: でも、先生も残業で大変なんですよね
+    MessageCN: 但是，老师加班也很辛苦对吧
+    MessageEN: You've also been working late, right?
+    MessageTH: คุณครูเองก็อยู่ดึกด้วยใช่ไหมคะ?
+    MessageTW: 不過，老師也很辛苦地在加班吧？
+    MessageGroupId: 130030290
     Id: 984
     CharacterId: 13003
     MessageCondition: None
@@ -911,13 +917,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님도 야근이 잦으시죠?
-    MessageJP: でも、先生も残業で大変なんですよね
-    MessageCN: 但是，老师加班也很辛苦对吧
-    MessageEN: You've also been working late, right?
-    MessageTH: คุณครูเองก็อยู่ดึกด้วยใช่ไหมคะ?
-    MessageTW: 不過，老師也很辛苦地在加班吧？
-  - MessageGroupId: 130030290
+  - MessageKR: 저도 힘내겠습니다.
+    MessageJP: 私も頑張ります
+    MessageCN: 我也会加油的
+    MessageEN: I'll do my best too.
+    MessageTH: ฉันเองก็จะพยายามค่ะ
+    MessageTW: 我也會加油的
+    MessageGroupId: 130030290
     Id: 985
     CharacterId: 13003
     MessageCondition: None
@@ -929,13 +935,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저도 힘내겠습니다.
-    MessageJP: 私も頑張ります
-    MessageCN: 我也会加油的
-    MessageEN: I'll do my best too.
-    MessageTH: ฉันเองก็จะพยายามค่ะ
-    MessageTW: 我也會加油的
-  - MessageGroupId: 130030300
+  - MessageKR: 응. 하스미도 힘내!
+    MessageJP: うん、応援してる
+    MessageCN: 嗯，我会支持莲见的
+    MessageEN: Yes. Fight on, Hasumi!
+    MessageTH: อื้อ ฮาสุมิเองก็พยายามเข้านะ!
+    MessageTW: 嗯，我會支持你的
+    MessageGroupId: 130030300
     Id: 986
     CharacterId: 13003
     MessageCondition: Answer
@@ -947,13 +953,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응. 하스미도 힘내!
-    MessageJP: うん、応援してる
-    MessageCN: 嗯，我会支持莲见的
-    MessageEN: Yes. Fight on, Hasumi!
-    MessageTH: อื้อ ฮาสุมิเองก็พยายามเข้านะ!
-    MessageTW: 嗯，我會支持你的
-  - MessageGroupId: 130030300
+  - MessageKR: 함께 힘내자!
+    MessageJP: 一緒に頑張ろう！
+    MessageCN: 一起加油吧！
+    MessageEN: We got this!
+    MessageTH: เรามาพยายามด้วยกันเถอะ!
+    MessageTW: 一起加油吧！
+    MessageGroupId: 130030300
     Id: 987
     CharacterId: 13003
     MessageCondition: Answer
@@ -965,13 +971,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 함께 힘내자!
-    MessageJP: 一緒に頑張ろう！
-    MessageCN: 一起加油吧！
-    MessageEN: We got this!
-    MessageTH: เรามาพยายามด้วยกันเถอะ!
-    MessageTW: 一起加油吧！
-  - MessageGroupId: 130030310
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 老師
+    MessageGroupId: 130030310
     Id: 988
     CharacterId: 13003
     MessageCondition: None
@@ -983,13 +989,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: Sensei.
-    MessageTH: คุณครูคะ
-    MessageTW: 老師
-  - MessageGroupId: 130030310
+  - MessageKR: 감기 걸리지 않게 뜨거운 물에 목욕하시고
+    MessageJP: 風邪をひかないよう、暖かいお風呂に入って、
+    MessageCN: 可千万不能感冒了，请老师泡个澡，
+    MessageEN: Take a hot bath and get plenty of rest
+    MessageTH: อาบน้ำอุ่นๆ แล้วพักผ่อนเถอะค่ะ
+    MessageTW: 為了避免感冒，請洗個熱水澡
+    MessageGroupId: 130030310
     Id: 989
     CharacterId: 13003
     MessageCondition: None
@@ -1001,13 +1007,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 감기 걸리지 않게 뜨거운 물에 목욕하시고
-    MessageJP: 風邪をひかないよう、暖かいお風呂に入って、
-    MessageCN: 可千万不能感冒了，请老师泡个澡，
-    MessageEN: Take a hot bath and get plenty of rest
-    MessageTH: อาบน้ำอุ่นๆ แล้วพักผ่อนเถอะค่ะ
-    MessageTW: 為了避免感冒，請洗個熱水澡
-  - MessageGroupId: 130030310
+  - MessageKR: 푹 쉬세요.
+    MessageJP: ゆっくり休んでくださいね
+    MessageCN: 好好休息一下吧
+    MessageEN: so you don't catch a cold.
+    MessageTH: จะได้ไม่เป็นหวัดนะคะ
+    MessageTW: 好好休息哦
+    MessageGroupId: 130030310
     Id: 990
     CharacterId: 13003
     MessageCondition: None
@@ -1019,13 +1025,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 푹 쉬세요.
-    MessageJP: ゆっくり休んでくださいね
-    MessageCN: 好好休息一下吧
-    MessageEN: so you don't catch a cold.
-    MessageTH: จะได้ไม่เป็นหวัดนะคะ
-    MessageTW: 好好休息哦
-  - MessageGroupId: 130030320
+  - MessageKR: 그럼, 다음에 또.
+    MessageJP: それでは、また
+    MessageCN: 那么，我们下次见
+    MessageEN: See you later.
+    MessageTH: ถ้างั้น... ไว้เจอกันนะคะ
+    MessageTW: 那麼，下次見
+    MessageGroupId: 130030320
     Id: 991
     CharacterId: 13003
     MessageCondition: None
@@ -1037,9 +1043,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼, 다음에 또.
-    MessageJP: それでは、また
-    MessageCN: 那么，我们下次见
-    MessageEN: See you later.
-    MessageTH: ถ้างั้น... ไว้เจอกันนะคะ
-    MessageTW: 那麼，下次見
