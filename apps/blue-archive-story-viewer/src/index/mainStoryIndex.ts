@@ -681,7 +681,8 @@ export const stories: StoryBriefing[] = [
             "在夜裡出外散步的補課部，偶然在甜點店遇見了蓮實。由於雙方都有各自的苦衷，因此蓮實便提議大家將今天在甜點店裡相遇的事當成是秘密。就在此時，一行人收到美食研究會引起騷動的消息。",
           TextEn:
             "The Make-Up Work Club runs into Hasumi at a dessert shop during their nighttime walk. Hasumi suggests keeping the encounter a secret due to each other's circumstances, but then receives a call that the Gourmet Research Society is causing a disturbance.",
-          TextCn: "",
+          TextCn:
+            "在夜间离开合宿处的前往散步的补习部一行人，在一家甜点店里偶遇了正义实现委员会的副委员长莲见。莲见提出“今晚的事就互相当作不知道”，并在夸奖小春的努力时，突然传来了“美食研究会”引发骚乱的消息。",
         },
       },
       {
@@ -708,7 +709,7 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Hasumi asks the Make-Up Work Club and Sensei for help, fearing conflict between Gehenna and Trinity might pose a problem for the Eden Treaty. The entire group heads out together to prevent the worst from happening.",
           TextCn:
-            "补习部的学生们一边互相帮助一边向老师请教，为迎接第一次考试做准备。梓十分热衷于学习，花子也似乎博学多才，而小春则（自认为）非常从容。总的来说氛围十分良好，日富美却透露出了“如果第一次考试有不及格者就要强制合宿”的实情。",
+            "《伊甸条约》签订在即，莲见判断在此时格黑娜与圣三一发生正面冲突并不明智，于是决定请求补习部和夏莱介入。与莲见并肩作战的小春也充满了斗志，一行人一同前去镇压事态。",
         },
       },
       {
@@ -734,7 +735,8 @@ export const stories: StoryBriefing[] = [
             "由於老師和補課部的活躍，美食研究會的騷動很快就被平息。為了追捕分頭逃跑的美食研究會，實現正義部鍥而不捨地追趕著她們。",
           TextEn:
             "Sensei and the Make-Up Work Club succeed in stopping the Gourmet Research Society's mischief, but each of their members flee, leaving the Justice Task Force hot on their heels in pursuit.",
-          TextCn: "",
+          TextCn:
+            "在老师和补习部的帮助下，局势成功得到了平息。逃离的美食研究会成员也成功逃离了正义实现委员会的追击。",
         },
       },
       {
@@ -760,7 +762,8 @@ export const stories: StoryBriefing[] = [
             "為了不讓美食研究會落入三一學園的手中，風紀委員會的陽奈和急救醫學部的瀬奈也隨後趕到了現場。見到陽奈也來了，老師便問問她對於伊甸園條約的看法，而陽奈也欣然告訴老師她對目前局勢的見解。",
           TextEn:
             "The Prefect Team's Hina and the Medical Emergency Club's Sena arrive to handle the Gourmet Research Society's new recruits.Sensei asks Hina about her thoughts on the Eden Treaty and listens to her point of view on the situation.",
-          TextCn: "",
+          TextCn:
+            "为了引渡美食研究会的成员，风纪委员会的日奈与急救医学部的濑名赶到现场进行交接。与初次见面的濑名打过招呼后，老师询问了日奈关于伊甸条约的意见。",
         },
       },
       {
@@ -786,7 +789,8 @@ export const stories: StoryBriefing[] = [
             "由於補課部的成員們總算順利通過模擬考，日步美便依約買了許多Momo好友周邊商品送給她們。儘管花子和小春極力婉拒，梓卻向日步美保證自己一定會好好珍惜她送的禮物。第二次學期考試前夕，渚決定找老師好好談談關於他和彌香見面的事。",
           TextEn:
             "The Make-Up Work Club finally earn a passing score on their practice test, and Hifumi presents them all with Momo Friends merch. Azusa tells Hifumi that she'll cherish it. Nagisa calls upon Sensei and questions them about their meeting with Mika.",
-          TextCn: "",
+          TextCn:
+            "在接下来的时间里，补习部的成员们刻苦学习，全员终于在正式考试来临前的模拟考中及格了。为了庆祝这一时刻，兴高采烈的日富美开始了MOMO FRIENDS周边的颁奖仪式。虽然花子和小春都拒绝了，然而梓似乎看上去十分兴奋。最后，梓紧紧抱着日富美选择的周边，高兴地表示这是她的朋友送给她的第一个礼物，是她努力的证明，她会用一生去珍惜。就在第二次特别学力考试前夕，老师被渚叫了过去……",
         },
       },
       {
@@ -812,7 +816,8 @@ export const stories: StoryBriefing[] = [
             "即使面對渚的質問，老師依舊表示自己不願懷疑任何人，更不想去追究叛徒到底是誰。老師不僅拒絕了渚的請求，還直接了當地告訴對方自己會阻止她的計畫，並且讓補課部全員通過學期考試。",
           TextEn:
             "Sensei refuses to place doubt on anyone or do anything to root out the traitor. Sensei declines Nagisa's request and declares their intention to block Nagisa's flurry of doubt and ensure that the entire Make-Up Work Club passes.",
-          TextCn: "",
+          TextCn:
+            "面对着渚，老师再次强调自己不打算花时间怀疑任何人。听着渚的话，老师斥责她“陷入了疑神疑鬼的黑暗之中”，并宣称自己绝对会让补习部的全员都能及格。",
         },
       },
       {
@@ -838,7 +843,8 @@ export const stories: StoryBriefing[] = [
             "茶會公布了第二次評鑑考試的修正事項。除了考試範圍增加及調高及格分數外，就連考試地點也改為格黑娜學園。儘管這個突如其來的消息令補課部愕然不已，但梓卻認為他們不能就此放棄，於是補課部一行人還是按照原定計畫前往了考場。",
           TextEn:
             "Sudden changes to the second exam are announced. Everyone is shocked and stunned by the test's newly expanded scope, higher bar to pass, and relocation of the testing site to Gehenna Academy. Azusa insists it's too soon to give up, and the club heads to the test site.",
-          TextCn: "",
+          TextCn:
+            "第二次特别学力考试前夕，补习部突然收到了考试范围、及格线以及考试地点的变更通知，感到十分困惑。然而，听到梓“直到最后一刻都要拼尽全力”的话语，大家一同振作精神前往了位于格黑娜自治区的考试地点。",
         },
       },
       {
@@ -863,7 +869,8 @@ export const stories: StoryBriefing[] = [
           TextTw: "擊敗了礙事的格黑娜混混們後，補課部繼續朝著考場邁進。",
           TextEn:
             "The Make-Up Work Club heads to the test site while laying waste to Gehenna delinquents standing in their way.",
-          TextCn: "",
+          TextCn:
+            "在前往格黑娜自治区的途中，被不良团伙堵住去路的补习部一行人想办法强行突破了阻碍并继续前进。",
         },
       },
       {
@@ -889,7 +896,8 @@ export const stories: StoryBriefing[] = [
             "抵達格黑娜學園後，風紀委員們將補課部誤認成實現正義部，並且擋住她們的去路。幸好美食研究會及時伸出援手，補課部才能成功脫離危機並順利抵達考場。然而，在渚的妨礙之下，補課部的成員們還是沒能通過考試。",
           TextEn:
             "The Prefect Team stop the Make-Up Work Club upon their arrival, mistaking them for the Justice Task Force. The Gourmet Research Society arrives just in time and helps clear the way for the Make-Up Work Club. However, everyone still flunks the exam due to Nagisa's interference.",
-          TextCn: "",
+          TextCn:
+            "补习部一行进入了格黑娜自治区，然而道路却被风纪委员会封锁了。看到小春的穿着，风纪委员误以为正义实现委员会前来袭击她们，然而就在这千钧一发的时刻，美食研究会赶到并帮助补习部脱离了困境。尽管一行人好不容易从爆炸和枪击中脱身，成功到达考试地点，然而渚的妨碍还在继续……！？",
         },
       },
       {
@@ -915,7 +923,8 @@ export const stories: StoryBriefing[] = [
             "得知茶會的幹部打算讓她們通通退學的消息，補課部的成員們大受打擊。儘管距離最後一次學期考試只剩一週的時間，補課部仍舊想不出任何能幫助她們突破困境的好方法。決定暫時先好好休息的成員們，默默回到了各自的房間去。當天深夜，見到梓獨自離開房間，花子偷偷地跟上了她的腳步。",
           TextEn:
             "The students are shocked to learn someone in the Tea Party is conspiring to have them expelled. The students decide to return to their respective rooms to decompress. Later that night, Azusa slips out alone with Hanako quietly tailing behind.",
-          TextCn: "",
+          TextCn:
+            "目睹了茶会对第二次特别学力考试的妨碍后，补习部一行人深感茶会已经下定决心要让她们退学。虽然老师也试图与渚和未花取得联系，然而并没有成功，大家束手无策。那天晚上，梓独自一人离开房间，花子悄悄跟上了梓……",
         },
       },
       {
@@ -941,7 +950,8 @@ export const stories: StoryBriefing[] = [
             "儘管被逼至死路，補課部依舊努力地準備著最後一次學期考試。最後一次學期考試的前一天深夜，花子躲在暗處默默地注視著和沙織偷偷見面的梓。",
           TextEn:
             "The Make-Up Work Club prepares for the final exam despite being backed up against the wall. Hanako quietly watches as Azusa has a secret meeting with Saori the day before the exam.",
-          TextCn: "",
+          TextCn:
+            "尽管被逼入了绝境，然而补习部一行仍未放弃努力。为了应对最后的考试，大家一同努力克服不合理的障碍，专心致志地继续学习。在最终考试的前一天晚上，梓与名为“纱织”的少女秘密会面，而这一切都被藏在暗处的花子默默看在眼里。",
         },
       },
       {
@@ -966,7 +976,8 @@ export const stories: StoryBriefing[] = [
             "凌晨時分，補課部的成員們聚在一起討論明天的事。就在眾人得知渚連最後一次學期考試也想耍詐時，梓終於忍不住告訴成員們自己就是「三一的叛徒」。雖然梓認為一切都是自己的錯，但老師卻不認同她的想法。花子也站出來鼓勵大家，她要大家努力通過考試，不讓渚的花招得逞。",
           TextEn:
             "The students gather together at night. Azusa confesses that she is the traitor once the full scope of Nagisa's interference is revealed. Azusa blames herself, but Sensei says it isn't her fault. Hanako declares they will find a way to pass no matter what.",
-          TextCn: "",
+          TextCn:
+            "失眠的日富美、花子和小春一同来到老师的房间，讨论着茶会在最后一次考试中动的手脚。就在这时，原本不在的梓回来了，并告诉大家自己就是“圣三一的叛徒”。然而见老师准备否定和谴责梓时，花子也提及了自己认识的“某个人”的事情，并表示自己能理解梓的想法。补习部的一行人不愿放弃，并根据花子的作战计划开始了行动。",
         },
       },
       {
@@ -991,7 +1002,8 @@ export const stories: StoryBriefing[] = [
             "就在奧利斯正準備襲擊渚的時候，梓和花子搶先一步綁走了渚。因為甩不掉緊咬不放的奧利斯學生們，梓只好與對方開戰。",
           TextEn:
             "Arius forces come to ambush Nagisa, but Azusa and Hanako beat them to the punch and kidnap Nagisa themselves. Afterwards, Azusa engages in combat with the subsequent rush of Arius students.",
-          TextCn: "",
+          TextCn:
+            "花子和梓成功赶在阿里乌斯之前掳走了渚。梓利用之前布置的陷阱，与阿里乌斯展开了战斗。",
         },
       },
       {
@@ -1016,7 +1028,8 @@ export const stories: StoryBriefing[] = [
             "奧利斯的學生們對補課部發動了襲擊。即使被梓放置的詭雷炸傷，奧利斯學生們還是將補課部逼得無處可逃。就在此時，補課部的學生們和老師合力發動反擊。",
           TextEn:
             "Arius students launch an attack and succeed in backing the Make-Up Work Club into a corner. The Make-Up Work Club and Sensei begin their counterattack.",
-          TextCn: "",
+          TextCn:
+            "尽管人数已经减员不少，但阿里乌斯依然在追逐梓与花子。然而这都是补习部一行人所设的圈套。老师与日富美、小春也与花子她们汇合，一同开始了破釜沉舟的战斗。",
         },
       },
       {
@@ -1041,7 +1054,8 @@ export const stories: StoryBriefing[] = [
             "雖然補課部成功和老師打倒了一批奧利斯的學生，但很快便又有多的奧利斯的學生朝他們撲了過來。就在眾人訝異為何奧利斯能夠如此輕易地潛入三一自治區時，不知從何處現身的彌香表明自己才是真正的「三一的叛徒」，並且命令奧利斯制服補課部。",
           TextEn:
             "The Make-Up Work Club and Sensei defeat the Arius forces but are met with reinforcements. Mika arrives and reveals herself to be the true traitor of Trinity before ordering the Arius students to subdue the Make-Up Work Club.",
-          TextCn: "",
+          TextCn:
+            "一行人成功将阿里乌斯逼入了无法战斗的境地，然而增援却比预计的更早到来，并且正义实现委员会也不知为何毫无动作。正当花子产生疑问时，茶会的未花现身了。她告诉大家，自己才是“圣三一真正的叛徒”，并透露了她的计划，指示阿里乌斯解决掉补习部。",
         },
       },
       {
@@ -1066,7 +1080,8 @@ export const stories: StoryBriefing[] = [
             "將修女會叫來的人正是花子，突然現身的櫻子為了平息事件，並開始與彌香戰鬥。",
           TextEn:
             "The Sisterhood was called in by none other than Hanako. Now on the scene, Sakurako begins to battle Mika to rectify the situation.",
-          TextCn: "",
+          TextCn:
+            "在花子的策划下，本来不应干涉此事的修女会开始了行动。修女会的歌住樱子表示，尽管这么做有悖惯例，但修女会依然要介入此事，并与未花等人开始了战斗。",
         },
       },
       {
@@ -1091,7 +1106,8 @@ export const stories: StoryBriefing[] = [
             "在眾人的齊心協力之下，補課部和修女會成功將彌香逼至死路。最後，彌香終於承認自己輸了，並且向眾人投降。然而老師卻告訴彌香只要她有需要，自己隨時都會為她撐腰，感動不已的彌香向眾人道別。",
           TextEn:
             "Together, the Make-Up Work Club and the Sisterhood succeed in cornering Mika, who finally surrenders. Sensei lets Mika know that they'll be there for her if she ever needs someone on her side. Mika is delighted to hear this and says farewell.",
-          TextCn: "",
+          TextCn:
+            "未花终于败在了补习部、夏莱与修女会面前。在听到花子告诉她的新事实后，未花松了一口气，承认了自己的失败并投降了。即使这样，未花在与老师告别时也告诉老师，当时老师说的那番话让她非常高兴，并思考着可能有与现在截然不同的另一个世界存在。带着难以捉摸的微笑，未花向老师告别。",
         },
       },
       {
@@ -1116,7 +1132,8 @@ export const stories: StoryBriefing[] = [
             "雖然歷經了無數風波，但補課部最終還是繼續前往考場，準備接受第三次評鑑考試。最終，補課部的所有人都成功通過了測驗。",
           TextEn:
             "Having overcome numerous incidents and happenings, the Make-Up Work Club heads to the test site to sit for the third and final evaluation exam.",
-          TextCn: "",
+          TextCn:
+            "经历了许多意外，坚持奔跑的补习部终于来到了最后的考试场所。在那里，她们之前的努力终于得到了回报，所有人都成功通过了考试。",
         },
       },
     ],
