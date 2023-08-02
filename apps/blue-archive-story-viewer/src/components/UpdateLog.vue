@@ -4,6 +4,15 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-08-02",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "浦和 花子（泳装）", id: 10074 }],
+      },
+    ],
+  },
+  {
     date: "2023-07-30",
     contents: [
       {

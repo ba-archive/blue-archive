@@ -23,6 +23,11 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   // },
   {
     type: "student",
+    jumpTo: 10074,
+    title: "浦和 花子（泳装）",
+  },
+  {
+    type: "student",
     jumpTo: 16013,
     title: "下江 小春（泳装）",
   },
