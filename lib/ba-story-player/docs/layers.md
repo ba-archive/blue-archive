@@ -55,7 +55,7 @@ interface CharacterEffect {
 
 ## 可使用的 getter
 
-`characterSpineData`: 根据 CharacterName 获取 spineData
+`characterSpineData`: 根据 CharacterName / url 获取 spineData
 `emotionResources`: 获取人物情绪图片 url, 返回一个 string 数组, 图片的排列按从底部到顶部, 从左到右排列.
 
 ## 需要处理的 state
