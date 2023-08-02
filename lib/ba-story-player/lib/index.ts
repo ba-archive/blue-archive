@@ -42,8 +42,8 @@ let privateState: ReturnType<typeof initPrivateState>;
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
 export function checkloadAssetAlias<T = any>(alias: string, url: string) {
-  if (!resourcesLoader.loadedList.includes(alias)) {
-    resourcesLoader.loadedList.push(alias);
+  if (!resourcesLoader.loadedList.includes(url)) {
+    resourcesLoader.loadedList.push(url);
     return loadAssetAlias(alias, url);
   }
   return Promise.resolve();
@@ -872,6 +872,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
       leftTime = leftTime - (now - startTime);
     }
     function restart() {
+      clearInterval(interval);
       startTime = Date.now();
       start();
     }
@@ -892,20 +893,16 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           end();
           resolve();
         } else if (Date.now() - startTime >= leftTime) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
+          end();
+          // eslint-disable-next-line max-len
+          const waitingKeys = Object.keys(eventEmitter)
+            .filter(it => it.endsWith("Done") && it !== "unitDone")
+            .filter(it => !eventEmitter[it as keyof typeof eventEmitter]);
           console.warn(
             `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
+            storyHandler.currentStoryUnit,
+            waitingKeys
           );
-          end();
           reject();
         }
       });
