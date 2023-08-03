@@ -55,32 +55,13 @@ const keyUpEvent = (e: KeyboardEvent) => {
       storyHandler.isSkip = false;
   }
 };
-let isScrollBottom = false;
+
 const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
-  const uiScrollElem = document.querySelector(".ba-chat-content");
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
-  if (delta > 0) {
-    isScrollBottom = false;
-  }
-  if (
-    delta < 0 &&
-    (uiScrollElem?.scrollTop || 0) + (uiScrollElem?.clientHeight || 0) >=
-      (uiScrollElem?.scrollHeight || 0) - 6
-  ) {
-    // 避免滑到底部就立刻关了, 再滚一次才生效
-    if (isScrollBottom) {
-      eventBus.emit("showStoryLog", false);
-      isScrollBottom = false;
-      return;
-    }
-    isScrollBottom = true;
-  }
   if (eventEmitter.isStoryLogShow || !isPlayerFocus()) {
     return;
   }
-  if (delta < 0) {
-    interactNext();
-  } else {
+  if (delta >= 0) {
     eventBus.emit("showStoryLog", true);
   }
 };
@@ -99,7 +80,7 @@ eventBus.on("dispose", () => {
   document.removeEventListener("focusout", clearNextInterval);
   document
     .querySelector("#player")
-    ?.addEventListener("wheel", wheelEvent as any);
+    ?.removeEventListener("wheel", wheelEvent as any);
 });
 
 function getLastDataFromIndex(index: number) {
