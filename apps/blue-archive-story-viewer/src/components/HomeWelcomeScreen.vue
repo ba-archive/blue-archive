@@ -22,6 +22,10 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   //   style: "pixelize",
   // },
   {
+    type: "mainstory",
+    title: "Vol.3 第二章",
+  },
+  {
     type: "student",
     jumpTo: 10074,
     title: "浦和 花子（泳装）",

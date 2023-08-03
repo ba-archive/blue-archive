@@ -19,7 +19,7 @@
           如您有任何疑问、意见或建议，或对本站收录的内容存在疑义，欢迎随时通过邮件向我们
           <a href="mailto:mail@blue-archive.io">询问或提出</a
           >。<strong>我们不是官方，无法也不能对游戏内容进行解释和解答。</strong>若您有条件体验游戏内容，我们强烈建议您
-          <a href="https://bluearchive.jp/" rel="noreferrer" target="_blank"
+          <a href="https://bluearchive-cn.com/" rel="noreferrer" target="_blank"
             >下载游戏并体验</a
           >。
         </p>
