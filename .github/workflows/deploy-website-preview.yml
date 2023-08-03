@@ -3,9 +3,12 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - "apps/blue-archive-story-viewer/**"
+      - "lib/**"
 
 concurrency:
-  group: "production-deploy"
+  group: "preview-deploy"
   cancel-in-progress: true
 
 jobs:
