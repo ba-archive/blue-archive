@@ -1,20 +1,20 @@
-export interface StoryRawUnit {
+export interface NexonJSONStory {
   GroupId: number
-  SelectionGroup: number
-  BGMId: number
-  Sound: string
-  Transition: number
-  BGName: number
-  BGEffect: number
-  PopupFileName: string
-  ScriptKr: string
-  TextJp: string
-  TextCn?: string
-  TextTw?: string
-  TextEn?: string
-  VoiceJp: string
-}
-
-export interface NexonScript {
-
+  translator: string
+  content: {
+    GroupId: number
+    SelectionGroup: number
+    BGMId: number
+    Sound: string
+    Transition: number
+    BGName: number
+    BGEffect: number
+    PopupFileName: string
+    ScriptKr: string
+    TextJp: string
+    TextCn?: string
+    TextTw?: string
+    TextEn?: string
+    VoiceJp: string
+  }[]
 }

@@ -104,9 +104,9 @@ export const PlayerAsset = {
   SpineAsset, VideoAsset, ImageAsset,
 }
 
-// Script (JSONScript, NexonScript, KotlinScript, JSScript)
+// Story (JSONScript, NexonScript, LegacyScript, KotlinScript, JSScript)
 
-enum Lang {
+export enum Lang {
   zhCN = 'zh-CN',
   zhTW = 'zh-TW',
   en = 'en',
@@ -114,49 +114,98 @@ enum Lang {
   kr = 'kr',
 }
 
+export type I18N<T> = {
+  [key in Lang]?: T
+}
+
+export type I18NString = I18N<string>
+
+export interface TextStyle {
+  name: | 'color' | 'fontsize' | 'ruby' | 'log' | 'tooltip' | 'b'
+  value: string[]
+}
+
+export interface Text {
+  content: (string | Text)[]
+  style: TextStyle[]
+}
+
+export type I18NText = I18N<Text>
+
+export enum NexonTags {
+  Color = 'Color',
+  Ruby = 'Ruby',
+  Tooltip = 'Tooltip',
+  B = 'B',
+  I = 'i',
+  Log = 'Log',
+  Root = 'Root',
+}
+
+export interface TextAST {
+  tag: NexonTags
+  children: (TextAST | string)[]
+  value?: String
+}
+
+export type I18NTextAST = I18N<TextAST>
+
 // 新剧情格式，暂且兼容老格式
-enum JSONScriptCommandType {
-  CharacterTalk = 'CharacterTalk',
+export enum JSONStoryCommandType {
+  Title = 'Title',
+  Place = 'Place', // 播放器左上角显示对话场景
+  Talk = 'Talk', // 角色对话，包括未知角色，旁白
+  Wait = 'Wait',
+  Character = 'Character', // 改变角色状态，不涉及角色对话，包括角色表情、位置
 }
 
-interface BaseJSONScriptCommand<T extends JSONScriptCommandType> {
-  type: T
+/** 标题与副标题 */
+export interface JSONStoryTitleCommand {
+  type: JSONStoryCommandType.Title
+  title: I18NTextAST
+  subtitle?: I18NTextAST
 }
 
-type JSONScriptCharacterTalkCommand = BaseJSONScriptCommand<JSONScriptCommandType.CharacterTalk> & {
-  // 人物摆放状态
-  characters: {
-    position: 1 | 2 | 3 | 4 | 5
-    // 人物CharacterName, 请通过它获取人物 spine data
-    id: number
-    // 人物 spine data 的url
-    spineUrl: string
-    face: string
-    highlight: boolean
-    // 人物是否是全息投影状态
-    signal: boolean
-    effects: {
-      type: 'emotion' | 'action' | 'fx'
-      effect: string
-      async: boolean
-      arg?: string
-    }[]
-  }[]
-  playerDialog: {
-    speaker: string
-    speakerGroup: string
-    text: string
-  }
+/** 展示对话位置 */
+export interface JSONStoryPlaceCommand {
+  type: JSONStoryCommandType.Place
+  place: I18NTextAST
 }
 
-type JSONScriptCommand = JSONScriptCharacterTalkCommand
+/** 控制角色 */
+export interface JSONStoryCharacterCommand {
+  type: JSONStoryCommandType.Character
+  position: 1 | 2 | 3 | 4 | 5
+  /** 人物CharacterName, 请通过它获取人物 spine data */
+  name?: string // 暂且兼容 nexon 旧命令，为空则操作 position 的人物
+  /** 任务差分表情 */
+  emotion?: string
+  /** 人物表情 */
+  face?: string
+  /** 人物高亮？ */
+  effects?: string
+}
 
-interface JSONScript {
+export interface JSONStoryTalkCommand {
+  type: JSONStoryCommandType.Talk
+  speaker?: string
+  content?: I18NTextAST
+}
+
+export interface JSONStoryWaitCommand {
+  type: JSONStoryCommandType.Wait
+  millionSecond: number
+}
+
+export type JSONStoryCommand = JSONStoryTitleCommand | JSONStoryPlaceCommand | JSONStoryTalkCommand | JSONStoryWaitCommand | JSONStoryCharacterCommand
+export type JSONStoryCommandT<T extends JSONStoryCommandType> = { type: T } & JSONStoryCommand
+
+export interface JSONStory {
   // 官方剧情格式的元信息
   nexonMeta?: {
     GroupID: number
   }
   translator: { [lang in Lang]?: string } // url?
   availableLang: Lang[]
-  content: JSONScriptCommand[]
+  content: JSONStoryCommand[]
 }
