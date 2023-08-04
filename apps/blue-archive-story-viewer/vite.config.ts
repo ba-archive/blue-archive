@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/ban-ts-comment */
+import dayjs from "dayjs";
 import path from "path";
 import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
@@ -8,8 +9,14 @@ import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
 import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 
-const currentTime = new Date().toISOString();
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const currentTime =
+  dayjs().tz("Asia/Shanghai").format("YYYY-MM-DDTHH:mm:ss") + "(GMT+0800)";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -119,7 +126,7 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
-    chunkSizeWarningLimit: 1500,
+    chunkSizeWarningLimit: 2000,
     minify: "terser",
     terserOptions: {
       toplevel: true,

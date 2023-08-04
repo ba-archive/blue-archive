@@ -1,44 +1,52 @@
 CharacterId: 10002
 translator: 今天早睡了吗
 title:
-  - GroupId: 1000202
-    FavorScheduleId: 100022
-    CharacterId: 10002
-    TextJp: 禁じられた研究
+  - TextJp: 禁じられた研究
     TextCn: 被禁止的研究
     TextKr: 금지된 연구
     TextEn: Forbidden Research
     TextTh: การวิจัยต้องห้าม
     TextTw: 被禁止的研究
-  - GroupId: 1000203
-    FavorScheduleId: 100023
+    GroupId: 1000202
+    FavorScheduleId: 100022
     CharacterId: 10002
-    TextJp: 孤高の道
+  - TextJp: 孤高の道
     TextCn: 孤高之路
     TextKr: 고고한 길
     TextEn: The Dignified Path
     TextTh: เส้นทางที่สง่างาม
     TextTw: 孤高之路
-  - GroupId: 1000205
-    FavorScheduleId: 100025
+    GroupId: 1000203
+    FavorScheduleId: 100023
     CharacterId: 10002
-    TextJp: 怒りの美食家
+  - TextJp: 怒りの美食家
     TextCn: 愤怒的美食家
     TextKr: 분노의 미식가
     TextEn: The Raging Epicure
     TextTh: นักชิมแห่งความเกรี้ยวกราด
     TextTw: 憤怒的美食家
-  - GroupId: 1000206
-    FavorScheduleId: 100026
+    GroupId: 1000205
+    FavorScheduleId: 100025
     CharacterId: 10002
-    TextJp: 真の美食
+  - TextJp: 真の美食
     TextCn: 真正的美食
     TextKr: 진정한 미식
     TextEn: The True Epicure
     TextTh: นักชิมที่แท้จริง
     TextTw: 真正的美食
+    GroupId: 1000206
+    FavorScheduleId: 100026
+    CharacterId: 10002
 content:
-  - MessageGroupId: 100020010
+  - MessageKR: 미식에 대한 탐구는 오늘도 계속될 예정……이지만,
+    MessageJP: 美食の探究は今日も続く……予定だったのですが
+    MessageCN: 我今天本打算……进行对美食的探究
+    MessageEN: I was planning to continue my gastronomical quest, but...
+    MessageTH: "การค้นคว้าเกี่ยวกับการชิมอาหารยังคงดำ
+
+      เนินต่อไป แต่ว่า..."
+    MessageTW: 今天也會繼續美食的探索……本來是這麼計畫的
+    MessageGroupId: 100020010
     Id: 416
     CharacterId: 10002
     MessageCondition: FavorRankUp
@@ -50,15 +58,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 미식에 대한 탐구는 오늘도 계속될 예정……이지만,
-    MessageJP: 美食の探究は今日も続く……予定だったのですが
-    MessageCN: 我今天本打算……进行对美食的探究
-    MessageEN: I was planning to continue my gastronomical quest, but...
-    MessageTH: "การค้นคว้าเกี่ยวกับการชิมอาหารยังคงดำ
-
-      เนินต่อไป แต่ว่า..."
-    MessageTW: 今天也會繼續美食的探索……本來是這麼計畫的
-  - MessageGroupId: 100020020
+  - MessageKR: 벽에 부딪히고 말았습니다.
+    MessageJP: 壁にぶつかってしまいました
+    MessageCN: 但是，探究却碰壁了
+    MessageEN: I encountered a roadblock.
+    MessageTH: ฉันเจอปัญหาเข้าแล้วละค่ะ
+    MessageTW: 遇到了障礙
+    MessageGroupId: 100020020
     Id: 417
     CharacterId: 10002
     MessageCondition: None
@@ -70,13 +76,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 벽에 부딪히고 말았습니다.
-    MessageJP: 壁にぶつかってしまいました
-    MessageCN: 但是，探究却碰壁了
-    MessageEN: I encountered a roadblock.
-    MessageTH: ฉันเจอปัญหาเข้าแล้วละค่ะ
-    MessageTW: 遇到了障礙
-  - MessageGroupId: 100020020
+  - MessageKR: 이 난관을 어떻게 해결할지 고민이 필요하겠네요.
+    MessageJP: この難問をどう解決すれば良いのか……少し考える必要がありますわね
+    MessageCN: 要如何解决这个难题呢……我需要考虑一下
+    MessageEN: I need to think about how to overcome this.
+    MessageTH: "ต้องมาคิดกันแล้วละค่ะว่าจะผ่านอุปสรรค
+
+      นี้ไปยังไง"
+    MessageTW: 這個問題該怎麼解決……需要思考一下
+    MessageGroupId: 100020020
     Id: 418
     CharacterId: 10002
     MessageCondition: None
@@ -88,15 +96,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 난관을 어떻게 해결할지 고민이 필요하겠네요.
-    MessageJP: この難問をどう解決すれば良いのか……少し考える必要がありますわね
-    MessageCN: 要如何解决这个难题呢……我需要考虑一下
-    MessageEN: I need to think about how to overcome this.
-    MessageTH: "ต้องมาคิดกันแล้วละค่ะว่าจะผ่านอุปสรรค
+  - MessageKR: 어떤 난관인지는 모르겠지만…… 힘내!
+    MessageJP: どんな内容か分からないけど、頑張って！
+    MessageCN: 虽然不知道是什么内容，总之晴奈加油!
+    MessageEN: I don't know what kind of roadblock you mean, but I'm on your side!
+    MessageTH: "ครูไม่รู้ว่าอุปสรรคคืออะไร แต่ก็...
 
-      นี้ไปยังไง"
-    MessageTW: 這個問題該怎麼解決……需要思考一下
-  - MessageGroupId: 100020030
+      พยายามเข้านะ!"
+    MessageTW: 雖然不知道是什麼內容，加油！
+    MessageGroupId: 100020030
     Id: 419
     CharacterId: 10002
     MessageCondition: Answer
@@ -108,15 +116,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어떤 난관인지는 모르겠지만…… 힘내!
-    MessageJP: どんな内容か分からないけど、頑張って！
-    MessageCN: 虽然不知道是什么内容，总之晴奈加油!
-    MessageEN: I don't know what kind of roadblock you mean, but I'm on your side!
-    MessageTH: "ครูไม่รู้ว่าอุปสรรคคืออะไร แต่ก็...
-
-      พยายามเข้านะ!"
-    MessageTW: 雖然不知道是什麼內容，加油！
-  - MessageGroupId: 100020040
+  - MessageKR: 아아.
+    MessageJP: ああ、良いことを思いつきました
+    MessageCN: 啊，我想到了一个好主意
+    MessageEN: Oh.
+    MessageTH: อ้ออ
+    MessageTW: 啊啊，想到了一個好主意
+    MessageGroupId: 100020040
     Id: 420
     CharacterId: 10002
     MessageCondition: Feedback
@@ -128,13 +134,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아아.
-    MessageJP: ああ、良いことを思いつきました
-    MessageCN: 啊，我想到了一个好主意
-    MessageEN: Oh.
-    MessageTH: อ้ออ
-    MessageTW: 啊啊，想到了一個好主意
-  - MessageGroupId: 100020040
+  - MessageKR: 물론 선생님의 도움이 필요할 것 같네요.
+    MessageJP: 先生、少々お手伝いしていただけませんでしょうか？
+    MessageCN: 老师，能帮我个小忙吗？
+    MessageEN: I was just about to ask for help.
+    MessageTH: "แน่นอนว่าฉันต้องการความช่วยเหลือจาก
+
+      คุณครูด้วยค่ะ"
+    MessageTW: 老師，能稍微幫個忙嗎？
+    MessageGroupId: 100020040
     Id: 421
     CharacterId: 10002
     MessageCondition: Feedback
@@ -146,15 +154,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론 선생님의 도움이 필요할 것 같네요.
-    MessageJP: 先生、少々お手伝いしていただけませんでしょうか？
-    MessageCN: 老师，能帮我个小忙吗？
-    MessageEN: I was just about to ask for help.
-    MessageTH: "แน่นอนว่าฉันต้องการความช่วยเหลือจาก
-
-      คุณครูด้วยค่ะ"
-    MessageTW: 老師，能稍微幫個忙嗎？
-  - MessageGroupId: 100020050
+  - MessageKR: 후후후.
+    MessageJP: ゲヘナでお待ちしておりますね
+    MessageCN: 我会在格黑娜等您的
+    MessageEN: Heeheehee.
+    MessageTH: ฮุฮุฮุ
+    MessageTW: 我在格黑娜等著唷
+    MessageGroupId: 100020050
     Id: 422
     CharacterId: 10002
     MessageCondition: Feedback
@@ -166,13 +172,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후후.
-    MessageJP: ゲヘナでお待ちしておりますね
-    MessageCN: 我会在格黑娜等您的
-    MessageEN: Heeheehee.
-    MessageTH: ฮุฮุฮุ
-    MessageTW: 我在格黑娜等著唷
-  - MessageGroupId: 100020060
+  - MessageKR: 생각해보니 맛술로 끓여도 비슷하지 않았을까 하는 생각이 드네요.
+    MessageJP: よく考えてみたら、料理酒でも良かったかもしれませんわね
+    MessageCN: 仔细想想的话，也许用料理酒也不错呢
+    MessageEN:
+      Come to think of it, I was wondering if I could use cooking wine to
+      create a similar taste.
+    MessageTH: "มาคิดดูแล้ว ฉันว่าเอาไวน์มาต้มก็น่าจะ
+
+      ได้ผลที่คล้ายกันอยู่นะ"
+    MessageTW: 仔細想想，料理酒可能也不錯
+    MessageGroupId: 100020060
     Id: 423
     CharacterId: 10002
     MessageCondition: None
@@ -184,17 +194,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 생각해보니 맛술로 끓여도 비슷하지 않았을까 하는 생각이 드네요.
-    MessageJP: よく考えてみたら、料理酒でも良かったかもしれませんわね
-    MessageCN: 仔细想想的话，也许用料理酒也不错呢
-    MessageEN:
-      Come to think of it, I was wondering if I could use cooking wine to
-      create a similar taste.
-    MessageTH: "มาคิดดูแล้ว ฉันว่าเอาไวน์มาต้มก็น่าจะ
-
-      ได้ผลที่คล้ายกันอยู่นะ"
-    MessageTW: 仔細想想，料理酒可能也不錯
-  - MessageGroupId: 100020060
+  - MessageKR: 맛술과 포도주스. 참고해둬야겠습니다.
+    MessageJP: 料理酒とぶどうジュース、次はこれで試してみましょうか
+    MessageCN: 料理酒和葡萄汁，下次就试试看这个配方吧
+    MessageEN: Cooking wine and grape juice. I'll make a note of that.
+    MessageTH: ไวน์กับน้ำองุ่น.. ไว้ต้องลองทำดูแล้วค่ะ
+    MessageTW: 料理酒和葡萄汁，下次用這個試試吧？
+    MessageGroupId: 100020060
     Id: 424
     CharacterId: 10002
     MessageCondition: None
@@ -206,13 +212,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 맛술과 포도주스. 참고해둬야겠습니다.
-    MessageJP: 料理酒とぶどうジュース、次はこれで試してみましょうか
-    MessageCN: 料理酒和葡萄汁，下次就试试看这个配方吧
-    MessageEN: Cooking wine and grape juice. I'll make a note of that.
-    MessageTH: ไวน์กับน้ำองุ่น.. ไว้ต้องลองทำดูแล้วค่ะ
-    MessageTW: 料理酒和葡萄汁，下次用這個試試吧？
-  - MessageGroupId: 100020070
+  - MessageKR: 조심해서 연구해…….
+    MessageJP: 次は気を付けてね……
+    MessageCN: 下次要小心啊……
+    MessageEN: Just research carefully...
+    MessageTH: ต้มดีๆ ด้วยล่ะ...
+    MessageTW: 下次要小心點唷……
+    MessageGroupId: 100020070
     Id: 425
     CharacterId: 10002
     MessageCondition: Answer
@@ -224,13 +230,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 조심해서 연구해…….
-    MessageJP: 次は気を付けてね……
-    MessageCN: 下次要小心啊……
-    MessageEN: Just research carefully...
-    MessageTH: ต้มดีๆ ด้วยล่ะ...
-    MessageTW: 下次要小心點唷……
-  - MessageGroupId: 100020070
+  - MessageKR: 안전이 중요하니까 조심해…….
+    MessageJP: 安全第一でね……
+    MessageCN: 安全第一啊……
+    MessageEN: Make sure to take care of yourself too...
+    MessageTH: ความปลอดภัยต้องมาก่อนนะ ระวังด้วย
+    MessageTW: 安全第一唷……
+    MessageGroupId: 100020070
     Id: 426
     CharacterId: 10002
     MessageCondition: Answer
@@ -242,13 +248,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 안전이 중요하니까 조심해…….
-    MessageJP: 安全第一でね……
-    MessageCN: 安全第一啊……
-    MessageEN: Make sure to take care of yourself too...
-    MessageTH: ความปลอดภัยต้องมาก่อนนะ ระวังด้วย
-    MessageTW: 安全第一唷……
-  - MessageGroupId: 100020080
+  - MessageKR: 후후. 걱정해주시는 건가요?
+    MessageJP: ふふ、心配してくださるのですか？
+    MessageCN: 呵呵，老师是在担心我吗?
+    MessageEN: Heehee, are you worried about me?
+    MessageTH: ฮุฮุ เป็นห่วงเหรอคะ?
+    MessageTW: 呵呵，是在擔心我嗎？
+    MessageGroupId: 100020080
     Id: 427
     CharacterId: 10002
     MessageCondition: Feedback
@@ -260,13 +266,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후. 걱정해주시는 건가요?
-    MessageJP: ふふ、心配してくださるのですか？
-    MessageCN: 呵呵，老师是在担心我吗?
-    MessageEN: Heehee, are you worried about me?
-    MessageTH: ฮุฮุ เป็นห่วงเหรอคะ?
-    MessageTW: 呵呵，是在擔心我嗎？
-  - MessageGroupId: 100020080
+  - MessageKR: 기쁘네요.
+    MessageJP: 嬉しいですわね。ふふっ、ありがとうございます
+    MessageCN: 很高兴呢。呵呵，谢谢
+    MessageEN: That makes me happy.
+    MessageTH: ดีใจจัง
+    MessageTW: 真高興。呵呵，非常感謝
+    MessageGroupId: 100020080
     Id: 428
     CharacterId: 10002
     MessageCondition: Feedback
@@ -278,13 +284,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기쁘네요.
-    MessageJP: 嬉しいですわね。ふふっ、ありがとうございます
-    MessageCN: 很高兴呢。呵呵，谢谢
-    MessageEN: That makes me happy.
-    MessageTH: ดีใจจัง
-    MessageTW: 真高興。呵呵，非常感謝
-  - MessageGroupId: 100020090
+  - MessageKR: 생각해보면 말이죠.
+    MessageJP: 私、考えてみたのですが
+    MessageCN: 我想了想
+    MessageEN: If you really think about it,
+    MessageTH: ฉันมาลองคิดๆ ดูนะ
+    MessageTW: 我想了一下
+    MessageGroupId: 100020090
     Id: 429
     CharacterId: 10002
     MessageCondition: FavorRankUp
@@ -296,13 +302,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 생각해보면 말이죠.
-    MessageJP: 私、考えてみたのですが
-    MessageCN: 我想了想
-    MessageEN: If you really think about it,
-    MessageTH: ฉันมาลองคิดๆ ดูนะ
-    MessageTW: 我想了一下
-  - MessageGroupId: 100020100
+  - MessageKR: 다도라는 것은
+    MessageJP: 茶道
+    MessageCN: 茶道
+    MessageEN: "tea ceremonies teach "
+    MessageTH: "ธรรมเนียมการชงและดื่มชา "
+    MessageTW: 茶道
+    MessageGroupId: 100020100
     Id: 430
     CharacterId: 10002
     MessageCondition: None
@@ -314,13 +320,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다도라는 것은
-    MessageJP: 茶道
-    MessageCN: 茶道
-    MessageEN: "tea ceremonies teach "
-    MessageTH: "ธรรมเนียมการชงและดื่มชา "
-    MessageTW: 茶道
-  - MessageGroupId: 100020100
+  - MessageKR: 맛에 대한 궁극의 예절이 아닌가.
+    MessageJP: あれは食に対する振る舞いとして、究極の姿ではないかと
+    MessageCN: 我觉得茶道
+    MessageEN: the ultimate form of etiquette
+    MessageTH: "เป็นเรื่องยิ่งใหญ่ที่สุดของการทานอาหาร
+
+      เลยละค่ะ"
+    MessageTW: 作為進食的行為，難道不是終極的形式嗎
+    MessageGroupId: 100020100
     Id: 431
     CharacterId: 10002
     MessageCondition: None
@@ -332,15 +340,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 맛에 대한 궁극의 예절이 아닌가.
-    MessageJP: あれは食に対する振る舞いとして、究極の姿ではないかと
-    MessageCN: 我觉得茶道
-    MessageEN: the ultimate form of etiquette
-    MessageTH: "เป็นเรื่องยิ่งใหญ่ที่สุดของการทานอาหาร
-
-      เลยละค่ะ"
-    MessageTW: 作為進食的行為，難道不是終極的形式嗎
-  - MessageGroupId: 100020100
+  - MessageKR: 그런 생각이 들었습니다.
+    MessageJP: そう思いまして
+    MessageCN: 不就是对待食物的终极态度吗
+    MessageEN: while dealing in taste.
+    MessageTH: ฉันคิดแบบนั้นน่ะ
+    MessageTW: 我是這麼認為的
+    MessageGroupId: 100020100
     Id: 432
     CharacterId: 10002
     MessageCondition: None
@@ -352,13 +358,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그런 생각이 들었습니다.
-    MessageJP: そう思いまして
-    MessageCN: 不就是对待食物的终极态度吗
-    MessageEN: while dealing in taste.
-    MessageTH: ฉันคิดแบบนั้นน่ะ
-    MessageTW: 我是這麼認為的
-  - MessageGroupId: 100020110
+  - MessageKR: 응? 다도?
+    MessageJP: 茶道？
+    MessageCN: 茶道？
+    MessageEN: Huh? Tea ceremonies?
+    MessageTH: หืม? การชงชาเหรอ?
+    MessageTW: 茶道？
+    MessageGroupId: 100020110
     Id: 433
     CharacterId: 10002
     MessageCondition: Answer
@@ -370,13 +376,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응? 다도?
-    MessageJP: 茶道？
-    MessageCN: 茶道？
-    MessageEN: Huh? Tea ceremonies?
-    MessageTH: หืม? การชงชาเหรอ?
-    MessageTW: 茶道？
-  - MessageGroupId: 100020110
+  - MessageKR: 어려운 영역이네.
+    MessageJP: 難しい世界だね
+    MessageCN: 听上去是个困难的领域呢
+    MessageEN: That's a difficult subject.
+    MessageTH: เรื่องนี้ครูไม่ถนัดแฮะ
+    MessageTW: 很困難的世界呢
+    MessageGroupId: 100020110
     Id: 434
     CharacterId: 10002
     MessageCondition: Answer
@@ -388,13 +394,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어려운 영역이네.
-    MessageJP: 難しい世界だね
-    MessageCN: 听上去是个困难的领域呢
-    MessageEN: That's a difficult subject.
-    MessageTH: เรื่องนี้ครูไม่ถนัดแฮะ
-    MessageTW: 很困難的世界呢
-  - MessageGroupId: 100020120
+  - MessageKR: 후후후.
+    MessageJP: ふふふ
+    MessageCN: 呵呵呵
+    MessageEN: Heeheehee.
+    MessageTH: ฮุฮุฮุ
+    MessageTW: 呵呵呵
+    MessageGroupId: 100020120
     Id: 435
     CharacterId: 10002
     MessageCondition: Feedback
@@ -406,13 +412,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후후.
-    MessageJP: ふふふ
-    MessageCN: 呵呵呵
-    MessageEN: Heeheehee.
-    MessageTH: ฮุฮุฮุ
-    MessageTW: 呵呵呵
-  - MessageGroupId: 100020120
+  - MessageKR: 그래서, 다시 탐구의 시간입니다.
+    MessageJP: 難しい世界ですので、私もまだまだ探求途中の身です
+    MessageCN: 正是因为茶道是个困难的领域，我也仅仅是在探索的过程中
+    MessageEN: So, time to go exploring again.
+    MessageTH: เอาล่ะ ถึงเวลาออกค้นคว้า
+    MessageTW: 因為是很困難的世界，所以我也還在探索中
+    MessageGroupId: 100020120
     Id: 436
     CharacterId: 10002
     MessageCondition: Feedback
@@ -424,13 +430,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서, 다시 탐구의 시간입니다.
-    MessageJP: 難しい世界ですので、私もまだまだ探求途中の身です
-    MessageCN: 正是因为茶道是个困难的领域，我也仅仅是在探索的过程中
-    MessageEN: So, time to go exploring again.
-    MessageTH: เอาล่ะ ถึงเวลาออกค้นคว้า
-    MessageTW: 因為是很困難的世界，所以我也還在探索中
-  - MessageGroupId: 100020130
+  - MessageKR: 장소는 준비해두었으니,
+    MessageJP: そこで、場所をセッティングしましたので
+    MessageCN: 于是，我定好了一个地方
+    MessageEN: "I've got a place ready, "
+    MessageTH: "ส่วนสถานที่ก็กำหนดเอาไว้แล้ว "
+    MessageTW: 於是，我安排了一個場所
+    MessageGroupId: 100020130
     Id: 437
     CharacterId: 10002
     MessageCondition: Feedback
@@ -442,13 +448,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 장소는 준비해두었으니,
-    MessageJP: そこで、場所をセッティングしましたので
-    MessageCN: 于是，我定好了一个地方
-    MessageEN: "I've got a place ready, "
-    MessageTH: "ส่วนสถานที่ก็กำหนดเอาไว้แล้ว "
-    MessageTW: 於是，我安排了一個場所
-  - MessageGroupId: 100020130
+  - MessageKR: 저와 함께 미식에 대한 탐구를 시작해보시죠.
+    MessageJP: 一緒に、究極の味を求めてみませんか？
+    MessageCN: 老师要来和我一起，探求极致的美味吗？
+    MessageEN: so please join me in my gastronomical quest.
+    MessageTH: ไปค้นคว้าการชิมอาหารกับฉันนะคะ
+    MessageTW: 一起追求終極的味道吧？
+    MessageGroupId: 100020130
     Id: 438
     CharacterId: 10002
     MessageCondition: Feedback
@@ -460,13 +466,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저와 함께 미식에 대한 탐구를 시작해보시죠.
-    MessageJP: 一緒に、究極の味を求めてみませんか？
-    MessageCN: 老师要来和我一起，探求极致的美味吗？
-    MessageEN: so please join me in my gastronomical quest.
-    MessageTH: ไปค้นคว้าการชิมอาหารกับฉันนะคะ
-    MessageTW: 一起追求終極的味道吧？
-  - MessageGroupId: 100020140
+  - MessageKR: 알았어. 조금 이따 봐.
+    MessageJP: それは楽しみ
+    MessageCN: 我很期待
+    MessageEN: Okay. I'll see you later.
+    MessageTH: ได้เลย แล้วเดี๋ยวเจอกัน
+    MessageTW: 好像很有趣
+    MessageGroupId: 100020140
     Id: 439
     CharacterId: 10002
     MessageCondition: Answer
@@ -478,13 +484,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알았어. 조금 이따 봐.
-    MessageJP: それは楽しみ
-    MessageCN: 我很期待
-    MessageEN: Okay. I'll see you later.
-    MessageTH: ได้เลย แล้วเดี๋ยวเจอกัน
-    MessageTW: 好像很有趣
-  - MessageGroupId: 100020140
+  - MessageKR: 다도라……. 어렵겠는걸.
+    MessageJP: 茶道……難しそうだね
+    MessageCN: 茶道……挺难的样子呢
+    MessageEN: A tea ceremony... That'll be difficult.
+    MessageTH: การชงชาเหรอ... ต้องยากแน่ๆ เลย
+    MessageTW: 茶道……好像很難呢
+    MessageGroupId: 100020140
     Id: 440
     CharacterId: 10002
     MessageCondition: Answer
@@ -496,13 +502,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다도라……. 어렵겠는걸.
-    MessageJP: 茶道……難しそうだね
-    MessageCN: 茶道……挺难的样子呢
-    MessageEN: A tea ceremony... That'll be difficult.
-    MessageTH: การชงชาเหรอ... ต้องยากแน่ๆ เลย
-    MessageTW: 茶道……好像很難呢
-  - MessageGroupId: 100020150
+  - MessageKR: 그럼. 기다리고 있겠습니다.
+    MessageJP: ふふ、お待ちしておりますね
+    MessageCN: 呵呵，那我就恭候老师的到来啦
+    MessageEN: I'll be waiting for you, then.
+    MessageTH: แล้วฉันจะรอนะคะ
+    MessageTW: 呵呵，我等著唷
+    MessageGroupId: 100020150
     Id: 441
     CharacterId: 10002
     MessageCondition: Feedback
@@ -514,13 +520,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼. 기다리고 있겠습니다.
-    MessageJP: ふふ、お待ちしておりますね
-    MessageCN: 呵呵，那我就恭候老师的到来啦
-    MessageEN: I'll be waiting for you, then.
-    MessageTH: แล้วฉันจะรอนะคะ
-    MessageTW: 呵呵，我等著唷
-  - MessageGroupId: 100020160
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師
+    MessageGroupId: 100020160
     Id: 442
     CharacterId: 10002
     MessageCondition: None
@@ -532,13 +538,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님.
-    MessageJP: 先生
-    MessageCN: 老师
-    MessageEN: Sensei.
-    MessageTH: คุณครู
-    MessageTW: 老師
-  - MessageGroupId: 100020160
+  - MessageKR: 어떻게 된 일인지……
+    MessageJP: どうしてでしょう……
+    MessageCN: 究竟为什么呢……
+    MessageEN: I don't know what happened, but...
+    MessageTH: นี่มันอะไรกันน่ะ...
+    MessageTW: 怎麼會這樣……
+    MessageGroupId: 100020160
     Id: 443
     CharacterId: 10002
     MessageCondition: None
@@ -550,13 +556,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어떻게 된 일인지……
-    MessageJP: どうしてでしょう……
-    MessageCN: 究竟为什么呢……
-    MessageEN: I don't know what happened, but...
-    MessageTH: นี่มันอะไรกันน่ะ...
-    MessageTW: 怎麼會這樣……
-  - MessageGroupId: 100020170
+  - MessageKR: 방에서 똑같은 재료로 다시 먹었을 때는
+    MessageJP: 先ほど、もう一度食べたくて作ってみたのですが、
+    MessageCN: 刚才，我还想再尝一次拉面的美味，就重新泡了一杯
+    MessageEN: "when I ate it again in my room, it wasn't as good as before "
+    MessageTH: "ฉันลองชิมชาที่ใช้วัตถุดิบเดิมดูอีกครั้ง "
+    MessageTW: 剛才因為想再吃一次，所以試著做做看
+    MessageGroupId: 100020170
     Id: 444
     CharacterId: 10002
     MessageCondition: None
@@ -568,13 +574,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 방에서 똑같은 재료로 다시 먹었을 때는
-    MessageJP: 先ほど、もう一度食べたくて作ってみたのですが、
-    MessageCN: 刚才，我还想再尝一次拉面的美味，就重新泡了一杯
-    MessageEN: "when I ate it again in my room, it wasn't as good as before "
-    MessageTH: "ฉันลองชิมชาที่ใช้วัตถุดิบเดิมดูอีกครั้ง "
-    MessageTW: 剛才因為想再吃一次，所以試著做做看
-  - MessageGroupId: 100020170
+  - MessageKR: 아까만큼 맛있지 않았습니다.
+    MessageJP: あまり美味しくありませんでした
+    MessageCN: 但是味道实在是不怎么样
+    MessageEN: even though the ingredients were all the same.
+    MessageTH: แต่มันไม่ได้อร่อยเหมือนที่เคยกิน
+    MessageTW: 但不怎麼好吃
+    MessageGroupId: 100020170
     Id: 445
     CharacterId: 10002
     MessageCondition: None
@@ -586,13 +592,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아까만큼 맛있지 않았습니다.
-    MessageJP: あまり美味しくありませんでした
-    MessageCN: 但是味道实在是不怎么样
-    MessageEN: even though the ingredients were all the same.
-    MessageTH: แต่มันไม่ได้อร่อยเหมือนที่เคยกิน
-    MessageTW: 但不怎麼好吃
-  - MessageGroupId: 100020170
+  - MessageKR: 이건 대체 왜 그런 걸까요…….
+    MessageJP: 同じ材料で作ったのですが、なぜ……？
+    MessageCN: 明明是用同样的材料制作的，究竟为什么呢……
+    MessageEN: Why do you think that is?
+    MessageTH: ทำไมเป็นอย่างนี้ล่ะคะ?
+    MessageTW: 是用相同的材料做的，為何……？
+    MessageGroupId: 100020170
     Id: 446
     CharacterId: 10002
     MessageCondition: None
@@ -604,13 +610,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이건 대체 왜 그런 걸까요…….
-    MessageJP: 同じ材料で作ったのですが、なぜ……？
-    MessageCN: 明明是用同样的材料制作的，究竟为什么呢……
-    MessageEN: Why do you think that is?
-    MessageTH: ทำไมเป็นอย่างนี้ล่ะคะ?
-    MessageTW: 是用相同的材料做的，為何……？
-  - MessageGroupId: 100020180
+  - MessageKR: 장소가 달라져서……?
+    MessageJP: 場所が変わったからかな？
+    MessageCN: 因为场所变了吧？
+    MessageEN: Because the location was different?
+    MessageTH: เพราะสถานที่เปลี่ยนไปเหรอ...?
+    MessageTW: 是因為場所變了嗎？
+    MessageGroupId: 100020180
     Id: 447
     CharacterId: 10002
     MessageCondition: Answer
@@ -622,13 +628,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 장소가 달라져서……?
-    MessageJP: 場所が変わったからかな？
-    MessageCN: 因为场所变了吧？
-    MessageEN: Because the location was different?
-    MessageTH: เพราะสถานที่เปลี่ยนไปเหรอ...?
-    MessageTW: 是因為場所變了嗎？
-  - MessageGroupId: 100020190
+  - MessageKR: 아뇨……. 제 방은 그 다실만큼 넓고 쾌적한데…….
+    MessageJP: 私のお部屋、茶室と同じくらい広くて快適なのですけれど……
+    MessageCN: 我的房间，明明和茶室的环境一样宽敞舒适……
+    MessageEN: No... My room is just as nice and big as the teahouse.
+    MessageTH: "ไม่น่าใช่นะคะ... เพราะห้องนี้ทั้งกว้าง
+
+      และโล่งสบายเหมือนร้านน้ำชา"
+    MessageTW: 我的房間和茶室一樣，寬敞又舒適……
+    MessageGroupId: 100020190
     Id: 448
     CharacterId: 10002
     MessageCondition: Feedback
@@ -640,15 +648,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아뇨……. 제 방은 그 다실만큼 넓고 쾌적한데…….
-    MessageJP: 私のお部屋、茶室と同じくらい広くて快適なのですけれど……
-    MessageCN: 我的房间，明明和茶室的环境一样宽敞舒适……
-    MessageEN: No... My room is just as nice and big as the teahouse.
-    MessageTH: "ไม่น่าใช่นะคะ... เพราะห้องนี้ทั้งกว้าง
-
-      และโล่งสบายเหมือนร้านน้ำชา"
-    MessageTW: 我的房間和茶室一樣，寬敞又舒適……
-  - MessageGroupId: 100020190
+  - MessageKR: 원인이 무엇일까요…….
+    MessageJP: 原因、何なのでしょう……
+    MessageCN: 原因，究竟是什么呢……
+    MessageEN: What could be the cause, then?
+    MessageTH: สาเหตุคืออะไรกันนะ...
+    MessageTW: 原因是什麼呢……
+    MessageGroupId: 100020190
     Id: 449
     CharacterId: 10002
     MessageCondition: Feedback
@@ -660,13 +666,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 원인이 무엇일까요…….
-    MessageJP: 原因、何なのでしょう……
-    MessageCN: 原因，究竟是什么呢……
-    MessageEN: What could be the cause, then?
-    MessageTH: สาเหตุคืออะไรกันนะ...
-    MessageTW: 原因是什麼呢……
-  - MessageGroupId: 100020190
+  - MessageKR: 재료와 온도, 드립 방식 등, 모든 게 똑같은데 말이죠.
+    MessageJP: 材料も、温度も、作り方も、全部同じはずなのですが……
+    MessageCN: 材料，温度，方法，明明是完全一样的……
+    MessageEN: The ingredients, temperature, and drip method were all the same.
+    MessageTH: "ทั้งวัตถุดิบและอุณหภูมิ แถมวิธีชงก็
+
+      เหมือนกันนี่นา.."
+    MessageTW: 材料也好，溫度也好，作法也罷，應該都是一樣的呀……
+    MessageGroupId: 100020190
     Id: 450
     CharacterId: 10002
     MessageCondition: Feedback
@@ -678,15 +686,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 재료와 온도, 드립 방식 등, 모든 게 똑같은데 말이죠.
-    MessageJP: 材料も、温度も、作り方も、全部同じはずなのですが……
-    MessageCN: 材料，温度，方法，明明是完全一样的……
-    MessageEN: The ingredients, temperature, and drip method were all the same.
-    MessageTH: "ทั้งวัตถุดิบและอุณหภูมิ แถมวิธีชงก็
-
-      เหมือนกันนี่นา.."
-    MessageTW: 材料也好，溫度也好，作法也罷，應該都是一樣的呀……
-  - MessageGroupId: 100020200
+  - MessageKR: 음…….
+    MessageJP: うーん、何か、あの時と違うこと……
+    MessageCN: 嗯……有什么东西，和那个时候不一样……
+    MessageEN: Hmm...
+    MessageTH: อืมม
+    MessageTW: 唔嗯，是什麼和當時不一樣……
+    MessageGroupId: 100020200
     Id: 451
     CharacterId: 10002
     MessageCondition: Feedback
@@ -698,13 +704,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…….
-    MessageJP: うーん、何か、あの時と違うこと……
-    MessageCN: 嗯……有什么东西，和那个时候不一样……
-    MessageEN: Hmm...
-    MessageTH: อืมม
-    MessageTW: 唔嗯，是什麼和當時不一樣……
-  - MessageGroupId: 100020200
+  - MessageKR: 고민해봐야겠습니다.
+    MessageJP: ちょっと考えてみますね、もしお気づきになりましたら教えてくださいませ
+    MessageCN: 我仔细考虑一下吧，如果老师注意到了什么的话请告诉我
+    MessageEN: I'll give this further thought.
+    MessageTH: ต้องลองเอาไปคิดดูแล้วละค่ะ
+    MessageTW: 讓我想一下，如果有發現什麼，請告訴我
+    MessageGroupId: 100020200
     Id: 452
     CharacterId: 10002
     MessageCondition: Feedback
@@ -716,13 +722,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 고민해봐야겠습니다.
-    MessageJP: ちょっと考えてみますね、もしお気づきになりましたら教えてくださいませ
-    MessageCN: 我仔细考虑一下吧，如果老师注意到了什么的话请告诉我
-    MessageEN: I'll give this further thought.
-    MessageTH: ต้องลองเอาไปคิดดูแล้วละค่ะ
-    MessageTW: 讓我想一下，如果有發現什麼，請告訴我
-  - MessageGroupId: 100020210
+  - MessageKR: 이번엔 몇 달 동안 벼르던 최고급 레스토랑에 갈 예정입니다.
+    MessageJP: 今日はここ数か月狙っていた、最高級のレストランに行く予定なのです
+    MessageCN: 今天我打算去那个已经看了好几个月的最高级餐厅
+    MessageEN:
+      This time, I'm gonna finally hit that fancy restaurant I've been eyeing
+      for months.
+    MessageTH: "ครั้งนี้ฉันจะไปร้านอาหารหรูที่ตั้งใจว่าจะ
+
+      ไปมาหลายวันแล้ว"
+    MessageTW: 今天打算去這幾個月一直關注的頂級餐廳
+    MessageGroupId: 100020210
     Id: 453
     CharacterId: 10002
     MessageCondition: FavorRankUp
@@ -734,29 +744,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번엔 몇 달 동안 벼르던 최고급 레스토랑에 갈 예정입니다.
-    MessageJP: 今日はここ数か月狙っていた、最高級のレストランに行く予定なのです
-    MessageCN: 今天我打算去那个已经看了好几个月的最高级餐厅
-    MessageEN:
-      This time, I'm gonna finally hit that fancy restaurant I've been eyeing
-      for months.
-    MessageTH: "ครั้งนี้ฉันจะไปร้านอาหารหรูที่ตั้งใจว่าจะ
-
-      ไปมาหลายวันแล้ว"
-    MessageTW: 今天打算去這幾個月一直關注的頂級餐廳
-  - MessageGroupId: 100020220
-    Id: 454
-    CharacterId: 10002
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100020230
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 비록 혼자가는 것이지만, 음식을 비평할 때는 혼자일 때가 나을 때도 있는 법이죠.
+  - MessageKR: 비록 혼자가는 것이지만, 음식을 비평할 때는 혼자일 때가 나을 때도 있는 법이죠.
     MessageJP: 今回は一人で行こうかと。料理の評価においてはその方が良い時もあるので
     MessageCN: 这次我想一个人去。因为在评价食物的时候，有时一个人反而更好
     MessageEN:
@@ -768,7 +756,25 @@ content:
 
       กว่านะคะ"
     MessageTW: 這次我想一個人去。有時要這麼做才比較好評價食物
-  - MessageGroupId: 100020230
+    MessageGroupId: 100020220
+    Id: 454
+    CharacterId: 10002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100020230
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 어라? 혼자 가는 거야?
+    MessageJP: そうなんだ、行ってらっしゃい
+    MessageCN: 这样啊，一路顺风
+    MessageEN: Huh? You're going by yourself?
+    MessageTH: ว่าไงนะ? จะไปคนเดียวเหรอ?
+    MessageTW: 這樣啊，路上小心
+    MessageGroupId: 100020230
     Id: 455
     CharacterId: 10002
     MessageCondition: Answer
@@ -780,13 +786,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어라? 혼자 가는 거야?
-    MessageJP: そうなんだ、行ってらっしゃい
-    MessageCN: 这样啊，一路顺风
-    MessageEN: Huh? You're going by yourself?
-    MessageTH: ว่าไงนะ? จะไปคนเดียวเหรอ?
-    MessageTW: 這樣啊，路上小心
-  - MessageGroupId: 100020230
+  - MessageKR: 혼자 레스토랑을…… 난이도가 높네.
+    MessageJP: 一人で最高級レストラン……すごいな……
+    MessageCN: 一个人去吃最高级餐厅……真厉害啊……
+    MessageEN: Going to a restaurant alone... You're really upping the ante.
+    MessageTH: ไปร้านอาหารคนเดียว... นี่มันสกิลคนโสด
+    MessageTW: 一個人去頂級餐廳……真厲害……
+    MessageGroupId: 100020230
     Id: 456
     CharacterId: 10002
     MessageCondition: Answer
@@ -798,13 +804,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 혼자 레스토랑을…… 난이도가 높네.
-    MessageJP: 一人で最高級レストラン……すごいな……
-    MessageCN: 一个人去吃最高级餐厅……真厉害啊……
-    MessageEN: Going to a restaurant alone... You're really upping the ante.
-    MessageTH: ไปร้านอาหารคนเดียว... นี่มันสกิลคนโสด
-    MessageTW: 一個人去頂級餐廳……真厲害……
-  - MessageGroupId: 100020240
+  - MessageKR: 후후후. 다녀와서 보고드리겠습니다.
+    MessageJP: ふふふ、戻ったら感想をお伝えいたしますね
+    MessageCN: 呵呵呵，等我回来的时候会告诉您感想的
+    MessageEN: Heehee. I'll tell you how it went when I get back.
+    MessageTH: ฮุฮุฮุ เสร็จแล้วจะกลับมารายงานนะคะ
+    MessageTW: 呵呵呵，我回來後會告訴你感想
+    MessageGroupId: 100020240
     Id: 457
     CharacterId: 10002
     MessageCondition: Feedback
@@ -816,13 +822,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후후. 다녀와서 보고드리겠습니다.
-    MessageJP: ふふふ、戻ったら感想をお伝えいたしますね
-    MessageCN: 呵呵呵，等我回来的时候会告诉您感想的
-    MessageEN: Heehee. I'll tell you how it went when I get back.
-    MessageTH: ฮุฮุฮุ เสร็จแล้วจะกลับมารายงานนะคะ
-    MessageTW: 呵呵呵，我回來後會告訴你感想
-  - MessageGroupId: 100020250
+  - MessageKR: 한동안 개인 미식 활동을 쉬고 있어요.
+    MessageJP: 突然なのですが、個人としての美食活動はしばらくお休みしようかと
+    MessageCN: 虽然比较唐突，但我决定暂时停止我个人的美食活动
+    MessageEN: I'm taking a break from my personal gastronomic journey for a while.
+    MessageTH: "ช่วงนี้ฉันหยุดพักการชิมอาการคนเดียว
+
+      อยู่น่ะ"
+    MessageTW: 雖然有點突然，但我想暫停個人美食活動一陣子
+    MessageGroupId: 100020250
     Id: 458
     CharacterId: 10002
     MessageCondition: FavorRankUp
@@ -834,15 +842,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 한동안 개인 미식 활동을 쉬고 있어요.
-    MessageJP: 突然なのですが、個人としての美食活動はしばらくお休みしようかと
-    MessageCN: 虽然比较唐突，但我决定暂时停止我个人的美食活动
-    MessageEN: I'm taking a break from my personal gastronomic journey for a while.
-    MessageTH: "ช่วงนี้ฉันหยุดพักการชิมอาการคนเดียว
-
-      อยู่น่ะ"
-    MessageTW: 雖然有點突然，但我想暫停個人美食活動一陣子
-  - MessageGroupId: 100020260
+  - MessageKR: 여러 가지 느낀 바가 많아서…….
+    MessageJP: 色々と、考えることがありまして……
+    MessageCN: 出于，各种考虑……
+    MessageEN: I've been having a lot of mixed feelings...
+    MessageTH: เพราะรู้สึกอะไรได้หลายอย่างเลย...
+    MessageTW: 有很多事需要想想……
+    MessageGroupId: 100020260
     Id: 459
     CharacterId: 10002
     MessageCondition: None
@@ -854,13 +860,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여러 가지 느낀 바가 많아서…….
-    MessageJP: 色々と、考えることがありまして……
-    MessageCN: 出于，各种考虑……
-    MessageEN: I've been having a lot of mixed feelings...
-    MessageTH: เพราะรู้สึกอะไรได้หลายอย่างเลย...
-    MessageTW: 有很多事需要想想……
-  - MessageGroupId: 100020270
+  - MessageKR: 기운 내. 하루나.
+    MessageJP: 大丈夫？元気出してね
+    MessageCN: 还好吗？晴奈振作起来啊
+    MessageEN: Cheer up, Haruna.
+    MessageTH: ครูเป็นกำลังใจให้นะฮารุนะ
+    MessageTW: 沒事吧？打起精神來
+    MessageGroupId: 100020270
     Id: 460
     CharacterId: 10002
     MessageCondition: Answer
@@ -872,13 +878,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기운 내. 하루나.
-    MessageJP: 大丈夫？元気出してね
-    MessageCN: 还好吗？晴奈振作起来啊
-    MessageEN: Cheer up, Haruna.
-    MessageTH: ครูเป็นกำลังใจให้นะฮารุนะ
-    MessageTW: 沒事吧？打起精神來
-  - MessageGroupId: 100020270
+  - MessageKR: 내가 도와줄 게 없을까?
+    MessageJP: 私に何か手伝えることある？
+    MessageCN: 有什么我可以帮忙的吗？
+    MessageEN: Is there anything I can do to help?
+    MessageTH: ให้ครูช่วยอะไรไหม?
+    MessageTW: 有什麼我可以幫忙的嗎？
+    MessageGroupId: 100020270
     Id: 461
     CharacterId: 10002
     MessageCondition: Answer
@@ -890,13 +896,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 도와줄 게 없을까?
-    MessageJP: 私に何か手伝えることある？
-    MessageCN: 有什么我可以帮忙的吗？
-    MessageEN: Is there anything I can do to help?
-    MessageTH: ให้ครูช่วยอะไรไหม?
-    MessageTW: 有什麼我可以幫忙的嗎？
-  - MessageGroupId: 100020280
+  - MessageKR: 후후후.
+    MessageJP: ふふふっ
+    MessageCN: 呵呵呵
+    MessageEN: Heeheehee.
+    MessageTH: ฮุฮุฮุ
+    MessageTW: 呵呵呵
+    MessageGroupId: 100020280
     Id: 462
     CharacterId: 10002
     MessageCondition: Feedback
@@ -908,13 +914,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후후.
-    MessageJP: ふふふっ
-    MessageCN: 呵呵呵
-    MessageEN: Heeheehee.
-    MessageTH: ฮุฮุฮุ
-    MessageTW: 呵呵呵
-  - MessageGroupId: 100020280
+  - MessageKR: 다정하기도 하셔라.
+    MessageJP: 先生は優しいですわね
+    MessageCN: 老师真是温柔呢
+    MessageEN: You're so sweet.
+    MessageTH: คุณครูเนี่ยอ่อนโยนจังเลย
+    MessageTW: 老師真溫柔啊
+    MessageGroupId: 100020280
     Id: 463
     CharacterId: 10002
     MessageCondition: Feedback
@@ -926,13 +932,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다정하기도 하셔라.
-    MessageJP: 先生は優しいですわね
-    MessageCN: 老师真是温柔呢
-    MessageEN: You're so sweet.
-    MessageTH: คุณครูเนี่ยอ่อนโยนจังเลย
-    MessageTW: 老師真溫柔啊
-  - MessageGroupId: 100020290
+  - MessageKR: 그 말씀으로도 충분히 위로가 되었어요.
+    MessageJP: そのお言葉だけでも、十分元気を頂きました
+    MessageCN: 光是看到您这句话，我就已经很有精神了
+    MessageEN: Your kindness is enough to heal me.
+    MessageTH: แค่คำพูดก็ช่วยปลอบฉันได้แล้วละค่ะ
+    MessageTW: 光是這句話就足以讓我打起精神了
+    MessageGroupId: 100020290
     Id: 464
     CharacterId: 10002
     MessageCondition: Feedback
@@ -944,13 +950,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 말씀으로도 충분히 위로가 되었어요.
-    MessageJP: そのお言葉だけでも、十分元気を頂きました
-    MessageCN: 光是看到您这句话，我就已经很有精神了
-    MessageEN: Your kindness is enough to heal me.
-    MessageTH: แค่คำพูดก็ช่วยปลอบฉันได้แล้วละค่ะ
-    MessageTW: 光是這句話就足以讓我打起精神了
-  - MessageGroupId: 100020290
+  - MessageKR: 고마워요.
+    MessageJP: ありがとうございます
+    MessageCN: 谢谢老师
+    MessageEN: Thank you.
+    MessageTH: ขอบคุณนะคะ
+    MessageTW: 非常感謝
+    MessageGroupId: 100020290
     Id: 465
     CharacterId: 10002
     MessageCondition: Feedback
@@ -962,13 +968,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 고마워요.
-    MessageJP: ありがとうございます
-    MessageCN: 谢谢老师
-    MessageEN: Thank you.
-    MessageTH: ขอบคุณนะคะ
-    MessageTW: 非常感謝
-  - MessageGroupId: 100020300
+  - MessageKR: 함께 먹은 붕어빵은 근래 먹은 것 중에 최고의 미식이었습니다.
+    MessageJP: 今日のたい焼きは間違いなく、最近食した物の中で最も美味しいものでした
+    MessageCN: 今天的鲷鱼烧绝对是我最近吃过的东西中最美味的
+    MessageEN: The taiyaki we ate together was the best food I've had lately.
+    MessageTH: "ขนมไทยากิที่เรากินด้วยกันเป็นของที่
+
+      อร่อยที่สุดที่เคยกินมาเลยค่ะ"
+    MessageTW: 今天的鯛魚燒毫無疑問是近期吃過的食物裡最好吃的
+    MessageGroupId: 100020300
     Id: 466
     CharacterId: 10002
     MessageCondition: None
@@ -980,15 +988,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 함께 먹은 붕어빵은 근래 먹은 것 중에 최고의 미식이었습니다.
-    MessageJP: 今日のたい焼きは間違いなく、最近食した物の中で最も美味しいものでした
-    MessageCN: 今天的鲷鱼烧绝对是我最近吃过的东西中最美味的
-    MessageEN: The taiyaki we ate together was the best food I've had lately.
-    MessageTH: "ขนมไทยากิที่เรากินด้วยกันเป็นของที่
-
-      อร่อยที่สุดที่เคยกินมาเลยค่ะ"
-    MessageTW: 今天的鯛魚燒毫無疑問是近期吃過的食物裡最好吃的
-  - MessageGroupId: 100020300
+  - MessageKR: 이유가 무엇이었을까요?
+    MessageJP: ……その理由、先生はお分かりになりますか？
+    MessageCN: ……个中缘由，老师知道吗？
+    MessageEN: Why do you think that was?
+    MessageTH: สาเหตุคืออะไรกันนะ?
+    MessageTW: ……理由的話，老師知道嗎？
+    MessageGroupId: 100020300
     Id: 467
     CharacterId: 10002
     MessageCondition: None
@@ -1000,13 +1006,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이유가 무엇이었을까요?
-    MessageJP: ……その理由、先生はお分かりになりますか？
-    MessageCN: ……个中缘由，老师知道吗？
-    MessageEN: Why do you think that was?
-    MessageTH: สาเหตุคืออะไรกันนะ?
-    MessageTW: ……理由的話，老師知道嗎？
-  - MessageGroupId: 100020310
+  - MessageKR: 음. 글쎄……. 평범한 붕어빵이었는데.
+    MessageJP: そうなの？うーん……普通のたい焼きだった気が……
+    MessageCN: 这样吗？嗯……但我感觉就是很普通的鲷鱼烧……
+    MessageEN: Hmm, I don't know. It was just normal taiyaki.
+    MessageTH: อืมม ไม่รู้สิ... มันก็ขนมไทยากิทั่วไปนี่
+    MessageTW: 是嗎？唔嗯……感覺只是普通的鯛魚燒……
+    MessageGroupId: 100020310
     Id: 468
     CharacterId: 10002
     MessageCondition: Answer
@@ -1018,13 +1024,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음. 글쎄……. 평범한 붕어빵이었는데.
-    MessageJP: そうなの？うーん……普通のたい焼きだった気が……
-    MessageCN: 这样吗？嗯……但我感觉就是很普通的鲷鱼烧……
-    MessageEN: Hmm, I don't know. It was just normal taiyaki.
-    MessageTH: อืมม ไม่รู้สิ... มันก็ขนมไทยากิทั่วไปนี่
-    MessageTW: 是嗎？唔嗯……感覺只是普通的鯛魚燒……
-  - MessageGroupId: 100020310
+  - MessageKR: 잘 모르겠는걸…….
+    MessageJP: ちょっと私には分からなかったかも……
+    MessageCN: 我好像不是很明白……
+    MessageEN: I got nothing...
+    MessageTH: เพราะอะไรเหรอ.. ไม่รู้เลย
+    MessageTW: 我可能不大明白……
+    MessageGroupId: 100020310
     Id: 469
     CharacterId: 10002
     MessageCondition: Answer
@@ -1036,13 +1042,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 잘 모르겠는걸…….
-    MessageJP: ちょっと私には分からなかったかも……
-    MessageCN: 我好像不是很明白……
-    MessageEN: I got nothing...
-    MessageTH: เพราะอะไรเหรอ.. ไม่รู้เลย
-    MessageTW: 我可能不大明白……
-  - MessageGroupId: 100020320
+  - MessageKR: 후후.
+    MessageJP: ふふっ
+    MessageCN: 呵呵
+    MessageEN: Heehee.
+    MessageTH: ฮุฮุ
+    MessageTW: 呵呵
+    MessageGroupId: 100020320
     Id: 470
     CharacterId: 10002
     MessageCondition: Feedback
@@ -1054,13 +1060,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후.
-    MessageJP: ふふっ
-    MessageCN: 呵呵
-    MessageEN: Heehee.
-    MessageTH: ฮุฮุ
-    MessageTW: 呵呵
-  - MessageGroupId: 100020320
+  - MessageKR: 저는 조금 알 것 같아요.
+    MessageJP: そうでしょうね。それでこそ先生ですわ
+    MessageCN: 大概吧。这才是老师呢
+    MessageEN: I think I know why.
+    MessageTH: ฉันว่าฉันพอจะรู้ค่ะ
+    MessageTW: 是吧。這才是老師啊
+    MessageGroupId: 100020320
     Id: 471
     CharacterId: 10002
     MessageCondition: Feedback
@@ -1072,13 +1078,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저는 조금 알 것 같아요.
-    MessageJP: そうでしょうね。それでこそ先生ですわ
-    MessageCN: 大概吧。这才是老师呢
-    MessageEN: I think I know why.
-    MessageTH: ฉันว่าฉันพอจะรู้ค่ะ
-    MessageTW: 是吧。這才是老師啊
-  - MessageGroupId: 100020330
+  - MessageKR: 어? 진짜?
+    MessageJP: ハルナは分かるの？
+    MessageCN: 晴奈知道吗？
+    MessageEN: Oh? You do?
+    MessageTH: "หืม? จริงเหรอ? "
+    MessageTW: 羽留奈知道嗎？
+    MessageGroupId: 100020330
     Id: 472
     CharacterId: 10002
     MessageCondition: Answer
@@ -1090,13 +1096,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어? 진짜?
-    MessageJP: ハルナは分かるの？
-    MessageCN: 晴奈知道吗？
-    MessageEN: Oh? You do?
-    MessageTH: "หืม? จริงเหรอ? "
-    MessageTW: 羽留奈知道嗎？
-  - MessageGroupId: 100020340
+  - MessageKR: 하지만 알려드리진 않을 거예요.
+    MessageJP: はい、ですがお教えすることはできません
+    MessageCN: 是的。但是我不能告诉您
+    MessageEN: But I'm not going to tell you.
+    MessageTH: แต่ฉันไม่บอกคุณครูหรอกค่ะ
+    MessageTW: 是，但我不能告訴您
+    MessageGroupId: 100020340
     Id: 473
     CharacterId: 10002
     MessageCondition: Feedback
@@ -1108,13 +1114,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만 알려드리진 않을 거예요.
-    MessageJP: はい、ですがお教えすることはできません
-    MessageCN: 是的。但是我不能告诉您
-    MessageEN: But I'm not going to tell you.
-    MessageTH: แต่ฉันไม่บอกคุณครูหรอกค่ะ
-    MessageTW: 是，但我不能告訴您
-  - MessageGroupId: 100020340
+  - MessageKR: 아직은 저만의 비밀로 간직해두겠습니다.
+    MessageJP: 私だけが知っている秘密、ということで
+    MessageCN: 因为这是只有我知道的秘密
+    MessageEN: It'll be my secret, at least for now.
+    MessageTH: ฉันจะเก็บไว้เป็นความลับคนเดียว
+    MessageTW: 因為這是只有我知道的祕密
+    MessageGroupId: 100020340
     Id: 474
     CharacterId: 10002
     MessageCondition: Feedback
@@ -1126,13 +1132,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아직은 저만의 비밀로 간직해두겠습니다.
-    MessageJP: 私だけが知っている秘密、ということで
-    MessageCN: 因为这是只有我知道的秘密
-    MessageEN: It'll be my secret, at least for now.
-    MessageTH: ฉันจะเก็บไว้เป็นความลับคนเดียว
-    MessageTW: 因為這是只有我知道的祕密
-  - MessageGroupId: 100020350
+  - MessageKR: 후후. 그럼, 선생님. 다음에 또 맛있는 걸 같이 먹어요.
+    MessageJP: それでは、また一緒に美味しいものを食べに行きましょうね、先生
+    MessageCN: 那么，以后我们也一起去吃好吃的东西吧，老师
+    MessageEN: Heehee. Sensei, let's enjoy another meal together soon.
+    MessageTH: "ฮุฮุ คุณครูคะ ไว้คราวหน้ามากินของ
+
+      อร่อยๆ ด้วยกันอีกนะคะ"
+    MessageTW: 那麼，再一起去吃好吃的東西吧，老師
+    MessageGroupId: 100020350
     Id: 475
     CharacterId: 10002
     MessageCondition: Feedback
@@ -1144,11 +1152,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후. 그럼, 선생님. 다음에 또 맛있는 걸 같이 먹어요.
-    MessageJP: それでは、また一緒に美味しいものを食べに行きましょうね、先生
-    MessageCN: 那么，以后我们也一起去吃好吃的东西吧，老师
-    MessageEN: Heehee. Sensei, let's enjoy another meal together soon.
-    MessageTH: "ฮุฮุ คุณครูคะ ไว้คราวหน้ามากินของ
-
-      อร่อยๆ ด้วยกันอีกนะคะ"
-    MessageTW: 那麼，再一起去吃好吃的東西吧，老師

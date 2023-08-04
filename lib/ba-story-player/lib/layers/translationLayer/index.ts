@@ -9,7 +9,7 @@ import {
 } from "@/types/common";
 import { ShowOption, StArgs } from "@/types/events";
 import * as utils from "./utils";
-import { getText, parseNxMagicTag } from "./utils";
+import { getText } from "./utils";
 
 type IStoryRawUnitParserFn = {
   reg: RegExp;

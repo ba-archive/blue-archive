@@ -19,15 +19,18 @@ import {
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
+import { useUiState } from "./stores/state";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
-import { StoryRawUnit, StoryUnit, TranslatedStoryUnit } from "@/types/common";
+import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
+import { sound } from "@pixi/sound";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
+sound.disableAutoPause = true;
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;
@@ -259,8 +262,17 @@ function hotReplaceStoryUnit(
   }
 }
 
+function resetLive2d() {
+  eventBus.emit("live2dDebugDispose");
+  const live2dIndex = initPrivateState().allStoryUnit.findIndex(it => it.l2d);
+  if (live2dIndex !== -1) {
+    changeStoryIndex(live2dIndex);
+  }
+}
+
 defineExpose({
   hotReplaceStoryUnit,
+  resetLive2d,
 });
 
 /**
@@ -298,12 +310,14 @@ onMounted(() => {
   window.addEventListener("focus", notifyWindowFocus);
 });
 
+const { tabActivated } = useUiState();
+
 function notifyWindowBlur() {
-  eventBus.emit("deactivated");
+  tabActivated.value = true;
 }
 
 function notifyWindowFocus() {
-  eventBus.emit("activated");
+  tabActivated.value = false;
 }
 
 onUnmounted(() => {

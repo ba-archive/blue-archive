@@ -1,6 +1,6 @@
 import { FXOptions, OptionDescriptions } from "@/types/characterLayer";
 
-export let fxOptionsDescriptions: OptionDescriptions["fx"] = {
+export const fxOptionsDescriptions: OptionDescriptions["fx"] = {
   shot: {
     scale: "图片缩放大小",
     shotDuration: "每次射击显示效果的时长",
@@ -8,7 +8,7 @@ export let fxOptionsDescriptions: OptionDescriptions["fx"] = {
   },
 };
 
-let fxOptions: FXOptions = {
+const fxOptions: FXOptions = {
   shot: {
     scale: 0.2,
     shotDuration: 0.1,

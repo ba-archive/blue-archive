@@ -98,6 +98,15 @@
         />
       </div>
       <div
+        class="st-tooltip-container absolute-container"
+        v-if="stToolTip.length > 0 && stText.length > 0"
+      >
+        <div v-for="(e, index) in stToolTip" :key="index" class="tooltip">
+          <span>{{ e[0] }}:</span>
+          <span>&emsp;{{ e[1] }}</span>
+        </div>
+      </div>
+      <div
         ref="titleEL"
         class="title-container absolute-container"
         :style="overrideTitleStyle"
@@ -217,6 +226,7 @@ import {
   StText,
 } from "@/types/events";
 import { useThrottleFn } from "@vueuse/core";
+import { text } from "stream/consumers";
 
 const textDialogWidth = ref(0);
 const TextDialog = ref<HTMLElement>() as Ref<HTMLElement>; // 文本框长度, 用于计算tooltip最大位置
@@ -237,6 +247,23 @@ const dialogText = ref<Text[]>([]);
 const stText = ref<StText[]>([]);
 // 标题
 const titleText = ref<Text[]>([]);
+// st的tooltip
+const stToolTip = computed(() => {
+  return stText.value
+    .map(it => {
+      return it.text.map(text => {
+        return [
+          text.content,
+          text.effects
+            .filter(ef => ef.name === "tooltip")
+            .map(ef => ef.value)
+            .flat()[0],
+        ];
+      });
+    })
+    .flat()
+    .filter(it => it[1]);
+});
 
 // 外部传入播放器高度,用于动态计算字体等数值
 const props = withDefaults(defineProps<TextLayerProps>(), {
@@ -638,16 +665,28 @@ function handleStartLoading(url: LoadingImageUrl) {
  * @param state 已加载的资源状态
  */
 function handleOneResourceLoaded(state: ResourceLoadState) {
-  showLoading.value = true;
-  const lastUrlPathIndex = state.resourceName.lastIndexOf("/") + 1;
-  const resourceName = state.resourceName.substring(
-    lastUrlPathIndex === -1 ? 0 : lastUrlPathIndex,
-    state.resourceName.length
-  );
-  loadLog.value.splice(0, 0, {
-    type: state.type,
-    resourceName: resourceName,
-  });
+  const tmp: ResourceLoadState[] = [];
+  function spliteUrl(str: string) {
+    const lastIndex = str.lastIndexOf("/");
+    if (lastIndex >= 0) {
+      return str.substring(lastIndex + 1);
+    }
+    return str;
+  }
+  if (typeof state.resourceName === "string") {
+    tmp.push({
+      type: state.type,
+      resourceName: spliteUrl(state.resourceName),
+    });
+  } else {
+    tmp.push(
+      ...state.resourceName.map(it => ({
+        type: state.type,
+        resourceName: spliteUrl(it),
+      }))
+    );
+  }
+  loadLog.value.splice(0, 0, ...tmp);
 }
 
 /**
@@ -796,6 +835,7 @@ $to-be-continue-z-index: 200;
 $next-episode-z-index: 201;
 $loading-z-index: 202;
 $st-z-index: 10;
+$st-tooltip-z-index: 10;
 $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 * {
   box-sizing: border-box;
@@ -1065,6 +1105,26 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     z-index: $text-layer-z-index + $st-z-index;
     color: white;
     text-shadow: $text-outline;
+  }
+
+  .st-tooltip-container {
+    z-index: $text-layer-z-index + $st-tooltip-z-index;
+    padding-left: 1rem;
+    color: white;
+    text-shadow: $text-outline;
+    .tooltip {
+      --font-size: max(
+        calc(
+          (
+              var(--param-font-size) / var(--standard-unity-font-size) *
+                var(--standard-font-size)
+            ) * 1rem
+        ),
+        var(--minimum-fs)
+      );
+      margin-top: 16px;
+      font-size: var(--font-size);
+    }
   }
 
   .fade-in-out {

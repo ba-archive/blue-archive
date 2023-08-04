@@ -6,5 +6,5 @@ export default {
     const match = micromatch.not(files, '**/lib/ba-story-player/**/*')
     return `eslint ${match.join(' ')} --fix --cache`
   },
-  "*.{json,md}": "prettier --write"
+  // "*.{json,md}": "prettier --write"
 }

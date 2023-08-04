@@ -44,6 +44,10 @@ const unitTestCollections: UnitTestCollection[] = [
                     name: "fontsize",
                     value: ["30"],
                   },
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
+                  },
                 ],
               },
               {
@@ -52,6 +56,19 @@ const unitTestCollections: UnitTestCollection[] = [
                   {
                     name: "color",
                     value: ["red"],
+                  },
+                ],
+              },
+              {
+                content: "不存在於任何地方",
+                effects: [
+                  {
+                    name: "color",
+                    value: ["red"],
+                  },
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
                   },
                 ],
               },
@@ -108,6 +125,19 @@ const unitTestCollections: UnitTestCollection[] = [
                   },
                 ],
               },
+              {
+                content: "   这是用来测试tooltip和rubb一起用的",
+                effects: [
+                  {
+                    name: "ruby",
+                    value: ["ruby and ruby"],
+                  },
+                  {
+                    name: "tooltip",
+                    value: ["这是测试中间tooltip的"],
+                  },
+                ],
+              },
             ],
           });
         },
@@ -139,7 +169,10 @@ const unitTestCollections: UnitTestCollection[] = [
               },
               {
                 content: "喝点水吗？",
-                effects: [],
+                effects: [{
+                  name: "ruby",
+                  value: ["ruby"],
+                }],
                 waitTime: 400,
               },
             ],
@@ -169,7 +202,10 @@ const unitTestCollections: UnitTestCollection[] = [
               },
               {
                 content: "喝点水吗？",
-                effects: [],
+                effects: [{
+                  name: "tooltip",
+                  value: ["测试st tooltip的"],
+                }],
                 waitTime: 400,
               },
             ],

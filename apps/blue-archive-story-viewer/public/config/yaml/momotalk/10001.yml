@@ -37,7 +37,6 @@ title:
     GroupId: 1000106
     FavorScheduleId: 100016
     CharacterId: 10001
-    unsure: false
   - TextJp: 傷
     TextCn: 伤
     TextKr: 상처
@@ -61,9 +60,9 @@ content:
     MessageJP: 先生、最近ぐっと暑くなった感じがしない？
     MessageCN: 老师，有没有感觉最近天气突然变热了？
     MessageEN: Sensei, doesn't it feel like it's gotten hotter lately?
-    MessageTH: |-
-      คุณครู ช่วงนี้อากาศร้อนขึ้นอย่างเห็นได้
-      ชัดเลยว่าไหม?
+    MessageTH: "คุณครู ช่วงนี้อากาศร้อนขึ้นอย่างเห็นได้
+
+      ชัดเลยว่าไหม?"
     MessageTW: 老師，有沒有感覺最近天氣突然變熱了？
     MessageGroupId: 100010010
     Id: 373
@@ -81,9 +80,9 @@ content:
     MessageJP: 作戦を終えた後とか、すごく蒸し暑いし……
     MessageCN: 比如说作战结束后，我就觉得特别闷……
     MessageEN: After working on a mission, it feels even more stifling...
-    MessageTH: |-
-      ยิ่งตอนต่อสู้เสร็จ ยิ่งรู้สึกได้เลยว่าร้อน
-      ขึ้นมาก...
+    MessageTH: "ยิ่งตอนต่อสู้เสร็จ ยิ่งรู้สึกได้เลยว่าร้อน
+
+      ขึ้นมาก..."
     MessageTW: 作戰結束後，非常的悶熱……
     MessageGroupId: 100010020
     Id: 374
@@ -101,9 +100,9 @@ content:
     MessageJP: そう？夏はまだまだ遠いけど……
     MessageCN: 有吗？离夏天应该还有一段时间来着……
     MessageEN: Yeah? It's still a while until summer.
-    MessageTH: |-
-      ร้อนเหรอ? แต่อีกตั้งนานกว่าจะถึงหน้า
-      ร้อนนะ...
+    MessageTH: "ร้อนเหรอ? แต่อีกตั้งนานกว่าจะถึงหน้า
+
+      ร้อนนะ..."
     MessageTW: 是嗎？離夏天還很遠呢……
     MessageGroupId: 100010030
     Id: 375
@@ -153,7 +152,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아, 참, 선생님.
     MessageJP: あ、そういえば先生
     MessageCN: 啊，对了老师
@@ -194,9 +192,9 @@ content:
     MessageJP: チョコミントのアイスを食べてるトリニティの生徒を見たんだけど……
     MessageCN: 我看到了几个圣三一学生在吃巧克力薄荷冰淇淋……
     MessageEN: getting mint chocolate ice cream from the parlor earlier...
-    MessageTH: |-
-      ฉันเห็นพวกนักเรียนทรีนิตี้ซื้อไอศกรีม
-      มิ้นต์ช็อกโกแลตกินด้วยล่ะ...
+    MessageTH: "ฉันเห็นพวกนักเรียนทรีนิตี้ซื้อไอศกรีม
+
+      มิ้นต์ช็อกโกแลตกินด้วยล่ะ..."
     MessageTW: 看到了正在吃薄荷巧克力冰淇淋的三一學生……
     MessageGroupId: 100010050
     Id: 380
@@ -213,12 +211,12 @@ content:
   - MessageKR: 치약 같은 맛의 아이스크림을 먹는 건 체온 조절에 도움이 되는 걸까……?
     MessageJP: 歯磨き粉味のアイスってもしかして、体温調節に役立つのかな……？
     MessageCN: 牙膏味的冰淇淋，莫非有助于调节体温……？
-    MessageEN: >-
-      Do you think eating ice cream that tastes like toothpaste helps them cool
-      down?
-    MessageTH: |-
-      การได้กินไอศกรีมรสยาสีฟันแบบนั้นอาจ
-      จะช่วยปรับอุณหภูมิร่างกายฉันก็ได้นะ...
+    MessageEN:
+      Do you think eating ice cream that tastes like toothpaste helps them
+      cool down?
+    MessageTH: "การได้กินไอศกรีมรสยาสีฟันแบบนั้นอาจ
+
+      จะช่วยปรับอุณหภูมิร่างกายฉันก็ได้นะ..."
     MessageTW: 牙膏味的冰淇淋難道有助於調節體溫……？
     MessageGroupId: 100010060
     Id: 381
@@ -236,9 +234,9 @@ content:
     MessageJP: チョコミント味が好きな人たちの気持ちが分からない……
     MessageCN: 我也不懂喜欢巧克力薄荷味冰淇淋的人是怎么想的……
     MessageEN: I've never understood why people like mint.
-    MessageTH: |-
-      ครูไม่รู้ว่าคนที่กินไอศกรีมรสมิ้นท์
-      เค้ารู้สึกกันยังไง...
+    MessageTH: "ครูไม่รู้ว่าคนที่กินไอศกรีมรสมิ้นท์
+
+      เค้ารู้สึกกันยังไง..."
     MessageTW: 不懂喜歡薄荷巧克力味的人的心情……
     MessageGroupId: 100010070
     Id: 382
@@ -256,9 +254,9 @@ content:
     MessageJP: 歯磨き粉味なんかじゃないよ！チョコミントに謝って！
     MessageCN: 那才不是牙膏味的！快点向巧克力薄荷冰淇淋道歉！
     MessageEN: Like toothpaste? Hey, you owe mint an apology!
-    MessageTH: |-
-      ยาสีฟันเหรอ?
-      ขอโทษไอศกรีมรสมิ้นต์เดี๋ยวนี้!
+    MessageTH: "ยาสีฟันเหรอ?
+
+      ขอโทษไอศกรีมรสมิ้นต์เดี๋ยวนี้!"
     MessageTW: 才不是牙膏味！向薄荷巧克力道歉！
     MessageGroupId: 100010070
     Id: 383
@@ -344,14 +342,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 고민? 세미나의 임무와 관련된 일이야?
     MessageJP: 悩み？セミナーの仕事に関係すること？
     MessageCN: 烦恼？和研讨会的工作有关吗？
     MessageEN: Problem? Is this about the Seminar mission?
-    MessageTH: |-
-      เรื่องกังวลเหรอ? เกี่ยวกับภารกิจของเซมิ
-      น่าหรือเปล่า?
+    MessageTH: "เรื่องกังวลเหรอ? เกี่ยวกับภารกิจของเซมิ
+
+      น่าหรือเปล่า?"
     MessageTW: 煩惱？與研討會的工作有關嗎？
     MessageGroupId: 100010110
     Id: 388
@@ -369,9 +366,9 @@ content:
     MessageJP: ううん。それとは関係ない、すごく個人的なことなんだけど
     MessageCN: 不是。和那个没关系，是非常个人的问题
     MessageEN: No, it has nothing to do with the mission. It's...personal.
-    MessageTH: |-
-      ไม่ใช่ ไม่เกี่ยวกับภารกิจหรอก เป็นเรื่อง
-      ส่วนตัวน่ะ
+    MessageTH: "ไม่ใช่ ไม่เกี่ยวกับภารกิจหรอก เป็นเรื่อง
+
+      ส่วนตัวน่ะ"
     MessageTW: 不，跟那個沒關係，是很私人的事情
     MessageGroupId: 100010120
     Id: 389
@@ -403,7 +400,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 나라도 괜찮다면 언제든지 들어줄게.
     MessageJP: 私で良ければ、いつでも聞くよ
     MessageCN: 艾米不介意的话，我随时可以哦
@@ -422,7 +418,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 역시 선생님에게 물어보길 잘했어…….
     MessageJP: うん、お願い
     MessageCN: 嗯，拜托了
@@ -462,10 +457,12 @@ content:
   - MessageKR: 선생님, 지난번에 여학생들이 좋아하는 것을 조사하는 데 협조해 주겠다고 했지?
     MessageJP: 先生この前、女子生徒が好きな物の調査に協力するって言ってくれたよね？
     MessageCN: 老师之前说过会帮我调查女学生们喜欢的东西对吧？
-    MessageEN: Sensei, didn't you say you'd help me understand what female students like?
-    MessageTH: |-
-      คุณครู จำที่เคยบอกว่าจะช่วยฉันสำรวจ
-      เกี่ยวกับสิ่งที่นักเรียนหญิงชอบได้ไหม?
+    MessageEN:
+      Sensei, didn't you say you'd help me understand what female students
+      like?
+    MessageTH: "คุณครู จำที่เคยบอกว่าจะช่วยฉันสำรวจ
+
+      เกี่ยวกับสิ่งที่นักเรียนหญิงชอบได้ไหม?"
     MessageTW: 老師上次有說要協助我調查女學生喜歡的東西吧？
     MessageGroupId: 100010150
     Id: 394
@@ -573,9 +570,9 @@ content:
     MessageJP: 密閉空間で歌うことが、あんなに楽しいなんて……
     MessageCN: 在密闭空间里面唱歌，竟然这么开心……
     MessageEN: It's surprisingly fun to sing in an enclosed space...
-    MessageTH: |-
-      การร้องเพลงในที่แคบๆ ก็สนุกดี
-      เหมือนกันนะเนี่ย
+    MessageTH: "การร้องเพลงในที่แคบๆ ก็สนุกดี
+
+      เหมือนกันนะเนี่ย"
     MessageTW: 在密閉空間裡唱歌竟然這麼開心……
     MessageGroupId: 100010200
     Id: 400
@@ -593,9 +590,9 @@ content:
     MessageJP: 敵に対して銃を乱射する時みたいな高揚感があった
     MessageCN: 感觉有种像是对着敌人乱枪扫射的兴奋感
     MessageEN: I feel strangely uplifted, like when I'm shooting at the enemy.
-    MessageTH: |-
-      ฉันรู้สึกแปลกๆ เหมือนตอนที่สาดกระสุน
-      ใส่ศัตรูเลยล่ะ
+    MessageTH: "ฉันรู้สึกแปลกๆ เหมือนตอนที่สาดกระสุน
+
+      ใส่ศัตรูเลยล่ะ"
     MessageTW: 有一種像是對敵人亂開槍時的興奮感
     MessageGroupId: 100010200
     Id: 401
@@ -609,14 +606,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: ……그럼 노래방에서 총을 쏘면 더 즐겁지 않을까?
     MessageJP: ……いっそのこと、カラオケで銃を撃てばもっと楽しかったり？
     MessageCN: ……要不干脆在卡拉OK里乱射一下？说不定会更开心
-    MessageEN: ...What if we did both at the same time? Would that be even more fun?
-    MessageTH: |-
-      ถ้างั้นไปสาดกระสุนที่คาราโอเกะก็ต้อง
-      สนุกกว่าแน่!
+    MessageEN: "...What if we did both at the same time? Would that be even more fun?"
+    MessageTH: "ถ้างั้นไปสาดกระสุนที่คาราโอเกะก็ต้อง
+
+      สนุกกว่าแน่!"
     MessageTW: ……要不乾脆在卡拉OK裡開槍，會不會更開心？
     MessageGroupId: 100010210
     Id: 402
@@ -630,7 +626,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그건 안 돼!
     MessageJP: それは絶対にダメ！
     MessageCN: 那可绝对不行！
@@ -649,7 +644,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생님, 오늘은 여성복 매장에 새 옷을 사러 갈 거야.
     MessageJP: 先生、今日は新しい服を買いに行く
     MessageCN: 老师，我今天要去买新衣服
@@ -686,14 +680,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 내게 잘 어울리는 옷이 있는지 선생님이 같이 가서 봐주었으면 좋겠는데……
     MessageJP: 私に似合う服かどうか、先生に見てほしくって……
     MessageCN: 我想让老师帮我看看新衣服适不适合我……
     MessageEN: I'd like you to come with me, and tell me what looks good on me...
-    MessageTH: |-
-      ว่าแต่.. คุณครูไปกับฉันได้ไหม? ไปช่วยดู
-      หน่อยว่ามีเสื้อผ้าที่เหมาะกับฉันรึเปล่า...
+    MessageTH: "ว่าแต่.. คุณครูไปกับฉันได้ไหม? ไปช่วยดู
+
+      หน่อยว่ามีเสื้อผ้าที่เหมาะกับฉันรึเปล่า..."
     MessageTW: 想請老師看看衣服穿在我身上合不合適……
     MessageGroupId: 100010250
     Id: 406
@@ -707,7 +700,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 오늘 방과 후에 시간 괜찮아?
     MessageJP: 今日の放課後、空いてる？
     MessageCN: 老师今天放学后有空吗？
@@ -748,9 +740,9 @@ content:
     MessageJP: 良かった。じゃあキヴォトスの中心街の、ショッピングモールで待ち合わせ
     MessageCN: 太好了。那我们就在基沃托斯中心街的购物中心碰头吧
     MessageEN: Great! I'll see you at the shopping mall in downtown Kivotos.
-    MessageTH: |-
-      ดีเลย งั้นเจอกันที่ห้างสรรพสินค้ากลาง
-      คิโวทอสนะ
+    MessageTH: "ดีเลย งั้นเจอกันที่ห้างสรรพสินค้ากลาง
+
+      คิโวทอสนะ"
     MessageTW: 太好了。那就在奇普托斯市中心的購物中心碰面
     MessageGroupId: 100010270
     Id: 409
@@ -786,9 +778,9 @@ content:
     MessageJP: さっきすれ違った時、腕から血が出てた気がするけど、もう手当てはした？
     MessageCN: 刚刚艾米和我擦肩而过的时候，我看到你手臂好像流血了，已经处理好了吗？
     MessageEN: I noticed earlier that your arm was bleeding. Do you need treatment?
-    MessageTH: |-
-      เมื่อกี้แขนเธอเลือดออกด้วย ไม่ต้อง
-      ทำแผลเหรอ?
+    MessageTH: "เมื่อกี้แขนเธอเลือดออกด้วย ไม่ต้อง
+
+      ทำแผลเหรอ?"
     MessageTW: 剛才擦肩而過時，你的手臂好像流血了，處理好了嗎？
     MessageGroupId: 100010290
     Id: 411
@@ -806,9 +798,9 @@ content:
     MessageJP: 大丈夫、ちょっと擦りむいただけだから
     MessageCN: 没关系，只是擦伤而已
     MessageEN: It's okay. It's just a scratch.
-    MessageTH: |-
-      ไม่เป็นไรหรอก แค่โดนขีดข่วนนิดหน่อย
-      เอง
+    MessageTH: "ไม่เป็นไรหรอก แค่โดนขีดข่วนนิดหน่อย
+
+      เอง"
     MessageTW: 沒事，只是有點擦傷而已
     MessageGroupId: 100010300
     Id: 412
@@ -826,9 +818,9 @@ content:
     MessageJP: 作戦中に、これぐらいの怪我はよくあること
     MessageCN: 作战中这种程度的伤是很常见的
     MessageEN: Scratches like this one are pretty common during missions.
-    MessageTH: |-
-      ปกติออกไปต่อสู้ก็ได้แผลแบบนี้กลับมา
-      บ่อยๆ น่ะ
+    MessageTH: "ปกติออกไปต่อสู้ก็ได้แผลแบบนี้กลับมา
+
+      บ่อยๆ น่ะ"
     MessageTW: 這種程度的傷在作戰時很常見
     MessageGroupId: 100010300
     Id: 413
@@ -846,9 +838,9 @@ content:
     MessageJP: それはダメ。消毒するから、保健室に来て
     MessageCN: 那可不行。来保健室一趟，我来给你消毒
     MessageEN: That's not good. Come to the infirmary, and I'll disinfect the wound.
-    MessageTH: |-
-      ไม่ได้! มาเจอกันที่ห้องพยาบาล ครูจะ
-      ล้างแผลให้
+    MessageTH: "ไม่ได้! มาเจอกันที่ห้องพยาบาล ครูจะ
+
+      ล้างแผลให้"
     MessageTW: 這可不行。來保健室我幫你消毒
     MessageGroupId: 100010310
     Id: 414
@@ -898,7 +890,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 폐허 근처에서 알 수 없는 반응이 다시 발견됐거든.
     MessageJP: 廃墟の近くで謎の信号が見つかったの
     MessageCN: 我们在废墟附近发现了神秘的信号
@@ -917,7 +908,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 초현상특무부의 업무를 겸해 조금 먼 곳으로 조사를 다녀올 거야.
     MessageJP: 特異現象捜査部の仕事もかねて、ちょっと遠い場所まで調べにいこうと思って
     MessageCN: 也是想着顺便处理一下特异现象调查部的工作，准备去稍微远一点的地方调查一下
@@ -936,7 +926,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 날이 조금 덥겠지만…….
     MessageJP: 暑い日になると思うけど……
     MessageCN: 虽然想到今天应该会很热……
@@ -955,7 +944,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 이번에는 괜찮을 거야.
     MessageJP: 今回は大丈夫、任せて
     MessageCN: 但是这次没问题，交给我吧
@@ -974,7 +962,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 오, 자신 있는 말투.
     MessageJP: おお、なんだか今回は自信があるんだね
     MessageCN: 哦，看来这次是自信满满呢
@@ -993,7 +980,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 뭔가 대책이 있는 거야?
     MessageJP: 今回は対策してるの？
     MessageCN: 这次是有对策了吗？
@@ -1012,7 +998,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응.
     MessageJP: うん
     MessageCN: 嗯
@@ -1031,7 +1016,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 이럴 때도 있겠다 싶어서, 확실하게 준비해 둔 게 있거든.
     MessageJP: こういう時のために、準備しておいたんだ
     MessageCN: 为了这种时候，我早就做好了准备
@@ -1050,7 +1034,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 기대해도 좋아.
     MessageJP: 期待してて
     MessageCN: 请期待吧
@@ -1069,7 +1052,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 이상하다.
     MessageJP: おかしい……
     MessageCN: 奇怪了……
@@ -1088,7 +1070,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 어째서인지 선풍기를 쐰 뒤로, 선생님이 더 더워하는 것 같았는데.
     MessageJP: 扇風機で涼んだのに、なんだか先生が暑そうだった
     MessageCN: 明明用风扇在吹风了，总感觉老师好像还是很热的样子
@@ -1107,7 +1088,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 출력이 부족했던 걸까? 아니면 선생님도 나처럼 열이 많았다던가.
     MessageJP: 出力不足だったのかな？それとも、先生も暑がりなの？
     MessageCN: 是风力不够大吗？还是说老师也很怕热？
@@ -1126,7 +1106,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 음
     MessageJP: うーん
     MessageCN: 嗯—
@@ -1145,7 +1124,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 역시 좀 더 가까이 붙었어야 했나.
     MessageJP: やっぱりもう少しくっついたほうが良かったのかも
     MessageCN: 果然还是再贴近一些比较好
@@ -1164,7 +1142,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 전신 밀착이었다면, 결과가 달라졌을지도 모르지.
     MessageJP: 全身密着していたら、結果が変わっていたかもだし
     MessageCN: 如果全身紧贴在一起的话，也许结果会不一样。
@@ -1183,7 +1160,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 어떻게 생각해?
     MessageJP: どう思う？
     MessageCN: 你觉得呢？
@@ -1202,7 +1178,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아마 다른 문제라고 생각하지만…….
     MessageJP: 別の問題だと思うけど……
     MessageCN: 我觉得是另外一个问题……
@@ -1221,7 +1196,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그래도 그렇게 나쁜 경험은 아니었어.
     MessageJP: それでもまぁ、そんな悪い経験じゃなかったよ
     MessageCN: 嘛，不过也不是什么讨厌的体验哦
@@ -1240,7 +1214,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 으음.
     MessageJP: うーん
     MessageCN: 嗯—
@@ -1259,7 +1232,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그건 무슨 말이야?
     MessageJP: ？それってどういうこと？
     MessageCN: ？这是什么意思？
@@ -1278,7 +1250,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 음.
     MessageJP: うーん……
     MessageCN: 嗯
@@ -1297,7 +1268,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 어쨌든 다음부터는 다른 대책도 준비해 두도록 할 게.
     MessageJP: とにかく、次からは他の対策も考えておくね
     MessageCN: 总之，下次要考虑一下其他对策了
@@ -1316,7 +1286,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼 또 봐, 선생님.
     MessageJP: じゃあまたね、先生
     MessageCN: 那么再见了，老师
@@ -1335,4 +1304,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false

@@ -1,0 +1,53 @@
+name: Deploy Website To Production
+on:
+  push:
+    branches:
+      - master
+      - main
+
+concurrency:
+  group: "production-deploy"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
+      - name: Rush Update
+        run: node common/scripts/install-run-rush.js update
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
+      - name: Generate secret for translator
+        env:
+          YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
+          YOUDAO_APP_SECRET: ${{ secrets.YOUDAO_APP_SECRET }}
+        shell: python
+        run: |
+          import os
+          YOUDAO_APP_ID = os.getenv("YOUDAO_APP_ID")
+          YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
+          with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
+            f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
+      - name: Rush build
+        run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
+      - name: Viewer rsync deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "./apps/blue-archive-story-viewer/dist/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
+          TARGET: "/var/www/website"
+          EXCLUDE: ".git*"

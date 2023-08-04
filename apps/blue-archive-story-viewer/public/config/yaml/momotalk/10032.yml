@@ -1,35 +1,41 @@
 CharacterId: 10032
 translator: Lepra
 title:
-  - GroupId: 1003202
-    FavorScheduleId: 100322
-    CharacterId: 10032
-    TextJp: 先生のためにプレゼント
+  - TextJp: 先生のためにプレゼント
     TextCn: 为老师准备的礼物
     TextKr: 선생님을 위한 새해 선물
     TextEn: New Year's Gift for Sensei
     TextTh: ของขวัญปีใหม่สำหรับคุณครู
     TextTw: 為老師準備的禮物
-  - GroupId: 1003203
-    FavorScheduleId: 100323
+    GroupId: 1003202
+    FavorScheduleId: 100322
     CharacterId: 10032
-    TextJp: 正月には正月らしく！
+  - TextJp: 正月には正月らしく！
     TextCn: 正月就要有正月的样子！
     TextKr: 새해에는 새해다운 일을!
     TextEn: Activities for New Year's!
     TextTh: เรื่องที่ทำให้สมกับเป็นวันปีใหม่!
     TextTw: 新年要像個新年一樣！
-  - GroupId: 1003205
-    FavorScheduleId: 100325
+    GroupId: 1003203
+    FavorScheduleId: 100323
     CharacterId: 10032
-    TextJp: 激しい戦い
+  - TextJp: 激しい戦い
     TextCn: 激烈的战斗
     TextKr: 격렬하게 둘이서 하네츠키!
     TextEn: It Takes Two to Hanetsuki!
     TextTh: การแข่งฮาเนะสึกิอันดุเดือด!
     TextTw: 激烈的戰鬥
+    GroupId: 1003205
+    FavorScheduleId: 100325
+    CharacterId: 10032
 content:
-  - MessageGroupId: 100320010
+  - MessageKR: 선생님~ 선생님~
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: Sensei! Sensei!
+    MessageTH: คุณครูขา~ คุณครู~
+    MessageTW: 老師！
+    MessageGroupId: 100320010
     Id: 100320010
     CharacterId: 10032
     MessageCondition: FavorRankUp
@@ -41,13 +47,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님~ 선생님~
-    MessageJP: 先生！
-    MessageCN: 老师！
-    MessageEN: Sensei! Sensei!
-    MessageTH: คุณครูขา~ คุณครู~
-    MessageTW: 老師！
-  - MessageGroupId: 100320020
+  - MessageKR: 새해 복 많이 받아~!
+    MessageJP: あらためて、明けましておめでとー！
+    MessageCN: 再次恭祝新年快乐ー！
+    MessageEN: Happy New Year!
+    MessageTH: สวัสดีปีใหม่~!
+    MessageTW: 再次祝你新年快樂──！
+    MessageGroupId: 100320020
     Id: 100320020
     CharacterId: 10032
     MessageCondition: None
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 새해 복 많이 받아~!
-    MessageJP: あらためて、明けましておめでとー！
-    MessageCN: 再次恭祝新年快乐ー！
-    MessageEN: Happy New Year!
-    MessageTH: สวัสดีปีใหม่~!
-    MessageTW: 再次祝你新年快樂──！
-  - MessageGroupId: 100320030
+  - MessageKR: 어, 벌써…. 새해인가?
+    MessageJP: いつの間にお正月だ……
+    MessageCN: 不知不觉就到正月了啊……
+    MessageEN: Oh, is it already...New Year's?
+    MessageTH: อ๊ะ วันนี้... ปีใหม่แล้วเหรอ?
+    MessageTW: 不知不覺已經過年了啊……
+    MessageGroupId: 100320030
     Id: 100320030
     CharacterId: 10032
     MessageCondition: Answer
@@ -77,13 +83,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어, 벌써…. 새해인가?
-    MessageJP: いつの間にお正月だ……
-    MessageCN: 不知不觉就到正月了啊……
-    MessageEN: Oh, is it already...New Year's?
-    MessageTH: อ๊ะ วันนี้... ปีใหม่แล้วเหรอ?
-    MessageTW: 不知不覺已經過年了啊……
-  - MessageGroupId: 100320030
+  - MessageKR: 응…. 무츠키도 새해 복 많이 받아.
+    MessageJP: うん、明けましておめでとう
+    MessageCN: 嗯，睦月新年快乐
+    MessageEN: Thanks. Happy New Year to you too, Mutsuki.
+    MessageTH: อื้อ... ปีใหม่นี้ มุสึกิก็มีความสุขมากๆ นะ
+    MessageTW: 嗯，新年快樂
+    MessageGroupId: 100320030
     Id: 100320040
     CharacterId: 10032
     MessageCondition: Answer
@@ -95,13 +101,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응…. 무츠키도 새해 복 많이 받아.
-    MessageJP: うん、明けましておめでとう
-    MessageCN: 嗯，睦月新年快乐
-    MessageEN: Thanks. Happy New Year to you too, Mutsuki.
-    MessageTH: อื้อ... ปีใหม่นี้ มุสึกิก็มีความสุขมากๆ นะ
-    MessageTW: 嗯，新年快樂
-  - MessageGroupId: 100320040
+  - MessageKR: 흐응, 뭐야~ 선생님의 반응, 재미없어~
+    MessageJP: えー、何その先生のリアクション。つまんな～い
+    MessageCN: 诶——，老师这是什么反应。无～聊～
+    MessageEN: Oh, come on! What's with your reaction, Sensei! It's not funny!
+    MessageTH: "ฮื้อออ อะไรเนี่ย~
+
+      ปฏิกิริยาของคุณครู ไม่สนุกเลย~"
+    MessageTW: 耶──，老師那是什麼反應。無～聊
+    MessageGroupId: 100320040
     Id: 100320050
     CharacterId: 10032
     MessageCondition: Feedback
@@ -113,15 +121,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흐응, 뭐야~ 선생님의 반응, 재미없어~
-    MessageJP: えー、何その先生のリアクション。つまんな～い
-    MessageCN: 诶——，老师这是什么反应。无～聊～
-    MessageEN: Oh, come on! What's with your reaction, Sensei! It's not funny!
-    MessageTH: "ฮื้อออ อะไรเนี่ย~
+  - MessageKR: 뭐, 그런 평소에도 흐느적흐느적하는 선생님이라도 불타오를 수 있도록.
+    MessageJP: しょうがないなぁ……そんなふにゃふにゃな先生でも一気に燃え上がるような
+    MessageCN: 还真是没办法啊……为了让软绵绵的老师也能一下子热血起来
+    MessageEN: Well, I did prepare something awesome that would
+    MessageTH: "ก็นะ... เพื่อให้คุณครูที่มักจะ
 
-      ปฏิกิริยาของคุณครู ไม่สนุกเลย~"
-    MessageTW: 耶──，老師那是什麼反應。無～聊
-  - MessageGroupId: 100320040
+      เอื่อยเฉื่อยอยู่ตลอดก็มีไฟขึ้นมา"
+    MessageTW: 真拿你沒辦法……我為無精打采的老師準備了
+    MessageGroupId: 100320040
     Id: 100320060
     CharacterId: 10032
     MessageCondition: Feedback
@@ -133,15 +141,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 뭐, 그런 평소에도 흐느적흐느적하는 선생님이라도 불타오를 수 있도록.
-    MessageJP: しょうがないなぁ……そんなふにゃふにゃな先生でも一気に燃え上がるような
-    MessageCN: 还真是没办法啊……为了让软绵绵的老师也能一下子热血起来
-    MessageEN: Well, I did prepare something awesome that would
-    MessageTH: "ก็นะ... เพื่อให้คุณครูที่มักจะ
-
-      เอื่อยเฉื่อยอยู่ตลอดก็มีไฟขึ้นมา"
-    MessageTW: 真拿你沒辦法……我為無精打采的老師準備了
-  - MessageGroupId: 100320050
+  - MessageKR: 내가 또 엄청난 걸 준비했지만 말이야!
+    MessageJP: 「ものすごく楽しいこと」を用意してあげる！
+    MessageCN: 我给老师准备了“非常有意思的东西”！
+    MessageEN: fire up even our frail Sensei!
+    MessageTH: เค้าเลยเตรียมของดีๆ เอาไว้แล้ว!
+    MessageTW: 連你也能一下就燃起鬥志的「極其有趣的事」！
+    MessageGroupId: 100320050
     Id: 100320070
     CharacterId: 10032
     MessageCondition: Feedback
@@ -153,13 +159,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 또 엄청난 걸 준비했지만 말이야!
-    MessageJP: 「ものすごく楽しいこと」を用意してあげる！
-    MessageCN: 我给老师准备了“非常有意思的东西”！
-    MessageEN: fire up even our frail Sensei!
-    MessageTH: เค้าเลยเตรียมของดีๆ เอาไว้แล้ว!
-    MessageTW: 連你也能一下就燃起鬥志的「極其有趣的事」！
-  - MessageGroupId: 100320060
+  - MessageKR: 흐느적흐느적…?
+    MessageJP: ふにゃふにゃ……？
+    MessageCN: 软绵绵……？
+    MessageEN: Frail...?
+    MessageTH: เอื่อยเฉื่อย...?
+    MessageTW: 無精打采……？
+    MessageGroupId: 100320060
     Id: 100320080
     CharacterId: 10032
     MessageCondition: Answer
@@ -171,13 +177,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흐느적흐느적…?
-    MessageJP: ふにゃふにゃ……？
-    MessageCN: 软绵绵……？
-    MessageEN: Frail...?
-    MessageTH: เอื่อยเฉื่อย...?
-    MessageTW: 無精打采……？
-  - MessageGroupId: 100320060
+  - MessageKR: 무츠키가 준비한, 거?
+    MessageJP: 「ものすごく楽しいこと」……？
+    MessageCN: “非常有意思的东西”……？
+    MessageEN: Something Mutsuki prepared?
+    MessageTH: ของดีๆ ที่มุสึกิเตรียมมา?
+    MessageTW: 「極其有趣的事」……？
+    MessageGroupId: 100320060
     Id: 100320090
     CharacterId: 10032
     MessageCondition: Answer
@@ -189,13 +195,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 무츠키가 준비한, 거?
-    MessageJP: 「ものすごく楽しいこと」……？
-    MessageCN: “非常有意思的东西”……？
-    MessageEN: Something Mutsuki prepared?
-    MessageTH: ของดีๆ ที่มุสึกิเตรียมมา?
-    MessageTW: 「極其有趣的事」……？
-  - MessageGroupId: 100320070
+  - MessageKR: 그럼 잔뜩 기대하고 있어~ 선생님!
+    MessageJP: じゃあ楽しみにしててね、先生！
+    MessageCN: 那就请老师好好期待咯～！
+    MessageEN: Be excited, Sensei!
+    MessageTH: ตั้งตารอได้เลย~ คุณครู!
+    MessageTW: 那就敬請期待吧，老師！
+    MessageGroupId: 100320070
     Id: 100320100
     CharacterId: 10032
     MessageCondition: Feedback
@@ -207,13 +213,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 잔뜩 기대하고 있어~ 선생님!
-    MessageJP: じゃあ楽しみにしててね、先生！
-    MessageCN: 那就请老师好好期待咯～！
-    MessageEN: Be excited, Sensei!
-    MessageTH: ตั้งตารอได้เลย~ คุณครู!
-    MessageTW: 那就敬請期待吧，老師！
-  - MessageGroupId: 100320080
+  - MessageKR: 응…? 무츠키?
+    MessageJP: え、えっ……？
+    MessageCN: 啊，啊……？
+    MessageEN: Huh...? Mutsuki?
+    MessageTH: หือ...? มุสึกิ?
+    MessageTW: 咦，咦……？
+    MessageGroupId: 100320080
     Id: 100320110
     CharacterId: 10032
     MessageCondition: Answer
@@ -225,13 +231,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응…? 무츠키?
-    MessageJP: え、えっ……？
-    MessageCN: 啊，啊……？
-    MessageEN: Huh...? Mutsuki?
-    MessageTH: หือ...? มุสึกิ?
-    MessageTW: 咦，咦……？
-  - MessageGroupId: 100320090
+  - MessageKR: 저기요…?
+    MessageJP: ムツキ……？
+    MessageCN: 睦月……？
+    MessageEN: Hello...?
+    MessageTH: คือว่า...
+    MessageTW: 無月……？
+    MessageGroupId: 100320090
     Id: 100320120
     CharacterId: 10032
     MessageCondition: Answer
@@ -243,13 +249,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 저기요…?
-    MessageJP: ムツキ……？
-    MessageCN: 睦月……？
-    MessageEN: Hello...?
-    MessageTH: คือว่า...
-    MessageTW: 無月……？
-  - MessageGroupId: 100320100
+  - MessageKR: 선생님, 혹시 소원 같은 거 있어?
+    MessageJP: 先生って、新年のお願いごともう決めた？
+    MessageCN: 老师，新年愿望想好了吗？
+    MessageEN: Do you have any wishes, Sensei?
+    MessageTH: "คุณครูมีความปรารถนา
+
+      อะไรรึเปล่า?"
+    MessageTW: 老師，新年願望已經決定好了嗎？
+    MessageGroupId: 100320100
     Id: 100320130
     CharacterId: 10032
     MessageCondition: FavorRankUp
@@ -261,15 +269,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 혹시 소원 같은 거 있어?
-    MessageJP: 先生って、新年のお願いごともう決めた？
-    MessageCN: 老师，新年愿望想好了吗？
-    MessageEN: Do you have any wishes, Sensei?
-    MessageTH: "คุณครูมีความปรารถนา
-
-      อะไรรึเปล่า?"
-    MessageTW: 老師，新年願望已經決定好了嗎？
-  - MessageGroupId: 100320110
+  - MessageKR: 당연히 있지!
+    MessageJP: もちろん！
+    MessageCN: 那当然！
+    MessageEN: Of course I do!
+    MessageTH: ต้องมีอยู่แล้วสิ!
+    MessageTW: 當然！
+    MessageGroupId: 100320110
     Id: 100320140
     CharacterId: 10032
     MessageCondition: Answer
@@ -281,13 +287,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 당연히 있지!
-    MessageJP: もちろん！
-    MessageCN: 那当然！
-    MessageEN: Of course I do!
-    MessageTH: ต้องมีอยู่แล้วสิ!
-    MessageTW: 當然！
-  - MessageGroupId: 100320110
+  - MessageKR: 음, 딱히 없어.
+    MessageJP: そういえばまだ……
+    MessageCN: 这么说来还没想好……
+    MessageEN: Um, not really.
+    MessageTH: อืม... ไม่มีหรอก
+    MessageTW: 這麼說來，還沒……
+    MessageGroupId: 100320110
     Id: 100320150
     CharacterId: 10032
     MessageCondition: Answer
@@ -299,13 +305,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음, 딱히 없어.
-    MessageJP: そういえばまだ……
-    MessageCN: 这么说来还没想好……
-    MessageEN: Um, not really.
-    MessageTH: อืม... ไม่มีหรอก
-    MessageTW: 這麼說來，還沒……
-  - MessageGroupId: 100320120
+  - MessageKR: 아하~ 역시 그렇구나.
+    MessageJP: ふーん、そうなんだ
+    MessageCN: 嗯——，这样啊
+    MessageEN: Aha! I knew it.
+    MessageTH: อ่ะฮ่า~ คิดไว้แล้วเชียว
+    MessageTW: 呵──，這樣啊
+    MessageGroupId: 100320120
     Id: 100320160
     CharacterId: 10032
     MessageCondition: Feedback
@@ -317,13 +323,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아하~ 역시 그렇구나.
-    MessageJP: ふーん、そうなんだ
-    MessageCN: 嗯——，这样啊
-    MessageEN: Aha! I knew it.
-    MessageTH: อ่ะฮ่า~ คิดไว้แล้วเชียว
-    MessageTW: 呵──，這樣啊
-  - MessageGroupId: 100320120
+  - MessageKR: 응, 하긴 평범하게 생각하면 소원 한둘쯤은 가지고 있을 테니까~
+    MessageJP: 先生のお願いごと、気になるな―
+    MessageCN: 老师的新年愿望，还真是很让人在意啊——
+    MessageEN: Yeah, if you think about it, everyone has one or two wishes!
+    MessageTH: "ก็นั่นสินะ คุณครูที่แสนธรรมดา
+
+      ก็คงมีความปรารถนาอยู่สักเรื่อง
+
+      สองเรื่องเหมือนกันสินะ~"
+    MessageTW: 老師的願望，好在意吶──
+    MessageGroupId: 100320120
     Id: 100320170
     CharacterId: 10032
     MessageCondition: Feedback
@@ -335,17 +345,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응, 하긴 평범하게 생각하면 소원 한둘쯤은 가지고 있을 테니까~
-    MessageJP: 先生のお願いごと、気になるな―
-    MessageCN: 老师的新年愿望，还真是很让人在意啊——
-    MessageEN: Yeah, if you think about it, everyone has one or two wishes!
-    MessageTH: "ก็นั่นสินะ คุณครูที่แสนธรรมดา
-
-      ก็คงมีความปรารถนาอยู่สักเรื่อง
-
-      สองเรื่องเหมือนกันสินะ~"
-    MessageTW: 老師的願望，好在意吶──
-  - MessageGroupId: 100320130
+  - MessageKR: 어라~? 그래?
+    MessageJP: あ、そうなんだ
+    MessageCN: 啊，这样啊
+    MessageEN: Oh! Really?
+    MessageTH: เอ๊ะ~? งั้นเหรอ?
+    MessageTW: 啊，這樣啊
+    MessageGroupId: 100320130
     Id: 100320180
     CharacterId: 10032
     MessageCondition: Feedback
@@ -357,13 +363,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어라~? 그래?
-    MessageJP: あ、そうなんだ
-    MessageCN: 啊，这样啊
-    MessageEN: Oh! Really?
-    MessageTH: เอ๊ะ~? งั้นเหรอ?
-    MessageTW: 啊，這樣啊
-  - MessageGroupId: 100320130
+  - MessageKR: 흐응~ 뭐, 상관은 없지만!
+    MessageJP: まあ、今からゆっくり決めれば良いんじゃない？
+    MessageCN: 也行吧，现在慢慢决定不就好了？
+    MessageEN: Hmm, it doesn't really matter!
+    MessageTH: ฮื้ม~ ก็นะ ไม่เป็นไรหรอก!
+    MessageTW: 嘛，從現在開始慢慢決定不就行了嗎？
+    MessageGroupId: 100320130
     Id: 100320190
     CharacterId: 10032
     MessageCondition: Feedback
@@ -375,13 +381,17 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 흐응~ 뭐, 상관은 없지만!
-    MessageJP: まあ、今からゆっくり決めれば良いんじゃない？
-    MessageCN: 也行吧，现在慢慢决定不就好了？
-    MessageEN: Hmm, it doesn't really matter!
-    MessageTH: ฮื้ม~ ก็นะ ไม่เป็นไรหรอก!
-    MessageTW: 嘛，從現在開始慢慢決定不就行了嗎？
-  - MessageGroupId: 100320140
+  - MessageKR: 그럼 가자! 선생님! 소원 빌러!
+    MessageJP: とりあえず先生、行こう！
+    MessageCN: 总之老师，我们出发咯！
+    MessageEN: Then let's go, Sensei! To fulfill our wishes!
+    MessageTH: "งั้นก็ไปกันเถอะ คุณครู!
+
+      ไปทำความปรารถนา
+
+      ให้เป็นจริงกัน!"
+    MessageTW: 總之，老師，走吧！
+    MessageGroupId: 100320140
     Id: 100320200
     CharacterId: 10032
     MessageCondition: Feedback
@@ -393,17 +403,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 가자! 선생님! 소원 빌러!
-    MessageJP: とりあえず先生、行こう！
-    MessageCN: 总之老师，我们出发咯！
-    MessageEN: Then let's go, Sensei! To fulfill our wishes!
-    MessageTH: "งั้นก็ไปกันเถอะ คุณครู!
-
-      ไปทำความปรารถนา
-
-      ให้เป็นจริงกัน!"
-    MessageTW: 總之，老師，走吧！
-  - MessageGroupId: 100320150
+  - MessageKR: 응? 갑자기 무슨 뜻이야?
+    MessageJP: えっと、どこに？
+    MessageCN: 那个，这是要去哪？
+    MessageEN: Huh? What do you mean?
+    MessageTH: หืม? จู่ๆ ก็พูดอะไรน่ะ?
+    MessageTW: 那個，去哪兒？
+    MessageGroupId: 100320150
     Id: 100320210
     CharacterId: 10032
     MessageCondition: Answer
@@ -415,13 +421,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응? 갑자기 무슨 뜻이야?
-    MessageJP: えっと、どこに？
-    MessageCN: 那个，这是要去哪？
-    MessageEN: Huh? What do you mean?
-    MessageTH: หืม? จู่ๆ ก็พูดอะไรน่ะ?
-    MessageTW: 那個，去哪兒？
-  - MessageGroupId: 100320160
+  - MessageKR: 모처럼의 새해잖아?
+    MessageJP: せっかくお正月なんだから決まってるでしょ？
+    MessageCN: 好不容易到正月了，不然呢？
+    MessageEN: Well, it is New Year's, right?
+    MessageTH: ก็ตอนนี้มันปีใหม่นี่นา?
+    MessageTW: 難得過新年，所以很明顯吧？
+    MessageGroupId: 100320160
     Id: 100320220
     CharacterId: 10032
     MessageCondition: Feedback
@@ -433,13 +439,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 모처럼의 새해잖아?
-    MessageJP: せっかくお正月なんだから決まってるでしょ？
-    MessageCN: 好不容易到正月了，不然呢？
-    MessageEN: Well, it is New Year's, right?
-    MessageTH: ก็ตอนนี้มันปีใหม่นี่นา?
-    MessageTW: 難得過新年，所以很明顯吧？
-  - MessageGroupId: 100320160
+  - MessageKR: 기왕이면 거기에 맞춘 이벤트를 즐길 필요가 있다구?
+    MessageJP: 正月なんだから、正月らしいところに行かないと！
+    MessageCN: 正月当然就要做一些正月做的事呀！
+    MessageEN: We should enjoy the New Year's events the best we can.
+    MessageTH: "ก็ต้องไปสนุกกับงานเทศกาล
+
+      ที่นั่นกันหน่อยสิ?"
+    MessageTW: 新年就得去有新年氣氛的地方！
+    MessageGroupId: 100320160
     Id: 100320230
     CharacterId: 10032
     MessageCondition: Feedback
@@ -451,15 +459,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기왕이면 거기에 맞춘 이벤트를 즐길 필요가 있다구?
-    MessageJP: 正月なんだから、正月らしいところに行かないと！
-    MessageCN: 正月当然就要做一些正月做的事呀！
-    MessageEN: We should enjoy the New Year's events the best we can.
-    MessageTH: "ก็ต้องไปสนุกกับงานเทศกาล
-
-      ที่นั่นกันหน่อยสิ?"
-    MessageTW: 新年就得去有新年氣氛的地方！
-  - MessageGroupId: 100320170
+  - MessageKR: 자, 그러니 집합이야! 선생님!
+    MessageJP: ほらほら、早く準備して！先生！
+    MessageCN: 好了好了，快点去准备一下吧！老师！
+    MessageEN: So let's get together, Sensei!
+    MessageTH: เอาละ ถ้างั้นก็มารวมพลกัน! คุณครู!
+    MessageTW: 好啦好啦，快點準備！老師！
+    MessageGroupId: 100320170
     Id: 100320240
     CharacterId: 10032
     MessageCondition: Feedback
@@ -471,13 +477,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 자, 그러니 집합이야! 선생님!
-    MessageJP: ほらほら、早く準備して！先生！
-    MessageCN: 好了好了，快点去准备一下吧！老师！
-    MessageEN: So let's get together, Sensei!
-    MessageTH: เอาละ ถ้างั้นก็มารวมพลกัน! คุณครู!
-    MessageTW: 好啦好啦，快點準備！老師！
-  - MessageGroupId: 100320180
+  - MessageKR: 선생님! 엄청나게 하네츠키가 하고 싶어졌어!
+    MessageJP: 先生！羽根つきしよっ！
+    MessageCN: 老师！我们一起玩板羽球吧！
+    MessageEN: Sensei! I really, really want to play hanetsuki!
+    MessageTH: "คุณครู! เค้าอยากเล่นฮาเนะสึกิ
+
+      มากๆ เลย!"
+    MessageTW: 老師！來打羽子板吧！
+    MessageGroupId: 100320180
     Id: 100320250
     CharacterId: 10032
     MessageCondition: FavorRankUp
@@ -489,15 +497,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님! 엄청나게 하네츠키가 하고 싶어졌어!
-    MessageJP: 先生！羽根つきしよっ！
-    MessageCN: 老师！我们一起玩板羽球吧！
-    MessageEN: Sensei! I really, really want to play hanetsuki!
-    MessageTH: "คุณครู! เค้าอยากเล่นฮาเนะสึกิ
-
-      มากๆ เลย!"
-    MessageTW: 老師！來打羽子板吧！
-  - MessageGroupId: 100320190
+  - MessageKR: 갑자기 하네츠키를……?
+    MessageJP: いきなりだね……？
+    MessageCN: 挺突然的……？
+    MessageEN: You suddenly want to play hanetsuki...?
+    MessageTH: ทำไมจู่ๆ ถึงอยากเล่นฮาเนะสึกิล่ะ...?
+    MessageTW: 這麼突然……？
+    MessageGroupId: 100320190
     Id: 100320260
     CharacterId: 10032
     MessageCondition: Answer
@@ -509,13 +515,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 하네츠키를……?
-    MessageJP: いきなりだね……？
-    MessageCN: 挺突然的……？
-    MessageEN: You suddenly want to play hanetsuki...?
-    MessageTH: ทำไมจู่ๆ ถึงอยากเล่นฮาเนะสึกิล่ะ...?
-    MessageTW: 這麼突然……？
-  - MessageGroupId: 100320200
+  - MessageKR: 지난번의 패배를, 하네츠키로 설욕해 줄 테니까!
+    MessageJP: この前の敗北の屈辱、思いっきり晴らしちゃうから！
+    MessageCN: 因为我已经下定决心，要好好洗刷掉上次败北的屈辱！
+    MessageEN: I'm going to avenge my last defeat with hanetsuki.
+    MessageTH: "เพราะเค้าจะใช้ฮาเนะสึกิเอาคืน
+
+      ที่แพ้ครั้งที่แล้วยังไงล่ะ!"
+    MessageTW: 我要一雪前恥！
+    MessageGroupId: 100320200
     Id: 100320270
     CharacterId: 10032
     MessageCondition: Feedback
@@ -527,15 +535,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번의 패배를, 하네츠키로 설욕해 줄 테니까!
-    MessageJP: この前の敗北の屈辱、思いっきり晴らしちゃうから！
-    MessageCN: 因为我已经下定决心，要好好洗刷掉上次败北的屈辱！
-    MessageEN: I'm going to avenge my last defeat with hanetsuki.
-    MessageTH: "เพราะเค้าจะใช้ฮาเนะสึกิเอาคืน
-
-      ที่แพ้ครั้งที่แล้วยังไงล่ะ!"
-    MessageTW: 我要一雪前恥！
-  - MessageGroupId: 100320210
+  - MessageKR: 선생님, 그럼 승부야!
+    MessageJP: さー、尋常に勝負！
+    MessageCN: 来吧～，我们再来一决胜负！
+    MessageEN: The game is on, Sensei!
+    MessageTH: คุณครู นี่คือการแข่งขันนะ!
+    MessageTW: 來吧──，一決勝負！
+    MessageGroupId: 100320210
     Id: 100320280
     CharacterId: 10032
     MessageCondition: Feedback
@@ -547,13 +553,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님, 그럼 승부야!
-    MessageJP: さー、尋常に勝負！
-    MessageCN: 来吧～，我们再来一决胜负！
-    MessageEN: The game is on, Sensei!
-    MessageTH: คุณครู นี่คือการแข่งขันนะ!
-    MessageTW: 來吧──，一決勝負！
-  - MessageGroupId: 100320210
+  - MessageKR: 기다리고 있을게!
+    MessageJP: 待ってるからね！早く早く！
+    MessageCN: 我等着老师哦！快点快点！
+    MessageEN: I'll be waiting!
+    MessageTH: เค้าจะรอนะ!
+    MessageTW: 我等著唷！快點快點！
+    MessageGroupId: 100320210
     Id: 100320290
     CharacterId: 10032
     MessageCondition: Feedback
@@ -565,13 +571,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있을게!
-    MessageJP: 待ってるからね！早く早く！
-    MessageCN: 我等着老师哦！快点快点！
-    MessageEN: I'll be waiting!
-    MessageTH: เค้าจะรอนะ!
-    MessageTW: 我等著唷！快點快點！
-  - MessageGroupId: 100320220
+  - MessageKR: 이번 새해에도, 선생님과 함께해서 엄청 재미있었어.
+    MessageJP: 先生のおかげでお正月、すっごい楽しかった！ありがとね！
+    MessageCN: 托老师的福，我新年过的很开心哦！谢谢啦！
+    MessageEN: I had so much fun spending New Year's with you, Sensei.
+    MessageTH: วันปีใหม่ปีนี้ เค้าอยู่กับคุณครูสนุกมากเลยล่ะ
+    MessageTW: 託老師的福，新年過得非常開心！謝啦！
+    MessageGroupId: 100320220
     Id: 100320300
     CharacterId: 10032
     MessageCondition: None
@@ -583,13 +589,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번 새해에도, 선생님과 함께해서 엄청 재미있었어.
-    MessageJP: 先生のおかげでお正月、すっごい楽しかった！ありがとね！
-    MessageCN: 托老师的福，我新年过的很开心哦！谢谢啦！
-    MessageEN: I had so much fun spending New Year's with you, Sensei.
-    MessageTH: วันปีใหม่ปีนี้ เค้าอยู่กับคุณครูสนุกมากเลยล่ะ
-    MessageTW: 託老師的福，新年過得非常開心！謝啦！
-  - MessageGroupId: 100320230
+  - MessageKR: 새해에도, 그리고 앞으로도.
+    MessageJP: これから先もずっと
+    MessageCN: 以后也要一直
+    MessageEN: During the New Year and from now on...
+    MessageTH: ทั้งในวันปีใหม่... แล้วก็จากนี้ไปด้วย
+    MessageTW: 今後也要
+    MessageGroupId: 100320230
     Id: 100320310
     CharacterId: 10032
     MessageCondition: None
@@ -601,13 +607,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 새해에도, 그리고 앞으로도.
-    MessageJP: これから先もずっと
-    MessageCN: 以后也要一直
-    MessageEN: During the New Year and from now on...
-    MessageTH: ทั้งในวันปีใหม่... แล้วก็จากนี้ไปด้วย
-    MessageTW: 今後也要
-  - MessageGroupId: 100320230
+  - MessageKR: 나랑 잔뜩 놀아줘야 해? 선생님♡
+    MessageJP: 私とたーっくさん遊んでね、先生♡
+    MessageCN: 经～常陪我玩哦，老师♡
+    MessageEN: "...please play with me a lot, Sensei! ♥"
+    MessageTH: ต้องมาเล่นกับเค้าเยอะๆ นะ คุณครู♡
+    MessageTW: 也要經常和我一起玩唷，老師♡
+    MessageGroupId: 100320230
     Id: 100320320
     CharacterId: 10032
     MessageCondition: None
@@ -619,9 +625,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나랑 잔뜩 놀아줘야 해? 선생님♡
-    MessageJP: 私とたーっくさん遊んでね、先生♡
-    MessageCN: 经～常陪我玩哦，老师♡
-    MessageEN: "...please play with me a lot, Sensei! ♥"
-    MessageTH: ต้องมาเล่นกับเค้าเยอะๆ นะ คุณครู♡
-    MessageTW: 也要經常和我一起玩唷，老師♡

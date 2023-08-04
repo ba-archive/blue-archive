@@ -8,6 +8,7 @@ import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
 import BaDialog from "./components/BaDialog.vue";
 import BaSelector from "./components/BaSelector.vue";
 import BaButton from "@/layers/uiLayer/components/BaButton.vue";
+import { useUiState } from "@/stores/state";
 import { ShowOption } from "@/types/events";
 import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
@@ -15,7 +16,7 @@ import "./userInteract";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
-const autoMode = ref(false);
+const { autoMode } = useUiState();
 const showMenu = ref(false);
 const forceShowMenu = ref(false);
 const showSubMenu = ref(false);
@@ -73,14 +74,12 @@ function handleBtnChatLog() {
   refreshBtnMenuTimer();
   showStoryLog.value = true;
   autoMode.value = false;
-  eventBus.emit("stopAuto");
 }
 function handleBtnSkipSummary() {
   eventBus.emit("playOtherSounds", "select");
   refreshBtnMenuTimer();
   autoMode.value = false;
   showSummary.value = true;
-  eventBus.emit("stopAuto");
 }
 
 // 处理选项
@@ -95,11 +94,6 @@ function handleBaSelector(selectionGroup: number) {
 
 function handleBtnAutoMode() {
   autoMode.value = !autoMode.value;
-  if (autoMode.value) {
-    eventBus.emit("auto");
-  } else {
-    eventBus.emit("stopAuto");
-  }
 }
 
 // 计时器：当这个计时器到时间时 -- 回调函数会把 hiddenMenu 设置成 true 来影藏菜单

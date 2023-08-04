@@ -3,10 +3,9 @@
  */
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Application, LoaderResource, Sprite } from "pixi.js";
 import gsap from "gsap";
+import { Application, Assets, Sprite, Texture } from "pixijs";
 import { BgLayer } from "@/types/bgLayer";
-import { Dict } from "@/types/common";
 
 export function bgInit() {
   return BgLayerInstance.init();
@@ -40,13 +39,8 @@ const BgLayerInstance: BgLayer = {
    * 事件监听处理函数
    */
   handleShowBg({ url, overlap }) {
-    const {
-      app: { loader },
-    } = usePlayerStore();
-
-    loader.load((loader, resources) => {
-      const instance = this.getBgSpriteFromResource(resources, url);
-
+    Assets.load(url).then(() => {
+      const instance = this.getBgSpriteFromResource(url);
       if (instance) {
         if (overlap) {
           this.loadBgOverlap(instance, overlap);
@@ -69,17 +63,15 @@ const BgLayerInstance: BgLayer = {
   /**
    * 方法
    */
-  getBgSpriteFromResource(resources: Dict<LoaderResource>, name: string) {
+  getBgSpriteFromResource(name: string) {
     const { app } = usePlayerStore();
     let sprite: Sprite | null = null;
-
-    if (!resources[name]) {
+    const asset = Assets.get<Texture>(name);
+    if (!asset) {
       console.error(`can't find resource: ${name}`);
       return;
     }
-
-    sprite = new Sprite(resources[name].texture);
-
+    sprite = new Sprite(asset);
     const { x, y, scale } = calcBackgroundImageSize(sprite, app);
     sprite.position.set(x, y);
     sprite.scale.set(scale);
@@ -96,7 +88,7 @@ const BgLayerInstance: BgLayer = {
   },
   async loadBgOverlap(instance: Sprite, overlap: number) {
     const { app, bgInstance: oldInstance, setBgInstance } = usePlayerStore();
-    let tl = gsap.timeline();
+    const tl = gsap.timeline();
     instance.zIndex = -99;
 
     app.stage.addChild(instance);

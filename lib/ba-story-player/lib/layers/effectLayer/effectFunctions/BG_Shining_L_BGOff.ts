@@ -1,5 +1,6 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Rectangle, Sprite, Texture, filters } from "pixi.js";
+import { Container, Sprite } from "pixijs";
+import { AlphaFilter } from "pixijs";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -10,7 +11,7 @@ export default async function BG_Shining_L_BGOff(resources: Sprite[]) {
   const appWidth = app.view.width;
   const appHeight = app.view.height;
   // 紫色覆盖
-  const alphaFilter = new filters.AlphaFilter(0.4);
+  const alphaFilter = new AlphaFilter(0.4);
   const backPurpleSprite = resources[2];
   backPurpleSprite.tint = 0xd59ffb;
   backPurpleSprite.width = appWidth;
@@ -19,9 +20,9 @@ export default async function BG_Shining_L_BGOff(resources: Sprite[]) {
   backPurpleSprite.zIndex = -1;
   app.stage.addChild(backPurpleSprite);
   // 波纹特效
-  let emitterContainer = new Container();
+  const emitterContainer = new Container();
   app.stage.addChild(emitterContainer);
-  let ringConfig: EmitterConfigV3 = {
+  const ringConfig: EmitterConfigV3 = {
     ...(emitterConfigs("shining_ring") as EmitterConfigV3),
   };
   const ringSprite = sprite2TransParent(resources[0]);

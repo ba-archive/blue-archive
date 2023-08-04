@@ -1,9 +1,9 @@
-import * as PIXI from "pixi.js";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
+import * as PIXI from "pixijs";
 import gsap, { Power0 } from "gsap";
-import { IAnimationState, ISkeletonData, Spine } from "pixi-spine";
+import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayerInterface,
@@ -26,13 +26,15 @@ import { AdjustmentFilter } from "@pixi/filter-adjustment";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
-import { PixiPlugin } from "gsap/PixiPlugin";
 import CharacterEffectPlayerInstance, {
   POS_INDEX_MAP,
   calcSpineStagePosition,
 } from "./actionPlayer";
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import PixiPlugin from "./gsapPixiPlugin";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
@@ -114,7 +116,7 @@ export const CharacterLayerInstance: CharacterLayer = {
     for (const item of characterMap) {
       const characterName = item.CharacterName;
       if (!this.hasCharacterInstance(characterName, item.position)) {
-        const spineData = characterSpineData(characterName);
+        const spineData = characterSpineData(characterName, item.spineUrl);
         if (!spineData) {
           return false;
         }
@@ -278,7 +280,9 @@ export const CharacterLayerInstance: CharacterLayer = {
     Promise.all(mapList.map(character => this.showOneCharacter(character)))
       .then(this.characterDone)
       .catch(reason => {
-        console.log(reason);
+        if (reason.some((it: unknown) => it)) {
+          console.log(reason);
+        }
         this.characterDone();
       });
     return true;
@@ -310,6 +314,8 @@ export const CharacterLayerInstance: CharacterLayer = {
         blue: 1.15,
       });
       const motionBlurFilter = new MotionBlurFilter();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       data.instance.filters.push(crtFilter, adjustmentFilter, motionBlurFilter);
       loopCRtAnimation(crtFilter);
       const tl = gsap.timeline();
@@ -359,8 +365,11 @@ export const CharacterLayerInstance: CharacterLayer = {
       chara.alpha = 1;
       chara.visible = true;
     }
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     data.instance.filters.push(colorFilter);
 
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise<void>(async (resolve, reject) => {
       const effectListLength = data.effects.length;
       if (effectListLength === 0) {
@@ -524,7 +533,7 @@ function loopAnimationTime<AnimationState extends IAnimationState>(
       }
       let loopCount = 1;
       const listener: ILoopAnimationStateListener = {
-        complete: entry => {
+        complete: (entry: ITrackEntry) => {
           if (entry.trackIndex !== trackIndex) {
             return;
           }

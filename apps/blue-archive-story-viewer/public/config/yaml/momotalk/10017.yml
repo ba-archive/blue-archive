@@ -1,53 +1,59 @@
 CharacterId: 10017
 translator: 罐子
 title:
-  - GroupId: 1001702
-    FavorScheduleId: 100172
-    CharacterId: 10017
-    TextJp: 勲章授与式
+  - TextJp: 勲章授与式
     TextCn: 授勋仪式
     TextKr: 훈장 수여식
     TextEn: The Award Ceremony
     TextTh: พิธีมอบเหรียญตรา
     TextTw: 授勳典禮
-  - GroupId: 1001703
-    FavorScheduleId: 100173
+    GroupId: 1001702
+    FavorScheduleId: 100172
     CharacterId: 10017
-    TextJp: ピーマンとハンバーグ
+  - TextJp: ピーマンとハンバーグ
     TextCn: 青椒和汉堡肉
     TextKr: 피망과 햄버거 스테이크
     TextEn: Bell Peppers and Hamburger Steak
     TextTh: พริกหวานกับสเต๊กแฮมเบอร์เกอร์
     TextTw: 青椒與漢堡排
-  - GroupId: 1001705
-    FavorScheduleId: 100175
+    GroupId: 1001703
+    FavorScheduleId: 100173
     CharacterId: 10017
-    TextJp: チェリノは九歳？
+  - TextJp: チェリノは九歳？
     TextCn: 切里诺是九岁吗？
     TextKr: 체리노는 아홉 살?
     TextEn: Cherino's Nine Years Old?
     TextTh: เชริโน่อายุเก้าขวบ?
     TextTw: 潔莉諾是九歲？
-  - GroupId: 1001706
-    FavorScheduleId: 100176
+    GroupId: 1001705
+    FavorScheduleId: 100175
     CharacterId: 10017
-    TextJp: 雪原の暗殺者
+  - TextJp: 雪原の暗殺者
     TextCn: 雪原的暗杀者
     TextKr: 설원의 암살자
     TextEn: The Snowfield Assassin
     TextTh: นักลอบฆ่าแห่งทุ่งหิมะ
     TextTw: 雪原的暗殺者
-  - GroupId: 1001708
-    FavorScheduleId: 100178
+    GroupId: 1001706
+    FavorScheduleId: 100176
     CharacterId: 10017
-    TextJp: 悪夢
+  - TextJp: 悪夢
     TextCn: 噩梦
     TextKr: 악몽
     TextEn: Nightmares
     TextTh: ฝันร้าย
     TextTw: 惡夢
+    GroupId: 1001708
+    FavorScheduleId: 100178
+    CharacterId: 10017
 content:
-  - MessageGroupId: 100170010
+  - MessageKR: 기뻐하게나, 콤라드.
+    MessageJP: 喜べ、カムラッド！
+    MessageCN: 庆贺吧，同志！
+    MessageEN: You should be happy, Comrade.
+    MessageTH: ดีใจซะเถอะสหาย
+    MessageTW: 歡呼吧，同志！
+    MessageGroupId: 100170010
     Id: 100170010
     CharacterId: 10017
     MessageCondition: FavorRankUp
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기뻐하게나, 콤라드.
-    MessageJP: 喜べ、カムラッド！
-    MessageCN: 庆贺吧，同志！
-    MessageEN: You should be happy, Comrade.
-    MessageTH: ดีใจซะเถอะสหาย
-    MessageTW: 歡呼吧，同志！
-  - MessageGroupId: 100170020
+  - MessageKR: 콤라드의 노력을 치하하기 위해
+    MessageJP: カムラッドのこれまでの努力を称えて
+    MessageCN: 为了表彰同志迄今为止的努力
+    MessageEN: To commend a fellow comrade's efforts,
+    MessageTH: พวกเราชาวสหพันธ์เรดวินเทอร์
+    MessageTW: 為了表揚同志至今為止的努力
+    MessageGroupId: 100170020
     Id: 100170020
     CharacterId: 10017
     MessageCondition: None
@@ -77,13 +83,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드의 노력을 치하하기 위해
-    MessageJP: カムラッドのこれまでの努力を称えて
-    MessageCN: 为了表彰同志迄今为止的努力
-    MessageEN: To commend a fellow comrade's efforts,
-    MessageTH: พวกเราชาวสหพันธ์เรดวินเทอร์
-    MessageTW: 為了表揚同志至今為止的努力
-  - MessageGroupId: 100170020
+  - MessageKR: 우리 붉은겨울 연방학원에서 콤라드에게
+    MessageJP: 我がレッドウィンター連邦学園からカムラッドに新たな勲章
+    MessageCN: 我红冬联邦学园将为同志
+    MessageEN: the Red Winter Federal Academy has decided to award you...
+    MessageTH: ได้มอบ <เหรียญไมตรีนักเรียนพิเศษ>
+    MessageTW: 我等赤冬聯邦學園將授予同志新的勳章
+    MessageGroupId: 100170020
     Id: 100170030
     CharacterId: 10017
     MessageCondition: None
@@ -95,13 +101,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우리 붉은겨울 연방학원에서 콤라드에게
-    MessageJP: 我がレッドウィンター連邦学園からカムラッドに新たな勲章
-    MessageCN: 我红冬联邦学园将为同志
-    MessageEN: the Red Winter Federal Academy has decided to award you...
-    MessageTH: ได้มอบ <เหรียญไมตรีนักเรียนพิเศษ>
-    MessageTW: 我等赤冬聯邦學園將授予同志新的勳章
-  - MessageGroupId: 100170020
+  - MessageKR: <특별 학생 우호 훈장>을 수여하기로 했다네!
+    MessageJP: 「特別友好章」を授与することにしたのだ！
+    MessageCN: 授予我园的新勋章“特別友好章”！
+    MessageEN: the Special Student Friendship Medal!
+    MessageTH: เพื่อชมเชยในความสามารถของสหายล่ะ!
+    MessageTW: 「特別友好章」！
+    MessageGroupId: 100170020
     Id: 100170040
     CharacterId: 10017
     MessageCondition: None
@@ -113,13 +119,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: <특별 학생 우호 훈장>을 수여하기로 했다네!
-    MessageJP: 「特別友好章」を授与することにしたのだ！
-    MessageCN: 授予我园的新勋章“特別友好章”！
-    MessageEN: the Special Student Friendship Medal!
-    MessageTH: เพื่อชมเชยในความสามารถของสหายล่ะ!
-    MessageTW: 「特別友好章」！
-  - MessageGroupId: 100170030
+  - MessageKR: 특별 학생 우호 훈장은 지난번에도 받지 않았어?
+    MessageJP: あれ……特別友好章って、この前も貰わなかったっけ？
+    MessageCN: 那个……特别友好章，我之前好像就拿到过一次？
+    MessageEN:
+      Wait, didn't you get the Special Student Friendship Medal last time
+      too?
+    MessageTH: "คราวก่อนก็ได้รับเหรียญนี้ไปแล้ว
+
+      ไม่ใช่เหรอ?"
+    MessageTW: 啊咧……之前不就給過特別友好章了嗎？
+    MessageGroupId: 100170030
     Id: 100170050
     CharacterId: 10017
     MessageCondition: Answer
@@ -131,29 +141,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 특별 학생 우호 훈장은 지난번에도 받지 않았어?
-    MessageJP: あれ……特別友好章って、この前も貰わなかったっけ？
-    MessageCN: 那个……特别友好章，我之前好像就拿到过一次？
-    MessageEN:
-      Wait, didn't you get the Special Student Friendship Medal last time
-      too?
-    MessageTH: "คราวก่อนก็ได้รับเหรียญนี้ไปแล้ว
-
-      ไม่ใช่เหรอ?"
-    MessageTW: 啊咧……之前不就給過特別友好章了嗎？
-  - MessageGroupId: 100170040
-    Id: 100170060
-    CharacterId: 10017
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100170050
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 무슨 소리인가. 지난번에 수여한 훈장은 <특별 학생 우정 훈장> 이었다고.
+  - MessageKR: 무슨 소리인가. 지난번에 수여한 훈장은 <특별 학생 우정 훈장> 이었다고.
     MessageJP: 何を言っている、この前授与した勲章は「特別友情章」だ
     MessageCN: 说什么呢，上次授予的勋章是“特別友情章”
     MessageEN:
@@ -165,7 +153,27 @@ content:
 
       ต่างหาก"
     MessageTW: 說什麼呢，上次授予的勳章是「特別友情章」！
-  - MessageGroupId: 100170040
+    MessageGroupId: 100170040
+    Id: 100170060
+    CharacterId: 10017
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100170050
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 훈장의 종류를 벌써부터 헷갈리면 어쩌자는 건가.
+    MessageJP: 勲章の種類を間違えるとはけしからん
+    MessageCN: 居然弄错勋章的种类，岂有此理
+    MessageEN: The names of these medals are so confusing...
+    MessageTH: "นี่สหายสับสนกับประเภทของเหรียญ
+
+      แล้วเหรอ?"
+    MessageTW: 勳章的種類可不能弄錯
+    MessageGroupId: 100170040
     Id: 100170070
     CharacterId: 10017
     MessageCondition: Feedback
@@ -177,15 +185,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 훈장의 종류를 벌써부터 헷갈리면 어쩌자는 건가.
-    MessageJP: 勲章の種類を間違えるとはけしからん
-    MessageCN: 居然弄错勋章的种类，岂有此理
-    MessageEN: The names of these medals are so confusing...
-    MessageTH: "นี่สหายสับสนกับประเภทของเหรียญ
-
-      แล้วเหรอ?"
-    MessageTW: 勳章的種類可不能弄錯
-  - MessageGroupId: 100170050
+  - MessageKR: 훈장이 몇 종류나 있는 거야…….
+    MessageJP: 勲章ってそんなに色々あるんだ……
+    MessageCN: 原来有这么多种类的勋章吗……
+    MessageEN: How many different awards are there?
+    MessageTH: แล้วเหรียญตรานี่มีกี่แบบกันล่ะ?
+    MessageTW: 有那麼多種勳章啊……
+    MessageGroupId: 100170050
     Id: 100170080
     CharacterId: 10017
     MessageCondition: Answer
@@ -197,25 +203,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 훈장이 몇 종류나 있는 거야…….
-    MessageJP: 勲章ってそんなに色々あるんだ……
-    MessageCN: 原来有这么多种类的勋章吗……
-    MessageEN: How many different awards are there?
-    MessageTH: แล้วเหรียญตรานี่มีกี่แบบกันล่ะ?
-    MessageTW: 有那麼多種勳章啊……
-  - MessageGroupId: 100170060
-    Id: 100170090
-    CharacterId: 10017
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100170070
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 붉은겨울 연방학원에서는 학원의 발전에 크게 기여한 학생들을 표창하기 위해
+  - MessageKR: 붉은겨울 연방학원에서는 학원의 발전에 크게 기여한 학생들을 표창하기 위해
     MessageJP: レッドウィンターでは、学園の発展に大きく貢献した者を表彰するために、
     MessageCN: 红冬为了表彰对学园发展作出重大贡献的人，
     MessageEN:
@@ -227,7 +215,25 @@ content:
 
       ที่ทุ่มเทต่อการพัฒนาของสถาบัน"
     MessageTW: 在赤冬，為了表揚對學園發展做出巨大貢獻的人
-  - MessageGroupId: 100170060
+    MessageGroupId: 100170060
+    Id: 100170090
+    CharacterId: 10017
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100170070
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 총 247가지의 훈장을 보유하고 있지.
+    MessageJP: 計247種類の勲章が存在する
+    MessageCN: 共有247种勋章
+    MessageEN: award students who contribute greatly to the advancement of our academy.
+    MessageTH: มีอยู่ทั้งหมด 247 แบบ
+    MessageTW: 共有247種勳章
+    MessageGroupId: 100170060
     Id: 100170100
     CharacterId: 10017
     MessageCondition: Feedback
@@ -239,13 +245,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 총 247가지의 훈장을 보유하고 있지.
-    MessageJP: 計247種類の勲章が存在する
-    MessageCN: 共有247种勋章
-    MessageEN: award students who contribute greatly to the advancement of our academy.
-    MessageTH: มีอยู่ทั้งหมด 247 แบบ
-    MessageTW: 共有247種勳章
-  - MessageGroupId: 100170070
+  - MessageKR: 체리노는 그중 몇 가지의 훈장을 받았어?
+    MessageJP: すごい数だね。チェリノはいくつの勲章を持ってるの？
+    MessageCN: 好厉害的数量啊。切里诺有多少勋章呢？
+    MessageEN: How many medals have you gotten, Cherino?
+    MessageTH: แล้วเชริโน่ได้เหรียญอะไรมาแล้วบ้าง?
+    MessageTW: 數量好驚人。潔莉諾有多少勳章？
+    MessageGroupId: 100170070
     Id: 100170110
     CharacterId: 10017
     MessageCondition: Answer
@@ -257,13 +263,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 체리노는 그중 몇 가지의 훈장을 받았어?
-    MessageJP: すごい数だね。チェリノはいくつの勲章を持ってるの？
-    MessageCN: 好厉害的数量啊。切里诺有多少勋章呢？
-    MessageEN: How many medals have you gotten, Cherino?
-    MessageTH: แล้วเชริโน่ได้เหรียญอะไรมาแล้วบ้าง?
-    MessageTW: 數量好驚人。潔莉諾有多少勳章？
-  - MessageGroupId: 100170080
+  - MessageKR: 후후, 어리석은 질문이로군. 콤라드.
+    MessageJP: ふふ、バカげた質問だな。カムラッド
+    MessageCN: 哼哼，真是愚蠢的问题啊。同志
+    MessageEN: What a foolish question, Comrade.
+    MessageTH: หุหุ ถามอะไรโง่ๆ น่ะสหาย
+    MessageTW: 呵呵，真是愚蠢的問題啊。同志
+    MessageGroupId: 100170080
     Id: 100170120
     CharacterId: 10017
     MessageCondition: Feedback
@@ -275,13 +281,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후, 어리석은 질문이로군. 콤라드.
-    MessageJP: ふふ、バカげた質問だな。カムラッド
-    MessageCN: 哼哼，真是愚蠢的问题啊。同志
-    MessageEN: What a foolish question, Comrade.
-    MessageTH: หุหุ ถามอะไรโง่ๆ น่ะสหาย
-    MessageTW: 呵呵，真是愚蠢的問題啊。同志
-  - MessageGroupId: 100170080
+  - MessageKR: ……247종 전부다!
+    MessageJP: ……247種、全部だ！
+    MessageCN: ……247种勋章，咱全都有！
+    MessageEN: "...I've been awarded all 247 medals!"
+    MessageTH: เราได้มาทั้ง 247 แบบแล้ว!
+    MessageTW: ……247種，全部！
+    MessageGroupId: 100170080
     Id: 100170130
     CharacterId: 10017
     MessageCondition: Feedback
@@ -293,13 +299,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……247종 전부다!
-    MessageJP: ……247種、全部だ！
-    MessageCN: ……247种勋章，咱全都有！
-    MessageEN: "...I've been awarded all 247 medals!"
-    MessageTH: เราได้มาทั้ง 247 แบบแล้ว!
-    MessageTW: ……247種，全部！
-  - MessageGroupId: 100170090
+  - MessageKR: 이것 보거라, 콤라드. 이 몸이 그린 새로운 훈장의 디자인이니라!
+    MessageJP: 見ろカムラッド。あの後おいらの手で仕上げた、新しい勲章のデザインだ！
+    MessageCN: 看吧同志。此即为咱亲自操刀的，全新的勋章设计！
+    MessageEN: Look here, Comrade. This is the newest medal, designed by yours truly!
+    MessageTH: "ดูนี่สิสหาย เหรียญที่เราออกแบบขึ้น
+
+      มาเอง!"
+    MessageTW: 看吧，同志。下面是咱親自完成的新勳章設計！
+    MessageGroupId: 100170090
     Id: 100170140
     CharacterId: 10017
     MessageCondition: None
@@ -311,15 +319,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이것 보거라, 콤라드. 이 몸이 그린 새로운 훈장의 디자인이니라!
-    MessageJP: 見ろカムラッド。あの後おいらの手で仕上げた、新しい勲章のデザインだ！
-    MessageCN: 看吧同志。此即为咱亲自操刀的，全新的勋章设计！
-    MessageEN: Look here, Comrade. This is the newest medal, designed by yours truly!
-    MessageTH: "ดูนี่สิสหาย เหรียญที่เราออกแบบขึ้น
-
-      มาเอง!"
-    MessageTW: 看吧，同志。下面是咱親自完成的新勳章設計！
-  - MessageGroupId: 100170100
+  - MessageKR: ""
+    MessageJP: ""
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100170100
     Id: 100170150
     CharacterId: 10017
     MessageCondition: None
@@ -331,13 +337,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Image
     ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Cherino_01
-    MessageKR: ""
-    MessageJP: ""
-    MessageCN: ""
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100170110
+  - MessageKR: 후후, 디자인만으로도 광채가 나지 않느냐?
+    MessageJP: ふふ、デザインからしてすでに光り輝いているだろう？
+    MessageCN: 哼哼，光从设计上就能看出闪闪发光的感觉了吧？
+    MessageEN: Heehee! Isn't this the most incredible design you've ever seen?
+    MessageTH: หุหุ แค่ดีไซน์ก็กินขาดแล้วใช่ไหมล่ะ?
+    MessageTW: 呵呵，光看設計就覺得閃閃發光對吧？
+    MessageGroupId: 100170110
     Id: 100170160
     CharacterId: 10017
     MessageCondition: None
@@ -349,13 +355,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후, 디자인만으로도 광채가 나지 않느냐?
-    MessageJP: ふふ、デザインからしてすでに光り輝いているだろう？
-    MessageCN: 哼哼，光从设计上就能看出闪闪发光的感觉了吧？
-    MessageEN: Heehee! Isn't this the most incredible design you've ever seen?
-    MessageTH: หุหุ แค่ดีไซน์ก็กินขาดแล้วใช่ไหมล่ะ?
-    MessageTW: 呵呵，光看設計就覺得閃閃發光對吧？
-  - MessageGroupId: 100170120
+  - MessageKR: 인상적이네.
+    MessageJP: 良いと思う！
+    MessageCN: 我觉得很好！
+    MessageEN: It's impressive, all right.
+    MessageTH: สวยดีนะ
+    MessageTW: 我覺得很棒！
+    MessageGroupId: 100170120
     Id: 100170170
     CharacterId: 10017
     MessageCondition: Answer
@@ -367,13 +373,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 인상적이네.
-    MessageJP: 良いと思う！
-    MessageCN: 我觉得很好！
-    MessageEN: It's impressive, all right.
-    MessageTH: สวยดีนะ
-    MessageTW: 我覺得很棒！
-  - MessageGroupId: 100170120
+  - MessageKR: 이런 디자인의 훈장은 처음 봐…….
+    MessageJP: ……頑張ったね！
+    MessageCN: ……加油哦！
+    MessageEN: I've never seen a design like this before...
+    MessageTH: ไม่เคยเห็นเหรียญแบบนี้มาก่อนเลย...
+    MessageTW: ……盡力了呢！
+    MessageGroupId: 100170120
     Id: 100170180
     CharacterId: 10017
     MessageCondition: Answer
@@ -385,13 +391,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이런 디자인의 훈장은 처음 봐…….
-    MessageJP: ……頑張ったね！
-    MessageCN: ……加油哦！
-    MessageEN: I've never seen a design like this before...
-    MessageTH: ไม่เคยเห็นเหรียญแบบนี้มาก่อนเลย...
-    MessageTW: ……盡力了呢！
-  - MessageGroupId: 100170130
+  - MessageKR: 그렇지? 좀 더 칭찬해도 괜찮느니라!
+    MessageJP: ふふっ、もっと褒めても良いぞ！
+    MessageCN: 哼哼，再多称赞几句也可以！
+    MessageEN: Right? Don't be shy, tell me how great it is!
+    MessageTH: ใช่ไหมล่ะ? จะชื่นชมเราอีกก็ได้นะ!
+    MessageTW: 呵呵，再多稱讚幾句也可以唷！
+    MessageGroupId: 100170130
     Id: 100170190
     CharacterId: 10017
     MessageCondition: Feedback
@@ -403,13 +409,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그렇지? 좀 더 칭찬해도 괜찮느니라!
-    MessageJP: ふふっ、もっと褒めても良いぞ！
-    MessageCN: 哼哼，再多称赞几句也可以！
-    MessageEN: Right? Don't be shy, tell me how great it is!
-    MessageTH: ใช่ไหมล่ะ? จะชื่นชมเราอีกก็ได้นะ!
-    MessageTW: 呵呵，再多稱讚幾句也可以唷！
-  - MessageGroupId: 100170130
+  - MessageKR: 어쩌면 이 몸에게는 훌륭한 디자이너의 자질이 있을지도……!
+    MessageJP: もしかしたらおいらには、デザイナーの素質まであるのかもしれない……！
+    MessageCN: 说不定咱也有着设计师的才能呢……！
+    MessageEN: I might just be a genius designer!
+    MessageTH: "เราคงมีความสามารถด้านการออก
+
+      แบบที่ยอดเยี่ยมอยู่ในตัวก็ได้!"
+    MessageTW: 說不定咱也有當設計師的資質……！
+    MessageGroupId: 100170130
     Id: 100170200
     CharacterId: 10017
     MessageCondition: Feedback
@@ -421,15 +429,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어쩌면 이 몸에게는 훌륭한 디자이너의 자질이 있을지도……!
-    MessageJP: もしかしたらおいらには、デザイナーの素質まであるのかもしれない……！
-    MessageCN: 说不定咱也有着设计师的才能呢……！
-    MessageEN: I might just be a genius designer!
-    MessageTH: "เราคงมีความสามารถด้านการออก
-
-      แบบที่ยอดเยี่ยมอยู่ในตัวก็ได้!"
-    MessageTW: 說不定咱也有當設計師的資質……！
-  - MessageGroupId: 100170140
+  - MessageKR: 우으…….
+    MessageJP: うぅ……
+    MessageCN: 呜呜……
+    MessageEN: Um...
+    MessageTH: อืม...
+    MessageTW: 唔……
+    MessageGroupId: 100170140
     Id: 100170210
     CharacterId: 10017
     MessageCondition: FavorRankUp
@@ -441,13 +447,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우으…….
-    MessageJP: うぅ……
-    MessageCN: 呜呜……
-    MessageEN: Um...
-    MessageTH: อืม...
-    MessageTW: 唔……
-  - MessageGroupId: 100170150
+  - MessageKR: 콤라드에게는 특별히 가리는 음식이 있는가?
+    MessageJP: なあ、カムラッドには何か苦手な食べ物とかあるのか？
+    MessageCN: 哎，同志你有什么不喜欢吃的食物吗？
+    MessageEN: Are there any foods you don't like, Comrade?
+    MessageTH: สหายมีอาหารที่เลือกกินไหม?
+    MessageTW: 吶，同志有什麼不喜歡的食物嗎？
+    MessageGroupId: 100170150
     Id: 100170220
     CharacterId: 10017
     MessageCondition: None
@@ -459,13 +465,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드에게는 특별히 가리는 음식이 있는가?
-    MessageJP: なあ、カムラッドには何か苦手な食べ物とかあるのか？
-    MessageCN: 哎，同志你有什么不喜欢吃的食物吗？
-    MessageEN: Are there any foods you don't like, Comrade?
-    MessageTH: สหายมีอาหารที่เลือกกินไหม?
-    MessageTW: 吶，同志有什麼不喜歡的食物嗎？
-  - MessageGroupId: 100170160
+  - MessageKR: 갑자기 가리는 음식은 왜?
+    MessageJP: 急にどうしたの？
+    MessageCN: 为什么切里诺突然问这个？
+    MessageEN: What? You wanna talk about food all of a sudden?
+    MessageTH: ทำไมจู่ๆ ถึงมาถามล่ะ?
+    MessageTW: 這麼突然，怎麼了？
+    MessageGroupId: 100170160
     Id: 100170230
     CharacterId: 10017
     MessageCondition: Answer
@@ -477,13 +483,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 가리는 음식은 왜?
-    MessageJP: 急にどうしたの？
-    MessageCN: 为什么切里诺突然问这个？
-    MessageEN: What? You wanna talk about food all of a sudden?
-    MessageTH: ทำไมจู่ๆ ถึงมาถามล่ะ?
-    MessageTW: 這麼突然，怎麼了？
-  - MessageGroupId: 100170170
+  - MessageKR: 이 몸은 피망이 싫다네. 맵고, 쓰고, 아린 맛이 나지 않는가!
+    MessageJP: おいらはピーマンが嫌いだ。苦くて、変な味がする！
+    MessageCN: 咱讨厌青椒。不仅很苦，还有奇怪的味道！
+    MessageEN: I hate bell peppers. They're spicy, bitter, and strange!
+    MessageTH: "เราไม่ชอบกินพริกหยวกน่ะ
+
+      ทั้งเผ็ด ทั้งขม แล้วก็รสจัดด้วย!"
+    MessageTW: 咱討厭青椒。又苦又怪的味道！
+    MessageGroupId: 100170170
     Id: 100170240
     CharacterId: 10017
     MessageCondition: Feedback
@@ -495,15 +503,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 몸은 피망이 싫다네. 맵고, 쓰고, 아린 맛이 나지 않는가!
-    MessageJP: おいらはピーマンが嫌いだ。苦くて、変な味がする！
-    MessageCN: 咱讨厌青椒。不仅很苦，还有奇怪的味道！
-    MessageEN: I hate bell peppers. They're spicy, bitter, and strange!
-    MessageTH: "เราไม่ชอบกินพริกหยวกน่ะ
+  - MessageKR: 으으……. 그 끔찍한 맛은 악마의 열매라고 해도 좋을 정도라네!
+    MessageJP: くぅっ……あのひどい味は、悪魔の食べ物と呼んでも良いぐらいだ
+    MessageCN: 咕……那个过分的味道，甚至可以称其为恶魔的食物了
+    MessageEN: Ugh... If you ask me, they may as well be called the fruit of death.
+    MessageTH: "แหวะ... รสชาติแย่แบบนั้น ฉันว่ามัน
 
-      ทั้งเผ็ด ทั้งขม แล้วก็รสจัดด้วย!"
-    MessageTW: 咱討厭青椒。又苦又怪的味道！
-  - MessageGroupId: 100170170
+      คือพืชผลแห่งความตายเลยล่ะ"
+    MessageTW: 唔……難吃到這地步，甚至可以稱為惡魔的食物
+    MessageGroupId: 100170170
     Id: 100170250
     CharacterId: 10017
     MessageCondition: Feedback
@@ -515,15 +523,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으으……. 그 끔찍한 맛은 악마의 열매라고 해도 좋을 정도라네!
-    MessageJP: くぅっ……あのひどい味は、悪魔の食べ物と呼んでも良いぐらいだ
-    MessageCN: 咕……那个过分的味道，甚至可以称其为恶魔的食物了
-    MessageEN: Ugh... If you ask me, they may as well be called the fruit of death.
-    MessageTH: "แหวะ... รสชาติแย่แบบนั้น ฉันว่ามัน
-
-      คือพืชผลแห่งความตายเลยล่ะ"
-    MessageTW: 唔……難吃到這地步，甚至可以稱為惡魔的食物
-  - MessageGroupId: 100170180
+  - MessageKR: 편식은 몸에 나빠.
+    MessageJP: 好き嫌いは身体に良くないよ？
+    MessageCN: 挑食对身体不好哦？
+    MessageEN: Being picky isn't good for your body.
+    MessageTH: การเลือกกินไม่ดีต่อร่างกายนะ
+    MessageTW: 挑食對身體不好唷？
+    MessageGroupId: 100170180
     Id: 100170260
     CharacterId: 10017
     MessageCondition: Answer
@@ -535,13 +541,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 편식은 몸에 나빠.
-    MessageJP: 好き嫌いは身体に良くないよ？
-    MessageCN: 挑食对身体不好哦？
-    MessageEN: Being picky isn't good for your body.
-    MessageTH: การเลือกกินไม่ดีต่อร่างกายนะ
-    MessageTW: 挑食對身體不好唷？
-  - MessageGroupId: 100170190
+  - MessageKR: 편식이 아니야! 피망을 싫어하는 건 사람이면 당연한 거라고!
+    MessageJP: 好き嫌いじゃない！ピーマンが食べられないのは、人として当然のことだ！
+    MessageCN: 这才不是挑食！对人来说吃不了青椒是理所当然的！
+    MessageEN: It's not being picky! Everyone hates bell peppers!
+    MessageTH: "ไม่ได้เลือกกินซะหน่อย! คนที่ไม่ชอบ
+
+      พริกหยวกก็ต้องคิดแบบนี้ทั้งนั้นแหละ!"
+    MessageTW: 不是挑食！生而為人，吃不了青椒是正常的！
+    MessageGroupId: 100170190
     Id: 100170270
     CharacterId: 10017
     MessageCondition: Feedback
@@ -553,15 +561,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 편식이 아니야! 피망을 싫어하는 건 사람이면 당연한 거라고!
-    MessageJP: 好き嫌いじゃない！ピーマンが食べられないのは、人として当然のことだ！
-    MessageCN: 这才不是挑食！对人来说吃不了青椒是理所当然的！
-    MessageEN: It's not being picky! Everyone hates bell peppers!
-    MessageTH: "ไม่ได้เลือกกินซะหน่อย! คนที่ไม่ชอบ
+  - MessageKR: 이렇게 간단한 진리를 학생들은 어째서 깨닫지 못하는 건지…….
+    MessageJP: こんな簡単な真理を、なぜ皆理解できないのか……
+    MessageCN: 如此简单的真理，为何大家都不能理解呢……
+    MessageEN: Why don't the students understand something so obvious?
+    MessageTH: "ทำไมไม่เข้าใจความเป็นจริงพื้นฐาน
 
-      พริกหยวกก็ต้องคิดแบบนี้ทั้งนั้นแหละ!"
-    MessageTW: 不是挑食！生而為人，吃不了青椒是正常的！
-  - MessageGroupId: 100170190
+      ง่ายๆ เลยนะ..."
+    MessageTW: 這麼簡單的真理，為什麼大家都不能理解呢……
+    MessageGroupId: 100170190
     Id: 100170280
     CharacterId: 10017
     MessageCondition: Feedback
@@ -573,15 +581,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이렇게 간단한 진리를 학생들은 어째서 깨닫지 못하는 건지…….
-    MessageJP: こんな簡単な真理を、なぜ皆理解できないのか……
-    MessageCN: 如此简单的真理，为何大家都不能理解呢……
-    MessageEN: Why don't the students understand something so obvious?
-    MessageTH: "ทำไมไม่เข้าใจความเป็นจริงพื้นฐาน
-
-      ง่ายๆ เลยนะ..."
-    MessageTW: 這麼簡單的真理，為什麼大家都不能理解呢……
-  - MessageGroupId: 100170200
+  - MessageKR: 후후후, 콤라드.
+    MessageJP: ふふふ、カムラッド
+    MessageCN: 哼哼哼，同志
+    MessageEN: "Hahaha, Comrade. "
+    MessageTH: "หุหุหุ สหาย "
+    MessageTW: 呵呵呵，同志。
+    MessageGroupId: 100170200
     Id: 100170290
     CharacterId: 10017
     MessageCondition: FavorRankUp
@@ -593,13 +599,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후후, 콤라드.
-    MessageJP: ふふふ、カムラッド
-    MessageCN: 哼哼哼，同志
-    MessageEN: "Hahaha, Comrade. "
-    MessageTH: "หุหุหุ สหาย "
-    MessageTW: 呵呵呵，同志。
-  - MessageGroupId: 100170210
+  - MessageKR: 지난번에 시내에서 푸딩을 사주겠다는 약속은 잊지 않았겠지?
+    MessageJP: この前の、プリンを買ってくれるという約束は忘れていないだろうな？
+    MessageCN: 同志没忘记之前约好要给我买布丁的事吧？
+    MessageEN: You didn't forget your promise from last time to buy me pudding, right?
+    MessageTH: "ยังไม่ลืมสัญญาที่บอกว่าจะซื้อพุดดิ้ง
+
+      ให้ใช่ไหม?"
+    MessageTW: 沒忘記之前說好要買布丁給我吧？
+    MessageGroupId: 100170210
     Id: 100170300
     CharacterId: 10017
     MessageCondition: None
@@ -611,15 +619,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지난번에 시내에서 푸딩을 사주겠다는 약속은 잊지 않았겠지?
-    MessageJP: この前の、プリンを買ってくれるという約束は忘れていないだろうな？
-    MessageCN: 同志没忘记之前约好要给我买布丁的事吧？
-    MessageEN: You didn't forget your promise from last time to buy me pudding, right?
-    MessageTH: "ยังไม่ลืมสัญญาที่บอกว่าจะซื้อพุดดิ้ง
-
-      ให้ใช่ไหม?"
-    MessageTW: 沒忘記之前說好要買布丁給我吧？
-  - MessageGroupId: 100170220
+  - MessageKR: 물론 잊지 않고 있어.
+    MessageJP: もちろん、覚えてるよ
+    MessageCN: 当然记得啦
+    MessageEN: Of course not.
+    MessageTH: ไม่ลืมอยู่แล้ว
+    MessageTW: 當然記得
+    MessageGroupId: 100170220
     Id: 100170310
     CharacterId: 10017
     MessageCondition: Answer
@@ -631,13 +637,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론 잊지 않고 있어.
-    MessageJP: もちろん、覚えてるよ
-    MessageCN: 当然记得啦
-    MessageEN: Of course not.
-    MessageTH: ไม่ลืมอยู่แล้ว
-    MessageTW: 當然記得
-  - MessageGroupId: 100170230
+  - MessageKR: 역시 콤라드야. 말뿐인 약속을 늘어놓는 어른들과는 다르다니까.
+    MessageJP: 流石はカムラッド、口だけの約束をするような大人ではないということだな
+    MessageCN: 不愧是同志，和那种只会耍嘴皮子的大人就是不一样啊
+    MessageEN: I knew it. Adults always know how to keep their promises.
+    MessageTH: "คิดไว้แล้วเชียว ต่างกับผู้ใหญ่คนอื่น
+
+      ที่ชอบสัญญาลมๆ แล้งๆ สมเป็นสหายจริงๆ"
+    MessageTW: 不愧是同志，不是那種只會嘴巴說說的大人
+    MessageGroupId: 100170230
     Id: 100170320
     CharacterId: 10017
     MessageCondition: Feedback
@@ -649,15 +657,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 콤라드야. 말뿐인 약속을 늘어놓는 어른들과는 다르다니까.
-    MessageJP: 流石はカムラッド、口だけの約束をするような大人ではないということだな
-    MessageCN: 不愧是同志，和那种只会耍嘴皮子的大人就是不一样啊
-    MessageEN: I knew it. Adults always know how to keep their promises.
-    MessageTH: "คิดไว้แล้วเชียว ต่างกับผู้ใหญ่คนอื่น
-
-      ที่ชอบสัญญาลมๆ แล้งๆ สมเป็นสหายจริงๆ"
-    MessageTW: 不愧是同志，不是那種只會嘴巴說說的大人
-  - MessageGroupId: 100170230
+  - MessageKR: 콤라드가 사주는 푸딩을 잔뜩 먹기 위해
+    MessageJP: せっかくカムラッドに奢ってもらうのだし、たくさん食べるために何と
+    MessageCN: 难得同志要款待咱，为了能多吃一点
+    MessageEN: I skipped lunch and snack time today
+    MessageTH: วันนี้เรางดกินของว่างตอนกลางวัน
+    MessageTW: 好不容易讓同志請客，為了能多吃一點
+    MessageGroupId: 100170230
     Id: 100170330
     CharacterId: 10017
     MessageCondition: Feedback
@@ -669,13 +675,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드가 사주는 푸딩을 잔뜩 먹기 위해
-    MessageJP: せっかくカムラッドに奢ってもらうのだし、たくさん食べるために何と
-    MessageCN: 难得同志要款待咱，为了能多吃一点
-    MessageEN: I skipped lunch and snack time today
-    MessageTH: วันนี้เรางดกินของว่างตอนกลางวัน
-    MessageTW: 好不容易讓同志請客，為了能多吃一點
-  - MessageGroupId: 100170230
+  - MessageKR: 오늘은 점심 간식도 거르고 기대하고 있었느니라.
+    MessageJP: 今日はお昼のおやつも抜いたのだ！ふふ、楽しみだな……！
+    MessageCN: 咱今天中午甚至没吃点心！哼哼，真是很期待啊……！
+    MessageEN: just so I can eat the puddings you're gonna buy me.
+    MessageTH: "เพื่อจะไปกินพุดดิ้งที่สหายจะซื้อให้
+
+      จนพุงกางเลย"
+    MessageTW: 咱今天中午甚至沒吃零食呢！呵呵，好期待啊……！
+    MessageGroupId: 100170230
     Id: 100170340
     CharacterId: 10017
     MessageCondition: Feedback
@@ -687,15 +695,17 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 점심 간식도 거르고 기대하고 있었느니라.
-    MessageJP: 今日はお昼のおやつも抜いたのだ！ふふ、楽しみだな……！
-    MessageCN: 咱今天中午甚至没吃点心！哼哼，真是很期待啊……！
-    MessageEN: just so I can eat the puddings you're gonna buy me.
-    MessageTH: "เพื่อจะไปกินพุดดิ้งที่สหายจะซื้อให้
+  - MessageKR: 오늘 방과 후, 가게 앞에서 기다리고 있을 테니 늦으면 안 돼!
+    MessageJP: 今日の放課後、お店の前で待っているから遅れないように！
+    MessageCN: 今天放学后，咱在店门口等同志，同志可别迟到了！
+    MessageEN:
+      I'll be waiting in front of the store after school today. Don't be
+      late!
+    MessageTH: "หลังเลิกเรียนวันนี้เราจะไปรออยู่หน้า
 
-      จนพุงกางเลย"
-    MessageTW: 咱今天中午甚至沒吃零食呢！呵呵，好期待啊……！
-  - MessageGroupId: 100170231
+      ร้านนะ ห้ามมาสายล่ะ!"
+    MessageTW: 今天放學後，咱在店門口等著，別遲到！
+    MessageGroupId: 100170231
     Id: 100170350
     CharacterId: 10017
     MessageCondition: Feedback
@@ -707,17 +717,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘 방과 후, 가게 앞에서 기다리고 있을 테니 늦으면 안 돼!
-    MessageJP: 今日の放課後、お店の前で待っているから遅れないように！
-    MessageCN: 今天放学后，咱在店门口等同志，同志可别迟到了！
-    MessageEN:
-      I'll be waiting in front of the store after school today. Don't be
-      late!
-    MessageTH: "หลังเลิกเรียนวันนี้เราจะไปรออยู่หน้า
+  - MessageKR: 푸딩을 여러 개 사주겠다는 말은 한 적이 없는 것 같은데…….
+    MessageJP: たくさん買ってあげるとは、言ってないような……？
+    MessageCN: 我应该没说过要给你买很多个来着……？
+    MessageEN: I don't remember saying I'd buy you more than one...
+    MessageTH: "เดี๋ยวสิ ไม่ได้บอกสักหน่อยว่าจะ
 
-      ร้านนะ ห้ามมาสายล่ะ!"
-    MessageTW: 今天放學後，咱在店門口等著，別遲到！
-  - MessageGroupId: 100170240
+      ซื้อพุดดิ้งให้หลายอันน่ะ..."
+    MessageTW: 我好像沒有說要買很多耶……？
+    MessageGroupId: 100170240
     Id: 100170360
     CharacterId: 10017
     MessageCondition: Answer
@@ -729,15 +737,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 푸딩을 여러 개 사주겠다는 말은 한 적이 없는 것 같은데…….
-    MessageJP: たくさん買ってあげるとは、言ってないような……？
-    MessageCN: 我应该没说过要给你买很多个来着……？
-    MessageEN: I don't remember saying I'd buy you more than one...
-    MessageTH: "เดี๋ยวสิ ไม่ได้บอกสักหน่อยว่าจะ
-
-      ซื้อพุดดิ้งให้หลายอันน่ะ..."
-    MessageTW: 我好像沒有說要買很多耶……？
-  - MessageGroupId: 100170250
+  - MessageKR: 콤라드, 어서 창밖을 보게나!
+    MessageJP: カムラッド、外を見ろ！
+    MessageCN: 看窗外，同志！
+    MessageEN: Look out the window, Comrade!
+    MessageTH: สหาย มองออกไปนอกหน้าต่างสิ!
+    MessageTW: 同志，往外看！
+    MessageGroupId: 100170250
     Id: 100170370
     CharacterId: 10017
     MessageCondition: FavorRankUp
@@ -749,13 +755,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드, 어서 창밖을 보게나!
-    MessageJP: カムラッド、外を見ろ！
-    MessageCN: 看窗外，同志！
-    MessageEN: Look out the window, Comrade!
-    MessageTH: สหาย มองออกไปนอกหน้าต่างสิ!
-    MessageTW: 同志，往外看！
-  - MessageGroupId: 100170260
+  - MessageKR: 눈이야, 눈이 내리고 있다고!
+    MessageJP: 雪だ、雪がすごい降っているぞ！
+    MessageCN: 是雪，下了好大的雪！
+    MessageEN: There's snow! It's snowing!
+    MessageTH: หิมะ! หิมะกำลังตก!
+    MessageTW: 是雪，雪下得好大呀！
+    MessageGroupId: 100170260
     Id: 100170380
     CharacterId: 10017
     MessageCondition: None
@@ -767,13 +773,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 눈이야, 눈이 내리고 있다고!
-    MessageJP: 雪だ、雪がすごい降っているぞ！
-    MessageCN: 是雪，下了好大的雪！
-    MessageEN: There's snow! It's snowing!
-    MessageTH: หิมะ! หิมะกำลังตก!
-    MessageTW: 是雪，雪下得好大呀！
-  - MessageGroupId: 100170270
+  - MessageKR: 샬레는 구름 한 점 없이 화창한데.
+    MessageJP: シャーレの方は、雲一つない晴天だよ……
+    MessageCN: 夏莱这边倒是万里无云的晴天呢……
+    MessageEN: It's sunny outside Schale... Not a cloud in sight.
+    MessageTH: ที่ชาเล่ต์อากาศแจ่มใส ไม่มีเมฆเลยสักนิดเดียว
+    MessageTW: 夏萊是萬里無雲的晴天……
+    MessageGroupId: 100170270
     Id: 100170390
     CharacterId: 10017
     MessageCondition: Answer
@@ -785,13 +791,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 샬레는 구름 한 점 없이 화창한데.
-    MessageJP: シャーレの方は、雲一つない晴天だよ……
-    MessageCN: 夏莱这边倒是万里无云的晴天呢……
-    MessageEN: It's sunny outside Schale... Not a cloud in sight.
-    MessageTH: ที่ชาเล่ต์อากาศแจ่มใส ไม่มีเมฆเลยสักนิดเดียว
-    MessageTW: 夏萊是萬里無雲的晴天……
-  - MessageGroupId: 100170280
+  - MessageKR: 그럼 바로 붉은겨울 자치구로 오게나!
+    MessageJP: なにっ！？それなら、今すぐ我がレッドウィンター連邦学園に来い！
+    MessageCN: 什么！？既然如此，速来我等红冬联邦学园处！
+    MessageEN: Then come to the Red Winter district right away!
+    MessageTH: ถ้างั้นมาที่เรดวินเทอร์สิ!
+    MessageTW: 什麼！那麼，現在就來我等赤冬聯邦學園！
+    MessageGroupId: 100170280
     Id: 100170400
     CharacterId: 10017
     MessageCondition: Feedback
@@ -803,13 +809,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 바로 붉은겨울 자치구로 오게나!
-    MessageJP: なにっ！？それなら、今すぐ我がレッドウィンター連邦学園に来い！
-    MessageCN: 什么！？既然如此，速来我等红冬联邦学园处！
-    MessageEN: Then come to the Red Winter district right away!
-    MessageTH: ถ้างั้นมาที่เรดวินเทอร์สิ!
-    MessageTW: 什麼！那麼，現在就來我等赤冬聯邦學園！
-  - MessageGroupId: 100170280
+  - MessageKR: 이곳에 오면 눈사람도, 눈토끼도 원하는 만큼 만들 수 있다고!
+    MessageJP: ここに来れば雪だるまも雪ウサギも、好きなだけ作れるぞ！
+    MessageCN: 同志过来的话，雪人、雪兔，想堆多少个就能多少个！
+    MessageEN:
+      If you come here, you can make as many snowmen and snow bunnies as
+      you want!
+    MessageTH: "ถ้ามาที่นี่ก็จะปั้นตุ๊กตาหิมะ
+
+      หรือปั้นกระต่ายหิมะก็ได้"
+    MessageTW: 來這裡的話，雪人也好，雪兔也好，想做多少就做多少！
+    MessageGroupId: 100170280
     Id: 100170410
     CharacterId: 10017
     MessageCondition: Feedback
@@ -821,17 +831,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이곳에 오면 눈사람도, 눈토끼도 원하는 만큼 만들 수 있다고!
-    MessageJP: ここに来れば雪だるまも雪ウサギも、好きなだけ作れるぞ！
-    MessageCN: 同志过来的话，雪人、雪兔，想堆多少个就能多少个！
-    MessageEN:
-      If you come here, you can make as many snowmen and snow bunnies as
-      you want!
-    MessageTH: "ถ้ามาที่นี่ก็จะปั้นตุ๊กตาหิมะ
-
-      หรือปั้นกระต่ายหิมะก็ได้"
-    MessageTW: 來這裡的話，雪人也好，雪兔也好，想做多少就做多少！
-  - MessageGroupId: 100170290
+  - MessageKR: 일이 끝나고 갈게.
+    MessageJP: 仕事が終わったら行くね
+    MessageCN: 那工作结束后我马上过去哦
+    MessageEN: I'll be there right after work.
+    MessageTH: เสร็จงานแล้วจะไปหานะ
+    MessageTW: 工作結束後就去唷
+    MessageGroupId: 100170290
     Id: 100170420
     CharacterId: 10017
     MessageCondition: Answer
@@ -843,25 +849,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일이 끝나고 갈게.
-    MessageJP: 仕事が終わったら行くね
-    MessageCN: 那工作结束后我马上过去哦
-    MessageEN: I'll be there right after work.
-    MessageTH: เสร็จงานแล้วจะไปหานะ
-    MessageTW: 工作結束後就去唷
-  - MessageGroupId: 100170300
-    Id: 100170430
-    CharacterId: 10017
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100170310
-    FeedbackTimeMillisec: 2000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 안 돼! 눈이 언제 그치고 녹아버릴지도 모르는데, 여유를 부릴 틈은 없다고!
+  - MessageKR: 안 돼! 눈이 언제 그치고 녹아버릴지도 모르는데, 여유를 부릴 틈은 없다고!
     MessageJP: ダメだ！いつ雪が止んでしまうかも分からないのに、そんな余裕はない！
     MessageCN: 不行！不知道什么时候雪就会停，机不可失！
     MessageEN:
@@ -873,7 +861,25 @@ content:
 
       อยู่ไม่ได้นะ!"
     MessageTW: 不行！不知道雪什麼時候會停，可沒有那麼充裕的時間！
-  - MessageGroupId: 100170300
+    MessageGroupId: 100170300
+    Id: 100170430
+    CharacterId: 10017
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100170310
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 지금 당장, 바로 오게나!
+    MessageJP: 今すぐ！今すぐ来るのだ！
+    MessageCN: 现在马上！现在马上过来！
+    MessageEN: Come right now! Now!
+    MessageTH: ต้องมาเดี๋ยวนี้เลย!
+    MessageTW: 現在馬上！現在馬上過來！
+    MessageGroupId: 100170300
     Id: 100170440
     CharacterId: 10017
     MessageCondition: Feedback
@@ -885,13 +891,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 지금 당장, 바로 오게나!
-    MessageJP: 今すぐ！今すぐ来るのだ！
-    MessageCN: 现在马上！现在马上过来！
-    MessageEN: Come right now! Now!
-    MessageTH: ต้องมาเดี๋ยวนี้เลย!
-    MessageTW: 現在馬上！現在馬上過來！
-  - MessageGroupId: 100170310
+  - MessageKR: 콤라드. 콤라드는 특별히 무서워하는 게 있는가?
+    MessageJP: カムラッドは、何か怖い物とかないのか？
+    MessageCN: 同志有什么害怕的东西吗？
+    MessageEN: What are you afraid of, Comrade?
+    MessageTH: "สหาย สหายมีอะไรที่กลัวเป็นพิเศษ
+
+      ไหม?"
+    MessageTW: 同志有什麼會怕的東西嗎？
+    MessageGroupId: 100170310
     Id: 100170450
     CharacterId: 10017
     MessageCondition: FavorRankUp
@@ -903,15 +911,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드. 콤라드는 특별히 무서워하는 게 있는가?
-    MessageJP: カムラッドは、何か怖い物とかないのか？
-    MessageCN: 同志有什么害怕的东西吗？
-    MessageEN: What are you afraid of, Comrade?
-    MessageTH: "สหาย สหายมีอะไรที่กลัวเป็นพิเศษ
-
-      ไหม?"
-    MessageTW: 同志有什麼會怕的東西嗎？
-  - MessageGroupId: 100170320
+  - MessageKR: 나는 귀신이 무서워.
+    MessageJP: うーん、お化けとかかな……
+    MessageCN: 嗯——，怪物之类的吧……
+    MessageEN: I'm afraid of ghosts.
+    MessageTH: ครูกลัวผี
+    MessageTW: 唔嗯，妖怪之類的吧……
+    MessageGroupId: 100170320
     Id: 100170460
     CharacterId: 10017
     MessageCondition: Answer
@@ -923,13 +929,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나는 귀신이 무서워.
-    MessageJP: うーん、お化けとかかな……
-    MessageCN: 嗯——，怪物之类的吧……
-    MessageEN: I'm afraid of ghosts.
-    MessageTH: ครูกลัวผี
-    MessageTW: 唔嗯，妖怪之類的吧……
-  - MessageGroupId: 100170320
+  - MessageKR: 나는 만쥬가 무서워.
+    MessageJP: まんじゅうこわい
+    MessageCN: 馒头好可怕
+    MessageEN: I'm afraid of manju.
+    MessageTH: ครูกลัวขนมมันจู
+    MessageTW: 怕饅頭
+    MessageGroupId: 100170320
     Id: 100170470
     CharacterId: 10017
     MessageCondition: Answer
@@ -941,13 +947,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나는 만쥬가 무서워.
-    MessageJP: まんじゅうこわい
-    MessageCN: 馒头好可怕
-    MessageEN: I'm afraid of manju.
-    MessageTH: ครูกลัวขนมมันจู
-    MessageTW: 怕饅頭
-  - MessageGroupId: 100170330
+  - MessageKR: 후후, 귀신을 무서워하다니 콤라드도 어린아이 같은 구석이 있군.
+    MessageJP: ふふん。お化けが怖いなんて、カムラッドにも子供みたいなところがあるのだな
+    MessageCN: 哼哼。居然会害怕怪物，同志也有小孩子的一面嘛
+    MessageEN: Haha! You're afraid of ghosts? That's pretty childish, Comrade.
+    MessageTH: "หุหุ กลัวผีเหรอ? สหายก็มีมุมที่เป็น
+
+      เด็กเหมือนกันนะเนี่ย"
+    MessageTW: 呵呵。怕妖怪啊，同志也有像孩子一樣的地方呢
+    MessageGroupId: 100170330
     Id: 100170480
     CharacterId: 10017
     MessageCondition: Feedback
@@ -959,15 +967,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 후후, 귀신을 무서워하다니 콤라드도 어린아이 같은 구석이 있군.
-    MessageJP: ふふん。お化けが怖いなんて、カムラッドにも子供みたいなところがあるのだな
-    MessageCN: 哼哼。居然会害怕怪物，同志也有小孩子的一面嘛
-    MessageEN: Haha! You're afraid of ghosts? That's pretty childish, Comrade.
-    MessageTH: "หุหุ กลัวผีเหรอ? สหายก็มีมุมที่เป็น
+  - MessageKR: 걱정 말게나, 콤라드. 설령 귀신이 정말로 나타나더라도 이 몸이 무찔러줄 테니!
+    MessageJP: 心配するな、カムラッド。仮にお化けが現れたとしても、おいらがやっつけてやる！
+    MessageCN: 无需担心，同志。就算真有怪物出现，咱也会收拾掉的！
+    MessageEN: Don't worry, Comrade. I'll bust any ghost before it can get you!
+    MessageTH: "ไม่ต้องกังวลนะสหาย ถ้าผีโผล่ออกมา
 
-      เด็กเหมือนกันนะเนี่ย"
-    MessageTW: 呵呵。怕妖怪啊，同志也有像孩子一樣的地方呢
-  - MessageGroupId: 100170330
+      ล่ะก็ เราจะจัดการมันให้เอง!"
+    MessageTW: 別擔心，同志。就算妖怪真的出現了，咱也會打倒他！
+    MessageGroupId: 100170330
     Id: 100170490
     CharacterId: 10017
     MessageCondition: Feedback
@@ -979,15 +987,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 걱정 말게나, 콤라드. 설령 귀신이 정말로 나타나더라도 이 몸이 무찔러줄 테니!
-    MessageJP: 心配するな、カムラッド。仮にお化けが現れたとしても、おいらがやっつけてやる！
-    MessageCN: 无需担心，同志。就算真有怪物出现，咱也会收拾掉的！
-    MessageEN: Don't worry, Comrade. I'll bust any ghost before it can get you!
-    MessageTH: "ไม่ต้องกังวลนะสหาย ถ้าผีโผล่ออกมา
+  - MessageKR: 으응? 달콤한 만쥬가 무섭다니, 그게 무슨 소리인가?
+    MessageJP: まんじゅうって、あの甘いお饅頭か？あれが怖いなんて、どういうことだ？
+    MessageCN: 馒头？是那个甜甜的馒头吗？为什么同志会怕那个？
+    MessageEN: Huh? How can anyone be afraid of manju? It's delicious and sweet.
+    MessageTH: "เอ๋? กลัวขนมมันจูที่หวานๆ น่ะเหรอ?
 
-      ล่ะก็ เราจะจัดการมันให้เอง!"
-    MessageTW: 別擔心，同志。就算妖怪真的出現了，咱也會打倒他！
-  - MessageGroupId: 100170340
+      หมายความว่ายังไง?"
+    MessageTW: 饅頭是指那個甜饅頭嗎？怕那個是怎麼回事？
+    MessageGroupId: 100170340
     Id: 100170500
     CharacterId: 10017
     MessageCondition: Feedback
@@ -999,15 +1007,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으응? 달콤한 만쥬가 무섭다니, 그게 무슨 소리인가?
-    MessageJP: まんじゅうって、あの甘いお饅頭か？あれが怖いなんて、どういうことだ？
-    MessageCN: 馒头？是那个甜甜的馒头吗？为什么同志会怕那个？
-    MessageEN: Huh? How can anyone be afraid of manju? It's delicious and sweet.
-    MessageTH: "เอ๋? กลัวขนมมันจูที่หวานๆ น่ะเหรอ?
+  - MessageKR: 콤라드도 알 수 없는 소리를 자꾸 하는군…….
+    MessageJP: カムラッドは時々よく分からないことを言うな……
+    MessageCN: 同志有时会说一些让人不明所以的话呢……
+    MessageEN: You're a strange one, Comrade...
+    MessageTH: "สหายชอบพูดอะไรที่เราไม่เข้าใจอยู่
 
-      หมายความว่ายังไง?"
-    MessageTW: 饅頭是指那個甜饅頭嗎？怕那個是怎麼回事？
-  - MessageGroupId: 100170340
+      เรื่อย..."
+    MessageTW: 同志有時會說些讓人搞不懂的話呢……
+    MessageGroupId: 100170340
     Id: 100170510
     CharacterId: 10017
     MessageCondition: Feedback
@@ -1019,15 +1027,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 콤라드도 알 수 없는 소리를 자꾸 하는군…….
-    MessageJP: カムラッドは時々よく分からないことを言うな……
-    MessageCN: 同志有时会说一些让人不明所以的话呢……
-    MessageEN: You're a strange one, Comrade...
-    MessageTH: "สหายชอบพูดอะไรที่เราไม่เข้าใจอยู่
-
-      เรื่อย..."
-    MessageTW: 同志有時會說些讓人搞不懂的話呢……
-  - MessageGroupId: 100170350
+  - MessageKR: 체리노는 무얼 무서워해?
+    MessageJP: チェリノは怖いものとかある？
+    MessageCN: 切里诺有害怕的东西吗？
+    MessageEN: What are you afraid of, Cherino?
+    MessageTH: แล้วเชริโน่ล่ะกลัวอะไร?
+    MessageTW: 潔莉諾有怕什麼東西嗎？
+    MessageGroupId: 100170350
     Id: 100170520
     CharacterId: 10017
     MessageCondition: Answer
@@ -1039,13 +1045,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 체리노는 무얼 무서워해?
-    MessageJP: チェリノは怖いものとかある？
-    MessageCN: 切里诺有害怕的东西吗？
-    MessageEN: What are you afraid of, Cherino?
-    MessageTH: แล้วเชริโน่ล่ะกลัวอะไร?
-    MessageTW: 潔莉諾有怕什麼東西嗎？
-  - MessageGroupId: 100170360
+  - MessageKR: 그 무슨 망언인가! 이 몸이 무서워하는 것이라니!
+    MessageJP: お、おいらに怖いものなんてあるわけないだろう！
+    MessageCN: 咱、咱才不可能有害怕的东西吧！
+    MessageEN: What are you talking about? I'm not afraid of anything!
+    MessageTH: ถามอะไรแบบนั้นกัน! เราไม่มีอะไรต้องกลัวหรอก!
+    MessageTW: 咱，咱怎麼可能有害怕的東西！
+    MessageGroupId: 100170360
     Id: 100170530
     CharacterId: 10017
     MessageCondition: Feedback
@@ -1057,13 +1063,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 무슨 망언인가! 이 몸이 무서워하는 것이라니!
-    MessageJP: お、おいらに怖いものなんてあるわけないだろう！
-    MessageCN: 咱、咱才不可能有害怕的东西吧！
-    MessageEN: What are you talking about? I'm not afraid of anything!
-    MessageTH: ถามอะไรแบบนั้นกัน! เราไม่มีอะไรต้องกลัวหรอก!
-    MessageTW: 咱，咱怎麼可能有害怕的東西！
-  - MessageGroupId: 100170360
+  - MessageKR: 위대한 지도자에게 공포란 불필요한 감정!
+    MessageJP: 偉大なる指導者にとって、恐怖など必要の無い感情だ！
+    MessageCN: 作为伟大的领导者，恐怖之类的感情是没有必要存在的！
+    MessageEN: Fear has no place in the heart of a great leader!
+    MessageTH: "คำว่ากลัวไม่มีอยู่ในพจนานุกรมของ
+
+      ผู้นำหรอกนะ!"
+    MessageTW: 對偉大的領導者來說，恐懼是不必要的情緒！
+    MessageGroupId: 100170360
     Id: 100170540
     CharacterId: 10017
     MessageCondition: Feedback
@@ -1075,27 +1083,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 위대한 지도자에게 공포란 불필요한 감정!
-    MessageJP: 偉大なる指導者にとって、恐怖など必要の無い感情だ！
-    MessageCN: 作为伟大的领导者，恐怖之类的感情是没有必要存在的！
-    MessageEN: Fear has no place in the heart of a great leader!
-    MessageTH: "คำว่ากลัวไม่มีอยู่ในพจนานุกรมของ
-
-      ผู้นำหรอกนะ!"
-    MessageTW: 對偉大的領導者來說，恐懼是不必要的情緒！
-  - MessageGroupId: 100170360
-    Id: 100170550
-    CharacterId: 10017
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 100178
-    NextGroupId: 0
-    FeedbackTimeMillisec: 2500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 붉은겨울 학원의 서기장이자 학생회장이자, 미화부장이자, 청소부장인 이 몸에게 두려움 따윈 없느니라!
+  - MessageKR: 붉은겨울 학원의 서기장이자 학생회장이자, 미화부장이자, 청소부장인 이 몸에게 두려움 따윈 없느니라!
     MessageJP: レッドウィンター連邦学園の生徒会長であり、書記長兼、環境美化部部長兼、清掃部部長のおいらに、恐れるものなど無い！
     MessageCN: 身为红冬联邦学园的学生会长兼书记长兼环境美化部部长兼清扫部部长的咱，根本不会有害怕的东西！
     MessageEN:
@@ -1109,3 +1097,15 @@ content:
 
       เราไม่กลัวอะไรหรอก!"
     MessageTW: 咱身為赤冬學聯邦學園的學生會長、兼書記長、兼環境美化部長、兼清掃部長，無所畏懼！
+    MessageGroupId: 100170360
+    Id: 100170550
+    CharacterId: 10017
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 100178
+    NextGroupId: 0
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ""

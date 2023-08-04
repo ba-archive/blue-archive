@@ -1,35 +1,41 @@
 CharacterId: 16006
 translator: 今天早睡了吗
 title:
-  - GroupId: 1600602
-    FavorScheduleId: 160062
-    CharacterId: 16006
-    TextJp: イズミと夏を楽しむ幾つかの方法
+  - TextJp: イズミと夏を楽しむ幾つかの方法
     TextCn: 与泉共度夏天的几种方法
     TextKr: 소녀가 여름을 즐기는 방법
     TextEn: How a Girl Enjoys Summer
     TextTh: วิธีสนุกกับฤดูร้อนของเด็กสาว
     TextTw: 泉與享受夏季的數種方法
-  - GroupId: 1600603
-    FavorScheduleId: 160063
+    GroupId: 1600602
+    FavorScheduleId: 160062
     CharacterId: 16006
-    TextJp: イズミと秘密の材料
+  - TextJp: イズミと秘密の材料
     TextCn: 泉与秘密的调料
     TextKr: 소녀의 비법 재료
     TextEn: A Girl's Secret Ingredient
     TextTh: วัตถุดิบลับของเด็กสาว
     TextTw: 泉與秘密的材料
-  - GroupId: 1600605
-    FavorScheduleId: 160065
+    GroupId: 1600603
+    FavorScheduleId: 160063
     CharacterId: 16006
-    TextJp: イズミと夏の魔物
+  - TextJp: イズミと夏の魔物
     TextCn: 泉与夏日的妖怪
     TextKr: 소녀는 그렇게 바다와 싸운다.
     TextEn: The Girl Fights with the Ocean
     TextTh: การต่อสู้ของเด็กสาวที่ทะเล
     TextTw: 泉與夏季的魔物
+    GroupId: 1600605
+    FavorScheduleId: 160065
+    CharacterId: 16006
 content:
-  - MessageGroupId: 160060010
+  - MessageKR: 선생님! 이벤트야!
+    MessageJP: 先生！夏だよ！夏！
+    MessageCN: 老师！夏天到了哦！夏天！
+    MessageEN: Sensei! It's an event!
+    MessageTH: คุณครูคะ! อีเว้นท์ค่ะ!
+    MessageTW: 老師！夏天到了！夏天！
+    MessageGroupId: 160060010
     Id: 160060010
     CharacterId: 16006
     MessageCondition: FavorRankUp
@@ -41,13 +47,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님! 이벤트야!
-    MessageJP: 先生！夏だよ！夏！
-    MessageCN: 老师！夏天到了哦！夏天！
-    MessageEN: Sensei! It's an event!
-    MessageTH: คุณครูคะ! อีเว้นท์ค่ะ!
-    MessageTW: 老師！夏天到了！夏天！
-  - MessageGroupId: 160060020
+  - MessageKR: 이벤트 음식을 먹으러 가야 해!
+    MessageJP: 夏なんだから、夏っぽい料理を食べに行かないと！
+    MessageCN: 既然到了夏天，那就得吃点夏天的美食！
+    MessageEN: I need to go try the specialties!
+    MessageTH: ต้องไปกินอาหารที่อีเว้นท์ค่ะ!
+    MessageTW: 既然是夏天，當然就要吃夏天的料理！
+    MessageGroupId: 160060020
     Id: 160060020
     CharacterId: 16006
     MessageCondition: None
@@ -59,13 +65,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이벤트 음식을 먹으러 가야 해!
-    MessageJP: 夏なんだから、夏っぽい料理を食べに行かないと！
-    MessageCN: 既然到了夏天，那就得吃点夏天的美食！
-    MessageEN: I need to go try the specialties!
-    MessageTH: ต้องไปกินอาหารที่อีเว้นท์ค่ะ!
-    MessageTW: 既然是夏天，當然就要吃夏天的料理！
-  - MessageGroupId: 160060030
+  - MessageKR: 갑자기 이벤트 음식……?
+    MessageJP: 夏っぽい料理かぁ……。
+    MessageCN: 夏天的美食啊……
+    MessageEN: Specialties...?
+    MessageTH: อีเว้นท์อาหารเหรอ...?
+    MessageTW: 夏天的料理啊……
+    MessageGroupId: 160060030
     Id: 160060030
     CharacterId: 16006
     MessageCondition: Answer
@@ -77,13 +83,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 갑자기 이벤트 음식……?
-    MessageJP: 夏っぽい料理かぁ……。
-    MessageCN: 夏天的美食啊……
-    MessageEN: Specialties...?
-    MessageTH: อีเว้นท์อาหารเหรอ...?
-    MessageTW: 夏天的料理啊……
-  - MessageGroupId: 160060030
+  - MessageKR: 이즈미가 먹으러 가자면 가야지!
+    MessageJP: うん、行こう！仕事してばっかりで疲れた！
+    MessageCN: 嗯，出发！我上班早就上累了！
+    MessageEN: Yeah, and so do I!
+    MessageTH: ถ้าอิซุมิชวนล่ะก็ครูไปอยู่แล้ว!
+    MessageTW: 嗯，走吧！一直工作好累啊！
+    MessageGroupId: 160060030
     Id: 160060040
     CharacterId: 16006
     MessageCondition: Answer
@@ -95,13 +101,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이즈미가 먹으러 가자면 가야지!
-    MessageJP: うん、行こう！仕事してばっかりで疲れた！
-    MessageCN: 嗯，出发！我上班早就上累了！
-    MessageEN: Yeah, and so do I!
-    MessageTH: ถ้าอิซุมิชวนล่ะก็ครูไปอยู่แล้ว!
-    MessageTW: 嗯，走吧！一直工作好累啊！
-  - MessageGroupId: 160060040
+  - MessageKR: 응! 이벤트 음식이 우리를 부르고 있어! 선생님!
+    MessageJP: 冷たい甘酸っぱさとか、濃ゆい味付けとかが、私たちを呼んでるよ！
+    MessageCN: 冰凉的酸甜、浓郁的调料，都在呼唤着我们呢！
+    MessageEN: The specialties are calling our names, Sensei!
+    MessageTH: "อื้อ! อีเว้นท์อาหารกำลังร้องเรียกเรา
+
+      อยู่ค่ะ! คุณครูคะ!"
+    MessageTW: 冰涼的酸甜、濃郁的調味，正呼喚著我們唷！
+    MessageGroupId: 160060040
     Id: 160060050
     CharacterId: 16006
     MessageCondition: Feedback
@@ -113,15 +121,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응! 이벤트 음식이 우리를 부르고 있어! 선생님!
-    MessageJP: 冷たい甘酸っぱさとか、濃ゆい味付けとかが、私たちを呼んでるよ！
-    MessageCN: 冰凉的酸甜、浓郁的调料，都在呼唤着我们呢！
-    MessageEN: The specialties are calling our names, Sensei!
-    MessageTH: "อื้อ! อีเว้นท์อาหารกำลังร้องเรียกเรา
-
-      อยู่ค่ะ! คุณครูคะ!"
-    MessageTW: 冰涼的酸甜、濃郁的調味，正呼喚著我們唷！
-  - MessageGroupId: 160060050
+  - MessageKR: ……으, 응?
+    MessageJP: ……お腹空いてきた！じゃあどこに行く？
+    MessageCN: ……肚子已经开始咕咕叫了！那我们去哪？
+    MessageEN: Y-Yeah?
+    MessageTH: "ห๊ะ...? "
+    MessageTW: ……肚子餓了！那要去哪裡呢？
+    MessageGroupId: 160060050
     Id: 160060060
     CharacterId: 16006
     MessageCondition: Answer
@@ -133,13 +139,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……으, 응?
-    MessageJP: ……お腹空いてきた！じゃあどこに行く？
-    MessageCN: ……肚子已经开始咕咕叫了！那我们去哪？
-    MessageEN: Y-Yeah?
-    MessageTH: "ห๊ะ...? "
-    MessageTW: ……肚子餓了！那要去哪裡呢？
-  - MessageGroupId: 160060060
+  - MessageKR: 바로 승낙해주다니, 역시 선생님이야!
+    MessageJP: そうそう、忙しい時ほど食事は大切だよ！
+    MessageCN: 就是就是，越是忙的时候越是应该吃好！
+    MessageEN: I knew you'd accept right away, Sensei!
+    MessageTH: ตอบตกลงทันทีสมกับเป็นคุณครูเลย!
+    MessageTW: 沒錯沒錯，越是忙碌，吃飯越是重要唷！
+    MessageGroupId: 160060060
     Id: 160060070
     CharacterId: 16006
     MessageCondition: Feedback
@@ -151,13 +157,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 바로 승낙해주다니, 역시 선생님이야!
-    MessageJP: そうそう、忙しい時ほど食事は大切だよ！
-    MessageCN: 就是就是，越是忙的时候越是应该吃好！
-    MessageEN: I knew you'd accept right away, Sensei!
-    MessageTH: ตอบตกลงทันทีสมกับเป็นคุณครูเลย!
-    MessageTW: 沒錯沒錯，越是忙碌，吃飯越是重要唷！
-  - MessageGroupId: 160060070
+  - MessageKR: 그래서 뭘 먹으러 가려고?
+    MessageJP: そうだね。ところでどこか行きたいところとかあるの？
+    MessageCN: 是啊。这么说来，泉有什么想去的地方吗？
+    MessageEN: So what do you have your eye on?
+    MessageTH: แล้วจะไปกินอะไรกันล่ะ?
+    MessageTW: 是啊。對了，你有什麼想去的地方嗎？
+    MessageGroupId: 160060070
     Id: 160060080
     CharacterId: 16006
     MessageCondition: Answer
@@ -169,13 +175,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 뭘 먹으러 가려고?
-    MessageJP: そうだね。ところでどこか行きたいところとかあるの？
-    MessageCN: 是啊。这么说来，泉有什么想去的地方吗？
-    MessageEN: So what do you have your eye on?
-    MessageTH: แล้วจะไปกินอะไรกันล่ะ?
-    MessageTW: 是啊。對了，你有什麼想去的地方嗎？
-  - MessageGroupId: 160060080
+  - MessageKR: 이번에 말이야~
+    MessageJP: うん、やっぱりまずは……！
+    MessageCN: 嗯，第一站果然还得是……！
+    MessageEN: This time...
+    MessageTH: คราวนี้น่ะ~
+    MessageTW: 嗯，首先果然是……！
+    MessageGroupId: 160060080
     Id: 160060090
     CharacterId: 16006
     MessageCondition: Feedback
@@ -187,13 +193,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이번에 말이야~
-    MessageJP: うん、やっぱりまずは……！
-    MessageCN: 嗯，第一站果然还得是……！
-    MessageEN: This time...
-    MessageTH: คราวนี้น่ะ~
-    MessageTW: 嗯，首先果然是……！
-  - MessageGroupId: 160060080
+  - MessageKR: 여름을 맞이해서 특별한 이벤트를 시작한 바다의 집이 있대!
+    MessageJP: 海の家に行こうと思うの！
+    MessageCN: 我想去海之家！
+    MessageEN: The Beach Shack started a special event for the summer!
+    MessageTH: "มีร้านริมทะเลที่จัดอีเว้นท์พิเศษรับ
+
+      ฤดูร้อนด้วยล่ะ!"
+    MessageTW: 想去海之家！
+    MessageGroupId: 160060080
     Id: 160060100
     CharacterId: 16006
     MessageCondition: Feedback
@@ -205,15 +213,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여름을 맞이해서 특별한 이벤트를 시작한 바다의 집이 있대!
-    MessageJP: 海の家に行こうと思うの！
-    MessageCN: 我想去海之家！
-    MessageEN: The Beach Shack started a special event for the summer!
-    MessageTH: "มีร้านริมทะเลที่จัดอีเว้นท์พิเศษรับ
+  - MessageKR: 바다의 집이라, 여름의 풍류구나~
+    MessageJP: 良いね、まさに定番って感じ
+    MessageCN: 很好啊。感觉就像是必去地点一样
+    MessageEN: Beach Shack? Sounds like a summer thing.
+    MessageTH: "ร้านริมทะเลเหรอ... สมกับเป็นฤดูร้อน
 
-      ฤดูร้อนด้วยล่ะ!"
-    MessageTW: 想去海之家！
-  - MessageGroupId: 160060090
+      ดีจังเลยนะ~"
+    MessageTW: 不錯耶，感覺就是要這裡
+    MessageGroupId: 160060090
     Id: 160060110
     CharacterId: 16006
     MessageCondition: Answer
@@ -225,15 +233,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 바다의 집이라, 여름의 풍류구나~
-    MessageJP: 良いね、まさに定番って感じ
-    MessageCN: 很好啊。感觉就像是必去地点一样
-    MessageEN: Beach Shack? Sounds like a summer thing.
-    MessageTH: "ร้านริมทะเลเหรอ... สมกับเป็นฤดูร้อน
-
-      ดีจังเลยนะ~"
-    MessageTW: 不錯耶，感覺就是要這裡
-  - MessageGroupId: 160060100
+  - MessageKR: 그치 그치?!
+    MessageJP: だよね！
+    MessageCN: 对吧！
+    MessageEN: Right? Right?!
+    MessageTH: ใช่มะๆ!
+    MessageTW: 對吧！
+    MessageGroupId: 160060100
     Id: 160060120
     CharacterId: 16006
     MessageCondition: Feedback
@@ -245,13 +251,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그치 그치?!
-    MessageJP: だよね！
-    MessageCN: 对吧！
-    MessageEN: Right? Right?!
-    MessageTH: ใช่มะๆ!
-    MessageTW: 對吧！
-  - MessageGroupId: 160060100
+  - MessageKR: 게다가 이게 또!
+    MessageJP: それに、どうやら普通の海の家じゃないんだって！
+    MessageCN: 而且，那个好像也不是一般的海之家！
+    MessageEN: And get this!
+    MessageTH: ชักตื่นเต้นแล้วสิ!
+    MessageTW: 而且，似乎還不是普通的海之家唷！
+    MessageGroupId: 160060100
     Id: 160060130
     CharacterId: 16006
     MessageCondition: Feedback
@@ -263,13 +269,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 게다가 이게 또!
-    MessageJP: それに、どうやら普通の海の家じゃないんだって！
-    MessageCN: 而且，那个好像也不是一般的海之家！
-    MessageEN: And get this!
-    MessageTH: ชักตื่นเต้นแล้วสิ!
-    MessageTW: 而且，似乎還不是普通的海之家唷！
-  - MessageGroupId: 160060100
+  - MessageKR: 그 게임에서 이기기만 하면 각종 상품을, 음식을 준다는 거 있지?!
+    MessageJP: なんと、あるゲームに勝てば、賞品としてそこの珍味を無料で食べられるとか！
+    MessageCN: 听说如果有人在他们举办的游戏中获胜的话，就可以免费享用那里的各种美味！
+    MessageEN: If you win a game, you get a bunch of prizes and food!
+    MessageTH: "แค่เล่นเกมชนะก็จะได้รับรางวัลแล้วก็
+
+      อาหารล่ะ?!"
+    MessageTW: 聽說只要贏了某個遊戲，就能免費吃店內美食當作獎品！
+    MessageGroupId: 160060100
     Id: 160060140
     CharacterId: 16006
     MessageCondition: Feedback
@@ -281,15 +289,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 게임에서 이기기만 하면 각종 상품을, 음식을 준다는 거 있지?!
-    MessageJP: なんと、あるゲームに勝てば、賞品としてそこの珍味を無料で食べられるとか！
-    MessageCN: 听说如果有人在他们举办的游戏中获胜的话，就可以免费享用那里的各种美味！
-    MessageEN: If you win a game, you get a bunch of prizes and food!
-    MessageTH: "แค่เล่นเกมชนะก็จะได้รับรางวัลแล้วก็
-
-      อาหารล่ะ?!"
-    MessageTW: 聽說只要贏了某個遊戲，就能免費吃店內美食當作獎品！
-  - MessageGroupId: 160060110
+  - MessageKR: 그건 확실히 구미가 당기네.
+    MessageJP: へえ、ちょっと燃えてきたかも！
+    MessageCN: 诶，我也有点燃起斗志了呢
+    MessageEN: That's appetizing for sure.
+    MessageTH: "ดึงดูดใจดีจริงๆ "
+    MessageTW: 喔！好像有點燃起鬥志了！
+    MessageGroupId: 160060110
     Id: 160060150
     CharacterId: 16006
     MessageCondition: Answer
@@ -301,13 +307,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그건 확실히 구미가 당기네.
-    MessageJP: へえ、ちょっと燃えてきたかも！
-    MessageCN: 诶，我也有点燃起斗志了呢
-    MessageEN: That's appetizing for sure.
-    MessageTH: "ดึงดูดใจดีจริงๆ "
-    MessageTW: 喔！好像有點燃起鬥志了！
-  - MessageGroupId: 160060120
+  - MessageKR: 그럼 결정!
+    MessageJP: もうこんなの行くしかないよね！
+    MessageCN: 就是说不能不去了对吧！
+    MessageEN: Then it's decided!
+    MessageTH: ตัดสินใจล่ะ!
+    MessageTW: 這種地方不去對不起自己！
+    MessageGroupId: 160060120
     Id: 160060160
     CharacterId: 16006
     MessageCondition: Feedback
@@ -319,13 +325,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 결정!
-    MessageJP: もうこんなの行くしかないよね！
-    MessageCN: 就是说不能不去了对吧！
-    MessageEN: Then it's decided!
-    MessageTH: ตัดสินใจล่ะ!
-    MessageTW: 這種地方不去對不起自己！
-  - MessageGroupId: 160060120
+  - MessageKR: 이따가 바다의 집에서 보자, 선생님!
+    MessageJP: じゃあ、お店の前で待ち合わせってことで！また後でね、先生！
+    MessageCN: 那我们就在海之家前面碰头吧！待会见，老师！
+    MessageEN: See you at the Beach Shack, Sensei!
+    MessageTH: เดี๋ยวเจอกันที่ร้านริมทะเลนะคุณครู!
+    MessageTW: 那麼，在店的前面碰面吧！晚點見囉，老師！
+    MessageGroupId: 160060120
     Id: 160060170
     CharacterId: 16006
     MessageCondition: Feedback
@@ -337,13 +343,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이따가 바다의 집에서 보자, 선생님!
-    MessageJP: じゃあ、お店の前で待ち合わせってことで！また後でね、先生！
-    MessageCN: 那我们就在海之家前面碰头吧！待会见，老师！
-    MessageEN: See you at the Beach Shack, Sensei!
-    MessageTH: เดี๋ยวเจอกันที่ร้านริมทะเลนะคุณครู!
-    MessageTW: 那麼，在店的前面碰面吧！晚點見囉，老師！
-  - MessageGroupId: 160060130
+  - MessageKR: 선생님! 기왕 해변으로 찾아온 만큼.
+    MessageJP: ねえ先生。せっかくの夏だし、私……
+    MessageCN: 那个，老师。难得到了夏天，我……
+    MessageEN: We gotta go back to the beach, Sensei!
+    MessageTH: คุณครูคะ! ไหนๆ ก็มาที่ทะเลแล้ว
+    MessageTW: 嘿，老師。難得的夏天，我……
+    MessageGroupId: 160060130
     Id: 160060180
     CharacterId: 16006
     MessageCondition: FavorRankUp
@@ -355,13 +361,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님! 기왕 해변으로 찾아온 만큼.
-    MessageJP: ねえ先生。せっかくの夏だし、私……
-    MessageCN: 那个，老师。难得到了夏天，我……
-    MessageEN: We gotta go back to the beach, Sensei!
-    MessageTH: คุณครูคะ! ไหนๆ ก็มาที่ทะเลแล้ว
-    MessageTW: 嘿，老師。難得的夏天，我……
-  - MessageGroupId: 160060140
+  - MessageKR: 더 많은 여름 별미가 먹고 싶어!
+    MessageJP: もっともっと夏の珍味を食べたい！
+    MessageCN: 想要吃更多更多夏天的美食！
+    MessageEN: I want more summer cuisine!
+    MessageTH: ฉันอยากกินอาหารฤดูร้อนอร่อยๆ อีก!
+    MessageTW: 想吃更多夏天的美食！
+    MessageGroupId: 160060140
     Id: 160060190
     CharacterId: 16006
     MessageCondition: None
@@ -373,13 +379,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 더 많은 여름 별미가 먹고 싶어!
-    MessageJP: もっともっと夏の珍味を食べたい！
-    MessageCN: 想要吃更多更多夏天的美食！
-    MessageEN: I want more summer cuisine!
-    MessageTH: ฉันอยากกินอาหารฤดูร้อนอร่อยๆ อีก!
-    MessageTW: 想吃更多夏天的美食！
-  - MessageGroupId: 160060150
+  - MessageKR: 확실히, 여름 별미는 각별하지.
+    MessageJP: たしかに、季節ものはそのシーズンの内に食べておきたいよね
+    MessageCN: 确实，季节限定的东西要在当季内吃完呢
+    MessageEN: Summer food is pretty good.
+    MessageTH: "อาหารเลิศรสของฤดูร้อนมันย่อมพิเศษ
+
+      อยู่แล้ว"
+    MessageTW: 確實，季節性的東西就想在那個季節吃呢
+    MessageGroupId: 160060150
     Id: 160060200
     CharacterId: 16006
     MessageCondition: Answer
@@ -391,15 +399,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 확실히, 여름 별미는 각별하지.
-    MessageJP: たしかに、季節ものはそのシーズンの内に食べておきたいよね
-    MessageCN: 确实，季节限定的东西要在当季内吃完呢
-    MessageEN: Summer food is pretty good.
-    MessageTH: "อาหารเลิศรสของฤดูร้อนมันย่อมพิเศษ
-
-      อยู่แล้ว"
-    MessageTW: 確實，季節性的東西就想在那個季節吃呢
-  - MessageGroupId: 160060160
+  - MessageKR: 하지만, 나 깨달았어. 선생님…….
+    MessageJP: でも気づいたの、先生
+    MessageCN: 但是我发现了，老师
+    MessageEN: But, I realized, Sensei...
+    MessageTH: แต่ว่าฉันรู้แล้วล่ะ คุณครู...
+    MessageTW: 但我注意到了，老師
+    MessageGroupId: 160060160
     Id: 160060210
     CharacterId: 16006
     MessageCondition: Feedback
@@ -411,13 +417,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하지만, 나 깨달았어. 선생님…….
-    MessageJP: でも気づいたの、先生
-    MessageCN: 但是我发现了，老师
-    MessageEN: But, I realized, Sensei...
-    MessageTH: แต่ว่าฉันรู้แล้วล่ะ คุณครู...
-    MessageTW: 但我注意到了，老師
-  - MessageGroupId: 160060160
+  - MessageKR: 별미란 기다린다고 찾아와주지 않아!
+    MessageJP: 珍味は待ってても、来てくれないって！
+    MessageCN: 虽然我等了好久的美味，但是它们就是不来！
+    MessageEN: It's not going to come to ME!
+    MessageTH: "ไม่ใช่ว่านั่งรอเฉยๆ แล้วอาหารเลิศรส
+
+      จะมาเสิร์ฟถึงที่หรอกนะ!"
+    MessageTW: 美食等再久也不會來！
+    MessageGroupId: 160060160
     Id: 160060220
     CharacterId: 16006
     MessageCondition: Feedback
@@ -429,15 +437,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 별미란 기다린다고 찾아와주지 않아!
-    MessageJP: 珍味は待ってても、来てくれないって！
-    MessageCN: 虽然我等了好久的美味，但是它们就是不来！
-    MessageEN: It's not going to come to ME!
-    MessageTH: "ไม่ใช่ว่านั่งรอเฉยๆ แล้วอาหารเลิศรส
-
-      จะมาเสิร์ฟถึงที่หรอกนะ!"
-    MessageTW: 美食等再久也不會來！
-  - MessageGroupId: 160060170
+  - MessageKR: 과연 미식연구회의 부원!
+    MessageJP: すごく美食研究会っぽい台詞！
+    MessageCN: 还真是美食研究会能说出来的台词！
+    MessageEN: That's the Gourmet Research Society spirit!
+    MessageTH: สมกับเป็นสมาชิกชมรมชิมอาหาร!
+    MessageTW: 非常像是美食研究會會說的台詞！
+    MessageGroupId: 160060170
     Id: 160060230
     CharacterId: 16006
     MessageCondition: Answer
@@ -449,13 +455,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 과연 미식연구회의 부원!
-    MessageJP: すごく美食研究会っぽい台詞！
-    MessageCN: 还真是美食研究会能说出来的台词！
-    MessageEN: That's the Gourmet Research Society spirit!
-    MessageTH: สมกับเป็นสมาชิกชมรมชิมอาหาร!
-    MessageTW: 非常像是美食研究會會說的台詞！
-  - MessageGroupId: 160060170
+  - MessageKR: 먼저 행동한다는 거구나!
+    MessageJP: 確かに、足が生えたりしないもんね。……普通は
+    MessageCN: 确实，吃的又不会自己长脚。……一般来说吧
+    MessageEN: You're hitting your stride!
+    MessageTH: ต้องบุกไปคว้ามาก่อนสินะ!
+    MessageTW: 確實，美食不會自己長腳上門呢……一般來說
+    MessageGroupId: 160060170
     Id: 160060240
     CharacterId: 16006
     MessageCondition: Answer
@@ -467,13 +473,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 먼저 행동한다는 거구나!
-    MessageJP: 確かに、足が生えたりしないもんね。……普通は
-    MessageCN: 确实，吃的又不会自己长脚。……一般来说吧
-    MessageEN: You're hitting your stride!
-    MessageTH: ต้องบุกไปคว้ามาก่อนสินะ!
-    MessageTW: 確實，美食不會自己長腳上門呢……一般來說
-  - MessageGroupId: 160060180
+  - MessageKR: 응! 멍-하니 입을 벌리고 있어 봤자 먹을 수 있는 건
+    MessageJP: うん！ただぼーっと口を開けて待ってても、食べ物はやってこないからね！
+    MessageCN: 嗯！只是张着嘴等的话，食物是不会自己过来的！
+    MessageEN: Yep! Staying still like an idiot isn't going to fill me.
+    MessageTH: "อื้อ! สิ่งที่ฉันสามารถกินได้โดยแค่
+
+      อ้าปากอยู่เฉยๆ"
+    MessageTW: 嗯！即使是呆呆地張開嘴巴等著，食物也不會來！
+    MessageGroupId: 160060180
     Id: 160060250
     CharacterId: 16006
     MessageCondition: Feedback
@@ -485,15 +493,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응! 멍-하니 입을 벌리고 있어 봤자 먹을 수 있는 건
-    MessageJP: うん！ただぼーっと口を開けて待ってても、食べ物はやってこないからね！
-    MessageCN: 嗯！只是张着嘴等的话，食物是不会自己过来的！
-    MessageEN: Yep! Staying still like an idiot isn't going to fill me.
-    MessageTH: "อื้อ! สิ่งที่ฉันสามารถกินได้โดยแค่
+  - MessageKR: 선생님이 먹여주는 감자칩 뿐이니까!
+    MessageJP: 先生がすぐ横で、ポテチを食べさせてくれない限りは！
+    MessageCN: 除非老师就在旁边喂我吃薯片！
+    MessageEN: Well, except for all of your chips you'd share with me.
+    MessageTH: "มีแค่มันฝรั่งทอดที่คุณครูป้อนฉัน
 
-      อ้าปากอยู่เฉยๆ"
-    MessageTW: 嗯！即使是呆呆地張開嘴巴等著，食物也不會來！
-  - MessageGroupId: 160060180
+      ยังไงล่ะ!"
+    MessageTW: 除非是老師就在我旁邊吃著洋芋片！
+    MessageGroupId: 160060180
     Id: 160060260
     CharacterId: 16006
     MessageCondition: Feedback
@@ -505,15 +513,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님이 먹여주는 감자칩 뿐이니까!
-    MessageJP: 先生がすぐ横で、ポテチを食べさせてくれない限りは！
-    MessageCN: 除非老师就在旁边喂我吃薯片！
-    MessageEN: Well, except for all of your chips you'd share with me.
-    MessageTH: "มีแค่มันฝรั่งทอดที่คุณครูป้อนฉัน
-
-      ยังไงล่ะ!"
-    MessageTW: 除非是老師就在我旁邊吃著洋芋片！
-  - MessageGroupId: 160060190
+  - MessageKR: 어?! 그건 확정인 거야?!
+    MessageJP: え、それは暗にやってってこと……？
+    MessageCN: 诶？这是在暗地里做的事吗……？
+    MessageEN: When did I agree to do that?!
+    MessageTH: เอ๋?! พูดจริงอ่ะ?!
+    MessageTW: 耶，那是在暗地裡做的事嗎……？
+    MessageGroupId: 160060190
     Id: 160060270
     CharacterId: 16006
     MessageCondition: Answer
@@ -525,13 +531,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어?! 그건 확정인 거야?!
-    MessageJP: え、それは暗にやってってこと……？
-    MessageCN: 诶？这是在暗地里做的事吗……？
-    MessageEN: When did I agree to do that?!
-    MessageTH: เอ๋?! พูดจริงอ่ะ?!
-    MessageTW: 耶，那是在暗地裡做的事嗎……？
-  - MessageGroupId: 160060200
+  - MessageKR: 자아! 그럼 여름 별미를 찾으러 가자!
+    MessageJP: ポテチはまた今度として……さあ、夏の珍味を探しに行こう！
+    MessageCN: 薯片还是留到下次吧……那么，我们一起出发寻找夏日美食吧！
+    MessageEN: Then summer food, here we come!
+    MessageTH: "เอาล่ะ! ถ้างั้นไปหาอาหารเลิศรสของ
+
+      ฤดูร้อนกันเถอะ!"
+    MessageTW: 洋芋片下次再吃……好了，去尋找夏天的美食吧！
+    MessageGroupId: 160060200
     Id: 160060280
     CharacterId: 16006
     MessageCondition: Feedback
@@ -543,15 +551,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 자아! 그럼 여름 별미를 찾으러 가자!
-    MessageJP: ポテチはまた今度として……さあ、夏の珍味を探しに行こう！
-    MessageCN: 薯片还是留到下次吧……那么，我们一起出发寻找夏日美食吧！
-    MessageEN: Then summer food, here we come!
-    MessageTH: "เอาล่ะ! ถ้างั้นไปหาอาหารเลิศรสของ
+  - MessageKR: 우리 여름여름맛집콤비가 나설 차례야!
+    MessageJP: 私たち、常夏グルメコンビの出番だよ！
+    MessageCN: 我们常夏美食组合出场了！
+    MessageEN: The Summer Summer Food Tour is a go!
+    MessageTH: "คู่หูตะลุยร้านเด็ดต้องออกปฏิบัติการ
 
-      ฤดูร้อนกันเถอะ!"
-    MessageTW: 洋芋片下次再吃……好了，去尋找夏天的美食吧！
-  - MessageGroupId: 160060200
+      แล้วล่ะ"
+    MessageTW: 我們常夏美食家雙人組該出場了！
+    MessageGroupId: 160060200
     Id: 160060290
     CharacterId: 16006
     MessageCondition: Feedback
@@ -563,15 +571,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우리 여름여름맛집콤비가 나설 차례야!
-    MessageJP: 私たち、常夏グルメコンビの出番だよ！
-    MessageCN: 我们常夏美食组合出场了！
-    MessageEN: The Summer Summer Food Tour is a go!
-    MessageTH: "คู่หูตะลุยร้านเด็ดต้องออกปฏิบัติการ
-
-      แล้วล่ะ"
-    MessageTW: 我們常夏美食家雙人組該出場了！
-  - MessageGroupId: 160060210
+  - MessageKR: 여름여름……?
+    MessageJP: 常夏グルメコンビ……？
+    MessageCN: 常夏美食组合……？
+    MessageEN: Summer Summer...?
+    MessageTH: ฤดูร้อนๆ...?
+    MessageTW: 常夏美食家雙人組……？
+    MessageGroupId: 160060210
     Id: 160060300
     CharacterId: 16006
     MessageCondition: Answer
@@ -583,13 +589,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 여름여름……?
-    MessageJP: 常夏グルメコンビ……？
-    MessageCN: 常夏美食组合……？
-    MessageEN: Summer Summer...?
-    MessageTH: ฤดูร้อนๆ...?
-    MessageTW: 常夏美食家雙人組……？
-  - MessageGroupId: 160060210
+  - MessageKR: ……맛집콤비?
+    MessageJP: ……って、何？
+    MessageCN: ……啊，啥？
+    MessageEN: Food Tour...?
+    MessageTH: คู่หูตะลุยร้านเด็ด?
+    MessageTW: ……什麼東西？
+    MessageGroupId: 160060210
     Id: 160060310
     CharacterId: 16006
     MessageCondition: Answer
@@ -601,13 +607,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……맛집콤비?
-    MessageJP: ……って、何？
-    MessageCN: ……啊，啥？
-    MessageEN: Food Tour...?
-    MessageTH: คู่หูตะลุยร้านเด็ด?
-    MessageTW: ……什麼東西？
-  - MessageGroupId: 160060220
+  - MessageKR: 기다리고 있을게!
+    MessageJP: あの場所で待ってるね！
+    MessageCN: 我在那个地方等老师哦！
+    MessageEN: I'll be waiting!
+    MessageTH: ฉันจะรอนะ!
+    MessageTW: 我在那裡等老師囉！
+    MessageGroupId: 160060220
     Id: 160060320
     CharacterId: 16006
     MessageCondition: Feedback
@@ -619,13 +625,13 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 기다리고 있을게!
-    MessageJP: あの場所で待ってるね！
-    MessageCN: 我在那个地方等老师哦！
-    MessageEN: I'll be waiting!
-    MessageTH: ฉันจะรอนะ!
-    MessageTW: 我在那裡等老師囉！
-  - MessageGroupId: 160060230
+  - MessageKR: 선생님!
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: Sensei!
+    MessageTH: คุณครู!
+    MessageTW: 老師！
+    MessageGroupId: 160060230
     Id: 160060330
     CharacterId: 16006
     MessageCondition: FavorRankUp
@@ -637,13 +643,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생님!
-    MessageJP: 先生！
-    MessageCN: 老师！
-    MessageEN: Sensei!
-    MessageTH: คุณครู!
-    MessageTW: 老師！
-  - MessageGroupId: 160060240
+  - MessageKR: 우리 여름여름맛집콤비의 별미 여행은 아직 끝나지 않았어!
+    MessageJP: 私たち常夏グルメコンビの珍味を巡る旅は、まだ終わってないよ！
+    MessageCN: 我们常夏美食组合的美食之旅，还没有结束哦！
+    MessageEN: The Summer Summer Food Tour is just getting started!
+    MessageTH: "ทริปคู่หูตะลุยร้านเด็ด
+
+      เพื่อหาของอร่อยในหน้าร้อนของเรา
+
+      ยังไม่จบหรอกนะ!"
+    MessageTW: 我們常夏美食家雙人組的美食之旅，還沒結束唷！
+    MessageGroupId: 160060240
     Id: 160060340
     CharacterId: 16006
     MessageCondition: None
@@ -655,17 +665,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 우리 여름여름맛집콤비의 별미 여행은 아직 끝나지 않았어!
-    MessageJP: 私たち常夏グルメコンビの珍味を巡る旅は、まだ終わってないよ！
-    MessageCN: 我们常夏美食组合的美食之旅，还没有结束哦！
-    MessageEN: The Summer Summer Food Tour is just getting started!
-    MessageTH: "ทริปคู่หูตะลุยร้านเด็ด
-
-      เพื่อหาของอร่อยในหน้าร้อนของเรา
-
-      ยังไม่จบหรอกนะ!"
-    MessageTW: 我們常夏美食家雙人組的美食之旅，還沒結束唷！
-  - MessageGroupId: 160060250
+  - MessageKR: 그 이름, 마음에 들었구나…….
+    MessageJP: その名前、本当に気に入ってるんだね……
+    MessageCN: 泉还真是很喜欢这个名字呢……
+    MessageEN: You really like that name, huh?
+    MessageTH: ชอบชื่อนั้นมากเลยสินะ...
+    MessageTW: 真的很喜歡這名字呢……
+    MessageGroupId: 160060250
     Id: 160060350
     CharacterId: 16006
     MessageCondition: Answer
@@ -677,13 +683,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그 이름, 마음에 들었구나…….
-    MessageJP: その名前、本当に気に入ってるんだね……
-    MessageCN: 泉还真是很喜欢这个名字呢……
-    MessageEN: You really like that name, huh?
-    MessageTH: ชอบชื่อนั้นมากเลยสินะ...
-    MessageTW: 真的很喜歡這名字呢……
-  - MessageGroupId: 160060260
+  - MessageKR: 그래서 말인데! 오늘은 뭘 먹어볼까!
+    MessageJP: というわけで、今日は何を食べよっか
+    MessageCN: 所以说，今天要吃什么呢
+    MessageEN: So! What should we eat today?
+    MessageTH: เพราะงั้น... วันนี้จะกินอะไรดีล่ะ!
+    MessageTW: 所以，今天要吃什麼呢？
+    MessageGroupId: 160060260
     Id: 160060360
     CharacterId: 16006
     MessageCondition: Feedback
@@ -695,13 +701,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래서 말인데! 오늘은 뭘 먹어볼까!
-    MessageJP: というわけで、今日は何を食べよっか
-    MessageCN: 所以说，今天要吃什么呢
-    MessageEN: So! What should we eat today?
-    MessageTH: เพราะงั้น... วันนี้จะกินอะไรดีล่ะ!
-    MessageTW: 所以，今天要吃什麼呢？
-  - MessageGroupId: 160060260
+  - MessageKR: 서쪽 해변에서 유명한 젤라또 아이스크림도 좋구!
+    MessageJP: 西の方の海岸で有名なジェラートも良いし……
+    MessageCN: 西边海岸有名的意式冰淇淋不错……
+    MessageEN: West Beach's famous gelato would be great!
+    MessageTH: "ไอศกรีมเจลาโต้ชื่อดังที่ขายอยู่ที่หาด
+
+      ด้านตะวันตกก็ดีนะ!"
+    MessageTW: 西邊海岸有名的義式冰淇淋很不錯……
+    MessageGroupId: 160060260
     Id: 160060370
     CharacterId: 16006
     MessageCondition: Feedback
@@ -713,15 +721,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 서쪽 해변에서 유명한 젤라또 아이스크림도 좋구!
-    MessageJP: 西の方の海岸で有名なジェラートも良いし……
-    MessageCN: 西边海岸有名的意式冰淇淋不错……
-    MessageEN: West Beach's famous gelato would be great!
-    MessageTH: "ไอศกรีมเจลาโต้ชื่อดังที่ขายอยู่ที่หาด
+  - MessageKR: 동쪽 스트리트에서 다들 먹는다는 와플 케잌도 좋지만…….
+    MessageJP: 東の大通りにある、美味しいって評判のワッフルも良いけど……
+    MessageCN: 但是东边大街上那家华夫饼好像口碑也很好……
+    MessageEN: East Street's waffle cake would be good too...
+    MessageTH: "แต่เค้กวัฟเฟิลที่ทุกคนบอกว่าต้องลอง
 
-      ด้านตะวันตกก็ดีนะ!"
-    MessageTW: 西邊海岸有名的義式冰淇淋很不錯……
-  - MessageGroupId: 160060270
+      ที่ขายอยู่ที่ถนนฝั่งตะวันออกก็ดี..."
+    MessageTW: 東邊大街上有口皆碑的鬆餅也不賴……
+    MessageGroupId: 160060270
     Id: 160060380
     CharacterId: 16006
     MessageCondition: Feedback
@@ -733,15 +741,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 동쪽 스트리트에서 다들 먹는다는 와플 케잌도 좋지만…….
-    MessageJP: 東の大通りにある、美味しいって評判のワッフルも良いけど……
-    MessageCN: 但是东边大街上那家华夫饼好像口碑也很好……
-    MessageEN: East Street's waffle cake would be good too...
-    MessageTH: "แต่เค้กวัฟเฟิลที่ทุกคนบอกว่าต้องลอง
-
-      ที่ขายอยู่ที่ถนนฝั่งตะวันออกก็ดี..."
-    MessageTW: 東邊大街上有口皆碑的鬆餅也不賴……
-  - MessageGroupId: 160060270
+  - MessageKR: 역시 지금 반드시 먹어봐야만 하는 건.
+    MessageJP: やっぱり今一番気になるのは……！
+    MessageCN: 但现在我最中意的果然还是……！
+    MessageEN: But the one thing we have to try for sure is...
+    MessageTH: แต่ว่าสิ่งที่ต้องกินให้ได้ในตอนนี้น่ะ
+    MessageTW: 但果然現在最感興趣的……！
+    MessageGroupId: 160060270
     Id: 160060390
     CharacterId: 16006
     MessageCondition: Feedback
@@ -753,25 +759,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 지금 반드시 먹어봐야만 하는 건.
-    MessageJP: やっぱり今一番気になるのは……！
-    MessageCN: 但现在我最中意的果然还是……！
-    MessageEN: But the one thing we have to try for sure is...
-    MessageTH: แต่ว่าสิ่งที่ต้องกินให้ได้ในตอนนี้น่ะ
-    MessageTW: 但果然現在最感興趣的……！
-  - MessageGroupId: 160060270
-    Id: 160060400
-    CharacterId: 16006
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 160060280
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 해변가 중앙 노점상에서 파는 딸기바나나맛 타코야키일까?!
+  - MessageKR: 해변가 중앙 노점상에서 파는 딸기바나나맛 타코야키일까?!
     MessageJP: 中央通りの屋台で売ってるって聞いた、「イチゴバナナ味のたこ焼き」かな！
     MessageCN: 听说在中央大街的小摊上卖的那个，“草莓香蕉味章鱼烧”！
     MessageEN:
@@ -783,7 +771,25 @@ content:
 
       สินะ?!"
     MessageTW: 還是中央大街攤販在賣的「草莓香蕉章魚燒」吧！
-  - MessageGroupId: 160060280
+    MessageGroupId: 160060270
+    Id: 160060400
+    CharacterId: 16006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160060280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러니까, 또 먹자고?
+    MessageJP: イズミ、夏バテとかしなさそうだね
+    MessageCN: 即使天气热成这样，泉还是很有精神呢
+    MessageEN: So we're going to go eat again?
+    MessageTH: จะไปกินอีกเหรอ?
+    MessageTW: 泉似乎沒有夏季倦怠的問題呢
+    MessageGroupId: 160060280
     Id: 160060410
     CharacterId: 16006
     MessageCondition: Answer
@@ -795,13 +801,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그러니까, 또 먹자고?
-    MessageJP: イズミ、夏バテとかしなさそうだね
-    MessageCN: 即使天气热成这样，泉还是很有精神呢
-    MessageEN: So we're going to go eat again?
-    MessageTH: จะไปกินอีกเหรอ?
-    MessageTW: 泉似乎沒有夏季倦怠的問題呢
-  - MessageGroupId: 160060290
+  - MessageKR: 응응! 이러고 있을 때가 아니야! 선생님!
+    MessageJP: だって、色んな美味しい料理が私たちを待ってるんだもん！
+    MessageCN: 毕竟，还有各种各样的美食等着我们呢！
+    MessageEN: Right! There's no time to waste, Sensei!
+    MessageTH: "อื้มอื้ม!  ไม่ใช่เวลาที่จะมามัวลังเลอยู่
+
+      นะ! คุณครู!"
+    MessageTW: 因為，有各種美味的料理在等著我們呢！
+    MessageGroupId: 160060290
     Id: 160060420
     CharacterId: 16006
     MessageCondition: Feedback
@@ -813,15 +821,17 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 응응! 이러고 있을 때가 아니야! 선생님!
-    MessageJP: だって、色んな美味しい料理が私たちを待ってるんだもん！
-    MessageCN: 毕竟，还有各种各样的美食等着我们呢！
-    MessageEN: Right! There's no time to waste, Sensei!
-    MessageTH: "อื้มอื้ม!  ไม่ใช่เวลาที่จะมามัวลังเลอยู่
+  - MessageKR: 이러고 있는 동안에도, 해변가의 맛있는 별미들이 전부 팔려 나갈 거라구!
+    MessageJP: こうしちゃいられないよ、先生！
+    MessageCN: 无精打采的可不行，老师！
+    MessageEN: If we wait any longer, all the good stuff will sell out!
+    MessageTH: "ระหว่างที่มัวแต่ลังเลแบบนี้ ของอร่อย
 
-      นะ! คุณครู!"
-    MessageTW: 因為，有各種美味的料理在等著我們呢！
-  - MessageGroupId: 160060290
+      ที่ขายริมหาดก็อาจจะขายหมดแล้ว
+
+      ก็ได้นะ!"
+    MessageTW: 沒時間發呆了，老師！
+    MessageGroupId: 160060290
     Id: 160060430
     CharacterId: 16006
     MessageCondition: Feedback
@@ -833,17 +843,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이러고 있는 동안에도, 해변가의 맛있는 별미들이 전부 팔려 나갈 거라구!
-    MessageJP: こうしちゃいられないよ、先生！
-    MessageCN: 无精打采的可不行，老师！
-    MessageEN: If we wait any longer, all the good stuff will sell out!
-    MessageTH: "ระหว่างที่มัวแต่ลังเลแบบนี้ ของอร่อย
+  - MessageKR: 자, 그럼 바다의 집 앞에서 보자! 선생님!
+    MessageJP: じゃあ、今日も海の家の前で待ってるね！
+    MessageCN: 那我今天也在海之家前面等老师哦！
+    MessageEN: See you in front of the Beach Shack, Sensei!
+    MessageTH: "เอาล่ะ เจอกันที่หน้าร้านริมทะเลนะ
 
-      ที่ขายริมหาดก็อาจจะขายหมดแล้ว
-
-      ก็ได้นะ!"
-    MessageTW: 沒時間發呆了，老師！
-  - MessageGroupId: 160060300
+      คุณครู!"
+    MessageTW: 那麼，今天也在海之家的前面等老師唷！
+    MessageGroupId: 160060300
     Id: 160060440
     CharacterId: 16006
     MessageCondition: Feedback
@@ -855,15 +863,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 자, 그럼 바다의 집 앞에서 보자! 선생님!
-    MessageJP: じゃあ、今日も海の家の前で待ってるね！
-    MessageCN: 那我今天也在海之家前面等老师哦！
-    MessageEN: See you in front of the Beach Shack, Sensei!
-    MessageTH: "เอาล่ะ เจอกันที่หน้าร้านริมทะเลนะ
+  - MessageKR: 아! 참고로 늦은 사람은, 자기 음식 절반 나눠주기야!
+    MessageJP: 遅れたら、先生の分も半分食べちゃうからね！
+    MessageCN: 要是老师来晚了，我就要把老师的份也吃掉一半！
+    MessageEN: Whoever's late has to give half of their share to the other!
+    MessageTH: "อ๊ะ! ถ้าใครมาช้าต้องยอมแบ่งของกิน
 
-      คุณครู!"
-    MessageTW: 那麼，今天也在海之家的前面等老師唷！
-  - MessageGroupId: 160060300
+      ของตัวเองให้อีกคนครึ่งนึงนะ!"
+    MessageTW: 遲到的話，我會連老師的份也吃掉一半！
+    MessageGroupId: 160060300
     Id: 160060450
     CharacterId: 16006
     MessageCondition: Feedback
@@ -875,15 +883,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아! 참고로 늦은 사람은, 자기 음식 절반 나눠주기야!
-    MessageJP: 遅れたら、先生の分も半分食べちゃうからね！
-    MessageCN: 要是老师来晚了，我就要把老师的份也吃掉一半！
-    MessageEN: Whoever's late has to give half of their share to the other!
-    MessageTH: "อ๊ะ! ถ้าใครมาช้าต้องยอมแบ่งของกิน
-
-      ของตัวเองให้อีกคนครึ่งนึงนะ!"
-    MessageTW: 遲到的話，我會連老師的份也吃掉一半！
-  - MessageGroupId: 160060310
+  - MessageKR: 어, 으, 으응.
+    MessageJP: それは全然良いけど……お腹壊さないようにね
+    MessageCN: 我倒是不介意……就是泉可别吃坏肚子了
+    MessageEN: S-Sure. Okay.
+    MessageTH: อ่ะ...เอ่อ... อื้อ
+    MessageTW: 那倒是完全沒問題……但別吃壞肚子了唷
+    MessageGroupId: 160060310
     Id: 160060460
     CharacterId: 16006
     MessageCondition: Answer
@@ -895,9 +901,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 어, 으, 으응.
-    MessageJP: それは全然良いけど……お腹壊さないようにね
-    MessageCN: 我倒是不介意……就是泉可别吃坏肚子了
-    MessageEN: S-Sure. Okay.
-    MessageTH: อ่ะ...เอ่อ... อื้อ
-    MessageTW: 那倒是完全沒問題……但別吃壞肚子了唷

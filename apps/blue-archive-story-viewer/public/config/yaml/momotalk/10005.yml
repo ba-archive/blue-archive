@@ -1,62 +1,72 @@
 CharacterId: 10005
 translator: 霉豆子
 title:
-  - GroupId: 1000502
-    FavorScheduleId: 100052
-    CharacterId: 10005
-    TextJp: 眠る鯨
+  - TextJp: 眠る鯨
     TextCn: 沉睡的鲸鱼
     TextKr: 잠자는 고래
     TextEn: The Sleeping Whale
     TextTh: วาฬที่หลับใหล
     TextTw: 沉睡的鯨魚
-  - GroupId: 1000503
-    FavorScheduleId: 100053
+    GroupId: 1000502
+    FavorScheduleId: 100052
     CharacterId: 10005
-    TextJp: 怠け者の朝
+  - TextJp: 怠け者の朝
     TextCn: 懒人的早晨
     TextKr: 게으름뱅이의 아침
     TextEn: A Lazy Morning
     TextTh: เช้าที่สดใสของจอมขี้เกียจ
     TextTw: 懶惰蟲的早晨
-  - GroupId: 1000505
-    FavorScheduleId: 100055
+    GroupId: 1000503
+    FavorScheduleId: 100053
     CharacterId: 10005
-    TextJp: うっすらだけど輝いてる
+  - TextJp: うっすらだけど輝いてる
     TextCn: 微弱但依然闪耀着
     TextKr: 희미하지만 빛나는
     TextEn: Faint Light
     TextTh: แม้จะดูเลือนรางแต่ก็เปล่งประกาย
     TextTw: 雖然隱約，但是耀眼
-  - GroupId: 1000506
-    FavorScheduleId: 100056
+    GroupId: 1000505
+    FavorScheduleId: 100055
     CharacterId: 10005
-    TextJp: 真夜中のパトロール
+  - TextJp: 真夜中のパトロール
     TextCn: 深夜里的巡逻
     TextKr: 한밤중의 순찰자
     TextEn: Midnight Ranger
     TextTh: กองลาดตระเวนยามราตรี
     TextTw: 深夜的巡邏
-  - GroupId: 1000508
-    FavorScheduleId: 100058
+    GroupId: 1000506
+    FavorScheduleId: 100056
     CharacterId: 10005
-    TextJp: 幸運を掴む方法
+  - TextJp: 幸運を掴む方法
     TextCn: 抓住幸运的方法
     TextKr: 행운을 잡는 법
     TextEn: How to Seize Luck
     TextTh: วิธีทำให้พบกับความโชคดี
     TextTw: 抓住幸運的方法
-  - GroupId: 1000509
-    FavorScheduleId: 100059
+    GroupId: 1000508
+    FavorScheduleId: 100058
     CharacterId: 10005
-    TextJp: アクアリウム！
+  - TextJp: アクアリウム！
     TextCn: 水族馆！
     TextKr: 아쿠아리움!
     TextEn: A Day at the Aquarium!
     TextTh: อควาเรียม!
     TextTw: 海生館！
+    GroupId: 1000509
+    FavorScheduleId: 100059
+    CharacterId: 10005
 content:
-  - MessageGroupId: 100050010
+  - MessageKR: 음, 선생. 휴일에 대책위원회 동아리실로 와줄 수 있겠어?
+    MessageJP: 先生、もし時間あったら次の休日、対策委員会の教室まで来てくれない？
+    MessageCN: 老师，要是下个休息日有时间的话，可以来一趟对策委员会的教室吗？
+    MessageEN:
+      Um, Sensei, can you come to the Foreclosure Task Force Room when you
+      have time?
+    MessageTH: "อืม... คุณครู วันหยุดนี้ช่วยมาที่ห้อง
+
+      ชมรมคณะกรรมการแผนงานหน่อยได้มั้ย?"
+    MessageTW: 老師，下次休假如果有空，能來趟對策委員會的教室嗎？
+    MessageGroupId: 100050010
     Id: 162
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -68,17 +78,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음, 선생. 휴일에 대책위원회 동아리실로 와줄 수 있겠어?
-    MessageJP: 先生、もし時間あったら次の休日、対策委員会の教室まで来てくれない？
-    MessageCN: 老师，要是下个休息日有时间的话，可以来一趟对策委员会的教室吗？
-    MessageEN:
-      Um, Sensei, can you come to the Foreclosure Task Force Room when you
-      have time?
-    MessageTH: "อืม... คุณครู วันหยุดนี้ช่วยมาที่ห้อง
-
-      ชมรมคณะกรรมการแผนงานหน่อยได้มั้ย?"
-    MessageTW: 老師，下次休假如果有空，能來趟對策委員會的教室嗎？
-  - MessageGroupId: 100050011
+  - MessageKR: 선생 도움이 좀 필요한데
+    MessageJP: ちょっと先生に手伝ってほしくって
+    MessageCN: 我有事情想请老师帮忙
+    MessageEN: I need your help.
+    MessageTH: ฉันมีเรื่องให้คุณครูช่วยหน่อยน่ะ
+    MessageTW: 想請老師幫個忙
+    MessageGroupId: 100050011
     Id: 163
     CharacterId: 10005
     MessageCondition: None
@@ -90,13 +96,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생 도움이 좀 필요한데
-    MessageJP: ちょっと先生に手伝ってほしくって
-    MessageCN: 我有事情想请老师帮忙
-    MessageEN: I need your help.
-    MessageTH: ฉันมีเรื่องให้คุณครูช่วยหน่อยน่ะ
-    MessageTW: 想請老師幫個忙
-  - MessageGroupId: 100050011
+  - MessageKR: 아 그리고, 고래는 물 속에서 숨을 참고 있는 거래. 알고 있었어?
+    MessageJP: あと全然関係ないけど、鯨は水中で呼吸を我慢してるんだって、知ってた？
+    MessageCN: 还有，虽然和帮忙没什么关系，老师知道鲸鱼在水里的时候其实一直在憋气吗？
+    MessageEN:
+      Oh, also, I heard that whales hold their breath underwater. Did you
+      know that?
+    MessageTH: "อ้อ! ได้ยินว่าปลาวาฬกลั้นหายใจตอน
+
+      อยู่ใต้น้ำล่ะ! คุณครูรู้หรือเปล่า?"
+    MessageTW: 還有，雖然完全無關，但鯨魚在水裡是憋住呼吸的，你知道嗎？
+    MessageGroupId: 100050011
     Id: 164
     CharacterId: 10005
     MessageCondition: None
@@ -108,17 +118,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아 그리고, 고래는 물 속에서 숨을 참고 있는 거래. 알고 있었어?
-    MessageJP: あと全然関係ないけど、鯨は水中で呼吸を我慢してるんだって、知ってた？
-    MessageCN: 还有，虽然和帮忙没什么关系，老师知道鲸鱼在水里的时候其实一直在憋气吗？
-    MessageEN:
-      Oh, also, I heard that whales hold their breath underwater. Did you
-      know that?
-    MessageTH: "อ้อ! ได้ยินว่าปลาวาฬกลั้นหายใจตอน
+  - MessageKR: 대책위원회 동아리실로? 알았어.
+    MessageJP: 対策委員会の教室だね、了解
+    MessageCN: 去对策委员会的教室是吧，我知道了
+    MessageEN: To the Foreclosure Task Force Room? Okay.
+    MessageTH: "ห้องชมรมคณะกรรมการแผนงานเหรอ?
 
-      อยู่ใต้น้ำล่ะ! คุณครูรู้หรือเปล่า?"
-    MessageTW: 還有，雖然完全無關，但鯨魚在水裡是憋住呼吸的，你知道嗎？
-  - MessageGroupId: 100050020
+      โอเค"
+    MessageTW: 對策委員會的教室是吧，了解
+    MessageGroupId: 100050020
     Id: 165
     CharacterId: 10005
     MessageCondition: Answer
@@ -130,15 +138,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 대책위원회 동아리실로? 알았어.
-    MessageJP: 対策委員会の教室だね、了解
-    MessageCN: 去对策委员会的教室是吧，我知道了
-    MessageEN: To the Foreclosure Task Force Room? Okay.
-    MessageTH: "ห้องชมรมคณะกรรมการแผนงานเหรอ?
-
-      โอเค"
-    MessageTW: 對策委員會的教室是吧，了解
-  - MessageGroupId: 100050020
+  - MessageKR: 몰랐어. 과연 포유류구나.
+    MessageJP: 知らなかった。確かに哺乳類だもんね
+    MessageCN: 不知道诶。不过毕竟鲸鱼是哺乳动物呢
+    MessageEN: I didn't know that. I guess they are mammals, after all.
+    MessageTH: ไม่รู้เลย รู้แค่มันเป็นสัตว์เลี้ยงลูกด้วยนม
+    MessageTW: 不知道耶。但確實是哺乳類呢
+    MessageGroupId: 100050020
     Id: 166
     CharacterId: 10005
     MessageCondition: Answer
@@ -150,13 +156,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 몰랐어. 과연 포유류구나.
-    MessageJP: 知らなかった。確かに哺乳類だもんね
-    MessageCN: 不知道诶。不过毕竟鲸鱼是哺乳动物呢
-    MessageEN: I didn't know that. I guess they are mammals, after all.
-    MessageTH: ไม่รู้เลย รู้แค่มันเป็นสัตว์เลี้ยงลูกด้วยนม
-    MessageTW: 不知道耶。但確實是哺乳類呢
-  - MessageGroupId: 100050030
+  - MessageKR: 으으…… 선생, 자고 일어났더니 허리가 부러질 듯 아프고……. 삭신이 쑤시는데…….
+    MessageJP: 先生、起きたら腰が折れそうなぐらい痛いんだけど……悲鳴を上げてる……
+    MessageCN: 老师，我起床之后感觉腰好像断了一样的痛……甚至疼得叫出声了……
+    MessageEN: Ugh. Sensei, I woke up with this awful back pain... My whole body aches...
+    MessageTH: "โอ๊ย... นอนผิดท่าแน่ๆ ทำไมตื่นมาแล้ว
+
+      เอวเป็นแบบนี้นะ ปวดไปหมดเลย..."
+    MessageTW: 老師，我起床後腰痛到快斷了……還發出哀號……
+    MessageGroupId: 100050030
     Id: 167
     CharacterId: 10005
     MessageCondition: None
@@ -168,15 +176,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으으…… 선생, 자고 일어났더니 허리가 부러질 듯 아프고……. 삭신이 쑤시는데…….
-    MessageJP: 先生、起きたら腰が折れそうなぐらい痛いんだけど……悲鳴を上げてる……
-    MessageCN: 老师，我起床之后感觉腰好像断了一样的痛……甚至疼得叫出声了……
-    MessageEN: Ugh. Sensei, I woke up with this awful back pain... My whole body aches...
-    MessageTH: "โอ๊ย... นอนผิดท่าแน่ๆ ทำไมตื่นมาแล้ว
-
-      เอวเป็นแบบนี้นะ ปวดไปหมดเลย..."
-    MessageTW: 老師，我起床後腰痛到快斷了……還發出哀號……
-  - MessageGroupId: 100050030
+  - MessageKR: 오리털이라는 건 원래 이런 거야?
+    MessageJP: 羽毛ってこういうものなの？
+    MessageCN: 羽毛原来是这样的东西吗？
+    MessageEN: Is this what duck down is supposed to feel like?
+    MessageTH: ที่นอนขนเป็ดนอนแล้วเป็นแบบนี้เหรอ?
+    MessageTW: 羽毛都是這樣子的嗎？
+    MessageGroupId: 100050030
     Id: 168
     CharacterId: 10005
     MessageCondition: None
@@ -188,13 +194,15 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오리털이라는 건 원래 이런 거야?
-    MessageJP: 羽毛ってこういうものなの？
-    MessageCN: 羽毛原来是这样的东西吗？
-    MessageEN: Is this what duck down is supposed to feel like?
-    MessageTH: ที่นอนขนเป็ดนอนแล้วเป็นแบบนี้เหรอ?
-    MessageTW: 羽毛都是這樣子的嗎？
-  - MessageGroupId: 100050040
+  - MessageKR: 역시 이 나이에는 딱딱한 바닥이 아니면 안 되는 건가…….
+    MessageJP: やっぱりこの歳だと、柔らかすぎるのはダメか……
+    MessageCN: 果然因为上了年纪，不能睡太柔软的床了吗……
+    MessageEN: Now that I'm older, maybe I should be sleeping on the hard floor instead.
+    MessageTH: "หรือว่าอายุแบบเราต้องนอนบนพื้น
+
+      แข็งๆ เท่านั้น..."
+    MessageTW: 果然這年紀不能睡太軟嗎……
+    MessageGroupId: 100050040
     Id: 169
     CharacterId: 10005
     MessageCondition: None
@@ -206,15 +214,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 역시 이 나이에는 딱딱한 바닥이 아니면 안 되는 건가…….
-    MessageJP: やっぱりこの歳だと、柔らかすぎるのはダメか……
-    MessageCN: 果然因为上了年纪，不能睡太柔软的床了吗……
-    MessageEN: Now that I'm older, maybe I should be sleeping on the hard floor instead.
-    MessageTH: "หรือว่าอายุแบบเราต้องนอนบนพื้น
-
-      แข็งๆ เท่านั้น..."
-    MessageTW: 果然這年紀不能睡太軟嗎……
-  - MessageGroupId: 100050050
+  - MessageKR: 다음부턴 제대로 침대에서 자.
+    MessageJP: ちゃんとしたベッドで寝たほうが良いよ
+    MessageCN: 还是乖乖在床上睡更好哦
+    MessageEN: You should find somewhere more comfortable to sleep next time.
+    MessageTH: คราวหน้าก็ไปนอนบนเตียงดีๆ สิ
+    MessageTW: 睡在一張像樣的床上比較好唷
+    MessageGroupId: 100050050
     Id: 170
     CharacterId: 10005
     MessageCondition: Answer
@@ -226,13 +232,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음부턴 제대로 침대에서 자.
-    MessageJP: ちゃんとしたベッドで寝たほうが良いよ
-    MessageCN: 还是乖乖在床上睡更好哦
-    MessageEN: You should find somewhere more comfortable to sleep next time.
-    MessageTH: คราวหน้าก็ไปนอนบนเตียงดีๆ สิ
-    MessageTW: 睡在一張像樣的床上比較好唷
-  - MessageGroupId: 100050060
+  - MessageKR: 으음…… 저 매트를 쓰는 건 일단 보류해둬야겠어.
+    MessageJP: うーん……あのマットはまた倉庫に逆戻りかなあ……
+    MessageCN: 嗯……那个垫子只能再放回仓库去吗……
+    MessageEN: Well, in any event, I'll stop using the mat for now.
+    MessageTH: อืม... ฉันคงต้องเลิกนอนบนฟูกแล้วล่ะ
+    MessageTW: 唔嗯……看來得請那張墊子回倉庫了……
+    MessageGroupId: 100050060
     Id: 171
     CharacterId: 10005
     MessageCondition: Feedback
@@ -244,13 +250,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으음…… 저 매트를 쓰는 건 일단 보류해둬야겠어.
-    MessageJP: うーん……あのマットはまた倉庫に逆戻りかなあ……
-    MessageCN: 嗯……那个垫子只能再放回仓库去吗……
-    MessageEN: Well, in any event, I'll stop using the mat for now.
-    MessageTH: อืม... ฉันคงต้องเลิกนอนบนฟูกแล้วล่ะ
-    MessageTW: 唔嗯……看來得請那張墊子回倉庫了……
-  - MessageGroupId: 100050070
+  - MessageKR: 아…… 어째서 사람은 아침에 일어나지 않으면 안 되는 걸까.
+    MessageJP: どうして人間は、朝起きなきゃいけないんだろう……
+    MessageCN: 为什么人类一定要早起啊……
+    MessageEN: Ugh, why do I have to wake up in the morning?
+    MessageTH: เฮ้อ... ทำไมเราต้องตื่นมาตอนเช้าด้วยเนี่ย?
+    MessageTW: 為什麼人類早上必須起床呢……
+    MessageGroupId: 100050070
     Id: 172
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -262,13 +268,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아…… 어째서 사람은 아침에 일어나지 않으면 안 되는 걸까.
-    MessageJP: どうして人間は、朝起きなきゃいけないんだろう……
-    MessageCN: 为什么人类一定要早起啊……
-    MessageEN: Ugh, why do I have to wake up in the morning?
-    MessageTH: เฮ้อ... ทำไมเราต้องตื่นมาตอนเช้าด้วยเนี่ย?
-    MessageTW: 為什麼人類早上必須起床呢……
-  - MessageGroupId: 100050071
+  - MessageKR: 눈꺼풀이 너무 무거워 선생 도와줘…….
+    MessageJP: まぶたが重すぎて地面に落ちそう……先生、助けて……
+    MessageCN: 眼皮沉得要掉到地上了……老师，帮帮我……
+    MessageEN: My eyelids are so heavy. Help me, Sensei...
+    MessageTH: ตาฉันจะปิดแล้ว ช่วยหน่อยสิครู....
+    MessageTW: 眼皮重到要掉地上了……老師，救命……
+    MessageGroupId: 100050071
     Id: 173
     CharacterId: 10005
     MessageCondition: None
@@ -280,13 +286,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 눈꺼풀이 너무 무거워 선생 도와줘…….
-    MessageJP: まぶたが重すぎて地面に落ちそう……先生、助けて……
-    MessageCN: 眼皮沉得要掉到地上了……老师，帮帮我……
-    MessageEN: My eyelids are so heavy. Help me, Sensei...
-    MessageTH: ตาฉันจะปิดแล้ว ช่วยหน่อยสิครู....
-    MessageTW: 眼皮重到要掉地上了……老師，救命……
-  - MessageGroupId: 100050080
+  - MessageKR: 학생의 숙명이니까…….
+    MessageJP: 学生としての定めだから……
+    MessageCN: 毕竟学生有学生的义务……
+    MessageEN: Ah, student life.
+    MessageTH: ชีวิตของนักเรียนก็แบบนี้ล่ะ...
+    MessageTW: 因為是學生的命運啊……
+    MessageGroupId: 100050080
     Id: 174
     CharacterId: 10005
     MessageCondition: Answer
@@ -298,13 +304,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 학생의 숙명이니까…….
-    MessageJP: 学生としての定めだから……
-    MessageCN: 毕竟学生有学生的义务……
-    MessageEN: Ah, student life.
-    MessageTH: ชีวิตของนักเรียนก็แบบนี้ล่ะ...
-    MessageTW: 因為是學生的命運啊……
-  - MessageGroupId: 100050080
+  - MessageKR: 힘내! 할 수 있어, 호시노 쨩!
+    MessageJP: 頑張って！ホシノならできるよ！
+    MessageCN: 加油！星野一定能做到的！
+    MessageEN: You got this, Hoshino!
+    MessageTH: พยายามถ่างตาไว้ โฮชิโนะจัง!
+    MessageTW: 加油！星野能做到的！
+    MessageGroupId: 100050080
     Id: 175
     CharacterId: 10005
     MessageCondition: Answer
@@ -316,13 +322,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 힘내! 할 수 있어, 호시노 쨩!
-    MessageJP: 頑張って！ホシノならできるよ！
-    MessageCN: 加油！星野一定能做到的！
-    MessageEN: You got this, Hoshino!
-    MessageTH: พยายามถ่างตาไว้ โฮชิโนะจัง!
-    MessageTW: 加油！星野能做到的！
-  - MessageGroupId: 100050090
+  - MessageKR: 물고기처럼 감을 눈꺼풀이 없으면 차라리 좋겠는데 말이지…… 음냐.
+    MessageJP: いっそ魚みたいにまぶたが無い方が楽かもしれないね…………むにゃ
+    MessageCN: 要是人能像鱼一样没有眼皮反而更好呢……呼呀
+    MessageEN: I wish I didn't have eyelids, like a fish. Hmm...
+    MessageTH: "ฉันอยากให้คนไม่มีหนังตาเหมือนปลาจัง
+
+      ถ้าหนังตาไม่ตกก็คงไม่ง่วงเนอะ... ฮ้าวว"
+    MessageTW: 乾脆像魚一樣沒有眼皮的話也許能更輕鬆些……咕噥
+    MessageGroupId: 100050090
     Id: 176
     CharacterId: 10005
     MessageCondition: Feedback
@@ -334,15 +342,13 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물고기처럼 감을 눈꺼풀이 없으면 차라리 좋겠는데 말이지…… 음냐.
-    MessageJP: いっそ魚みたいにまぶたが無い方が楽かもしれないね…………むにゃ
-    MessageCN: 要是人能像鱼一样没有眼皮反而更好呢……呼呀
-    MessageEN: I wish I didn't have eyelids, like a fish. Hmm...
-    MessageTH: "ฉันอยากให้คนไม่มีหนังตาเหมือนปลาจัง
-
-      ถ้าหนังตาไม่ตกก็คงไม่ง่วงเนอะ... ฮ้าวว"
-    MessageTW: 乾脆像魚一樣沒有眼皮的話也許能更輕鬆些……咕噥
-  - MessageGroupId: 100050100
+  - MessageKR: 선생, 알고 있었어?
+    MessageJP: 先生、知ってた？
+    MessageCN: 老师知道吗？
+    MessageEN: Sensei, did you know?
+    MessageTH: คุณครูรู้รึเปล่า?
+    MessageTW: 老師，你知道嗎？
+    MessageGroupId: 100050100
     Id: 177
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -354,13 +360,17 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 알고 있었어?
-    MessageJP: 先生、知ってた？
-    MessageCN: 老师知道吗？
-    MessageEN: Sensei, did you know?
-    MessageTH: คุณครูรู้รึเปล่า?
-    MessageTW: 老師，你知道嗎？
-  - MessageGroupId: 100050101
+  - MessageKR: 심해에 사는 물고기 중에는 빛을 만들어서 자기를 보호하는 녀석들도 있대.
+    MessageJP: 深海に住んでる魚には、身体から光を放って身を守るのもいるんだって
+    MessageCN: 听说深海里的鱼，会通过在身上发光来保护自己呢
+    MessageEN:
+      Some fish that live in the deepest oceans create their own light to
+      protect themselves.
+    MessageTH: "ปลาบางสายพันธุ์ที่อยู่ใต้ทะเลลึก
+
+      จะสร้างแสงออกมาคุ้มกันตัวเองด้วยล่ะ"
+    MessageTW: 據說深海魚會讓身體發光來保護自己
+    MessageGroupId: 100050101
     Id: 178
     CharacterId: 10005
     MessageCondition: None
@@ -372,17 +382,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 심해에 사는 물고기 중에는 빛을 만들어서 자기를 보호하는 녀석들도 있대.
-    MessageJP: 深海に住んでる魚には、身体から光を放って身を守るのもいるんだって
-    MessageCN: 听说深海里的鱼，会通过在身上发光来保护自己呢
+  - MessageKR: 아, 그리고 오늘도 보물찾기 할 건데 올래?
+    MessageJP: それはそれとして、今日も宝探しやるけど来る？
+    MessageCN: 先不聊这个，我今天也要去寻宝，老师一起来怎么样？
     MessageEN:
-      Some fish that live in the deepest oceans create their own light to
-      protect themselves.
-    MessageTH: "ปลาบางสายพันธุ์ที่อยู่ใต้ทะเลลึก
+      "Oh, I'm gonna do another treasure hunt today. Do you want to join
+      me? "
+    MessageTH: "อ้อ! วันนี้ฉันจะออกไปล่าสมบัติด้วย
 
-      จะสร้างแสงออกมาคุ้มกันตัวเองด้วยล่ะ"
-    MessageTW: 據說深海魚會讓身體發光來保護自己
-  - MessageGroupId: 100050101
+      ไปด้วยกันไหม? "
+    MessageTW: 話說回來，今天也要去尋寶，你要來嗎？
+    MessageGroupId: 100050101
     Id: 179
     CharacterId: 10005
     MessageCondition: None
@@ -394,17 +404,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아, 그리고 오늘도 보물찾기 할 건데 올래?
-    MessageJP: それはそれとして、今日も宝探しやるけど来る？
-    MessageCN: 先不聊这个，我今天也要去寻宝，老师一起来怎么样？
-    MessageEN:
-      "Oh, I'm gonna do another treasure hunt today. Do you want to join
-      me? "
-    MessageTH: "อ้อ! วันนี้ฉันจะออกไปล่าสมบัติด้วย
-
-      ไปด้วยกันไหม? "
-    MessageTW: 話說回來，今天也要去尋寶，你要來嗎？
-  - MessageGroupId: 100050110
+  - MessageKR: 과연. 오늘도 출동인가.
+    MessageJP: ラジャーです隊長
+    MessageCN: 收到，队长
+    MessageEN: I see. You won't even skip a single day, will you?
+    MessageTH: วันนี้ก็จะออกไปเหมือนกันสินะ?
+    MessageTW: 收到，隊長
+    MessageGroupId: 100050110
     Id: 180
     CharacterId: 10005
     MessageCondition: Answer
@@ -416,13 +422,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 과연. 오늘도 출동인가.
-    MessageJP: ラジャーです隊長
-    MessageCN: 收到，队长
-    MessageEN: I see. You won't even skip a single day, will you?
-    MessageTH: วันนี้ก็จะออกไปเหมือนกันสินะ?
-    MessageTW: 收到，隊長
-  - MessageGroupId: 100050110
+  - MessageKR: 몰랐어. 바다는 심오하구나.
+    MessageJP: 知らなかった、海の世界は奥が深いね
+    MessageCN: 我不知道，原来海里的世界有这么深的奥秘啊
+    MessageEN: I didn't know that. The sea is such a mysterious place.
+    MessageTH: ไม่รู้เลย ทะเลก็เป็นอะไรที่ลึกซึ้งนะเนี่ย
+    MessageTW: 不知道耶，海洋世界真是深奧
+    MessageGroupId: 100050110
     Id: 181
     CharacterId: 10005
     MessageCondition: Answer
@@ -434,13 +440,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 몰랐어. 바다는 심오하구나.
-    MessageJP: 知らなかった、海の世界は奥が深いね
-    MessageCN: 我不知道，原来海里的世界有这么深的奥秘啊
-    MessageEN: I didn't know that. The sea is such a mysterious place.
-    MessageTH: ไม่รู้เลย ทะเลก็เป็นอะไรที่ลึกซึ้งนะเนี่ย
-    MessageTW: 不知道耶，海洋世界真是深奧
-  - MessageGroupId: 100050120
+  - MessageKR: 선생, 선생! 이것 봐!
+    MessageJP: 先生、見てこれ！
+    MessageCN: 老师，快看这个！
+    MessageEN: Sensei, Sensei! Look!
+    MessageTH: ครู! ดูนี่สิ!
+    MessageTW: 老師，你看這個！
+    MessageGroupId: 100050120
     Id: 182
     CharacterId: 10005
     MessageCondition: None
@@ -452,13 +458,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 선생! 이것 봐!
-    MessageJP: 先生、見てこれ！
-    MessageCN: 老师，快看这个！
-    MessageEN: Sensei, Sensei! Look!
-    MessageTH: ครู! ดูนี่สิ!
-    MessageTW: 老師，你看這個！
-  - MessageGroupId: 100050130
+  - MessageKR: ""
+    MessageJP: ""
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050130
     Id: 183
     CharacterId: 10005
     MessageCondition: None
@@ -470,13 +476,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Image
     ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_Hoshino_01
-    MessageKR: ""
-    MessageJP: ""
-    MessageCN: ""
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
-  - MessageGroupId: 100050140
+  - MessageKR: 오오, 천정에 붙였구나?
+    MessageJP: 天井に貼ったんだ
+    MessageCN: 星野把它们贴在天花板上了啊
+    MessageEN: Oh, you put them on the ceiling, huh?
+    MessageTH: โอ้! ติดเอาไว้ที่เพดานนี่เอง
+    MessageTW: 貼在天花板上啦
+    MessageGroupId: 100050140
     Id: 184
     CharacterId: 10005
     MessageCondition: Answer
@@ -488,13 +494,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오오, 천정에 붙였구나?
-    MessageJP: 天井に貼ったんだ
-    MessageCN: 星野把它们贴在天花板上了啊
-    MessageEN: Oh, you put them on the ceiling, huh?
-    MessageTH: โอ้! ติดเอาไว้ที่เพดานนี่เอง
-    MessageTW: 貼在天花板上啦
-  - MessageGroupId: 100050140
+  - MessageKR: 예쁜데?
+    MessageJP: すごい、綺麗だね
+    MessageCN: 好厉害，真漂亮啊
+    MessageEN: It's pretty!
+    MessageTH: สวยดีนะ
+    MessageTW: 哇，好漂亮啊
+    MessageGroupId: 100050140
     Id: 185
     CharacterId: 10005
     MessageCondition: Answer
@@ -506,13 +512,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 예쁜데?
-    MessageJP: すごい、綺麗だね
-    MessageCN: 好厉害，真漂亮啊
-    MessageEN: It's pretty!
-    MessageTH: สวยดีนะ
-    MessageTW: 哇，好漂亮啊
-  - MessageGroupId: 100050150
+  - MessageKR: 으헤, 멋지지? 누워서 보면 정말 굉장하다고!
+    MessageJP: へっへっへ～、良いでしょ？これは想像以上だったな～
+    MessageCN: 嘿嘿嘿～，不错吧？比预期的还要好看呢～
+    MessageEN: Heehee, isn't it cool? It looks amazing when I lie down!
+    MessageTH: "อิอิ สวยใช่ไหมล่ะ? ถ้าได้นอนดูจะยิ่ง
+
+      สวยกว่านี้อีก!"
+    MessageTW: 嘿嘿嘿，很棒吧？這比想像中還要棒呢～
+    MessageGroupId: 100050150
     Id: 186
     CharacterId: 10005
     MessageCondition: Feedback
@@ -524,15 +532,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으헤, 멋지지? 누워서 보면 정말 굉장하다고!
-    MessageJP: へっへっへ～、良いでしょ？これは想像以上だったな～
-    MessageCN: 嘿嘿嘿～，不错吧？比预期的还要好看呢～
-    MessageEN: Heehee, isn't it cool? It looks amazing when I lie down!
-    MessageTH: "อิอิ สวยใช่ไหมล่ะ? ถ้าได้นอนดูจะยิ่ง
+  - MessageKR: 오늘은 엄청 즐거웠어. 선물도 고마웠고!
+    MessageJP: 今日は楽しかったよ、プレゼントありがと
+    MessageCN: 今天很开心哦，谢谢老师送的礼物
+    MessageEN: I had so much fun today. Thank you for the gift!
+    MessageTH: "วันนี้ฉันสนุกมากเลย ขอบคุณ
 
-      สวยกว่านี้อีก!"
-    MessageTW: 嘿嘿嘿，很棒吧？這比想像中還要棒呢～
-  - MessageGroupId: 100050150
+      สำหรับของขวัญด้วยนะ!"
+    MessageTW: 今天很開心，謝謝你的禮物
+    MessageGroupId: 100050150
     Id: 187
     CharacterId: 10005
     MessageCondition: Feedback
@@ -544,15 +552,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오늘은 엄청 즐거웠어. 선물도 고마웠고!
-    MessageJP: 今日は楽しかったよ、プレゼントありがと
-    MessageCN: 今天很开心哦，谢谢老师送的礼物
-    MessageEN: I had so much fun today. Thank you for the gift!
-    MessageTH: "วันนี้ฉันสนุกมากเลย ขอบคุณ
-
-      สำหรับของขวัญด้วยนะ!"
-    MessageTW: 今天很開心，謝謝你的禮物
-  - MessageGroupId: 100050160
+  - MessageKR: 그럼 또 다음에 같이 어디든 가는 걸로.
+    MessageJP: じゃ、また次も一緒にどっか行こうね。約束
+    MessageCN: 那，下次也一起去哪里玩吧。约好了
+    MessageEN: Let's go out again next time.
+    MessageTH: ไว้คราวหน้า เราไปที่ไหนด้วยกันอีกนะ
+    MessageTW: 那麼，下次再一起去哪裡吧。約好了
+    MessageGroupId: 100050160
     Id: 188
     CharacterId: 10005
     MessageCondition: Feedback
@@ -564,13 +570,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 또 다음에 같이 어디든 가는 걸로.
-    MessageJP: じゃ、また次も一緒にどっか行こうね。約束
-    MessageCN: 那，下次也一起去哪里玩吧。约好了
-    MessageEN: Let's go out again next time.
-    MessageTH: ไว้คราวหน้า เราไปที่ไหนด้วยกันอีกนะ
-    MessageTW: 那麼，下次再一起去哪裡吧。約好了
-  - MessageGroupId: 100050170
+  - MessageKR: 그래. 잘 자.
+    MessageJP: うん、おやすみ
+    MessageCN: 嗯，晚安
+    MessageEN: Okay. Goodnight.
+    MessageTH: ได้สิ ฝันดีนะ
+    MessageTW: 嗯，晚安
+    MessageGroupId: 100050170
     Id: 189
     CharacterId: 10005
     MessageCondition: Answer
@@ -582,13 +588,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래. 잘 자.
-    MessageJP: うん、おやすみ
-    MessageCN: 嗯，晚安
-    MessageEN: Okay. Goodnight.
-    MessageTH: ได้สิ ฝันดีนะ
-    MessageTW: 嗯，晚安
-  - MessageGroupId: 100050170
+  - MessageKR: 별빛 아래의 침대구나. 로망이네~
+    MessageJP: 光に包まれたベッド、ロマンチックだね
+    MessageCN: 被光笼罩着的床，有种很浪漫的感觉呢
+    MessageEN: A bed under the stars? Sounds dreamy.
+    MessageTH: "เตียงที่อยู่ใต้แสงดาวแบบนี้...
+
+      โรแมนติกจัง~"
+    MessageTW: 被光芒包裹住的床，真是浪漫呀
+    MessageGroupId: 100050170
     Id: 190
     CharacterId: 10005
     MessageCondition: Answer
@@ -600,15 +608,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 별빛 아래의 침대구나. 로망이네~
-    MessageJP: 光に包まれたベッド、ロマンチックだね
-    MessageCN: 被光笼罩着的床，有种很浪漫的感觉呢
-    MessageEN: A bed under the stars? Sounds dreamy.
-    MessageTH: "เตียงที่อยู่ใต้แสงดาวแบบนี้...
+  - MessageKR: 하암. 새벽까지 깨어있으면 역시 다음 주까지 힘들단 말야.
+    MessageJP: うへ～、やっぱり夜中まで起きてると次の日まで引きずるねえ……
+    MessageCN: 唔嘿～，果然一熬夜第二天早上就起不来呢……
+    MessageEN: "*yawn* The whole week is hard when I stay up until dawn."
+    MessageTH: "ฮ้าวว พอโต้รุ่งทีไรก็เหนื่อยไปถึงอีกวัน
 
-      โรแมนติกจัง~"
-    MessageTW: 被光芒包裹住的床，真是浪漫呀
-  - MessageGroupId: 100050180
+      ทุกทีเลย"
+    MessageTW: 唔嘿～半夜不睡覺，第二天果然會很難受……
+    MessageGroupId: 100050180
     Id: 191
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -620,15 +628,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 하암. 새벽까지 깨어있으면 역시 다음 주까지 힘들단 말야.
-    MessageJP: うへ～、やっぱり夜中まで起きてると次の日まで引きずるねえ……
-    MessageCN: 唔嘿～，果然一熬夜第二天早上就起不来呢……
-    MessageEN: "*yawn* The whole week is hard when I stay up until dawn."
-    MessageTH: "ฮ้าวว พอโต้รุ่งทีไรก็เหนื่อยไปถึงอีกวัน
-
-      ทุกทีเลย"
-    MessageTW: 唔嘿～半夜不睡覺，第二天果然會很難受……
-  - MessageGroupId: 100050181
+  - MessageKR: 나이가 들어서 그런가?
+    MessageJP: 歳のせいもあるのかな～
+    MessageCN: 是上了年纪的缘故吧～
+    MessageEN: Am I getting old?
+    MessageTH: หรือว่าเป็นเพราะอายุมากขึ้นนะ?
+    MessageTW: 可能是上了年紀吧～
+    MessageGroupId: 100050181
     Id: 192
     CharacterId: 10005
     MessageCondition: None
@@ -640,13 +646,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 나이가 들어서 그런가?
-    MessageJP: 歳のせいもあるのかな～
-    MessageCN: 是上了年纪的缘故吧～
-    MessageEN: Am I getting old?
-    MessageTH: หรือว่าเป็นเพราะอายุมากขึ้นนะ?
-    MessageTW: 可能是上了年紀吧～
-  - MessageGroupId: 100050190
+  - MessageKR: 선생도 새벽에 돌아다니면 안 돼.
+    MessageJP: 先生もあんまり夜中に出かけたりしちゃダメだよ
+    MessageCN: 老师要是大半夜在外面闲逛的话也不太好哦
+    MessageEN: "You shouldn't be up at this hour either, Sensei. "
+    MessageTH: "ครูก็อย่าไปไหนมาไหนจนดึกดื่นล่ะ "
+    MessageTW: 老師也不能半夜出門唷
+    MessageGroupId: 100050190
     Id: 193
     CharacterId: 10005
     MessageCondition: None
@@ -658,13 +664,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생도 새벽에 돌아다니면 안 돼.
-    MessageJP: 先生もあんまり夜中に出かけたりしちゃダメだよ
-    MessageCN: 老师要是大半夜在外面闲逛的话也不太好哦
-    MessageEN: "You shouldn't be up at this hour either, Sensei. "
-    MessageTH: "ครูก็อย่าไปไหนมาไหนจนดึกดื่นล่ะ "
-    MessageTW: 老師也不能半夜出門唷
-  - MessageGroupId: 100050190
+  - MessageKR: 몸조심해야지~
+    MessageJP: お互い気を付けていこうね～
+    MessageCN: 我们两个都应该注意一下呢～
+    MessageEN: You need to take care of yourself!
+    MessageTH: ต้องระวังตัวดีๆ นะ~
+    MessageTW: 讓我們互相照應吧～
+    MessageGroupId: 100050190
     Id: 194
     CharacterId: 10005
     MessageCondition: None
@@ -676,13 +682,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 몸조심해야지~
-    MessageJP: お互い気を付けていこうね～
-    MessageCN: 我们两个都应该注意一下呢～
-    MessageEN: You need to take care of yourself!
-    MessageTH: ต้องระวังตัวดีๆ นะ~
-    MessageTW: 讓我們互相照應吧～
-  - MessageGroupId: 100050200
+  - MessageKR: 새벽까지 왜 깨어있는 거야?
+    MessageJP: ホシノはどうして夜中まで起きてるの？
+    MessageCN: 星野为什么半夜还不睡觉呢？
+    MessageEN: Why are you still awake?
+    MessageTH: แล้วทำไมเธอถึงโต้รุ่งเหรอ?
+    MessageTW: 星野為什麼半夜還醒著呢？
+    MessageGroupId: 100050200
     Id: 195
     CharacterId: 10005
     MessageCondition: Answer
@@ -694,13 +700,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 새벽까지 왜 깨어있는 거야?
-    MessageJP: ホシノはどうして夜中まで起きてるの？
-    MessageCN: 星野为什么半夜还不睡觉呢？
-    MessageEN: Why are you still awake?
-    MessageTH: แล้วทำไมเธอถึงโต้รุ่งเหรอ?
-    MessageTW: 星野為什麼半夜還醒著呢？
-  - MessageGroupId: 100050200
+  - MessageKR: 일찍 일찍 자는 게 좋아.
+    MessageJP: そうだね、夜は早く寝るに限るよ
+    MessageCN: 是啊，晚上最好早点睡觉呢
+    MessageEN: You should go to bed early.
+    MessageTH: ควรรีบเข้านอนแต่หัวค่ำนะ
+    MessageTW: 是啊，晚上最好早點睡
+    MessageGroupId: 100050200
     Id: 196
     CharacterId: 10005
     MessageCondition: Answer
@@ -712,13 +718,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 일찍 일찍 자는 게 좋아.
-    MessageJP: そうだね、夜は早く寝るに限るよ
-    MessageCN: 是啊，晚上最好早点睡觉呢
-    MessageEN: You should go to bed early.
-    MessageTH: ควรรีบเข้านอนแต่หัวค่ำนะ
-    MessageTW: 是啊，晚上最好早點睡
-  - MessageGroupId: 100050210
+  - MessageKR: 으헤~ 뭐, 여러 사정이 있달까…….
+    MessageJP: おじさんの方はまあ色々事情があるというか……
+    MessageCN: 只能说大叔这边有很多事情要忙吧……
+    MessageEN: "Well, there are multiple reasons... "
+    MessageTH: "อืม... มีหลายอย่างที่ต้องทำน่ะ "
+    MessageTW: 大叔這兒也是有各種情況……
+    MessageGroupId: 100050210
     Id: 197
     CharacterId: 10005
     MessageCondition: Feedback
@@ -730,13 +736,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으헤~ 뭐, 여러 사정이 있달까…….
-    MessageJP: おじさんの方はまあ色々事情があるというか……
-    MessageCN: 只能说大叔这边有很多事情要忙吧……
-    MessageEN: "Well, there are multiple reasons... "
-    MessageTH: "อืม... มีหลายอย่างที่ต้องทำน่ะ "
-    MessageTW: 大叔這兒也是有各種情況……
-  - MessageGroupId: 100050220
+  - MessageKR: 그건 그렇고 걱정해주는 거야?
+    MessageJP: というか先生、心配してくれてるの？
+    MessageCN: 话说回来老师，这算是在担心我吗？
+    MessageEN: "Are you worried about me? "
+    MessageTH: "ว่าแต่ นี่เป็นห่วงฉันเหรอ? "
+    MessageTW: 還是說，老師是在擔心我？
+    MessageGroupId: 100050220
     Id: 198
     CharacterId: 10005
     MessageCondition: Feedback
@@ -748,13 +754,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그건 그렇고 걱정해주는 거야?
-    MessageJP: というか先生、心配してくれてるの？
-    MessageCN: 话说回来老师，这算是在担心我吗？
-    MessageEN: "Are you worried about me? "
-    MessageTH: "ว่าแต่ นี่เป็นห่วงฉันเหรอ? "
-    MessageTW: 還是說，老師是在擔心我？
-  - MessageGroupId: 100050220
+  - MessageKR: 이 아저씨는 감동이네~
+    MessageJP: おじさん感激しちゃうな～
+    MessageCN: 大叔我还真是感动啊～
+    MessageEN: Wow! I'm touched...
+    MessageTH: ลุงคนนี้เริ่มประทับใจคุณครูแล้วแฮะ
+    MessageTW: 大叔好感動啊～
+    MessageGroupId: 100050220
     Id: 199
     CharacterId: 10005
     MessageCondition: Feedback
@@ -766,13 +772,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이 아저씨는 감동이네~
-    MessageJP: おじさん感激しちゃうな～
-    MessageCN: 大叔我还真是感动啊～
-    MessageEN: Wow! I'm touched...
-    MessageTH: ลุงคนนี้เริ่มประทับใจคุณครูแล้วแฮะ
-    MessageTW: 大叔好感動啊～
-  - MessageGroupId: 100050230
+  - MessageKR: 그냥 잔소리하는 거야.
+    MessageJP: 素行の良くない生徒への注意だよ
+    MessageCN: 这是对操行不好的学生的提醒哦
+    MessageEN: I'm just nagging you.
+    MessageTH: ครูก็แค่บ่นไปตามประสาผู้ใหญ่น่ะ
+    MessageTW: 只是在叮嚀品行不良的學生
+    MessageGroupId: 100050230
     Id: 200
     CharacterId: 10005
     MessageCondition: Answer
@@ -784,13 +790,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그냥 잔소리하는 거야.
-    MessageJP: 素行の良くない生徒への注意だよ
-    MessageCN: 这是对操行不好的学生的提醒哦
-    MessageEN: I'm just nagging you.
-    MessageTH: ครูก็แค่บ่นไปตามประสาผู้ใหญ่น่ะ
-    MessageTW: 只是在叮嚀品行不良的學生
-  - MessageGroupId: 100050240
+  - MessageKR: 솔직하지 못하긴. 선생도. 으헤헤-
+    MessageJP: 素直じゃないなあ先生は、うへへ～
+    MessageCN: 老师真是不坦诚啊，唔嘿嘿～
+    MessageEN: Be honest, Sensei. Heehee...
+    MessageTH: ไม่กล้าพูดตรงๆ สินะ ครูนี่ก็ ฮ่าฮ่าฮ่า
+    MessageTW: 老師真不老實，唔嘿嘿～
+    MessageGroupId: 100050240
     Id: 201
     CharacterId: 10005
     MessageCondition: Feedback
@@ -802,13 +808,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 솔직하지 못하긴. 선생도. 으헤헤-
-    MessageJP: 素直じゃないなあ先生は、うへへ～
-    MessageCN: 老师真是不坦诚啊，唔嘿嘿～
-    MessageEN: Be honest, Sensei. Heehee...
-    MessageTH: ไม่กล้าพูดตรงๆ สินะ ครูนี่ก็ ฮ่าฮ่าฮ่า
-    MessageTW: 老師真不老實，唔嘿嘿～
-  - MessageGroupId: 100050250
+  - MessageKR: 선생, 오늘 일은 모두에겐 비밀이야? 선생이라면 입이 무거운 건 알고 있지만.
+    MessageJP: 先生、今日のことはみんなには秘密だよ？先生の口が堅いのは知ってるけど
+    MessageCN: 老师，今天的事要对大家保密哦？虽然知道老师口风很紧啦
+    MessageEN:
+      Sensei, can you please not tell anyone about today? I know you can
+      keep a secret.
+    MessageTH: "เรื่องวันนี้ต้องเก็บเป็นความลับนะ
+
+      ฉันเชื่อว่าครูจะไม่เอาไปบอกใคร"
+    MessageTW: 老師，今天發生的事要對大家保密唷？雖然我知道老師的口風很緊
+    MessageGroupId: 100050250
     Id: 202
     CharacterId: 10005
     MessageCondition: None
@@ -820,17 +830,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 오늘 일은 모두에겐 비밀이야? 선생이라면 입이 무거운 건 알고 있지만.
-    MessageJP: 先生、今日のことはみんなには秘密だよ？先生の口が堅いのは知ってるけど
-    MessageCN: 老师，今天的事要对大家保密哦？虽然知道老师口风很紧啦
-    MessageEN:
-      Sensei, can you please not tell anyone about today? I know you can
-      keep a secret.
-    MessageTH: "เรื่องวันนี้ต้องเก็บเป็นความลับนะ
-
-      ฉันเชื่อว่าครูจะไม่เอาไปบอกใคร"
-    MessageTW: 老師，今天發生的事要對大家保密唷？雖然我知道老師的口風很緊
-  - MessageGroupId: 100050250
+  - MessageKR: 음…… 여러 가지로 부끄러우니까.
+    MessageJP: その……色々恥ずかしいし
+    MessageCN: 就是……感觉很难为情
+    MessageEN: Um... I just feel so embarrassed.
+    MessageTH: อืม... ฉันเขินน่ะ >_<
+    MessageTW: 但還是……會各種害臊
+    MessageGroupId: 100050250
     Id: 203
     CharacterId: 10005
     MessageCondition: None
@@ -842,13 +848,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 음…… 여러 가지로 부끄러우니까.
-    MessageJP: その……色々恥ずかしいし
-    MessageCN: 就是……感觉很难为情
-    MessageEN: Um... I just feel so embarrassed.
-    MessageTH: อืม... ฉันเขินน่ะ >_<
-    MessageTW: 但還是……會各種害臊
-  - MessageGroupId: 100050260
+  - MessageKR: 으헤헤, 그럼 다음에 봐.
+    MessageJP: うへ、じゃあまたね
+    MessageCN: 唔嘿，那再见啦
+    MessageEN: Heehee! See you later, then.
+    MessageTH: ไว้เจอกันใหม่นะ
+    MessageTW: 唔嘿，回頭見
+    MessageGroupId: 100050260
     Id: 204
     CharacterId: 10005
     MessageCondition: None
@@ -860,13 +866,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으헤헤, 그럼 다음에 봐.
-    MessageJP: うへ、じゃあまたね
-    MessageCN: 唔嘿，那再见啦
-    MessageEN: Heehee! See you later, then.
-    MessageTH: ไว้เจอกันใหม่นะ
-    MessageTW: 唔嘿，回頭見
-  - MessageGroupId: 100050270
+  - MessageKR: 호시노도 잘 자~
+    MessageJP: うん、おやすみ
+    MessageCN: 嗯，晚安
+    MessageEN: Goodnight, Hoshino!
+    MessageTH: ฝันดีนะโฮชิโนะ~
+    MessageTW: 嗯，晚安
+    MessageGroupId: 100050270
     Id: 205
     CharacterId: 10005
     MessageCondition: Answer
@@ -878,13 +884,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 호시노도 잘 자~
-    MessageJP: うん、おやすみ
-    MessageCN: 嗯，晚安
-    MessageEN: Goodnight, Hoshino!
-    MessageTH: ฝันดีนะโฮชิโนะ~
-    MessageTW: 嗯，晚安
-  - MessageGroupId: 100050270
+  - MessageKR: 다음에 봐~
+    MessageJP: またね
+    MessageCN: 下次见啦
+    MessageEN: Later, alligator!
+    MessageTH: ไว้เจอกันใหม่~
+    MessageTW: 回頭見
+    MessageGroupId: 100050270
     Id: 206
     CharacterId: 10005
     MessageCondition: Answer
@@ -896,13 +902,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 봐~
-    MessageJP: またね
-    MessageCN: 下次见啦
-    MessageEN: Later, alligator!
-    MessageTH: ไว้เจอกันใหม่~
-    MessageTW: 回頭見
-  - MessageGroupId: 100050280
+  - MessageKR: 책을 좀 사고 싶은데 말야. 선생, 도와줄 수 있어?
+    MessageJP: ちょっと本を買いたいんだけど。先生、一緒について来てくれない？
+    MessageCN: 我想要买点书。老师，可以陪我一起吗？
+    MessageEN: I want to buy a book. Can you help me, Sensei?
+    MessageTH: "ฉันอยากซื้อหนังสือน่ะ ครูพอจะช่วยหน่อย
+
+      ได้มั้ย?"
+    MessageTW: 我想買些書。老師，可以跟我一起去嗎？
+    MessageGroupId: 100050280
     Id: 207
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -914,15 +922,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 책을 좀 사고 싶은데 말야. 선생, 도와줄 수 있어?
-    MessageJP: ちょっと本を買いたいんだけど。先生、一緒について来てくれない？
-    MessageCN: 我想要买点书。老师，可以陪我一起吗？
-    MessageEN: I want to buy a book. Can you help me, Sensei?
-    MessageTH: "ฉันอยากซื้อหนังสือน่ะ ครูพอจะช่วยหน่อย
-
-      ได้มั้ย?"
-    MessageTW: 我想買些書。老師，可以跟我一起去嗎？
-  - MessageGroupId: 100050281
+  - MessageKR: 내가 찾고 있는 책은 이 동네에는 없어서 말이지…….
+    MessageJP: この辺では買えない本で、遠出しないといけないんだけど……
+    MessageCN: 因为是在这附近买不到的书，所以必须出一趟远门……
+    MessageEN: The book I'm looking for isn't available in my town.
+    MessageTH: หนังสือที่ฉันหาอยู่ไม่มีขายแถวนี้เลย...
+    MessageTW: 是這附近買不到的書，所以必須去遠一點的地方……
+    MessageGroupId: 100050281
     Id: 208
     CharacterId: 10005
     MessageCondition: None
@@ -934,13 +940,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 내가 찾고 있는 책은 이 동네에는 없어서 말이지…….
-    MessageJP: この辺では買えない本で、遠出しないといけないんだけど……
-    MessageCN: 因为是在这附近买不到的书，所以必须出一趟远门……
-    MessageEN: The book I'm looking for isn't available in my town.
-    MessageTH: หนังสือที่ฉันหาอยู่ไม่มีขายแถวนี้เลย...
-    MessageTW: 是這附近買不到的書，所以必須去遠一點的地方……
-  - MessageGroupId: 100050290
+  - MessageKR: 그래. 쇼핑몰의 서점으로 가볼까?
+    MessageJP: うん、いいよ。ショッピングモールの方まで行ってみる？
+    MessageCN: 嗯，可以啊。那就去购物中心看看？
+    MessageEN: Okay. Should we go to the bookstore in the mall?
+    MessageTH: ได้สิ ลองไปร้านหนังสือที่อยู่ในห้างไหม?
+    MessageTW: 嗯，好啊。去購物中心看看吧？
+    MessageGroupId: 100050290
     Id: 209
     CharacterId: 10005
     MessageCondition: Answer
@@ -952,13 +958,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래. 쇼핑몰의 서점으로 가볼까?
-    MessageJP: うん、いいよ。ショッピングモールの方まで行ってみる？
-    MessageCN: 嗯，可以啊。那就去购物中心看看？
-    MessageEN: Okay. Should we go to the bookstore in the mall?
-    MessageTH: ได้สิ ลองไปร้านหนังสือที่อยู่ในห้างไหม?
-    MessageTW: 嗯，好啊。去購物中心看看吧？
-  - MessageGroupId: 100050300
+  - MessageKR: 오, 그래. 아비도스에서 좀 멀지만
+    MessageJP: そうしよっか～、アビドスからはちょっと遠いけど
+    MessageCN: 那就这样定吧～虽然那边离阿比多斯有点远
+    MessageEN: "Oh, sure. It's a bit far from Abydos, "
+    MessageTH: "ดีเลย! ถึงจะอยู่ไกลจากอะบิดอสก็เถอะ.. "
+    MessageTW: 就那樣吧～，雖然離阿拜多斯有點遠
+    MessageGroupId: 100050300
     Id: 210
     CharacterId: 10005
     MessageCondition: Feedback
@@ -970,13 +976,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 오, 그래. 아비도스에서 좀 멀지만
-    MessageJP: そうしよっか～、アビドスからはちょっと遠いけど
-    MessageCN: 那就这样定吧～虽然那边离阿比多斯有点远
-    MessageEN: "Oh, sure. It's a bit far from Abydos, "
-    MessageTH: "ดีเลย! ถึงจะอยู่ไกลจากอะบิดอสก็เถอะ.. "
-    MessageTW: 就那樣吧～，雖然離阿拜多斯有點遠
-  - MessageGroupId: 100050300
+  - MessageKR: 거기라면 찾는 책이 있겠는데?
+    MessageJP: あそこならありそうだしね～
+    MessageCN: 不过那里应该有我想要的书吧～
+    MessageEN: but I'm sure they'll have the book I want!
+    MessageTH: แต่ที่นั่นน่าจะมีหนังสือที่ฉันต้องการนะ
+    MessageTW: 但那裡應該會有～
+    MessageGroupId: 100050300
     Id: 211
     CharacterId: 10005
     MessageCondition: Feedback
@@ -988,13 +994,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 거기라면 찾는 책이 있겠는데?
-    MessageJP: あそこならありそうだしね～
-    MessageCN: 不过那里应该有我想要的书吧～
-    MessageEN: but I'm sure they'll have the book I want!
-    MessageTH: แต่ที่นั่นน่าจะมีหนังสือที่ฉันต้องการนะ
-    MessageTW: 但那裡應該會有～
-  - MessageGroupId: 100050310
+  - MessageKR: 같이 가줄 거지?
+    MessageJP: というか、一も二も無くOKなんだね、さっすが先生～
+    MessageCN: 话说回来，老师马上就答应了呢。不愧是老师～
+    MessageEN: Will you go with me?
+    MessageTH: ครูจะไปด้วยกันใช่ไหม?
+    MessageTW: 話說回來，二話不說就答應了呢，不愧是老師～
+    MessageGroupId: 100050310
     Id: 212
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1006,13 +1012,15 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 같이 가줄 거지?
-    MessageJP: というか、一も二も無くOKなんだね、さっすが先生～
-    MessageCN: 话说回来，老师马上就答应了呢。不愧是老师～
-    MessageEN: Will you go with me?
-    MessageTH: ครูจะไปด้วยกันใช่ไหม?
-    MessageTW: 話說回來，二話不說就答應了呢，不愧是老師～
-  - MessageGroupId: 100050320
+  - MessageKR: 물론이지. 호시노 쨩의 부탁인데.
+    MessageJP: それはもちろん、ホシノの頼みだからね
+    MessageCN: 那当然，毕竟是星野的请求嘛
+    MessageEN: Of course, Hoshino.
+    MessageTH: "แน่นอนอยู่แล้ว โฮชิโนะจังมา
+
+      ขอร้องทั้งที"
+    MessageTW: 那是當然，因為是星野的請求呢
+    MessageGroupId: 100050320
     Id: 213
     CharacterId: 10005
     MessageCondition: Answer
@@ -1024,15 +1032,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이지. 호시노 쨩의 부탁인데.
-    MessageJP: それはもちろん、ホシノの頼みだからね
-    MessageCN: 那当然，毕竟是星野的请求嘛
-    MessageEN: Of course, Hoshino.
-    MessageTH: "แน่นอนอยู่แล้ว โฮชิโนะจังมา
-
-      ขอร้องทั้งที"
-    MessageTW: 那是當然，因為是星野的請求呢
-  - MessageGroupId: 100050320
+  - MessageKR: 근처에서 만나서 같이 가자.
+    MessageJP: とりあえず近くで待ち合わせよっか
+    MessageCN: 总而言之就在那附近汇合吧
+    MessageEN: Let's meet up somewhere nearby and go together.
+    MessageTH: มาเจอกันแถวนี้แล้วไปด้วยกันสิ
+    MessageTW: 先在附近碰面吧
+    MessageGroupId: 100050320
     Id: 214
     CharacterId: 10005
     MessageCondition: Answer
@@ -1044,13 +1050,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 근처에서 만나서 같이 가자.
-    MessageJP: とりあえず近くで待ち合わせよっか
-    MessageCN: 总而言之就在那附近汇合吧
-    MessageEN: Let's meet up somewhere nearby and go together.
-    MessageTH: มาเจอกันแถวนี้แล้วไปด้วยกันสิ
-    MessageTW: 先在附近碰面吧
-  - MessageGroupId: 100050330
+  - MessageKR: 이야. 오늘 완전 대박이었어.
+    MessageJP: いや～、びっくりしたよ～
+    MessageCN: 咿呀～今天还真是震惊到我了呢～
+    MessageEN: Wow, today was so amazing.
+    MessageTH: ว้าว! วันนี้ยอดมากเลย!
+    MessageTW: 哎呀～，嚇了一跳～
+    MessageGroupId: 100050330
     Id: 215
     CharacterId: 10005
     MessageCondition: None
@@ -1062,25 +1068,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이야. 오늘 완전 대박이었어.
-    MessageJP: いや～、びっくりしたよ～
-    MessageCN: 咿呀～今天还真是震惊到我了呢～
-    MessageEN: Wow, today was so amazing.
-    MessageTH: ว้าว! วันนี้ยอดมากเลย!
-    MessageTW: 哎呀～，嚇了一跳～
-  - MessageGroupId: 100050330
-    Id: 216
-    CharacterId: 10005
-    MessageCondition: None
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 100050340
-    FeedbackTimeMillisec: 1500
-    MessageType: Text
-    ImagePath: ""
-    MessageKR: 근성으로 운을 잡아채는 거 잘 봤어, 선생. 이것이 바로 어른의 힘인가. 나도 배워야겠어. 음음.
+  - MessageKR: 근성으로 운을 잡아채는 거 잘 봤어, 선생. 이것이 바로 어른의 힘인가. 나도 배워야겠어. 음음.
     MessageJP: 幸運を根性で掴み取ろうとするなんて、さすが先生。おじさん驚きだよ
     MessageCN: 不愧是老师，居然想靠毅力抓住幸运。大叔我被震惊到了哦
     MessageEN:
@@ -1094,7 +1082,25 @@ content:
 
       อืมม"
     MessageTW: 竟然想用毅力抓住幸運，不愧是老師。大叔很驚訝唷
-  - MessageGroupId: 100050340
+    MessageGroupId: 100050330
+    Id: 216
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050340
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이것이 어른의 힘이다!
+    MessageJP: これぞ大人の力！
+    MessageCN: 这就是大人的力量！
+    MessageEN: This is the advantage of being an adult!
+    MessageTH: นี่แหละพลังของผู้ใหญ่!
+    MessageTW: 這就是大人的力量！
+    MessageGroupId: 100050340
     Id: 217
     CharacterId: 10005
     MessageCondition: Answer
@@ -1106,13 +1112,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 이것이 어른의 힘이다!
-    MessageJP: これぞ大人の力！
-    MessageCN: 这就是大人的力量！
-    MessageEN: This is the advantage of being an adult!
-    MessageTH: นี่แหละพลังของผู้ใหญ่!
-    MessageTW: 這就是大人的力量！
-  - MessageGroupId: 100050350
+  - MessageKR: ……그런데 그 돈으로 그냥 티켓을 샀으면 됐을 텐데 말이지.
+    MessageJP: ……でもよく考えると、そのお金で普通にチケット買えたかもね
+    MessageCN: ……不过细想一下，直接拿那些钱去买票就可以了呢
+    MessageEN: "...We could have just used that money to buy a ticket, though."
+    MessageTH: แต่ว่าเราเอาเงินนั้นไปซื้อตั๋วเลยก็ได้นี่...
+    MessageTW: ……但仔細想想，也許用那筆錢就能正常買票了
+    MessageGroupId: 100050350
     Id: 218
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1124,13 +1130,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……그런데 그 돈으로 그냥 티켓을 샀으면 됐을 텐데 말이지.
-    MessageJP: ……でもよく考えると、そのお金で普通にチケット買えたかもね
-    MessageCN: ……不过细想一下，直接拿那些钱去买票就可以了呢
-    MessageEN: "...We could have just used that money to buy a ticket, though."
-    MessageTH: แต่ว่าเราเอาเงินนั้นไปซื้อตั๋วเลยก็ได้นี่...
-    MessageTW: ……但仔細想想，也許用那筆錢就能正常買票了
-  - MessageGroupId: 100050360
+  - MessageKR: 그걸 언급하는 건 반칙이야!
+    MessageJP: それを言ったらおしまいだよ！
+    MessageCN: 如果说出来就完了啊！
+    MessageEN: That's cheating!
+    MessageTH: อย่าพูดแบบนั้นสิ!
+    MessageTW: 說出那句話就完了！
+    MessageGroupId: 100050360
     Id: 219
     CharacterId: 10005
     MessageCondition: Answer
@@ -1142,13 +1148,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그걸 언급하는 건 반칙이야!
-    MessageJP: それを言ったらおしまいだよ！
-    MessageCN: 如果说出来就完了啊！
-    MessageEN: That's cheating!
-    MessageTH: อย่าพูดแบบนั้นสิ!
-    MessageTW: 說出那句話就完了！
-  - MessageGroupId: 100050360
+  - MessageKR: 살다보면 물러설 수 없는 싸움을 해야 하는 법.
+    MessageJP: 大人にはね、後には退けない時があるんだ
+    MessageCN: 大人啊，也有不能让步的时候的
+    MessageEN: There are some fights you have to take up in life.
+    MessageTH: เรื่องบางอย่างเราก็ต้องสู้ให้สุดใจนะ
+    MessageTW: 對大人來說，有時候是不能退縮的
+    MessageGroupId: 100050360
     Id: 220
     CharacterId: 10005
     MessageCondition: Answer
@@ -1160,13 +1166,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 살다보면 물러설 수 없는 싸움을 해야 하는 법.
-    MessageJP: 大人にはね、後には退けない時があるんだ
-    MessageCN: 大人啊，也有不能让步的时候的
-    MessageEN: There are some fights you have to take up in life.
-    MessageTH: เรื่องบางอย่างเราก็ต้องสู้ให้สุดใจนะ
-    MessageTW: 對大人來說，有時候是不能退縮的
-  - MessageGroupId: 100050370
+  - MessageKR: 으헤헤헤, 그런가? 뭐, 암튼.
+    MessageJP: うへへ、そっか～
+    MessageCN: 唔嘿嘿，这样啊～
+    MessageEN: Heeheehee. Is that so? Well, anyway.
+    MessageTH: อะฮ่ะฮ่า.. เป็นอย่างนั้นเหรอ? แต่ก็..
+    MessageTW: 唔嘿嘿，這樣啊～
+    MessageGroupId: 100050370
     Id: 221
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1178,13 +1184,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 으헤헤헤, 그런가? 뭐, 암튼.
-    MessageJP: うへへ、そっか～
-    MessageCN: 唔嘿嘿，这样啊～
-    MessageEN: Heeheehee. Is that so? Well, anyway.
-    MessageTH: อะฮ่ะฮ่า.. เป็นอย่างนั้นเหรอ? แต่ก็..
-    MessageTW: 唔嘿嘿，這樣啊～
-  - MessageGroupId: 100050380
+  - MessageKR: 고마워.
+    MessageJP: まあとにかく、ありがとね
+    MessageCN: 总而言之，谢谢啦
+    MessageEN: Thanks.
+    MessageTH: ขอบคุณนะ
+    MessageTW: 不管怎樣，謝啦
+    MessageGroupId: 100050380
     Id: 222
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1196,13 +1202,17 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 고마워.
-    MessageJP: まあとにかく、ありがとね
-    MessageCN: 总而言之，谢谢啦
-    MessageEN: Thanks.
-    MessageTH: ขอบคุณนะ
-    MessageTW: 不管怎樣，謝啦
-  - MessageGroupId: 100050390
+  - MessageKR: ……아쿠아리움, 다음에 같이 가지 않을래? 표도 2장이고 하니…….
+    MessageJP: ……えっと、あのアクアリウム、一緒に行かない？チケットも2枚だし……
+    MessageCN: ……那个，上回的水族馆，要一起去吗？票也刚好有两张……
+    MessageEN:
+      "Hey, so, do you wanna come with me to the aquarium next time? I have
+      two tickets... "
+    MessageTH: "ไว้คราวหน้าไปอควาเรียมด้วยกันไหม?
+
+      ไหนๆ ก็มีตั๋ว 2 ใบแล้ว... "
+    MessageTW: ……那個，海生館，要一起去嗎？有2張票……
+    MessageGroupId: 100050390
     Id: 223
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1214,17 +1224,15 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……아쿠아리움, 다음에 같이 가지 않을래? 표도 2장이고 하니…….
-    MessageJP: ……えっと、あのアクアリウム、一緒に行かない？チケットも2枚だし……
-    MessageCN: ……那个，上回的水族馆，要一起去吗？票也刚好有两张……
-    MessageEN:
-      "Hey, so, do you wanna come with me to the aquarium next time? I have
-      two tickets... "
-    MessageTH: "ไว้คราวหน้าไปอควาเรียมด้วยกันไหม?
+  - MessageKR: 아쿠아리움이라…… 나라도 괜찮다면.
+    MessageJP: うん、私でよければ
+    MessageCN: 嗯，如果不嫌弃我和你一起去的话
+    MessageEN: I'll join you. So long as you don't mind.
+    MessageTH: "อควาเรียมงั้นเหรอ?
 
-      ไหนๆ ก็มีตั๋ว 2 ใบแล้ว... "
-    MessageTW: ……那個，海生館，要一起去嗎？有2張票……
-  - MessageGroupId: 100050400
+      ถ้าอยากไปกับครูก็ได้"
+    MessageTW: 嗯，不嫌棄我的話
+    MessageGroupId: 100050400
     Id: 224
     CharacterId: 10005
     MessageCondition: Answer
@@ -1236,15 +1244,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아쿠아리움이라…… 나라도 괜찮다면.
-    MessageJP: うん、私でよければ
-    MessageCN: 嗯，如果不嫌弃我和你一起去的话
-    MessageEN: I'll join you. So long as you don't mind.
-    MessageTH: "อควาเรียมงั้นเหรอ?
-
-      ถ้าอยากไปกับครูก็ได้"
-    MessageTW: 嗯，不嫌棄我的話
-  - MessageGroupId: 100050400
+  - MessageKR: 물론이지. 언제든지 환영이야.
+    MessageJP: もちろん、ありがとね
+    MessageCN: 当然没问题，谢谢啦
+    MessageEN: Of course. You're always welcome.
+    MessageTH: แน่นอน ครูยินดีเสมอ
+    MessageTW: 當然，謝啦
+    MessageGroupId: 100050400
     Id: 225
     CharacterId: 10005
     MessageCondition: Answer
@@ -1256,13 +1262,13 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 물론이지. 언제든지 환영이야.
-    MessageJP: もちろん、ありがとね
-    MessageCN: 当然没问题，谢谢啦
-    MessageEN: Of course. You're always welcome.
-    MessageTH: แน่นอน ครูยินดีเสมอ
-    MessageTW: 當然，謝啦
-  - MessageGroupId: 100050410
+  - MessageKR: 그래?
+    MessageJP: ……うへへ
+    MessageCN: ……唔嘿嘿
+    MessageEN: Yeah?
+    MessageTH: จริงนะ?
+    MessageTW: ……唔嘿嘿
+    MessageGroupId: 100050410
     Id: 226
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1274,13 +1280,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그래?
-    MessageJP: ……うへへ
-    MessageCN: ……唔嘿嘿
-    MessageEN: Yeah?
-    MessageTH: จริงนะ?
-    MessageTW: ……唔嘿嘿
-  - MessageGroupId: 100050410
+  - MessageKR: ……에헤헤-
+    MessageJP: ……言ったね、先生？
+    MessageCN: ……说出来了呢，老师？
+    MessageEN: "...Heehee!"
+    MessageTH: อ่า... แหะๆๆ
+    MessageTW: ……這是你說的唷，老師？
+    MessageGroupId: 100050410
     Id: 227
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1292,13 +1298,13 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    MessageKR: ……에헤헤-
-    MessageJP: ……言ったね、先生？
-    MessageCN: ……说出来了呢，老师？
-    MessageEN: "...Heehee!"
-    MessageTH: อ่า... แหะๆๆ
-    MessageTW: ……這是你說的唷，老師？
-  - MessageGroupId: 100050420
+  - MessageKR: 그럼 약속한 거야?
+    MessageJP: 約束したからね？
+    MessageCN: 那就约好了哦？
+    MessageEN: You promise?
+    MessageTH: ถือว่าตกลงแล้วนะ?
+    MessageTW: 約定好囉？
+    MessageGroupId: 100050420
     Id: 228
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1310,13 +1316,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 그럼 약속한 거야?
-    MessageJP: 約束したからね？
-    MessageCN: 那就约好了哦？
-    MessageEN: You promise?
-    MessageTH: ถือว่าตกลงแล้วนะ?
-    MessageTW: 約定好囉？
-  - MessageGroupId: 100050420
+  - MessageKR: 다음에 시간 날 때 얘기하라고, 선생!
+    MessageJP: じゃあ今度、お互いに都合の良い時にでも行こっか。また連絡する～
+    MessageCN: 那下次两个人都有空的时候去吧。到时候联系～
+    MessageEN: Tell me when we can go, Sensei!
+    MessageTH: ถ้ามีเวลาว่างก็มาบอกฉันนะ!
+    MessageTW: 那麼下次，找個彼此都方便的時間去吧。再連絡～
+    MessageGroupId: 100050420
     Id: 229
     CharacterId: 10005
     MessageCondition: Feedback
@@ -1328,13 +1334,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 다음에 시간 날 때 얘기하라고, 선생!
-    MessageJP: じゃあ今度、お互いに都合の良い時にでも行こっか。また連絡する～
-    MessageCN: 那下次两个人都有空的时候去吧。到时候联系～
-    MessageEN: Tell me when we can go, Sensei!
-    MessageTH: ถ้ามีเวลาว่างก็มาบอกฉันนะ!
-    MessageTW: 那麼下次，找個彼此都方便的時間去吧。再連絡～
-  - MessageGroupId: 100050430
+  - MessageKR: 선생, 저번에 얻은 아쿠아리움 티켓 말야.
+    MessageJP: 先生、この間のアクアリウムの話なんだけど
+    MessageCN: 老师，关于之前说的水族馆的事
+    MessageEN: Sensei, about the aquarium tickets you got a while ago...
+    MessageTH: ครู ตั๋วอควาเรียมที่ได้มาคราวก่อนน่ะ
+    MessageTW: 老師，關於上次說的海生館
+    MessageGroupId: 100050430
     Id: 230
     CharacterId: 10005
     MessageCondition: FavorRankUp
@@ -1346,13 +1352,15 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 선생, 저번에 얻은 아쿠아리움 티켓 말야.
-    MessageJP: 先生、この間のアクアリウムの話なんだけど
-    MessageCN: 老师，关于之前说的水族馆的事
-    MessageEN: Sensei, about the aquarium tickets you got a while ago...
-    MessageTH: ครู ตั๋วอควาเรียมที่ได้มาคราวก่อนน่ะ
-    MessageTW: 老師，關於上次說的海生館
-  - MessageGroupId: 100050440
+  - MessageKR: 슬슬 기간이 다 되어 가니까, 이번에 같이 가지 않을래?
+    MessageJP: 有効期限がもうそろそろだから、今度の週末にでもどう？
+    MessageCN: 水族馆门票也快过期了，就这周末去怎么样？
+    MessageEN: They're gonna expire soon. Should we go?
+    MessageTH: "มันจะหมดอายุอยู่แล้วนะ
+
+      เราไปด้วยกันไหม?"
+    MessageTW: 有效期限快到了，這個週末如何？
+    MessageGroupId: 100050440
     Id: 231
     CharacterId: 10005
     MessageCondition: None
@@ -1364,15 +1372,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 슬슬 기간이 다 되어 가니까, 이번에 같이 가지 않을래?
-    MessageJP: 有効期限がもうそろそろだから、今度の週末にでもどう？
-    MessageCN: 水族馆门票也快过期了，就这周末去怎么样？
-    MessageEN: They're gonna expire soon. Should we go?
-    MessageTH: "มันจะหมดอายุอยู่แล้วนะ
-
-      เราไปด้วยกันไหม?"
-    MessageTW: 有效期限快到了，這個週末如何？
-  - MessageGroupId: 100050440
+  - MessageKR: 아쿠아리움 앞에서 기다리고 있을게.
+    MessageJP: 問題なければアクアリウムの前で待ち合わせってことで、よろしく～
+    MessageCN: 如果没问题的话就在水族馆前面汇合吧，请多关照～
+    MessageEN: I'll be waiting in front of the aquarium.
+    MessageTH: ฉันจะรออยู่หน้าอควาเรียมนะ
+    MessageTW: 如果沒問題的話，在海生館前碰面，拜託了～
+    MessageGroupId: 100050440
     Id: 232
     CharacterId: 10005
     MessageCondition: None
@@ -1384,13 +1390,13 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    MessageKR: 아쿠아리움 앞에서 기다리고 있을게.
-    MessageJP: 問題なければアクアリウムの前で待ち合わせってことで、よろしく～
-    MessageCN: 如果没问题的话就在水族馆前面汇合吧，请多关照～
-    MessageEN: I'll be waiting in front of the aquarium.
-    MessageTH: ฉันจะรออยู่หน้าอควาเรียมนะ
-    MessageTW: 如果沒問題的話，在海生館前碰面，拜託了～
-  - MessageGroupId: 100050450
+  - MessageKR: 알았어. 거기서 봐.
+    MessageJP: うん、大丈夫。楽しみにしてるね
+    MessageCN: 嗯。没问题。我很期待呢
+    MessageEN: Okay. I'll see you there.
+    MessageTH: ได้สิ แล้วเจอกันที่นั่นนะ
+    MessageTW: 嗯，沒問題。我很期待唷
+    MessageGroupId: 100050450
     Id: 233
     CharacterId: 10005
     MessageCondition: Answer
@@ -1402,9 +1408,3 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    MessageKR: 알았어. 거기서 봐.
-    MessageJP: うん、大丈夫。楽しみにしてるね
-    MessageCN: 嗯。没问题。我很期待呢
-    MessageEN: Okay. I'll see you there.
-    MessageTH: ได้สิ แล้วเจอกันที่นั่นนะ
-    MessageTW: 嗯，沒問題。我很期待唷

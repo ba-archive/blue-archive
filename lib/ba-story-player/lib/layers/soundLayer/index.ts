@@ -1,5 +1,7 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
+import { watch } from "vue";
+import { useUiState } from "@/stores/state";
 import { PlayAudio } from "@/types/events";
 import { Sound } from "@pixi/sound";
 
@@ -52,6 +54,12 @@ export async function preloadSound(audioUrls: string[]) {
   await Promise.all(audioLoadPromises);
 }
 
+export function soundDispose() {
+  for (const sound of audioMap.values()) {
+    sound.stop();
+  }
+}
+
 /**
  * 初始化声音层, 订阅player的剧情信息.
  */
@@ -64,7 +72,7 @@ export function soundInit() {
   /**
    * 声音层的全局设置, 包括BGM音量, 效果音量和语音音量
    */
-  let soundSettings = new (class SoundSettings {
+  const soundSettings = new (class SoundSettings {
     BGMvolume = 0.3;
     SFXvolume = 1;
     Voicevolume = 1;
@@ -177,20 +185,29 @@ export function soundInit() {
     playAudio({ soundUrl: usePlayerStore().bgEffectSoundUrl(bgEffect) });
   });
   // 解决标签页失焦时无法停止音频的问题
-  eventBus.on("activated", stopShouldStopBgm);
+  const { tabActivated } = useUiState();
+  watch(
+    () => tabActivated.value,
+    cur => {
+      if (cur) {
+        stopShouldStopBgm();
+      }
+    }
+  );
   eventBus.on("dispose", () => {
     soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
   });
-  eventBus.on("stop", () => soundDispose());
+  eventBus.on("stop", () => {
+    soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
+  });
   eventBus.on("continue", () => bgm?.play());
   eventBus.on("playAudioWithConfig", ({ url, config }) => {
     getAudio(url).play(config);
   });
-  eventBus.on("end", () => soundDispose);
-}
-
-export function soundDispose() {
-  for (const sound of audioMap.values()) {
-    sound.stop();
-  }
+  eventBus.on("end", () => {
+    soundDispose();
+    pausedBgm.splice(0, pausedBgm.length);
+  });
 }

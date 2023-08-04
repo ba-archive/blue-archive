@@ -35,8 +35,9 @@
         </n-tag>
         <n-input
           :value="selection.translated"
-          type="text"
+          type="textarea"
           @input="(e: string) => selectInputHandle(e, idx)"
+          :autosize="{ minRows: 2 }"
           placeholder="请输入"
           clearable
         />

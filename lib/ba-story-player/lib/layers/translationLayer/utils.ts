@@ -3,22 +3,15 @@ import { deepCopyObject, getResourcesUrl } from "@/utils";
 import xxhash from "xxhashjs";
 import {
   Character,
-  Effect,
   Speaker,
   StoryRawUnit,
-  StoryType,
   StoryUnit,
   Text,
   TextEffect,
   TextEffectName,
 } from "@/types/common";
 import { PlayAudio, PlayEffect, ShowTitleOption } from "@/types/events";
-import {
-  BGEffectExcelTableItem,
-  BGMExcelTableItem,
-  CharacterNameExcelTableItem,
-  TransitionTableItem,
-} from "@/types/excels";
+import { CharacterNameExcelTableItem } from "@/types/excels";
 import { Language } from "@/types/store";
 
 const playerStore = usePlayerStore();
@@ -123,6 +116,19 @@ export function buildNxAST(rawText: string) {
     rawText = rawText.substring(len);
   }
   return root;
+}
+
+export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
+  if (!source || source.length === 0) {
+    return [];
+  }
+  let current = source[0];
+  return source
+    .filter((_, index) => index > 0)
+    .map(it => {
+      current = iterateStoryUnit(current, it);
+      return current;
+    });
 }
 
 /**
@@ -260,6 +266,7 @@ export function getCharacterInfo(krName: string) {
     };
   }
 }
+
 /**
  * 根据角色韩文名获取CharacterName
  * @param krName
@@ -314,20 +321,6 @@ export function getSpeaker(
   }
 }
 
-/**
- * 选择文字, 当没有当前语言文字时返回日文
- */
-export function getText(
-  rawStoryUnit: StoryRawUnit,
-  language: Language
-): string {
-  const textProperty = `Text${language}` as const;
-  return (
-    String(Reflect.get(rawStoryUnit, textProperty)) ||
-    String(rawStoryUnit.TextJp)
-  );
-}
-
 function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
   if (root.tag === "text") {
     return [
@@ -353,10 +346,18 @@ function walkNxAST(root: NxAST, effects: TextEffect[]): Text[] {
     .flat();
 }
 
-export function getVoiceJPUrl(VoiceJp: string) {
-  if (VoiceJp) {
-    return getResourcesUrl("voiceJp", VoiceJp);
-  }
+/**
+ * 选择文字, 当没有当前语言文字时返回日文
+ */
+export function getText(
+  rawStoryUnit: StoryRawUnit,
+  language: Language
+): string {
+  const textProperty = `Text${language}` as const;
+  return (
+    String(Reflect.get(rawStoryUnit, textProperty)) ||
+    String(rawStoryUnit.TextJp)
+  );
 }
 
 type NxTagMap = {
@@ -412,21 +413,10 @@ type NxTagParseResult = {
   attr?: string[];
 };
 
-/**
- * 将嵌套tag结构分割
- *
- * [FF6666]……我々は望む、七つの[-][ruby=なげ][FF6666]嘆[-][/ruby][FF6666]きを。[-]
- *
- * [FF6666]……我々は望む、七つの[-],[ruby=なげ][FF6666]嘆[-][/ruby],[FF6666]きを。[-]
- *
- * [b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]
- *
- * [b]……我々は望む、七つの嘆[/b], [b][FF6666]きを。[-][/b]
- * @param rawText 原始结构
- */
-export function parseNxMagicTag(rawText: string): Text[] {
-  const ast = buildNxAST(rawText);
-  return walkNxAST(ast, []);
+export function getVoiceJPUrl(VoiceJp: string) {
+  if (VoiceJp) {
+    return getResourcesUrl("voiceJp", VoiceJp);
+  }
 }
 
 type IterateStoryUnit = {
@@ -533,15 +523,19 @@ function iterateStoryUnit(prv: StoryUnit, cur: StoryUnit): StoryUnit {
   return copy;
 }
 
-export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
-  if (!source || source.length === 0) {
-    return [];
-  }
-  let current = source[0];
-  return source
-    .filter((_, index) => index > 0)
-    .map(it => {
-      current = iterateStoryUnit(current, it);
-      return current;
-    });
+/**
+ * 将嵌套tag结构分割
+ *
+ * [FF6666]……我々は望む、七つの[-][ruby=なげ][FF6666]嘆[-][/ruby][FF6666]きを。[-]
+ *
+ * [FF6666]……我々は望む、七つの[-],[ruby=なげ][FF6666]嘆[-][/ruby],[FF6666]きを。[-]
+ *
+ * [b]……我々は望む、七つの嘆[FF6666]きを。[-][/b]
+ *
+ * [b]……我々は望む、七つの嘆[/b], [b][FF6666]きを。[-][/b]
+ * @param rawText 原始结构
+ */
+export function parseNxMagicTag(rawText: string): Text[] {
+  const ast = buildNxAST(rawText);
+  return walkNxAST(ast, []);
 }

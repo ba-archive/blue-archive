@@ -1,5 +1,4 @@
-import { LoaderResource, Sprite } from "pixi.js";
-import { Dict } from "@/types/common";
+import { Sprite } from "pixijs";
 import { BgParams } from "@/types/events";
 
 export interface BgLayer {
@@ -30,13 +29,9 @@ export interface BgLayer {
   handleResize(): void;
   /**
    * 从 Loader Resource 获取背景 Sprite
-   * @param resources loader resources
    * @param name 背景图片名
    */
-  getBgSpriteFromResource(
-    resources: Dict<LoaderResource>,
-    name: string
-  ): Sprite | undefined;
+  getBgSpriteFromResource(name: string): Sprite | undefined;
   /**
    * 直接加载背景
    */
