@@ -6,7 +6,7 @@
   "packageManager": "pnpm@8.6.5",
   "scripts": {
     "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --port 3333",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
@@ -25,6 +25,7 @@
     "@vueuse/head": "^1.1.26",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",
+    "tdesign-vue-next": "~1.4.2",
     "vue": "^3.3.4",
     "vue-demi": "^0.14.5",
     "vue-i18n": "^9.2.2",
