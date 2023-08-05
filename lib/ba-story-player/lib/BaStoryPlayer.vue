@@ -29,7 +29,7 @@ import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 import { sound } from '@pixi/sound';
 import { useUiState } from "./stores/state";
-sound.disableAutoPause = true;
+sound.useLegacy = true; // 别问, 问就是旧的好用
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;

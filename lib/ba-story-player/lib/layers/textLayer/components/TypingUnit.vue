@@ -3,7 +3,11 @@
     @click.stop="onUnitClick"
     class="unit"
     :style="effectCSS"
-    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip && !st }"
+    :class="{
+      ruby: internalSubContent,
+      'has-tooltip': tooltip,
+      'has-st-tooltip': st && internalContent,
+    }"
     v-click-outside="onClickOutside"
     ref="TypingContainer"
   >
@@ -109,7 +113,6 @@ if (props.instant) {
 
 const contentHandler = ref(0);
 const subContentHandler = ref(0);
-
 
 const internalContent = computed(() =>
   currentContent.value.substring(0, contentPointer.value)
@@ -321,6 +324,8 @@ type IProp = {
 </script>
 
 <style scoped lang="scss">
+$tooltip-padding-r: 8px;
+$tooltip-padding-t: 4px;
 .unit {
   position: relative;
   height: var(--font-size);
@@ -354,10 +359,9 @@ type IProp = {
   }
 }
 .unit.has-tooltip {
-  $padding: 8px;
   z-index: 999;
   cursor: pointer;
-  margin: -$padding;
+  margin: -$tooltip-padding-r;
   background: linear-gradient(
     transparent 90%,
     white 90%,
@@ -365,12 +369,23 @@ type IProp = {
     transparent 95%,
     transparent 100%
   );
-  background-position: $padding 0;
-  background-size: calc(100% - #{$padding} * 2) 100%;
+  background-position: $tooltip-padding-r 0;
+  background-size: calc(100% - #{$tooltip-padding-r} * 2) 100%;
   background-repeat: no-repeat;
-  padding: 4px $padding;
+  padding: $tooltip-padding-t $tooltip-padding-r;
   .rt {
     top: 0;
+  }
+}
+.unit.has-tooltip.has-st-tooltip {
+  background: none;
+  &::after {
+    position: absolute;
+    top: $tooltip-padding-t;
+    right: $tooltip-padding-r;
+    counter-increment: st;
+    content: counter(st);
+    font-size: calc(var(--font-size) * 0.25);
   }
 }
 .tooltip {
