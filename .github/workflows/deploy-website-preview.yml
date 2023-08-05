@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - dev
+      - "dev/**"
+      - "feat/**"
     paths:
       - "apps/blue-archive-story-viewer/**"
       - "lib/**"
