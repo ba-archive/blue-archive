@@ -575,7 +575,7 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Mari makes her way to the Make-Up Work Club to offer thanks on behalf of the student that Azusa recently saved. Later, Sensei is waiting to discuss the future with Hifumi when Hanako arrives and the situation takes an unexpected turn.",
           TextCn:
-            "某一天，修女会的玛丽访问了补习部的合宿处。她似乎是代替某位之前被梓帮助过的学生来表达感谢的。当天晚上，日富美找老师商量之后的事情，没想到……？",
+            "某一天，修女会的玛丽访问了补习部的合宿处。她似乎是代替某位之前被梓帮助过的学生来表达感谢的。当天晚上，日富美找老师商量之后的事情，然而……？",
         },
       },
       {
