@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Ref, computed, ref } from "vue";
-import NeuTitleBar from "../widgets/NeuUI/NeuTitleBar.vue";
 import { useSettingsStore } from "@store/settings";
 import { Language } from "@types/Settings";
 import { StoryBriefing } from "@types/StoryJson";
+import NeuTitleBar from "@widgets/NeuUI/NeuTitleBar.vue";
 import StoryBriefBlock from "./StoryBriefBlock.vue";
 
 const settingsStore = useSettingsStore();
@@ -21,7 +21,7 @@ withDefaults(
   }
 );
 
-const openChapters: Ref<number[]> = ref([1]);
+const openChapters: Ref<number[]> = ref([2]);
 const language = computed(() => settingsStore.getLang);
 
 function getTitleText(
@@ -68,6 +68,7 @@ function handleOpenChapters(index: number) {
       <story-brief-block
         :title="getTitleText(section.title, language)"
         :avatar="avatar"
+        :storyOrder="storyOrder"
         :description="section.summary"
       />
     </router-link>

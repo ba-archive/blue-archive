@@ -1,10 +1,10 @@
 <template>
   <div
     class="main-story-container fill-screen flex-vertical"
-    v-if="!storySelected"
+    v-if="!isStorySelected"
   >
     <story-line-container
-      v-for="(story, index) in stories"
+      v-for="(story, index) in releasedStories"
       :title="story.title"
       :avatar="story.avatar"
       :index="index"
@@ -23,7 +23,11 @@ import { stories } from "@index/mainStoryIndex";
 
 const route = useRoute();
 
-const storySelected = computed(() => !/\/mainStory\/?$/.test(route.path));
+const releasedStories = stories.filter(story =>
+  [undefined, true].includes(story?.released)
+);
+
+const isStorySelected = computed(() => !/\/mainStory\/?$/.test(route.path));
 </script>
 
 <style scoped lang="scss">
