@@ -102,7 +102,7 @@
         v-if="stToolTip.length > 0 && stText.length > 0"
       >
         <div v-for="(e, index) in stToolTip" :key="index" class="tooltip">
-          <span>{{ e[0] }}:</span>
+          <span>[{{ index + 1 }}]{{ e[0] }}:</span>
           <span>&emsp;{{ e[1] }}</span>
         </div>
       </div>
@@ -1103,6 +1103,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   .st-container {
     z-index: $text-layer-z-index + $st-z-index;
+    counter-reset: st;
     color: white;
     text-shadow: $text-outline;
   }
@@ -1122,8 +1123,11 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         ),
         var(--minimum-fs)
       );
-      margin-top: 16px;
+      margin-top: 4px;
       font-size: var(--font-size);
+      &:first-child {
+        margin-top: 16px;
+      }
     }
   }
 
