@@ -116,7 +116,7 @@ export const CharacterLayerInstance: CharacterLayer = {
     for (const item of characterMap) {
       const characterName = item.CharacterName;
       if (!this.hasCharacterInstance(characterName, item.position)) {
-        const spineData = characterSpineData(characterName);
+        const spineData = characterSpineData(characterName, item.spineUrl);
         if (!spineData) {
           return false;
         }
@@ -280,7 +280,9 @@ export const CharacterLayerInstance: CharacterLayer = {
     Promise.all(mapList.map(character => this.showOneCharacter(character)))
       .then(this.characterDone)
       .catch(reason => {
-        console.log(reason);
+        if (reason.some((it: unknown) => it)) {
+          console.log(reason);
+        }
         this.characterDone();
       });
     return true;

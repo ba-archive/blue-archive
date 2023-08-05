@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { usePlayerStore } from "@/stores";
-import { Ref, onMounted, ref, watch } from "vue";
-import { checkBgOverlap } from "@/layers/translationLayer/utils";
+import { Ref, onMounted, ref } from "vue";
 import BaChatMessage from "./BaChatMessage.vue";
 
 const props = defineProps({
@@ -19,7 +18,6 @@ const isDraggingDialog = ref(false);
 onMounted(() => {
   content.value.scrollTo({
     top: content.value.scrollHeight,
-    behavior: "smooth",
   });
 });
 

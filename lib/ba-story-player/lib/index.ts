@@ -42,8 +42,8 @@ let privateState: ReturnType<typeof initPrivateState>;
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
 export function checkloadAssetAlias<T = any>(alias: string, url: string) {
-  if (!resourcesLoader.loadedList.includes(alias)) {
-    resourcesLoader.loadedList.push(alias);
+  if (!resourcesLoader.loadedList.includes(url)) {
+    resourcesLoader.loadedList.push(url);
     return loadAssetAlias(alias, url);
   }
   return Promise.resolve();
@@ -528,6 +528,10 @@ export async function init(
   globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
   document.querySelector(`#${elementID}`)?.appendChild(app.view);
+
+  // 记录加载开始时间 优化光速加载的体验
+  const startLoadTime = Date.now();
+  eventBus.emit("startLoading", { url: props.dataUrl });
   //加载初始化资源以便翻译层进行翻译
   await resourcesLoader.init();
   privateState.allStoryUnit = translate(props.story);
@@ -540,9 +544,6 @@ export async function init(
   effectInit();
   L2DInit();
 
-  // 记录加载开始时间 优化光速加载的体验
-  const startLoadTime = Date.now();
-  eventBus.emit("startLoading", { url: props.dataUrl });
   //加载剩余资源
   await resourcesLoader.addLoadResources();
   resourcesLoader.load(() => {
@@ -765,6 +766,18 @@ export const resourcesLoader = {
    */
   async loadExcels() {
     const excelPromiseArray: Array<Promise<void>> = [];
+    function notifyExcelSuccess(name: string) {
+      eventBus.emit("oneResourceLoaded", {
+        type: "success",
+        resourceName: name,
+      });
+    }
+    function notifyExcelError(name: string) {
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: name,
+      });
+    }
     excelPromiseArray.push(
       axios
         .get(utils.getResourcesUrl("excel", "ScenarioBGNameExcelTable.json"))
@@ -772,6 +785,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.BGNameExcelTable.set(i["Name"], i);
           }
+          notifyExcelSuccess("ScenarioBGNameExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("ScenarioBGNameExcelTable");
         })
     );
     excelPromiseArray.push(
@@ -783,6 +800,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.CharacterNameExcelTable.set(i["CharacterName"], i);
           }
+          notifyExcelSuccess("ScenarioCharacterNameExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("ScenarioCharacterNameExcelTable");
         })
     );
     excelPromiseArray.push(
@@ -792,6 +813,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.BGMExcelTable.set(i["Id"], i);
           }
+          notifyExcelSuccess("BGMExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("BGMExcelTable");
         })
     );
     excelPromiseArray.push(
@@ -803,6 +828,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.TransitionExcelTable.set(i["Name"], i);
           }
+          notifyExcelSuccess("ScenarioTransitionExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("ScenarioTransitionExcelTable");
         })
     );
     excelPromiseArray.push(
@@ -812,6 +841,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.BGEffectExcelTable.set(i["Name"], i);
           }
+          notifyExcelSuccess("ScenarioBGEffectExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("ScenarioBGEffectExcelTable");
         })
     );
     excelPromiseArray.push(
@@ -826,6 +859,10 @@ export const resourcesLoader = {
           for (const i of res.data["DataList"]) {
             privateState.EmotionExcelTable.set(i["Name"], i["EmoticonName"]);
           }
+          notifyExcelSuccess("ScenarioCharacterEmotionExcelTable");
+        })
+        .catch(() => {
+          notifyExcelError("ScenarioCharacterEmotionExcelTable");
         })
     );
 
@@ -872,6 +909,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
       leftTime = leftTime - (now - startTime);
     }
     function restart() {
+      clearInterval(interval);
       startTime = Date.now();
       start();
     }
@@ -892,20 +930,16 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           end();
           resolve();
         } else if (Date.now() - startTime >= leftTime) {
-          for (const key of Object.keys(eventEmitter) as Array<
-            keyof typeof eventEmitter
-          >) {
-            if (key.endsWith("Done") && key !== "unitDone") {
-              if (!eventEmitter[key]) {
-                console.error(`${key}未完成: `);
-              }
-            }
-          }
+          end();
+          // eslint-disable-next-line max-len
+          const waitingKeys = Object.keys(eventEmitter)
+            .filter(it => it.endsWith("Done") && it !== "unitDone")
+            .filter(it => !eventEmitter[it as keyof typeof eventEmitter]);
           console.warn(
             `故事节点 index: ${storyHandler.currentStoryIndex}长时间未完成`,
-            storyHandler.currentStoryUnit
+            storyHandler.currentStoryUnit,
+            waitingKeys
           );
-          end();
           reject();
         }
       });

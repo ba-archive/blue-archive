@@ -47,9 +47,12 @@ export interface BasicGetters {
 
   /**
    * 获取角色spineData
+   * @param url 为啥多出个url呢, 因为遗像哥是两个id共用一个spine的, 这就导致它俩的id会在pixi的cache里互相覆盖
+   * 导致一个有另一个没有
    */
   characterSpineData: (
-    CharacterName: number
+    CharacterName: number,
+    url: string
   ) => import("pixi-spine").ISkeletonData | undefined;
   /**
    * 获取情绪图像资源

@@ -4,6 +4,28 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-08-05",
+    contents: [
+      {
+        type: "main",
+        content: "Vol.3 伊甸条约 第二章",
+      },
+      {
+        type: "fix",
+        content: "对话记录滚动到底时，对话框不再被关闭",
+      },
+    ],
+  },
+  {
+    date: "2023-08-02",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "浦和 花子（泳装）", id: 10074 }],
+      },
+    ],
+  },
+  {
     date: "2023-07-30",
     contents: [
       {
