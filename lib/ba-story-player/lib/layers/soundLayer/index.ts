@@ -28,7 +28,7 @@ function getAudio(url: string): Sound {
  * 预加载与解析声音资源
  * @param audioUrls 声音地址数组
  */
-export async function preloadSound(audioUrls: string[]) {
+export function preloadSound(audioUrls: string[]) {
   const audioLoadPromises: Promise<void>[] = [];
   for (const audioUrl of audioUrls) {
     audioLoadPromises.push(
@@ -39,7 +39,7 @@ export async function preloadSound(audioUrls: string[]) {
             url: audioUrl,
             preload: true,
             autoPlay: false,
-            loaded(err, resource) {
+            loaded(err, _) {
               eventBus.emit("oneResourceLoaded", {
                 type: err ? "fail" : "success",
                 resourceName: audioUrl,
@@ -51,7 +51,6 @@ export async function preloadSound(audioUrls: string[]) {
       })
     );
   }
-  await Promise.all(audioLoadPromises);
 }
 
 
