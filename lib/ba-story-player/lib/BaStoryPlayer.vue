@@ -19,16 +19,17 @@ import {
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
+import { useUiState } from "./stores/state";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
+import { sound } from "@pixi/sound";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
-import { sound } from '@pixi/sound';
-import { useUiState } from "./stores/state";
+
 sound.useLegacy = true; // 别问, 问就是旧的好用
 export type PlayerProps = {
   story: TranslatedStoryUnit;
@@ -194,7 +195,7 @@ watch([playerWidth, playerHeight], () => {
   }
 });
 
-const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
+// const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
 //加载字体
 onBeforeMount(() => {
   const newStyle = document.createElement("style");
@@ -202,7 +203,8 @@ onBeforeMount(() => {
     document.createTextNode(`\
   @font-face {
     font-family: 'TJL';
-    src: url(${fontUrl});`)
+    src: url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff2) format('woff2'),
+         url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff) format('woff');`)
   );
 
   document.head.appendChild(newStyle);
@@ -246,10 +248,10 @@ function hotReplaceStoryUnit(
   } else {
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
-        GroupId: props.story.GroupId,
-        translator: props.story.translator,
-        content: unit,
-      }
+          GroupId: props.story.GroupId,
+          translator: props.story.translator,
+          content: unit,
+        }
       : (unit as TranslatedStoryUnit);
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
@@ -263,9 +265,7 @@ function hotReplaceStoryUnit(
 
 function resetLive2d() {
   eventBus.emit("live2dDebugDispose");
-  const live2dIndex = initPrivateState().allStoryUnit.findIndex(
-    it => it.l2d
-  );
+  const live2dIndex = initPrivateState().allStoryUnit.findIndex(it => it.l2d);
   if (live2dIndex !== -1) {
     changeStoryIndex(live2dIndex);
   }
