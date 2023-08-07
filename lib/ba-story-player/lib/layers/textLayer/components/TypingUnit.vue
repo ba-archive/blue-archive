@@ -56,7 +56,7 @@ import { useThrottleFn } from "@vueuse/core";
 
 const props = withDefaults(defineProps<IProp>(), {
   index: "-1",
-  speed: 20,
+  speed: 40,
   text: () => ({
     content: "",
     waitTime: 0,
@@ -335,7 +335,9 @@ $tooltip-padding-t: 4px;
     --local-font-size: max(calc(var(--font-size) * 0.6), 12px);
     position: absolute;
     // top: calc(var(--local-font-size) * var(--top-offset));
-    top: calc(var(--local-font-size) * var(--top-offset) + var(--font-size) * 0.5 / 2);
+    top: calc(
+      var(--local-font-size) * var(--top-offset) + var(--font-size) * 0.5 / 2
+    );
     left: 50%;
     transform: translateX(-50%);
     animation: fade-in 0.25s ease-in-out;

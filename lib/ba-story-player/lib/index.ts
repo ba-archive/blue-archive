@@ -145,7 +145,7 @@ export const eventEmitter = {
     eventBus.on("textDone", async () => {
       //等待一段时间在textDone, 提升auto的体验
       if (storyHandler.auto) {
-        await wait(1000);
+        await wait(2000);
       }
       this.textDone = true;
     });
