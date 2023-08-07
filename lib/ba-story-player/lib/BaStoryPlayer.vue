@@ -435,7 +435,7 @@ onDeactivated(() => {
     left: 0;
     transform: rotate(-90deg);
     transform-origin: top left;
-    z-index: 201;
+    z-index: 119;
 
     #player__main__canvas {
       z-index: 0;
