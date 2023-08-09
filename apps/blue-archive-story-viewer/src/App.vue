@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import { computed, onBeforeMount, onBeforeUnmount, ref } from "vue";
 import { useRoute } from "vue-router";
-import HeadupBanner from "@components/HeadupBanner.vue";
 import HomeWelcomeScreen from "@components/HomeWelcomeScreen.vue";
 import DesktopMenu from "@components/menu/DesktopMenu.vue";
 import MobileMenu from "@components/menu/MobileMenu.vue";
 import { useSettingsStore } from "@store/settings";
 import { switchTheme } from "@util/userInterfaceUtils";
-import timezone from "dayjs/plugin/timezone";
-import utc from "dayjs/plugin/utc";
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
+// import timezone from "dayjs/plugin/timezone";
+// import utc from "dayjs/plugin/utc";
+//
+// dayjs.extend(utc);
+// dayjs.extend(timezone);
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
@@ -60,22 +60,22 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", handleWindowSizeChange);
 });
 
-function getInitialBannerState() {
-  const now = dayjs().tz("Asia/Shanghai");
-  const startDate = dayjs("2023/07/28 00:01").tz("Asia/Shanghai");
-  const endDate = dayjs("2023/07/29 00:30").tz("Asia/Shanghai");
-  return now.isAfter(startDate) && now.isBefore(endDate);
-}
-
-const shouldShowBanner = ref(getInitialBannerState());
+// function getInitialBannerState() {
+//   const now = dayjs().tz("Asia/Shanghai");
+//   const startDate = dayjs("2023/07/28 00:01").tz("Asia/Shanghai");
+//   const endDate = dayjs("2023/07/29 00:30").tz("Asia/Shanghai");
+//   return now.isAfter(startDate) && now.isBefore(endDate);
+// }
+//
+// const shouldShowBanner = ref(getInitialBannerState());
 </script>
 
 <template>
-  <headup-banner
-    v-if="shouldShowBanner"
-    @close="shouldShowBanner = false"
-    content="本站将于北京时间 7 月 29 日 00:01 - 00:30 进行维护，届时部分服务将不可用，敬请谅解"
-  />
+  <!--  <headup-banner-->
+  <!--    v-if="shouldShowBanner"-->
+  <!--    @close="shouldShowBanner = false"-->
+  <!--    content="本站将于北京时间 7 月 29 日 00:01 - 00:30 进行维护，届时部分服务将不可用，敬请谅解"-->
+  <!--  />-->
   <mobile-menu v-if="showMobileMenu" />
   <desktop-menu v-else />
   <div
