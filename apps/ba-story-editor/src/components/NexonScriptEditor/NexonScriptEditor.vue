@@ -4,15 +4,21 @@ import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
 
 import type { EditorState } from '@codemirror/state'
-import type { EditorView } from '@codemirror/view'
+import { EditorView } from '@codemirror/view'
 
-const props = defineProps<{}>()
+// const props = defineProps<{}>()
 
 // code mirror
-const code = ref('')
-const extensions = [javascript(), oneDark]
+const customTheme = EditorView.theme({
+  '*': {
+    fontFamily: '\'Hack\', monospace',
+    fontSize: '12px',
+  },
+})
+const extensions = [javascript(), oneDark, customTheme]
 const view = shallowRef<EditorView>()
-const codeMirrorStyle = ref({ height: '400px' })
+const codeMirrorStyle = ref({ height: '1200px' })
+const nexonScriptEditorStore = useNexonScriptEditorStore()
 
 function handleReady(payload: { view: EditorView; state: EditorState ; container: HTMLDivElement }) {
   view.value = payload.view
@@ -22,8 +28,8 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
 <template>
   <div class="nexon-script-editor">
     <Codemirror
-      :module-value="code"
-      placeholder="Code goes here..."
+      v-model="nexonScriptEditorStore.code"
+      placeholder=""
       :style="codeMirrorStyle"
       :autofocus="false"
       :indent-with-tab="true"
@@ -35,5 +41,4 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
 </template>
 
 <style scoped>
-
 </style>

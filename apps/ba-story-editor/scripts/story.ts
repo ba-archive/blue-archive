@@ -145,7 +145,7 @@ export enum NexonTags {
 export interface TextAST {
   tag: NexonTags
   children: (TextAST | string)[]
-  value?: String
+  value?: string
 }
 
 export type I18NTextAST = I18N<TextAST>

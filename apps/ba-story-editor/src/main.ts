@@ -4,6 +4,7 @@ import { ViteSSG } from 'vite-ssg'
 import './styles/main.css'
 import '@unocss/reset/tailwind.css'
 import 'tdesign-vue-next/es/style/index'
+import './styles/font.scss'
 
 // import Previewer from 'virtual:vue-component-preview'
 import App from './App.vue'
