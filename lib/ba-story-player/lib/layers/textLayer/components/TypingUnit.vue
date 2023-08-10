@@ -3,7 +3,11 @@
     @click.stop="onUnitClick"
     class="unit"
     :style="effectCSS"
-    :class="{ ruby: internalSubContent, 'has-tooltip': tooltip && !st }"
+    :class="{
+      ruby: internalSubContent,
+      'has-tooltip': tooltip,
+      'has-st-tooltip': st && internalContent,
+    }"
     v-click-outside="onClickOutside"
     ref="TypingContainer"
   >
@@ -52,7 +56,7 @@ import { useThrottleFn } from "@vueuse/core";
 
 const props = withDefaults(defineProps<IProp>(), {
   index: "-1",
-  speed: 20,
+  speed: 40,
   text: () => ({
     content: "",
     waitTime: 0,
@@ -93,7 +97,7 @@ const currentSubContent = ref(filterRuby.value.join(""));
 const contentPointer = ref(-1);
 const subContentPointer = ref(-1);
 const subPadding = ref(0);
-const subContainTop = computed(() => (props.title ? "-0.45" : "-1"));
+const subContainTop = computed(() => (props.title ? "-0.6" : "-1"));
 const effectCSS = computed(() => ({
   ...parseTextEffectToCss(props.text.effects),
   "--padding": subPadding.value,
@@ -320,15 +324,20 @@ type IProp = {
 </script>
 
 <style scoped lang="scss">
+$tooltip-padding-r: 8px;
+$tooltip-padding-t: 4px;
 .unit {
   position: relative;
   height: var(--font-size);
   font-size: var(--font-size);
   line-height: var(--font-size);
   .rt {
-    --local-font-size: calc(var(--font-size) * 0.6);
+    --local-font-size: max(calc(var(--font-size) * 0.6), 12px);
     position: absolute;
-    top: calc(var(--local-font-size) * var(--top-offset));
+    // top: calc(var(--local-font-size) * var(--top-offset));
+    top: calc(
+      var(--local-font-size) * var(--top-offset) + var(--font-size) * 0.5 / 2
+    );
     left: 50%;
     transform: translateX(-50%);
     animation: fade-in 0.25s ease-in-out;
@@ -353,10 +362,9 @@ type IProp = {
   }
 }
 .unit.has-tooltip {
-  $padding: 8px;
   z-index: 999;
   cursor: pointer;
-  margin: -$padding;
+  margin: -$tooltip-padding-r;
   background: linear-gradient(
     transparent 90%,
     white 90%,
@@ -364,12 +372,23 @@ type IProp = {
     transparent 95%,
     transparent 100%
   );
-  background-position: $padding 0;
-  background-size: calc(100% - #{$padding} * 2) 100%;
+  background-position: $tooltip-padding-r 0;
+  background-size: calc(100% - #{$tooltip-padding-r} * 2) 100%;
   background-repeat: no-repeat;
-  padding: 4px $padding;
+  padding: $tooltip-padding-t $tooltip-padding-r;
   .rt {
     top: 0;
+  }
+}
+.unit.has-tooltip.has-st-tooltip {
+  background: none;
+  &::after {
+    position: absolute;
+    top: $tooltip-padding-t;
+    right: $tooltip-padding-r;
+    counter-increment: st;
+    content: counter(st);
+    font-size: calc(var(--font-size) * 0.25);
   }
 }
 .tooltip {

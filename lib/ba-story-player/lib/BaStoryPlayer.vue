@@ -30,7 +30,7 @@ import { sound } from "@pixi/sound";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
-sound.disableAutoPause = true;
+sound.useLegacy = true; // 别问, 问就是旧的好用
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;
@@ -195,7 +195,7 @@ watch([playerWidth, playerHeight], () => {
   }
 });
 
-const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
+// const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
 //加载字体
 onBeforeMount(() => {
   const newStyle = document.createElement("style");
@@ -203,7 +203,8 @@ onBeforeMount(() => {
     document.createTextNode(`\
   @font-face {
     font-family: 'TJL';
-    src: url(${fontUrl});`)
+    src: url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff2) format('woff2'),
+         url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff) format('woff');`)
   );
 
   document.head.appendChild(newStyle);
@@ -247,10 +248,10 @@ function hotReplaceStoryUnit(
   } else {
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
-          GroupId: props.story.GroupId,
-          translator: props.story.translator,
-          content: unit,
-        }
+        GroupId: props.story.GroupId,
+        translator: props.story.translator,
+        content: unit,
+      }
       : (unit as TranslatedStoryUnit);
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
@@ -434,7 +435,7 @@ onDeactivated(() => {
     left: 0;
     transform: rotate(-90deg);
     transform-origin: top left;
-    z-index: 201;
+    z-index: 119;
 
     #player__main__canvas {
       z-index: 0;

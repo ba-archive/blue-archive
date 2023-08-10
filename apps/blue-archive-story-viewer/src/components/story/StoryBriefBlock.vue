@@ -5,14 +5,17 @@ import { CommonStoryTextObject } from "@types/StoryJson";
 
 const settingsStore = useSettingsStore();
 
-const props = defineProps({
-  title: { type: String, required: true },
-  avatar: { type: String, required: false, default: "" },
-  description: {
-    type: Object as PropType<CommonStoryTextObject>,
-    required: true,
-  },
-});
+const props = withDefaults(
+  defineProps<{
+    title: string;
+    avatar: string;
+    description: CommonStoryTextObject;
+    storyOrder?: number;
+  }>(),
+  {
+    avatar: "",
+  }
+);
 
 const currentLanguage = computed(() => settingsStore.getLang);
 const username = computed(() => settingsStore.getUsername);
@@ -51,6 +54,13 @@ function getFallbackDescription() {
   }
   return "NoFallbackText";
 }
+
+const storyOrder = computed(() => {
+  if (undefined !== props.storyOrder) {
+    return `${(props.storyOrder + 1).toString().padStart(2, "0")} `;
+  }
+  return "";
+});
 </script>
 
 <template>
@@ -62,7 +72,7 @@ function getFallbackDescription() {
       alt="avatar"
     />
     <div class="text-wrapper">
-      <div class="title">{{ title }}</div>
+      <div class="title">{{ storyOrder }}{{ title }}</div>
       <div class="description">
         {{ selectedLangDescription || `${getFallbackDescription()}` }}
       </div>

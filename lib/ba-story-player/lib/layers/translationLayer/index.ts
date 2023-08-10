@@ -161,7 +161,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
     },
   },
   zmc: {
-    reg: /#zmc;(instant|instnat|move);(-?\d+,-?\d+);(\d+);?(\d+)?;?/i,
+    reg: /#zmc;(instant|instnat|intstant|move);(-?\d+,-?\d+);(\d+);?(\d+)?;?/i,
     fn(match: RegExpExecArray, unit: StoryUnit) {
       const args: ZmcArgs = {
         type: match[1] as "instant",

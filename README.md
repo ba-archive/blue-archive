@@ -14,11 +14,8 @@ rush install
 rush build
 ```
 
-1. 使用 node 版本 符合 `rush.json` 中的要求, 推荐 18
+1. 使用 node 版本 符合 `rush.json` 中的要求, 推荐 18 （经测试 20 的 `node-gyp` 大概率出问题）
 2. 全局安装 rush.js `npm install -g @microsoft/rush`
-3. 解决 json with comment https://jingyan.baidu.com/article/b24f6c82042b95c7bfe5dad6.html
-4. 全局安装`lerna@^6`
-5. 进入`lib/pixi-spine` 使用 `npm install --save-dev lerna@^6` 安装 `lerna`, 然后使用`lerna bootstrap && lerna run build`打包魔改版`pixi-spine`
-6. 使用 `rush update` 安装所有依赖, 执行 `rush build` 全量打包所有项目
-7. `rush update-autoinstaller --name rush-prettier` 安装 prettier git hook, eslint 暂时依靠手动 ctrl + s 进行
-8. 进入某个项目目录, `pnpm dev` 启动即可进行开发
+3. 使用 `rush update` 安装所有依赖, 执行 `rush build` 全量打包所有项目
+4. `rush update-autoinstaller --name rush-prettier` 安装 prettier git hook, eslint 暂时依靠手动 ctrl + s 进行
+5. 进入某个项目目录, `pnpm dev` 启动即可进行开发

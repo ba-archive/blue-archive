@@ -13,27 +13,27 @@
           We are a <strong>non-profit, non-commercial</strong> fan site for the
           game "Blue Archive (ブルーアーカイブ)". We aim to provide a way for
           players to search and revisit
-          <strong>ONLY PUBLICLY AVAILABLE</strong> story contents.
+          <strong>ONLY PUBLICLY AVAILABLE</strong> story content.
         </p>
         <p>
           如您有任何疑问、意见或建议，或对本站收录的内容存在疑义，欢迎随时通过邮件向我们
           <a href="mailto:mail@blue-archive.io">询问或提出</a
           >。<strong>我们不是官方，无法也不能对游戏内容进行解释和解答。</strong>若您有条件体验游戏内容，我们强烈建议您
-          <a href="https://bluearchive.jp/" rel="noreferrer" target="_blank"
+          <a href="https://bluearchive-cn.com/" rel="noreferrer" target="_blank"
             >下载游戏并体验</a
           >。
         </p>
         <p>
-          If you have any questions, suggestions or concerns, or if you have
+          If you have any questions, suggestions, or concerns, or if you have
           doubts about the content we have collected, please feel free to
           <a href="mailto:mail@blue-archive.io">send us an email.</a>
           <strong>
-            We are not affiliated with Blue Archive in any forms, so please be
+            We are not affiliated with Blue Archive in any form, so please be
             aware that we cannot and will not answer questions regarding any
             in-game contents.
           </strong>
-          If you have interests in further exploring the in-game contents, we do
-          strongly recommend you to
+          If you have interest in further exploring the in-game contents, we do
+          strongly recommend you
           <a
             href="https://bluearchive.nexon.com/"
             rel="noreferrer"

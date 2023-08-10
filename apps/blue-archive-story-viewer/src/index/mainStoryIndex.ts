@@ -3,6 +3,7 @@ import { StoryBriefing } from "@types/StoryJson";
 /* eslint-disable max-len */
 export const stories: StoryBriefing[] = [
   {
+    released: true,
     title: {
       TextJp: "プロローグ",
       TextCn: "序章",
@@ -41,6 +42,7 @@ export const stories: StoryBriefing[] = [
     ],
   },
   {
+    released: true,
     title: {
       TextJp: "Vol.3 エデン条約編 1章",
       TextCn: "Vol.3 伊甸条约篇 第1章",
@@ -49,16 +51,16 @@ export const stories: StoryBriefing[] = [
       TextEn: "Vol.3 Eden Treaty Chapter 1",
       TextTw: "Vol.3 伊甸條約篇 第1章",
     },
-    avatar: "/image/story_cover/eden_treaty.webp",
+    avatar: "/image/story_cover/eden_treaty_chapter1.webp",
     sections: [
       {
         title: {
-          TextKr: "01 프롤로그",
-          TextJp: "01 プロローグ",
-          TextTh: "01 บทเริ่มต้น",
-          TextTw: "01 序幕",
-          TextEn: "01 Prologue",
-          TextCn: "01 序章",
+          TextKr: "프롤로그",
+          TextJp: "プロローグ",
+          TextTh: "บทเริ่มต้น",
+          TextTw: "序幕",
+          TextEn: "Prologue",
+          TextCn: "序章",
         },
         story_id: 31010,
         next: 31020,
@@ -79,12 +81,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "02 보충수업부",
-          TextJp: "02 補習授業部",
-          TextTh: "02 ชมรมชั้นเรียนเสริม",
-          TextTw: "02 補課部",
-          TextEn: "02 Make-Up Work Club",
-          TextCn: "02 补习部",
+          TextKr: "보충수업부",
+          TextJp: "補習授業部",
+          TextTh: "ชมรมชั้นเรียนเสริม",
+          TextTw: "補課部",
+          TextEn: "Make-Up Work Club",
+          TextCn: "补习部",
         },
         story_id: 31020,
         previous: 31010,
@@ -106,12 +108,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "03 티파티",
-          TextJp: "03 ティーパーティー",
-          TextTh: "03 สภาน้ำชา",
-          TextTw: "03 茶會",
-          TextEn: "03 Tea Party",
-          TextCn: "03 茶会",
+          TextKr: "티파티",
+          TextJp: "ティーパーティー",
+          TextTh: "สภาน้ำชา",
+          TextTw: "茶會",
+          TextEn: "Tea Party",
+          TextCn: "茶会",
         },
         story_id: 31030,
         previous: 31020,
@@ -133,12 +135,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "04 낙제생들 1",
-          TextJp: "04 補習授業部の生徒たち（１）",
-          TextTh: "04 นักเรียนที่สอบตก 1",
-          TextTw: "04 補課部的學生們（１）",
-          TextEn: "04 Failing Students Part 1",
-          TextCn: "04 补习部的学生们（1）",
+          TextKr: "낙제생들 1",
+          TextJp: "補習授業部の生徒たち（１）",
+          TextTh: "นักเรียนที่สอบตก 1",
+          TextTw: "補課部的學生們（１）",
+          TextEn: "Failing Students Part 1",
+          TextCn: "补习部的学生们（1）",
         },
         story_id: 31040,
         previous: 31030,
@@ -160,12 +162,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "05 낙제생들 2",
-          TextJp: "05 補習授業部の生徒たち（２）",
-          TextTh: "05 นักเรียนที่สอบตก 2",
-          TextTw: "05 補課部的學生們（２）",
-          TextEn: "05 Failing Students Part 2",
-          TextCn: "05 补习部的学生们（2）",
+          TextKr: "낙제생들 2",
+          TextJp: "補習授業部の生徒たち（２）",
+          TextTh: "นักเรียนที่สอบตก 2",
+          TextTw: "補課部的學生們（２）",
+          TextEn: "Failing Students Part 2",
+          TextCn: "补习部的学生们（2）",
         },
         story_id: 31050,
         previous: 31040,
@@ -187,12 +189,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "06 자기소개의 시간",
-          TextJp: "06 自己紹介をしましょう！",
-          TextTh: "06 เวลาสำหรับการแนะนำตัว",
-          TextTw: "06 來自我介紹吧！",
-          TextEn: "06 Breaking the Ice",
-          TextCn: "06 来做一下自我介绍吧！",
+          TextKr: "자기소개의 시간",
+          TextJp: "自己紹介をしましょう！",
+          TextTh: "เวลาสำหรับการแนะนำตัว",
+          TextTw: "來自我介紹吧！",
+          TextEn: "Breaking the Ice",
+          TextCn: "来做一下自我介绍吧！",
         },
         story_id: 31060,
         previous: 31050,
@@ -214,12 +216,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "07 시험 준비",
-          TextJp: "07 試験勉強",
-          TextTh: "07 เตรียมตัวสอบ",
-          TextTw: "07 準備考試",
-          TextEn: "07 Exam Prep",
-          TextCn: "07 准备考试",
+          TextKr: "시험 준비",
+          TextJp: "試験勉強",
+          TextTh: "เตรียมตัวสอบ",
+          TextTw: "準備考試",
+          TextEn: "Exam Prep",
+          TextCn: "准备考试",
         },
         story_id: 31070,
         previous: 31060,
@@ -241,12 +243,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "08 제1차 평가 시험",
-          TextJp: "08 第1次特別学力試験",
-          TextTh: "08 การสอบประเมินครั้งที่ 1",
-          TextTw: "08 第1次特別學力測驗",
-          TextEn: "08 The First Evaluation Exam",
-          TextCn: "08 第一次特别学力考试",
+          TextKr: "제1차 평가 시험",
+          TextJp: "第1次特別学力試験",
+          TextTh: "การสอบประเมินครั้งที่ 1",
+          TextTw: "第1次特別學力測驗",
+          TextEn: "The First Evaluation Exam",
+          TextCn: "第一次特别学力考试",
         },
         story_id: 31080,
         previous: 31070,
@@ -268,12 +270,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "09 수면 아래의 것들",
-          TextJp: "09 水面下に揺らめく影",
-          TextTh: "09 สิ่งที่ซ่อนอยู่เบื้องลึก",
-          TextTw: "09 水面下搖曳的影子",
-          TextEn: "09 What Lurks in the Depths",
-          TextCn: "09 暗流涌动",
+          TextKr: "수면 아래의 것들",
+          TextJp: "水面下に揺らめく影",
+          TextTh: "สิ่งที่ซ่อนอยู่เบื้องลึก",
+          TextTw: "水面下搖曳的影子",
+          TextEn: "What Lurks in the Depths",
+          TextCn: "暗流涌动",
         },
         story_id: 31090,
         previous: 31080,
@@ -295,12 +297,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "10 합숙, 시작합니다!",
-          TextJp: "10 合宿、スタート！",
-          TextTh: "10 เริ่มแคมป์ฝึกฝน!",
-          TextTw: "10 合宿，開始！",
-          TextEn: "10 Boot Camp, Here We Come!",
-          TextCn: "10 合宿，开始！",
+          TextKr: "합숙, 시작합니다!",
+          TextJp: "合宿、スタート！",
+          TextTh: "เริ่มแคมป์ฝึกฝน!",
+          TextTw: "合宿，開始！",
+          TextEn: "Boot Camp, Here We Come!",
+          TextCn: "合宿，开始！",
         },
         story_id: 31100,
         previous: 31090,
@@ -322,12 +324,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "11 대청소!",
-          TextJp: "11 大掃除！",
-          TextTh: "11 ทำความสะอาดครั้งใหญ่!",
-          TextTw: "11 大掃除！",
-          TextEn: "11 Spring Cleaning!",
-          TextCn: "11 大扫除！",
+          TextKr: "대청소!",
+          TextJp: "大掃除！",
+          TextTh: "ทำความสะอาดครั้งใหญ่!",
+          TextTw: "大掃除！",
+          TextEn: "Spring Cleaning!",
+          TextCn: "大扫除！",
         },
         story_id: 31110,
         previous: 31100,
@@ -349,12 +351,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "12 합숙의 첫날 밤",
-          TextJp: "12 合宿初日の夜",
-          TextTh: "12 คืนแรกในแคมป์ฝึกฝน",
-          TextTw: "12 合宿初日的夜晚",
-          TextEn: "12 First Night of Boot Camp",
-          TextCn: "12 合宿第一天的夜晚",
+          TextKr: "합숙의 첫날 밤",
+          TextJp: "合宿初日の夜",
+          TextTh: "คืนแรกในแคมป์ฝึกฝน",
+          TextTw: "合宿初日的夜晚",
+          TextEn: "First Night of Boot Camp",
+          TextCn: "合宿第一天的夜晚",
         },
         story_id: 31120,
         previous: 31110,
@@ -376,12 +378,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "13 제1차 모의시험",
-          TextJp: "13 補習授業部の模擬試験",
-          TextTh: "13 การสอบเสมือนจริงครั้งที่ 1",
-          TextTw: "13 補課部的模擬測驗",
-          TextEn: "13 First Mock Exam",
-          TextCn: "13 补习部的模拟考试",
+          TextKr: "제1차 모의시험",
+          TextJp: "補習授業部の模擬試験",
+          TextTh: "การสอบเสมือนจริงครั้งที่ 1",
+          TextTw: "補課部的模擬測驗",
+          TextEn: "First Mock Exam",
+          TextCn: "补习部的模拟考试",
         },
         story_id: 31130,
         previous: 31120,
@@ -403,12 +405,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "14 정의실현부의 부부장 1",
-          TextJp: "14 正義実現委員会の副委員長（１）",
-          TextTh: "14 รองหัวหน้าชมรมทวงความยุติธรรม 1",
-          TextTw: "14 實現正義部的副部長（１）",
-          TextEn: "14 Justice Task Force Vice President Part 1",
-          TextCn: "14 正义实现委员会的副委员长（1）",
+          TextKr: "정의실현부의 부부장 1",
+          TextJp: "正義実現委員会の副委員長（１）",
+          TextTh: "รองหัวหน้าชมรมทวงความยุติธรรม 1",
+          TextTw: "實現正義部的副部長（１）",
+          TextEn: "Justice Task Force Vice President Part 1",
+          TextCn: "正义实现委员会的副委员长（1）",
         },
         story_id: 31140,
         previous: 31130,
@@ -430,12 +432,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "15 정의실현부의 부부장 2",
-          TextJp: "15 正義実現委員会の副委員長（２）",
-          TextTh: "15 รองหัวหน้าชมรมทวงความยุติธรรม 2",
-          TextTw: "15 實現正義部的副部長（２）",
-          TextEn: "15 Justice Task Force Vice President Part 2",
-          TextCn: "15 正义实现委员会的副委员长（2）",
+          TextKr: "정의실현부의 부부장 2",
+          TextJp: "正義実現委員会の副委員長（２）",
+          TextTh: "รองหัวหน้าชมรมทวงความยุติธรรม 2",
+          TextTw: "實現正義部的副部長（２）",
+          TextEn: "Justice Task Force Vice President Part 2",
+          TextCn: "正义实现委员会的副委员长（2）",
         },
         story_id: 31150,
         previous: 31140,
@@ -457,12 +459,12 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "16 작은 틈새",
-          TextJp: "16 小さな隙間",
-          TextTh: "16 โอกาสเล็กๆ",
-          TextTw: "16 小小的閒隙",
-          TextEn: "16 Crack in the Surface",
-          TextCn: "16 小小的间隙",
+          TextKr: "작은 틈새",
+          TextJp: "小さな隙間",
+          TextTh: "โอกาสเล็กๆ",
+          TextTw: "小小的閒隙",
+          TextEn: "Crack in the Surface",
+          TextCn: "小小的间隙",
         },
         story_id: 31160,
         previous: 31150,
@@ -484,15 +486,16 @@ export const stories: StoryBriefing[] = [
       },
       {
         title: {
-          TextKr: "17 트리니티의 배신자",
-          TextJp: "17 トリニティの裏切り者",
-          TextTh: "17 คนทรยศในทรีนิตี้",
-          TextTw: "17 三一的叛徒",
-          TextEn: "17 Trinity's Traitor",
-          TextCn: "17 圣三一的叛徒",
+          TextKr: "트리니티의 배신자",
+          TextJp: "トリニティの裏切り者",
+          TextTh: "คนทรยศในทรีนิตี้",
+          TextTw: "三一的叛徒",
+          TextEn: "Trinity's Traitor",
+          TextCn: "圣三一的叛徒",
         },
         story_id: 31170,
         previous: 31160,
+        next: 32010,
         summary: {
           TextKr:
             "미카는 선생님에게 이미 나기사와 선생님 사이에 어떤 이야기가 오갔는지 알고 있으니 트리니티의 배신자를 알려주겠다며 거래를 제안한다. 배신자는 다름 아닌 아즈사이며, 거래의 조건으로 미카는 바로 그 아즈사를 지켜달라 말한다.",
@@ -506,6 +509,692 @@ export const stories: StoryBriefing[] = [
             "Claiming to already know what kind of talk went on between Nagisa and Sensei, Mika offers Sensei a deal to reveal the identity of Trinity's traitor. The traitor is none other than Azusa, and in exchange, Mika asks that Sensei protect Azusa at all costs.",
           TextCn:
             "未花提及老师与渚之间的交流，并提出与老师进行交易，并告诉老师“圣三一的叛徒”的名字叫白洲梓。未花接着说，希望老师能保护梓。",
+        },
+      },
+    ],
+  },
+  {
+    released: true,
+    title: {
+      TextJp: "Vol.3 エデン条約編 2章",
+      TextCn: "Vol.3 伊甸条约篇 第2章",
+      TextKr: "Vol.3 에덴 조약편 2장",
+      TextTh: "Vol.3 สนธิสัญญาเอเดน ตอนที่ 2",
+      TextEn: "Vol.3 Eden Treaty Chapter 2",
+      TextTw: "Vol.3 伊甸條約篇 第2章",
+    },
+    avatar: "/image/story_cover/eden_treaty_chapter2.webp",
+    sections: [
+      {
+        title: {
+          TextKr: "거대한 괴물",
+          TextJp: "巨大な怪物",
+          TextTh: "ปีศาจยักษ์",
+          TextTw: "巨大的怪物",
+          TextEn: "The Great Leviathan",
+          TextCn: "巨大的怪物",
+        },
+        story_id: 32010,
+        next: 32020,
+        summary: {
+          TextKr:
+            "나기사가 에덴조약을 통해 노리는 바가 있다고 말하는 미카. 그런 나기사를 막기 위해서는 아즈사를 지켜야 한다며, 미카는 선생님에게 자신을 믿을지 나기사를 믿을지 선택해달라고 한다.",
+          TextJp:
+            "ナギサはエデン条約を通じて何かを狙っているかもしれない、と告げるミカ。自身の狙いを語りつつアズサを守ってほしいと言うミカは、ナギサを信じるのか自分を信じるのか、最終的には先生に決めてほしいと口にする。",
+          TextTh:
+            "มิกะบอกคุณครูว่านางิสะหวังบางอย่างจากสนธิสัญญาเอเดน เธอบอกว่าต้องปกป้องอาซึสะเพื่อขัดขวางนางิสะ และขอให้คุณครูเลือกว่าจะเชื่อตัวเองหรือเชื่อนางิสะ",
+          TextTw:
+            "彌香認為渚想利用伊甸園條約來換取一些好處，倘若想要阻止渚，他們就必須想辦法保護好梓。說完，彌香要老師自己選擇到底要相信她說的話，還是渚說的話。",
+          TextEn:
+            "Mika says that Nagisa is after something using the Eden Treaty. Claiming that Azusa must be protected in order to stop Nagisa, Mika asks Sensei to choose whether to trust her or to trust Nagisa.",
+          TextCn:
+            "未花告诉老师，渚在签订伊甸条约这件事上可能别有所图。未花说着自己的目的，并告诉老师希望他能保护好梓。最后她说，是相信渚还是要相信自己由老师自己决定。",
+        },
+      },
+      {
+        title: {
+          TextCn: "修女会",
+          TextKr: "시스터후드",
+          TextJp: "シスターフッド",
+          TextTh: "ชมรมซิสเตอร์",
+          TextTw: "修女會",
+          TextEn: "The Sisterhood",
+        },
+        story_id: 32020,
+        previous: 32010,
+        next: 32030,
+        summary: {
+          TextKr:
+            "보충수업부가 있는 곳으로 마리가 찾아온다. 그녀는 얼마 전 아즈사가 구해준 학생을 대신하여 감사 인사를 전하러 온 것이었다. 그 후 찾아온 심야. 앞으로의 일을 의논하기 위해 히후미를 기다리던 선생님 앞에 하나코가 찾아오며, 상황은 예상치 못한 방향으로 흐른다.",
+          TextJp:
+            "ある日、合宿中の補習授業部の元へシスターフッドのマリーが訪ねてくる。どうやらアズサが以前助けた生徒の代わりに、お礼を伝えに来たとのことだった。その晩、これからのことを相談するためにヒフミが先生の元を訪れた、と思いきや……？",
+          TextTh:
+            "มารีเข้ามาพบชมรมชั้นเรียนเสริม เธอมาเพื่อกล่าวคำขอบคุณแทน\nนักเรียนคนหนึ่งที่อาซึสะเคยช่วยไว้ ในกลางดึกคืนนั้น ฮานาโกะแวะ\nเข้ามาหาคุณครูก่อนที่ฮิฟุมิจะเข้ามาเพื่อหารือเกี่ยวกับเรื่องในอนาคต\nสถานการณ์เริ่มไปในทางที่คาดไม่ถึง",
+          TextTw:
+            "為了替一名碰巧被梓救下的一名學生道謝，瑪麗特地前往別館尋找補課部。當天深夜，為了討論日後的計畫，老師和日步美約好私下見面，然而最後出現在老師眼前的卻是花子，未來的走向似乎越來越令人無法捉摸。",
+          TextEn:
+            "Mari makes her way to the Make-Up Work Club to offer thanks on behalf of the student that Azusa recently saved. Later, Sensei is waiting to discuss the future with Hifumi when Hanako arrives and the situation takes an unexpected turn.",
+          TextCn:
+            "某一天，修女会的玛丽访问了补习部的合宿处。她似乎是代替某位之前被梓帮助过的学生来表达感谢的。当天晚上，日富美找老师商量之后的事情，然而……？",
+        },
+      },
+      {
+        title: {
+          TextCn: "深夜密会",
+          TextKr: "비밀 모임",
+          TextJp: "深夜の密会",
+          TextTh: "การประชุมลับ",
+          TextTw: "深夜密會",
+          TextEn: "Secret Society",
+        },
+        story_id: 32030,
+        previous: 32020,
+        next: 32040,
+        summary: {
+          TextKr:
+            "아즈사에 대해 상담하고자 찾아온 하나코는 뒤늦게 히후미에게서 낙제하면 전원 학교에서 퇴학당하게 된다는 사실을 듣게 된다. 이 모든 것이 나기사의 노림수였다는 걸 추리해낸 하나코는, 앞으로는 제대로 협력하겠다 선언하고는 세 사람만의 비밀 모임을 만들었다며 좋아한다.",
+          TextJp:
+            "ハナコはアズサのことを心配し、先生の元を訪れたのだった。話の流れからハナコに対しても「三回不合格なら全員退学」という事実を伝え、ハナコはそこからさらに裏の事情を推測する。彼女はその説明を受けて今後の試験は最低限迷惑をかけないように頑張ると宣言しつつ、どうやら深夜に密会というこの状況が楽しそうな様子。しかしヒフミと共に先生の部屋を出た瞬間、トイレに行く途中だったコハルに見つかってしまい……？",
+          TextTh:
+            "ฮานาโกะบอกว่าจะปรึกษาเรื่องอาซึสะ และก็ได้รู้จากฮิฟุมิในภายหลัง\nว่าหากสอบตก ทุกคนจะถูกไล่ออกจากโรงเรียน ฮานาโกะสันนิษฐาน\nว่าทั้งหมดนี้คือกลอุบายของนางิสะ เธอประกาศว่าจะให้ความร่วมมือ\nอย่างเต็มที่และชอบการประชุมลับของทั้ง 3 คนแบบนี้",
+          TextTw:
+            "花子來找老師本來是想討論梓的事，然而她卻意外從日步美口中得知只要有人沒通過考試，他們所有人都會被退學的殘酷事實。花子認為這一切都是渚的計謀，並且誓言要幫助補課部度過難關。對於自己身為三人秘密小團體一員的事，花子顯得有些雀躍。",
+          TextEn:
+            "Hanako learns from Hifumi that failing will result in all of them getting expelled from school. Deducing that this was Nagisa's aim all along, Hanako declares that she will try harder going forward and is delighted that the three of them have formed a secret society.",
+          TextCn:
+            "花子原来是因为担心梓的情况才找老师商量这件事的。在谈话中，日富美透露了“如果三次考试不及格的话就要全部退学”，花子从这个事实中推测出了更深层的情况。听完日富美的说明后，花子宣称之后在考试中会努力不给大家添麻烦，并且看起来对这种夜晚的密会表现得很开心。然而她与日富美一起走出老师的房间时，被正要去洗手间的小春发现了……？",
+        },
+      },
+      {
+        title: {
+          TextCn: "泳装派对",
+          TextKr: "수영복 좌담회",
+          TextJp: "水着パーティー",
+          TextTh: "เสวนาชุดว่ายน้ำ",
+          TextTw: "泳裝派對",
+          TextEn: "Swimsuit Symposium",
+        },
+        story_id: 32040,
+        previous: 32030,
+        next: 32050,
+        summary: {
+          TextKr:
+            "갑자기 내린 비로 인해 빨래가 전부 젖어버린 보충수업부는 하는 수 없이 오늘 하루만큼은 공부를 쉬고 수영복 좌담회를 열기로 한다. 평범하지만, 오랜만에 맛보는 즐거운 일상 시간을 보낸 끝에 이번엔 다 함께 밤 산책을 나가기로 결정한다.",
+          TextJp:
+            "突然の雨によって洗濯物が全て濡れてしまい、他に着るものが無くなってしまった補習授業部一同は、パジャマパーティーならぬ水着パーティーを開くことに。以前よりも親交の深まった彼女たちは色んな話をして、学生らしい楽しい時間を過ごす。そんな一同はそのまま合宿の醍醐味として、合宿所を抜け出して夜の散歩へと出かけることに決めたのだった。",
+          TextTh:
+            "จู่ๆ ฝนก็ตกลงมาจนชมรมชั้นเรียนเสริมเปียกกันถ้วนหน้า วันนี้ทุกคนต้อง\nหยุดพักการเรียนอย่างหลีกเลี่ยงไม่ได้และเปิดการเสวนาชุดว่ายน้ำขึ้นมา\nแทน หลังจากได้ใช้เวลาด้วยกันอย่างเรียบง่าย สนุกๆ ทุกคนก็ตัดสินใจ\nว่าจะออกไปเดินเล่นใต้แสงจันทร์ด้วยกัน",
+          TextTw:
+            "因為一場突如其來的大雨，補課部的成員紛紛被淋成了落湯雞。在迫不得已的情況下，補課部決定以泳裝座談會代替原本的課程。度過了一段平凡無奇卻令人懷念的悠閒時光後，補課部的成員們決定一起去散步。",
+          TextEn:
+            "Rain drenches the Make-Up Work Club's laundry and they have no choice but to take a day off from studying and hold a swimsuit symposium instead. After experiencing their first enjoyable day in a while, they all decide to go out together on a nighttime walk.",
+          TextCn:
+            "突如其来的大雨把补习部所有人洗好的衣服全淋湿了。没有其他衣服穿的补习部成员决定一起开一个泳装派对来代替睡衣派对。彼此之间的关系比以往来得更加亲密的女生们谈论着各种事情，度过了一段学生的快乐时光。之后他们一同决定趁着合宿的大好机会，一起进行一回合宿的保留项目——在夜晚悄悄离开宿舍出去散步。",
+        },
+      },
+      {
+        title: {
+          TextCn: "深夜的大骚动（1）",
+          TextKr: "한밤중의 대소동 1",
+          TextJp: "真夜中の大騒ぎ（１）",
+          TextTh: "โกลาหลกลางดึก (1)",
+          TextTw: "深夜的大騷動（１）",
+          TextEn: "Midnight Commotion Part 1",
+        },
+        story_id: 32050,
+        previous: 32040,
+        next: 32060,
+        summary: {
+          TextKr:
+            "밤 산책을 나온 보충수업부는 우연히 디저트 가게에서 하스미와 마주친다. 서로의 사정으로 인해 여기서 만난 걸 비밀로 하자고 말하는 하스미였지만 그때 미식연구회가 소동을 벌이고 있다는 연락이 온다.",
+          TextJp:
+            "合宿所を抜け出して夜の散歩へと出かけた補習授業部一同は、ふと入ったスイーツ屋さんで正義実現委員会の副委員長であるハスミと出会う。ハスミは「お互いに見なかったことにしましょう」と告げ、コハルの頑張りを褒めていたその時、「美食研究会」が暴れているとの情報が舞い込む。",
+          TextTh:
+            "ชมรมชั้นเรียนเสริมออกมาเดินเล่นยามค่ำคืนและได้พบกับฮาสุมิที่ร้าน\nของหวานโดยบังเอิญ ฮาสุมิขอให้เก็บเรื่องการพบกันในวันนี้ไว้เป็น\nความลับ ในตอนนั้นเองเธอได้รับรายงานว่าชมรมชิมอาหารกำลังก่อ\nเรื่องโกลาหล",
+          TextTw:
+            "在夜裡出外散步的補課部，偶然在甜點店遇見了蓮實。由於雙方都有各自的苦衷，因此蓮實便提議大家將今天在甜點店裡相遇的事當成是秘密。就在此時，一行人收到美食研究會引起騷動的消息。",
+          TextEn:
+            "The Make-Up Work Club runs into Hasumi at a dessert shop during their nighttime walk. Hasumi suggests keeping the encounter a secret due to each other's circumstances, but then receives a call that the Gourmet Research Society is causing a disturbance.",
+          TextCn:
+            "在夜间离开合宿处的前往散步的补习部一行人，在一家甜点店里偶遇了正义实现委员会的副委员长莲见。莲见提出“今晚的事就互相当作不知道”，并在夸奖小春的努力时，突然传来了“美食研究会”引发骚乱的消息。",
+        },
+      },
+      {
+        title: {
+          TextCn: "深夜的大骚动（2）（战斗前）",
+          TextKr: "한밤중의 대소동 2",
+          TextJp: "真夜中の大騒ぎ（２）",
+          TextTh: "โกลาหลกลางดึก (2)",
+          TextTw: "深夜的大騷動（２）",
+          TextEn: "Midnight Commotion Part 2",
+        },
+        story_id: 32060,
+        previous: 32050,
+        next: 32065,
+        summary: {
+          TextKr:
+            "하스미는 에덴조약을 앞둔 상황에서 게헨나와 트리니티의 충돌은 문제가 될 수 있다며, 보충수업부와 샬레의 선생님에게 도움을 요청한다. 그렇게 다 함께 사건을 막기 위해 출동한다.",
+          TextJp:
+            "エデン条約を目前に控えたこの状況で、ゲヘナとトリニティが正面衝突をしているように見えるのは良くないと判断したハスミは、補習授業部とシャーレに助けを求めることに。ハスミと肩を並べられてコハルが気合を入れたりしながら、一同は事態を鎮圧するために出発する。",
+          TextTh:
+            "ฮาสุมิบอกว่าการปะทะกันระหว่างเกเฮนน่ากับทรีนิตี้อาจเป็นปัญหาได้\nเพราะการทำสนธิสัญญาเอเดนกำลังใกล้เข้ามา เธอขอร้องให้ชมรม\nชั้นเรียนเสริมและคุณครูจากชาเล่ต์เข้ามาช่วย ทุกคนจึงออกไปช่วย\nกันเพื่อป้องกันเหตุวุ่นวาย",
+          TextTw:
+            "由於伊甸園條約簽訂儀式的日子就快到了，蓮實認為格黑娜學園和三一學園之間的衝突可能會引發喧然大波，於是蓮實只好拜託補課部和夏萊的老師幫忙。於是，他們一行人便立刻動身前往平息騷動。",
+          TextEn:
+            "Hasumi asks the Make-Up Work Club and Sensei for help, fearing conflict between Gehenna and Trinity might pose a problem for the Eden Treaty. The entire group heads out together to prevent the worst from happening.",
+          TextCn:
+            "《伊甸条约》签订在即，莲见判断在此时格黑娜与圣三一发生正面冲突并不明智，于是决定请求补习部和夏莱介入。与莲见并肩作战的小春也充满了斗志，一行人一同前去镇压事态。",
+        },
+      },
+      {
+        title: {
+          TextCn: "深夜的大骚动（2）（战斗后）",
+          TextKr: "한밤중의 대소동 2",
+          TextJp: "真夜中の大騒ぎ（２）",
+          TextTh: "โกลาหลกลางดึก (2)",
+          TextTw: "深夜的大騷動（２）",
+          TextEn: "Midnight Commotion Part 2",
+        },
+        story_id: 32065,
+        previous: 32060,
+        next: 32070,
+        summary: {
+          TextKr:
+            "선생님과 보충수업부의 활약으로 미식연구회의 난동을 막는데 성공했다. 그러자 제각기 도주를 하는 미식연구회 멤버들. 그 뒤를 정의실현부가 추격한다.",
+          TextJp:
+            "先生と補習授業部の活躍もあり、事態の収束に成功。逃げ出した美食研究会のメンバーたちも、正義実現委員会が追撃して無事に事なきを得るのだった。",
+          TextTh:
+            "คุณครูและชมรมชั้นเรียนเสริมป้องกันไม่ให้เกิดเรื่องวุ่นวายได้ แต่สมาชิก\nชมรมชิมอาหารก็หนีกันไปคนละทิศละทาง ชมรมทวงความยุติธรรมจึงไล่\nล่าตามไป",
+          TextTw:
+            "由於老師和補課部的活躍，美食研究會的騷動很快就被平息。為了追捕分頭逃跑的美食研究會，實現正義部鍥而不捨地追趕著她們。",
+          TextEn:
+            "Sensei and the Make-Up Work Club succeed in stopping the Gourmet Research Society's mischief, but each of their members flee, leaving the Justice Task Force hot on their heels in pursuit.",
+          TextCn:
+            "在老师和补习部的帮助下，局势得以成功平息。逃跑的美食研究会的成员也在正义实现委员会的追击下被逐个抓获。",
+        },
+      },
+      {
+        title: {
+          TextCn: "全新的视角",
+          TextKr: "새로운 관점",
+          TextJp: "新しい視点",
+          TextTh: "มุมมองใหม่",
+          TextTw: "嶄新的觀點",
+          TextEn: "A New Perspective",
+        },
+        story_id: 32070,
+        previous: 32065,
+        next: 32080,
+        summary: {
+          TextKr:
+            "미식연구회의 신병을 넘겨받기 위해 선도부의 히나와 응급의학부의 세나가 현장에 도착한다. 마침 찾아온 히나에게 선생님은 이번 에덴조약에 대해 어찌 생각하는지 물어보며, 선생님은 히나의 관점에서 바라본 현 상황에 대해 듣게 된다.",
+          TextJp:
+            "美食研究会の身柄を引き取るために迎えに現れたのは、風紀委員会のヒナと救急医学部のセナ。初対面のセナと挨拶をした後、先生はヒナにエデン条約に関しての意見を聞く。",
+          TextTh:
+            "ฮินะจากคณะกรรมการวินัยกับเซนะจากหน่วยแพทย์ฉุกเฉินมาถึงที่\nเกิดเหตุเพื่อรับตัวชมรมชิมอาหาร คุณครูถามฮินะว่าคิดอย่างไรเรื่อง\nสนธิสัญญาเอเดน และได้ฟังมุมมองของฮินะที่มีต่อสนธิสัญญา",
+          TextTw:
+            "為了不讓美食研究會落入三一學園的手中，風紀委員會的陽奈和急救醫學部的瀬奈也隨後趕到了現場。見到陽奈也來了，老師便問問她對於伊甸園條約的看法，而陽奈也欣然告訴老師她對目前局勢的見解。",
+          TextEn:
+            "The Prefect Team's Hina and the Medical Emergency Club's Sena arrive to handle the Gourmet Research Society's new recruits.Sensei asks Hina about her thoughts on the Eden Treaty and listens to her point of view on the situation.",
+          TextCn:
+            "为了引渡美食研究会的成员，风纪委员会的日奈与急救医学部的濑名赶到现场进行交接。与初次见面的濑名打过招呼后，老师询问了日奈关于伊甸条约的意见。",
+        },
+      },
+      {
+        title: {
+          TextCn: "微明的希望",
+          TextKr: "보이기 시작하는 희망",
+          TextJp: "差し込む希望",
+          TextTh: "ความหวังเริ่มปรากฏ",
+          TextTw: "浮現的希望",
+          TextEn: "A Glimmer of Hope",
+        },
+        story_id: 32080,
+        previous: 32070,
+        next: 32090,
+        summary: {
+          TextKr:
+            "모의시험에서 마침내 합격점을 얻어낸 보충수업부 학생들, 히후미는 이를 축하하며 모두에게 모모프렌즈 굿즈를 선물한다. 사양하는 하나코나 코하루와 달리 아즈사는 히후미에게 받은 굿즈를 소중히 여기겠다고 말하고, 그렇게 2차 평가 시험을 앞둔 그때, 나기사는 선생님을 호출하여 미카와 만난 것을 추궁한다.",
+          TextJp:
+            "その後も勉強を繰り返し、模擬試験とはいえようやくどうにか全員で合格点を取ることができた補習授業部一同。そのお祝いとして、テンションの上がったヒフミがモモフレンズグッズの授与式を始める。ハナコとコハルには遠慮されてしまったものの、アズサはかなり興奮している様子。アズサは最終的にヒフミに選んでもらったグッズを抱きしめながら、努力の証であり友達からの初めてのプレゼントであるそれを一生大切にすると嬉しそうに口にするのだった。そうして第2次特別学力試験の直前、先生はナギサからの呼び出しを受け……。",
+          TextTh:
+            "ชมรมชั้นเรียนเสริมทำคะแนนผ่านเกณฑ์ของการสอบเสมือนจริงได้ในที่สุด\nฮิฟุมิจึงให้ของขวัญเพื่อน ๆ เป็นสินค้า MOMO FRIENDS เพื่อฉลองในความ\nสำเร็จ การสอบประเมินครั้งที่ 2 ใกล้เข้ามาแล้ว นางิสะเรียกคุณครูไปพบ\nและเค้นถามเรื่องที่ได้ไปเจอกับมิกะ",
+          TextTw:
+            "由於補課部的成員們總算順利通過模擬考，日步美便依約買了許多Momo好友周邊商品送給她們。儘管花子和小春極力婉拒，梓卻向日步美保證自己一定會好好珍惜她送的禮物。第二次學期考試前夕，渚決定找老師好好談談關於他和彌香見面的事。",
+          TextEn:
+            "The Make-Up Work Club finally earn a passing score on their practice test, and Hifumi presents them all with Momo Friends merch. Azusa tells Hifumi that she'll cherish it. Nagisa calls upon Sensei and questions them about their meeting with Mika.",
+          TextCn:
+            "在接下来的时间里，补习部的成员们刻苦学习，全员终于在正式考试来临前的模拟考中及格了。为了庆祝这一时刻，兴高采烈的日富美开始了MOMO FRIENDS周边的颁奖仪式。虽然花子和小春都拒绝了，然而梓似乎看上去十分兴奋。最后，梓紧紧抱着日富美选择的周边，高兴地表示这是她的朋友送给她的第一个礼物，是她努力的证明，她会用一生去珍惜。就在第二次特别学力考试前夕，老师被渚叫了过去……",
+        },
+      },
+      {
+        title: {
+          TextCn: "黑手",
+          TextKr: "검은 손길",
+          TextJp: "黒い手",
+          TextTh: "การมาถึงของเงามืด",
+          TextTw: "黑手",
+          TextEn: "A Shadowy Reach",
+        },
+        story_id: 32090,
+        previous: 32080,
+        next: 32100,
+        summary: {
+          TextKr:
+            "나기사의 추궁에도 선생님은 누군가를 의심하고 배신자를 찾는 일 따윈 하지 않겠다고 말한다. 대신 의심암귀에 빠져 있는 나기사를 막고, 보충수업부 전원을 합격시키겠다고 선언하며 선생님은 나기사의 부탁을 거절한다.",
+          TextJp:
+            "ナギサに対して再び、誰かを疑うことに時間を費やすつもりは無いと告げる先生。そんなナギサの話を聞く中で、先生は「君はきっと疑心暗鬼の闇の中にいる」と口にし、そこから必ずや出してみせる、補習授業部のみんなも絶対に合格させると宣言する。",
+          TextTh:
+            "คุณครูบอกนางิสะว่าไม่สนใจว่าใครเป็นคนทรยศและไม่อยากจะหาตัว\nคนนั้น แต่กลับปฏิเสธคำขอร้องของนางิสะและบอกไปว่าจะขัดขวาง\nคนดื้อด้านที่ตัดสินใจอะไรผิดๆ และจะทำให้ชมรมชั้นเรียนเสริมสอบผ่าน\nให้ได้",
+          TextTw:
+            "即使面對渚的質問，老師依舊表示自己不願懷疑任何人，更不想去追究叛徒到底是誰。老師不僅拒絕了渚的請求，還直接了當地告訴對方自己會阻止她的計畫，並且讓補課部全員通過學期考試。",
+          TextEn:
+            "Sensei refuses to place doubt on anyone or do anything to root out the traitor. Sensei declines Nagisa's request and declares their intention to block Nagisa's flurry of doubt and ensure that the entire Make-Up Work Club passes.",
+          TextCn:
+            "面对着渚，老师再次强调自己不打算花时间怀疑任何人。听着渚的话，老师斥责她“陷入了疑神疑鬼的黑暗之中”，并宣称自己绝对会让补习部的全员都能及格。",
+        },
+      },
+      {
+        title: {
+          TextCn: "第2次特别学力考试（1）（战斗前）",
+          TextKr: "제2차 평가 시험 1",
+          TextJp: "第2次特別学力試験（１）",
+          TextTh: "การสอบประเมินครั้งที่ 2 (1)",
+          TextTw: "第2次特別學力測驗（１）",
+          TextEn: "The Second Exam Part 1",
+        },
+        story_id: 32100,
+        previous: 32090,
+        next: 32105,
+        summary: {
+          TextKr:
+            "제2차 평가 시험의 변경사항이 공지된다. 시험 범위가 확대되고, 합격 커트라인이 오르고, 시험장소 또한 게헨나 학원으로 변경되었다는 충격적인 이야기에 모두가 당황하지만. 포기하긴 이르다는 아즈사의 말에 따라 보충수업부는 시험 장소로 향한다.",
+          TextJp:
+            "第2次特別学力試験の前日、試験範囲・合格ライン・試験場所の突然の変更を受け、戸惑う補習授業部一同。しかし、それでも最後まで足掻くしかないというアズサの言葉を受け、あらためて一同は試験会場であるゲヘナの自治区へと向かう。",
+          TextTh:
+            "ทุกคนตกใจกับการเปลี่ยนแปลงในการสอบประเมินครั้งที่ 2 เพราะขอบ\nเขตการสอบจะมากขึ้นและเกณฑ์สอบผ่านก็โหดขึ้น ส่วนสนามสอบก็ย้าย\nไปที่สถาบันเกเฮนน่า อาซึสะบอกทุกคนว่ายังเร็วเกินไปที่จะยอมแพ้\nชมรมชั้นเรียนเสริมจึงมุ่งหน้าไปยังสนามสอบ",
+          TextTw:
+            "茶會公布了第二次評鑑考試的修正事項。除了考試範圍增加及調高及格分數外，就連考試地點也改為格黑娜學園。儘管這個突如其來的消息令補課部愕然不已，但梓卻認為他們不能就此放棄，於是補課部一行人還是按照原定計畫前往了考場。",
+          TextEn:
+            "Sudden changes to the second exam are announced. Everyone is shocked and stunned by the test's newly expanded scope, higher bar to pass, and relocation of the testing site to Gehenna Academy. Azusa insists it's too soon to give up, and the club heads to the test site.",
+          TextCn:
+            "第二次特别学力考试前夕，补习部突然收到了考试范围、及格线以及考试地点的变更通知，感到十分困惑。然而，听到梓“直到最后一刻都要拼尽全力”的话语，大家一同振作精神前往了位于格黑娜自治区的考试地点。",
+        },
+      },
+      {
+        title: {
+          TextCn: "第2次特别学力考试（1）（战斗后）",
+          TextKr: "제2차 평가 시험 1",
+          TextJp: "第2次特別学力試験（１）",
+          TextTh: "การสอบประเมินครั้งที่ 2 (1)",
+          TextTw: "第2次特別學力測驗（１）",
+          TextEn: "The Second Exam Part 1",
+        },
+        story_id: 32105,
+        previous: 32100,
+        next: 32110,
+        summary: {
+          TextKr:
+            "시험 장소로 향하는 길을 가로막는 게헨나의 불량배들을 쓰러트리며, 보충수업부는 나아간다.",
+          TextJp:
+            "ゲヘナの自治区へと向かう最中、不良たちに道を塞がれるが、補習授業部一同は何とか強行突破で進んでいく。",
+          TextTh:
+            "พวกนักเลงเกเฮนน่ามาขวางทางไปสนามสอบ แต่ชมรมชั้นเรียนเสริมก็\nจัดการนักเลงพวกนี้แล้วไปต่อได้",
+          TextTw: "擊敗了礙事的格黑娜混混們後，補課部繼續朝著考場邁進。",
+          TextEn:
+            "The Make-Up Work Club heads to the test site while laying waste to Gehenna delinquents standing in their way.",
+          TextCn:
+            "在前往格黑娜自治区的途中，被不良团伙堵住去路的补习部一行人想办法强行突破了阻碍并继续前进。",
+        },
+      },
+      {
+        title: {
+          TextCn: "第2次特别学力考试（2）",
+          TextKr: "제2차 평가 시험 2",
+          TextJp: "第2次特別学力試験（２）",
+          TextTh: "การสอบประเมินครั้งที่ 2 (2)",
+          TextTw: "第2次特別學力測驗（２）",
+          TextEn: "The Second Exam Part 2",
+        },
+        story_id: 32110,
+        previous: 32105,
+        next: 32120,
+        summary: {
+          TextKr:
+            "게헨나에 도착한 보충수업부를 정의실현부로 오해한 선도부원들이 가로막는다. 하지만 바로 그때, 다행히 미식연구회의 도움으로 위기에서 빠져나와 무사히 시험 장소에 도착한 보충수업부지만, 나기사의 방해로 전원 시험에서 낙제하고야 만다.",
+          TextJp:
+            "ゲヘナの自治区へと入った補習授業部一同だったが、その行く手を風紀委員会によって塞がれてしまう。コハルの見た目から正義実現委員会の襲撃だと判断され、危うく戦闘になるところだったが、そこを美食研究会のメンバーたちに助けられる。爆発と銃撃の中を何とか通り抜け、試験会場へと辿り着く一同だったが、ナギサの妨害はそれだけでは終わらず……！？",
+          TextTh:
+            "คณะกรรมการวินัยเข้าใจผิดว่าชมรมชั้นเรียนเสริมที่เพิ่มมาถึงเกเฮนน่าคือ\nชมรมทวงความยุติธรรม โชคดีที่ชมรมชิมอาหารช่วยให้พ้นจากวิกฤตได้\nแต่เมื่อชมรมชั้นเรียนเสริมมาถึงสนามสอบ ทุกคนก็ไม่ผ่านการสอบเพราะ\nการกีดขวางของนางิสะ",
+          TextTw:
+            "抵達格黑娜學園後，風紀委員們將補課部誤認成實現正義部，並且擋住她們的去路。幸好美食研究會及時伸出援手，補課部才能成功脫離危機並順利抵達考場。然而，在渚的妨礙之下，補課部的成員們還是沒能通過考試。",
+          TextEn:
+            "The Prefect Team stop the Make-Up Work Club upon their arrival, mistaking them for the Justice Task Force. The Gourmet Research Society arrives just in time and helps clear the way for the Make-Up Work Club. However, everyone still flunks the exam due to Nagisa's interference.",
+          TextCn:
+            "补习部一行进入了格黑娜自治区，然而道路却被风纪委员会封锁了。看到小春的穿着，风纪委员误以为正义实现委员会前来袭击她们，然而就在这千钧一发的时刻，美食研究会赶到并帮助补习部脱离了困境。尽管一行人好不容易从爆炸和枪击中脱身，成功到达考试地点，然而渚的妨碍还在继续……！？",
+        },
+      },
+      {
+        title: {
+          TextCn: "重回原点",
+          TextKr: "다시 원점으로",
+          TextJp: "再び原点へと",
+          TextTh: "กลับไปยังจุดเริ่มต้น",
+          TextTw: "再次回到原點",
+          TextEn: "Back to Square One",
+        },
+        story_id: 32120,
+        previous: 32110,
+        next: 32130,
+        summary: {
+          TextKr:
+            "티파티의 높으신 분이 보충수업부를 퇴학시키려고 한다는 사실을 알고 충격에 빠진 학생들. 일주일 앞으로 다가온 마지막 평가 시험의 타개책이 보이지 않는 가운데. 우선 쉬기 위해 학생들은 각자 방을 돌아간다. 그 후 늦은 밤. 홀로 일어난 아즈사의 뒤를 하나코가 조용히 미행한다.",
+          TextJp:
+            "第2次特別学力試験での妨害を目にし、補習授業部一同はティーパーティーが本気で自分たちを退学させようとしていることを実感する。先生もナギサやミカにどうにかコンタクトを取ろうとするがそれも叶わず、打開策は見えない。その日の夜、ひとり部屋を抜け出したアズサをハナコが尾行し……。",
+          TextTh:
+            "ทุกคนตกอยู่ในความตกใจเมื่อรู้ว่าคนระดับสูงในสภาน้ำชาพยายามไล่\nชมรมชั้นเรียนเสริมออกจากโรงเรียน การสอบประเมินครั้งสุดท้ายจะจัด\nขึ้นในอีก 1 สัปดาห์ แต่ชมรมก็ไม่รู้ว่าจะรับมืออย่างไร นักเรียนต่างแยก\nย้ายไปที่ห้องตัวเองเพื่อพักผ่อนก่อน กลางดึกคืนนั้นอาซึสะตื่นออกมา\nและฮานาโกะก็แอบตามเธอไปเงียบๆ",
+          TextTw:
+            "得知茶會的幹部打算讓她們通通退學的消息，補課部的成員們大受打擊。儘管距離最後一次學期考試只剩一週的時間，補課部仍舊想不出任何能幫助她們突破困境的好方法。決定暫時先好好休息的成員們，默默回到了各自的房間去。當天深夜，見到梓獨自離開房間，花子偷偷地跟上了她的腳步。",
+          TextEn:
+            "The students are shocked to learn someone in the Tea Party is conspiring to have them expelled. The students decide to return to their respective rooms to decompress. Later that night, Azusa slips out alone with Hanako quietly tailing behind.",
+          TextCn:
+            "目睹了茶会对第二次特别学力考试的妨碍后，补习部一行人深感茶会已经下定决心要让她们退学。虽然老师也试图与渚和未花取得联系，然而并没有成功，大家束手无策。那天晚上，梓独自一人离开房间，花子悄悄跟上了梓……",
+        },
+      },
+      {
+        title: {
+          TextCn: "即使如此",
+          TextKr: "그럼에도 불구하고",
+          TextJp: "それでも",
+          TextTh: "ถึงจะอย่างนั้นก็เถอะ",
+          TextTw: "即使如此",
+          TextEn: "In Spite of Everything",
+        },
+        story_id: 32130,
+        previous: 32120,
+        next: 32140,
+        summary: {
+          TextKr:
+            "궁지에 몰렸지만 보충수업부는 포기하지 않고 마지막 평가 시험을 준비하게 된다. 그렇게 마지막 시험을 하루 앞에 둔 늦은 밤. 사오리와 몰래 밀회를 하는 아즈사를 하나코가 조용히 지켜본다.",
+          TextJp:
+            "窮地に追い込まれても、それでも諦めずに努力を続ける補習授業部一同。最後の試験に向けて、理不尽なハードルをみんなで乗り越えるべく、ただひたむきに勉強を続ける。そして最後の試験を翌日に迎えた夜、アズサは「サオリ」という少女と密会しており、その様子をハナコが陰から見守っていた。",
+          TextTh:
+            "ถึงจะตกอยู่ในสภาวะคับขัน แต่ชมรมชั้นเรียนเสริมก็ไม่ท้อถอยและไป\nเตรียมตัวเพื่อสอบประเมินครั้งสุดท้าย กลางดึกก่อนวันสอบครั้งสุดท้าย\nฮานาโกะแอบเฝ้าดูอาซึสะที่แอบพบกับซาโอริ",
+          TextTw:
+            "儘管被逼至死路，補課部依舊努力地準備著最後一次學期考試。最後一次學期考試的前一天深夜，花子躲在暗處默默地注視著和沙織偷偷見面的梓。",
+          TextEn:
+            "The Make-Up Work Club prepares for the final exam despite being backed up against the wall. Hanako quietly watches as Azusa has a secret meeting with Saori the day before the exam.",
+          TextCn:
+            "尽管被逼入了绝境，然而补习部一行仍未放弃努力。为了应对最后的考试，大家一同努力克服不合理的障碍，专心致志地继续学习。在最终考试的前一天晚上，梓与名为“纱织”的少女秘密会面，而这一切都被藏在暗处的花子默默看在眼里。",
+        },
+      },
+      {
+        title: {
+          TextCn: "坦白",
+          TextKr: "고백",
+          TextJp: "こくはく",
+          TextTh: "สารภาพ",
+          TextTw: "坦承",
+          TextEn: "A Confession",
+        },
+        story_id: 32140,
+        previous: 32130,
+        next: 32150,
+        summary: {
+          TextKr:
+            "늦은 밤, 한자리에 모인 학생들. 마지막 시험까지 나기사의 방해를 받게 된 걸 안 그때, 아즈사가 자신이 「트리니티의 배신자」라고 고백한다. 아즈사는 모든 게 자기 때문이라고 말하지만. 선생님은 이게 아즈사 탓이 아니라고 말한다. 또한 하나코는 어떤 방해 공작이 있든 다 같이 힘을 합쳐 시험에 합격하자고 선언한다.",
+          TextJp:
+            "眠れずに先生の元を訪れていたヒフミとハナコ、そしてコハルが更なる妨害行為について話していた最中、どこからか戻ってきたアズサが「トリニティの裏切り者」は自分だと告げる。しかし先生はそれを否定し、糾弾するかのように見えたハナコもまた「誰か」の話を引き合いに出しながら、彼女に共感を示す。何も諦めたくない、そのために一同はハナコの作戦をもとに行動を開始する。",
+          TextTh:
+            "พวกนักเรียนมารวมตัวกันในกลางดึก อาซึสะรู้มาว่านางิสะขัดขวางการ\nสอบจนถึงการสอบครั้งสุดท้าย เธอสารภาพว่าตัวเองคือคนทรยศในทรีนิตี้\nและบอกว่าทุกอย่างเป็นความผิดของเธอเอง แต่คุณครูบอกว่าไม่ใช่ความ\nผิดของอาซึสะ ส่วนฮานาโกะก็บอกว่าทุกคนต้องรวมพลังกันแล้วสอบให้\nผ่านให้ได้ ไม่ว่าจะต้องเจอการกลั่นแกล้งอะไรก็ตาม",
+          TextTw:
+            "凌晨時分，補課部的成員們聚在一起討論明天的事。就在眾人得知渚連最後一次學期考試也想耍詐時，梓終於忍不住告訴成員們自己就是「三一的叛徒」。雖然梓認為一切都是自己的錯，但老師卻不認同她的想法。花子也站出來鼓勵大家，她要大家努力通過考試，不讓渚的花招得逞。",
+          TextEn:
+            "The students gather together at night. Azusa confesses that she is the traitor once the full scope of Nagisa's interference is revealed. Azusa blames herself, but Sensei says it isn't her fault. Hanako declares they will find a way to pass no matter what.",
+          TextCn:
+            "失眠的日富美、花子和小春一同来到老师的房间，讨论着茶会在最后一次考试中动的手脚。就在这时，原本不在的梓回来了，并告诉大家自己就是“圣三一的叛徒”。然而见老师准备否定和谴责梓时，花子也提及了自己认识的“某个人”的事情，并表示自己能理解梓的想法。补习部的一行人不愿放弃，并根据花子的作战计划开始了行动。",
+        },
+      },
+      {
+        title: {
+          TextCn: "全面开战",
+          TextKr: "시작되는 습격",
+          TextJp: "火蓋は切られて",
+          TextTh: "เริ่มบุกรุก",
+          TextTw: "全面開戰",
+          TextEn: "Lighting the Fuse",
+        },
+        story_id: 32150,
+        previous: 32140,
+        next: 32160,
+        summary: {
+          TextKr:
+            "아리우스가 나기사를 습격하러온 그때, 아즈사와 하나코가 먼저 선수를 쳐서 나기사를 납치하는 데 성공한다. 뒤이어 들이닥친 아리우스의 학생들에 맞서 아즈사는 교전을 시작한다.",
+          TextJp:
+            "アリウスに先んじて、ナギサをさらうことに成功したアズサとハナコ。アズサはこれまで仕込んできたトラップを用いながら、アリウスとの交戦へと突入する。",
+          TextTh:
+            "อาเรียสมาบุกโจมตีนางิสะ แต่อาซึสะกับฮานาโกะก็เข้ามาตัดหน้าไปก่อน\nและลักพาตัวนางิสะไปได้ อาซึสะเริ่มปะทะกับกลุ่มนักเรียนอาเรียสที่ผลุน\nผลันเข้ามาทีหลัง",
+          TextTw:
+            "就在奧利斯正準備襲擊渚的時候，梓和花子搶先一步綁走了渚。因為甩不掉緊咬不放的奧利斯學生們，梓只好與對方開戰。",
+          TextEn:
+            "Arius forces come to ambush Nagisa, but Azusa and Hanako beat them to the punch and kidnap Nagisa themselves. Afterwards, Azusa engages in combat with the subsequent rush of Arius students.",
+          TextCn:
+            "花子和梓成功赶在阿里乌斯之前掳走了渚。梓利用之前布置的陷阱，与阿里乌斯展开了战斗。",
+        },
+      },
+      {
+        title: {
+          TextCn: "激战（战斗前）",
+          TextKr: "격전",
+          TextJp: "激戦",
+          TextTh: "การทะเลาะอย่างรุนแรง",
+          TextTw: "激戰",
+          TextEn: "A Fearsome Clash",
+        },
+        story_id: 32160,
+        previous: 32150,
+        next: 32165,
+        summary: {
+          TextKr:
+            "습격해오는 아리우스 학생들. 아즈사가 설치한 부비트랩에 피해를 입는 것도 개의치 않고 아리우스는 마침내 보충수업부를 궁지로 모는 데 성공한다. 그러나 그곳에서 보충수업부 학생들은 샬레의 선생님과 함께 반격을 개시한다.",
+          TextJp:
+            "数はだいぶ減らされたものの、それでもアズサとハナコを追い詰めるアリウス。しかしその状況は、補習授業部一同が仕掛けた罠だった。先生とヒフミ、コハルも合流し、逃げ場のない状況で戦闘が始まる。",
+          TextTh:
+            "กลุ่มนักเรียนอาเรียสบุกโจมตีเข้ามาโดยไม่สนใจกับดักที่อาซึสะวางไว้ ชมรมชั้นเรียนเสริมต้องตกอยู่ในสภาวะหนีเสือปะจระเข้ แต่นักเรียนชมรมชั้นเรียนเสริมกับคุณครูจากชาเล่ต์ก็เริ่มตอบโต้กลับ",
+          TextTw:
+            "奧利斯的學生們對補課部發動了襲擊。即使被梓放置的詭雷炸傷，奧利斯學生們還是將補課部逼得無處可逃。就在此時，補課部的學生們和老師合力發動反擊。",
+          TextEn:
+            "Arius students launch an attack and succeed in backing the Make-Up Work Club into a corner. The Make-Up Work Club and Sensei begin their counterattack.",
+          TextCn:
+            "尽管人数已经减员不少，但阿里乌斯依然在追逐梓与花子。然而这都是补习部一行人所设的圈套。老师与日富美、小春也与花子她们汇合，一同开始了破釜沉舟的战斗。",
+        },
+      },
+      {
+        title: {
+          TextCn: "激战（战斗后）",
+          TextKr: "격전",
+          TextJp: "激戦",
+          TextTh: "การทะเลาะอย่างรุนแรง",
+          TextTw: "激戰",
+          TextEn: "A Fearsome Clash",
+        },
+        story_id: 32165,
+        previous: 32160,
+        next: 32170,
+        summary: {
+          TextKr:
+            "습격해오는 아리우스 학생들. 아즈사가 설치한 부비트랩에 피해를 입는 것도 개의치 않고 아리우스는 마침내 보충수업부를 궁지로 모는 데 성공한다. 그러나 그곳에서 보충수업부 학생들은 샬레의 선생님과 함께 반격을 개시한다.",
+          TextJp:
+            "数はだいぶ減らされたものの、それでもアズサとハナコを追い詰めるアリウス。しかしその状況は、補習授業部一同が仕掛けた罠だった。先生とヒフミ、コハルも合流し、逃げ場のない状況で戦闘が始まる。",
+          TextTh:
+            "กลุ่มนักเรียนอาเรียสบุกโจมตีเข้ามาโดยไม่สนใจกับดักที่อาซึสะวางไว้ ชมรมชั้นเรียนเสริมต้องตกอยู่ในสภาวะหนีเสือปะจระเข้ แต่นักเรียนชมรมชั้นเรียนเสริมกับคุณครูจากชาเล่ต์ก็เริ่มตอบโต้กลับ",
+          TextTw:
+            "奧利斯的學生們對補課部發動了襲擊。即使被梓放置的詭雷炸傷，奧利斯學生們還是將補課部逼得無處可逃。就在此時，補課部的學生們和老師合力發動反擊。",
+          TextEn:
+            "Arius students launch an attack and succeed in backing the Make-Up Work Club into a corner. The Make-Up Work Club and Sensei begin their counterattack.",
+          TextCn:
+            "尽管人数已经减员不少，但阿里乌斯依然在追逐梓与花子。然而这都是补习部一行人所设的圈套。老师与日富美、小春也与花子她们汇合，一同开始了破釜沉舟的战斗。",
+        },
+      },
+      {
+        title: {
+          TextCn: "就算是这样的世界（1）（战斗前）",
+          TextKr: "그런 세계 1",
+          TextJp: "そんな世界も（１）",
+          TextTh: "โลกแบบนั้น (1)",
+          TextTw: "就算是這樣的世界（１）",
+          TextEn: "The Way of the World Part 1",
+        },
+        story_id: 32170,
+        previous: 32165,
+        next: 32175,
+        summary: {
+          TextKr:
+            "선생님과 힘을 합쳐 아리우스 학생을 쓰러트리는 데 성공한 보충수업부였지만, 곧바로 더 많은 아리우스 학생들이 들이닥친다. 이들이 들키지 않고 트리니티에 잠입했단 것에 모두가 놀라워하는 그때, 미카가 등장해 자신이야말로 「트리니티의 진짜 배신자」라고 소개한 뒤, 그녀는 아리우스에게 보충수업부를 제압하라 지시한다.",
+          TextJp:
+            "何とかアリウスの生徒たちを戦闘不能に追い込んだ補習授業部一同だったが、想定よりも増援が早く、なぜか正義実現委員会も動かない。ハナコが疑問に思ったその時、ティーパーティーのミカが現れる。彼女は自分こそが「本当のトリニティの裏切り者」だと告げ、その計画を口にし、補習授業部を片付けてとアリウスに指示をする。",
+          TextTh:
+            "ชมรมชั้นเรียนเสริมร่วมมือกับคุณครูและปราบนักเรียนอาเรียสได้\nแต่นักเรียนอาเรียสกลุ่มใหญ่ก็เข้ามาอีก ในขณะที่ทุกคนกำลังตกใจกับ\nนักเรียนที่ลักลอบเข้าทรีนิตี้มาได้โดยที่ไม่ถูกจับ มิกะก็ปรากฏตัวแล้วบอก\nว่าเธอคือ 'คนทรยศตัวจริงของทรีนิตี้' และสั่งการอาเรียสให้ใช้กำลังกับ\nชมรมชั้นเรียนเสริม",
+          TextTw:
+            "雖然補課部成功和老師打倒了一批奧利斯的學生，但很快便又有多的奧利斯的學生朝他們撲了過來。就在眾人訝異為何奧利斯能夠如此輕易地潛入三一自治區時，不知從何處現身的彌香表明自己才是真正的「三一的叛徒」，並且命令奧利斯制服補課部。",
+          TextEn:
+            "The Make-Up Work Club and Sensei defeat the Arius forces but are met with reinforcements. Mika arrives and reveals herself to be the true traitor of Trinity before ordering the Arius students to subdue the Make-Up Work Club.",
+          TextCn:
+            "一行人成功将阿里乌斯逼入了无法战斗的境地，然而增援却比预计的更早到来，并且正义实现委员会也不知为何毫无动作。正当花子产生疑问时，茶会的未花现身了。她告诉大家，自己才是“圣三一真正的叛徒”，并透露了她的计划，指示阿里乌斯解决掉补习部。",
+        },
+      },
+      {
+        title: {
+          TextCn: "就算是这样的世界（1）（战斗后）",
+          TextKr: "그런 세계 1",
+          TextJp: "そんな世界も（１）",
+          TextTh: "โลกแบบนั้น (1)",
+          TextTw: "就算是這樣的世界（１）",
+          TextEn: "The Way of the World Part 1",
+        },
+        story_id: 32175,
+        previous: 32170,
+        next: 32180,
+        summary: {
+          TextKr:
+            "미카는 이어진 교전에도 쉽사리 쓰러지지 않는 선생님을 보고 감탄한다. 그리고는 과거 아즈사가 세이아를 습격한 이야기를 꺼내 들며 미카가 보충수업부를 뒤흔들려는 그때, 시스터후드가 참전한다.",
+          TextJp:
+            "交戦は続くもののそれでも中々倒れない一同を見て、これが「大人」そして「シャーレ」の力なのかなと感心するミカ。そんな最中彼女がセイアの話を持ち出し、アズサが動揺したその時、本来動くはずがない「シスターフッド」が参戦する。",
+          TextTh:
+            "มิกะประหลาดใจที่คุณครูยังไม่เป็นอะไรแม้ในการปะทะครั้งต่อมา เธอเล่าเรื่องที่อาซึสะเคยบุกโจมตีเซอาในอดีต ชมรมชั้นเรียนเสริมเริ่มสั่นไหว และชมรมซิสเตอร์ก็เข้ามาในตอนนั้นพอดี",
+          TextTw:
+            "見到老師在連天的烽火中咬牙苦撐的模樣，彌香不禁對老師刮目相看。隨後便提到梓以前曾經襲擊聖亞的事，就在彌香試圖想要動搖補課部時，修女會也加入了這場戰鬥當中。",
+          TextEn:
+            "Mika marvels at Sensei's refusal to surrender during the ensuing battle. She brings up how Azusa ambushed Seia in the past while preparing to crack down on the Make-Up Work Club, just in time for the Sisterhood to join the fray.",
+          TextCn:
+            "看着明明经历了持续作战却依然顽强抵抗的一行人，未花也不禁感叹起“大人”和“夏莱”的力量。在此过程中，她提到了圣娅的事情。就在梓对未花的话感到动摇时，本不应该出现的修女会也加入了战斗。",
+        },
+      },
+      {
+        title: {
+          TextCn: "就算是这样的世界（2）（战斗前）",
+          TextKr: "그런 세계 2",
+          TextJp: "そんな世界も（２）",
+          TextTh: "โลกแบบนั้น (2)",
+          TextTw: "就算是這樣的世界（２）",
+          TextEn: "The Way of the World Part 2",
+        },
+        story_id: 32180,
+        previous: 32175,
+        next: 32185,
+        summary: {
+          TextKr:
+            "시스터후드를 이 자리에 부른 건 다름 아닌 하나코였다. 그렇게 나타난 사쿠라코는 사태를 해결하고 수습하기 위해 미카와 교전을 시작한다.",
+          TextJp:
+            "ハナコの画策により、本来干渉してくるはずがないシスターフッドが動き出した。シスターフッドの歌住サクラコは、慣習には反するものの介入させていただきますと告げ、ミカたちとの交戦が始まる。",
+          TextTh:
+            "ชมรมซิสเตอร์มาที่นี่เพราะฮานาโกะเป็นคนขอให้มา ซากุระโกะเริ่มปะทะ\nกับมิกะเพื่อควบคุมและแก้ไขสถานการณ์",
+          TextTw:
+            "將修女會叫來的人正是花子，突然現身的櫻子為了平息事件，並開始與彌香戰鬥。",
+          TextEn:
+            "The Sisterhood was called in by none other than Hanako. Now on the scene, Sakurako begins to battle Mika to rectify the situation.",
+          TextCn:
+            "在花子的策划下，本来不应干涉此事的修女会开始了行动。修女会的歌住樱子表示，尽管这么做有悖惯例，但修女会依然要介入此事，并与未花等人开始了战斗。",
+        },
+      },
+      {
+        title: {
+          TextCn: "就算是这样的世界（2）（战斗后）",
+          TextKr: "그런 세계 2",
+          TextJp: "そんな世界も（２）",
+          TextTh: "โลกแบบนั้น (2)",
+          TextTw: "就算是這樣的世界（２）",
+          TextEn: "The Way of the World Part 2",
+        },
+        story_id: 32185,
+        previous: 32180,
+        next: 32190,
+        summary: {
+          TextKr:
+            "힘을 합친 끝에 결국 미카는 궁지에 모는 데 성공한 보충수업부와 시스터후드. 그 앞에서 미카는 끝내 자신의 패배를 인정하고 항복한다. 그런 미카에게 선생님은 필요하다면 자신이 미카의 편이 되어줄 거라 말하고, 그 말에 미카는 기뻐하며 작별 인사를 남긴다.",
+          TextJp:
+            "補習授業部とシャーレ、そしてシスターフッドたちの前に敗れたミカ。ハナコから聞かされた新たな事実に安堵の声を漏らしつつ、彼女は自身の負けを認めて降参する。そんなミカは先生との別れ際、あの時の言葉は本当に嬉しかったと告げ、その先にあったかもしれない世界のことを想う。彼女は何とも言えない笑顔を浮かべたまま、先生に別れを告げるのだった。",
+          TextTh:
+            "ชมรมชั้นเรียนเสริมกับชมรมซิสเตอร์ผนึกกำลังกันจนกำราบมิกะได้สำเร็จ\nมิกะยอมรับความพ่ายแพ้ของตัวเองต่อหน้าคนอื่นและยอมจำนนในที่สุด\nคุณครูบอกมิกะว่าจะช่วยอยู่ข้างเธอหากเธอต้องการ มิกะได้ยินอย่างนั้นก็\nดีใจและเอ่ยคำอำลาคุณครู",
+          TextTw:
+            "在眾人的齊心協力之下，補課部和修女會成功將彌香逼至死路。最後，彌香終於承認自己輸了，並且向眾人投降。然而老師卻告訴彌香只要她有需要，自己隨時都會為她撐腰，感動不已的彌香向眾人道別。",
+          TextEn:
+            "Together, the Make-Up Work Club and the Sisterhood succeed in cornering Mika, who finally surrenders. Sensei lets Mika know that they'll be there for her if she ever needs someone on her side. Mika is delighted to hear this and says farewell.",
+          TextCn:
+            "未花终于败在了补习部、夏莱与修女会面前。在听到花子告诉她的新事实后，未花松了一口气，承认了自己的失败并投降了。即使这样，未花在与老师告别时也告诉老师，当时老师说的那番话让她非常高兴，并思考着可能有与现在截然不同的另一个世界存在。带着难以捉摸的微笑，未花向老师告别。",
+        },
+      },
+      {
+        title: {
+          TextCn: "第3次特别学力考试",
+          TextKr: "제3차 평가 시험",
+          TextJp: "第3次特別学力試験",
+          TextTh: "การสอบประเมินครั้งที่ 3",
+          TextTw: "第3次特別學力測驗",
+          TextEn: "The Third Exam",
+        },
+        story_id: 32190,
+        previous: 32185,
+        next: 32200,
+        summary: {
+          TextKr:
+            "수많은 해프닝이 있었지만 이를 전부 이겨낸 보충수업부는 마지막 제3차 평가 시험을 치르기 위해 시험장소로 향한다. 그리고 전원 시험에 합격한다.",
+          TextJp:
+            "数多くのハプニングを乗り越え、走り続けてきたその先、ようやく最後の試験会場へと辿り着いた補習授業部一同。彼女たちのこれまでの努力はしっかりとその実を結び、全員で試験に合格することができたのだった。",
+          TextTh:
+            "ถึงจะเกิดเรื่องขึ้นมากมาย แต่ชมรมชั้นเรียนเสริมก็ฝ่าฟันทุกอย่างมาได้\nทุกคนมุ่งหน้าไปยังสนามสอบเพื่อการสอบประเมินครั้งที่ 3 และสมาชิก\nชมรมทุกคนก็สอบผ่าน",
+          TextTw:
+            "雖然歷經了無數風波，但補課部最終還是繼續前往考場，準備接受第三次評鑑考試。最終，補課部的所有人都成功通過了測驗。",
+          TextEn:
+            "Having overcome numerous incidents and happenings, the Make-Up Work Club heads to the test site to sit for the third and final evaluation exam.",
+          TextCn:
+            "经历了许多意外，坚持奔跑的补习部终于来到了最后的考试场所。在那里，她们之前的努力终于得到了回报，所有人都成功通过了考试。",
+        },
+      },
+      {
+        title: {
+          TextCn: "尾声",
+          TextKr: "에필로그",
+          TextJp: "エピローグ",
+          TextTh: "บทส่งท้าย",
+          TextTw: "尾聲",
+          TextEn: "Epilogue",
+        },
+        story_id: 32200,
+        previous: 32190,
+        summary: {
+          TextKr:
+            "세이아는 위험을 이겨낸 선생님을 칭찬하지만, 결국 모든 것은 파국으로 수렴할 것이라 경고한다. 그리고 마침내 아리우스 스쿼드가 움직이기 시작한다.",
+          TextJp:
+            "セイアはこれまでの努力を評価しつつも、先生に対しそれでもまだ終わっていないと告げる。そうして、ついにアリウススクワッドが動き始め……。",
+          TextTh:
+            "เซอาชื่นชมที่คุณครูฝ่าฟันอันตรายมาได้ แต่ก็เตือนว่าท้ายที่สุดแล้ว\nทุกสิ่งทุกอย่างจะจบลงอย่างพินาศ และในตอนนั้นเอง สควอดของอาเรียส\nก็เริ่มเคลื่อนไหว",
+          TextTw:
+            "聖亞雖然相當讚賞成功克服危機的老師，但是她仍舊警告老師他們最後只會落得不好的下場。與此同時，奧利斯小隊也終於開始行動了。",
+          TextEn:
+            "Seia praises Sensei for overcoming the dangers, but warns that everything will eventually end in catastrophe. Finally, the Arius Squad goes on the move.",
+          TextCn:
+            "圣娅称赞了老师和补习部到现在为止的努力，但也告诉老师事件还没有结束。与此同时，阿里乌斯小队也开始行动了。",
         },
       },
     ],

@@ -67,19 +67,19 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios';
-import StoryPlayer from 'ba-story-player';
-import { computed, ref, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { useSettingsStore } from '../../store/settings';
-import { StoryAbstract, StoryContent, StoryIndex } from '../../types/StoryJson';
-import DialogContent from '../widgets/DialogContent.vue';
-import ErrorScreen from '../widgets/ErrorScreen.vue';
-import NeuDialog from '../widgets/NeuUI/NeuDialog.vue';
-import NeuProgressBar from '../widgets/NeuUI/NeuProgressBar.vue';
-import NeuSwitch from '../widgets/NeuUI/NeuSwitch.vue';
-import { useElementSize } from '@vueuse/core';
-import 'ba-story-player/dist/style.css';
+import axios from "axios";
+import StoryPlayer from "ba-story-player";
+import { computed, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { useSettingsStore } from "../../store/settings";
+import { StoryAbstract, StoryContent, StoryIndex } from "../../types/StoryJson";
+import DialogContent from "../widgets/DialogContent.vue";
+import ErrorScreen from "../widgets/ErrorScreen.vue";
+import NeuDialog from "../widgets/NeuUI/NeuDialog.vue";
+import NeuProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
+import NeuSwitch from "../widgets/NeuUI/NeuSwitch.vue";
+import { useElementSize } from "@vueuse/core";
+import "ba-story-player/dist/style.css";
 
 const route = useRoute();
 const router = useRouter();
@@ -101,7 +101,7 @@ const language = computed(
 const showPlayer = ref(true);
 
 function getSummaryTextByKey(summary: StoryAbstract, key: string) {
-  return Reflect.get(Reflect.get(summary, key), 'Text' + language.value);
+  return Reflect.get(Reflect.get(summary, key), "Text" + language.value);
 }
 
 function handleSummaryDisplayLanguageChange() {
@@ -111,12 +111,12 @@ function handleSummaryDisplayLanguageChange() {
   if (currentChapterAbstract) {
     const tempChapterName = getSummaryTextByKey(
       currentChapterAbstract,
-      'title'
+      "title"
     );
-    const tempSummary = getSummaryTextByKey(currentChapterAbstract, 'abstract');
+    const tempSummary = getSummaryTextByKey(currentChapterAbstract, "abstract");
     summary.value = {
-      chapterName: 'string' === typeof tempChapterName ? tempChapterName : '',
-      summary: 'string' === typeof tempSummary ? tempSummary : '',
+      chapterName: "string" === typeof tempChapterName ? tempChapterName : "",
+      summary: "string" === typeof tempSummary ? tempSummary : "",
     };
   }
 }
@@ -135,9 +135,9 @@ watch(
 const story = ref<StoryContent>({} as StoryContent);
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 const summary = ref({
-  chapterName: '序章',
+  chapterName: "序章",
   summary:
-    '从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。',
+    "从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。",
 });
 const userName = computed(() => settingsStore.getUsername);
 const playerContainerElement = ref<HTMLElement>();
@@ -166,7 +166,12 @@ axios
     fetchError.value = true;
     fetchErrorMessage.value =
       404 === err.response.status
-        ? '学生剧情目前尚未完全开放，还请期待！'
+        ? {
+          message: "Story not found",
+          response: {
+            status: 1919,
+          },
+        }
         : err;
   })
   .finally(() => {
@@ -216,7 +221,7 @@ watch(
 // 检测浏览器是否为 webkit，如果是则使用 mp3
 /* eslint-disable-next-line */
 // @ts-ignore
-if (typeof window.webkitConvertPointFromNodeToPage === 'function') {
+if (typeof window.webkitConvertPointFromNodeToPage === "function") {
   settingsStore.setUseMp3(true);
 }
 
@@ -242,12 +247,12 @@ function handleUseMp3(value: boolean) {
   reloadPlayer();
 }
 function handleUseSuperSampling(value: boolean) {
-  console.log('超分选项：' + value ? '2倍' : '关闭');
-  settingsStore.setUseSuperSampling(value ? '2' : '');
+  console.log("超分选项：" + value ? "2倍" : "关闭");
+  settingsStore.setUseSuperSampling(value ? "2" : "");
   reloadPlayer();
 }
 
-const shouldReturnToMomotalk = 'true' === route.query?.returnToMomotalk;
+const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
 
 function handleStoryEnd() {
   router.push(

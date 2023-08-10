@@ -4,6 +4,27 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-08-05",
+    contents: [
+      {
+        type: "main",
+        content: "Vol.3 伊甸条约 第二章",
+      },
+      {
+        type: "fix",
+        content: "对话记录滚动到底时，对话框不再被关闭",
+      },
+      {
+        type: "fix",
+        content: "修复了 BGM 异常停止的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了加载完成后异常黑屏无法播放的问题",
+      },
+    ],
+  },
+  {
     date: "2023-08-02",
     contents: [
       {
