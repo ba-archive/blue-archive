@@ -180,7 +180,7 @@ const routes: Array<RouteRecordRaw> = [
             { lang: "th", title: "ห้องสมุด" },
           ],
         },
-        component: () => import("../components/Library/LibraryHome.vue"),
+        component: () => import("../components/library/LibraryHome.vue"),
       },
       {
         path: "/friendlinks",
