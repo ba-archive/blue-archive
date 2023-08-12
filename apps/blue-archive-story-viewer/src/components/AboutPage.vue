@@ -1,7 +1,7 @@
 <template>
   <div class="flex-vertical">
     <article class="flex-vertical">
-      <h2>关于本站 / About this site</h2>
+      <h2 class="color-transition">关于本站 / About this site</h2>
       <section class="flex-vertical">
         <p>
           本站为
@@ -77,7 +77,6 @@ article {
 }
 
 h2 {
-  transition: color 0.375s ease-in-out;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }

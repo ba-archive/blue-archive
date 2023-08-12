@@ -166,28 +166,28 @@ const routes: Array<RouteRecordRaw> = [
       //   component: () => import('../components/GroupStoryHome.vue'),
       // },
       {
-        path: "/updateLog",
-        name: "UpdateLog",
+        path: "/library",
+        name: "Library",
         meta: {
           shouldShowInNav: true,
-          navOrder: 6,
+          navOrder: 5,
           m17n: [
-            { lang: "cn", title: "更新日志" },
-            { lang: "tw", title: "更新日誌" },
-            { lang: "jp", title: "アップデートログ" },
-            { lang: "en", title: "Update Log" },
-            { lang: "kr", title: "업데이트 로그" },
-            { lang: "th", title: "บันทึกการอัปเดต" },
+            { lang: "cn", title: "档案库" },
+            { lang: "tw", title: "檔案庫" },
+            { lang: "jp", title: "文庫" },
+            { lang: "en", title: "Library" },
+            { lang: "kr", title: "도서관" },
+            { lang: "th", title: "ห้องสมุด" },
           ],
         },
-        component: () => import("../components/UpdateLog.vue"),
+        component: () => import("../components/library/LibraryHome.vue"),
       },
       {
         path: "/friendlinks",
         name: "FriendLinks",
         meta: {
           shouldShowInNav: true,
-          navOrder: 5,
+          navOrder: 6,
           m17n: [
             { lang: "cn", title: "友情链接" },
             { lang: "tw", title: "友情連結" },
@@ -200,11 +200,28 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../components/FriendLinks.vue"),
       },
       {
+        path: "/updateLog",
+        name: "UpdateLog",
+        meta: {
+          shouldShowInNav: true,
+          navOrder: 7,
+          m17n: [
+            { lang: "cn", title: "更新日志" },
+            { lang: "tw", title: "更新日誌" },
+            { lang: "jp", title: "アップデートログ" },
+            { lang: "en", title: "Update Log" },
+            { lang: "kr", title: "업데이트 로그" },
+            { lang: "th", title: "บันทึกการอัปเดต" },
+          ],
+        },
+        component: () => import("../components/UpdateLog.vue"),
+      },
+      {
         path: "/settings",
         name: "Settings",
         meta: {
           shouldShowInNav: true,
-          navOrder: 7,
+          navOrder: 8,
           m17n: [
             { lang: "cn", title: "设置" },
             { lang: "tw", title: "設定" },
@@ -221,7 +238,7 @@ const routes: Array<RouteRecordRaw> = [
         name: "About",
         meta: {
           shouldShowInNav: true,
-          navOrder: 7,
+          navOrder: 9,
           m17n: [
             { lang: "cn", title: "关于" },
             { lang: "tw", title: "關於" },

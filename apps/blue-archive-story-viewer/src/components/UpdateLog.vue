@@ -618,7 +618,7 @@ const contributorList: any = h(
 </script>
 
 <template>
-  <div id="contributor-container" class="flex-vertical" v-once>
+  <div id="contributor-container color-transition" class="flex-vertical" v-once>
     <h2 class="update-log__title">更新日志</h2>
     <!-- eslint-disable vue/require-v-for-key -->
     <div class="update-log__block" v-for="log in updateLogs">
@@ -659,7 +659,6 @@ const contributorList: any = h(
 #contributor-container {
   align-items: flex-start;
   align-self: center;
-  transition: color 0.375s ease-in-out;
   padding-bottom: 2rem;
   width: min(50rem, 90%);
   color: var(--color-text-main);

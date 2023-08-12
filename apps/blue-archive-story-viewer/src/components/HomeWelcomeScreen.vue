@@ -52,7 +52,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   <div id="home-welcome" class="center flex-vertical fill-screen">
     <div class="center flex-vertical">
       <img class="mika-sticker" src="@assets/mika_sticker.webp" alt="mika" />
-      <p>先从<span id="choice"></span>选择项目哦</p>
+      <p class="color-transition">先从<span id="choice"></span>选择项目哦</p>
       <div class="update-info-container">
         <updated-portal-card
           v-for="info in homepageDisplayInfoList"
@@ -75,7 +75,6 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   }
 
   p {
-    transition: color 0.375s ease-in-out;
     color: var(--color-text-main);
     font-weight: bold;
     font-size: 1.5rem;

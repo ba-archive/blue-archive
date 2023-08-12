@@ -15,7 +15,7 @@
       />
 
       <div class="message-text flex-vertical">
-        <div class="student-name" v-if="message?.avatar">
+        <div class="student-name color-transition" v-if="message?.avatar">
           {{ studentName }}
         </div>
         <div class="message-content-wrap rounded-small">
@@ -324,7 +324,6 @@ function handleContinueReadingButtonPressed() {
   margin-left: 0.5rem;
 
   .student-name {
-    transition: color 0.375s ease-in-out;
     font-weight: bold;
     font-size: 1rem;
   }
