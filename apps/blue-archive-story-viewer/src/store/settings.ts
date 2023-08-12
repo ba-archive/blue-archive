@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { Language } from "../types/Settings";
-import { StudentAttributeFilters, StudentFilters } from "../types/Student";
+import { StudentAttributeFilters, StudentFilters } from "@types/Student";
 
 export const useSettingsStore = defineStore({
   id: "ba-main-storage",

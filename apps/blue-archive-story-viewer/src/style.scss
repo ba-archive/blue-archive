@@ -279,6 +279,10 @@ a {
   box-shadow: 0.2rem 0.2rem 1rem var(--color-shadow-farther);
 }
 
+.color-transition {
+  transition: color 0.375s ease-in-out;
+}
+
 .user-action-button {
   display: flex;
   justify-content: center;

@@ -309,7 +309,7 @@ onUnmounted(() => {
       >
         <img
           v-show="!isEmptyFilter"
-          src="/src/assets/clear-filter.svg"
+          src="@assets/clear-filter.svg"
           alt="Clear all filters"
         />
       </div>
@@ -318,7 +318,7 @@ onUnmounted(() => {
         class="filter-options-icon-mobile rounded-small"
         @click="showFilter = !showFilter"
       >
-        <img src="/src/assets/filter-options.svg" alt="Filter options" />
+        <img src="@assets/filter-options.svg" alt="Filter options" />
       </div>
     </div>
     <div class="student-filter" v-show="showFilter">
@@ -602,8 +602,8 @@ onUnmounted(() => {
   user-select: none;
 
   .clear-filter-button {
-    mask-image: url("/src/assets/bin.svg");
-    -webkit-mask-image: url("/src/assets/bin.svg");
+    mask-image: url("@assets/bin.svg");
+    -webkit-mask-image: url("@assets/bin.svg");
     mask-position: bottom;
     -webkit-mask-position: bottom;
     mask-size: 1rem;

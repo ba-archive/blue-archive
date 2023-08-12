@@ -1,6 +1,6 @@
 <template>
   <div class="error-container">
-    <h3 class="error-title">
+    <h3 class="error-title color-transition">
       诶？{{ isNotOpenError ? "好像还没开放……" : "数据去哪了？" }}
     </h3>
     <img
@@ -91,7 +91,6 @@ const isNotOpenError = computed(
   }
 }
 
-h3,
 p {
   transition: color 0.375s ease-in-out;
 }
