@@ -60,9 +60,9 @@ watch(
     }
     const index = availableSpineName.value.indexOf(cur);
     if (index !== 0) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-extra-non-null-assertion
       const url = utils.getResourcesUrl(
         "otherL2dSpine",
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-extra-non-null-assertion
         currentOptions.value.otherSpine!![index - 1]
       );
       loadAnimationNames(url);

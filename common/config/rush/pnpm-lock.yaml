@@ -342,7 +342,7 @@ importers:
       '@pixi/filter-crt': ~4.2.0
       '@pixi/filter-motion-blur': ~4.2.0
       '@pixi/particle-emitter': ~5.0.8
-      '@pixi/sound': ~4.4.0
+      '@types/howler': ^2.2.7
       '@types/node': ^20.3.3
       '@types/xxhashjs': ^0.2.2
       '@typescript-eslint/eslint-plugin': ^5.60.1
@@ -359,6 +359,7 @@ importers:
       eslint-plugin-vue: ^9.15.1
       eslint-plugin-yaml: ^0.5.0
       gsap: ^3.12.2
+      howler: ~2.2.3
       mitt: ^3.0.0
       pixi-spine: ~3.1.2
       pixi.js: ~6.5.10
@@ -380,10 +381,10 @@ importers:
       '@pixi/filter-crt': 4.2.0
       '@pixi/filter-motion-blur': 4.2.0
       '@pixi/particle-emitter': 5.0.8
-      '@pixi/sound': 4.4.0
       '@vueuse/core': 10.2.1_vue@3.3.4
       axios: 1.4.0
       gsap: 3.12.2
+      howler: 2.2.3
       mitt: 3.0.1
       pixi-spine: 3.1.2
       pixi.js: 6.5.10
@@ -391,6 +392,7 @@ importers:
       vue-responsive-video-background-player: 2.3.1
       xxhashjs: 0.2.2
     devDependencies:
+      '@types/howler': 2.2.7
       '@types/node': 20.4.5
       '@types/xxhashjs': 0.2.2
       '@typescript-eslint/eslint-plugin': 5.62.0_17357f68f3a550d4e1de94100f3b1b27
@@ -4266,15 +4268,6 @@ packages:
       '@pixi/constants': 6.5.10
     dev: false
 
-  /@pixi/sound/4.4.0:
-    resolution: {integrity: sha512-fkvbaH7ZyrUWGSpvcCiqJjanQMjJnP5RF3hurAHlEckp9nn4Ge+mie2RmkZTWKAMCBgdkilaR8X3pKQk2BJqCg==}
-    peerDependencies:
-      '@pixi/core': '>=5 <7'
-      '@pixi/loaders': '>=5 <7'
-      '@pixi/ticker': '>=5 <7'
-      '@pixi/utils': '>=5 <7'
-    dev: false
-
   /@pixi/sprite-animated/6.5.10_32c7c873abaa699c3fb40b26aadbe198:
     resolution: {integrity: sha512-x1kayucAqpVbNk+j+diC/7sQGQsAl6NCH1J2/EEaiQjlV3GOx1MXS9Tft1N1Y1y7otbg1XsnBd60/Yzcp05pxA==}
     peerDependencies:
@@ -4638,6 +4631,10 @@ packages:
 
   /@types/file-saver/2.0.5:
     resolution: {integrity: sha512-zv9kNf3keYegP5oThGLaPk8E081DFDuwfqjtiTzm6PoxChdJ1raSuADf2YGCVIyrSynLrgc8JWv296s7Q7pQSQ==}
+    dev: true
+
+  /@types/howler/2.2.7:
+    resolution: {integrity: sha512-PEZldwZqJJw1PWRTpupyC7ajVTZA8aHd8nB/Y0n6zRZi5u8ktYDntsHj13ltEiBRqWwF06pASxBEvCTxniG8eA==}
     dev: true
 
   /@types/js-yaml/4.0.5:
@@ -8643,6 +8640,10 @@ packages:
     dependencies:
       lru-cache: 7.18.3
     dev: true
+
+  /howler/2.2.3:
+    resolution: {integrity: sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==}
+    dev: false
 
   /hpack.js/2.1.6:
     resolution: {integrity: sha512-zJxVehUdMGIKsRaNt7apO2Gqp0BdqW5yaiGHXXmbpvxgBYVZnAql+BJb4RO5ad2MgpbZKn5G6nMnegrH1FcNYQ==}

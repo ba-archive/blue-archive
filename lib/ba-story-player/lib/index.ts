@@ -5,16 +5,15 @@ import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
 import {
   Application,
-  BaseTexture,
   IAddOptions,
   Loader,
   LoaderResource,
-  extensions,
   utils as pixiUtils,
 } from "pixi.js";
 import axios from "axios";
+import { Howler } from "howler";
 import "pixi-spine";
-import { IEventData, ISkeletonData, SpineParser } from "pixi-spine";
+import { IEventData, SpineParser } from "pixi-spine";
 import { watch } from "vue";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
@@ -26,8 +25,8 @@ import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
-import "@pixi/sound";
-import { sound } from "@pixi/sound";
+
+Howler.autoSuspend = false;
 
 Loader.registerPlugin(SpineParser);
 let playerStore: ReturnType<typeof usePlayerStore>;
@@ -185,9 +184,6 @@ export const eventEmitter = {
    */
   async emitEvents() {
     // TODO: 上线注释, 也可以不注释
-    if (storyHandler.currentStoryIndex === 20) {
-      debugger;
-    }
     console.log(
       "剧情进度: " + storyHandler.currentStoryIndex,
       storyHandler.currentStoryUnit
@@ -720,18 +716,15 @@ export const resourcesLoader = {
    * 添加l2d语音
    */
   loadL2dVoice(audioEvents: IEventData[]) {
-    for (const event of audioEvents) {
-      if (
-        event.name.includes("MemorialLobby") &&
-        !unexistL2dSoundEvent.includes(event.name)
-      ) {
-        const voiceUrl = utils.getResourcesUrl("l2dVoice", event.name);
-        sound.add(voiceUrl, {
-          url: voiceUrl,
-          preload: true,
-        });
-      }
-    }
+    const audios = audioEvents
+      .filter(it => {
+        return (
+          it.name.includes("MemorialLobby") &&
+          !unexistL2dSoundEvent.includes(it.name)
+        );
+      })
+      .map(it => utils.getResourcesUrl("l2dVoice", it.name));
+    preloadSound(audios);
   },
 
   /**
