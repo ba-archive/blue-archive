@@ -506,4 +506,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Yuuka_home: {
+    name: "Yuuka_home",
+    playQue: [
+      {
+        name: "Yuuka_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Yuuka_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
