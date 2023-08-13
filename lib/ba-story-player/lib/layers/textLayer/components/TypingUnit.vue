@@ -56,7 +56,7 @@ import { useThrottleFn } from "@vueuse/core";
 
 const props = withDefaults(defineProps<IProp>(), {
   index: "-1",
-  speed: 40,
+  speed: import.meta.env.DEV ? 20 : 40,
   text: () => ({
     content: "",
     waitTime: 0,

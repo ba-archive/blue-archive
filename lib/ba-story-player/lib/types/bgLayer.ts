@@ -1,4 +1,4 @@
-import { Sprite } from "pixijs";
+import { Sprite } from "pixi.js";
 import { BgParams } from "@/types/events";
 
 export interface BgLayer {

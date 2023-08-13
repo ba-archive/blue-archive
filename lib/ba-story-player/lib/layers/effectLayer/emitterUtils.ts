@@ -1,11 +1,10 @@
+import { Container } from "pixi.js";
 import { EffectRemoveFunction } from "@/types/effectLayer";
 import {
   Emitter,
   EmitterConfigV2,
   EmitterConfigV3,
 } from "@pixi/particle-emitter";
-import { Container } from "pixijs";
-
 
 /**
  * 获取emitter config

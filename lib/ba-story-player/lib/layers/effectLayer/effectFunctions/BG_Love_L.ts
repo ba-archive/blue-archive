@@ -1,6 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixijs";
-import { AlphaFilter } from "pixijs";
+import { Container, Sprite, filters } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -10,7 +9,7 @@ export default async function BG_Love_L(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  const alphaFilter = new AlphaFilter(0.5);
+  const alphaFilter = new filters.AlphaFilter(0.5);
   const backSprite = resources[2];
   backSprite.tint = 0xffc0cb;
   backSprite.width = appWidth;

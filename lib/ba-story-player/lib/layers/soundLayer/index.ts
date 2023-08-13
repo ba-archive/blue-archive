@@ -1,9 +1,7 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { useUiState } from "@/stores/state";
 import { PlayAudio } from "@/types/events";
 import { Sound, sound } from "@pixi/sound";
-import { watch } from "vue";
 
 const audioMap = new Map<string, Sound>();
 /**
@@ -52,7 +50,6 @@ export function preloadSound(audioUrls: string[]) {
     );
   }
 }
-
 
 export function soundDispose() {
   for (const sound of audioMap.values()) {

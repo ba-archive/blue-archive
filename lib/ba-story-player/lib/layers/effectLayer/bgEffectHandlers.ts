@@ -1,11 +1,11 @@
 import { usePlayerStore } from "@/stores";
+import { Sprite } from "pixi.js";
 import {
   BGEffectHandlerFunction,
   BGEffectHandlerOptions,
   CurrentBGEffect,
 } from "@/types/effectLayer";
 import { BGEffectExcelTableItem, BGEffectType } from "@/types/excels";
-import { Sprite } from "pixijs";
 
 const effectFunctionsRaw = import.meta.glob<{
   default: BGEffectHandlerFunction<BGEffectType>;
@@ -25,7 +25,6 @@ function getEffectFunctions(functionName: string) {
  * 当前播放的BGEffect
  */
 let currentBGEffect: CurrentBGEffect;
-
 
 /**
  * 处理函数的对应参数
@@ -70,9 +69,6 @@ export const bgEffectHandlerOptions: BGEffectHandlerOptions = {
   "BG_ScrollR_1.0": {},
 };
 
-
-
-
 export const bgEffectHandlers: Record<
   string,
   BGEffectHandlerFunction<BGEffectType>
@@ -115,7 +111,6 @@ const bgEffects = [
   "BG_Fireworks_L_BGOff_01",
   "BG_ScrollR_1.0",
 ];
-
 
 /**
  * 播放对应的BGEffect
@@ -164,7 +159,6 @@ for (const effect of bgEffects) {
     });
   }
 }
-
 
 /**
  * 移除当前的BGEffect

@@ -1,18 +1,20 @@
 import * as utils from "@/utils";
+import * as PIXI from "pixi.js";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
-import axios from "axios";
-import "pixi-spine";
-import { IEventData, ISkeletonData } from "pixi-spine";
 import {
   Application,
-  Assets,
   BaseTexture,
-  LoadAsset,
+  IAddOptions,
+  Loader,
+  LoaderResource,
+  extensions,
   utils as pixiUtils,
-} from "pixijs";
-import { extensions } from "pixijs";
+} from "pixi.js";
+import axios from "axios";
+import "pixi-spine";
+import { IEventData, ISkeletonData, SpineParser } from "pixi-spine";
 import { watch } from "vue";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
@@ -27,13 +29,7 @@ import { PlayerConfigs, StoryUnit } from "@/types/common";
 import "@pixi/sound";
 import { sound } from "@pixi/sound";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-extensions.add(window.spineLoader);
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-extensions.add(window.spineTextureAtlasLoader);
-
+Loader.registerPlugin(SpineParser);
 let playerStore: ReturnType<typeof usePlayerStore>;
 let privateState: ReturnType<typeof initPrivateState>;
 /**
@@ -42,11 +38,15 @@ let privateState: ReturnType<typeof initPrivateState>;
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
 export function checkloadAssetAlias<T = any>(alias: string, url: string) {
-  if (!resourcesLoader.loadedList.includes(url)) {
-    resourcesLoader.loadedList.push(url);
-    return loadAssetAlias(alias, url);
+  const {
+    app: { loader },
+  } = usePlayerStore();
+  const asset = loader.resources[url] ?? loader.resources[alias];
+  if (!asset) {
+    loadAssetAlias(alias, url);
+  } else {
+    return asset;
   }
-  return Promise.resolve();
 }
 
 /**
@@ -185,6 +185,9 @@ export const eventEmitter = {
    */
   async emitEvents() {
     // TODO: 上线注释, 也可以不注释
+    if (storyHandler.currentStoryIndex === 20) {
+      debugger;
+    }
     console.log(
       "剧情进度: " + storyHandler.currentStoryIndex,
       storyHandler.currentStoryUnit
@@ -477,7 +480,7 @@ export async function init(
   errorCallback: () => void
 ) {
   //缓解图片缩放失真
-  BaseTexture.defaultOptions.mipmap = 2;
+  PIXI.settings.MIPMAP_TEXTURES = 2;
   console.log(
     `%c ba-bug-player %c ${version} %c`,
     "background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff",
@@ -528,6 +531,15 @@ export async function init(
   globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
   document.querySelector(`#${elementID}`)?.appendChild(app.view);
+  app.loader.onError.add(
+    (error: Error, _: unknown, resource: LoaderResource) => {
+      console.error(error);
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: resource.name ?? resource.url,
+      });
+    }
+  );
   // 记录加载开始时间 优化光速加载的体验
   const startLoadTime = Date.now();
   eventBus.emit("startLoading", { url: props.dataUrl });
@@ -543,8 +555,13 @@ export async function init(
   effectInit();
   L2DInit();
   //加载剩余资源
-  resourcesLoader.addLoadResources();
-  resourcesLoader.load(() => {
+  resourcesLoader.addLoadResources(app.loader);
+  resourcesLoader.load(async () => {
+    // 加载live2d音频
+    const spineData = usePlayerStore().l2dSpineData;
+    if (spineData) {
+      resourcesLoader.loadL2dVoice(spineData.events);
+    }
     // 加载时间少于1秒, 延迟一下再开始
     const loadedTime = Date.now() - startLoadTime;
     new Promise<void>(resolve => {
@@ -568,8 +585,6 @@ export async function init(
  * 资源加载处理对象
  */
 export const resourcesLoader = {
-  loadTaskList: [] as Promise<unknown>[],
-  loadedList: [] as string[],
   /**
    * 初始化, 预先加载表资源供翻译层使用
    */
@@ -579,7 +594,7 @@ export const resourcesLoader = {
   /**
    * 添加所有资源, 有些pixi loader不能处理的资源则会调用资源处理函数, 故会返回promise
    */
-  addLoadResources() {
+  addLoadResources(loader: PIXI.Loader) {
     // this.loader.add('https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg',
     //   'https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg'
     // )
@@ -633,13 +648,8 @@ export const resourcesLoader = {
 
       //添加l2d spine资源
       if (unit.l2d) {
-        checkloadAssetAlias(unit.l2d.spineUrl, unit.l2d.spineUrl).then(
-          (res?: { spineData: ISkeletonData }) => {
-            if (res) {
-              this.loadL2dVoice(res.spineData.events);
-            }
-          }
-        );
+        const l2dUrl = unit.l2d.spineUrl;
+        checkloadAssetAlias(l2dUrl, l2dUrl);
         playerStore.curL2dConfig?.otherSpine?.forEach(i =>
           this.checkAndAdd(utils.getResourcesUrl("otherL2dSpine", i))
         );
@@ -653,11 +663,10 @@ export const resourcesLoader = {
    * @param callback
    */
   load(callback: () => void) {
-    Promise.allSettled(this.loadTaskList).then(() => {
-      this.loadTaskList.splice(0, this.loadTaskList.length);
-      this.loadedList.splice(0, this.loadedList.length);
-      callback();
-    });
+    const {
+      app: { loader },
+    } = usePlayerStore();
+    loader.load(callback);
   },
 
   /**
@@ -673,7 +682,7 @@ export const resourcesLoader = {
       } else {
         url = key ? Reflect.get(resources, key) : "";
       }
-      this.loadTaskList.push(checkloadAssetAlias(url, url));
+      checkloadAssetAlias(url, url);
     }
   },
 
@@ -683,17 +692,15 @@ export const resourcesLoader = {
   async addEmotionResources() {
     for (const emotionResources of playerStore.emotionResourcesTable.values()) {
       for (const emotionResource of emotionResources) {
-        this.loadTaskList.push(
-          checkloadAssetAlias(
-            emotionResource,
-            utils.getResourcesUrl("emotionImg", emotionResource)
-          )
+        checkloadAssetAlias(
+          emotionResource,
+          utils.getResourcesUrl("emotionImg", emotionResource)
         );
       }
     }
     // for (const emotionName of playerStore.emotionResourcesTable.keys()) {
     //   const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-    //   // eslint-disable-next-line max-len
+    // eslint-disable-next-line max-len, max-len
     //   this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
     // }
   },
@@ -704,9 +711,7 @@ export const resourcesLoader = {
   async addFXResources() {
     for (const fxImages of playerStore.fxImageTable.values()) {
       for (const url of fxImages) {
-        this.loadTaskList.push(
-          checkloadAssetAlias(url, utils.getResourcesUrl("fx", url))
-        );
+        checkloadAssetAlias(url, utils.getResourcesUrl("fx", url));
       }
     }
   },
@@ -745,9 +750,7 @@ export const resourcesLoader = {
   addBGEffectImgs() {
     for (const imgs of playerStore.bgEffectImgMap.values()) {
       for (const img of imgs) {
-        this.loadTaskList.push(
-          checkloadAssetAlias(img, utils.getResourcesUrl("bgEffectImgs", img))
-        );
+        checkloadAssetAlias(img, utils.getResourcesUrl("bgEffectImgs", img));
       }
     }
   },
@@ -1142,16 +1145,14 @@ export const storyHandler = {
   },
 };
 
-function loadAssetAlias<T = any>(alias: string | string[], url: string) {
+function loadAssetAlias<T = any>(alias: string, url: string) {
   return loadAsset<T>({
-    src: url,
-    alias: Array.isArray(alias) ? alias : [alias],
+    url: url,
+    name: alias,
   });
 }
 
-function loadAsset<T = any>(
-  param: string | LoadAsset | string[] | LoadAsset[]
-) {
+function loadAsset<T = any>(param: IAddOptions) {
   function getResourceName(): string[] {
     if (typeof param === "string") {
       return [lastName(param as string)];
@@ -1160,30 +1161,25 @@ function loadAsset<T = any>(
         if (typeof param[0] === "string") {
           return param as string[];
         } else {
-          const tmp: LoadAsset[] = param as LoadAsset[];
-          return tmp.map(it => (it.alias && it.alias[0]) ?? lastName(it.src));
+          const tmp: IAddOptions[] = param as IAddOptions[];
+          return tmp.map(it => it.name ?? it.key ?? lastName(it.url ?? ""));
         }
       } else {
-        return [(param.alias && param.alias[0]) ?? lastName(param.src)];
+        return [param.name ?? param.key ?? lastName(param.url ?? "")];
       }
     }
   }
   function lastName(source: string) {
     return source.substring(source.lastIndexOf("/") + 1);
   }
-  return Assets.load<T>(param as never)
-    .then(_ => {
-      eventBus.emit("oneResourceLoaded", {
-        type: "success",
-        resourceName: getResourceName(),
-      });
-      return _;
-    })
-    .catch(err => {
-      console.error(err);
-      eventBus.emit("oneResourceLoaded", {
-        type: "fail",
-        resourceName: getResourceName(),
-      });
+  const {
+    app: { loader },
+  } = usePlayerStore();
+  loader.add(param, _ => {
+    eventBus.emit("oneResourceLoaded", {
+      type: "success",
+      resourceName: getResourceName(),
     });
+    return _;
+  });
 }
