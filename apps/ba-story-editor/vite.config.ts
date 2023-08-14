@@ -39,6 +39,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        '@vueuse/head',
         '@vueuse/core',
       ],
       resolvers: [TDesignResolver({ library: 'vue-next' })],
