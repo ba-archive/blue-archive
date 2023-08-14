@@ -117,7 +117,10 @@ importers:
       '@codemirror/view': ~6.16.0
       '@iconify-json/carbon': ^1.1.17
       '@types/node': ^20.3.3
+      '@typescript-eslint/eslint-plugin': ^5.60.1
+      '@typescript-eslint/parser': ^5.60.1
       '@unocss/eslint-config': ^0.53.0
+      '@unocss/eslint-plugin': ~0.53.5
       '@unocss/reset': ^0.53.0
       '@vitejs/plugin-vue': ^4.2.3
       '@vue-macros/volar': ^0.10.2
@@ -128,7 +131,22 @@ importers:
       ba-story-player: workspace:*
       codemirror: ~6.0.1
       eslint: ^8.44.0
+      eslint-plugin-antfu: ~0.39.7
+      eslint-plugin-cypress: ^2.13.3
+      eslint-plugin-eslint-comments: ~3.2.0
+      eslint-plugin-html: ~7.1.0
+      eslint-plugin-import: ^2.27.5
+      eslint-plugin-jsonc: ~2.9.0
+      eslint-plugin-markdown: ~3.0.0
+      eslint-plugin-n: ~16.0.1
+      eslint-plugin-no-only-tests: ~3.1.0
+      eslint-plugin-promise: ~6.1.1
+      eslint-plugin-unicorn: ~47.0.0
+      eslint-plugin-unused-imports: ~3.0.0
+      eslint-plugin-vue: ^9.15.1
+      eslint-plugin-yml: ~1.8.0
       jsdom: ^22.1.0
+      jsonc-eslint-parser: ~2.3.0
       lint-staged: ^13.2.3
       pinia: ^2.1.4
       pnpm: ^8.6.5
@@ -145,6 +163,7 @@ importers:
       vitest: ^0.31.4
       vue: ^3.3.4
       vue-codemirror: ~6.1.1
+      vue-eslint-parser: ^9.3.1
       vue-router: ^4.2.2
       vue-tsc: ^1.8.3
       workbox-window: ^7.0.0
@@ -166,14 +185,32 @@ importers:
       '@antfu/eslint-config': 0.39.8_eslint@8.46.0+typescript@5.1.6
       '@iconify-json/carbon': 1.1.19
       '@types/node': 20.4.7
+      '@typescript-eslint/eslint-plugin': 5.62.0_17357f68f3a550d4e1de94100f3b1b27
+      '@typescript-eslint/parser': 5.62.0_eslint@8.46.0+typescript@5.1.6
       '@unocss/eslint-config': 0.53.6_eslint@8.46.0+typescript@5.1.6
+      '@unocss/eslint-plugin': 0.53.6_eslint@8.46.0+typescript@5.1.6
       '@unocss/reset': 0.53.6
       '@vitejs/plugin-vue': 4.2.3_vite@4.4.8+vue@3.3.4
       '@vue-macros/volar': 0.10.2_vue-tsc@1.8.8+vue@3.3.4
       '@vue/test-utils': 2.4.1_vue@3.3.4
       ba-rig: link:../../lib/ba-rig
       eslint: 8.46.0
+      eslint-plugin-antfu: 0.39.8_eslint@8.46.0+typescript@5.1.6
+      eslint-plugin-cypress: 2.13.3_eslint@8.46.0
+      eslint-plugin-eslint-comments: 3.2.0_eslint@8.46.0
+      eslint-plugin-html: 7.1.0
+      eslint-plugin-import: 2.28.0_eslint@8.46.0
+      eslint-plugin-jsonc: 2.9.0_eslint@8.46.0
+      eslint-plugin-markdown: 3.0.1_eslint@8.46.0
+      eslint-plugin-n: 16.0.1_eslint@8.46.0
+      eslint-plugin-no-only-tests: 3.1.0
+      eslint-plugin-promise: 6.1.1_eslint@8.46.0
+      eslint-plugin-unicorn: 47.0.0_eslint@8.46.0
+      eslint-plugin-unused-imports: 3.0.0_8d31066e7790cac1a47cd14fe986cbe9
+      eslint-plugin-vue: 9.16.1_eslint@8.46.0
+      eslint-plugin-yml: 1.8.0_eslint@8.46.0
       jsdom: 22.1.0
+      jsonc-eslint-parser: 2.3.0
       lint-staged: 13.2.3
       pnpm: 8.6.11
       simple-git-hooks: 2.9.0
@@ -186,6 +223,7 @@ importers:
       vite: 4.4.8_@types+node@20.4.7
       vite-plugin-pages: 0.31.0_vite@4.4.8
       vitest: 0.31.4_jsdom@22.1.0
+      vue-eslint-parser: 9.3.1_eslint@8.46.0
       vue-tsc: 1.8.8_typescript@5.1.6
       workbox-window: 7.0.0
 
@@ -7182,7 +7220,6 @@ packages:
     dependencies:
       eslint: 8.46.0
       globals: 11.12.0
-    dev: false
 
   /eslint-plugin-es-x/7.2.0_eslint@8.46.0:
     resolution: {integrity: sha512-9dvv5CcvNjSJPqnS5uZkqb3xmbeqRLnvXKK7iI5+oK/yTusyc46zbBZKENGsOfojm/mKfszyZb+wNqNPAPeGXA==}
@@ -7375,7 +7412,6 @@ packages:
       safe-regex: 2.1.1
       semver: 7.5.4
       strip-indent: 3.0.0
-    dev: false
 
   /eslint-plugin-unicorn/48.0.1_eslint@8.46.0:
     resolution: {integrity: sha512-FW+4r20myG/DqFcCSzoumaddKBicIPeFnTrifon2mWIzlfyvzwyqZjqVP7m4Cqr/ZYisS2aiLghkUWaPg6vtCw==}
@@ -7427,7 +7463,6 @@ packages:
       '@typescript-eslint/eslint-plugin': 5.62.0_cdf4b1b39ee7a79a18350962b50cb7bb
       eslint: 8.46.0
       eslint-rule-composer: 0.3.0
-    dev: false
 
   /eslint-plugin-vue/9.16.1_eslint@8.46.0:
     resolution: {integrity: sha512-2FtnTqazA6aYONfDuOZTk0QzwhAwi7Z4+uJ7+GHeGxcKapjqWlDsRWDenvyG/utyOfAS5bVRmAG3cEWiYEz2bA==}
@@ -10585,7 +10620,6 @@ packages:
     resolution: {integrity: sha512-rx+x8AMzKb5Q5lQ95Zoi6ZbJqwCLkqi3XuJXp5P3rT8OEc6sZCJG5AE5dU3lsgRr/F4Bs31jSlVN+j5KrsGu9A==}
     dependencies:
       regexp-tree: 0.1.27
-    dev: false
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}

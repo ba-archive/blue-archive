@@ -13,6 +13,7 @@ declare module 'vue' {
     EditorLayout: typeof import('./components/EditorLayout/index.vue')['default']
     FileItem: typeof import('./components/ResourceExplorer/FileItem.vue')['default']
     NexonScriptEditor: typeof import('./components/NexonScriptEditor/NexonScriptEditor.vue')['default']
+    NexonScriptEditorToolbar: typeof import('./components/NexonScriptEditor/NexonScriptEditorToolbar.vue')['default']
     README: typeof import('./components/README.md')['default']
     ResourceExplorer: typeof import('./components/ResourceExplorer/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

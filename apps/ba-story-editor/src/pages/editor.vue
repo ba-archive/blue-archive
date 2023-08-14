@@ -48,4 +48,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-../../scripts/yuuka.json../common/nexon-script/parser

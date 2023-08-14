@@ -6,6 +6,7 @@ import type { UserModule } from './types'
 
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
+import './styles/font.scss'
 import 'uno.css'
 
 const app = createApp(App)
