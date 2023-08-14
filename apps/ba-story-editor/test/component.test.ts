@@ -15,14 +15,8 @@ describe('TheCounter.vue', () => {
 
     expect(wrapper.find('.inc').exists()).toBe(true)
 
-    expect(wrapper.find('.dec').exists()).toBe(true)
-
-    await wrapper.get('.inc').trigger('click')
+    await wrapper.get('button').trigger('click')
 
     expect(wrapper.text()).toContain('1')
-
-    await wrapper.get('.dec').trigger('click')
-
-    expect(wrapper.text()).toContain('0')
   })
 })

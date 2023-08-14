@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import yuuka from './../../scripts/yuuka.json'
+import yuuka from '../../scripts/yuuka.json'
 import type { NexonJSONStory } from '~/types/story'
 
 export const useEditorStore = defineStore('editor', () => {

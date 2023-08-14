@@ -19,22 +19,13 @@
     "vueuse",
     "yuuka"
   ],
-  "i18n-ally.sourceLanguage": "en",
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": "locales",
-  "i18n-ally.sortKeys": true,
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
+    "source.fixAll.eslint": true
   },
   "files.associations": {
     "*.css": "postcss"
   },
-  "vue-i18n.i18nPaths": "locales",
-  "editor.formatOnPaste": false, // required
-  "editor.formatOnType": false, // required
-  "editor.formatOnSave": false, // optional
-  "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
