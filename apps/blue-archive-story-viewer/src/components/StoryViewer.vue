@@ -58,6 +58,12 @@
             >
               {{ getI18nString(userLanguage, "playerControl.replay") }}
             </div>
+            <div
+              @click="handleRecord"
+              class="user-button shadow-near rounded-small"
+            >
+              Record
+            </div>
             <a
               v-if="undefined !== findPreviousStoryId()"
               :href="`/${storyQueryType}Story/${findPreviousStoryId()}?type=${storyQueryType}`"
@@ -322,6 +328,15 @@ function handleStoryEnd() {
 function handleReplay() {
   playEnded.value = false;
   reloadPlayer();
+}
+
+async function handleRecord() {
+  try {
+    const recordData = await fetchRecordData(storyId.value);
+    displayRecordData(recordData);
+  } catch (error) {
+    fetchErrorMessage.value = 'Failed to fetch record data';
+  }
 }
 </script>
 
