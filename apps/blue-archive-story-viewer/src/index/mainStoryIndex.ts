@@ -248,7 +248,7 @@ export const stories: StoryBriefing[] = [
           TextTh: "การสอบประเมินครั้งที่ 1",
           TextTw: "第1次特別學力測驗",
           TextEn: "The First Evaluation Exam",
-          TextCn: "第一次特别学力考试",
+          TextCn: "第1次特别学力考试",
         },
         story_id: 31080,
         previous: 31070,

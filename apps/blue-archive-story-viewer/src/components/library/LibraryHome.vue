@@ -6,8 +6,8 @@ import { libraryIndex } from "@index/libraryIndex";
   <div class="flex-vertical">
     <div class="flex-vertical" style="width: min(50rem, 90%)">
       <h2 class="color-transition">档案库</h2>
-      <!-- eslint-disable-next-line vue/require-v-for-key -->
       <div class="library flex-vertical">
+        <!-- eslint-disable-next-line vue/require-v-for-key -->
         <div
           class="library__section flex-vertical"
           v-for="librarySection in libraryIndex"

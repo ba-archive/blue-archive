@@ -472,4 +472,55 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Izuna_home: {
+    name: "Izuna_home",
+    playQue: [
+      {
+        name: "Izuna_home",
+        animation: "Start_Idle_01",
+        fadeTime: 7.3,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Izuna_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0179_home: {
+    name: "CH0179_home",
+    playQue: [
+      {
+        name: "CH0179_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.3,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0179_home: {
+        scale: 1.9,
+      },
+    },
+    otherSpine: [],
+  },
+  Yuuka_home: {
+    name: "Yuuka_home",
+    playQue: [
+      {
+        name: "Yuuka_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Yuuka_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
