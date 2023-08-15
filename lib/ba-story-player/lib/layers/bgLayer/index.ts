@@ -2,9 +2,10 @@
  * 初始化背景层, 订阅player的剧情信息.
  */
 import eventBus from "@/eventBus";
+import { checkloadAssetAlias } from "@/index";
 import { usePlayerStore } from "@/stores";
+import { Application, Sprite } from "pixi.js";
 import gsap from "gsap";
-import { Application, Assets, Sprite, Texture } from "pixijs";
 import { BgLayer } from "@/types/bgLayer";
 
 export function bgInit() {
@@ -39,7 +40,17 @@ const BgLayerInstance: BgLayer = {
    * 事件监听处理函数
    */
   handleShowBg({ url, overlap }) {
-    Assets.load(url).then(() => {
+    const {
+      app: { loader },
+    } = usePlayerStore();
+    const resource = checkloadAssetAlias(url, url);
+    new Promise<void>(resolve => {
+      if (resource) {
+        resolve();
+      } else {
+        loader.add(url).load(() => resolve());
+      }
+    }).then(() => {
       const instance = this.getBgSpriteFromResource(url);
       if (instance) {
         if (overlap) {
@@ -66,12 +77,12 @@ const BgLayerInstance: BgLayer = {
   getBgSpriteFromResource(name: string) {
     const { app } = usePlayerStore();
     let sprite: Sprite | null = null;
-    const asset = Assets.get<Texture>(name);
+    const asset = app.loader.resources[name];
     if (!asset) {
       console.error(`can't find resource: ${name}`);
       return;
     }
-    sprite = new Sprite(asset);
+    sprite = new Sprite(asset.texture);
     const { x, y, scale } = calcBackgroundImageSize(sprite, app);
     sprite.position.set(x, y);
     sprite.scale.set(scale);

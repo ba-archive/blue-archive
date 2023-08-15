@@ -3,9 +3,9 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
+import { Container } from "pixi.js";
 import gsap from "gsap";
 import { IEvent, ITrackEntry, Spine } from "pixi-spine";
-import { Assets, Container } from "pixijs";
 import { IL2dPlayQue } from "@/types/l2d";
 
 let disposed = true;
@@ -74,7 +74,7 @@ export function L2DInit() {
   });
   // 播放live2D
   eventBus.on("playL2D", () => {
-    const { l2dSpineData, curL2dConfig } = usePlayerStore();
+    const { l2dSpineData, curL2dConfig, characterSpineData } = usePlayerStore();
     // 动画是否已经播放, true 代表播放完成
     const hasPlayedAnimation = {} as { [key: string]: boolean };
     currentIndex = 0;
@@ -236,7 +236,7 @@ export function L2DInit() {
     if (curL2dConfig?.otherSpine) {
       otherItems = curL2dConfig.otherSpine.map((i, idx) => {
         const temItem = new Spine(
-          Assets.get(getResourcesUrl("otherL2dSpine", i)).spineData
+          characterSpineData(getResourcesUrl("otherL2dSpine", i))
         );
         temItem.name = i;
         setSpinePlayInfo({ item: temItem, zIndex: 100 + idx + 1 });

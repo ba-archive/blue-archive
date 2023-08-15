@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite } from "pixijs";
+import { Sprite } from "pixi.js";
 import gsap from "gsap";
 import fxOptions from "./options/fxOptions";
 import {

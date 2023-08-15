@@ -1,23 +1,21 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { useUiState } from "@/stores/state";
+import { Howl, Howler } from "howler";
 import { PlayAudio } from "@/types/events";
-import { Sound, sound } from "@pixi/sound";
-import { watch } from "vue";
 
-const audioMap = new Map<string, Sound>();
+const audioMap = new Map<string, Howl>();
 /**
  * 获取url对于的Sound对象, 缓存不存在则新建
  * @param url
  */
-function getAudio(url: string): Sound {
+function getAudio(url: string): Howl {
   const audio = audioMap.get(url);
   if (audio) {
     return audio;
   } else {
-    const newAudio = Sound.from({
-      url,
-      autoPlay: false,
+    const newAudio = new Howl({
+      src: url,
+      autoplay: false,
     });
     audioMap.set(url, newAudio);
     return newAudio;
@@ -33,42 +31,47 @@ export function preloadSound(audioUrls: string[]) {
   for (const audioUrl of audioUrls) {
     audioLoadPromises.push(
       new Promise<void>(resolve => {
-        audioMap.set(
-          audioUrl,
-          Sound.from({
-            url: audioUrl,
-            preload: true,
-            autoPlay: false,
-            loaded(err, _) {
-              eventBus.emit("oneResourceLoaded", {
-                type: err ? "fail" : "success",
-                resourceName: audioUrl,
-              });
-              resolve();
-            },
-          })
-        );
+        const newAudio = new Howl({
+          src: audioUrl,
+          preload: false,
+          autoplay: false,
+        });
+        newAudio.once("load", () => {
+          eventBus.emit("oneResourceLoaded", {
+            type: "success",
+            resourceName: audioUrl,
+          });
+          resolve();
+        });
+        newAudio.once("loaderror", () => {
+          eventBus.emit("oneResourceLoaded", {
+            type: "fail",
+            resourceName: audioUrl,
+          });
+          resolve();
+        });
+        audioMap.set(audioUrl, newAudio);
+        newAudio.load();
       })
     );
   }
 }
 
-
 export function soundDispose() {
   for (const sound of audioMap.values()) {
     sound.stop();
   }
-  sound.stopAll();
+  Howler.stop();
 }
 
 /**
  * 初始化声音层, 订阅player的剧情信息.
  */
 export function soundInit() {
-  let bgm: Sound | undefined = undefined;
-  let sfx: Sound | undefined = undefined;
-  let voice: Sound | undefined = undefined;
-  let emotionSound: Sound | undefined = undefined;
+  let bgm: Howl | undefined = undefined;
+  let sfx: Howl | undefined = undefined;
+  let voice: Howl | undefined = undefined;
+  let emotionSound: Howl | undefined = undefined;
 
   /**
    * 声音层的全局设置, 包括BGM音量, 效果音量和语音音量
@@ -83,31 +86,22 @@ export function soundInit() {
    * @param playAudioInfo
    */
   function playAudio(playAudioInfo: PlayAudio) {
+    function endCb() {
+      bgm?.seek(playAudioInfo.bgm?.bgmArgs.LoopStartTime);
+      bgm?.play();
+    }
     if (playAudioInfo.bgm) {
       // 如果有正在播放的BGM则停止当前播放, 替换为下一个BGM
       if (bgm) {
         bgm.stop();
+        bgm.off("end", endCb);
       }
       // 替换BGM
       bgm = getAudio(playAudioInfo.bgm.url);
-      bgm.volume = soundSettings.BGMvolume;
-      bgm.play({
-        // 第一次是非loop播放, 播放到LoopStartTime为止
-        loop: false,
-        start: 0,
-        end: playAudioInfo.bgm?.bgmArgs.LoopEndTime,
-        complete: function (sound) {
-          if (bgm && bgm.url !== sound.url) {
-            return;
-          }
-          // 第一次播放结束后进入loop
-          sound.play({
-            loop: true,
-            start: playAudioInfo.bgm?.bgmArgs.LoopStartTime,
-            end: playAudioInfo.bgm?.bgmArgs.LoopEndTime,
-          });
-        },
-      }); // 这样写真的好吗...
+      bgm.volume(soundSettings.BGMvolume);
+      bgm.seek(0);
+      bgm.once("end", endCb);
+      bgm.play();
     }
 
     if (playAudioInfo.soundUrl) {
@@ -115,12 +109,11 @@ export function soundInit() {
         sfx.stop();
       }
       sfx = getAudio(playAudioInfo.soundUrl);
-      sfx.volume = soundSettings.SFXvolume;
-      sfx.play({
-        complete: () => {
-          console.log("Finish Playing Sound!");
-        },
+      sfx.volume(soundSettings.SFXvolume);
+      sfx.once("end", () => {
+        console.log("Finish Playing Sound!");
       });
+      sfx.play();
     }
 
     if (playAudioInfo.voiceJPUrl) {
@@ -128,12 +121,11 @@ export function soundInit() {
         voice.stop();
       }
       voice = getAudio(playAudioInfo.voiceJPUrl);
-      voice.volume = soundSettings.Voicevolume;
-      voice.play({
-        complete: () => {
-          eventBus.emit("playVoiceJPDone", playAudioInfo.voiceJPUrl || "");
-        },
+      voice.volume(soundSettings.Voicevolume);
+      voice.once("end", () => {
+        eventBus.emit("playVoiceJPDone", playAudioInfo.voiceJPUrl || "");
       });
+      voice.play();
     }
   }
 
@@ -157,9 +149,8 @@ export function soundInit() {
       emotionSound.stop();
     }
     emotionSound = getAudio(usePlayerStore().emotionSoundUrl(emotype));
-    emotionSound.play({
-      volume: soundSettings.SFXvolume,
-    });
+    emotionSound.volume(soundSettings.SFXvolume);
+    emotionSound.play();
   });
 
   eventBus.on("playOtherSounds", sound => {

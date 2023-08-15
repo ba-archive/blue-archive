@@ -1,9 +1,7 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite, TilingSprite } from "pixijs";
+import { Sprite, TilingSprite, filters } from "pixi.js";
 import { emitterStarter } from "../emitterUtils";
 import { loadSpriteSheet } from "../resourcesUtils";
-import { BlurFilter } from "pixijs";
-
 
 export default async function BG_SandStorm_L(resources: Sprite[]) {
   // 原理是两个平铺图片不断移动
@@ -23,7 +21,7 @@ export default async function BG_SandStorm_L(resources: Sprite[]) {
   const width = Math.sqrt(appWidth * appWidth + appHeight * appHeight);
   const height = texture.height;
   const scale = appHeight / height;
-  const blurFilter = new BlurFilter();
+  const blurFilter = new filters.BlurFilter();
   [TextureTilingBack, TextureTilingFront].forEach(i => {
     // 避免 tiling 产生的像素
     i.clampMargin = 1.5;

@@ -26,11 +26,9 @@ import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
-import { sound } from "@pixi/sound";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
-sound.useLegacy = true; // 别问, 问就是旧的好用
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;

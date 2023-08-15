@@ -1,5 +1,4 @@
 import { getResourcesUrl } from "@/utils";
-import { Assets } from "pixijs";
 import { ref } from "vue";
 import { BGEffectImgTable } from "@/types/effectLayer";
 import {
@@ -159,7 +158,14 @@ const getterFunctions: GetterFunctions = {
 
   characterSpineData: () => (CharacterName: number, url: string) => {
     // eslint-disable-next-line max-len
-    return (Assets.cache.has(String(CharacterName)) ? Assets.get(String(CharacterName)) : (Assets.get(url) || {})).spineData;
+    const {
+      app: { loader },
+    } = usePlayerStore();
+    return (
+      loader.resources[String(CharacterName)] ??
+      loader.resources[url] ??
+      {}
+    ).spineData;
   },
 
   /**
@@ -195,8 +201,10 @@ const getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    const resource = Assets.get(privateState.l2dSpineUrl);
-    if (resource) return resource.spineData;
+    const {
+      app: { loader },
+    } = usePlayerStore();
+    return (loader.resources[privateState.l2dSpineUrl] ?? {}).spineData;
   },
 };
 

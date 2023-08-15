@@ -1,7 +1,7 @@
+import * as PIXI from "pixi.js";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
-import * as PIXI from "pixijs";
 import gsap, { Power0 } from "gsap";
 import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine";
 import {

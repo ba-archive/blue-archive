@@ -1,14 +1,11 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite, TilingSprite } from "pixijs";
+import { Container, Sprite, TilingSprite } from "pixi.js";
 import {
   emitterConfigs,
   emitterContainer,
   emitterStarter,
 } from "../emitterUtils";
-import {
-  getEmitterType,
-  loadSpriteSheet,
-} from "../resourcesUtils";
+import { getEmitterType, loadSpriteSheet } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
 
 export default async function BG_Dust_L(resources: Sprite[]) {

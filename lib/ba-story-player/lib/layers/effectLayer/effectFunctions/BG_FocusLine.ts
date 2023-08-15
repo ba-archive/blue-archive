@@ -1,6 +1,6 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixijs";
+import { Container, Sprite } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3, Particle } from "@pixi/particle-emitter";

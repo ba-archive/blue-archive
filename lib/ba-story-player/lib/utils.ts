@@ -42,10 +42,12 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       return `${dataUrl}/effectTexture/${arg}`;
     case "l2dVoice":
       //arg "sound/CH0184_MemorialLobby_1_1"
+      // eslint-disable-next-line no-case-declarations
       const voiceDirectory = arg.replace(
         /(?:.*\/)?([A-Z0-9]*)_MemorialLobby.*/i,
         "JP_$1"
       );
+      // eslint-disable-next-line no-case-declarations
       const voiceFilename = arg.split("/").pop();
       return `${dataUrl}/Audio/VoiceJp/Character_voice/${voiceDirectory}/${voiceFilename}.${oggAudioType}`;
     case "l2dSpine":
@@ -62,12 +64,15 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       return `${dataUrl}/Audio/VoiceJp/${arg}.${oggAudioType}`;
     case "characterSpine":
       //arg UIs/03_Scenario/02_Character/CharacterSpine_hasumi
+      // eslint-disable-next-line no-case-declarations
       const temp = String(arg).split("/");
+      // eslint-disable-next-line no-case-declarations
       let id = temp.pop();
       id = id?.replace("CharacterSpine_", "");
       if (id?.endsWith("ND")) {
         id = id.slice(0, id.length - 2);
       }
+      // eslint-disable-next-line no-case-declarations
       const filename = `${id}_spr`; //hasumi_spr
       if (superSampling) {
         return `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`;
