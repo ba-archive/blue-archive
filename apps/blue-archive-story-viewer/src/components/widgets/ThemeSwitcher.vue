@@ -19,7 +19,7 @@ const initTheme =
     ? "dark"
     : "light";
 
-// toggleTheme(initTheme);
+toggleTheme(initTheme);
 
 function handleThemeChange(event: MediaQueryListEvent) {
   const { matches } = event;
@@ -41,11 +41,7 @@ onUnmounted(() => {
 
 <template>
   <div class="theme-switcher">
-    <img
-      class="dark-mode-icon"
-      src="/src/assets/dark-mode.svg"
-      alt="Dark Mode"
-    />
+    <img class="dark-mode-icon" src="@assets/dark-mode.svg" alt="Dark Mode" />
     <neu-switch
       :checked="'light' === currentTheme"
       checked-value="light"
@@ -55,7 +51,7 @@ onUnmounted(() => {
     />
     <img
       class="light-mode-icon"
-      src="/src/assets/light-mode.svg"
+      src="@assets/light-mode.svg"
       alt="Light Mode"
     />
   </div>
