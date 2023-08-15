@@ -129,6 +129,12 @@ import { useSettingsStore } from "@store/settings";
 import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
+import { fetchRecordData, displayRecordData } from "@utils/recordData";
+let fetchErrorMessage = '';
+let storyId = '';
+import { fetchRecordData, displayRecordData } from "@utils/recordData";
+let fetchErrorMessage = '';
+let storyId = '';
 
 const changeIndex = ref(0);
 
