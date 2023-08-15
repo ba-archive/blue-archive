@@ -20,22 +20,31 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   //   startDate: "2023/05/16",
   //   endDate: "2023/06/30",
   //   style: "pixelize",
-  // },
-  {
-    type: "student",
-    jumpTo: 13010,
-    title: "早濑 优香",
-  },
-  {
-    type: "student",
-    jumpTo: 10014,
-    title: "久田 泉奈",
-  },
-  {
-    type: "mainstory",
-    title: "Vol.3 第二章",
-  },
-];
+  const homepageDisplayInfoList: HomeDisplayInfo[] = [
+    {
+      type: "student",
+      jumpTo: 13010,
+      title: "早濑 优香",
+    },
+    {
+      type: "student",
+      jumpTo: 10014,
+      title: "久田 泉奈",
+    },
+    {
+      type: "mainstory",
+      title: "Vol.3 第二章",
+    },
+  ];
+  
+  async function handleRecord(storyId: number | string) {
+    try {
+      const recordData = await fetchRecordData(storyId);
+      displayRecordData(recordData);
+    } catch (error) {
+      fetchErrorMessage.value = 'Failed to fetch record data';
+    }
+  }
 </script>
 
 <template>
@@ -49,6 +58,12 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
           :info="info"
           :key="info.title"
         />
+        <div
+          @click="handleRecord(info.jumpTo)"
+          class="user-button shadow-near rounded-small"
+        >
+          Record
+        </div>
       </div>
     </div>
   </div>
