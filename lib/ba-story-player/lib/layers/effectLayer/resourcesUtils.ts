@@ -1,4 +1,4 @@
-import { BaseTexture, ImageResource, Sprite, Spritesheet } from "pixijs";
+import { BaseTexture, ImageResource, Sprite, Spritesheet } from "pixi.js";
 import { EmitterConfigV3 } from "@pixi/particle-emitter";
 
 /**

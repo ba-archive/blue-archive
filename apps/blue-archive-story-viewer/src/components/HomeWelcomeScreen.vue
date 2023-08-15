@@ -22,28 +22,18 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   //   style: "pixelize",
   // },
   {
+    type: "student",
+    jumpTo: 13010,
+    title: "早濑 优香",
+  },
+  {
+    type: "student",
+    jumpTo: 10014,
+    title: "久田 泉奈",
+  },
+  {
     type: "mainstory",
     title: "Vol.3 第二章",
-  },
-  {
-    type: "student",
-    jumpTo: 10074,
-    title: "浦和 花子（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 16013,
-    title: "下江 小春（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 10073,
-    title: "古关 忧（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 20028,
-    title: "若叶 日向（泳装）",
   },
 ];
 </script>

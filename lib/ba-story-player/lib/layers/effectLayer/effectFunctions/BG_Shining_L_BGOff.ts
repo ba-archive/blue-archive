@@ -1,9 +1,8 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixijs";
+import { Container, Sprite, filters } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
-import { AlphaFilter } from "pixijs";
 
 export default async function BG_Shining_L_BGOff(resources: Sprite[]) {
   // 原理是波纹
@@ -11,7 +10,7 @@ export default async function BG_Shining_L_BGOff(resources: Sprite[]) {
   const appWidth = app.view.width;
   const appHeight = app.view.height;
   // 紫色覆盖
-  const alphaFilter = new AlphaFilter(0.4);
+  const alphaFilter = new filters.AlphaFilter(0.4);
   const backPurpleSprite = resources[2];
   backPurpleSprite.tint = 0xd59ffb;
   backPurpleSprite.width = appWidth;
