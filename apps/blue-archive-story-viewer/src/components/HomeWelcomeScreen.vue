@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
+import { fetchRecordData, displayRecordData } from "@utils/recordData";
+let fetchErrorMessage = '';
+let storyId = '';
+import { fetchRecordData, displayRecordData } from "@utils/recordData";
+let fetchErrorMessage = '';
+let storyId = '';
 
 export interface HomeDisplayInfo {
   type: "mainstory" | "student" | "minigame";
@@ -18,24 +24,22 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   //   icon: "https://shiroko.blue-archive.io/favicon.gif",
   //   jumpTo: "https://shiroko.blue-archive.io",
   //   startDate: "2023/05/16",
-  //   endDate: "2023/06/30",
-  //   style: "pixelize",
   const homepageDisplayInfoList: HomeDisplayInfo[] = [
-    {
-      type: "student",
-      jumpTo: 13010,
-      title: "早濑 优香",
-    },
-    {
-      type: "student",
-      jumpTo: 10014,
-      title: "久田 泉奈",
-    },
-    {
-      type: "mainstory",
-      title: "Vol.3 第二章",
-    },
-  ];
+      {
+        type: "student",
+        jumpTo: 13010,
+        title: "早濑 优香",
+      },
+      {
+        type: "student",
+        jumpTo: 10014,
+        title: "久田 泉奈",
+      },
+      {
+        type: "mainstory",
+        title: "Vol.3 第二章",
+      },
+    ];
   
   async function handleRecord(storyId: number | string) {
     try {
