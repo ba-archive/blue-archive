@@ -1,4 +1,3 @@
-setup
 <script setup lang="ts">
 import { Codemirror } from 'vue-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
@@ -32,7 +31,7 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
 </script>
 
 <template>
-  <div class="codemirror-editor">
+  <div class="json-editor">
     <!-- <NexonScriptEditorToolbar /> -->
     <Codemirror
       :model-value="props.code"
@@ -43,7 +42,7 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
       :indent-with-tab="true"
       :tab-size="2"
       :extensions="extensions"
-      @update:model-value="emit('update:code', props.code)"
+      @update:model-value="emit('update:code', $event)"
       @ready="handleReady"
     />
   </div>

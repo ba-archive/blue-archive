@@ -5,9 +5,9 @@ import type { NexonJSONStory } from '~/types/story'
 export const useEditorStore = defineStore('editor', () => {
   const nexonJSONStory = ref<NexonJSONStory>()
 
-  async function loadNexonJSONStory() {
+  function loadNexonJSONStory() {
     nexonJSONStory.value = yuuka
-    return nexonJSONStory
+    return nexonJSONStory as Ref<NexonJSONStory >
   }
 
   return {

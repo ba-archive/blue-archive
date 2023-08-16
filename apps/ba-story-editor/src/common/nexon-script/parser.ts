@@ -2,7 +2,7 @@ import { JSONStoryCommandType } from '../../types/story'
 import { Lang, NexonTags } from '../../types/common'
 import type { JSONStory, JSONStoryCharacterCommand, JSONStoryPlaceCommand, JSONStoryTalkCommand, JSONStoryTitleCommand, JSONStoryWaitCommand, NexonJSONStory } from '../../types/story'
 import type { I18NString, I18NTextAST, TextAST } from '../../types/common'
-import { NexonScriptCommandRegex, NexonScriptCommandTypes, langKeyMap } from './type'
+import { LangKeyMap, NexonScriptCommandRegex, NexonScriptCommandTypes } from './type'
 import type { NexonCommandUnit, NexonCommandUnitT } from './type'
 
 function buildNexonCommandMetaInfo(text: string): NexonCommandUnit['meta'] {
@@ -29,7 +29,7 @@ function buildI18NAST(i18NString: I18NString): I18NTextAST {
 
 function buildI18NStringUtil(metaInfo: NexonCommandUnit['meta'], textKr: string): I18NString {
   const i18NString: I18NString = { [Lang.kr]: textKr }
-  for (const [k, v] of Object.entries(langKeyMap)) {
+  for (const [k, v] of Object.entries(LangKeyMap)) {
     if (Reflect.has(metaInfo, k)) {
       const langText = String(Reflect.get(metaInfo, k))
       Reflect.set(i18NString, v, langText)
@@ -68,7 +68,7 @@ function buildNexonCommandUnit(raw: string): NexonCommandUnit {
       case NexonScriptCommandTypes.Title: {
         const i18NTitle: I18NString = {}
         const i18NSubtitle: I18NString = {}
-        for (const [k, v] of Object.entries(langKeyMap)) {
+        for (const [k, v] of Object.entries(LangKeyMap)) {
           if (Reflect.has(metaInfo, k)) {
             const langText = String(Reflect.get(metaInfo, k))
             const [titleText, subtitleText] = langText.split(';')
@@ -124,40 +124,91 @@ interface ParserHandler {
   (unit: NexonCommandUnit): void
 }
 
-const NexonTextTagRe: { [key in NexonTags]?: { tag: NexonTags; start: RegExp; end: RegExp } } = {
+const NexonTextTagRe: {
+  [key in NexonTags]?: {
+    tag: NexonTags
+    start: RegExp
+    end: RegExp
+    toText: (ast: TextAST) => string
+  }
+} = {
   [NexonTags.Ruby]: {
     tag: NexonTags.Ruby,
     start: /^\[ruby=(.*?)]/i,
     end: /^\[\/ruby]/,
+    toText: (ast) => {
+      return `[ruby=${ast.value}]${AST2Text(ast.children)}[/ruby]`
+    },
   },
   [NexonTags.B]: {
     tag: NexonTags.B,
     start: /^\[b]/i,
     end: /^\[\/b]/,
+    toText: (ast) => {
+      return `[b]${AST2Text(ast.children)}[/b]`
+    },
   },
   [NexonTags.I]: {
     tag: NexonTags.I,
     start: /^\[i]/i,
     end: /^\[\/i]/,
+    toText: (ast) => {
+      return `[i}]${AST2Text(ast.children)}[/i]`
+    },
   },
   [NexonTags.Tooltip]: {
     tag: NexonTags.B,
     start: /^\[tooltip=(.*?)]/i,
     end: /^\[\/tooltip]/,
+    toText: (ast) => {
+      return `[tooltip=${ast.value}]${AST2Text(ast.children)}[/tooltip]`
+    },
   },
   [NexonTags.Log]: {
     tag: NexonTags.Log,
     start: /^\[log=(.*?)]/i,
     end: /^\[\/log]/,
+    toText: (ast) => {
+      return `[log=${ast.value}]${AST2Text(ast.children)}[/log]`
+    },
   },
   [NexonTags.Color]: {
     tag: NexonTags.Color,
     start: /^\[([a-fA-F0-9]{6})]/,
     end: /^\[-]/,
+    toText: (ast) => {
+      return `[${ast.value}]${AST2Text(ast.children)}[-]`
+    },
+  },
+  [NexonTags.Root]: { // fake tag
+    tag: NexonTags.Root,
+    start: /^\[Root]/,
+    end: /^\[\/Root]/,
+    toText: (ast) => {
+      return AST2Text(ast.children)
+    },
   },
   // fontsize: null,
 }
 
+/** transform ast to text(string) */
+function AST2Text(astChildren: (TextAST | string | undefined)[]): string {
+  let result = ''
+  for (const child of astChildren) {
+    if (typeof child === 'string') {
+      result += child
+    }
+    else if (typeof child === 'object') {
+      if (Reflect.has(NexonTextTagRe, child.tag))
+        result += (Reflect.get(NexonTextTagRe, child.tag))!.toText(child)
+      else
+        console.warn(`buildText: unrecognized tag: ${child}`)
+    }
+  }
+  return result
+}
+
+/** transform text(string) to ast */
 function buildAST(raw: string): TextAST {
   const stack: TextAST[] = [{ tag: NexonTags.Root, children: [] }]
   let index = 0
@@ -202,16 +253,13 @@ function buildAST(raw: string): TextAST {
 export class NexonScriptParser {
   public nexonScript?: string
   public units: NexonCommandUnit[]
-  public groupId: number
   public index = 0
 
   public result: JSONStory['content'] = []
 
-  constructor(groupId: number, obj: string)
-  constructor(groupId: number, obj: NexonCommandUnit[])
-  constructor(groupId: number, obj: string | NexonCommandUnit[]) {
-    this.groupId = groupId
-
+  constructor(obj: string)
+  constructor(obj: NexonCommandUnit[])
+  constructor(obj: string | NexonCommandUnit[]) {
     if (typeof obj === 'string') {
       this.nexonScript = obj
       this.units = []
@@ -229,7 +277,20 @@ export class NexonScriptParser {
     }
   }
 
-  parse() {
+  parseToJSONStory(
+    groupID: number,
+    translator: { [lang in Lang]?: string } = {},
+    availableLang: Lang[] = [],
+  ): JSONStory {
+    return {
+      nexonMeta: { GroupID: groupID },
+      translator,
+      availableLang,
+      content: this.parse(),
+    }
+  }
+
+  parse(): JSONStory['content'] {
     for (this.index = 0; this.index < this.units.length; this.index++)
       this.parseCommandUnit(this.units[this.index])
     return this.result
@@ -308,14 +369,14 @@ export class NexonScriptParser {
 
 // build NexonScript
 const STARTUP_INDENT = '   '
-const langKeys = ['TextJp', 'TextCn']
-const scriptKeys = ['BGMId', 'Sound', 'Transition', 'BGName', 'BGEffect', 'PopupFileName', 'VoiceJp']
+const LangKeys = ['TextJp', 'TextCn']
+const ScriptKeys = ['BGMId', 'Sound', 'Transition', 'BGName', 'BGEffect', 'PopupFileName', 'VoiceJp']
 
 export function buildNexonScript(json: NexonJSONStory) {
   let result = ''
   json.content.forEach((each) => {
     let attrText = ''
-    for (const scriptKey of scriptKeys) {
+    for (const scriptKey of ScriptKeys) {
       const temp = Reflect.get(each, scriptKey)
       if (temp)
         attrText += ` @${scriptKey}="${encodeEscape(String(temp))}"`
@@ -324,7 +385,7 @@ export function buildNexonScript(json: NexonJSONStory) {
     const splitKr = each.ScriptKr.split('\n')
     const splitLangs: Record<string, string[]> = {}
 
-    for (const langKey of langKeys) {
+    for (const langKey of LangKeys) {
       const temp = String(Reflect.get(each, langKey))
       splitLangs[langKey] = temp.split('\n')
     }
@@ -340,5 +401,57 @@ export function buildNexonScript(json: NexonJSONStory) {
       result += `${temp}\n`
     }
   })
+  return result
+}
+
+export function buildNexonJSONStory(story: JSONStory) {
+  const result: NexonJSONStory = {
+    GroupId: story.nexonMeta?.GroupID ?? 0,
+    translator: '',
+    content: [],
+  }
+  for (const command of story.content) {
+    const temp = {
+      GroupId: result.GroupId,
+      SelectionGroup: 0,
+      BGMId: 0,
+      Sound: '',
+      Transition: 0,
+      BGName: 0,
+      BGEffect: 0,
+      PopupFileName: '',
+      ScriptKr: '',
+      TextJp: '',
+      TextCn: '',
+      TextTw: '',
+      TextEn: '',
+      VoiceJp: '',
+    }
+    if (command.type === JSONStoryCommandType.Title) {
+      temp.ScriptKr = `#title;${AST2Text([command.title[Lang.kr]])};${AST2Text([command.subtitle?.[Lang.kr]])};`
+    }
+    else if (command.type === JSONStoryCommandType.Place) {
+      temp.ScriptKr = `#place;${command.place};`
+    }
+    else if (command.type === JSONStoryCommandType.Wait) {
+      temp.ScriptKr = `#wait;${command.millionSecond};`
+    }
+    else if (command.type === JSONStoryCommandType.Talk) {
+      temp.ScriptKr = `#na;${AST2Text([command.content?.[Lang.kr]])}`
+    }
+    else if (command.type === JSONStoryCommandType.Character) {
+      if (command.emotion) {
+        temp.ScriptKr = `#${command.position};(em;${command.emotion});`
+      }
+      else if (command.face) { // fx
+        temp.ScriptKr = `#${command.position};(fx;${command.face});`
+      }
+      else if (command.effects) {
+        temp.ScriptKr = `#${command.position};${command.effects};`
+      }
+    }
+
+    result.content.push(temp)
+  }
   return result
 }

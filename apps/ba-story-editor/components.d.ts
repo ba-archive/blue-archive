@@ -9,10 +9,12 @@ declare module 'vue' {
   export interface GlobalComponents {
     AssetPreviewer: typeof import('./src/components/ResourceExplorer/AssetPreviewer.vue')['default']
     CodeMirror: typeof import('./src/components/CodeMirror/CodeMirror.vue')['default']
-    ConversationCard: typeof import('./src/components/VisualEditorComponents/ConversationCard.vue')['default']
+    ConversationCard: typeof import('./src/components/VisualEditor/ConversationCard.vue')['default']
     EditorLayout: typeof import('./src/components/EditorLayout/index.vue')['default']
     FileItem: typeof import('./src/components/ResourceExplorer/FileItem.vue')['default']
+    JSONEditor: typeof import('./src/components/JSONEditor/JSONEditor.vue')['default']
     NexonScriptEditor: typeof import('./src/components/NexonScriptEditor/NexonScriptEditor.vue')['default']
+    NexonScriptEditorToolbar: typeof import('./src/components/NexonScriptEditor/NexonScriptEditorToolbar.vue')['default']
     ResourceExplorer: typeof import('./src/components/ResourceExplorer/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -20,6 +22,6 @@ declare module 'vue' {
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
     VisualEditor: typeof import('./src/components/VisualEditor/VisualEditor.vue')['default']
-    VisualEditorCard: typeof import('./src/components/VisualEditorComponents/VisualEditorCard.vue')['default']
+    VisualEditorCard: typeof import('./src/components/VisualEditor/VisualEditorCard.vue')['default']
   }
 }

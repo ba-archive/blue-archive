@@ -2,7 +2,7 @@ import { Lang } from '../../types/common'
 import type { I18NTextAST } from '../../types/common'
 
 // todo debug
-export const langKeyMap = {
+export const LangKeyMap = {
   TextJp: Lang.jp,
   TextCn: Lang.zhCN,
   TextEn: Lang.en,

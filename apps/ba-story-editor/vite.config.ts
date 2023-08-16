@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
@@ -8,10 +9,12 @@ import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import { TDesignResolver } from 'unplugin-vue-components/resolvers'
 
+// import VueMacros from 'unplugin-vue-macros/vite'
+
 export default defineConfig({
   resolve: {
     alias: {
-      // '~/': `${path.resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
   plugins: [
@@ -51,11 +54,9 @@ export default defineConfig({
     // // https://github.com/antfu/vite-plugin-components
     Components({
       resolvers: [TDesignResolver({ library: 'vue-next' })],
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/components.d.ts',
+      dts: true,
     }),
 
     // https://github.com/antfu/unocss

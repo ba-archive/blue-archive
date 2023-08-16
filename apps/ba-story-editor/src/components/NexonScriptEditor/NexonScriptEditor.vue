@@ -2,11 +2,21 @@
 import { Codemirror } from 'vue-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
+import { ref, shallowRef } from 'vue'
 
 import type { EditorState } from '@codemirror/state'
 import { EditorView } from '@codemirror/view'
 
-// const props = defineProps<{}>()
+const props = withDefaults(defineProps<{
+  code: string
+  readonly?: boolean
+}>(), {
+  readonly: false,
+})
+
+const emit = defineEmits<{
+  'update:code': [code: string]
+}>()
 
 // code mirror
 const customTheme = EditorView.theme({
@@ -18,7 +28,6 @@ const customTheme = EditorView.theme({
 const extensions = [javascript(), oneDark, customTheme]
 const view = shallowRef<EditorView>()
 const codeMirrorStyle = ref({ height: '1200px' })
-const nexonScriptEditorStore = useNexonScriptEditorStore()
 
 function handleReady(payload: { view: EditorView; state: EditorState ; container: HTMLDivElement }) {
   view.value = payload.view
@@ -27,18 +36,18 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
 
 <template>
   <div class="nexon-script-editor">
+    <!-- <NexonScriptEditorToolbar /> -->
     <Codemirror
-      v-model="nexonScriptEditorStore.code"
+      :model-value="props.code"
+      class="codemirror"
       placeholder=""
       :style="codeMirrorStyle"
       :autofocus="false"
       :indent-with-tab="true"
       :tab-size="2"
       :extensions="extensions"
+      @update:model-value="emit('update:code', props.code)"
       @ready="handleReady"
     />
   </div>
 </template>
-
-<style scoped>
-</style>

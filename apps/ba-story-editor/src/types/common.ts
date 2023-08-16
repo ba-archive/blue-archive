@@ -37,7 +37,7 @@ export enum NexonTags {
 export interface TextAST {
   tag: NexonTags
   children: (TextAST | string)[]
-  value?: string
+  value?: string // argument (unlike xml, nexon tag has only one argument)
 }
 
 export type I18NTextAST = I18N<TextAST>
