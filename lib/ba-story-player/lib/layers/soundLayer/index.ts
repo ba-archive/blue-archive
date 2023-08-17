@@ -16,6 +16,7 @@ function getAudio(url: string): Howl {
     const newAudio = new Howl({
       src: url,
       autoplay: false,
+      preload: true,
     });
     audioMap.set(url, newAudio);
     return newAudio;
@@ -86,24 +87,68 @@ export function soundInit() {
    * @param playAudioInfo
    */
   function playAudio(playAudioInfo: PlayAudio) {
-    function endCb() {
-      bgm?.seek(playAudioInfo.bgm?.bgmArgs.LoopStartTime);
-      bgm?.play();
-    }
     if (playAudioInfo.bgm) {
       // 如果有正在播放的BGM则停止当前播放, 替换为下一个BGM
-      if (bgm) {
-        bgm.stop();
-        bgm.off("end", endCb);
+      const cfg = playAudioInfo.bgm;
+      const self = getAudio(cfg.url);
+      // eslint-disable-next-line no-inner-declarations
+      function endCb() {
+        bgm?.off("end", endCb);
+        if (Reflect.get(bgm || {}, "_src") === cfg.url) {
+          self.play("loop");
+        }
       }
-      // 替换BGM
-      bgm = getAudio(playAudioInfo.bgm.url);
-      bgm.volume(soundSettings.BGMvolume);
-      bgm.seek(0);
-      bgm.once("end", endCb);
-      bgm.play();
+      new Promise<typeof cfg>((resovle, reject) => {
+        if (bgm) {
+          // 如果正在播放的bgm和新的是同一个，直接跳过?? 是否合理
+          if (Reflect.get(bgm, "_src") === cfg.url) {
+            reject();
+            return;
+          }
+          bgm.stop();
+          bgm.off("end", endCb);
+          bgm = undefined;
+        }
+        resovle(cfg);
+      })
+        .then(cfg => {
+          // 替换BGM
+          bgm = self;
+          const state = Reflect.get(self, "_state");
+          function setLoop() {
+            const sprite = Reflect.get(self, "_sprite");
+            if (sprite) {
+              // eslint-disable-next-line max-len
+              Reflect.set(sprite, "loop", [
+                cfg.bgmArgs.LoopStartTime * 1000,
+                (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                true,
+              ]);
+            } else {
+              // eslint-disable-next-line max-len
+              Reflect.set(sprite, "_sprite", {
+                loop: [
+                  cfg.bgmArgs.LoopStartTime * 1000,
+                  (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                  true,
+                ],
+              });
+            }
+          }
+          if (state !== "loaded") {
+            bgm.once("load", () => {
+              setLoop();
+            });
+          } else {
+            setLoop();
+          }
+          bgm.fade(0, soundSettings.BGMvolume, cfg.bgmArgs.LoopTranstionTime);
+          bgm.seek(0);
+          bgm.once("end", endCb);
+          bgm.play();
+        })
+        .catch();
     }
-
     if (playAudioInfo.soundUrl) {
       if (sfx) {
         sfx.stop();
