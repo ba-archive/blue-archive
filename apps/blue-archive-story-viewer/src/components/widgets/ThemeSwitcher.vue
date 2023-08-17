@@ -1,42 +1,10 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted } from "vue";
+import { computed } from "vue";
 import NeuSwitch from "./NeuUI/NeuSwitch.vue";
 import { useSettingsStore } from "@store/settings";
-import { switchTheme } from "@util/userInterfaceUtils";
 
 const settingsStore = useSettingsStore();
 const currentTheme = computed(() => settingsStore.getTheme);
-
-function toggleTheme(value: "light" | "dark") {
-  switchTheme(value);
-  settingsStore.setTheme(value);
-}
-
-const initTheme =
-  (window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-  "dark" === currentTheme.value
-    ? "dark"
-    : "light";
-
-toggleTheme(initTheme);
-
-function handleThemeChange(event: MediaQueryListEvent) {
-  const { matches } = event;
-  toggleTheme(matches ? "dark" : "light");
-}
-
-onMounted(() => {
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", handleThemeChange);
-});
-
-onUnmounted(() => {
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .removeEventListener("change", handleThemeChange);
-});
 </script>
 
 <template>
@@ -47,7 +15,7 @@ onUnmounted(() => {
       checked-value="light"
       unchecked-value="dark"
       :accessibility-label="'Toggle Dark Mode'"
-      @update:value="toggleTheme"
+      @update:value="settingsStore.setTheme"
     />
     <img
       class="light-mode-icon"
