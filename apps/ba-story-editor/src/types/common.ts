@@ -41,3 +41,11 @@ export interface TextAST {
 }
 
 export type I18NTextAST = I18N<TextAST>
+
+export class NotImplement implements Error {
+  name = 'NotImplement Error'
+  stack?: string | undefined
+  cause?: unknown
+
+  constructor(public message: string = '') {}
+}

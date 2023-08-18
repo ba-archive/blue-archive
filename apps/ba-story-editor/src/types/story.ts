@@ -47,7 +47,7 @@ export interface JSONStoryPlaceCommand {
 export interface JSONStoryCharacterCommand {
   type: JSONStoryCommandType.Character
   position: 1 | 2 | 3 | 4 | 5
-  /** 人物CharacterName, 请通过它获取人物 spine data */
+  /** 人物 CharacterName, 请通过它获取人物 spine data */
   name?: string // 暂且兼容 nexon 旧命令，为空则操作 position 的人物
   /** 任务差分表情 */
   emotion?: string
@@ -57,6 +57,7 @@ export interface JSONStoryCharacterCommand {
   effects?: string
 }
 
+/** Talk 命令控制对话框，speaker 为空则是 na，否则为人物对话 */
 export interface JSONStoryTalkCommand {
   type: JSONStoryCommandType.Talk
   speaker?: string
