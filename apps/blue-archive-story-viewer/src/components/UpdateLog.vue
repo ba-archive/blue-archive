@@ -4,6 +4,18 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-08-21",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "水羽 三森（泳装）", id: 20029 },
+          { name: "久田 泉奈（泳装）", id: 10046 },
+        ],
+      },
+    ],
+  },
+  {
     date: "2023-08-13",
     contents: [
       {
@@ -642,7 +654,7 @@ const contributorList: any = h(
 </script>
 
 <template>
-  <div id="contributor-container color-transition" class="flex-vertical" v-once>
+  <div id="contributor-container" class="flex-vertical color-transition" v-once>
     <h2 class="update-log__title">更新日志</h2>
     <!-- eslint-disable vue/require-v-for-key -->
     <div class="update-log__block" v-for="log in updateLogs">
