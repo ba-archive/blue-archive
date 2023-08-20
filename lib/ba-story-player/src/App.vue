@@ -80,7 +80,7 @@ const storyCacheKey = "storyJson";
 const jsonName = localStorage.getItem(storyCacheKey);
 if (jsonName && jsonName !== "0") {
   axios
-    .get(`https://yuuka.cdn.diyigemt.com/image/story/vol3/${jsonName}.json`)
+    .get(`https://yuuka.cdn.diyigemt.com/image/story/${jsonName}.json`)
     .then(response => {
       if (response.status === 200) {
         story.value = response.data;
