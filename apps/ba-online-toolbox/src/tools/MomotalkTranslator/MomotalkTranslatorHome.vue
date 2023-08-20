@@ -44,7 +44,7 @@ function updateTranslator(translator: string) {
 
 function updateStudentName(studentId: number) {
   return new Promise<void>((resolve, reject) => {
-    fetch('https://dev.bluearchive.pages.dev/config/json/students.json')
+    fetch('https://preview.blue-archive.io/config/json/students.json')
       .then(response => response.json())
       .then(data => {
         const student = data.find(
