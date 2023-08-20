@@ -8,7 +8,10 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [{ name: "水羽 三森（泳装）", id: 20029 }],
+        students: [
+          { name: "水羽 三森（泳装）", id: 20029 },
+          { name: "久田 泉奈（泳装）", id: 10046 },
+        ],
       },
     ],
   },
