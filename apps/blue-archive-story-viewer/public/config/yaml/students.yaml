@@ -1796,7 +1796,7 @@
     en: Utazumi
     kr: 우타즈미
     tw: 歌住
-    th: 歌住
+    th: อุทะซุมิ
   name:
     cn: 樱子
     jp: サクラコ
@@ -2162,18 +2162,20 @@
     en: Urawa
     kr: 우라와
     tw: 浦和
-    th: อุราวะ
+    th: 浦和
   name:
     cn: 花子(泳装)
     jp: ハナコ（水着）
     en: Hanako (Swimsuit)
     kr: 하나코(수영복)
-    tw: 花子(泳裝)
+    tw: ハナコ（水着）
     th: ฮานาโกะ (ชุดว่ายน้ำ)
-  nickname: ["车王", "水花子"]
+  nickname:
+    - 车王
+    - 水花子
   birthday:
-    month: 4
-    day: 23
+    month: 1
+    day: 3
   club: 补习部
   clubCode: RemedialClass
   affiliation: 圣三一
@@ -3824,6 +3826,34 @@
   type: Special
   armorType: LightArmor
   bulletType: Explosion
+  weapon: HG
+- id: 20029
+  familyName:
+    cn: 水羽
+    jp: 水羽
+    en: Mizuha
+    kr: 미즈하
+    tw: 水羽
+    th: 水羽
+  name:
+    cn: 三森(泳装)
+    jp: ミモリ（水着）
+    en: Mimori (Swimsuit)
+    kr: 미모리(수영복)
+    tw: ミモリ（水着）
+    th: มิโมริ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 3
+    day: 15
+  club: 修行部
+  clubCode: Shugyobu
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Special
+  armorType: Unarmed
+  bulletType: Mystic
   weapon: HG
 - id: 23000
   familyName:
