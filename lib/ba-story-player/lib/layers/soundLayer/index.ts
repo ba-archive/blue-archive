@@ -102,7 +102,7 @@ export function soundInit() {
         if (bgm) {
           // 如果正在播放的bgm和新的是同一个，直接跳过?? 是否合理
           if (Reflect.get(bgm, "_src") === cfg.url) {
-            reject();
+            reject("");
             return;
           }
           bgm.stop();
@@ -147,7 +147,11 @@ export function soundInit() {
           bgm.once("end", endCb);
           bgm.play();
         })
-        .catch();
+        .catch(err => {
+          if (err && typeof err !== "string") {
+            console.log(err);
+          }
+        });
     }
     if (playAudioInfo.soundUrl) {
       if (sfx) {
