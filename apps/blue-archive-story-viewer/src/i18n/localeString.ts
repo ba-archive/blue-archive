@@ -4,6 +4,9 @@ export const localeString = {
     actions: { goto: "前往", close: "关闭", cancel: "取消" },
 
     settings: {
+      disableMomotalkAnimation: "跳过 MomoTalk 动画",
+      disableMomotalkAnimationDescription:
+        "跳过 MomoTalk 的信息输入动画，立即展示所有信息",
       language: "语言",
       useMp3Title: "兼容 Apple 设备",
       useMp3Description: "如果 Apple 设备不能正确播放音频，可以尝试开启此选项",
@@ -48,6 +51,9 @@ export const localeString = {
     actions: { goto: "移動", close: "閉じる", cancel: "キャンセル" },
 
     settings: {
+      disableMomotalkAnimation: "モモトークのアニメーションを無効にする",
+      disableMomotalkAnimationDescription:
+        "モモトークの待機アニメーションを無効にし、すべてのメッセージを一気に表示する",
       language: "言語",
       useMp3Title: "Apple デバイスとの互換性",
       useMp3Description:
@@ -94,6 +100,9 @@ export const localeString = {
     actions: { goto: "前往", close: "關閉", cancel: "取消" },
 
     settings: {
+      disableMomotalkAnimation: "取消 MomoTalk 動畫",
+      disableMomotalkAnimationDescription:
+        "取消 MomoTalk 的等待動畫，立即展示所有訊息",
       language: "語言",
       useMp3Title: "兼容 Apple 裝置",
       useMp3Description: "如果 Apple 裝置不能正確播放音頻，可以嘗試開啟此選項",
@@ -137,6 +146,9 @@ export const localeString = {
     actions: { goto: "Go to", close: "Close", cancel: "Cancel" },
 
     settings: {
+      disableMomotalkAnimation: "Disable MomoTalk animation",
+      disableMomotalkAnimationDescription:
+        "Disable MomoTalk's typing animation and display all messages at once",
       language: "Language",
       useMp3Title: "Apple device compatibility",
       useMp3Description:
@@ -183,6 +195,9 @@ export const localeString = {
     actions: { goto: "이동", close: "닫기", cancel: "취소" },
 
     settings: {
+      disableMomotalkAnimation: "MomoTalk 애니메이션 비활성화",
+      disableMomotalkAnimationDescription:
+        "MomoTalk의 타이핑 애니메이션을 비활성화하고 모든 메시지를 한 번에 표시합니다.",
       language: "언어",
       useMp3Title: "Apple 장치 호환성",
       useMp3Description:
@@ -229,6 +244,9 @@ export const localeString = {
     actions: { goto: "ไปยัง", close: "ปิด", cancel: "ยกเลิก" },
 
     settings: {
+      disableMomotalkAnimation: "ปิดใช้งานการเล่นแอนิเมชันของ MomoTalk",
+      disableMomotalkAnimationDescription:
+        "ปิดใช้งานการเล่นแอนิเมชันของ MomoTalk และแสดงข้อความทั้งหมดในครั้งเดียว",
       language: "ภาษา",
       useMp3Title: "ความเข้ากันได้กับอุปกรณ์ Apple",
       useMp3Description:

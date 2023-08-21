@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { Language } from "../types/Settings";
+import { Language } from "@types/Settings";
 import { StudentAttributeFilters, StudentFilters } from "@types/Student";
 
 export const useSettingsStore = defineStore({
@@ -7,6 +7,7 @@ export const useSettingsStore = defineStore({
   state: () => {
     return {
       settings: {
+        disableMomotalkAnimation: false,
         lang: "cn" as Language,
         theme: "light" as "light" | "dark",
         username: "Sensei" as string,
@@ -19,13 +20,20 @@ export const useSettingsStore = defineStore({
         club: [] as string[],
         affiliation: [] as string[],
         type: [] as ("Striker" | "Special")[],
-        armorType: [] as ("LightArmor" | "HeavyArmor" | "Unarmed")[],
-        bulletType: [] as ("Pierce" | "Explode" | "Mystic")[],
+        armorType: [] as (
+          | "LightArmor"
+          | "HeavyArmor"
+          | "Unarmed"
+          | "ElasticArmor"
+        )[],
+        bulletType: [] as ("Pierce" | "Explode" | "Mystic" | "Sonic")[],
       },
     };
   },
   persist: true,
   getters: {
+    getDisableMomotalkAnimationState: state =>
+      state.settings.disableMomotalkAnimation ?? false,
     getLang: state => state.settings.lang,
     getTheme: state => state.settings.theme,
     getUsername: state => state.settings.username,
@@ -46,6 +54,9 @@ export const useSettingsStore = defineStore({
     },
   },
   actions: {
+    setDisableMomotalkAnimationState(state: boolean) {
+      this.settings.disableMomotalkAnimation = state;
+    },
     setLang(lang: "cn" | "tw" | "jp" | "en" | "kr" | "th") {
       this.settings.lang = lang;
     },

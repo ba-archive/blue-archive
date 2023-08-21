@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, computed, ref, watch } from "vue";
+import { ComputedRef, PropType, computed, ref, watch } from "vue";
 import { getI18nString } from "@i18n/getI18nString";
 import { useSettingsStore } from "@store/settings";
 import { useStudentStore } from "@store/students";
@@ -139,6 +139,9 @@ const studentStore = useStudentStore();
 const selectedLang = computed(
   () => settingsStore.getLang.replace("zh", "cn") as Language
 );
+const isAnimationDisabled: ComputedRef<boolean> = computed(
+  () => useSettingsStore().getDisableMomotalkAnimationState
+);
 
 const characterId = props.message?.CharacterId || 10000;
 const studentInfo = studentStore.getStudentById(characterId);
@@ -165,14 +168,21 @@ const feedbackTime = computed(
 );
 
 function animateMessage() {
-  setTimeout(() => {
+  if (isAnimationDisabled.value) {
     showMessageContent.value = true;
-  }, feedbackTime.value);
-
-  setTimeout(() => {
     showFavorMessageContent.value =
       "Answer" !== messageCondition.value || -1 !== currentSelection.value;
-  }, feedbackTime.value + 500);
+    return;
+  } else {
+    setTimeout(() => {
+      showMessageContent.value = true;
+    }, feedbackTime.value);
+
+    setTimeout(() => {
+      showFavorMessageContent.value =
+        "Answer" !== messageCondition.value || -1 !== currentSelection.value;
+    }, feedbackTime.value + 500);
+  }
 }
 
 animateMessage();

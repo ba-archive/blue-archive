@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { PropType, Ref, onActivated, ref } from "vue";
+import { ComputedRef, PropType, Ref, computed, onActivated, ref } from "vue";
+import { useSettingsStore } from "@store/settings";
 import { CurrentMessageItem, Momotalk, SelectionOption } from "@types/Chats";
 import MomoTalkComponent from "./MomoTalkComponent.vue";
+
+const isAnimationDisabled: ComputedRef<boolean> = computed(
+  () => useSettingsStore().getDisableMomotalkAnimationState
+);
 
 const props = defineProps({
   messageGroup: Number,
@@ -75,7 +80,6 @@ async function next(NextGroupId: number, id: number) {
       MessageType: "Text",
       ImagePath: "",
     });
-    await wait(-1000);
     return;
   } else {
     if (id !== nextId.value) {
@@ -139,8 +143,14 @@ async function next(NextGroupId: number, id: number) {
   await next(firstMessageGroupElement.NextGroupId, id);
 }
 
-function wait(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms + 1000));
+function wait(ms: number): Promise<void> {
+  return new Promise(resolve => {
+    if (isAnimationDisabled.value) {
+      resolve();
+      return;
+    }
+    return setTimeout(resolve, ms + 800);
+  });
 }
 
 function findItemsByGroupId(GroupId: number) {

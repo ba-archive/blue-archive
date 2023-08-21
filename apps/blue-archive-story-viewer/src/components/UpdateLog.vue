@@ -4,6 +4,15 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-08-27",
+    contents: [
+      {
+        type: "feat",
+        content: "可以在“设置”界面中选择跳过 MomoTalk 动画",
+      },
+    ],
+  },
+  {
     date: "2023-08-21",
     contents: [
       {
