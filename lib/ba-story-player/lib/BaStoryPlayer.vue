@@ -26,6 +26,7 @@ import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
+import { useElementSize } from "@vueuse/core";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
@@ -75,10 +76,22 @@ watch(
     }
   }
 );
+
+const player = ref<HTMLDivElement>();
+const { width: playerActualWidth, height: playerActualHeight } =
+  useElementSize(player);
+
+watch([playerActualWidth, playerActualHeight], () => {
+  if (fullScreen.value) {
+    console.warn("playerActualWidth", playerActualWidth.value);
+    playerWidth.value = playerActualWidth.value;
+    playerHeight.value = playerActualHeight.value;
+  }
+});
+
 const playerStyle = computed(() => {
   return { height: `${playerHeight.value}px`, width: `${playerWidth.value}px` };
 });
-const player = ref<HTMLDivElement>();
 
 const isPseudoFullscreen = ref(false);
 
