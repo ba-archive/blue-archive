@@ -8,11 +8,12 @@ import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
 import BaDialog from "./components/BaDialog.vue";
 import BaSelector from "./components/BaSelector.vue";
 import BaButton from "@/layers/uiLayer/components/BaButton.vue";
+import BaPlayerSetting from "@/layers/uiLayer/components/BaPlayerSetting/BaPlayerSetting.vue";
+import { useUiState } from "@/stores/state";
 import { ShowOption } from "@/types/events";
 import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
 import "./userInteract";
-import { useUiState } from "@/stores/state";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
@@ -355,9 +356,14 @@ onMounted(() => {
       <BaChatLog :show="showStoryLog" />
     </BaDialog>
 
-    <!-- <BaDialog id="ba-player-setting" :show="true" width="min(1080px, 80%)" height="min(650px, 86%)">
+    <BaDialog
+      id="ba-player-setting"
+      :show="true"
+      width="min(1080px, 80%)"
+      height="min(650px, 86%)"
+    >
       <BaPlayerSetting />
-    </BaDialog> -->
+    </BaDialog>
   </div>
 </template>
 
