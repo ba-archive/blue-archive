@@ -54,7 +54,7 @@ const props = withDefaults(defineProps<PlayerProps>(), {
   useMp3: false,
 });
 const storySummary = ref(props.storySummary);
-storySummary.value.summary = storySummary.value.summary.replace(
+storySummary.value.summary = storySummary.value.summary.replaceAll(
   "[USERNAME]",
   props.userName
 );
@@ -83,7 +83,6 @@ const { width: playerActualWidth, height: playerActualHeight } =
 
 watch([playerActualWidth, playerActualHeight], () => {
   if (fullScreen.value) {
-    console.warn("playerActualWidth", playerActualWidth.value);
     playerWidth.value = playerActualWidth.value;
     playerHeight.value = playerActualHeight.value;
   }
