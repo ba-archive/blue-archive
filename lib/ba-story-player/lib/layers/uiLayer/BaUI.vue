@@ -3,7 +3,7 @@ import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, provide, ref, watch } from "vue";
 import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
 import BaDialog from "./components/BaDialog.vue";
 import BaSelector from "./components/BaSelector.vue";
@@ -14,6 +14,7 @@ import { ShowOption } from "@/types/events";
 import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
 import "./userInteract";
+import { getUiI18n } from "./utils";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
@@ -30,6 +31,8 @@ let props = defineProps<{
   fullScreen: boolean;
   language: Language;
 }>();
+
+provide("language", props.language);
 
 const selectOptions = ref<ShowOption[]>([]);
 const emitter = defineEmits(["update:fullScreen"]);
@@ -174,46 +177,6 @@ eventBus.on("click", function () {
   }
 });
 
-// i18n
-const dict = {
-  cn: {
-    log: "对话记录",
-    summary: "概要",
-    close: "关闭",
-  },
-  en: {
-    log: "LOG",
-    summary: "Summary",
-    close: "Close",
-  },
-  jp: {
-    log: "ログ",
-    summary: "あらすじ",
-    close: "閉じる",
-  },
-  kr: {
-    log: "로그",
-    summary: "요약",
-    close: "닫기",
-  },
-  tw: {
-    log: "對話記錄",
-    summary: "概要",
-    close: "關閉",
-  },
-  th: {
-    log: "บันทึกการสนทนา",
-    summary: "สรุป",
-    close: "ปิด",
-  },
-};
-
-function getI18n(key: string) {
-  return (
-    Reflect.get(Reflect.get(dict, props.language.toLowerCase()), key) || key
-  );
-}
-
 // #97 UI层接收到隐藏UI事件后无法操作菜单
 const rightTop = ref<HTMLElement | null>();
 onMounted(() => {
@@ -244,6 +207,9 @@ onMounted(() => {
     );
   }
 });
+function getI18n(key: string) {
+  return getUiI18n(key, props.language);
+}
 </script>
 
 <template>
@@ -358,9 +324,10 @@ onMounted(() => {
 
     <BaDialog
       id="ba-player-setting"
+      :title="getI18n('setting')"
       :show="true"
-      width="min(1080px, 80%)"
-      height="min(650px, 86%)"
+      width="min(680px, 80%)"
+      height="min(350px, 86%)"
     >
       <BaPlayerSetting />
     </BaDialog>

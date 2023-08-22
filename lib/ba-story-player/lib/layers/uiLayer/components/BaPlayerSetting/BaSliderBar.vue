@@ -41,4 +41,38 @@ const props = defineProps<{
     background: linear-gradient(135deg, #b2cffa 14%, #65a0f5 85%);
   }
 }
+.ba-slider {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 32px 16px 16px;
+  font-size: 14px;
+  line-height: 32px;
+  .slider {
+    flex: 1;
+    margin-right: 16px;
+    margin-left: 8px;
+  }
+  .prefix,
+  .suffix,
+  .name {
+    margin: 0 8px;
+  }
+  .name {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 8.5px;
+      left: -8px;
+      border-radius: 1.5px;
+      background: #95b7f2;
+      width: 3px;
+      height: 16px;
+      content: "";
+    }
+  }
+  .value {
+    min-width: 40px;
+    text-align: right;
+  }
+}
 </style>

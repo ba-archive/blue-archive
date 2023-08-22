@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { Language } from "@/types/store";
 
 // 按钮激活动画
 function effectBtnMouseDown(duration = 0.15, scale = 0.94) {
@@ -79,3 +80,52 @@ function buttonAnimation(
 }
 
 export { buttonAnimation, effectBtnMouseDown, effectBtnMouseUp };
+// i18n
+const dict = {
+  cn: {
+    log: "对话记录",
+    summary: "概要",
+    close: "关闭",
+    setting: "设置",
+    volume: "音量",
+  },
+  en: {
+    log: "LOG",
+    summary: "Summary",
+    close: "Close",
+    setting: "Setting",
+    volume: "Volume",
+  },
+  jp: {
+    log: "ログ",
+    summary: "あらすじ",
+    close: "閉じる",
+    setting: "設定",
+    volume: "音量",
+  },
+  kr: {
+    log: "로그",
+    summary: "요약",
+    close: "닫기",
+    setting: "설치",
+    volume: "볼륨",
+  },
+  tw: {
+    log: "對話記錄",
+    summary: "概要",
+    close: "關閉",
+    setting: "設定",
+    volume: "音量",
+  },
+  th: {
+    log: "บันทึกการสนทนา",
+    summary: "สรุป",
+    close: "ปิด",
+    setting: "การตั้งค่า",
+    volume: "ระดับเสียง",
+  },
+};
+
+export function getUiI18n(key: string, language: Language) {
+  return Reflect.get(Reflect.get(dict, language.toLowerCase()), key) || key;
+}
