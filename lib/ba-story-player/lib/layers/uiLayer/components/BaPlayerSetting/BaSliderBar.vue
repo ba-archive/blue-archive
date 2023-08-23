@@ -21,6 +21,9 @@ const emit = defineEmits<{
   "update:value": [value: number];
 }>();
 const factor = props.data.fator || 1;
+const factorS = String(factor);
+const ponitPos = factorS.indexOf(".");
+const accurcy = ponitPos === -1 ? 0 : factorS.length - ponitPos - 1;
 const internalValue = ref(props.value * factor);
 watchThrottled(
   () => internalValue.value,
@@ -51,7 +54,7 @@ watchThrottled(
       <slot name="suffix" />
     </div>
     <div class="value">
-      <slot name="value" :value="value"> {{ internalValue }}{{ unit }} </slot>
+      <slot name="value" :value="value"> {{ internalValue.toFixed(accurcy) }}{{ unit }} </slot>
     </div>
   </div>
 </template>
