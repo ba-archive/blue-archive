@@ -7,3 +7,13 @@ export type BaRadioData = {
     label: string;
   }[];
 };
+
+export type BaSliderData = {
+  name: string;
+  tip: string;
+  min: number;
+  max: number;
+  step: number;
+  fator?: number;
+  default?: number;
+};

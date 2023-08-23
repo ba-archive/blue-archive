@@ -1,6 +1,8 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { Howl, Howler } from "howler";
+import { watch } from "vue";
+import { useUiState } from "@/stores/state";
 import { PlayAudio } from "@/types/events";
 
 const audioMap = new Map<string, Howl>();
@@ -73,15 +75,22 @@ export function soundInit() {
   let sfx: Howl | undefined = undefined;
   let voice: Howl | undefined = undefined;
   let emotionSound: Howl | undefined = undefined;
-
-  /**
-   * 声音层的全局设置, 包括BGM音量, 效果音量和语音音量
-   */
-  const soundSettings = new (class SoundSettings {
-    BGMvolume = 0.3;
-    SFXvolume = 1;
-    Voicevolume = 1;
-  })();
+  const UiState = useUiState();
+  watch(
+    () => UiState.volume.value,
+    cur => {
+      if (bgm) {
+        bgm.volume(cur.bgmVolume);
+      }
+      if (sfx) {
+        sfx.volume(cur.sfxVolume);
+      }
+      if (voice) {
+        voice.volume(cur.voiceVolume);
+      }
+    },
+    { deep: true }
+  );
   /**
    * @description 播放声音
    * @param playAudioInfo
@@ -142,9 +151,9 @@ export function soundInit() {
           } else {
             setLoop();
           }
-          bgm.fade(0, soundSettings.BGMvolume, cfg.bgmArgs.LoopTranstionTime);
           bgm.seek(0);
           bgm.once("end", endCb);
+          bgm.volume(UiState.volume.value.bgmVolume);
           bgm.play();
         })
         .catch(err => {
@@ -158,7 +167,7 @@ export function soundInit() {
         sfx.stop();
       }
       sfx = getAudio(playAudioInfo.soundUrl);
-      sfx.volume(soundSettings.SFXvolume);
+      sfx.volume(UiState.volume.value.sfxVolume);
       sfx.once("end", () => {
         console.log("Finish Playing Sound!");
       });
@@ -170,7 +179,7 @@ export function soundInit() {
         voice.stop();
       }
       voice = getAudio(playAudioInfo.voiceJPUrl);
-      voice.volume(soundSettings.Voicevolume);
+      voice.volume(UiState.volume.value.voiceVolume);
       voice.once("end", () => {
         eventBus.emit("playVoiceJPDone", playAudioInfo.voiceJPUrl || "");
       });
@@ -198,7 +207,7 @@ export function soundInit() {
       emotionSound.stop();
     }
     emotionSound = getAudio(usePlayerStore().emotionSoundUrl(emotype));
-    emotionSound.volume(soundSettings.SFXvolume);
+    emotionSound.volume(UiState.volume.value.sfxVolume);
     emotionSound.play();
   });
 

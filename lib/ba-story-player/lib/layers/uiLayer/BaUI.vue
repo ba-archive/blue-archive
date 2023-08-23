@@ -3,19 +3,22 @@ import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, provide, ref, watch } from "vue";
 import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
 import BaDialog from "./components/BaDialog.vue";
 import BaSelector from "./components/BaSelector.vue";
 import BaButton from "@/layers/uiLayer/components/BaButton.vue";
+import BaPlayerSetting from "@/layers/uiLayer/components/BaPlayerSetting/BaPlayerSetting.vue";
+import { useUiState } from "@/stores/state";
 import { ShowOption } from "@/types/events";
 import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
 import "./userInteract";
-import { useUiState } from "@/stores/state";
+import { getUiI18n } from "./utils";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
+const showSetting = ref(false);
 const { autoMode } = useUiState();
 const showMenu = ref(false);
 const forceShowMenu = ref(false);
@@ -30,19 +33,30 @@ let props = defineProps<{
   language: Language;
 }>();
 
+provide("language", props.language);
+
 const selectOptions = ref<ShowOption[]>([]);
 const emitter = defineEmits(["update:fullScreen"]);
 
 const overrideTextContainer = computed(() =>
-  [!showSubMenu.value, !showSummary.value, !showStoryLog.value].some(it => !it)
+  [
+    !showSubMenu.value,
+    !showSummary.value,
+    !showStoryLog.value,
+    !showSetting.value,
+  ].some(it => !it)
 );
 
 eventBus.on("hide", () => {
   showSummary.value = false;
   showStoryLog.value = false;
   showMenu.value = false;
+  showSetting.value = false;
 });
 eventBus.on("showStoryLog", e => {
+  if (showSummary.value || showSetting.value) {
+    return;
+  }
   showStoryLog.value = e;
 });
 watch(showStoryLog, () => {
@@ -80,6 +94,12 @@ function handleBtnSkipSummary() {
   refreshBtnMenuTimer();
   autoMode.value = false;
   showSummary.value = true;
+}
+function handleBtnSetting() {
+  eventBus.emit("playOtherSounds", "select");
+  refreshBtnMenuTimer();
+  autoMode.value = false;
+  showSetting.value = true;
 }
 
 // 处理选项
@@ -158,7 +178,12 @@ let cursorTimer: number = window.setTimeout(() => {
 document.addEventListener("mousemove", () => {
   cursorStyle.value = "auto";
   clearTimeout(cursorTimer);
-  if (!showSummary.value && !showStoryLog.value && props.fullScreen) {
+  if (
+    !showSummary.value &&
+    !showStoryLog.value &&
+    !showSetting.value &&
+    props.fullScreen
+  ) {
     cursorTimer = window.setTimeout(() => {
       cursorStyle.value = "none";
     }, hideCursorDelay);
@@ -172,46 +197,6 @@ eventBus.on("click", function () {
     return;
   }
 });
-
-// i18n
-const dict = {
-  cn: {
-    log: "对话记录",
-    summary: "概要",
-    close: "关闭",
-  },
-  en: {
-    log: "LOG",
-    summary: "Summary",
-    close: "Close",
-  },
-  jp: {
-    log: "ログ",
-    summary: "あらすじ",
-    close: "閉じる",
-  },
-  kr: {
-    log: "로그",
-    summary: "요약",
-    close: "닫기",
-  },
-  tw: {
-    log: "對話記錄",
-    summary: "概要",
-    close: "關閉",
-  },
-  th: {
-    log: "บันทึกการสนทนา",
-    summary: "สรุป",
-    close: "ปิด",
-  },
-};
-
-function getI18n(key: string) {
-  return (
-    Reflect.get(Reflect.get(dict, props.language.toLowerCase()), key) || key
-  );
-}
 
 // #97 UI层接收到隐藏UI事件后无法操作菜单
 const rightTop = ref<HTMLElement | null>();
@@ -243,6 +228,9 @@ onMounted(() => {
     );
   }
 });
+function getI18n(key: string) {
+  return getUiI18n(key, props.language);
+}
 </script>
 
 <template>
@@ -276,6 +264,17 @@ onMounted(() => {
 
       <Transition>
         <div class="baui-menu-options lean-rect" v-if="showSubMenu">
+          <button
+            class="button-nostyle ba-menu-option"
+            @click="handleBtnSetting"
+            @mousedown="handleBtnMouseDown"
+            @touchstart="handleBtnMouseDown"
+            @touchend="handleBtnMouseUp"
+            @mouseup="handleBtnMouseUp"
+            @mouseleave="handleBtnMouseUp"
+          >
+            <img draggable="false" src="./assets/setting.svg" />
+          </button>
           <button
             class="button-nostyle ba-menu-option"
             @click="handleBtnFullScreen"
@@ -355,9 +354,15 @@ onMounted(() => {
       <BaChatLog :show="showStoryLog" />
     </BaDialog>
 
-    <!-- <BaDialog id="ba-player-setting" :show="true" width="min(1080px, 80%)" height="min(650px, 86%)">
+    <BaDialog
+      id="ba-player-setting"
+      :title="getI18n('setting')"
+      v-model:show="showSetting"
+      width="min(580px, 80%)"
+      height="min(350px, 86%)"
+    >
       <BaPlayerSetting />
-    </BaDialog> -->
+    </BaDialog>
   </div>
 </template>
 
@@ -410,8 +415,9 @@ onMounted(() => {
   }
 
   .baui-button-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
 
     .ba-button {
       &:hover:enabled {
@@ -431,14 +437,17 @@ onMounted(() => {
   }
 
   .baui-menu-options {
+    $btn-size: 4;
     grid-gap: 0.5em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat($btn-size, 1fr);
     margin-top: 0.56em;
     margin: 0.5em 0.5em;
     border-radius: 0.375em;
     background-color: rgba(244, 244, 244, 0.6);
     padding: 0.6em 0.6em;
+    width: calc(4em * #{$btn-size});
+    min-width: 8rem;
     overflow: hidden;
 
     .ba-menu-option {
