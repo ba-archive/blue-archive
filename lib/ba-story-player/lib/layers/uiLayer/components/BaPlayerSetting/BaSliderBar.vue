@@ -1,16 +1,34 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ElSlider from "./slider/src/slider.vue";
+import { watchThrottled } from "@vueuse/core";
 import { BaSliderData } from "./BaPlayerSetting";
 
 defineOptions({
   name: "BaSliderBar",
 });
-const value = ref(0);
-const props = defineProps<{
-  data: BaSliderData;
-  unit: string;
+const props = withDefaults(
+  defineProps<{
+    data: BaSliderData;
+    unit: string;
+    value: number;
+  }>(),
+  {
+    value: 0,
+  }
+);
+const emit = defineEmits<{
+  "update:value": [value: number];
 }>();
+const factor = props.data.fator || 1;
+const internalValue = ref(props.value * factor);
+watchThrottled(
+  () => internalValue.value,
+  cur => {
+    emit("update:value", cur / factor);
+  },
+  { throttle: 100 }
+);
 </script>
 
 <template>
@@ -22,13 +40,18 @@ const props = defineProps<{
       <slot name="prefix" />
     </div>
     <div class="slider">
-      <ElSlider v-model="value" />
+      <ElSlider
+        v-model="internalValue"
+        :max="data.max"
+        :min="data.min"
+        :step="data.step"
+      />
     </div>
     <div class="suffix">
       <slot name="suffix" />
     </div>
     <div class="value">
-      <slot name="value" :value="value"> {{ value }}{{ unit }} </slot>
+      <slot name="value" :value="value"> {{ internalValue }}{{ unit }} </slot>
     </div>
   </div>
 </template>
@@ -44,9 +67,14 @@ const props = defineProps<{
 .ba-slider {
   display: flex;
   flex-direction: row;
+  border-radius: 3px;
+  background: white;
   padding: 16px 32px 16px 16px;
   font-size: 14px;
   line-height: 32px;
+  & + .ba-slider {
+    margin-top: 4px;
+  }
   .slider {
     flex: 1;
     margin-right: 16px;

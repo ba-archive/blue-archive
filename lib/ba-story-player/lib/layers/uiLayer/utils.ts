@@ -88,6 +88,8 @@ const dict = {
     close: "关闭",
     setting: "设置",
     volume: "音量",
+    about: "关于",
+    "about-inside": "这个人很懒, 什么也没写",
   },
   en: {
     log: "LOG",
@@ -95,6 +97,8 @@ const dict = {
     close: "Close",
     setting: "Setting",
     volume: "Volume",
+    about: "About us",
+    "about-inside": "This person is very lazy and hasn't written anything",
   },
   jp: {
     log: "ログ",
@@ -102,6 +106,8 @@ const dict = {
     close: "閉じる",
     setting: "設定",
     volume: "音量",
+    about: "について",
+    "about-inside": "この人は怠け者で何も書いていない",
   },
   kr: {
     log: "로그",
@@ -109,6 +115,8 @@ const dict = {
     close: "닫기",
     setting: "설치",
     volume: "볼륨",
+    about: "우리에 대해",
+    "about-inside": "이 사람은 게을러서 아무것도 쓰지 않았다",
   },
   tw: {
     log: "對話記錄",
@@ -116,6 +124,8 @@ const dict = {
     close: "關閉",
     setting: "設定",
     volume: "音量",
+    about: "關於我們",
+    "about-inside": "這個人很懶，什麼也沒寫",
   },
   th: {
     log: "บันทึกการสนทนา",
@@ -123,6 +133,8 @@ const dict = {
     close: "ปิด",
     setting: "การตั้งค่า",
     volume: "ระดับเสียง",
+    about: "เกี่ยวกับเรา",
+    "about-inside": "ผู้ชายคนนี้ขี้เกียจและไม่ได้เขียนอะไร",
   },
 };
 

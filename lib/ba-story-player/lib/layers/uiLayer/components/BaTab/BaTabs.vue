@@ -6,6 +6,7 @@
         v-for="(e, index) in panelList"
         :key="index"
         :class="{ active: e.name === currentActivePanel }"
+        @click="onTabClick(e.name)"
       >
         {{ e.label }}
       </div>
@@ -39,7 +40,7 @@ type TabList = {
 const props = withDefaults(
   defineProps<{
     value: string;
-    isStatic: boolean;
+    isStatic?: boolean;
   }>(),
   {
     value: "",
@@ -106,17 +107,38 @@ onMounted(() => {
   display: flex;
   flex-direction: row;
   .ba-tabs-side {
+    background-color: #c6e9fe;
     min-width: 80px;
     .ba-tabs-tab-item {
-      background-color: #c6e9fe;
+      position: relative;
+      transition: all 0.15s ease-in-out;
       padding: 8px 16px;
+      text-align: center;
       &.active {
         background-color: white;
+        &::after {
+          display: none;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &::after {
+        $offset: 6px;
+        position: absolute;
+        bottom: 0;
+        left: $offset;
+        background: #c3d2e0;
+        width: calc(100% - 2 * #{$offset});
+        height: 1px;
+        content: "";
       }
     }
   }
   .ba-tabs-wrapper {
     flex: 1;
+    background-color: white;
+    padding: 4px;
   }
 }
 </style>

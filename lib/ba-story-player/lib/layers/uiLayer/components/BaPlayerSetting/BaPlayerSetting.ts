@@ -14,5 +14,6 @@ export type BaSliderData = {
   min: number;
   max: number;
   step: number;
+  fator?: number;
   default?: number;
 };

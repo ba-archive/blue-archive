@@ -46,6 +46,7 @@ export const VolumeSetting: BaSliderData[] = [
     min: 0,
     max: 100,
     step: 1,
+    fator: 100,
     default: 100,
   },
   {
@@ -54,6 +55,7 @@ export const VolumeSetting: BaSliderData[] = [
     min: 0,
     max: 100,
     step: 1,
+    fator: 100,
     default: 100,
   },
   {
@@ -62,6 +64,7 @@ export const VolumeSetting: BaSliderData[] = [
     min: 0,
     max: 100,
     step: 1,
+    fator: 100,
     default: 100,
   },
 ];

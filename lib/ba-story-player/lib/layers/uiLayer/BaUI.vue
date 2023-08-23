@@ -18,6 +18,7 @@ import { getUiI18n } from "./utils";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
+const showSetting = ref(false);
 const { autoMode } = useUiState();
 const showMenu = ref(false);
 const forceShowMenu = ref(false);
@@ -38,15 +39,24 @@ const selectOptions = ref<ShowOption[]>([]);
 const emitter = defineEmits(["update:fullScreen"]);
 
 const overrideTextContainer = computed(() =>
-  [!showSubMenu.value, !showSummary.value, !showStoryLog.value].some(it => !it)
+  [
+    !showSubMenu.value,
+    !showSummary.value,
+    !showStoryLog.value,
+    !showSetting.value,
+  ].some(it => !it)
 );
 
 eventBus.on("hide", () => {
   showSummary.value = false;
   showStoryLog.value = false;
   showMenu.value = false;
+  showSetting.value = false;
 });
 eventBus.on("showStoryLog", e => {
+  if (showSummary.value || showSetting.value) {
+    return;
+  }
   showStoryLog.value = e;
 });
 watch(showStoryLog, () => {
@@ -84,6 +94,12 @@ function handleBtnSkipSummary() {
   refreshBtnMenuTimer();
   autoMode.value = false;
   showSummary.value = true;
+}
+function handleBtnSetting() {
+  eventBus.emit("playOtherSounds", "select");
+  refreshBtnMenuTimer();
+  autoMode.value = false;
+  showSetting.value = true;
 }
 
 // 处理选项
@@ -162,7 +178,12 @@ let cursorTimer: number = window.setTimeout(() => {
 document.addEventListener("mousemove", () => {
   cursorStyle.value = "auto";
   clearTimeout(cursorTimer);
-  if (!showSummary.value && !showStoryLog.value && props.fullScreen) {
+  if (
+    !showSummary.value &&
+    !showStoryLog.value &&
+    !showSetting.value &&
+    props.fullScreen
+  ) {
     cursorTimer = window.setTimeout(() => {
       cursorStyle.value = "none";
     }, hideCursorDelay);
@@ -245,6 +266,17 @@ function getI18n(key: string) {
         <div class="baui-menu-options lean-rect" v-if="showSubMenu">
           <button
             class="button-nostyle ba-menu-option"
+            @click="handleBtnSetting"
+            @mousedown="handleBtnMouseDown"
+            @touchstart="handleBtnMouseDown"
+            @touchend="handleBtnMouseUp"
+            @mouseup="handleBtnMouseUp"
+            @mouseleave="handleBtnMouseUp"
+          >
+            <img draggable="false" src="./assets/setting.svg" />
+          </button>
+          <button
+            class="button-nostyle ba-menu-option"
             @click="handleBtnFullScreen"
             @mousedown="handleBtnMouseDown"
             @touchstart="handleBtnMouseDown"
@@ -325,8 +357,8 @@ function getI18n(key: string) {
     <BaDialog
       id="ba-player-setting"
       :title="getI18n('setting')"
-      :show="true"
-      width="min(680px, 80%)"
+      v-model:show="showSetting"
+      width="min(580px, 80%)"
       height="min(350px, 86%)"
     >
       <BaPlayerSetting />
@@ -383,8 +415,9 @@ function getI18n(key: string) {
   }
 
   .baui-button-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
 
     .ba-button {
       &:hover:enabled {
@@ -404,14 +437,17 @@ function getI18n(key: string) {
   }
 
   .baui-menu-options {
+    $btn-size: 4;
     grid-gap: 0.5em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat($btn-size, 1fr);
     margin-top: 0.56em;
     margin: 0.5em 0.5em;
     border-radius: 0.375em;
     background-color: rgba(244, 244, 244, 0.6);
     padding: 0.6em 0.6em;
+    width: calc(4em * #{$btn-size});
+    min-width: 8rem;
     overflow: hidden;
 
     .ba-menu-option {

@@ -25,3 +25,12 @@ const displayMyself = computed(() => currentActivePanel.value === props.name);
     <div v-if="displayMyself"><slot /></div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.ba-tab-panel {
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  padding: 4px;
+  height: calc(100% - 8px);
+}
+</style>

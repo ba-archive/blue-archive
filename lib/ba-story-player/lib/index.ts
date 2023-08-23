@@ -17,13 +17,13 @@ import { IEventData, SpineParser } from "pixi-spine";
 import { watch } from "vue";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
-import { useUiState } from "./stores/state";
 import { bgInit } from "@/layers/bgLayer";
 import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
+import { useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 Howler.autoSuspend = false;
@@ -927,7 +927,11 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             storyHandler.currentStoryUnit,
             waitingKeys
           );
+          // waitingKeys.forEach((key) => {
+          //   Reflect.set(eventEmitter, key, true);
+          // });
           reject();
+          // resolve();
         }
       });
     }
