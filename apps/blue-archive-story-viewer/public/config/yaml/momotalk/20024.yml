@@ -4,36 +4,36 @@ title:
   - TextJp: 午後のティータイム
     TextCn: 午后的红茶时间
     TextKr: 정오의 홍차
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Afternoon Tea Time
+    TextTh: เวลาน้ำชายามบ่าย
+    TextTw: 午後的品茶時間
     GroupId: 2002402
     FavorScheduleId: 200242
     CharacterId: 20024
   - TextJp: 言葉の乱れは心の乱れ
     TextCn: 语乱即心乱
     TextKr: 교양인의 말투
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Proper Speech
+    TextTh: ภาษาของผู้มีการศึกษา
+    TextTw: 語亂即心亂
     GroupId: 2002403
     FavorScheduleId: 200243
     CharacterId: 20024
   - TextJp: 紅茶とコク
     TextCn: 红茶与香醇
     TextKr: 홍차와 감칠맛
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: The Rich Flavor of Black Tea
+    TextTh: รสกลมกล่อมของชาแดง
+    TextTw: 紅茶與韻味
     GroupId: 2002405
     FavorScheduleId: 200245
     CharacterId: 20024
   - TextJp: パンがなければ
     TextCn: 没有面包的话
     TextKr: 빵의 대용품
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Let Them Eat...
+    TextTh: สิ่งที่ใช้แทนขนมปัง
+    TextTw: 何不吃蛋糕
     GroupId: 2002406
     FavorScheduleId: 200246
     CharacterId: 20024
@@ -41,9 +41,9 @@ content:
   - MessageKR: 오랜만에 인사드립니다, 선생님.
     MessageJP: ご無沙汰しております
     MessageCN: 久疏问候
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Long time no see, Sensei.
+    MessageTH: ไม่ได้คุยกันนานเลยนะคะคุณครู
+    MessageTW: 久疏問候
     MessageGroupId: 200240010
     Id: 200240010
     CharacterId: 20024
@@ -59,9 +59,9 @@ content:
   - MessageKR: 그간 평안하셨는지요?
     MessageJP: ご機嫌いかがですか、先生？
     MessageCN: 近来如何，老师？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I hope this message finds you well.
+    MessageTH: ช่วงที่ผ่านมาสบายดีรึเปล่าคะ?
+    MessageTW: 這段時間過得好嗎，老師？
     MessageGroupId: 200240020
     Id: 200240020
     CharacterId: 20024
@@ -77,9 +77,9 @@ content:
   - MessageKR: 오랜만이야, 나기사.
     MessageJP: ナギサ、久しぶり
     MessageCN: 渚，好久不见
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It's been a while, Nagisa.
+    MessageTH: ไม่เจอกันนานเลยนะ นางิสะ
+    MessageTW: 渚，好久不見
     MessageGroupId: 200240030
     Id: 200240030
     CharacterId: 20024
@@ -95,9 +95,9 @@ content:
   - MessageKR: 오늘 모처럼 연락을 드린 이유는 다름이 아니라
     MessageJP: はい、確かにお久しぶりですね
     MessageCN: 是的，确实好久没见呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm contacting you today for a reason.
+    MessageTH: เหตุผลที่ฉันติดต่อคุณครูมาในวันนี้...
+    MessageTW: 是，確實很久沒見了呢
     MessageGroupId: 200240040
     Id: 200240040
     CharacterId: 20024
@@ -113,9 +113,11 @@ content:
   - MessageKR: 트리니티 학생들의 일로 선생님께 상담을 하고 싶은 것이 있어서요.
     MessageJP: 実は、トリニティの生徒たちのことでご相談したいことがありまして
     MessageCN: 其实，我想和老师讨论一下圣三一的学生们的事情
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I would like to discuss a matter with you regarding the Trinity students.
+    MessageTH: "ก็เพราะมีงานของทรีนิตี้ที่อยากให้
+
+      คุณครูดูแลให้หน่อยน่ะค่ะ"
+    MessageTW: 其實，我想和老師商量有關三一學生的事
     MessageGroupId: 200240040
     Id: 200240050
     CharacterId: 20024
@@ -131,9 +133,15 @@ content:
   - MessageKR: 무거운 사안은 아니니 점심 식사 후에 차라도 한잔하며 이야기를 나누는 게 어떠실까요?
     MessageJP: それほど重たい内容でもありませんので、アフタヌーン・ティーでもご一緒しながらお話できればと思うのですが、いかがでしょうか？
     MessageCN: 并不是非常沉重的内容，所以如果老师愿意赏光的话，我们可以在享用下午茶的同时谈论这个话题，您意下如何呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      Nothing too serious, though. Please don't be overly concerned. In fact,
+      perhaps we could enjoy tea and a meal as we speak?
+    MessageTH: "ไม่ใช่งานหนักหนาอะไรหรอกค่ะ
+
+      เรามาคุยรายละเอียดหลังจากดื่มชา
+
+      ช่วงบ่ายด้วยกันดีมั้ยคะ?"
+    MessageTW: 由於並非沉重的話題，我想和老師一邊享用下午茶一邊商量，您意下如何呢？
     MessageGroupId: 200240050
     Id: 200240060
     CharacterId: 20024
@@ -149,9 +157,9 @@ content:
   - MessageKR: 응, 좋아.
     MessageJP: あ、良いね。ぜひ
     MessageCN: 啊，不错呢。我一定来
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Yeah, sure.
+    MessageTH: อื้อ เอาสิ
+    MessageTW: 啊，感覺不錯呢。我很樂意
     MessageGroupId: 200240060
     Id: 200240070
     CharacterId: 20024
@@ -167,9 +175,11 @@ content:
   - MessageKR: 네. 그럼 좋은 홍차를 준비하고 기다리고 있겠습니다.
     MessageJP: ふふっ
     MessageCN: 呵呵
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Very well. I'll select a suitable black tea.
+    MessageTH: "ค่ะ ถ้างั้นฉันจะเตรียมชาแดงชั้นดีไว้
+
+      รอคุณครูนะคะ"
+    MessageTW: 呵呵
     MessageGroupId: 200240070
     Id: 200240080
     CharacterId: 20024
@@ -185,9 +195,11 @@ content:
   - MessageKR: 날이 더우니 더위에 주의하시길.
     MessageJP: それでは、良い茶葉をご用意してお待ちしておりますね
     MessageCN: 那么，我就提前准备好优质茶叶静候老师的光临了哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It's very hot out today. Please be cautious and stay out of the sun.
+    MessageTH: "วันนี้อากาศร้อน ระวังเป็นลมแดดด้วย
+
+      นะคะ"
+    MessageTW: 那麼，我會準備上好的茶葉等著您
     MessageGroupId: 200240080
     Id: 200240090
     CharacterId: 20024
@@ -203,9 +215,11 @@ content:
   - MessageKR: 먼저 자리를 비워서 죄송합니다, 선생님.
     MessageJP: 先に席を外してしまい、申し訳ございません。先生
     MessageCN: 刚刚我先行离席，真的是十分抱歉，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I hope you'll forgive my abrupt departure, Sensei.
+    MessageTH: "ต้องขอโทษที่ฉันเป็นฝ่ายลุกไปก่อน
+
+      ด้วยค่ะ"
+    MessageTW: 方才提前離開，真是非常抱歉，老師
     MessageGroupId: 200240090
     Id: 200240100
     CharacterId: 20024
@@ -221,9 +235,9 @@ content:
   - MessageKR: 부득이하게 갑자기 컨디션이 나빠지는 바람에…
     MessageJP: 急に体調が悪くなってしまい……健康管理ができておらず申し訳ありません
     MessageCN: 身体突然有点不适……没有做好健康管理，真的很抱歉
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm afraid I felt my health suddenly fail me.
+    MessageTH: จู่ๆ อาการฉันก็แย่ขึ้นมากะทันหัน...
+    MessageTW: 身體狀況突然出了點問題……沒能做好健康管理我很抱歉
     MessageGroupId: 200240100
     Id: 200240110
     CharacterId: 20024
@@ -239,9 +253,9 @@ content:
   - MessageKR: 괜찮아. 신경 쓰지 마.
     MessageJP: 大丈夫だよ、気にしないで
     MessageCN: 没关系哦，不用在意的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Don't worry about it.
+    MessageTH: ไม่เป็นไร ไม่ต้องคิดมากหรอก
+    MessageTW: 沒關係的唷，別在意
     MessageGroupId: 200240110
     Id: 200240120
     CharacterId: 20024
@@ -257,9 +271,11 @@ content:
   - MessageKR: 혹시 내가 권한 홍차가 입에 맞지 않았던 거야?
     MessageJP: ペットボトルの紅茶、もしかして口に合わなかった？
     MessageCN: 是瓶装红茶不合渚的口味吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry. Perhaps it was that black tea I selected?
+    MessageTH: "ชาแดงที่ครูแนะนำไปไม่ถูกปาก
+
+      รึเปล่า?"
+    MessageTW: 寶特瓶裝的紅茶，難道不合你的口味嗎？
     MessageGroupId: 200240120
     Id: 200240130
     CharacterId: 20024
@@ -275,9 +291,9 @@ content:
   - MessageKR: 무리하게 권한 것 같아 미안하네……
     MessageJP: 無理に勧めちゃってごめんね……
     MessageCN: 对不起，是我硬要劝渚喝……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm really sorry about that...
+    MessageTH: ดูเหมือนจะหนักไป ขอโทษนะ...
+    MessageTW: 勉強你喝真是抱歉……
     MessageGroupId: 200240120
     Id: 200240140
     CharacterId: 20024
@@ -293,9 +309,11 @@ content:
   - MessageKR: 아뇨. 대단히 흥미로운 경험이었습니다만……
     MessageJP: いいえ、大変興味深い経験でした。ありがとうございます……
     MessageCN: 不必道歉，这对于我而言也是非常有趣的经验。十分感谢老师……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Don't be. It was a unique experience.
+    MessageTH: "ไม่เลย เป็นประสบการณ์ที่เพลิดเพลิน
+
+      จริงๆ..."
+    MessageTW: 不會，這是相當有趣的經驗。謝謝您……
     MessageGroupId: 200240130
     Id: 200240150
     CharacterId: 20024
@@ -311,9 +329,11 @@ content:
   - MessageKR: 다음에는 조금 양을 조절하는 게 좋을 것 같네요……
     MessageJP: ですが、今度からはいただく量を調節した方が良いかもしれませんね……
     MessageCN: 不过，下次可能要调整一下喝的量……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: But next time I will be more cautious about the amount.
+    MessageTH: "คราวหน้าเห็นทีคงจะต้องปรับปริมาณ
+
+      แล้วละค่ะ..."
+    MessageTW: 但是，下次或許稍微調整一下份量比較好……
     MessageGroupId: 200240140
     Id: 200240160
     CharacterId: 20024
@@ -329,9 +349,9 @@ content:
   - MessageKR: ……다시 한번 인사드립니다, 선생님.
     MessageJP: ……先日は失礼いたしました
     MessageCN: ……前些日子失礼了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Hello again, Sensei.
+    MessageTH: สวัสดีอีกครั้งค่ะ... คุณครู
+    MessageTW: ……先前真是失禮了
     MessageGroupId: 200240150
     Id: 200240170
     CharacterId: 20024
@@ -347,9 +367,9 @@ content:
   - MessageKR: 그간 평안하셨는지요?
     MessageJP: 最近はいかがお過ごしでしょうか？
     MessageCN: 老师近来过得如何呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I hope this message finds you well.
+    MessageTH: ช่วงที่ผ่านมาสบายดีรึเปล่าคะ?
+    MessageTW: 最近您過得如何呢？
     MessageGroupId: 200240160
     Id: 200240180
     CharacterId: 20024
@@ -365,9 +385,9 @@ content:
   - MessageKR: 몸은 이제 괜찮아?
     MessageJP: あれから体調は大丈夫？
     MessageCN: 那之后身体还好吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: How are you feeling?
+    MessageTH: ร่างกายเป็นยังไงบ้าง?
+    MessageTW: 在那之後身體還好嗎？
     MessageGroupId: 200240170
     Id: 200240190
     CharacterId: 20024
@@ -383,9 +403,9 @@ content:
   - MessageKR: 아, 지난 번의 일은……
     MessageJP: あ、先日の事でしたら……
     MessageCN: 啊，要说前几天的事……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Oh, are you still concerned about last time?
+    MessageTH: อ๊ะ เรื่องคราวที่แล้ว...
+    MessageTW: 啊，您指的是上次的事嗎……
     MessageGroupId: 200240180
     Id: 200240200
     CharacterId: 20024
@@ -401,9 +421,11 @@ content:
   - MessageKR: 괜찮습니다. 크게 몸이 나빴던 것도 아닌걸요.
     MessageJP: 大丈夫です。大きく体調を崩したわけではありませんので
     MessageCN: 没什么。也没有到特别不舒服的程度
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Please don't be. It wasn't too bad.
+    MessageTH: "ไม่เป็นไรค่ะ สุขภาพฉันไม่ได้แย่ลง
+
+      อะไรหรอกค่ะ"
+    MessageTW: 沒事的。當時身體的狀況也並沒有那麼糟。
     MessageGroupId: 200240180
     Id: 200240210
     CharacterId: 20024
@@ -419,9 +441,13 @@ content:
   - MessageKR: 그보다, 괜찮으실 때 다시 한번 티파티의 다과회실에 방문해 주시겠습니까?
     MessageJP: ところで、先日お話しそびれたことがありまして。よろしければ、お時間を頂けないでしょうか？
     MessageCN: 话说回来，前几天有件事没能告诉老师。如果老师方便的话，可以占用您一点时间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      In other matters, might I impose upon you to stop by the Tea Party
+      room when you have a spare moment?
+    MessageTH: "คือว่าคุณครูช่วยแวะมาที่ห้องชงชา
+
+      ของสภาน้ำชาอีกทีได้มั้ยคะ?"
+    MessageTW: 話說回來，先前的話題尚未結束呢。不介意的話，能否占用您一些時間呢？
     MessageGroupId: 200240190
     Id: 200240220
     CharacterId: 20024
@@ -437,9 +463,13 @@ content:
   - MessageKR: 지난번에 못다 한 이야기를 계속 드리고 싶습니다.
     MessageJP: お手すきの際で構いませんので、テラスにお越しいただければと思います
     MessageCN: 等老师有空的时候就可以，我想请您来露台一趟
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      I was unable to tell you the conclusion of the story last time. I'd
+      like to continue it.
+    MessageTH: "ฉันอยากเล่าเรื่องที่ยังไม่ได้เล่าเมื่อ
+
+      คราวที่แล้วค่ะ"
+    MessageTW: 在您方便的時間也沒關係，希望您能來露臺一趟
     MessageGroupId: 200240190
     Id: 200240230
     CharacterId: 20024
@@ -455,9 +485,11 @@ content:
   - MessageKR: 이번에야말로 좋은 홍차를 준비하고 기다리겠습니다.
     MessageJP: また、紅茶をご用意しておきますので
     MessageCN: 我还会再为老师准备红茶的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      I have a particularly lovely blend of black tea I would like to brew
+      for you this time.
+    MessageTH: และคราวนี้ฉันจะเตรียมชาแดงดีๆ ให้ค่ะ
+    MessageTW: 我會準備好紅茶的
     MessageGroupId: 200240200
     Id: 200240240
     CharacterId: 20024
@@ -473,9 +505,9 @@ content:
   - MessageKR: 나도 좋아하는 홍차를 잔뜩 가져갈게!
     MessageJP: うん、了解。私の方も前の紅茶、持っていこうか？
     MessageCN: 嗯，明白了。那我把之前的红茶带过去吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sounds good. I'll bring my favorite black tea, too!
+    MessageTH: ครูจะเอาชาแดงที่ชอบไปเอง!
+    MessageTW: 嗯，我知道了。我要不要也帶之前的紅茶過去？
     MessageGroupId: 200240210
     Id: 200240250
     CharacterId: 20024
@@ -491,9 +523,9 @@ content:
   - MessageKR: 페트병 홍차는…… 이제 괜찮습니다.
     MessageJP: えっと、それは結構です。先日十分味わいましたので……
     MessageCN: 那个，那就免了。前几日已经充分品味过了……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Of course. As long as it's not in a plastic bottle.
+    MessageTH: ชาแดงสำเร็จรูป... ฉันขอผ่านดีกว่าค่ะ
+    MessageTW: 那個，我心領了。之前已經好好品嘗過了……
     MessageGroupId: 200240220
     Id: 200240260
     CharacterId: 20024
@@ -509,9 +541,9 @@ content:
   - MessageKR: ……그간 평안하셨는지요.
     MessageJP: ……いかがお過ごしでしょうか
     MessageCN: ……老师最近过得还好吗
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I...hope this message finds you well.
+    MessageTH: ช่วงที่ผ่านมาสบายดีรึเปล่าคะ...?
+    MessageTW: ……最近過得如何呢
     MessageGroupId: 200240230
     Id: 200240270
     CharacterId: 20024
@@ -527,9 +559,9 @@ content:
   - MessageKR: 저
     MessageJP: 先日は、みっともない姿をお見せしてしまいましたが……
     MessageCN: 前几天，让您看到了我失态的样子……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Um...
+    MessageTH: คือว่า...
+    MessageTW: 前些日子，讓您看見難以見人的樣子了呢……
     MessageGroupId: 200240240
     Id: 200240280
     CharacterId: 20024
@@ -545,9 +577,11 @@ content:
   - MessageKR: 지난번에는 평정심을 잃은 탓에 선생님께 큰 실례를 저질렀습니다……
     MessageJP: あらためましてその、決して普段からあのような言動をしているわけではなく……
     MessageCN: 那个，我要重申一下，我平时的言行举止绝对不是那样的……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: About the last time we spoke... I owe you an apology. I lost my composure.
+    MessageTH: "ครั้งที่แล้วฉันสูญเสียความสุขุมไป
+
+      ต้องขอโทษที่เสียมารยาทด้วยค่ะ"
+    MessageTW: 那個，向您重申，我平時的言行絕對不是那樣的……
     MessageGroupId: 200240240
     Id: 200240290
     CharacterId: 20024
@@ -563,9 +597,9 @@ content:
   - MessageKR: 괜찮아. 신경 쓰지 않아.
     MessageJP: 気にしないで
     MessageCN: 不用在意
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Don't worry about it! It's not a problem.
+    MessageTH: ไม่เป็นไร ไม่ต้องคิดมากหรอก
+    MessageTW: 別在意
     MessageGroupId: 200240250
     Id: 200240300
     CharacterId: 20024
@@ -581,9 +615,15 @@ content:
   - MessageKR: 하지만 트리니티의 중책을 맡은 자가 실수를 가벼이 넘길 수는 없는 법.
     MessageJP: そう言われましても……ティーパーティーとして、やはり失態を放っておくことはできません。
     MessageCN: 话虽如此……作为茶会的成员，我果然还是不能将如此失态置之不顾
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      Thank you. However, as one of the leaders of Trinity, I must hold myself
+      to a higher standard.
+    MessageTH: "แต่ว่าผู้รับผิดชอบของทรีนิตี้จะมองผ่าน
+
+      ความผิดพลาดเล็กน้อยแบบนี้ไปไม่ได้
+
+      หรอกค่ะ"
+    MessageTW: 雖然您這麼說……身為茶會的一員，果然不能對此等失態置之不理
     MessageGroupId: 200240260
     Id: 200240310
     CharacterId: 20024
@@ -599,9 +639,11 @@ content:
   - MessageKR: 선생님께서 괜찮으시다면 부디 제게 실수를 만회할 기회를 주셨으면 합니다.
     MessageJP: ……よろしければお詫びを兼ねて、もう一度お時間を頂けませんか？
     MessageCN: ……如果可以的话，我可以再次占用老师一次时间，顺带表达我的歉意吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: If you would, please allow me the opportunity to correct my mistakes.
+    MessageTH: "ถ้าคุณครูไม่ว่าอะไร ช่วยให้โอกาสฉัน
+
+      ได้แก้ไขความผิดพลาดด้วยเถอะค่ะ"
+    MessageTW: ……老師願意的話，順帶作為賠罪，能再借用您一些時間嗎？
     MessageGroupId: 200240260
     Id: 200240320
     CharacterId: 20024
@@ -617,9 +659,11 @@ content:
   - MessageKR: 그러고 보니 새로 주문한 찻잎이 곧 도착할 것 같은데……
     MessageJP: ちょうど新しく頼んだ茶葉がもうすぐ到着しますので
     MessageCN: 正好新订的茶叶就快到了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: As it happens, the new tea leaves I ordered are due to be delivered.
+    MessageTH: "พอมาคิดๆ ดูแล้ว... ใบชาที่สั่งมาใหม่
+
+      ก็มาถึงพอดี..."
+    MessageTW: 正好新購入的茶葉也即將送達
     MessageGroupId: 200240270
     Id: 200240330
     CharacterId: 20024
@@ -635,9 +679,11 @@ content:
   - MessageKR: 새로운 차의 시음과 겸하여 함께 다과회라도 즐기시는 게 어떠신가요?
     MessageJP: ご馳走させてください。先生のご都合がよろしければ、ですが
     MessageCN: 如果老师时间方便的话，请一定让我来招待您
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Shall we enjoy it together?
+    MessageTH: "มาเพลิดเพลินกับพิธีชงชาและดื่มด่ำ
+
+      กับรสชาติใบชาใหม่ด้วยกันดีไหมคะ?"
+    MessageTW: 請讓我招待您吧。當然，前提是老師您願意
     MessageGroupId: 200240280
     Id: 200240340
     CharacterId: 20024
@@ -653,9 +699,9 @@ content:
   - MessageKR: 좋아.
     MessageJP: それじゃあ、ご相伴に預かろうかな
     MessageCN: 那我就去叨陪末座了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sure.
+    MessageTH: ก็ดีนะ
+    MessageTW: 那，就承蒙你的好意囉
     MessageGroupId: 200240290
     Id: 200240350
     CharacterId: 20024
@@ -671,9 +717,9 @@ content:
   - MessageKR: 네. 그럼 전의 장소에서 기다리고 있겠습니다.
     MessageJP: ありがとうございます。それでは、テラスでお待ちしておりますね。
     MessageCN: 非常感谢老师。那么，我在露台等您
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'll be waiting for you in the usual spot.
+    MessageTH: ค่ะ ถ้างั้นฉันจะรออยู่ที่เดิมนะคะ
+    MessageTW: 謝謝您。那麼，我會在露臺等待您的到來
     MessageGroupId: 200240300
     Id: 200240360
     CharacterId: 20024
@@ -689,9 +735,9 @@ content:
   - MessageKR: 좋은 아침입니다, 선생님.
     MessageJP: おはようございます、先生
     MessageCN: 早上好，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Good morning, Sensei.
+    MessageTH: อรุณสวัสดิ์ค่ะคุณครู
+    MessageTW: 早安，老師
     MessageGroupId: 200240310
     Id: 200240370
     CharacterId: 20024
@@ -707,9 +753,11 @@ content:
   - MessageKR: 아침 식사는 하고 출근하셨나요?
     MessageJP: 一日の始まりは朝食からと言いますが……先生はもうすでに食べられましたか？
     MessageCN: 都说一天从早餐开始……老师吃过早餐了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Did you eat breakfast before you went to work?
+    MessageTH: "รับประทานอาหารเช้ามาก่อนเริ่ม
+
+      ทำงานรึเปล่าคะ?"
+    MessageTW: 有句話說早餐是一天的開始……老師已經用過早餐了嗎？
     MessageGroupId: 200240320
     Id: 200240380
     CharacterId: 20024
@@ -725,9 +773,9 @@ content:
   - MessageKR: 응. 나기사는?
     MessageJP: うん、ちょうどさっき。ナギサの方は？
     MessageCN: 嗯，刚吃完。渚呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Yeah. How about you, Nagisa?
+    MessageTH: อื้อ นางิสะล่ะ?
+    MessageTW: 嗯，我剛吃完。渚呢？
     MessageGroupId: 200240330
     Id: 200240390
     CharacterId: 20024
@@ -743,9 +791,9 @@ content:
   - MessageKR: 네, 조금 전에 미소시루를 먹었답니다.
     MessageJP: 私は先ほど、お味噌汁をいただきました
     MessageCN: 我也刚刚喝完味噌汤
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Yes. I had miso soup a while ago.
+    MessageTH: ค่ะ เมื่อสักครู่ฉันทานซุปมิโสะไปแล้วค่ะ
+    MessageTW: 我稍早之前喝過了味噌湯
     MessageGroupId: 200240340
     Id: 200240400
     CharacterId: 20024
@@ -761,9 +809,9 @@ content:
   - MessageKR: ……의외네.
     MessageJP: ……ちょっと意外かも
     MessageCN: ……有点意外呢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: "...I didn't expect that."
+    MessageTH: แปลกนะเนี่ย...
+    MessageTW: ……有點意外
     MessageGroupId: 200240350
     Id: 200240410
     CharacterId: 20024
@@ -779,9 +827,11 @@ content:
   - MessageKR: 티파티의 학생들은 스위츠만 먹을 것 같은 인상이었는데…….
     MessageJP: ティーパーティーって何か、スイーツしか食べないみたいなイメージが……
     MessageCN: 不知道为什么，我总有一种茶会里的人只会吃甜点的印象……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I thought Tea Party students ate pastries three meals a day.
+    MessageTH: "นักเรียนของทางสภาน้ำชามีชีวิตได้
+
+      ด้วยของหวานนี่นา..."
+    MessageTW: 茶會好像給人一種只吃甜點的印象……
     MessageGroupId: 200240360
     Id: 200240420
     CharacterId: 20024
@@ -797,9 +847,9 @@ content:
   - MessageKR: 그럴 리가 없잖습니까.
     MessageJP: 何を仰るのですか……
     MessageCN: 您在说什么呢……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: That's simply not possible.
+    MessageTH: จะเป็นแบบนั้นได้ยังไงกันล่ะคะ
+    MessageTW: 您說笑了……
     MessageGroupId: 200240370
     Id: 200240430
     CharacterId: 20024
@@ -815,9 +865,15 @@ content:
   - MessageKR: 아무리 입에 달다고 해도 한 가지 음식만 먹으면 건강을 해치는 법.
     MessageJP: いくら何でも、甘いものばかり食べていては栄養バランスが良くありません
     MessageCN: 而且再怎么说，只吃甜食营养也会不均衡的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      We may enjoy sweets at our gatherings, but it wouldn't be healthy to
+      eat that and nothing else.
+    MessageTH: "ถึงจะบอกว่าชอบของหวาน แต่ถ้ากิน
+
+      อาหารอยู่แค่อย่างเดียว สุขภาพจะย่ำแย่
+
+      เอานะคะ"
+    MessageTW: 再怎麼說，只吃甜食對營養的平衡會造成不良的影響
     MessageGroupId: 200240380
     Id: 200240440
     CharacterId: 20024
@@ -833,9 +889,11 @@ content:
   - MessageKR: 저라고 해서 언제나 케이크와 과자만 먹는 건 아니랍니다.
     MessageJP: 私たちだって、いつもケーキやお菓子ばかり食べているわけではないんです
     MessageCN: 就算我们是茶会，也不是总吃蛋糕和点心的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I certainly don't eat only cakes and cookies.
+    MessageTH: "ต่อให้เป็นฉันเอง ก็ไม่ได้กินเค้กหรือ
+
+      ของหวานอยู่ตลอดหรอกนะคะ"
+    MessageTW: 即使是我們，也不是一直都在吃蛋糕和點心的
     MessageGroupId: 200240380
     Id: 200240450
     CharacterId: 20024
