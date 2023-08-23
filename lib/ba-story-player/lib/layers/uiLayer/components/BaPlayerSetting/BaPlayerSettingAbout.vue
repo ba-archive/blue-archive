@@ -10,11 +10,20 @@ defineOptions({
 </script>
 
 <template>
-  <p>{{ getUiI18n("about-inside", language) }}</p>
+  <div>
+    <p v-html="getUiI18n('about-inside', language)"></p>
+  </div>
 </template>
 
 <style scoped lang="scss">
-p {
-  text-align: center;
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  p {
+    text-align: center;
+  }
 }
 </style>

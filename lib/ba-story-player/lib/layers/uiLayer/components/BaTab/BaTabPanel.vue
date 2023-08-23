@@ -22,7 +22,7 @@ const displayMyself = computed(() => currentActivePanel.value === props.name);
 
 <template>
   <div class="ba-tab-panel" v-show="displayMyself">
-    <div v-if="displayMyself"><slot /></div>
+    <div class="ba-tab-panel__inner" v-if="displayMyself"><slot /></div>
   </div>
 </template>
 
@@ -32,5 +32,9 @@ const displayMyself = computed(() => currentActivePanel.value === props.name);
   background-color: #f0f0f0;
   padding: 4px;
   height: calc(100% - 8px);
+
+  &__inner {
+    height: 100%;
+  }
 }
 </style>

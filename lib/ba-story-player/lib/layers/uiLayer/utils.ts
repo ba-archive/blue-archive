@@ -81,6 +81,7 @@ function buttonAnimation(
 
 export { buttonAnimation, effectBtnMouseDown, effectBtnMouseUp };
 // i18n
+/* eslint-disable max-len */
 const dict = {
   cn: {
     log: "对话记录",
@@ -89,7 +90,8 @@ const dict = {
     setting: "设置",
     volume: "音量",
     about: "关于",
-    "about-inside": "这个人很懒, 什么也没写",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
   en: {
     log: "LOG",
@@ -98,16 +100,18 @@ const dict = {
     setting: "Setting",
     volume: "Volume",
     about: "About us",
-    "about-inside": "This person is very lazy and hasn't written anything",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
   jp: {
     log: "ログ",
     summary: "あらすじ",
     close: "閉じる",
     setting: "設定",
-    volume: "音量",
-    about: "について",
-    "about-inside": "この人は怠け者で何も書いていない",
+    volume: "ボリューム",
+    about: "情報",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
   kr: {
     log: "로그",
@@ -116,7 +120,8 @@ const dict = {
     setting: "설치",
     volume: "볼륨",
     about: "우리에 대해",
-    "about-inside": "이 사람은 게을러서 아무것도 쓰지 않았다",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
   tw: {
     log: "對話記錄",
@@ -124,8 +129,9 @@ const dict = {
     close: "關閉",
     setting: "設定",
     volume: "音量",
-    about: "關於我們",
-    "about-inside": "這個人很懶，什麼也沒寫",
+    about: "關於",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
   th: {
     log: "บันทึกการสนทนา",
@@ -134,9 +140,11 @@ const dict = {
     setting: "การตั้งค่า",
     volume: "ระดับเสียง",
     about: "เกี่ยวกับเรา",
-    "about-inside": "ผู้ชายคนนี้ขี้เกียจและไม่ได้เขียนอะไร",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
   },
 };
+/* eslint-enable max-len */
 
 export function getUiI18n(key: string, language: Language) {
   return Reflect.get(Reflect.get(dict, language.toLowerCase()), key) || key;

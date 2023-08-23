@@ -1,15 +1,10 @@
+import { v4 as uuidv4 } from "uuid";
 import { Ref, ref } from "vue";
 
 export const CurrentActivePanel = ref<Map<string, Ref<string>>>(new Map());
 
 function getUUID() {
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    return (c === "x" ? (Math.random() * 16) | 0 : "r&0x3" | "0x8").toString(
-      16
-    );
-  });
+  return uuidv4();
 }
 
 export function useProgress(uuid?: string) {

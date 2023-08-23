@@ -345,6 +345,7 @@ importers:
       '@types/howler': ^2.2.7
       '@types/lodash-es': ~4.17.8
       '@types/node': ^20.3.3
+      '@types/uuid': ~9.0.2
       '@types/xxhashjs': ^0.2.2
       '@typescript-eslint/eslint-plugin': ^5.60.1
       '@typescript-eslint/parser': ^5.60.1
@@ -371,6 +372,7 @@ importers:
       staged: ^0.0.0
       type-fest: ~4.2.0
       typescript: ^5.1.6
+      uuid: ~9.0.0
       vite: ^4.3.9
       vue: ^3.3.4
       vue-eslint-parser: ^9.3.1
@@ -386,6 +388,7 @@ importers:
       '@pixi/filter-motion-blur': 4.2.0
       '@pixi/particle-emitter': 5.0.8
       '@types/lodash-es': 4.17.8
+      '@types/uuid': 9.0.2
       '@vue/shared': 3.3.4
       '@vueuse/core': 10.2.1_vue@3.3.4
       axios: 1.4.0
@@ -396,6 +399,7 @@ importers:
       pixi-spine: 3.1.2
       pixi.js: 6.5.10
       type-fest: 4.2.0
+      uuid: 9.0.0
       vue: 3.3.4
       vue-responsive-video-background-player: 2.3.1
       xxhashjs: 0.2.2
@@ -4737,6 +4741,10 @@ packages:
   /@types/unist/2.0.7:
     resolution: {integrity: sha512-cputDpIbFgLUaGQn6Vqg3/YsJwxUwHLO13v3i5ouxT4lat0khip9AEWxtERujXV9wxIB1EyF97BSJFt6vpdI8g==}
     dev: true
+
+  /@types/uuid/9.0.2:
+    resolution: {integrity: sha512-kNnC1GFBLuhImSnV7w4njQkUiJi0ZXUycu1rUaouPqiKlXkh77JKgdRnTAp1x5eBwcIwbtI+3otwzuIDEuDoxQ==}
+    dev: false
 
   /@types/web-bluetooth/0.0.16:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
@@ -12744,6 +12752,11 @@ packages:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
 
   /validate-npm-package-license/3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
