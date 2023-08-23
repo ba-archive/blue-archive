@@ -26,6 +26,7 @@ import BaUI from "@/layers/uiLayer/BaUI.vue";
 import { useUiState } from "@/stores/state";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
+import { useElementSize } from "@vueuse/core";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
@@ -53,7 +54,7 @@ const props = withDefaults(defineProps<PlayerProps>(), {
   useMp3: false,
 });
 const storySummary = ref(props.storySummary);
-storySummary.value.summary = storySummary.value.summary.replace(
+storySummary.value.summary = storySummary.value.summary.replaceAll(
   "[USERNAME]",
   props.userName
 );
@@ -75,10 +76,21 @@ watch(
     }
   }
 );
+
+const player = ref<HTMLDivElement>();
+const { width: playerActualWidth, height: playerActualHeight } =
+  useElementSize(player);
+
+watch([playerActualWidth, playerActualHeight], () => {
+  if (fullScreen.value) {
+    playerWidth.value = playerActualWidth.value;
+    playerHeight.value = playerActualHeight.value;
+  }
+});
+
 const playerStyle = computed(() => {
   return { height: `${playerHeight.value}px`, width: `${playerWidth.value}px` };
 });
-const player = ref<HTMLDivElement>();
 
 const isPseudoFullscreen = ref(false);
 
