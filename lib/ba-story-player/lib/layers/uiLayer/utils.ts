@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { Language } from "@/types/store";
 
 // 按钮激活动画
 function effectBtnMouseDown(duration = 0.15, scale = 0.94) {
@@ -79,3 +80,72 @@ function buttonAnimation(
 }
 
 export { buttonAnimation, effectBtnMouseDown, effectBtnMouseUp };
+// i18n
+/* eslint-disable max-len */
+const dict = {
+  cn: {
+    log: "对话记录",
+    summary: "概要",
+    close: "关闭",
+    setting: "设置",
+    volume: "音量",
+    about: "关于",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+  en: {
+    log: "LOG",
+    summary: "Summary",
+    close: "Close",
+    setting: "Setting",
+    volume: "Volume",
+    about: "About us",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+  jp: {
+    log: "ログ",
+    summary: "あらすじ",
+    close: "閉じる",
+    setting: "設定",
+    volume: "ボリューム",
+    about: "情報",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+  kr: {
+    log: "로그",
+    summary: "요약",
+    close: "닫기",
+    setting: "설치",
+    volume: "볼륨",
+    about: "우리에 대해",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+  tw: {
+    log: "對話記錄",
+    summary: "概要",
+    close: "關閉",
+    setting: "設定",
+    volume: "音量",
+    about: "關於",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+  th: {
+    log: "บันทึกการสนทนา",
+    summary: "สรุป",
+    close: "ปิด",
+    setting: "การตั้งค่า",
+    volume: "ระดับเสียง",
+    about: "เกี่ยวกับเรา",
+    "about-inside":
+      "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+  },
+};
+/* eslint-enable max-len */
+
+export function getUiI18n(key: string, language: Language) {
+  return Reflect.get(Reflect.get(dict, language.toLowerCase()), key) || key;
+}

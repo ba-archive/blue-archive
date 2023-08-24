@@ -106,7 +106,7 @@ export interface Option {
 export type PlayOptions = {
   url: string;
   config: {
-    volume: number;
+    volume: number; // 0 - 1
   };
 };
 export type PlayerConfigs = PlayerProps & { height: number };

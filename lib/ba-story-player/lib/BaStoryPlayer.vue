@@ -19,11 +19,11 @@ import {
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
-import { useUiState } from "./stores/state";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
+import { useUiState } from "@/stores/state";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import { useElementSize } from "@vueuse/core";
