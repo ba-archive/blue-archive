@@ -7,6 +7,7 @@ import {
   stop,
   storyHandler,
 } from "@/index";
+import { isMobile } from "pixi.js";
 import {
   computed,
   onActivated,
@@ -82,10 +83,12 @@ const { width: playerActualWidth, height: playerActualHeight } =
   useElementSize(player);
 
 watch([playerActualWidth, playerActualHeight], () => {
-  if (fullScreen.value) {
-    playerWidth.value = playerActualWidth.value;
-    playerHeight.value = playerActualHeight.value;
+  if (!fullScreen.value || isMobile.phone || isPseudoFullscreen.value) {
+    return;
   }
+
+  playerWidth.value = playerActualWidth.value;
+  playerHeight.value = playerActualHeight.value;
 });
 
 const playerStyle = computed(() => {
