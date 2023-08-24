@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import type { ExtractPropTypes } from "vue";
 import { buildProps, definePropType } from "../runtime";
 import { componentSizes } from "../size";
@@ -7,6 +8,14 @@ import type { FormItemRule } from "./types";
 export type FormItemProp = Arrayable<string>;
 export type FormItemProps = ExtractPropTypes<typeof formItemProps>;
 
+export const formItemValidateStates = [
+  "",
+  "error",
+  "validating",
+  "success",
+] as const;
+
+// eslint-disable-next-line sort-exports/sort-exports
 export type FormItemValidateState = (typeof formItemValidateStates)[number];
 
 export const formItemProps = buildProps({
@@ -77,9 +86,3 @@ export const formItemProps = buildProps({
     values: componentSizes,
   },
 } as const);
-export const formItemValidateStates = [
-  "",
-  "error",
-  "validating",
-  "success",
-] as const;

@@ -1,11 +1,13 @@
+/* eslint-disable max-len */
 import type {
   RuleItem,
   ValidateError,
-  ValidateFieldsError,
+  ValidateFieldsError, // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
 } from "async-validator";
 import type { SetupContext, UnwrapRef } from "vue";
-import type { ComponentSize } from "@element-plus/constants";
-import type { Arrayable } from "@element-plus/utils";
+import type { ComponentSize } from "../size";
+import type { Arrayable } from "../typescript";
 import type { MaybeRef } from "@vueuse/core";
 import type { FormEmits, FormProps } from "./form";
 import type {

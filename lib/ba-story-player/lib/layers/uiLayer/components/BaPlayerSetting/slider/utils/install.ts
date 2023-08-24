@@ -1,4 +1,3 @@
-import { NOOP } from "vue";
 import type { App, Directive } from "vue";
 import type { AppContext, Plugin } from "vue";
 
@@ -47,7 +46,5 @@ export const withInstallFunction = <T>(fn: T, name: string) => {
 };
 
 export const withNoopInstall = <T>(component: T) => {
-  (component as SFCWithInstall<T>).install = NOOP;
-
   return component as SFCWithInstall<T>;
 };

@@ -226,9 +226,19 @@ export function soundInit() {
     soundDispose();
   });
   eventBus.on("continue", () => bgm?.play());
-  eventBus.on("playAudioWithConfig", ({ url, config }) => {
-    getAudio(url).play(config);
-  });
+  eventBus.on(
+    "playAudioWithConfig",
+    ({
+      url,
+      config: {
+        config: { volume },
+      },
+    }) => {
+      const howl = getAudio(url);
+      howl.volume(volume > 1 ? volume / 100 : volume);
+      howl.play();
+    }
+  );
   eventBus.on("end", () => {
     soundDispose();
   });
