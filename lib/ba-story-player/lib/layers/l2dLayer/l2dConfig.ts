@@ -540,4 +540,38 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Momiji_home: {
+    name: "Momiji_home",
+    playQue: [
+      {
+        name: "Momiji_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Momiji_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0124_home: {
+    name: "CH0124_home",
+    playQue: [
+      {
+        name: "CH0124_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.5,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0124_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
 };
