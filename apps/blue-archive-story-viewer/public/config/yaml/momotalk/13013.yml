@@ -12,7 +12,7 @@ title:
     CharacterId: 13013
     unsure: false
   - TextJp: 集める理由
-    TextCn: 收集的理由
+    TextCn: 收集书本的缘由
     TextKr: 무언가를 모으는 이유
     TextEn: ""
     TextTh: ""
@@ -22,7 +22,7 @@ title:
     CharacterId: 13013
     unsure: false
   - TextJp: 一期一会のブックフェスティバル
-    TextCn: 一生一次的书之庆典
+    TextCn: 一生一会的书之庆典
     TextKr: 축제의 현장
     TextEn: ""
     TextTh: ""
@@ -30,9 +30,9 @@ title:
     GroupId: 1301305
     FavorScheduleId: 130135
     CharacterId: 13013
-    unsure: true
+    unsure: false
   - TextJp: 本に包まれて
-    TextCn: 被书所环绕着
+    TextCn: 被书本所环绕着
     TextKr: 약간의 일탈
     TextEn: ""
     TextTh: ""
@@ -177,7 +177,7 @@ content:
     unsure: false
   - MessageKR: 괜히 저 때문에 고생만 하시고……
     MessageJP: すみません、私のせいで遅くまで迷惑を……
-    MessageCN: 对不起，因为我的原因弄到这么晚给您添了麻烦……
+    MessageCN: 对不起，因为我的原因弄到这么晚，给老师添了麻烦……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -196,7 +196,7 @@ content:
     unsure: false
   - MessageKR: 고생이라니, 무슨.
     MessageJP: 迷惑だなんて、私も楽しかったよ
-    MessageCN: 没有麻烦哦，我也很开心呢
+    MessageCN: 才没有添麻烦，我也很开心哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -291,7 +291,7 @@ content:
     unsure: false
   - MessageKR: 피로라면 열심히 콜렉팅하고 있어……
     MessageJP: 疲労のレパートリーならコレクションされてるよ……
-    MessageCN: 疲劳的＊的话倒是有在收集哦……
+    MessageCN: 疲劳的计量表的话倒是有在累积哦……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -307,10 +307,10 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: "네? "
     MessageJP: そ、それは
-    MessageCN: 那，那还真是
+    MessageCN: 那、那还
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -329,7 +329,7 @@ content:
     unsure: false
   - MessageKR: 그, 그건 큰일이네요.
     MessageJP: 大変ですね……
-    MessageCN: 很辛苦呢……
+    MessageCN: 真是很辛苦呢……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -405,7 +405,7 @@ content:
     unsure: false
   - MessageKR: "에헤헤. 개인적으로 콜렉팅하는 판본이 있어요.\_"
     MessageJP: 私は、とある作家さんの絶版本を集めてるんです
-    MessageCN: 我的话，在收集某位作家的绝版书哦
+    MessageCN: 我的话，在收集某位作家的绝版书籍哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -481,7 +481,7 @@ content:
     unsure: false
   - MessageKR: 뭐, 뭐가?
     MessageJP: な、何が？
-    MessageCN: 举，举办什么？
+    MessageCN: 举、举办什么？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -500,7 +500,7 @@ content:
     unsure: false
   - MessageKR: 모미지가 이렇게까지 흥분하다니, 드문 일이네.
     MessageJP: 楽しそうだね、モミジ
-    MessageCN: 看上去很期待呢，红叶
+    MessageCN: 看起来红叶很期待呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -652,7 +652,7 @@ content:
     unsure: false
   - MessageKR: 너무 피곤하다거나 하지는…… 않으시고요?
     MessageJP: たくさん歩き回りましたが……疲れてませんか？
-    MessageCN: 我们到处走了很多路呢……老师会很累吗？
+    MessageCN: 今天逛了很久呢……老师应该累了吧？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -709,7 +709,7 @@ content:
     unsure: false
   - MessageKR: 그러면 내일도 함께 해 주신다는 거죠?
     MessageJP: 明日も楽しみですね！
-    MessageCN: 我也很期待明天呢！
+    MessageCN: 明天我也很期待呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -728,7 +728,7 @@ content:
     unsure: false
   - MessageKR: 내, 내일도?!
     MessageJP: あ、明日も！？
-    MessageCN: 明，明天也！？
+    MessageCN: 明、明天也！？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -747,7 +747,7 @@ content:
     unsure: false
   - MessageKR: 네. 붉은겨울 책 축제는 내일까지니까요!
     MessageJP: ブックフェスティバルは2日間ありますから！
-    MessageCN: 书之庆典可是有两天呢！
+    MessageCN: 因为书之庆典要举办两天哦！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -785,7 +785,7 @@ content:
     unsure: false
   - MessageKR: 선생님, 힘낼게……
     MessageJP: が、頑張るね……
-    MessageCN: 我，我会努力的……
+    MessageCN: 我、我会努力的……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -956,7 +956,7 @@ content:
     unsure: false
   - MessageKR: 그냥, 이틀째 철야를 했더니 정신이 없네……
     MessageJP: 2日連続の徹夜で頭がぼーっとして……
-    MessageCN: 连续熬了两天夜后脑袋昏昏沉沉的……
+    MessageCN: 连续熬了两天夜，脑袋昏昏沉沉的……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -975,7 +975,7 @@ content:
     unsure: false
   - MessageKR: 세상에, 그거 정말 큰 일이잖아요!
     MessageJP: そんな！大変です！
-    MessageCN: 怎么会！不得了！
+    MessageCN: 怎么会！这可不好！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -994,7 +994,7 @@ content:
     unsure: false
   - MessageKR: 물론 저도 만화를 읽다가 밤을 새는 적도 가끔씩 있지만……
     MessageJP: 私も本を読んでいると気づいたら朝になっている日もありますが……
-    MessageCN: 虽然我有时候也会在读书的时候读着读着就到早上了……
+    MessageCN: 虽然我有时候也会，看书看着看着就看到早上了……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1051,7 +1051,7 @@ content:
     unsure: false
   - MessageKR: 도서관에……?
     MessageJP: 図書館に……？
-    MessageCN: 去图书馆……？
+    MessageCN: 图书馆……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
