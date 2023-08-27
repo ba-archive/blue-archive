@@ -225,7 +225,14 @@ export function L2DInit() {
         eventBus.emit("playAudio", {
           voiceJPUrl: getResourcesUrl("l2dVoice", event.data.name),
         });
-      } else if ("talk" === eventName.toLowerCase()) {
+      } else if (
+        "talk" === eventName.toLowerCase() &&
+        !(
+          currentVoice.endsWith(event.stringValue) ||
+          (typeof event.stringValue === "string" &&
+            event.stringValue.endsWith(currentVoice))
+        )
+      ) {
         eventBus.emit("playAudio", {
           voiceJPUrl: getResourcesUrl("l2dVoice", event.stringValue),
         });
