@@ -23,17 +23,13 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   // },
   {
     type: "student",
-    jumpTo: 20029,
-    title: "水羽 三森（泳装）",
+    jumpTo: 10075,
+    title: "姫木 梅露",
   },
   {
     type: "student",
-    jumpTo: 10046,
-    title: "久田 泉奈（泳装）",
-  },
-  {
-    type: "mainstory",
-    title: "Vol.3 第二章",
+    jumpTo: 13013,
+    title: "秋泉 红叶",
   },
 ];
 </script>

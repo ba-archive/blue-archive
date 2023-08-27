@@ -10,6 +10,17 @@ const updateLogs: UpdateLog[] = [
         type: "feat",
         content: "可以在“设置”界面中选择跳过 MomoTalk 动画",
       },
+      {
+        type: "feat",
+        content: "剧情播放时可以调节音量",
+      },
+      {
+        type: "student",
+        students: [
+          { name: "姫木 梅露", id: 10075 },
+          { name: "秋泉 红叶", id: 13013 },
+        ],
+      },
     ],
   },
   {
