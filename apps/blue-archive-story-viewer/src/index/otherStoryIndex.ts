@@ -279,8 +279,8 @@ export const stories: StoryBriefing[] = [
           TextEn: "",
           TextCn: "海边的袭击者",
         },
-        previous: 208,
-        story_id: 209,
+        previous: 209,
+        story_id: 210,
         summary: {
           TextKr:
             "모모카는 선생님에게 키보토스의 교정국을 탈출한 죄수와 호버크래프트 소동에 대해 설명한다.",
