@@ -270,6 +270,29 @@ export const stories: StoryBriefing[] = [
           TextCn: "巨匠向老师介绍“数秘术”所创造的“格里高利”。",
         },
       },
+      {
+        title: {
+          TextKr: "흉악한 범죄자의 해변가 습격",
+          TextJp: "浜辺の襲撃者",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn: "海边的袭击者",
+        },
+        previous: 208,
+        story_id: 209,
+        summary: {
+          TextKr:
+            "모모카는 선생님에게 키보토스의 교정국을 탈출한 죄수와 호버크래프트 소동에 대해 설명한다.",
+          TextJp:
+            "モモカは先生に、キヴォトスの矯正局から脱出した囚人とホバークラフト騒動について説明する。",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn:
+            "桃香向老师说明关于逃离基沃托斯矫正局的囚犯和气垫船的骚动事件。",
+        },
+      },
     ],
   },
 ];

@@ -53,7 +53,7 @@ export interface StoryAbstract {
 }
 
 export interface StoryBriefing {
-  released: boolean;
+  released?: boolean;
   title: {
     TextCn?: string;
     TextJp: string;
