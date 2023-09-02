@@ -43,8 +43,8 @@ export const localeString = {
     updates: {
       updated: "{title}已更新",
       favorScheduleUpdated: "{name}的好感剧情已更新",
-      minigameUpdated: "{name}主题小游戏已更新（至{date}前有效）",
-      minigameUpdatedNoDate: "{name}主题小游戏已更新",
+      minigameUpdated: "{name}已发布（至{date}前有效）",
+      minigameUpdatedNoDate: "{name}已发布",
     },
   },
   jp: {

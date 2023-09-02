@@ -12,15 +12,14 @@ export interface HomeDisplayInfo {
 }
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
-  // {
-  //   type: "minigame",
-  //   title: "白子",
-  //   icon: "https://shiroko.blue-archive.io/favicon.gif",
-  //   jumpTo: "https://shiroko.blue-archive.io",
-  //   startDate: "2023/05/16",
-  //   endDate: "2023/06/30",
-  //   style: "pixelize",
-  // },
+  {
+    type: "minigame",
+    title: "小春幸存者游戏",
+    icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
+    jumpTo: "https://games.blue-archive.io/koharu-dream/",
+    startDate: "2023/09/01",
+    style: "pixelize",
+  },
   {
     type: "student",
     jumpTo: 10075,
