@@ -2,7 +2,7 @@
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
-  type: "mainstory" | "student" | "minigame";
+  type: "mainstory" | "otherStory" | "student" | "minigame";
   icon?: string;
   jumpTo?: string | number;
   title: string;
@@ -21,14 +21,8 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
     style: "pixelize",
   },
   {
-    type: "student",
-    jumpTo: 10075,
-    title: "姫木 梅露",
-  },
-  {
-    type: "student",
-    jumpTo: 13013,
-    title: "秋泉 红叶",
+    type: "otherStory",
+    title: "若藻总力战剧情",
   },
 ];
 </script>

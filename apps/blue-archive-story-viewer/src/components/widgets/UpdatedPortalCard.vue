@@ -74,6 +74,10 @@ function getDialogTitle() {
           date: props.info.endDate || "",
         }
       )}`;
+    case "otherStory":
+      return `${getI18nString(userLanguage.value, "updates.updated", {
+        title: props.info.title,
+      })}`;
     default:
       return `${getI18nString(userLanguage.value, "updates.updated", {
         title: props.info.title,
@@ -98,6 +102,11 @@ function handleJumpToRequest() {
           : props.info.jumpTo!.toString(),
         "_self"
       );
+      break;
+    case "otherStory":
+      router.push({
+        name: "OtherStory",
+      });
       break;
     default:
       break;
