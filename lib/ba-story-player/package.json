@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build #&& vue-tsc --emitDeclarationOnly",
+    "build": "vite build",
     "preview": "vite preview",
     "check": "vue-tsc --noEmit"
   },
