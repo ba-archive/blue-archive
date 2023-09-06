@@ -9,6 +9,15 @@ const routes: Array<RouteRecordRaw> = [
   ...commonRoutes,
   // 带鉴权的业务路由
   ...asyncRoutes,
+  // Story editor route
+  {
+    path: '/story-editor',
+    name: 'StoryEditor',
+    component: () => import('@/views/StoryEditor.vue'),
+    meta: {
+      title: 'Story Editor',
+    },
+  },
   // 异常页必须放在路由匹配规则的最后
   ...exceptionRoutes,
 ];
