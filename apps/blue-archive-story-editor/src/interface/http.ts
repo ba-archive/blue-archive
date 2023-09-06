@@ -38,9 +38,7 @@ export interface ApiServiceAdapter {
   raw<T>(config: IRequestConfig): Promise<ServerResponse<T>>;
   excel<T extends ExcelTableType>(
     type: T,
-  ): Promise<ServerResponse<ExcelTable<NonNullable<ReturnType<ActualBaseExcelTable[T]["get"]>>>>>;
-  urlDownload(url: string, data: instanceObject): void;
-}
+  ): Promise<ServerResponse<ExcelTable<NonNullable<ReturnType<ActualBaseExcelTable[T]["get"]
 
 export const NetworkAdapter = {
   Offline: "离线",
