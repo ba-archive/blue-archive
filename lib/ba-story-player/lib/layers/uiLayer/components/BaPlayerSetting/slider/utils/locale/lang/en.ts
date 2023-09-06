@@ -162,4 +162,21 @@ export default {
       cancelButtonText: "No",
     },
   },
+  storyEditor: {
+    saveButton: "Save",
+    loadButton: "Load",
+    newStoryButton: "New Story",
+    titleField: "Title",
+    contentField: "Content",
+  },
+  storyUnits: {
+    newType1: {
+      name: "New Type 1",
+      description: "Description for New Type 1",
+    },
+    newType2: {
+      name: "New Type 2",
+      description: "Description for New Type 2",
+    },
+  },
 };
