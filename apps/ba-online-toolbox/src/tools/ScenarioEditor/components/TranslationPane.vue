@@ -72,7 +72,7 @@
               size="medium"
               :default-value="0"
               :min="0"
-              :step="10"
+              :step="500"
               style="width: 9rem"
             >
               <template #suffix><span style="color: #999">毫秒</span></template>
