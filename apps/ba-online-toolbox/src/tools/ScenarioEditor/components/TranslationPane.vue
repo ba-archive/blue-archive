@@ -114,9 +114,7 @@
         <n-checkbox
           :checked="
             config.getSelectLine !== -1
-              ? mainStore.getScenario.content[config.getSelectLine].Unsure
-                ? true
-                : false
+              ? !!mainStore.getScenario.content[config.getSelectLine].Unsure
               : false
           "
           @click="
