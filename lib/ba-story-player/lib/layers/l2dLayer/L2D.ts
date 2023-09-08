@@ -217,6 +217,7 @@ export function L2DInit() {
     function playL2dVoice(entry: ITrackEntry, event: IEvent) {
       const eventName = event.data.name;
       if (
+        // 正常情况下 spine 会 emit 声音事件，但是注意不要让 enableObject, disableObject 等开发事件干扰声音播放
         eventName !== "Talk" &&
         eventName !== currentVoice &&
         !["enableobject", "disableobject"].includes(eventName.toLowerCase())
@@ -226,6 +227,7 @@ export function L2DInit() {
           voiceJPUrl: getResourcesUrl("l2dVoice", event.data.name),
         });
       } else if (
+        // 部分情况下 spine 有声音事件但是不 emit，需要尝试分析 talk 事件
         "talk" === eventName.toLowerCase() &&
         !(
           currentVoice.endsWith(event.stringValue) ||
