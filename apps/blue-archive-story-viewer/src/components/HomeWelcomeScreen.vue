@@ -2,7 +2,7 @@
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
-  type: "mainstory" | "student" | "minigame";
+  type: "mainstory" | "otherStory" | "student" | "minigame";
   icon?: string;
   jumpTo?: string | number;
   title: string;
