@@ -22,13 +22,13 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   },
   {
     type: "student",
-    jumpTo: 10075,
-    title: "姫木 梅露",
+    jumpTo: 10076,
+    title: "丰见 小鸟（应援团）",
   },
   {
     type: "student",
-    jumpTo: 13013,
-    title: "秋泉 红叶",
+    jumpTo: 10009,
+    title: "狮子堂 泉",
   },
 ];
 </script>

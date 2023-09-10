@@ -4,6 +4,23 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-09-10",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "丰见 小鸟（应援团）", id: 10076 }],
+      },
+      {
+        type: "student",
+        students: [{ name: "狮子堂 泉", id: 10009 }],
+      },
+      {
+        type: "feat",
+        content: "新增小春幸存者游戏",
+      },
+    ],
+  },
+  {
     date: "2023-08-27",
     contents: [
       {
