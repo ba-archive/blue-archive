@@ -324,7 +324,9 @@ onMounted(() => {
   window.addEventListener("focus", notifyWindowFocus);
 });
 
-const { tabActivated } = useUiState();
+const { tabActivated, autoMode } = useUiState();
+
+autoMode.value = false;
 
 function notifyWindowBlur() {
   tabActivated.value = true;

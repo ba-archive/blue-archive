@@ -312,7 +312,9 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         .map(it => {
           const parseResult = /\[n?s(\d{0,2})?](.+)/.exec(it);
           if (!parseResult) {
-            console.error("在处理选项文本时遇到严重错误");
+            console.error(
+              `在处理选项文本时遇到严重错误, 在尝试解析'${it}'时, 期望'/\\[n?s(\\d{0,2})?](.+)/'， 实际 undefined`
+            );
             return undefined;
           }
           return {
