@@ -121,6 +121,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
   wait: {
     reg: /#wait;(\d+);?/i,
     fn(match: RegExpExecArray, unit: StoryUnit) {
+      unit.type = "effectOnly";
       unit.effect.otherEffect.push({ type: "wait", args: Number(match[1]) });
       return unit;
     },
