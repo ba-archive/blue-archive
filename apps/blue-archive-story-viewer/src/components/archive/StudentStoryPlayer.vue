@@ -71,13 +71,13 @@ import axios from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { useSettingsStore } from "../../store/settings";
-import { StoryAbstract, StoryContent, StoryIndex } from "../../types/StoryJson";
 import DialogContent from "../widgets/DialogContent.vue";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import NeuDialog from "../widgets/NeuUI/NeuDialog.vue";
 import NeuProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import NeuSwitch from "../widgets/NeuUI/NeuSwitch.vue";
+import { useSettingsStore } from "@store/settings";
+import { StoryAbstract, StoryContent, StoryIndex } from "@types/StoryJson";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
 
