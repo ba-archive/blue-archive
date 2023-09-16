@@ -625,4 +625,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH0169_home: {
+    name: "CH0169_home",
+    playQue: [
+      {
+        name: "CH0169_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0169_home: {
+        scale: 1.4,
+      },
+    },
+    otherSpine: [],
+  },
 };
