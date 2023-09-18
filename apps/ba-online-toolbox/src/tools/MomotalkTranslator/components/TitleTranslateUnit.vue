@@ -94,7 +94,7 @@
 <script setup lang="ts">
 import { PropType, Ref, computed, ref, watch } from 'vue';
 import CardUnit from '../../public/components/CardUnit.vue';
-import { halfToFull, translate } from '../../public/getTranslation';
+import { halfToFull, translate } from '../../public/helper/getTranslation';
 import { useMainStore } from '../store/mainStore';
 import { Title } from '../types/FileContent';
 import { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';
