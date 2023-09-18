@@ -175,6 +175,7 @@ export const eventEmitter = {
         localStorage.getItem("storyIndex") || 0
       );
     }
+    storyHandler.unitPlaying = false;
     storyHandler.isEnd = false;
     storyHandler.storyPlay().then();
   },

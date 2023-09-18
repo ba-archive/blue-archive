@@ -10,7 +10,7 @@ const updateLogs: UpdateLog[] = [
         type: "student",
         students: [
           {
-            name: "黑馆 晴奈（应援团）",
+            name: "黑馆 晴奈（体操服）",
             id: 20030,
           },
           {

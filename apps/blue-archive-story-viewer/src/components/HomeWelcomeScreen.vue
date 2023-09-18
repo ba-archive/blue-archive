@@ -23,7 +23,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
     jumpTo: 20030,
-    title: "黑馆 晴奈（应援团）",
+    title: "黑馆 晴奈（体操服）",
   },
   {
     type: "student",
