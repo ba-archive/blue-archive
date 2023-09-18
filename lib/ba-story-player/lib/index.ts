@@ -496,7 +496,7 @@ export async function init(
     });
     eventBus.emit("oneResourceLoaded", {
       type: "fail",
-      resourceName: '剧情对象中的 "content" 不能为 undefined',
+      resourceName: `剧情对象中的 "content" 不能为 ${props.story.content}`,
     });
     errorCallback();
     return;
