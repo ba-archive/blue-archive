@@ -642,4 +642,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Utaha_home: {
+    name: "Utaha_home",
+    playQue: [
+      {
+        name: "Utaha_home",
+        animation: "Start_Idle_01",
+        fadeTime: 7.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Utaha_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
