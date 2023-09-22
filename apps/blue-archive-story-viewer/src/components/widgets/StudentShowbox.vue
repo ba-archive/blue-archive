@@ -40,7 +40,7 @@ function getImagePath(id: number | undefined): string {
     <img
       v-lazy-load="getImagePath(studentInfo?.id)"
       class="student-avatar"
-      src="/src/assets/loading.webp"
+      src="@assets/loading.webp"
       :alt="studentInfo?.name.cn"
     />
     <div class="name-tag">{{ studentName }}</div>
