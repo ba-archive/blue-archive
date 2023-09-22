@@ -4,6 +4,28 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-09-24",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "白石 咏叶",
+            id: 23004,
+          },
+          {
+            name: "古关 忧",
+            id: 10035,
+          },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分情况下剧情播放黑屏的问题",
+      },
+    ],
+  },
+  {
     date: "2023-09-17",
     contents: [
       {
