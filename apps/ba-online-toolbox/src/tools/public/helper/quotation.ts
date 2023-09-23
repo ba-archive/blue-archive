@@ -9,7 +9,7 @@ function contentTokenizer(content: string) {
   let singleQuotationMarkCount = 0;
   while (currentPos < content.length) {
     const currentChar = content[currentPos];
-    if (['"', '＂', '“', '”'].includes(currentChar)) {
+    if (['"', '＂', '“', '”', '「', '」'].includes(currentChar)) {
       quotationMarkCount++;
       contentToken.push({
         type: 'QuotationMark',
@@ -19,7 +19,7 @@ function contentTokenizer(content: string) {
       continue;
     }
 
-    if (["'", '＇', '‘', '’'].includes(currentChar)) {
+    if (["'", '＇', '‘', '’', '『', '』'].includes(currentChar)) {
       singleQuotationMarkCount++;
       contentToken.push({
         type: 'SingleQuotationMark',
