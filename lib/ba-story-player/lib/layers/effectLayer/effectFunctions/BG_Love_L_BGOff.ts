@@ -48,7 +48,6 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   );
   getEmitterType(ringConfig, "spawnShape").config.data.w = appWidth;
   getEmitterType(ringConfig, "spawnShape").config.data.h = appHeight;
-  getEmitterType(ringConfig, "colorStatic").config.color = "#ffe7d8";
   const ringTextureWidth = resources[1].texture.width;
   const ringBaseRatio = (0.28 * appWidth) / ringTextureWidth;
   const ringScaleConfig = getEmitterType(ringConfig, "scale").config;
