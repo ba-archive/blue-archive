@@ -59,7 +59,7 @@ const bgEffectImgTable: BGEffectImgTable = {
   BG_Wave_F: [],
   BG_Flash: [],
   BG_UnderFire_R: [],
-  BG_Love_L: [
+  BG_Love_L_BGOff: [
     "FX_TEX_Img_Heart_01.png",
     "FX_TEX_SCN_Ring_02.png",
     "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
@@ -83,7 +83,7 @@ const bgEffectImgTable: BGEffectImgTable = {
     "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
   ],
   "BG_ScrollB_1.0": [],
-  BG_Love_L_BGOff: [
+  BG_Love_L: [
     "FX_TEX_Img_Heart_01.png",
     "FX_TEX_SCN_Ring_02.png",
     "FX_TEX_SCN_Circle_Love.png",
