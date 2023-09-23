@@ -315,15 +315,26 @@ function calcL2DSize(
   const height = (rawHeight / ratio) * 1.1;
   return { width, height, ratio };
 }
+
 function fadeEffect() {
   if (!disposed) {
     const player = document.querySelector("#player__main") as HTMLDivElement;
     player.style.backgroundColor = "white";
     const playerCanvas = document.querySelector("#player canvas");
-    gsap.to(playerCanvas, { alpha: 0, duration: 1 });
+    gsap.to(playerCanvas, {
+      duration: 1,
+      alpha: 0,
+      "-webkit-filter": "brightness(2) contrast(1.5) saturate(0.8) blur(2px)",
+      filter: "brightness(2) contrast(1.5) saturate(0.8) blur(2px)",
+    });
     setTimeout(() => {
       if (!disposed) {
-        gsap.to(playerCanvas, { alpha: 1, duration: 0.8 });
+        gsap.to(playerCanvas, {
+          duration: 0.8,
+          alpha: 1,
+          "-webkit-filter": "none",
+          filter: "none",
+        });
       }
     }, 1300);
   }
