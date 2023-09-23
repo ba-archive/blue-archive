@@ -9,12 +9,13 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  const alphaFilter = new filters.AlphaFilter(0.5);
+  const alphaFilter = new filters.AlphaFilter(0.6);
+  const blurFilter = new filters.BlurFilter(300);
   const backSprite = resources[2];
-  backSprite.tint = 0xffc0cb;
+  backSprite.tint = 0xd973b5;
   backSprite.width = appWidth;
   backSprite.height = appHeight;
-  backSprite.filters = [alphaFilter];
+  backSprite.filters = [alphaFilter, blurFilter];
   backSprite.zIndex = -1;
   app.stage.addChild(backSprite);
   // 心心特效
