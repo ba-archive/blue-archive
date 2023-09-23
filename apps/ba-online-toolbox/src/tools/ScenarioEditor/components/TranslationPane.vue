@@ -93,8 +93,8 @@
             </n-button>
           </n-dropdown>
           <n-button @click="acceptHandle" type="info">接受机翻</n-button>
-          <n-button @click="handleFormalizeQuotation" type="info">
-            规范引号
+          <n-button @click="handleFormalizePunctuation" type="info">
+            规范符号
           </n-button>
         </n-space>
       </div>
@@ -243,9 +243,11 @@ const acceptHandle = () => {
   }
 };
 
-function handleFormalizeQuotation() {
+function handleFormalizePunctuation() {
   const line = mainStore.getScenario.content[config.getSelectLine];
-  line[config.getTargetLang] = formalizeQuotation(line[config.getTargetLang]);
+  line[config.getTargetLang] = formalizeQuotation(
+    line[config.getTargetLang]
+  ).replaceAll('……。', '……');
 }
 
 const commentHandle = (event: string) => {
