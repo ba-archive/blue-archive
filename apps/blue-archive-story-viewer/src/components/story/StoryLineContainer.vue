@@ -68,7 +68,6 @@ function handleOpenChapters(index: number) {
       <story-brief-block
         :title="getTitleText(section.title, language)"
         :avatar="avatar"
-        :storyOrder="storyOrder"
         :description="section.summary"
       />
     </router-link>

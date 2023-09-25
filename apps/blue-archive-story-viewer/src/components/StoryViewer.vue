@@ -30,12 +30,14 @@
         class="flex-vertical story-container"
         v-if="consentFromConfirmed && ready && !fetchError"
       >
-        <div v-if="!playEnded">Story ID {{ storyId }}</div>
+        <div v-if="!playEnded">
+          Story ID {{ isStuStory ? favorGroupId : storyId }}
+        </div>
         <story-player
           v-if="showPlayer && !playEnded"
+          class="player-container"
           :change-index="changeIndex"
           :story="story"
-          class="player-container"
           :width="playerWidth"
           :height="playerHeight"
           data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
@@ -93,7 +95,6 @@
               getI18nString(userLanguage, "settings.useSuperSamplingTitle")
             }}</span>
           </div>
-          <!--          <div @click="changeIndex = 50">change index 50</div>-->
         </div>
       </div>
     </div>
@@ -127,8 +128,6 @@ import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
 
-const changeIndex = ref(0);
-
 const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
@@ -152,6 +151,13 @@ const initProgress = ref(0);
 const ready = ref(false);
 const fetchError = ref(false);
 const fetchErrorMessage = ref({});
+
+const changeIndex = computed(() =>
+  Number.isInteger(route.query.changeIndex * 1)
+    ? Number(route.query.changeIndex)
+    : 0
+);
+
 /* eslint-disable max-len */
 const summary = ref({
   chapterName: "序章",
@@ -218,6 +224,7 @@ const playerHeight = ref(0);
 const startFullScreen = ref(document.body.clientWidth < 425);
 const useMp3 = computed(() => settingsStore.getUseMp3);
 const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
+// 超分埋点
 const useSuperSamplingImgPath = computed(
   () =>
     `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${
@@ -230,20 +237,24 @@ if (typeof window.webkitConvertPointFromNodeToPage === "function") {
   settingsStore.setUseMp3(true);
 }
 
+const appHeight = computed(() => settingsStore.getAppSize.height);
+const appWidth = computed(() => settingsStore.getAppSize.width);
+
 /* eslint-disable indent */
 watch(
-  () => containerWidth.value,
+  () => [containerWidth.value, containerHeight.value],
   () => {
-    playerWidth.value =
+    playerWidth.value = Math.ceil(
       document.body.clientWidth <= 360
         ? window.screen.availWidth - 32
         : Math.min(
-            containerWidth.value - 32,
-            (16 * (containerHeight.value - 32)) / 9,
-            768
-          );
+            containerWidth.value * 0.8,
+            (16 * (appHeight.value - 256)) / 9,
+            appWidth.value - 64
+          )
+    );
     playerHeight.value = Math.floor(
-      Math.min((playerWidth.value * 9) / 16, containerHeight.value)
+      Math.min((playerWidth.value * 9) / 16, appHeight.value - 256)
     );
   },
   { immediate: true }

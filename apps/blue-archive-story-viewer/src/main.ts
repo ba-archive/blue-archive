@@ -5,6 +5,7 @@ import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import Toastify from "toastify-js";
 import { createApp } from "vue";
+import { useSettingsStore } from "./store/settings";
 import { routerConvert } from "@route/routes";
 import App from "./App.vue";
 import "./style.scss";
@@ -35,3 +36,17 @@ const updateSW = registerSW({
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 createApp(App).use(pinia).use(routerConvert).mount("#app");
+
+const appElement = document.getElementById("app");
+
+const resizeObserver = new ResizeObserver(() => {
+  const width = appElement?.clientWidth;
+  const height = appElement?.clientHeight;
+  if (width && height) {
+    useSettingsStore().setAppSize(width, height);
+  }
+});
+
+if (appElement) {
+  resizeObserver.observe(appElement);
+}

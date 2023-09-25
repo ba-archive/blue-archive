@@ -28,10 +28,15 @@ export const useSettingsStore = defineStore({
         )[],
         bulletType: [] as ("Pierce" | "Explode" | "Mystic" | "Sonic")[],
       },
+      app: {
+        width: 1920,
+        height: 1080,
+      },
     };
   },
   persist: true,
   getters: {
+    getAppSize: state => state.app,
     getDisableMomotalkAnimationState: state =>
       state.settings.disableMomotalkAnimation ?? false,
     getLang: state => state.settings.lang,
@@ -54,6 +59,10 @@ export const useSettingsStore = defineStore({
     },
   },
   actions: {
+    setAppSize(width: number, height: number) {
+      this.app.width = width;
+      this.app.height = height;
+    },
     setDisableMomotalkAnimationState(state: boolean) {
       this.settings.disableMomotalkAnimation = state;
     },
