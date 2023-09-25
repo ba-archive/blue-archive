@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PropType, computed } from "vue";
+import { computed } from "vue";
 import { useSettingsStore } from "@store/settings";
 import { CommonStoryTextObject } from "@types/StoryJson";
 
@@ -8,7 +8,7 @@ const settingsStore = useSettingsStore();
 const props = withDefaults(
   defineProps<{
     title: string;
-    avatar: string;
+    avatar?: string;
     description: CommonStoryTextObject;
     storyOrder?: number;
   }>(),

@@ -105,6 +105,7 @@
 import axios from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, ref, watch } from "vue";
+import { nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
@@ -251,18 +252,15 @@ watch(
 
 function handleConsentFormConfirm() {
   consentFromConfirmed.value = true;
-  // 不是第一次直接刷新
-  (window as any).hasStoryPlayed = true;
 }
 
 const showPlayer = ref(true);
 
-function reloadPlayer(forceReload = false) {
+async function reloadPlayer(forceReload = false) {
   if (!forceReload) {
     showPlayer.value = false;
-    setTimeout(() => {
-      showPlayer.value = true;
-    }, 4);
+    await nextTick();
+    showPlayer.value = true;
     return;
   }
   setTimeout(() => {
@@ -327,10 +325,9 @@ function handleSummaryDisplayLanguageChange() {
 
 watch(
   () => userLanguage.value,
-  () => {
-    showPlayer.value = false;
+  async () => {
     handleSummaryDisplayLanguageChange();
-    reloadPlayer();
+    await reloadPlayer();
   }
 );
 
@@ -349,15 +346,14 @@ if (!isStuStory.value) {
     });
 }
 
-function handleUseMp3(value: boolean) {
+async function handleUseMp3(value: boolean) {
   settingsStore.setUseMp3(value);
-  reloadPlayer();
+  await reloadPlayer();
 }
 
-function handleUseSuperSampling(value: boolean) {
-  console.log("超分选项：" + value ? "2倍" : "关闭");
+async function handleUseSuperSampling(value: boolean) {
   settingsStore.setUseSuperSampling(value ? "2" : "");
-  reloadPlayer();
+  await reloadPlayer();
 }
 
 function findPreviousStoryId(): number | undefined {
@@ -390,9 +386,9 @@ function handleStoryEnd() {
   }
 }
 
-function handleReplay() {
+async function handleReplay() {
   playEnded.value = false;
-  reloadPlayer();
+  await reloadPlayer();
 }
 </script>
 
