@@ -52,7 +52,7 @@ export default defineConfig({
           propBlackList: ["font-size", "border", "border-width"],
           exclude: /(node_module)/,
         }),
-        tailwind(tailwindConfig),
+        // tailwind(tailwindConfig),
       ],
     },
   },
