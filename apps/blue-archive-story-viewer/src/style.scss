@@ -64,6 +64,7 @@ html {
   --color-tag-active-background: #2f2f2f;
   --color-tag-active: #ffffff;
   --color-tag-background: #ffffff;
+  --color-tag-fluent: #115ea3;
 
   --color-text-contrast: #fff;
   --color-text-decoration: #ededed;
@@ -76,6 +77,7 @@ html {
   --color-text-special: #006bff;
   --color-text-striker: #cc1a25;
   --color-text-unarmed: #216f9c;
+  --color-text-fluent-white: #fff;
 
   --color-title-container: #fcfdfe;
 
@@ -281,6 +283,13 @@ a {
 
 .color-transition {
   transition: color 0.375s ease-in-out;
+}
+
+.fluent-tag {
+  border-radius: 4px;
+  background-color: var(--color-tag-fluent);
+  padding: 0 8px;
+  color: var(--color-text-fluent-white);
 }
 
 .user-action-button {

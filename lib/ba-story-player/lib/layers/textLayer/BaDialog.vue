@@ -226,7 +226,6 @@ import {
   StText,
 } from "@/types/events";
 import { useThrottleFn } from "@vueuse/core";
-import { text } from "stream/consumers";
 
 const textDialogWidth = ref(0);
 const TextDialog = ref<HTMLElement>() as Ref<HTMLElement>; // 文本框长度, 用于计算tooltip最大位置

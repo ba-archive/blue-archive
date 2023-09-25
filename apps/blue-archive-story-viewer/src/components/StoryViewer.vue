@@ -30,12 +30,31 @@
         class="flex-vertical story-container"
         v-if="consentFromConfirmed && ready && !fetchError"
       >
-        <div v-if="!playEnded">
-          Story ID {{ isStuStory ? favorGroupId : storyId }}
+        <div class="story-info flex-horizontal" v-if="!playEnded">
+          <svg
+            role="button"
+            class="icon-back"
+            @click="handleGoBack"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- eslint-disable max-len -->
+            <path
+              d="M10.7327 19.791C11.0326 20.0766 11.5074 20.0651 11.7931 19.7652C12.0787 19.4652 12.0672 18.9905 11.7673 18.7048L5.51587 12.7502L20.25 12.7502C20.6642 12.7502 21 12.4144 21 12.0002C21 11.586 20.6642 11.2502 20.25 11.2502L5.51577 11.2502L11.7673 5.29551C12.0672 5.00982 12.0787 4.53509 11.7931 4.23516C11.5074 3.93523 11.0326 3.92369 10.7327 4.20938L3.31379 11.2761C3.14486 11.437 3.04491 11.6422 3.01393 11.8556C3.00479 11.9024 3 11.9507 3 12.0002C3 12.0498 3.00481 12.0982 3.01398 12.1451C3.04502 12.3583 3.14496 12.5634 3.31379 12.7243L10.7327 19.791Z"
+            />
+            <!-- eslint-enable max-len -->
+          </svg>
+          <div class="fluent-tag">
+            {{ getI18nString(userLanguage, `storyType.${storyType}`) }}
+          </div>
+          <div>
+            {{ summary.chapterName }}
+          </div>
         </div>
         <story-player
           v-if="showPlayer && !playEnded"
-          class="player-container"
+          class="story-player"
           @initiated="handleInitiated"
           :change-index="changeIndex"
           :story="story"
@@ -51,7 +70,11 @@
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
         />
-        <img :src="useSuperSamplingImgPath" alt="" style="opacity: 0" />
+        <img
+          :src="useSuperSamplingImgPath"
+          alt=""
+          style="opacity: 0; position: absolute"
+        />
         <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
@@ -80,21 +103,35 @@
             >
           </div>
         </div>
-        <div v-if="!playEnded" class="player-settings flex-horizontal">
-          <div>
-            <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
-            <span>{{
-              getI18nString(userLanguage, "settings.useMp3Title")
-            }}</span>
+        <div v-if="!playEnded" class="player-footer flex-horizontal">
+          <div class="story-info flex-horizontal">
+            <div>
+              <div>Story ID</div>
+              <div>{{ isStuStory ? favorGroupId : storyId }}</div>
+            </div>
+            <div>
+              <div>翻译</div>
+              <div class="translator">
+                {{ story.translator || "佚名" }}
+              </div>
+            </div>
           </div>
-          <div class="flex-horizontal">
-            <neu-switch
-              :checked="![undefined, false, ''].includes(useSuperSampling)"
-              @update:value="handleUseSuperSampling"
-            />
-            <span>{{
-              getI18nString(userLanguage, "settings.useSuperSamplingTitle")
-            }}</span>
+          <div class="flex-horizontal player-settings">
+            <div class="flex-horizontal player-settings__settings--container">
+              <span>{{
+                getI18nString(userLanguage, "settings.useMp3Title")
+              }}</span>
+              <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
+            </div>
+            <div class="flex-horizontal player-settings__settings--container">
+              <span>{{
+                getI18nString(userLanguage, "settings.useSuperSamplingTitle")
+              }}</span>
+              <neu-switch
+                :checked="![undefined, false, ''].includes(useSuperSampling)"
+                @update:value="handleUseSuperSampling"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -106,8 +143,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import StoryPlayer from "ba-story-player";
-import { computed, ref, watch } from "vue";
-import { nextTick } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
@@ -133,7 +169,7 @@ const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
 const storyQueryType = computed(() => route.query.type ?? "main");
-const consentFromConfirmed = ref(false);
+const consentFromConfirmed = ref(true);
 const story = ref<StoryContent>({} as StoryContent);
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 
@@ -178,6 +214,14 @@ const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
 const isStuStory = computed(() =>
   route.name === "StudentStoryViewer" ? true : false
 );
+
+const storyType = computed(() => {
+  if (isStuStory.value) {
+    return "favor";
+  }
+  return storyQueryType.value;
+});
+
 const queryUrl = isStuStory.value
   ? `/story/favor/${studentId.value}/${favorGroupId.value}.json`
   : `/story/${storyQueryType.value}/${storyId.value}.json`;
@@ -207,6 +251,7 @@ axios
           ? err
           : "该剧情目前尚未开放，敬请期待！";
     } else {
+      /* eslint-disable indent */
       fetchErrorMessage.value =
         404 === err.response.status
           ? {
@@ -216,6 +261,7 @@ axios
               },
             }
           : err;
+      /* eslint-enable indent */
     }
   })
   .finally(() => {
@@ -265,6 +311,7 @@ watch(
   },
   { immediate: true }
 );
+
 /* eslint-enable indent */
 
 function handleConsentFormConfirm() {
@@ -407,13 +454,55 @@ async function handleReplay() {
   playEnded.value = false;
   await reloadPlayer();
 }
+
+function handleGoBack() {
+  router.go(-1);
+}
 </script>
 
 <style scoped lang="scss">
 .story-container {
-  .player-settings {
-    margin-top: 1rem;
+  gap: 0.5rem;
+
+  .story-info {
+    gap: 0.5rem;
+    width: 100%;
+
+    .icon-back {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      path {
+        fill: var(--color-text-main);
+      }
+    }
+  }
+
+  .player-footer {
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
     user-select: none;
+
+    .story-info {
+      gap: 1rem;
+
+      .translator {
+        font-weight: bold;
+      }
+    }
+
+    .player-settings {
+      gap: 0.5rem;
+
+      span {
+        white-space: nowrap;
+      }
+
+      &__settings--container {
+        gap: 0.5rem;
+      }
+    }
   }
 }
 
@@ -437,6 +526,11 @@ async function handleReplay() {
   flex-direction: column;
   align-items: stretch;
   width: 100%;
+}
+
+.story-player {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 :deep(.pseudo-fullscreen) {

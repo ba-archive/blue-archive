@@ -24,6 +24,15 @@ export const localeString = {
       unregisterSWActionText: "重置",
     },
 
+    storyType: {
+      favor: "好感剧情",
+      main: "主线剧情",
+      event: "活动剧情",
+      other: "任务剧情",
+      group: "社团剧情",
+      mini: "迷你剧情",
+    },
+
     momotalk: {
       replyTitle: "回复",
       favorScheduleTitle: "羁绊事件",
@@ -72,6 +81,15 @@ export const localeString = {
       unregisterSWActionText: "リセット",
     },
 
+    storyType: {
+      favor: "絆ストーリー",
+      main: "メインストーリー",
+      event: "イベントストーリー",
+      other: "お仕事ストーリー",
+      group: "グループストーリー",
+      mini: "ミニストーリー",
+    },
+
     momotalk: {
       replyTitle: "返信",
       favorScheduleTitle: "絆ストーリ",
@@ -117,6 +135,15 @@ export const localeString = {
       unregisterSWDescription:
         "重置應用的全部狀態。當您認為已經有更新但無法檢測到的時候可以使用此功能。\n該行為會卸載已安裝的Service Worker並清空全部快取。",
       unregisterSWActionText: "重置",
+    },
+
+    storyType: {
+      favor: "好感劇情",
+      main: "主線劇情",
+      event: "活動劇情",
+      other: "任務劇情",
+      group: "社團劇情",
+      mini: "迷你劇情",
     },
 
     momotalk: {
@@ -167,6 +194,15 @@ export const localeString = {
       unregisterSWActionText: "Reset",
     },
 
+    storyType: {
+      favor: "Favor story",
+      main: "Main story",
+      event: "Event story",
+      other: "Other story",
+      group: "Group story",
+      mini: "Mini story",
+    },
+
     momotalk: {
       replyTitle: "Reply",
       favorScheduleTitle: "Relationship event",
@@ -214,6 +250,15 @@ export const localeString = {
       unregisterSWDescription:
         "앱의 상태를 재설정합니다. 업데이트가 있지만 감지되지 않는 경우 이 기능을 사용하십시오.\n이 작업은 설치된 서비스 워커를 제거하고 모든 캐시를 지웁니다.",
       unregisterSWActionText: "재설정",
+    },
+
+    storyType: {
+      favor: "관계 이벤트",
+      main: "메인 스토리",
+      event: "이벤트 스토리",
+      other: "임무 스토리",
+      group: "동아리 스토리",
+      mini: "미니 스토리",
     },
 
     momotalk: {
