@@ -96,7 +96,8 @@ const routes: Array<RouteRecordRaw> = [
                       shouldShowInNav: false,
                     },
                     component: () =>
-                      import("../components/archive/StudentStoryPlayer.vue"),
+                      // import("../components/archive/StudentStoryPlayer.vue"),
+                      import("../components/StoryViewer.vue"),
                   },
                 ],
               },

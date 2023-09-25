@@ -1,5 +1,5 @@
 <template>
-  <div class="fill-screen center" ref="playerContainerElement">
+  <div class="fill-screen center player-container" ref="playerContainerElement">
     <error-screen
       :route-path="route.path"
       :error-message="fetchErrorMessage"
@@ -49,7 +49,7 @@
           @end="handleStoryEnd"
         />
         <img :src="useSuperSamplingImgPath" alt="" style="opacity: 0" />
-        <div v-if="playEnded" class="flex-vertical">
+        <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
             <div
@@ -105,6 +105,7 @@
 import axios from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, ref, watch } from "vue";
+import { nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
@@ -114,7 +115,9 @@ import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
 import {
   CommonStoryTextObject,
   Section,
+  StoryAbstract,
   StoryContent,
+  StoryIndex,
 } from "@/types/StoryJson";
 import { getI18nString } from "@i18n/getI18nString";
 import { stories } from "@index/mainStoryIndex";
@@ -132,6 +135,7 @@ const storyId = computed(() => route.params.id);
 const storyQueryType = computed(() => route.query.type ?? "main");
 const consentFromConfirmed = ref(false);
 const story = ref<StoryContent>({} as StoryContent);
+const storyIndex = ref<StoryIndex>({} as StoryIndex);
 
 const settingsStore = useSettingsStore();
 const userName = computed(() => settingsStore.getUsername);
@@ -155,8 +159,18 @@ const summary = ref({
     "从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。",
 });
 /* eslint-enable max-len */
+const studentId = computed(() => route.params.id as string);
+const favorGroupId = computed(() => (route.params.groupId as string) ?? "");
+const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
+// 存储故事类型并以此生成请求url
+const isStuStory = computed(() =>
+  route.name === "StudentStoryViewer" ? true : false
+);
+const queryUrl = isStuStory.value
+  ? `/story/favor/${studentId.value}/${favorGroupId.value}.json`
+  : `/story/${storyQueryType.value}/${storyId.value}.json`;
 axios
-  .get(`/story/${storyQueryType.value}/${storyId.value}.json`, {
+  .get(queryUrl, {
     onDownloadProgress: progressEvent => {
       if (progressEvent.total) {
         initProgress.value = Math.floor(
@@ -175,10 +189,22 @@ axios
   })
   .catch(err => {
     fetchError.value = true;
-    fetchErrorMessage.value =
-      route.params.id.toString() === "11000"
-        ? err
-        : "该剧情目前尚未开放，敬请期待！";
+    if (!isStuStory.value) {
+      fetchErrorMessage.value =
+        route.params.id.toString() === "11000"
+          ? err
+          : "该剧情目前尚未开放，敬请期待！";
+    } else {
+      fetchErrorMessage.value =
+        404 === err.response.status
+          ? {
+              message: "Story not found",
+              response: {
+                status: 1919,
+              },
+            }
+          : err;
+    }
   })
   .finally(() => {
     ready.value = true;
@@ -226,18 +252,15 @@ watch(
 
 function handleConsentFormConfirm() {
   consentFromConfirmed.value = true;
-  // 不是第一次直接刷新
-  (window as any).hasStoryPlayed = true;
 }
 
 const showPlayer = ref(true);
 
-function reloadPlayer(forceReload = false) {
+async function reloadPlayer(forceReload = false) {
   if (!forceReload) {
     showPlayer.value = false;
-    setTimeout(() => {
-      showPlayer.value = true;
-    }, 4);
+    await nextTick();
+    showPlayer.value = true;
     return;
   }
   setTimeout(() => {
@@ -268,33 +291,69 @@ function getTextByLanguage(textObject: CommonStoryTextObject | undefined) {
   );
 }
 
+// 学生故事模式下获取 summary 的方法
+function getSummaryTextByKey(summary: StoryAbstract, key: string) {
+  return Reflect.get(Reflect.get(summary, key), "Text" + playerLanguage.value);
+}
+
 function handleSummaryDisplayLanguageChange() {
-  summary.value = {
-    chapterName: getTextByLanguage(currentStoryIndexUnit?.title),
-    summary: getTextByLanguage(currentStoryIndexUnit?.summary),
-  };
+  if (isStuStory.value) {
+    const currentChapterAbstract = storyIndex.value.abstracts.find(
+      abstract => abstract.groupId.toString() === favorGroupId.value
+    );
+    if (currentChapterAbstract) {
+      const tempChapterName = getSummaryTextByKey(
+        currentChapterAbstract,
+        "title"
+      );
+      const tempSummary = getSummaryTextByKey(
+        currentChapterAbstract,
+        "abstract"
+      );
+      summary.value = {
+        chapterName: "string" === typeof tempChapterName ? tempChapterName : "",
+        summary: "string" === typeof tempSummary ? tempSummary : "",
+      };
+    }
+  } else {
+    summary.value = {
+      chapterName: getTextByLanguage(currentStoryIndexUnit?.title),
+      summary: getTextByLanguage(currentStoryIndexUnit?.summary),
+    };
+  }
 }
 
 watch(
   () => userLanguage.value,
-  () => {
-    showPlayer.value = false;
+  async () => {
     handleSummaryDisplayLanguageChange();
-    reloadPlayer();
+    await reloadPlayer();
   }
 );
 
-handleSummaryDisplayLanguageChange();
-
-function handleUseMp3(value: boolean) {
-  settingsStore.setUseMp3(value);
-  reloadPlayer();
+// 在学生故事模式下通过 axios 获取 summary
+if (!isStuStory.value) {
+  handleSummaryDisplayLanguageChange();
+} else {
+  axios
+    .get(`/story/favor/${studentId.value}/index.json`)
+    .then(res => {
+      storyIndex.value = res.data;
+      handleSummaryDisplayLanguageChange();
+    })
+    .catch(err => {
+      console.error(err);
+    });
 }
 
-function handleUseSuperSampling(value: boolean) {
-  console.log("超分选项：" + value ? "2倍" : "关闭");
+async function handleUseMp3(value: boolean) {
+  settingsStore.setUseMp3(value);
+  await reloadPlayer();
+}
+
+async function handleUseSuperSampling(value: boolean) {
   settingsStore.setUseSuperSampling(value ? "2" : "");
-  reloadPlayer();
+  await reloadPlayer();
 }
 
 function findPreviousStoryId(): number | undefined {
@@ -313,15 +372,23 @@ function findNextStoryId(): number | undefined {
 
 function handleStoryEnd() {
   console.log("剧情结束");
-  setTimeout(
-    () => (playEnded.value = true),
-    "main" === storyQueryType.value ? 4000 : 4
-  );
+  if (isStuStory.value) {
+    router.push(
+      shouldReturnToMomotalk
+        ? `/archive/${studentId.value}/momotalk`
+        : `/archive/${studentId.value}/story`
+    );
+  } else {
+    setTimeout(
+      () => (playEnded.value = true),
+      "main" === storyQueryType.value ? 4000 : 4
+    );
+  }
 }
 
-function handleReplay() {
+async function handleReplay() {
   playEnded.value = false;
-  reloadPlayer();
+  await reloadPlayer();
 }
 </script>
 
@@ -348,7 +415,11 @@ function handleReplay() {
 }
 
 .player-container {
-  user-select: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
 }
 
 :deep(.pseudo-fullscreen) {
