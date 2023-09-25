@@ -36,6 +36,7 @@
         <story-player
           v-if="showPlayer && !playEnded"
           class="player-container"
+          @initiated="handleInitiated"
           :change-index="changeIndex"
           :story="story"
           :width="playerWidth"
@@ -152,11 +153,16 @@ const ready = ref(false);
 const fetchError = ref(false);
 const fetchErrorMessage = ref({});
 
-const changeIndex = computed(() =>
-  Number.isInteger(route.query.changeIndex * 1)
-    ? Number(route.query.changeIndex)
-    : 0
-);
+const changeIndex = ref(0);
+
+function handleInitiated() {
+  if (route.query.changeIndex) {
+    const rawIndex = parseInt(route.query.changeIndex as string);
+    if (!Number.isNaN(rawIndex)) {
+      changeIndex.value = rawIndex;
+    }
+  }
+}
 
 /* eslint-disable max-len */
 const summary = ref({

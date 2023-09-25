@@ -59,7 +59,7 @@ storySummary.value.summary = storySummary.value.summary.replaceAll(
   "[USERNAME]",
   props.userName
 );
-const emit = defineEmits(["end", "error"]);
+const emit = defineEmits(["end", "error", "initiated"]);
 
 const playerHeight = ref(props.height);
 const playerWidth = ref(props.width);
@@ -309,6 +309,9 @@ onMounted(() => {
       emit("error");
     }
   );
+  eventBus.on("loaded", () => {
+    emit("initiated");
+  });
   if (props.startFullScreen) {
     updateFullScreenState();
   }
