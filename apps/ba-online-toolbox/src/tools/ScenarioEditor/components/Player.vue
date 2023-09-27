@@ -4,6 +4,7 @@
       <ba-story-player
         class="player-body rounded-small"
         v-if="showPlayer"
+        @initiated="handlePlayerInit"
         :story="mainStore.getScenario"
         :language="playerLanguage"
         :width="playerContainerWidth - 24"
@@ -82,6 +83,14 @@ watchDebounced(
     debounce: 200,
   }
 );
+
+function handlePlayerInit() {
+  StoryPlayer.value &&
+    StoryPlayer.value.hotReplaceStoryUnit(
+      mainStore.getScenario.content[config.getSelectLine],
+      config.getSelectLine
+    );
+}
 
 const isPreviewMode = computed(() => config.getPreviewMode);
 const targetLanguage = computed(() => config.getTargetLang);
