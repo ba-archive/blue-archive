@@ -693,4 +693,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Azusa_swimsuit_home: {
+    name: "Azusa_swimsuit_home",
+    playQue: [
+      {
+        name: "Azusa_swimsuit_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Azusa_swimsuit_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
