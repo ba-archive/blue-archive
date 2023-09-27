@@ -116,10 +116,15 @@ function getLastDataFromIndex(index: number) {
   return { lastBg, lastBgm, lastCharacter };
 }
 
-export const changeStoryIndex = (index?: number) => {
-  if (typeof index !== "number") {
+export const changeStoryIndex = (index?: number | string) => {
+  if (!["string", "number"].includes(typeof index)) {
     return;
   }
+
+  if ("string" === typeof index && Number.isInteger(Number(index))) {
+    index = Number(index);
+  }
+
   // 不允许跳到最后
   if (index >= usePlayerStore().allStoryUnit.length - 1) {
     return;
