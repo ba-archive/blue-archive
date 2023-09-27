@@ -110,6 +110,7 @@ export function L2DInit() {
             fade,
             fadeTime = 0.8,
             secondFadeTime,
+            fadeBlackTime,
             sounds,
           } = startAnimations[currentIndex - 1] || {};
           if (fade) {
@@ -117,6 +118,14 @@ export function L2DInit() {
             timeOutArray.push(
               window.setTimeout(fadeEffect, (duration - fadeTime) * 1000)
             );
+            if (fadeBlackTime) {
+              timeOutArray.push(
+                window.setTimeout(
+                  fadeEffect("black"),
+                  (duration - fadeBlackTime) * 1000
+                )
+              );
+            }
             if (secondFadeTime) {
               timeOutArray.push(
                 window.setTimeout(
@@ -315,10 +324,12 @@ function calcL2DSize(
   const height = (rawHeight / ratio) * 1.1;
   return { width, height, ratio };
 }
-function fadeEffect() {
+
+function fadeEffect(color = "white") {
   if (!disposed) {
+    console.warn("fadeEffect", color);
     const player = document.querySelector("#player__main") as HTMLDivElement;
-    player.style.backgroundColor = "white";
+    player.style.backgroundColor = color;
     const playerCanvas = document.querySelector("#player canvas");
     gsap.to(playerCanvas, { alpha: 0, duration: 1 });
     setTimeout(() => {
