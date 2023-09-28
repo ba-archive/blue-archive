@@ -683,7 +683,15 @@ export const l2dConfig: IL2dConfig = {
         name: "CH0089_home",
         animation: "Start_Idle_01",
         fadeTime: 4.9,
-        fadeBlackTime: 5.5,
+        customFade: [
+          {
+            customFadeTime: 8.2,
+            customFadeColor: "black",
+            toSolidDuration: 0.4,
+            solidStateDuration: 0.6,
+            toNormalDuration: 0.4,
+          },
+        ],
         fade: true,
       },
     ],

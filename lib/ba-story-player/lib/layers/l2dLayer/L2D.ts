@@ -108,9 +108,9 @@ export function L2DInit() {
           const duration = entry.animation.duration;
           const {
             fade,
-            fadeTime = 0.8,
+            fadeTime = 4.9,
             secondFadeTime,
-            fadeBlackTime,
+            customFade,
             sounds,
           } = startAnimations[currentIndex - 1] || {};
           if (fade) {
@@ -118,13 +118,29 @@ export function L2DInit() {
             timeOutArray.push(
               window.setTimeout(fadeEffect, (duration - fadeTime) * 1000)
             );
-            if (fadeBlackTime) {
-              timeOutArray.push(
-                window.setTimeout(
-                  fadeEffect("black"),
-                  (duration - fadeBlackTime) * 1000
-                )
-              );
+            if (Array.isArray(customFade) && customFade.length > 0) {
+              for (const customFadeItem of customFade) {
+                const {
+                  customFadeTime,
+                  customFadeColor,
+                  toSolidDuration,
+                  solidStateDuration,
+                  toNormalDuration,
+                } = customFadeItem;
+
+                timeOutArray.push(
+                  window.setTimeout(
+                    () =>
+                      fadeEffect(
+                        customFadeColor || "black",
+                        toSolidDuration ?? 0.8,
+                        solidStateDuration ?? 1,
+                        toNormalDuration ?? 1
+                      ),
+                    (duration - customFadeTime) * 1000
+                  )
+                );
+              }
             }
             if (secondFadeTime) {
               timeOutArray.push(
@@ -325,17 +341,21 @@ function calcL2DSize(
   return { width, height, ratio };
 }
 
-function fadeEffect(color = "white") {
+function fadeEffect(
+  color = "white",
+  toSolidDuration = 1,
+  solidStateDuration = 1.3,
+  toNormalDuration = 0.8
+) {
   if (!disposed) {
-    console.warn("fadeEffect", color);
     const player = document.querySelector("#player__main") as HTMLDivElement;
     player.style.backgroundColor = color;
     const playerCanvas = document.querySelector("#player canvas");
-    gsap.to(playerCanvas, { alpha: 0, duration: 1 });
+    gsap.to(playerCanvas, { alpha: 0, duration: toSolidDuration });
     setTimeout(() => {
       if (!disposed) {
-        gsap.to(playerCanvas, { alpha: 1, duration: 0.8 });
+        gsap.to(playerCanvas, { alpha: 1, duration: toNormalDuration });
       }
-    }, 1300);
+    }, solidStateDuration * 1000);
   }
 }

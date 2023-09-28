@@ -15,8 +15,14 @@ export type IL2dPlayQue = {
   name: string;
   animation: string;
   fadeTime?: number;
-  fadeBlackTime?: number;
   secondFadeTime?: number;
+  customFade?: Array<{
+    customFadeTime: number;
+    customFadeColor?: string;
+    toSolidDuration?: number;
+    solidStateDuration?: number;
+    toNormalDuration?: number;
+  }>;
   sounds?: {
     fileName: string;
     time: number;
