@@ -1882,13 +1882,13 @@
     en: Onikata
     kr: 오니카타
     tw: 鬼方
-    th: 鬼方
+    th: โอนิคาตะ
   name:
     cn: 佳代子(正月)
     jp: カヨコ（正月）
     en: Kayoko (New Year)
     kr: 카요코(새해)
-    tw: カヨコ（正月）
+    tw: 佳世子(正月)
     th: คาโยโกะ (ปีใหม่)
   nickname: []
   birthday:
@@ -1916,7 +1916,7 @@
     jp: カホ
     en: Kaho
     kr: 카호
-    tw: カホ
+    tw: 佳穗
     th: คาโฮะ
   nickname: []
   birthday:
@@ -1944,8 +1944,8 @@
     jp: アリス（メイド）
     en: Aris (Maid)
     kr: 아리스(메이드)
-    tw: アリス（メイド）
-    th: อาริสึ (เมด)
+    tw: 愛麗絲(女僕)
+    th: อาริสึ (ชุดเมด)
   nickname: []
   birthday:
     month: 3
@@ -1972,7 +1972,7 @@
     jp: トキ（バニーガール）
     en: Toki (Bunny)
     kr: 토키(바니걸)
-    tw: トキ（バニーガール）
+    tw: 季(兔女郎)
     th: โทคิ (บันนี่เกิร์ล)
   nickname: []
   birthday:
@@ -2000,7 +2000,7 @@
     jp: レイサ
     en: Reisa
     kr: 레이사
-    tw: レイサ
+    tw: 澪紗
     th: เรอิสะ
   nickname: []
   birthday:
@@ -2028,7 +2028,7 @@
     jp: ルミ
     en: Rumi
     kr: 루미
-    tw: ルミ
+    tw: 瑠美
     th: รูมิ
   nickname: []
   birthday:
@@ -2056,7 +2056,7 @@
     jp: ミナ
     en: Mina
     kr: 미나
-    tw: ミナ
+    tw: 美奈
     th: มินะ
   nickname: []
   birthday:
@@ -2084,7 +2084,7 @@
     jp: ミヤコ（水着）
     en: Miyako (Swimsuit)
     kr: 미야코(수영복)
-    tw: ミヤコ（水着）
+    tw: 都子(泳裝)
     th: มิยาโกะ (ชุดว่ายน้ำ)
   nickname: []
   birthday:
@@ -2112,7 +2112,7 @@
     jp: サキ（水着）
     en: Saki (Swimsuit)
     kr: 사키(수영복)
-    tw: サキ（水着）
+    tw: 咲希(泳裝)
     th: ซากิ (ชุดว่ายน้ำ)
   nickname: []
   birthday:
@@ -2241,6 +2241,63 @@
   armorType: Unarmed
   bulletType: Explosion
   weapon: MG
+- id: 10077
+  familyName:
+    cn: 仲正
+    jp: 仲正
+    en: Nakamasa
+    kr: 나카마사
+    tw: 仲正
+    th: 仲正
+  name:
+    cn: 一花
+    jp: イチカ
+    en: Ichika
+    kr: 이치카
+    tw: イチカ
+    th: イチカ
+  nickname:
+    - 大号杂鱼酱
+  birthday:
+    month: 11
+    day: 11
+  club: 正义实现委员会
+  clubCode: Justice
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Sonic
+  weapon: AR
+- id: 10078
+  familyName:
+    cn: 鬼怒川
+    jp: 鬼怒川
+    en: Kinugawa
+    kr: 키누가와
+    tw: 鬼怒川
+    th: 鬼怒川
+  name:
+    cn: 霞
+    jp: カスミ
+    en: Kasumi
+    kr: 카스미
+    tw: カスミ
+    th: カスミ
+  nickname: []
+  birthday:
+    month: 5
+    day: 24
+  club: 温泉开发部
+  clubCode: HotSpringsDepartment
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Sonic
+  weapon: HG
 - id: 13000
   familyName:
     cn: 室笠
@@ -3701,7 +3758,9 @@
     kr: 하나에(크리스마스)
     tw: 花繪(聖誕節)
     th: ฮานาเอะ (คริสต์มาส)
-  nickname: [圣诞大护士, 大护士]
+  nickname:
+    - 圣诞大护士
+    - 大护士
   birthday:
     month: 5
     day: 12
@@ -3729,7 +3788,8 @@
     kr: 후우카(새해)
     tw: 風華(正月)
     th: ฟูกะ (ปีใหม่)
-  nickname: [煮饭婆]
+  nickname:
+    - 煮饭婆
   birthday:
     month: 4
     day: 30
@@ -3757,7 +3817,8 @@
     kr: 칸나
     tw: 環奈
     th: คันนะ
-  nickname: [叶渚]
+  nickname:
+    - 叶渚
   birthday:
     month: 9
     day: 7
@@ -3805,15 +3866,16 @@
     en: Igusa
     kr: 이구사
     tw: 伊草
-    th: 伊草
+    th: อิคุสะ
   name:
     cn: 遥香(正月)
     jp: ハルカ（正月）
     en: Haruka (New Year)
     kr: 하루카(새해)
-    tw: ハルカ（正月）
+    tw: 遙香(正月)
     th: ฮารุกะ (ปีใหม่)
-  nickname: [春香]
+  nickname:
+    - 春香
   birthday:
     month: 5
     day: 13
@@ -3839,7 +3901,7 @@
     jp: ミノリ
     en: Minori
     kr: 미노리
-    tw: ミノリ
+    tw: 實里
     th: มิโนริ
   nickname:
     - 实梨
@@ -3868,9 +3930,10 @@
     jp: シロコ（水着）
     en: Shiroko (Swimsuit)
     kr: 시로코(수영복)
-    tw: シロコ（水着）
+    tw: 白子(泳裝)
     th: ชิโรโกะ (ชุดว่ายน้ำ)
-  nickname: [水白子]
+  nickname:
+    - 水白子
   birthday:
     month: 5
     day: 16
@@ -3898,7 +3961,8 @@
     kr: 히나타(수영복)
     tw: ヒナタ（水着）
     th: ฮินาตะ (ชุดว่ายน้ำ)
-  nickname: [水日向]
+  nickname:
+    - 水日向
   birthday:
     month: 5
     day: 17
@@ -3926,7 +3990,9 @@
     kr: 미모리(수영복)
     tw: ミモリ（水着）
     th: มิโมริ (ชุดว่ายน้ำ)
-  nickname: [水三森, 弥守]
+  nickname:
+    - 水三森
+    - 弥守
   birthday:
     month: 3
     day: 15
@@ -3954,7 +4020,8 @@
     kr: 하루나(체육복)
     tw: ハルナ（体操服）
     th: ฮารุนะ (ชุดพละ)
-  nickname: [体晴奈]
+  nickname:
+    - 体晴奈
   birthday:
     month: 3
     day: 1
@@ -3982,7 +4049,8 @@
     kr: 아이리
     tw: 愛莉
     th: ไอริ
-  nickname: [冰淇淋]
+  nickname:
+    - 冰淇淋
   birthday:
     month: 1
     day: 30
@@ -4499,9 +4567,10 @@
     jp: ユズ（メイド）
     en: Yuzu (Maid)
     kr: 유즈(메이드)
-    tw: ユズ（メイド）
-    th: ยูสึ (เมด)
-  nickname: [箱柚]
+    tw: 柚子(女僕)
+    th: ยูสึ (ชุดเมด)
+  nickname:
+    - 箱柚
   birthday:
     month: 8
     day: 12
@@ -4527,9 +4596,10 @@
     jp: ミユ（水着）
     en: Miyu (Swimsuit)
     kr: 미유(수영복)
-    tw: ミユ（水着）
+    tw: 美優(泳裝)
     th: มิยุ (ชุดว่ายน้ำ)
-  nickname: [水美游]
+  nickname:
+    - 水美游
   birthday:
     month: 7
     day: 12
