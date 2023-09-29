@@ -2,9 +2,14 @@
   <div
     class="card-unit shadow-near"
     :class="[props.type.toLowerCase(), { unsure: props.unsure }]"
+    :id="props?.id"
   >
     <div class="card-title">
-      <span>{{ title }}</span>
+      <span
+        @click="handleClickToJump"
+        :class="{ isJumpAvailable: props.jumpTo }"
+        >{{ title }}</span
+      >
       <div class="unsure-flag-checkbox">
         <n-checkbox
           v-model:checked="isUnsure"
@@ -25,6 +30,8 @@ const props = withDefaults(
     title: string;
     type: 'Title' | 'None' | 'FavorRankUp' | 'Answer' | 'Feedback';
     unsure?: boolean;
+    id?: string;
+    jumpTo?: string;
   }>(),
   {
     title: '消息卡片',
@@ -34,6 +41,19 @@ const props = withDefaults(
 );
 
 const isUnsure = ref(props.unsure);
+
+function handleClickToJump() {
+  if (props.jumpTo) {
+    const element = document.getElementById(props.jumpTo);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'instant',
+        block: 'start',
+        inline: 'start',
+      });
+    }
+  }
+}
 
 watch(
   () => props.unsure,
@@ -92,6 +112,11 @@ function handleUnsureChange(value: boolean) {
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 18px;
+
+  .isJumpAvailable {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 
   .unsure-flag-checkbox {
     color: gray;
