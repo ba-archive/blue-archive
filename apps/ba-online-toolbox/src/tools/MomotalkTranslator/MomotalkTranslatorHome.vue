@@ -208,7 +208,8 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
     <h3>对话</h3>
     <div class="vertical-grid">
       <translate-unit
-        v-for="content in mainStore.getMomotalkContents"
+        v-for="(content, index) in mainStore.getMomotalkContents"
+        :index="index"
         :key="content.Id"
         :content="content"
       />

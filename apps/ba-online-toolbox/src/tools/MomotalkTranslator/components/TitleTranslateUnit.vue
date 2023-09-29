@@ -1,8 +1,9 @@
 <template>
   <card-unit
-    title="剧情标题"
+    title="剧情标题（点击标题跳转）"
     type="Title"
     :unsure="isUnsure"
+    :jumpTo="`${props.content?.FavorScheduleId}`"
     @flagUnsure="handleFlagUnsure"
   >
     <div class="content-container">
@@ -24,14 +25,6 @@
         </n-input-group>
       </div>
       <n-space vertical>
-        <n-switch v-model:value="localReferenceMode">
-          <template #checked
-            ><span class="hint-reference-mode">参考模式开</span></template
-          >
-          <template #unchecked
-            ><span class="hint-reference-mode">参考模式关</span></template
-          >
-        </n-switch>
         <n-space
           vertical
           justify="space-between"
