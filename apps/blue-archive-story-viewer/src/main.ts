@@ -7,6 +7,7 @@ import Toastify from "toastify-js";
 import { createApp } from "vue";
 import { useSettingsStore } from "./store/settings";
 import { routerConvert } from "@route/routes";
+import quicklink from "quicklink/dist/quicklink.umd.js";
 import App from "./App.vue";
 import "./style.scss";
 
@@ -50,3 +51,7 @@ const resizeObserver = new ResizeObserver(() => {
 if (appElement) {
   resizeObserver.observe(appElement);
 }
+
+quicklink({
+  el: appElement,
+});
