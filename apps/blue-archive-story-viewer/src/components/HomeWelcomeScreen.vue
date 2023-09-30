@@ -13,6 +13,16 @@ export interface HomeDisplayInfo {
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
+    type: "student",
+    jumpTo: 10077,
+    title: "仲正 一花",
+  },
+  {
+    type: "student",
+    jumpTo: 10078,
+    title: "鬼怒川 霞",
+  },
+  {
     type: "minigame",
     title: "小春幸存者游戏",
     icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
@@ -22,18 +32,8 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   },
   {
     type: "student",
-    jumpTo: 20030,
-    title: "黑馆 晴奈（体操服）",
-  },
-  {
-    type: "student",
-    jumpTo: 23004,
-    title: "白石 咏叶",
-  },
-  {
-    type: "student",
-    jumpTo: 10035,
-    title: "古关 忧",
+    jumpTo: 10021,
+    title: "白洲 梓（泳装）",
   },
 ];
 </script>

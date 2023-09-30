@@ -4,6 +4,28 @@ import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-10-01",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "仲正 一花",
+            id: 10077,
+          },
+          {
+            name: "鬼怒川 霞",
+            id: 10078,
+          },
+        ],
+      },
+      {
+        type: "style",
+        content: "优化剧情播放界面",
+      },
+    ],
+  },
+  {
     date: "2023-09-24",
     contents: [
       {
