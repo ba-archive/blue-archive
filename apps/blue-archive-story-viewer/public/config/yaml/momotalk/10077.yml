@@ -101,7 +101,7 @@ content:
     unsure: false
   - MessageKR: 어쩌다 보니
     MessageJP: 今回は私が先生を手伝うことになったみたいで
-    MessageCN: 这次似乎就安排由我来给老师帮忙了
+    MessageCN: 好像这次她们会安排我帮老师的忙
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -158,7 +158,7 @@ content:
     unsure: false
   - MessageKR: 잘 부탁해!
     MessageJP: よろしくね！
-    MessageCN: 请多关照哦！
+    MessageCN: 请多关照啦！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -234,7 +234,7 @@ content:
     unsure: false
   - MessageKR: 잘 들어왔어.
     MessageJP: うん、おかげさまで
-    MessageCN: 嗯，多亏了一花呢
+    MessageCN: 嗯，多亏有一花呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -253,7 +253,7 @@ content:
     unsure: false
   - MessageKR: 덕분에 안전하게 왔네.
     MessageJP: ありがとう、イチカ
-    MessageCN: 谢谢你啦
+    MessageCN: 谢谢啦，一花
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -329,7 +329,7 @@ content:
     unsure: false
   - MessageKR: 좋은 밤~
     MessageJP: おやすみなさーい
-    MessageCN: 老师晚安~
+    MessageCN: 老师晚安～
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -367,7 +367,7 @@ content:
     unsure: false
   - MessageKR: 뭐하지
     MessageJP: どうしたもんかなぁ
-    MessageCN: 这该怎么办呢
+    MessageCN: 这下该怎么办呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -386,7 +386,7 @@ content:
     unsure: false
   - MessageKR: "선생님은 "
     MessageJP: "先生って "
-    MessageCN: 老师
+    MessageCN: 我想问问老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -405,7 +405,7 @@ content:
     unsure: false
   - MessageKR: 일 없을 때 뭐하시나요
     MessageJP: 仕事がないときは何してるんですか？
-    MessageCN: 您在下班的时候都会做什么呢？
+    MessageCN: 您不在工作的时候都会做什么呢？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -424,7 +424,7 @@ content:
     unsure: false
   - MessageKR: 죽은 듯이 자는 편이지
     MessageJP: 死んだように寝てるかな……
-    MessageCN: 陷入死亡一般的长眠……
+    MessageCN: 会陷入死亡一般的长眠吧……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -519,7 +519,7 @@ content:
     unsure: false
   - MessageKR: 이야~ 즐거웠습니다.
     MessageJP: やー、楽しかった
-    MessageCN: 哎呀~弹得真尽兴啊
+    MessageCN: 哎呀～弹得真尽兴啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -557,7 +557,7 @@ content:
     unsure: false
   - MessageKR: 기타는 계속 치고 있어?
     MessageJP: ギターはまだ弾いてるの？
-    MessageCN: 现在还有在弹吉他吗？
+    MessageCN: 一花现在还在弹吉他吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -576,7 +576,7 @@ content:
     unsure: false
   - MessageKR: 연주에는 흥미가 좀 붙었어?
     MessageJP: 演奏に興味は出てきた？
-    MessageCN: 对演奏有一些兴趣了吗？
+    MessageCN: 现在对演奏有点兴趣了吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -671,7 +671,7 @@ content:
     unsure: false
   - MessageKR: 방 한쪽에 놔뒀습니다
     MessageJP: 押し入れに入れちゃったんすよね
-    MessageCN: 于是就把它收进壁橱里了
+    MessageCN: 就把它收到壁橱里去啦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -728,7 +728,7 @@ content:
     unsure: false
   - MessageKR: 지금 한가하시나요
     MessageJP: 今って時間あります？
-    MessageCN: 您现在有空吗？
+    MessageCN: 您现在有时间吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -804,7 +804,7 @@ content:
     unsure: false
   - MessageKR: 아뇨 그냥
     MessageJP: いや、なんとなく
-    MessageCN: 我本来想着现在老师有没有空呢
+    MessageCN: 没什么，我就问问
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -820,10 +820,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: 진짜 그냥 심심해서
     MessageJP: ちょっと暇だなって……
-    MessageCN: 然后，不知不觉间就联系您了……
+    MessageCN: 就是我现在有点没事干……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -839,10 +839,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: 사람들 기다리는 중이라 할 게 없네요
     MessageJP: 予定まで結構時間があるんですけど
-    MessageCN: 我离我之后的安排还有很久的空闲时间
+    MessageCN: 离我下一个安排还有好久来着
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -858,7 +858,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: ㅎㅎ
     MessageJP: 思ったよりやることがないんですよね
     MessageCN: 我现在比您想象中还要无所事事哦
@@ -918,7 +918,7 @@ content:
     unsure: false
   - MessageKR: 아
     MessageJP: ああっと
-    MessageCN: 呃
+    MessageCN: 啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -937,7 +937,7 @@ content:
     unsure: false
   - MessageKR: 무슨 일 있는 건 아닙니다만
     MessageJP: 別に何か用があるわけじゃないんですが……
-    MessageCN: 其实也不是什么重要的事……
+    MessageCN: 其实也没什么要紧事……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -975,7 +975,7 @@ content:
     unsure: false
   - MessageKR: 조금 있다 공원에서 볼까?
     MessageJP: 公園で会おっか
-    MessageCN: 我们在公园见面吧
+    MessageCN: 那我们就公园见吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1013,7 +1013,7 @@ content:
     unsure: false
   - MessageKR: 좋네요
     MessageJP: いいですね
-    MessageCN: 好啊
+    MessageCN: 好耶
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1029,7 +1029,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: 그럼 그때 뵙겠습니다
     MessageJP: それじゃ、後ほど！
     MessageCN: 那待会见！
@@ -1070,7 +1070,7 @@ content:
     unsure: false
   - MessageKR: 오늘은 덕분에 아주 좋았던 듯
     MessageJP: 今日は先生のおかげで楽しかったです
-    MessageCN: 今天多亏了老师玩的真开心啊
+    MessageCN: 多亏有老师，今天玩得真开心啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1089,7 +1089,7 @@ content:
     unsure: false
   - MessageKR: 감사합니다, 선생님
     MessageJP: ありがとうございました、先生
-    MessageCN: 谢谢你了，老师
+    MessageCN: 谢谢你啦，老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1127,7 +1127,7 @@ content:
     unsure: false
   - MessageKR: 선생님이 그러라고 한 거니까
     MessageJP: 先生がそうした方がいいって言ったんですからね！
-    MessageCN: 老师也说我不要再压抑自己比较好呢！
+    MessageCN: 老师也说过这样比较好呢！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1146,7 +1146,7 @@ content:
     unsure: false
   - MessageKR: 좋지. 비슷한 느낌도 더 찾아봐.
     MessageJP: もちろん、いつでも付き合うよ
-    MessageCN: 当然，我会一直陪你的哦
+    MessageCN: 当然，我会一直陪着一花哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1181,7 +1181,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: 네~
     MessageJP: はい！
     MessageCN: 嗯！
@@ -1203,7 +1203,7 @@ content:
     unsure: false
   - MessageKR: 음
     MessageJP: ……ん～
-    MessageCN: ……唔~
+    MessageCN: ……唔～
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1279,7 +1279,7 @@ content:
     unsure: false
   - MessageKR: 이거 보다 더 마음 가는 건,
     MessageJP: 今が最高なので大丈夫です！
-    MessageCN: 我现在这样就最好了所以没关系！
+    MessageCN: 我现在就很满足啦，没关系！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
@@ -1295,7 +1295,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: true
+    unsure: false
   - MessageKR: 없을 지도 모르겠네요
     MessageJP: はは
     MessageCN: 哈哈
