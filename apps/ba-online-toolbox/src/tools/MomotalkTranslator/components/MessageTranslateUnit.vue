@@ -231,10 +231,10 @@ function handleTranslateRequest(
 }
 
 onMounted(() => {
-  // setTimeout(() => {
-  //   handleTranslateRequest(messageJp.value);
-  // // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  // }, props.index! * 1000);
+  setTimeout(() => {
+    handleTranslateRequest(messageJp.value);
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  }, props.index! * 1000);
 });
 
 function acceptTranslation() {
