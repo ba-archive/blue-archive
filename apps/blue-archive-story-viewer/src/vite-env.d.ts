@@ -1,4 +1,6 @@
 /// <reference types="vite/client" />
+import { QuicklinkOptions } from "@types/quicklink";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 declare module "*.vue" {
@@ -10,4 +12,5 @@ declare module "*.vue" {
 
 declare interface Window {
   webkitConvertPointFromNodeToPage?: (Node, WebkitPoint) => WebkitPoint;
+  quicklink?: (options: QuicklinkOptions) => void;
 }
