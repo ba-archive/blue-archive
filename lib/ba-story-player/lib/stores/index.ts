@@ -115,7 +115,7 @@ const bgEffectImgTable: BGEffectImgTable = {
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const privateState: PrivateStates = {
+let privateState: PrivateStates = {
   language: "Cn",
   userName: "",
   dataUrl: "",
@@ -263,6 +263,40 @@ const actions: Actions = {
   },
   setTranslator(translator: string) {
     privateState.translator = translator;
+  },
+  dispose() {
+    privateState = {
+      language: "Cn",
+      userName: "",
+      dataUrl: "",
+      app: null,
+      l2dSpineUrl: "",
+      curL2dConfig: null,
+      translator: "",
+      storySummary: {
+        chapterName: "",
+        summary: "",
+      },
+
+      allStoryUnit: [],
+      stackStoryUnit: [],
+      //文字层
+      logText: ref([]),
+
+      //背景层
+      bgInstance: null,
+
+      //资源管理
+      BGNameExcelTable: new Map(),
+      CharacterNameExcelTable: new Map(),
+      BGMExcelTable: new Map(),
+      BGEffectExcelTable: new Map(),
+      TransitionExcelTable: new Map(),
+      EmotionExcelTable: new Map(),
+      emotionResourcesTable: new Map(Object.entries(emotionResourcesTable)),
+      fxImageTable: new Map(Object.entries(fxImageTable)),
+      bgEffectImgMap: new Map(Object.entries(bgEffectImgTable)),
+    } as unknown as PrivateStates;
   },
 };
 

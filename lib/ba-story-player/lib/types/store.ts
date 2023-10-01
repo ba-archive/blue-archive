@@ -40,6 +40,10 @@ export interface Actions {
    * @param translator
    */
   setTranslator(translator: string): void;
+  /**
+   * 清除privateState的状态
+   */
+  dispose(): void;
 }
 
 export interface BasicGetters {

@@ -66,6 +66,7 @@ export function dispose() {
   usePlayerStore().logText.value = [];
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
+  usePlayerStore().dispose();
 }
 
 /**
