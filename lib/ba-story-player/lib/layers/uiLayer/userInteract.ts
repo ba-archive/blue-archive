@@ -56,6 +56,7 @@ const keyUpEvent = (e: KeyboardEvent) => {
   }
 };
 
+let wheelTimer: number | undefined;
 const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
   if (eventEmitter.isStoryLogShow || !isPlayerFocus()) {
@@ -63,6 +64,13 @@ const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   }
   if (delta >= 0) {
     eventBus.emit("showStoryLog", true);
+  } else {
+    if (!wheelTimer) {
+      wheelTimer = setTimeout(() => {
+        interactNext();
+        wheelTimer = undefined;
+      }, 200);
+    }
   }
 };
 
