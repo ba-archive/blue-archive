@@ -25,6 +25,7 @@ const vLazyLoad: Directive = {
     img.onload = function () {
       if (img.complete) {
         el.setAttribute("src", binding.value);
+        el.classList.add("fade-in");
       }
     };
   },
@@ -61,11 +62,26 @@ function getImagePath(id: number | undefined): string {
   grid-area: avatar;
   width: 100%;
   object-fit: cover;
+
+  &.fade-in {
+    grid-area: avatar;
+    animation: fade-in 0.375s ease-in-out;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .name-tag {
   grid-area: avatar;
   align-self: end;
+  z-index: 1;
   transition: all 0.375s ease-in-out;
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: var(--color-name-tag);
