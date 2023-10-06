@@ -63,6 +63,8 @@ const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   }
   if (delta >= 0) {
     eventBus.emit("showStoryLog", true);
+  } else {
+    interactNext();
   }
 };
 
