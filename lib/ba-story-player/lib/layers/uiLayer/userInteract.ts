@@ -56,7 +56,7 @@ const keyUpEvent = (e: KeyboardEvent) => {
   }
 };
 
-let wheelTimer: number | undefined;
+let wheelTimer: ReturnType<typeof setTimeout> | undefined;
 const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
   if (eventEmitter.isStoryLogShow || !isPlayerFocus()) {
