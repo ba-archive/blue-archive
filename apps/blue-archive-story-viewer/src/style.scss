@@ -308,6 +308,12 @@ a {
   &.danger {
     background: var(--color-pallete-danger);
   }
+
+  &.outline {
+    border: 1px solid var(--color-text-glass-panel);
+    background: none;
+    color: var(--color-text-main);
+  }
 }
 
 // consistent scrollbar style on all desktop browsers

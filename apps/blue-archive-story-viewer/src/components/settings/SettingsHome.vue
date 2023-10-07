@@ -86,6 +86,29 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{
+              getI18nString(userLanguage, "settings.allowCheckForUpdatesTitle")
+            }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.allowCheckForUpdatesDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <neu-switch
+            :checked="useCheckForUpdatesSwitchValue"
+            @update:value="handleCheckForUpdatesSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.clearCacheTitle") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.clearCacheDescription") }}
@@ -158,6 +181,13 @@ function handleAppleCompatibleSwitchChange(value: boolean) {
 
 function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
   settingsStore.setUseSuperSampling(value);
+}
+
+const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(
+  settingsStore.getEnableCheckForUpdates
+);
+function handleCheckForUpdatesSwitchChange(value: boolean) {
+  settingsStore.setEnableCheckForUpdates(value);
 }
 
 function handleClearCache() {
