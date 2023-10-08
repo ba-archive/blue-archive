@@ -256,8 +256,10 @@ export function L2DInit() {
         "talk" === eventName.toLowerCase() &&
         !(
           currentVoice.endsWith(event.stringValue) ||
-          (typeof event.stringValue === "string" &&
-            event.stringValue.endsWith(currentVoice))
+          (currentVoice !== "" &&
+            typeof event.stringValue === "string" &&
+            event.stringValue.endsWith(currentVoice)
+          )
         )
       ) {
         eventBus.emit("playAudio", {
