@@ -107,7 +107,11 @@ async function resolveBuild() {
     build: string;
     timezone: string;
   };
-  if (build && build !== currentVersion.value.build) {
+  if (
+    build &&
+    currentVersion.value.build &&
+    build !== currentVersion.value.build
+  ) {
     hasUpdate.value = true;
     remoteVersion.value = {
       build,
