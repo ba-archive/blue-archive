@@ -18,6 +18,10 @@ export const localeString = {
       clearCacheDescription: "清除所有缓存内容。当遇到显示错误时可尝试此操作",
       clearCacheActionText: "清除",
 
+      allowCheckForUpdatesTitle: "允许检查更新",
+      allowCheckForUpdatesDescription:
+        "允许网页检查是否有新版本。关闭此选项后，网页将不会自动检查更新",
+
       unregisterSWTitle: "重置应用状态",
       unregisterSWDescription:
         "重置应用的全部状态。当您认为已经有更新但无法检测到的时候可以使用此功能。\n该行为会卸载已安装的Service Worker并清空全部缓存。",
@@ -75,6 +79,10 @@ export const localeString = {
         "すべてのキャッシュをクリアします。表示エラーが発生した場合、この操作をお試してみてください",
       clearCacheActionText: "クリア",
 
+      allowCheckForUpdatesTitle: "自動更新チェックを有効にする",
+      allowCheckForUpdatesDescription:
+        "このオプションを無効にすると、自動的に新しいバージョンがあるかどうかを確認しません",
+
       unregisterSWTitle: "アプリの状態をリセット",
       unregisterSWDescription:
         "アプリの状態をリセットします。アップデートがあると思われるが検出されない場合に使用してください。\nこの操作は、インストールされている Service Worker をアンインストールし、すべてのキャッシュをクリアします。",
@@ -127,9 +135,14 @@ export const localeString = {
       useSuperSamplingTitle: "開啟超分辨率",
       useSuperSamplingDescription:
         "載入使用 ESRGAN 進行超分辨率處理的素材（手機最高支援2x）",
+
       clearCacheTitle: "清除快取",
       clearCacheDescription: "清除所有快取內容。當遇到顯示錯誤時可嘗試此操作",
       clearCacheActionText: "清除",
+
+      allowCheckForUpdatesTitle: "允許檢查更新",
+      allowCheckForUpdatesDescription:
+        "允許網頁檢查是否有新版本。關閉此選項後，網頁將不會自動檢查更新",
 
       unregisterSWTitle: "重置應用狀態",
       unregisterSWDescription:
@@ -187,6 +200,10 @@ export const localeString = {
       clearCacheDescription:
         "Clear all cache. Try this when you encounter display errors",
       clearCacheActionText: "Clear",
+
+      allowCheckForUpdatesTitle: "Enable check for updates",
+      allowCheckForUpdatesDescription:
+        "Allow the web page to check for new versions. When this option is turned off, the web page will not check for updates automatically",
 
       unregisterSWTitle: "Reset app state",
       unregisterSWDescription:
@@ -246,6 +263,10 @@ export const localeString = {
         "모든 캐시를 지웁니다. 표시 오류가 발생한 경우 이 작업을 시도하십시오",
       clearCacheActionText: "지우기",
 
+      allowCheckForUpdatesTitle: "업데이트 확인 허용",
+      allowCheckForUpdatesDescription:
+        "웹 페이지에서 새 버전을 확인할 수 있도록 허용합니다. 이 옵션을 끄면 웹 페이지가 자동으로 업데이트를 확인하지 않습니다.",
+
       unregisterSWTitle: "앱 상태 재설정",
       unregisterSWDescription:
         "앱의 상태를 재설정합니다. 업데이트가 있지만 감지되지 않는 경우 이 기능을 사용하십시오.\n이 작업은 설치된 서비스 워커를 제거하고 모든 캐시를 지웁니다.",
@@ -303,6 +324,10 @@ export const localeString = {
       clearCacheDescription:
         "ล้างแคชทั้งหมด ลองทำการนี้เมื่อคุณพบข้อผิดพลาดในการแสดงผล",
       clearCacheActionText: "ล้าง",
+
+      allowCheckForUpdatesTitle: "เปิดใช้งานการตรวจสอบการอัปเดต",
+      allowCheckForUpdatesDescription:
+        "อนุญาตให้เว็บไซต์ตรวจสอบเวอร์ชันใหม่ หากปิดตัวเลือกนี้เว็บไซต์จะไม่ตรวจสอบการอัปเดตโดยอัตโนมัติ",
 
       unregisterSWTitle: "รีเซ็ตสถานะแอป",
       unregisterSWDescription:
