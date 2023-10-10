@@ -25,11 +25,6 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
     startDate: "2023/09/01",
     style: "pixelize",
   },
-  {
-    type: "student",
-    jumpTo: 10021,
-    title: "白洲 梓（泳装）",
-  },
 ];
 </script>
 
