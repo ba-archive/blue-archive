@@ -143,6 +143,9 @@
           </div>
         </div>
       </div>
+      <div class="built-time fill-width flex-vertical">
+        built {{ builtTime }}
+      </div>
     </div>
   </div>
 </template>
@@ -158,6 +161,8 @@ import LanguageSelector from "@widgets/LanguageSelector.vue";
 import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
+
+const builtTime = import.meta.env?.__BUILD_TIME__;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
@@ -268,6 +273,11 @@ function checkMobile() {
       align-items: center;
       width: fit-content;
     }
+  }
+
+  .built-time {
+    color: #999;
+    font-size: 12px;
   }
 }
 </style>
