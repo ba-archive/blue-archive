@@ -1,8 +1,40 @@
 <script setup lang="ts">
+import { type } from "os";
 import { h } from "vue";
 import { Contributor, UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
+  {
+    date: "2023-10-15",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "间宵 时雨（温泉）",
+            id: 101010,
+          },
+        ],
+      },
+      {
+        type: "feat",
+        content: "添加了自动检测更新的机制。",
+      },
+    ],
+  },
+  {
+    date: "2023-10-08",
+    contents: [
+      {
+        type: "feat",
+        content: "在播放剧情时，可以通过在播放器界面下滑滚轮的方式进入下一句。",
+      },
+      {
+        type: "fix",
+        content: "修复了水宫子 live2d 没有语音的问题",
+      },
+    ],
+  },
   {
     date: "2023-10-01",
     contents: [
@@ -470,6 +502,60 @@ const updateLogs: UpdateLog[] = [
           { name: "飞鸟马 时", id: 10062 },
           { name: "桐藤 渚", id: 20024 },
         ],
+      },
+    ],
+  },
+  {
+    date: "2023-02-11",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "歌住 樱子", id: 10061 }],
+      },
+    ],
+  },
+  {
+    date: "2022-02-03",
+    contents: [
+      {
+        type: "feat",
+        content: "momotalk 会自动定位到最后一条消息",
+      },
+      {
+        type: "fix",
+        content:
+          "修复了连续出现两个选项时，重新选择倒数第二个选项会让整段对话看起来卡死的问题",
+      },
+    ],
+  },
+  {
+    date: "2023-01-29",
+    contents: [
+      {
+        type: "feat",
+        content: "支持按攻击类型过滤",
+      },
+    ],
+  },
+  {
+    date: "2023-01-26",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "圣园 未花", id: 10059 },
+          { name: "尾刃 康娜", id: 20023 },
+          { name: "下仓 惠", id: 10060 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-01-22",
+    contents: [
+      {
+        type: "feat",
+        content: "网站上线，提供 MomoTalk 查看功能。",
       },
     ],
   },

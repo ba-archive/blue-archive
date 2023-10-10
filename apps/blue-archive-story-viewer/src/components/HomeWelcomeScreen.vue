@@ -14,13 +14,8 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
-    jumpTo: 10077,
-    title: "仲正 一花",
-  },
-  {
-    type: "student",
-    jumpTo: 10078,
-    title: "鬼怒川 霞",
+    jumpTo: 101010,
+    title: "间宵 时雨（温泉）",
   },
   {
     type: "minigame",
@@ -29,11 +24,6 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
     jumpTo: "https://games.blue-archive.io/koharu-dream/",
     startDate: "2023/09/01",
     style: "pixelize",
-  },
-  {
-    type: "student",
-    jumpTo: 10021,
-    title: "白洲 梓（泳装）",
   },
 ];
 </script>
