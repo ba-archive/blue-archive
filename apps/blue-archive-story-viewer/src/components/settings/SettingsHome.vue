@@ -86,6 +86,29 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{
+              getI18nString(userLanguage, "settings.allowCheckForUpdatesTitle")
+            }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.allowCheckForUpdatesDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <neu-switch
+            :checked="useCheckForUpdatesSwitchValue"
+            @update:value="handleCheckForUpdatesSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.clearCacheTitle") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.clearCacheDescription") }}
@@ -120,9 +143,7 @@
           </div>
         </div>
       </div>
-      <div class="built-time fill-width flex-vertical">
-        built {{ builtTime }}
-      </div>
+      <div class="built-time fill-width flex-vertical">build {{ version }}</div>
     </div>
   </div>
 </template>
@@ -139,7 +160,7 @@ import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
-const builtTime = import.meta.env?.__BUILD_TIME__;
+const version = import.meta.env?.__VERSION__.build;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
@@ -163,6 +184,13 @@ function handleAppleCompatibleSwitchChange(value: boolean) {
 
 function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
   settingsStore.setUseSuperSampling(value);
+}
+
+const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(
+  settingsStore.getEnableCheckForUpdates
+);
+function handleCheckForUpdatesSwitchChange(value: boolean) {
+  settingsStore.setEnableCheckForUpdates(value);
 }
 
 function handleClearCache() {

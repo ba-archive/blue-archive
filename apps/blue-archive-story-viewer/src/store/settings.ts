@@ -6,9 +6,13 @@ export const useSettingsStore = defineStore({
   id: "ba-main-storage",
   state: () => {
     return {
+      currentVersion: {
+        lastUpdated: 0,
+      },
       settings: {
         disableMomotalkAnimation: false,
         lang: "cn" as Language,
+        enableCheckForUpdates: true,
         theme: "light" as "light" | "dark",
         username: "Sensei" as string,
         useMp3: false,
@@ -36,6 +40,7 @@ export const useSettingsStore = defineStore({
   },
   persist: true,
   getters: {
+    getLastUpdated: state => state.currentVersion.lastUpdated,
     getAppSize: state => state.app,
     getDisableMomotalkAnimationState: state =>
       state.settings.disableMomotalkAnimation ?? false,
@@ -49,6 +54,7 @@ export const useSettingsStore = defineStore({
     getTypeFilter: state => state.studentFilters.type,
     getArmorTypeFilter: state => state.studentFilters.armorType,
     getBulletTypeFilter: state => state.studentFilters.bulletType || [],
+    getEnableCheckForUpdates: state => state.settings.enableCheckForUpdates,
     getUseMp3: state => state.settings.useMp3,
     getUseSuperSampling: state => {
       const shouldUseSuperSampling = state.settings.useSuperSampling;
@@ -59,6 +65,9 @@ export const useSettingsStore = defineStore({
     },
   },
   actions: {
+    setLastUpdated(lastUpdated: number) {
+      this.currentVersion.lastUpdated = lastUpdated;
+    },
     setAppSize(width: number, height: number) {
       this.app.width = width;
       this.app.height = height;
@@ -74,6 +83,9 @@ export const useSettingsStore = defineStore({
     },
     setUsername(username: string) {
       this.settings.username = username;
+    },
+    setEnableCheckForUpdates(state: boolean) {
+      this.settings.enableCheckForUpdates = state;
     },
     setStudentFilters(filters: StudentFilters) {
       this.studentFilters.searchString = filters.searchString;
