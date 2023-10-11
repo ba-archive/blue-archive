@@ -142,7 +142,7 @@ export default defineConfig({
     }),
     // viteCompression(),
     //@ts-ignore
-    visualizer(),
+    // visualizer(),
   ],
   build: {
     emptyOutDir: true,
