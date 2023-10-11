@@ -146,7 +146,7 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
-    chunkSizeWarningLimit: 2000,
+    chunkSizeWarningLimit: 2500,
     minify: "terser",
     terserOptions: {
       toplevel: true,

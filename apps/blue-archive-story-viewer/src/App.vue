@@ -95,13 +95,16 @@ async function resolveBuild() {
   const currentTime = new Date().getTime();
   const lastUpdated = settingsStore.getLastUpdated;
   const diff = currentTime - lastUpdated;
+  if (!lastUpdated) {
+    settingsStore.setLastUpdated(currentTime);
+  }
 
   if (diff < 1000 * 60 * 60 * 1) {
     // 1 小时内只检查一次
     return;
   }
 
-  const { data, status } = await axios.get("/version.json");
+  const { data, status } = await axios.get(`/version.json?t=${currentTime}`);
   if (status !== 200) {
     return;
   }
