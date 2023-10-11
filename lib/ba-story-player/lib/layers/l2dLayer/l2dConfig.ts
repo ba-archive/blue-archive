@@ -671,7 +671,7 @@ export const l2dConfig: IL2dConfig = {
     ],
     spineSettings: {
       CH0071_home: {
-        scale: 1,
+        scale: 1.1,
       },
     },
     otherSpine: [],
@@ -714,6 +714,23 @@ export const l2dConfig: IL2dConfig = {
     ],
     spineSettings: {
       Azusa_swimsuit_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0123_home: {
+    name: "CH0123_home",
+    playQue: [
+      {
+        name: "CH0123_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0123_home: {
         scale: 1,
       },
     },
