@@ -154,7 +154,9 @@ export const eventEmitter = {
       () => autoMode.value,
       cur => {
         if (cur) {
-          storyHandler.startAuto();
+          setTimeout(() => {
+            storyHandler.startAuto();
+          }, 1500);
         } else {
           storyHandler.stopAuto();
         }

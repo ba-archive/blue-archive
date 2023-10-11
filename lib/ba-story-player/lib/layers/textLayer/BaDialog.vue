@@ -189,6 +189,7 @@
               :index="String(index)"
               :key="index"
               :text="e"
+              :speed="state.playing.value.typingSpeed"
               @unit-click="simulateUiClick"
             />
           </div>
@@ -217,6 +218,7 @@ import VideoBackground from "vue-responsive-video-background-player";
 import TypingUnit from "./components/TypingUnit.vue";
 import TypingEmitter from "./utils/typingEmitter";
 import StUnit from "@/layers/textLayer/components/StUnit.vue";
+import { useUiState } from "@/stores/state";
 import { Text } from "@/types/common";
 import {
   LoadingImageUrl,
@@ -227,6 +229,7 @@ import {
 } from "@/types/events";
 import { useThrottleFn } from "@vueuse/core";
 
+const state = useUiState();
 const textDialogWidth = ref(0);
 const TextDialog = ref<HTMLElement>() as Ref<HTMLElement>; // 文本框长度, 用于计算tooltip最大位置
 const toBeContinuedBg0 = ref<HTMLElement>(); // to be continued的背景
