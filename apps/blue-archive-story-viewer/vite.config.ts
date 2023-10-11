@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/ban-ts-comment */
+import chalk from "chalk";
 import dayjs from "dayjs";
 import fs from "fs";
 import path from "path";
@@ -21,6 +22,10 @@ const version = {
   build: dayjs().tz("Asia/Shanghai").format("YYYYMMDDHHmmss"),
   timezone: "Asia/Shanghai",
 };
+
+console.log(
+  chalk.yellowBright(`Build version: ${version.build} (${version.timezone})`)
+);
 
 fs.writeFile(
   path.resolve(__dirname, "public/version.json"),
