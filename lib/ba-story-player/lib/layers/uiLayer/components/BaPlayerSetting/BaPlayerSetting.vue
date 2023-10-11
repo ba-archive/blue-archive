@@ -5,6 +5,7 @@ import BaTabPanel from "../BaTab/BaTabPanel.vue";
 import BaTabs from "../BaTab/BaTabs.vue";
 import { Language } from "@/types/store";
 import BaPlayerSettingAbout from "./BaPlayerSettingAbout.vue";
+import BaPlayerSettingPlaying from "./BaPlayerSettingPlaying.vue";
 import BaPlayerSettingVolume from "./BaPlayerSettingVolume.vue";
 
 const current = ref("volume");
@@ -16,6 +17,9 @@ const language = inject<Language>("language", "Cn");
     <BaTabs v-model:value="current" class="tabs">
       <BaTabPanel name="volume" :label="getUiI18n('volume', language)">
         <BaPlayerSettingVolume />
+      </BaTabPanel>
+      <BaTabPanel name="playing" :label="getUiI18n('playing', language)">
+        <BaPlayerSettingPlaying />
       </BaTabPanel>
       <BaTabPanel name="about" :label="getUiI18n('about', language)">
         <BaPlayerSettingAbout />
