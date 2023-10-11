@@ -39,4 +39,37 @@ const emit = defineEmits<{ (event: "close"): void }>();
     white-space: nowrap;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .headup-banner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "action";
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100vw;
+    width: 100dvw;
+
+    &__content {
+      border-bottom: 1px solid var(--color-text-decoration);
+      padding-bottom: 0.5rem;
+
+      p {
+        white-space: normal;
+      }
+    }
+  }
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.625s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
 </style>
