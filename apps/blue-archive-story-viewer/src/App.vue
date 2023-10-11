@@ -76,9 +76,10 @@ onBeforeMount(() => {
     .addEventListener("change", handleSystemThemeChange);
 });
 
-const currentVersion = computed(() => {
-  return settingsStore.getCurrentVersion;
-});
+const currentVersion = import.meta.env.__VERSION__ || {
+  build: "",
+  timezone: "Asia/Shanghai",
+};
 
 const hasUpdate = ref(false);
 
@@ -92,8 +93,9 @@ async function resolveBuild() {
     return;
   }
   const currentTime = new Date().getTime();
-  const lastUpdated = currentVersion.value.lastUpdated;
+  const lastUpdated = settingsStore.getLastUpdated;
   const diff = currentTime - lastUpdated;
+
   if (diff < 1000 * 60 * 60 * 1) {
     // 1 小时内只检查一次
     return;
@@ -107,11 +109,10 @@ async function resolveBuild() {
     build: string;
     timezone: string;
   };
-  if (!currentVersion.value.build) {
-    settingsStore.setCurrentVersion(build, timezone);
+  if (!currentVersion.build) {
     settingsStore.setLastUpdated(currentTime);
   }
-  if (build && build !== currentVersion.value.build) {
+  if (build && build !== currentVersion.build) {
     hasUpdate.value = true;
     remoteVersion.value = {
       build,
@@ -126,10 +127,6 @@ function handleDisableCheckForUpdates() {
 }
 
 function handleAppUpdate() {
-  settingsStore.setCurrentVersion(
-    remoteVersion.value.build,
-    remoteVersion.value.timezone
-  );
   location.reload(true); // 标准浏览器不支持，但是 Firefox 支持
 }
 

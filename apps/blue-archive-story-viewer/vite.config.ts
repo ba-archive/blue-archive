@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/ban-ts-comment */
 import dayjs from "dayjs";
+import fs from "fs";
 import path from "path";
 import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
@@ -10,15 +11,26 @@ import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
 import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
-import timezone from "dayjs/plugin/timezone";
-import utc from "dayjs/plugin/utc";
-import tailwindConfig from "./tailwind.config.js";
+import timezone from "dayjs/plugin/timezone.js";
+import utc from "dayjs/plugin/utc.js";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const currentTime =
-  dayjs().tz("Asia/Shanghai").format("YYYY-MM-DDTHH:mm:ss") + "(GMT+0800)";
+const version = {
+  build: dayjs().tz("Asia/Shanghai").format("YYYYMMDDHHmmss"),
+  timezone: "Asia/Shanghai",
+};
+
+fs.writeFile(
+  path.resolve(__dirname, "public/version.json"),
+  JSON.stringify(version),
+  err => {
+    if (err) {
+      throw new Error(err.message);
+    }
+  }
+);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -38,7 +50,7 @@ export default defineConfig({
     },
   },
   define: {
-    "import.meta.env.__BUILD_TIME__": JSON.stringify(currentTime),
+    "import.meta.env.__VERSION__": version,
   },
   server: {
     cors: true,

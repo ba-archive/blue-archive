@@ -8,8 +8,6 @@ import { routerConvert } from "@route/routes";
 import App from "./App.vue";
 import "./style.scss";
 
-console.log("build " + import.meta.env?.__BUILD_TIME__);
-
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 createApp(App).use(pinia).use(routerConvert).mount("#app");

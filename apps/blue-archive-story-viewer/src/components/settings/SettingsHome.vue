@@ -143,9 +143,7 @@
           </div>
         </div>
       </div>
-      <div class="built-time fill-width flex-vertical">
-        built {{ builtTime }}
-      </div>
+      <div class="built-time fill-width flex-vertical">build {{ version }}</div>
     </div>
   </div>
 </template>
@@ -162,7 +160,7 @@ import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
-const builtTime = import.meta.env?.__BUILD_TIME__;
+const version = import.meta.env?.__VERSION__.build;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
