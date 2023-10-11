@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { inject, ref } from "vue";
+import { getUiI18n } from "../../utils";
 import ElSlider from "./slider/src/slider.vue";
+import { Language } from "@/types/store";
 import { watchThrottled } from "@vueuse/core";
 import { BaSliderData } from "./BaPlayerSetting";
 
 defineOptions({
   name: "BaSliderBar",
 });
+const language = inject<Language>("language", "Cn");
 const props = withDefaults(
   defineProps<{
     data: BaSliderData;
@@ -37,7 +40,7 @@ watchThrottled(
 <template>
   <div class="ba-slider">
     <div class="name">
-      {{ data.name }}
+      {{ getUiI18n(data.name, language) }}
     </div>
     <div class="prefix">
       <slot name="prefix" />
@@ -54,7 +57,9 @@ watchThrottled(
       <slot name="suffix" />
     </div>
     <div class="value">
-      <slot name="value" :value="value"> {{ internalValue.toFixed(accurcy) }}{{ unit }} </slot>
+      <slot name="value" :value="value">
+        {{ internalValue.toFixed(accurcy) }}{{ unit }}
+      </slot>
     </div>
   </div>
 </template>
