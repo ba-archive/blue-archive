@@ -112,9 +112,7 @@ async function resolveBuild() {
     build: string;
     timezone: string;
   };
-  if (!currentVersion.build) {
-    settingsStore.setLastUpdated(currentTime);
-  }
+  settingsStore.setLastUpdated(currentTime);
   if (build && build !== currentVersion.build) {
     hasUpdate.value = true;
     remoteVersion.value = {
