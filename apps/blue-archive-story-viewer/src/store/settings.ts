@@ -7,8 +7,6 @@ export const useSettingsStore = defineStore({
   state: () => {
     return {
       currentVersion: {
-        build: "",
-        timezone: "",
         lastUpdated: 0,
       },
       settings: {
@@ -42,7 +40,6 @@ export const useSettingsStore = defineStore({
   },
   persist: true,
   getters: {
-    getCurrentVersion: state => state.currentVersion,
     getLastUpdated: state => state.currentVersion.lastUpdated,
     getAppSize: state => state.app,
     getDisableMomotalkAnimationState: state =>
@@ -68,12 +65,6 @@ export const useSettingsStore = defineStore({
     },
   },
   actions: {
-    setCurrentVersion(build: string, timezone?: string) {
-      this.currentVersion.build = build;
-      if (timezone) {
-        this.currentVersion.timezone = timezone;
-      }
-    },
     setLastUpdated(lastUpdated: number) {
       this.currentVersion.lastUpdated = lastUpdated;
     },
