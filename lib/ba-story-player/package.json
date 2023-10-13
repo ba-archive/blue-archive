@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "build:github": "pnpm build",
     "preview": "vite preview",
     "check": "vue-tsc --noEmit"
   },

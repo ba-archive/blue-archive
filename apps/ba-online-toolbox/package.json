@@ -10,6 +10,7 @@
     "check": "vue-tsc --noEmit; eslint --config ./.eslintrc.json ./src/ --ext .js,.ts,.vue",
     "build:json": "eslint --config ./.eslintrc.json ./public/ && node ./CICD/build_json.mjs",
     "build": "pnpm format && pnpm build:json && vite build",
+    "build:github": "pnpm build",
     "preview": "vite preview --host"
   },
   "dependencies": {
