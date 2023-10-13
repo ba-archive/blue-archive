@@ -32,6 +32,16 @@
       "ignoreDependencyOrder": false,
       "ignoreMissingScript": false,
       "allowWarningsInSuccessfulBuild": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "build:github",
+      "summary": "Build all projects that haven't been built, or have changed since they were last built",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true,
+      "ignoreDependencyOrder": false,
+      "ignoreMissingScript": false,
+      "allowWarningsInSuccessfulBuild": true
     }
     // {
     //   /**

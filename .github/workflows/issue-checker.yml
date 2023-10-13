@@ -12,7 +12,7 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-      - uses: zzyyyl/issue-checker@v1.7
+      - uses: zzyyyl/issue-checker@main
         if: ${{ github.actor != 'renovate[bot]' }}
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"

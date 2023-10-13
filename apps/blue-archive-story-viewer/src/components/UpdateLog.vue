@@ -3,6 +3,45 @@ import { UpdateLog } from "@types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-10-15",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "间宵 时雨（温泉）",
+            id: 20031,
+          },
+        ],
+      },
+      {
+        type: "feat",
+        content: "添加了自动检测更新的机制。",
+      },
+      {
+        type: "feat",
+        content: "在播放剧情时，可以自主调节文字展示速度。",
+      },
+      {
+        type: "feat",
+        content: "在播放剧情时，可以通过在播放器界面下滑滚轮的方式播放下一句",
+      },
+    ],
+  },
+  {
+    date: "2023-10-08",
+    contents: [
+      {
+        type: "feat",
+        content: "在播放剧情时，可以通过在播放器界面下滑滚轮的方式进入下一句。",
+      },
+      {
+        type: "fix",
+        content: "修复了水宫子 live2d 没有语音的问题",
+      },
+    ],
+  },
+  {
     date: "2023-10-01",
     contents: [
       {

@@ -7,6 +7,7 @@
     "dev": "vite --host",
     "build:json": "node ./CICD/build_json.mjs",
     "build": "pnpm build:json && vite build && cp ./dist/index.html ./dist/404.html",
+    "build:github": "pnpm build:json && vite build --base=/blue-archive/ && cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite preview --host",
     "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck"
   },
