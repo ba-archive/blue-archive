@@ -49,7 +49,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
-          ARGS: "-rltgoDzvO --delete"
+          ARGS: "-rltgoDzvO"
           SOURCE: "./apps/blue-archive-story-viewer/dist/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
           REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
