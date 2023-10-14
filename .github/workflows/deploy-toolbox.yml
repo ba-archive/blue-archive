@@ -42,7 +42,7 @@ jobs:
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
             f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --verbose
+        run: node common/scripts/install-run-rush.js build --verbose --impacted-by ba-story-player --only ba-online-toolbox
       - name: Toolbox rsync deploy
         uses: easingthemes/ssh-deploy@main
         env:
