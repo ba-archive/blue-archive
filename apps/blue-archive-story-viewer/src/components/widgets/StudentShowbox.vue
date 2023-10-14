@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Directive, DirectiveBinding, PropType, computed } from "vue";
+import { Student } from "@/types/Student";
 import { useSettingsStore } from "@store/settings";
-import { Student } from "@types/Student";
 
 const props = defineProps({
   studentInfo: Object as PropType<Student>,

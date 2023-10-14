@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { UpdateLog } from "@types/UpdateNews";
+import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {

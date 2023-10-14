@@ -48,18 +48,18 @@
 </template>
 
 <script setup lang="ts">
-import { AxiosError } from "axios";
 import { computed } from "vue";
 
 const props = defineProps<{
-  errorMessage: AxiosError;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  errorMessage: any;
   routePath: string | undefined;
 }>();
 
 const baseUrl = window.location.origin;
 
 const isNotOpenError = computed(
-  () => 1919 === (props.errorMessage ?? {})?.response.status
+  () => 1919 === (props.errorMessage ?? {})?.response?.status
 );
 </script>
 

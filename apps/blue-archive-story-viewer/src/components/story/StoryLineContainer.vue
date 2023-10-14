@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Ref, computed, ref } from "vue";
+import { Language } from "@/types/Settings";
+import { StoryBriefing } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
-import { Language } from "@types/Settings";
-import { StoryBriefing } from "@types/StoryJson";
 import NeuTitleBar from "@widgets/NeuUI/NeuTitleBar.vue";
 import StoryBriefBlock from "./StoryBriefBlock.vue";
 

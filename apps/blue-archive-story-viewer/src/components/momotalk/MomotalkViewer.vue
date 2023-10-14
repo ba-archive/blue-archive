@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ComputedRef, PropType, Ref, computed, onActivated, ref } from "vue";
+import { CurrentMessageItem, Momotalk, SelectionOption } from "@/types/Chats";
 import { useSettingsStore } from "@store/settings";
-import { CurrentMessageItem, Momotalk, SelectionOption } from "@types/Chats";
 import MomoTalkComponent from "./MomoTalkComponent.vue";
 
 const isAnimationDisabled: ComputedRef<boolean> = computed(

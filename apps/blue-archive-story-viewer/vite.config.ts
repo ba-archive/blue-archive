@@ -48,7 +48,6 @@ export default defineConfig({
       "@index": path.resolve(__dirname, "src/index"),
       "@route": path.resolve(__dirname, "src/route"),
       "@store": path.resolve(__dirname, "src/store"),
-      "@types": path.resolve(__dirname, "src/types"),
       "@util": path.resolve(__dirname, "src/util"),
       "@widgets": path.resolve(__dirname, "src/components/widgets"),
       "@NeuUI": path.resolve(__dirname, "src/components/NeuUI"),

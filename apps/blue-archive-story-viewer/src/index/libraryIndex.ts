@@ -1,4 +1,4 @@
-import { Library } from "@types/Library";
+import { Library } from "@/types/Library";
 
 export const libraryIndex: Library = [
   {

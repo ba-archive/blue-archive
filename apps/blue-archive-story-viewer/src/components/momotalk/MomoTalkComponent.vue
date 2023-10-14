@@ -96,12 +96,12 @@
 
 <script setup lang="ts">
 import { ComputedRef, PropType, computed, ref, watch } from "vue";
+import { CurrentMessageItem, MessageText } from "@/types/Chats";
+import { Language } from "@/types/Settings";
+import { StudentName } from "@/types/Student";
 import { getI18nString } from "@i18n/getI18nString";
 import { useSettingsStore } from "@store/settings";
 import { useStudentStore } from "@store/students";
-import { CurrentMessageItem, MessageText } from "@types/Chats";
-import { Language } from "@types/Settings";
-import { StudentName } from "@types/Student";
 
 const props = defineProps({
   message: Object as PropType<CurrentMessageItem>,

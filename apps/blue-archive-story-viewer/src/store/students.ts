@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { Student } from "@types/Student";
+import { Student } from "@/types/Student";
 
 export const useStudentStore = defineStore({
   id: "ba-students-storage",

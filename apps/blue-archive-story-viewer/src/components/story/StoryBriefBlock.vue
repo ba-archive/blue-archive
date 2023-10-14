@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { CommonStoryTextObject } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
-import { CommonStoryTextObject } from "@types/StoryJson";
 
 const settingsStore = useSettingsStore();
 

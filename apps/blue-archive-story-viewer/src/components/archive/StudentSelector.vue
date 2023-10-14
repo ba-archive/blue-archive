@@ -5,15 +5,15 @@ import { useRoute } from "vue-router";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import StudentShowbox from "../widgets/StudentShowbox.vue";
-import { useSettingsStore } from "@store/settings";
-import { useStudentStore } from "@store/students";
-import { AppliedFilter } from "@types/AppliedFilter";
+import { AppliedFilter } from "@/types/AppliedFilter";
 import {
   Student,
   StudentAttributeFilters,
   StudentAttributes,
   StudentNames,
-} from "@types/Student";
+} from "@/types/Student";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
 import { filterStudents } from "@util/filterStudents";
 
 const route = useRoute();
@@ -188,7 +188,7 @@ const studentBulletTypes = computed(() =>
 
 const studentNameFilter = ref("");
 // 学生属性过滤器
-const appliedFilters = computed<AppliedFilter>(() => {
+const appliedFilters = computed(() => {
   return {
     searchString: studentNameFilter.value,
     rarity: settingsStore.getRarityFilter,
@@ -197,7 +197,7 @@ const appliedFilters = computed<AppliedFilter>(() => {
     type: settingsStore.getTypeFilter,
     armorType: settingsStore.getArmorTypeFilter,
     bulletType: settingsStore.getBulletTypeFilter,
-  };
+  } as AppliedFilter;
 });
 
 // 检测当前过滤器（不含搜索栏）是否为空

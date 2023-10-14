@@ -1,10 +1,10 @@
 import { distance } from "fastest-levenshtein";
 import { match } from "pinyin-pro";
-import { AppliedFilter } from "@types/AppliedFilter";
-import { Student, StudentAttributes, StudentNames } from "@types/Student";
+import { AppliedFilter } from "@/types/AppliedFilter";
+import { Student, StudentAttributes, StudentNames } from "@/types/Student";
 
 const specialCharacters = new RegExp(
-  /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()（）%!~～`_\[\]\-\s]/g
+  /[，。！“”/《》？：；「」{}｜\\"$&+,:;=?@#|'<>.^*()（）%!~～`_[\]\-\s]/g
 );
 
 function similarity(s1: string, s2: string): number {
@@ -78,6 +78,7 @@ function filterStudentsByProperty(
 ): Student[] {
   return initialList.filter((student: Student) =>
     criteria?.includes(
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       student[property as keyof StudentAttributes] as string | number
     )

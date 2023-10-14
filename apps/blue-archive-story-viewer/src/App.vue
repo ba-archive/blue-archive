@@ -128,6 +128,8 @@ function handleDisableCheckForUpdates() {
 }
 
 function handleAppUpdate() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   location.reload(true); // 标准浏览器不支持，但是 Firefox 支持
 }
 

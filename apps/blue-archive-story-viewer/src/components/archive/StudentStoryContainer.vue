@@ -42,10 +42,10 @@ import StoryBriefBlock from "../story/StoryBriefBlock.vue";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import NeuProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import StudentArchiveTitle from "../widgets/StudentArchiveTitle.vue";
+import { Language } from "@/types/Settings";
+import { CommonStoryTextObject, StoryIndex } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
 import { useStudentStore } from "@store/students";
-import { Language } from "@types/Settings";
-import { CommonStoryTextObject, StoryIndex } from "@types/StoryJson";
 
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 const activeIndex = ref<number[]>([]);
@@ -88,8 +88,9 @@ axios
   .catch((err: AxiosError) => {
     console.error(err);
     fetchError.value = true;
+    /* eslint-disable indent */
     fetchErrorMessage.value =
-      404 === err.response.status
+      404 === err.response?.status
         ? {
             message: "Story not found",
             response: {
@@ -97,6 +98,7 @@ axios
             },
           }
         : err;
+    /* eslint-enable indent */
   })
   .finally(() => {
     ready.value = true;
