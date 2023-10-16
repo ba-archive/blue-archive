@@ -254,7 +254,6 @@ const showFilter = ref(true);
 let currentWidth = window.innerWidth;
 let ticking = false;
 function updateShowFilter() {
-  // console.log("updateShowFilter", ticking, window.innerWidth, showFilter.value);
   if (ticking) return;
   ticking = true;
   window.requestAnimationFrame(() => {
