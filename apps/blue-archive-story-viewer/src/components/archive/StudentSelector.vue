@@ -254,6 +254,7 @@ const showFilter = ref(true);
 let currentWidth = window.innerWidth;
 let ticking = false;
 function updateShowFilter() {
+  // console.log("updateShowFilter", ticking, window.innerWidth, showFilter.value);
   if (ticking) return;
   ticking = true;
   window.requestAnimationFrame(() => {
@@ -790,10 +791,13 @@ onUnmounted(() => {
   .student-filter {
     grid-area: filter;
     padding-left: 0;
+    width: 100%;
+    overflow-y: auto;
   }
 
   #student-list {
     grid-template-columns: repeat(auto-fill, 5rem);
+    overflow-y: auto;
   }
 }
 </style>
