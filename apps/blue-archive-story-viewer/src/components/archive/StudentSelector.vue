@@ -287,10 +287,11 @@ onBeforeMount(() => {
 
 onMounted(() => {
   document.addEventListener("keydown", handleFilterFocusRequest);
-}),
-  onUnmounted(() => {
-    window.removeEventListener("resize", updateShowFilter);
-  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateShowFilter);
+});
 
 const nameFilterInput = ref<HTMLInputElement | null>(null);
 
@@ -723,6 +724,7 @@ watch(
       color: var(--color-text-contrast);
     }
   }
+
   &.heavyarmor,
   &.pierce {
     color: var(--color-text-heavy-armor);
@@ -732,6 +734,7 @@ watch(
       color: var(--color-text-contrast);
     }
   }
+
   &.unarmed,
   &.mystic {
     color: var(--color-text-unarmed);
@@ -792,6 +795,7 @@ watch(
     align-items: center;
     border-radius: 0;
     background-color: transparent;
+
     .clear-filter-icon {
       margin-right: 0.5rem;
       border-radius: 0.5rem;
