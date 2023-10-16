@@ -739,6 +739,7 @@ onUnmounted(() => {
   #student-selector-container {
     display: flex;
     flex-direction: column;
+    overflow-y: visible;
   }
 
   .filter-banner {
@@ -747,6 +748,7 @@ onUnmounted(() => {
     align-items: center;
     border-radius: 0;
     background-color: transparent;
+    overflow: visible;
     .clear-filter-icon {
       margin-right: 0.5rem;
       border-radius: 0.5rem;
@@ -791,12 +793,12 @@ onUnmounted(() => {
     grid-area: filter;
     padding-left: 0;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: visible;
   }
 
   #student-list {
     grid-template-columns: repeat(auto-fill, 5rem);
-    overflow-y: auto;
+    overflow-y: visible;
   }
 }
 </style>
