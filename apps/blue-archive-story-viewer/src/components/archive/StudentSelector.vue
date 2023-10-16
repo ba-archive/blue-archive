@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import axios from "axios";
-import { computed, onBeforeMount, onUnmounted, ref } from "vue";
+import {
+  computed,
+  onBeforeMount,
+  onMounted,
+  onUnmounted,
+  ref,
+  watch,
+} from "vue";
 import { useRoute } from "vue-router";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
@@ -278,9 +285,47 @@ onBeforeMount(() => {
   window.addEventListener("resize", updateShowFilter);
 });
 
+onMounted(() => {
+  document.addEventListener("keydown", handleFilterFocusRequest);
+});
+
 onUnmounted(() => {
   window.removeEventListener("resize", updateShowFilter);
 });
+
+const nameFilterInput = ref<HTMLInputElement | null>(null);
+
+function handleFilterFocusRequest(event: KeyboardEvent) {
+  if (event.shiftKey || event.altKey || ["Tab", "Escape"].includes(event.key)) {
+    return;
+  }
+
+  if (event.metaKey || event.ctrlKey) {
+    if ("k" !== event.key) {
+      return;
+    }
+  }
+
+  if (
+    (event.key >= "a" && event.key <= "z") ||
+    (event.key >= "A" && event.key <= "Z") ||
+    (event.key >= "0" && event.key <= "9")
+  ) {
+    nameFilterInput.value?.focus();
+  }
+}
+
+watch(
+  () => studentSelected.value,
+  newValue => {
+    if (newValue) {
+      document.removeEventListener("keydown", handleFilterFocusRequest);
+    } else if (!newValue) {
+      // 不用担心重复添加，重复的事件监听会被浏览器丢弃
+      document.addEventListener("keydown", handleFilterFocusRequest);
+    }
+  }
+);
 </script>
 
 <template>
@@ -301,6 +346,7 @@ onUnmounted(() => {
         v-model="studentNameFilter"
         @focus="handleFocus"
         autocomplete="off"
+        ref="nameFilterInput"
       />
       <div
         class="clear-filter-icon"
@@ -678,6 +724,7 @@ onUnmounted(() => {
       color: var(--color-text-contrast);
     }
   }
+
   &.heavyarmor,
   &.pierce {
     color: var(--color-text-heavy-armor);
@@ -687,6 +734,7 @@ onUnmounted(() => {
       color: var(--color-text-contrast);
     }
   }
+
   &.unarmed,
   &.mystic {
     color: var(--color-text-unarmed);
