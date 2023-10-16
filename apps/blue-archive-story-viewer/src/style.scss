@@ -317,7 +317,7 @@ a {
 }
 
 // consistent scrollbar style on all desktop browsers
-@media screen and (min-width: 768px) {
+@media screen {
   html[data-scrollbar="customize"] {
     //scrollbar-gutter: stable;
     //scrollbar-width: thin;
@@ -388,7 +388,6 @@ a {
 @media screen and (max-width: 768px) {
   body {
     padding: 0;
-    height: unset;
   }
 
   #app {

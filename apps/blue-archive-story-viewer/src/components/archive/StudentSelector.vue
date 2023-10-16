@@ -787,6 +787,7 @@ watch(
   #student-selector-container {
     display: flex;
     flex-direction: column;
+    overflow-y: visible;
   }
 
   .filter-banner {
@@ -795,7 +796,7 @@ watch(
     align-items: center;
     border-radius: 0;
     background-color: transparent;
-
+    overflow: visible;
     .clear-filter-icon {
       margin-right: 0.5rem;
       border-radius: 0.5rem;
@@ -839,10 +840,13 @@ watch(
   .student-filter {
     grid-area: filter;
     padding-left: 0;
+    width: 100%;
+    overflow-y: visible;
   }
 
   #student-list {
     grid-template-columns: repeat(auto-fill, 5rem);
+    overflow-y: visible;
   }
 }
 </style>
