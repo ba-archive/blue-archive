@@ -70,6 +70,7 @@ onBeforeMount(() => {
       : "light";
 
   switchTheme(initTheme);
+  settingsStore.setTheme(initTheme);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
