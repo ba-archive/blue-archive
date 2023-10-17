@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { CommonStoryTextObject } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
 
@@ -61,6 +61,8 @@ const storyOrder = computed(() => {
   }
   return "";
 });
+
+onMounted(() => import("@/components/StoryViewer.vue"));
 </script>
 
 <template>

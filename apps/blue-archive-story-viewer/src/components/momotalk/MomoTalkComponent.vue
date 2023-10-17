@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import { ComputedRef, PropType, computed, ref, watch } from "vue";
+import { ComputedRef, PropType, computed, onMounted, ref, watch } from "vue";
 import { CurrentMessageItem, MessageText } from "@/types/Chats";
 import { Language } from "@/types/Settings";
 import { StudentName } from "@/types/Student";
@@ -106,6 +106,12 @@ import { useStudentStore } from "@store/students";
 const props = defineProps({
   message: Object as PropType<CurrentMessageItem>,
   shouldComponentUpdate: Boolean,
+});
+
+onMounted(() => {
+  if (0 !== props.message?.FavorScheduleId) {
+    import("@/components/StoryViewer.vue");
+  }
 });
 
 function isInViewport(el: HTMLElement) {
@@ -311,6 +317,7 @@ function handleContinueReadingButtonPressed() {
     gap: 0.5rem;
   }
 }
+
 .student-reply {
   display: flex;
   flex-direction: row;
@@ -329,6 +336,7 @@ function handleContinueReadingButtonPressed() {
     height: 0;
   }
 }
+
 .message-text {
   align-items: flex-start;
   margin-left: 0.5rem;
@@ -356,10 +364,12 @@ function handleContinueReadingButtonPressed() {
   .dot-1 {
     animation: typing 1.5s infinite;
   }
+
   .dot-2 {
     animation: typing 1.5s infinite;
     animation-delay: 0.2s;
   }
+
   .dot-3 {
     animation: typing 1.5s infinite;
     animation-delay: 0.4s;
@@ -370,9 +380,11 @@ function handleContinueReadingButtonPressed() {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

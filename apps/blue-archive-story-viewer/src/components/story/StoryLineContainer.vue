@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref, computed, ref } from "vue";
+import { Ref, computed, onMounted, ref } from "vue";
 import { Language } from "@/types/Settings";
 import { StoryBriefing } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
@@ -43,6 +43,8 @@ function handleOpenChapters(index: number) {
     openChapters.value.push(index);
   }
 }
+
+onMounted(() => import("@/components/StoryViewer.vue"));
 </script>
 
 <template>
