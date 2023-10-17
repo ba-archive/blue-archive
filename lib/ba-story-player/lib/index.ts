@@ -59,9 +59,10 @@ export function continuePlay() {
  * 回收播放器资源, 让播放器回到初始状态
  */
 export function dispose() {
+  eventBus.emit("removeEffect");
+  eventBus.emit("dispose");
   initPrivateState().app?.destroy();
   initPrivateState().app = null;
-  eventBus.emit("dispose");
   eventBus.all.clear();
   usePlayerStore().logText.value = [];
   pixiUtils.clearTextureCache();
