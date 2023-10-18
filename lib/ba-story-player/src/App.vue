@@ -88,10 +88,22 @@ if (jsonName && jsonName !== "0") {
       }
       showPlayer.value = true;
     })
-    .catch(error => {
-      console.log(error);
-      console.log("fallback to yuuka");
-      showPlayer.value = true;
+    .catch(() => {
+      // 远程获取失败，尝试本地获取
+      axios
+        .get(`${jsonName}.json`)
+        .then(response => {
+          if (response.status === 200) {
+            story.value = response.data;
+            storyJsonName.value = jsonName;
+            showPlayer.value = true;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          console.log("fallback to yuuka");
+          showPlayer.value = true;
+        });
     });
 } else {
   showPlayer.value = true;
@@ -206,6 +218,7 @@ watch(
   overflow-y: auto;
   text-align: center;
 }
+
 .hidden {
   display: none;
 }
