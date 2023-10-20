@@ -342,11 +342,12 @@ watch(
       <input
         type="text"
         id="name-filter"
-        :placeholder="studentNameFilter ? '' : '在学生姓名/黑话内搜索…'"
+        :placeholder="studentNameFilter ? '' : '在学生姓名/昵称内搜索…'"
         v-model="studentNameFilter"
         @focus="handleFocus"
         autocomplete="off"
         ref="nameFilterInput"
+        @keydown.escape="studentNameFilter = ''"
       />
       <div
         class="clear-filter-icon"
