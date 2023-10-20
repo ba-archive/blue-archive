@@ -1,73 +1,56 @@
-<template>
-  <div class="flex-vertical">
-    <article class="flex-vertical">
-      <h2 class="color-transition">关于本站 / About this site</h2>
-      <section class="flex-vertical">
-        <p>
-          本站为
-          <strong>无任何盈利意图、形式和行为</strong>
-          的同人站点，旨在为《蔚蓝档案（又译：碧蓝档案）》的玩家提供
-          <strong>已公开</strong> 剧情的查找和重温方式。
-        </p>
-        <p>
-          We are a <strong>non-profit, non-commercial</strong> fan site for the
-          game "Blue Archive (ブルーアーカイブ)". We aim to provide a way for
-          players to search and revisit
-          <strong>ONLY PUBLICLY AVAILABLE</strong> story content.
-        </p>
-        <p>
-          如您有任何疑问、意见或建议，或对本站收录的内容存在疑义，欢迎随时通过邮件向我们
-          <a href="mailto:mail@blue-archive.io">询问或提出</a
-          >。<strong>我们不是官方，无法也不能对游戏内容进行解释和解答。</strong>若您有条件体验游戏内容，我们强烈建议您
-          <a href="https://bluearchive-cn.com/" rel="noreferrer" target="_blank"
-            >下载游戏并体验</a
-          >。
-        </p>
-        <p>
-          If you have any questions, suggestions, or concerns, or if you have
-          doubts about the content we have collected, please feel free to
-          <a href="mailto:mail@blue-archive.io">send us an email.</a>
-          <strong>
-            We are not affiliated with Blue Archive in any form, so please be
-            aware that we cannot and will not answer questions regarding any
-            in-game contents.
-          </strong>
-          If you have interest in further exploring the in-game contents, we do
-          strongly recommend you
-          <a
-            href="https://bluearchive.nexon.com/"
-            rel="noreferrer"
-            target="_blank"
-            >download the game and have a try.</a
-          >
-        </p>
-      </section>
-      <section class="copyright">
-        <p>
-          本站与ブルーアーカイブ、Yostar、Nexon 以及 Nexon Games
-          没有任何形式关联。<br />
-          本网站中使用的所有游戏作品、信息和素材均为各自作者的财产和版权。
-        </p>
-        <p>
-          This site is not affiliated in any forms with Blue Archive, Yostar,
-          Nexon and Nexon Games.<br />All game artwork, information and assets
-          used in this site are the property and copyright of the respective
-          authors.
-        </p>
-      </section>
-      <section class="contributor flex-vertical">
-        <h2 class="contributor">贡献者 / Contributors</h2>
-        <contributor-list />
-      </section>
-    </article>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { h } from "vue";
 import { Contributor } from "@/types/UpdateNews";
 
 const contributors: Contributor[] = [
+  {
+    name: "绘",
+    role: "前端",
+    avatar: "/image/contributor/changesuger.webp",
+    link: "https://github.com/ChangeSuger",
+  },
+  {
+    name: "哈赤Hachi",
+    role: "UI",
+    avatar: "/image/contributor/hachi.webp",
+    link: "http://hachiiiiiiii.co/",
+  },
+  {
+    name: "大尿",
+    role: "Spine 动画师",
+    avatar: "/image/contributor/daniao.webp",
+    link: "https://space.bilibili.com/480253231",
+  },
+  {
+    name: "水银h2oag",
+    role: "翻译",
+    avatar: "/image/contributor/shuiyinh2oag.webp",
+    link: "https://space.bilibili.com/246606859/",
+  },
+  {
+    name: "晓月VAN",
+    role: "Unity 程序",
+    avatar: "/image/contributor/xiaoyuevan.webp",
+    link: "https://space.bilibili.com/342028199/",
+  },
+  {
+    name: "妮娅ko",
+    role: "美术",
+    avatar: "/image/contributor/niyako.webp",
+    link: "https://space.bilibili.com/13347846",
+  },
+  {
+    name: "隐锦想吃披萨",
+    role: "美术",
+    avatar: "/image/contributor/yinjinxiangchipisa.webp",
+    link: "https://space.bilibili.com/12688696/",
+  },
+  {
+    name: "苏见Sukaliya",
+    role: "美术",
+    avatar: "/image/contributor/sujian.webp",
+    link: "https://space.bilibili.com/6858831",
+  },
   {
     name: "黑猫汐",
     role: "校对",
@@ -223,6 +206,7 @@ const contributors: Contributor[] = [
     name: "矮人",
     role: "策划",
     avatar: "/image/contributor/airen.webp",
+    link: "https://space.bilibili.com/535089/",
   },
   {
     name: "雷电",
@@ -233,6 +217,7 @@ const contributors: Contributor[] = [
     name: "Unique、",
     role: "美术",
     avatar: "/image/contributor/unique.webp",
+    link: "https://www.pixiv.net/users/12704744",
   },
   {
     name: "米袋",
@@ -264,11 +249,7 @@ const contributors: Contributor[] = [
     name: "电獭",
     role: "后端、架构",
     avatar: "/image/contributor/dianta.webp",
-  },
-  {
-    name: "星之韻律",
-    role: "后端",
-    avatar: "/image/contributor/xingzhiyunlv.webp",
+    link: "https://github.com/SwingCosmic",
   },
   {
     name: "花奈",
@@ -284,6 +265,7 @@ const contributors: Contributor[] = [
     name: "Dyin",
     role: "PV",
     avatar: "/image/contributor/dyin.webp",
+    link: "https://space.bilibili.com/22786060",
   },
   {
     name: "阿彬",
@@ -294,11 +276,13 @@ const contributors: Contributor[] = [
     name: "水哥不sd",
     role: "PV",
     avatar: "/image/contributor/shuigebusd.webp",
+    link: "https://space.bilibili.com/341657114/",
   },
   {
     name: "En_Sound",
     role: "音乐",
     avatar: "/image/contributor/ensound.webp",
+    link: "https://space.bilibili.com/3493111038741347/",
   },
   {
     name: "小白",
@@ -343,6 +327,73 @@ const contributorList: any = h(
     })
 );
 </script>
+
+<template>
+  <div class="flex-vertical">
+    <article class="flex-vertical">
+      <h2 class="color-transition">关于本站 / About this site</h2>
+      <section class="flex-vertical">
+        <p>
+          本站为
+          <strong>无任何盈利意图、形式和行为</strong>
+          的同人站点，旨在为《蔚蓝档案（又译：碧蓝档案）》的玩家提供
+          <strong>已公开</strong> 剧情的查找和重温方式。
+        </p>
+        <p>
+          We are a <strong>non-profit, non-commercial</strong> fan site for the
+          game "Blue Archive (ブルーアーカイブ)". We aim to provide a way for
+          players to search and revisit
+          <strong>ONLY PUBLICLY AVAILABLE</strong> story content.
+        </p>
+        <p>
+          如您有任何疑问、意见或建议，或对本站收录的内容存在疑义，欢迎随时通过邮件向我们
+          <a href="mailto:mail@blue-archive.io">询问或提出</a
+          >。<strong>我们不是官方，无法也不能对游戏内容进行解释和解答。</strong>若您有条件体验游戏内容，我们强烈建议您
+          <a href="https://bluearchive-cn.com/" rel="noreferrer" target="_blank"
+            >下载游戏并体验</a
+          >。
+        </p>
+        <!-- eslint-disable max-len-->
+        <p>
+          If you have any questions, suggestions, or concerns, or if you have
+          doubts about the content we have collected, please feel free to
+          <a href="mailto:mail@blue-archive.io">send us an email.</a>
+          <strong>
+            We are not affiliated with Blue Archive in any form, so please be
+            aware that we cannot and will not answer questions regarding any
+            in-game contents.
+          </strong>
+          If you have interest in further exploring the in-game contents, we do
+          strongly recommend you
+          <a
+            href="https://bluearchive.nexon.com/"
+            rel="noreferrer"
+            target="_blank"
+            >download the game and have a try.</a
+          >
+        </p>
+        <!-- eslint-enable max-len-->
+      </section>
+      <section class="copyright">
+        <p>
+          本站与ブルーアーカイブ、Yostar、Nexon 以及 Nexon Games
+          没有任何形式关联。<br />
+          本网站中使用的所有游戏作品、信息和素材均为各自作者的财产和版权。
+        </p>
+        <p>
+          This site is not affiliated in any forms with Blue Archive, Yostar,
+          Nexon and Nexon Games.<br />All game artwork, information and assets
+          used in this site are the property and copyright of the respective
+          authors.
+        </p>
+      </section>
+      <section class="contributor flex-vertical">
+        <h2 class="contributor">贡献者 / Contributors</h2>
+        <contributor-list />
+      </section>
+    </article>
+  </div>
+</template>
 
 <style scoped lang="scss">
 article {

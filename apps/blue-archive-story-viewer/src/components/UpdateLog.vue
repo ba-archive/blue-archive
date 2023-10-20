@@ -3,6 +3,38 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-10-22",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "奥空 绫音（泳装）", id: 26007 },
+          { name: "阿慈谷 日富美（泳装）", id: 20005 },
+        ],
+      },
+      {
+        type: "feat",
+        content: "改善部分小型平板设备的观看体验",
+      },
+      {
+        type: "feat",
+        content: "在学生选择界面的键盘输入会被自动识别为搜索学生",
+      },
+      {
+        type: "fix",
+        content: "修复在部分条件下，亮色/暗色切换按钮状态错误的问题",
+      },
+      {
+        type: "fix",
+        content: "修复在部分条件下，前一个剧情的特效会保留到其他剧情中的问题",
+      },
+      {
+        type: "perf",
+        content: "优化了点击进入剧情时的加载速度",
+      },
+    ],
+  },
+  {
     date: "2023-10-15",
     contents: [
       {
