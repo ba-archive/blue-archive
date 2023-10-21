@@ -1,0 +1,15 @@
+{
+  "name": "eden-docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "build": "pnpm docs:build",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "vitepress": "~1.0.0-rc.22"
+  }
+}
