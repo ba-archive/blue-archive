@@ -15,14 +15,35 @@ export default defineConfig({
       {
         text: "开始使用",
         items: [
-          { text: "开始使用", link: "get-started" },
-          { text: "设计语言", link: "/design-language" },
+          { text: "组件总览", link: "/components/" },
+          { text: "设计规范", link: "/guideline/design/" },
+          { text: "设计语言", link: "/guideline/design/design-language" },
         ],
+        collapsed: false,
       },
     ],
 
     socialLinks: [
       { icon: "github", link: "https://github.com/ba-archive/blue-archive" },
     ],
+  },
+
+  transformHead({ assets }) {
+    // adjust the regex accordingly to match your font
+    const myFontFile = assets.find(file => /.*\.\w+\.woff2/);
+    if (myFontFile) {
+      return [
+        [
+          "link",
+          {
+            rel: "preload",
+            href: myFontFile,
+            as: "font",
+            type: "font/woff2",
+            crossorigin: "",
+          },
+        ],
+      ];
+    }
   },
 });
