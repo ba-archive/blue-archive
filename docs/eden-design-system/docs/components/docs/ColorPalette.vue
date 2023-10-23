@@ -33,10 +33,13 @@
 
 <script setup lang="ts">
 import colorString from "color-string";
+import { useData } from "vitepress";
 import { computed } from "vue";
 import { PaletteProps } from "../../types/ColorPalette";
 import { Message } from "@arco-design/web-vue";
 import { useClipboard } from "@vueuse/core";
+
+const { isDark } = useData();
 
 const props = withDefaults(defineProps<PaletteProps>(), {
   primary: false,
@@ -53,10 +56,18 @@ function handleCopyRequest(text) {
   Message.success(`已复制到剪贴板：${text}`);
 }
 
-// @ts-ignore
-const displayColor = computed(() =>
-  colorString.to.hex(colorString.get.rgb(props.color))
-);
+function stringToHex(color: string) {
+  // @ts-ignore
+  return colorString.to.hex(colorString.get.rgb(color));
+}
+
+const displayColor = computed(() => {
+  if (props.darkColor && isDark.value) {
+    return stringToHex(props.darkColor);
+  } else {
+    return stringToHex(props.color);
+  }
+});
 </script>
 
 <style scoped lang="scss">

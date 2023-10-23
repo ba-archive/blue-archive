@@ -38,7 +38,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
+  font-weight: 600 !important;
   font-family: "Wix Madefor Display", "OPPOSans-SemiBold",
     var(--vp-font-family-base) !important;
 }
@@ -49,6 +51,16 @@ h6 {
     "sans-serif";
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     "Menlo", "Courier", "monospace";
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: inherit;
+}
+
+.vp-doc tr {
+  &:hover {
+    background-color: var(--vp-c-bg-soft);
+  }
 }
 /**
  * Customize default theme styling by overriding CSS variables:

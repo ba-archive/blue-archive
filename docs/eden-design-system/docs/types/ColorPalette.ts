@@ -1,5 +1,6 @@
 export interface ColorPalette {
   color: string;
+  darkColor?: string;
   token?: string;
   description?: string;
 }

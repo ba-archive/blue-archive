@@ -15,6 +15,7 @@
       <ColorPaletteComponent
         v-for="color in colorGroup"
         :color="color.color"
+        :dark-color="color.darkColor"
         :token="color.token"
         :description="color.description"
         :primary="color.primary"
@@ -51,6 +52,7 @@ const colorGroup = computed(() => {
   return props.group.palettes.map(palette => {
     return {
       color: palette.color,
+      darkColor: palette.darkColor,
       token: palette.token,
       description: palette.description,
       primary: props.group.primary,
