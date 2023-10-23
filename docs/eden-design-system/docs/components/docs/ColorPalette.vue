@@ -48,7 +48,7 @@ const props = withDefaults(defineProps<PaletteProps>(), {
 
 const { copy } = useClipboard({ legacy: true });
 
-function handleCopyRequest(text) {
+function handleCopyRequest(text: string) {
   copy(text).catch(() => {
     Message.error("复制失败，请手动复制");
   });

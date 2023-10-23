@@ -64,7 +64,7 @@ outline: deep
         spacing: "32px",
         description: "大型组件或布局间的间距，栅格单元格尺寸"
       },
-    ]
+    ];
 
     const aronaBlueGroup = {
     token: "阿罗娜蓝 / Arona Blue",
@@ -115,7 +115,7 @@ outline: deep
         token: "arona-blue-1",
       },
     ]
-  }
+  };
 
   const grayGroup = {
     token: "灰度 / Gray",
@@ -167,7 +167,7 @@ outline: deep
         token: "color-gray-1",
       },
     ]
-  }
+  };
 
   const fillGroup = {
     token: "填充色 / Fill",
@@ -210,7 +210,7 @@ outline: deep
         token: "color-fill-base",
       },
     ]
-  }
+  };
 
   const textGroup = {
     token: "文字 / Text",
@@ -247,7 +247,7 @@ outline: deep
         token: "color-text-1",
       },
     ]
-  }
+  };
 
   const borderGroup = {
     token: "边框 / Border",
@@ -278,7 +278,7 @@ outline: deep
         token: "color-border-1",
       },
     ]
-  }
+  };
 
   const successGroup = {
     token: "成功 / Success",
@@ -321,7 +321,7 @@ outline: deep
         token: "success-1",
       },
     ]
-  }
+  };
 
   const warningGroup = {
     token: "警告 / Warning",
@@ -364,7 +364,7 @@ outline: deep
         token: "warning-1",
       },
     ]
-  }
+  };
 
   const dangerGroup = {
     token: "错误 / Danger",
@@ -407,7 +407,7 @@ outline: deep
         token: "danger-1",
       },
     ]
-  }
+  };
 
   const planaPinkGroup = {
     token: "普拉娜粉 / Plana Pink",
@@ -450,7 +450,7 @@ outline: deep
         token: "plana-pink-1",
       },
     ]
-  }
+  };
 
   const strikerGroup = {
     token: "突击位｜错误 / Striker｜Danger",
@@ -459,9 +459,9 @@ outline: deep
       return {
         ...palette,
         token: palette.token.replace("danger", "striker"),
-      }
+      };
     })
-  }
+  };
 
   const specialGroup = {
     token: "特种位｜阿罗娜蓝 / Special｜Arona Blue",
@@ -471,9 +471,9 @@ outline: deep
         ...palette,
         color: palette.color,
         token: palette.token.replace("arona-blue", "special"),
-      }
+      };
     })
-  }
+  };
 
   const explosionGroup = {
     token: "爆发 / Explosion",
@@ -516,7 +516,7 @@ outline: deep
         token: "explosion-1",
       },
     ]
-  }
+  };
 
   const pierceGroup = {
     token: "贯通 / Pierce",
@@ -559,7 +559,7 @@ outline: deep
         token: "pierce-1",
       },
     ]
-  }
+  };
 
   const unarmedGroup = {
     token: "神秘 / Unarmed",
@@ -602,7 +602,7 @@ outline: deep
         token: "unarmed-1",
       }
     ]
-  }
+  };
 
   const vibrateGroup = {
     token: "振动 / Vibrate",
@@ -645,10 +645,10 @@ outline: deep
         token: "vibrate-1",
       }
     ]
-  }
+  };
 
-  const textCn = "实用、美观与友好的三位一体"
-  const textEn = "Pragmatic, aesthetic, friendly"
+  const textCn = "实用、美观与友好的三位一体";
+  const textEn = "Pragmatic, aesthetic, friendly";
 </script>
 
 <a-table :columns="columns" :data="data" :pagination="false" size="medium" :bordered="false"></a-table>
@@ -658,6 +658,8 @@ outline: deep
 Eden Design System 的栅格宽度为 32px。
 
 ## 颜色 / Color
+
+我们在不断尝试和调整的过程中总结出了一套适合 Eden Design System 的颜色体系，分为亮色和暗色两套色卡。你可以使用右上角的主题切换开关切换亮暗模式以对比两套色卡的差异。
 
 ### 主色 / Primary Color
 
@@ -704,7 +706,8 @@ Eden Design System 的栅格宽度为 32px。
 字体是体系化界面中最基本的构成之一。
 用户通过文本来理解内容和完成工作，科学的字体系统能提升用户的阅读体验及工作效率。
 
-本次设计中，我们对中文和英文进行了分别处理。中文段落使用 OPPO Sans 3.0 Regular（原 OPPO Sans 现改名为 OPlus Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
+本次设计中，我们对中文和英文进行了分别处理。中文段落使用 OPPO Sans 3.0 Regular（原 OPPO Sans 现改名为 OPlus
+Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
 
 ### 中文段落
 
@@ -750,7 +753,8 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 中文标题
 
-中文标题使用的字体为 OPPO Sans 3.0 (OPlus Sans)，字重为 SemiBold。注意原字体并未提供 SemiBold 字重，因此我们通过对 Regular 字重进行处理得到了 SemiBold 字重。
+中文标题使用的字体为 OPPO Sans 3.0 (OPlus Sans)，字重为 SemiBold。注意原字体并未提供 SemiBold 字重，因此我们通过对 Regular
+字重进行处理得到了 SemiBold 字重。
 
 <table class="w-full">
 <tr>

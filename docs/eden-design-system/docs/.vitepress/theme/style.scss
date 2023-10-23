@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  src: url("../../fonts/OPlusSans3-Regular.woff2") format("woff2");
-  font-family: "OPPOSans-Regular";
-  font-display: swap;
-}
+// @font-face {
+//   src: url("../../fonts/OPlusSans3-Regular.woff2") format("woff2");
+//   font-family: "OPPOSans-Regular";
+//   font-display: swap;
+// }
 
-@font-face {
-  src: url("../../fonts/OPlusSans3-SemiBold.woff2") format("woff2");
-  font-family: "OPPOSans-SemiBold";
-  font-display: swap;
-}
+// @font-face {
+//   src: url("../../fonts/OPlusSans3-SemiBold.woff2") format("woff2");
+//   font-family: "OPPOSans-SemiBold";
+//   font-display: swap;
+// }
 
 @font-face {
   src: url("../../fonts/WixMadeforText-VariableFont_wght.ttf")
@@ -29,7 +29,6 @@
 }
 
 body {
-  font-size: 16px !important;
   font-family: var(--vp-font-family-base) !important;
 }
 
@@ -40,15 +39,17 @@ h4,
 h5,
 h6,
 .title {
-  font-weight: 600 !important;
-  font-family: "Wix Madefor Display", "OPPOSans-SemiBold",
-    var(--vp-font-family-base) !important;
+  font-weight: bold;
+  font-family: "Wix Madefor Display", var(--vp-font-family-base);
 }
 
 :root {
-  --vp-font-family-base: "Wix Madefor Text", "OPPOSans-Regular", "PingFang SC",
-    "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "微软雅黑",
-    "sans-serif";
+  // --vp-font-family-base: "Wix Madefor Text", "OPPOSans-Regular", "PingFang SC",
+  //   "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "微软雅黑",
+  //   "sans-serif";
+  --vp-font-family-base: "Wix Madefor Text", "Microsoft YaHei", "PingFang SC",
+    -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans",
+    BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     "Menlo", "Courier", "monospace";
 }
