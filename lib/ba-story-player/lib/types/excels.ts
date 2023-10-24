@@ -56,12 +56,12 @@ export enum Nation {
 export interface BGMExcelTableItem {
   Id: number;
   Nation?: Nation[];
-  Path?: string[];
-  Volume?: number[];
-  LoopStartTime?: number[];
-  LoopEndTime?: number[];
-  LoopTranstionTime?: number[];
-  LoopOffsetTime?: number[];
+  Path?: string[] | string;
+  Volume?: number[] | number;
+  LoopStartTime?: number[] | number;
+  LoopEndTime?: number[] | number;
+  LoopTranstionTime?: number[] | number;
+  LoopOffsetTime?: number[] | number;
 }
 
 export interface BGNameExcelTableItem {
