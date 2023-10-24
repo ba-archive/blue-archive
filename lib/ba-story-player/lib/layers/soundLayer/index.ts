@@ -4,6 +4,7 @@ import { Howl, Howler } from "howler";
 import { watch } from "vue";
 import { useUiState } from "@/stores/state";
 import { PlayAudio } from "@/types/events";
+import { BGMExcelTableItem } from "@/types/excels";
 
 const audioMap = new Map<string, Howl>();
 /**
@@ -126,19 +127,38 @@ export function soundInit() {
           const state = Reflect.get(self, "_state");
           function setLoop() {
             const sprite = Reflect.get(self, "_sprite");
+            let loopStartTime: (number | undefined)[] = [];
+            let loopEndTime: (number | undefined)[] = [];
+
+            if (Array.isArray(cfg.bgmArgs.LoopStartTime)) {
+              loopStartTime = cfg.bgmArgs.LoopStartTime;
+            } else {
+              // 旧版bgm配置
+              loopStartTime = [cfg.bgmArgs.LoopStartTime];
+            }
+
+            if (Array.isArray(cfg.bgmArgs.LoopEndTime)) {
+              loopEndTime = cfg.bgmArgs.LoopEndTime;
+            } else {
+              // 旧版bgm配置
+              loopEndTime = [cfg.bgmArgs.LoopEndTime];
+            }
+
+            console.warn(bgm?.duration());
+
             if (sprite) {
               // eslint-disable-next-line max-len
               Reflect.set(sprite, "loop", [
-                cfg.bgmArgs.LoopStartTime * 1000,
-                (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                (loopStartTime[0] ?? 0) * 1000,
+                (loopEndTime[0] || self.duration()) * 1000,
                 true,
               ]);
             } else {
               // eslint-disable-next-line max-len
               Reflect.set(sprite, "_sprite", {
                 loop: [
-                  cfg.bgmArgs.LoopStartTime * 1000,
-                  (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                  (loopStartTime[0] ?? 0) * 1000,
+                  (loopEndTime[0] || self.duration()) * 1000,
                   true,
                 ],
               });
