@@ -129,16 +129,16 @@ export function soundInit() {
             if (sprite) {
               // eslint-disable-next-line max-len
               Reflect.set(sprite, "loop", [
-                cfg.bgmArgs.LoopStartTime * 1000,
-                (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                (cfg.bgmArgs.LoopStartTime?.[0] || 0) * 1000,
+                (cfg.bgmArgs.LoopEndTime?.[0] || self.duration()) * 1000,
                 true,
               ]);
             } else {
               // eslint-disable-next-line max-len
               Reflect.set(sprite, "_sprite", {
                 loop: [
-                  cfg.bgmArgs.LoopStartTime * 1000,
-                  (cfg.bgmArgs.LoopEndTime || self.duration()) * 1000,
+                  (cfg.bgmArgs.LoopStartTime?.[0] || 0) * 1000,
+                  (cfg.bgmArgs.LoopEndTime?.[0] || self.duration()) * 1000,
                   true,
                 ],
               });
