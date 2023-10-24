@@ -800,7 +800,7 @@ export const resourcesLoader = {
     );
     excelPromiseArray.push(
       axios
-        .get(utils.getResourcesUrl("excel", "BGMExcelTable_dev.json")) // FIXME: 临时使用dev版
+        .get(utils.getResourcesUrl("excel", "BGMExcelTable.json"))
         .then(res => {
           for (const i of res.data["DataList"]) {
             privateState.BGMExcelTable.set(i["Id"], i);
