@@ -1,3 +1,4 @@
+/* eslint-disable sort-exports/sort-exports */
 export interface BGEffectExcelTableItem {
   Name: number;
   Effect: BGEffectType;
@@ -44,15 +45,23 @@ export type BGEffectType =
   | "BG_Fireworks_L_BGOff_01"
   | "BG_ScrollR_1.0";
 
+export enum Nation {
+  None = 0,
+  All = 1,
+  JP = 2,
+  GL = 3,
+  KR = 4,
+}
+
 export interface BGMExcelTableItem {
   Id: number;
-  ProductionStep: string;
-  Path: string;
-  Volume: number;
-  LoopStartTime: number;
-  LoopEndTime: number;
-  LoopTranstionTime: number;
-  LoopOffsetTime: number;
+  Nation?: Nation[];
+  Path?: string[];
+  Volume?: number[];
+  LoopStartTime?: number[];
+  LoopEndTime?: number[];
+  LoopTranstionTime?: number[];
+  LoopOffsetTime?: number[];
 }
 
 export interface BGNameExcelTableItem {
