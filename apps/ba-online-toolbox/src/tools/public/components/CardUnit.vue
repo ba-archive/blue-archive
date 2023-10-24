@@ -44,6 +44,7 @@ const isUnsure = ref(props.unsure);
 
 function handleClickToJump() {
   if (props.jumpTo) {
+    console.log('jump to', props.jumpTo);
     const element = document.getElementById(props.jumpTo);
     if (element) {
       element.scrollIntoView({
