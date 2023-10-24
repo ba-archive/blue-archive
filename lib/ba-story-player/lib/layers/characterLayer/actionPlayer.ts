@@ -52,6 +52,7 @@ const CharacterEffectPlayerInstance: CharacterEffectPlayer = {
     return new Promise(resolve => {
       characterInstance.visible = true;
       const timeLine = gsap.timeline();
+      resolve();
       timeLine.to(colorFilter, {
         alpha: finalAlpha,
         duration: 1,
