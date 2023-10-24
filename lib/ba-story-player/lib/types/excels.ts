@@ -1,4 +1,3 @@
-/* eslint-disable sort-exports/sort-exports */
 export interface BGEffectExcelTableItem {
   Name: number;
   Effect: BGEffectType;
@@ -55,13 +54,15 @@ export enum Nation {
 
 export interface BGMExcelTableItem {
   Id: number;
-  Nation?: Nation[];
-  Path?: string[] | string;
-  Volume?: number[] | number;
-  LoopStartTime?: number[] | number;
-  LoopEndTime?: number[] | number;
-  LoopTranstionTime?: number[] | number;
-  LoopOffsetTime?: number[] | number;
+  options?: {
+    Nation?: Nation[];
+    Path?: string[] | string;
+    Volume?: number[] | number;
+    LoopStartTime?: number[] | number;
+    LoopEndTime?: number[] | number;
+    LoopTranstionTime?: number[] | number;
+    LoopOffsetTime?: number[] | number;
+  };
 }
 
 export interface BGNameExcelTableItem {
