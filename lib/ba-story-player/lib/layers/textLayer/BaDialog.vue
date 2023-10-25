@@ -314,7 +314,7 @@ function endPlay() {
  * 单击屏幕后触发效果 next或者立即显示当前对话
  */
 function moveToNext() {
-  if (!showDialog.value) return; // 显示st期间不允许跳过
+  if (!showDialog.value && stText.value.length > 0) return; // 显示st期间不允许跳过
   // 没打过任何一行字(初始化)或者对话已经显示完成, 点击屏幕代表继续
   if (typingComplete.value) {
     eventBus.emit("next");

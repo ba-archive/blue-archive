@@ -414,7 +414,7 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
     if (
       !rawStoryUnit.TextJp ||
       !rawStoryUnit.TextJp ||
-      rawStoryUnit.TextJp === " "
+      /^ +$/.test(rawStoryUnit.TextJp)
     ) {
       unit.type = "effectOnly";
     }
@@ -440,6 +440,13 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
         character.highlight = true;
         return character;
       });
+    }
+    // 解决纯effect unit中 TextJp字段不为空导致的文字层误判?
+    if (unit.type === "text") {
+      const hasText = ScriptKr.split("\n").some((text) => (StoryRawUnitParserUnit.character.reg.exec(text) ?? [])[4]);
+      if (!hasText) {
+        unit.type = "effectOnly";
+      }
     }
     parseResult.push(unit);
   }
