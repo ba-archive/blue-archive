@@ -179,7 +179,7 @@ watch(
         更换故事index
       </button>
       <label>故事json</label>
-      <input v-model="storyJsonName" />
+      <input v-model="storyJsonName" @keydown.enter="changeJSON" />
       <button @click="changeJSON">更换故事json</button>
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
       <label>语言</label>

@@ -770,4 +770,55 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH9997_home: {
+    name: "CH9997_home",
+    playQue: [
+      {
+        name: "CH9997_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9997_home: {
+        scale: 1.7,
+      },
+    },
+    otherSpine: [],
+  },
+  CH9998_home: {
+    name: "CH9998_home",
+    playQue: [
+      {
+        name: "CH9998_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9998_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH9996_home: {
+    name: "CH9996_home",
+    playQue: [
+      {
+        name: "CH9996_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9996_home: {
+        scale: 1.72,
+      },
+    },
+    otherSpine: [],
+  },
 };

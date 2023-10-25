@@ -880,7 +880,7 @@ export function stop() {
 
 function waitForStoryUnitPlayComplete(currentIndex: number) {
   let startTime = Date.now();
-  let leftTime = 5000;
+  let leftTime = 20000;
   let interval = 0;
 
   return new Promise<void>((resolve, reject) => {
