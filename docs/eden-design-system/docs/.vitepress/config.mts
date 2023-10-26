@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { HeadConfig, defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -28,22 +28,27 @@ export default defineConfig({
     ],
   },
 
-  transformHead({ assets }) {
-    // adjust the regex accordingly to match your font
-    const myFontFile = assets.find(file => /.*\.\w+\.woff2/);
-    if (myFontFile) {
-      return [
-        [
-          "link",
-          {
-            rel: "preload",
-            href: myFontFile,
-            as: "font",
-            type: "font/woff2",
-            crossorigin: "",
-          },
-        ],
-      ];
-    }
+  transformHead: () => {
+    const head: HeadConfig[] = [];
+    head.push([
+      "link",
+      {
+        rel: "prefetch",
+        href: "https://fonts.blue-archive.io/misans-webfont/misans-400-regular.min.css",
+        as: "style",
+        onload: "this.rel='stylesheet';this.onload=null;",
+      },
+    ]);
+    head.push([
+      "link",
+      {
+        rel: "prefetch",
+        href: "https://fonts.blue-archive.io/misans-webfont/misans-600-semibold.min.css",
+        as: "style",
+        onload: "this.rel='stylesheet';this.onload=null;",
+      },
+    ]);
+
+    return head;
   },
 });

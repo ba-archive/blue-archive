@@ -21,6 +21,7 @@
 
 body {
   font-size: 16px;
+  line-height: 24px;
   font-family: var(--vp-font-family-base) !important;
 }
 
@@ -34,6 +35,15 @@ body {
   .title {
     font-weight: 700;
     font-family: "Wix Madefor Display", var(--vp-font-family-base);
+  }
+
+  table {
+    display: table;
+    width: 100%;
+
+    td {
+      line-height: 22px;
+    }
   }
 }
 
@@ -104,30 +114,34 @@ body {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-default-1: #242424; /* default text color */
-  --vp-c-default-2: #616161; /* hover state */
-  --vp-c-default-3: #dfdfdf; /* solid bg */
-  --vp-c-default-soft: var(--vp-c-gray-soft); /* soft bg */
+  --vp-c-default-1: var(--color-text-5); /* default text color */
+  --vp-c-default-2: var(--color-fill-5); /* hover state */
+  --vp-c-default-3: var(--color-fill-2); /* solid bg */
+  --vp-c-default-soft: var(--color-fill-1); /* soft bg */
 
-  --vp-c-brand-1: #2773e1; /* main brand color */
-  --vp-c-brand-2: #4a91e7; /* hover state, link */
-  --vp-c-brand-3: #2773e1; /* solid bg */
-  --vp-c-brand-soft: #2773e11a;
+  --vp-c-brand-1: var(--arona-blue-6); /* main brand color */
+  --vp-c-brand-2: var(--arona-blue-5); /* hover state, link */
+  --vp-c-brand-3: var(--arona-blue-6); /* solid bg */
+  --vp-c-brand-soft: var(--arona-blue-1); /* soft bg */
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
   --vp-c-tip-3: var(--vp-c-brand-3);
   --vp-c-tip-soft: var(--vp-c-brand-soft);
 
-  --vp-c-warning-1: #ff7d00;
-  --vp-c-warning-2: #ff9a2e;
-  --vp-c-warning-3: #ff7d00;
-  --vp-c-warning-soft: #ff7d001a;
+  --vp-c-warning-1: var(--warning-6);
+  --vp-c-warning-2: var(--warning-5);
+  --vp-c-warning-3: var(--warning-6);
+  --vp-c-warning-soft: var(--warning-1);
 
-  --vp-c-danger-1: #e9583b;
-  --vp-c-danger-2: #ed795b;
-  --vp-c-danger-3: #e9583b;
-  --vp-c-danger-soft: #e9583b1a;
+  --vp-c-danger-1: var(--danger-6);
+  --vp-c-danger-2: var(--danger-5);
+  --vp-c-danger-3: var(--danger-6);
+  --vp-c-danger-soft: var(--danger-1);
+
+  --vp-c-text-1: var(--color-text-5);
+  --vp-c-text-2: var(--color-text-4);
+  --vp-c-text-3: var(--color-text-3);
 }
 
 /**
