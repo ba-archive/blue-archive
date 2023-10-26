@@ -24,15 +24,17 @@ body {
   font-family: var(--vp-font-family-base) !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.title {
-  font-weight: bold;
-  font-family: "Wix Madefor Display", var(--vp-font-family-base);
+.vp-doc {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title {
+    font-weight: 700;
+    font-family: "Wix Madefor Display", var(--vp-font-family-base);
+  }
 }
 
 :root {

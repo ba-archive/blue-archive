@@ -706,12 +706,11 @@ Eden Design System 的栅格宽度为 32px。
 字体是体系化界面中最基本的构成之一。
 用户通过文本来理解内容和完成工作，科学的字体系统能提升用户的阅读体验及工作效率。
 
-本次设计中，我们对中文和英文进行了分别处理。中文段落使用 OPPO Sans 3.0 Regular（原 OPPO Sans 现改名为 OPlus
-Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
+本次设计中，我们对中文和英文进行了分别处理。中文段落使用 MiSans Regular，标题使用 MiSans Semibold。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
 
 ### 中文段落
 
-中文段落使用的字体为 OPPO Sans 3.0 (OPlus Sans)，字重为 Regular。
+中文段落使用的字体为 MiSans，字重为 Regular。
 
 <table class="w-full">
 <tr>
@@ -720,32 +719,32 @@ Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用
   <th>语义化</th>
 </tr>
 <tr>
-  <td style="font-size: 12px">{{textCn}}</td>
-  <td>12/CN-Regular</td>
+  <td style="font-size: 14px !important">{{textCn}}</td>
+  <td>14/CN-Regular</td>
   <td>正文-小</td>
 </tr>
 <tr>
-  <td style="font-size: 14px">{{textCn}}</td>
-  <td>14/CN-Regular</td>
+  <td style="font-size: 16px !important">{{textCn}}</td>
+  <td>16/CN-Regular</td>
   <td>正文-中</td>
 </tr>
 <tr>
-  <td style="font-size: 16px">{{textCn}}</td>
-  <td>16/CN-Regular</td>
+  <td style="font-size: 18px !important">{{textCn}}</td>
+  <td>18/CN-Regular</td>
   <td>正文-大</td>
 </tr>
 <tr>
-  <td style="font-size: 20px">{{textCn}}</td>
+  <td style="font-size: 20px !important">{{textCn}}</td>
   <td>20/CN-Regular</td>
   <td>标题-小</td>
 </tr>
 <tr>
-  <td style="font-size: 24px">{{textCn}}</td>
+  <td style="font-size: 24px !important">{{textCn}}</td>
   <td>24/CN-Regular</td>
   <td>标题-中</td>
 </tr>
 <tr>
-  <td style="font-size: 28px">{{textCn}}</td>
+  <td style="font-size: 28px !important">{{textCn}}</td>
   <td>28/CN-Regular</td>
   <td>标题-大</td>
   </tr>
@@ -753,8 +752,7 @@ Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用
 
 ### 中文标题
 
-中文标题使用的字体为 OPPO Sans 3.0 (OPlus Sans)，字重为 SemiBold。注意原字体并未提供 SemiBold 字重，因此我们通过对 Regular
-字重进行处理得到了 SemiBold 字重。
+中文标题使用的字体为 MiSans，字重为 SemiBold。
 
 <table class="w-full">
 <tr>
@@ -763,47 +761,47 @@ Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用
 <th>语义化</th>
 </tr>
 <tr>
-  <td class="title" style="font-size: 12px">{{textCn}}</td>
-  <td>12/CN-SemiBold</td>
+  <td class="title" style="font-size: 14px !important">{{textCn}}</td>
+  <td>14/CN-SemiBold</td>
   <td>正文-小</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 14px">{{textCn}}</td>
-  <td>14/CN-SemiBold</td>
+  <td class="title" style="font-size: 16px !important">{{textCn}}</td>
+  <td>16/CN-SemiBold</td>
   <td>正文-中</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 16px">{{textCn}}</td>
-  <td>16/CN-SemiBold</td>
+  <td class="title" style="font-size: 18px !important">{{textCn}}</td>
+  <td>18/CN-SemiBold</td>
   <td>正文-大</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 20px">{{textCn}}</td>
+  <td class="title" style="font-size: 20px !important">{{textCn}}</td>
   <td>20/CN-SemiBold</td>
   <td>标题-小</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 24px">{{textCn}}</td>
+  <td class="title" style="font-size: 24px !important">{{textCn}}</td>
   <td>24/CN-SemiBold</td>
   <td>标题-中</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 28px">{{textCn}}</td>
+  <td class="title" style="font-size: 28px !important">{{textCn}}</td>
   <td>28/CN-SemiBold</td>
   <td>标题-大</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 32px">{{textCn}}</td>
+<td class="title" style="font-size: 32px !important">{{textCn}}</td>
 <td>32/CN-SemiBold</td>
 <td>运营标题-小</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 48px">{{textCn}}</td>
+<td class="title" style="font-size: 48px !important">{{textCn}}</td>
 <td>48/CN-SemiBold</td>
 <td>运营标题-中</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 64px">{{textCn}}</td>
+<td class="title" style="font-size: 64px !important">{{textCn}}</td>
 <td>64/CN-SemiBold</td>
 <td>运营标题-大</td>
 </tr>
@@ -820,32 +818,32 @@ Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用
 <th>语义化</th>
 </tr>
 <tr>
-  <td style="font-size: 12px">{{textEn}}</td>
-  <td>12/EN-Regular</td>
+  <td style="font-size: 14px !important">{{textEn}}</td>
+  <td>14/EN-Regular</td>
   <td>正文-小</td>
 </tr>
 <tr>
-  <td style="font-size: 14px">{{textEn}}</td>
-  <td>14/EN-Regular</td>
+  <td style="font-size: 16px !important">{{textEn}}</td>
+  <td>16/EN-Regular</td>
   <td>正文-中</td>
 </tr>
 <tr>
-  <td style="font-size: 16px">{{textEn}}</td>
-  <td>16/EN-Regular</td>
+  <td style="font-size: 18px !important">{{textEn}}</td>
+  <td>18/EN-Regular</td>
   <td>正文-大</td>
 </tr>
 <tr>
-  <td style="font-size: 20px">{{textEn}}</td>
+  <td style="font-size: 20px !important">{{textEn}}</td>
   <td>20/EN-Regular</td>
   <td>标题-小</td>
 </tr>
 <tr>
-  <td style="font-size: 24px">{{textEn}}</td>
+  <td style="font-size: 24px !important">{{textEn}}</td>
   <td>24/EN-Regular</td>
   <td>标题-中</td>
 </tr>
 <tr>
-  <td style="font-size: 28px">{{textEn}}</td>
+  <td style="font-size: 28px !important">{{textEn}}</td>
   <td>28/EN-Regular</td>
   <td>标题-大</td>
 </tr>
@@ -862,47 +860,47 @@ Sans），标题使用自行处理得到的 SemiBold 字重。英文段落使用
 <th>语义化</th>
 </tr>
 <tr>
-  <td class="title" style="font-size: 12px">{{textEn}}</td>
-  <td>12/EN-SemiBold</td>
+  <td class="title" style="font-size: 14px !important">{{textEn}}</td>
+  <td>14/EN-SemiBold</td>
   <td>正文-小</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 14px">{{textEn}}</td>
-  <td>14/EN-SemiBold</td>
+  <td class="title" style="font-size: 16px !important">{{textEn}}</td>
+  <td>16/EN-SemiBold</td>
   <td>正文-中</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 16px">{{textEn}}</td>
-  <td>16/EN-SemiBold</td>
+  <td class="title" style="font-size: 18px !important">{{textEn}}</td>
+  <td>18/EN-SemiBold</td>
   <td>正文-大</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 20px">{{textEn}}</td>
+  <td class="title" style="font-size: 20px !important">{{textEn}}</td>
   <td>20/EN-SemiBold</td>
   <td>标题-小</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 24px">{{textEn}}</td>
+  <td class="title" style="font-size: 24px !important">{{textEn}}</td>
   <td>24/EN-SemiBold</td>
   <td>标题-中</td>
 </tr>
 <tr>
-  <td class="title" style="font-size: 28px">{{textEn}}</td>
+  <td class="title" style="font-size: 28px !important">{{textEn}}</td>
   <td>28/EN-SemiBold</td>
   <td>标题-大</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 32px">{{textEn}}</td>
+<td class="title" style="font-size: 32px !important">{{textEn}}</td>
 <td>32/EN-SemiBold</td>
 <td>运营标题-小</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 48px">{{textEn}}</td>
+<td class="title" style="font-size: 48px !important">{{textEn}}</td>
 <td>48/EN-SemiBold</td>
 <td>运营标题-中</td>
 </tr>
 <tr>
-<td class="title" style="font-size: 64px">{{textEn}}</td>
+<td class="title" style="font-size: 64px !important">{{textEn}}</td>
 <td>64/EN-SemiBold</td>
 <td>运营标题-大</td>
 </tr>
