@@ -120,7 +120,7 @@ const fillGroup = {
   description: "填充色用于非主要类型的图标填充，以及部分元素的背景填充。",
   palettes: [
     {
-      color: "#A3A3A5",
+      color: "#616161",
       darkColor: "#4B4B4B",
       description: "强调/图标/特殊场景",
       token: "color-fill-5",
@@ -667,7 +667,7 @@ Eden Design System 的栅格宽度为 32px。
 
 本次设计中，我们对中文和英文进行了分别处理。中文段落使用 MiSans Regular，标题使用 MiSans Semibold。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
 
-### 中文段落
+### 中文段落 / CJK Paragraph
 
 中文段落使用的字体为 MiSans，字重为 Regular。
 
@@ -709,7 +709,7 @@ Eden Design System 的栅格宽度为 32px。
   </tr>
 </table>
 
-### 中文标题
+### 中文标题 / CJK Title
 
 中文标题使用的字体为 MiSans，字重为 SemiBold。
 
@@ -766,7 +766,7 @@ Eden Design System 的栅格宽度为 32px。
 </tr>
 </table>
 
-### 英文段落
+### 英文段落 / English Paragraph
 
 英文段落使用的字体为 Wix Madefor Text Regular。
 
@@ -808,7 +808,7 @@ Eden Design System 的栅格宽度为 32px。
 </tr>
 </table>
 
-### 英文标题
+### 英文标题 / English Title
 
 英文标题使用的字体为 Wix Madefor Display SemiBold。
 

@@ -20,7 +20,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 24px;
   font-family: var(--vp-font-family-base) !important;
 }
@@ -44,13 +44,20 @@ body {
     td {
       line-height: 22px;
     }
+
+    th {
+      &.arco-table-th {
+        border: none;
+      }
+    }
+
+    th, td {
+      border: inherit;
+    }
   }
 }
 
 :root {
-  // --vp-font-family-base: "Wix Madefor Text", "OPPOSans-Regular", "PingFang SC",
-  //   "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "微软雅黑",
-  //   "sans-serif";
   --vp-font-family-base: "Wix Madefor Text", "MiSans", "Microsoft YaHei",
     "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
     Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
@@ -209,13 +216,4 @@ body {
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
-}
-
-.vp-doc th,
-.vp-doc td {
-  border: inherit;
-}
-
-th.arco-table-th {
-  border: none;
 }

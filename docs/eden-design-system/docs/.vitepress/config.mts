@@ -4,6 +4,7 @@ import { HeadConfig, defineConfig } from "vitepress";
 export default defineConfig({
   title: "Eden Design System",
   description: "(Not yet) A Stylized Vue 3 Design System for Blue Archive",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
