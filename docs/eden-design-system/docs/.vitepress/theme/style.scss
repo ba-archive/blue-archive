@@ -2,33 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-// @font-face {
-//   src: url("../../fonts/OPlusSans3-Regular.woff2") format("woff2");
-//   font-family: "OPPOSans-Regular";
-//   font-display: swap;
-// }
-
-// @font-face {
-//   src: url("../../fonts/OPlusSans3-SemiBold.woff2") format("woff2");
-//   font-family: "OPPOSans-SemiBold";
-//   font-display: swap;
-// }
+@import url("https://fonts.blue-archive.io/misans-webfont/misans-400-regular.min.css");
+@import url("https://fonts.blue-archive.io/misans-webfont/misans-600-semibold.min.css");
 
 @font-face {
-  src: url("../../fonts/WixMadeforText-VariableFont_wght.ttf")
+  src: url("https://fonts.blue-archive.io/WixMadeforText-VariableFont_wght.ttf")
     format("truetype");
   font-family: "Wix Madefor Text";
   font-display: swap;
 }
 
 @font-face {
-  src: url("../../fonts/WixMadeforDisplay-VariableFont_wght.ttf")
+  src: url("https://fonts.blue-archive.io/WixMadeforDisplay-VariableFont_wght.ttf")
     format("truetype");
   font-family: "Wix Madefor Display";
   font-display: swap;
 }
 
 body {
+  font-size: 16px;
   font-family: var(--vp-font-family-base) !important;
 }
 
@@ -47,9 +39,10 @@ h6,
   // --vp-font-family-base: "Wix Madefor Text", "OPPOSans-Regular", "PingFang SC",
   //   "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "微软雅黑",
   //   "sans-serif";
-  --vp-font-family-base: "Wix Madefor Text", "Microsoft YaHei", "PingFang SC",
-    -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans",
-    BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+  --vp-font-family-base: "Wix Madefor Text", "MiSans", "Microsoft YaHei",
+    "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Sans GB", Arial, sans-serif;
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     "Menlo", "Courier", "monospace";
 }
