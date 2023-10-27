@@ -28,6 +28,15 @@ watchDebounced(() => UiState.playing.value, (cur) => {
   localStorage.setItem(PlayingSettingKey, JSON.stringify(cur));
 }, { debounce: 1000, deep: true });
 
+export function disposeUiState() {
+  const saveVolume = JSON.parse(localStorage.getItem(VolumeKey) || "{}");
+  const savePlayingSetting = JSON.parse(localStorage.getItem(PlayingSettingKey) || "{}");
+  UiState.playing.value = savePlayingSetting;
+  UiState.volume.value = saveVolume;
+  UiState.autoMode.value = false;
+  UiState.tabActivated.value = false;
+}
+
 export function useUiState() {
   return UiState;
 }

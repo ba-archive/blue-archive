@@ -23,7 +23,7 @@ import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
-import { useUiState } from "@/stores/state";
+import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 Howler.autoSuspend = false;
@@ -68,6 +68,7 @@ export function dispose() {
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
   usePlayerStore().dispose();
+  disposeUiState();
 }
 
 /**
@@ -880,21 +881,21 @@ export function stop() {
 
 function waitForStoryUnitPlayComplete(currentIndex: number) {
   let startTime = Date.now();
-  let leftTime = 20000;
+  let leftTime = 50000;
   let interval = 0;
 
   return new Promise<void>((resolve, reject) => {
-    const { tabActivated } = useUiState();
-    const watchSideEffect = watch(
-      () => tabActivated.value,
-      cur => {
-        if (cur) {
-          restart();
-        } else {
-          resetTime();
-        }
-      }
-    );
+    // const { tabActivated } = useUiState();
+    // const watchSideEffect = watch(
+    //   () => tabActivated.value,
+    //   cur => {
+    //     if (cur) {
+    //       restart();
+    //     } else {
+    //       resetTime();
+    //     }
+    //   }
+    // );
     function resetTime() {
       clearInterval(interval);
       const now = Date.now();
@@ -907,7 +908,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
     }
     function end() {
       clearInterval(interval);
-      watchSideEffect();
+      // watchSideEffect();
     }
     function start() {
       interval = window.setInterval(() => {
@@ -932,11 +933,13 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             storyHandler.currentStoryUnit,
             waitingKeys
           );
-          // waitingKeys.forEach((key) => {
-          //   Reflect.set(eventEmitter, key, true);
-          // });
-          reject();
-          // resolve();
+          
+          // TODO 重写逻辑解决莫名其妙的播放卡死?
+          // reject();
+          waitingKeys.forEach((key) => {
+            Reflect.set(eventEmitter, key, true);
+          });
+          resolve();
         }
       });
     }
