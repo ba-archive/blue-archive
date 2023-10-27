@@ -301,11 +301,19 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
       }
       // 过滤a和h同时出现的情况
       const ch = unit.characters[characterIndex];
-      if (!ch || ch.effects.length < 2 || ch.effects.filter((ef) => ef.type === "action").length < 2) {
+      if (
+        !ch ||
+        ch.effects.length < 2 ||
+        ch.effects.filter(ef => ef.type === "action").length < 2
+      ) {
         return unit;
       }
-      const appearIndex = ch.effects.findIndex((ef) => ef.type === "action" && ef.effect === "a");
-      const hideIndex = ch.effects.findIndex((ef) => ef.type === "action" && ef.effect === "h");
+      const appearIndex = ch.effects.findIndex(
+        ef => ef.type === "action" && ef.effect === "a"
+      );
+      const hideIndex = ch.effects.findIndex(
+        ef => ef.type === "action" && ef.effect === "h"
+      );
       if (appearIndex !== -1 && hideIndex !== -1) {
         ch.effects[Math.min(appearIndex, hideIndex)].async = true;
       }
@@ -443,7 +451,14 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
     }
     // 解决纯effect unit中 TextJp字段不为空导致的文字层误判?
     if (unit.type === "text") {
-      const hasText = ScriptKr.split("\n").some((text) => (StoryRawUnitParserUnit.character.reg.exec(text) ?? [])[4]);
+      // 判断显示的人物是否为空，以及如果为空的话是否为旁白类型
+      const hasText =
+        ScriptKr.split("\n").some(
+          text => (StoryRawUnitParserUnit.character.reg.exec(text) ?? [])[4]
+        ) ||
+        ScriptKr.split("\n").some(text =>
+          StoryRawUnitParserUnit.na.reg.exec(text)
+        );
       if (!hasText) {
         unit.type = "effectOnly";
       }
