@@ -108,7 +108,7 @@ export function L2DInit() {
           const duration = entry.animation.duration;
           const {
             fade,
-            fadeTime = 4.9,
+            fadeTime = 0,
             secondFadeTime,
             customFade,
             sounds,
