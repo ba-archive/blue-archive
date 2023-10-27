@@ -2,4 +2,4 @@
 outline: deep
 ---
 
-# 文本 / Text
+# 排版 / Typography

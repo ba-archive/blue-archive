@@ -16,12 +16,87 @@ export default defineConfig({
       {
         text: "开始使用",
         items: [
-          { text: "组件总览", link: "/components/" },
-          { text: "设计规范", link: "/guideline/design/" },
-          { text: "设计语言", link: "/guideline/design/design-language" },
+          {
+            text: "组件总览 / Components",
+            link: "/components/",
+            items: [
+              {
+                text: "通用 / General",
+                link: "/components/#通用-general",
+              },
+              {
+                text: "布局 / Layout",
+                link: "/components/#布局-layout",
+              },
+              {
+                text: "导航 / Navigation",
+                link: "/components/#导航-navigation",
+              },
+              {
+                text: "数据展示 / Data Display",
+                link: "/components/#数据展示-data-display",
+              },
+              {
+                text: "数据录入 / Data Entry",
+                link: "/components/#数据录入-data-entry",
+              },
+              {
+                text: "反馈 / Feedback",
+                link: "/components/#反馈-feedback",
+              },
+              {
+                text: "其他 / Others",
+                link: "/components/#其他-others",
+              },
+            ],
+          },
         ],
         collapsed: false,
       },
+      {
+        text: "设计规范",
+        link: "/guideline/design/",
+        collapsed: true,
+        items: [
+          {
+            text: "间距 / Spacing",
+            link: "/guideline/design/#间距-spacing",
+          },
+          {
+            text: "栅格 / Grid",
+            link: "/guideline/design/#栅格-grid",
+          },
+          {
+            text: "颜色 / Color",
+            link: "/guideline/design/#颜色-color",
+          },
+          {
+            text: "字体 / Typography",
+            link: "/guideline/design/#字体-typography",
+          },
+          // {
+          //   text: "图标 / Iconography",
+          //   link: "/guideline/design/#图标-iconography",
+          // },
+          // {
+          //   text: "阴影 / Shadow",
+          //   link: "/guideline/design/#阴影-shadow",
+          // },
+          // {
+          //   text: "动画 / Animation",
+          //   link: "/guideline/design/#动画-animation",
+          // },
+          // {
+          //   text: "布局 / Layout",
+          //   link: "/guideline/design/#布局-layout",
+          // },
+          // {
+          //   text: "交互 / Interaction",
+          //   link: "/guideline/design/#交互-interaction",
+          // },
+        ]
+      },
+      { text: "设计语言", link: "/guideline/design/design-language", items: [] },
     ],
 
     socialLinks: [

@@ -768,7 +768,7 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 英文段落 / English Paragraph
 
-英文段落使用的字体为 Wix Madefor Text Regular。
+英文段落使用的字体为 Wix Madefor Text，字重为 Regular。
 
 <table class="w-full">
 <tr>
@@ -810,7 +810,7 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 英文标题 / English Title
 
-英文标题使用的字体为 Wix Madefor Display SemiBold。
+英文标题使用的字体为 Wix Madefor Display，字重为 Bold。
 
 <table class="w-full">
 <tr>
