@@ -144,8 +144,6 @@ export function soundInit() {
               loopEndTime = [cfg.bgmArgs.LoopEndTime];
             }
 
-            console.warn(bgm?.duration());
-
             if (sprite) {
               // eslint-disable-next-line max-len
               Reflect.set(sprite, "loop", [
