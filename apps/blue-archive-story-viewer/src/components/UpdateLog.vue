@@ -3,6 +3,27 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-10-29",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "御坂美琴", id: 10079 },
+          { name: "食蜂操祈", id: 10080 },
+          { name: "佐天泪子", id: 26011 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分情况下播放无法继续的问题",
+      },
+      {
+        type: "fix",
+        content: "部分学生剧情 live2d 特效错误的问题",
+      },
+    ],
+  },
+  {
     date: "2023-10-22",
     contents: [
       {
