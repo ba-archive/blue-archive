@@ -885,17 +885,17 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
   let interval = 0;
 
   return new Promise<void>((resolve, reject) => {
-    // const { tabActivated } = useUiState();
-    // const watchSideEffect = watch(
-    //   () => tabActivated.value,
-    //   cur => {
-    //     if (cur) {
-    //       restart();
-    //     } else {
-    //       resetTime();
-    //     }
-    //   }
-    // );
+    const { tabActivated } = useUiState();
+    const watchSideEffect = watch(
+      () => tabActivated.value,
+      cur => {
+        if (cur) {
+          restart();
+        } else {
+          resetTime();
+        }
+      }
+    );
     function resetTime() {
       clearInterval(interval);
       const now = Date.now();
@@ -908,7 +908,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
     }
     function end() {
       clearInterval(interval);
-      // watchSideEffect();
+      watchSideEffect();
     }
     function start() {
       interval = window.setInterval(() => {
@@ -936,9 +936,9 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           
           // TODO 重写逻辑解决莫名其妙的播放卡死?
           // reject();
-          waitingKeys.forEach((key) => {
-            Reflect.set(eventEmitter, key, true);
-          });
+          // waitingKeys.forEach((key) => {
+          //   Reflect.set(eventEmitter, key, true);
+          // });
           resolve();
         }
       });
