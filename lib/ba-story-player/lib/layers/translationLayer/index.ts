@@ -328,6 +328,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         getText(rawUnit, usePlayerStore().language)
       )
         .split("\n")
+        .filter((it) => it)
         .map(it => {
           const parseResult = /\[n?s(\d{0,2})?](.+)/.exec(it);
           if (!parseResult) {
