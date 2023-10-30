@@ -1910,7 +1910,7 @@
     en: Kuwakami
     kr: 쿠와카미
     tw: 桑上
-    th: 桑上
+    th: คุวาคามิ
   name:
     cn: 果穗
     jp: カホ
@@ -2297,6 +2297,62 @@
   type: Striker
   armorType: HeavyArmor
   bulletType: Sonic
+  weapon: HG
+- id: 10079
+  familyName:
+    cn: 御坂
+    jp: 御坂
+    en: Misaka
+    kr: 미사카
+    tw: 御坂
+    th: 御坂
+  name:
+    cn: 御坂美琴
+    jp: 御坂美琴
+    en: Misaka Mikoto
+    kr: 미사카 미코토
+    tw: 御坂美琴
+    th: มิซากะ มิโคโตะ
+  nickname: []
+  birthday:
+    month: 5
+    day: 2
+  club: 无社团
+  clubCode: EmptyClub
+  affiliation: 常盘台中学
+  schoolCode: Tokiwadai
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Pierce
+  weapon: AR
+- id: 10080
+  familyName:
+    cn: 食蜂
+    jp: 食蜂
+    en: Shokuhou
+    kr: 쇼쿠호
+    tw: 食蜂
+    th: 食蜂
+  name:
+    cn: 食蜂操祈
+    jp: 食蜂操祈
+    en: Shokuhou Misaki
+    kr: 쇼쿠호 미사키
+    tw: 食蜂操祈
+    th: โชคุโฮว มิซากิ
+  nickname: []
+  birthday:
+    month: 0
+    day: 0
+  club: 无社团
+  clubCode: EmptyClub
+  affiliation: 常盘台中学
+  schoolCode: Tokiwadai
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Explosion
   weapon: HG
 - id: 13000
   familyName:
@@ -4640,3 +4696,31 @@
   armorType: LightArmor
   bulletType: Explosion
   weapon: SR
+- id: 26011
+  familyName:
+    cn: 佐天
+    jp: 佐天
+    en: Saten
+    kr: 사텐
+    tw: 佐天
+    th: 佐天
+  name:
+    cn: 佐天泪子
+    jp: 佐天涙子
+    en: Saten Ruiko
+    kr: 사텐 루이코
+    tw: 佐天涙子
+    th: ซาเต็น รุยโกะ
+  nickname: []
+  birthday:
+    month: 0
+    day: 0
+  club: 无社团
+  clubCode: EmptyClub
+  affiliation: 栅川中学
+  schoolCode: Sakugawa
+  rarity: 1
+  type: Special
+  armorType: Unarmed
+  bulletType: Pierce
+  weapon: SMG

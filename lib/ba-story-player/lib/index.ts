@@ -23,7 +23,7 @@ import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
-import { useUiState } from "@/stores/state";
+import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 Howler.autoSuspend = false;
@@ -68,6 +68,7 @@ export function dispose() {
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
   usePlayerStore().dispose();
+  disposeUiState();
 }
 
 /**
@@ -932,11 +933,13 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             storyHandler.currentStoryUnit,
             waitingKeys
           );
+          
+          // TODO 重写逻辑解决莫名其妙的播放卡死?
+          // reject();
           // waitingKeys.forEach((key) => {
           //   Reflect.set(eventEmitter, key, true);
           // });
-          reject();
-          // resolve();
+          resolve();
         }
       });
     }

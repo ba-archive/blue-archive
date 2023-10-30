@@ -299,6 +299,24 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
           unit.characters[characterIndex].signal = true;
         }
       }
+      // 过滤a和h同时出现的情况
+      const ch = unit.characters[characterIndex];
+      if (
+        !ch ||
+        ch.effects.length < 2 ||
+        ch.effects.filter(ef => ef.type === "action").length < 2
+      ) {
+        return unit;
+      }
+      const appearIndex = ch.effects.findIndex(
+        ef => ef.type === "action" && ef.effect === "a"
+      );
+      const hideIndex = ch.effects.findIndex(
+        ef => ef.type === "action" && ef.effect === "h"
+      );
+      if (appearIndex !== -1 && hideIndex !== -1) {
+        ch.effects[Math.min(appearIndex, hideIndex)].async = true;
+      }
       return unit;
     },
   },
@@ -310,6 +328,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         getText(rawUnit, usePlayerStore().language)
       )
         .split("\n")
+        .filter((it) => it)
         .map(it => {
           const parseResult = /\[n?s(\d{0,2})?](.+)/.exec(it);
           if (!parseResult) {
@@ -404,7 +423,7 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
     if (
       !rawStoryUnit.TextJp ||
       !rawStoryUnit.TextJp ||
-      rawStoryUnit.TextJp === " "
+      /^ +$/.test(rawStoryUnit.TextJp)
     ) {
       unit.type = "effectOnly";
     }
@@ -430,6 +449,20 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
         character.highlight = true;
         return character;
       });
+    }
+    // 解决纯effect unit中 TextJp字段不为空导致的文字层误判?
+    if (unit.type === "text") {
+      // 判断显示的人物是否为空，以及如果为空的话是否为旁白类型
+      const hasText =
+        ScriptKr.split("\n").some(
+          text => (StoryRawUnitParserUnit.character.reg.exec(text) ?? [])[4]
+        ) ||
+        ScriptKr.split("\n").some(text =>
+          StoryRawUnitParserUnit.na.reg.exec(text)
+        );
+      if (!hasText) {
+        unit.type = "effectOnly";
+      }
     }
     parseResult.push(unit);
   }
