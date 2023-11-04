@@ -1,4 +1,5 @@
 import { Application, Sprite } from "pixi.js";
+import { Howl } from "howler";
 
 export type BGEffectType =
   | "BG_ScrollT_0.5"

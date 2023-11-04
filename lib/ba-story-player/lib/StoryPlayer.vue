@@ -6,7 +6,7 @@ import resourceManager, {
   setDataUrl,
 } from "./playerSubModules/recourageManager";
 import { ResourceMap, StoryNode, Ii8nString } from "./type";
-import Dialog from "./playerSubLayers/showLayer/Dialog.vue";
+import ShowDialog from "./playerSubLayers/showLayer/ShowDialog.vue";
 const props = defineProps<{
   storyNodes: StoryNode[];
   dataUrl: string;
@@ -48,7 +48,6 @@ const currentStoryNode = computed(() => {
     return props.storyNodes[currentStoryIndex.value];
   } else {
     props.endCallback();
-    auto.value = false;
     return props.storyNodes[props.storyNodes.length - 1];
   }
 });
@@ -58,7 +57,9 @@ const storyManager = new StoryManager(
   currentStoryIndex,
   currentStoryNode,
   auto,
-  () => {}
+  () => {
+    console.error("error!");
+  }
 );
 const pixiCanvas = ref<HTMLDivElement>();
 
@@ -73,7 +74,6 @@ if (import.meta.env.DEV) {
 }
 onMounted(async () => {
   nodePlayer.mouted(pixiCanvas.value!);
-  await resourceManager.init();
   await resourceManager.load(props.storyNodes);
   await storyManager.play();
 });
@@ -85,10 +85,10 @@ onUnmounted(() => {
 <template>
   <div @click="storyManager.next" class="player" :style="playerStyle">
     <div ref="pixiCanvas"></div>
-    <Dialog
+    <ShowDialog
       :text-layer-instance="nodePlayer.serversInstance.show"
       :current-story-node="currentStoryNode"
-    ></Dialog>
+    ></ShowDialog>
   </div>
 </template>
 

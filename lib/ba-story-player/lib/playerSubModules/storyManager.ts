@@ -10,7 +10,7 @@ export default class StoryManager {
   nodePlayer: NodePlayer;
   state: "playing" | "done";
   auto: Ref<boolean>;
-  autoTimeOutMs: number = 1500;
+  autoTimeOutMs = 1500;
   errorCallback: () => void;
   constructor(
     storyNodes: StoryNode[],
@@ -31,6 +31,10 @@ export default class StoryManager {
   async next() {
     if (this.state !== "playing") {
       this.currentStoryIndex.value = this.currentStoryNode.value.nextNodeIndex;
+      if (this.currentStoryNode.value.nextNodeIndex === -1) {
+        this.auto.value = false;
+        return;
+      }
       await this.play();
     }
   }

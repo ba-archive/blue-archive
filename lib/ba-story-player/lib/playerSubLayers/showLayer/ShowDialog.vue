@@ -19,6 +19,8 @@ const dialogContent = computed(() => {
     return dialogInfo.content.reduce((pre, currentText) => {
       return pre + currentText.content[props.textLayerInstance.language.value];
     }, "");
+  } else {
+    return "";
   }
 });
 </script>

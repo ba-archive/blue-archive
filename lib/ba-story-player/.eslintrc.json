@@ -13,7 +13,7 @@
     "@vue/eslint-config-typescript",
     "prettier"
   ],
-  "plugins": ["vue", "import", "sort-exports", "@typescript-eslint"],
+  "plugins": ["vue", "import", "@typescript-eslint"],
   "rules": {
     "vue/no-multiple-template-root": "off",
     "indent": ["error", 2, { "SwitchCase": 1 }],
@@ -29,16 +29,6 @@
         "imports": "always-multiline",
         "exports": "always-multiline",
         "functions": "ignore"
-      }
-    ],
-    "sort-exports/sort-exports": ["error", { "sortDir": "asc" }],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
       }
     ]
   },

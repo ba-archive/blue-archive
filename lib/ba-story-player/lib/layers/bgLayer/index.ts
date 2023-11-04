@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ZINDEXBASE, timelineToPauseAble } from "../../utils";
 
 export class BgLayer extends Layer {
-  currentBgUrl: string = "";
+  currentBgUrl = "";
   animations: { bgOverlap: typeof loadBgOverlapAnimation } = {
     bgOverlap: loadBgOverlapAnimation,
   };

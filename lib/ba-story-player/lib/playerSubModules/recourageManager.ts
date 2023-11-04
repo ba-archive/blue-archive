@@ -243,7 +243,6 @@ const resourcerManager = {
   loader: Loader.shared,
   state: "done" as "loading" | "done",
   audioSoundMap: new Map<string, Howl>(),
-  async init() {},
   load(storyNodes: StoryNode[]) {
     this.state = "loading";
     const audioUrls: string[] = [];

@@ -1,3 +1,3 @@
-import Player from "./Player.vue";
+import Player from "./StoryPlayer.vue";
 
 export default Player;
