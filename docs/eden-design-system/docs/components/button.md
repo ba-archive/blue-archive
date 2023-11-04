@@ -8,15 +8,15 @@ outline: deep
 
 ## 基础用法
 
-:::demo 按钮分为 `filled`（默认），`outline`，`dashed`，`text` 四种显示模式，支持 `mini`，`small`，`normal`，`large` 四种尺寸。
+:::demo 按钮分为 `filled`（默认），`outline`，`dashed`，`text` 四种类型，支持 `mini`，`small`，`normal`，`large` 四种尺寸。
 
 button/basic
 
 :::
 
-## 按钮类型
+## 按钮状态
 
-::: 按钮有 `primary`, `secondary`（默认），`success`, `warning`, `danger` 六种类型。
+::: 按钮有 `primary`, `secondary`（默认），`success`, `warning`, `danger` 六种基础状态。
 
 button/type
 
@@ -58,13 +58,13 @@ button/group
 
 ### 属性 / Props
 
-| 属性名   | 类型                                                                     | 说明         | 默认值        |
-| -------- | ------------------------------------------------------------------------ | ------------ | ------------- |
-| mode     | `'filled'` \| `'outline'` \| `'dashed'` \| `'text'`                      | 按钮显示模式 | `'filled'`    |
-| type     | `'primary'` \| `'secondary'` \| `'success'` \| `'warning'` \| `'danger'` | 按钮类型     | `'secondary'` |
-| size     | `'mini'` \| `'small'` \| `'normal'` \| `'large'`                         | 按钮尺寸     | `'normal'`    |
-| disabled | `boolean`                                                                | 是否禁用     | `false`       |
-| loading  | `boolean`                                                                | 是否加载中   | `false`       |
+| 属性名   | 类型                                                                     | 说明       | 默认值        |
+| -------- | ------------------------------------------------------------------------ | ---------- | ------------- |
+| type     | `'filled'` \| `'outline'` \| `'dashed'` \| `'text'`                      | 按钮类型   | `'filled'`    |
+| status   | `'primary'` \| `'secondary'` \| `'success'` \| `'warning'` \| `'danger'` | 按钮状态   | `'secondary'` |
+| size     | `'mini'` \| `'small'` \| `'normal'` \| `'large'`                         | 按钮尺寸   | `'normal'`    |
+| disabled | `boolean`                                                                | 是否禁用   | `false`       |
+| loading  | `boolean`                                                                | 是否加载中 | `false`       |
 
 ### 插槽 / Slots
 
