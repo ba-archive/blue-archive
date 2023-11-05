@@ -73,7 +73,7 @@ if (import.meta.env.DEV) {
   Reflect.set(window, "StoryManager", storyManager);
 }
 onMounted(async () => {
-  nodePlayer.mouted(pixiCanvas.value!);
+  nodePlayer.mouted(pixiCanvas.value as HTMLDivElement);
   await resourceManager.load(props.storyNodes);
   await storyManager.play();
 });

@@ -1,5 +1,5 @@
 import { StoryNode, ResourceMap } from "../type";
-import { Loader, Sprite } from "pixi.js";
+import { Loader, Sprite, Texture } from "pixi.js";
 import { IEventData, ISkeletonData } from "pixi-spine";
 import { Howl } from "howler";
 
@@ -178,7 +178,7 @@ const fxImageTable = {
 /**
  * 请在此处填入需要的图片资源的名称
  */
-const bgEffectImgTable = {
+const bgEffectResourceTable: Record<string, string[]> = {
   "": [],
   "BG_ScrollT_0.5": [],
   BG_Filter_Red: [],
@@ -272,8 +272,8 @@ const resourcerManager = {
     return new Promise<void>((resolve, reject) => {
       this.loader.load(async () => {
         if (l2dUrl) {
-          const l2dSpinedata: ISkeletonData =
-            this.loader.resources[l2dUrl].spineData!;
+          const l2dSpinedata: ISkeletonData = this.loader.resources[l2dUrl]
+            .spineData as ISkeletonData;
           audioUrls.concat(this.getL2dVoiceUrls(l2dSpinedata.events));
         }
         try {
@@ -291,11 +291,18 @@ const resourcerManager = {
     key: string
   ): ResourceMap[T] | undefined {
     if (type === "img" || type === "video") {
-      console.log(type, key);
-      console.log(this.loader.resources[key]);
-      return Sprite.from(this.loader.resources[key].texture!) as ResourceMap[T];
+      return Sprite.from(
+        this.loader.resources[key].texture as Texture
+      ) as ResourceMap[T];
     } else if (type === "audio") {
       return this.audioSoundMap.get(key) as ResourceMap[T];
+    } else if (type === "bgEffect") {
+      return bgEffectResourceTable[key].map(resource =>
+        Sprite.from(
+          this.loader.resources[getResourcesUrl("bgEffectImgs", resource)]
+            .texture as Texture
+        )
+      ) as ResourceMap[T];
     }
   },
 
@@ -357,7 +364,7 @@ const resourcerManager = {
     return audios;
   },
   addBGEffectImgs() {
-    for (const imgs of Object.values(bgEffectImgTable)) {
+    for (const imgs of Object.values(bgEffectResourceTable)) {
       for (const img of imgs) {
         this.checkAndAdd(getResourcesUrl("bgEffectImgs", img));
       }

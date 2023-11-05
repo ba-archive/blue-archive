@@ -300,6 +300,7 @@ export interface ResourceMap {
   img: Sprite;
   video: Sprite;
   audio: Howl;
+  bgEffect: Sprite[];
 }
 
 export interface HandlerMap {

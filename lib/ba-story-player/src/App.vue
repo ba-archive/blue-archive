@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Player from "./player/Player.vue";
-import { StoryNode, Ii8nString } from "./player/type";
+import Player from "../lib/StoryPlayer.vue";
+import { StoryNode, Ii8nString } from "../lib/type";
 import testStory from "./testStory.json";
 
 const storyNodes = ref<StoryNode[]>(testStory);
