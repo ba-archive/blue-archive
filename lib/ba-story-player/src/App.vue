@@ -11,19 +11,22 @@ const language = ref<keyof Ii8nString>("cn");
 
 <template>
   <button @click="flag = !flag" class="flagButton">test</button>
-  <Player
-    :language="language"
-    :height="500"
-    :width="1000"
-    data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
-    :story-nodes="storyNodes"
-    v-if="flag"
-    :end-callback="
-      () => {
-        console.log('end!');
-      }
-    "
-  />
+  <div class="playerContainer">
+    <Player
+      :language="language"
+      :height="500"
+      :width="1000"
+      class="player"
+      data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
+      :story-nodes="storyNodes"
+      v-if="flag"
+      :end-callback="
+        () => {
+          console.log('end!');
+        }
+      "
+    />
+  </div>
 </template>
 
 <style scoped>
@@ -31,5 +34,11 @@ const language = ref<keyof Ii8nString>("cn");
   position: absolute;
   left: 1%;
   top: 3%;
+}
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

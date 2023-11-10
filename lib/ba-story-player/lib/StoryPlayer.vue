@@ -20,7 +20,7 @@ const pixiWidth = computed(() => (PIXIHeight * props.width) / props.height);
 const nodePlayer = new NodePlayer(pixiWidth.value);
 nodePlayer.handlerMap.getResources = <T extends keyof ResourceMap>(
   type: T,
-  key: string
+  key: ResourceMap[T]["key"]
 ) => resourceManager.getResource(type, key);
 const language = ref(props.language);
 nodePlayer.serversInstance.show.language = language;

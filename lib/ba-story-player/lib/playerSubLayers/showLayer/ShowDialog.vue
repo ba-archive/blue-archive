@@ -41,6 +41,7 @@ const dialogContent = computed(() => {
   &__content {
     padding-top: 5%;
     text-align: left;
+    color: white;
   }
 }
 </style>

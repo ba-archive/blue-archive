@@ -1,5 +1,6 @@
 import { Application, Sprite } from "pixi.js";
 import { Howl } from "howler";
+import { Spine } from "pixi-spine";
 
 export type BGEffectType =
   | "BG_ScrollT_0.5"
@@ -82,15 +83,20 @@ export interface BGMExcelTableItem {
   LoopOffsetTime: number;
 }
 
+export interface SpineUrls {
+  common: string;
+  superSampling2x: string;
+}
+
 export interface Character {
   /**
    * 人物初始位置
    */
   initPosition: number;
   /**
-   * 人物CharacterName, 请通过它获取人物spinedata
+   * 人物Spine url, 请通过它获取人物spine
    */
-  CharacterName: number;
+  CharacterSpine: SpineUrls;
   /**
    * 人物表情
    */
@@ -141,7 +147,7 @@ export interface L2DStartArg {
     };
   };
   /** 实际上是请求的路径 */
-  otherSpine?: string[];
+  otherSpine?: SpineUrls[];
 }
 
 export interface Option {
@@ -217,7 +223,7 @@ export interface Text {
 }
 
 interface RawStoryNode {
-  character: Character[];
+  characters: Character[];
   text: {
     st: StText[];
     dialog: {
@@ -268,12 +274,12 @@ interface RawStoryNode {
     | {
         state: "start";
         startArg: L2DStartArg;
-        spineUrl: string;
+        spineUrl: SpineUrls;
       }
     | {
         state: "playing";
         currentAnimation: string;
-        spineUrl: string;
+        spineUrl: SpineUrls;
       };
   effect: {
     bgEffect: BGEffectExcelTableItem;
@@ -284,7 +290,7 @@ interface RawStoryNode {
 
 type PersistStoryNode = Pick<RawStoryNode, "ui" | "nextNodeIndex">;
 type ParticalStoryNode = Partial<
-  Pick<RawStoryNode, "character" | "bg" | "l2d">
+  Pick<RawStoryNode, "characters" | "bg" | "l2d">
 >;
 type PartialPropertyStoryNode = Pick<RawStoryNode, "audio" | "text" | "effect">;
 type FinalPartialPropertyStoryNode = {
@@ -297,17 +303,22 @@ export type StoryNode = PersistStoryNode &
   FinalPartialPropertyStoryNode;
 
 export interface ResourceMap {
-  img: Sprite;
-  video: Sprite;
-  audio: Howl;
-  bgEffect: Sprite[];
+  img: { key: string; value: Sprite };
+  video: { key: string; value: Sprite };
+  audio: { key: string; value: Howl };
+  bgEffect: { key: string; value: Sprite[] };
+  character: { key: SpineUrls; value: Spine };
+  l2d: { key: SpineUrls; value: Sprite };
+  l2dOtherSpine: { key: SpineUrls[]; value: Spine[] };
+  emotion: { key: string; value: Sprite[] };
+  fx: { key: string; value: Sprite[] };
 }
 
 export interface HandlerMap {
   getResources: <T extends keyof ResourceMap>(
     type: T,
-    key: string
-  ) => ResourceMap[T] | undefined;
+    key: ResourceMap[T]["key"]
+  ) => ResourceMap[T]["value"] | undefined;
   getBgInstance: () => Sprite | undefined;
 }
 export type CheckMethod<T> = (

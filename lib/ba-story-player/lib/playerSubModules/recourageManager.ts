@@ -1,6 +1,6 @@
-import { StoryNode, ResourceMap } from "../type";
+import { StoryNode, ResourceMap, SpineUrls } from "../type";
 import { Loader, Sprite, Texture } from "pixi.js";
-import { IEventData, ISkeletonData } from "pixi-spine";
+import { IEventData, ISkeletonData, Spine } from "pixi-spine";
 import { Howl } from "howler";
 
 type ResourcesTypes =
@@ -146,7 +146,7 @@ export function setOggAudioType(audioType: "mp3") {
 }
 
 export function setSuperSampling(type: string) {
-  superSampling = `-${type}x`;
+  superSampling = `${type}x`;
 }
 
 const emotionResourcesTable = {
@@ -254,9 +254,25 @@ const resourcerManager = {
       this.checkAndAdd(storyNode.bg, "url");
       this.checkAndAdd(storyNode.text.popupImage);
       this.checkAndAdd(storyNode.text.popupVideo);
+      if (storyNode.characters) {
+        if (superSampling === "") {
+          for (const character of storyNode.characters) {
+            this.checkAndAdd(character.CharacterSpine.common);
+          }
+        } else {
+          for (const character of storyNode.characters) {
+            this.checkAndAdd(character.CharacterSpine.superSampling2x);
+          }
+        }
+      }
+
       const audio = storyNode.audio;
       if (storyNode.l2d) {
-        l2dUrl = storyNode.l2d.spineUrl;
+        if (superSampling === "") {
+          l2dUrl = storyNode.l2d.spineUrl.common;
+        } else {
+          l2dUrl = storyNode.l2d.spineUrl.superSampling2x;
+        }
         this.checkAndAdd(l2dUrl);
       }
       if (audio.bgm) {
@@ -288,21 +304,75 @@ const resourcerManager = {
   },
   getResource<T extends keyof ResourceMap>(
     type: T,
-    key: string
-  ): ResourceMap[T] | undefined {
+    key: ResourceMap[T]["key"]
+  ): ResourceMap[T]["value"] | undefined {
     if (type === "img" || type === "video") {
       return Sprite.from(
-        this.loader.resources[key].texture as Texture
-      ) as ResourceMap[T];
+        this.loader.resources[key as string].texture as Texture
+      );
     } else if (type === "audio") {
-      return this.audioSoundMap.get(key) as ResourceMap[T];
+      return this.audioSoundMap.get(key as string) as ResourceMap[T]["value"];
     } else if (type === "bgEffect") {
-      return bgEffectResourceTable[key].map(resource =>
+      return bgEffectResourceTable[key as string].map(resource =>
         Sprite.from(
           this.loader.resources[getResourcesUrl("bgEffectImgs", resource)]
             .texture as Texture
         )
-      ) as ResourceMap[T];
+      ) as ResourceMap[T]["value"];
+    } else if (type === "character") {
+      const spineUrls = key as SpineUrls;
+      let spineUrl = "";
+      if (superSampling === "") {
+        spineUrl = spineUrls.common;
+      } else {
+        spineUrl = spineUrls.superSampling2x;
+      }
+      return new Spine(
+        this.loader.resources[spineUrl].spineData as ISkeletonData
+      ) as ResourceMap[T]["value"];
+    } else if (type === "l2d") {
+      const spineUrls = key as SpineUrls;
+      let spineUrl = "";
+      if (superSampling === "") {
+        spineUrl = spineUrls.common;
+      } else {
+        spineUrl = spineUrls.superSampling2x;
+      }
+      return new Spine(
+        this.loader.resources[spineUrl].spineData as ISkeletonData
+      ) as ResourceMap[T]["value"];
+    } else if (type === "l2dOtherSpine") {
+      const spineUrlsArr = key as SpineUrls[];
+
+      return spineUrlsArr.map(value => {
+        let spineUrl = "";
+        if (superSampling === "") {
+          spineUrl = value.common;
+        } else {
+          spineUrl = value.superSampling2x;
+        }
+        return new Spine(
+          this.loader.resources[spineUrl].spineData as ISkeletonData
+        );
+      }) as ResourceMap[T]["value"];
+    } else if (type === "emotion") {
+      return emotionResourcesTable[
+        key as keyof typeof emotionResourcesTable
+      ].map(resource =>
+        Sprite.from(
+          this.loader.resources[getResourcesUrl("emotionImg", resource)]
+            .texture as Texture
+        )
+      ) as ResourceMap[T]["value"];
+    } else if (type === "fx") {
+      return emotionResourcesTable[
+        key as keyof typeof emotionResourcesTable
+      ].map(resource =>
+        Sprite.from(
+          this.loader.resources[getResourcesUrl("fx", resource)]
+            .texture as Texture
+        )
+      ) as ResourceMap[T]["value"];
     }
   },
 
