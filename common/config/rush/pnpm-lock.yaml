@@ -21,11 +21,11 @@ importers:
       '@vue/eslint-config-typescript': ^11.0.3
       '@vueuse/core': ^10.2.1
       '@vueuse/math': ^10.2.1
-      axios: ^1.4.0
+      axios: ^1.6.0
       ba-rig: workspace:*
       ba-story-player: workspace:*
       chalk: ^5.3.0
-      crypto-js: ^4.1.1
+      crypto-js: '>=4.2.0'
       element-plus: ^2.3.7
       eslint: ^8.44.0
       eslint-config-prettier: ^8.8.0
@@ -57,9 +57,9 @@ importers:
     dependencies:
       '@vueuse/core': 10.2.1_vue@3.3.4
       '@vueuse/math': 10.2.1_vue@3.3.4
-      axios: 1.4.0
+      axios: 1.6.2
       ba-story-player: link:../../lib/ba-story-player
-      crypto-js: 4.1.1
+      crypto-js: 4.2.0
       element-plus: 2.3.8_vue@3.3.4
       file-saver: 2.0.5
       js-yaml: 4.1.0
@@ -227,7 +227,7 @@ importers:
       '@vue/eslint-config-typescript': ^11.0.3
       '@vueuse/core': ^10.2.1
       autoprefixer: ~10.4.14
-      axios: ^1.4.0
+      axios: ^1.6.0
       axios-retry: ^3.5.1
       ba-rig: workspace:*
       ba-story-player: workspace:*
@@ -270,7 +270,7 @@ importers:
       '@vue/compiler-sfc': 3.3.4
       '@vueuse/core': 10.2.1_vue@3.3.4
       autoprefixer: 10.4.14_postcss@8.4.31
-      axios: 1.4.0
+      axios: 1.6.2
       axios-retry: 3.6.0
       ba-story-player: link:../../lib/ba-story-player
       dayjs: 1.11.9
@@ -351,7 +351,7 @@ importers:
       '@vue/eslint-config-typescript': ^11.0.3
       '@vue/shared': ~3.3.4
       '@vueuse/core': ^10.2.1
-      axios: ^1.4.0
+      axios: ^1.6.0
       ba-rig: workspace:*
       element-plus: ^2.3.7
       eslint: ^8.44.0
@@ -390,7 +390,7 @@ importers:
       '@types/uuid': 9.0.2
       '@vue/shared': 3.3.4
       '@vueuse/core': 10.2.1_vue@3.3.4
-      axios: 1.4.0
+      axios: 1.6.2
       element-plus: 2.3.8_vue@3.3.4
       gsap: 3.12.2
       howler: 2.2.3
@@ -5623,7 +5623,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.7_sass@1.64.1+terser@5.19.2
+      vite: 4.4.7_@types+node@20.4.5+sass@1.64.1
       vue: 3.3.4
     dev: true
 
@@ -6861,8 +6861,8 @@ packages:
       is-retry-allowed: 2.2.0
     dev: false
 
-  /axios/1.4.0:
-    resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
+  /axios/1.6.2:
+    resolution: {integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
@@ -7437,8 +7437,8 @@ packages:
       which: 2.0.2
     dev: true
 
-  /crypto-js/4.1.1:
-    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+  /crypto-js/4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
     dev: false
 
   /crypto-random-string/2.0.0:
@@ -13486,7 +13486,7 @@ packages:
     peerDependencies:
       vite: ^2 || ^3 || ^4
     dependencies:
-      axios: 1.4.0
+      axios: 1.6.2
       clean-css: 5.3.2
       flat-cache: 3.0.4
       picocolors: 1.0.0
