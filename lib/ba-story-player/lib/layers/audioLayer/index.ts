@@ -1,8 +1,9 @@
 import { CheckMethod, HandlerMap, Layer } from "@/type";
 import { Howl } from "howler";
 import { Application } from "pixi.js";
+import { watch } from "vue";
 
-export class SoundLayer extends Layer {
+export class AudioLayer extends Layer {
   /**
    * bgm 音量
    */
@@ -24,11 +25,11 @@ export class SoundLayer extends Layer {
 
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
-    this.addCheckMethod(loadSound);
+    this.addCheckMethod(loadAudio);
   }
 }
 
-const loadSound: CheckMethod<SoundLayer> = async function (
+const loadAudio: CheckMethod<AudioLayer> = async function (
   node,
   app,
   handlerMap
@@ -39,6 +40,7 @@ const loadSound: CheckMethod<SoundLayer> = async function (
       throw new Error(`获取sound资源失败, 资源名${node.audio.sound}`);
     } else {
       this.instances.sound = sound;
+      this.instances.sound.volume(this.soundVolume / 100);
     }
   }
   if (node.audio.bgm) {
@@ -47,6 +49,7 @@ const loadSound: CheckMethod<SoundLayer> = async function (
       throw new Error(`获取bgm资源失败, 资源名${node.audio.bgm.url}`);
     } else {
       this.instances.bgm = bgm;
+      this.instances.bgm.volume(this.bgmVolume / 100);
     }
   }
   if (node.audio.voice) {
@@ -55,6 +58,21 @@ const loadSound: CheckMethod<SoundLayer> = async function (
       throw new Error(`获取voice资源失败，资源名${node.audio.voice}`);
     } else {
       this.instances.voice = voice;
+      this.instances.voice.volume(this.voiceVolume / 100);
     }
   }
+  watch(
+    () => node.audio.voice,
+    (newVoice, oldVoice) => {
+      if (newVoice !== oldVoice && newVoice) {
+        const voice = handlerMap.getResources<"audio">("audio", newVoice);
+        if (!voice) {
+          throw new Error(`获取voice资源失败，资源名${newVoice}`);
+        } else {
+          this.instances.voice = voice;
+          this.instances.voice.volume(this.voiceVolume / 100);
+        }
+      }
+    }
+  );
 };
