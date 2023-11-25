@@ -82,6 +82,7 @@ export class AudioLayer extends Layer {
     this.instances.bgm = bgm;
     bgm.volume(this.bgmVolume / 100);
     bgm.seek(0);
+    bgm.loop(true);
     bgm.play();
   }
 
