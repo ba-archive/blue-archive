@@ -387,12 +387,13 @@ export const CharacterLayerInstance: CharacterLayer = {
           return;
         }
         if (effect.async) {
-          await effectPlayer.processEffect(effect.effect as EffectsWord, data);
-          // .then(resolveHandler)
-          // .catch((err) => {
-          //   reason.push(err);
-          //   resolveHandler();
-          // })
+          await effectPlayer
+            .processEffect(effect.effect as EffectsWord, data)
+            .then()
+            .catch(err => {
+              reasons.push(err);
+              reject(reasons);
+            });
         } else {
           effectPromise.push(
             effectPlayer.processEffect(effect.effect as EffectsWord, data)
