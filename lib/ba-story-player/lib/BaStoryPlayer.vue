@@ -209,19 +209,34 @@ watch([playerWidth, playerHeight], () => {
   }
 });
 
-// const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
-//加载字体
-onBeforeMount(() => {
-  const newStyle = document.createElement("style");
-  newStyle.appendChild(
-    document.createTextNode(`\
-  @font-face {
-    font-family: 'TJL';
-    src: url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff2) format('woff2'),
-         url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff) format('woff');`)
+function setPlayerFont(mode: "load" | "unload" = "load") {
+  const currentPlayerFont = document.querySelector(
+    'link[href="https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css"]'
   );
 
-  document.head.appendChild(newStyle);
+  if (currentPlayerFont) {
+    if ("unload" === mode) {
+      currentPlayerFont.remove();
+      return;
+    } else {
+      return;
+    }
+  }
+
+  if ("unload" === mode) return;
+
+  const playerFontStyle = document.createElement("link");
+  playerFontStyle.rel = "stylesheet";
+  playerFontStyle.type = "text/css";
+  playerFontStyle.href =
+    "https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css";
+
+  document.head.appendChild(playerFontStyle);
+}
+
+//加载字体
+onBeforeMount(() => {
+  setPlayerFont();
 });
 
 const prefixes = ["", "moz", "webkit", "ms"];
@@ -260,6 +275,7 @@ function hotReplaceStoryUnit(
     );
     changeStoryIndex(index);
   } else {
+    /* eslint-disable indent */
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
           GroupId: props.story.GroupId,
@@ -267,6 +283,7 @@ function hotReplaceStoryUnit(
           content: unit,
         }
       : (unit as TranslatedStoryUnit);
+    /* eslint-enable indent */
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
       privateStore.allStoryUnit
@@ -367,6 +384,7 @@ onBeforeUnmount(() => {
       handleFullScreenChange
     );
   });
+  setPlayerFont("unload");
 });
 
 onDeactivated(() => {

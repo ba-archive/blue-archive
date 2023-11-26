@@ -400,9 +400,10 @@ function getI18n(key: string) {
   // top: 0;
   // overflow: hidden;
   z-index: $ui-layer-z-index;
-  font-family: "TJL", "Microsoft YaHei", "PingFang SC", -apple-system, system-ui,
-    "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
-    "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+  font-family: "Resource Han Rounded CN Medium", "Microsoft YaHei",
+    "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Sans GB", Arial, sans-serif;
 
   .v-enter-active,
   .v-leave-active {
