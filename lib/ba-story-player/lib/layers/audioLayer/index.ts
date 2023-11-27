@@ -11,17 +11,17 @@ export interface AudioSetting {
 
 export class AudioLayer extends Layer {
   /**
-   * bgm 音量 0-100
+   * bgm 音量 0-1
    */
-  bgmVolume = 50;
+  private bgmVolume = 0.8;
   /**
-   * 音效音量 0-100
+   * 音效音量 0-1
    */
-  soundVolume = 50;
+  private soundVolume = 0.8;
   /**
-   * 语音音量 0-100
+   * 语音音量 0-1
    */
-  voiceVolume = 50;
+  private voiceVolume = 0.8;
   /**
    * 播放实例
    */
@@ -43,12 +43,42 @@ export class AudioLayer extends Layer {
     handlerMap.playAudio = this.playAudio.bind(this);
   }
 
+  public setBgmVolume(volume: number) {
+    if (volume > 1 || volume < 0) {
+      throw new Error("bgm音量设置错误，应该在0-1之间");
+    }
+    this.bgmVolume = volume;
+    if (this.instances.bgm) {
+      this.instances.bgm.volume(volume);
+    }
+  }
+
+  public setSoundVolume(volume: number) {
+    if (volume > 1 || volume < 0) {
+      throw new Error("音效音量设置错误，应该在0-1之间");
+    }
+    this.soundVolume = volume;
+    if (this.instances.sound) {
+      this.instances.sound.volume(volume);
+    }
+  }
+
+  public setVoiceVolume(volume: number) {
+    if (volume > 1 || volume < 0) {
+      throw new Error("语音音量设置错误，应该在0-1之间");
+    }
+    this.voiceVolume = volume;
+    if (this.instances.voice) {
+      this.instances.voice.volume(volume);
+    }
+  }
+
   public playAudio(url: string, setting: AudioSetting) {
     const audio = this.handlerMap.getResources<"audio">("audio", url);
     if (!audio) {
       throw new Error(`获取audio资源失败，资源名${url}`);
     } else {
-      audio.volume(setting.volume / 100);
+      audio.volume(setting.volume);
       audio.play();
     }
   }
@@ -80,7 +110,7 @@ export class AudioLayer extends Layer {
 
     // 保存实例，设置参数，播放
     this.instances.bgm = bgm;
-    bgm.volume(this.bgmVolume / 100);
+    bgm.volume(this.bgmVolume);
     bgm.seek(0);
     bgm.loop(true);
     bgm.play();
@@ -137,7 +167,7 @@ export class AudioLayer extends Layer {
     }
 
     this.instances.sound = sound;
-    sound.volume(this.soundVolume / 100);
+    sound.volume(this.soundVolume);
     sound.play();
   }
 
@@ -153,7 +183,7 @@ export class AudioLayer extends Layer {
     }
 
     this.instances.voice = voice;
-    voice.volume(this.voiceVolume / 100);
+    voice.volume(this.voiceVolume);
     voice.play();
   }
 
@@ -166,4 +196,18 @@ export class AudioLayer extends Layer {
     this.playSound(node.audio.sound);
     this.playVoice(node.audio.voice);
   };
+
+  public stop(): Promise<void> {
+    super.stop();
+    if (this.instances.bgm) {
+      this.instances.bgm.stop();
+    }
+    if (this.instances.sound) {
+      this.instances.sound.stop();
+    }
+    if (this.instances.voice) {
+      this.instances.voice.stop();
+    }
+    return Promise.resolve();
+  }
 }
