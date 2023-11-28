@@ -85,7 +85,13 @@ export class AudioLayer extends Layer {
   }
 
   public playBgm(url: string | undefined, args: BGMExcelTableItem | undefined) {
-    if (!url) return;
+    if (!url) {
+      // 没有bgm，停止旧的bgm
+      if (this.instances.bgm) {
+        this.instances.bgm.stop();
+      }
+      return;
+    }
 
     const bgm = this.handlerMap.getResources<"audio">("audio", url);
     if (!bgm) {
@@ -130,7 +136,13 @@ export class AudioLayer extends Layer {
   }
 
   public playSound(url: string | undefined) {
-    if (!url) return;
+    if (!url) {
+      // 没有音效，停止旧的音效
+      if (this.instances.sound) {
+        this.instances.sound.stop();
+      }
+      return;
+    }
     const sound = this.handlerMap.getResources<"audio">("audio", url);
 
     if (!sound) {
@@ -147,7 +159,13 @@ export class AudioLayer extends Layer {
   }
 
   public playVoice(url: string | undefined) {
-    if (!url) return;
+    if (!url) {
+      // 没有语音，停止旧的语音
+      if (this.instances.voice) {
+        this.instances.voice.stop();
+      }
+      return;
+    }
     const voice = this.handlerMap.getResources<"audio">("audio", url);
     if (!voice) {
       throw new Error(`获取voice资源失败，资源名${url}`);
