@@ -27,6 +27,7 @@ export class AudioLayer extends Layer {
    */
   instances: {
     bgm?: Howl;
+    bgmArgs?: BGMExcelTableItem;
     sound?: Howl;
     voice?: Howl;
   } = {};
@@ -92,14 +93,13 @@ export class AudioLayer extends Layer {
     }
 
     // 检查是否是同一个bgm
-    if (this.instances.bgm && this.instances.bgm.playing()) {
-      if (
-        Reflect.get(bgm, "_src") === Reflect.get(this.instances.bgm, "_src")
-      ) {
-        // TODO: 同一个bgm，不做处理?
-        return;
-      }
+    if (this.instances.bgm
+      && this.instances.bgmArgs?.LoopStartTime === args?.LoopStartTime
+      && this.instances.bgmArgs?.LoopEndTime === args?.LoopEndTime) {
+      // 同一个bgm，不处理
+      return;
     }
+
     // 需要切换，停止旧的bgm
     if (this.instances.bgm) {
       this.instances.bgm.stop();
@@ -117,41 +117,16 @@ export class AudioLayer extends Layer {
   }
 
   private setBgmSprite(bgm: Howl, args: BGMExcelTableItem | undefined) {
-    const sprite = Reflect.get(bgm, "_sprite");
-
-    let loopStartTime: (number | undefined)[] = [];
-    let loopEndTime: (number | undefined)[] = [];
-
-    if (Array.isArray(args?.LoopStartTime)) {
-      loopStartTime = args.LoopStartTime;
-    } else {
-      // 旧版bgm配置
-      loopStartTime = [args?.LoopStartTime];
-    }
-
-    if (Array.isArray(args?.LoopEndTime)) {
-      loopEndTime = args.LoopEndTime;
-    } else {
-      // 旧版bgm配置
-      loopEndTime = [args?.LoopEndTime];
-    }
-
+    if (!bgm) return;
+    if (!args) return;
     // 设置循环片段
-    if (sprite) {
-      Reflect.set(sprite, "loop", [
-        (loopStartTime[0] ?? 0) * 1000,
-        (loopEndTime[0] ?? bgm.duration(0)) * 1000,
-        true,
-      ]);
-    } else {
-      Reflect.set(sprite, "_sprite", {
-        loop: [
-          (loopStartTime[0] ?? 0) * 1000,
-          (loopEndTime[0] ?? bgm.duration(0)) * 1000,
-          true,
-        ],
-      });
-    }
+    Reflect.set(bgm, "_sprite", {
+      __default: [
+        (args.LoopStartTime ?? 0) * 1000,
+        (args.LoopEndTime ?? bgm.duration(0)) * 1000,
+      ],
+    });
+
   }
 
   public playSound(url: string | undefined) {
