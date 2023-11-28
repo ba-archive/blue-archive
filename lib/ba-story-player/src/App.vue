@@ -3,7 +3,7 @@ import { ref } from "vue";
 import Player from "../lib/StoryPlayer.vue";
 import { StoryNode, Ii8nString } from "../lib/type";
 import testStory from "./testStory.json";
-import UnitTest from "./components/UnitTest.vue";
+import UnitTest from "./components/UnitTest/UnitTest.vue";
 
 const storyNodes = ref<StoryNode[]>(testStory);
 const flag = ref(true);
