@@ -1,4 +1,5 @@
 import { BGMExcelTableItem, CheckMethod, HandlerMap, Layer } from "@/type";
+import { ca } from "element-plus/es/locale";
 import { Howl } from "howler";
 import { Application } from "pixi.js";
 
@@ -27,7 +28,11 @@ export class AudioLayer extends Layer {
    */
   instances: {
     bgm?: Howl;
-    bgmArgs?: BGMExcelTableItem;
+    bgmArgs?: {
+      url?: string;
+      LoopStartTime?: number;
+      LoopEndTime?: number;
+    };
     sound?: Howl;
     voice?: Howl;
   } = {};
@@ -87,9 +92,7 @@ export class AudioLayer extends Layer {
   public playBgm(url: string | undefined, args: BGMExcelTableItem | undefined) {
     if (!url) {
       // 没有bgm，停止旧的bgm
-      if (this.instances.bgm) {
-        this.instances.bgm.stop();
-      }
+      this.stopBgm();
       return;
     }
 
@@ -100,26 +103,33 @@ export class AudioLayer extends Layer {
 
     // 检查是否是同一个bgm
     if (this.instances.bgm
+      && this.instances.bgmArgs?.url === url
       && this.instances.bgmArgs?.LoopStartTime === args?.LoopStartTime
       && this.instances.bgmArgs?.LoopEndTime === args?.LoopEndTime) {
-      // 同一个bgm，不处理
-      return;
+      if (!this.instances.bgm.playing()) {
+        // 没有在播放，播放
+        this.instances.bgm.play("loop");
+      } else {
+        // 已经在播放了，不处理
+        return;
+      }
     }
 
     // 需要切换，停止旧的bgm
-    if (this.instances.bgm) {
-      this.instances.bgm.stop();
-    }
-
+    this.stopBgm();
     // bgm 需要按片段循环播放
     this.setBgmSprite(bgm, args);
 
     // 保存实例，设置参数，播放
     this.instances.bgm = bgm;
+    this.instances.bgmArgs = {
+      url,
+      LoopStartTime: args?.LoopStartTime,
+      LoopEndTime: args?.LoopEndTime,
+    };
     bgm.volume(this.bgmVolume);
-    bgm.seek(0);
     bgm.loop(true);
-    bgm.play();
+    bgm.play("loop");
   }
 
   private setBgmSprite(bgm: Howl, args: BGMExcelTableItem | undefined) {
@@ -127,7 +137,7 @@ export class AudioLayer extends Layer {
     if (!args) return;
     // 设置循环片段
     Reflect.set(bgm, "_sprite", {
-      __default: [
+      loop: [
         (args.LoopStartTime ?? 0) * 1000,
         (args.LoopEndTime ?? bgm.duration(0)) * 1000,
       ],
@@ -138,9 +148,7 @@ export class AudioLayer extends Layer {
   public playSound(url: string | undefined) {
     if (!url) {
       // 没有音效，停止旧的音效
-      if (this.instances.sound) {
-        this.instances.sound.stop();
-      }
+      this.stopSound();
       return;
     }
     const sound = this.handlerMap.getResources<"audio">("audio", url);
@@ -161,9 +169,7 @@ export class AudioLayer extends Layer {
   public playVoice(url: string | undefined) {
     if (!url) {
       // 没有语音，停止旧的语音
-      if (this.instances.voice) {
-        this.instances.voice.stop();
-      }
+      this.stopVoice();
       return;
     }
     const voice = this.handlerMap.getResources<"audio">("audio", url);
@@ -182,25 +188,41 @@ export class AudioLayer extends Layer {
 
   public loadAudio: CheckMethod<AudioLayer> = async function (
     node,
-    app,
-    handlerMap
+    _app,
+    _handlerMap
   ) {
     this.playBgm(node.audio.bgm?.url, node.audio.bgm?.bgmArgs);
     this.playSound(node.audio.sound);
     this.playVoice(node.audio.voice);
   };
 
-  public stop(): Promise<void> {
-    super.stop();
+  private stopBgm() {
     if (this.instances.bgm) {
       this.instances.bgm.stop();
+      this.instances.bgm = undefined;
+      this.instances.bgmArgs = undefined;
     }
+  }
+
+  private stopSound() {
     if (this.instances.sound) {
       this.instances.sound.stop();
+      this.instances.sound = undefined;
     }
+  }
+
+  private stopVoice() {
     if (this.instances.voice) {
       this.instances.voice.stop();
+      this.instances.voice = undefined;
     }
+  }
+
+  public stop(): Promise<void> {
+    super.stop();
+    this.stopBgm();
+    this.stopSound();
+    this.stopVoice();
     return Promise.resolve();
   }
 }
