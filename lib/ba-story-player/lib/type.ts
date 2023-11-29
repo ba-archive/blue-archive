@@ -1,6 +1,7 @@
 import { Application, Sprite } from "pixi.js";
 import { Howl } from "howler";
 import { Spine } from "pixi-spine";
+import { AudioSetting } from "./layers/audioLayer";
 
 export type BGEffectType =
   | "BG_ScrollT_0.5"
@@ -320,6 +321,7 @@ export interface HandlerMap {
     key: ResourceMap[T]["key"]
   ) => ResourceMap[T]["value"] | undefined;
   getBgInstance: () => Sprite | undefined;
+  playAudio: (url: string, setting: AudioSetting) => void;
 }
 export type CheckMethod<T> = (
   this: T,

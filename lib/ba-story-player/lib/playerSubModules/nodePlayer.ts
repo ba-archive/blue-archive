@@ -4,12 +4,14 @@ import { BgLayer } from "../layers/bgLayer";
 import { gsap } from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { ShowLayer } from "../playerSubLayers/showLayer";
+import { AudioLayer } from "../layers/audioLayer";
 const PIXIHeight = 1012.5;
 gsap.registerPlugin(PixiPlugin);
 
 const registerServers = {
   bg: BgLayer,
   show: ShowLayer,
+  audio: AudioLayer,
 };
 type RegisterServers = typeof registerServers;
 type ServerInstances = {
