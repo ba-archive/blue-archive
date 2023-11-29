@@ -1,5 +1,4 @@
 import { BGMExcelTableItem, CheckMethod, HandlerMap, Layer } from "@/type";
-import { ca } from "element-plus/es/locale";
 import { Howl } from "howler";
 import { Application } from "pixi.js";
 
@@ -102,10 +101,12 @@ export class AudioLayer extends Layer {
     }
 
     // 检查是否是同一个bgm
-    if (this.instances.bgm
-      && this.instances.bgmArgs?.url === url
-      && this.instances.bgmArgs?.LoopStartTime === args?.LoopStartTime
-      && this.instances.bgmArgs?.LoopEndTime === args?.LoopEndTime) {
+    if (
+      this.instances.bgm &&
+      this.instances.bgmArgs?.url === url &&
+      this.instances.bgmArgs?.LoopStartTime === args?.LoopStartTime &&
+      this.instances.bgmArgs?.LoopEndTime === args?.LoopEndTime
+    ) {
       if (!this.instances.bgm.playing()) {
         // 没有在播放，播放
         this.instances.bgm.play("loop");
@@ -142,7 +143,6 @@ export class AudioLayer extends Layer {
         (args.LoopEndTime ?? bgm.duration(0)) * 1000,
       ],
     });
-
   }
 
   public playSound(url: string | undefined) {

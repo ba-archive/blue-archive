@@ -86,7 +86,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         return initStoryNodes;
       },
       async runTest(player) {
-        player.storyManager.switch(1);
+        await player.storyManager.next();
       },
     },
     stopBgm: {
