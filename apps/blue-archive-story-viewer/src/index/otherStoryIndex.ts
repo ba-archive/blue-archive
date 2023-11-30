@@ -259,6 +259,7 @@ export const stories: StoryBriefing[] = [
         },
         previous: 208,
         story_id: 209,
+        next: 210,
         summary: {
           TextKr:
             "부서진 마에스트로가 선생님에게 찾아와 예술의 불멸성에 대해 이야기한다. 그리고 자신이 새롭게 만들어낸 작품, 그레고리오에 대해 설명한다.",
@@ -291,6 +292,26 @@ export const stories: StoryBriefing[] = [
           TextEn: "",
           TextCn:
             "桃香向老师说明关于逃离基沃托斯矫正局的囚犯和气垫船的骚动事件。",
+        },
+      },
+      {
+        title: {
+          TextKr: "매듭짓지 못한 괴담의 말로",
+          TextJp: "怪談の末路",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn: "怪谈的末路",
+        },
+        previous: 210,
+        story_id: 211,
+        summary: {
+          TextKr: "쿠즈노하가 환량백물어, 묘귀 쿠로카게에 대해 설명한다.",
+          TextJp: "クズノハは、幻魎百物語「猫鬼黒影」について語る。",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn: "葛叶向老师说起幻魉百物语中的“猫鬼黑影”的事。",
         },
       },
     ],
