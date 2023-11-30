@@ -72,6 +72,7 @@ if (import.meta.env.DEV) {
   Reflect.set(window, "nodePlayer", nodePlayer);
   Reflect.set(window, "StoryManager", storyManager);
 }
+defineExpose({ storyManager, nodePlayer });
 onMounted(async () => {
   nodePlayer.mouted(pixiCanvas.value as HTMLDivElement);
   await resourceManager.load(props.storyNodes);
@@ -80,6 +81,15 @@ onMounted(async () => {
 onUnmounted(() => {
   nodePlayer.unMounted();
 });
+
+const emits = defineEmits(["loaded"]);
+watch(
+  () => props.storyNodes,
+  async newVal => {
+    await resourceManager.load(newVal);
+    emits("loaded");
+  }
+);
 </script>
 
 <template>

@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { ShowLayer } from "../playerSubLayers/showLayer";
 import { CharacterLayer } from "@/layers/characterLayer";
+import { AudioLayer } from "../layers/audioLayer";
 const PIXIHeight = 1012.5;
 gsap.registerPlugin(PixiPlugin);
 
@@ -12,6 +13,7 @@ const registerServers = {
   bg: BgLayer,
   show: ShowLayer,
   character: CharacterLayer,
+  audio: AudioLayer,
 };
 type RegisterServers = typeof registerServers;
 type ServerInstances = {
