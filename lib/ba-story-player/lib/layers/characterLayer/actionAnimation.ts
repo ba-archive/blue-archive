@@ -3,7 +3,7 @@ import { timelineToPauseAble, ZINDEXBASE } from "@/utils";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import gsap from "gsap";
 import { Spine } from "pixi-spine";
-import { Application } from "pixi.js";
+import { Application, ObservablePoint } from "pixi.js";
 import { calcCharacterYAndScale, getStageSize, PositionOffset } from ".";
 import actionOptions from "./Options/actionOptions";
 import { ActionOptions, CharacterEffectInstance } from "./type";
@@ -373,10 +373,12 @@ const dr: Animation<{
 const falldownR: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["falldownR"];
+  orginState: { pivot: ObservablePoint<any>; y: number } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["falldownR"],
+    orginState: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -393,8 +395,10 @@ const falldownR: Animation<{
         (this.args.instance.instance.height * this.args.options.anchor.y) /
         this.args.instance.instance.scale.y,
     };
-    const orginPivot = this.args.instance.instance.pivot.clone();
-    const originY = this.args.instance.instance.y;
+    this.args.orginState = {
+      pivot: this.args.instance.instance.pivot.clone(),
+      y: this.args.instance.instance.y,
+    };
     this.args.instance.instance.pivot.x += pivotOffset.x;
     this.args.instance.instance.pivot.y += pivotOffset.y;
     this.args.instance.instance.position.set(
@@ -450,9 +454,9 @@ const falldownR: Animation<{
       );
 
     this.args.instance.instance.angle = 0;
-    this.args.instance.instance.pivot = orginPivot;
+    this.args.instance.instance.pivot = this.args.orginState.pivot;
     this.args.instance.instance.visible = false;
-    this.args.instance.instance.y = originY;
+    this.args.instance.instance.y = this.args.orginState.y;
   },
   // origin?
   async final() {
@@ -462,6 +466,10 @@ const falldownR: Animation<{
     if (this.args.instance) {
       this.args.instance.instance.angle = 0;
       this.args.instance.instance.visible = false;
+      if (this.args.orginState) {
+        this.args.instance.instance.pivot = this.args.orginState.pivot;
+        this.args.instance.instance.y = this.args.orginState.y;
+      }
     }
   },
 };
@@ -469,8 +477,13 @@ const falldownR: Animation<{
 const falldownL: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["falldownL"];
+  orginState: { pivot: ObservablePoint<any>; y: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["falldownL"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["falldownL"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
@@ -486,8 +499,10 @@ const falldownL: Animation<{
         (this.args.instance.instance.height * this.args.options.anchor.y) /
         this.args.instance.instance.scale.y,
     };
-    const orginPivot = this.args.instance.instance.pivot.clone();
-    const originY = this.args.instance.instance.y;
+    this.args.orginState = {
+      pivot: this.args.instance.instance.pivot.clone(),
+      y: this.args.instance.instance.y,
+    };
     this.args.instance.instance.pivot.x += pivotOffset.x;
     this.args.instance.instance.pivot.y += pivotOffset.y;
     this.args.instance.instance.position.set(
@@ -543,9 +558,9 @@ const falldownL: Animation<{
       );
 
     this.args.instance.instance.angle = 0;
-    this.args.instance.instance.pivot = orginPivot;
+    this.args.instance.instance.pivot = this.args.orginState.pivot;
     this.args.instance.instance.visible = false;
-    this.args.instance.instance.y = originY;
+    this.args.instance.instance.y = this.args.orginState.y;
   },
   // origin?
   async final() {
@@ -555,6 +570,10 @@ const falldownL: Animation<{
     if (this.args.instance) {
       this.args.instance.instance.angle = 0;
       this.args.instance.instance.visible = false;
+      if (this.args.orginState) {
+        this.args.instance.instance.pivot = this.args.orginState.pivot;
+        this.args.instance.instance.y = this.args.orginState.y;
+      }
     }
   },
 };
@@ -562,13 +581,21 @@ const falldownL: Animation<{
 const greeting: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["greeting"];
+  orginState: { y: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["greeting"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["greeting"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
       return;
     }
+    this.args.orginState = {
+      y: this.args.instance.instance.y,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const yOffset =
@@ -583,6 +610,9 @@ const greeting: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.instance && this.args.orginState) {
+      this.args.instance.instance.y = this.args.orginState.y;
     }
   },
 };
@@ -607,13 +637,21 @@ const hide: Animation<{ instance: CharacterEffectInstance | undefined }> = {
 const hophop: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["hophop"];
+  orginState: { y: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["hophop"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["hophop"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
       return;
     }
+    this.args.orginState = {
+      y: this.args.instance.instance.y,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const yOffset =
@@ -629,19 +667,30 @@ const hophop: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.instance && this.args.orginState) {
+      this.args.instance.instance.y = this.args.orginState.y;
+    }
   },
 };
 
 const jump: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["hophop"];
+  orginState: { y: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["jump"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["jump"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
       return;
     }
+    this.args.orginState = {
+      y: this.args.instance.instance.y,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const yOffset =
@@ -656,6 +705,9 @@ const jump: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.instance && this.args.orginState) {
+      this.args.instance.instance.y = this.args.orginState.y;
     }
   },
 };
@@ -813,13 +865,21 @@ const m5: Animation<{
 const shake: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["shake"];
+  orginState: { x: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["shake"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["shake"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
       return;
     }
+    this.args.orginState = {
+      x: this.args.instance.instance.x,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const fromX =
@@ -844,6 +904,9 @@ const shake: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.instance && this.args.orginState) {
+      this.args.instance.instance.x = this.args.orginState.x;
     }
   },
 };
@@ -851,13 +914,21 @@ const shake: Animation<{
 const stiff: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["stiff"];
+  orginState: { x: number } | undefined;
 }> = {
-  args: { instance: undefined, options: actionOptions["stiff"] },
+  args: {
+    instance: undefined,
+    options: actionOptions["stiff"],
+    orginState: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
       return;
     }
+    this.args.orginState = {
+      x: this.args.instance.instance.x,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const fromX =
@@ -882,6 +953,9 @@ const stiff: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.instance && this.args.orginState) {
+      this.args.instance.instance.x = this.args.orginState.x;
     }
   },
 };

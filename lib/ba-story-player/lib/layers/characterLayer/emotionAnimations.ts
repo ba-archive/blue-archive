@@ -94,6 +94,19 @@ function timelinePromise(timeLine: gsap.core.Timeline, destroyImgs: Sprite[]) {
 }
 
 /**
+ * 销毁表情图片
+ * @param destroyImgs 要回首的sprite对象数组
+ */
+function imgFinal(destroyImgs: Sprite[] | undefined) {
+  if (!destroyImgs) {
+    return;
+  }
+  for (const img of destroyImgs) {
+    img.destroy();
+  }
+}
+
+/**
  * 根据相对位置计算相对位置
  * @param standard 相对位置基于的图片
  * @param relativeValue 相对值
@@ -128,12 +141,14 @@ const Angry: Animation<{
   options: EmotionOptions["Angry"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Angry"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -157,6 +172,7 @@ const Angry: Animation<{
     //最后用于确定动画结束的timeline
     let waitTimeLine = gsap.timeline();
     const destroyImg: Sprite[] = [];
+    this.args.imgs = destroyImg;
     for (let i = 0; i < 3; ++i) {
       const uImgUnit = Sprite.from(angryImgUnit.texture);
       destroyImg.push(uImgUnit);
@@ -188,6 +204,7 @@ const Angry: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    imgFinal(this.args.imgs);
   },
 };
 
@@ -196,12 +213,14 @@ const Chat: Animation<{
   options: EmotionOptions["Chat"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Chat"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -222,7 +241,7 @@ const Chat: Animation<{
       this.args.options,
       chatImage
     );
-
+    this.args.imgs = chatImage;
     chatImage.scale.set(getRelativeScale(chatImage, this.args.options));
     chatImage.visible = true;
     chatImage.pivot.x = chatImage.width * (1 + this.args.options.rotatePivot.x);
@@ -243,6 +262,9 @@ const Chat: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.alpha = 0;
+    }
   },
 };
 
@@ -251,12 +273,14 @@ const Dot: Animation<{
   options: EmotionOptions["Dot"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { dialogImg: Sprite; container: Container } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Dot"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -278,6 +302,10 @@ const Dot: Animation<{
       dialogImg
     );
     const dotContainer = new Container();
+    this.args.imgs = {
+      dialogImg: dialogImg,
+      container: dotContainer,
+    };
     const showTl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(showTl));
     for (let i = 0; i < 3; ++i) {
@@ -313,6 +341,12 @@ const Dot: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([
+        this.args.imgs.dialogImg,
+        ...(this.args.imgs.container.children as Sprite[]),
+      ]);
+    }
   },
 };
 
@@ -321,12 +355,14 @@ const Exclaim: Animation<{
   options: EmotionOptions["Exclaim"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Exclaim"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -347,6 +383,7 @@ const Exclaim: Animation<{
       this.args.options,
       surpriseImg
     );
+    this.args.imgs = surpriseImg;
     const scale = getRelativeScale(surpriseImg, this.args.options);
     surpriseImg.visible = true;
     const tl = gsap.timeline();
@@ -377,6 +414,9 @@ const Exclaim: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.alpha = 0;
+    }
   },
 };
 
@@ -385,12 +425,14 @@ const Heart: Animation<{
   options: EmotionOptions["Heart"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { heartImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Heart"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -412,7 +454,10 @@ const Heart: Animation<{
       this.args.instance.instance,
       this.args.options
     );
-
+    this.args.imgs = {
+      heartImg: heartImg,
+      dialogImg: dialogImg,
+    };
     dialogImg.scale.set(dialogScale);
     heartImg.x = dialogImg.width * this.args.options.heartImg.position.x;
     heartImg.y = dialogImg.width * this.args.options.heartImg.position.y;
@@ -463,6 +508,10 @@ const Heart: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.heartImg.alpha = 0;
+      this.args.imgs.dialogImg.alpha = 0;
+    }
   },
 };
 
@@ -471,12 +520,14 @@ const Music: Animation<{
   options: EmotionOptions["Music"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Music"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -497,6 +548,7 @@ const Music: Animation<{
       this.args.instance.instance,
       this.args.options
     );
+    this.args.imgs = note;
     note.scale.set(scale * 0.7);
     note.visible = true;
     container.addChild(note);
@@ -552,6 +604,9 @@ const Music: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.alpha = 0;
+    }
   },
 };
 
@@ -560,12 +615,14 @@ const Question: Animation<{
   options: EmotionOptions["Question"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Question"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -589,7 +646,7 @@ const Question: Animation<{
       this.args.options,
       questionImg
     );
-
+    this.args.imgs = questionImg;
     questionImg.scale.set(scale);
     questionImg.anchor.set(
       this.args.options.scaleAnimation.anchor.x,
@@ -623,6 +680,9 @@ const Question: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.alpha = 0;
+    }
   },
 };
 
@@ -631,12 +691,14 @@ const Respond: Animation<{
   options: EmotionOptions["Respond"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { sprites: Sprite[]; container: Container } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Respond"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -670,6 +732,10 @@ const Respond: Animation<{
     container.zIndex = 10;
     container.alpha = 1;
     container.visible = true;
+    this.args.imgs = {
+      sprites: sprites,
+      container: container,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     await timelinePromise(
@@ -694,6 +760,12 @@ const Respond: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([
+        ...(this.args.imgs.container.children as Sprite[]),
+        ...this.args.imgs.sprites,
+      ]);
+    }
   },
 };
 
@@ -702,12 +774,14 @@ const Sad: Animation<{
   options: EmotionOptions["Sad"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { container: Container; sadLineImage: Sprite[] } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sad"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -729,6 +803,10 @@ const Sad: Animation<{
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     const sadLineImages: Sprite[] = [];
+    this.args.imgs = {
+      container: container,
+      sadLineImage: sadLineImages,
+    };
     for (let i = 0; i < 3; ++i) {
       const sadLineImage = Sprite.from(sprites[0].texture);
       sadLineImages.push(sadLineImage);
@@ -754,6 +832,10 @@ const Sad: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal(this.args.imgs.sadLineImage);
+      this.args.imgs.container.alpha = 0;
+    }
   },
 };
 
@@ -762,12 +844,14 @@ const Shy: Animation<{
   options: EmotionOptions["Shy"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { shyImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Shy"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -809,6 +893,10 @@ const Shy: Animation<{
     const shyImgAnchor = this.args.options.shyImg.anchor;
     shyImg.anchor.set(shyImgAnchor.x, shyImgAnchor.y);
     shyImg.visible = dialogImg.visible = true;
+    this.args.imgs = {
+      shyImg: shyImg,
+      dialogImg: dialogImg,
+    };
     container.addChild(dialogImg, shyImg);
     const shakeTl = gsap.timeline({ paused: true });
     shakeTl
@@ -824,7 +912,7 @@ const Shy: Animation<{
       .add("end");
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
-    return timelinePromise(
+    await timelinePromise(
       tl
         .to(shyImg.scale, {
           x: scale,
@@ -858,6 +946,10 @@ const Shy: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.dialogImg.alpha = 0;
+      this.args.imgs.shyImg.alpha = 0;
+    }
   },
 };
 
@@ -866,12 +958,16 @@ const Surprise: Animation<{
   options: EmotionOptions["Surprise"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs:
+    | { container: Container; surpriseImg: Sprite; exclaimImg: Sprite }
+    | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Surprise"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -890,7 +986,6 @@ const Surprise: Animation<{
     const surpriseImg = Sprite.from(sprites[1].texture);
     const scale = getRelativeScale(exclaimImg, this.args.options);
     const startScale = scale * this.args.options.scaleAnimation.startScale;
-
     exclaimImg.scale.set(startScale);
     exclaimImg.anchor.set(
       this.args.options.scaleAnimation.anchor.x,
@@ -914,6 +1009,11 @@ const Surprise: Animation<{
     );
     container.addChild(exclaimImg, surpriseImg);
     container.zIndex = 10;
+    this.args.imgs = {
+      container: container,
+      exclaimImg: exclaimImg,
+      surpriseImg: surpriseImg,
+    };
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -981,6 +1081,10 @@ const Surprise: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      this.args.imgs.container.alpha = 0;
+      imgFinal([this.args.imgs.exclaimImg, this.args.imgs.surpriseImg]);
+    }
   },
 };
 
@@ -989,12 +1093,14 @@ const Sweat: Animation<{
   options: EmotionOptions["Sweat"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { dropImg: Sprite; smallDropImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sweat"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1028,6 +1134,10 @@ const Sweat: Animation<{
     smallDropImg.zIndex = 10;
     smallDropImg.visible = dropImg.visible = true;
     container.addChild(dropImg, smallDropImg);
+    this.args.imgs = {
+      smallDropImg: smallDropImg,
+      dropImg: dropImg,
+    };
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     tl.to(dropImg, {
@@ -1050,6 +1160,9 @@ const Sweat: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.dropImg, this.args.imgs.smallDropImg]);
+    }
   },
 };
 
@@ -1058,12 +1171,14 @@ const Twinkle: Animation<{
   options: EmotionOptions["Twinkle"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { container: Container; starImgs: Sprite[] } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Twinkle"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1086,6 +1201,10 @@ const Twinkle: Animation<{
     const scale = getRelativeScale(sprites[0], this.args.options) / 0.5;
     const starImgs: Sprite[] = [];
     const starImgScales: number[] = [];
+    this.args.imgs = {
+      container: container,
+      starImgs: starImgs,
+    };
     for (let i = 0; i < 3; ++i) {
       starImgScales.push(scale * this.args.options.starImgs.scale[i]);
     }
@@ -1144,6 +1263,10 @@ const Twinkle: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([...this.args.imgs.starImgs]);
+      this.args.imgs.container.alpha = 0;
+    }
   },
 };
 
@@ -1152,12 +1275,14 @@ const Upset: Animation<{
   options: EmotionOptions["Upset"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { upsetImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Upset"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1183,6 +1308,10 @@ const Upset: Animation<{
     dialogImg.addChild(upsetImg);
     dialogImg.visible = true;
     setRelativePosition(upsetImg, dialogImg, this.args.options.upsetImgPos);
+    this.args.imgs = {
+      dialogImg: dialogImg,
+      upsetImg: upsetImg,
+    };
 
     const animationTl = gsap.timeline({ paused: true });
     animationTl
@@ -1221,6 +1350,10 @@ const Upset: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.upsetImg]);
+      this.args.imgs.dialogImg.alpha = 0;
+    }
   },
 };
 
@@ -1229,12 +1362,14 @@ const Steam: Animation<{
   options: EmotionOptions["Steam"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { steamImage1: Sprite; steamImage2: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Steam"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1271,6 +1406,10 @@ const Steam: Animation<{
     steamImage2.visible = false;
     container.addChild(steamImage2);
     container.addChild(steamImage1);
+    this.args.imgs = {
+      steamImage1: steamImage1,
+      steamImage2: steamImage2,
+    };
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -1299,6 +1438,9 @@ const Steam: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.steamImage1, this.args.imgs.steamImage2]);
+    }
   },
 };
 
@@ -1307,12 +1449,14 @@ const Sigh: Animation<{
   options: EmotionOptions["Sigh"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { sighImage: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sigh"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1340,6 +1484,9 @@ const Sigh: Animation<{
     );
     sighImage.scale.set(this.args.options.scaleAnimation.start);
     container.addChild(sighImage);
+    this.args.imgs = {
+      sighImage: sighImage,
+    };
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -1361,6 +1508,9 @@ const Sigh: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.sighImage]);
+    }
   },
 };
 
@@ -1369,12 +1519,16 @@ const Bulb: Animation<{
   options: EmotionOptions["Bulb"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs:
+    | { bulbImage: Sprite; lightImage: Sprite; container: Container }
+    | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Bulb"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1415,6 +1569,11 @@ const Bulb: Animation<{
     lightImage.scale.set(this.args.options.lightScale);
     lightImage.visible = false;
     container.addChild(lightImage);
+    this.args.imgs = {
+      lightImage: lightImage,
+      bulbImage: bulbImage,
+      container: container,
+    };
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -1447,6 +1606,10 @@ const Bulb: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.bulbImage, this.args.imgs.lightImage]);
+      this.args.imgs.container.visible = false;
+    }
   },
 };
 
@@ -1455,12 +1618,14 @@ const Tear: Animation<{
   options: EmotionOptions["Tear"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: { smallTearImage: Sprite; largeTearImage: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Tear"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1499,6 +1664,10 @@ const Tear: Animation<{
     smallTearImage.scale.set(this.args.options.scaleAnimations[1].start);
     container.addChild(smallTearImage);
     smallTearImage.alpha = 0;
+    this.args.imgs = {
+      smallTearImage: smallTearImage,
+      largeTearImage: largeTearImage,
+    };
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -1535,6 +1704,9 @@ const Tear: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (this.args.imgs) {
+      imgFinal([this.args.imgs.smallTearImage, this.args.imgs.largeTearImage]);
+    }
   },
 };
 
@@ -1543,12 +1715,14 @@ const Zzz: Animation<{
   options: EmotionOptions["Zzz"];
   app: Application;
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Zzz"],
     app: new Application(),
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -1578,6 +1752,7 @@ const Zzz: Animation<{
       zImages.push(zImage);
       container.addChild(zImage);
     }
+    this.args.imgs = zImages;
 
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
@@ -1605,6 +1780,9 @@ const Zzz: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.imgs) {
+      imgFinal(this.args.imgs);
     }
   },
 };

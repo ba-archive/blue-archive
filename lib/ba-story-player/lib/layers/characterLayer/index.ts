@@ -3,7 +3,7 @@ import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
 import gsap from "gsap";
-import { Spine } from "pixi-spine";
+import { IAnimationState, ITrackEntry, Spine } from "pixi-spine";
 import { Application } from "pixi.js";
 import { reactive } from "vue";
 import { Character, CheckMethod, HandlerMap, Layer } from "../../type";
@@ -13,6 +13,9 @@ import {
   CharacterEffectWord,
   CharacterInstance,
   EmotionWord,
+  ILoopAnimationStateListener,
+  WinkAnimationObject,
+  WinkObject,
 } from "./type";
 import actionAnimation from "./actionAnimation";
 import emotionAnimations from "./emotionAnimations";
@@ -46,7 +49,7 @@ const spineHideRate = 0.49;
 const AnimationFaceTrack = 1; // 差分切换
 const AnimationIdleTrack = 0; // 光环动画track index
 
-export class characterLayer extends Layer {
+export class CharacterLayer extends Layer {
   currentCharacters: Character[] = [];
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
@@ -54,7 +57,6 @@ export class characterLayer extends Layer {
     app.stage.sortableChildren = true;
   }
   // 存放角色实例，包括状态和spine
-  // instances: CharacterInstance[] = [];
   instances: InstancesObj = {
     "1": 0,
     "2": 0,
@@ -64,6 +66,7 @@ export class characterLayer extends Layer {
   };
 
   // 存放动画播放实例
+  // TODO: 声音层未并入，所以还未处理声音的播放
   animations = {
     ...actionAnimation,
     ...emotionAnimations,
@@ -138,7 +141,7 @@ export class characterLayer extends Layer {
     app: Application,
     characterInstance: CharacterInstance
   ): boolean {
-    //wink(characterInstance)
+    wink(characterInstance);
     const spine = characterInstance.instance;
     if (!spine) {
       return false;
@@ -436,22 +439,6 @@ export class characterLayer extends Layer {
           }
         }
       }
-      // for (const index in data.effects) {
-      //   const effect = data.effects[index];
-      //   const effectPlayer = getEffectPlayer(effect.type);
-      //   if (!effectPlayer) {
-      //     // TODO error handle
-      //     reject(`获取特效类型{${effect.type}}对应的播放器时失败`);
-      //     return;
-      //   }
-      //   if (effect.async) {
-      //     await effectPlayer.processEffect(effect.effect as EffectsWord, data, app, handlerMap);
-      //   } else {
-      //     effectPromise.push(
-      //       effectPlayer.processEffect(effect.effect as EffectsWord, data, app, handlerMap)
-      //     );
-      //   }
-      // }
       const results = await Promise.allSettled(effectPromise);
       for (const result of results) {
         if (result.status === "rejected") {
@@ -482,7 +469,7 @@ export class characterLayer extends Layer {
 }
 
 // 监听node的character数组，保证角色同步
-const loadCharacter: CheckMethod<characterLayer> = async function (
+const loadCharacter: CheckMethod<CharacterLayer> = async function (
   node,
   app,
   handlerMap
@@ -537,4 +524,106 @@ const Standard_Width_Relative = 0.3;
  */
 export function getStandardWidth(app: Application) {
   return app.screen.width * Standard_Width_Relative;
+}
+
+const AnimationWinkTrack = 1;
+
+/**
+ * 眨眼
+ *
+ * 至少游戏里只会眨一次或者两次
+ *
+ * 固定只有01表情时才会眨眼
+ * @param instance 要眨眼的角色结构体
+ * @param first 是否为改变表情时的初始化
+ */
+function wink(instance: CharacterInstance, first = true) {
+  //只在有眨眼动画时起作用
+  if (!instance.instance.state.hasAnimation("Eye_Close_01")) {
+    return;
+  }
+  const face = instance.status.currentFace;
+  const spine = instance.instance;
+  clearWinkHandler(instance.status.winkObject);
+  if (face !== "01") {
+    return;
+  }
+  const winkTimeout = Math.floor(Math.random() * 1000) + 3500;
+  instance.status.winkObject = {
+    handler: window.setTimeout(wink, winkTimeout, instance, false),
+  };
+  if (first) {
+    return;
+  }
+  const loopTime = Math.floor(Math.random() * 2) + 1;
+  const winkAnimationObject = loopAnimationTime(
+    spine.state,
+    AnimationWinkTrack,
+    "Eye_Close_01",
+    "eye",
+    loopTime
+  );
+  instance.status.winkObject.animationObject = winkAnimationObject;
+  winkAnimationObject.start();
+}
+
+/**
+ * 指定循环次数的播放循环动画
+ *
+ * 通过AnimationStateListener在每次播放结束后判断播放次数,
+ *
+ * 如果没有达到次数就继续播放
+ * @param state spine的state对象
+ * @param trackIndex 动画的trackIndex
+ * @param animationName 动画的animationName
+ * @param id 用于标识loop handler的key
+ * @param loop 循环次数
+ */
+function loopAnimationTime<AnimationState extends IAnimationState>(
+  state: AnimationState,
+  trackIndex: number,
+  animationName: string,
+  id: string,
+  loop: number
+): WinkAnimationObject {
+  return {
+    _pause: false,
+    start() {
+      const controller = state.listeners.filter(
+        it => Reflect.get(it, "complete") && Reflect.get(it, "key") === id
+      );
+      if (controller.length !== 0) {
+        state.removeListener(controller[0]);
+      }
+      let loopCount = 1;
+      const listener: ILoopAnimationStateListener = {
+        complete: (entry: ITrackEntry) => {
+          if (entry.trackIndex !== trackIndex) {
+            return;
+          }
+          if (loopCount < loop && !this._pause) {
+            loopCount++;
+            state.setAnimation(trackIndex, animationName, false);
+          }
+        },
+        key: id,
+      };
+      state.addListener(listener);
+      state.setAnimation(trackIndex, animationName, false);
+    },
+    pause() {
+      this._pause = true;
+    },
+  };
+}
+
+function clearWinkHandler(winkObject?: WinkObject) {
+  if (!winkObject) {
+    return;
+  }
+  if (winkObject.handler) {
+    window.clearTimeout(winkObject.handler);
+    winkObject.handler = 0;
+  }
+  winkObject.animationObject?.pause();
 }

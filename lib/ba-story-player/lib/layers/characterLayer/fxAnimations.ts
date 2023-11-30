@@ -73,12 +73,14 @@ const shot: Animation<{
   app: Application;
   options: FXOptions["shot"];
   handlerMap: HandlerMap | undefined;
+  imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
     app: new Application(),
     options: fxOptions["shot"],
     handlerMap: undefined,
+    imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -93,6 +95,7 @@ const shot: Animation<{
       (this.args.options.scale * getStandardWidth(this.args.app)) /
       sprites[0].width;
 
+    this.args.imgs = sprites;
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     for (const [index, sequence] of this.args.options.shotSequence.entries()) {
@@ -136,6 +139,11 @@ const shot: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (this.args.imgs) {
+      for (const img of this.args.imgs) {
+        img.destroy();
+      }
     }
   },
 };

@@ -1,6 +1,6 @@
 import { Character, HandlerMap, SpineUrls } from "@/type";
-import { Spine } from "pixi-spine";
-import { Application, Sprite } from "pixi.js";
+import { IAnimationStateListener, Spine } from "pixi-spine";
+import { Application } from "pixi.js";
 import { PositionOffset } from ".";
 
 export interface CharacterInstance {
@@ -100,30 +100,6 @@ export type CharacterEffectWord =
   | "hide";
 
 /**
- * 对话特效处理
- */
-export interface CharacterEmotionPlayer
-  extends BaseCharacterEffectPlayer<EmotionWord> {
-  /**
-   * 获取特效处理函数
-   * @param type 角色特效类型
-   */
-  getHandlerFunction(type: EmotionWord): EffectFunctionUnit;
-}
-
-/**
- * 人物fx特效处理
- */
-export interface CharacterFXPlayer
-  extends BaseCharacterEffectPlayer<FXEffectWord> {
-  /**
-   * 获取特效处理函数
-   * @param type 人物特效类型
-   */
-  getHandlerFunction(type: FXEffectWord): EffectFunctionUnit;
-}
-
-/**
  * fx特效定义
  */
 export type FXEffectWord = "shot";
@@ -183,12 +159,6 @@ export type CharacterEffectType = "emotion" | "action" | "fx";
 type Options = EmotionOptions & ActionOptions & FXOptions;
 
 export type BaseOptions<T extends string> = Record<T, Record<string, any>>;
-
-type EffectFunctionUnit = (
-  instance: CharacterEffectInstance,
-  options: any,
-  sprites: Sprite[]
-) => Promise<void> | undefined;
 
 /**
  * emotion情绪动画共有的参数
@@ -473,30 +443,12 @@ export interface BasicEmotionOptions extends BaseOptions<EmotionWord> {
   };
 }
 
-// 添加app参数用于声明当前播放用的app
-export type EffectFunction<T extends EffectsWord> = {
-  [key in T]: (
-    instance: CharacterEffectInstance,
-    app: Application,
-    options: Options[key],
-    sprites: Sprite[]
-  ) => Promise<void>;
-};
+export interface WinkAnimationObject {
+  _pause: boolean;
+  start(): void;
+  pause(): void;
+}
 
-/**
- * 所有角色特效统一接口
- */
-export type BaseCharacterEffectPlayer<T extends EffectsWord> =
-  CharacterEffectPlayerInterface<T> & EffectFunction<T>;
-
-/**
- * 人物特效处理
- */
-export interface CharacterEffectPlayer
-  extends BaseCharacterEffectPlayer<CharacterEffectWord> {
-  /**
-   * 获取特效处理函数
-   * @param type 人物特效类型
-   */
-  getHandlerFunction(type: CharacterEffectWord): EffectFunctionUnit;
+export interface ILoopAnimationStateListener extends IAnimationStateListener {
+  key: string;
 }
