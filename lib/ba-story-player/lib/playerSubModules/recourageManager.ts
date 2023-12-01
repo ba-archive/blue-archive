@@ -1,4 +1,5 @@
 import { StoryNode, ResourceMap, SpineUrls } from "../type";
+import { mapGetKeyByValue } from "../utils";
 import { Loader, Sprite, Texture } from "pixi.js";
 import { IEventData, ISkeletonData, Spine } from "pixi-spine";
 import { Howl } from "howler";
@@ -59,7 +60,7 @@ function getResourcesUrl(type: ResourcesTypes, arg: string): string {
     case "emotionImg":
       return `${dataUrl}/emotions/${arg}`;
     case "emotionSound":
-      return `${dataUrl}/Audio/Sound/${arg}.wav`;
+      return `${dataUrl}/Audio/Sound/SFX_Emoticon_Motion_${arg}.wav`;
     case "fx":
       return `${dataUrl}/effectTexture/${arg}`;
     case "l2dVoice":
@@ -136,6 +137,11 @@ export function setDataUrl(url: string): void {
     bg_underfire: `${dataUrl}/Audio/Sound/UI_FX_BG_UnderFire.wav`,
     back: `${dataUrl}/Audio/Sound/UI_Button_Back.wav`,
   };
+  for (const key of Object.keys(emotionResourcesTable) as Array<
+    keyof typeof emotionResourcesTable
+  >) {
+    emotionSoundMap.set(key, getResourcesUrl("emotionSound", key));
+  }
 }
 
 /**
@@ -170,6 +176,8 @@ const emotionResourcesTable = {
   Tear: ["Emoji_Tear_1.png", "Emoji_Tear_2.png"],
   Zzz: ["Emoji_Zzz.png"],
 };
+
+const emotionSoundMap = new Map<string, string>();
 
 const fxImageTable = {
   shot: ["fire1.png", "fire2.png", "fire3.png"],
@@ -415,8 +423,7 @@ const resourcerManager = {
       }
     }
     for (const emotionName of Object.keys(emotionResourcesTable)) {
-      const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-      voiceUrls.push(getResourcesUrl("emotionSound", emotionSoundName));
+      voiceUrls.push(emotionSoundMap.get(emotionName) as string);
     }
   },
   /**
@@ -460,6 +467,15 @@ const resourcerManager = {
           newAudio.once("loaderror", (_, error) => {
             reject(error);
           });
+          if (Array.from(emotionSoundMap.values()).includes(audioUrl)) {
+            this.audioSoundMap.set(
+              mapGetKeyByValue<string, string>(
+                emotionSoundMap,
+                audioUrl
+              ) as string,
+              newAudio.load()
+            );
+          }
           this.audioSoundMap.set(audioUrl, newAudio.load());
         })
       );
