@@ -13,6 +13,7 @@ import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
 import "./userInteract";
 import { useUiState } from "@/stores/state";
+import { getUiI18n } from "./utils";
 
 const showSummary = ref(false);
 const showStoryLog = ref(false);
