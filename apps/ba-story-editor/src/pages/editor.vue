@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BaStoryPlayer from 'ba-story-player'
 import 'ba-story-player/dist/style.css'
 import { ref } from 'vue'
 import { NexonScriptParser, buildNexonJSONStory, buildNexonScript } from './../common/nexon-script/parser'
@@ -62,7 +61,7 @@ watchEffect(updateNS)
 <template>
   <div id="editor" :style="{}" flex="~ justify-center" border="~ 1 red" children:border="~ 1 blue" h-full min-w-6xl children-overflow-hidden>
     <div :style="playerContainerStyle">
-      <BaStoryPlayer
+      <!-- <BaStoryPlayer
         class="player-container"
         data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
         language="Cn"
@@ -73,7 +72,7 @@ watchEffect(updateNS)
         :width="playerWidth"
         :height="playerHeight"
         :exit-fullscreen-time-out="5000"
-      />
+      /> -->
     </div>
     <div flex-1>
       <div flex="~" gap-3>
