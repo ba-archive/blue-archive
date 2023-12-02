@@ -2,7 +2,6 @@ import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { AnimatedSprite, Sprite } from "pixi.js";
 import { gsap } from "gsap";
-import { AnimatedSprite, Sprite } from "pixijs";
 import { loadSpriteSheet } from "../resourcesUtils";
 import { AdvancedBloomFilter } from "@pixi/filter-advanced-bloom";
 
