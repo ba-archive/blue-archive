@@ -1,5 +1,5 @@
-import { Application, Sprite } from "pixijs";
-import { Loader } from "pixijs";
+import { Application, Sprite } from "pixi.js";
+import { Loader } from "pixi.js";
 import { Ref } from "vue";
 import { CharacterInstance, StoryUnit } from "./common";
 import { ShowOption, ShowText } from "./events";
@@ -40,6 +40,10 @@ export interface Actions {
    * @param translator
    */
   setTranslator(translator: string): void;
+  /**
+   * 清除privateState的状态
+   */
+  dispose(): void;
 }
 
 export interface BasicGetters {

@@ -44,7 +44,7 @@ function updateTranslator(translator: string) {
 
 function updateStudentName(studentId: number) {
   return new Promise<void>((resolve, reject) => {
-    fetch('https://dev.bluearchive.pages.dev/config/json/students.json')
+    fetch('https://preview.blue-archive.io/config/json/students.json')
       .then(response => response.json())
       .then(data => {
         const student = data.find(
@@ -208,7 +208,8 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
     <h3>对话</h3>
     <div class="vertical-grid">
       <translate-unit
-        v-for="content in mainStore.getMomotalkContents"
+        v-for="(content, index) in mainStore.getMomotalkContents"
+        :index="index"
         :key="content.Id"
         :content="content"
       />

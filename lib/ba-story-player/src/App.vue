@@ -80,7 +80,7 @@ const storyCacheKey = "storyJson";
 const jsonName = localStorage.getItem(storyCacheKey);
 if (jsonName && jsonName !== "0") {
   axios
-    .get(`https://yuuka.cdn.diyigemt.com/image/story/vol3/${jsonName}.json`)
+    .get(`https://yuuka.cdn.diyigemt.com/image/story/${jsonName}.json`)
     .then(response => {
       if (response.status === 200) {
         story.value = response.data;
@@ -88,10 +88,22 @@ if (jsonName && jsonName !== "0") {
       }
       showPlayer.value = true;
     })
-    .catch(error => {
-      console.log(error);
-      console.log("fallback to yuuka");
-      showPlayer.value = true;
+    .catch(() => {
+      // 远程获取失败，尝试本地获取
+      axios
+        .get(`${jsonName}.json`)
+        .then(response => {
+          if (response.status === 200) {
+            story.value = response.data;
+            storyJsonName.value = jsonName;
+            showPlayer.value = true;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          console.log("fallback to yuuka");
+          showPlayer.value = true;
+        });
     });
 } else {
   showPlayer.value = true;
@@ -167,7 +179,7 @@ watch(
         更换故事index
       </button>
       <label>故事json</label>
-      <input v-model="storyJsonName" />
+      <input v-model="storyJsonName" @keydown.enter="changeJSON" />
       <button @click="changeJSON">更换故事json</button>
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
       <label>语言</label>
@@ -206,6 +218,7 @@ watch(
   overflow-y: auto;
   text-align: center;
 }
+
 .hidden {
   display: none;
 }

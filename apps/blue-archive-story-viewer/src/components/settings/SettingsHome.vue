@@ -11,6 +11,29 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{
+              getI18nString(userLanguage, "settings.disableMomotalkAnimation")
+            }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.disableMomotalkAnimationDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <neu-switch
+            :checked="disableMomotalkAnimationState"
+            @update:value="handleDisableMomotalkAnimationSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.useMp3Title") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.useMp3Description") }}
@@ -63,6 +86,29 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{
+              getI18nString(userLanguage, "settings.allowCheckForUpdatesTitle")
+            }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.allowCheckForUpdatesDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <neu-switch
+            :checked="useCheckForUpdatesSwitchValue"
+            @update:value="handleCheckForUpdatesSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.clearCacheTitle") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.clearCacheDescription") }}
@@ -97,6 +143,7 @@
           </div>
         </div>
       </div>
+      <div class="built-time fill-width flex-vertical">build {{ version }}</div>
     </div>
   </div>
 </template>
@@ -113,6 +160,8 @@ import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
+const version = import.meta.env?.__VERSION__.build;
+
 const settingsStore = useSettingsStore();
 const router = useRouter();
 const userLanguage = computed(() => settingsStore.getLang);
@@ -121,6 +170,13 @@ const useMp3SwitchValue: Ref<boolean> = ref(settingsStore.getUseMp3);
 const useSuperSamplingValue = computed<"" | "2" | "4" | undefined>(
   () => settingsStore.getUseSuperSampling
 );
+const disableMomotalkAnimationState: Ref<boolean> = ref(
+  settingsStore.getDisableMomotalkAnimationState
+);
+
+function handleDisableMomotalkAnimationSwitchChange(value: boolean) {
+  settingsStore.setDisableMomotalkAnimationState(value);
+}
 
 function handleAppleCompatibleSwitchChange(value: boolean) {
   settingsStore.setUseMp3(value);
@@ -128,6 +184,13 @@ function handleAppleCompatibleSwitchChange(value: boolean) {
 
 function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
   settingsStore.setUseSuperSampling(value);
+}
+
+const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(
+  settingsStore.getEnableCheckForUpdates
+);
+function handleCheckForUpdatesSwitchChange(value: boolean) {
+  settingsStore.setEnableCheckForUpdates(value);
 }
 
 function handleClearCache() {
@@ -147,6 +210,7 @@ function handleClearCache() {
 }
 
 function handleUnregisterSW() {
+  localStorage.clear();
   navigator.serviceWorker
     .getRegistrations()
     .then(registrations => {
@@ -207,6 +271,11 @@ function checkMobile() {
       align-items: center;
       width: fit-content;
     }
+  }
+
+  .built-time {
+    color: #999;
+    font-size: 12px;
   }
 }
 </style>

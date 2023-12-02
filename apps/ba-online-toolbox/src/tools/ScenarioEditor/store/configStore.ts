@@ -3,6 +3,7 @@ import { Language } from '../types/content';
 
 export const useGlobalConfig = defineStore({
   id: 'globalConfig',
+  persist: true,
   state: () => ({
     proofread: false,
     selectLine: 0,

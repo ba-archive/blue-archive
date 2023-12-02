@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite } from "pixijs";
+import { Sprite } from "pixi.js";
 import {
   BGEffectHandlerFunction,
   BGEffectHandlerOptions,
@@ -164,7 +164,7 @@ for (const effect of bgEffects) {
  * 移除当前的BGEffect
  */
 export async function removeBGEffect() {
-  if (currentBGEffect) {
+  if (currentBGEffect && "function" === typeof currentBGEffect.removeFunction) {
     await currentBGEffect.removeFunction();
     for (const resource of currentBGEffect.resources) {
       resource.destroy();

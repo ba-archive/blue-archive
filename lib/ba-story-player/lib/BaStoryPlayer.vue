@@ -7,6 +7,7 @@ import {
   stop,
   storyHandler,
 } from "@/index";
+import { isMobile } from "pixi.js";
 import {
   computed,
   onActivated,
@@ -19,18 +20,18 @@ import {
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
-import { useUiState } from "./stores/state";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import BaUI from "@/layers/uiLayer/BaUI.vue";
+import { useUiState } from "@/stores/state";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
-import { sound } from "@pixi/sound";
+import { useElementSize } from "@vueuse/core";
+import "element-plus/dist/index.css";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
-sound.useLegacy = true; // 别问, 问就是旧的好用
 export type PlayerProps = {
   story: TranslatedStoryUnit;
   dataUrl: string;
@@ -55,11 +56,11 @@ const props = withDefaults(defineProps<PlayerProps>(), {
   useMp3: false,
 });
 const storySummary = ref(props.storySummary);
-storySummary.value.summary = storySummary.value.summary.replace(
+storySummary.value.summary = storySummary.value.summary.replaceAll(
   "[USERNAME]",
   props.userName
 );
-const emit = defineEmits(["end", "error"]);
+const emit = defineEmits(["end", "error", "initiated"]);
 
 const playerHeight = ref(props.height);
 const playerWidth = ref(props.width);
@@ -77,10 +78,23 @@ watch(
     }
   }
 );
+
+const player = ref<HTMLDivElement>();
+const { width: playerActualWidth, height: playerActualHeight } =
+  useElementSize(player);
+
+watch([playerActualWidth, playerActualHeight], () => {
+  if (!fullScreen.value || isMobile.phone || isPseudoFullscreen.value) {
+    return;
+  }
+
+  playerWidth.value = playerActualWidth.value;
+  playerHeight.value = playerActualHeight.value;
+});
+
 const playerStyle = computed(() => {
   return { height: `${playerHeight.value}px`, width: `${playerWidth.value}px` };
 });
-const player = ref<HTMLDivElement>();
 
 const isPseudoFullscreen = ref(false);
 
@@ -195,19 +209,34 @@ watch([playerWidth, playerHeight], () => {
   }
 });
 
-// const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
-//加载字体
-onBeforeMount(() => {
-  const newStyle = document.createElement("style");
-  newStyle.appendChild(
-    document.createTextNode(`\
-  @font-face {
-    font-family: 'TJL';
-    src: url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff2) format('woff2'),
-         url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff) format('woff');`)
+function setPlayerFont(mode: "load" | "unload" = "load") {
+  const currentPlayerFont = document.querySelector(
+    'link[href="https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css"]'
   );
 
-  document.head.appendChild(newStyle);
+  if (currentPlayerFont) {
+    if ("unload" === mode) {
+      currentPlayerFont.remove();
+      return;
+    } else {
+      return;
+    }
+  }
+
+  if ("unload" === mode) return;
+
+  const playerFontStyle = document.createElement("link");
+  playerFontStyle.rel = "stylesheet";
+  playerFontStyle.type = "text/css";
+  playerFontStyle.href =
+    "https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css";
+
+  document.head.appendChild(playerFontStyle);
+}
+
+//加载字体
+onBeforeMount(() => {
+  setPlayerFont();
 });
 
 const prefixes = ["", "moz", "webkit", "ms"];
@@ -246,6 +275,7 @@ function hotReplaceStoryUnit(
     );
     changeStoryIndex(index);
   } else {
+    /* eslint-disable indent */
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
         GroupId: props.story.GroupId,
@@ -253,6 +283,7 @@ function hotReplaceStoryUnit(
         content: unit,
       }
       : (unit as TranslatedStoryUnit);
+    /* eslint-enable indent */
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
       privateStore.allStoryUnit
@@ -296,6 +327,9 @@ onMounted(() => {
       emit("error");
     }
   );
+  eventBus.on("loaded", () => {
+    emit("initiated");
+  });
   if (props.startFullScreen) {
     updateFullScreenState();
   }
@@ -311,7 +345,9 @@ onMounted(() => {
   window.addEventListener("focus", notifyWindowFocus);
 });
 
-const { tabActivated } = useUiState();
+const { tabActivated, autoMode } = useUiState();
+
+autoMode.value = false;
 
 function notifyWindowBlur() {
   tabActivated.value = true;
@@ -348,6 +384,7 @@ onBeforeUnmount(() => {
       handleFullScreenChange
     );
   });
+  setPlayerFont("unload");
 });
 
 onDeactivated(() => {

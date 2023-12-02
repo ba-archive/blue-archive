@@ -103,6 +103,12 @@ export interface Option {
     TextEn?: string;
   };
 }
+export type PlayOptions = {
+  url: string;
+  config: {
+    volume: number; // 0 - 1
+  };
+};
 export type PlayerConfigs = PlayerProps & { height: number };
 export type PlayerProps = {
   story: TranslatedStoryUnit;
@@ -221,6 +227,7 @@ export interface Text {
    */
   effects: TextEffect[];
 }
+
 export interface TextEffect {
   name: TextEffectName;
   /**
@@ -252,10 +259,12 @@ export interface WinkAnimationObject {
   start(): void;
   pause(): void;
 }
+
 export interface WinkObject {
   handler: number;
   animationObject?: WinkAnimationObject;
 }
+
 /**
  * zmc参数, 当duration为10时代表是move起始
  */

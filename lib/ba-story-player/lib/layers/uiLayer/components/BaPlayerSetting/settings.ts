@@ -1,4 +1,4 @@
-import type { BaRadioData } from "./BaPlayerSetting";
+import type { BaRadioData, BaSliderData } from "./BaPlayerSetting";
 
 export const ObbAudioSetting: BaRadioData = {
   name: "ObbAudioSetting",
@@ -38,3 +38,33 @@ export const SuperResolutionSetting: BaRadioData = {
     },
   ],
 };
+
+export const VolumeSetting: BaSliderData[] = [
+  {
+    name: "volume-bg",
+    tip: "",
+    min: 0,
+    max: 100,
+    step: 1,
+    fator: 100,
+    default: 100,
+  },
+  {
+    name: "volume-fx",
+    tip: "",
+    min: 0,
+    max: 100,
+    step: 1,
+    fator: 100,
+    default: 100,
+  },
+  {
+    name: "volume-voice",
+    tip: "",
+    min: 0,
+    max: 100,
+    step: 1,
+    fator: 100,
+    default: 100,
+  },
+];

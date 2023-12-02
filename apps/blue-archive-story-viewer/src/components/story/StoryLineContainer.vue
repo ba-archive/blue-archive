@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Ref, computed, ref } from "vue";
+import { Ref, computed, onMounted, ref } from "vue";
+import { Language } from "@/types/Settings";
+import { StoryBriefing } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
-import { Language } from "@types/Settings";
-import { StoryBriefing } from "@types/StoryJson";
 import NeuTitleBar from "@widgets/NeuUI/NeuTitleBar.vue";
 import StoryBriefBlock from "./StoryBriefBlock.vue";
 
@@ -43,6 +43,8 @@ function handleOpenChapters(index: number) {
     openChapters.value.push(index);
   }
 }
+
+onMounted(() => import("@/components/StoryViewer.vue"));
 </script>
 
 <template>
@@ -68,7 +70,6 @@ function handleOpenChapters(index: number) {
       <story-brief-block
         :title="getTitleText(section.title, language)"
         :avatar="avatar"
-        :storyOrder="storyOrder"
         :description="section.summary"
       />
     </router-link>

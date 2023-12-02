@@ -1,8 +1,9 @@
 <template>
   <card-unit
-    title="剧情标题"
+    title="剧情标题（点击标题跳转）"
     type="Title"
     :unsure="isUnsure"
+    :jumpTo="`${props.content?.FavorScheduleId}`"
     @flagUnsure="handleFlagUnsure"
   >
     <div class="content-container">
@@ -24,14 +25,6 @@
         </n-input-group>
       </div>
       <n-space vertical>
-        <n-switch v-model:value="localReferenceMode">
-          <template #checked
-            ><span class="hint-reference-mode">参考模式开</span></template
-          >
-          <template #unchecked
-            ><span class="hint-reference-mode">参考模式关</span></template
-          >
-        </n-switch>
         <n-space
           vertical
           justify="space-between"
@@ -94,7 +87,7 @@
 <script setup lang="ts">
 import { PropType, Ref, computed, ref, watch } from 'vue';
 import CardUnit from '../../public/components/CardUnit.vue';
-import { halfToFull, translate } from '../../public/getTranslation';
+import { halfToFull, translate } from '../../public/helper/getTranslation';
 import { useMainStore } from '../store/mainStore';
 import { Title } from '../types/FileContent';
 import { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';

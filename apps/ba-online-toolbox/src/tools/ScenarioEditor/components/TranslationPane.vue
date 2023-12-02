@@ -14,6 +14,14 @@
             >
           </n-radio-group>
         </span>
+        <n-space>
+          <n-text>显示全部语言</n-text>
+          <n-switch
+            @update:value="handleShowAllLanguageChange"
+            :value="config.getShowAllLanguage"
+          >
+          </n-switch>
+        </n-space>
       </div>
       <div class="referLang">
         <n-input
@@ -37,24 +45,13 @@
       </div>
       <div class="trans">
         <n-space>
-          <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+          <n-button type="info" @click="sendResetLive2dSignal"
+            >重置 Live2D 状态
+          </n-button>
           <n-button type="info" @click="sendRefreshPlayerSignal"
             >刷新播放器</n-button
           >
-          <n-dropdown
-            trigger="hover"
-            :options="langSelect"
-            @select="
-              {
-                config.setTargetLang($event as Language);
-              }
-            "
-          >
-            <n-button secondary type="info">
-              目标语言: {{ langHash[config.getTargetLang] }}
-            </n-button>
-          </n-dropdown>
-          <n-space :size="8">
+          <n-space :size="4">
             <n-tooltip>
               <template #trigger>
                 <n-button type="info" @click="addTag()"> 插入等待时长</n-button>
@@ -72,26 +69,34 @@
               size="medium"
               :default-value="0"
               :min="0"
-              :step="10"
-              style="width: 9rem"
+              :step="500"
+              style="width: 8.5rem"
             >
-              <template #suffix><span style="color: #999">毫秒</span></template>
+              <template #suffix
+                ><span style="color: #999; font-size: 0.8rem"
+                  >毫秒</span
+                ></template
+              >
             </n-input-number>
           </n-space>
-          <n-button type="info" @click="sendResetLive2dSignal"
-            >重置 Live2D 播放状态
+          <n-dropdown
+            trigger="hover"
+            :options="langSelect"
+            @select="
+              {
+                config.setTargetLang($event as Language);
+              }
+            "
+          >
+            <n-button secondary type="info">
+              目标语言: {{ langHash[config.getTargetLang] }}
+            </n-button>
+          </n-dropdown>
+          <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+          <n-button @click="handleFormalizePunctuation" type="info">
+            规范符号
           </n-button>
         </n-space>
-        <span>
-          <n-space>
-            <n-text>显示全部语言</n-text>
-            <n-switch
-              @update:value="handleShowAllLanguageChange"
-              :value="config.getShowAllLanguage"
-            >
-            </n-switch>
-          </n-space>
-        </span>
       </div>
       <div class="textLine">
         <span style="flex: 2">
@@ -114,9 +119,7 @@
         <n-checkbox
           :checked="
             config.getSelectLine !== -1
-              ? mainStore.getScenario.content[config.getSelectLine].Unsure
-                ? true
-                : false
+              ? !!mainStore.getScenario.content[config.getSelectLine].Unsure
               : false
           "
           @click="
@@ -168,7 +171,8 @@
 </template>
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
-import { halfToFull, translate } from '../../public/getTranslation';
+import { halfToFull, translate } from '../../public/helper/getTranslation';
+import { formalizeQuotation } from '../../public/helper/quotation';
 import eventBus from '../eventsSystem/eventBus';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
@@ -238,6 +242,13 @@ const acceptHandle = () => {
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
+
+function handleFormalizePunctuation() {
+  const line = mainStore.getScenario.content[config.getSelectLine];
+  line[config.getTargetLang] = formalizeQuotation(
+    line[config.getTargetLang]
+  ).replaceAll('……。', '……');
+}
 
 const commentHandle = (event: string) => {
   if (config.getSelectLine !== -1) {

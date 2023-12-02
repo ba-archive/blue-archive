@@ -1,6 +1,6 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Container } from "pixijs";
+import { Container } from "pixi.js";
 import {
   emitterConfigs,
   emitterContainer,

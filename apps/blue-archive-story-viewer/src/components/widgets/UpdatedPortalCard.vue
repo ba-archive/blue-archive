@@ -60,9 +60,23 @@ function getDialogTitle() {
         }
       )}`;
     case "minigame":
-      return `${getI18nString(userLanguage.value, "updates.minigameUpdated", {
-        name: props.info.title,
-        date: props.info.endDate || "",
+      if (props.info.endDate) {
+        return `${getI18nString(userLanguage.value, "updates.minigameUpdated", {
+          name: props.info.title,
+          date: props.info.endDate,
+        })}`;
+      }
+      return `${getI18nString(
+        userLanguage.value,
+        "updates.minigameUpdatedNoDate",
+        {
+          name: props.info.title,
+          date: props.info.endDate || "",
+        }
+      )}`;
+    case "otherStory":
+      return `${getI18nString(userLanguage.value, "updates.updated", {
+        title: props.info.title,
       })}`;
     default:
       return `${getI18nString(userLanguage.value, "updates.updated", {
@@ -89,6 +103,11 @@ function handleJumpToRequest() {
         "_self"
       );
       break;
+    case "otherStory":
+      router.push({
+        name: "OtherStory",
+      });
+      break;
     default:
       break;
   }
@@ -113,7 +132,7 @@ function handleJumpToRequest() {
   >
     <template #title-before>
       <img v-if="props.info?.icon" :src="props.info?.icon" alt="info" />
-      <img src="/src/assets/info.svg" alt="info" v-else />
+      <img src="@assets/info.svg" alt="info" v-else />
     </template>
   </neu-dialog>
 </template>

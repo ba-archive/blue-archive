@@ -46,14 +46,24 @@ title:
     GroupId: 1003808
     FavorScheduleId: 100388
     CharacterId: 10038
+  - TextJp: SRT、思い出します
+    TextCn: SRT，开始回忆
+    TextKr: SRT, 추억합니다.
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1003820
+    FavorScheduleId: 1003820
+    CharacterId: 10038
+    unsure: false
 content:
   - MessageKR: <SYSTEM> 여기는 RABBIT 1. 착륙 허가를 요청합니다.
     MessageJP: こちらRABBIT1、着陸の許可を要請します
     MessageCN: 这里是RABBIT1，请求着陆许可
     MessageEN: <SYSTEM> This is RABBIT 1. Requesting permission to land.
-    MessageTH: "<ข้อความระบบ> นี่คือ RABBIT 1
-
-      ขออนุญาตลงจอดภาคพื้นดินด้วยค่ะ"
+    MessageTH: |-
+      <ข้อความระบบ> นี่คือ RABBIT 1
+      ขออนุญาตลงจอดภาคพื้นดินด้วยค่ะ
     MessageTW: 這裡是RABBIT 1，請求著陸
     MessageGroupId: 100380010
     Id: 100380010
@@ -89,11 +99,10 @@ content:
     MessageJP: 高度2000フィートまで下降、準備完了です
     MessageCN: 高度2000英尺，准备就绪
     MessageEN: <SYSTEM> Descending to an altitude of 2,000 feet. Ready to descend.
-    MessageTH: "<ข้อความระบบ> ลดระดับความสูงถึง
-
+    MessageTH: |-
+      <ข้อความระบบ> ลดระดับความสูงถึง
       2,000 ฟุต เตรียมลดระดับความสูง
-
-      เรียบร้อยค่ะ"
+      เรียบร้อยค่ะ
     MessageTW: 高度下降至2000英尺，準備完成
     MessageGroupId: 100380030
     Id: 100380030
@@ -110,8 +119,8 @@ content:
   - MessageKR: ……???
     MessageJP: ……？？？
     MessageCN: ……？？？
-    MessageEN: "...???"
-    MessageTH: "...???"
+    MessageEN: ...???
+    MessageTH: ...???
     MessageTW: ……？？？
     MessageGroupId: 100380040
     Id: 100380040
@@ -129,9 +138,9 @@ content:
     MessageJP: 目標まで約1.5マイル――まもなく突入します
     MessageCN: 距离目标约1.5英里——即将开始突入
     MessageEN: <SYSTEM> About 1.5 miles to target. Entering soon.
-    MessageTH: "<ข้อความระบบ> อีกประมาณ 1.5 ไมล์
-
-      จะถึงเป้าหมายค่ะ"
+    MessageTH: |-
+      <ข้อความระบบ> อีกประมาณ 1.5 ไมล์
+      จะถึงเป้าหมายค่ะ
     MessageTW: 距離目標1.5英里──即將突入
     MessageGroupId: 100380050
     Id: 100380050
@@ -148,7 +157,7 @@ content:
   - MessageKR: ……미야코? 어디에 돌입하려는 거야?
     MessageJP: ……ミヤコ？どこに突入しようとしてるの？
     MessageCN: 宫子？你这是要突入哪啊？
-    MessageEN: "...Miyako? Are you infiltrating something right now?"
+    MessageEN: ...Miyako? Are you infiltrating something right now?
     MessageTH: มิยาโกะ...? จะไปตรงไหนเหรอ?
     MessageTW: ……都子？你打算從哪裡突入？
     MessageGroupId: 100380060
@@ -221,11 +230,10 @@ content:
     MessageJP: そうですか。確かに犬は忠誠心があり、人懐っこいということで好きな方が多いですね
     MessageCN: 原来如此，狗很忠诚，还亲近人，喜欢狗的人很多呢
     MessageEN: I see. Dogs are loyal and obedient, so a lot of people love them.
-    MessageTH: "อย่างนั้นเหรอคะ สุนัขมีความซื่อสัตย์
-
+    MessageTH: |-
+      อย่างนั้นเหรอคะ สุนัขมีความซื่อสัตย์
       และเชื่อฟังคำสั่ง เพราะงั้นเลยมีคนที่
-
-      ชอบอยู่เยอะสินะคะ"
+      ชอบอยู่เยอะสินะคะ
     MessageTW: 這樣啊。確實，狗既忠誠又容易與人親近，所以很多人都喜歡呢
     MessageGroupId: 100380090
     Id: 100380100
@@ -243,11 +251,10 @@ content:
     MessageJP: そうですか。確かに猫は可愛くてつんとした魅力があって、好きな方が多いですね
     MessageCN: 原来如此。猫可爱而又端庄，很有魅力，喜欢猫的人很多呢
     MessageEN: I see. Cats are adorable and sassy, so a lot of people love them.
-    MessageTH: "อย่างนั้นเหรอคะ แมวเป็นสัตว์ที่น่ารัก
-
+    MessageTH: |-
+      อย่างนั้นเหรอคะ แมวเป็นสัตว์ที่น่ารัก
       และมีเสน่ห์ดึงดูดมาก เพราะงั้นเลยมี
-
-      คนชอบเยอะสินะคะ"
+      คนชอบเยอะสินะคะ
     MessageTW: 這樣啊。確實，貓既可愛又有著高傲的魅力，所以很多人都喜歡呢
     MessageGroupId: 100380100
     Id: 100380110
@@ -337,9 +344,9 @@ content:
     MessageJP: 先生、写真をどうぞ
     MessageCN: 老师，请看照片
     MessageEN: Sensei, here's a picture of the rabbit we adopted.
-    MessageTH: "คุณครู นี่เป็นรูปน้องกระต่ายที่เพิ่งรับมา
-
-      เลี้ยงค่ะ"
+    MessageTH: |-
+      คุณครู นี่เป็นรูปน้องกระต่ายที่เพิ่งรับมา
+      เลี้ยงค่ะ
     MessageTW: 老師，請看照片
     MessageGroupId: 100380140
     Id: 100380160
@@ -393,9 +400,9 @@ content:
     MessageJP: ですよね？ウサギには、犬や猫とはまた違った魅力があります
     MessageCN: 对吧？兔子有着和猫狗不一样的魅力
     MessageEN: Right? Rabbits have a different charm from dogs or cats.
-    MessageTH: "ใช่ไหมล่ะคะ? กระต่ายเองก็มีเสน่ห์
-
-      เฉพาะตัวที่ต่างจากสุนัขและแมวค่ะ"
+    MessageTH: |-
+      ใช่ไหมล่ะคะ? กระต่ายเองก็มีเสน่ห์
+      เฉพาะตัวที่ต่างจากสุนัขและแมวค่ะ
     MessageTW: 對吧？兔子有著和貓狗不同的魅力
     MessageGroupId: 100380160
     Id: 100380190
@@ -413,9 +420,9 @@ content:
     MessageJP: 後で目覚めたら、また写真を撮って送りますね
     MessageCN: 等它醒了，我再拍照发给老师哦
     MessageEN: I'll take another picture when she wakes up for you.
-    MessageTH: "เดี๋ยวถ้าน้องกระต่ายตื่นขึ้นมา ฉันจะ
-
-      ถ่ายรูปส่งไปให้ดูนะคะ"
+    MessageTH: |-
+      เดี๋ยวถ้าน้องกระต่ายตื่นขึ้นมา ฉันจะ
+      ถ่ายรูปส่งไปให้ดูนะคะ
     MessageTW: 等牠醒來之後，再傳照片給老師哦
     MessageGroupId: 100380160
     Id: 100380200
@@ -433,9 +440,9 @@ content:
     MessageJP: そういえば先生からプレゼントしていただいた、あのウサギの名前がまだ決まってないんです
     MessageCN: 说起来，老师送我的那只兔子还没起好名字呢
     MessageEN: By the way, I haven't decided on a name for her yet.
-    MessageTH: "พอมานึกๆ ดูแล้ว ฉันยังไม่ได้ตั้งชื่อกระต่าย
-
-      ที่คุณครูให้มาเป็นของขวัญเลยนะคะ"
+    MessageTH: |-
+      พอมานึกๆ ดูแล้ว ฉันยังไม่ได้ตั้งชื่อกระต่าย
+      ที่คุณครูให้มาเป็นของขวัญเลยนะคะ
     MessageTW: 話說回來，還沒幫老師送給我的兔子取名字呢
     MessageGroupId: 100380170
     Id: 100380210
@@ -453,9 +460,9 @@ content:
     MessageJP: 可愛くて愛おしくて勇敢なこのウサギの性格をよく表すような名前、何かないでしょうか？
     MessageCN: 老师有没有什么名字能很好地表现出它可爱和勇敢的性格呢
     MessageEN: What kind of name would describe this adorable and brave rabbit?
-    MessageTH: "มีชื่อที่แสดงถึงความกล้าหาญและความ
-
-      น่ารักนุ่มฟูของน้องกระต่ายบ้างมั้ยคะ?"
+    MessageTH: |-
+      มีชื่อที่แสดงถึงความกล้าหาญและความ
+      น่ารักนุ่มฟูของน้องกระต่ายบ้างมั้ยคะ?
     MessageTW: 有沒有什麼名字可以表現出牠的可愛、惹人憐愛又勇敢的性格呢？
     MessageGroupId: 100380180
     Id: 100380220
@@ -509,9 +516,9 @@ content:
     MessageJP: それはウサギに付けるには派手すぎだと思いますが……
     MessageCN: 这个名字放在兔子身上有点过于夸张了……
     MessageEN: That seems too fancy for a rabbit.
-    MessageTH: "ชื่อนั้นดูยิ่งใหญ่เกินไปที่จะเป็นชื่อน้อง
-
-      กระต่ายนะคะ"
+    MessageTH: |-
+      ชื่อนั้นดูยิ่งใหญ่เกินไปที่จะเป็นชื่อน้อง
+      กระต่ายนะคะ
     MessageTW: 這個名字對兔子來說好像有點太浮誇了……
     MessageGroupId: 100380200
     Id: 100380250
@@ -528,10 +535,10 @@ content:
   - MessageKR: ……그건 좀 토끼에게 미안한 이름이 아닐까요.
     MessageJP: ……それをウサギに付けるのはどうかと思います
     MessageCN: ……老师是怎么想到给兔子起这种名字的啊
-    MessageEN: "...I don't want someone to eat my rabbit."
-    MessageTH: "ถ้าตั้งชื่อน้องแบบนั้นคงรู้สึกผิด
-
-      กับน้องแน่เลยค่ะ..."
+    MessageEN: ...I don't want someone to eat my rabbit.
+    MessageTH: |-
+      ถ้าตั้งชื่อน้องแบบนั้นคงรู้สึกผิด
+      กับน้องแน่เลยค่ะ...
     MessageTW: ……幫兔子取這個名字不太好吧
     MessageGroupId: 100380210
     Id: 100380260
@@ -603,9 +610,9 @@ content:
     MessageJP: それではこれからこのウサギはぴょんこと呼びます
     MessageCN: 那就叫它小跃吧
     MessageEN: Yeah, I think it's perfect.
-    MessageTH: 'ถ้างั้นต่อไปฉันจะเรียกน้องกระต่าย
-
-      ตัวนี้ว่า "เปียงโกะ" ค่ะ'
+    MessageTH: |-
+      ถ้างั้นต่อไปฉันจะเรียกน้องกระต่าย
+      ตัวนี้ว่า "เปียงโกะ" ค่ะ
     MessageTW: 那麼之後這隻兔子就叫做蹦蹦了
     MessageGroupId: 100380240
     Id: 100380300
@@ -623,9 +630,9 @@ content:
     MessageJP: ここはRABBIT1。離陸の許可を要請します……
     MessageCN: 这里是RABBIT1。请求起飞许可……
     MessageEN: <SYSTEM> This is RABBIT 1. Requesting permission to land.
-    MessageTH: "<ข้อความระบบ> นี่คือ RABBIT 1
-
-      ขออนุญาตลงจอดภาคพื้นดินด้วยค่ะ..."
+    MessageTH: |-
+      <ข้อความระบบ> นี่คือ RABBIT 1
+      ขออนุญาตลงจอดภาคพื้นดินด้วยค่ะ...
     MessageTW: 這裡是RABBIT 1，請求起飛……
     MessageGroupId: 100380250
     Id: 100380310
@@ -678,14 +685,13 @@ content:
   - MessageKR: 어라, 또 선생님의 메일 주소를 헬리콥터 관제소 주소와 착각했군요. 죄송해요.
     MessageJP: あ。また宛先を間違えていました、すみません
     MessageCN: 啊。不好意思，我又发错消息了
-    MessageEN:
+    MessageEN: >-
       Oh... I mistook your email address for the helicopter control station
       again. I'm sorry.
-    MessageTH: "เอ๋? ฉันจำชื่อห้องแชทของคุณครูสลับกับ
-
+    MessageTH: |-
+      เอ๋? ฉันจำชื่อห้องแชทของคุณครูสลับกับ
       หอควบคุมเฮลิคอปเตอร์อีกแล้วค่ะ ขอโทษ
-
-      ด้วยค่ะ "
+      ด้วยค่ะ
     MessageTW: 啊。我又搞錯了，不好意思
     MessageGroupId: 100380270
     Id: 100380340
@@ -720,12 +726,12 @@ content:
   - MessageKR: 네, 선생님. 오늘 2200시에 헬기를 사용한 강하 작전이 예정되어 있습니다.
     MessageJP: はい。本日2200に、ヘリを使った降下作戦が予定されています
     MessageCN: 是的，今天2200，我预计要执行一个直升机空降作战行动
-    MessageEN:
+    MessageEN: >-
       Yes, Sensei. A helicopter descent operation is scheduled today at 2200
       hours.
-    MessageTH: "ค่ะ คุณครู วันนี้มีแผนปฏิบัติการโรยตัว
-
-      โดยใช้เฮลิคอปเตอร์รุ่น 2200 ค่ะ"
+    MessageTH: |-
+      ค่ะ คุณครู วันนี้มีแผนปฏิบัติการโรยตัว
+      โดยใช้เฮลิคอปเตอร์รุ่น 2200 ค่ะ
     MessageTW: 是的。今天2200預計將進行直升機的降落作戰
     MessageGroupId: 100380290
     Id: 100380360
@@ -742,12 +748,12 @@ content:
   - MessageKR: 키보토스에 불법으로 동물들을 들여오는 밀수업자들을 습격하는 임무입니다.
     MessageJP: キヴォトスへ不法に動物たちを輸入している、密輸業者たちを襲撃する任務です
     MessageCN: 任务目标是袭击那些把动物非法进口到基沃托斯的走私犯
-    MessageEN:
+    MessageEN: >-
       The mission is to raid the smugglers who have been illegally bringing
       animals into Kivotos.
-    MessageTH: "เป็นภารกิจบุกโจมตีกลุ่มลักลอบขนสัตว์
-
-      เข้ามาที่คิโวทอสอย่างผิดกฎหมายค่ะ"
+    MessageTH: |-
+      เป็นภารกิจบุกโจมตีกลุ่มลักลอบขนสัตว์
+      เข้ามาที่คิโวทอสอย่างผิดกฎหมายค่ะ
     MessageTW: 是襲擊非法引進動物到奇普托斯的走私業者們的任務
     MessageGroupId: 100380300
     Id: 100380370
@@ -765,9 +771,9 @@ content:
     MessageJP: 今回の降下作戦には私も付いて行くよ
     MessageCN: 这次作战我也要跟去
     MessageEN: I'll come.
-    MessageTH: "งั้นปฏิบัติการโรยตัวคราวนี้ครูขอตามไป
-
-      ด้วยนะ"
+    MessageTH: |-
+      งั้นปฏิบัติการโรยตัวคราวนี้ครูขอตามไป
+      ด้วยนะ
     MessageTW: 這次降落作戰我也會跟著一起去哦
     MessageGroupId: 100380310
     Id: 100380380
@@ -785,9 +791,9 @@ content:
     MessageJP: はい？先生も一緒にヘリに乗られるのですか？
     MessageCN: 什么？老师也要和我一起坐直升机？
     MessageEN: Huh? You wanna come on the helicopter?
-    MessageTH: "คะ? คุณครูก็จะขึ้นเฮลิคอปเตอร์ด้วย
-
-      เหรอคะ?"
+    MessageTH: |-
+      คะ? คุณครูก็จะขึ้นเฮลิคอปเตอร์ด้วย
+      เหรอคะ?
     MessageTW: 咦？老師也要一起搭直升機嗎？
     MessageGroupId: 100380320
     Id: 100380390
@@ -805,9 +811,9 @@ content:
     MessageJP: 危ないと思いますが……大丈夫ですか？
     MessageCN: 任务可能很危险……老师没关系吗？
     MessageEN: It'll be dangerous though... Are you sure?
-    MessageTH: "มันอันตรายนะคะ... คุณครูไม่เป็นไรแน่
-
-      เหรอคะ?"
+    MessageTH: |-
+      มันอันตรายนะคะ... คุณครูไม่เป็นไรแน่
+      เหรอคะ?
     MessageTW: 我想會有點危險……沒問題嗎？
     MessageGroupId: 100380320
     Id: 100380400
@@ -879,9 +885,9 @@ content:
     MessageJP: ごめん、ミヤコ。会議中だったから確認が遅くなっちゃった
     MessageCN: 抱歉，宫子。刚刚我开会没看消息
     MessageEN: Sorry, Miyako. I was in a meeting and just saw this.
-    MessageTH: "ขอโทษที มิยาโกะ เมื่อกี้ครูประชุมอยู่เลย
-
-      ตอบช้าน่ะ"
+    MessageTH: |-
+      ขอโทษที มิยาโกะ เมื่อกี้ครูประชุมอยู่เลย
+      ตอบช้าน่ะ
     MessageTW: 抱歉，都子。剛才在開會所以這麼晚才看到
     MessageGroupId: 100380360
     Id: 100380440
@@ -909,7 +915,311 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100388
-    NextGroupId: 0
+    NextGroupId: 100380380
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+  - MessageKR: SRT 특수학원의 건물 내에서 생활할 때는 미처 몰랐었는데
+    MessageJP: SRT特殊学園で生活していた時は知りませんでしたが
+    MessageCN: 我在SRT特殊学园生活的时候还不知道
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380380
+    Id: 100380460
+    CharacterId: 10038
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100380370
+    PreConditionFavorScheduleId: 100388
+    FavorScheduleId: 0
+    NextGroupId: 100380390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 장기간 야영을 하는 건 겨울보다 여름이 더 힘든 것 같네요.
+    MessageJP: 長期間キャンプをする場合、冬より夏の方が大変なのですね
+    MessageCN: 不过长时间在外露营的时候，夏天要比冬天更煎熬呢
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380390
+    Id: 100380470
+    CharacterId: 10038
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 무슨 어려움이라도 있어?
+    MessageJP: 何かあったの？
+    MessageCN: 是发生什么事了吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380400
+    Id: 100380480
+    CharacterId: 10038
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 얼마 전부터 여름 장마가 시작되었잖아요?
+    MessageJP: ええ。最近、梅雨に入ったので
+    MessageCN: 嗯。因为最近到梅雨季了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380410
+    Id: 100380490
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그 때문에 장비에도 자주 녹이 슬고, 음식도 쉽게 상해서
+    MessageJP: 装備が錆びたり、食べ物の日持ちも悪くなってしまって
+    MessageCN: 装备会生锈，食物也保存不了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380410
+    Id: 100380500
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 여러모로 애로사항이 많네요.
+    MessageJP: 色々と困っているのです
+    MessageCN: 在各种方面都挺困扰的
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380410
+    Id: 100380510
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 다른 것보다 빨래가 좀처럼 마르지 않아서……
+    MessageJP: 何より、雨のせいで洗濯物がなかなか乾かず……
+    MessageCN: 最重要的是，因为连续下雨，我们洗好的衣服怎么也干不了……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380420
+    Id: 100380520
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 밀린 빨랫감을 어디서 말려야 좋을지 소대원들과 고민하던 중이었어요.
+    MessageJP: どうすればいいかみんなで悩んでいたところでした
+    MessageCN: 我们现在都在发愁到底该怎么办
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380420
+    Id: 100380530
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380430
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 빨랫감을 샬레로 가져오는 건 어때?
+    MessageJP: なら、シャーレで洗濯する？
+    MessageCN: 那，来夏莱洗衣服？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380430
+    Id: 100380540
+    CharacterId: 10038
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380440
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 샬레요?
+    MessageJP: シャーレで、ですか？
+    MessageCN: 去夏莱吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380440
+    Id: 100380550
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 샬레 휴게실에는 세탁기도 건조기도 있으니까.
+    MessageJP: シャーレの休憩室には乾燥機もあるから
+    MessageCN: 毕竟夏莱的休息室里有烘干机
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380450
+    Id: 100380560
+    CharacterId: 10038
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380460
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 한나절이면 금방 마를 거야.
+    MessageJP: 半日もあれば乾くと思うよ
+    MessageCN: 我觉得应该半天时间就能烘干哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380460
+    Id: 100380570
+    CharacterId: 10038
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 아뇨. 선생님의 호의라지만
+    MessageJP: いえ、いくら先生が仰ってくれたからといって
+    MessageCN: 不，不管老师怎么说
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380470
+    Id: 100380580
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그럴 수는
+    MessageJP: それに甘えるわけには
+    MessageCN: 过于依赖那个的话
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380470
+    Id: 100380590
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100380480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 이번 한 번만……
+    MessageJP: 今回だけ……
+    MessageCN: 就这一次……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380480
+    Id: 100380600
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 2500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 부탁드리겠습니다……
+    MessageJP: お願いします……
+    MessageCN: 拜托老师了……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100380480
+    Id: 100380610
+    CharacterId: 10038
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1003820
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false

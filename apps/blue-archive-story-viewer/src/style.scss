@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 //noinspection CssUnknownTarget
 @font-face {
   src: url("/font/bender-bold.woff2") format("woff2"),
@@ -64,6 +60,7 @@ html {
   --color-tag-active-background: #2f2f2f;
   --color-tag-active: #ffffff;
   --color-tag-background: #ffffff;
+  --color-tag-fluent: #115ea3;
 
   --color-text-contrast: #fff;
   --color-text-decoration: #ededed;
@@ -76,6 +73,7 @@ html {
   --color-text-special: #006bff;
   --color-text-striker: #cc1a25;
   --color-text-unarmed: #216f9c;
+  --color-text-fluent-white: #fff;
 
   --color-title-container: #fcfdfe;
 
@@ -279,6 +277,17 @@ a {
   box-shadow: 0.2rem 0.2rem 1rem var(--color-shadow-farther);
 }
 
+.color-transition {
+  transition: color 0.375s ease-in-out;
+}
+
+.fluent-tag {
+  border-radius: 4px;
+  background-color: var(--color-tag-fluent);
+  padding: 0 8px;
+  color: var(--color-text-fluent-white);
+}
+
 .user-action-button {
   display: flex;
   justify-content: center;
@@ -299,10 +308,16 @@ a {
   &.danger {
     background: var(--color-pallete-danger);
   }
+
+  &.outline {
+    border: 1px solid var(--color-text-glass-panel);
+    background: none;
+    color: var(--color-text-main);
+  }
 }
 
 // consistent scrollbar style on all desktop browsers
-@media screen and (min-width: 768px) {
+@media screen {
   html[data-scrollbar="customize"] {
     //scrollbar-gutter: stable;
     //scrollbar-width: thin;
@@ -330,50 +345,9 @@ a {
   }
 }
 
-// control pwa install prompt
-//noinspection CssUnusedSymbol,CssOverwrittenProperties
-.sw-update-toast {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.1);
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-
-  .sw-update-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: var(--style-shadow-far);
-    border-radius: 1rem;
-    background: var(--color-card-background);
-    padding: 1rem;
-
-    h4 {
-      margin-bottom: 0.5rem;
-      font-weight: normal;
-    }
-
-    .sw-update-button {
-      cursor: pointer;
-      border-radius: 0.25rem;
-      background: var(--color-primary-button);
-      padding: 0.4rem 1rem;
-      color: #fff;
-      font-weight: bold;
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   body {
     padding: 0;
-    height: unset;
   }
 
   #app {

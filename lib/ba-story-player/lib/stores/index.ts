@@ -1,5 +1,4 @@
 import { getResourcesUrl } from "@/utils";
-import { Assets } from "pixijs";
 import { ref } from "vue";
 import { BGEffectImgTable } from "@/types/effectLayer";
 import {
@@ -60,7 +59,7 @@ const bgEffectImgTable: BGEffectImgTable = {
   BG_Wave_F: [],
   BG_Flash: [],
   BG_UnderFire_R: [],
-  BG_Love_L: [
+  BG_Love_L_BGOff: [
     "FX_TEX_Img_Heart_01.png",
     "FX_TEX_SCN_Ring_02.png",
     "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
@@ -84,7 +83,7 @@ const bgEffectImgTable: BGEffectImgTable = {
     "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
   ],
   "BG_ScrollB_1.0": [],
-  BG_Love_L_BGOff: [
+  BG_Love_L: [
     "FX_TEX_Img_Heart_01.png",
     "FX_TEX_SCN_Ring_02.png",
     "FX_TEX_SCN_Circle_Love.png",
@@ -116,7 +115,7 @@ const bgEffectImgTable: BGEffectImgTable = {
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const privateState: PrivateStates = {
+let privateState: PrivateStates = {
   language: "Cn",
   userName: "",
   dataUrl: "",
@@ -159,10 +158,13 @@ const getterFunctions: GetterFunctions = {
 
   characterSpineData: () => (CharacterName: number, url: string) => {
     // eslint-disable-next-line max-len
+    const {
+      app: { loader },
+    } = usePlayerStore();
     return (
-      Assets.cache.has(String(CharacterName))
-        ? Assets.get(String(CharacterName))
-        : Assets.get(url) || {}
+      loader.resources[String(CharacterName)] ??
+      loader.resources[url] ??
+      {}
     ).spineData;
   },
 
@@ -199,8 +201,10 @@ const getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    const resource = Assets.get(privateState.l2dSpineUrl);
-    if (resource) return resource.spineData;
+    const {
+      app: { loader },
+    } = usePlayerStore();
+    return (loader.resources[privateState.l2dSpineUrl] ?? {}).spineData;
   },
 };
 
@@ -259,6 +263,40 @@ const actions: Actions = {
   },
   setTranslator(translator: string) {
     privateState.translator = translator;
+  },
+  dispose() {
+    privateState = {
+      language: "Cn",
+      userName: "",
+      dataUrl: "",
+      app: null,
+      l2dSpineUrl: "",
+      curL2dConfig: null,
+      translator: "",
+      storySummary: {
+        chapterName: "",
+        summary: "",
+      },
+
+      allStoryUnit: [],
+      stackStoryUnit: [],
+      //文字层
+      logText: ref([]),
+
+      //背景层
+      bgInstance: null,
+
+      //资源管理
+      BGNameExcelTable: new Map(),
+      CharacterNameExcelTable: new Map(),
+      BGMExcelTable: new Map(),
+      BGEffectExcelTable: new Map(),
+      TransitionExcelTable: new Map(),
+      EmotionExcelTable: new Map(),
+      emotionResourcesTable: new Map(Object.entries(emotionResourcesTable)),
+      fxImageTable: new Map(Object.entries(fxImageTable)),
+      bgEffectImgMap: new Map(Object.entries(bgEffectImgTable)),
+    } as unknown as PrivateStates;
   },
 };
 

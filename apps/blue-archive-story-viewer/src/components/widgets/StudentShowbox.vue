@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Directive, DirectiveBinding, PropType, computed } from "vue";
+import { Student } from "@/types/Student";
 import { useSettingsStore } from "@store/settings";
-import { Student } from "@types/Student";
 
 const props = defineProps({
   studentInfo: Object as PropType<Student>,
@@ -25,6 +25,7 @@ const vLazyLoad: Directive = {
     img.onload = function () {
       if (img.complete) {
         el.setAttribute("src", binding.value);
+        el.classList.add("fade-in");
       }
     };
   },
@@ -40,7 +41,7 @@ function getImagePath(id: number | undefined): string {
     <img
       v-lazy-load="getImagePath(studentInfo?.id)"
       class="student-avatar"
-      src="/src/assets/loading.webp"
+      src="@assets/loading.webp"
       :alt="studentInfo?.name.cn"
     />
     <div class="name-tag">{{ studentName }}</div>
@@ -61,11 +62,26 @@ function getImagePath(id: number | undefined): string {
   grid-area: avatar;
   width: 100%;
   object-fit: cover;
+
+  &.fade-in {
+    grid-area: avatar;
+    animation: fade-in 0.375s ease-in-out;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .name-tag {
   grid-area: avatar;
   align-self: end;
+  z-index: 1;
   transition: all 0.375s ease-in-out;
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: var(--color-name-tag);

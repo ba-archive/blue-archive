@@ -2,6 +2,7 @@ import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
+import { Application, Sprite } from "pixi.js";
 import gsap from "gsap";
 import { Application, Sprite } from "pixijs";
 import { calcBackgroundImageSize } from "@/layers/bgLayer";

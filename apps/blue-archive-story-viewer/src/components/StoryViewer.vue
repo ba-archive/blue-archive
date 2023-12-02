@@ -1,5 +1,5 @@
 <template>
-  <div class="fill-screen center" ref="playerContainerElement">
+  <div class="fill-screen center player-container" ref="playerContainerElement">
     <error-screen
       :route-path="route.path"
       :error-message="fetchErrorMessage"
@@ -30,12 +30,34 @@
         class="flex-vertical story-container"
         v-if="consentFromConfirmed && ready && !fetchError"
       >
-        <div v-if="!playEnded">Story ID {{ storyId }}</div>
+        <div class="story-info flex-horizontal" v-if="!playEnded">
+          <svg
+            role="button"
+            class="icon-back"
+            @click="handleGoBack"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- eslint-disable max-len -->
+            <path
+              d="M10.7327 19.791C11.0326 20.0766 11.5074 20.0651 11.7931 19.7652C12.0787 19.4652 12.0672 18.9905 11.7673 18.7048L5.51587 12.7502L20.25 12.7502C20.6642 12.7502 21 12.4144 21 12.0002C21 11.586 20.6642 11.2502 20.25 11.2502L5.51577 11.2502L11.7673 5.29551C12.0672 5.00982 12.0787 4.53509 11.7931 4.23516C11.5074 3.93523 11.0326 3.92369 10.7327 4.20938L3.31379 11.2761C3.14486 11.437 3.04491 11.6422 3.01393 11.8556C3.00479 11.9024 3 11.9507 3 12.0002C3 12.0498 3.00481 12.0982 3.01398 12.1451C3.04502 12.3583 3.14496 12.5634 3.31379 12.7243L10.7327 19.791Z"
+            />
+            <!-- eslint-enable max-len -->
+          </svg>
+          <div class="fluent-tag">
+            {{ getI18nString(userLanguage, `storyType.${storyType}`) }}
+          </div>
+          <div>
+            {{ summary.chapterName }}
+          </div>
+        </div>
         <story-player
           v-if="showPlayer && !playEnded"
+          class="story-player"
+          @initiated="handleInitiated"
           :change-index="changeIndex"
           :story="story"
-          class="player-container"
           :width="playerWidth"
           :height="playerHeight"
           data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
@@ -48,8 +70,12 @@
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
         />
-        <img :src="useSuperSamplingImgPath" alt="" style="opacity: 0" />
-        <div v-if="playEnded" class="flex-vertical">
+        <img
+          :src="useSuperSamplingImgPath"
+          alt=""
+          style="opacity: 0; position: absolute"
+        />
+        <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
             <div
@@ -77,23 +103,36 @@
             >
           </div>
         </div>
-        <div v-if="!playEnded" class="player-settings flex-horizontal">
-          <div>
-            <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
-            <span>{{
-              getI18nString(userLanguage, "settings.useMp3Title")
-            }}</span>
+        <div v-if="!playEnded" class="player-footer flex-horizontal">
+          <div class="story-info flex-horizontal">
+            <div>
+              <div>Story ID</div>
+              <div>{{ isStuStory ? favorGroupId : storyId }}</div>
+            </div>
+            <div>
+              <div>翻译</div>
+              <div class="translator">
+                {{ story.translator || "佚名" }}
+              </div>
+            </div>
           </div>
-          <div class="flex-horizontal">
-            <neu-switch
-              :checked="![undefined, false, ''].includes(useSuperSampling)"
-              @update:value="handleUseSuperSampling"
-            />
-            <span>{{
-              getI18nString(userLanguage, "settings.useSuperSamplingTitle")
-            }}</span>
+          <div class="flex-horizontal player-settings">
+            <div class="flex-horizontal player-settings__settings--container">
+              <span>{{
+                getI18nString(userLanguage, "settings.useMp3Title")
+              }}</span>
+              <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
+            </div>
+            <div class="flex-horizontal player-settings__settings--container">
+              <span>{{
+                getI18nString(userLanguage, "settings.useSuperSamplingTitle")
+              }}</span>
+              <neu-switch
+                :checked="![undefined, false, ''].includes(useSuperSampling)"
+                @update:value="handleUseSuperSampling"
+              />
+            </div>
           </div>
-          <!--          <div @click="changeIndex = 50">change index 50</div>-->
         </div>
       </div>
     </div>
@@ -104,7 +143,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import StoryPlayer from "ba-story-player";
-import { computed, ref, watch } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
@@ -114,7 +153,9 @@ import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
 import {
   CommonStoryTextObject,
   Section,
+  StoryAbstract,
   StoryContent,
+  StoryIndex,
 } from "@/types/StoryJson";
 import { getI18nString } from "@i18n/getI18nString";
 import { stories } from "@index/mainStoryIndex";
@@ -124,14 +165,13 @@ import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
 
-const changeIndex = ref(0);
-
 const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
 const storyQueryType = computed(() => route.query.type ?? "main");
-const consentFromConfirmed = ref(false);
+const consentFromConfirmed = ref(true);
 const story = ref<StoryContent>({} as StoryContent);
+const storyIndex = ref<StoryIndex>({} as StoryIndex);
 
 const settingsStore = useSettingsStore();
 const userName = computed(() => settingsStore.getUsername);
@@ -148,6 +188,18 @@ const initProgress = ref(0);
 const ready = ref(false);
 const fetchError = ref(false);
 const fetchErrorMessage = ref({});
+
+const changeIndex = ref(0);
+
+function handleInitiated() {
+  if (route.query.changeIndex) {
+    const rawIndex = parseInt(route.query.changeIndex as string);
+    if (!Number.isNaN(rawIndex)) {
+      changeIndex.value = rawIndex;
+    }
+  }
+}
+
 /* eslint-disable max-len */
 const summary = ref({
   chapterName: "序章",
@@ -155,8 +207,26 @@ const summary = ref({
     "从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。",
 });
 /* eslint-enable max-len */
+const studentId = computed(() => route.params.id as string);
+const favorGroupId = computed(() => (route.params.groupId as string) ?? "");
+const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
+// 存储故事类型并以此生成请求url
+const isStuStory = computed(() =>
+  route.name === "StudentStoryViewer" ? true : false
+);
+
+const storyType = computed(() => {
+  if (isStuStory.value) {
+    return "favor";
+  }
+  return storyQueryType.value;
+});
+
+const queryUrl = isStuStory.value
+  ? `/story/favor/${studentId.value}/${favorGroupId.value}.json`
+  : `/story/${storyQueryType.value}/${storyId.value}.json`;
 axios
-  .get(`/story/${storyQueryType.value}/${storyId.value}.json`, {
+  .get(queryUrl, {
     onDownloadProgress: progressEvent => {
       if (progressEvent.total) {
         initProgress.value = Math.floor(
@@ -175,10 +245,24 @@ axios
   })
   .catch(err => {
     fetchError.value = true;
-    fetchErrorMessage.value =
-      route.params.id.toString() === "11000"
-        ? err
-        : "该剧情目前尚未开放，敬请期待！";
+    if (!isStuStory.value) {
+      fetchErrorMessage.value =
+        route.params.id.toString() === "11000"
+          ? err
+          : "该剧情目前尚未开放，敬请期待！";
+    } else {
+      /* eslint-disable indent */
+      fetchErrorMessage.value =
+        404 === err.response.status
+          ? {
+              message: "Story not found",
+              response: {
+                status: 1919,
+              },
+            }
+          : err;
+      /* eslint-enable indent */
+    }
   })
   .finally(() => {
     ready.value = true;
@@ -192,6 +276,7 @@ const playerHeight = ref(0);
 const startFullScreen = ref(document.body.clientWidth < 425);
 const useMp3 = computed(() => settingsStore.getUseMp3);
 const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
+// 超分埋点
 const useSuperSamplingImgPath = computed(
   () =>
     `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${
@@ -204,40 +289,42 @@ if (typeof window.webkitConvertPointFromNodeToPage === "function") {
   settingsStore.setUseMp3(true);
 }
 
+const appHeight = computed(() => settingsStore.getAppSize.height);
+const appWidth = computed(() => settingsStore.getAppSize.width);
+
 /* eslint-disable indent */
 watch(
-  () => containerWidth.value,
+  () => [containerWidth.value, containerHeight.value],
   () => {
-    playerWidth.value =
+    playerWidth.value = Math.ceil(
       document.body.clientWidth <= 360
         ? window.screen.availWidth - 32
         : Math.min(
-            containerWidth.value - 32,
-            (16 * (containerHeight.value - 32)) / 9,
-            768
-          );
+            containerWidth.value * 0.8,
+            (16 * (appHeight.value - 256)) / 9,
+            appWidth.value - 64
+          )
+    );
     playerHeight.value = Math.floor(
-      Math.min((playerWidth.value * 9) / 16, containerHeight.value)
+      Math.min((playerWidth.value * 9) / 16, appHeight.value - 256)
     );
   },
   { immediate: true }
 );
+
 /* eslint-enable indent */
 
 function handleConsentFormConfirm() {
   consentFromConfirmed.value = true;
-  // 不是第一次直接刷新
-  (window as any).hasStoryPlayed = true;
 }
 
 const showPlayer = ref(true);
 
-function reloadPlayer(forceReload = false) {
+async function reloadPlayer(forceReload = false) {
   if (!forceReload) {
     showPlayer.value = false;
-    setTimeout(() => {
-      showPlayer.value = true;
-    }, 4);
+    await nextTick();
+    showPlayer.value = true;
     return;
   }
   setTimeout(() => {
@@ -268,33 +355,69 @@ function getTextByLanguage(textObject: CommonStoryTextObject | undefined) {
   );
 }
 
+// 学生故事模式下获取 summary 的方法
+function getSummaryTextByKey(summary: StoryAbstract, key: string) {
+  return Reflect.get(Reflect.get(summary, key), "Text" + playerLanguage.value);
+}
+
 function handleSummaryDisplayLanguageChange() {
-  summary.value = {
-    chapterName: getTextByLanguage(currentStoryIndexUnit?.title),
-    summary: getTextByLanguage(currentStoryIndexUnit?.summary),
-  };
+  if (isStuStory.value) {
+    const currentChapterAbstract = storyIndex.value.abstracts.find(
+      abstract => abstract.groupId.toString() === favorGroupId.value
+    );
+    if (currentChapterAbstract) {
+      const tempChapterName = getSummaryTextByKey(
+        currentChapterAbstract,
+        "title"
+      );
+      const tempSummary = getSummaryTextByKey(
+        currentChapterAbstract,
+        "abstract"
+      );
+      summary.value = {
+        chapterName: "string" === typeof tempChapterName ? tempChapterName : "",
+        summary: "string" === typeof tempSummary ? tempSummary : "",
+      };
+    }
+  } else {
+    summary.value = {
+      chapterName: getTextByLanguage(currentStoryIndexUnit?.title),
+      summary: getTextByLanguage(currentStoryIndexUnit?.summary),
+    };
+  }
 }
 
 watch(
   () => userLanguage.value,
-  () => {
-    showPlayer.value = false;
+  async () => {
     handleSummaryDisplayLanguageChange();
-    reloadPlayer();
+    await reloadPlayer();
   }
 );
 
-handleSummaryDisplayLanguageChange();
-
-function handleUseMp3(value: boolean) {
-  settingsStore.setUseMp3(value);
-  reloadPlayer();
+// 在学生故事模式下通过 axios 获取 summary
+if (!isStuStory.value) {
+  handleSummaryDisplayLanguageChange();
+} else {
+  axios
+    .get(`/story/favor/${studentId.value}/index.json`)
+    .then(res => {
+      storyIndex.value = res.data;
+      handleSummaryDisplayLanguageChange();
+    })
+    .catch(err => {
+      console.error(err);
+    });
 }
 
-function handleUseSuperSampling(value: boolean) {
-  console.log("超分选项：" + value ? "2倍" : "关闭");
+async function handleUseMp3(value: boolean) {
+  settingsStore.setUseMp3(value);
+  await reloadPlayer();
+}
+
+async function handleUseSuperSampling(value: boolean) {
   settingsStore.setUseSuperSampling(value ? "2" : "");
-  reloadPlayer();
+  await reloadPlayer();
 }
 
 function findPreviousStoryId(): number | undefined {
@@ -313,23 +436,73 @@ function findNextStoryId(): number | undefined {
 
 function handleStoryEnd() {
   console.log("剧情结束");
-  setTimeout(
-    () => (playEnded.value = true),
-    "main" === storyQueryType.value ? 4000 : 4
-  );
+  if (isStuStory.value) {
+    router.push(
+      shouldReturnToMomotalk
+        ? `/archive/${studentId.value}/momotalk`
+        : `/archive/${studentId.value}/story`
+    );
+  } else {
+    setTimeout(
+      () => (playEnded.value = true),
+      "main" === storyQueryType.value ? 4000 : 4
+    );
+  }
 }
 
-function handleReplay() {
+async function handleReplay() {
   playEnded.value = false;
-  reloadPlayer();
+  await reloadPlayer();
+}
+
+function handleGoBack() {
+  router.go(-1);
 }
 </script>
 
 <style scoped lang="scss">
 .story-container {
-  .player-settings {
-    margin-top: 1rem;
+  gap: 0.5rem;
+
+  .story-info {
+    gap: 0.5rem;
+    width: 100%;
+
+    .icon-back {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      path {
+        fill: var(--color-text-main);
+      }
+    }
+  }
+
+  .player-footer {
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
     user-select: none;
+
+    .story-info {
+      gap: 1rem;
+
+      .translator {
+        font-weight: bold;
+      }
+    }
+
+    .player-settings {
+      gap: 0.5rem;
+
+      span {
+        white-space: nowrap;
+      }
+
+      &__settings--container {
+        gap: 0.5rem;
+      }
+    }
   }
 }
 
@@ -348,7 +521,16 @@ function handleReplay() {
 }
 
 .player-container {
-  user-select: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.story-player {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 :deep(.pseudo-fullscreen) {

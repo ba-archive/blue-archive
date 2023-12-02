@@ -1,5 +1,4 @@
-import { PlayOptions } from "@pixi/sound";
-import { Character, Effect, Speaker, Text } from "./common";
+import { Character, Effect, PlayOptions, Speaker, Text } from "./common";
 import {
   BGEffectExcelTableItem,
   BGEffectType,

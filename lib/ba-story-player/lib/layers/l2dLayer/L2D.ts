@@ -3,9 +3,9 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
+import { Container } from "pixi.js";
 import gsap from "gsap";
 import { IEvent, ITrackEntry, Spine } from "pixi-spine";
-import { Assets, Container } from "pixijs";
 import { IL2dPlayQue } from "@/types/l2d";
 
 let disposed = true;
@@ -36,13 +36,13 @@ export function L2DInit() {
       clearInterval(timeout);
     }
     timeOutArray = [];
-    otherItems.forEach(it => app.stage.removeChild(it as unknown as Container));
+    otherItems.forEach(it =>
+      app.stage?.removeChild(it as unknown as Container)
+    );
     if (startAnimations) {
-      startAnimations.forEach(it => {
-        if (null !== app.stage) {
-          app.stage.removeChild(it.spine as unknown as Container);
-        }
-      });
+      startAnimations.forEach(it =>
+        app.stage?.removeChild(it as unknown as Container)
+      );
     }
     if (null !== app.stage) {
       app.stage.removeChild(mainItem as unknown as Container);
@@ -74,7 +74,7 @@ export function L2DInit() {
   });
   // 播放live2D
   eventBus.on("playL2D", () => {
-    const { l2dSpineData, curL2dConfig } = usePlayerStore();
+    const { l2dSpineData, curL2dConfig, characterSpineData } = usePlayerStore();
     // 动画是否已经播放, true 代表播放完成
     const hasPlayedAnimation = {} as { [key: string]: boolean };
     currentIndex = 0;
@@ -108,8 +108,9 @@ export function L2DInit() {
           const duration = entry.animation.duration;
           const {
             fade,
-            fadeTime = 0.8,
+            fadeTime = 0,
             secondFadeTime,
+            customFade,
             sounds,
           } = startAnimations[currentIndex - 1] || {};
           if (fade) {
@@ -117,6 +118,30 @@ export function L2DInit() {
             timeOutArray.push(
               window.setTimeout(fadeEffect, (duration - fadeTime) * 1000)
             );
+            if (Array.isArray(customFade) && customFade.length > 0) {
+              for (const customFadeItem of customFade) {
+                const {
+                  customFadeTime,
+                  customFadeColor,
+                  toSolidDuration,
+                  solidStateDuration,
+                  toNormalDuration,
+                } = customFadeItem;
+
+                timeOutArray.push(
+                  window.setTimeout(
+                    () =>
+                      fadeEffect(
+                        customFadeColor || "black",
+                        toSolidDuration ?? 0.8,
+                        solidStateDuration ?? 1,
+                        toNormalDuration ?? 1
+                      ),
+                    (duration - customFadeTime) * 1000
+                  )
+                );
+              }
+            }
             if (secondFadeTime) {
               timeOutArray.push(
                 window.setTimeout(
@@ -217,6 +242,7 @@ export function L2DInit() {
     function playL2dVoice(entry: ITrackEntry, event: IEvent) {
       const eventName = event.data.name;
       if (
+        // 正常情况下 spine 会 emit 声音事件，但是注意不要让 enableObject, disableObject 等开发事件干扰声音播放
         eventName !== "Talk" &&
         eventName !== currentVoice &&
         !["enableobject", "disableobject"].includes(eventName.toLowerCase())
@@ -224,6 +250,20 @@ export function L2DInit() {
         currentVoice = eventName;
         eventBus.emit("playAudio", {
           voiceJPUrl: getResourcesUrl("l2dVoice", event.data.name),
+        });
+      } else if (
+        // 部分情况下 spine 有声音事件但是不 emit，需要尝试分析 talk 事件
+        "talk" === eventName.toLowerCase() &&
+        !(
+          currentVoice.endsWith(event.stringValue) ||
+          (currentVoice !== "" &&
+            typeof event.stringValue === "string" &&
+            event.stringValue.endsWith(currentVoice)
+          )
+        )
+      ) {
+        eventBus.emit("playAudio", {
+          voiceJPUrl: getResourcesUrl("l2dVoice", event.stringValue),
         });
       }
     }
@@ -236,7 +276,7 @@ export function L2DInit() {
     if (curL2dConfig?.otherSpine) {
       otherItems = curL2dConfig.otherSpine.map((i, idx) => {
         const temItem = new Spine(
-          Assets.get(getResourcesUrl("otherL2dSpine", i)).spineData
+          characterSpineData(getResourcesUrl("otherL2dSpine", i))
         );
         temItem.name = i;
         setSpinePlayInfo({ item: temItem, zIndex: 100 + idx + 1 });
@@ -302,16 +342,22 @@ function calcL2DSize(
   const height = (rawHeight / ratio) * 1.1;
   return { width, height, ratio };
 }
-function fadeEffect() {
+
+function fadeEffect(
+  color = "white",
+  toSolidDuration = 1,
+  solidStateDuration = 1.3,
+  toNormalDuration = 0.8
+) {
   if (!disposed) {
     const player = document.querySelector("#player__main") as HTMLDivElement;
-    player.style.backgroundColor = "white";
+    player.style.backgroundColor = color;
     const playerCanvas = document.querySelector("#player canvas");
-    gsap.to(playerCanvas, { alpha: 0, duration: 1 });
+    gsap.to(playerCanvas, { alpha: 0, duration: toSolidDuration });
     setTimeout(() => {
       if (!disposed) {
-        gsap.to(playerCanvas, { alpha: 1, duration: 0.8 });
+        gsap.to(playerCanvas, { alpha: 1, duration: toNormalDuration });
       }
-    }, 1300);
+    }, solidStateDuration * 1000);
   }
 }

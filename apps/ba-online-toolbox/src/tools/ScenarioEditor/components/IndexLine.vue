@@ -9,10 +9,6 @@
     <n-image v-if="false"></n-image>
     <n-text>
       <span>{{ line[mainLanguage] || '暂无参考文本' }}</span>
-      <!--      <br v-if="3 === config.isSwitchLanguage" />-->
-      <!--      <span v-if="config.isSwitchLanguage & 0b01">{{-->
-      <!--        line[config.getTargetLang] || '暂无翻译'-->
-      <!--      }}</span>-->
       <div>
         <div
           v-show="config.getShowAllLanguage"
@@ -30,17 +26,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useGlobalConfig } from '../store/configStore';
-// import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine } from '../types/content';
 
-// const mainStore = useScenarioStore();
 const config = useGlobalConfig();
 const props = defineProps<{
   line: ContentLine;
   index: number;
 }>();
+
+onMounted(() => {
+  const activeElement = document.querySelector('.selected');
+  if (activeElement) {
+    activeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  }
+});
 
 const currentElement = ref<HTMLElement>();
 

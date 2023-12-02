@@ -1,4 +1,4 @@
-import { Sprite } from "pixijs";
+import { Sprite } from "pixi.js";
 import { BGEffectExcelTableItem, BGEffectType } from "./excels";
 
 /**
@@ -9,7 +9,6 @@ export type BGEffectHandlerFunction<type extends BGEffectType> = (
   setting: BGEffectExcelTableItem,
   options: BGEffectHandlerOptions[type]
 ) => Promise<EffectRemoveFunction>;
-
 
 export interface BGEffectHandlerOptions {
   BG_FocusLine: {};
@@ -51,7 +50,6 @@ export interface BGEffectHandlerOptions {
   "BG_ScrollR_1.0": {};
 }
 
-
 /**
  * 类型与处理函数的对应
  */
@@ -59,11 +57,7 @@ export type BGEffectHandlers = {
   [key in BGEffectType]: BGEffectHandlerFunction<key>;
 };
 
-
-
 export type BGEffectImgTable = Record<BGEffectType, string[]>;
-
-
 
 export type CurrentBGEffect =
   | {
@@ -72,6 +66,5 @@ export type CurrentBGEffect =
       resources: Sprite[];
     }
   | undefined;
-
 
 export type EffectRemoveFunction = () => Promise<void>;

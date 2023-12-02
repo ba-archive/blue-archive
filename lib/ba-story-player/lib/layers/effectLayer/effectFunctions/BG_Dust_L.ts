@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite, TilingSprite } from "pixijs";
+import { Container, Sprite, TilingSprite } from "pixi.js";
 import {
   emitterConfigs,
   emitterContainer,

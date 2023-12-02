@@ -4,45 +4,45 @@ title:
   - TextJp: 誤解されやすい人
     TextCn: 易招误解的人
     TextKr: 오해 받기 쉬운 사람
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Easily Misunderstood
+    TextTh: คนที่ถูกเข้าใจผิดได้ง่าย
+    TextTw: 容易被誤會的人
     GroupId: 1006102
     FavorScheduleId: 100612
     CharacterId: 10061
   - TextJp: 「流行」
     TextCn: 「流行」
     TextKr: 트렌드 따라잡기
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Catching Up on the Trends
+    TextTh: ตามเทรนด์
+    TextTw: 「流行」
     GroupId: 1006103
     FavorScheduleId: 100613
     CharacterId: 10061
   - TextJp: 秘密の夜
     TextCn: 秘密的夜晚
     TextKr: "내부 회랑 산책 "
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: "Walking the Halls "
+    TextTh: "เดินเล่นในทางเชื่อมภายใน "
+    TextTw: 秘密的夜晚
     GroupId: 1006105
     FavorScheduleId: 100615
     CharacterId: 10061
   - TextJp: 意外な趣味
     TextCn: 意外的兴趣
     TextKr: 의외의 취미
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: An Unexpected Hobby
+    TextTh: งานอดิเรกที่คาดไม่ถึง
+    TextTw: 意外的興趣
     GroupId: 1006106
     FavorScheduleId: 100616
     CharacterId: 10061
   - TextJp: 説明の場
     TextCn: 说明的场合
     TextKr: 해명의 자리
-    TextEn: ""
-    TextTh: ""
-    TextTw: ""
+    TextEn: Proof of Good Intent
+    TextTh: ตำแหน่งที่ชี้แจ้ง
+    TextTw: 說明的場合
     GroupId: 1006108
     FavorScheduleId: 100618
     CharacterId: 10061
@@ -50,9 +50,9 @@ content:
   - MessageKR: 후후
     MessageJP: ふふ
     MessageCN: 哼哼
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Heehee.
+    MessageTH: ฮุฮุ...
+    MessageTW: 呵呵
     MessageGroupId: 100610010
     Id: 100610010
     CharacterId: 10061
@@ -68,9 +68,9 @@ content:
   - MessageKR: 후후후후…….
     MessageJP: うふふ
     MessageCN: 嗯哼哼
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Heeheeheehee...
+    MessageTH: ฮุฮุฮุฮุ...
+    MessageTW: 唔呵呵
     MessageGroupId: 100610020
     Id: 100610020
     CharacterId: 10061
@@ -86,9 +86,9 @@ content:
   - MessageKR: ……? 사쿠라코?
     MessageJP: ……サクラコ？
     MessageCN: ……樱子？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: "...? Sakurako?"
+    MessageTH: ซากุระโกะ...?
+    MessageTW: ……櫻子？
     MessageGroupId: 100610030
     Id: 100610030
     CharacterId: 10061
@@ -104,9 +104,9 @@ content:
   - MessageKR: 무슨 일이야?
     MessageJP: どうしたの？
     MessageCN: 怎么了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: What's going on?
+    MessageTH: มีอะไรเหรอ?
+    MessageTW: 怎麼了？
     MessageGroupId: 100610030
     Id: 100610040
     CharacterId: 10061
@@ -122,9 +122,9 @@ content:
   - MessageKR: 아무것도 아닙니다, 선생님.
     MessageJP: ……お気になさらず、先生
     MessageCN: ……请不要在意，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It's nothing, Sensei.
+    MessageTH: ไม่มีอะไรหรอกค่ะคุณครู
+    MessageTW: ……請別在意，老師
     MessageGroupId: 100610040
     Id: 100610050
     CharacterId: 10061
@@ -140,9 +140,9 @@ content:
   - MessageKR: 단지 인사차 보내 드리는 연락일 뿐.
     MessageJP: そうですね……申し上げるとすれば、ご挨拶を……
     MessageCN: 这个嘛……硬要说的话，就是想和老师打个招呼……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Just a friendly greeting.
+    MessageTH: ฉันแค่ส่งข้อความมาทักทายค่ะ
+    MessageTW: 唔嗯……硬要說的話，想向您問好……
     MessageGroupId: 100610040
     Id: 100610060
     CharacterId: 10061
@@ -158,9 +158,11 @@ content:
   - MessageKR: 이전부터 선생님과는 쭉 대화를 나눌 기회가 있기를 바래 왔으니까요.
     MessageJP: 以前から、先生とお話できる機会を探しておりまして
     MessageCN: 从以前开始，我就一直想找个机会和老师聊聊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I've been looking for an opportunity to talk to you for a time now.
+    MessageTH: "ฉันคิดมาตลอดว่าอยากมีโอกาส
+
+      ได้พูดคุยกับคุณครูบ้างน่ะค่ะ"
+    MessageTW: 我從以前就一直在尋找和老師說話的機會
     MessageGroupId: 100610050
     Id: 100610070
     CharacterId: 10061
@@ -176,9 +178,11 @@ content:
   - MessageKR: 어쩌면 조만간, 우리에게 그럴 시간이 올지도 모르겠지요.
     MessageJP: もしかしたら……近いうちに、相見えることがあるかもしれません
     MessageCN: 不过……说不定接下来，我就有机会和老师见上一面了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Hopefully that opportunity will arise soon.
+    MessageTH: "อีกไม่นาน เราอาจได้มีโอกาสใช้เวลา
+
+      พูดคุยกันก็ได้นะคะ"
+    MessageTW: 或許……在不遠的將來就能與您相見了呢
     MessageGroupId: 100610050
     Id: 100610080
     CharacterId: 10061
@@ -194,9 +198,9 @@ content:
   - MessageKR: 그럼, 그 때까지,
     MessageJP: では、またその時まで
     MessageCN: 那么，到时候我再联系老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Until then...
+    MessageTH: ถ้างั้น จนกว่าจะถึงตอนนั้น...
+    MessageTW: 那麼，在時機來臨之前
     MessageGroupId: 100610060
     Id: 100610090
     CharacterId: 10061
@@ -212,9 +216,9 @@ content:
   - MessageKR: 모쪼록, 평안하시기를.
     MessageJP: 日々が穏やかでありますよう
     MessageCN: 愿安宁每日与您同在
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Take care.
+    MessageTH: ขอให้คุณครูสบายดีนะคะ...
+    MessageTW: 願您能有安穩的每一天
     MessageGroupId: 100610060
     Id: 100610100
     CharacterId: 10061
@@ -230,9 +234,9 @@ content:
   - MessageKR: 후후
     MessageJP: ふふ
     MessageCN: 哼哼
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Heehee.
+    MessageTH: ฮุฮุ...
+    MessageTW: 呵呵
     MessageGroupId: 100610070
     Id: 100610110
     CharacterId: 10061
@@ -248,9 +252,9 @@ content:
   - MessageKR: 후후후…….
     MessageJP: うふふ
     MessageCN: 嗯哼哼
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Heeheehee...
+    MessageTH: ฮุฮุฮุ...
+    MessageTW: 唔呵呵
     MessageGroupId: 100610080
     Id: 100610120
     CharacterId: 10061
@@ -266,9 +270,9 @@ content:
   - MessageKR: ……???
     MessageJP: ……？？？
     MessageCN: ……？？？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: "...?"
+    MessageTH: "...???"
+    MessageTW: ……？？？
     MessageGroupId: 100610090
     Id: 100610130
     CharacterId: 10061
@@ -284,9 +288,9 @@ content:
   - MessageKR: 얏호-선생님☆
     MessageJP: こんにちわ～先生☆
     MessageCN: 老师～泥嚎呀☆
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Yay! Sensei! ☆
+    MessageTH: ยะโฮ่ว-คุณครู☆
+    MessageTW: 嗨嗨～老師☆
     MessageGroupId: 100610100
     Id: 100610140
     CharacterId: 10061
@@ -302,9 +306,9 @@ content:
   - MessageKR: 오늘도 평안하신가요?
     MessageJP: 今日もいかがお過ごしですか？
     MessageCN: 老师今天过得如何呢？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: How are you doing today?
+    MessageTH: วันนี้สบายดีรึเปล่าคะ?
+    MessageTW: 今天過得好嗎？
     MessageGroupId: 100610110
     Id: 100610150
     CharacterId: 10061
@@ -320,9 +324,11 @@ content:
   - MessageKR: 사쿠라코 쨩은 늘 선생님의 평안을 빌고 있답니다!
     MessageJP: サクラコは、いつも先生の一日が平和であるよう、願っています！
     MessageCN: 樱子我会一直为老师祈祷，愿和平今日也与您同在！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm always praying for your peace, Sensei!
+    MessageTH: "ซากุระโกะจังกำลังขอพรให้คุณครู
+
+      สบายดีอยู่ค่ะ!"
+    MessageTW: 櫻子一直都在祈求老師的平安哦！
     MessageGroupId: 100610110
     Id: 100610160
     CharacterId: 10061
@@ -338,9 +344,9 @@ content:
   - MessageKR: 그럼 오늘도 좋은 하루 되시기 바래용~!
     MessageJP: 今日も良い一日を～！！
     MessageCN: 希望老师今天也能度过美好的一天～！！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Have a great day!
+    MessageTH: ถ้างั้นขอให้วันนี้เป็นวันที่ดีนะค๊า~!
+    MessageTW: 希望今天也是美好的一天～！！
     MessageGroupId: 100610120
     Id: 100610170
     CharacterId: 10061
@@ -356,9 +362,9 @@ content:
   - MessageKR: 그럼~ 뾰로롱~☆
     MessageJP: それじゃ、またね☆
     MessageCN: 那么，再会啦☆
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Uwu! ☆
+    MessageTH: ถ้างั้น~ ปิ้วปิ้ว~☆
+    MessageTW: 那，掰掰囉☆
     MessageGroupId: 100610130
     Id: 100610180
     CharacterId: 10061
@@ -374,9 +380,9 @@ content:
   - MessageKR: ……사쿠라코????
     MessageJP: ……サクラコ？？？
     MessageCN: ……樱子？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: "...Sakurako???"
+    MessageTH: ซากุระโกะ...????
+    MessageTW: ……櫻子？？？
     MessageGroupId: 100610140
     Id: 100610190
     CharacterId: 10061
@@ -392,9 +398,9 @@ content:
   - MessageKR: 본인 맞으십니까?
     MessageJP: 本人……だよね？
     MessageCN: 这个是樱子本人……没错吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Is that you?
+    MessageTH: ตัวจริงรึเปล่าเนี่ย?
+    MessageTW: 是本人……嗎？
     MessageGroupId: 100610140
     Id: 100610200
     CharacterId: 10061
@@ -410,9 +416,9 @@ content:
   - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: "......."
+    MessageTH: "...."
+    MessageTW: ……
     MessageGroupId: 100610150
     Id: 100610210
     CharacterId: 10061
@@ -428,9 +434,9 @@ content:
   - MessageKR: 음
     MessageJP: ええと、
     MessageCN: 那个，
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Hmm.
+    MessageTH: อืม
+    MessageTW: 那個……
     MessageGroupId: 100610160
     Id: 100610220
     CharacterId: 10061
@@ -446,9 +452,11 @@ content:
   - MessageKR: 죄송합니다, 선생님. 이게 아닌 모양이군요.
     MessageJP: 申し訳ありません先生。これはどうやら違うみたいですね
     MessageCN: 不好意思老师。看来是我哪里搞错了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry. I guess I didn't get it right.
+    MessageTH: "ขอโทษด้วยค่ะคุณครู แต่ท่าทางจะทำ
+
+      แบบนี้ไม่ได้สินะคะ"
+    MessageTW: 不好意思，老師。看來似乎有點搞錯了呢
     MessageGroupId: 100610170
     Id: 100610230
     CharacterId: 10061
@@ -464,9 +472,11 @@ content:
   - MessageKR: 친근하게 보이는 법이라고, 인터넷 검색으로 찾아본 것이었는데
     MessageJP: 「親しみやすい人」と、インターネットで調べてみたのですが
     MessageCN: 我试着在上网搜了一下“平易近人的人“
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I researched "how to look friendly" on the internet.
+    MessageTH: "พอดีลองเสิร์ชหาวิธีพูดคุยอย่างสนิท
+
+      สนมในเน็ตมาน่ะค่ะ..."
+    MessageTW: 我在網路上搜尋了「讓人容易親近的人」
     MessageGroupId: 100610170
     Id: 100610240
     CharacterId: 10061
@@ -482,9 +492,9 @@ content:
   - MessageKR: 혹여 제가 뭔가 잘못 말씀드린 거라면……
     MessageJP: その……何か失礼がありましたら……
     MessageCN: 那个……如果我做了什么失礼的行为……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: If I conducted myself badly...
+    MessageTH: แต่ถ้าเกิดฉันทำอะไรผิดไป...
+    MessageTW: 那個……如果有什麼失禮之處……
     MessageGroupId: 100610180
     Id: 100610250
     CharacterId: 10061
@@ -500,9 +510,9 @@ content:
   - MessageKR: 죄송합니다.
     MessageJP: 申し訳ありません
     MessageCN: 十分抱歉
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry.
+    MessageTH: ขอโทษด้วยนะคะ
+    MessageTW: 我非常抱歉
     MessageGroupId: 100610180
     Id: 100610260
     CharacterId: 10061
@@ -518,9 +528,9 @@ content:
   - MessageKR: 그럼 이만…….
     MessageJP: では、また……
     MessageCN: 那，之后见……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Until next time...
+    MessageTH: ขอตัวก่อนนะคะ...
+    MessageTW: 那麼，再會……
     MessageGroupId: 100610190
     Id: 100610270
     CharacterId: 10061
@@ -536,9 +546,9 @@ content:
   - MessageKR: 선생님
     MessageJP: 先生、お疲れ様です
     MessageCN: 老师，辛苦了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 老師，您辛苦了
     MessageGroupId: 100610200
     Id: 100610280
     CharacterId: 10061
@@ -554,9 +564,11 @@ content:
   - MessageKR: 일이 끝나고 연락을 드리는 건 처음이네요.
     MessageJP: お別れの後に連絡を差し上げるのは初めてですね
     MessageCN: 这还是我第一次在告别之后给您发消息
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: This is my first time contacting you after work.
+    MessageTH: "ฉันเพิ่งเคยติดต่อคุณครูหลังจากเสร็จ
+
+      งานเลยค่ะ"
+    MessageTW: 這是我第一次在分別後聯絡您呢
     MessageGroupId: 100610210
     Id: 100610290
     CharacterId: 10061
@@ -572,9 +584,9 @@ content:
   - MessageKR: 오늘 일은 정말로 감사했습니다.
     MessageJP: 今日は、本当にありがとうございました
     MessageCN: 今天，真的十分感谢您
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Thank you so much for today, Sensei.
+    MessageTH: วันนี้ขอบคุณมากนะคะ
+    MessageTW: 今天真的非常謝謝您
     MessageGroupId: 100610210
     Id: 100610300
     CharacterId: 10061
@@ -590,9 +602,15 @@ content:
   - MessageKR: 염치는 없겠지만……. 비슷한 일이 있으면, 또 부탁드리겠습니다.
     MessageJP: その……厚かましいお願いですが……また何かあった際には、よろしくお願いします
     MessageCN: 那个……虽然这么说显得我脸皮有点厚……但如果下次我遇到什么困难的话，还请老师多多关照了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN:
+      I know it's a lot to ask...but please help if something like this happens
+      again.
+    MessageTH: "ถึงจะน่าละอายไปบ้าง... แต่ถ้าเกิด
+
+      เรื่องแบบนี้อีกละก็ คงจะต้องขอรบกวน
+
+      คุณครูอีกนะคะ"
+    MessageTW: 那個……雖然是個厚顏無恥的請求……如果又發生什麼事的話，再麻煩老師幫忙了
     MessageGroupId: 100610220
     Id: 100610310
     CharacterId: 10061
@@ -608,9 +626,9 @@ content:
   - MessageKR: 그럼
     MessageJP: それでは、先生
     MessageCN: 那么，老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Well, then...
+    MessageTH: ถ้างั้น...
+    MessageTW: 那麼，老師
     MessageGroupId: 100610230
     Id: 100610320
     CharacterId: 10061
@@ -626,9 +644,11 @@ content:
   - MessageKR: 늘 평안하시고, 행운이 가득하시길.
     MessageJP: どうか明日も、平穏な一日でありますよう
     MessageCN: 希望明天老师也能度过平静的一天
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: May you always be at peace and blessed with luck.
+    MessageTH: "วันนี้ขอให้มีแต่ความสงขสุขและโชคดี
+
+      นะคะ"
+    MessageTW: 希望明天也是和平安穩的一天
     MessageGroupId: 100610230
     Id: 100610330
     CharacterId: 10061
@@ -644,9 +664,9 @@ content:
   - MessageKR: 빠밤-!!
     MessageJP: それでは……わっぴ～！
     MessageCN: 那就这样……开森～！
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Uwu~!
+    MessageTH: จ๊ะเอ๋-!!
+    MessageTW: 那麼……啾咪～！
     MessageGroupId: 100610240
     Id: 100610340
     CharacterId: 10061
@@ -662,9 +682,9 @@ content:
   - MessageKR: 늦은 밤 갑작스럽습니다만,
     MessageJP: 夜分申し訳ありません、先生……
     MessageCN: 深夜叨扰老师，深感抱歉……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I know it's late...and on short notice, but...
+    MessageTH: ขอโทษที่จู่ๆ ก็ติดต่อมากลางดึกค่ะ
+    MessageTW: 這麼晚打擾您非常抱歉，老師……
     MessageGroupId: 100610250
     Id: 100610350
     CharacterId: 10061
@@ -680,9 +700,11 @@ content:
   - MessageKR: 선생님, 잠시 동행을 부탁드려도 괜찮을까요?
     MessageJP: 少々お時間よろしいでしょうか？
     MessageCN: 不知能否占用老师一点时间？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sensei, would it be all right if I asked for your company for a while?
+    MessageTH: "แต่รบกวนคุณครูช่วยไปกับฉันหน่อย
+
+      ได้มั้ยคะ?"
+    MessageTW: 能占用您一些時間嗎？
     MessageGroupId: 100610260
     Id: 100610360
     CharacterId: 10061
@@ -698,9 +720,9 @@ content:
   - MessageKR: 괜찮지만 무슨 일이야?
     MessageJP: 大丈夫だけど、どうしたの？
     MessageCN: 可以是可以，樱子有什么事吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Any time. What's wrong?
+    MessageTH: ทำไมจะไม่ได้ล่ะ?
+    MessageTW: 可以是可以，怎麼了嗎？
     MessageGroupId: 100610270
     Id: 100610370
     CharacterId: 10061
@@ -716,9 +738,9 @@ content:
   - MessageKR: 무슨 일 있어?
     MessageJP: 何かあったの？
     MessageCN: 发生什么事了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: What's wrong?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 發生什麼事了？
     MessageGroupId: 100610270
     Id: 100610380
     CharacterId: 10061
@@ -734,9 +756,9 @@ content:
   - MessageKR: 별 일은 아니랍니다.
     MessageJP: 大したことではないのですが、
     MessageCN: 虽然算不上是什么大事
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Oh, it's nothing of concern...
+    MessageTH: ก็ไม่ใช่เรื่องใหญ่อะไรหรอกค่ะ...
+    MessageTW: 雖然不是什麼嚴重的事
     MessageGroupId: 100610280
     Id: 100610390
     CharacterId: 10061
@@ -752,9 +774,11 @@ content:
   - MessageKR: 다만 이번에는……. 아니, 사실 늘 그랬지만…….
     MessageJP: ただ今回は……いえ、これまでもそうなのですが
     MessageCN: 只是这次……不，至今为止一直都是这样
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: But, well, I was just wondering... Not that this is out of the ordinary...
+    MessageTH: "แต่ว่าคราวนี้... ไม่สิ ถึงจะเป็นแบบนี้
+
+      ตลอดก็เถอะ..."
+    MessageTW: 但這次……不，一直以來都是這樣
     MessageGroupId: 100610290
     Id: 100610400
     CharacterId: 10061
@@ -770,9 +794,11 @@ content:
   - MessageKR: 괜찮으시다면, 혼자 와 주실 수 있으실까요?
     MessageJP: よろしければ、先生お一人で来ていただけませんか？
     MessageCN: 老师要是方便的话，能单独过来一趟吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Do you mind coming alone?
+    MessageTH: "แต่ถ้าคุณครูสะดวกละก็ รบกวนออกมา
+
+      คนเดียวหน่อยได้มั้ยคะ?"
+    MessageTW: 方便的話，能請您單獨過來嗎？
     MessageGroupId: 100610300
     Id: 100610410
     CharacterId: 10061
@@ -788,9 +814,9 @@ content:
   - MessageKR: 조금…….
     MessageJP: その、何と申し上げれば良いのでしょう……
     MessageCN: 那个，该怎么说好呢……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It's...
+    MessageTH: คือว่า...
+    MessageTW: 那個，該怎麼說才好呢……
     MessageGroupId: 100610310
     Id: 100610420
     CharacterId: 10061
@@ -806,9 +832,9 @@ content:
   - MessageKR: 비밀스러운 이야기가 될 것 같습니다.
     MessageJP: 二人だけで、お話したいことがございまして……
     MessageCN: 有些话，我想单独和老师聊聊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I have a secret to tell you. A private one.
+    MessageTH: มันค่อนข้างจะเป็นความลับนิดหน่อยค่ะ
+    MessageTW: 有些話，我想與您單獨討論……
     MessageGroupId: 100610310
     Id: 100610430
     CharacterId: 10061
@@ -824,9 +850,9 @@ content:
   - MessageKR: 음
     MessageJP: ええと……やはり
     MessageCN: 那个……果然
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Yes.
+    MessageTH: อืม
+    MessageTW: 那，那個……果然
     MessageGroupId: 100610320
     Id: 100610440
     CharacterId: 10061
@@ -842,9 +868,11 @@ content:
   - MessageKR: 아무래도 너무 늦은 시간에 불러드린 게 아닌지 걱정입니다.
     MessageJP: 夜遅くにお呼び立てしてしまったのでは、と心配になってしまいました
     MessageCN: 这么晚还把您叫出来，总感觉不是很合适
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry... I contacted you too late.
+    MessageTH: "แต่ฉันก็กังวลอยู่เหมือนกันค่ะว่าเรียก
+
+      คุณครูออกมาดึกเกินไปรึเปล่า"
+    MessageTW: 我還是很擔心，會不會太晚找您出來
     MessageGroupId: 100610330
     Id: 100610450
     CharacterId: 10061
@@ -860,9 +888,11 @@ content:
   - MessageKR: 선생님만 괜찮으시다면, 주무실 곳을 마련해 드리는 것이 예의였을지도.
     MessageJP: 先生にご相談のうえ、お休みする場所を用意すれば良かったですね
     MessageCN: 和老师谈话的时候，还是准备一个能休息的地方比较好
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I didn't have time to prepare a bed for you or anything.
+    MessageTH: "ถ้าคุณครูไม่ติดอะไรละก็ ให้ฉันเป็นฝ่าย
+
+      ไปพบคุณครูที่ห้องพัก น่าจะดีกว่า..."
+    MessageTW: 既然是我有事找老師商量，應該提供休息的地方給老師才對
     MessageGroupId: 100610330
     Id: 100610460
     CharacterId: 10061
@@ -878,9 +908,9 @@ content:
   - MessageKR: 네
     MessageJP: 申し訳ありません……
     MessageCN: 十分抱歉……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Okay.
+    MessageTH: ค่ะ
+    MessageTW: 非常抱歉……
     MessageGroupId: 100610340
     Id: 100610470
     CharacterId: 10061
@@ -896,9 +926,9 @@ content:
   - MessageKR: 다음부터는, 그렇게 하도록 하겠습니다.
     MessageJP: 次からはそうしようと思います
     MessageCN: 下次我会准备的
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Next time, I'll be properly prepared.
+    MessageTH: คราวหน้า ฉันจะทำแบบนั้นค่ะ
+    MessageTW: 下次開始我會這麼做的
     MessageGroupId: 100610350
     Id: 100610480
     CharacterId: 10061
@@ -914,9 +944,11 @@ content:
   - MessageKR: 그럼 평안하시고, 늘 행운이 가득하시길.
     MessageJP: では……いつも平穏無事でありますよう
     MessageCN: 那么……愿平和与安宁与您同在
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: May you always be at peace and full of luck.
+    MessageTH: "ถ้าอย่างนั้นก็ขอให้มีแต่ความสุขและ
+
+      โชคดีนะคะ"
+    MessageTW: 那麼……希望您能永遠平安
     MessageGroupId: 100610350
     Id: 100610490
     CharacterId: 10061
@@ -932,9 +964,9 @@ content:
   - MessageKR: 선생님.
     MessageJP: 先生、こんにちは
     MessageCN: 老师，您好
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 老師，您好
     MessageGroupId: 100610360
     Id: 100610500
     CharacterId: 10061
@@ -950,9 +982,9 @@ content:
   - MessageKR: 외람되지만, 실례가 되지 않는다면
     MessageJP: 差し支えなければですが
     MessageCN: 如果不打扰的话
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry this is so sudden. I hope it's okay with you.
+    MessageTH: ถ้าไม่เป็นการรบกวนเกินไป...
+    MessageTW: 如果您不介意的話
     MessageGroupId: 100610370
     Id: 100610510
     CharacterId: 10061
@@ -968,9 +1000,11 @@ content:
   - MessageKR: 선생님께서는 쉬시는 날 어떤 일을 하시는지, 여쭤봐도 괜찮을까요?
     MessageJP: お休みの日は何をされるのか、お聞きしてもいいでしょうか？
     MessageCN: 不知道我能否问一下老师休息日一般都会做些什么？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: If you don't mind me asking... What do you do on your days off?
+    MessageTH: "ขอถามได้ไหมคะว่า ในวันพักผ่อน
+
+      คุณครูทำอะไรบ้างเหรอค่ะ?"
+    MessageTW: 能請問老師放假時都在做些什麼嗎？
     MessageGroupId: 100610370
     Id: 100610520
     CharacterId: 10061
@@ -986,9 +1020,9 @@ content:
   - MessageKR: 괜찮지만, 무슨 일이야?
     MessageJP: 大丈夫だけど、どうしたの？
     MessageCN: 可以倒是可以，怎么了吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Oh? Why were you wondering?
+    MessageTH: ก็ได้อยู่หรอก ว่าแต่มีอะไรหรือเปล่าน่ะ?
+    MessageTW: 這倒是沒問題，怎麼了嗎？
     MessageGroupId: 100610380
     Id: 100610530
     CharacterId: 10061
@@ -1004,9 +1038,9 @@ content:
   - MessageKR: 이것저것 하긴 하는데…….
     MessageJP: 色々やるけど……
     MessageCN: 会做各种各样的事吧……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I do this and that...
+    MessageTH: ก็ทำโน่นทำนี่ไปเรื่อย...
+    MessageTW: 做各種事吧……
     MessageGroupId: 100610380
     Id: 100610540
     CharacterId: 10061
@@ -1022,9 +1056,11 @@ content:
   - MessageKR: 다름이 아니라, 최근 저도 그런 질문을 받았었는데
     MessageJP: その……実は、最近同じ内容の質問をされたのですが、
     MessageCN: 那个……其实最近，别人也问了我同样的问题
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Well, someone asked me that recently.
+    MessageTH: "คือว่าเมื่อไม่นานนี้ ฉันก็ถูกถามแบบนี้
+
+      มาเหมือนกันค่ะ"
+    MessageTW: 那個……其實，最近我也被問了相同的問題
     MessageGroupId: 100610390
     Id: 100610550
     CharacterId: 10061
@@ -1040,9 +1076,9 @@ content:
   - MessageKR: 그
     MessageJP: ええっと……
     MessageCN: 但是……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Um...
+    MessageTH: คือ...
+    MessageTW: 只是……
     MessageGroupId: 100610400
     Id: 100610560
     CharacterId: 10061
@@ -1058,9 +1094,9 @@ content:
   - MessageKR: 뭐라고 답해야 할지 몰라서,
     MessageJP: なんと返したらいいのか分からず、
     MessageCN: 我不知道应该怎么回答比较好
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I didn't know what to say.
+    MessageTH: ฉันไม่รู้ว่าจะตอบว่าอะไรดี
+    MessageTW: 我不知道該如何回答
     MessageGroupId: 100610410
     Id: 100610570
     CharacterId: 10061
@@ -1076,9 +1112,9 @@ content:
   - MessageKR: 그냥 넘겨버렸습니다.
     MessageJP: うやむやに流してしまいました
     MessageCN: 就糊弄过去了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: So I just didn't respond.
+    MessageTH: ถ้างั้นฉันจะข้ามไปก็แล้วกันนะคะ
+    MessageTW: 只好糊弄過去
     MessageGroupId: 100610420
     Id: 100610580
     CharacterId: 10061
@@ -1094,9 +1130,9 @@ content:
   - MessageKR: 선생님.
     MessageJP: 先生……あの
     MessageCN: 那个……老师
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sensei.
+    MessageTH: คุณครูคะ
+    MessageTW: 老師……那個
     MessageGroupId: 100610430
     Id: 100610590
     CharacterId: 10061
@@ -1112,9 +1148,9 @@ content:
   - MessageKR: 오늘 일은, 정말로 죄송합니다.
     MessageJP: 今日は本当に申し訳ございません
     MessageCN: 今天真的十分抱歉
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm so sorry about today.
+    MessageTH: เรื่องวันนี้ ต้องขอโทษด้วยจริงๆ นะคะ
+    MessageTW: 今天真的非常抱歉
     MessageGroupId: 100610440
     Id: 100610600
     CharacterId: 10061
@@ -1130,9 +1166,11 @@ content:
   - MessageKR: 하지만 선생님 덕분에 고민은 해결되었습니다.
     MessageJP: でも、先生のおかげで悩みは無事解決できました
     MessageCN: 但是，多亏了老师在，我的烦恼才能顺利解决
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: But thank you for helping me resolve my troubles...
+    MessageTH: "แต่เพราะคุณครูช่วยไว้ ฉันเลยหาย
+
+      กังวลแล้วค่ะ"
+    MessageTW: 但是，多虧老師才讓我能順利解開煩惱
     MessageGroupId: 100610450
     Id: 100610610
     CharacterId: 10061
@@ -1148,9 +1186,9 @@ content:
   - MessageKR: 그 부분은 또한 감사드립니다.
     MessageJP: お礼をお伝えしたかったです
     MessageCN: 我想向您道谢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I appreciate it.
+    MessageTH: ขอบคุณมากเลยนะคะ
+    MessageTW: 我想向您致上謝意
     MessageGroupId: 100610450
     Id: 100610620
     CharacterId: 10061
@@ -1166,9 +1204,11 @@ content:
   - MessageKR: 잘은 모르겠지만 다행이야.
     MessageJP: それならよかった
     MessageCN: 那太好了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I don't know exactly what I did, but I'm glad.
+    MessageTH: "ถึงจะไม่ค่อยเข้าใจก็เถอะ แต่ก็ดีแล้ว
+
+      ละนะ"
+    MessageTW: 那真是太好了
     MessageGroupId: 100610460
     Id: 100610630
     CharacterId: 10061
@@ -1184,9 +1224,11 @@ content:
   - MessageKR: 사쿠라코가 괜찮다면 괜찮은 거지.
     MessageJP: サクラコがいいと言うならそれで十分だよ
     MessageCN: 樱子觉得没问题的话我也很满足哦
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: As long as you're happy, that's all that matters.
+    MessageTH: "ถ้าซากุระโกะพูดแบบนั้นก็แสดงว่า
+
+      คงไม่เป็นไร"
+    MessageTW: 櫻子覺得沒問題那就夠了
     MessageGroupId: 100610460
     Id: 100610640
     CharacterId: 10061
@@ -1202,9 +1244,9 @@ content:
   - MessageKR: 네
     MessageJP: ありがとうございます
     MessageCN: 谢谢您
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Okay.
+    MessageTH: ค่ะ
+    MessageTW: 謝謝您
     MessageGroupId: 100610470
     Id: 100610650
     CharacterId: 10061
@@ -1220,9 +1262,11 @@ content:
   - MessageKR: 그럼 이만, 오늘 하루도 평안하시길 기도 드리겠습니다.
     MessageJP: 明日も、祝福があらんことを
     MessageCN: 明天，我也依旧会为老师献上祝福
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Well... Then, I wish you a day filled with peace.
+    MessageTH: "ถ้างั้น... วันนี้ขอให้มีแต่ความสงบสุข
+
+      นะคะ"
+    MessageTW: 願祝福明日也與您同在
     MessageGroupId: 100610470
     Id: 100610660
     CharacterId: 10061
@@ -1238,9 +1282,9 @@ content:
   - MessageKR: 혹시
     MessageJP: その……
     MessageCN: 那个……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: By any chance...
+    MessageTH: คือว่า...
+    MessageTW: 那個……
     MessageGroupId: 100610480
     Id: 100610670
     CharacterId: 10061
@@ -1256,9 +1300,9 @@ content:
   - MessageKR: 나중에 언젠가
     MessageJP: いつか、ですが……
     MessageCN: 虽然我也说不准具体什么时候
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I don't know
+    MessageTH: คราวหน้าสักวันหนึ่ง...
+    MessageTW: 也許，有朝一日……
     MessageGroupId: 100610480
     Id: 100610680
     CharacterId: 10061
@@ -1274,9 +1318,9 @@ content:
   - MessageKR: 언제가 될지는 모르겠지만
     MessageJP: またそのうちに
     MessageCN: 但是最近
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: when exactly, but...
+    MessageTH: ถึงจะไม่รู้ว่าเมื่อไรก็ตาม
+    MessageTW: 或是近期
     MessageGroupId: 100610480
     Id: 100610690
     CharacterId: 10061
@@ -1292,9 +1336,11 @@ content:
   - MessageKR: 다른 상담을, 또 부탁드릴 날이 올지도 모르겠습니다.
     MessageJP: 別の相談をお願いするかもしれません
     MessageCN: 我可能还会有别的事要找老师谈
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I think I'll need to consult with you again...
+    MessageTH: "แต่ก็อาจมีวันที่ฉันมาขอปรึกษาคุณครู
+
+      อีกนะคะ"
+    MessageTW: 可能還會因為其他的事向老師諮詢
     MessageGroupId: 100610490
     Id: 100610700
     CharacterId: 10061
@@ -1310,9 +1356,9 @@ content:
   - MessageKR: 그때를, 지금부터 미리
     MessageJP: その際には、また…‥‥
     MessageCN: 到那时候，还请老师……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I wanted to let you know in advance.
+    MessageTH: เลยจะขอบอกเอาไว้ล่วงหน้าค่ะ
+    MessageTW: 到時候……
     MessageGroupId: 100610500
     Id: 100610710
     CharacterId: 10061
@@ -1328,9 +1374,9 @@ content:
   - MessageKR: 잘, 부탁드리겠습니다.
     MessageJP: お時間を頂けますと嬉しいです?
     MessageCN: 还能再占用老师一些时间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'll be here when you need me.
+    MessageTH: ขอฝากเนื้อฝากตัวด้วยนะคะ
+    MessageTW: 老師願意撥空的話我會很開心的？
     MessageGroupId: 100610500
     Id: 100610720
     CharacterId: 10061
@@ -1346,9 +1392,9 @@ content:
   - MessageKR: 선생님
     MessageJP: こんにちは、先生
     MessageCN: 老师，您好
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Sensei.
+    MessageTH: คุณครู
+    MessageTW: 您好，老師
     MessageGroupId: 100610510
     Id: 100610730
     CharacterId: 10061
@@ -1364,9 +1410,9 @@ content:
   - MessageKR: 문제가 생겼습니다.
     MessageJP: その……問題が起きてしまいました
     MessageCN: 那个……出了点问题
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I have a problem.
+    MessageTH: มีปัญหาแล้วค่ะ
+    MessageTW: 那個……發生了一些問題
     MessageGroupId: 100610520
     Id: 100610740
     CharacterId: 10061
@@ -1382,9 +1428,9 @@ content:
   - MessageKR: 문제?
     MessageJP: 問題？
     MessageCN: 问题？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: A problem?
+    MessageTH: ปัญหาเหรอ?
+    MessageTW: 問題？
     MessageGroupId: 100610530
     Id: 100610750
     CharacterId: 10061
@@ -1400,9 +1446,9 @@ content:
   - MessageKR: 무슨 일 있어?
     MessageJP: どうしたの？
     MessageCN: 发生什么了？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: What's wrong?
+    MessageTH: มีเรื่องอะไรเหรอ?
+    MessageTW: 怎麼了？
     MessageGroupId: 100610530
     Id: 100610760
     CharacterId: 10061
@@ -1418,9 +1464,11 @@ content:
   - MessageKR: 의도한 건 아니지만, 그렇게 되었습니다.
     MessageJP: 意図したわけではなかったのですが……
     MessageCN: 虽然我不想特意这样做……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It was entirely unintentional, but...
+    MessageTH: "ถึงไม่ได้ตั้งใจ แต่ก็กลายเป็นแบบนั้น
+
+      ไปแล้วค่ะ"
+    MessageTW: 雖然並非如我所願……
     MessageGroupId: 100610540
     Id: 100610770
     CharacterId: 10061
@@ -1436,9 +1484,9 @@ content:
   - MessageKR: 아무래도…….
     MessageJP: ……なんとか、先生の力を
     MessageCN: ……但是，我还是希望
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: It's become something of a habit.
+    MessageTH: ไม่ว่ายังไง...
+    MessageTW: ……不過我還是希望
     MessageGroupId: 100610550
     Id: 100610780
     CharacterId: 10061
@@ -1454,9 +1502,9 @@ content:
   - MessageKR: 도움을 조금, 받고자 합니다.
     MessageJP: お借りできないかと思いまして
     MessageCN: 能够借用一下老师的力量
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I need your help with it.
+    MessageTH: ฉันคงต้องขอให้คุณครูช่วยแล้วค่ะ
+    MessageTW: 能夠借用老師的力量
     MessageGroupId: 100610550
     Id: 100610790
     CharacterId: 10061
@@ -1472,9 +1520,11 @@ content:
   - MessageKR: 죄송합니다. 선생님께서 그렇게 힘내 주셨는데…….
     MessageJP: 申し訳ありません……せっかくお時間を頂いたのに
     MessageCN: 十分抱歉……明明您为我腾出了时间
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry. I know you worked very hard...
+    MessageTH: "ขอโทษนะคะ คุณครูอุตส่าห์ให้กำลังใจ
+
+      แท้ๆ..."
+    MessageTW: 非常抱歉……明明占用了老師的時間
     MessageGroupId: 100610560
     Id: 100610800
     CharacterId: 10061
@@ -1490,9 +1540,11 @@ content:
   - MessageKR: 무엇이 문제였을까요. 이건 너무 어려운 일인 것 같습니다.
     MessageJP: 何が問題だったのでしょうか……思っていたよりも、難しいですね
     MessageCN: 问题到底出在哪里呢……好像比我想象的还要复杂啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I don't know what was wrong. Maybe I was asking too much.
+    MessageTH: "จะมีปัญหาอะไรรึเปล่าคะ เหมือนว่า
+
+      เรื่องนี้จะเป็นเรื่องยากพอควรเลยค่ะ"
+    MessageTW: 問題究竟出在哪裡呢……比想像中還困難呢
     MessageGroupId: 100610570
     Id: 100610810
     CharacterId: 10061
@@ -1508,9 +1560,9 @@ content:
   - MessageKR: 어, 음……. 그렇네요.
     MessageJP: えっと、ごめんね
     MessageCN: 那个，对不住啊
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Oh, um... I see.
+    MessageTH: เอ่อ อืม... นั่นสินะ
+    MessageTW: 那個，抱歉
     MessageGroupId: 100610580
     Id: 100610820
     CharacterId: 10061
@@ -1526,9 +1578,9 @@ content:
   - MessageKR: 도움이 되지 못해 미안해.
     MessageJP: お役に立てなくて
     MessageCN: 我没能帮上忙
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'm sorry I couldn't help.
+    MessageTH: ขอโทษนะที่ครูช่วยอะไรไม่ได้เลย
+    MessageTW: 沒能幫上你的忙
     MessageGroupId: 100610580
     Id: 100610830
     CharacterId: 10061
@@ -1544,9 +1596,11 @@ content:
   - MessageKR: 아닙니다. 그래도 크게 도움이 되었습니다.
     MessageJP: そんなことありません、大変助かりました
     MessageCN: 没这回事，老师您已经帮了我很多了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Not at all. You were still very helpful in a different way.
+    MessageTH: "ไม่เลยค่ะ คุณครูช่วยฉันได้เยอะมาก
+
+      เลยค่ะ"
+    MessageTW: 別這麼說，您已經幫了我很大的忙了
     MessageGroupId: 100610590
     Id: 100610840
     CharacterId: 10061
@@ -1562,9 +1616,9 @@ content:
   - MessageKR: 최소한 자매님들께서
     MessageJP: 少なくとも以前よりは確実に
     MessageCN: 至少现在别人对我的印象相比以前确实
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: At least, it seems like maybe...
+    MessageTH: อย่างน้อยพวกซิสเตอร์...
+    MessageTW: 至少和之前相比
     MessageGroupId: 100610590
     Id: 100610850
     CharacterId: 10061
@@ -1580,9 +1634,11 @@ content:
   - MessageKR: 전처럼 어려워하신다는 느낌은 확실히 줄어들었으니까요.
     MessageJP: 気難しい人だという印象は減ったようですし
     MessageCN: 没有那么让人感觉难以亲近了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: They're a little more comfortable than before.
+    MessageTH: "ตอนนี้ฉันรู้สึกว่าพวกพี่น้องซิสเตอร์
+
+      ทำให้ลำบากใจน้อยลงมากเลยค่ะ"
+    MessageTW: 覺得我是個難相處的人的印象確實減少了
     MessageGroupId: 100610590
     Id: 100610860
     CharacterId: 10061
@@ -1598,9 +1654,9 @@ content:
   - MessageKR: 대신 조금 종잡을 수 없고
     MessageJP: その分、つかみどころのない、
     MessageCN: 但是相对的，不知道为什么
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: But I feel like
+    MessageTH: แต่ว่าก็เดาไม่ได้เลยค่ะ
+    MessageTW: 雖然，是個難以捉摸的、
     MessageGroupId: 100610600
     Id: 100610870
     CharacterId: 10061
@@ -1616,9 +1672,9 @@ content:
   - MessageKR: 이상한 사람
     MessageJP: 変わった人という印象が……
     MessageCN: 感觉好像其他人都……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I've become someone
+    MessageTH: อาจจะกลายเป็น
+    MessageTW: 奇怪的人的印象似乎……
     MessageGroupId: 100610610
     Id: 100610880
     CharacterId: 10061
@@ -1634,9 +1690,9 @@ content:
   - MessageKR: 이 된 것 같긴 하지만요.
     MessageJP: できてしまったようですが
     MessageCN: ……认为我是个奇怪的人了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: unpredictable and weird to them.
+    MessageTH: คนแปลกๆ ไปแล้วก็ได้ค่ะ
+    MessageTW: 已經形成了
     MessageGroupId: 100610620
     Id: 100610890
     CharacterId: 10061
@@ -1652,9 +1708,9 @@ content:
   - MessageKR: 뭐, 일단은 일보 전진일까
     MessageJP: ひとまず一歩前進かな？
     MessageCN: 这也算一种进步吧？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Well, it's a first step.
+    MessageTH: ก็นะ อย่างน้อยก็ก้าวหน้าแหละนะ
+    MessageTW: 也算是向前邁進了一步吧？
     MessageGroupId: 100610630
     Id: 100610900
     CharacterId: 10061
@@ -1670,9 +1726,11 @@ content:
   - MessageKR: 하나씩 해결해 나가보자
     MessageJP: 一つずつ解決していこう
     MessageCN: 问题还是一个一个解决吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Let's take it step-by-step.
+    MessageTH: "มาค่อยๆ แก้ไขปัญหากันไปทีละ
+
+      อย่างก็แล้วกัน"
+    MessageTW: 一步步解決吧
     MessageGroupId: 100610630
     Id: 100610910
     CharacterId: 10061
@@ -1688,9 +1746,9 @@ content:
   - MessageKR: 네
     MessageJP: はい……
     MessageCN: 好的……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Okay.
+    MessageTH: ค่ะ
+    MessageTW: 好的……
     MessageGroupId: 100610640
     Id: 100610920
     CharacterId: 10061
@@ -1706,9 +1764,9 @@ content:
   - MessageKR: 다시 한번 정말 감사드립니다.
     MessageJP: 本当に、ありがとうございました
     MessageCN: 真的，十分感谢
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: Again, thank you so much.
+    MessageTH: ขอบคุณอีกครั้งค่ะ
+    MessageTW: 真的非常感謝您
     MessageGroupId: 100610650
     Id: 100610930
     CharacterId: 10061
@@ -1724,9 +1782,9 @@ content:
   - MessageKR: 그리고 앞으로도, 모쪼록 잘 부탁드립니다.
     MessageJP: これからも……どうぞよろしくお願いします
     MessageCN: 今后也……请您多多指教了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
+    MessageEN: I'll look to you again if I need help.
+    MessageTH: และหลังจากนี้... ก็ขอรบกวนด้วยนะคะ
+    MessageTW: 今後……也請多多指教
     MessageGroupId: 100610660
     Id: 100610940
     CharacterId: 10061

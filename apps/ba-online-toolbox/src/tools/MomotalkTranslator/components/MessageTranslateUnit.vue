@@ -8,6 +8,7 @@
     "
     :unsure="isUnsure"
     @flagUnsure="handleFlagUnsure"
+    :id="getFavorMessageId()"
   >
     <div
       class="content-container"
@@ -32,14 +33,6 @@
         </n-input-group>
       </div>
       <n-space vertical>
-        <n-switch v-model:value="localReferenceMode">
-          <template #checked
-            ><span class="hint-reference-mode">参考模式开</span></template
-          >
-          <template #unchecked
-            ><span class="hint-reference-mode">参考模式关</span></template
-          >
-        </n-switch>
         <n-space vertical justify="space-between">
           <n-button
             secondary
@@ -109,7 +102,7 @@
 <script setup lang="ts">
 import { PropType, Ref, computed, onMounted, ref, watch } from 'vue';
 import CardUnit from '../../public/components/CardUnit.vue';
-import { halfToFull, translate } from '../../public/getTranslation';
+import { halfToFull, translate } from '../../public/helper/getTranslation';
 import { useMainStore } from '../store/mainStore';
 import { Content } from '../types/FileContent';
 import { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';
@@ -118,7 +111,15 @@ import { Key } from 'naive-ui/es/menu/src/interface';
 const mainStore = useMainStore();
 const props = defineProps({
   content: Object as PropType<Content>,
+  index: Number,
 });
+
+function getFavorMessageId() {
+  if (0 === props.content?.ConditionValue) {
+    return;
+  }
+  return `${props.content?.CharacterId}${props.content?.ConditionValue}`;
+}
 
 const messageCondition = {
   None: '学生信息',
@@ -228,6 +229,13 @@ function handleTranslateRequest(
       });
   }
 }
+
+onMounted(() => {
+  setTimeout(() => {
+    handleTranslateRequest(messageJp.value);
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  }, props.index! * 1000);
+});
 
 function acceptTranslation() {
   messageCn.value = translateCn.value;

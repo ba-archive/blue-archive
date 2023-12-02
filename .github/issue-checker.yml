@@ -11,7 +11,7 @@ labels:
   - name: UI
     mode: add
     content: UI
-    regexes: "[Uu][Ii]|界面"
+    regexes: "界面"
   - name: momotalk
     mode: add
     content: "module: momotalk"
@@ -23,7 +23,7 @@ labels:
   - name: story-player
     mode: add
     content: "module: story-player"
-    regexes: "(([Ss][Tt][Oo][Rr][Yy])|故事|剧情)(?!编辑)|(特效|[Ee][Ff]{2}[Ee][Cc][Tt])|人物重复|影(分身|流)|[Ll]([Ii][Vv][Ee])? ?2[Dd]|[声语]音|播放"
+    regexes: "(([Pp][Ll][Aa][Yy][Ee][Rr])|故事|剧情)(?!编辑)|(特效|[Ee][Ff]{2}[Ee][Cc][Tt])|人物重复|影(分身|流)|[Ll]([Ii][Vv][Ee])? ?2[Dd]|[声语]音|播放"
   - name: story-editor
     mode: add
     content: "module: story-editor"
@@ -46,7 +46,7 @@ labels:
     regexes: '[Dd]uplicate\s+(of|with)\s+#\d+|[和与跟]\s?#\d+\s?是?重复'
   - name: backlog
     mode: add
-    content: duplicate
+    content: backlog
     regexes: "[Bb][Aa][Cc][Kk][Ll][Oo][Gg]|备忘"
   - name: wontfix
     mode: add

@@ -274,10 +274,10 @@ const vAddComboKeyListener: Directive = {
     el.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.shiftKey && e.key === 'Enter') {
         e.preventDefault();
-        props.handleGotoNextLineRequest?.();
+        props.handleGotoPrevLineRequest?.();
       } else if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
         e.preventDefault();
-        props.handleGotoPrevLineRequest?.();
+        props.handleGotoNextLineRequest?.();
       }
     });
     el.addEventListener('wheel', wheelEvent);

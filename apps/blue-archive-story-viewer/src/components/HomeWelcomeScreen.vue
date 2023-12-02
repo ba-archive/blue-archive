@@ -2,7 +2,7 @@
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
-  type: "mainstory" | "student" | "minigame";
+  type: "mainstory" | "otherStory" | "student" | "minigame";
   icon?: string;
   jumpTo?: string | number;
   title: string;
@@ -12,38 +12,23 @@ export interface HomeDisplayInfo {
 }
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
-  // {
-  //   type: "minigame",
-  //   title: "白子",
-  //   icon: "https://shiroko.blue-archive.io/favicon.gif",
-  //   jumpTo: "https://shiroko.blue-archive.io",
-  //   startDate: "2023/05/16",
-  //   endDate: "2023/06/30",
-  //   style: "pixelize",
-  // },
   {
-    type: "mainstory",
-    title: "Vol.3 第二章",
+    type: "student",
+    jumpTo: 10082,
+    title: "不破 莲华",
   },
   {
     type: "student",
-    jumpTo: 10074,
-    title: "浦和 花子（泳装）",
+    jumpTo: 10083,
+    title: "桐生 桔梗",
   },
   {
-    type: "student",
-    jumpTo: 16013,
-    title: "下江 小春（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 10073,
-    title: "古关 忧（泳装）",
-  },
-  {
-    type: "student",
-    jumpTo: 20028,
-    title: "若叶 日向（泳装）",
+    type: "minigame",
+    title: "小春幸存者游戏",
+    icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
+    jumpTo: "https://games.blue-archive.io/koharu-dream/",
+    startDate: "2023/09/01",
+    style: "pixelize",
   },
 ];
 </script>
@@ -52,7 +37,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   <div id="home-welcome" class="center flex-vertical fill-screen">
     <div class="center flex-vertical">
       <img class="mika-sticker" src="@assets/mika_sticker.webp" alt="mika" />
-      <p>先从<span id="choice"></span>选择项目哦</p>
+      <p class="color-transition">先从<span id="choice"></span>选择项目哦</p>
       <div class="update-info-container">
         <updated-portal-card
           v-for="info in homepageDisplayInfoList"
@@ -75,7 +60,6 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   }
 
   p {
-    transition: color 0.375s ease-in-out;
     color: var(--color-text-main);
     font-weight: bold;
     font-size: 1.5rem;

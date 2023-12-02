@@ -55,7 +55,7 @@ export default defineConfig({
     minify: 'terser',
     terserOptions: {
       toplevel: true,
-      safari10: true,
+      safari10: false,
     },
   },
 });

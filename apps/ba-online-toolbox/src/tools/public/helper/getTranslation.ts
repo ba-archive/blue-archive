@@ -1,10 +1,10 @@
 import axios from 'axios';
-import sha256 from 'crypto-js/sha256';
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 // import { appKey, appSecret } from './translationSecrets';
-import secrets from './secrets.json';
+import secrets from '../secrets.json';
+import sha256 from 'crypto-js/sha256';
 
 const { appKey, appSecret } = secrets;
 

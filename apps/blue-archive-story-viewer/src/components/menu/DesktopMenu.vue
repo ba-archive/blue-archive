@@ -2,7 +2,7 @@
   <div class="desktop-menu-panel">
     <div class="id-sensei">
       <div class="avatar-wrapper center">
-        <img src="/src/assets/arona_icon.webp" alt="Arona" />
+        <img src="@assets/arona_icon.webp" alt="Arona" />
       </div>
       <div class="welcome-message">
         <p>欢迎，</p>
@@ -15,7 +15,7 @@
         v-for="mainRoute in mainRoutes"
         :key="mainRoute.path"
         :to="mainRoute.path"
-        class="nav-link rounded-small"
+        class="nav-link rounded-small color-transition"
         >{{ getRouteTranslation(mainRoute, selectedLanguage) }}</router-link
       >
     </div>
@@ -32,13 +32,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRouter } from 'vue-router';
-import { useSettingsStore } from '../../store/settings';
-import { getRouteTranslation } from '../../util/routerUtils';
-import LanguageSelector from '../widgets/LanguageSelector.vue';
-import ThemeSwitcher from '../widgets/ThemeSwitcher.vue';
-import UserNameInput from '../widgets/UserNameInput.vue';
+import { computed } from "vue";
+import { useRouter } from "vue-router";
+import LanguageSelector from "../widgets/LanguageSelector.vue";
+import ThemeSwitcher from "../widgets/ThemeSwitcher.vue";
+import UserNameInput from "../widgets/UserNameInput.vue";
+import { useSettingsStore } from "@store/settings";
+import { getRouteTranslation } from "@util/routerUtils";
 
 const settingsStore = useSettingsStore();
 const selectedLanguage = computed(() => settingsStore.getLang);
@@ -107,7 +107,6 @@ const mainRoutes = computed(() =>
 
 .nav-link {
   display: flex;
-  transition: color 0.375s ease-in-out;
   padding: 0.25rem 1rem;
   color: var(--color-text-main);
   text-decoration: none;
@@ -125,8 +124,8 @@ const mainRoutes = computed(() =>
 #settings {
   display: grid;
   grid-template-areas:
-    'language theme'
-    'sponsor sponsor';
+    "language theme"
+    "sponsor sponsor";
   grid-auto-flow: column;
   column-gap: 1rem;
   row-gap: 0.5rem;
@@ -141,10 +140,10 @@ const mainRoutes = computed(() =>
       background: linear-gradient(to right, #f48120, #faad3f);
       background-clip: text;
       color: transparent;
-      font-family: 'Asap Condensed Bold Italic', 'Microsoft YaHei',
-        'PingFang SC', -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu,
-        Cantarell, 'Noto Sans', BlinkMacSystemFont, 'Helvetica Neue',
-        'Hiragino Sans GB', Arial, sans-serif;
+      font-family: "Asap Condensed Bold Italic", "Microsoft YaHei",
+        "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+        Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+        "Hiragino Sans GB", Arial, sans-serif;
       text-decoration: none;
     }
   }

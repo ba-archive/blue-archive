@@ -1,0 +1,212 @@
+@use "sass:map";
+
+@use "mixins/mixins" as *;
+@use "mixins/utils" as *;
+@use "mixins/var" as *;
+@use "common/var" as *;
+
+$slider-height: () !default;
+$slider-height: map.merge(
+  (
+    "large": 40px,
+    "default": 32px,
+    "small": 24px,
+  ),
+  $slider-height
+);
+
+@include b(slider) {
+  @include set-component-css-var("slider", $slider);
+}
+
+@include b(slider) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: map.get($slider-height, "default");
+
+  @include e(runway) {
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    border-radius: getCssVar("slider-border-radius");
+    background-color: getCssVar("slider-runway-bg-color");
+    height: getCssVar("slider-height");
+
+    &.show-input {
+      margin-right: 30px;
+      width: auto;
+    }
+
+    &.is-disabled {
+      cursor: default;
+
+      .#{$namespace}-slider__bar {
+        background-color: getCssVar("slider-disabled-color");
+      }
+
+      .#{$namespace}-slider__button {
+        border-color: getCssVar("slider-disabled-color");
+      }
+
+      .#{$namespace}-slider__button-wrapper {
+        &:hover,
+        &.hover {
+          cursor: not-allowed;
+        }
+
+        &.dragging {
+          cursor: not-allowed;
+        }
+      }
+
+      .#{$namespace}-slider__button {
+        &:hover,
+        &.hover,
+        &.dragging {
+          transform: scale(1);
+        }
+
+        &:hover,
+        &.hover {
+          cursor: not-allowed;
+        }
+
+        &.dragging {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  @include e(input) {
+    flex-shrink: 0;
+    width: 130px;
+  }
+
+  @include e(bar) {
+    position: absolute;
+    border-top-left-radius: getCssVar("slider-border-radius");
+    border-bottom-left-radius: getCssVar("slider-border-radius");
+    background-color: getCssVar("slider-main-bg-color");
+    height: getCssVar("slider-height");
+  }
+
+  @include e(button-wrapper) {
+    position: absolute;
+    top: getCssVar("slider-button-wrapper-offset");
+    transform: translateX(-50%);
+    z-index: 1;
+    outline: none;
+    background-color: transparent;
+    width: getCssVar("slider-button-wrapper-size");
+    height: getCssVar("slider-button-wrapper-size");
+    line-height: normal;
+    user-select: none;
+    text-align: center;
+    @include utils-vertical-center;
+
+    &:hover,
+    &.hover {
+      cursor: grab;
+    }
+
+    &.dragging {
+      cursor: grabbing;
+    }
+  }
+
+  @include e(button) {
+    display: inline-block;
+    vertical-align: middle;
+    transition: getCssVar("transition-duration-fast");
+    box-sizing: border-box;
+    border: solid 2px getCssVar("slider-main-bg-color");
+    border-radius: 50%;
+    background-color: getCssVar("color-white");
+    width: getCssVar("slider-button-size");
+    height: getCssVar("slider-button-size");
+    user-select: none;
+
+    &:hover,
+    &.hover,
+    &.dragging {
+      transform: scale(1.2);
+    }
+
+    &:hover,
+    &.hover {
+      cursor: grab;
+    }
+
+    &.dragging {
+      cursor: grabbing;
+    }
+  }
+
+  @include e(stop) {
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: getCssVar("border-radius-circle");
+    background-color: getCssVar("slider-stop-bg-color");
+    width: getCssVar("slider-height");
+    height: getCssVar("slider-height");
+  }
+
+  @include e(marks) {
+    top: 0;
+    left: 12px;
+    width: 18px;
+    height: 100%;
+
+    @include e(marks-text) {
+      position: absolute;
+      transform: translateX(-50%);
+      margin-top: 15px;
+      color: getCssVar("color-info");
+      font-size: 14px;
+      white-space: pre;
+    }
+  }
+
+  @include when(vertical) {
+    display: inline-flex;
+    position: relative;
+    flex: 0;
+    width: auto;
+    height: 100%;
+
+    .#{$namespace}-slider__runway {
+      margin: 0 16px;
+      width: getCssVar("slider-height");
+      height: 100%;
+    }
+    .#{$namespace}-slider__bar {
+      border-radius: 0 0 3px 3px;
+      width: getCssVar("slider-height");
+      height: auto;
+    }
+    .#{$namespace}-slider__button-wrapper {
+      top: auto;
+      left: getCssVar("slider-button-wrapper-offset");
+      transform: translateY(50%);
+    }
+    .#{$namespace}-slider__stop {
+      transform: translateY(50%);
+    }
+
+    @include e(marks-text) {
+      left: 15px;
+      transform: translateY(50%);
+      margin-top: 0;
+    }
+  }
+
+  @each $size in (large, small) {
+    @include m($size) {
+      height: map.get($slider-height, $size);
+      @include e(runway) {
+      }
+    }
+  }
+}

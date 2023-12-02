@@ -56,6 +56,7 @@ const keyUpEvent = (e: KeyboardEvent) => {
   }
 };
 
+let wheelTimer: ReturnType<typeof setTimeout> | undefined;
 const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
   if (eventEmitter.isStoryLogShow || !isPlayerFocus()) {
@@ -63,6 +64,13 @@ const wheelEvent = (e: WheelEvent & { [key: string]: any }) => {
   }
   if (delta >= 0) {
     eventBus.emit("showStoryLog", true);
+  } else {
+    if (!wheelTimer) {
+      wheelTimer = setTimeout(() => {
+        interactNext();
+        wheelTimer = undefined;
+      }, 200);
+    }
   }
 };
 
@@ -116,10 +124,15 @@ function getLastDataFromIndex(index: number) {
   return { lastBg, lastBgm, lastCharacter };
 }
 
-export const changeStoryIndex = (index?: number) => {
-  if (typeof index !== "number") {
+export const changeStoryIndex = (index?: number | string) => {
+  if (!["string", "number"].includes(typeof index)) {
     return;
   }
+
+  if ("string" === typeof index && Number.isInteger(Number(index))) {
+    index = Number(index);
+  }
+
   // 不允许跳到最后
   if (index >= usePlayerStore().allStoryUnit.length - 1) {
     return;

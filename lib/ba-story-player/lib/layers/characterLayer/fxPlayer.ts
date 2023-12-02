@@ -1,6 +1,6 @@
 import { usePlayerStore } from "@/stores";
+import { Sprite } from "pixi.js";
 import gsap from "gsap";
-import { Sprite } from "pixijs";
 import fxOptions from "./options/fxOptions";
 import {
   CharacterEffectInstance,

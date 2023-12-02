@@ -1,6 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixijs";
-import { AlphaFilter } from "pixijs";
+import { Container, Sprite } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -10,12 +9,11 @@ export default async function BG_Love_L(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  const alphaFilter = new AlphaFilter(0.5);
   const backSprite = resources[2];
-  backSprite.tint = 0xffc0cb;
-  backSprite.width = appWidth;
-  backSprite.height = appHeight;
-  backSprite.filters = [alphaFilter];
+  backSprite.x = -0.2 * appWidth;
+  backSprite.y = -0.2 * appHeight;
+  backSprite.width = appWidth * 1.4;
+  backSprite.height = appHeight * 1.4;
   backSprite.zIndex = -1;
   app.stage.addChild(backSprite);
   // 心心特效
@@ -50,6 +48,7 @@ export default async function BG_Love_L(resources: Sprite[]) {
   );
   getEmitterType(ringConfig, "spawnShape").config.data.w = appWidth;
   getEmitterType(ringConfig, "spawnShape").config.data.h = appHeight;
+  getEmitterType(ringConfig, "colorStatic").config.color = "#ffe7d8";
   const ringTextureWidth = resources[1].texture.width;
   const ringBaseRatio = (0.28 * appWidth) / ringTextureWidth;
   const ringScaleConfig = getEmitterType(ringConfig, "scale").config;

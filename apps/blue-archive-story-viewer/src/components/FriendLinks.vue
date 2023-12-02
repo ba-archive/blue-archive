@@ -9,18 +9,18 @@ interface FriendLink {
 }
 const links: FriendLink[] = [
   {
-    title: "碧蓝档案资讯站",
-    url: "https://space.bilibili.com/37507923",
-    logo: "/image/contributor/zixunzhan.webp",
-    logoDescription: "资讯站logo",
-    description: "为玩家服务的民间组织，尊重官方设定",
-  },
-  {
     title: "项目公告板 (bilibili)",
     url: "https://space.bilibili.com/1413213021",
     logo: "/favicon/apple-touch-icon.png",
     logoDescription: "项目logo",
     description: "更新公告等内容发布",
+  },
+  {
+    title: "碧蓝档案资讯站",
+    url: "https://space.bilibili.com/37507923",
+    logo: "/image/contributor/zixunzhan.webp",
+    logoDescription: "资讯站logo",
+    description: "为玩家服务的民间组织，尊重官方设定",
   },
   {
     title: "项目仓库",
@@ -43,7 +43,7 @@ const links: FriendLink[] = [
 <template>
   <div class="flex-vertical">
     <article>
-      <h2>友情链接</h2>
+      <h2 class="color-transition">友情链接</h2>
       <div class="contribution-wall">
         <a
           v-for="link in links"
@@ -59,8 +59,8 @@ const links: FriendLink[] = [
             :src="link.logo"
             :alt="link.logoDescription"
           />
-          <h4>{{ link.title }}</h4>
-          <p>{{ link.description }}</p>
+          <h4 class="color-transition">{{ link.title }}</h4>
+          <p class="color-transition">{{ link.description }}</p>
         </a>
       </div>
     </article>
@@ -128,7 +128,6 @@ html[data-theme="dark"] {
 }
 
 h2 {
-  transition: color 0.375s ease-in-out;
   margin: 2rem auto 0.5rem;
 }
 

@@ -15,7 +15,7 @@
       />
 
       <div class="message-text flex-vertical">
-        <div class="student-name" v-if="message?.avatar">
+        <div class="student-name color-transition" v-if="message?.avatar">
           {{ studentName }}
         </div>
         <div class="message-content-wrap rounded-small">
@@ -95,17 +95,23 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, computed, ref, watch } from "vue";
+import { ComputedRef, PropType, computed, onMounted, ref, watch } from "vue";
+import { CurrentMessageItem, MessageText } from "@/types/Chats";
+import { Language } from "@/types/Settings";
+import { StudentName } from "@/types/Student";
 import { getI18nString } from "@i18n/getI18nString";
 import { useSettingsStore } from "@store/settings";
 import { useStudentStore } from "@store/students";
-import { CurrentMessageItem, MessageText } from "@types/Chats";
-import { Language } from "@types/Settings";
-import { StudentName } from "@types/Student";
 
 const props = defineProps({
   message: Object as PropType<CurrentMessageItem>,
   shouldComponentUpdate: Boolean,
+});
+
+onMounted(() => {
+  if (0 !== props.message?.FavorScheduleId) {
+    import("@/components/StoryViewer.vue");
+  }
 });
 
 function isInViewport(el: HTMLElement) {
@@ -139,6 +145,9 @@ const studentStore = useStudentStore();
 const selectedLang = computed(
   () => settingsStore.getLang.replace("zh", "cn") as Language
 );
+const isAnimationDisabled: ComputedRef<boolean> = computed(
+  () => useSettingsStore().getDisableMomotalkAnimationState
+);
 
 const characterId = props.message?.CharacterId || 10000;
 const studentInfo = studentStore.getStudentById(characterId);
@@ -165,14 +174,21 @@ const feedbackTime = computed(
 );
 
 function animateMessage() {
-  setTimeout(() => {
+  if (isAnimationDisabled.value) {
     showMessageContent.value = true;
-  }, feedbackTime.value);
-
-  setTimeout(() => {
     showFavorMessageContent.value =
       "Answer" !== messageCondition.value || -1 !== currentSelection.value;
-  }, feedbackTime.value + 500);
+    return;
+  } else {
+    setTimeout(() => {
+      showMessageContent.value = true;
+    }, feedbackTime.value);
+
+    setTimeout(() => {
+      showFavorMessageContent.value =
+        "Answer" !== messageCondition.value || -1 !== currentSelection.value;
+    }, feedbackTime.value + 500);
+  }
 }
 
 animateMessage();
@@ -301,6 +317,7 @@ function handleContinueReadingButtonPressed() {
     gap: 0.5rem;
   }
 }
+
 .student-reply {
   display: flex;
   flex-direction: row;
@@ -319,12 +336,12 @@ function handleContinueReadingButtonPressed() {
     height: 0;
   }
 }
+
 .message-text {
   align-items: flex-start;
   margin-left: 0.5rem;
 
   .student-name {
-    transition: color 0.375s ease-in-out;
     font-weight: bold;
     font-size: 1rem;
   }
@@ -347,10 +364,12 @@ function handleContinueReadingButtonPressed() {
   .dot-1 {
     animation: typing 1.5s infinite;
   }
+
   .dot-2 {
     animation: typing 1.5s infinite;
     animation-delay: 0.2s;
   }
+
   .dot-3 {
     animation: typing 1.5s infinite;
     animation-delay: 0.4s;
@@ -361,9 +380,11 @@ function handleContinueReadingButtonPressed() {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

@@ -1,4 +1,4 @@
-import { Container } from "pixijs";
+import { Container } from "pixi.js";
 import { EffectRemoveFunction } from "@/types/effectLayer";
 import {
   Emitter,

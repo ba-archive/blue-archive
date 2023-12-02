@@ -1,16 +1,26 @@
 <script setup lang="ts">
-// import dayjs from "dayjs";
-import { computed, onBeforeMount, onBeforeUnmount, ref } from "vue";
+import axios from "axios";
+import {
+  computed,
+  onBeforeMount,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  watch,
+} from "vue";
 import { useRoute } from "vue-router";
+import HeadupBanner from "./components/HeadupBanner.vue";
 import HomeWelcomeScreen from "@components/HomeWelcomeScreen.vue";
 import DesktopMenu from "@components/menu/DesktopMenu.vue";
 import MobileMenu from "@components/menu/MobileMenu.vue";
 import { useSettingsStore } from "@store/settings";
 import { switchTheme } from "@util/userInterfaceUtils";
+import { useIntervalFn } from "@vueuse/core";
 
-// import timezone from "dayjs/plugin/timezone";
-// import utc from "dayjs/plugin/utc";
-//
+// import dayjs from "dayjs";
+// import timezone from "dayjs/plugin/timezone.js";
+// import utc from "dayjs/plugin/utc.js";
+
 // dayjs.extend(utc);
 // dayjs.extend(timezone);
 
@@ -42,40 +52,130 @@ function handleWindowSizeChange() {
   });
 }
 
+function handleSystemThemeChange(event: MediaQueryListEvent) {
+  const { matches } = event;
+  settingsStore.setTheme(matches ? "dark" : "light");
+}
+
 onBeforeMount(() => {
   const htmlElement = document.querySelector("html") as HTMLHtmlElement;
   showMobileMenu.value = htmlElement.clientWidth <= 768;
   window.addEventListener("resize", handleWindowSizeChange);
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    settingsStore.setTheme("dark");
-    switchTheme("dark");
+  const initTheme =
+    (window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+    "dark" === settingsStore.getTheme
+      ? "dark"
+      : "light";
+
+  switchTheme(initTheme);
+  settingsStore.setTheme(initTheme);
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", handleSystemThemeChange);
+});
+
+const currentVersion = import.meta.env.__VERSION__ || {
+  build: "",
+  timezone: "Asia/Shanghai",
+};
+
+const hasUpdate = ref(false);
+
+const remoteVersion = ref({
+  build: "",
+  timezone: "Asia/Shanghai",
+});
+
+async function resolveBuild() {
+  if (!settingsStore.getEnableCheckForUpdates) {
+    return;
   }
+  const currentTime = new Date().getTime();
+  const lastUpdated = settingsStore.getLastUpdated;
+  const diff = currentTime - lastUpdated;
+  if (!lastUpdated) {
+    settingsStore.setLastUpdated(currentTime);
+  }
+
+  if (diff < 1000 * 60 * 60 * 1) {
+    // 1 小时内只检查一次
+    return;
+  }
+
+  const { data, status } = await axios.get(`/version.json?t=${currentTime}`);
+  if (status !== 200) {
+    return;
+  }
+  const { build, timezone } = data as {
+    build: string;
+    timezone: string;
+  };
+  settingsStore.setLastUpdated(currentTime);
+  if (build && build !== currentVersion.build) {
+    hasUpdate.value = true;
+    remoteVersion.value = {
+      build,
+      timezone,
+    };
+  }
+}
+
+function handleDisableCheckForUpdates() {
+  hasUpdate.value = false;
+  settingsStore.setEnableCheckForUpdates(false);
+}
+
+function handleAppUpdate() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  location.reload(true); // 标准浏览器不支持，但是 Firefox 支持
+}
+
+const { pause, resume } = useIntervalFn(resolveBuild, 1000 * 60 * 60 * 1);
+
+function handleDocumentVisibilityChange() {
+  if ("hidden" === document.visibilityState) {
+    pause();
+  } else {
+    resolveBuild();
+    resume();
+  }
+}
+
+onMounted(() => {
+  watch(
+    () => settingsStore.getTheme,
+    newValue => {
+      switchTheme(newValue);
+    }
+  );
+  resolveBuild();
+  document.addEventListener("visibilitychange", handleDocumentVisibilityChange);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", handleWindowSizeChange);
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .removeEventListener("change", handleSystemThemeChange);
 });
-
-// function getInitialBannerState() {
-//   const now = dayjs().tz("Asia/Shanghai");
-//   const startDate = dayjs("2023/07/28 00:01").tz("Asia/Shanghai");
-//   const endDate = dayjs("2023/07/29 00:30").tz("Asia/Shanghai");
-//   return now.isAfter(startDate) && now.isBefore(endDate);
-// }
-//
-// const shouldShowBanner = ref(getInitialBannerState());
 </script>
 
 <template>
-  <!--  <headup-banner-->
-  <!--    v-if="shouldShowBanner"-->
-  <!--    @close="shouldShowBanner = false"-->
-  <!--    content="本站将于北京时间 7 月 29 日 00:01 - 00:30 进行维护，届时部分服务将不可用，敬请谅解"-->
-  <!--  />-->
+  <headup-banner
+    :show="hasUpdate"
+    @action-button-clicked="handleAppUpdate"
+    @close-button-clicked="hasUpdate = false"
+    @permanent-close-button-clicked="handleDisableCheckForUpdates"
+    show-permanent-close-button
+    close-button-text="关闭"
+    action-button-text="更新"
+    permanent-close-button-text="永久关闭提醒"
+    content="有新版本资源可用，点击以更新（当前的观看进度将丢失）"
+  />
   <mobile-menu v-if="showMobileMenu" />
   <desktop-menu v-else />
   <div
