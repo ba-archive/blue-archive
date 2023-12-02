@@ -278,10 +278,10 @@ function hotReplaceStoryUnit(
     /* eslint-disable indent */
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
-          GroupId: props.story.GroupId,
-          translator: props.story.translator,
-          content: unit,
-        }
+        GroupId: props.story.GroupId,
+        translator: props.story.translator,
+        content: unit,
+      }
       : (unit as TranslatedStoryUnit);
     /* eslint-enable indent */
     privateStore.allStoryUnit = translate(newStory);

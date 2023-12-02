@@ -1,6 +1,5 @@
 import { ActionOptions, OptionDescriptions } from "@/types/characterLayer";
 
-
 export const actionDescriptions: OptionDescriptions["action"] = {
   a: {},
   d: {

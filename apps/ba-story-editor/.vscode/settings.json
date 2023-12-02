@@ -1,23 +1,28 @@
 {
   "cSpell.words": [
-    "Vitesse",
-    "Vite",
-    "unocss",
-    "vitest",
-    "vueuse",
-    "pinia",
-    "demi",
     "antfu",
+    "demi",
+    "gnjson",
     "iconify",
     "intlify",
-    "vitejs",
+    "jdumps",
+    "jloads",
+    "NAST",
+    "Nexon",
+    "njson",
+    "pinia",
+    "Plana",
+    "pnpm",
+    "sensei",
+    "unocss",
     "unplugin",
-    "pnpm"
+    "Vite",
+    "vitejs",
+    "Vitesse",
+    "vitest",
+    "vueuse",
+    "yuuka"
   ],
-  "i18n-ally.sourceLanguage": "en",
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": "locales",
-  "i18n-ally.sortKeys": true,
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -25,5 +30,12 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "vue.codeActions.enabled": false
 }

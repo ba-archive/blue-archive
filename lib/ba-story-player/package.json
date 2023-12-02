@@ -24,7 +24,8 @@
     "build": "vite build",
     "build:github": "pnpm build",
     "preview": "vite preview",
-    "check": "vue-tsc --noEmit"
+    "check": "vue-tsc --noEmit",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@vueuse/core": "^10.2.1",

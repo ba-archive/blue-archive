@@ -11,9 +11,7 @@ import {
   TextEffectName,
 } from "@/types/common";
 import { PlayAudio, PlayEffect, ShowTitleOption } from "@/types/events";
-import {
-  CharacterNameExcelTableItem,
-} from "@/types/excels";
+import { CharacterNameExcelTableItem } from "@/types/excels";
 import { Language } from "@/types/store";
 
 const playerStore = usePlayerStore();
@@ -120,7 +118,6 @@ export function buildNxAST(rawText: string) {
   return root;
 }
 
-
 export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
   if (!source || source.length === 0) {
     return [];
@@ -133,7 +130,6 @@ export function buildStoryIndexStackRecord(source: StoryUnit[]): StoryUnit[] {
       return current;
     });
 }
-
 
 /**
  * 检查当前单元是否有背景覆盖变换, 有则删除该变换并返回变换的参数
@@ -148,7 +144,6 @@ export function checkBgOverlap(unit: StoryUnit) {
     }
   }
 }
-
 
 /**
  * 在大小写不敏感的情况下比较字符串
@@ -214,14 +209,12 @@ export function generateTitleInfo(
   };
 }
 
-
 export function getBgm(BGMId: number): PlayAudio["bgm"] | undefined {
   const item = playerStore.BGMExcelTable.get(BGMId);
   if (item) {
     return { url: getResourcesUrl("bgm", item.Path), bgmArgs: item };
   }
 }
-
 
 /**
  * 获取角色在unit的characters里的index, 当不存在时会自动往unit的character里加入该角色
@@ -295,13 +288,11 @@ export function getL2DUrlAndName(BGFileName: string) {
   return { url: getResourcesUrl("l2dSpine", filename), name: filename };
 }
 
-
 export function getSoundUrl(Sound: string) {
   if (Sound) {
     return getResourcesUrl("sound", Sound);
   }
 }
-
 
 /**
  * 在CharacterNameExcelTableItem中获取到speaker信息
@@ -420,7 +411,6 @@ type NxTagParseResult = {
   name: NxTag;
   attr?: string[];
 };
-
 
 export function getVoiceJPUrl(VoiceJp: string) {
   if (VoiceJp) {

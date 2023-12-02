@@ -1,5 +1,3 @@
-@import './markdown.css';
-
 html,
 body,
 #app {
@@ -26,4 +24,8 @@ html.dark {
   left: 0;
   width: 100%;
   height: 2px;
+}
+
+template {
+  display: block;
 }
