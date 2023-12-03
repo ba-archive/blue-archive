@@ -253,6 +253,7 @@ const resourcerManager = {
   audioSoundMap: new Map<string, Howl>(),
   load(storyNodes: StoryNode[]) {
     this.state = "loading";
+    this.loader.reset();
     const audioUrls: string[] = [];
     this.addBGEffectImgs();
     this.addEmotionResources(audioUrls);

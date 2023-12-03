@@ -6,19 +6,19 @@ import { waitMs } from "../utils";
 export default class StoryManager {
   currentStoryIndex: Ref<number>;
   currentStoryNode: ComputedRef<StoryNode>;
-  storyNodes: StoryNode[];
+  storyNodes: () => StoryNode[];
   nodePlayer: NodePlayer;
   state: "playing" | "done";
   auto: Ref<boolean>;
   autoTimeOutMs = 1500;
-  errorCallback: () => void;
+  errorCallback: (error: unknown) => void;
   constructor(
-    storyNodes: StoryNode[],
+    storyNodes: () => StoryNode[],
     nodePlayer: NodePlayer,
     currentStoryIndex: Ref<number>,
     currentStoryNode: ComputedRef<StoryNode>,
     auto: Ref<boolean>,
-    errorCallback: () => void
+    errorCallback: (error: unknown) => void
   ) {
     this.currentStoryIndex = currentStoryIndex;
     this.storyNodes = storyNodes;
@@ -44,7 +44,7 @@ export default class StoryManager {
     try {
       await this.nodePlayer.playNode(this.currentStoryNode.value);
     } catch (error) {
-      this.errorCallback();
+      this.errorCallback(error);
     }
 
     this.state = "done";

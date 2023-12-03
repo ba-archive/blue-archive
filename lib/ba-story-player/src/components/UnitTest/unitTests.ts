@@ -2,7 +2,13 @@ import { StoryNode } from "../../../lib/type";
 import StoryPlayer from "../../../lib/StoryPlayer.vue";
 export interface UnitTest {
   getStoryNodes: (initStoryNodes: StoryNode[]) => StoryNode[];
-  runTest: (player: InstanceType<typeof StoryPlayer>) => Promise<void>;
+  runTest: (
+    player: InstanceType<typeof StoryPlayer>,
+    arg?: {
+      select: string;
+    }
+  ) => Promise<void>;
+  select?: string[];
 }
 const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
   audio: {
@@ -149,6 +155,87 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
       async runTest(player) {
         player.storyManager.switch(5);
       },
+    },
+  },
+  character: {
+    emotion: {
+      getStoryNodes(initStoryNodes) {
+        initStoryNodes[1] = {
+          ...initStoryNodes[1],
+          characters: [
+            {
+              initPosition: 3,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "emotion",
+                  effect: "Heart",
+                  async: false,
+                },
+              ],
+            },
+          ],
+        };
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        if (arg.select) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[1],
+            characters: [
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [
+                  {
+                    type: "emotion",
+                    effect: arg.select,
+                    async: false,
+                  },
+                ],
+              },
+            ],
+          };
+
+          player.storyManager.switch(1);
+        }
+      },
+      select: [
+        "Heart",
+        "Respond",
+        "Music",
+        "Twinkle",
+        "Upset",
+        "Sweat",
+        "Dot",
+        "Exclaim",
+        "Surprise",
+        "Question",
+        "Shy",
+        "Angry",
+        "Chat",
+        "Sad",
+        "Steam",
+        "Sigh",
+        "Bulb",
+        "Tear",
+        "Zzz",
+      ],
     },
   },
 };

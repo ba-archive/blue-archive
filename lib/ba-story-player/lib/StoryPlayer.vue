@@ -47,18 +47,17 @@ const currentStoryNode = computed(() => {
   ) {
     return props.storyNodes[currentStoryIndex.value];
   } else {
-    props.endCallback();
     return props.storyNodes[props.storyNodes.length - 1];
   }
 });
 const storyManager = new StoryManager(
-  props.storyNodes,
+  () => props.storyNodes,
   nodePlayer,
   currentStoryIndex,
   currentStoryNode,
   auto,
-  () => {
-    console.error("error!");
+  error => {
+    console.error(error);
   }
 );
 const pixiCanvas = ref<HTMLDivElement>();
