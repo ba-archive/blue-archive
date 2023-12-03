@@ -398,6 +398,7 @@ export class CharacterLayer extends Layer {
         if (effect.type === "action") {
           const animate = this.animations[effect.effect as CharacterEffectWord];
           animate.args.instance = data;
+          animate.args.app = app;
           if (effect.async) {
             // 如果角色有位置移动，更新instances中角色位置
             if (["m1", "m2", "m3", "m4", "m5"].includes(effect.effect)) {
@@ -432,6 +433,7 @@ export class CharacterLayer extends Layer {
             this.animations[effect.effect as EmotionWord | "shot"];
           animate.args.instance = data;
           animate.args.handlerMap = handlerMap;
+          animate.args.app = app;
           if (effect.async) {
             await animate.animate();
           } else {

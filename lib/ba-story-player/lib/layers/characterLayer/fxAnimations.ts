@@ -70,21 +70,21 @@ const getFXSprites = function (
 
 const shot: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
   options: FXOptions["shot"];
   handlerMap: HandlerMap | undefined;
   imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
-    app: new Application(),
+    app: undefined,
     options: fxOptions["shot"],
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getFXSprites("shot", this.args.handlerMap, this.args.app);

@@ -101,12 +101,12 @@ const AnimationIdleTrack = 0; // 光环动画track index
 
 const a: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const timeLine = gsap.timeline();
@@ -156,12 +156,12 @@ const a: Animation<{
 
 const al: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     initCharacter(this.args.instance, this.args.app);
@@ -187,7 +187,7 @@ const al: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       const characterInstance = this.args.instance.instance;
       const { x } = calcSpineStagePosition(
         characterInstance,
@@ -201,12 +201,12 @@ const al: Animation<{
 
 const ar: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     initCharacter(this.args.instance, this.args.app);
@@ -229,7 +229,7 @@ const ar: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       const characterInstance = this.args.instance.instance;
       const { x } = calcSpineStagePosition(
         characterInstance,
@@ -244,8 +244,9 @@ const ar: Animation<{
 const closeup: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["closeup"];
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, options: { scale: 0 } },
+  args: { instance: undefined, options: { scale: 0 }, app: undefined },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
@@ -272,8 +273,9 @@ const closeup: Animation<{
 const d: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["d"];
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, options: { duration: 0 } },
+  args: { instance: undefined, options: { duration: 0 }, app: undefined },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
@@ -304,12 +306,12 @@ const d: Animation<{
 
 const dl: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline({
@@ -339,12 +341,12 @@ const dl: Animation<{
 
 const dr: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline({
@@ -374,11 +376,13 @@ const falldownR: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["falldownR"];
   orginState: { pivot: ObservablePoint<any>; y: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["falldownR"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -458,7 +462,6 @@ const falldownR: Animation<{
     this.args.instance.instance.visible = false;
     this.args.instance.instance.y = this.args.orginState.y;
   },
-  // origin?
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
@@ -478,11 +481,13 @@ const falldownL: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["falldownL"];
   orginState: { pivot: ObservablePoint<any>; y: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["falldownL"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -562,7 +567,6 @@ const falldownL: Animation<{
     this.args.instance.instance.visible = false;
     this.args.instance.instance.y = this.args.orginState.y;
   },
-  // origin?
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
@@ -582,11 +586,13 @@ const greeting: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["greeting"];
   orginState: { y: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["greeting"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -617,8 +623,11 @@ const greeting: Animation<{
   },
 };
 
-const hide: Animation<{ instance: CharacterEffectInstance | undefined }> = {
-  args: { instance: undefined },
+const hide: Animation<{
+  instance: CharacterEffectInstance | undefined;
+  app: Application | undefined;
+}> = {
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
@@ -638,11 +647,13 @@ const hophop: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["hophop"];
   orginState: { y: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["hophop"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -677,11 +688,13 @@ const jump: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["hophop"];
   orginState: { y: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["jump"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -714,12 +727,12 @@ const jump: Animation<{
 
 const m1: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline();
@@ -730,7 +743,7 @@ const m1: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       this.args.instance.position = 1;
       const movePos = calcSpineStagePosition(
         this.args.instance.instance,
@@ -744,12 +757,12 @@ const m1: Animation<{
 
 const m2: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline();
@@ -760,7 +773,7 @@ const m2: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       this.args.instance.position = 2;
       const movePos = calcSpineStagePosition(
         this.args.instance.instance,
@@ -774,12 +787,12 @@ const m2: Animation<{
 
 const m3: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline();
@@ -790,7 +803,7 @@ const m3: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       this.args.instance.position = 3;
       const movePos = calcSpineStagePosition(
         this.args.instance.instance,
@@ -804,12 +817,12 @@ const m3: Animation<{
 
 const m4: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline();
@@ -820,7 +833,7 @@ const m4: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       this.args.instance.position = 4;
       const movePos = calcSpineStagePosition(
         this.args.instance.instance,
@@ -834,12 +847,12 @@ const m4: Animation<{
 
 const m5: Animation<{
   instance: CharacterEffectInstance | undefined;
-  app: Application;
+  app: Application | undefined;
 }> = {
-  args: { instance: undefined, app: new Application() },
+  args: { instance: undefined, app: undefined },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance) {
+    if (!this.args.instance || !this.args.app) {
       return;
     }
     const tl = gsap.timeline();
@@ -850,7 +863,7 @@ const m5: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
-    if (this.args.instance) {
+    if (this.args.instance && this.args.app) {
       this.args.instance.position = 5;
       const movePos = calcSpineStagePosition(
         this.args.instance.instance,
@@ -866,11 +879,13 @@ const shake: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["shake"];
   orginState: { x: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["shake"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {
@@ -915,11 +930,13 @@ const stiff: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: ActionOptions["stiff"];
   orginState: { x: number } | undefined;
+  app: Application | undefined;
 }> = {
   args: {
     instance: undefined,
     options: actionOptions["stiff"],
     orginState: undefined,
+    app: undefined,
   },
   runningAnimation: [],
   async animate() {

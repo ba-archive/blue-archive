@@ -1,5 +1,5 @@
 import { Animation, HandlerMap } from "@/type";
-import { timelineToPauseAble } from "@/utils";
+import { timelineToPauseAble, ZINDEXBASE } from "@/utils";
 import { Spine } from "pixi-spine";
 import { Application, Container, Sprite } from "pixi.js";
 import { PositionOffset } from ".";
@@ -139,20 +139,20 @@ function setRelativePosition(
 const Angry: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Angry"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Angry"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -163,6 +163,7 @@ const Angry: Animation<{
     if (!sprites) {
       return Promise.reject(`Angry没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Angry", { volume: 0.8 });
     const angryImgUnit = sprites[0];
     const scale = getRelativeScale(angryImgUnit, this.args.options);
     const { container } = prepareEmotionContainer(
@@ -179,7 +180,7 @@ const Angry: Animation<{
       uImgUnit.scale.set(scale);
       uImgUnit.anchor.set(0.35, -0.05);
       uImgUnit.angle += i * 120;
-      uImgUnit.zIndex = 10;
+      uImgUnit.zIndex = ZINDEXBASE.character + 10;
       container.addChild(uImgUnit);
       const tl = gsap.timeline();
       waitTimeLine = tl;
@@ -211,20 +212,20 @@ const Angry: Animation<{
 const Chat: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Chat"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Chat"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -235,6 +236,7 @@ const Chat: Animation<{
     if (!sprites) {
       return Promise.reject(`Chat没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Chat", { volume: 0.8 });
     const chatImage = sprites[0];
     prepareEmotionContainer(
       this.args.instance.instance,
@@ -247,7 +249,7 @@ const Chat: Animation<{
     chatImage.pivot.x = chatImage.width * (1 + this.args.options.rotatePivot.x);
     chatImage.pivot.y =
       chatImage.height * (1 + this.args.options.rotatePivot.y);
-    chatImage.zIndex = 10;
+    chatImage.zIndex = ZINDEXBASE.character + 10;
     const tl = gsap.timeline();
     this.runningAnimation.push(timelineToPauseAble(tl));
     await tl
@@ -271,20 +273,20 @@ const Chat: Animation<{
 const Dot: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Dot"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { dialogImg: Sprite; container: Container } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Dot"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -295,6 +297,7 @@ const Dot: Animation<{
     if (!sprites) {
       return Promise.reject(`Dot没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Dot", { volume: 0.8 });
     const dialogImg = Sprite.from(sprites[0].texture);
     prepareEmotionContainer(
       this.args.instance.instance,
@@ -353,20 +356,20 @@ const Dot: Animation<{
 const Exclaim: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Exclaim"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Exclaim"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -377,6 +380,7 @@ const Exclaim: Animation<{
     if (!sprites) {
       return Promise.reject(`Exclaim没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Exclaim", { volume: 0.8 });
     const surpriseImg = sprites[0];
     prepareEmotionContainer(
       this.args.instance.instance,
@@ -423,20 +427,20 @@ const Exclaim: Animation<{
 const Heart: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Heart"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { heartImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Heart"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -447,6 +451,7 @@ const Heart: Animation<{
     if (!sprites) {
       return Promise.reject(`Heart没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Heart", { volume: 0.8 });
     const dialogImg = sprites[0];
     const heartImg = sprites[1];
     const dialogScale = getRelativeScale(dialogImg, this.args.options);
@@ -464,8 +469,8 @@ const Heart: Animation<{
     const heartScale =
       (this.args.options.heartImg.scale * dialogImg.width) / heartImg.width;
     heartImg.scale.set(heartScale);
-    dialogImg.zIndex = 10;
-    heartImg.zIndex = 11;
+    dialogImg.zIndex = ZINDEXBASE.character + 10;
+    heartImg.zIndex = ZINDEXBASE.character + 11;
     dialogImg.visible = heartImg.visible = true;
     container.addChild(dialogImg);
     container.addChild(heartImg);
@@ -518,20 +523,20 @@ const Heart: Animation<{
 const Music: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Music"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Music"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -542,6 +547,7 @@ const Music: Animation<{
     if (!sprites) {
       return Promise.reject(`Music没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Music", { volume: 0.8 });
     const note = sprites[0];
     const scale = getRelativeScale(note, this.args.options);
     const { container } = prepareEmotionContainer(
@@ -613,20 +619,20 @@ const Music: Animation<{
 const Question: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Question"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Question"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -637,9 +643,10 @@ const Question: Animation<{
     if (!sprites) {
       return Promise.reject(`Question没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Question", { volume: 0.8 });
     const questionImg = sprites[0];
     questionImg.visible = true;
-    questionImg.zIndex = 10;
+    questionImg.zIndex = ZINDEXBASE.character + 10;
     const scale = getRelativeScale(questionImg, this.args.options);
     prepareEmotionContainer(
       this.args.instance.instance,
@@ -689,20 +696,20 @@ const Question: Animation<{
 const Respond: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Respond"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { sprites: Sprite[]; container: Container } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Respond"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -713,6 +720,7 @@ const Respond: Animation<{
     if (!sprites) {
       return Promise.reject(`Respond没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Respond", { volume: 0.8 });
     const { instance: spine } = this.args.instance;
     const { container } = prepareEmotionContainer(spine, this.args.options);
     const scale = getRelativeScale(sprites[0], this.args.options);
@@ -729,7 +737,7 @@ const Respond: Animation<{
       );
       container.addChild(respondImg);
     }
-    container.zIndex = 10;
+    container.zIndex = ZINDEXBASE.character + 10;
     container.alpha = 1;
     container.visible = true;
     this.args.imgs = {
@@ -772,20 +780,20 @@ const Respond: Animation<{
 const Sad: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Sad"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { container: Container; sadLineImage: Sprite[] } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sad"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -796,6 +804,7 @@ const Sad: Animation<{
     if (!sprites) {
       return Promise.reject(`Sad没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Sad", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
@@ -842,20 +851,20 @@ const Sad: Animation<{
 const Shy: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Shy"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { shyImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Shy"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -866,6 +875,7 @@ const Shy: Animation<{
     if (!sprites) {
       return Promise.reject(`Shy没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Shy", { volume: 0.8 });
     const dialogImg = sprites[0];
     const shyImg = sprites[1];
     const { container } = prepareEmotionContainer(
@@ -888,8 +898,8 @@ const Shy: Animation<{
         this.args.options.scaleAnamation.startScale
     );
     shyImg.position = shyImgPos;
-    dialogImg.zIndex = 10;
-    shyImg.zIndex = 11;
+    dialogImg.zIndex = ZINDEXBASE.character + 10;
+    shyImg.zIndex = ZINDEXBASE.character + 11;
     const shyImgAnchor = this.args.options.shyImg.anchor;
     shyImg.anchor.set(shyImgAnchor.x, shyImgAnchor.y);
     shyImg.visible = dialogImg.visible = true;
@@ -956,7 +966,7 @@ const Shy: Animation<{
 const Surprise: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Surprise"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs:
     | { container: Container; surpriseImg: Sprite; exclaimImg: Sprite }
@@ -965,13 +975,13 @@ const Surprise: Animation<{
   args: {
     instance: undefined,
     options: emotionOptions["Surprise"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -982,6 +992,7 @@ const Surprise: Animation<{
     if (!sprites) {
       return Promise.reject(`Surprise没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Surprise", { volume: 0.8 });
     const exclaimImg = Sprite.from(sprites[0].texture);
     const surpriseImg = Sprite.from(sprites[1].texture);
     const scale = getRelativeScale(exclaimImg, this.args.options);
@@ -1008,7 +1019,7 @@ const Surprise: Animation<{
       this.args.options
     );
     container.addChild(exclaimImg, surpriseImg);
-    container.zIndex = 10;
+    container.zIndex = ZINDEXBASE.character + 10;
     this.args.imgs = {
       container: container,
       exclaimImg: exclaimImg,
@@ -1091,20 +1102,20 @@ const Surprise: Animation<{
 const Sweat: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Sweat"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { dropImg: Sprite; smallDropImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sweat"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1115,6 +1126,7 @@ const Sweat: Animation<{
     if (!sprites) {
       return Promise.reject(`Sweat没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Sweat", { volume: 0.8 });
     const dropImg = sprites[0];
     const smallDropImg = sprites[1];
     const { container } = prepareEmotionContainer(
@@ -1130,8 +1142,8 @@ const Sweat: Animation<{
     );
     smallDropImg.x = smallPosition.x;
     smallDropImg.y = smallPosition.y;
-    dropImg.zIndex = 10;
-    smallDropImg.zIndex = 10;
+    dropImg.zIndex = ZINDEXBASE.character + 10;
+    smallDropImg.zIndex = ZINDEXBASE.character + 10;
     smallDropImg.visible = dropImg.visible = true;
     container.addChild(dropImg, smallDropImg);
     this.args.imgs = {
@@ -1169,20 +1181,20 @@ const Sweat: Animation<{
 const Twinkle: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Twinkle"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { container: Container; starImgs: Sprite[] } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Twinkle"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1193,6 +1205,7 @@ const Twinkle: Animation<{
     if (!sprites) {
       return Promise.reject(`Twinkle没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Twinkle", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
@@ -1273,20 +1286,20 @@ const Twinkle: Animation<{
 const Upset: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Upset"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { upsetImg: Sprite; dialogImg: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Upset"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1297,6 +1310,7 @@ const Upset: Animation<{
     if (!sprites) {
       return Promise.reject(`Upset没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Upset", { volume: 0.8 });
     const dialogImg = sprites[0];
     const upsetImg = Sprite.from(sprites[1].texture);
     prepareEmotionContainer(
@@ -1360,20 +1374,20 @@ const Upset: Animation<{
 const Steam: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Steam"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { steamImage1: Sprite; steamImage2: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Steam"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1384,6 +1398,7 @@ const Steam: Animation<{
     if (!sprites) {
       return Promise.reject(`Steam没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Steam", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
@@ -1447,20 +1462,20 @@ const Steam: Animation<{
 const Sigh: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Sigh"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { sighImage: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Sigh"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1471,6 +1486,7 @@ const Sigh: Animation<{
     if (!sprites) {
       return Promise.reject(`Sigh没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Sigh", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
@@ -1517,7 +1533,7 @@ const Sigh: Animation<{
 const Bulb: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Bulb"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs:
     | { bulbImage: Sprite; lightImage: Sprite; container: Container }
@@ -1526,13 +1542,13 @@ const Bulb: Animation<{
   args: {
     instance: undefined,
     options: emotionOptions["Bulb"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1543,6 +1559,7 @@ const Bulb: Animation<{
     if (!sprites) {
       return Promise.reject(`Bulb没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Bulb", { volume: 0.8 });
     const dialogImg = Sprite.from(sprites[0].texture);
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
@@ -1616,20 +1633,20 @@ const Bulb: Animation<{
 const Tear: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Tear"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: { smallTearImage: Sprite; largeTearImage: Sprite } | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Tear"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1640,6 +1657,7 @@ const Tear: Animation<{
     if (!sprites) {
       return Promise.reject(`Tear没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Tear", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
@@ -1713,20 +1731,20 @@ const Tear: Animation<{
 const Zzz: Animation<{
   instance: CharacterEffectInstance | undefined;
   options: EmotionOptions["Zzz"];
-  app: Application;
+  app: Application | undefined;
   handlerMap: HandlerMap | undefined;
   imgs: Sprite[] | undefined;
 }> = {
   args: {
     instance: undefined,
     options: emotionOptions["Zzz"],
-    app: new Application(),
+    app: undefined,
     handlerMap: undefined,
     imgs: undefined,
   },
   runningAnimation: [],
   async animate() {
-    if (!this.args.instance || !this.args.handlerMap) {
+    if (!this.args.instance || !this.args.handlerMap || !this.args.app) {
       return;
     }
     const sprites = getEmotionSprites(
@@ -1737,6 +1755,7 @@ const Zzz: Animation<{
     if (!sprites) {
       return Promise.reject(`Zzz没有对应的图像资源`);
     }
+    this.args.handlerMap.playAudio("Zzz", { volume: 0.8 });
     const { container } = prepareEmotionContainer(
       this.args.instance.instance,
       this.args.options
