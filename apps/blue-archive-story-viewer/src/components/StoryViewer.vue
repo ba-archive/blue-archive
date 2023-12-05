@@ -272,8 +272,11 @@ const { width: containerWidth, height: containerHeight } = useElementSize(
   playerContainerElement
 );
 const playerWidth = ref(0);
+const playerWidthWithUnit = computed(() => playerWidth.value + "px");
 const playerHeight = ref(0);
-const startFullScreen = ref(document.body.clientWidth < 425);
+const startFullScreen = ref(
+  document.body.clientWidth < 425 || settingsStore.getInitWithFullscreen
+);
 const useMp3 = computed(() => settingsStore.getUseMp3);
 const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
 // 超分埋点
@@ -537,20 +540,28 @@ function handleGoBack() {
   z-index: 512 !important;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 650px) {
+  .story-container {
+    .story-info {
+      flex-wrap: wrap;
+      width: v-bind(playerWidthWithUnit);
+    }
+  }
+
   .player-footer {
     flex-direction: column;
+    width: v-bind(playerWidthWithUnit);
 
     .story-info {
       flex-wrap: wrap;
+      width: v-bind(playerWidthWithUnit);
       justify-content: space-between;
     }
 
     .player-settings {
       flex-wrap: wrap;
-      width: 100%;
       align-items: flex-start;
-      flex-direction: column;
+      width: v-bind(playerWidthWithUnit);
     }
   }
 }
