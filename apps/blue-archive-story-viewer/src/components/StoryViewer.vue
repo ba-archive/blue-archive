@@ -536,4 +536,22 @@ function handleGoBack() {
 :deep(.pseudo-fullscreen) {
   z-index: 512 !important;
 }
+
+@media screen and (max-width: 425px) {
+  .player-footer {
+    flex-direction: column;
+
+    .story-info {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .player-settings {
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
 </style>
