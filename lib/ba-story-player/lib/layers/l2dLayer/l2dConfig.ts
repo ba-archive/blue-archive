@@ -874,4 +874,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Hare_home: {
+    name: "Hare_home",
+    playQue: [
+      {
+        name: "Hare_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Hare_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };
