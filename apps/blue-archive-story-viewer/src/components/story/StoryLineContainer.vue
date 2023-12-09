@@ -8,20 +8,22 @@ import StoryBriefBlock from "./StoryBriefBlock.vue";
 
 const settingsStore = useSettingsStore();
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     title: StoryBriefing["title"];
     avatar: StoryBriefing["avatar"];
     index: number;
     sections: StoryBriefing["sections"];
     type?: "mainStory" | "otherStory";
+    totalLength?: number;
   }>(),
   {
     type: "mainStory",
   }
 );
 
-const openChapters: Ref<number[]> = ref([2]);
+// eslint-disable-next-line vue/no-setup-props-destructure
+const openChapters: Ref<number[]> = ref([(props.totalLength ?? -1) - 1]);
 const language = computed(() => settingsStore.getLang);
 
 function getTitleText(

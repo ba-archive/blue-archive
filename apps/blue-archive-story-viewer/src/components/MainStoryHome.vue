@@ -10,6 +10,7 @@
       :index="index"
       :sections="story.sections"
       :key="index"
+      :total-length="releasedStories.length"
     />
   </div>
   <router-view v-else />
