@@ -110,7 +110,7 @@ export default defineConfig({
       "link",
       {
         rel: "prefetch",
-        href: "https://fonts.blue-archive.io/misans-webfont/misans-400-regular.min.css",
+        href: "https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-400.css",
         as: "style",
         onload: "this.rel='stylesheet';this.onload=null;",
       },
@@ -119,7 +119,7 @@ export default defineConfig({
       "link",
       {
         rel: "prefetch",
-        href: "https://fonts.blue-archive.io/misans-webfont/misans-600-semibold.min.css",
+        href: "https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-700.css",
         as: "style",
         onload: "this.rel='stylesheet';this.onload=null;",
       },

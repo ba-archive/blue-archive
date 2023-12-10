@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.blue-archive.io/misans-webfont/misans-400-regular.min.css");
-@import url("https://fonts.blue-archive.io/misans-webfont/misans-600-semibold.min.css");
+@import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-400.css");
+@import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-700.css");
 
 @font-face {
   src: url("https://fonts.blue-archive.io/WixMadeforText-VariableFont_wght.ttf")
@@ -51,16 +51,17 @@ body {
       }
     }
 
-    th, td {
+    th,
+    td {
       border: inherit;
     }
   }
 }
 
 :root {
-  --vp-font-family-base: "Wix Madefor Text", "MiSans", "Microsoft YaHei",
-    "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
-    Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+  --vp-font-family-base: "Wix Madefor Text", "HarmonyOS Sans SC",
+    "Microsoft YaHei", "PingFang SC", -apple-system, system-ui, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
     "Hiragino Sans GB", Arial, sans-serif;
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     "Menlo", "Courier", "monospace";
