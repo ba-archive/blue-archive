@@ -126,7 +126,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
       return unit;
     },
   },
-  fontsize: {
+  fontsize: { 
     reg: /#fontsize;(\d+);?/i,
     fn(match: RegExpExecArray, unit: StoryUnit) {
       unit.textAbout.showText.text.forEach(it => {

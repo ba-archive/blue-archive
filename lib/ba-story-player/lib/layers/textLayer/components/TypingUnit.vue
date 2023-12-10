@@ -376,9 +376,9 @@ $tooltip-padding-t: 4px;
   background-size: calc(100% - #{$tooltip-padding-r} * 2) 100%;
   background-repeat: no-repeat;
   padding: $tooltip-padding-t $tooltip-padding-r;
-  .rt {
-    top: 0;
-  }
+  // .rt {
+  //   top: 0;
+  // }
 }
 .unit.has-tooltip.has-st-tooltip {
   background: none;

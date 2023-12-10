@@ -3,6 +3,60 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2023-12-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "和泉元 艾米（泳装）", id: 20032 },
+          { name: "小钩 晴", id: 23003 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分设备上注音会遮盖文字的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了小屏幕设备上剧情信息排版异常的问题",
+      },
+      {
+        type: "feat",
+        content: "“设置”页面中新增“默认以全屏模式开始播放”选项",
+      },
+    ],
+  },
+  {
+    date: "2023-12-03",
+    contents: [
+      {
+        type: "feat",
+        content: "新增猫鬼黑影总力战介绍",
+      },
+    ],
+  },
+  {
+    date: "2023-11-26",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "不破 莲华", id: 10082 },
+          { name: "桐生 桔梗", id: 10083 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-11-12",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "勘解由小路 紫蓠", id: 10081 }],
+      },
+    ],
+  },
+  {
     date: "2023-10-29",
     contents: [
       {

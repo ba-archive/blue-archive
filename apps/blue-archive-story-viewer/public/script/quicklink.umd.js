@@ -1,17 +1,17 @@
 !(function (e, n) {
-  "object" == typeof exports && "undefined" != typeof module
+  "object" === typeof exports && "undefined" !== typeof module
     ? n(exports)
-    : "function" == typeof define && define.amd
-    ? define(["exports"], n)
-    : n((e.quicklink = {}));
+    : "function" === typeof define && define.amd
+      ? define(["exports"], n)
+      : n((e.quicklink = {}));
 })(this, function (e) {
   function n(e) {
     return new Promise(function (n, r, t) {
       (t = new XMLHttpRequest()).open("GET", e, (t.withCredentials = !0)),
-        (t.onload = function () {
-          200 === t.status ? n() : r();
-        }),
-        t.send();
+      (t.onload = function () {
+        200 === t.status ? n() : r();
+      }),
+      t.send();
     });
   }
   var r,
@@ -20,14 +20,14 @@
       r.relList.supports &&
       r.relList.supports("prefetch")
         ? function (e) {
-            return new Promise(function (n, r, t) {
-              ((t = document.createElement("link")).rel = "prefetch"),
-                (t.href = e),
-                (t.onload = n),
-                (t.onerror = r),
-                document.head.appendChild(t);
-            });
-          }
+          return new Promise(function (n, r, t) {
+            ((t = document.createElement("link")).rel = "prefetch"),
+            (t.href = e),
+            (t.onload = n),
+            (t.onerror = r),
+            document.head.appendChild(t);
+          });
+        }
         : n,
     o =
       window.requestIdleCallback ||
@@ -62,21 +62,21 @@
           console.warn(
             "[Warning] You are using both prefetching and prerendering on the same document"
           ),
-        Promise.all(
-          [].concat(e).map(function (e) {
-            if (!i.has(e))
-              return (
-                i.add(e),
-                (r
-                  ? function (e) {
-                      return window.fetch
-                        ? fetch(e, { credentials: "include" })
-                        : n(e);
-                    }
-                  : t)(new URL(e, location.href).toString())
-              );
-          })
-        ));
+      Promise.all(
+        [].concat(e).map(function (e) {
+          if (!i.has(e))
+            return (
+              i.add(e),
+              (r
+                ? function (e) {
+                  return window.fetch
+                    ? fetch(e, { credentials: "include" })
+                    : n(e);
+                }
+                : t)(new URL(e, location.href).toString())
+            );
+        })
+      ));
   }
   function f(e, n) {
     var r = a(navigator.connection);
@@ -111,7 +111,7 @@
     var l = (function (e) {
       var n = document.createElement("script");
       (n.type = "speculationrules"),
-        (n.text =
+      (n.text =
           '{"prerender":[{"source": "list","urls": ["' +
           Array.from(e).join('","') +
           '"]}]}');
@@ -150,7 +150,7 @@
         h = e.delay || 0,
         p = [],
         m = e.timeoutFn || o,
-        w = "function" == typeof e.hrefFn && e.hrefFn,
+        w = "function" === typeof e.hrefFn && e.hrefFn,
         g = e.prerender || !1;
       u = e.prerenderAndPrefetch || !1;
       var v = new IntersectionObserver(
@@ -158,16 +158,16 @@
           n.forEach(function (n) {
             if (n.isIntersecting)
               p.push((n = n.target).href),
-                (function (e, n) {
-                  n ? setTimeout(e, n) : e();
-                })(function () {
-                  -1 !== p.indexOf(n.href) &&
+              (function (e, n) {
+                n ? setTimeout(e, n) : e();
+              })(function () {
+                -1 !== p.indexOf(n.href) &&
                     (v.unobserve(n),
                     (u || g) && c.size < 1
                       ? f(w ? w(n) : n.href).catch(function (n) {
-                          if (!e.onError) throw n;
-                          e.onError(n);
-                        })
+                        if (!e.onError) throw n;
+                        e.onError(n);
+                      })
                       : i.size < a &&
                         !g &&
                         r(function () {
@@ -177,7 +177,7 @@
                               t(), e.onError && e.onError(n);
                             });
                         }));
-                }, h);
+              }, h);
             else {
               var o = p.indexOf((n = n.target).href);
               o > -1 && p.splice(o);
@@ -194,8 +194,8 @@
                 (function e(n, r) {
                   return Array.isArray(r)
                     ? r.some(function (r) {
-                        return e(n, r);
-                      })
+                      return e(n, r);
+                    })
                     : (r.test || r).call(r, n.href, n);
                 })(e, d) ||
                 v.observe(e);
@@ -209,6 +209,6 @@
       );
     }
   }),
-    (e.prefetch = s),
-    (e.prerender = f);
+  (e.prefetch = s),
+  (e.prerender = f);
 });

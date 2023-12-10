@@ -75,7 +75,7 @@ const contributors: Contributor[] = [
     link: "https://github.com/diyigemt",
   },
   {
-    name: "发椿",
+    name: "红叶",
     role: "翻译",
     avatar: "/image/contributor/fachun.webp",
   },

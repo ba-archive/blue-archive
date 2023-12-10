@@ -7,6 +7,9 @@ export const localeString = {
       disableMomotalkAnimation: "跳过 MomoTalk 动画",
       disableMomotalkAnimationDescription:
         "跳过 MomoTalk 的信息输入动画，立即展示所有信息",
+      initWithFullscreen: "默认以全屏模式播放",
+      initWithFullscreenDescription:
+        "在任何设备上都默认以全屏模式开始播放，不再需要手动点击全屏按钮",
       language: "语言",
       useMp3Title: "兼容 Apple 设备",
       useMp3Description: "如果 Apple 设备不能正确播放音频，可以尝试开启此选项",
@@ -67,6 +70,9 @@ export const localeString = {
       disableMomotalkAnimation: "モモトークのアニメーションを無効にする",
       disableMomotalkAnimationDescription:
         "モモトークの待機アニメーションを無効にし、すべてのメッセージを一気に表示する",
+      initWithFullscreen: "フルスクリーンで再生",
+      initWithFullscreenDescription:
+        "デバイスのスクリンーサイズにもかかわらず、すべてのストーリーをフルスクリーンで開始します",
       language: "言語",
       useMp3Title: "Apple デバイスとの互換性",
       useMp3Description:
@@ -129,6 +135,9 @@ export const localeString = {
       disableMomotalkAnimation: "取消 MomoTalk 動畫",
       disableMomotalkAnimationDescription:
         "取消 MomoTalk 的等待動畫，立即展示所有訊息",
+      initWithFullscreen: "預設以全螢幕模式播放",
+      initWithFullscreenDescription:
+        "在任何裝置上都預設以全螢幕模式開始播放，不再需要手動點擊全螢幕按鈕",
       language: "語言",
       useMp3Title: "兼容 Apple 裝置",
       useMp3Description: "如果 Apple 裝置不能正確播放音頻，可以嘗試開啟此選項",
@@ -189,6 +198,9 @@ export const localeString = {
       disableMomotalkAnimation: "Disable MomoTalk animation",
       disableMomotalkAnimationDescription:
         "Disable MomoTalk's typing animation and display all messages at once",
+      initWithFullscreen: "Play in fullscreen by default",
+      initWithFullscreenDescription:
+        "Start all stories in fullscreen mode regardless of device screen size",
       language: "Language",
       useMp3Title: "Apple device compatibility",
       useMp3Description:
@@ -251,6 +263,9 @@ export const localeString = {
       disableMomotalkAnimation: "MomoTalk 애니메이션 비활성화",
       disableMomotalkAnimationDescription:
         "MomoTalk의 타이핑 애니메이션을 비활성화하고 모든 메시지를 한 번에 표시합니다.",
+      initWithFullscreen: "전체 화면으로 시작",
+      initWithFullscreenDescription:
+        "기기 화면 크기와 관계없이 모든 스토리를 전체 화면 모드로 시작합니다.",
       language: "언어",
       useMp3Title: "Apple 장치 호환성",
       useMp3Description:
@@ -313,6 +328,9 @@ export const localeString = {
       disableMomotalkAnimation: "ปิดใช้งานการเล่นแอนิเมชันของ MomoTalk",
       disableMomotalkAnimationDescription:
         "ปิดใช้งานการเล่นแอนิเมชันของ MomoTalk และแสดงข้อความทั้งหมดในครั้งเดียว",
+      initWithFullscreen: "เล่นแบบเต็มจอเป็นค่าเริ่มต้น",
+      initWithFullscreenDescription:
+        "เริ่มเล่นเรื่องราวทั้งหมดในโหมดเต็มจอไม่ว่าจะเป็นขนาดหน้าจอของอุปกรณ์อย่างไร",
       language: "ภาษา",
       useMp3Title: "ความเข้ากันได้กับอุปกรณ์ Apple",
       useMp3Description:

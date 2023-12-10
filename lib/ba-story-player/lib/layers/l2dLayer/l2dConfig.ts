@@ -823,4 +823,89 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH0161_home: {
+    name: "CH0161_home",
+    playQue: [
+      {
+        name: "CH0161_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0161_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0224_home: {
+    name: "CH0224_home",
+    playQue: [
+      {
+        name: "CH0224_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0224_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0225_home: {
+    name: "CH0225_home",
+    playQue: [
+      {
+        name: "CH0225_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0225_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  Hare_home: {
+    name: "Hare_home",
+    playQue: [
+      {
+        name: "Hare_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Hare_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0219_home: {
+    name: "CH0219_home",
+    playQue: [
+      {
+        name: "CH0219_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0219_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };

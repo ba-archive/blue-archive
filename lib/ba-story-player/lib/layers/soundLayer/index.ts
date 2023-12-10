@@ -209,7 +209,8 @@ export function soundInit() {
   // eventBus.emit('playAudio', {voiceJPUrl: url})
   // 这样就可以了x
 
-  eventBus.on("playAudio", (playAudioInfo: PlayAudio) => {
+  eventBus.on("playAudio", (playAudioInfo: PlayAudio | undefined) => {
+    if (!playAudioInfo) return;
     console.log(
       `Get playAudioInfo: ${
         playAudioInfo.soundUrl ||

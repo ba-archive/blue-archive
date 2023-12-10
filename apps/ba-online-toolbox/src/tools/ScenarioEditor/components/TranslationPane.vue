@@ -185,7 +185,7 @@ const mainStore = useScenarioStore();
 const langHash = {
   TextJp: '日语',
   TextEn: '英语',
-  TextKr: '韩语',
+  ScriptKr: '韩语',
   TextTh: '泰语',
   TextCn: '简中',
   TextTw: '繁中',
