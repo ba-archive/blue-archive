@@ -251,9 +251,13 @@ const resourcerManager = {
   loader: Loader.shared,
   state: "done" as "loading" | "done",
   audioSoundMap: new Map<string, Howl>(),
-  load(storyNodes: StoryNode[]) {
+  async load(storyNodes: StoryNode[]) {
     this.state = "loading";
-    this.loader.reset();
+    if (this.loader.loading) {
+      await new Promise<void>(resolve =>
+        this.loader.onComplete.once(() => resolve())
+      );
+    }
     const audioUrls: string[] = [];
     this.addBGEffectImgs();
     this.addEmotionResources(audioUrls);
@@ -294,7 +298,7 @@ const resourcerManager = {
         audioUrls.push(audio.voice);
       }
     }
-    return new Promise<void>((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       this.loader.load(async () => {
         if (l2dUrl) {
           const l2dSpinedata: ISkeletonData = this.loader.resources[l2dUrl]
@@ -374,9 +378,7 @@ const resourcerManager = {
         )
       ) as ResourceMap[T]["value"];
     } else if (type === "fx") {
-      return emotionResourcesTable[
-        key as keyof typeof emotionResourcesTable
-      ].map(resource =>
+      return fxImageTable[key as keyof typeof fxImageTable].map(resource =>
         Sprite.from(
           this.loader.resources[getResourcesUrl("fx", resource)]
             .texture as Texture

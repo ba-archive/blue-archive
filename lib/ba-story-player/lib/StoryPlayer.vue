@@ -70,6 +70,7 @@ const pixiScale = computed(
 if (import.meta.env.DEV) {
   Reflect.set(window, "nodePlayer", nodePlayer);
   Reflect.set(window, "StoryManager", storyManager);
+  Reflect.set(window, "ResourceManager", resourceManager);
 }
 defineExpose({ storyManager, nodePlayer });
 onMounted(async () => {
