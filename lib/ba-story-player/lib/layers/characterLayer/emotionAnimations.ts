@@ -10,6 +10,7 @@ import {
   EmotionWord,
   Scale,
 } from "./type";
+import gsap, { Power4 } from "gsap";
 
 // 获取资源
 const getEmotionSprites = function (
@@ -102,6 +103,7 @@ function imgFinal(destroyImgs: Sprite[] | undefined) {
     return;
   }
   for (const img of destroyImgs) {
+    if (!img._texture) continue;
     img.destroy();
   }
 }
@@ -844,6 +846,7 @@ const Sad: Animation<{
     if (this.args.imgs) {
       imgFinal(this.args.imgs.sadLineImage);
       this.args.imgs.container.alpha = 0;
+      this.args.imgs.container.destroy();
     }
   },
 };
@@ -1166,7 +1169,7 @@ const Sweat: Animation<{
       "<"
     );
 
-    await timelinePromise(tl, []);
+    await timelinePromise(tl, [dropImg, smallDropImg]);
   },
   async final() {
     for (const animation of this.runningAnimation) {
@@ -1279,6 +1282,7 @@ const Twinkle: Animation<{
     if (this.args.imgs) {
       imgFinal([...this.args.imgs.starImgs]);
       this.args.imgs.container.alpha = 0;
+      this.args.imgs.container.destroy();
     }
   },
 };
@@ -1357,7 +1361,7 @@ const Upset: Animation<{
           pixi: { alpha: 0 },
           duration: this.args.options.fadeOutDuration,
         }),
-      [upsetImg]
+      [upsetImg, dialogImg]
     );
   },
   async final() {
@@ -1365,8 +1369,7 @@ const Upset: Animation<{
       animation.pause();
     }
     if (this.args.imgs) {
-      imgFinal([this.args.imgs.upsetImg]);
-      this.args.imgs.dialogImg.alpha = 0;
+      imgFinal([this.args.imgs.upsetImg, this.args.imgs.dialogImg]);
     }
   },
 };

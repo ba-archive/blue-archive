@@ -20,6 +20,12 @@ import {
 import actionAnimation from "./actionAnimation";
 import emotionAnimations from "./emotionAnimations";
 import fxAnimations from "./fxAnimations";
+import * as PIXI from "pixi.js";
+import { PixiPlugin } from "gsap/all";
+
+// 注册gasp的pixi插件
+gsap.registerPlugin(PixiPlugin);
+PixiPlugin.registerPIXI(PIXI);
 
 const timeline = gsap.timeline();
 
@@ -367,6 +373,7 @@ export class CharacterLayer extends Layer {
     } else {
       // 没有淡入效果, 直接显示
       const chara = data.instance;
+      chara.zIndex = Reflect.get(POS_INDEX_MAP, data.initPosition);
       //当人物被移出画面时重设为初始位置
       if (!chara.visible) {
         const { x } = calcSpineStagePosition(chara, data.initPosition, app);
@@ -402,6 +409,10 @@ export class CharacterLayer extends Layer {
           if (effect.async) {
             // 如果角色有位置移动，更新instances中角色位置
             if (["m1", "m2", "m3", "m4", "m5"].includes(effect.effect)) {
+              if (data.position === parseInt(effect.effect[1])) {
+                continue;
+              }
+              data.position = parseInt(effect.effect[1]);
               this.removeCharacterInstance(
                 this.instances[effect.effect[1]],
                 app
@@ -413,6 +424,10 @@ export class CharacterLayer extends Layer {
             if (["m1", "m2", "m3", "m4", "m5"].includes(effect.effect)) {
               effectPromise.push(
                 new Promise<void>(resolve => {
+                  if (data.position === parseInt(effect.effect[1])) {
+                    return resolve();
+                  }
+                  data.position = parseInt(effect.effect[1]);
                   this.removeCharacterInstance(
                     this.instances[effect.effect[1]],
                     app
@@ -485,6 +500,7 @@ const loadCharacter: CheckMethod<CharacterLayer> = async function (
       });
     }
     this.currentCharacters = node.characters;
+    this.showCharacter(app, handlerMap);
   }
   return;
 };

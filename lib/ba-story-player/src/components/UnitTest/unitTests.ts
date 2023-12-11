@@ -237,6 +237,155 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         "Zzz",
       ],
     },
+    action: {
+      getStoryNodes(initStoryNodes) {
+        initStoryNodes[1] = {
+          ...initStoryNodes[1],
+          characters: [
+            {
+              initPosition: 3,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "action",
+                  effect: "a",
+                  async: false,
+                },
+              ],
+            },
+          ],
+        };
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        if (arg!.select) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[1],
+            characters: [
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [
+                  // {
+                  //   type: "action",
+                  //   effect: 'm3',
+                  //   async: false,
+                  // },
+                  {
+                    type: "action",
+                    effect: arg!.select,
+                    async: false,
+                  },
+                ],
+              },
+            ],
+          };
+
+          player.storyManager.switch(1);
+        }
+      },
+      select: [
+        "a",
+        "ar",
+        "al",
+        "closeup",
+        "d",
+        "dl",
+        "dr",
+        "falldownR",
+        "falldownL",
+        "greeting",
+        "hide",
+        "hophop",
+        "jump",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "shake",
+        "stiff",
+      ],
+    },
+    fx: {
+      getStoryNodes(initStoryNodes) {
+        initStoryNodes[1] = {
+          ...initStoryNodes[1],
+          characters: [
+            {
+              initPosition: 3,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "fx",
+                  effect: "shot",
+                  async: false,
+                },
+              ],
+            },
+          ],
+        };
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        if (arg!.select) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[1],
+            characters: [
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [
+                  // {
+                  //   type: "action",
+                  //   effect: 'm3',
+                  //   async: false,
+                  // },
+                  {
+                    type: "fx",
+                    effect: arg!.select,
+                    async: false,
+                  },
+                ],
+              },
+            ],
+          };
+
+          player.storyManager.switch(1);
+        }
+      },
+      select: ["shot"],
+    },
   },
 };
 

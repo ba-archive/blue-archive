@@ -150,6 +150,12 @@ const a: Animation<{
     }
     if (this.args.instance) {
       this.args.instance.instance.alpha = 1;
+      const colorFilter = this.args.instance.instance.filters?.[
+        this.args.instance.instance.filters?.length - 1
+      ] as ColorOverlayFilter;
+      if (colorFilter) {
+        colorFilter.alpha = 0;
+      }
     }
   },
 };
@@ -189,6 +195,9 @@ const al: Animation<{
     }
     if (this.args.instance && this.args.app) {
       const characterInstance = this.args.instance.instance;
+      if (!characterInstance.transform) {
+        return;
+      }
       const { x } = calcSpineStagePosition(
         characterInstance,
         this.args.instance.initPosition,
@@ -231,6 +240,9 @@ const ar: Animation<{
     }
     if (this.args.instance && this.args.app) {
       const characterInstance = this.args.instance.instance;
+      if (!characterInstance.transform) {
+        return;
+      }
       const { x } = calcSpineStagePosition(
         characterInstance,
         this.args.instance.initPosition,
@@ -246,7 +258,11 @@ const closeup: Animation<{
   options: ActionOptions["closeup"];
   app: Application | undefined;
 }> = {
-  args: { instance: undefined, options: { scale: 0 }, app: undefined },
+  args: {
+    instance: undefined,
+    options: actionOptions["closeup"],
+    app: undefined,
+  },
   runningAnimation: [],
   async animate() {
     if (!this.args.instance) {
@@ -260,6 +276,9 @@ const closeup: Animation<{
   },
   async final() {
     if (!this.args.instance) {
+      return;
+    }
+    if (!this.args.instance.instance.transform) {
       return;
     }
     if (!this.args.instance.isCloseUp()) {
@@ -467,6 +486,9 @@ const falldownR: Animation<{
       animation.pause();
     }
     if (this.args.instance) {
+      if (!this.args.instance.instance.transform) {
+        return;
+      }
       this.args.instance.instance.angle = 0;
       this.args.instance.instance.visible = false;
       if (this.args.orginState) {
@@ -572,6 +594,9 @@ const falldownL: Animation<{
       animation.pause();
     }
     if (this.args.instance) {
+      if (!this.args.instance.instance.transform) {
+        return;
+      }
       this.args.instance.instance.angle = 0;
       this.args.instance.instance.visible = false;
       if (this.args.orginState) {
@@ -616,6 +641,9 @@ const greeting: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (!this.args.instance?.instance.transform) {
+      return;
     }
     if (this.args.instance && this.args.orginState) {
       this.args.instance.instance.y = this.args.orginState.y;
@@ -678,6 +706,9 @@ const hophop: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (!this.args.instance?.instance.transform) {
+      return;
+    }
     if (this.args.instance && this.args.orginState) {
       this.args.instance.instance.y = this.args.orginState.y;
     }
@@ -719,6 +750,9 @@ const jump: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (!this.args.instance?.instance.transform) {
+      return;
+    }
     if (this.args.instance && this.args.orginState) {
       this.args.instance.instance.y = this.args.orginState.y;
     }
@@ -742,6 +776,9 @@ const m1: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (!this.args.instance?.instance.transform) {
+      return;
     }
     if (this.args.instance && this.args.app) {
       this.args.instance.position = 1;
@@ -773,6 +810,9 @@ const m2: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (!this.args.instance?.instance.transform) {
+      return;
+    }
     if (this.args.instance && this.args.app) {
       this.args.instance.position = 2;
       const movePos = calcSpineStagePosition(
@@ -802,6 +842,9 @@ const m3: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (!this.args.instance?.instance.transform) {
+      return;
     }
     if (this.args.instance && this.args.app) {
       this.args.instance.position = 3;
@@ -833,6 +876,9 @@ const m4: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (!this.args.instance?.instance.transform) {
+      return;
+    }
     if (this.args.instance && this.args.app) {
       this.args.instance.position = 4;
       const movePos = calcSpineStagePosition(
@@ -862,6 +908,9 @@ const m5: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (!this.args.instance?.instance.transform) {
+      return;
     }
     if (this.args.instance && this.args.app) {
       this.args.instance.position = 5;
@@ -920,6 +969,9 @@ const shake: Animation<{
     for (const animation of this.runningAnimation) {
       animation.pause();
     }
+    if (!this.args.instance?.instance.transform) {
+      return;
+    }
     if (this.args.instance && this.args.orginState) {
       this.args.instance.instance.x = this.args.orginState.x;
     }
@@ -970,6 +1022,9 @@ const stiff: Animation<{
   async final() {
     for (const animation of this.runningAnimation) {
       animation.pause();
+    }
+    if (!this.args.instance?.instance.transform) {
+      return;
     }
     if (this.args.instance && this.args.orginState) {
       this.args.instance.instance.x = this.args.orginState.x;
