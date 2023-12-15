@@ -2,7 +2,7 @@ import { AdjustmentFilter } from "@pixi/filter-adjustment";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { CRTFilter } from "@pixi/filter-crt";
 import { MotionBlurFilter } from "@pixi/filter-motion-blur";
-import gsap from "gsap";
+import gsap, { Power0 } from "gsap";
 import { IAnimationState, ITrackEntry, Spine } from "pixi-spine";
 import { Application } from "pixi.js";
 import { reactive } from "vue";
