@@ -5,6 +5,7 @@ import { Application, Sprite } from "pixi.js";
 import { getStandardWidth, PositionOffset } from ".";
 import fxOptions from "./Options/fxOptions";
 import { CharacterEffectInstance, FXOptions } from "./type";
+import gsap from "gsap";
 
 /**
  * timeline执行后生成一个promise并自动回收sprite
@@ -142,7 +143,9 @@ const shot: Animation<{
     }
     if (this.args.imgs) {
       for (const img of this.args.imgs) {
-        img.destroy();
+        if (img._texture) {
+          img.destroy();
+        }
       }
     }
   },
