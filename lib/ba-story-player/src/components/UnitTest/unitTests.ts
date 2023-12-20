@@ -437,7 +437,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
           if (arg.select === "显示所有") {
             const storyNodes = player.storyManager.storyNodes();
             storyNodes[1] = {
-              ...storyNodes[1],
+              ...storyNodes[0],
               characters: [
                 {
                   initPosition: 1,
@@ -506,7 +506,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
           } else if (arg.select === "替换") {
             const storyNodes = player.storyManager.storyNodes();
             storyNodes[1] = {
-              ...storyNodes[1],
+              ...storyNodes[0],
               nextNodeIndex: 2,
               characters: [
                 {
@@ -524,7 +524,8 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
               ],
             };
             storyNodes[2] = {
-              ...storyNodes[1],
+              ...storyNodes[0],
+              nextNodeIndex: -1,
               characters: [
                 {
                   initPosition: 3,
@@ -544,10 +545,55 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
             await player.storyManager.switch(1);
             await waitMs(1000);
             player.storyManager.next();
+          } else if (arg.select === "切换位置与删除") {
+            const storyNodes = player.storyManager.storyNodes();
+            storyNodes[1] = {
+              ...storyNodes[0],
+              nextNodeIndex: 2,
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+              ],
+            };
+            storyNodes[2] = {
+              ...storyNodes[0],
+              nextNodeIndex: 3,
+              characters: [
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+              ],
+            };
+            storyNodes[3] = {
+              ...storyNodes[0],
+              nextNodeIndex: -1,
+            };
+
+            await player.storyManager.switch(1);
+            player.storyManager.auto.value = true;
           }
         }
       },
-      select: ["显示所有", "替换"],
+      select: ["显示所有", "替换", "切换位置与删除"],
     },
   },
 };
