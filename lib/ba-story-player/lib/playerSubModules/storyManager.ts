@@ -62,6 +62,5 @@ export default class StoryManager {
   async switch(index: number) {
     await this.nodePlayer.stop();
     this.currentStoryIndex.value = index;
-    this.play();
   }
 }

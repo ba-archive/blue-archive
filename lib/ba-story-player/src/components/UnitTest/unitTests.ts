@@ -1,11 +1,12 @@
 import { StoryNode } from "../../../lib/type";
+import { waitMs } from "../../../lib/utils";
 import StoryPlayer from "../../../lib/StoryPlayer.vue";
 export interface UnitTest {
   getStoryNodes: (initStoryNodes: StoryNode[]) => StoryNode[];
   runTest: (
     player: InstanceType<typeof StoryPlayer>,
-    arg?: {
-      select: string;
+    arg: {
+      select?: string;
     }
   ) => Promise<void>;
   select?: string[];
@@ -265,7 +266,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         return initStoryNodes;
       },
       async runTest(player, arg) {
-        if (arg!.select) {
+        if (arg.select) {
           const storyNodes = player.storyManager.storyNodes();
           storyNodes[1] = {
             ...storyNodes[1],
@@ -288,7 +289,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
                   // },
                   {
                     type: "action",
-                    effect: arg!.select,
+                    effect: arg.select,
                     async: false,
                   },
                 ],
@@ -350,7 +351,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         return initStoryNodes;
       },
       async runTest(player, arg) {
-        if (arg!.select) {
+        if (arg.select) {
           const storyNodes = player.storyManager.storyNodes();
           storyNodes[1] = {
             ...storyNodes[1],
@@ -373,7 +374,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
                   // },
                   {
                     type: "fx",
-                    effect: arg!.select,
+                    effect: arg.select,
                     async: false,
                   },
                 ],
@@ -385,6 +386,167 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         }
       },
       select: ["shot"],
+    },
+    showCharacter: {
+      getStoryNodes(initStoryNodes) {
+        initStoryNodes[1] = {
+          ...initStoryNodes[1],
+          characters: [
+            {
+              initPosition: 3,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "fx",
+                  effect: "shot",
+                  async: false,
+                },
+              ],
+            },
+            {
+              initPosition: 1,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "fx",
+                  effect: "shot",
+                  async: false,
+                },
+              ],
+            },
+          ],
+        };
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        if (arg.select) {
+          if (arg.select === "显示所有") {
+            const storyNodes = player.storyManager.storyNodes();
+            storyNodes[1] = {
+              ...storyNodes[1],
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+                {
+                  initPosition: 2,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+                {
+                  initPosition: 3,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+                {
+                  initPosition: 4,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+              ],
+            };
+
+            player.storyManager.switch(1);
+          } else if (arg.select === "替换") {
+            const storyNodes = player.storyManager.storyNodes();
+            storyNodes[1] = {
+              ...storyNodes[1],
+              characters: [
+                {
+                  initPosition: 3,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+              ],
+            };
+            storyNodes[2] = {
+              ...storyNodes[1],
+              characters: [
+                {
+                  initPosition: 3,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [],
+                },
+              ],
+            };
+
+            await player.storyManager.switch(1);
+            await waitMs(1000);
+            player.storyManager.next();
+          }
+        }
+      },
+      select: ["显示所有", "替换"],
     },
   },
 };
