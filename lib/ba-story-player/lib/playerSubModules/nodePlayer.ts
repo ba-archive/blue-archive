@@ -28,7 +28,7 @@ export default class NodePlayer {
   constructor(width: number) {
     this.app = new Application({ width: width, height: PIXIHeight });
     this.handlerMap = {} as HandlerMap;
-    const tempInstances: Record<string, any> = {};
+    const tempInstances: Record<string, unknown> = {};
     for (const key of Object.keys(registerServers) as Array<
       keyof RegisterServers
     >) {

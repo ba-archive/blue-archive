@@ -507,6 +507,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
             const storyNodes = player.storyManager.storyNodes();
             storyNodes[1] = {
               ...storyNodes[1],
+              nextNodeIndex: 2,
               characters: [
                 {
                   initPosition: 3,

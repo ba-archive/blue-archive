@@ -40,6 +40,7 @@ const playerStyle = computed(() => {
 
 const currentStoryIndex = ref(0);
 const auto = ref(false);
+const autoTimeoutMs = ref(1500);
 const currentStoryNode = computed(() => {
   if (
     currentStoryIndex.value >= 0 &&
@@ -56,6 +57,7 @@ const storyManager = new StoryManager(
   currentStoryIndex,
   currentStoryNode,
   auto,
+  autoTimeoutMs,
   error => {
     console.error(error);
   }
@@ -76,7 +78,7 @@ defineExpose({ storyManager, nodePlayer });
 onMounted(async () => {
   nodePlayer.mouted(pixiCanvas.value as HTMLDivElement);
   await resourceManager.load(props.storyNodes);
-  await storyManager.play();
+  storyManager.play();
 });
 onUnmounted(() => {
   nodePlayer.unMounted();
