@@ -6,7 +6,7 @@ on:
       - "dev/**"
       - "feat/**"
     paths:
-      - "lib/eden-design/docs/**"
+      - "lib/eden-design/**"
 
 concurrency:
   group: "eden-docs-deploy"
