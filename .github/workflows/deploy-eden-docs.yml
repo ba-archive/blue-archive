@@ -9,7 +9,7 @@ on:
       - "lib/eden-design/docs/**"
 
 concurrency:
-  group: "preview-deploy"
+  group: "eden-docs-deploy"
   cancel-in-progress: true
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
             f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --to eden-docs --verbose
+        run: node common/scripts/install-run-rush.js build --to eden-design --verbose
       - name: Docs rsync deploy
         uses: easingthemes/ssh-deploy@main
         env:
