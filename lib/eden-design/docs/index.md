@@ -9,10 +9,13 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /get-started
+      link: /components/
+    - theme: alt
+      text: 设计规范
+      link: /guideline/design/
     - theme: alt
       text: 设计语言
-      link: /design-language
+      link: /guideline/design/design-language
   # image:
   #   src: /cover.png
   #   alt: eden-cover
