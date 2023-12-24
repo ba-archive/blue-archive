@@ -1,8 +1,8 @@
 {
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnPaste": false, // required
   "editor.formatOnType": false, // required
