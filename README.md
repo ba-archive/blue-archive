@@ -1,14 +1,16 @@
 # 碧蓝档案 monorepo
 
+简体中文 | [English](README_EN.md)
+
 项目采用 `rush.js` 组织 monorepo, 统一各个项目的代码规范和依赖, 优化引入项目公用包形式
 
-## 环境信息：
+## 环境信息
 
 - 当前 rush 版本：`5.112.1`
 - 推荐 node 版本：`20` （测试可用版本：`v20.7.0`）
 - 项目包管理器版本信息：`pnpm@latest` （测试可用版本：`8.10.5`）
 
-## 配置教程：
+## 配置教程
 
 **安装 node20（推荐使用 [nvm](https://github.com/nvm-sh/nvm)）**
 
