@@ -46,7 +46,7 @@ jobs:
         run: node common/scripts/install-run-rush.js build --to eden-design --verbose
       - name: Docs rsync deploy
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "./lib/eden-design/docs/.vitepress/dist/"

@@ -45,7 +45,7 @@ jobs:
         run: node common/scripts/install-run-rush.js build --verbose --impacted-by-except blue-archive-story-viewer --to ba-online-toolbox
       - name: Toolbox rsync deploy
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
           ARGS: "-rltgoDzvO"
           SOURCE: "./apps/ba-online-toolbox/dist/"

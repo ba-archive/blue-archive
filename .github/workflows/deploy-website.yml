@@ -43,7 +43,7 @@ jobs:
         run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
       - name: Viewer rsync deploy
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
           ARGS: "-rltgoDzvO"
           SOURCE: "./apps/blue-archive-story-viewer/dist/"
