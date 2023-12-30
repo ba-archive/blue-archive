@@ -3,6 +3,22 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-12-31",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "音濑 小玉（露营）", id: 10084 },
+          { name: "小钩 晴（露营）", id: 10085 },
+        ],
+      },
+      {
+        type: "feat",
+        content: "在移动端点击阿罗娜头像时，可以回到主页",
+      },
+    ],
+  },
+  {
     date: "2023-12-10",
     contents: [
       {
