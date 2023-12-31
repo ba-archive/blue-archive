@@ -71,9 +71,13 @@ common/autoinstallers/*/.npmrc
 
 # Heft temporary files
 .heft
-apps/ba-online-toolbox/public/config/json/sticker_list.json
-apps/blue-archive-story-viewer/public/version.json
-
-# vue auto import
-auto-imports.d.ts
-components.d.ts
+pnpm-lock.yaml
+dist
+**/config/json/
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
