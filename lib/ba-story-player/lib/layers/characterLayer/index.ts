@@ -22,6 +22,7 @@ import emotionAnimations from "./emotionAnimations";
 import fxAnimations from "./fxAnimations";
 import * as PIXI from "pixi.js";
 import { PixiPlugin } from "gsap/all";
+import actionOptions from "./Options/actionOptions";
 
 // 注册gasp的pixi插件
 gsap.registerPlugin(PixiPlugin);
@@ -305,6 +306,7 @@ export class CharacterLayer extends Layer {
     handlerMap: HandlerMap
   ): Promise<void> {
     // 当人物没有closeUp时取消closeup
+    // state为closeup时设置closeup
     if (data.isCloseUp()) {
       // 这里的data.effects.effect仍然存储closeup吗，还是说由state来存储了
       // 这里先采用后者
@@ -312,6 +314,9 @@ export class CharacterLayer extends Layer {
         const { scale } = calcCharacterYAndScale(data.instance, app);
         data.instance.scale.set(scale);
       }
+    } else if (data.state === "closeup") {
+      const scale = data.instance.scale.x * actionOptions["closeup"].scale;
+      data.instance.scale.set(scale);
     }
 
     // 表情
@@ -501,6 +506,10 @@ const loadCharacter: CheckMethod<CharacterLayer> = async function (
     }
     this.currentCharacters = node.characters;
     this.showCharacter(app, handlerMap);
+  } else {
+    for (let i = 1; i <= 5; i++) {
+      this.removeCharacterInstance(this.instances[i], app);
+    }
   }
   return;
 };
