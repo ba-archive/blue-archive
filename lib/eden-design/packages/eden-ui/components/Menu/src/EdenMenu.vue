@@ -1,7 +1,7 @@
 <script setup lang="tsx">
-import { IMenuData } from "../types/Menu";
-import SubMenu from "./SubMenu.vue";
-import MenuItem from "./MenuItem.vue";
+import { IMenuData } from "../types/MenuProps";
+import SubMenu from "./EdenSubMenu.vue";
+import MenuItem from "./EdenMenuItem.vue";
 const props = defineProps<{
   title?: string;
   data?: IMenuData[];
@@ -36,6 +36,10 @@ const menuItemTriage = [
       <component
         v-for="item in props.data"
         :is="menuItemTriage.find(triage => item[triage.keyIs])?.component"
+        v-bind="{
+          title: item?.title,
+          groupName: item?.groupName,
+        }"
       />
     </div>
   </div>

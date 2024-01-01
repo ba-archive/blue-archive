@@ -4,18 +4,24 @@ import {
   CollapsibleRoot,
   CollapsibleTrigger,
 } from "radix-vue";
-import { IMenuData } from "../types/Menu";
+import { IMenuData } from "../types/MenuProps";
 const props = withDefaults(defineProps<IMenuData>(), {
-  title: "SubMenu",
+  title: "SubMenuDefaultTitle",
   route: {
     path: "/",
   },
 });
+import Chevron from "../../Icons/src/Chevron.vue";
+import { ref } from "vue";
+const isOpen = ref(false);
 </script>
 
 <template>
   <CollapsibleRoot>
-    <CollapsibleTrigger>{{ props.title }}</CollapsibleTrigger>
+    <div>{{ props.title }}</div>
+    <CollapsibleTrigger @click="isOpen = !isOpen">
+      <chevron />
+    </CollapsibleTrigger>
   </CollapsibleRoot>
 </template>
 

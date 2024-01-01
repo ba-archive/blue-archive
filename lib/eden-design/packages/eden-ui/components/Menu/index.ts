@@ -1,7 +1,7 @@
-import Menu from "./src/Menu.vue";
-import MenuItem from "./src/MenuItem.vue";
-import MenuItemGroup from "./src/MenuItemGroup.vue";
-import SubMenu from "./src/SubMenu.vue";
+import Menu from "./src/EdenMenu.vue";
+import MenuItem from "./src/EdenMenuItem.vue";
+import MenuItemGroup from "./src/EdenMenuItemGroup.vue";
+import SubMenu from "./src/EdenSubMenu.vue";
 import type { App } from "vue";
 Menu.name = "menu";
 MenuItem.name = "menu-item";
