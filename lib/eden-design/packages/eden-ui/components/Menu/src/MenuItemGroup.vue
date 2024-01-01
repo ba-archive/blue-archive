@@ -8,7 +8,7 @@ import {
 
 <template>
   <CollapsibleRoot>
-    <CollapsibleTrigger>111</CollapsibleTrigger>
+    <CollapsibleTrigger>MenuItemGroup</CollapsibleTrigger>
   </CollapsibleRoot>
 </template>
 

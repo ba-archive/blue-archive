@@ -5,14 +5,14 @@ import postcssPresetEnv from "postcss-preset-env";
 import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import tailwindConfig from "./tailwind.config.js";
-import vue from '@vitejs/plugin-vue'
+import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import legacy from "@vitejs/plugin-legacy";
-import vueJsx from '@vitejs/plugin-vue-jsx'
-
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig({
+  base: "/demo/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    // vueJsx(),
+    vueJsx(),
     // AutoImport({
     //   resolvers: [],
     // }),

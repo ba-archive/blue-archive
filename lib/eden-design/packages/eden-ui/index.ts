@@ -1,8 +1,13 @@
 import type { App } from "vue";
 import "./styles.scss";
-import { Menu } from "./components/Menu/index";
+import { Menu, MenuItem, MenuItemGroup, SubMenu } from "./components/Menu";
 
-const components = [Menu];
+const components = [
+  Menu,
+  MenuItem,
+  MenuItemGroup,
+  SubMenu,
+];
 const componentPrefix = "e";
 
 const install = (app: App) => {

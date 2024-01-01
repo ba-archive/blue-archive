@@ -14,8 +14,8 @@ hero:
       text: 设计规范
       link: /guideline/design/
     - theme: alt
-      text: 设计语言
-      link: /guideline/design/design-language
+      text: Demo
+      link: https://eden.blue-archive.io/demo/index.html/button
   # image:
   #   src: /cover.png
   #   alt: eden-cover
