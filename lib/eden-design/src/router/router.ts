@@ -7,13 +7,18 @@ const router: Router = createRouter({
     {
       path: "/",
       name: "home",
-      redirect: "/button",
+      redirect: "/texts",
       component: DevPanel,
       children: [
         {
-          path: "button",
-          name: "button",
-          component: () => import("@/views/Button.vue"),
+          path: "buttons",
+          name: "buttons",
+          component: () => import("@/views/DevButtons.vue"),
+        },
+        {
+          path: "texts",
+          name: "texts",
+          component: () => import("@/views/DevTexts.vue"),
         },
       ],
     },

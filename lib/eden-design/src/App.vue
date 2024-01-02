@@ -50,7 +50,7 @@ const menuData: IMenuData[] = [
     <template #title> Eden Design </template>
     <e-menu-item>111</e-menu-item>
   </e-menu>
-  <div class="w-full" style="margin-top: 32px">
+  <div class="w-full" style="padding-top: 32px; padding-right: 32px">
     <dev-panel />
   </div>
 </template>

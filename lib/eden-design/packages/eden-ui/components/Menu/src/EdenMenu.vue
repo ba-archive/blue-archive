@@ -46,35 +46,30 @@ const menuItemTriage = [
 </template>
 
 <style scoped lang="scss">
-@import "../../../style/color.scss";
+.eden-ui__menu {
+  font-family: var(--eden-main-font);
+  width: 256px;
+  padding: 32px 20px 0 20px;
+  border-right: 1px solid #00000010;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
-@include theme {
-  .eden-ui__menu {
-    font-family: var(--eden-main-font);
-    width: 256px;
-    padding-left: 20px;
-    padding-top: 32px;
-    border-right: 1px solid #00000010;
+  &__header {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+    align-items: center;
+    color: var(--color-text-5);
 
-    &__header {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      color: themeColor("color-text-5");
+    &--logo {
+      max-width: 48px;
+      max-height: 48px;
+      object-fit: contain;
+    }
 
-      &--logo {
-        max-width: 48px;
-        max-height: 48px;
-        object-fit: contain;
-      }
-
-      &--title {
-        font-family: var(--eden-title-font);
-        font-weight: var(--eden-title-font-weight);
-      }
+    &--title {
+      font-family: var(--eden-title-font);
+      font-weight: var(--eden-title-font-weight);
     }
   }
 }

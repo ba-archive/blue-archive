@@ -8,12 +8,12 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     lastUpdated: {
-      text: '最后更新于',
+      text: "最后更新于",
       formatOptions: {
-        dateStyle: 'medium',
-        timeStyle: 'short',
+        dateStyle: "medium",
+        timeStyle: "short",
         forceLocale: true,
-      }
+      },
     },
     search: {
       provider: "local",
@@ -82,29 +82,29 @@ export default defineConfig({
             text: "字体 / Typography",
             link: "/guideline/design/#字体-typography",
           },
-          // {
-          //   text: "图标 / Iconography",
-          //   link: "/guideline/design/#图标-iconography",
-          // },
-          // {
-          //   text: "阴影 / Shadow",
-          //   link: "/guideline/design/#阴影-shadow",
-          // },
-          // {
-          //   text: "动画 / Animation",
-          //   link: "/guideline/design/#动画-animation",
-          // },
-          // {
-          //   text: "布局 / Layout",
-          //   link: "/guideline/design/#布局-layout",
-          // },
-          // {
-          //   text: "交互 / Interaction",
-          //   link: "/guideline/design/#交互-interaction",
-          // },
-        ]
+          {
+            text: "图标 / Iconography",
+            link: "/guideline/design/#图标-iconography",
+          },
+          {
+            text: "阴影 / Shadow",
+            link: "/guideline/design/#阴影-shadow",
+          },
+          {
+            text: "布局 / Layout",
+            link: "/guideline/design/#布局-layout",
+          },
+          {
+            text: "交互 / Interaction",
+            link: "/guideline/design/#交互-interaction",
+          },
+        ],
       },
-      { text: "设计语言", link: "/guideline/design/design-language", items: [] },
+      {
+        text: "设计语言",
+        link: "/guideline/design/design-language",
+        items: [],
+      },
     ],
 
     socialLinks: [

@@ -6,7 +6,7 @@ import {
 } from "radix-vue";
 import { IMenuData } from "../types/MenuProps";
 const props = withDefaults(defineProps<IMenuData>(), {
-  title: "SubMenuDefaultTitle",
+  groupName: "SubMenuDefaultGroupName",
   route: {
     path: "/",
   },
@@ -17,11 +17,24 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <CollapsibleRoot>
-    <div>{{ props.title }}</div>
-    <CollapsibleTrigger @click="isOpen = !isOpen">
-      <chevron />
-    </CollapsibleTrigger>
+  <CollapsibleRoot
+    :open="isOpen"
+    :class="[
+      'eden-ui__menu__submenu',
+      {
+        active: isOpen,
+      },
+    ]"
+  >
+    <div class="eden-ui__menu__submenu__title">
+      <div v-if="props.groupName">{{ props.groupName }}</div>
+      <CollapsibleTrigger @click="isOpen = !isOpen">
+        <chevron :rotate="isOpen ? 90 : 0" />
+      </CollapsibleTrigger>
+    </div>
+    <CollapsibleContent>
+      <slot></slot>
+    </CollapsibleContent>
   </CollapsibleRoot>
 </template>
 
