@@ -246,11 +246,30 @@ const acceptHandle = () => {
   }
 };
 
+const replaceStrings = [
+  {
+    from: "……。",
+    to: "……",
+  },
+  {
+    from: "~",
+    to: "～",
+  },
+  {
+    from: " ”",
+    to: "”",
+  },
+];
+
 function handleFormalizePunctuation() {
   const line = mainStore.getScenario.content[config.getSelectLine];
-  line[config.getTargetLang] = formalizeQuotation(
-    line[config.getTargetLang]
-  ).replaceAll("……。", "……");
+  line[config.getTargetLang] = formalizeQuotation(line[config.getTargetLang]);
+  replaceStrings.forEach(item => {
+    line[config.getTargetLang] = line[config.getTargetLang].replaceAll(
+      item.from,
+      item.to
+    );
+  });
 }
 
 function handleWrapByQuotation() {
