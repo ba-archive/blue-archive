@@ -40,6 +40,7 @@ const playerStyle = computed(() => {
 
 const currentStoryIndex = ref(0);
 const auto = ref(false);
+const autoTimeoutMs = ref(1500);
 const currentStoryNode = computed(() => {
   if (
     currentStoryIndex.value >= 0 &&
@@ -47,18 +48,18 @@ const currentStoryNode = computed(() => {
   ) {
     return props.storyNodes[currentStoryIndex.value];
   } else {
-    props.endCallback();
     return props.storyNodes[props.storyNodes.length - 1];
   }
 });
 const storyManager = new StoryManager(
-  props.storyNodes,
+  () => props.storyNodes,
   nodePlayer,
   currentStoryIndex,
   currentStoryNode,
   auto,
-  () => {
-    console.error("error!");
+  autoTimeoutMs,
+  error => {
+    console.error(error);
   }
 );
 const pixiCanvas = ref<HTMLDivElement>();
@@ -71,12 +72,13 @@ const pixiScale = computed(
 if (import.meta.env.DEV) {
   Reflect.set(window, "nodePlayer", nodePlayer);
   Reflect.set(window, "StoryManager", storyManager);
+  Reflect.set(window, "ResourceManager", resourceManager);
 }
 defineExpose({ storyManager, nodePlayer });
 onMounted(async () => {
   nodePlayer.mouted(pixiCanvas.value as HTMLDivElement);
   await resourceManager.load(props.storyNodes);
-  await storyManager.play();
+  storyManager.play();
 });
 onUnmounted(() => {
   nodePlayer.unMounted();

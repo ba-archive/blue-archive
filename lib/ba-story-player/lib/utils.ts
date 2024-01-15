@@ -32,3 +32,14 @@ export function timelineToPauseAble(tl: ReturnType<typeof gsap.timeline>) {
     },
   };
 }
+
+export function mapGetKeyByValue<keyType, valueType>(
+  map: Map<keyType, valueType>,
+  searchValue: valueType
+) {
+  for (const [key, value] of map.entries()) {
+    if (value === searchValue) {
+      return key;
+    }
+  }
+}

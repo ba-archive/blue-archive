@@ -4,6 +4,7 @@ import { BgLayer } from "../layers/bgLayer";
 import { gsap } from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { ShowLayer } from "../playerSubLayers/showLayer";
+import { CharacterLayer } from "@/layers/characterLayer";
 import { AudioLayer } from "../layers/audioLayer";
 const PIXIHeight = 1012.5;
 gsap.registerPlugin(PixiPlugin);
@@ -11,6 +12,7 @@ gsap.registerPlugin(PixiPlugin);
 const registerServers = {
   bg: BgLayer,
   show: ShowLayer,
+  character: CharacterLayer,
   audio: AudioLayer,
 };
 type RegisterServers = typeof registerServers;
@@ -26,7 +28,7 @@ export default class NodePlayer {
   constructor(width: number) {
     this.app = new Application({ width: width, height: PIXIHeight });
     this.handlerMap = {} as HandlerMap;
-    const tempInstances: Record<string, any> = {};
+    const tempInstances: Record<string, unknown> = {};
     for (const key of Object.keys(registerServers) as Array<
       keyof RegisterServers
     >) {

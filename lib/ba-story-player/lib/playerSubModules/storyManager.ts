@@ -6,62 +6,90 @@ import { waitMs } from "../utils";
 export default class StoryManager {
   currentStoryIndex: Ref<number>;
   currentStoryNode: ComputedRef<StoryNode>;
-  storyNodes: StoryNode[];
+  storyNodes: () => StoryNode[];
   nodePlayer: NodePlayer;
-  state: "playing" | "done";
+  nodeState: "unplay" | "played" = "played";
+  storyState: "playing" | "stop" = "stop";
   auto: Ref<boolean>;
-  autoTimeOutMs = 1500;
-  errorCallback: () => void;
+  autoTimeOutMs: Ref<number>;
+  errorCallback: (error: unknown) => void;
   constructor(
-    storyNodes: StoryNode[],
+    storyNodes: () => StoryNode[],
     nodePlayer: NodePlayer,
     currentStoryIndex: Ref<number>,
     currentStoryNode: ComputedRef<StoryNode>,
     auto: Ref<boolean>,
-    errorCallback: () => void
+    autoTimeOutMs: Ref<number>,
+    errorCallback: (error: unknown) => void
   ) {
     this.currentStoryIndex = currentStoryIndex;
     this.storyNodes = storyNodes;
     this.nodePlayer = nodePlayer;
     this.currentStoryNode = currentStoryNode;
     this.errorCallback = errorCallback;
-    this.state = "done";
     this.auto = auto;
+    this.autoTimeOutMs = autoTimeOutMs;
   }
-  async next() {
-    if (this.state !== "playing") {
+  next() {
+    if (
+      this.nodeState !== "unplay" &&
+      this.currentStoryNode.value.nextNodeIndex !== -1
+    ) {
       this.currentStoryIndex.value = this.currentStoryNode.value.nextNodeIndex;
-      if (this.currentStoryNode.value.nextNodeIndex === -1) {
-        this.auto.value = false;
-        return;
-      }
-      await this.play();
+      this.nodeState = "unplay";
     }
   }
 
   async play() {
-    this.state = "playing";
-    try {
-      await this.nodePlayer.playNode(this.currentStoryNode.value);
-    } catch (error) {
-      this.errorCallback();
-    }
-
-    this.state = "done";
-    if (this.auto.value) {
-      await waitMs(this.autoTimeOutMs);
-      if (this.auto.value && this.currentStoryNode.value.ui.option) {
-        this.next();
+    this.storyState = "playing";
+    this.nodeState = "unplay";
+    const playFunction = async () => {
+      if (this.storyState === "playing") {
+        if (this.nodeState === "played") {
+          window.requestIdleCallback(playFunction);
+          this.auto.value = false;
+          return;
+        }
+        try {
+          await this.nodePlayer.playNode(this.currentStoryNode.value);
+        } catch (error) {
+          this.errorCallback(error);
+        }
+        this.nodeState = "played";
+        if (this.auto.value && !this.currentStoryNode.value.ui.option) {
+          await waitMs(this.autoTimeOutMs.value);
+          this.next();
+        }
+        window.requestAnimationFrame(playFunction);
+      } else {
+        return;
       }
-    }
+    };
+    window.requestAnimationFrame(playFunction);
+  }
+
+  async stop() {
+    await this.nodePlayer.stop();
+    this.storyState = "stop";
   }
   select(selectIndex: number) {
-    this.currentStoryIndex.value = selectIndex;
-    this.play();
+    if (selectIndex === -1) {
+      throw new Error("index不合法");
+    }
+    if (this.nodeState === "played") {
+      this.currentStoryIndex.value = selectIndex;
+    }
   }
   async switch(index: number) {
+    if (index === -1) {
+      throw new Error("index不合法");
+    }
     await this.nodePlayer.stop();
+    this.nodeState = "played";
     this.currentStoryIndex.value = index;
-    this.play();
+    this.nodeState = "unplay";
+    if (this.storyState === "stop") {
+      this.play();
+    }
   }
 }

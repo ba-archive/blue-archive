@@ -26,9 +26,19 @@
         </option>
       </select>
     </div>
+    <div v-if="currentUnitTest.select">
+      <div>选项</div>
+      <select v-model="rawCurrentUnitSelectValue">
+        <option v-for="option in currentUnitTest.select" :key="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
     <div>
       <button
-        @click="currentUnitTest.runTest(player)"
+        @click="
+          currentUnitTest.runTest(player, { select: currentUnitSelectValue })
+        "
         :disabled="!storyResourceLoaded"
       >
         run test
@@ -41,7 +51,7 @@
 import { useLocalStorage } from "@vueuse/core";
 import { StoryNode } from "../../../lib/type";
 import testStoryNodes from "../../testStory.json";
-import { computed, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import Player from "../../../lib/StoryPlayer.vue";
 import unitTestsFilteByCategory from "./unitTests";
 import { cloneDeep } from "lodash-es";
@@ -61,10 +71,23 @@ const currentUnitTests = computed(() => {
 const currentUnitTest = computed(() => {
   return currentUnitTests.value[currentUnitTestKey.value];
 });
+const rawCurrentUnitSelectValue = ref("");
+const currentUnitSelectValue = computed(() => {
+  if (currentUnitTest.value.select) {
+    return rawCurrentUnitSelectValue.value;
+  } else {
+    return undefined;
+  }
+});
 const emits = defineEmits<{
   (e: "storyNodesChange", storyNodes: StoryNode[]): void;
 }>();
 watch(currentUnitTest, newVal => {
+  const unitTestkeys = Object.keys(currentUnitTests.value);
+  if (!unitTestkeys.includes(currentUnitTestKey.value)) {
+    currentUnitTestKey.value = unitTestkeys[0];
+    return;
+  }
   emits("storyNodesChange", newVal.getStoryNodes(cloneDeep(initStoryNodes)));
   newVal;
 });

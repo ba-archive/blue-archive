@@ -78,12 +78,14 @@ export class AudioLayer extends Layer {
     }
   }
 
-  public playAudio(url: string, setting: AudioSetting) {
+  public playAudio(url: string, setting?: AudioSetting) {
     const audio = this.handlerMap.getResources<"audio">("audio", url);
     if (!audio) {
       throw new Error(`获取audio资源失败，资源名${url}`);
     } else {
-      audio.volume(setting.volume);
+      if (setting) {
+        audio.volume(setting.volume);
+      }
       audio.play();
     }
   }
