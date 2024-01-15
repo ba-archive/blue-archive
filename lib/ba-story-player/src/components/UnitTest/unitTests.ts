@@ -11,6 +11,51 @@ export interface UnitTest {
   ) => Promise<void>;
   select?: string[];
 }
+
+const ACTIONS = [
+  "a",
+  "ar",
+  "al",
+  "closeup",
+  "d",
+  "dl",
+  "dr",
+  "falldownR",
+  "falldownL",
+  "greeting",
+  "hide",
+  "hophop",
+  "jump",
+  "m1",
+  "m2",
+  "m3",
+  "m4",
+  "m5",
+  "shake",
+  "stiff",
+];
+const EMOTIONS = [
+  "Heart",
+  "Respond",
+  "Music",
+  "Twinkle",
+  "Upset",
+  "Sweat",
+  "Dot",
+  "Exclaim",
+  "Surprise",
+  "Question",
+  "Shy",
+  "Angry",
+  "Chat",
+  "Sad",
+  "Steam",
+  "Sigh",
+  "Bulb",
+  "Tear",
+  "Zzz",
+];
+
 const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
   audio: {
     changeBgm: {
@@ -216,27 +261,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
           player.storyManager.switch(1);
         }
       },
-      select: [
-        "Heart",
-        "Respond",
-        "Music",
-        "Twinkle",
-        "Upset",
-        "Sweat",
-        "Dot",
-        "Exclaim",
-        "Surprise",
-        "Question",
-        "Shy",
-        "Angry",
-        "Chat",
-        "Sad",
-        "Steam",
-        "Sigh",
-        "Bulb",
-        "Tear",
-        "Zzz",
-      ],
+      select: EMOTIONS,
     },
     action: {
       getStoryNodes(initStoryNodes) {
@@ -300,28 +325,7 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
           player.storyManager.switch(1);
         }
       },
-      select: [
-        "a",
-        "ar",
-        "al",
-        "closeup",
-        "d",
-        "dl",
-        "dr",
-        "falldownR",
-        "falldownL",
-        "greeting",
-        "hide",
-        "hophop",
-        "jump",
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5",
-        "shake",
-        "stiff",
-      ],
+      select: ACTIONS,
     },
     fx: {
       getStoryNodes(initStoryNodes) {
@@ -594,6 +598,245 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         }
       },
       select: ["显示所有", "替换", "切换位置与删除"],
+    },
+    multiCharacters: {
+      getStoryNodes(initStoryNodes) {
+        initStoryNodes[1] = {
+          ...initStoryNodes[1],
+          characters: [
+            {
+              initPosition: 3,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "fx",
+                  effect: "shot",
+                  async: false,
+                },
+              ],
+            },
+            {
+              initPosition: 1,
+              CharacterSpine: {
+                common:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                superSampling2x:
+                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+              },
+              face: "02",
+              state: "highlight",
+              effects: [
+                {
+                  type: "fx",
+                  effect: "shot",
+                  async: false,
+                },
+              ],
+            },
+          ],
+        };
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        const storyNodes = player.storyManager.storyNodes();
+        switch (arg.select) {
+          case "多个相同emotion":
+            storyNodes[1] = {
+              ...storyNodes[0],
+              nextNodeIndex: 2,
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "emotion",
+                      effect: EMOTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "emotion",
+                      effect: EMOTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+              ],
+            };
+            player.storyManager.switch(1);
+            break;
+          case "多个不同emotion":
+            storyNodes[1] = {
+              ...storyNodes[0],
+              nextNodeIndex: 2,
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "emotion",
+                      effect: EMOTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "emotion",
+                      effect: EMOTIONS[1],
+                      async: false,
+                    },
+                  ],
+                },
+              ],
+            };
+            player.storyManager.switch(1);
+            break;
+          case "多个action":
+            storyNodes[1] = {
+              ...storyNodes[0],
+              nextNodeIndex: 2,
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "action",
+                      effect: ACTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "action",
+                      effect: ACTIONS[1],
+                      async: false,
+                    },
+                  ],
+                },
+              ],
+            };
+            player.storyManager.switch(1);
+            break;
+          case "emotion与action混合":
+            storyNodes[1] = {
+              ...storyNodes[0],
+              nextNodeIndex: 2,
+              characters: [
+                {
+                  initPosition: 1,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "emotion",
+                      effect: EMOTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+                {
+                  initPosition: 5,
+                  CharacterSpine: {
+                    common:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                    superSampling2x:
+                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  },
+                  face: "02",
+                  state: "highlight",
+                  effects: [
+                    {
+                      type: "action",
+                      effect: ACTIONS[0],
+                      async: false,
+                    },
+                  ],
+                },
+              ],
+            };
+            player.storyManager.switch(1);
+            break;
+          default:
+            break;
+        }
+      },
+      select: [
+        "多个相同emotion",
+        "多个不同emotion",
+        "多个action",
+        "emotion与action混合",
+      ],
     },
   },
 };
