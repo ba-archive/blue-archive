@@ -9,7 +9,7 @@ import { cloneDeep } from "lodash-es";
  */
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 /**
- * ogg类型的音频是否用其他音频类型代替
+ * ogg类型的音频是否用其他音频类型代替, 影响范围为l2d、bgm、voiceJp
  */
 let oggAudioType = "ogg";
 let superSampling = "";
@@ -45,7 +45,7 @@ function getL2dVoiceUrl(eventName: string): string {
 /**
  * 设置ogg类型音频的替代音频类型
  */
-export function setOggAudioType(audioType: "mp3") {
+export function setOggAudioType(audioType: string) {
   oggAudioType = audioType;
 }
 
@@ -98,13 +98,23 @@ const resourcerManager = {
         this.checkAndAdd(l2dUrl);
       }
       if (audio.bgm) {
-        audioUrls.push(audio.bgm.url);
+        const bmgUrl = audio.bgm.url;
+        if (oggAudioType !== "") {
+          audioUrls.push(bmgUrl.slice(0, bmgUrl.length - 3) + oggAudioType);
+        } else {
+          audioUrls.push(bmgUrl);
+        }
       }
       if (audio.sound) {
         audioUrls.push(audio.sound);
       }
       if (audio.voice) {
-        audioUrls.push(audio.voice);
+        const voiceUrl = audio.voice;
+        if (oggAudioType !== "") {
+          audioUrls.push(voiceUrl.slice(0, voiceUrl.length - 3) + oggAudioType);
+        } else {
+          audioUrls.push(voiceUrl);
+        }
       }
     }
     await new Promise<void>((resolve, reject) => {
