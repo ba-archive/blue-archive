@@ -1,8 +1,8 @@
-import { StoryNode, ResourceMap, SpineUrls } from "../type";
-import { mapGetKeyByValue } from "../utils";
+import { StoryNode, ResourceMap, SpineUrls, ResourceSetting } from "../type";
 import { Loader, Sprite, Texture } from "pixi.js";
 import { IEventData, ISkeletonData, Spine } from "pixi-spine";
 import { Howl } from "howler";
+import { cloneDeep } from "lodash-es";
 
 type ResourcesTypes =
   | "emotionImg"
@@ -40,6 +40,7 @@ const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
  */
 let oggAudioType = "ogg";
 let superSampling = "";
+let resourceSetting: ResourceSetting | null = null;
 
 /**
  * 获取其他特效音资源, 用于本体资源加载
@@ -47,6 +48,10 @@ let superSampling = "";
  */
 export function getOtherSoundUrls(): string[] {
   return Object.values(otherSoundMap);
+}
+
+export function setResourceSetting(setting: ResourceSetting) {
+  resourceSetting = setting;
 }
 
 /**
@@ -137,11 +142,6 @@ export function setDataUrl(url: string): void {
     bg_underfire: `${dataUrl}/Audio/Sound/UI_FX_BG_UnderFire.wav`,
     back: `${dataUrl}/Audio/Sound/UI_Button_Back.wav`,
   };
-  for (const key of Object.keys(emotionResourcesTable) as Array<
-    keyof typeof emotionResourcesTable
-  >) {
-    emotionSoundMap.set(key, getResourcesUrl("emotionSound", key));
-  }
 }
 
 /**
@@ -155,103 +155,14 @@ export function setSuperSampling(type: string) {
   superSampling = `${type}x`;
 }
 
-const emotionResourcesTable = {
-  Heart: ["Emoticon_Balloon_N.png", "Emoticon_Heart.png"],
-  Respond: ["Emoticon_Action.png"],
-  Music: ["Emoticon_Note.png"],
-  Twinkle: ["Emoticon_Twinkle.png"],
-  Upset: ["Emoticon_Balloon_N.png", "Emoticon_Anxiety.png"],
-  Sweat: ["Emoticon_Sweat_1.png", "Emoticon_Sweat_2.png"],
-  Dot: ["Emoticon_Balloon_N.png", "Emoticon_Idea.png"],
-  Exclaim: ["Emoticon_ExclamationMark.png"],
-  Surprise: ["Emoticon_Exclamation.png", "Emoticon_Question.png"],
-  Question: ["Emoticon_QuestionMark.png"],
-  Shy: ["Emoticon_Balloon_N.png", "Emoticon_Shy.png"],
-  Angry: ["Emoticon_Aggro.png"],
-  Chat: ["Emoticon_Chat.png"],
-  Sad: ["Emoji_Sad.png"],
-  Steam: ["Emoji_Steam.png"],
-  Sigh: ["Emoji_Sigh.png"],
-  Bulb: ["Emoticon_Balloon_N.png", "Emoji_Bulb_1.png", "Emoji_Bulb_2.png"],
-  Tear: ["Emoji_Tear_1.png", "Emoji_Tear_2.png"],
-  Zzz: ["Emoji_Zzz.png"],
-};
-
-const emotionSoundMap = new Map<string, string>();
-
-const fxImageTable = {
-  shot: ["fire1.png", "fire2.png", "fire3.png"],
-};
-
-/**
- * 请在此处填入需要的图片资源的名称
- */
-const bgEffectResourceTable: Record<string, string[]> = {
-  "": [],
-  "BG_ScrollT_0.5": [],
-  BG_Filter_Red: [],
-  BG_Wave_F: [],
-  BG_Flash: [],
-  BG_UnderFire_R: [],
-  BG_Love_L_BGOff: [
-    "FX_TEX_Img_Heart_01.png",
-    "FX_TEX_SCN_Ring_02.png",
-    "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
-  ],
-  "BG_ScrollB_0.5": [],
-  BG_Rain_L: ["HardRain.png"],
-  BG_UnderFire: [
-    "FX_TEX_Smoke_17.png",
-    "fire1.png",
-    "fire2.png",
-    "fire3.png",
-    "HardRain.png",
-  ],
-  BG_WaveShort_F: [],
-  BG_SandStorm_L: ["FX_TEX_Smoke_10a.png"],
-  "BG_ScrollT_1.5": [],
-  BG_Shining_L: [
-    "FX_TEX_SCN_Ring_02.png",
-    "FX_TEX_Flare_23.png",
-    "FX_TEX_SCN_Circle_Love.png",
-    "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
-  ],
-  "BG_ScrollB_1.0": [],
-  BG_Love_L: [
-    "FX_TEX_Img_Heart_01.png",
-    "FX_TEX_SCN_Ring_02.png",
-    "FX_TEX_SCN_Circle_Love.png",
-  ],
-  BG_Dust_L: ["FX_TEX_Smoke_Scroll_23.png", "dust_spark.png"],
-  "BG_ScrollL_0.5": [],
-  "BG_ScrollL_1.0": [],
-  BG_Ash_Black: [],
-  BG_Mist_L: [],
-  BG_Flash_Sound: ["FX_TEX_Lightning_Line_16.png"],
-  "BG_ScrollL_1.5": [],
-  BG_FocusLine: ["FX_TEX_SCN_FocusLine5.png"],
-  "BG_ScrollR_1.5": [],
-  BG_Shining_L_BGOff: [
-    "FX_TEX_SCN_Ring_02.png",
-    "FX_TEX_Flare_23.png",
-    "Gacha/FX_TEX_GT_Circle_Blur_inv.png",
-  ],
-  "BG_ScrollT_1.0": [],
-  "BG_ScrollB_1.5": [],
-  BG_Filter_Red_BG: [],
-  BG_Ash_Red: [],
-  BG_Fireworks_L_BGOff_02: [],
-  "BG_ScrollR_0.5": [],
-  BG_Snow_L: [],
-  BG_Fireworks_L_BGOff_01: [],
-  "BG_ScrollR_1.0": [],
-};
-
 const resourcerManager = {
   loader: Loader.shared,
   state: "done" as "loading" | "done",
   audioSoundMap: new Map<string, Howl>(),
   async load(storyNodes: StoryNode[]) {
+    if (!resourceSetting) {
+      throw new Error("resource settting未设置");
+    }
     this.state = "loading";
     if (this.loader.loading) {
       await new Promise<void>(resolve =>
@@ -326,12 +237,18 @@ const resourcerManager = {
     } else if (type === "audio") {
       return this.audioSoundMap.get(key as string) as ResourceMap[T]["value"];
     } else if (type === "bgEffect") {
-      return bgEffectResourceTable[key as string].map(resource =>
-        Sprite.from(
-          this.loader.resources[getResourcesUrl("bgEffectImgs", resource)]
-            .texture as Texture
-        )
-      ) as ResourceMap[T]["value"];
+      if (resourceSetting) {
+        const resources = cloneDeep(
+          resourceSetting.bgEffect[key as string].effectResources
+        );
+        const finalResource: Record<string, Sprite> = {};
+        for (const key in resources) {
+          finalResource[key] = Sprite.from(
+            this.loader.resources[resources[key]].texture as Texture
+          );
+        }
+        return finalResource;
+      }
     } else if (type === "character") {
       const spineUrls = key as SpineUrls;
       let spineUrl = "";
@@ -369,21 +286,17 @@ const resourcerManager = {
         );
       }) as ResourceMap[T]["value"];
     } else if (type === "emotion") {
-      return emotionResourcesTable[
-        key as keyof typeof emotionResourcesTable
-      ].map(resource =>
-        Sprite.from(
-          this.loader.resources[getResourcesUrl("emotionImg", resource)]
-            .texture as Texture
-        )
-      ) as ResourceMap[T]["value"];
+      if (resourceSetting) {
+        return resourceSetting.emotion[key as string].imgs.map(resource =>
+          Sprite.from(this.loader.resources[resource].texture as Texture)
+        );
+      }
     } else if (type === "fx") {
-      return fxImageTable[key as keyof typeof fxImageTable].map(resource =>
-        Sprite.from(
-          this.loader.resources[getResourcesUrl("fx", resource)]
-            .texture as Texture
-        )
-      ) as ResourceMap[T]["value"];
+      if (resourceSetting) {
+        return resourceSetting.fx[key as string].map(resource =>
+          Sprite.from(this.loader.resources[resource].texture as Texture)
+        );
+      }
     }
   },
 
@@ -410,9 +323,11 @@ const resourcerManager = {
    * 添加FX相关资源
    */
   async addFXResources() {
-    for (const fxImages of Object.values(fxImageTable)) {
-      for (const img of fxImages) {
-        this.checkAndAdd(getResourcesUrl("fx", img));
+    if (resourceSetting) {
+      for (const fxImages of Object.values(resourceSetting.fx)) {
+        for (const img of fxImages) {
+          this.checkAndAdd(img);
+        }
       }
     }
   },
@@ -420,13 +335,13 @@ const resourcerManager = {
    * 添加人物情绪相关资源(图片和声音)
    */
   async addEmotionResources(voiceUrls: string[]) {
-    for (const emotionResources of Object.values(emotionResourcesTable)) {
-      for (const emotionResource of emotionResources) {
-        this.checkAndAdd(getResourcesUrl("emotionImg", emotionResource));
+    if (resourceSetting) {
+      for (const emotionResources of Object.values(resourceSetting.emotion)) {
+        for (const imgUrl of emotionResources.imgs) {
+          this.checkAndAdd(imgUrl);
+        }
+        voiceUrls.push(emotionResources.sound);
       }
-    }
-    for (const emotionName of Object.keys(emotionResourcesTable)) {
-      voiceUrls.push(emotionSoundMap.get(emotionName) as string);
     }
   },
   /**
@@ -444,9 +359,11 @@ const resourcerManager = {
     return audios;
   },
   addBGEffectImgs() {
-    for (const imgs of Object.values(bgEffectResourceTable)) {
-      for (const img of imgs) {
-        this.checkAndAdd(getResourcesUrl("bgEffectImgs", img));
+    if (resourceSetting) {
+      for (const resources of Object.values(resourceSetting.bgEffect)) {
+        for (const effectResource of Object.values(resources.effectResources)) {
+          this.checkAndAdd(effectResource);
+        }
       }
     }
   },
@@ -470,15 +387,19 @@ const resourcerManager = {
           newAudio.once("loaderror", (_, error) => {
             reject(error);
           });
-          if (Array.from(emotionSoundMap.values()).includes(audioUrl)) {
-            this.audioSoundMap.set(
-              mapGetKeyByValue<string, string>(
-                emotionSoundMap,
-                audioUrl
-              ) as string,
-              newAudio.load()
-            );
+          if (resourceSetting) {
+            const emotionSoundMap: Record<string, string> = {};
+            for (const key in resourceSetting.emotion) {
+              emotionSoundMap[resourceSetting.emotion[key].sound] = key;
+            }
+            if (Object.keys(emotionSoundMap).includes(audioUrl)) {
+              this.audioSoundMap.set(
+                emotionSoundMap[audioUrl],
+                newAudio.load()
+              );
+            }
           }
+
           this.audioSoundMap.set(audioUrl, newAudio.load());
         })
       );

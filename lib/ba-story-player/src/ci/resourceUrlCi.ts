@@ -62,6 +62,16 @@ for (const key of Object.keys(finalSetting["emotion"]) as Array<
   finalSetting["emotion"][key]["sound"] = getResourcesUrl("emotionSound", key);
 }
 
+//fx
+for (const key of Object.keys(finalSetting.fx) as Array<keyof Setting["fx"]>) {
+  const imgs = finalSetting.fx[key];
+  const finalImgs: string[] = [];
+  for (const img of imgs) {
+    finalImgs.push(getResourcesUrl("fx", img));
+  }
+  finalSetting.fx[key] = finalImgs;
+}
+
 //bgeffect
 for (const key of Object.keys(finalSetting["bgEffect"]) as Array<
   keyof Setting["bgEffect"]

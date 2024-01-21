@@ -307,7 +307,7 @@ export interface ResourceMap {
   img: { key: string; value: Sprite };
   video: { key: string; value: Sprite };
   audio: { key: string; value: Howl };
-  bgEffect: { key: string; value: Sprite[] };
+  bgEffect: { key: string; value: Record<string, Sprite> };
   character: { key: SpineUrls; value: Spine };
   l2d: { key: SpineUrls; value: Sprite };
   l2dOtherSpine: { key: SpineUrls[]; value: Spine[] };
@@ -360,4 +360,34 @@ export class Layer {
       Object.values(this.animations).map(animation => animation.final())
     );
   }
+}
+
+type Emotions =
+  | "Heart"
+  | "Respond"
+  | "Music"
+  | "Twinkle"
+  | "Upset"
+  | "Sweat"
+  | "Dot"
+  | "Exclaim"
+  | "Surprise"
+  | "Question"
+  | "Shy"
+  | "Angry"
+  | "Chat"
+  | "Sad"
+  | "Steam"
+  | "Sigh"
+  | "Bulb"
+  | "Tear"
+  | "Zzz";
+export interface ResourceSetting {
+  otherSounds: Record<string, string>;
+  emotion: Record<string, { imgs: string[]; sound: string }>;
+  fx: Record<string, string[]>;
+  bgEffect: Record<
+    string,
+    { effectResources: Record<string, string>; sound: string }
+  >;
 }

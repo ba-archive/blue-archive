@@ -4,18 +4,22 @@ import NodePlayer, { PIXIHeight } from "./playerSubModules/nodePlayer";
 import StoryManager from "./playerSubModules/storyManager";
 import resourceManager, {
   setDataUrl,
+  setResourceSetting,
 } from "./playerSubModules/recourageManager";
-import { ResourceMap, StoryNode, Ii8nString } from "./type";
+import { ResourceMap, StoryNode, Ii8nString, ResourceSetting } from "./type";
 import ShowDialog from "./playerSubLayers/showLayer/ShowDialog.vue";
 const props = defineProps<{
   storyNodes: StoryNode[];
   dataUrl: string;
+  resourceSetting: ResourceSetting;
   height: number;
   width: number;
   language: keyof Ii8nString;
   endCallback: () => void;
 }>();
+
 setDataUrl(props.dataUrl);
+setResourceSetting(props.resourceSetting);
 const pixiWidth = computed(() => (PIXIHeight * props.width) / props.height);
 const nodePlayer = new NodePlayer(pixiWidth.value);
 nodePlayer.handlerMap.getResources = <T extends keyof ResourceMap>(
@@ -77,6 +81,7 @@ if (import.meta.env.DEV) {
 defineExpose({ storyManager, nodePlayer });
 onMounted(async () => {
   nodePlayer.mouted(pixiCanvas.value as HTMLDivElement);
+
   await resourceManager.load(props.storyNodes);
   storyManager.play();
 });
