@@ -1,0 +1,146 @@
+{
+  "otherSounds": {
+    "select": "Audio/Sound/UI_Button_Touch.wav",
+    "bg_underfire": "Audio/Sound/UI_FX_BG_UnderFire.wav",
+    "back": "Audio/Sound/UI_Button_Back.wav"
+  },
+  "emotion": {
+    "Heart": {
+      "imgs": ["Emoticon_Balloon_N.png", "Emoticon_Heart.png"],
+      "sound": ""
+    },
+    "Respond": { "imgs": ["Emoticon_Action.png"], "sound": "" },
+    "Music": { "imgs": ["Emoticon_Note.png"], "sound": "" },
+    "Twinkle": { "imgs": ["Emoticon_Twinkle.png"], "sound": "" },
+    "Upset": {
+      "imgs": ["Emoticon_Balloon_N.png", "Emoticon_Anxiety.png"],
+      "sound": ""
+    },
+    "Sweat": {
+      "imgs": ["Emoticon_Sweat_1.png", "Emoticon_Sweat_2.png"],
+      "sound": ""
+    },
+    "Dot": {
+      "imgs": ["Emoticon_Balloon_N.png", "Emoticon_Idea.png"],
+      "sound": ""
+    },
+    "Exclaim": { "imgs": ["Emoticon_ExclamationMark.png"], "sound": "" },
+    "Surprise": {
+      "imgs": ["Emoticon_Exclamation.png", "Emoticon_Question.png"],
+      "sound": ""
+    },
+    "Question": { "imgs": ["Emoticon_QuestionMark.png"], "sound": "" },
+    "Shy": {
+      "imgs": ["Emoticon_Balloon_N.png", "Emoticon_Shy.png"],
+      "sound": ""
+    },
+    "Angry": { "imgs": ["Emoticon_Aggro.png"], "sound": "" },
+    "Chat": { "imgs": ["Emoticon_Chat.png"], "sound": "" },
+    "Sad": { "imgs": ["Emoji_Sad.png"], "sound": "" },
+    "Steam": { "imgs": ["Emoji_Steam.png"], "sound": "" },
+    "Sigh": { "imgs": ["Emoji_Sigh.png"], "sound": "" },
+    "Bulb": {
+      "imgs": [
+        "Emoticon_Balloon_N.png",
+        "Emoji_Bulb_1.png",
+        "Emoji_Bulb_2.png"
+      ],
+      "sound": ""
+    },
+    "Tear": { "imgs": ["Emoji_Tear_1.png", "Emoji_Tear_2.png"], "sound": "" },
+    "Zzz": { "imgs": ["Emoji_Zzz.png"], "sound": "" }
+  },
+  "fx": {
+    "shot": ["fire1.png", "fire2.png", "fire3.png"]
+  },
+  "bgEffect": {
+    "": { "effectResources": {}, "sound": "" },
+    "BG_ScrollT_0.5": { "effectResources": {}, "sound": "" },
+    "BG_Filter_Red": { "effectResources": {}, "sound": "" },
+    "BG_Wave_F": { "effectResources": {}, "sound": "" },
+    "BG_Flash": { "effectResources": {}, "sound": "" },
+    "BG_UnderFire_R": { "effectResources": {}, "sound": "" },
+    "BG_Love_L_BGOff": {
+      "effectResources": {
+        "heart": "FX_TEX_Img_Heart_01.png",
+        "ring": "FX_TEX_SCN_Ring_02.png",
+        "circle": "Gacha/FX_TEX_GT_Circle_Blur_inv.png"
+      },
+      "sound": ""
+    },
+    "BG_ScrollB_0.5": { "effectResources": {}, "sound": "" },
+    "BG_Rain_L": { "effectResources": { "rain": "HardRain.png" }, "sound": "" },
+    "BG_UnderFire": {
+      "effectResources": {
+        "smoke": "FX_TEX_Smoke_17.png",
+        "fire1": "fire1.png",
+        "fire2": "fire2.png",
+        "fire3": "fire3.png",
+        "rain": "HardRain.png"
+      },
+      "sound": ""
+    },
+    "BG_WaveShort_F": { "effectResources": {}, "sound": "" },
+    "BG_SandStorm_L": {
+      "effectResources": { "smoke": "FX_TEX_Smoke_10a.png" },
+      "sound": ""
+    },
+    "BG_ScrollT_1.5": { "effectResources": {}, "sound": "" },
+    "BG_Shining_L": {
+      "effectResources": {
+        "ring": "FX_TEX_SCN_Ring_02.png",
+        "flare": "FX_TEX_Flare_23.png",
+        "circleLove": "FX_TEX_SCN_Circle_Love.png",
+        "circleBlur": "Gacha/FX_TEX_GT_Circle_Blur_inv.png"
+      },
+      "sound": ""
+    },
+    "BG_ScrollB_1.0": { "effectResources": {}, "sound": "" },
+    "BG_Love_L": {
+      "effectResources": {
+        "heart": "FX_TEX_Img_Heart_01.png",
+        "ring": "FX_TEX_SCN_Ring_02.png",
+        "circleLove": "FX_TEX_SCN_Circle_Love.png"
+      },
+      "sound": ""
+    },
+    "BG_Dust_L": {
+      "effectResources": {
+        "smoke": "FX_TEX_Smoke_Scroll_23.png",
+        "dust": "dust_spark.png"
+      },
+      "sound": ""
+    },
+    "BG_ScrollL_0.5": { "effectResources": {}, "sound": "" },
+    "BG_ScrollL_1.0": { "effectResources": {}, "sound": "" },
+    "BG_Ash_Black": { "effectResources": {}, "sound": "" },
+    "BG_Mist_L": { "effectResources": {}, "sound": "" },
+    "BG_Flash_Sound": {
+      "effectResources": { "lightningLine": "FX_TEX_Lightning_Line_16.png" },
+      "sound": ""
+    },
+    "BG_ScrollL_1.5": { "effectResources": {}, "sound": "" },
+    "BG_FocusLine": {
+      "effectResources": { "focusLine": "FX_TEX_SCN_FocusLine5.png" },
+      "sound": ""
+    },
+    "BG_ScrollR_1.5": { "effectResources": {}, "sound": "" },
+    "BG_Shining_L_BGOff": {
+      "effectResources": {
+        "ring": "FX_TEX_SCN_Ring_02.png",
+        "flare": "FX_TEX_Flare_23.png",
+        "circleBlur": "Gacha/FX_TEX_GT_Circle_Blur_inv.png"
+      },
+      "sound": ""
+    },
+    "BG_ScrollT_1.0": { "effectResources": {}, "sound": "" },
+    "BG_ScrollB_1.5": { "effectResources": {}, "sound": "" },
+    "BG_Filter_Red_BG": { "effectResources": {}, "sound": "" },
+    "BG_Ash_Red": { "effectResources": {}, "sound": "" },
+    "BG_Fireworks_L_BGOff_02": { "effectResources": {}, "sound": "" },
+    "BG_ScrollR_0.5": { "effectResources": {}, "sound": "" },
+    "BG_Snow_L": { "effectResources": {}, "sound": "" },
+    "BG_Fireworks_L_BGOff_01": { "effectResources": {}, "sound": "" },
+    "BG_ScrollR_1.0": { "effectResources": {}, "sound": "" }
+  }
+}
