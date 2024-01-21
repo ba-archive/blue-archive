@@ -300,9 +300,18 @@ const resourcerManager = {
             for (const key in resourceSetting.emotion) {
               emotionSoundMap[resourceSetting.emotion[key].sound] = key;
             }
+            const bgEffectSoundMap: Record<string, string> = {};
+            for (const key in resourceSetting.bgEffect) {
+              bgEffectSoundMap[resourceSetting.bgEffect[key].sound] = key;
+            }
             if (Object.keys(emotionSoundMap).includes(audioUrl)) {
               this.audioSoundMap.set(
                 emotionSoundMap[audioUrl],
+                newAudio.load()
+              );
+            } else if (Object.keys(bgEffectSoundMap).includes(audioUrl)) {
+              this.audioSoundMap.set(
+                bgEffectSoundMap[audioUrl],
                 newAudio.load()
               );
             }
