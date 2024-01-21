@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Player from "../lib/StoryPlayer.vue";
-import { StoryNode, Ii8nString } from "../lib/type";
+import resourceSetting from "./ci/output/setting.json";
+import { StoryNode, Ii8nString, ResourceSetting } from "../lib/type";
 import testStory from "./testStory.json";
 import UnitTest from "./components/UnitTest/UnitTest.vue";
 
@@ -16,7 +17,9 @@ function changeStoryNodes(newNodes: StoryNode[]) {
 }
 function afterStoryLoaded() {
   storyResourceLoaded.value = true;
-  player.value.storyManager.switch(0);
+  if (player.value) {
+    player.value.storyManager.switch(0);
+  }
 }
 </script>
 
@@ -35,6 +38,7 @@ function afterStoryLoaded() {
       :width="1000"
       class="player"
       data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
+      :resourceSetting="resourceSetting"
       :story-nodes="storyNodes"
       @loaded="afterStoryLoaded"
       v-if="flag"
