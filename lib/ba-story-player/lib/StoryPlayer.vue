@@ -3,7 +3,7 @@ import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import NodePlayer, { PIXIHeight } from "./playerSubModules/nodePlayer";
 import StoryManager from "./playerSubModules/storyManager";
 import resourceManager, {
-  setDataUrl,
+  setL2dVoiceUrlOrigin,
   setResourceSetting,
 } from "./playerSubModules/recourageManager";
 import { ResourceMap, StoryNode, Ii8nString, ResourceSetting } from "./type";
@@ -18,7 +18,7 @@ const props = defineProps<{
   endCallback: () => void;
 }>();
 
-setDataUrl(props.dataUrl);
+setL2dVoiceUrlOrigin(props.dataUrl);
 setResourceSetting(props.resourceSetting);
 const pixiWidth = computed(() => (PIXIHeight * props.width) / props.height);
 const nodePlayer = new NodePlayer(pixiWidth.value);

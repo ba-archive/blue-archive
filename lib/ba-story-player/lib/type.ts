@@ -390,4 +390,5 @@ export interface ResourceSetting {
     string,
     { effectResources: Record<string, string>; sound: string }
   >;
+  l2dVoiceOrigin: string;
 }
