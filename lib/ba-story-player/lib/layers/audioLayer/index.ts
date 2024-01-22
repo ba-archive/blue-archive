@@ -22,6 +22,7 @@ export class AudioLayer extends Layer {
    * 语音音量 0-1
    */
   private voiceVolume = 0.8;
+  checkMethodMap: Record<string | "loadAudio", CheckMethod<this>> = {};
   /**
    * 播放实例
    */
@@ -44,7 +45,7 @@ export class AudioLayer extends Layer {
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
     this.handlerMap = handlerMap;
-    this.addCheckMethod(this.loadAudio);
+    this.addCheckMethod(this.loadAudio, "loadAudio");
     handlerMap.playAudio = this.playAudio.bind(this);
   }
 
@@ -188,11 +189,7 @@ export class AudioLayer extends Layer {
     voice.play();
   }
 
-  public loadAudio: CheckMethod<AudioLayer> = async function (
-    node,
-    _app,
-    _handlerMap
-  ) {
+  public loadAudio: CheckMethod<AudioLayer> = async function (node) {
     this.playBgm(node.audio.bgm?.url, node.audio.bgm?.bgmArgs);
     this.playSound(node.audio.sound);
     this.playVoice(node.audio.voice);

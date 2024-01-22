@@ -58,9 +58,11 @@ const AnimationIdleTrack = 0; // 光环动画track index
 
 export class CharacterLayer extends Layer {
   currentCharacters: Character[] = [];
+  checkMethodMap: Record<string | "loadCharacter", CheckMethod<this>> = {
+    loadCharacter,
+  };
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
-    this.addCheckMethod(loadCharacter);
     app.stage.sortableChildren = true;
   }
   // 存放角色实例，包括状态和spine
