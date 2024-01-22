@@ -338,7 +338,7 @@ export interface Animation<Arg extends Record<string, any>> {
 }
 
 export class Layer {
-  checkMethods: CheckMethod<this>[] = [];
+  checkMethodMap: Record<string, CheckMethod<this>> = {};
   animations: Record<string, Animation<any>> = {};
   instances: Record<string, any> = {};
   constructor(app: Application, handlerMap: HandlerMap) {
@@ -347,13 +347,13 @@ export class Layer {
   }
   async check(storyNode: StoryNode, app: Application, handlerMap: HandlerMap) {
     await Promise.all(
-      this.checkMethods.map(method => {
+      Object.values(this.checkMethodMap).map(method => {
         return method.call(this, storyNode, app, handlerMap);
       })
     );
   }
-  addCheckMethod(method: CheckMethod<this>) {
-    this.checkMethods.push(method);
+  addCheckMethod(method: CheckMethod<this>, key: string) {
+    this.checkMethodMap[key] = method;
   }
   async stop() {
     await Promise.all(
@@ -362,26 +362,6 @@ export class Layer {
   }
 }
 
-type Emotions =
-  | "Heart"
-  | "Respond"
-  | "Music"
-  | "Twinkle"
-  | "Upset"
-  | "Sweat"
-  | "Dot"
-  | "Exclaim"
-  | "Surprise"
-  | "Question"
-  | "Shy"
-  | "Angry"
-  | "Chat"
-  | "Sad"
-  | "Steam"
-  | "Sigh"
-  | "Bulb"
-  | "Tear"
-  | "Zzz";
 export interface ResourceSetting {
   otherSounds: Record<string, string>;
   emotion: Record<string, { imgs: string[]; sound: string }>;

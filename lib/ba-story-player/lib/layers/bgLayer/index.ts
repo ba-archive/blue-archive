@@ -8,11 +8,13 @@ export class BgLayer extends Layer {
   animations: { bgOverlap: typeof loadBgOverlapAnimation } = {
     bgOverlap: loadBgOverlapAnimation,
   };
+  checkMethodMap: Record<"loadBg" | string, CheckMethod<this>> = {
+    loadBg,
+  };
   instances: { bgInstance?: Sprite } = {};
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
     handlerMap.getBgInstance = () => this.instances.bgInstance;
-    this.addCheckMethod(loadBg);
   }
   async resize(app: Application) {
     if (this.instances.bgInstance) {

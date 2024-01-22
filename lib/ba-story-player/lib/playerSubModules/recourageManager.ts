@@ -34,9 +34,15 @@ function getL2dVoiceUrl(eventName: string): string {
   );
   // eslint-disable-next-line no-case-declarations
   const voiceFilename = eventName.split("/").pop();
+  let currentOggAudioType = "";
+  if (oggAudioType === "") {
+    currentOggAudioType = "ogg";
+  } else {
+    currentOggAudioType = oggAudioType;
+  }
   if (resourceSetting) {
     // eslint-disable-next-line max-len
-    return `${resourceSetting.l2dVoiceOrigin}/Audio/VoiceJp/Character_voice/${voiceDirectory}/${voiceFilename}.${oggAudioType}`;
+    return `${resourceSetting.l2dVoiceOrigin}/Audio/VoiceJp/Character_voice/${voiceDirectory}/${voiceFilename}.${currentOggAudioType}`;
   } else {
     return "";
   }
