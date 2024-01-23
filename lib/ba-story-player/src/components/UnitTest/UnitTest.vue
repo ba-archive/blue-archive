@@ -34,13 +34,14 @@
         </option>
       </select>
     </div>
+    <div v-if="currentUnitTest.input">
+      <div>
+        <label for="testInput">{{ currentUnitTest.input }}</label>
+      </div>
+      <input type="text" v-model="rawCurrentUnitInputValue" />
+    </div>
     <div>
-      <button
-        @click="
-          currentUnitTest.runTest(player, { select: currentUnitSelectValue })
-        "
-        :disabled="!storyResourceLoaded"
-      >
+      <button @click="runTest" :disabled="!storyResourceLoaded">
         run test
       </button>
     </div>
@@ -71,6 +72,7 @@ const currentUnitTests = computed(() => {
 const currentUnitTest = computed(() => {
   return currentUnitTests.value[currentUnitTestKey.value];
 });
+
 const rawCurrentUnitSelectValue = ref("");
 const currentUnitSelectValue = computed(() => {
   if (currentUnitTest.value.select) {
@@ -79,6 +81,16 @@ const currentUnitSelectValue = computed(() => {
     return undefined;
   }
 });
+
+const rawCurrentUnitInputValue = ref("");
+const currentUnitInputValue = computed(() => {
+  if (currentUnitTest.value.input) {
+    return rawCurrentUnitInputValue.value;
+  } else {
+    return undefined;
+  }
+});
+
 const emits = defineEmits<{
   (e: "storyNodesChange", storyNodes: StoryNode[]): void;
 }>();
@@ -95,4 +107,12 @@ emits(
   "storyNodesChange",
   currentUnitTest.value.getStoryNodes(cloneDeep(initStoryNodes))
 );
+function runTest() {
+  if (props.player) {
+    currentUnitTest.value.runTest(props.player, {
+      select: currentUnitSelectValue.value,
+      input: currentUnitInputValue.value,
+    });
+  }
+}
 </script>

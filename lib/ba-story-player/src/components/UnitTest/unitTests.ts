@@ -7,9 +7,11 @@ export interface UnitTest {
     player: InstanceType<typeof StoryPlayer>,
     arg: {
       select?: string;
+      input?: string;
     }
   ) => Promise<void>;
   select?: string[];
+  input?: string;
 }
 
 const ACTIONS = [
@@ -837,6 +839,25 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
         "多个action",
         "emotion与action混合",
       ],
+    },
+  },
+  effect: {
+    otherEffect: {
+      getStoryNodes(initStoryNodes) {
+        return initStoryNodes;
+      },
+      async runTest(player, arg) {
+        const storyManager = player.storyManager;
+        const storyNodes = storyManager.storyNodes();
+        storyNodes[3].effect.action = {
+          type: "wait",
+          args: Number(arg.input),
+        };
+        storyNodes[5].nextNodeIndex = -1;
+        storyManager.switch(3);
+        storyManager.auto.value = true;
+      },
+      input: "暂停时间",
     },
   },
 };
