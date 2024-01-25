@@ -65,7 +65,7 @@
     jp: 黒舘
     en: Kurodate
     kr: 쿠로다테
-    tw: 黒舘
+    tw: 黑舘
     th: คุโรดาเตะ
   name:
     cn: 晴奈
@@ -640,7 +640,8 @@
     kr: 아즈사(수영복)
     tw: 梓(泳裝)
     th: อาซึสะ (ชุดว่ายน้ำ)
-  nickname: []
+  nickname:
+    - 水梓
   birthday:
     month: 12
     day: 26
@@ -790,6 +791,7 @@
     th: เนรุ (บันนี่เกิร์ล)
   nickname:
     - 兔女郎尼禄
+    - 兔尼禄
     - 红兔
   birthday:
     month: 8
@@ -822,6 +824,7 @@
     - 黑皮
     - 花梨
     - 兔女郎花凛
+    - 兔花凛
     - 黑兔
   birthday:
     month: 2
@@ -1682,7 +1685,7 @@
     jp: 黒舘
     en: Kurodate
     kr: 쿠로다테
-    tw: 黒舘
+    tw: 黑舘
     th: คุโรดาเตะ
   name:
     cn: 晴奈(正月)
@@ -2495,6 +2498,34 @@
   armorType: LightArmor
   bulletType: Explosion
   weapon: AR
+- id: 10087
+  familyName:
+    cn: 天雨
+    jp: 天雨
+    en: Amau
+    kr: 아마우
+    tw: 天雨
+    th: 天雨
+  name:
+    cn: 亚子(礼服)
+    jp: アコ（ドレス）
+    en: Ako (Dress)
+    kr: 아코(드레스)
+    tw: アコ（ドレス）
+    th: อาโกะ (ชุดเดรส)
+  nickname: []
+  birthday:
+    month: 12
+    day: 22
+  club: 风纪委员会
+  clubCode: Fuuki
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Explosion
+  weapon: HG
 - id: 13000
   familyName:
     cn: 室笠
@@ -2738,7 +2769,7 @@
     jp: 黒見
     en: Kuromi
     kr: 쿠로미
-    tw: 黒見
+    tw: 黑見
     th: คุโรมิ
   name:
     cn: 芹香
@@ -3157,7 +3188,7 @@
     jp: 合歓垣
     en: Nemugaki
     kr: 네무가키
-    tw: 合歓垣
+    tw: 合歡垣
     th: เนมุคากิ
   name:
     cn: 吹雪
@@ -3323,6 +3354,34 @@
   armorType: HeavyArmor
   bulletType: Mystic
   weapon: SR
+- id: 16014
+  familyName:
+    cn: 丹花
+    jp: 丹花
+    en: Tanga
+    kr: 탄가
+    tw: 丹花
+    th: 丹花
+  name:
+    cn: 伊吹
+    jp: イブキ
+    en: Ibuki
+    kr: 이부키
+    tw: イブキ
+    th: อิบูกิ
+  nickname: []
+  birthday:
+    month: 4
+    day: 14
+  club: 万魔殿
+  clubCode: PandemoniumSociety
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 1
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: AR
 - id: 20000
   familyName:
     cn: 猫塚
@@ -3388,7 +3447,7 @@
     jp: 薬子
     en: Yakushi
     kr: 야쿠시
-    tw: 薬子
+    tw: 藥子
     th: ยาคูชิ
   name:
     cn: 沙耶
@@ -3511,7 +3570,7 @@
     jp: 薬子
     en: Yakushi
     kr: 야쿠시
-    tw: 薬子
+    tw: 藥子
     th: ยาคูชิ
   name:
     cn: 沙耶(私服)
@@ -3657,7 +3716,7 @@
     jp: 黒見
     en: Kuromi
     kr: 쿠로미
-    tw: 黒見
+    tw: 黑見
     th: คุโรมิ
   name:
     cn: 芹香(正月)
@@ -4121,7 +4180,7 @@
     en: Sunaookami
     kr: 스나오오카미
     tw: 砂狼
-    th: 砂狼
+    th: สึนาโอกามิ
   name:
     cn: 白子(泳装)
     jp: シロコ（水着）
@@ -4287,6 +4346,34 @@
   armorType: Unarmed
   bulletType: Mystic
   weapon: SG
+- id: 20033
+  familyName:
+    cn: 羽沼
+    jp: 羽沼
+    en: Hanuma
+    kr: 하누마
+    tw: 羽沼
+    th: 羽沼
+  name:
+    cn: 真琴
+    jp: マコト
+    en: Makoto
+    kr: 마코토
+    tw: マコト
+    th: มาโคโตะ
+  nickname: []
+  birthday:
+    month: 3
+    day: 19
+  club: 万魔殿
+  clubCode: PandemoniumSociety
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Special
+  armorType: Unarmed
+  bulletType: Pierce
+  weapon: SR
 - id: 23000
   familyName:
     cn: 栗村
