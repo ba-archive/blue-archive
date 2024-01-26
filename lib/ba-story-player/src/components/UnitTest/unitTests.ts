@@ -1,8 +1,10 @@
 import { StoryNode } from "../../../lib/type";
 import { waitMs } from "../../../lib/utils";
 import StoryPlayer from "../../../lib/StoryPlayer.vue";
+
+type GetStoryNodeFunction = (initStoryNodes: StoryNode[]) => StoryNode[];
 export interface UnitTest {
-  getStoryNodes: (initStoryNodes: StoryNode[]) => StoryNode[];
+  getStoryNodes: GetStoryNodeFunction;
   runTest: (
     player: InstanceType<typeof StoryPlayer>,
     arg: {
@@ -13,6 +15,9 @@ export interface UnitTest {
   select?: string[];
   input?: string;
 }
+export type UnitTestsFilteByCategory = {
+  [key: string]: UnitTest | UnitTestsFilteByCategory;
+};
 
 const ACTIONS = [
   "a",
@@ -57,8 +62,100 @@ const EMOTIONS = [
   "Tear",
   "Zzz",
 ];
+const showCharacterGetStoryNodes: GetStoryNodeFunction = function (
+  initStoryNodes
+) {
+  initStoryNodes[1] = {
+    ...initStoryNodes[1],
+    characters: [
+      {
+        initPosition: 3,
+        CharacterSpine: {
+          common:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+          superSampling2x:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        },
+        face: "02",
+        state: "highlight",
+        effects: [
+          {
+            type: "fx",
+            effect: "shot",
+            async: false,
+          },
+        ],
+      },
+      {
+        initPosition: 1,
+        CharacterSpine: {
+          common:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+          superSampling2x:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+        },
+        face: "02",
+        state: "highlight",
+        effects: [
+          {
+            type: "fx",
+            effect: "shot",
+            async: false,
+          },
+        ],
+      },
+    ],
+  };
+  return initStoryNodes;
+};
+const multiCharactersGetStoryNodes: GetStoryNodeFunction = function (
+  initStoryNodes
+) {
+  initStoryNodes[1] = {
+    ...initStoryNodes[1],
+    characters: [
+      {
+        initPosition: 3,
+        CharacterSpine: {
+          common:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+          superSampling2x:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        },
+        face: "02",
+        state: "highlight",
+        effects: [
+          {
+            type: "fx",
+            effect: "shot",
+            async: false,
+          },
+        ],
+      },
+      {
+        initPosition: 1,
+        CharacterSpine: {
+          common:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+          superSampling2x:
+            "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+        },
+        face: "02",
+        state: "highlight",
+        effects: [
+          {
+            type: "fx",
+            effect: "shot",
+            async: false,
+          },
+        ],
+      },
+    ],
+  };
+  return initStoryNodes;
+};
 
-const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
+const unitTestsFilteByCategory: UnitTestsFilteByCategory = {
   audio: {
     changeBgm: {
       getStoryNodes(initStoryNodes) {
@@ -394,212 +491,174 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
       select: ["shot"],
     },
     showCharacter: {
-      getStoryNodes(initStoryNodes) {
-        initStoryNodes[1] = {
-          ...initStoryNodes[1],
-          characters: [
-            {
-              initPosition: 3,
-              CharacterSpine: {
-                common:
-                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                superSampling2x:
-                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+      显示所有: {
+        getStoryNodes: showCharacterGetStoryNodes,
+        async runTest(player) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[0],
+            characters: [
+              {
+                initPosition: 1,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [],
               },
-              face: "02",
-              state: "highlight",
-              effects: [
-                {
-                  type: "fx",
-                  effect: "shot",
-                  async: false,
+              {
+                initPosition: 2,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
                 },
-              ],
-            },
-            {
-              initPosition: 1,
-              CharacterSpine: {
-                common:
-                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
-                superSampling2x:
-                  "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                face: "02",
+                state: "highlight",
+                effects: [],
               },
-              face: "02",
-              state: "highlight",
-              effects: [
-                {
-                  type: "fx",
-                  effect: "shot",
-                  async: false,
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
                 },
-              ],
-            },
-          ],
-        };
-        return initStoryNodes;
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+              {
+                initPosition: 4,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+              {
+                initPosition: 5,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+            ],
+          };
+
+          player.storyManager.switch(1);
+        },
       },
-      async runTest(player, arg) {
-        if (arg.select) {
-          if (arg.select === "显示所有") {
-            const storyNodes = player.storyManager.storyNodes();
-            storyNodes[1] = {
-              ...storyNodes[0],
-              characters: [
-                {
-                  initPosition: 1,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
+      替换: {
+        getStoryNodes: showCharacterGetStoryNodes,
+        async runTest(player) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[0],
+            nextNodeIndex: 2,
+            characters: [
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
                 },
-                {
-                  initPosition: 2,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+            ],
+          };
+          storyNodes[2] = {
+            ...storyNodes[0],
+            nextNodeIndex: -1,
+            characters: [
+              {
+                initPosition: 3,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
                 },
-                {
-                  initPosition: 3,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-                {
-                  initPosition: 4,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-                {
-                  initPosition: 5,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-              ],
-            };
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+            ],
+          };
 
-            player.storyManager.switch(1);
-          } else if (arg.select === "替换") {
-            const storyNodes = player.storyManager.storyNodes();
-            storyNodes[1] = {
-              ...storyNodes[0],
-              nextNodeIndex: 2,
-              characters: [
-                {
-                  initPosition: 3,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-              ],
-            };
-            storyNodes[2] = {
-              ...storyNodes[0],
-              nextNodeIndex: -1,
-              characters: [
-                {
-                  initPosition: 3,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0183_spr/CH0183_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-              ],
-            };
-
-            await player.storyManager.switch(1);
-            await waitMs(1000);
-            player.storyManager.next();
-          } else if (arg.select === "切换位置与删除") {
-            const storyNodes = player.storyManager.storyNodes();
-            storyNodes[1] = {
-              ...storyNodes[0],
-              nextNodeIndex: 2,
-              characters: [
-                {
-                  initPosition: 1,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-              ],
-            };
-            storyNodes[2] = {
-              ...storyNodes[0],
-              nextNodeIndex: 3,
-              characters: [
-                {
-                  initPosition: 5,
-                  CharacterSpine: {
-                    common:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                    superSampling2x:
-                      "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
-                  },
-                  face: "02",
-                  state: "highlight",
-                  effects: [],
-                },
-              ],
-            };
-            storyNodes[3] = {
-              ...storyNodes[0],
-              nextNodeIndex: -1,
-            };
-
-            await player.storyManager.switch(1);
-            player.storyManager.auto.value = true;
-          }
-        }
+          await player.storyManager.switch(1);
+          await waitMs(1000);
+          player.storyManager.next();
+        },
       },
-      select: ["显示所有", "替换", "切换位置与删除"],
+      切换位置与删除: {
+        getStoryNodes: showCharacterGetStoryNodes,
+        async runTest(player) {
+          const storyNodes = player.storyManager.storyNodes();
+          storyNodes[1] = {
+            ...storyNodes[0],
+            nextNodeIndex: 2,
+            characters: [
+              {
+                initPosition: 1,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+            ],
+          };
+          storyNodes[2] = {
+            ...storyNodes[0],
+            nextNodeIndex: 3,
+            characters: [
+              {
+                initPosition: 5,
+                CharacterSpine: {
+                  common:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                  superSampling2x:
+                    "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+                },
+                face: "02",
+                state: "highlight",
+                effects: [],
+              },
+            ],
+          };
+          storyNodes[3] = {
+            ...storyNodes[0],
+            nextNodeIndex: -1,
+          };
+
+          await player.storyManager.switch(1);
+          player.storyManager.auto.value = true;
+        },
+      },
     },
     multiCharacters: {
       getStoryNodes(initStoryNodes) {
