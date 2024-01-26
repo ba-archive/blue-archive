@@ -4,21 +4,20 @@ import { gsap } from "gsap";
 import { ZINDEXBASE, timelineToPauseAble } from "../../utils";
 
 export class BgLayer extends Layer {
-  currentBgUrl = "";
   animations: { bgOverlap: typeof loadBgOverlapAnimation } = {
     bgOverlap: loadBgOverlapAnimation,
   };
   checkMethodMap: Record<"loadBg" | string, CheckMethod<this>> = {
     loadBg,
   };
-  instances: { bgInstance?: Sprite } = {};
+  instances: { bgInstance?: { url: string; instance: Sprite } } = {};
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
-    handlerMap.getBgInstance = () => this.instances.bgInstance;
+    handlerMap.getBgInstance = () => this.instances.bgInstance?.instance;
   }
   async resize(app: Application) {
     if (this.instances.bgInstance) {
-      initBg(this.instances.bgInstance, app);
+      initBg(this.instances.bgInstance.instance, app);
     }
   }
 }
@@ -52,7 +51,7 @@ export function initBg(background: Sprite, app: Application) {
 
 const loadBg: CheckMethod<BgLayer> = async function (node, app, handlerMap) {
   if (node.bg) {
-    if (node.bg.url !== this.currentBgUrl) {
+    if (node.bg.url !== this.instances.bgInstance?.url) {
       const newBg = handlerMap.getResources<"img">("img", node.bg.url);
       if (!newBg) {
         throw new Error("获取bg资源失败");
@@ -63,13 +62,16 @@ const loadBg: CheckMethod<BgLayer> = async function (node, app, handlerMap) {
           const bgOverlap = this.animations.bgOverlap;
           bgOverlap.args = { instance: newBg, overlap: node.bg.overlap };
           await this.animations.bgOverlap.animate();
-          if (this.instances.bgInstance) {
-            app.stage.removeChild(this.instances.bgInstance);
-          }
         } else {
           initBg(newBg, app);
         }
-        this.instances.bgInstance = newBg;
+        if (this.instances.bgInstance) {
+          app.stage.removeChild(this.instances.bgInstance.instance);
+        }
+        this.instances.bgInstance = {
+          instance: newBg,
+          url: node.bg.url,
+        };
       }
     }
   }
