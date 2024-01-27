@@ -14,29 +14,50 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    function getOptions(propertyChain: string[]) {
+    function getOptions(propertyChain: string[], currentSelectOption?: string) {
       let current: UnitTestsFilteByCategory = cloneDeep(
         props.unitTestsFilteByCategory
       );
       for (const property of propertyChain) {
-        console.log("property: ", property);
         if (Reflect.get(current[property], "getStoryNodes") !== undefined) {
           return;
         }
         current = current[property] as UnitTestsFilteByCategory;
       }
-      console.log("current:", current);
-      return Object.keys(current).map(option => h("option", option));
+      const options = Object.keys(current);
+      if (currentSelectOption) {
+        return options.map(option => {
+          if (option === currentSelectOption) {
+            return h("option", { selected: true }, [option]);
+          } else {
+            return h("option", option);
+          }
+        });
+      } else {
+        const finalOptionNodes = options.map(option => h("option", option));
+        finalOptionNodes.unshift(
+          h("option", { disable: true, selected: true, hidden: true }, [""])
+        );
+        return finalOptionNodes;
+      }
     }
     function getFinalSelects(propertyChain: string[]) {
-      console.log("getFinalSelects run! propertyChain:", propertyChain);
       const currentFinalSelects: VNode[] = [];
       for (
         let currentLen = 0;
         currentLen < propertyChain.length + 1;
         ++currentLen
       ) {
-        const options = getOptions(propertyChain.slice(0, currentLen));
+        let options: VNode[] | undefined;
+        if (currentLen < propertyChain.length) {
+          options = getOptions(
+            propertyChain.slice(0, currentLen),
+            propertyChain[currentLen]
+          );
+        } else {
+          options = getOptions(propertyChain.slice(0, currentLen));
+        }
+
         if (options) {
           currentFinalSelects.push(
             h(
@@ -46,7 +67,7 @@ export default defineComponent({
                   display: "block",
                   margin: "3px 0",
                 },
-                onChange: (e: Event) => {
+                onInput: (e: Event) => {
                   const select = e.target as HTMLSelectElement;
                   const persistLen = Number(currentLen);
                   const currentModelValue = propertyChain
@@ -54,7 +75,6 @@ export default defineComponent({
                     .concat([select.value]);
                   emit("update:modelValue", currentModelValue);
                   finalSelects.value = getFinalSelects(currentModelValue);
-                  console.log("finalSelects:", finalSelects.value);
                 },
               },
               options
@@ -64,11 +84,13 @@ export default defineComponent({
           break;
         }
       }
+
       return currentFinalSelects;
     }
 
     const finalSelects = ref<VNode[]>([]);
     finalSelects.value = getFinalSelects(props.modelValue);
+
     return () => h("div", null, finalSelects.value);
   },
 });
