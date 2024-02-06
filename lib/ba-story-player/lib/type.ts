@@ -50,7 +50,7 @@ export interface BGEffectExcelTableItem {
 export type ZmcArgs =
   | {
       type: "move";
-      position: [number, number];
+      to: [number, number];
       size: number;
       duration: number;
     }
@@ -336,6 +336,11 @@ export interface Animation<Arg extends Record<string, any>> {
   animate: () => Promise<void>;
   final: () => Promise<void>;
 }
+
+export const DefaultFinalFunction = async function (this: Animation<any>) {
+  await Promise.all(this.runningAnimation.map(animation => animation.pause()));
+  this.runningAnimation = [];
+};
 
 export class Layer {
   checkMethodMap: Record<string, CheckMethod<this>> = {};

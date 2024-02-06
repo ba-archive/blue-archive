@@ -1,9 +1,16 @@
 import { CheckMethod, Layer } from "@/type";
-import { otherEffectAnimations, wait } from "./effect/otherEffect";
+import {
+  otherEffectAnimations,
+  wait,
+  ZmcInstance,
+  otherEffectCheckMethods,
+} from "./effect/otherEffect";
 
 export default class EffectLayer extends Layer {
   animations = { ...otherEffectAnimations };
-  checkMethodMap: Record<string | "wait", CheckMethod<this>> = {
+  instances: { zmcInstance?: ZmcInstance } = {};
+  checkMethodMap = {
     wait,
+    ...otherEffectCheckMethods,
   };
 }

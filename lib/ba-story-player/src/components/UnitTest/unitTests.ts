@@ -878,6 +878,42 @@ const unitTestsFilteByCategory: UnitTestsFilteByCategory = {
         },
         input: "暂停时间",
       },
+      zmc: {
+        instant: {
+          getStoryNodes(init) {
+            init[1] = {
+              ...init[1],
+              bg: {
+                url: "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg",
+              },
+              effect: {
+                action: {
+                  type: "zmc",
+                  args: {
+                    type: "instant",
+                    position: [0, -222],
+                    size: 2528,
+                  },
+                },
+              },
+            };
+            init[2] = {
+              ...init[1],
+              nextNodeIndex: 3,
+            };
+            init[3] = {
+              ...init[1],
+              effect: {},
+              nextNodeIndex: -1,
+            };
+
+            return init;
+          },
+          async runTest(player) {
+            await player.storyManager.switch(1);
+          },
+        },
+      },
     },
   },
 };
