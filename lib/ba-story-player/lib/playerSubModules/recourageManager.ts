@@ -60,6 +60,7 @@ export function setSuperSampling(type: string) {
 }
 
 const resourcerManager = {
+  l2dVoiceMap: {} as Record<string, string>,
   loader: Loader.shared,
   state: "done" as "loading" | "done",
   audioSoundMap: new Map<string, Howl>(),
@@ -128,7 +129,7 @@ const resourcerManager = {
         if (l2dUrl) {
           const l2dSpinedata: ISkeletonData = this.loader.resources[l2dUrl]
             .spineData as ISkeletonData;
-          audioUrls.concat(this.getL2dVoiceUrls(l2dSpinedata.events));
+          audioUrls.push(...this.getL2dVoiceUrls(l2dSpinedata.events));
         }
         try {
           await this.preloadSound(audioUrls);
@@ -269,7 +270,11 @@ const resourcerManager = {
           !unexistL2dSoundEvent.includes(it.name)
         );
       })
-      .map(it => getL2dVoiceUrl(it.name));
+      .map(it => {
+        const url = getL2dVoiceUrl(it.name);
+        this.l2dVoiceMap[url] = it.name;
+        return url;
+      });
     return audios;
   },
   addBGEffectImgs() {
@@ -318,6 +323,11 @@ const resourcerManager = {
             } else if (Object.keys(bgEffectSoundMap).includes(audioUrl)) {
               this.audioSoundMap.set(
                 bgEffectSoundMap[audioUrl],
+                newAudio.load()
+              );
+            } else if (Object.keys(this.l2dVoiceMap).includes(audioUrl)) {
+              this.audioSoundMap.set(
+                this.l2dVoiceMap[audioUrl],
                 newAudio.load()
               );
             }
