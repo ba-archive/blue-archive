@@ -839,6 +839,16 @@ const unitTestsFilteByCategory: Record<string, Record<string, UnitTest>> = {
       ],
     },
   },
+  l2d: {
+    enter: {
+      getStoryNodes(init) {
+        return init;
+      },
+      async runTest(player) {
+        await player.storyManager.switch(19);
+      },
+    },
+  },
 };
 
 export default unitTestsFilteByCategory;

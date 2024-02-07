@@ -47,6 +47,16 @@ export interface BGEffectExcelTableItem {
   ScrollFrom: number;
   ScrollTo: number;
 }
+export type TransitionTypes = "bgoverlap" | "fade" | "fade_white" | string;
+export interface TransitionTableItem {
+  Name: number;
+  TransitionOut: TransitionTypes;
+  TransitionOutDuration: number;
+  TransitionOutResource: null | string;
+  TransitionIn: TransitionTypes;
+  TransitionInDuration: number;
+  TransitionInResource: null | string;
+}
 export type ZmcArgs =
   | {
       type: "move";
@@ -117,7 +127,7 @@ export interface CharacterEffect {
 export type CharacterEffectType = "emotion" | "action" | "fx";
 
 export type IL2dPlayQue = {
-  name: string;
+  spineUrl: SpineUrls;
   animation: string;
   fadeTime?: number;
   secondFadeTime?: number;
@@ -275,16 +285,19 @@ interface RawStoryNode {
     | {
         state: "start";
         startArg: L2DStartArg;
+        scale: number;
         spineUrl: SpineUrls;
       }
     | {
         state: "playing";
         currentAnimation: string;
+        scale: number;
         spineUrl: SpineUrls;
       };
   effect: {
     bgEffect: BGEffectExcelTableItem;
-    action: OtherEffect;
+    action: OtherEffect[];
+    transition: TransitionTableItem;
   };
   nextNodeIndex: number;
 }

@@ -188,5 +188,1085 @@
       "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PV4_066.jpg"
     },
     "nextNodeIndex": 18
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": {
+      "transition": {
+        "Name": 2482233134,
+        "TransitionOut": "fade",
+        "TransitionOutDuration": 2000,
+        "TransitionOutResource": "",
+        "TransitionIn": "fade",
+        "TransitionInDuration": 2000,
+        "TransitionInResource": ""
+      }
+    },
+
+    "l2d": {
+      "state": "start",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "startArg": {
+        "name": "CH0184_home",
+        "playQue": [
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_01",
+            "fadeTime": 1,
+            "fade": true
+          },
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_00/CH0184_00.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_01",
+            "fadeTime": 1,
+            "fade": true
+          },
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_02"
+          }
+        ],
+        "otherSpine": [
+          {
+            "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_00/CH0184_00.skel",
+            "superSampling2x": ""
+          }
+        ]
+      }
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 23000 }] },
+
+    "l2d": {
+      "state": "start",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "startArg": {
+        "name": "CH0184_home",
+        "playQue": [
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_01",
+            "fadeTime": 1,
+            "fade": true
+          },
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_00/CH0184_00.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_01",
+            "fadeTime": 1,
+            "fade": true
+          },
+          {
+            "spineUrl": {
+              "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+              "superSampling2x": ""
+            },
+            "animation": "Start_Idle_02"
+          }
+        ],
+        "otherSpine": [
+          {
+            "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_00/CH0184_00.skel",
+            "superSampling2x": ""
+          }
+        ]
+      }
+    },
+    "nextNodeIndex": 20
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 哈、" },
+              "waitTime": 0,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "哈……" },
+              "waitTime": 1500,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": "Talk_01_M"
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 哈、" },
+              "waitTime": 0,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "哈……" },
+              "waitTime": 1500,
+              "effects": []
+            }
+          ]
+        },
+        {
+          "args": [[-1200, -630], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 没想到" },
+              "waitTime": 1800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "只过了" },
+              "waitTime": 500,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "几个月" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "时间" },
+              "waitTime": 600,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "体力" },
+              "waitTime": 1100,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "就下降" },
+              "waitTime": 500,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "到了" },
+              "waitTime": 500,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "这种程度……" },
+              "waitTime": 200,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 2300 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 23
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 为了" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不在" },
+              "waitTime": 1000,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "「晄轮大祭」" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "上" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "出丑……" },
+              "waitTime": 400,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 为了" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不在" },
+              "waitTime": 1000,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "「晄轮大祭」" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "上" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "出丑……" },
+              "waitTime": 400,
+              "effects": []
+            }
+          ]
+        },
+        {
+          "args": [[-1200, -630], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 我必须" },
+              "waitTime": 1200,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "更加努力" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "锻炼才行。" },
+              "waitTime": 800,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 3500 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 27
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 啊，" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "老师" },
+              "waitTime": 700,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "您需要" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "喝点水吗？" },
+              "waitTime": 400,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": "Talk_02_M"
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 3500 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 30
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 好的，" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "请喝……" },
+              "waitTime": 400,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": "Talk_03_M"
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 1500 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 33
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 等、" },
+              "waitTime": 800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "等一下" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "老师！" },
+              "waitTime": 300,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 等、" },
+              "waitTime": 800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "等一下" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "老师！" },
+              "waitTime": 300,
+              "effects": []
+            }
+          ]
+        },
+        {
+          "args": [[-1200, -630], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 现、" },
+              "waitTime": 800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "现在" },
+              "waitTime": 800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "果然还是" },
+              "waitTime": 600,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不行！" },
+              "waitTime": 600,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 3500 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 37
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― （要是" },
+              "waitTime": 700,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "老师" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "现在喝了" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "我" },
+              "waitTime": 100,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "对嘴喝的" },
+              "waitTime": 700,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "这瓶水的话……" },
+              "waitTime": 1000,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": "Talk_04_M"
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― （要是" },
+              "waitTime": 700,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "老师" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "现在喝了" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "我" },
+              "waitTime": 100,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "对嘴喝的" },
+              "waitTime": 700,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "这瓶水的话……" },
+              "waitTime": 1000,
+              "effects": []
+            }
+          ]
+        },
+        {
+          "args": [[-1200, -630], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 不就是事实上的" },
+              "waitTime": 2300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "间接" },
+              "waitTime": 1500,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "接……）" },
+              "waitTime": 700,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 2000 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 41
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― （不行" },
+              "waitTime": 0,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不行，" },
+              "waitTime": 200,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "就算是" },
+              "waitTime": 900,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "现在这种" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "情况" },
+              "waitTime": 300,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― （不行" },
+              "waitTime": 0,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不行，" },
+              "waitTime": 200,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "就算是" },
+              "waitTime": 900,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "现在这种" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "情况" },
+              "waitTime": 300,
+              "effects": []
+            }
+          ]
+        },
+        {
+          "args": [[-1200, -630], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 那样" },
+              "waitTime": 1600,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不知羞耻的" },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "事情" },
+              "waitTime": 400,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "绝对" },
+              "waitTime": 500,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "不行……！）" },
+              "waitTime": 400,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 4000 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 45
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― （但是……" },
+              "waitTime": 800,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "如果是老师的话……）" },
+              "waitTime": 2200,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": "Talk_05_M"
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 2500 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 48
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {
+      "st": [
+        {
+          "args": [[-1200, -530], "serial", 60],
+          "middle": false,
+          "text": [
+            {
+              "content": { "jp": "", "cn": "― 只能…… " },
+              "waitTime": 300,
+              "effects": []
+            },
+            {
+              "content": { "jp": "", "cn": "喝一口哦……？" },
+              "waitTime": 2000,
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {},
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 5000 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 51
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": {
+      "transition": {
+        "Name": 2482233134,
+        "TransitionOut": "fade",
+        "TransitionOutDuration": 2000,
+        "TransitionOutResource": "",
+        "TransitionIn": "fade",
+        "TransitionInDuration": 2000,
+        "TransitionInResource": ""
+      }
+    },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 19
+  },
+  {
+    "ui": { "menuState": true },
+    "audio": {},
+    "text": {},
+    "effect": { "action": [{ "type": "wait", "args": 1000 }] },
+
+    "l2d": {
+      "state": "playing",
+      "spineUrl": {
+        "common": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+        "superSampling2x": ""
+      },
+      "scale": 1,
+      "currentAnimation": ""
+    },
+    "nextNodeIndex": 53
   }
 ]
