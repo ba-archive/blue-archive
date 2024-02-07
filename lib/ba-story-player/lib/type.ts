@@ -314,7 +314,21 @@ export interface ResourceMap {
   emotion: { key: string; value: Sprite[] };
   fx: { key: string; value: Sprite[] };
 }
+export interface CallalbeEffectConfigMap {
+  fade: {
+    color: "white" | "black";
+    toSolidDuration: number;
+    solidStateDuration: number;
+    toNormalDuration: number;
+  };
+}
 
+interface callEffectType {
+  <T extends keyof CallalbeEffectConfigMap>(
+    effect: T,
+    config: CallalbeEffectConfigMap[T]
+  ): Promise<void>;
+}
 export interface HandlerMap {
   getResources: <T extends keyof ResourceMap>(
     type: T,
@@ -322,6 +336,7 @@ export interface HandlerMap {
   ) => ResourceMap[T]["value"] | undefined;
   getBgInstance: () => Sprite | undefined;
   playAudio: (url: string, setting: AudioSetting) => void;
+  callEffect: callEffectType;
 }
 export type CheckMethod<T> = (
   this: T,
