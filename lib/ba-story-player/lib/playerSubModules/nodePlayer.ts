@@ -30,6 +30,9 @@ export default class NodePlayer {
   constructor(width: number) {
     this.app = new Application({ width: width, height: PIXIHeight });
     this.handlerMap = {} as HandlerMap;
+    this.handlerMap.callEffect = async (effect, config) => {
+      console.log(`call effect!effect,effect:${effect},config:`, config);
+    };
     const tempInstances: Record<string, unknown> = {};
     for (const key of Object.keys(registerServers) as Array<
       keyof RegisterServers
