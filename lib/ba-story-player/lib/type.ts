@@ -47,18 +47,18 @@ export interface BGEffectExcelTableItem {
   ScrollFrom: number;
   ScrollTo: number;
 }
-export type ZmcArgs =
-  | {
-      type: "move";
-      to: [number, number];
-      size: number;
-      duration: number;
-    }
-  | {
-      type: "instant";
-      position: [number, number];
-      size: number;
-    };
+export interface ZmcMoveArg {
+  type: "move";
+  from: { position: [number, number]; size: number };
+  to: { position: [number, number]; size: number };
+  duration: number;
+}
+export interface ZmcInstanceArg {
+  type: "instant";
+  position: [number, number];
+  size: number;
+}
+export type ZmcArgs = ZmcMoveArg | ZmcInstanceArg;
 export type OtherEffect =
   | {
       type: "wait";
