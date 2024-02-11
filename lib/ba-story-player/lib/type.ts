@@ -47,18 +47,29 @@ export interface BGEffectExcelTableItem {
   ScrollFrom: number;
   ScrollTo: number;
 }
-export type ZmcArgs =
-  | {
-      type: "move";
-      position: [number, number];
-      size: number;
-      duration: number;
-    }
-  | {
-      type: "instant";
-      position: [number, number];
-      size: number;
-    };
+export interface ZmcMoveArg {
+  type: "move";
+  from: { position: [number, number]; size: number };
+  to: { position: [number, number]; size: number };
+  duration: number;
+}
+export interface ZmcInstanceArg {
+  type: "instant";
+  position: [number, number];
+  size: number;
+}
+export type ZmcArgs = ZmcMoveArg | ZmcInstanceArg;
+export interface TransitionTableItem {
+  Name: number;
+  TransitionOut: TransitionTypes;
+  TransitionOutDuration: number;
+  TransitionOutResource: null | string;
+  TransitionIn: TransitionTypes;
+  TransitionInDuration: number;
+  TransitionInResource: null | string;
+}
+
+export type TransitionTypes = "fade" | "fade_white" | string;
 export type OtherEffect =
   | {
       type: "wait";
@@ -73,7 +84,8 @@ export type OtherEffect =
     }
   | {
       type: "bgshake";
-    };
+    }
+  | { type: "transition"; args: TransitionTableItem };
 
 export interface BGMExcelTableItem {
   Id: number;
@@ -314,7 +326,21 @@ export interface ResourceMap {
   emotion: { key: string; value: Sprite[] };
   fx: { key: string; value: Sprite[] };
 }
+export interface CallalbeEffectConfigMap {
+  fade: {
+    color: "white" | "black";
+    toSolidDuration: number;
+    solidStateDuration: number;
+    toNormalDuration: number;
+  };
+}
 
+interface callEffectType {
+  <T extends keyof CallalbeEffectConfigMap>(
+    effect: T,
+    config: CallalbeEffectConfigMap[T]
+  ): Promise<void>;
+}
 export interface HandlerMap {
   getResources: <T extends keyof ResourceMap>(
     type: T,
@@ -322,6 +348,7 @@ export interface HandlerMap {
   ) => ResourceMap[T]["value"] | undefined;
   getBgInstance: () => Sprite | undefined;
   playAudio: (url: string, setting: AudioSetting) => void;
+  callEffect: callEffectType;
 }
 export type CheckMethod<T> = (
   this: T,
@@ -336,6 +363,11 @@ export interface Animation<Arg extends Record<string, any>> {
   animate: () => Promise<void>;
   final: () => Promise<void>;
 }
+
+export const DefaultFinalFunction = async function (this: Animation<any>) {
+  await Promise.all(this.runningAnimation.map(animation => animation.pause()));
+  this.runningAnimation = [];
+};
 
 export class Layer {
   checkMethodMap: Record<string, CheckMethod<this>> = {};

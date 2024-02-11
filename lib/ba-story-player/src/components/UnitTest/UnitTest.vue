@@ -1,31 +1,12 @@
 <template>
   <div>
     <div>
-      <div>
-        <label>测试集</label>
-      </div>
-      <select v-model="currentTestCatogory">
-        <option
-          v-for="category in Object.keys(unitTestsFilteByCategory)"
-          :key="category"
-        >
-          {{ category }}
-        </option>
-      </select>
+      <label>选择测试</label>
     </div>
-    <div>
-      <div>
-        <label>测试</label>
-      </div>
-      <select v-model="currentUnitTestKey">
-        <option
-          v-for="unitTestKey in Object.keys(currentUnitTests)"
-          :key="unitTestKey"
-        >
-          {{ unitTestKey }}
-        </option>
-      </select>
-    </div>
+    <UnitTestSelect
+      :unit-tests-filte-by-category="unitTestsFilteByCategory"
+      v-model="currentPropertyChain"
+    />
     <div v-if="currentUnitTest.select">
       <div>选项</div>
       <select v-model="rawCurrentUnitSelectValue">
@@ -34,13 +15,14 @@
         </option>
       </select>
     </div>
+    <div v-if="currentUnitTest.input">
+      <div>
+        <label for="testInput">{{ currentUnitTest.input }}</label>
+      </div>
+      <input type="text" v-model="rawCurrentUnitInputValue" />
+    </div>
     <div>
-      <button
-        @click="
-          currentUnitTest.runTest(player, { select: currentUnitSelectValue })
-        "
-        :disabled="!storyResourceLoaded"
-      >
+      <button @click="runTest" :disabled="!storyResourceLoaded">
         run test
       </button>
     </div>
@@ -53,8 +35,12 @@ import { StoryNode } from "../../../lib/type";
 import testStoryNodes from "../../testStory.json";
 import { computed, ref, watch } from "vue";
 import Player from "../../../lib/StoryPlayer.vue";
-import unitTestsFilteByCategory from "./unitTests";
+import unitTestsFilteByCategory, {
+  UnitTestsFilteByCategory,
+  UnitTest,
+} from "./unitTests";
 import { cloneDeep } from "lodash-es";
+import UnitTestSelect from "./UnitTestSelect";
 
 const props = defineProps<{
   player: InstanceType<typeof Player> | null;
@@ -63,14 +49,27 @@ const props = defineProps<{
 
 const initStoryNodes: StoryNode[] = Array.from(testStoryNodes);
 
-const currentTestCatogory = useLocalStorage("category", "audio");
-const currentUnitTestKey = useLocalStorage("unitTest", "changeBgm");
-const currentUnitTests = computed(() => {
-  return unitTestsFilteByCategory[currentTestCatogory.value];
-});
+const currentPropertyChain = useLocalStorage<string[]>("propertyChain", []);
 const currentUnitTest = computed(() => {
-  return currentUnitTests.value[currentUnitTestKey.value];
+  let current = cloneDeep(unitTestsFilteByCategory);
+  for (const property of currentPropertyChain.value) {
+    if (Reflect.get(current[property], "getStoryNodes") !== undefined) {
+      return current[property] as UnitTest;
+    } else {
+      current = current[property] as UnitTestsFilteByCategory;
+    }
+  }
+  return {
+    getStoryNodes(init) {
+      return init;
+    },
+    async runTest() {
+      console.log("init test function");
+      return;
+    },
+  };
 });
+
 const rawCurrentUnitSelectValue = ref("");
 const currentUnitSelectValue = computed(() => {
   if (currentUnitTest.value.select) {
@@ -79,20 +78,32 @@ const currentUnitSelectValue = computed(() => {
     return undefined;
   }
 });
+
+const rawCurrentUnitInputValue = ref("");
+const currentUnitInputValue = computed(() => {
+  if (currentUnitTest.value.input) {
+    return rawCurrentUnitInputValue.value;
+  } else {
+    return undefined;
+  }
+});
+
 const emits = defineEmits<{
   (e: "storyNodesChange", storyNodes: StoryNode[]): void;
 }>();
 watch(currentUnitTest, newVal => {
-  const unitTestkeys = Object.keys(currentUnitTests.value);
-  if (!unitTestkeys.includes(currentUnitTestKey.value)) {
-    currentUnitTestKey.value = unitTestkeys[0];
-    return;
-  }
   emits("storyNodesChange", newVal.getStoryNodes(cloneDeep(initStoryNodes)));
-  newVal;
 });
 emits(
   "storyNodesChange",
   currentUnitTest.value.getStoryNodes(cloneDeep(initStoryNodes))
 );
+function runTest() {
+  if (props.player) {
+    currentUnitTest.value.runTest(props.player, {
+      select: currentUnitSelectValue.value,
+      input: currentUnitInputValue.value,
+    });
+  }
+}
 </script>

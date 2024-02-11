@@ -47,7 +47,9 @@ export default class StoryManager {
       if (this.storyState === "playing") {
         if (this.nodeState === "played") {
           window.requestIdleCallback(playFunction);
-          this.auto.value = false;
+          if (import.meta.env.DEV) {
+            this.auto.value = false;
+          }
           return;
         }
         try {
