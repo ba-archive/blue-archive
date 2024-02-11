@@ -12,14 +12,11 @@
         line[mainLanguage] || "暂无参考文本"
       }}</span>
       <div v-if="config.getShowAllLanguage">
-        <div
+        <span
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
+          >{{ getContentByLang(line, language) }}</span
         >
-          <span v-if="getContentByLang(line, language)">{{
-            getContentByLang(line, language)
-          }}</span>
-        </div>
       </div>
       <span v-if="!config.getShowAllLanguage">{{ line[targetLanguage] }}</span>
     </n-text>
@@ -119,7 +116,7 @@ function getLineType(line: ContentLine) {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0.5rem;
   overflow: visible;
 }
 .selected {
@@ -128,6 +125,7 @@ function getLineType(line: ContentLine) {
 .unsure {
   background-color: #ffce80;
 }
+
 span {
   :is(.type-title, .type-selection, .type-text) {
     &::before {
@@ -135,14 +133,15 @@ span {
       color: #165dff;
       background: rgba(32, 128, 240, 0.12);
       padding: 1px 4px;
-      margin-right: 4px;
+      margin-right: 6px;
       border-radius: 2px;
       align-items: center;
       font-size: 0.75rem;
+      width: 24px;
     }
   }
-  :not(.type-title, .type-selection, .type-text) {
-    padding-left: calc(0.5rem + 4px);
+  div {
+    padding-left: 38px;
   }
   .type-title::before {
     content: "标题";
