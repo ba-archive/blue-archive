@@ -1,4 +1,20 @@
 <template>
+  <n-modal
+    v-model:show="showModal"
+    preset="dialog"
+    :style="{ width: '600px' }"
+    size="huge"
+    :bordered="false"
+    to="body"
+    positive-text="确定"
+    negative-text="取消"
+    @positive-click="handlePositiveClick"
+  >
+    <template #header> MomoTalk 文件 </template>
+
+    您正在尝试上传一个 MomoTalk 文件。<br />
+    点击“确定”跳转到 MomoTalk 编辑器。
+  </n-modal>
   <div
     class="loadFile flex-vertical center fill-screen"
     @drop="dragHandle"
@@ -35,19 +51,20 @@
   </div>
 </template>
 <script setup lang="ts">
-import jsYaml from 'js-yaml';
-import { useScenarioStore } from '../store/scenarioEditorStore';
-import { Scenario } from '../types/content';
+import jsYaml from "js-yaml";
+import { useScenarioStore } from "../store/scenarioEditorStore";
+import { Scenario } from "../types/content";
+import { ref } from "vue";
+import { FileContent as MomotalkFileContent } from "../../MomotalkTranslator/types/FileContent";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const mainStore = useScenarioStore();
 
 const dragHandle = (event: DragEvent) => {
   event.preventDefault();
   const files = event.dataTransfer?.files;
-  if (files && files.length > 1) {
-    alert('只能上传一个文件，使用第一个文件作为输入');
-  }
-  // fileHandle(files![0]);
   if (files && 0 !== files.length) {
     fileHandle(files[0]);
   }
@@ -63,28 +80,40 @@ const inputHandle = (event: Event): void => {
   fileHandle(file);
 };
 
+const showModal = ref(false);
+const tempMomotalkData = ref({} as MomotalkFileContent);
+
+function handlePositiveClick() {
+  import("../../MomotalkTranslator/store/mainStore").then(module => {
+    const { useMainStore: callMomotalkStore } = module;
+    const momotalkStore = callMomotalkStore();
+    momotalkStore.setFileContent(tempMomotalkData.value);
+    router.push("/momotalk");
+  });
+}
+
 const fileHandle = (file: File): void => {
   mainStore.setTitle(file.name);
   readFile(file).then(data => {
     let parsed: Scenario = {} as Scenario;
     try {
-      if (file.name.endsWith('.json')) {
+      if (file.name.endsWith(".json")) {
         parsed = JSON.parse(data) as Scenario;
-      } else {
-        parsed = jsYaml.load(data) as Scenario;
+        mainStore.setScenario(parsed);
+      } else if (file.name.endsWith(".yaml") || file.name.endsWith(".yml")) {
+        showModal.value = true;
+        tempMomotalkData.value = jsYaml.load(data) as MomotalkFileContent;
       }
     } catch (e) {
       console.error(e);
-      alert('文件格式错误');
+      alert("文件格式错误");
       return;
     }
-    mainStore.setScenario(parsed);
-    console.log(mainStore.getScenario);
   });
 };
 
 const clickHandle = (): void => {
-  const fileInput = document.getElementById('uploadFile') as HTMLInputElement;
+  const fileInput = document.getElementById("uploadFile") as HTMLInputElement;
   fileInput.click();
 };
 

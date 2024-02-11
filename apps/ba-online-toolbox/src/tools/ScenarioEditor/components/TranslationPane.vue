@@ -71,6 +71,7 @@
               :min="0"
               :step="500"
               style="width: 8.5rem"
+              @keydown.enter="addTag()"
             >
               <template #suffix
                 ><span style="color: #999; font-size: 0.8rem"
