@@ -170,6 +170,11 @@ const zmcMoveAnimation: Animation<ZmcMoveArg & ZmcAnimationCommonArg> = {
         bgInstance
       );
       const tl = gsap.timeline();
+      this.runningAnimation.push({
+        async pause() {
+          await tl.clear();
+        },
+      });
       await tl.fromTo(
         bgInstance,
         {
@@ -189,11 +194,6 @@ const zmcMoveAnimation: Animation<ZmcMoveArg & ZmcAnimationCommonArg> = {
           ease: "none",
         }
       );
-      this.runningAnimation.push({
-        async pause() {
-          await tl.clear();
-        },
-      });
     }
   },
   final: DefaultFinalFunction,
@@ -258,12 +258,54 @@ const zmc: EffectCheckMethod = async function (node, app, handlerMap) {
   }
 };
 
+const bgShakeAnimation: Animation<{ bgInstance?: Sprite }> = {
+  args: {},
+  runningAnimation: [],
+  async animate() {
+    const bgInstance = this.args.bgInstance;
+    if (!bgInstance) {
+      throw new Error("参数错误, effect: bgshake");
+    }
+    const tl = gsap.timeline();
+    const fromX = bgInstance.width * 0.01;
+    const toX = bgInstance.width * 0.01;
+    this.runningAnimation.push({
+      async pause() {
+        await tl.clear();
+      },
+    });
+    await tl
+      .to(bgInstance, {
+        pixi: { x: `+=${fromX}` },
+        repeat: 1,
+        yoyo: true,
+        duration: 0.1,
+      })
+      .to(bgInstance, {
+        pixi: { x: `+=${toX}` },
+        repeat: 1,
+        yoyo: true,
+        duration: 0.1,
+      })
+      .repeat(1);
+  },
+  final: DefaultFinalFunction,
+};
+export const bgShake: EffectCheckMethod = async function (node, _, handlerMap) {
+  if (node.effect.action?.type === "bgshake") {
+    bgShakeAnimation.args.bgInstance = handlerMap.getBgInstance();
+    await bgShakeAnimation.animate();
+  }
+};
+
 export const otherEffectAnimations = {
   waitAnimation,
   zmcInstantAnimation,
   zmcMoveAnimation,
+  bgShakeAnimation,
 };
 
 export const otherEffectCheckMethods = {
   zmc,
+  bgShake,
 };
