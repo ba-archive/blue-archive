@@ -59,6 +59,17 @@ export interface ZmcInstanceArg {
   size: number;
 }
 export type ZmcArgs = ZmcMoveArg | ZmcInstanceArg;
+export interface TransitionTableItem {
+  Name: number;
+  TransitionOut: TransitionTypes;
+  TransitionOutDuration: number;
+  TransitionOutResource: null | string;
+  TransitionIn: TransitionTypes;
+  TransitionInDuration: number;
+  TransitionInResource: null | string;
+}
+
+export type TransitionTypes = "fade" | "fade_white" | string;
 export type OtherEffect =
   | {
       type: "wait";
@@ -73,7 +84,8 @@ export type OtherEffect =
     }
   | {
       type: "bgshake";
-    };
+    }
+  | { type: "transition"; args: TransitionTableItem };
 
 export interface BGMExcelTableItem {
   Id: number;

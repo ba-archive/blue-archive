@@ -978,6 +978,43 @@ const unitTestsFilteByCategory: UnitTestsFilteByCategory = {
           await player.storyManager.switch(1);
         },
       },
+      transition: {
+        getStoryNodes(init) {
+          init[1] = {
+            ...init[1],
+            bg: {
+              url: "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg",
+            },
+            effect: {
+              action: {
+                type: "transition",
+                args: {
+                  Name: 3957412172,
+                  TransitionOut: "2",
+                  TransitionOutDuration: 1000,
+                  TransitionOutResource:
+                    "Effect/UI/BGFX/UI_FX_HorSwipe_RtoL_In",
+                  TransitionIn: "2",
+                  TransitionInDuration: 1000,
+                  TransitionInResource:
+                    "Effect/UI/BGFX/UI_FX_HorSwipe_RtoL_Out",
+                },
+              },
+            },
+          };
+
+          init[2] = {
+            ...init[1],
+            effect: {},
+            nextNodeIndex: -1,
+          };
+
+          return init;
+        },
+        async runTest(player) {
+          await player.storyManager.switch(1);
+        },
+      },
     },
   },
 };

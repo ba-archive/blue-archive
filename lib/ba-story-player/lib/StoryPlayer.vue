@@ -8,7 +8,7 @@ import resourceManager, {
 } from "./playerSubModules/recourageManager";
 import { ResourceMap, StoryNode, Ii8nString, ResourceSetting } from "./type";
 import ShowDialog from "./playerSubLayers/showLayer/ShowDialog.vue";
-import { playerId } from "./layers/effectLayer/callableEffect";
+import { playerId, playerBackgroundId } from "./layers/effectLayer";
 const props = defineProps<{
   storyNodes: StoryNode[];
   dataUrl: string;
@@ -106,7 +106,12 @@ watch(
 </script>
 
 <template>
-  <div @click="storyManager.next" class="player" :style="playerStyle">
+  <div
+    @click="storyManager.next"
+    class="player"
+    :style="playerStyle"
+    :id="playerBackgroundId"
+  >
     <div ref="pixiCanvas" :id="playerId"></div>
     <ShowDialog
       :text-layer-instance="nodePlayer.serversInstance.show"

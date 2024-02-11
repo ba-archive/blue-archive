@@ -3,10 +3,9 @@ import {
   DefaultFinalFunction,
   CallalbeEffectConfigMap,
 } from "@/type";
-import EffectLayer from ".";
+import { playerId } from "../";
 import gsap from "gsap";
 
-export const playerId = "d2f8a8415469eb47477";
 const fadeAnimation: Animation<CallalbeEffectConfigMap["fade"]> = {
   args: {
     color: "white",

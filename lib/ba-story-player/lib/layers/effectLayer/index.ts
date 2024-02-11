@@ -5,8 +5,11 @@ import {
   ZmcInstance,
   otherEffectCheckMethods,
 } from "./effect/otherEffect";
-import callableAnimations from "./callableEffect";
+import callableAnimations from "./effect/callableEffect";
 import { Application } from "pixi.js";
+
+export const playerId = "d2f8a8415469eb47477";
+export const playerBackgroundId = "d2f8a8415469eb47478";
 export default class EffectLayer extends Layer {
   constructor(app: Application, handlerMap: HandlerMap) {
     super(app, handlerMap);
