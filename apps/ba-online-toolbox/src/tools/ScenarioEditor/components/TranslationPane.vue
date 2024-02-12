@@ -260,6 +260,10 @@ const replaceStrings = [
     from: " ”",
     to: "”",
   },
+  {
+    from: "  ",
+    to: "，",
+  },
 ];
 
 function handleFormalizePunctuation() {
