@@ -97,9 +97,9 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <n-button @click="handleWrapByQuotation" type="info">
+          <!-- <n-button @click="handleWrapByQuotation" type="info">
             用引号包裹
-          </n-button>
+          </n-button> -->
         </n-space>
       </div>
       <div class="textLine">
