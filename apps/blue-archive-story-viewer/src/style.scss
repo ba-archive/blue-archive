@@ -35,6 +35,9 @@ html {
   --color-pallete-arona-blue: #3f88f2;
   --color-pallete-warning: #ffa00c;
   --color-pallete-danger: #ff3a30;
+  --color-eden-danger-1: 255, 240, 232;
+  --color-eden-danger-6: 233, 88, 59;
+  --color-eden-danger-7: 194, 58, 37;
 
   --color-card-background: #fff;
 
@@ -108,6 +111,9 @@ html[data-theme="dark"] {
   --color-pallete-arona-blue: #b2cffa;
   --color-pallete-warning: #cc820a;
   --color-pallete-danger: #cc2f27;
+  --color-eden-danger-1: 77, 3, 0;
+  --color-eden-danger-6: 237, 125, 96;
+  --color-eden-danger-7: 242, 155, 129;
 
   --color-card-background: #2f2f2f;
   --color-glass-panel-border: #4b93dc;
@@ -279,6 +285,13 @@ a {
 
 .color-transition {
   transition: color 0.375s ease-in-out;
+}
+
+.el-message--error {
+  --el-message-border-color: rgb(var(--color-eden-danger-7)) !important;
+  --el-message-bg-color: rgb(var(--color-eden-danger-1)) !important;
+  --el-message-text-color: rgb(var(--color-eden-danger-6)) !important;
+  box-shadow: 0 0 10px rgba(var(--color-eden-danger-7), 0.1);
 }
 
 .fluent-tag {

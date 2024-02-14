@@ -245,6 +245,7 @@ importers:
       ba-story-player: workspace:*
       chalk: ^5.3.0
       dayjs: ~1.11.9
+      element-plus: ^2.3.7
       eslint: ^8.44.0
       eslint-config-prettier: ^8.8.0
       eslint-plugin-import: ^2.27.5
@@ -286,6 +287,7 @@ importers:
       axios-retry: 3.6.0
       ba-story-player: link:../../lib/ba-story-player
       dayjs: 1.11.9
+      element-plus: 2.3.8_vue@3.3.11
       fastest-levenshtein: 1.0.16
       gsap: 3.12.2
       husky: 8.0.3
@@ -4522,23 +4524,10 @@ packages:
     resolution: {integrity: sha512-a8TLtmPi8xzPkCbp/OGFUo5yhRkHM2Ko9kOWP4znJr0WAhWyThaw3PnwX4vOTWOAMsV2uRt32PPDcEz63esSaA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  /@floating-ui/core/1.4.1:
-    resolution: {integrity: sha512-jk3WqquEJRlcyu7997NtR5PibI+y5bi+LS3hPmguVClypenMsCY3CBa3LAQnozRCtCrYWSEtAdiskpamuJRFOQ==}
-    dependencies:
-      '@floating-ui/utils': 0.1.1
-    dev: false
-
   /@floating-ui/core/1.5.2:
     resolution: {integrity: sha512-Ii3MrfY/GAIN3OhXNzpCKaLxHQfJF9qvwq/kEJYdqDxeIHa01K8sldugal6TmeeXl+WMvhv9cnVzUTaFFJF09A==}
     dependencies:
       '@floating-ui/utils': 0.1.6
-    dev: false
-
-  /@floating-ui/dom/1.5.1:
-    resolution: {integrity: sha512-KwvVcPSXg6mQygvA1TjbN/gh///36kKtllIF8SUm0qpFj8+rvYrpvlYdL1JoA71SHpDqgSSdGOSoQ0Mp3uY5aw==}
-    dependencies:
-      '@floating-ui/core': 1.4.1
-      '@floating-ui/utils': 0.1.1
     dev: false
 
   /@floating-ui/dom/1.5.3:
@@ -4546,10 +4535,6 @@ packages:
     dependencies:
       '@floating-ui/core': 1.5.2
       '@floating-ui/utils': 0.1.6
-    dev: false
-
-  /@floating-ui/utils/0.1.1:
-    resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
     dev: false
 
   /@floating-ui/utils/0.1.6:
@@ -7568,7 +7553,7 @@ packages:
       '@types/web-bluetooth': 0.0.16
       '@vueuse/metadata': 9.13.0
       '@vueuse/shared': 9.13.0_vue@3.3.11
-      vue-demi: 0.14.5_vue@3.3.11
+      vue-demi: 0.14.6_vue@3.3.11
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7688,7 +7673,7 @@ packages:
   /@vueuse/shared/9.13.0_vue@3.3.11:
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
     dependencies:
-      vue-demi: 0.14.5_vue@3.3.11
+      vue-demi: 0.14.6_vue@3.3.11
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -8949,7 +8934,7 @@ packages:
     dependencies:
       '@ctrl/tinycolor': 3.6.0
       '@element-plus/icons-vue': 2.1.0_vue@3.3.11
-      '@floating-ui/dom': 1.5.1
+      '@floating-ui/dom': 1.5.3
       '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@types/lodash': 4.14.196
       '@types/lodash-es': 4.17.8
