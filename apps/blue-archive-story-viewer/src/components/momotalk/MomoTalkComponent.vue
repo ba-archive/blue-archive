@@ -441,6 +441,11 @@ function handleContinueReadingButtonPressed() {
       background-color: var(--color-option-button);
       padding: 0.5rem;
       user-select: none;
+      transition: background-color ease-in-out 0.3s;
+
+      &:hover {
+        background-color: var(--color-option-button-hover);
+      }
 
       &.selected {
         background-color: #5889c4;
