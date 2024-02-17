@@ -3,7 +3,7 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
-    date: "2023-02-14",
+    date: "2024-02-14",
     contents: [
       {
         type: "student",
