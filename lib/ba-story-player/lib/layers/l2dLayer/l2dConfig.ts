@@ -942,4 +942,72 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH0230_home: {
+    name: "CH0230_home",
+    playQue: [
+      {
+        name: "CH0230_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0230_home: {
+        scale: 1.5,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0231_home: {
+    name: "CH0231_home",
+    playQue: [
+      {
+        name: "CH0231_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0231_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  Ibuki_home: {
+    name: "Ibuki_home",
+    playQue: [
+      {
+        name: "Ibuki_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Ibuki_home: {
+        scale: 1.1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0079_home: {
+    name: "CH0079_home",
+    playQue: [
+      {
+        name: "CH0079_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0079_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
 };

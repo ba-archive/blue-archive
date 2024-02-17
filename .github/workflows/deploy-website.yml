@@ -13,13 +13,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@main
         with:
           node-version: "18"
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@master
         with:
           version: latest
       - name: Verify Change Logs

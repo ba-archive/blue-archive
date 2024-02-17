@@ -14,13 +14,23 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
-    jumpTo: 10084,
-    title: "音濑 小玉（露营）",
+    jumpTo: 10086,
+    title: "空崎 日奈（礼服）",
   },
   {
     type: "student",
-    jumpTo: 10085,
-    title: "小钩 晴（露营）",
+    jumpTo: 10087,
+    title: "天雨 亚子（礼服）",
+  },
+  {
+    type: "student",
+    jumpTo: 16014,
+    title: "丹花 伊吹",
+  },
+  {
+    type: "student",
+    jumpTo: 20033,
+    title: "羽沼 真琴",
   },
   {
     type: "minigame",
