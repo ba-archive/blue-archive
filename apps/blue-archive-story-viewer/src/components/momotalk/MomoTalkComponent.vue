@@ -441,11 +441,17 @@ function handleContinueReadingButtonPressed() {
       background-color: var(--color-option-button);
       padding: 0.5rem;
       user-select: none;
+      transition: background-color ease-in-out .3s;
 
       &.selected {
         background-color: #5889c4;
         color: #fff;
       }
+    }
+
+    div:hover {
+      background-color: var(--color-option-button-hover);
+      transition: background-color ease-in-out .3s;
     }
   }
 }
