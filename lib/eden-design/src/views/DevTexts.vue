@@ -32,21 +32,21 @@ const testString = "段落测试".repeat(30);
           <span style="font-size: 12px; line-height: 12px">suffix</span>
         </div>
       </template>
-      文字 / Text
+      文字 / Text / display-1
     </e-text>
     <e-text size="display-2" underline stroke color="var(--plana-pink-6)"
-      >Eden Design</e-text
+      >display-2</e-text
     >
-    <e-text size="display-3">Eden Design</e-text>
-    <e-text size="title-1" type="title">Eden Design</e-text>
-    <e-text size="title-2" type="title">Eden Design</e-text>
-    <e-text size="title-3" type="title">Eden Design</e-text>
-    <e-text size="title-1">Eden Design</e-text>
-    <e-text size="title-2">Eden Design</e-text>
-    <e-text size="title-3">Eden Design</e-text>
-    <e-text size="body-1" type="title">Eden Design</e-text>
-    <e-text size="body-2" type="title">Eden Design</e-text>
-    <e-text size="body-3" type="title">Eden Design</e-text>
+    <e-text size="display-3">display-3</e-text>
+    <e-text size="title-1" type="title">title-1 / title</e-text>
+    <e-text size="title-2" type="title">title-2 / title</e-text>
+    <e-text size="title-3" type="title">title-3 / title</e-text>
+    <e-text size="title-1">title-1</e-text>
+    <e-text size="title-2">title-2</e-text>
+    <e-text size="title-3">title-3</e-text>
+    <e-text size="body-1" type="title">body-1 / title</e-text>
+    <e-text size="body-2" type="title">body-2 / title</e-text>
+    <e-text size="body-3" type="title">body-3 / title</e-text>
     <e-text
       size="body-1"
       :color="{

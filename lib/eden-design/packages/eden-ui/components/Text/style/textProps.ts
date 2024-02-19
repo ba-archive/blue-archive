@@ -45,3 +45,66 @@ export const textSizeMap = [
     lineHeight: "76px",
   },
 ];
+
+export const elementTagRules = [
+  {
+    tagName: "h1",
+    matches: {
+      size: ["display-1", "title-1"],
+    },
+  },
+  {
+    tagName: "h2",
+    matches: {
+      size: ["display-2", "title-2"],
+    },
+  },
+  {
+    tagName: "h3",
+    matches: {
+      size: ["display-3", "title-3"],
+    },
+  },
+  {
+    tagName: "p",
+    matches: {
+      size: ["body-3", "body-2", "body-1"],
+    },
+  },
+  {
+    tagName: "span",
+    matches: {
+      inline: true,
+    },
+  },
+  {
+    tagName: "span",
+    matches: {
+      span: true,
+    },
+  },
+  {
+    tagName: "blockquote",
+    matches: {
+      blockquote: true,
+    },
+  },
+  {
+    tagName: "em",
+    matches: {
+      italic: true,
+    },
+  },
+  {
+    tagName: "sub",
+    matches: {
+      subscript: true,
+    },
+  },
+  {
+    tagName: "sup",
+    matches: {
+      superscript: true,
+    },
+  },
+];

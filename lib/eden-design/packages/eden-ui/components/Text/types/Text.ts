@@ -19,6 +19,9 @@ export type TextProps = {
   italic?: boolean;
   delete?: boolean;
   stroke?: boolean;
+  superscript?: boolean;
+  subscript?: boolean;
+  inline?: boolean;
   color?:
     | string
     | {

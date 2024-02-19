@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { TextProps } from "../types/Text";
-import { textSizeMap } from "../style/textProps";
-import { computed } from "vue";
+import { textSizeMap, elementTagRules } from "../style/textProps";
+import { computed, h, useSlots } from "vue";
+
 const props = withDefaults(defineProps<TextProps>(), {
   size: "body-2",
   level: 5,
@@ -48,31 +49,56 @@ const gradientStyle = computed(() => {
     };
   }
 });
+
+function getElementTag(textProps = props) {
+  const matches = elementTagRules.filter(el =>
+    Object.keys(el.matches).every(key =>
+      key === "size"
+        ? el.matches[key]?.includes(textProps[key])
+        : el.matches[key] === textProps[key]
+    )
+  );
+  return matches && matches.length > 0 ? matches.pop()?.tagName ?? "p" : "p";
+}
+
+const possibleSlots = useSlots();
+
+function renderTextNode(nodeProps = props, slots = possibleSlots) {
+  return h(
+    getElementTag(nodeProps),
+    {
+      class: [
+        "eden-ui__text",
+        {
+          "is-title":
+            nodeProps.type === "title" || nodeProps.size.startsWith("display"),
+          "no-select": nodeProps.noSelect,
+          blockquote: nodeProps.blockquote,
+          disabled: nodeProps.disabled,
+          strong: nodeProps.strong,
+          italic: nodeProps.italic,
+          subscript: nodeProps.subscript,
+          superscript: nodeProps.superscript,
+        },
+      ],
+      style: [textStyle.value, gradientStyle.value],
+    },
+    [
+      !!slots.prefix && slots.prefix(),
+      !!slots.default && slots.default(),
+      !!slots.suffix && slots.suffix(),
+    ]
+  );
+}
+
+const EdenTextElement = computed(() => renderTextNode(props, possibleSlots));
 </script>
 
 <template>
-  <div
-    role="text"
-    :class="[
-      'eden-ui__text',
-      {
-        'is-title': props.type === 'title' || props.size.startsWith('display'),
-        'no-select': props.noSelect,
-        blockquote: props.blockquote,
-        disabled: props.disabled,
-        strong: props.strong,
-        italic: props.italic,
-      },
-    ]"
-    :style="[textStyle, gradientStyle]"
-  >
-    <slot name="prefix"></slot>
-    <slot></slot>
-    <slot name="suffix"></slot>
-  </div>
+  <EdenTextElement />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .eden-ui__text {
   width: fit-content;
   display: flex;
