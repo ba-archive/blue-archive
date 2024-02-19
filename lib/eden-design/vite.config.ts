@@ -12,7 +12,7 @@ import legacy from "@vitejs/plugin-legacy";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig({
-  base: "/demo/",
+  base: "/eden-demo/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
