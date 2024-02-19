@@ -16,8 +16,8 @@ const textStyle = computed(() => {
     fontSize: sizeProps?.fontSize,
     lineHeight: sizeProps?.lineHeight,
     textDecoration: [
-      props.underline && "underline",
-      props.stroke && "line-through",
+      !!props.underline && "underline",
+      !!props.stroke && "line-through",
     ].join(" "),
     color:
       props.color && "string" === typeof props.color
@@ -98,6 +98,13 @@ const EdenTextElement = computed(() => renderTextNode(props, possibleSlots));
 </template>
 
 <style lang="scss">
+h1,
+h2,
+h3 {
+  &.eden-ui__text {
+    margin: 0;
+  }
+}
 .eden-ui__text {
   width: fit-content;
   display: flex;

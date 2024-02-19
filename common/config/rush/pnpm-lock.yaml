@@ -480,6 +480,7 @@ importers:
   ../../lib/eden-design:
     specifiers:
       '@arco-design/web-vue': ~2.54.1
+      '@arco-plugins/vite-vue': ~1.4.5
       '@types/color-string': ~1.5.5
       '@typescript-eslint/eslint-plugin': ^5.60.1
       '@typescript-eslint/parser': ^5.60.1
@@ -509,6 +510,7 @@ importers:
       vue-router: ^4.2.2
     dependencies:
       '@arco-design/web-vue': 2.54.1_vue@3.3.11
+      '@arco-plugins/vite-vue': 1.4.5
       '@types/color-string': 1.5.5
       '@typescript-eslint/eslint-plugin': 5.62.0_cca1d4900a205e16b16b9e87c210486b
       '@typescript-eslint/parser': 5.62.0_typescript@5.1.6
@@ -907,6 +909,19 @@ packages:
       resize-observer-polyfill: 1.5.1
       scroll-into-view-if-needed: 2.2.31
       vue: 3.3.11_typescript@5.1.6
+    dev: false
+
+  /@arco-plugins/vite-vue/1.4.5:
+    resolution: {integrity: sha512-2pJ9mpZP9mRD7NGZwRsZTS9C/US5ilEBBUqxN5Qgnd3Td50u9apJVKAABCZjG2K2eHiyZg7Fd9XhgHJXVJJmsw==}
+    dependencies:
+      '@babel/generator': 7.23.6
+      '@babel/helper-module-imports': 7.22.15
+      '@babel/parser': 7.23.6
+      '@babel/traverse': 7.23.7
+      '@babel/types': 7.23.6
+      '@types/node': 16.18.82
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@babel/code-frame/7.22.13:
@@ -5778,6 +5793,10 @@ packages:
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
+
+  /@types/node/16.18.82:
+    resolution: {integrity: sha512-pcDZtkx9z8XYV+ius2P3Ot2VVrcYOfXffBQUBuiszrlUzKSmoDYqo+mV+IoL8iIiIjjtOMvNSmH1hwJ+Q+f96Q==}
+    dev: false
 
   /@types/node/20.4.7:
     resolution: {integrity: sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==}
