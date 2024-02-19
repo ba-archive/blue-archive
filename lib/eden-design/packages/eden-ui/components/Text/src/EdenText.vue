@@ -6,7 +6,6 @@ import { computed, h, useSlots } from "vue";
 const props = withDefaults(defineProps<TextProps>(), {
   size: "body-2",
   level: 5,
-  type: "text",
 });
 
 const textStyle = computed(() => {
@@ -70,9 +69,9 @@ function renderTextNode(nodeProps = props, slots = possibleSlots) {
       class: [
         "eden-ui__text",
         {
-          "is-title":
-            nodeProps.type === "title" || nodeProps.size.startsWith("display"),
+          "is-title": nodeProps.title || nodeProps.size.startsWith("display"),
           "no-select": nodeProps.noSelect,
+          bold: nodeProps.bold,
           blockquote: nodeProps.blockquote,
           disabled: nodeProps.disabled,
           strong: nodeProps.strong,
@@ -105,8 +104,12 @@ const EdenTextElement = computed(() => renderTextNode(props, possibleSlots));
   align-items: center;
 
   &.is-title {
-    font-family: var(--eden-title-font);
-    font-weight: var(--eden-title-font-weight);
+    font-family: var(--eden-title-font, sans-serif);
+    font-weight: var(--eden-title-font-weight, 700);
+  }
+
+  &.bold {
+    font-weight: var(--eden-title-font-weight, 700);
   }
 
   &.no-select {
@@ -115,7 +118,7 @@ const EdenTextElement = computed(() => renderTextNode(props, possibleSlots));
 
   &.disabled {
     cursor: not-allowed;
-    color: var(--color-text-2);
+    color: var(--color-text-2, #bdbdbd);
   }
 
   &.strong {

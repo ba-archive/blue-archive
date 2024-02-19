@@ -9,7 +9,8 @@ export type TextProps = {
     | "display-3"
     | "display-2"
     | "display-1";
-  type?: "text" | "title";
+  title?: boolean;
+  bold?: boolean;
   level?: 5 | 4 | 3 | 2 | 1 | "5" | "4" | "3" | "2" | "1";
   blockquote?: boolean;
   noSelect?: boolean;

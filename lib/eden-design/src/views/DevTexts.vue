@@ -38,15 +38,15 @@ const testString = "段落测试".repeat(30);
       >display-2</e-text
     >
     <e-text size="display-3">display-3</e-text>
-    <e-text size="title-1" type="title">title-1 / title</e-text>
-    <e-text size="title-2" type="title">title-2 / title</e-text>
-    <e-text size="title-3" type="title">title-3 / title</e-text>
+    <e-text size="title-1" title>title-1 / title</e-text>
+    <e-text size="title-2" title>title-2 / title</e-text>
+    <e-text size="title-3" title>title-3 / title</e-text>
     <e-text size="title-1">title-1</e-text>
     <e-text size="title-2">title-2</e-text>
     <e-text size="title-3">title-3</e-text>
-    <e-text size="body-1" type="title">body-1 / title</e-text>
-    <e-text size="body-2" type="title">body-2 / title</e-text>
-    <e-text size="body-3" type="title">body-3 / title</e-text>
+    <e-text size="body-1" title>body-1 / title</e-text>
+    <e-text size="body-2" title>body-2 / title</e-text>
+    <e-text size="body-3" title>body-3 / title</e-text>
     <e-text
       size="body-1"
       :color="{
