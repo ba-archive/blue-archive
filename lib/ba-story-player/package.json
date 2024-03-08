@@ -5,6 +5,7 @@
   "files": [
     "dist"
   ],
+  "type": "module",
   "main": "./dist/ba-story-player.umd.cjs",
   "module": "./lib/main.ts",
   "types": "./dist/lib/main.d.ts",
@@ -13,8 +14,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/ba-story-player.mjs",
-      "require": "./dist/ba-story-player.umd.js"
+      "import": "./dist/ba-story-player.js",
+      "require": "./dist/ba-story-player.umd.cjs"
     },
     "./dist/lib/types/common": "./dist/lib/types/common.d.ts",
     "./dist/style.css": "./dist/style.css"
