@@ -2,9 +2,9 @@
   <div class="mobile-menu-wrapper">
     <div class="mobile-menu-bar shadow-far acrylic">
       <div class="id-sensei flex-horizontal">
-        <div class="avatar-wrapper center">
+        <router-link to="/" class="avatar-wrapper center">
           <img src="@assets/arona_icon.webp" alt="Arona" />
-        </div>
+        </router-link>
         <div class="welcome-message">
           <user-name-input />
           <span>老师，欢迎</span>

@@ -35,9 +35,7 @@
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
           <p>
-            {{
-              getI18nString(userLanguage, "settings.initWithFullscreen")
-            }}
+            {{ getI18nString(userLanguage, "settings.initWithFullscreen") }}
           </p>
           <p class="settings-panel__row__text__description">
             {{
@@ -183,7 +181,7 @@ import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
-const version = import.meta.env?.__VERSION__.build;
+const version = import.meta.env.__VERSION__?.build;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();

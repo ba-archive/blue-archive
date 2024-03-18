@@ -69,6 +69,7 @@
           :use-super-sampling="useSuperSampling"
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
+          @error="handleError()"
         />
         <img
           :src="useSuperSamplingImgPath"
@@ -157,6 +158,7 @@ import {
   StoryContent,
   StoryIndex,
 } from "@/types/StoryJson";
+import { ElMessage } from "element-plus";
 import { getI18nString } from "@i18n/getI18nString";
 import { stories } from "@index/mainStoryIndex";
 import { stories as OtherStories } from "@index/otherStoryIndex";
@@ -460,6 +462,14 @@ async function handleReplay() {
 
 function handleGoBack() {
   router.go(-1);
+}
+
+function handleError(message = "播放可能失败，请刷新页面重试") {
+  ElMessage.error({
+    message: message,
+    center: true,
+    showClose: true,
+  });
 }
 </script>
 

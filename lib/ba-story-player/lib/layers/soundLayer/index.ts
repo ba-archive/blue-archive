@@ -210,7 +210,13 @@ export function soundInit() {
   // 这样就可以了x
 
   eventBus.on("playAudio", (playAudioInfo: PlayAudio | undefined) => {
-    if (!playAudioInfo) return;
+    if (
+      !playAudioInfo ||
+      Object.values(playAudioInfo).every(el => [undefined, null].includes(el))
+    ) {
+      console.warn("playAudioInfo is empty");
+      return;
+    }
     console.log(
       `Get playAudioInfo: ${
         playAudioInfo.soundUrl ||

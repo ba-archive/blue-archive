@@ -34,6 +34,7 @@
           {{ selection.label }}
         </n-tag>
         <n-input
+          v-add-combo-key-listener
           :value="selection.translated"
           type="textarea"
           @input="(e: string) => selectInputHandle(e, idx)"

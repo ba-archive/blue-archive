@@ -3,6 +3,90 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-03-16",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "鳄渊 明里（正月）", id: 20034 }],
+      },
+    ],
+  },
+  {
+    date: "2024-03-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "鬼方 佳代子（礼服）", id: 10088 },
+          { name: "陆八魔 阿露（礼服）", id: 10089 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2024-02-14",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "空崎 日奈（礼服）", id: 10086 },
+          { name: "天雨 亚子（礼服）", id: 10087 },
+          { name: "丹花 伊吹", id: 16014 },
+          { name: "羽沼 真琴", id: 20033 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-12-31",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "音濑 小玉（露营）", id: 10084 },
+          { name: "小钩 晴（露营）", id: 10085 },
+        ],
+      },
+      {
+        type: "feat",
+        content: "在移动端点击阿罗娜头像时，可以回到主页",
+      },
+    ],
+  },
+  {
+    date: "2023-12-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "和泉元 艾米（泳装）", id: 20032 },
+          { name: "小钩 晴", id: 23003 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分设备上注音会遮盖文字的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了小屏幕设备上剧情信息排版异常的问题",
+      },
+      {
+        type: "feat",
+        content: "“设置”页面中新增“默认以全屏模式开始播放”选项",
+      },
+    ],
+  },
+  {
+    date: "2023-12-03",
+    contents: [
+      {
+        type: "feat",
+        content: "新增猫鬼黑影总力战介绍",
+      },
+    ],
+  },
+  {
     date: "2023-11-26",
     contents: [
       {
