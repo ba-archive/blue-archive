@@ -1,35 +1,35 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "types": ["@intlify/vite-plugin-vue-i18n/client", "unplugin-fonts/client"],
-    // baseUrl来告诉编译器到哪里去查找模块，所有非相对模块导入都会被当做相对于 baseUrl。
-    "baseUrl": ".",
-    // 非相对模块导入的路径映射配置
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client",
+      "unplugin-vue-macros/macros-global"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "mock/index.d.ts"],
-  // 编译器默认排除的编译文件
-  "exclude": ["node_modules"],
-  // ts-node 特殊编译选项
-  "ts-node": {
-    "compilerOptions": {
-      "target": "es2020",
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "useDefineForClassFields": true,
-      "forceConsistentCasingInFileNames": true,
-      "module": "CommonJS"
-    }
-  }
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
