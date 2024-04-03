@@ -7,7 +7,6 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
-import { TDesignResolver } from 'unplugin-vue-components/resolvers'
 
 // import VueMacros from 'unplugin-vue-macros/vite'
 
@@ -45,7 +44,6 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      resolvers: [TDesignResolver({ library: 'vue-next' })],
       dts: true,
       dirs: ['src/composables', 'src/stores'],
       vueTemplate: true,
@@ -53,7 +51,7 @@ export default defineConfig({
 
     // // https://github.com/antfu/vite-plugin-components
     Components({
-      resolvers: [TDesignResolver({ library: 'vue-next' })],
+      resolvers: [],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: true,
@@ -65,7 +63,7 @@ export default defineConfig({
   ],
 
   // https://github.com/vitest-dev/vitest
-  test: {
-    environment: 'jsdom',
-  },
+  // test: {
+  //   environment: 'jsdom',
+  // },
 })
