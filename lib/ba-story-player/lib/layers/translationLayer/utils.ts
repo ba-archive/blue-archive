@@ -159,9 +159,10 @@ export function compareCaseInsensive(s1: string, s2: string) {
  * @returns
  */
 export function generateText(rawStoryUnit: StoryRawUnit) {
-  const rawText = getText(rawStoryUnit, playerStore.language)
-    .replaceAll("[USERNAME]", playerStore.userName)
-    .replaceAll("#n", "\n");
+  const rawText = getText(rawStoryUnit, playerStore.language).replaceAll(
+    "#n",
+    "\n"
+  );
   return parseNxMagicTag(rawText)
     .map(it => {
       let text = it.content;
@@ -535,6 +536,8 @@ function iterateStoryUnit(prv: StoryUnit, cur: StoryUnit): StoryUnit {
  * @param rawText 原始结构
  */
 export function parseNxMagicTag(rawText: string): Text[] {
-  const ast = buildNxAST(rawText);
+  const ast = buildNxAST(
+    rawText.replaceAll("[USERNAME]", playerStore.userName)
+  );
   return walkNxAST(ast, []);
 }
