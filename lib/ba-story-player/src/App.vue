@@ -128,10 +128,14 @@ const languageList = ["Cn", "Jp", "Kr", "En", "Tw"];
 const language = ref<Language>(
   (localStorage.getItem(languageCacheKey) as never) ?? "Cn"
 );
+const useSuperSampling = ref<boolean>(
+  localStorage.getItem("useSuperSampling") === "true"
+);
 watch(
-  () => language.value,
+  () => [language.value, useSuperSampling.value],
   () => {
     localStorage.setItem(languageCacheKey, language.value);
+    localStorage.setItem("useSuperSampling", useSuperSampling.value.toString());
     location.reload();
   }
 );
@@ -150,6 +154,7 @@ watch(
         :story-summary="storySummary"
         style="resize: both; overflow: hidden"
         :exit-fullscreen-time-out="2000"
+        :use-super-sampling="useSuperSampling ? '2' : ''"
         ref="player"
       />
       <!--其实在左边的剧情json里填入11000就能测试序章, 不需要改动这里-->
@@ -188,6 +193,10 @@ watch(
           {{ name }}
         </option>
       </select>
+      <label
+        >超分
+        <input type="checkbox" v-model="useSuperSampling" />
+      </label>
     </div>
     <div class="absolute-right-center">
       <ModifyEmotionOption v-if="toolType === 'emotion'" />

@@ -71,6 +71,7 @@
               :min="0"
               :step="500"
               style="width: 8.5rem"
+              @keydown.enter="addTag()"
             >
               <template #suffix
                 ><span style="color: #999; font-size: 0.8rem"
@@ -96,6 +97,9 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
+          <!-- <n-button @click="handleWrapByQuotation" type="info">
+            用引号包裹
+          </n-button> -->
         </n-space>
       </div>
       <div class="textLine">
@@ -170,43 +174,43 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
-import { halfToFull, translate } from '../../public/helper/getTranslation';
-import { formalizeQuotation } from '../../public/helper/quotation';
-import eventBus from '../eventsSystem/eventBus';
-import { useGlobalConfig } from '../store/configStore';
-import { useScenarioStore } from '../store/scenarioEditorStore';
-import { ContentLine, Language } from '../types/content';
-import TranslateInput from './TranslateInput.vue';
+import { computed, ref, watch } from "vue";
+import { halfToFull, translate } from "../../public/helper/getTranslation";
+import { formalizeQuotation } from "../../public/helper/quotation";
+import eventBus from "../eventsSystem/eventBus";
+import { useGlobalConfig } from "../store/configStore";
+import { useScenarioStore } from "../store/scenarioEditorStore";
+import { ContentLine, Language } from "../types/content";
+import TranslateInput from "./TranslateInput.vue";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
 
 const langHash = {
-  TextJp: '日语',
-  TextEn: '英语',
-  TextKr: '韩语',
-  TextTh: '泰语',
-  TextCn: '简中',
-  TextTw: '繁中',
+  TextJp: "日语",
+  TextEn: "英语",
+  ScriptKr: "韩语",
+  TextTh: "泰语",
+  TextCn: "简中",
+  TextTw: "繁中",
 };
 
 const translateHash = {
-  TextJp: 'ja',
-  TextEn: 'en',
-  TextKr: 'ko',
-  TextTh: 'th',
-  TextCn: 'zh-CHS',
-  TextTw: 'zh-CHT',
+  TextJp: "ja",
+  TextEn: "en",
+  TextKr: "ko",
+  TextTh: "th",
+  TextCn: "zh-CHS",
+  TextTw: "zh-CHT",
 };
 
 const langSelect = [
-  { label: '简体中文', key: 'TextCn' },
-  { label: '繁体中文', key: 'TextTw' },
-  { label: '日语', key: 'TextJp' },
-  { label: '英语', key: 'TextEn' },
-  { label: '韩语', key: 'TextKr' },
-  { label: '泰语', key: 'TextTh' },
+  { label: "简体中文", key: "TextCn" },
+  { label: "繁体中文", key: "TextTw" },
+  { label: "日语", key: "TextJp" },
+  { label: "英语", key: "TextEn" },
+  { label: "韩语", key: "TextKr" },
+  { label: "泰语", key: "TextTh" },
 ];
 
 const translateHandle = () => {
@@ -214,16 +218,16 @@ const translateHandle = () => {
     const text = mainStore.getScenario.content[config.getSelectLine][
       config.getLanguage
     ]
-      ?.replaceAll('#n', '[#n]')
-      ?.replaceAll(/\[.*?\]/g, '');
+      ?.replaceAll("#n", "[#n]")
+      ?.replaceAll(/\[.*?\]/g, "");
     translate(
       text,
-      'auto' || translateHash[config.getLanguage],
+      "auto" || translateHash[config.getLanguage],
       translateHash[config.getTargetLang]
     )
       .then(res => {
         config.setTmpMachineTranslate(
-          halfToFull((res.translation || [])[0] ?? '')
+          halfToFull((res.translation || [])[0] ?? "")
         );
       })
       .catch(err => {
@@ -235,19 +239,50 @@ const translateHandle = () => {
 const acceptHandle = () => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    if (line[config.getLanguage].split(/(\[.*?\])/g).length > 1) {
-      alert('文本中有特殊标记, 请注意添加~');
-    }
+    // if (line[config.getLanguage].split(/(\[.*?\])/g).length > 1) {
+    //   alert("文本中有特殊标记, 请注意添加~");
+    // }
     line[config.getTargetLang] = config.tmpMachineTranslate;
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
 
+const replaceStrings = [
+  {
+    from: "……。",
+    to: "……",
+  },
+  {
+    from: "~",
+    to: "～",
+  },
+  {
+    from: " ”",
+    to: "”",
+  },
+  {
+    from: "  ",
+    to: "，",
+  },
+];
+
 function handleFormalizePunctuation() {
   const line = mainStore.getScenario.content[config.getSelectLine];
-  line[config.getTargetLang] = formalizeQuotation(
-    line[config.getTargetLang]
-  ).replaceAll('……。', '……');
+  line[config.getTargetLang] = formalizeQuotation(line[config.getTargetLang]);
+  replaceStrings.forEach(item => {
+    line[config.getTargetLang] = line[config.getTargetLang].replaceAll(
+      item.from,
+      item.to
+    );
+  });
+}
+
+function handleWrapByQuotation() {
+  const line = mainStore.getScenario.content[config.getSelectLine];
+  const currentString = line[config.getTargetLang];
+  line[config.getTargetLang] = `${
+    currentString.startsWith("“") ? "" : "“"
+  }${currentString}${currentString.endsWith("”") ? "" : "”"}`;
 }
 
 const commentHandle = (event: string) => {
@@ -306,7 +341,7 @@ const waitTime = ref(0);
 function addTag() {
   // 传统方法，如果加入了其他的textarea记得修改
   // TODO: 改成 ref
-  let textArea = document.getElementsByTagName('textarea')[1];
+  let textArea = document.getElementsByTagName("textarea")[1];
   let cursor = textArea.selectionStart;
   let sentence =
     mainStore.scenario.content[config.getSelectLine][config.getTargetLang];
@@ -319,11 +354,11 @@ function addTag() {
 }
 
 function sendResetLive2dSignal() {
-  eventBus.emit('resetLive2d');
+  eventBus.emit("resetLive2d");
 }
 
 function sendRefreshPlayerSignal() {
-  eventBus.emit('refreshPlayer');
+  eventBus.emit("refreshPlayer");
 }
 </script>
 <style scoped lang="scss">

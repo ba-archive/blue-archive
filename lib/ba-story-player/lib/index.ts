@@ -348,7 +348,12 @@ export const eventEmitter = {
    */
   playAudio(currentStoryUnit?: StoryUnit) {
     currentStoryUnit = currentStoryUnit || storyHandler.currentStoryUnit;
-    if (currentStoryUnit.audio) {
+    if (
+      currentStoryUnit.audio &&
+      !Object.values(currentStoryUnit.audio).every(el =>
+        [undefined, null].includes(el)
+      )
+    ) {
       eventBus.emit("playAudio", currentStoryUnit.audio);
       if (currentStoryUnit.audio.voiceJPUrl) {
         this.VoiceJpDone = false;
@@ -933,7 +938,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             storyHandler.currentStoryUnit,
             waitingKeys
           );
-          
+
           // TODO 重写逻辑解决莫名其妙的播放卡死?
           // reject();
           // waitingKeys.forEach((key) => {

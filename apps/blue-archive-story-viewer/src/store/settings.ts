@@ -17,6 +17,7 @@ export const useSettingsStore = defineStore({
         username: "Sensei" as string,
         useMp3: false,
         useSuperSampling: "" as "" | "2" | "4",
+        initWithFullscreen: false,
       },
       studentFilters: {
         searchString: "",
@@ -63,6 +64,7 @@ export const useSettingsStore = defineStore({
       }
       return shouldUseSuperSampling;
     },
+    getInitWithFullscreen: state => state.settings.initWithFullscreen,
   },
   actions: {
     setLastUpdated(lastUpdated: number) {
@@ -113,6 +115,9 @@ export const useSettingsStore = defineStore({
     },
     setUseSuperSampling(useSuperSampling: "" | "2" | "4") {
       this.settings.useSuperSampling = useSuperSampling;
+    },
+    setInitWithFullscreen(initWithFullscreen: boolean) {
+      this.settings.initWithFullscreen = initWithFullscreen;
     },
   },
 });

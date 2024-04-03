@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "rushVersion": "5.112.1",
+  "rushVersion": "5.119.0",
   "pnpmVersion": "6.7.1",
   "nodeSupportedVersionRange": ">=14.15.0",
   "gitPolicy": {},
@@ -35,8 +35,8 @@
       "projectFolder": "apps/ba-story-editor"
     },
     {
-      "packageName": "eden-docs",
-      "projectFolder": "docs/eden-design-system"
+      "packageName": "eden-design",
+      "projectFolder": "lib/eden-design"
     }
   ]
 }

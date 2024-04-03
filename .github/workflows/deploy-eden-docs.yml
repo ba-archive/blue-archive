@@ -1,0 +1,66 @@
+name: Deploy Eden Docs To Preview Environment
+on:
+  push:
+    branches:
+      - dev
+      - "dev/**"
+      - "feat/**"
+    paths:
+      - "lib/eden-design/**"
+
+concurrency:
+  group: "eden-docs-deploy"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@main
+        with:
+          node-version: "18"
+      - uses: pnpm/action-setup@master
+        with:
+          version: latest
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
+      - name: Rush Update
+        run: node common/scripts/install-run-rush.js update
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
+      - name: Generate secret for translator
+        env:
+          YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
+          YOUDAO_APP_SECRET: ${{ secrets.YOUDAO_APP_SECRET }}
+        shell: python
+        run: |
+          import os
+          YOUDAO_APP_ID = os.getenv("YOUDAO_APP_ID")
+          YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
+          with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
+            f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
+      - name: Rush build
+        run: node common/scripts/install-run-rush.js build --to eden-design --verbose
+      - name: Docs rsync deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "./lib/eden-design/docs/.vitepress/dist/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
+          TARGET: "/var/www/eden-docs"
+          EXCLUDE: ".git*"
+      - name: Demo rsync deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "./lib/eden-design/dist/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
+          TARGET: "/var/www/eden-docs/demo"
+          EXCLUDE: ".git*"

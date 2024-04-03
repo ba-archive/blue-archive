@@ -14,13 +14,18 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
-    jumpTo: 10082,
-    title: "不破 莲华",
+    jumpTo: 20034,
+    title: "鳄渊 明里（正月）",
   },
   {
     type: "student",
-    jumpTo: 10083,
-    title: "桐生 桔梗",
+    jumpTo: 10088,
+    title: "鬼方 佳代子（礼服）",
+  },
+  {
+    type: "student",
+    jumpTo: 10089,
+    title: "陆八魔 阿露（礼服）",
   },
   {
     type: "minigame",

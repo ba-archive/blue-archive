@@ -36,12 +36,9 @@
         >
           查看已有翻译
         </router-link>
-        <a
-          class="user-action-button rounded-small"
-          href="https://www.bilibili.com/read/cv24128500"
-          target="_blank"
-          >我来组成翻译!</a
-        >
+        <router-link class="user-action-button rounded-small" to="/library">
+          来一局小游戏？
+        </router-link>
       </div>
     </div>
   </div>

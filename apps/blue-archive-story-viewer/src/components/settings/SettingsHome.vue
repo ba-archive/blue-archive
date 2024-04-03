@@ -34,6 +34,27 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{ getI18nString(userLanguage, "settings.initWithFullscreen") }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.initWithFullscreenDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <neu-switch
+            :checked="initWithFullscreenSwitchValue"
+            @update:value="handleInitWithFullscreenSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.useMp3Title") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.useMp3Description") }}
@@ -160,7 +181,7 @@ import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
 
-const version = import.meta.env?.__VERSION__.build;
+const version = import.meta.env.__VERSION__?.build;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
@@ -191,6 +212,14 @@ const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(
 );
 function handleCheckForUpdatesSwitchChange(value: boolean) {
   settingsStore.setEnableCheckForUpdates(value);
+}
+
+const initWithFullscreenSwitchValue: Ref<boolean> = ref(
+  settingsStore.getInitWithFullscreen
+);
+
+function handleInitWithFullscreenSwitchChange(value: boolean) {
+  settingsStore.setInitWithFullscreen(value);
 }
 
 function handleClearCache() {
