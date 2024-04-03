@@ -1,1 +1,1 @@
-export { default } from "./apps/ba-story-editor/uno.config"  // to fix the stupid unocss config lint-stage monorepo
+export { default } from "./apps/blue-archive-story-editor/uno.config"  // to fix the stupid unocss config lint-stage monorepo
