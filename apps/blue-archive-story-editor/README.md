@@ -11,6 +11,7 @@
   - PlanaShop (PS)
 - 项目图标征集
 - integrate [CodeMirror](https://codemirror.net/)
+- update unplugin-vue-pages
 
 ## Script Commands
 

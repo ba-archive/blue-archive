@@ -31,7 +31,11 @@ export default defineConfig({
     //   },
     // }),
 
-    Vue(),
+    Vue({
+      script: {
+        defineModel: true,
+      },
+    }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),

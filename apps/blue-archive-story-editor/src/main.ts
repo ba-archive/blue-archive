@@ -24,3 +24,6 @@ Object.values(
 ).forEach(i => i.install?.({ isClient: true, app }))
 
 app.mount('#app')
+
+// white theme
+isDark.value = false
