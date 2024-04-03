@@ -41,7 +41,23 @@ rush update # 在 blue-archive 根目录下执行，下同
 rush build
 ```
 
-# 项目结构
+## 常用命令
+
+**对一个子库新增依赖**
+
+> -m 将所有其他库的依赖保持一致
+
+```bash
+rush add -p 库名 [--dev] [-m]
+```
+
+**git commit 时禁用自动格式化 hook**
+
+```bash
+git commit -m "..." --no-verify
+```
+
+## 项目结构
 
 - `apps/` 应用程序目录
 - `lib/` 库目录
