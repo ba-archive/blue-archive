@@ -3,7 +3,7 @@ import student_data from '~/assets/students.json'
 import type { Student } from '~/types/app'
 
 export const useAppStore = defineStore('app', () => {
-  const student = ref<Student[]>(
+  const students = ref<Student[]>(
     student_data.map((item) => {
       return {
         id: item.id,
@@ -14,7 +14,7 @@ export const useAppStore = defineStore('app', () => {
   )
 
   return {
-    student,
+    students,
   }
 })
 

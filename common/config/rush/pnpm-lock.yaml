@@ -53,7 +53,7 @@ importers:
       vite: ^5.2.7
       vue: ^3.3.7
       vue-eslint-parser: ^9.4.2
-      vue-router: ^4.2.5
+      vue-router: ~4.3.0
       vue-tsc: ^2.0.7
     dependencies:
       '@vueuse/core': 10.7.2_vue@3.3.11
@@ -68,7 +68,7 @@ importers:
       pinia: 2.1.7_typescript@5.4.3+vue@3.3.11
       pinia-plugin-persistedstate: 3.2.1_pinia@2.1.7
       vue: 3.3.11_typescript@5.4.3
-      vue-router: 4.2.5_vue@3.3.11
+      vue-router: 4.3.0_vue@3.3.11
     devDependencies:
       '@csstools/css-parser-algorithms': 2.6.0_@csstools+css-tokenizer@2.2.3
       '@csstools/css-tokenizer': 2.2.3
@@ -124,6 +124,7 @@ importers:
       '@typescript-eslint/eslint-plugin': ^7.5.0
       '@typescript-eslint/parser': ^7.5.0
       '@unocss/eslint-plugin': '>=0.50.0'
+      '@unocss/reset': ^0.59.0-beta.1
       '@vitejs/plugin-vue': ^5.0.4
       '@vue-macros/volar': ^0.18.17
       '@vue/test-utils': ^2.4.5
@@ -203,7 +204,7 @@ importers:
       vue: ^3.3.7
       vue-codemirror: ~6.1.1
       vue-eslint-parser: ^9.4.2
-      vue-router: ^4.2.5
+      vue-router: ~4.3.0
       vue-tsc: ^2.0.7
       yaml-eslint-parser: ^1.2.2
       yargs: ^17.7.2
@@ -212,6 +213,7 @@ importers:
       '@codemirror/state': 6.4.1
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.16.0
+      '@unocss/reset': 0.59.0-beta.1
       '@vueuse/core': 10.9.0_vue@3.4.21
       '@vueuse/head': 1.3.1_vue@3.4.21
       ba-story-player: link:../../lib/ba-story-player
@@ -362,7 +364,7 @@ importers:
       vite-plugin-pwa: ^0.19.0
       vue: ^3.3.7
       vue-eslint-parser: ^9.4.2
-      vue-router: ^4.2.5
+      vue-router: ~4.3.0
       vue-tsc: ^2.0.7
       workbox-window: ^7.0.0
       xxhashjs: ^0.2.2
@@ -386,7 +388,7 @@ importers:
       tailwindcss: 3.4.1
       typed.js: 2.1.0
       vue: 3.3.11_typescript@5.4.3
-      vue-router: 4.2.5_vue@3.3.11
+      vue-router: 4.3.0_vue@3.3.11
       xxhashjs: 0.2.2
     devDependencies:
       '@babel/preset-env': 7.23.9
@@ -665,7 +667,7 @@ importers:
       vite: ^5.2.7
       vitepress: ~1.0.0-rc.24
       vue: ^3.3.7
-      vue-router: ^4.2.5
+      vue-router: ~4.3.0
     dependencies:
       '@arco-design/web-vue': 2.54.1_vue@3.3.11
       '@types/color-string': 1.5.5
@@ -695,7 +697,7 @@ importers:
       vite: 5.2.8
       vitepress: 1.0.0-rc.31_postcss@8.4.35+typescript@5.4.3
       vue: 3.3.11_typescript@5.4.3
-      vue-router: 4.2.5_vue@3.3.11
+      vue-router: 4.3.0_vue@3.3.11
 
 packages:
 
@@ -7512,7 +7514,6 @@ packages:
 
   /@unocss/reset/0.59.0-beta.1:
     resolution: {integrity: sha512-FswTFLBOaeWGs3+Lj/0ozT8LR95OTNrVX9KfaGcRl3yVf3CAyXZmB7IiL171niThL+Uk4qITXVxLxXQg1Kvy8g==}
-    dev: true
 
   /@unocss/rule-utils/0.59.0-beta.1:
     resolution: {integrity: sha512-afWVZZdMBJD5t3TPq/Mh7EWWNAfy5DVu6Be0d6h4+9DjYUNgrv1hCKWfX1jrs97DP6AJak53JJV51u2nlA30Yg==}
@@ -17844,8 +17845,8 @@ packages:
     resolution: {integrity: sha512-9IdFfmHe1cY0PvTw51sYcSO5+gPJya5einLIoktVzBMALEC3yok36X/1+hDfbgihapRYxz3fmyv1o5M1u+0xEA==}
     dev: false
 
-  /vue-router/4.2.5_vue@3.3.11:
-    resolution: {integrity: sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw==}
+  /vue-router/4.3.0_vue@3.3.11:
+    resolution: {integrity: sha512-dqUcs8tUeG+ssgWhcPbjHvazML16Oga5w34uCUmsk7i0BcnskoLGwjpa15fqMr2Fa5JgVBrdL2MEgqz6XZ/6IQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:

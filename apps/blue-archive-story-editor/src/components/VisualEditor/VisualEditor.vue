@@ -55,15 +55,14 @@ const testCharacterData: Ref<CharacterNode[]> = ref([
 ])
 
 const storyNodes = ref<StoryNode[]>([
-  ...testData.value, ...testCharacterData.value,
+  ...testData.value,
+  ...testCharacterData.value,
 ])
 
 function handleAddCard() {
   storyNodes.value.push({
     id: storyIndex.value += 1,
     type: StoryNodeType.DialogNode,
-
-
     dialog: {
       text: '',
       speaker: '',
@@ -78,11 +77,7 @@ function handleAddCard() {
   <div class="visual-editor">
     <div
       class="canvas" inline-block
-
-
-
-
-              bg-gray-1 p-3 children:m-y-3
+      bg-gray-1 p-3 children:m-y-3
     >
       <StoryCardContainer
         v-for="_, i in storyNodes" :key="storyNodes[i].id"
