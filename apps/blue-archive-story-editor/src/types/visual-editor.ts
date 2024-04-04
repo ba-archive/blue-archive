@@ -1,7 +1,7 @@
 export interface Character {
   id: string
   name: string
-  group: string
+  club: string
   fx: string // 立绘
   emotion: string
 }

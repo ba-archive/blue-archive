@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import type { Student } from '~/types/app'
+import {useAppStore} from "~/stores/app"
+
+const appStore = useAppStore()
+const students: ref<Student[]> = appStore.students
 </script>
 
 <template>

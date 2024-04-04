@@ -1,16 +1,20 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import yuuka from '../../scripts/yuuka.json'
-import type { NexonJSONStory } from '~/types/story'
+import student_data from '~/assets/students.json'
+import type { Student } from '~/types/app'
 
 export const useAppStore = defineStore('app', () => {
-  const nexonJSONStory = ref<NexonJSONStory>()
-  function loadNexonJSONStory() {
-    nexonJSONStory.value = yuuka
-    return nexonJSONStory as Ref<NexonJSONStory >
-  }
+  const student = ref<Student[]>(
+    student_data.map((item) => {
+      return {
+        id: item.id,
+        name: item.name.cn,
+        club: item.club,
+      }
+    }),
+  )
 
   return {
-    nexonJSONStory, loadNexonJSONStory,
+    student,
   }
 })
 
