@@ -48,13 +48,19 @@ rush build
 > -m 将所有其他库的依赖保持一致
 
 ```bash
-rush add -p 库名 [--dev] [-m]
+rush add -p <库名> [--dev] [-m]
 ```
 
 **git commit 时禁用自动格式化 hook**
 
 ```bash
 git commit -m "..." --no-verify
+```
+
+**更新依赖**
+
+```base
+rush add --make-consistent -p <库名>
 ```
 
 ## 项目结构
