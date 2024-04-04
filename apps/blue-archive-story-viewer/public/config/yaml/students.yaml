@@ -2370,7 +2370,7 @@
     jp: ユカリ
     en: Yukari
     kr: 유카리
-    tw: ユカリ
+    tw: 紫草
     th: ยูคาริ
   nickname: []
   birthday:
@@ -2398,7 +2398,7 @@
     jp: レンゲ
     en: Renge
     kr: 렌게
-    tw: レンゲ
+    tw: 蓮華
     th: เรนเกะ
   nickname: []
   birthday:
@@ -2426,7 +2426,7 @@
     jp: キキョウ
     en: Kikyou
     kr: 키쿄
-    tw: キキョウ
+    tw: 桔梗
     th: คิเคียว
   nickname: []
   birthday:
@@ -2454,7 +2454,7 @@
     jp: コタマ（キャンプ）
     en: Kotama (Camping)
     kr: 코타마(캠핑)
-    tw: コタマ（キャンプ）
+    tw: 小玉（露營）
     th: โคทามะ (แคมป์)
   nickname: []
   birthday:
@@ -2482,7 +2482,7 @@
     jp: ハレ（キャンプ）
     en: Hare (Camping)
     kr: 하레(캠핑)
-    tw: ハレ（キャンプ）
+    tw: 晴（露營）
     th: ฮาเระ (แคมป์)
   nickname:
     - 红薯
@@ -2511,7 +2511,7 @@
     jp: ヒナ（ドレス）
     en: Hina (Dress)
     kr: 히나(드레스)
-    tw: ヒナ（ドレス）
+    tw: 陽奈（禮服）
     th: ฮินะ (ชุดเดรส)
   nickname: []
   birthday:
@@ -2539,7 +2539,7 @@
     jp: アコ（ドレス）
     en: Ako (Dress)
     kr: 아코(드레스)
-    tw: アコ（ドレス）
+    tw: 亞子（禮服）
     th: อาโกะ (ชุดเดรส)
   nickname: []
   birthday:
@@ -2567,7 +2567,7 @@
     jp: カヨコ（ドレス）
     en: Kayoko (Dress)
     kr: 카요코(드레스)
-    tw: カヨコ（ドレス）
+    tw: 佳世子（禮服）
     th: คาโยโกะ (ชุดเดรส)
   nickname: []
   birthday:
@@ -2595,7 +2595,7 @@
     jp: アル（ドレス）
     en: Aru (Dress)
     kr: 아루(드레스)
-    tw: アル（ドレス）
+    tw: 亞瑠（禮服）
     th: อารุ (ชุดเดรส)
   nickname: []
   birthday:
@@ -2610,6 +2610,34 @@
   armorType: HeavyArmor
   bulletType: Pierce
   weapon: SR
+- id: 10090
+  familyName:
+    cn: 里滨
+    jp: 里浜
+    en: Satohama
+    kr: 사토하마
+    tw: 里浜
+    th: 里浜
+  name:
+    cn: 海夏
+    jp: ウミカ
+    en: Umika
+    kr: 우미카
+    tw: 海花
+    th: อุมิกะ
+  nickname: []
+  birthday:
+    month: 7
+    day: 1
+  club: 祭典运营委员会
+  clubCode: MatsuriOffice
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Mystic
+  weapon: AR
 - id: 13000
   familyName:
     cn: 室笠
@@ -3451,7 +3479,7 @@
     jp: イブキ
     en: Ibuki
     kr: 이부키
-    tw: イブキ
+    tw: 伊吹
     th: อิบูกิ
   nickname: []
   birthday:
@@ -4351,8 +4379,8 @@
     jp: 黒舘
     en: Kurodate
     kr: 쿠로다테
-    tw: 黒舘
-    th: 黒舘
+    tw: 黑舘
+    th: คุโรดาเตะ
   name:
     cn: 晴奈(体操服)
     jp: ハルナ（体操服）
@@ -4415,7 +4443,7 @@
     jp: エイミ（水着）
     en: Eimi (Swimsuit)
     kr: 에이미(수영복)
-    tw: エイミ（水着）
+    tw: 英美（泳裝）
     th: เอมิ (ชุดว่ายน้ำ)
   nickname: []
   birthday:
@@ -4443,7 +4471,7 @@
     jp: マコト
     en: Makoto
     kr: 마코토
-    tw: マコト
+    tw: 真琴
     th: มาโคโตะ
   nickname: []
   birthday:
@@ -4464,14 +4492,14 @@
     jp: 鰐渕
     en: Wanibuchi
     kr: 와니부치
-    tw: Wanibuchi
+    tw: 鰐渕
     th: วานิบูชิ
   name:
     cn: 明里(正月)
     jp: アカリ（正月）
     en: Akari (New Year)
     kr: 아카리(새해)
-    tw: ""
+    tw: 亞伽里（正月）
     th: อาคาริ (ปีใหม่)
   nickname: []
   birthday:
@@ -4486,6 +4514,34 @@
   armorType: Unarmed
   bulletType: Mystic
   weapon: AR
+- id: 20035
+  familyName:
+    cn: 春日
+    jp: 春日
+    en: Kasuga
+    kr: 카스가
+    tw: 春日
+    th: 春日
+  name:
+    cn: 椿(向导)
+    jp: ツバキ（ガイド）
+    en: Tsubaki (Guide)
+    kr: 츠바키(가이드)
+    tw: 椿（導游）
+    th: สึบากิ (ชุดไกด์)
+  nickname: []
+  birthday:
+    month: 2
+    day: 3
+  club: 修行部
+  clubCode: Shugyobu
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Pierce
+  weapon: SMG
 - id: 23000
   familyName:
     cn: 栗村
@@ -5077,7 +5133,7 @@
     jp: 佐天涙子
     en: Saten Ruiko
     kr: 사텐 루이코
-    tw: 佐天涙子
+    tw: 佐天淚子
     th: ซาเต็น รุยโกะ
   nickname: []
   birthday:
