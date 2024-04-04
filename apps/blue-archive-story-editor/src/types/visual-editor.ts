@@ -6,14 +6,29 @@ export interface Character {
   emotion: string
 }
 
-export interface GNode {
+export enum StoryNodeType {
+  DialogNode = 'DialogNode',
+  CharacterNode = 'CharacterNode',
+}
+
+export interface BaseNode {
   id: number
-  characters: [Character | null, Character | null, Character | null, Character | null, Character | null]
+  type: StoryNodeType
+  next: number | null
+}
+
+export type DialogNode = BaseNode & {
+  type: StoryNodeType.DialogNode
   dialog: {
     text: string
     speaker: string
     group: string
   }
-  position: [number, number]
-  next: number | null
 }
+
+export type CharacterNode = BaseNode & {
+  type: StoryNodeType.CharacterNode
+  characters: [Character | null, Character | null, Character | null, Character | null, Character | null]
+}
+
+export type StoryNode = DialogNode | CharacterNode
