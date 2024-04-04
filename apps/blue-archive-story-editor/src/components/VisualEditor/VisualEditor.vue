@@ -77,7 +77,12 @@ function handleAddCard() {
 <template>
   <div class="visual-editor">
     <div
-      class="canvas" inline-block bg-gray-1 p-3 children:m-y-3
+      class="canvas" inline-block
+
+
+
+
+              bg-gray-1 p-3 children:m-y-3
     >
       <StoryCardContainer
         v-for="_, i in storyNodes" :key="storyNodes[i].id"
