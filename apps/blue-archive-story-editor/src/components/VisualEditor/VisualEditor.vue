@@ -62,6 +62,8 @@ function handleAddCard() {
   storyNodes.value.push({
     id: storyIndex.value += 1,
     type: StoryNodeType.DialogNode,
+
+
     dialog: {
       text: '',
       speaker: '',
