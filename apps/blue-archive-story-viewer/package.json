@@ -9,7 +9,8 @@
     "build": "pnpm build:json && vite build && cp ./dist/index.html ./dist/404.html",
     "build:github": "pnpm build:json && vite build --base=/blue-archive/ && cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite preview --host",
-    "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck"
+    "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck",
+    "up": "taze major -I"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.3.4",
@@ -35,6 +36,7 @@
     "element-plus": "^2.5.6"
   },
   "devDependencies": {
+    "taze": "^0.13.3",
     "@babel/preset-env": "^7.23.9",
     "@csstools/css-parser-algorithms": "^2.6.0",
     "@csstools/css-tokenizer": "^2.2.3",

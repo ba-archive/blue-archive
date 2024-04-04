@@ -10,15 +10,15 @@
    * "rush my-global-command --help".
    */
   "commands": [
-    {
-      "name": "prettier",
-      "commandKind": "global",
-      "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
-      "safeForSimultaneousRushProcesses": true,
-      "autoinstallerName": "rush-prettier",
-      // 它将会唤起 common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
-      "shellCommand": "pretty-quick --staged"
-    },
+    // {
+    //   "name": "prettier",
+    //   "commandKind": "global",
+    //   "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
+    //   "safeForSimultaneousRushProcesses": true,
+    //   "autoinstallerName": "rush-prettier",
+    //   // 它将会唤起 common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
+    //   "shellCommand": "pretty-quick --staged"
+    // },
     {
       "name": "lint-staged",
       "commandKind": "global",
@@ -33,6 +33,14 @@
       "summary": "Use eslint to fix your code",
       "safeForSimultaneousRushProcesses": true,
       "enableParallelism": true
+    },
+    {
+      "name": "taze",
+      "commandKind": "bulk",
+      "summary": "Use taze to upgrade dependencies",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "up",
+      "enableParallelism": false
     },
     {
       "commandKind": "bulk",

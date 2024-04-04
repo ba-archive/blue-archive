@@ -10,6 +10,7 @@
     "build:json": "eslint --config ./.eslintrc.json ./public/ && node ./CICD/build_json.mjs",
     "build": "pnpm build:json && vite build",
     "build:github": "pnpm build",
+    "up": "taze major -I",
     "preview": "vite preview --host"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "mitt": "^3.0.0"
   },
   "devDependencies": {
+    "taze": "^0.13.3",
     "@csstools/css-parser-algorithms": "^2.6.0",
     "@csstools/css-tokenizer": "^2.2.3",
     "@rushstack/eslint-patch": "^1.3.2",

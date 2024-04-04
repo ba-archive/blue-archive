@@ -8,9 +8,11 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "build": "pnpm docs:build && vite build",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "taze": "^0.13.3"
   },
   "dependencies": {
+    "taze": "^0.13.3",
     "@arco-design/web-vue": "~2.54.1",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vueuse/core": "^10.7.2",
