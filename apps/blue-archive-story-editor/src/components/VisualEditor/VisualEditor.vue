@@ -71,6 +71,14 @@ function handleAddCard() {
     next: null,
   })
 }
+
+const selectedStudent = ref<{
+  id: number
+  name: string
+  club: string
+  fx: string
+  emotion: string
+} | null>(null)
 </script>
 
 <template>
@@ -84,6 +92,7 @@ function handleAddCard() {
         v-model="storyNodes[i]"
       />
       <AddCard @click="handleAddCard" />
+      <StudentSelect v-model="selectedStudent" />
     </div>
   </div>
 </template>

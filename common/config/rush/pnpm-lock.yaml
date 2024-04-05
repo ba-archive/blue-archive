@@ -116,6 +116,7 @@ importers:
       '@codemirror/theme-one-dark': ~6.1.2
       '@codemirror/view': ~6.16.0
       '@iconify-json/carbon': ^1.1.31
+      '@iconify/json': ~2.2.196
       '@intlify/unplugin-vue-i18n': ^4.0.0
       '@shikijs/markdown-it': ^1.2.2
       '@stylistic/eslint-plugin': ^1.7.0
@@ -227,6 +228,7 @@ importers:
       '@antfu/install-pkg': 0.3.2
       '@clack/prompts': 0.7.0
       '@iconify-json/carbon': 1.1.31
+      '@iconify/json': 2.2.196
       '@intlify/unplugin-vue-i18n': 4.0.0_rollup@4.14.0
       '@shikijs/markdown-it': 1.2.4
       '@stylistic/eslint-plugin': 1.7.0_eslint@8.57.0+typescript@5.4.3
@@ -5242,6 +5244,13 @@ packages:
     resolution: {integrity: sha512-CAvECFfiwGyZmlcuM2JLMRDEN3VsIEZv6lml7Xf+3giQ5oXloADm0b5wiVPFZmONKM5jXERmx+E7YSvAtFJIbw==}
     dependencies:
       '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/json/2.2.196:
+    resolution: {integrity: sha512-hRZ0pq77N+mkAbZvFi/pfsKcspA8PyGSASc6zQoq6n/RSLxb8xAgORatVHyDl0ow7shcS+dvyiZI8xmr6yI2WA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
     dev: true
 
   /@iconify/types/2.0.0:

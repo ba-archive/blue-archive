@@ -19,6 +19,7 @@ const modelValue = defineModel<string>()
         v-model="modelValue"
         type="text"
         v-bind="$attrs"
+        autocomplete="off"
         p="x-2 y-1"
         w-auto
         flex-1

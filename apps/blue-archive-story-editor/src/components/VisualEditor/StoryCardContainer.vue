@@ -22,7 +22,7 @@ function handleSelect(value: StoryNodeType) {
 <template>
   <div
     class="story-card-container"
-    block w-sm b-rd bg-white
+    w-sm b-rd bg-white
     p4 py2 shadow-md
   >
     <div class="header">
