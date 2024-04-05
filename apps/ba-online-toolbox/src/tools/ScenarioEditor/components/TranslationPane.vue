@@ -97,9 +97,9 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <!-- <n-button @click="handleWrapByQuotation" type="info">
-            用引号包裹
-          </n-button> -->
+          <n-button @click="handleLLMTranslateRequest" type="info" quaternary>
+            帮帮我，GPT 先生
+          </n-button>
         </n-space>
       </div>
       <div class="textLine">
@@ -173,6 +173,7 @@
     </n-space>
   </div>
 </template>
+
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 import { halfToFull, translate } from "../../public/helper/getTranslation";
@@ -182,6 +183,7 @@ import { useGlobalConfig } from "../store/configStore";
 import { useScenarioStore } from "../store/scenarioEditorStore";
 import { ContentLine, Language } from "../types/content";
 import TranslateInput from "./TranslateInput.vue";
+import { ElMessage } from "element-plus";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -277,12 +279,11 @@ function handleFormalizePunctuation() {
   });
 }
 
-function handleWrapByQuotation() {
-  const line = mainStore.getScenario.content[config.getSelectLine];
-  const currentString = line[config.getTargetLang];
-  line[config.getTargetLang] = `${
-    currentString.startsWith("“") ? "" : "“"
-  }${currentString}${currentString.endsWith("”") ? "" : "”"}`;
+function handleLLMTranslateRequest() {
+  ElMessage({
+    message: "你先别急",
+    type: "info",
+  });
 }
 
 const commentHandle = (event: string) => {

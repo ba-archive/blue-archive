@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import HomepageNavigator from './HomepageNavigator.vue';
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import HomepageNavigator from "./HomepageNavigator.vue";
 
 const route = useRoute();
 
 const isMainPage = computed(() => {
-  return '/' === route.path;
+  return "/" === route.path;
 });
 </script>
 
@@ -45,7 +45,7 @@ const isMainPage = computed(() => {
   position: fixed;
   justify-content: center;
   align-items: center;
-  z-index: 114514;
+  z-index: 100;
   background-color: #fff;
   width: 100%;
   font-weight: bold;
@@ -80,7 +80,7 @@ const isMainPage = computed(() => {
         background-color: var(--color-arona-blue);
         width: 100%;
         height: 2px;
-        content: '';
+        content: "";
       }
     }
   }

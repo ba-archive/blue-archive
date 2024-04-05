@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - dev
+      - feat/**
     paths:
       - "apps/ba-online-toolbox/**"
       - "lib/**"
