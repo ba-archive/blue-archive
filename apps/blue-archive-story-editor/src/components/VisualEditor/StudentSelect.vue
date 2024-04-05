@@ -44,7 +44,7 @@ function handleStudentSelect(student: Student) {
 <template>
   <div
     class="student-select"
-    b-rd-md bg-white p4 shadow-md
+    w480px b-rd-md bg-white p4 shadow-md
   >
     <div class="student-data" mb-2 flex px1>
       <img

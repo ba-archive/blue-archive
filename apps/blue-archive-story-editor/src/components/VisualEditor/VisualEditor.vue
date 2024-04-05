@@ -54,6 +54,12 @@ const testCharacterData: Ref<CharacterNode[]> = ref([
   },
 ])
 
+const testStudent: Ref<Student> = ref({
+  id: 'ibuki',
+  name: '伊吹',
+  club: '万魔殿',
+})
+
 const storyNodes = ref<StoryNode[]>([
   ...testData.value,
   ...testCharacterData.value,
@@ -93,6 +99,7 @@ const selectedStudent = ref<{
       />
       <AddCard @click="handleAddCard" />
       <StudentSelect v-model="selectedStudent" />
+      <StudentViewer :student="testStudent" />
     </div>
   </div>
 </template>

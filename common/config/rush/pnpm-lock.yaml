@@ -118,7 +118,7 @@ importers:
       '@iconify-json/carbon': ^1.1.31
       '@iconify/json': ~2.2.196
       '@intlify/unplugin-vue-i18n': ^4.0.0
-      '@pixi/spine-pixi': ~1.0.8
+      '@pixi/assets': v6.x
       '@shikijs/markdown-it': ^1.2.2
       '@stylistic/eslint-plugin': ^1.7.0
       '@types/markdown-it-link-attributes': ^3.0.4
@@ -177,7 +177,8 @@ importers:
       parse-gitignore: ^2.0.0
       picocolors: ^1.0.0
       pinia: ^2.1.7
-      pixi.js: ^8.0.5
+      pixi-spine: ~3.1.2
+      pixi.js: ~6.5.10
       pnpm: ^8.15.5
       prettier-plugin-astro: ^0.13.0
       prettier-plugin-slidev: ^1.0.5
@@ -216,14 +217,15 @@ importers:
       '@codemirror/state': 6.4.1
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.16.0
-      '@pixi/spine-pixi': 1.0.8_pixi.js@8.0.5
+      '@pixi/assets': 6.5.10
       '@unocss/reset': 0.59.0-beta.1
       '@vueuse/core': 10.9.0_vue@3.4.21
       '@vueuse/head': 1.3.1_vue@3.4.21
       ba-story-player: link:../../lib/ba-story-player
       codemirror: 6.0.1
       pinia: 2.1.7_typescript@5.4.3+vue@3.4.21
-      pixi.js: 8.0.5
+      pixi-spine: 3.1.2
+      pixi.js: 6.5.10
       vue: 3.4.21_typescript@5.4.3
       vue-codemirror: 6.1.1_codemirror@6.0.1+vue@3.4.21
       vue-router: 4.3.0_vue@3.4.21
@@ -5200,10 +5202,6 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  /@esotericsoftware/spine-core/4.1.51:
-    resolution: {integrity: sha512-dbw+QG6wu6XE2RqvHCfIa7VRrzgwl/QXpVWx/1Cx4wfGuqdC2J7ztEUWo4n4ik1yrlbbE16LxrNET19PcsCpjA==}
-    dev: false
-
   /@floating-ui/core/1.5.2:
     resolution: {integrity: sha512-Ii3MrfY/GAIN3OhXNzpCKaLxHQfJF9qvwq/kEJYdqDxeIHa01K8sldugal6TmeeXl+WMvhv9cnVzUTaFFJF09A==}
     dependencies:
@@ -5769,8 +5767,19 @@ packages:
       '@pixi/utils': 6.5.10_e897286d4c6a99e271a05904abd3a818
     dev: false
 
-  /@pixi/colord/2.9.6:
-    resolution: {integrity: sha512-nezytU2pw587fQstUu1AsJZDVEynjskwOL+kibwcdxsMBFqPsFFNA7xl0ii/gXuDi6M0xj3mfRJj8pBSc2jCfA==}
+  /@pixi/assets/6.5.10:
+    resolution: {integrity: sha512-K8QQRkLauFw7UtJkF2Yy3gvq8Hh1EKeAT1T64wGSEVOco/yyvbPAh4b4YKyol2wZcqaM6FECroKCPXuJtShKQg==}
+    peerDependencies:
+      '@pixi/basis': 6.5.10
+      '@pixi/compressed-textures': 6.5.10
+      '@pixi/constants': 6.5.10
+      '@pixi/core': 6.5.10
+      '@pixi/settings': 6.5.10
+      '@pixi/spritesheet': 6.5.10
+      '@pixi/text-bitmap': 6.5.10
+      '@pixi/utils': 6.5.10
+    dependencies:
+      '@types/css-font-loading-module': 0.0.7
     dev: false
 
   /@pixi/compressed-textures/6.5.10_ed1533c51f2c795b6d3f8f500f3365b7:
@@ -6138,15 +6147,6 @@ packages:
       '@pixi/constants': 6.5.10
     dependencies:
       '@pixi/constants': 6.5.10
-    dev: false
-
-  /@pixi/spine-pixi/1.0.8_pixi.js@8.0.5:
-    resolution: {integrity: sha512-EkwULBA96i6P90u1HP99H7MVOhM7MTO1lJGOxMCPnLgiuXKYOhXYmD2CbtCRmDwjFNPwgHpeYohGXj9jDM/i+A==}
-    peerDependencies:
-      pixi.js: ^8.0.0
-    dependencies:
-      '@esotericsoftware/spine-core': 4.1.51
-      pixi.js: 8.0.5
     dev: false
 
   /@pixi/sprite-animated/6.5.10_32c7c873abaa699c3fb40b26aadbe198:
@@ -6701,16 +6701,12 @@ packages:
     resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
     dev: true
 
-  /@types/css-font-loading-module/0.0.12:
-    resolution: {integrity: sha512-x2tZZYkSxXqWvTDgveSynfjq/T2HyiZHXb00j/+gy19yp70PHCizM48XFdjBCWH7eHBD0R5i/pw9yMBP/BH5uA==}
+  /@types/css-font-loading-module/0.0.7:
+    resolution: {integrity: sha512-nl09VhutdjINdWyXxHWN/w9zlNCfr60JUqJbd24YXUuCwgeL0TpFSdElCwb6cxfB6ybE19Gjj4g0jsgkXxKv1Q==}
     dev: false
 
   /@types/earcut/2.1.1:
     resolution: {integrity: sha512-w8oigUCDjElRHRRrMvn/spybSMyX8MTkKA5Dv+tS1IE/TgmNZPqUYtvYBXGY8cieSE66gm+szeK+bnbxC2xHTQ==}
-    dev: false
-
-  /@types/earcut/2.1.4:
-    resolution: {integrity: sha512-qp3m9PPz4gULB9MhjGID7wpo3gJ4bTGXm7ltNDsmOvsPduTeHp8wSW9YckBj3mljeOh4F0m2z/0JKAALRKbmLQ==}
     dev: false
 
   /@types/eslint/8.56.7:
@@ -8702,15 +8698,6 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
-    dev: false
-
-  /@webgpu/types/0.1.40:
-    resolution: {integrity: sha512-/BBkHLS6/eQjyWhY2H7Dx5DHcVrS2ICj9owvSRdgtQT6KcafLZA86tPze0xAOsd4FbsYKCUBUQyNi87q7gV7kw==}
-    dev: false
-
-  /@xmldom/xmldom/0.8.10:
-    resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
-    engines: {node: '>=10.0.0'}
     dev: false
 
   /abbrev/2.0.0:
@@ -14211,10 +14198,6 @@ packages:
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
 
-  /parse-svg-path/0.1.2:
-    resolution: {integrity: sha512-JyPSBnkTJ0AI8GGJLfMXvKq42cj5c006fnLz6fXy6zfoVjJizi8BNTpu8on8ziI1cKy9d9DGNuY17Ce7wuejpQ==}
-    dev: false
-
   /parse5/7.1.2:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
@@ -14423,20 +14406,6 @@ packages:
       '@pixi/text-bitmap': 6.5.10_e05b89f08a02fd1a4380626c6b9d0f3d
       '@pixi/ticker': 6.5.10_59f636326e43b99db5ba120f5b2d2fd2
       '@pixi/utils': 6.5.10_e897286d4c6a99e271a05904abd3a818
-    dev: false
-
-  /pixi.js/8.0.5:
-    resolution: {integrity: sha512-4v88YaMNg0/APoTnje0MFDQt5S7nRM6/yvrZkIxIgqgjs7zMIaxpOl2UDDUDXj/XwdD5lKJAz/H7rVukOepwyQ==}
-    dependencies:
-      '@pixi/colord': 2.9.6
-      '@types/css-font-loading-module': 0.0.12
-      '@types/earcut': 2.1.4
-      '@webgpu/types': 0.1.40
-      '@xmldom/xmldom': 0.8.10
-      earcut: 2.2.4
-      eventemitter3: 5.0.1
-      ismobilejs: 1.1.1
-      parse-svg-path: 0.1.2
     dev: false
 
   /pkg-types/1.0.3:

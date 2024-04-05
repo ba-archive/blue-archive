@@ -21,9 +21,7 @@ function handleSelect(value: StoryNodeType) {
 
 <template>
   <div
-    class="story-card-container"
-    w-sm b-rd bg-white
-    p4 py2 shadow-md
+    class="story-card-container" card
   >
     <div class="header">
       id: {{ storyNode.id }}
