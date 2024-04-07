@@ -72,10 +72,19 @@ onMounted(async () => {
   initPixi()
 })
 
+onUpdated(() => {
+  app.resize()
+  container.scale.set(SPINE_SCALE)
+  container.x = app.screen.width / 2
+  container.y = app.screen.height / 2 + container.height * SPINE_SCALE / (2 / DIV_SCALE)
+})
+
 watchEffect(async () => {
   const spineUrl = getCharacterSpineUrl(model.value)
   if (spineUrl)
     await loadSpine(spineUrl)
+  else
+    container.removeChildren()
 })
 
 function handleChangeAnimation(name: string) {
@@ -85,7 +94,7 @@ function handleChangeAnimation(name: string) {
 </script>
 
 <template>
-  <div class="student-viewer" flex="~ col">
+  <div class="character-viewer" flex="~ col">
     <h3>
       <span>
         {{ model.name }} ({{ model.id }})

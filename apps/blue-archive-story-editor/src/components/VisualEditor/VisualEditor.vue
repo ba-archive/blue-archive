@@ -72,33 +72,21 @@ function handleAddCard() {
   })
 }
 
-const selectedStudent = ref<{
-  id: number
-  name: string
-  club: string
-  fx: string
-  emotion: string
-} | null>(null)
-
-const modalShow = ref(true)
 </script>
 
 <template>
   <div class="visual-editor">
     <div
-      class="canvas" inline-block
-      bg-gray-1 p-3 children:m-y-3
+      class="canvas"
+      inline-block w-100vw bg-gray-1 p-3 children:m-y-3
     >
       <StoryCardContainer
         v-for="_, i in storyNodes" :key="storyNodes[i].id"
         v-model="storyNodes[i]"
       />
       <AddCard @click="handleAddCard" />
-      <StudentSelect v-model="selectedStudent" />
+      <!-- <CharacterSelect v-model="selectedStudent" /> -->
       <!-- <StudentViewer :student="testStudent" /> -->
-      <TheModal v-model:show="modalShow" title="HelloWorld">
-        Hello, World
-      </TheModal>
     </div>
   </div>
 </template>

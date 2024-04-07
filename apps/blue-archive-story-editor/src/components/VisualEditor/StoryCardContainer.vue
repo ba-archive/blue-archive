@@ -17,11 +17,14 @@ function handleSelect(value: StoryNodeType) {
     storyNode.value.characters = storyNode.value.characters || [null, null, null, null, null]
   }
 }
+
+const cardContainer = ref<HTMLDivElement | null>(null)
+provide('cardContainer', cardContainer)
 </script>
 
 <template>
   <div
-    class="story-card-container" card
+    ref="cardContainer" class="story-card-container" card
   >
     <div class="header">
       id: {{ storyNode.id }}

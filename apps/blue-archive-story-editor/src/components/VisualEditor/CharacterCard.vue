@@ -1,23 +1,40 @@
 <script setup lang="ts">
-import type { CharacterNode } from '~/types/visual-editor.ts'
+import type { Character, CharacterNode } from '~/types/visual-editor.ts'
 
 const model = defineModel<CharacterNode>({ required: true })
+const appStore = useAppStore()
 
-function getCharacterAvatarImg(id: string) {
-  return 'https://sdfsdf.dev/50x50.jpg'
+const currentClickedCharacterIndex = ref(0)
+const characterSelectShow = ref(false)
+
+function handleCharacterClicked(event: Event, index: number) {
+  currentClickedCharacterIndex.value = index
+  characterSelectShow.value = true
 }
+const cardContainer = inject('cardContainer') as Ref<HTMLDivElement | undefined>
 </script>
 
 <template>
-  <div class="character-card">
-    <div class="characters">
-      <template v-for="character in model.characters">
-        <div v-if="character" :key="character.id" class="character" h12 w12>
-          <img :src="getCharacterAvatarImg(character.id)" h12 w12>
+  <TheModal v-model:show="characterSelectShow" :anchor="cardContainer">
+    <div class="character-card">
+      <div class="characters" flex="~ justify-between" mt2>
+        <div
+          v-for="character, index in model.characters"
+          :key="character?.id" class="character" @click="handleCharacterClicked($event, index)"
+        >
+          <div v-if="character" h12 w12>
+            <img :src="appStore.getCharacterAvatarUrl(character.id)" h12 w12 object-cover>
+          </div>
+          <div v-else h12 w12>
+            <img src="https://sdfsdf.dev/50x50.jpg" h12 w12>
+          </div>
         </div>
-      </template>
+      </div>
     </div>
-  </div>
+    <template #content>
+      <CharacterSelect v-model="model.characters[currentClickedCharacterIndex]" @close="characterSelectShow = false" />
+    </template>
+  </TheModal>
 </template>
 
 <style scoped>
