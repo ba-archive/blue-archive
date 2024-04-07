@@ -24,20 +24,7 @@ function loadSpineData(app: PIXI.Application, name: string, path: string): Promi
   })
 }
 
-function getCharacterSpineUrl(character: Character) {
-  // return `/SpineCharacters/${character.id}_spr/${character.id}_spr.skel`
-  for (const each of appStore.charactersData) {
-    if (character.id === each.id) {
-      const matched = each.spinePath.match(/CharacterSpine_(.*)/)
-      if (matched) {
-        const spineName = matched[1]
-        return `https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/${spineName}_spr/${spineName}_spr.skel`
-      }
-      return ''
-    }
-  }
-  return ''
-}
+
 
 const animations = ref<string[]>([])
 const spine = ref<Spine | null>(null)
@@ -58,7 +45,7 @@ async function loadSpine(path: string) {
   container.removeChildren()
   spine.value = new Spine(await loadSpineData(app, path, path))
   animations.value = spine.value.spineData.animations.map(item => item.name)
-  model.value.fx = animations.value[0]
+  model.value.face = animations.value[0]
   // const spineDebugger = new SpineDebugRenderer()
   // spineDebugger.drawBoundingBoxes = true
   // spine.debug = spineDebugger
@@ -80,7 +67,7 @@ onUpdated(() => {
 })
 
 watchEffect(async () => {
-  const spineUrl = getCharacterSpineUrl(model.value)
+  const spineUrl = appStore.getCharacterSpineUrl(model.value.id)
   if (spineUrl)
     await loadSpine(spineUrl)
   else
@@ -88,7 +75,7 @@ watchEffect(async () => {
 })
 
 function handleChangeAnimation(name: string) {
-  model.value.fx = name
+  model.value.face = name
   spine!.value?.state.setAnimation(0, name, false)
 }
 </script>
@@ -104,13 +91,15 @@ function handleChangeAnimation(name: string) {
     <div class="animations" my1 mb2>
       <button
         v-for="name in animations" :key="name"
-        :class="{ 'bg-gray-3': name === model.fx }"
+        :class="{ 'bg-gray-3': name === model.face }"
         mx.5 my.5 px3 py1 btn text="sm"
         @click="handleChangeAnimation(name)"
       >
         {{ name }}
       </button>
     </div>
-    <div ref="canvasWrapper" class="canvas-wrapper" h-96rem w-56rem transform-origin-lt scale-50 of-hidden b-rd-2 />
+    <div h48rem w28rem>
+      <div ref="canvasWrapper" class="canvas-wrapper" h-96rem w-56rem transform-origin-lt scale-50 of-hidden b-rd-2 />
+    </div>
   </div>
 </template>

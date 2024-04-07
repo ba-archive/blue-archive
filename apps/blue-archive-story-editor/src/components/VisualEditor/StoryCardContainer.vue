@@ -10,7 +10,6 @@ function handleSelect(value: StoryNodeType) {
     storyNode.value.dialog = storyNode.value.dialog || {
       text: '',
       speaker: '',
-      group: '',
     }
   }
   else if (storyNode.value.type === StoryNodeType.CharacterNode) {

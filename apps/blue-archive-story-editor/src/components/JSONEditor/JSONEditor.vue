@@ -8,6 +8,8 @@ import { EditorView } from '@codemirror/view'
 
 const props = defineProps<{
   code: string
+  height?: string,
+  width?: string,
 }>()
 
 const emit = defineEmits<{
@@ -23,9 +25,9 @@ const customTheme = EditorView.theme({
 })
 const extensions = [javascript(), oneDark, customTheme]
 const view = shallowRef<EditorView>()
-const codeMirrorStyle = ref({ height: '1200px' })
+const codeMirrorStyle = ref({ height: props.height || '1200px', width: props.width })
 
-function handleReady(payload: { view: EditorView; state: EditorState ; container: HTMLDivElement }) {
+function handleReady(payload: { view: EditorView, state: EditorState, container: HTMLDivElement }) {
   view.value = payload.view
 }
 </script>
@@ -34,9 +36,10 @@ function handleReady(payload: { view: EditorView; state: EditorState ; container
   <div class="json-editor">
     <!-- <NexonScriptEditorToolbar /> -->
     <Codemirror
-      :model-value="props.code"
       class="codemirror"
       placeholder=""
+      v-bind="$attrs"
+      :model-value="props.code"
       :style="codeMirrorStyle"
       :autofocus="false"
       :indent-with-tab="true"

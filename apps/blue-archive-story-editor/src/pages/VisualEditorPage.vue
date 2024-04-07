@@ -3,10 +3,7 @@
 </script>
 
 <template>
-  <div id="visual-editor-page">
-    <h1>
-      VisualEditorPage
-    </h1>
+  <div id="visual-editor-page" bg-gray-1>
     <VisualEditor />
   </div>
 </template>

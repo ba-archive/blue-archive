@@ -2,7 +2,7 @@ export interface Character {
   id: number,
   name: string
   club: string
-  fx: string // 立绘
+  face: string // 立绘
   emotion: string
 }
 
@@ -20,9 +20,8 @@ export interface BaseNode {
 export type DialogNode = BaseNode & {
   type: StoryNodeType.DialogNode
   dialog: {
+    speaker: number
     text: string
-    speaker: string
-    group: string
   }
 }
 

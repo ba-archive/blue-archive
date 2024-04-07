@@ -10,7 +10,7 @@ const model = defineModel<{
   id: number
   name: string
   club: string
-  fx: string
+  face: string
   emotion: string
 } | null>({ required: true })
 
@@ -24,7 +24,7 @@ const selected = computed({
       id: 0,
       name: '',
       club: '',
-      fx: '',
+      face: '',
       emotion: '',
     }
   },
@@ -54,7 +54,7 @@ function handleCharacterSelect(character_data: CharacterData) {
     id: character_data.id,
     name: character_data.nameCn,
     club: character_data.club,
-    fx: '',
+    face: '',
     emotion: '',
   }
   characterListShow.value = false

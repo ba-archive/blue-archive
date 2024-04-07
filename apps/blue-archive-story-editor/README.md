@@ -12,6 +12,7 @@
 - 项目图标征集
 - integrate [CodeMirror](https://codemirror.net/)
 - update unplugin-vue-pages
+- CharacterView 单例
 
 ## Script Commands
 

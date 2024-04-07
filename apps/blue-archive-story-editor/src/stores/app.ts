@@ -9,27 +9,51 @@ export const useAppStore = defineStore('app', () => {
 
   // todo 优化
   function getCharacterAvatarUrl(id: number) {
-    // const url1 = `/avatars/${id}.webp`
-    // if (await checkImageExist(url1)) {
-    //   return url1
-    // }
-    // else {
     if (id === 0)
       return DEFAULT_AVATAR_URL
     for (const each of charactersData.value) {
       if (id === each.id) {
         const url2 = `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${each.textureDir}.png`
-        // if (await checkImageExist(url2))
         return url2
       }
     }
     return DEFAULT_AVATAR_URL
-    // }
+  }
+
+  function getCharacter(id: number) {
+    for (const each of charactersData.value) {
+      if (id === each.id)
+        return each
+    }
+  }
+
+  function getCharacterSpineUrl(id: number) {
+    // return `/SpineCharacters/${character.id}_spr/${character.id}_spr.skel`
+    for (const each of charactersData.value) {
+      if (id === each.id) {
+        const matched = each.spinePath.match(/CharacterSpine_(.*)/)
+        if (matched) {
+          const spineName = matched[1]
+          return `https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/${spineName}_spr/${spineName}_spr.skel`
+        }
+        return ''
+      }
+    }
+    return ''
+  }
+
+  function getCharacterScriptName(id: number) {
+    const character = getCharacter(id)
+    if (character)
+      return character.nameKr.replace('(', ' ').replace(')', '')
   }
 
   return {
     charactersData,
     getCharacterAvatarUrl,
+    getCharacterSpineUrl,
+    getCharacterScriptName,
+    getCharacter,
   }
 })
 
