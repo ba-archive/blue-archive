@@ -1,20 +1,12 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import student_data from '~/assets/students.json'
-import type { Student } from '~/types/app'
+import student_data from '~/assets/character_data.json'
+import type { CharacterData } from '~/types/app'
 
 export const useAppStore = defineStore('app', () => {
-  const students = ref<Student[]>(
-    student_data.map((item) => {
-      return {
-        id: item.id,
-        name: item.name.cn,
-        club: item.club,
-      }
-    }),
-  )
+  const charactersData = ref<CharacterData[]>(student_data.students)
 
   return {
-    students,
+    charactersData,
   }
 })
 

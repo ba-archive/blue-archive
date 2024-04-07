@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { CharacterNode, DialogNode, StoryNode } from '~/types/visual-editor.ts'
+import type { Character, CharacterNode, DialogNode, StoryNode } from '~/types/visual-editor.ts'
 import { StoryNodeType } from '~/types/visual-editor'
 
 const storyIndex = ref(4)
 
-const testCharacter = {
-  id: 'yuuka',
+const testCharacter: Character = {
+  id: 10038,
   name: 'yuuka',
-  group: 'yuuka\'s group',
+  club: 'yuuka\'s group',
   fx: 'normal',
   emotion: 'smile',
 }
@@ -54,12 +54,6 @@ const testCharacterData: Ref<CharacterNode[]> = ref([
   },
 ])
 
-const testStudent: Ref<Student> = ref({
-  id: 'ibuki',
-  name: '伊吹',
-  club: '万魔殿',
-})
-
 const storyNodes = ref<StoryNode[]>([
   ...testData.value,
   ...testCharacterData.value,
@@ -85,6 +79,8 @@ const selectedStudent = ref<{
   fx: string
   emotion: string
 } | null>(null)
+
+const modalShow = ref(true)
 </script>
 
 <template>
@@ -99,7 +95,10 @@ const selectedStudent = ref<{
       />
       <AddCard @click="handleAddCard" />
       <StudentSelect v-model="selectedStudent" />
-      <StudentViewer :student="testStudent" />
+      <!-- <StudentViewer :student="testStudent" /> -->
+      <TheModal v-model:show="modalShow" title="HelloWorld">
+        Hello, World
+      </TheModal>
     </div>
   </div>
 </template>
