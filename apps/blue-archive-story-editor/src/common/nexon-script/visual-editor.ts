@@ -41,24 +41,41 @@ export function buildNexonJSONStory(nodes: StoryNode[]) {
       const dialog = node.dialog
       const characterIndex = node.dialog.speaker
       const character = currentCharacters[characterIndex]
+      const temp = { ...template }
       if (!character) {
         console.error('buildNexonJSONStory error')
         continue
       }
       const scriptName = appStore.getCharacterScriptName(character.id)
-      template.ScriptKr = `${characterIndex + 1};${scriptName};${character.face};${dialog.text}\n`
-      template.TextCn = node.dialog.text
-      result.content.push({ ...template })
+      temp.ScriptKr = `${characterIndex + 1};${scriptName};${character.face};${dialog.text}\n`
+      temp.TextCn = node.dialog.text
+      result.content.push(temp)
     }
     else if (node.type === StoryNodeType.CharacterNode) {
       currentCharacters = node.characters
+      const temp = { ...template }
       for (const [index, character] of node.characters.entries()) {
         if (character) {
           const scriptName = appStore.getCharacterScriptName(character.id)
-          template.ScriptKr += `${index + 1};${scriptName};${character.face};\n`
+          temp.ScriptKr += `${index + 1};${scriptName};${character.face};\n`
         }
       }
-      result.content.push({ ...template })
+      result.content.push(temp)
+    }
+    else if (node.type === StoryNodeType.BackgroundNode) {
+      result.content.push({ ...template, BGName: node.backgroundId })
+    }
+    else if (node.type === StoryNodeType.BgmNode) {
+      result.content.push({ ...template, BGMId: node.bgmId })
+    }
+    else if (node.type === StoryNodeType.TitleNode) {
+      result.content.push({ ...template, ScriptKr: `#title;${node.text}`, TextCn: node.text })
+    }
+    else if (node.type === StoryNodeType.WaitNode) {
+      result.content.push({ ...template, ScriptKr: `#wait;${node.milliSecond}` })
+    }
+    else if (node.type === StoryNodeType.NaNode) {
+      result.content.push({ ...template, ScriptKr: `#na;${node.text}`, TextCn: node.text })
     }
   }
   return result

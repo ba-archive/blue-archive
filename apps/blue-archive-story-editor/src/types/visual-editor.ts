@@ -1,5 +1,5 @@
 export interface Character {
-  id: number,
+  id: number
   name: string
   club: string
   face: string // 立绘
@@ -9,6 +9,11 @@ export interface Character {
 export enum StoryNodeType {
   DialogNode = 'DialogNode',
   CharacterNode = 'CharacterNode',
+  BackgroundNode = 'BackgroundNode',
+  TitleNode = 'TitleNode',
+  BgmNode = 'BgmNode',
+  WaitNode = 'WaitNode',
+  NaNode = 'NaNode',
 }
 
 export interface BaseNode {
@@ -20,7 +25,7 @@ export interface BaseNode {
 export type DialogNode = BaseNode & {
   type: StoryNodeType.DialogNode
   dialog: {
-    speaker: number
+    speaker: number // todo use student id, unwrap dialog
     text: string
   }
 }
@@ -30,4 +35,32 @@ export type CharacterNode = BaseNode & {
   characters: [Character | null, Character | null, Character | null, Character | null, Character | null]
 }
 
-export type StoryNode = DialogNode | CharacterNode
+export type BackgroundNode = BaseNode & {
+  type: StoryNodeType.BackgroundNode
+  backgroundId: number
+}
+
+export type BgmNode = BaseNode & {
+  type: StoryNodeType.BgmNode
+  bgmId: number
+}
+
+export type TitleNode = BaseNode & {
+  type: StoryNodeType.TitleNode
+  text: string
+}
+
+export type WaitNode = BaseNode & {
+  type: StoryNodeType.WaitNode
+  milliSecond: number
+}
+
+export type NaNode = BaseNode & {
+  type: StoryNodeType.NaNode
+  speaker: number
+  text: string
+}
+
+// todo st clearSt [s] #all:hide #continued #nextepisode
+export type StoryNode =
+  DialogNode | CharacterNode | BackgroundNode | TitleNode | BgmNode | TitleNode | WaitNode | NaNode

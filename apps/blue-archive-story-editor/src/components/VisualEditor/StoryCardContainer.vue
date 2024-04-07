@@ -41,6 +41,26 @@ provide('cardContainer', cardContainer)
       v-else-if="storyNode.type === StoryNodeType.CharacterNode"
       v-model="storyNode"
     />
+    <BackgroundCard
+      v-else-if="storyNode.type === StoryNodeType.BackgroundNode"
+      v-model="storyNode"
+    />
+    <BgmCard
+      v-else-if="storyNode.type === StoryNodeType.BgmNode"
+      v-model="storyNode"
+    />
+    <WaitCard
+      v-else-if="storyNode.type === StoryNodeType.WaitNode"
+      v-model="storyNode"
+    />
+    <NaCard
+      v-else-if="storyNode.type === StoryNodeType.NaNode"
+      v-model="storyNode"
+    />
+    <TitleCard
+      v-else-if="storyNode.type === StoryNodeType.TitleNode"
+      v-model="storyNode"
+    />
   </div>
 </template>
 

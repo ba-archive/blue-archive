@@ -5,7 +5,8 @@ const props = withDefaults(defineProps<{
   label: '',
 })
 
-const modelValue = defineModel<string>()
+const model = defineModel<string>()
+
 </script>
 
 <template>
@@ -16,7 +17,7 @@ const modelValue = defineModel<string>()
       </span>
       <input
         id="input"
-        v-model="modelValue"
+        v-model="model"
         type="text"
         v-bind="$attrs"
         autocomplete="off"
