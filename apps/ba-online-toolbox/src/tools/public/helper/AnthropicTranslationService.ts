@@ -30,7 +30,6 @@ interface ClaudeRoleplayContent {
 // anthropic API 有问题，自己构建一个 axios 实例
 const instance = axios.create({
   // baseURL: "https://api.anthropic.com/v1",
-  baseURL: "/messages",
   headers: {
     "Content-Type": "application/json",
     "anthropic-version": "2023-06-01",
@@ -129,7 +128,7 @@ function getClaudeTranslation(input: string) {
   });
 
   return instance
-    .post("/", rag_request)
+    .post("/messages", rag_request)
     .then(res => res.data)
     .catch(e => {
       error_message.content[0].text = e.message;
