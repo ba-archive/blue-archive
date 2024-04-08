@@ -45,7 +45,7 @@ jobs:
           YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
           ANTHROPIC_TIER1_SECRET = os.getenv("ANTHROPIC_TIER1_SECRET")
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
-              f.write(f'{{"YOUDAO_APP_ID": "{YOUDAO_APP_ID}", "YOUDAO_APP_SECRET": "{YOUDAO_APP_SECRET}", "ANTHROPIC_TIER1_SECRET": "{ANTHROPIC_TIER1_SECRET}"}}'
+              f.write(f'{{"YOUDAO_APP_ID": "{YOUDAO_APP_ID}", "YOUDAO_APP_SECRET": "{YOUDAO_APP_SECRET}", "ANTHROPIC_TIER1_SECRET": "{ANTHROPIC_TIER1_SECRET}"}}')
       - name: Rush build
         run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
       - name: Viewer rsync deploy

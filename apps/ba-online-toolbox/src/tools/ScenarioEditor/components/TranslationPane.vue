@@ -284,13 +284,19 @@ import {
   getClaudeTranslation,
 } from "../../public/helper/AnthropicTranslationService";
 
-function handleLLMTranslateRequest() {
-  // ElMessage({
-  //   message: "你先别急",
-  //   type: "info",
-  // });
+let llmLastCalled = 0;
 
+function handleLLMTranslateRequest() {
   if (config.getSelectLine !== -1) {
+    if (Date.now() - llmLastCalled < 5000) {
+      ElMessage({
+        message: "太……太快啦♡小小的接口♡要受不了啦♡",
+        type: "error",
+      });
+      return;
+    }
+    llmLastCalled = Date.now();
+
     const text =
       mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
 
