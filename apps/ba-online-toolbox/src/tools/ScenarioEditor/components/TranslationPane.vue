@@ -243,9 +243,6 @@ const translateHandle = () => {
 const acceptHandle = () => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    // if (line[config.getLanguage].split(/(\[.*?\])/g).length > 1) {
-    //   alert("文本中有特殊标记, 请注意添加~");
-    // }
     line[config.getTargetLang] = config.tmpMachineTranslate;
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
