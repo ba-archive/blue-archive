@@ -279,11 +279,29 @@ function handleFormalizePunctuation() {
   });
 }
 
+import {
+  ClaudeMessage,
+  getClaudeTranslation,
+} from "../../public/helper/AnthropicTranslationService";
+
 function handleLLMTranslateRequest() {
-  ElMessage({
-    message: "你先别急",
-    type: "info",
-  });
+  // ElMessage({
+  //   message: "你先别急",
+  //   type: "info",
+  // });
+
+  if (config.getSelectLine !== -1) {
+    const text =
+      mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
+
+    getClaudeTranslation(text)
+      .then((res: ClaudeMessage) => {
+        config.setTmpMachineTranslate(halfToFull(res.content[0].text ?? ""));
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 }
 
 const commentHandle = (event: string) => {
