@@ -1,7 +1,7 @@
 import axios from "axios";
 import secrets from "../secrets.json";
 
-const { AnthropicAppKey } = secrets;
+const { ANTHROPIC_TIER1_SECRET } = secrets;
 
 interface ClaudeContent {
   type: "text";
@@ -34,7 +34,7 @@ const instance = axios.create({
   headers: {
     "Content-Type": "application/json",
     "anthropic-version": "2023-06-01",
-    "x-api-key": AnthropicAppKey || "",
+    "x-api-key": ANTHROPIC_TIER1_SECRET || "",
   },
 });
 
@@ -113,7 +113,7 @@ function getClaudeTranslation(input: string) {
     return new Promise(resolve => resolve(error_message));
   }
 
-  if (!AnthropicAppKey || AnthropicAppKey.length === 0) {
+  if (!ANTHROPIC_TIER1_SECRET || ANTHROPIC_TIER1_SECRET.length === 0) {
     error_message.content[0].text = "找不到Anthropic API Key";
     return new Promise(resolve => resolve(error_message));
   }
