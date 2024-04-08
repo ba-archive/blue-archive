@@ -184,6 +184,8 @@ import { useScenarioStore } from "../store/scenarioEditorStore";
 import { ContentLine, Language } from "../types/content";
 import TranslateInput from "./TranslateInput.vue";
 import { ElMessage } from "element-plus";
+import { getClaudeTranslation } from "../../public/helper/AnthropicTranslationService";
+import type { ClaudeMessage } from "../../public/helper/AnthropicTranslationService";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -278,11 +280,6 @@ function handleFormalizePunctuation() {
     );
   });
 }
-
-import {
-  ClaudeMessage,
-  getClaudeTranslation,
-} from "../../public/helper/AnthropicTranslationService";
 
 let llmLastCalled = 0;
 
