@@ -12,8 +12,7 @@ export const useVisualEditorStore = defineStore('visualEditor', () => {
       type: StoryNodeType.DialogNode,
       dialog: {
         text: '',
-        speaker: '',
-        group: '',
+        speaker: 0,
       },
       next: null,
     })

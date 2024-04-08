@@ -4,6 +4,7 @@ export interface Character {
   club: string
   face: string // 立绘
   emotion: string
+  effect: string // todo use null other than ''
 }
 
 export enum StoryNodeType {

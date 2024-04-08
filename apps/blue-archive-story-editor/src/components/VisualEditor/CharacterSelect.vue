@@ -12,6 +12,7 @@ const model = defineModel<{
   club: string
   face: string
   emotion: string
+  effect: ''
 } | null>({ required: true })
 
 const characterSelectCard = ref<HTMLDivElement | undefined>(undefined)
@@ -26,6 +27,7 @@ const selected = computed({
       club: '',
       face: '',
       emotion: '',
+      effect: '',
     }
   },
   set: (value) => {
@@ -45,8 +47,12 @@ const selected = computed({
 //   })
 // }
 
-function handleShowCharacterList() {
+function handleSelectCharacter() {
   characterListShow.value = true
+}
+function handleUnSelectCharacter() {
+  model.value = null  // clear selected character
+  characterListShow.value = false
 }
 
 function handleCharacterSelect(character_data: CharacterData) {
@@ -56,6 +62,7 @@ function handleCharacterSelect(character_data: CharacterData) {
     club: character_data.club,
     face: '',
     emotion: '',
+    effect: ''
   }
   characterListShow.value = false
 }
@@ -80,7 +87,8 @@ function handleCharacterSelect(character_data: CharacterData) {
           :src="appStore.getCharacterAvatarUrl(selected.id)"
           h26
           w26 b-rd-2 object-cover
-          @click="handleShowCharacterList"
+          @click="handleSelectCharacter"
+          @click.right.prevent="handleUnSelectCharacter"
         >
         <div flex="~ col" ml4 gap-y-1>
           <div class="name">

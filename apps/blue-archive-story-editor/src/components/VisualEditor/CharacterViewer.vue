@@ -2,6 +2,7 @@
 import * as PIXI from 'pixi.js'
 import { Spine, SpineDebugRenderer } from 'pixi-spine'
 import type { Character } from '~/types/visual-editor'
+import allCharacterEffect from '~/assets/all_character_effect.json'
 
 const appStore = useAppStore()
 
@@ -23,8 +24,6 @@ function loadSpineData(app: PIXI.Application, name: string, path: string): Promi
     })
   })
 }
-
-
 
 const animations = ref<string[]>([])
 const spine = ref<Spine | null>(null)
@@ -74,6 +73,20 @@ watchEffect(async () => {
     container.removeChildren()
 })
 
+function handleChangeEmotion(emotion: typeof allCharacterEffect.emotions[number]) {
+  if (model.value.emotion === emotion.scriptName)
+    model.value.emotion = ''
+  else
+    model.value.emotion = emotion.scriptName
+}
+
+function handleChangeEffect(effect: string) {
+  if (model.value.effect === effect)
+    model.value.effect = ''
+  else
+    model.value.effect = effect
+}
+
 function handleChangeAnimation(name: string) {
   model.value.face = name
   spine!.value?.state.setAnimation(0, name, false)
@@ -82,12 +95,26 @@ function handleChangeAnimation(name: string) {
 
 <template>
   <div class="character-viewer" flex="~ col">
-    <h3>
-      <span>
-        {{ model.name }} ({{ model.id }})
-      </span>
-      表情选择：{{ model }}
-    </h3>
+    <div class="emotions" my1 mb2>
+      <button
+        v-for="emotion in allCharacterEffect.emotions" :key="emotion.id"
+        :class="{ 'bg-gray-3': emotion.scriptName === model.emotion }"
+        mx.5 my.5 px3 py1 btn text="sm"
+        @click="handleChangeEmotion(emotion)"
+      >
+        {{ emotion.name }}
+      </button>
+    </div>
+    <div class="actions" my1 mb2>
+      <button
+        v-for="effect in allCharacterEffect.others" :key="effect"
+        :class="{ 'bg-gray-3': effect === model.effect }"
+        mx.5 my.5 px3 py1 btn text="sm"
+        @click="handleChangeEffect(effect)"
+      >
+        {{ effect }}
+      </button>
+    </div>
     <div class="animations" my1 mb2>
       <button
         v-for="name in animations" :key="name"

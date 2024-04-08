@@ -7,9 +7,12 @@ const appStore = useAppStore()
 const currentClickedCharacterIndex = ref(0)
 const characterSelectShow = ref(false)
 
-function handleCharacterClicked(event: Event, index: number) {
+function handleCharacterClicked(index: number) {
   currentClickedCharacterIndex.value = index
   characterSelectShow.value = true
+}
+function handleCharacterRightClicked(index: number) {
+  model.value.characters[index] = null  // unselect character
 }
 const cardContainer = inject('cardContainer') as Ref<HTMLDivElement | undefined>
 </script>
@@ -20,7 +23,9 @@ const cardContainer = inject('cardContainer') as Ref<HTMLDivElement | undefined>
       <div class="characters" flex="~ justify-between" mt2>
         <div
           v-for="character, index in model.characters"
-          :key="character?.id" class="character" @click="handleCharacterClicked($event, index)"
+          :key="character?.id" class="character"
+          @click="handleCharacterClicked( index)"
+          @click.right.prevent="handleCharacterRightClicked(index)"
         >
           <div v-if="character" h12 w12>
             <img :src="appStore.getCharacterAvatarUrl(character.id)" h12 w12 object-cover>

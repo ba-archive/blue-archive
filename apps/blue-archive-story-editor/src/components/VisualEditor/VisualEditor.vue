@@ -19,6 +19,7 @@ const storySummary = {
 }
 
 const playerVIf = ref(false)
+const player = ref<InstanceType<typeof BaStoryPlayer> | undefined>(undefined)
 function reloadPlayer() {
   playerVIf.value = false
   nextTick(() => {
@@ -54,6 +55,7 @@ const playerHeight = 400
           <div class="player-container" :style="{ height: `${playerHeight}px`, width: `${playerWidth}px` }" relative z-0>
             <BaStoryPlayer
               v-if="playerVIf"
+              ref="player"
               class="player-container"
               data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
               language="Cn"

@@ -58,6 +58,10 @@ export function buildNexonJSONStory(nodes: StoryNode[]) {
         if (character) {
           const scriptName = appStore.getCharacterScriptName(character.id)
           temp.ScriptKr += `${index + 1};${scriptName};${character.face};\n`
+          if (character.emotion)
+            temp.ScriptKr += `#${index + 1};em;${character.emotion}\n`
+          if (character.effect)
+            temp.ScriptKr += `#${index + 1};${character.effect}\n`
         }
       }
       result.content.push(temp)
