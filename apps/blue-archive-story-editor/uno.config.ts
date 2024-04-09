@@ -11,6 +11,8 @@ export default defineConfig({
     ['btn', 'px-4 py-1 rounded inline-block bg-white shadow-md cursor-pointer hover:bg-gray-2 active:bg-gray-3 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50 transition select-none'],
     ['icon-btn', 'text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600 !outline-none'],
     ['card', 'w-sm b-rd bg-white p3 py2 shadow-md'],
+    ['flex-center', 'flex-justify-center flex-items-center'],
+    ['img', 'object-contain w24 h18'],
   ],
   rules: [
     ['pos-center', { left: '50%', top: '50%', 'transform': 'translate(-50%, -50%)' }],

@@ -1,18 +1,33 @@
 <script setup lang="ts">
-const props = defineProps<{
-  title?: string
-  width?: string
-  height?: string
-  anchor?: HTMLElement
-}>()
+const props = withDefaults(
+  defineProps<{
+    title?: string
+    width?: string
+    height?: string
+    anchor?: HTMLElement | 'body'
+    position?: 'top' | 'right' | 'bottom' | 'left' | 'center'
+  }>(),
+  {
+    position: 'right',
+  },
+)
 const show = defineModel<boolean>('show')
 const modal = ref<HTMLDivElement | undefined>(undefined)
 
 const modalPosition = computed(() => {
-  void show.value  // 副作用，当 show 更新的时候重新计算
-  const el = props.anchor || modal.value
-  if (!el)
-    return [0, 0]
+  void show.value // 副作用，当 show 更新的时候重新计算
+  let el: HTMLElement
+
+  if (props.anchor === 'body')
+    el = document.documentElement
+  else if (props.anchor)
+    el = props.anchor
+  else
+    el = modal.value || document.documentElement
+
+  if (props.position === 'center')
+    return [Number.NaN, Number.NaN]
+
   const rect = el.getBoundingClientRect()
   const body = document.documentElement
 
@@ -28,12 +43,18 @@ const modalPosition = computed(() => {
   </div>
   <Teleport to="body">
     <div
-      v-show="show" class="the-modal-content" :class="{ 'pos-center': !(modalPosition[1] && modalPosition[0]) }"
+      v-show="show" class="the-modal-content"
+      :class="{ 'pos-center': Number.isNaN(modalPosition[1]) && Number.isNaN(modalPosition[0]) }"
       :style="{ width, height, top: modalPosition[1], left: modalPosition[0] }"
-      absolute
+      absolute box-content card h-auto w-auto
     >
-      <div class="header">
-        <slot name="header" />
+      <div class="header" flex="~">
+        <slot name="header">
+          <div class="header-content" flex-1>
+            <h2>Modal</h2>
+          </div>
+        </slot>
+        <i i-material-symbols:cancel-outline icon-btn @click="show = false" />
       </div>
       <div class="container">
         <slot name="content" />

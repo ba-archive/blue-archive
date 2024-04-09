@@ -1,5 +1,6 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import student_data from '~/assets/character_data.json'
+import backgrounds from '~/assets/excel/ScenarioBGNameExcelTable.json'
 import type { CharacterData } from '~/types/app'
 
 const DEFAULT_AVATAR_URL = 'https://sdfsdf.dev/50x50.jpg'
@@ -48,12 +49,30 @@ export const useAppStore = defineStore('app', () => {
       return character.nameKr.replace('(', ' ').replace(')', '')
   }
 
+  function getBackground(id: number) {
+    // todo 使用自己的数据结构
+    for (const background of backgrounds.DataList) {
+      if (background.Name === id)
+        return background
+    }
+  }
+
+  function getBackgroundUrl(id: number) {
+    // todo 使用自己的数据结构
+    const background = getBackground(id)
+    if (background)
+      return `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${background.BGFileName}.jpg`
+    return 'https://sdfsdf.dev/100x70.jpg'
+  }
+
   return {
     charactersData,
     getCharacterAvatarUrl,
     getCharacterSpineUrl,
     getCharacterScriptName,
     getCharacter,
+    getBackground,
+    getBackgroundUrl,
   }
 })
 

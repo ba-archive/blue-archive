@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import type { BackgroundNode } from '~/types/visual-editor'
 
+const appStore = useAppStore()
 const model = defineModel<BackgroundNode>({ required: true })
-const backgroundId = computed({
-  get: () => {
-    return String(model.value.backgroundId || '')
-  },
-  set: (value) => {
-    model.value.backgroundId = Number(value) || 0
-  },
-})
+
+const modalShow = ref(false)
 </script>
 
 <template>
   <div class="background-card">
-    <TheInput v-model="backgroundId" label="背景 id:" />
+    <div>
+      背景 id: {{ model.backgroundId }}
+    </div>
+    <TheModal v-model:show="modalShow" anchor="body" position="center">
+      <img img h16rem w-full :src="appStore.getBackgroundUrl(model.backgroundId)" @click="modalShow = true">
+      <template #content>
+        <BackgroundSelector v-model="model.backgroundId" />
+      </template>
+    </TheModal>
   </div>
 </template>
 

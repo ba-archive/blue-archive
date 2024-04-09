@@ -208,6 +208,7 @@ importers:
       vue: ^3.3.7
       vue-codemirror: ~6.1.1
       vue-eslint-parser: ^9.4.2
+      vue-lazyload: 3.x
       vue-router: ~4.3.0
       vue-tsc: ^2.0.7
       yaml-eslint-parser: ^1.2.2
@@ -228,6 +229,7 @@ importers:
       pixi.js: 6.5.10
       vue: 3.4.21_typescript@5.4.3
       vue-codemirror: 6.1.1_codemirror@6.0.1+vue@3.4.21
+      vue-lazyload: 3.0.0
       vue-router: 4.3.0_vue@3.4.21
     devDependencies:
       '@antfu/eslint-config': 2.12.1_0bf4c03bf70c6f8db563903c76b972a8
@@ -17874,6 +17876,10 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
+
+  /vue-lazyload/3.0.0:
+    resolution: {integrity: sha512-h2keL/Rj550dLgesgOtXJS9qOiSMmuJNeVlfNAYV1/IYwOQYaWk5mFJlwRxmZDK9YC5gECcFLYYj7z1lKSf9ug==}
+    dev: false
 
   /vue-responsive-video-background-player/2.3.1:
     resolution: {integrity: sha512-9IdFfmHe1cY0PvTw51sYcSO5+gPJya5einLIoktVzBMALEC3yok36X/1+hDfbgihapRYxz3fmyv1o5M1u+0xEA==}

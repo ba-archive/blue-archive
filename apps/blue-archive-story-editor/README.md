@@ -13,6 +13,8 @@
 - integrate [CodeMirror](https://codemirror.net/)
 - update unplugin-vue-pages
 - CharacterView 单例
+- card padding放在 the modal 里面，组件不包含 padding
+- don't use vue-lazyload@3.x this stupid lib
 
 ## Script Commands
 

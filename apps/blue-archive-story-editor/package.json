@@ -20,6 +20,7 @@
     "@codemirror/state": "6.x",
     "@codemirror/theme-one-dark": "~6.1.2",
     "@codemirror/view": "~6.16.0",
+    "@pixi/assets": "v6.x",
     "@unocss/reset": "^0.59.0-beta.1",
     "@vueuse/core": "^10.7.2",
     "@vueuse/head": "^1.1.26",
@@ -30,8 +31,8 @@
     "pixi.js": "~6.5.10",
     "vue": "^3.3.7",
     "vue-codemirror": "~6.1.1",
-    "vue-router": "~4.3.0",
-    "@pixi/assets": "v6.x"
+    "vue-lazyload": "3.x",
+    "vue-router": "~4.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.11.6",
