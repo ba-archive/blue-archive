@@ -2,11 +2,12 @@
 import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
 import { buildNexonJSONStory } from '~/common/nexon-script/visual-editor'
+import { StoryNodeType } from '~/types/visual-editor';
 
 const store = useVisualEditorStore()
 
 function handleAddCard() {
-  store.newNode()
+  store.newNode(StoryNodeType.CharacterNode)
 }
 
 const jsonStory = computed(() => {

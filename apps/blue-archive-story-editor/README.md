@@ -15,6 +15,8 @@
 - CharacterView 单例
 - card padding放在 the modal 里面，组件不包含 padding
 - don't use vue-lazyload@3.x this stupid lib
+- story card container 卡片类型选择
+- 卡片移动
 
 ## Script Commands
 

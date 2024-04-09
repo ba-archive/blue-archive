@@ -54,14 +54,17 @@ export function buildNexonJSONStory(nodes: StoryNode[]) {
     else if (node.type === StoryNodeType.CharacterNode) {
       currentCharacters = node.characters
       const temp = { ...template }
-      for (const [index, character] of node.characters.entries()) {
-        if (character) {
-          const scriptName = appStore.getCharacterScriptName(character.id)
-          temp.ScriptKr += `${index + 1};${scriptName};${character.face};\n`
-          if (character.emotion)
-            temp.ScriptKr += `#${index + 1};em;${character.emotion}\n`
-          if (character.effect)
-            temp.ScriptKr += `#${index + 1};${character.effect}\n`
+      for (const [index, character] of currentCharacters.entries()) {
+        const newCharacter = node.characters[index]
+        if (character && !newCharacter)
+          temp.ScriptKr += `#${index + 1};hide\n`
+        if (newCharacter) {
+          const scriptName = appStore.getCharacterScriptName(newCharacter.id)
+          temp.ScriptKr += `${index + 1};${scriptName};${newCharacter.face};\n`
+          if (newCharacter.emotion)
+            temp.ScriptKr += `#${index + 1};em;${newCharacter.emotion}\n`
+          if (newCharacter.effect)
+            temp.ScriptKr += `#${index + 1};${newCharacter.effect}\n`
         }
       }
       result.content.push(temp)

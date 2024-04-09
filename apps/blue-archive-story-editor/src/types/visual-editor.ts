@@ -65,3 +65,4 @@ export type NaNode = BaseNode & {
 // todo st clearSt [s] #all:hide #continued #nextepisode
 export type StoryNode =
   DialogNode | CharacterNode | BackgroundNode | TitleNode | BgmNode | TitleNode | WaitNode | NaNode
+export type StoryNodeT<T extends StoryNodeType> = { type: T } & StoryNode

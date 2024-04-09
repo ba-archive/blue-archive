@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { rejects } from 'node:assert'
 import type { Character, CharacterNode } from '~/types/visual-editor.ts'
 
 const model = defineModel<CharacterNode>({ required: true })
