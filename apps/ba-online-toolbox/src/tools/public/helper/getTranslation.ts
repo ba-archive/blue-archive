@@ -6,7 +6,7 @@ import axios from "axios";
 import secrets from "../secrets.json";
 import sha256 from "crypto-js/sha256";
 
-const { appKey, appSecret } = secrets;
+const { appKey: YOUDAO_APP_ID, appSecret: YOUDAO_APP_SECRET } = secrets;
 
 const salt = crypto.randomUUID();
 const api = "/api";
@@ -18,7 +18,8 @@ function getSign(input: string, currtime: number): string {
     input.length > 20
       ? input.slice(0, 10) + input.length.toString() + input.slice(-10)
       : input;
-  const signStr = appKey + querySign + salt + currtime + appSecret;
+  const signStr =
+    YOUDAO_APP_ID + querySign + salt + currtime + YOUDAO_APP_SECRET;
 
   return sha256(signStr).toString();
 }
@@ -37,7 +38,7 @@ function translate(text: string, from = "ja", to = "zh-CHS") {
     .get(api, {
       params: {
         q: text,
-        appKey: appKey,
+        appKey: YOUDAO_APP_ID,
         salt: salt,
         from: from,
         to: to,
