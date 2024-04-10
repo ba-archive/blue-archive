@@ -97,9 +97,15 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <!-- <n-button @click="handleWrapByQuotation" type="info">
-            用引号包裹
-          </n-button> -->
+          <n-button @click="translateHandle" type="info">重新翻译</n-button>
+          <n-button
+            @click="handleLLMTranslateRequest"
+            type="info"
+            quaternary
+            :loading="llmLoading"
+          >
+            帮帮我，GPT 先生
+          </n-button>
         </n-space>
       </div>
       <div class="textLine">
@@ -173,6 +179,7 @@
     </n-space>
   </div>
 </template>
+
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 import { halfToFull, translate } from "../../public/helper/getTranslation";
@@ -182,6 +189,12 @@ import { useGlobalConfig } from "../store/configStore";
 import { useScenarioStore } from "../store/scenarioEditorStore";
 import { ContentLine, Language } from "../types/content";
 import TranslateInput from "./TranslateInput.vue";
+import { ElMessage } from "element-plus";
+import {
+  ClaudeMessage,
+  getClaudeTranslation,
+} from "../../public/helper/AnthropicTranslationService";
+import { transformStudentName } from "../../public/helper/transformStudentName";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -222,7 +235,7 @@ const translateHandle = () => {
       ?.replaceAll(/\[.*?\]/g, "");
     translate(
       text,
-      "auto" || translateHash[config.getLanguage],
+      translateHash[config.getLanguage],
       translateHash[config.getTargetLang]
     )
       .then(res => {
@@ -239,9 +252,6 @@ const translateHandle = () => {
 const acceptHandle = () => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    // if (line[config.getLanguage].split(/(\[.*?\])/g).length > 1) {
-    //   alert("文本中有特殊标记, 请注意添加~");
-    // }
     line[config.getTargetLang] = config.tmpMachineTranslate;
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
@@ -277,12 +287,42 @@ function handleFormalizePunctuation() {
   });
 }
 
-function handleWrapByQuotation() {
-  const line = mainStore.getScenario.content[config.getSelectLine];
-  const currentString = line[config.getTargetLang];
-  line[config.getTargetLang] = `${
-    currentString.startsWith("“") ? "" : "“"
-  }${currentString}${currentString.endsWith("”") ? "" : "”"}`;
+let llmLastCalled = 0;
+const llmLoading = ref(false);
+const studentNames = computed(() => config.getStudentList);
+
+function handleLLMTranslateRequest() {
+  if (config.getSelectLine !== -1) {
+    if (Date.now() - llmLastCalled < 5000) {
+      ElMessage({
+        message: "太……太快啦♡小小的接口♡要受不了啦♡",
+        type: "error",
+      });
+      return;
+    }
+    llmLastCalled = Date.now();
+    llmLoading.value = true;
+
+    const text =
+      mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
+
+    getClaudeTranslation(text)
+      .then((res: ClaudeMessage) => {
+        const rawText = res.content[0].text ?? "";
+        const fullWidthText = halfToFull(rawText);
+        const studentTransformed = transformStudentName(
+          fullWidthText,
+          studentNames.value
+        );
+        config.setTmpMachineTranslate(formalizeQuotation(studentTransformed));
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        llmLoading.value = false;
+      });
+  }
 }
 
 const commentHandle = (event: string) => {

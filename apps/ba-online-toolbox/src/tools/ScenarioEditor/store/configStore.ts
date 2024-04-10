@@ -1,19 +1,21 @@
-import { defineStore } from 'pinia';
-import { Language } from '../types/content';
+import { defineStore } from "pinia";
+import { Language } from "../types/content";
+import { Student } from "../../../../../blue-archive-story-viewer/src/types/Student";
 
 export const useGlobalConfig = defineStore({
-  id: 'globalConfig',
+  id: "globalConfig",
   persist: true,
   state: () => ({
     proofread: false,
     selectLine: 0,
-    language: 'TextJp' as Language,
-    targetLang: 'TextCn' as Language,
-    tmpMachineTranslate: '',
+    language: "TextJp" as Language,
+    targetLang: "TextCn" as Language,
+    tmpMachineTranslate: "",
     switchLanguage: 0b11,
     showAllLanguage: true,
-    selectTag: '[wa:]',
+    selectTag: "[wa:]",
     previewMode: false,
+    students: [] as Student[],
   }),
   getters: {
     isProofread: state => state.proofread,
@@ -25,6 +27,7 @@ export const useGlobalConfig = defineStore({
     getSelectTag: state => state.selectTag,
     getShowAllLanguage: state => state.showAllLanguage,
     getPreviewMode: state => state.previewMode,
+    getStudentList: state => state.students,
   },
   actions: {
     startProofread() {
@@ -48,7 +51,7 @@ export const useGlobalConfig = defineStore({
     },
     setSelectLine(line: number) {
       this.selectLine = line;
-      this.tmpMachineTranslate = '';
+      this.tmpMachineTranslate = "";
     },
     setTmpMachineTranslate(text: string) {
       this.tmpMachineTranslate = text;
@@ -62,12 +65,12 @@ export const useGlobalConfig = defineStore({
     initialize_state() {
       this.proofread = false;
       this.selectLine = -1;
-      this.tmpMachineTranslate = '';
+      this.tmpMachineTranslate = "";
       this.previewMode = false;
     },
     initialize_config() {
-      this.language = 'TextJp';
-      this.targetLang = 'TextCn';
+      this.language = "TextJp";
+      this.targetLang = "TextCn";
     },
     setShowAllLanguage(showAllLanguage: boolean) {
       this.showAllLanguage = showAllLanguage;
@@ -78,6 +81,9 @@ export const useGlobalConfig = defineStore({
     resetConfigState() {
       this.initialize_config();
       this.initialize_state();
+    },
+    setStudents(students: Student[]) {
+      this.students = students;
     },
   },
 });
