@@ -100,10 +100,25 @@ const rag_request = {
         },
       ],
     },
+    {
+      role: "user",
+      content: [{ type: "text", text: "" }],
+    },
   ],
 };
 
 function getClaudeTranslation(input: string) {
+  // const test = {
+  //   content: [
+  //     {
+  //       type: "text",
+  //       text: "接到_ウミカ_的联络后，老师来到百夜堂，看到_ウミカ_正为一群顽皮的客人感到困扰。听了老师的建议后，_ウミカ_决定付诸行动，用真诚的心意来“招待”客人。",
+  //     },
+  //   ],
+  // };
+
+  // return new Promise(resolve => resolve(test));
+
   const error_message = { content: [{ type: "text", text: "" }] };
 
   if (input && input.length < 10) {
@@ -117,15 +132,7 @@ function getClaudeTranslation(input: string) {
     return new Promise(resolve => resolve(error_message));
   }
 
-  rag_request.messages.push({
-    role: "user",
-    content: [
-      {
-        type: "text",
-        text: input,
-      },
-    ],
-  });
+  rag_request.messages[6].content[0].text = input;
 
   return instance
     .post("/v1/messages", rag_request)

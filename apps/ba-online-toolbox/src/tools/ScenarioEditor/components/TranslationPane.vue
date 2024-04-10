@@ -98,7 +98,12 @@
             规范符号
           </n-button>
           <n-button @click="translateHandle" type="info">重新翻译</n-button>
-          <n-button @click="handleLLMTranslateRequest" type="info" quaternary>
+          <n-button
+            @click="handleLLMTranslateRequest"
+            type="info"
+            quaternary
+            :loading="llmLoading"
+          >
             帮帮我，GPT 先生
           </n-button>
         </n-space>
@@ -185,8 +190,11 @@ import { useScenarioStore } from "../store/scenarioEditorStore";
 import { ContentLine, Language } from "../types/content";
 import TranslateInput from "./TranslateInput.vue";
 import { ElMessage } from "element-plus";
-import { getClaudeTranslation } from "../../public/helper/AnthropicTranslationService";
-import type { ClaudeMessage } from "../../public/helper/AnthropicTranslationService";
+import {
+  ClaudeMessage,
+  getClaudeTranslation,
+} from "../../public/helper/AnthropicTranslationService";
+import { transformStudentName } from "../../public/helper/transformStudentName";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -280,6 +288,8 @@ function handleFormalizePunctuation() {
 }
 
 let llmLastCalled = 0;
+const llmLoading = ref(false);
+const studentNames = computed(() => config.getStudentList);
 
 function handleLLMTranslateRequest() {
   if (config.getSelectLine !== -1) {
@@ -291,16 +301,26 @@ function handleLLMTranslateRequest() {
       return;
     }
     llmLastCalled = Date.now();
+    llmLoading.value = true;
 
     const text =
       mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
 
     getClaudeTranslation(text)
       .then((res: ClaudeMessage) => {
-        config.setTmpMachineTranslate(halfToFull(res.content[0].text ?? ""));
+        const rawText = res.content[0].text ?? "";
+        const fullWidthText = halfToFull(rawText);
+        const studentTransformed = transformStudentName(
+          fullWidthText,
+          studentNames.value
+        );
+        config.setTmpMachineTranslate(formalizeQuotation(studentTransformed));
       })
       .catch(err => {
         console.log(err);
+      })
+      .finally(() => {
+        llmLoading.value = false;
       });
   }
 }

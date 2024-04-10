@@ -1,7 +1,24 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import HomepageNavigator from "./HomepageNavigator.vue";
+import { useGlobalConfig } from "./tools/ScenarioEditor/store/configStore";
+import { getStudents } from "./tools/public/helper/getStudents";
+import { ElMessage } from "element-plus";
+
+const config = useGlobalConfig();
+
+onMounted(() => {
+  getStudents().then(students => {
+    if (!students || students.length === 0) {
+      ElMessage({
+        message: "No students found",
+        type: "warning",
+      });
+    }
+    config.setStudents(students);
+  });
+});
 
 const route = useRoute();
 
