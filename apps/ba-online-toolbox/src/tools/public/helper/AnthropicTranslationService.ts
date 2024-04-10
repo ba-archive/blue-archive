@@ -128,7 +128,7 @@ function getClaudeTranslation(input: string) {
   });
 
   return instance
-    .post("/messages", rag_request)
+    .post("/v1/messages", rag_request)
     .then(res => res.data)
     .catch(e => {
       error_message.content[0].text = e.message;

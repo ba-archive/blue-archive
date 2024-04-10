@@ -19,7 +19,6 @@ export default defineConfig({
       },
       "/messages": {
         target: "https://api.anthropic.com/v1",
-        changeOrigin: true,
       },
     },
   },
