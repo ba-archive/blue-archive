@@ -6,7 +6,7 @@ import axios from "axios";
 import secrets from "../secrets.json";
 import sha256 from "crypto-js/sha256";
 
-const { appKey: YOUDAO_APP_ID, appSecret: YOUDAO_APP_SECRET } = secrets;
+const { YOUDAO_APP_ID, YOUDAO_APP_SECRET } = secrets;
 
 const salt = crypto.randomUUID();
 const api = "/api";
