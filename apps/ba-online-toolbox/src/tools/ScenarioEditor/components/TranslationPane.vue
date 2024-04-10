@@ -97,6 +97,7 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
+          <n-button @click="translateHandle" type="info">重新翻译</n-button>
           <n-button @click="handleLLMTranslateRequest" type="info" quaternary>
             帮帮我，GPT 先生
           </n-button>
@@ -226,7 +227,7 @@ const translateHandle = () => {
       ?.replaceAll(/\[.*?\]/g, "");
     translate(
       text,
-      "auto" || translateHash[config.getLanguage],
+      translateHash[config.getLanguage],
       translateHash[config.getTargetLang]
     )
       .then(res => {
