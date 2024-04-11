@@ -8,7 +8,6 @@ import type { StoryNode } from '~/types/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
 
 const store = useVisualEditorStore()
-window.store = store
 
 function handleAddCard() {
   store.newNode(StoryNodeType.CharacterNode)
@@ -41,7 +40,6 @@ const playerHeight = 400
 function applyCardDrag(dropResult: DropResult) {
   const fromId = store.storyNodes[dropResult.removedIndex].id
   const toId = store.storyNodes[dropResult.addedIndex].id
-  console.log(dropResult, 'move from ', fromId, 'to ', toId)
   store.moveNode(fromId, toId)
 }
 
@@ -53,15 +51,15 @@ const dropPlaceholderOptions = {
 </script>
 
 <template>
-  <div class="visual-editor">
+  <div class="visual-editor" h-100vh w-100vw>
     <!-- <div class="toolbar">
       <button></button>
     </div> -->
-    <div flex="~" gap-2>
+    <div flex="~" h-full w-full gap-2>
       <div class="story-node-list" inline-block card w27rem>
-        <div of-hidden bg-gray-1 p-3>
+        <div flex="~ col" h-full bg-gray-1>
           <Container
-            children:m-b-3 important:min-h-0
+            flex-1 of-x-hidden of-y-auto children:m-3 important:min-h-0
             :animation-duration="150"
             :drop-placeholder="dropPlaceholderOptions"
             drag-handle-selector=".drag-handle"
@@ -74,7 +72,7 @@ const dropPlaceholderOptions = {
               />
             </Draggable>
           </Container>
-          <AddCard @click="handleAddCard" />
+          <AddCard m3 @click="handleAddCard" />
         </div>
       </div>
       <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card>
@@ -101,7 +99,7 @@ const dropPlaceholderOptions = {
             />
           </div>
         </div>
-        <JSONEditor :code="JSON.stringify(jsonStory, null, 2)" />
+        <JSONEditor :code="JSON.stringify(jsonStory, null, 2)" flex-1 height="100%" />
       </div>
     </div>
   </div>

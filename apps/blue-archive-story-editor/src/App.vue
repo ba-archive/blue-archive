@@ -5,7 +5,7 @@
 useHead({
   title: 'PlanaStudio',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
+    { name: 'description', content: 'Blue Archive Story Editor' },
     {
       name: 'theme-color',
       content: () => (isDark.value ? '#00aba9' : '#ffffff'),

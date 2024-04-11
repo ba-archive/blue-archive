@@ -18,6 +18,7 @@
 - story card container 卡片类型选择
 - 卡片移动
 - https://github.com/kutlugsahin/vue-smooth-dnd/issues/229
+- update vueuse useHead
 
 ## Script Commands
 

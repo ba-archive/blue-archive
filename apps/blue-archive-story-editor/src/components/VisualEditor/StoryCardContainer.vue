@@ -24,7 +24,7 @@ provide('cardContainer', cardContainer)
 
 <template>
   <div
-    ref="cardContainer" class="story-card-container" card select-none
+    ref="cardContainer" class="story-card-container" card w-auto select-none
   >
     <div class="header" flex="~ items-center" gap-2>
       <span class="drag-handle" i-material-symbols:drag-indicator inline-block cursor-pointer p-1 px4 text-size-xl />

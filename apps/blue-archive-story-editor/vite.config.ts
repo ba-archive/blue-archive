@@ -54,7 +54,7 @@ export default defineConfig({
           'vue-router/auto': ['useLink'],
         },
       ],
-      dts: true,
+      dts: 'src/auto-imports.d.ts',
       dirs: [
         'src/composables',
         'src/stores',
@@ -67,7 +67,7 @@ export default defineConfig({
       resolvers: [],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: true,
+      dts: 'src/components.d.ts',
     }),
 
     // https://github.com/antfu/unocss
