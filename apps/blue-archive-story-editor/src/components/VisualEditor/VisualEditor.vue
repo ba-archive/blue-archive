@@ -51,18 +51,23 @@ const dropPlaceholderOptions = {
 </script>
 
 <template>
-  <div class="visual-editor" h-100vh w-100vw>
-    <!-- <div class="toolbar">
-      <button></button>
-    </div> -->
-    <div flex="~" h-full w-full gap-2>
+  <div class="visual-editor" h-100vh w-100vw flex="~ col">
+    <div class="headbar" flex bg-white py1 border="~ b-1" shadow-sm>
+      <div class="left" flex flex-1>
+        <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px>
+        <button border shadow-sm btn @click="reloadPlayer">
+          运行
+        </button>
+      </div>
+      <div class="right" flex="~ center">
+        <a href="https://github.com/ba-archive/blue-archive/tree/dev-notype/apps/blue-archive-story-editor" target="_blank">
+          <i text="gray-9 3xl" i-mdi:github align-top icon-btn />
+        </a>
+      </div>
+    </div>
+    <div flex="~ 1" w-full gap-2 p-2>
       <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview">
-          <div class="toolbar" flex>
-            <button btn @click="reloadPlayer">
-              加载
-            </button>
-          </div>
           <div class="player-container" :style="{ height: `${playerHeight}px`, width: `${playerWidth}px` }" relative z-0>
             <BaStoryPlayer
               v-if="playerVIf"

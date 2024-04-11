@@ -17,6 +17,16 @@ function handleSelect(value: StoryNodeType) {
     storyNode.value.characters = storyNode.value.characters || [null, null, null, null, null]
   }
 }
+
+const StoryNodeDescription = {
+  [StoryNodeType.DialogNode]: '对话节点',
+  [StoryNodeType.CharacterNode]: '角色节点',
+  [StoryNodeType.BackgroundNode]: '背景节点',
+  [StoryNodeType.TitleNode]: '标题节点',
+  [StoryNodeType.BgmNode]: 'BGM 节点',
+  [StoryNodeType.WaitNode]: '等待节点',
+  [StoryNodeType.NaNode]: '文本节点',
+}
 </script>
 
 <template>
@@ -30,7 +40,7 @@ function handleSelect(value: StoryNodeType) {
       </div>
       <TheSelect :model-value="storyNode.type" flex-1 @update:model-value="handleSelect($event as StoryNodeType)">
         <TheSelectOption v-for="storyNodeType in StoryNodeType" :key="storyNodeType" :value="storyNodeType">
-          {{ storyNodeType }}
+          {{ StoryNodeDescription[storyNodeType] }}
         </TheSelectOption>
       </TheSelect>
       <button i-material-symbols:cancel-outline px3 icon-btn @click="emits('remove')" />

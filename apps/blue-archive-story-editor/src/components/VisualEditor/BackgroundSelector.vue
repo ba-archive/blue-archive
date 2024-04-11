@@ -50,7 +50,7 @@ function handleSelect(background: Background) {
 </script>
 
 <template>
-  <div class="background-selector" h-5xl w-7xl of-hidden flex="~">
+  <div class="background-selector" h-5xl w-5xl of-hidden flex="~">
     <div>
       <div class="tab-bar" flex>
         <button btn :class="{ 'bg-gray-2': currentTab === 'image' }" @click="currentTab = 'image'">
