@@ -4,11 +4,12 @@ const props = withDefaults(
     title?: string
     width?: string
     height?: string
-    anchor?: HTMLElement | 'body'
+    anchor?: HTMLElement | 'body' | 'slot'
     position?: 'top' | 'right' | 'bottom' | 'left' | 'center'
   }>(),
   {
-    position: 'right',
+    title: 'TheModal',
+    position: 'center',
   },
 )
 const show = defineModel<boolean>('show')
@@ -20,10 +21,12 @@ const modalPosition = computed(() => {
 
   if (props.anchor === 'body')
     el = document.documentElement
+  else if (props.anchor === 'slot')
+    el = modal.value || document.documentElement
   else if (props.anchor)
     el = props.anchor
   else
-    el = modal.value || document.documentElement
+    el = document.documentElement
 
   if (props.position === 'center')
     return [Number.NaN, Number.NaN]
@@ -46,12 +49,12 @@ const modalPosition = computed(() => {
       v-show="show" class="the-modal-content"
       :class="{ 'pos-center': Number.isNaN(modalPosition[1]) && Number.isNaN(modalPosition[0]) }"
       :style="{ width, height, top: modalPosition[1], left: modalPosition[0] }"
-      absolute box-content card h-auto w-auto
+      absolute box-content card h-auto w-auto shadow-lg
     >
       <div class="header" flex="~">
         <slot name="header">
-          <div class="header-content" flex-1>
-            <h2>Modal</h2>
+          <div class="header-content" flex-1 text-center>
+            <h2>{{ title }}</h2>
           </div>
         </slot>
         <i i-material-symbols:cancel-outline icon-btn @click="show = false" />

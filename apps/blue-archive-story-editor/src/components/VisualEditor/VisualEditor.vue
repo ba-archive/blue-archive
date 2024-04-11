@@ -56,26 +56,7 @@ const dropPlaceholderOptions = {
       <button></button>
     </div> -->
     <div flex="~" h-full w-full gap-2>
-      <div class="story-node-list" inline-block card w27rem>
-        <div flex="~ col" h-full bg-gray-1>
-          <Container
-            flex-1 of-x-hidden of-y-auto children:m-3 important:min-h-0
-            :animation-duration="150"
-            :drop-placeholder="dropPlaceholderOptions"
-            drag-handle-selector=".drag-handle"
-            non-drag-area-selector=".add-card"
-            @drop="applyCardDrag"
-          >
-            <Draggable v-for="_, i in store.storyNodes" :key="store.storyNodes[i].id">
-              <StoryCardContainer
-                v-model="store.storyNodes[i]" @remove="handleRemoveCard(store.storyNodes[i])"
-              />
-            </Draggable>
-          </Container>
-          <AddCard m3 @click="handleAddCard" />
-        </div>
-      </div>
-      <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card>
+      <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview">
           <div class="toolbar" flex>
             <button btn @click="reloadPlayer">
@@ -99,7 +80,27 @@ const dropPlaceholderOptions = {
             />
           </div>
         </div>
-        <JSONEditor :code="JSON.stringify(jsonStory, null, 2)" flex-1 height="100%" />
+        <JSONEditor :code="JSON.stringify(jsonStory, null, 2)" flex-1 of-y-auto height="100%" />
+      </div>
+      <div flex-1 />
+      <div class="story-node-list" inline-block card w27rem>
+        <div flex="~ col" h-full bg-gray-1>
+          <Container
+            flex-1 of-x-hidden of-y-auto children:m-3 important:min-h-0
+            :animation-duration="150"
+            :drop-placeholder="dropPlaceholderOptions"
+            drag-handle-selector=".drag-handle"
+            non-drag-area-selector=".add-card"
+            @drop="applyCardDrag"
+          >
+            <Draggable v-for="_, i in store.storyNodes" :key="store.storyNodes[i].id">
+              <StoryCardContainer
+                v-model="store.storyNodes[i]" @remove="handleRemoveCard(store.storyNodes[i])"
+              />
+            </Draggable>
+          </Container>
+          <AddCard m3 @click="handleAddCard" />
+        </div>
       </div>
     </div>
   </div>

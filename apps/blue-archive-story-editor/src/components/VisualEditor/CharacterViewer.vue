@@ -30,7 +30,7 @@ const spine = ref<Spine | null>(null)
 const app = new PIXI.Application({ backgroundColor: 0xCCCCCC, resizeTo: canvasWrapper.value })
 const container = new PIXI.Container()
 app.stage.addChild(container)
-const SPINE_SCALE = 0.8
+const SPINE_SCALE = 0.7
 const DIV_SCALE = 0.5
 
 // extensions.add(ResizePlugin)
@@ -125,8 +125,10 @@ function handleChangeAnimation(name: string) {
         {{ name }}
       </button>
     </div>
-    <div relative h48rem of-hidden>
-      <div ref="canvasWrapper" class="canvas-wrapper" absolute h="2/1" w="2/1" transform-origin-lt scale-50 of-hidden b-rd-2 />
+    <div flex-1>
+      <div relative h-full of-hidden>
+        <div ref="canvasWrapper" class="canvas-wrapper" absolute h="2/1" w="2/1" transform-origin-lt scale-50 of-hidden b-rd-2 />
+      </div>
     </div>
   </div>
 </template>

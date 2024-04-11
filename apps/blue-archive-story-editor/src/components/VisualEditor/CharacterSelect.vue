@@ -67,52 +67,49 @@ function handleCharacterSelect(character_data: CharacterData) {
 </script>
 
 <template>
-  <div ref="characterSelectCard" class="character-select" w30rem>
-    <div class="character-data" flex px1>
-      <img
-        :src="appStore.getCharacterAvatarUrl(selected.id)"
-        h26
-        w26 b-rd-2 object-cover
-        @click="handleSelectCharacter"
-        @click.right.prevent="handleUnSelectCharacter"
-      >
-      <div flex="~ col" ml4 gap-y-1>
-        <div class="name">
-          {{ selected.name }} ({{ selected.id }})
+  <div ref="characterSelectCard" class="character-select" h5xl w-4xl flex="~">
+    <div h-full w-auto class="character-list" flex="~ col" gap-3>
+      <div class="character-data" flex px1>
+        <img
+          v-lazy="appStore.getCharacterAvatarUrl(selected.id)"
+          h26
+          w26 b-rd-2 object-cover
+          @click="handleSelectCharacter"
+          @click.right.prevent="handleUnSelectCharacter"
+        >
+        <div flex="~ col" ml4 gap-y-1>
+          <div class="name">
+            {{ selected.name }} ({{ selected.id }})
+          </div>
         </div>
       </div>
-    </div>
-    <TheModal v-model:show="characterListShow" width="30rem" :anchor="characterSelectCard">
-      <template #content>
-        <div w-auto class="characters-container">
-          <ul
-            class="characters"
-            grid="~ cols-5 justify-items-center"
-            hmd gap-2 of-x-hidden of-y-auto p-1
+      <ul
+        class="characters"
+        grid="~ cols-5 justify-items-center"
+        flex-1 gap-2 of-x-hidden of-y-auto p-1
+      >
+        <li
+          v-for="character_data in appStore.charactersData.slice(0, 220)" :key="character_data.id"
+          relative h20 w20 select-none of-hidden b-rd-2 transition hover:scale-110
+          @click="handleCharacterSelect(character_data)"
+        >
+          <img
+            v-lazy="appStore.getCharacterAvatarUrl(character_data.id)"
+            h20
+            w20 object-cover
           >
-            <li
-              v-for="character_data in appStore.charactersData.slice(0, 140)" :key="character_data.id"
-              relative h20 w20 select-none of-hidden b-rd-2 transition hover:scale-110
-              @click="handleCharacterSelect(character_data)"
-            >
-              <img
-                :src="appStore.getCharacterAvatarUrl(character_data.id)"
-                h20
-                w20 object-cover
-              >
-              <div
-                class="name"
-                absolute bottom-0 h5 w-full of-hidden ws-nowrap p-x-1
-                text="~ white size-sm center shadow-sm ellipsis" bg="gray op-70"
-              >
-                {{ character_data.nameCn || character_data.nameKr || character_data.devName || character_data.id }}
-              </div>
-            </li>
-          </ul>
-        </div>
-      </template>
-    </TheModal>
-
-    <CharacterViewer v-model="selected" />
+          <div
+            class="name"
+            absolute bottom-0 h5 w-full of-hidden ws-nowrap p-x-1
+            text="~ white size-sm center shadow-sm ellipsis" bg="gray op-70"
+          >
+            {{ character_data.nameCn || character_data.nameKr || character_data.devName || character_data.id }}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="character-spine-data" w30rem>
+      <CharacterViewer v-model="selected" h-full />
+    </div>
   </div>
 </template>

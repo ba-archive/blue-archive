@@ -8,8 +8,8 @@ import { EditorView } from '@codemirror/view'
 
 const props = defineProps<{
   code: string
-  height?: string,
-  width?: string,
+  height?: string
+  width?: string
 }>()
 
 const emit = defineEmits<{

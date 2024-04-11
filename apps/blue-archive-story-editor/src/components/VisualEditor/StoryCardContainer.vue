@@ -17,14 +17,11 @@ function handleSelect(value: StoryNodeType) {
     storyNode.value.characters = storyNode.value.characters || [null, null, null, null, null]
   }
 }
-
-const cardContainer = ref<HTMLDivElement | null>(null)
-provide('cardContainer', cardContainer)
 </script>
 
 <template>
   <div
-    ref="cardContainer" class="story-card-container" card w-auto select-none
+    class="story-card-container" card w-auto select-none
   >
     <div class="header" flex="~ items-center" gap-2>
       <span class="drag-handle" i-material-symbols:drag-indicator inline-block cursor-pointer p-1 px4 text-size-xl />

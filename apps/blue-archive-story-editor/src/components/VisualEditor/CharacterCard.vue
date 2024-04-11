@@ -14,7 +14,6 @@ function handleCharacterClicked(index: number) {
 function handleCharacterRightClicked(index: number) {
   model.value.characters[index] = null // unselect character
 }
-const cardContainer = inject('cardContainer') as Ref<HTMLDivElement | undefined>
 </script>
 
 <template>
@@ -34,7 +33,7 @@ const cardContainer = inject('cardContainer') as Ref<HTMLDivElement | undefined>
         </div>
       </div>
     </div>
-    <TheModal v-model:show="characterSelectShow" :anchor="cardContainer">
+    <TheModal v-model:show="characterSelectShow" title="角色选择">
       <template #content>
         <CharacterSelect v-model="model.characters[currentClickedCharacterIndex]" />
       </template>
