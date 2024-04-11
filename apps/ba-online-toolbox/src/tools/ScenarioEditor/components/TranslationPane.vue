@@ -233,7 +233,7 @@ const currentText = computed(() => {
 });
 
 const translateHandle = () => {
-  if (!config.getTmpMachineTranslate(currentText.value)) return;
+  if (config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
     const text = currentText.value
       ?.replaceAll("#n", "[#n]")
