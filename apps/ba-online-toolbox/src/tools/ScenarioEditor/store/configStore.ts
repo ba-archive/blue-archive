@@ -25,8 +25,14 @@ export const useGlobalConfig = defineStore({
     /* eslint-disable indent */
     getTmpMachineTranslate:
       state =>
-      (string = "") =>
-        state.tmpMachineTranslate.get(string) || "",
+      (string = "") => {
+        const mapType = Object.prototype.toString.call(
+          state.tmpMachineTranslate
+        );
+        return mapType === "[object Map]"
+          ? state.tmpMachineTranslate.get(string) || ""
+          : state.tmpMachineTranslate;
+      },
     /* eslint-enable indent */
     isSwitchLanguage: state => state.switchLanguage,
     getSelectTag: state => state.selectTag,
@@ -58,6 +64,10 @@ export const useGlobalConfig = defineStore({
       this.selectLine = line;
     },
     setTmpMachineTranslate(origin: string, text: string) {
+      const mapType = Object.prototype.toString.call(this.tmpMachineTranslate);
+      if (mapType !== "[object Map]") {
+        this.tmpMachineTranslate = new Map<string, string>();
+      }
       this.tmpMachineTranslate.set(origin, text);
     },
     setLanguage(language: Language) {
