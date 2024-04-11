@@ -10,7 +10,7 @@ export const useGlobalConfig = defineStore({
     selectLine: 0,
     language: "TextJp" as Language,
     targetLang: "TextCn" as Language,
-    tmpMachineTranslate: "",
+    tmpMachineTranslate: new Map<string, string>(),
     switchLanguage: 0b11,
     showAllLanguage: true,
     selectTag: "[wa:]",
@@ -22,7 +22,12 @@ export const useGlobalConfig = defineStore({
     getSelectLine: state => state.selectLine,
     getLanguage: state => state.language,
     getTargetLang: state => state.targetLang,
-    getTmpMachineTranslate: state => state.tmpMachineTranslate,
+    /* eslint-disable indent */
+    getTmpMachineTranslate:
+      state =>
+      (string = "") =>
+        state.tmpMachineTranslate.get(string) || "",
+    /* eslint-enable indent */
     isSwitchLanguage: state => state.switchLanguage,
     getSelectTag: state => state.selectTag,
     getShowAllLanguage: state => state.showAllLanguage,
@@ -51,10 +56,9 @@ export const useGlobalConfig = defineStore({
     },
     setSelectLine(line: number) {
       this.selectLine = line;
-      this.tmpMachineTranslate = "";
     },
-    setTmpMachineTranslate(text: string) {
-      this.tmpMachineTranslate = text;
+    setTmpMachineTranslate(origin: string, text: string) {
+      this.tmpMachineTranslate.set(origin, text);
     },
     setLanguage(language: Language) {
       this.language = language;
@@ -65,7 +69,6 @@ export const useGlobalConfig = defineStore({
     initialize_state() {
       this.proofread = false;
       this.selectLine = -1;
-      this.tmpMachineTranslate = "";
       this.previewMode = false;
     },
     initialize_config() {
