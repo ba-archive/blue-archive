@@ -1,13 +1,21 @@
 <script setup lang="ts">
 import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
+import type { DropResult } from 'vue3-smooth-dnd'
+import { Container, Draggable } from 'vue3-smooth-dnd'
 import { buildNexonJSONStory } from '~/common/nexon-script/visual-editor'
-import { StoryNodeType } from '~/types/visual-editor';
+import type { StoryNode } from '~/types/visual-editor'
+import { StoryNodeType } from '~/types/visual-editor'
 
 const store = useVisualEditorStore()
+window.store = store
 
 function handleAddCard() {
   store.newNode(StoryNodeType.CharacterNode)
+}
+
+function handleRemoveCard(node: StoryNode) {
+  store.removeNode(node.id)
 }
 
 const jsonStory = computed(() => {
@@ -29,6 +37,19 @@ function reloadPlayer() {
 }
 const playerWidth = 740
 const playerHeight = 400
+
+function applyCardDrag(dropResult: DropResult) {
+  const fromId = store.storyNodes[dropResult.removedIndex].id
+  const toId = store.storyNodes[dropResult.addedIndex].id
+  console.log(dropResult, 'move from ', fromId, 'to ', toId)
+  store.moveNode(fromId, toId)
+}
+
+const dropPlaceholderOptions = {
+  className: 'drop-preview',
+  animationDuration: '150',
+  showOnTop: true,
+}
 </script>
 
 <template>
@@ -36,15 +57,25 @@ const playerHeight = 400
     <!-- <div class="toolbar">
       <button></button>
     </div> -->
-    <div flex="~">
-      <div class="story-node-list" inline-block bg-gray-1 p-3 children:m-b-3>
-        <StoryCardContainer
-          v-for="_, i in store.storyNodes" :key="store.storyNodes[i].id"
-          v-model="store.storyNodes[i]"
-        />
-        <AddCard @click="handleAddCard" />
-      <!-- <CharacterSelect v-model="selectedStudent" /> -->
-      <!-- <StudentViewer :student="testStudent" /> -->
+    <div flex="~" gap-2>
+      <div class="story-node-list" inline-block card w27rem>
+        <div of-hidden bg-gray-1 p-3>
+          <Container
+            children:m-b-3 important:min-h-0
+            :animation-duration="150"
+            :drop-placeholder="dropPlaceholderOptions"
+            drag-handle-selector=".drag-handle"
+            non-drag-area-selector=".add-card"
+            @drop="applyCardDrag"
+          >
+            <Draggable v-for="_, i in store.storyNodes" :key="store.storyNodes[i].id">
+              <StoryCardContainer
+                v-model="store.storyNodes[i]" @remove="handleRemoveCard(store.storyNodes[i])"
+              />
+            </Draggable>
+          </Container>
+          <AddCard @click="handleAddCard" />
+        </div>
       </div>
       <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card>
         <div class="player-preview">
@@ -76,6 +107,10 @@ const playerHeight = 400
   </div>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+.drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px;
+}
 </style>

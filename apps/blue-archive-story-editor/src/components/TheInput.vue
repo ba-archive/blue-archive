@@ -16,7 +16,6 @@ const model = defineModel<string>()
         {{ props.label }}
       </span>
       <input
-        id="input"
         v-model="model"
         type="text"
         v-bind="$attrs"

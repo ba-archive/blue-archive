@@ -2,6 +2,7 @@
 import type { StoryNode } from '~/types/visual-editor.ts'
 import { StoryNodeType } from '~/types/visual-editor'
 
+const emits = defineEmits(['remove'])
 const storyNode = defineModel<StoryNode>({ required: true })
 
 function handleSelect(value: StoryNodeType) {
@@ -23,15 +24,19 @@ provide('cardContainer', cardContainer)
 
 <template>
   <div
-    ref="cardContainer" class="story-card-container" card
+    ref="cardContainer" class="story-card-container" card select-none
   >
-    <div class="header">
-      id: {{ storyNode.id }}
-      <TheSelect :model-value="storyNode.type" @update:model-value="handleSelect($event as StoryNodeType)">
+    <div class="header" flex="~ items-center" gap-2>
+      <span class="drag-handle" i-material-symbols:drag-indicator inline-block cursor-pointer p-1 px4 text-size-xl />
+      <div class="story-id" inline-block w-8 text="center">
+        {{ storyNode.id }}
+      </div>
+      <TheSelect :model-value="storyNode.type" flex-1 @update:model-value="handleSelect($event as StoryNodeType)">
         <TheSelectOption v-for="storyNodeType in StoryNodeType" :key="storyNodeType" :value="storyNodeType">
           {{ storyNodeType }}
         </TheSelectOption>
       </TheSelect>
+      <button i-material-symbols:cancel-outline px3 icon-btn @click="emits('remove')" />
     </div>
     <DialogCard
       v-if="storyNode.type === StoryNodeType.DialogNode"

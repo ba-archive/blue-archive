@@ -17,6 +17,7 @@
 - don't use vue-lazyload@3.x this stupid lib
 - story card container 卡片类型选择
 - 卡片移动
+- https://github.com/kutlugsahin/vue-smooth-dnd/issues/229
 
 ## Script Commands
 

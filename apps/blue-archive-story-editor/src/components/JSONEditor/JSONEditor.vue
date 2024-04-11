@@ -25,7 +25,7 @@ const customTheme = EditorView.theme({
 })
 const extensions = [javascript(), oneDark, customTheme]
 const view = shallowRef<EditorView>()
-const codeMirrorStyle = ref({ height: props.height || '1200px', width: props.width })
+const codeMirrorStyle = ref({ height: props.height || '600px', width: props.width })
 
 function handleReady(payload: { view: EditorView, state: EditorState, container: HTMLDivElement }) {
   view.value = payload.view

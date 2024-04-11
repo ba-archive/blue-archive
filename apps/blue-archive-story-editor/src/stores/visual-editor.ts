@@ -7,7 +7,8 @@ export const useVisualEditorStore = defineStore('visualEditor', () => {
   const storyIndex = ref(0)
 
   function getLastCharacters() {
-    for (let i = storyIndex.value - 1; i > 0; i--) {
+    // todo use id not index
+    for (let i = storyNodes.value.length - 1; i > 0; i--) {
       const node = storyNodes.value[i]
       if (node.type === StoryNodeType.CharacterNode)
         return JSON.parse(JSON.stringify(node.characters))
@@ -93,9 +94,96 @@ export const useVisualEditorStore = defineStore('visualEditor', () => {
     }
   }
 
+  function getNodeIndex(id: number) {
+    for (let i = 0; i < storyNodes.value.length; i++) {
+      if (storyNodes.value[i].id === id)
+        return i
+    }
+
+    return -1
+  }
+  function getLastNode(id: number) {
+    for (let i = 0; i < storyNodes.value.length; i++) {
+      if (storyNodes.value[i].next === id)
+        return i
+    }
+
+    return -1
+  }
+
+  /** 添加在前 */
+  function addNode(id: number, newNode: StoryNode) {
+    const nodeIndex = getNodeIndex(id)
+    const lastNodeIndex = getLastNode(id)
+    if (nodeIndex === -1)
+      return false
+    if (lastNodeIndex !== -1)
+      storyNodes.value[lastNodeIndex].next = newNode.id
+    newNode.next = storyNodes.value[nodeIndex].next
+    storyNodes.value.splice(nodeIndex, 0, newNode)
+    return true
+  }
+
+  /** 添加在后 */
+  function addNodeAfter(id: number, newNode: StoryNode) {
+    const nodeIndex = getNodeIndex(id)
+    const nextNodeIndex = storyNodes.value[nodeIndex].next || -1
+    if (nodeIndex === -1)
+      return false
+    storyNodes.value[nodeIndex].next = newNode.id
+    newNode.next = nextNodeIndex
+    storyNodes.value.splice(nodeIndex + 1, 0, newNode)
+    return true
+  }
+
+  function removeNode(id: number) {
+    let lastNodeIndex = -1
+    let nodeIndex = -1
+    for (let i = 0; i < storyNodes.value.length; i++) {
+      if (storyNodes.value[i].id === id)
+        nodeIndex = i
+      if (storyNodes.value[i].next === id)
+        lastNodeIndex = i
+      if (lastNodeIndex !== -1 && nodeIndex !== -1)
+        break
+    }
+    if (lastNodeIndex !== -1)
+      storyNodes.value[lastNodeIndex].next = storyNodes.value[nodeIndex].next
+    if (nodeIndex !== -1) {
+      const removed = storyNodes.value[nodeIndex]
+      storyNodes.value.splice(nodeIndex, 1)
+      return removed
+    }
+    return null
+  }
+
+  function moveNode(fromId: number, toId: number) {
+    // todo use id not index
+    const fromIndex = getNodeIndex(fromId)
+    const toIndex = getNodeIndex(toId)
+    if (fromId === toId)
+      return true
+    if (fromIndex === -1 || toIndex === -1)
+      return false
+
+    const removed = removeNode(fromId)
+    if (!removed)
+      return false
+    if (fromIndex < toIndex)
+      return addNodeAfter(toId, removed)
+
+    if (fromIndex > toIndex)
+      return addNode(toId, removed)
+  }
+
   return {
     storyNodes,
     newNode,
+    removeNode,
+    getNode: getNodeIndex,
+    addNode,
+    moveNode,
+    addNodeAfter,
   }
 })
 

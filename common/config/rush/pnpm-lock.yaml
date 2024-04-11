@@ -211,6 +211,7 @@ importers:
       vue-lazyload: 3.x
       vue-router: ~4.3.0
       vue-tsc: ^2.0.7
+      vue3-smooth-dnd: ~0.0.6
       yaml-eslint-parser: ^1.2.2
       yargs: ^17.7.2
     dependencies:
@@ -231,6 +232,7 @@ importers:
       vue-codemirror: 6.1.1_codemirror@6.0.1+vue@3.4.21
       vue-lazyload: 3.0.0
       vue-router: 4.3.0_vue@3.4.21
+      vue3-smooth-dnd: 0.0.6_vue@3.4.21
     devDependencies:
       '@antfu/eslint-config': 2.12.1_0bf4c03bf70c6f8db563903c76b972a8
       '@antfu/install-pkg': 0.3.2
@@ -7697,7 +7699,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.8
+      vite: 5.2.8_@types+node@20.11.19+sass@1.71.0
       vue: 3.3.11_typescript@5.4.3
 
   /@vitejs/plugin-vue/5.0.4_vite@5.2.8+vue@3.4.21:
@@ -15766,6 +15768,10 @@ packages:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
 
+  /smooth-dnd/0.12.1:
+    resolution: {integrity: sha512-Dndj/MOG7VP83mvzfGCLGzV2HuK1lWachMtWl/Iuk6zV7noDycIBnflwaPuDzoaapEl3Pc4+ybJArkkx9sxPZg==}
+    dev: false
+
   /socks-proxy-agent/8.0.3:
     resolution: {integrity: sha512-VNegTZKhuGq5vSD6XNKlbqWhyt/40CgoEw8XxD6dhnm8Jq9IEa3nIa4HwnM8XOqU0CdB0BwWVXusqiFXfHB3+A==}
     engines: {node: '>= 14'}
@@ -17964,6 +17970,15 @@ packages:
       '@vue/server-renderer': 3.4.21_vue@3.4.21
       '@vue/shared': 3.4.21
       typescript: 5.4.3
+
+  /vue3-smooth-dnd/0.0.6_vue@3.4.21:
+    resolution: {integrity: sha512-CH9ZZhEfE7qU1ef2rlfgBG+nZtQX8PnWlspB2HDDz1uVGU7fXM0Pr65DftBMz4X81S+edw2H+ZFG6Dyb5J81KA==}
+    peerDependencies:
+      vue: ^3.0.11
+    dependencies:
+      smooth-dnd: 0.12.1
+      vue: 3.4.21_typescript@5.4.3
+    dev: false
 
   /vueuc/0.4.51_vue@3.3.11:
     resolution: {integrity: sha512-pLiMChM4f+W8czlIClGvGBYo656lc2Y0/mXFSCydcSmnCR1izlKPGMgiYBGjbY9FDkFG8a2HEVz7t0DNzBWbDw==}

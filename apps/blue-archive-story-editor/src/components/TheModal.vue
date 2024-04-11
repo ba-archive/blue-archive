@@ -56,7 +56,7 @@ const modalPosition = computed(() => {
         </slot>
         <i i-material-symbols:cancel-outline icon-btn @click="show = false" />
       </div>
-      <div class="container">
+      <div class="wrapper">
         <slot name="content" />
       </div>
     </div>

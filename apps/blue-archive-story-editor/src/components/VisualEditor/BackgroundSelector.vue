@@ -60,7 +60,7 @@ function handleSelect(background: Background) {
           spine
         </button> -->
       </div>
-      <div class="container" h-full w-md>
+      <div class="wrapper" h-full w-md>
         <div class="image-background-list" grid="~ cols-4 justify-between" h-full gap-1 of-y-auto>
           <template v-if="currentTab === 'image'">
             <div v-for="background in imageBackgrounds" :key="background.Name" class="image-background">
@@ -81,7 +81,7 @@ function handleSelect(background: Background) {
         </div>
       </div>
     </div>
-    <div min-w-xl flex="~ col 1">
+    <div flex="~ col 1">
       <div class="background-info" h-xs>
         <div>
           BGFileName: {{ selected?.BGFileName }}
