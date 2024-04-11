@@ -65,7 +65,7 @@ const dropPlaceholderOptions = {
         </a>
       </div>
     </div>
-    <div flex="~ 1" w-full gap-2 p-2>
+    <div flex="~ 1" w-full gap-2 of-hidden p-2>
       <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview">
           <div class="player-container" :style="{ height: `${playerHeight}px`, width: `${playerWidth}px` }" relative z-0>
