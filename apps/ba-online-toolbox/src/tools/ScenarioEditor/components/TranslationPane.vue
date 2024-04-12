@@ -97,7 +97,9 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <n-button @click="translateHandle" type="info">重新翻译</n-button>
+          <n-button @click="translateHandle(true)" type="info"
+            >重新翻译</n-button
+          >
           <n-button
             @click="handleLLMTranslateRequest"
             type="info"
@@ -232,8 +234,8 @@ const currentText = computed(() => {
   ];
 });
 
-const translateHandle = () => {
-  if (config.getTmpMachineTranslate(currentText.value)) return;
+const translateHandle = (force = false) => {
+  if (!force || config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
     const text = currentText.value
       ?.replaceAll("#n", "[#n]")
