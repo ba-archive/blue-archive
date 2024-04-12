@@ -29,9 +29,14 @@ export const useGlobalConfig = defineStore({
         const objectType = Object.prototype.toString.call(
           state.tmpMachineTranslate
         );
-        return objectType === "[object Object]"
-          ? state.tmpMachineTranslate?.[query] || ""
-          : state.tmpMachineTranslate;
+        switch (objectType) {
+          case "[object Object]":
+            return state.tmpMachineTranslate?.[query] || undefined;
+          case "[object String]":
+            return state.tmpMachineTranslate;
+          default:
+            return "";
+        }
       },
     /* eslint-enable indent */
     isSwitchLanguage: state => state.switchLanguage,
