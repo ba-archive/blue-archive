@@ -10,7 +10,7 @@ export const useGlobalConfig = defineStore({
     selectLine: 0,
     language: "TextJp" as Language,
     targetLang: "TextCn" as Language,
-    tmpMachineTranslate: new Map<string, string>(),
+    tmpMachineTranslate: {} as { [key: string]: string },
     switchLanguage: 0b11,
     showAllLanguage: true,
     selectTag: "[wa:]",
@@ -25,12 +25,12 @@ export const useGlobalConfig = defineStore({
     /* eslint-disable indent */
     getTmpMachineTranslate:
       state =>
-      (string = "") => {
-        const mapType = Object.prototype.toString.call(
+      (query = "") => {
+        const objectType = Object.prototype.toString.call(
           state.tmpMachineTranslate
         );
-        return mapType === "[object Map]"
-          ? state.tmpMachineTranslate.get(string) || ""
+        return objectType === "[object Object]"
+          ? state.tmpMachineTranslate?.[query] || ""
           : state.tmpMachineTranslate;
       },
     /* eslint-enable indent */
@@ -65,10 +65,10 @@ export const useGlobalConfig = defineStore({
     },
     setTmpMachineTranslate(origin: string, text: string) {
       const mapType = Object.prototype.toString.call(this.tmpMachineTranslate);
-      if (mapType !== "[object Map]") {
-        this.tmpMachineTranslate = new Map<string, string>();
+      if (mapType !== "[object Object]") {
+        this.tmpMachineTranslate = {};
       }
-      this.tmpMachineTranslate.set(origin, text);
+      this.tmpMachineTranslate[origin] = text;
     },
     setLanguage(language: Language) {
       this.language = language;
@@ -94,6 +94,9 @@ export const useGlobalConfig = defineStore({
     resetConfigState() {
       this.initialize_config();
       this.initialize_state();
+    },
+    resetTmpTranslation() {
+      this.tmpMachineTranslate = {};
     },
     setStudents(students: Student[]) {
       this.students = students;
