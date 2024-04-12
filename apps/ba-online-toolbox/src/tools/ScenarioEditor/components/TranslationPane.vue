@@ -97,7 +97,9 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <n-button @click="translateHandle" type="info">重新翻译</n-button>
+          <n-button @click="translateHandle(true)" type="info"
+            >重新翻译</n-button
+          >
           <n-button
             @click="handleLLMTranslateRequest"
             type="info"
@@ -119,7 +121,7 @@
           <n-input
             type="textarea"
             placeholder="机翻结果"
-            :value="config.tmpMachineTranslate"
+            :value="config.getTmpMachineTranslate(currentText)"
             style="width: 100%; height: 120px"
           >
           </n-input>
@@ -226,11 +228,16 @@ const langSelect = [
   { label: "泰语", key: "TextTh" },
 ];
 
-const translateHandle = () => {
+const currentText = computed(() => {
+  return mainStore.getScenario.content[config.getSelectLine]?.[
+    config.getLanguage
+  ];
+});
+
+const translateHandle = (force = false) => {
+  if (!force && config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
-    const text = mainStore.getScenario.content[config.getSelectLine][
-      config.getLanguage
-    ]
+    const text = currentText.value
       ?.replaceAll("#n", "[#n]")
       ?.replaceAll(/\[.*?\]/g, "");
     translate(
@@ -240,6 +247,7 @@ const translateHandle = () => {
     )
       .then(res => {
         config.setTmpMachineTranslate(
+          currentText.value,
           halfToFull((res.translation || [])[0] ?? "")
         );
       })
@@ -252,7 +260,9 @@ const translateHandle = () => {
 const acceptHandle = () => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    line[config.getTargetLang] = config.tmpMachineTranslate;
+    line[config.getTargetLang] = config.getTmpMachineTranslate(
+      currentText.value
+    );
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
@@ -314,7 +324,10 @@ function handleLLMTranslateRequest() {
           fullWidthText,
           studentNames.value
         );
-        config.setTmpMachineTranslate(formalizeQuotation(studentTransformed));
+        config.setTmpMachineTranslate(
+          currentText.value,
+          formalizeQuotation(studentTransformed)
+        );
       })
       .catch(err => {
         console.log(err);
