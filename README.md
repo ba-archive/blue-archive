@@ -1,10 +1,20 @@
-# 碧蓝档案 monorepo
+# 碧蓝档案剧情站
 
 简体中文 | [English](README_EN.md)
 
-项目采用 `rush.js` 组织 monorepo, 统一各个项目的代码规范和依赖, 优化引入项目公用包形式
+## 子项目 (monorepos)
+
+- Plana Studio - 碧蓝档案剧情编辑器 ([/apps/blue-archive-story-player](https://github.com/ba-archive/blue-archive/tree/dev-notype/apps/blue-archive-story-editor))
+- blue-archive-story-viewer - 碧蓝档案剧情站 ([/apps/blue-archive-story-viewer](https://github.com/ba-archive/blue-archive/tree/main/apps/blue-archive-story-viewer))
+- ba-online-toolbox - 在线翻译工具 ([/apps/ba-online-toolbox](https://github.com/ba-archive/blue-archive/tree/main/apps/ba-online-toolbox))
+- Eden Design - 组件库 ([/lib/eden-design](https://github.com/ba-archive/blue-archive/tree/main/lib/eden-design))
+- ba-story-player - 剧情播放器组件 ([/lib/ba-story-player](https://github.com/ba-archive/blue-archive/tree/main/lib/ba-story-player))
+
+
 
 ## 环境信息
+
+项目采用 `rush.js` 组织 monorepo, 统一各个项目的代码规范和依赖, 优化引入项目公用包形式
 
 - 当前 rush 版本：`5.112.1`
 - 推荐 node 版本：`20` （测试可用版本：`v20.7.0`）
@@ -14,10 +24,22 @@
 
 **安装 node20（推荐使用 [nvm](https://github.com/nvm-sh/nvm)）**
 
+> linux 安装教程
+
+```bash
+# Linux
+# 安装 nvm https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# 安装 node
+nvm install 20
+nvm use 20
+```
+
 > 对于 windows 系统推荐先安装 [scoop](https://scoop.sh/)，然后使用 scoop 安装 nvm，最后使用 nvm 安装 node
 
 ```powershell
-# windows
+# Windows
 # 安装 scoop
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
 irm get.scoop.sh | iex
@@ -35,7 +57,7 @@ nvm use 20
 ```bash
 # 安装 pnpm
 npm install -g pnpm
-pnpm install -g @microsoft/rush
+npm install -g @microsoft/rush
 rush update # 在 blue-archive 根目录下执行，下同
 # 编译项目、链接项目
 rush build
@@ -70,7 +92,9 @@ rush add --make-consistent -p <库名>
 - `lib/ba-rig` 此仓库的 rush-rig 包，详见：https://heft.rushstack.io/zh-cn/pages/intro/rig_packages/
 - `lib/ba-story-player` 剧情播放器组件库
 
-## 正确的使用 eslint 和 lint-staged
+## ~~正确的使用 eslint 和 lint-staged~~
+
+> deprecated 已过时
 
 **eslint lint-staged 配置文件**
 
