@@ -51,23 +51,11 @@ const dropPlaceholderOptions = {
 </script>
 
 <template>
-  <div class="visual-editor" h-100vh w-100vw flex="~ col">
-    <div class="headbar" flex bg-white py1 border="~ b-1" shadow-sm>
-      <div class="left" flex flex-1>
-        <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px>
-        <button border shadow-sm btn @click="reloadPlayer">
-          运行
-        </button>
-      </div>
-      <div class="right" flex="~ center">
-        <a href="https://github.com/ba-archive/blue-archive/tree/dev-notype/apps/blue-archive-story-editor" target="_blank">
-          <i text="gray-9 3xl" i-mdi:github align-top icon-btn />
-        </a>
-      </div>
-    </div>
-    <div flex="~ 1" w-full gap-2 of-hidden p-2>
-      <div class="preview" flex="~ col" :style="{ width: `${playerWidth + 24}px` }" card h-full>
-        <div class="player-preview">
+  <div class="visual-editor" flex="~ 1 col" h-full w-full of-hidden>
+    <HeaderToolbar @reload-player="reloadPlayer" />
+    <div class="visual-editor-content" flex="~ 1" gap-2 p-2>
+      <div class="preview" flex="~ col" :style="{ minWidth: `${playerWidth + 24}px` }" card h-full>
+        <div class="player-preview" bg-black>
           <div class="player-container" :style="{ height: `${playerHeight}px`, width: `${playerWidth}px` }" relative z-0>
             <BaStoryPlayer
               v-if="playerVIf"
@@ -88,7 +76,7 @@ const dropPlaceholderOptions = {
         <JSONEditor :code="JSON.stringify(jsonStory, null, 2)" flex-1 of-y-auto height="100%" />
       </div>
       <div flex-1 />
-      <div class="story-node-list" inline-block card w27rem>
+      <div class="story-node-list" inline-block card min-w24rem w27rem>
         <div flex="~ col" h-full bg-gray-1>
           <Container
             flex-1 of-x-hidden of-y-auto children:m-3 important:min-h-0

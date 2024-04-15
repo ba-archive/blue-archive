@@ -5,7 +5,7 @@ const emits = defineEmits(['click'])
 <template>
   <button
     class="add-card" block
-    h-14 w-sm flex items-center justify-center b-rd bg-white p-4
+    h-14 flex items-center justify-center b-rd bg-white p-4
     shadow-md transition active:bg-gray-2 hover:bg-gray-1
     @click="emits('click')"
   >

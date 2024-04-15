@@ -1,9 +1,7 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div id="visual-editor-page" bg-gray-1>
+  <div id="visual-editor-page" h100vh w100vw bg-gray-1>
     <VisualEditor />
   </div>
 </template>

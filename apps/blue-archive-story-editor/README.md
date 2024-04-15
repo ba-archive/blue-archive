@@ -1,26 +1,21 @@
-# Blue Archive Story Editor (New)
+# Plana Studio (Blue Archive Story Editor)
+
+<div style="display: flex; justify-content: center; align-items: center">
+  <img src="./public/plana-studio.svg">
+</div>
 
 ## TODOS
 
-- 项目名征集
-  - HikariStudio
-  - YukamamaStudio (Y8S)
-  - NoaStudio (?)
-  - MidoriStudio (?)
-  - MomoStudio (没活了?)
-  - PlanaShop (PS)
-- 项目图标征集
 - integrate [CodeMirror](https://codemirror.net/)
 - update unplugin-vue-pages
-- CharacterView 单例
-- card padding放在 the modal 里面，组件不包含 padding
 - don't use vue-lazyload@3.x this stupid lib
-- story card container 卡片类型选择
-- 卡片移动
 - https://github.com/kutlugsahin/vue-smooth-dnd/issues/229
 - update vueuse useHead
+- update pixi v8
+- 自定义资产
 
-## Script Commands
+## TODOS (backend)
+
 
 ## routes
 

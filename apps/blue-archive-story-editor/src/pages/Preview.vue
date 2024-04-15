@@ -3,8 +3,6 @@ import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
 import { ref } from 'vue'
 
-const editorStore = useEditorStore()
-
 const playerWidth = ref(750)
 const playerHeight = ref(400)
 const storySummary = {
