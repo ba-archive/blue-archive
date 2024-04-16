@@ -2,12 +2,13 @@
 const emits = defineEmits([
   'reloadPlayer',
 ])
+const router = useRouter()
 </script>
 
 <template>
   <div class="header-toolbar" flex bg-white py1 border="~ b-1" shadow-sm>
     <div class="left" flex flex-1>
-      <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px>
+      <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px @click="router.push('/storygallerypage')">
       <button border shadow-sm btn @click="emits('reloadPlayer')">
         运行
       </button>

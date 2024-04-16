@@ -13,6 +13,7 @@ export default defineConfig({
     ['card', 'min-w-xs b-rd bg-white p3 py2 shadow-md'],
     ['flex-center', 'flex-justify-center flex-items-center'],
     ['img', 'object-contain w24 h18'],
+    [/^xxl:(.*)$/, ([, c]) => `important:2xl:${c}`],  // hack: 这里生成的 css 文件媒体查询在前面，需要加 important 强制生效
   ],
   rules: [
     ['pos-center', { left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }],

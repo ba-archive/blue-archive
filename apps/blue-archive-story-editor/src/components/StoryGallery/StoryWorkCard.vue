@@ -1,0 +1,48 @@
+<script setup lang="ts">
+import type { StoryWork } from '~/types/story-gallery'
+
+// todo 考虑把 sensei 当成一个宏
+const props = defineProps<StoryWork>()
+
+// todo: 使用日期格式化库
+function toDate(ts: number) {
+  const date = new Date(ts)
+  return `${date.getMonth() + 1}-${date.getDate()}`
+}
+</script>
+
+<template>
+  <div class="story-work-card" flex="~ col" card max-w-md gap-1 transition hover:scale-102 hover:shadow-xl>
+    <div class="title-and-name" flex="~ items-center">
+      <h2 font="500" text="xl" flex-1 of-hidden text-ellipsis whitespace-nowrap>
+        {{ props.title }}
+      </h2>
+      <span color-gray-5>
+        {{ props.author.name }} &#183; {{ toDate(props.publishTs) }}
+      </span>
+    </div>
+    <div flex="~ 1" gap-2>
+      <img class="story-work-cover" h9rem w12rem b-rd-md :src="props.cover">
+      <div class="story-work-details" flex="~ col">
+        <!-- todo js 实现多行溢出省略号 -->
+        <div line-clamp-5 flex-1 of-hidden>
+          {{ props.description }}
+        </div>
+        <div class="story-work-infos" font="thin" text="md gray-5" flex="~ justify-around">
+          <div flex-1 children:align-middle>
+            <i i-material-symbols:play-circle-outline-rounded inline-block />
+            <span>
+              {{ props.hits }}
+            </span>
+          </div>
+          <div flex-1 children:align-middle>
+            <i i-material-symbols:favorite-outline-rounded inline-block />
+            <span>
+              {{ props.loves }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
