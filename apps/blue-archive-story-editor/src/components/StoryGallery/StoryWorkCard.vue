@@ -5,25 +5,25 @@ import type { StoryWork } from '~/types/story-gallery'
 const props = defineProps<StoryWork>()
 
 // todo: 使用日期格式化库
-function toDate(ts: number) {
-  const date = new Date(ts)
+function toDate(dateString: string) {
+  const date = new Date(dateString)
   return `${date.getMonth() + 1}-${date.getDate()}`
 }
 </script>
 
 <template>
-  <div class="story-work-card" flex="~ col" card max-w-md gap-1 transition hover:scale-102 hover:shadow-xl>
+  <div class="story-work-card" flex="~ col" card max-w-lg w-full gap-1 transition hover:scale-102 hover:shadow-xl>
     <div class="title-and-name" flex="~ items-center">
       <h2 font="500" text="xl" flex-1 of-hidden text-ellipsis whitespace-nowrap>
         {{ props.title }}
       </h2>
       <span color-gray-5>
-        {{ props.author.name }} &#183; {{ toDate(props.publishTs) }}
+        {{ props.author.name }} &#183; {{ toDate(props.created) }}
       </span>
     </div>
     <div flex="~ 1" gap-2>
-      <img class="story-work-cover" h9rem w12rem b-rd-md :src="props.cover">
-      <div class="story-work-details" flex="~ col">
+      <img class="story-work-cover" h9rem w12rem b-rd-md object-cover :src="props.cover">
+      <div class="story-work-details" flex="~ 1 col">
         <!-- todo js 实现多行溢出省略号 -->
         <div line-clamp-5 flex-1 of-hidden>
           {{ props.description }}

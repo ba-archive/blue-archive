@@ -1,13 +1,20 @@
 export interface StoryWork{
-  id: number
+  created: string
+  updated: string
+  id: string
   title: string
   description: string
   cover: string
-  publishTs: number
   author: {
+    created: string
+    updated: string
     name: string
+    nickname: string
+    email: string
     avatar: string
+    id: string
   }
   loves: number
   hits: number
+  story: object
 }
