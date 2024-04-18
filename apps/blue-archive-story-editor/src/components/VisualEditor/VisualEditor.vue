@@ -3,8 +3,9 @@ import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
 import type { DropResult } from 'vue3-smooth-dnd'
 import { Container, Draggable } from 'vue3-smooth-dnd'
+import type { CharacterSelect } from './CharacterSelect'
 import { buildNexonJSONStory } from '~/common/nexon-script/visual-editor'
-import type { StoryNode } from '~/types/visual-editor'
+import type { Character, StoryNode } from '~/types/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
 
 const store = useVisualEditorStore()
@@ -48,12 +49,16 @@ const dropPlaceholderOptions = {
   animationDuration: '150',
   showOnTop: true,
 }
+
+const characterSelectInstance = shallowRef<CharacterSelect>()
+provide('character-select', characterSelectInstance)
+
 </script>
 
 <template>
-  <div class="visual-editor" flex="~ 1 col" h-full w-full of-hidden>
+  <div class="visual-editor" flex="~ 1 col" h-full w-full of-x-hidden>
     <HeaderToolbar @reload-player="reloadPlayer" />
-    <div class="visual-editor-content" flex="~ 1" gap-2 p-2>
+    <div class="visual-editor-content" flex="~ 1" gap-2 of-hidden p-2>
       <div class="preview" flex="~ col" :style="{ minWidth: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview" bg-black>
           <div class="player-container" :style="{ height: `${playerHeight}px`, width: `${playerWidth}px` }" relative z-0>
@@ -95,6 +100,9 @@ const dropPlaceholderOptions = {
           <AddCard m3 @click="handleAddCard" />
         </div>
       </div>
+    </div>
+    <div class="modals">
+      <CharacterSelect ref="characterSelectInstance" />
     </div>
   </div>
 </template>

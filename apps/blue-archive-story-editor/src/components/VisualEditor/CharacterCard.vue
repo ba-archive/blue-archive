@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import type { Character, CharacterNode } from '~/types/visual-editor.ts'
+import type { CharacterSelect } from './CharacterSelect'
+import type { CharacterNode } from '~/types/visual-editor.ts'
 
 const model = defineModel<CharacterNode>({ required: true })
 const appStore = useAppStore()
 
-const currentClickedCharacterIndex = ref(0)
-const characterSelectShow = ref(false)
+const characterSelectInstance = inject('character-select') as Ref<{ instance: CharacterSelect } | undefined>
 
-function handleCharacterClicked(index: number) {
-  currentClickedCharacterIndex.value = index
-  characterSelectShow.value = true
+async function handleCharacterClicked(index: number) {
+  if (characterSelectInstance.value) {
+    const selectedCharacter = await characterSelectInstance.value.instance.selectCharacter(model.value.characters[index])
+    model.value.characters[index] = selectedCharacter
+  }
 }
 function handleCharacterRightClicked(index: number) {
   model.value.characters[index] = null // unselect character
@@ -33,11 +35,6 @@ function handleCharacterRightClicked(index: number) {
         </div>
       </div>
     </div>
-    <TheModal v-model:show="characterSelectShow" title="角色选择">
-      <template #content>
-        <CharacterSelect v-model="model.characters[currentClickedCharacterIndex]" />
-      </template>
-    </TheModal>
   </div>
 </template>
 

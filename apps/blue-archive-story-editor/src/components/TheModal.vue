@@ -12,7 +12,7 @@ const props = withDefaults(
     position: 'center',
   },
 )
-const show = defineModel<boolean>('show')
+const show = defineModel<boolean>('show', { default: false, required: true})
 const modal = ref<HTMLDivElement | undefined>(undefined)
 
 const modalPosition = computed(() => {

@@ -42,6 +42,8 @@ function initPixi() {
 
 async function loadSpine(path: string) {
   container.removeChildren()
+  // todo destroy when hidden
+  // spine.value?.destroy()
   spine.value = new Spine(await loadSpineData(app, path, path))
   animations.value = spine.value.spineData.animations.map(item => item.name)
   model.value.face = animations.value[0]
