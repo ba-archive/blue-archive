@@ -8,7 +8,7 @@ from app.db import get_engine
 from app.dependencies import dep_engine, dep_user
 from app.models.story_works import StoryWork
 from app.models.users import User
-from app.schemas.story_works import StoryWorkCreate, StoryWorkSchema
+from app.schemas.story_works import StoryWorkCreate, StoryWorkSchema, StoryWorkUpdate
 
 
 router = APIRouter()
@@ -42,11 +42,31 @@ async def create_story_works(
     return await engine.save(story_work)
 
 
-@router.put("/story-works/")
-async def update_story_works(engine: AIOEngine = Depends(dep_engine)):
-    ...
+@router.put("/story-works/{id}", response_model=StoryWorkSchema)
+async def update_story_works(
+    *,
+    id: ObjectId,
+    engine: AIOEngine = Depends(dep_engine),
+    user: User = Depends(dep_user),
+    story_work_update: StoryWorkUpdate
+):
+    story_work = await engine.find_one(StoryWork, StoryWork.id == id)
+    if story_work is None:
+        raise HTTPException(404)
+    story_work.model_update(story_work_update)
+    return await engine.save(story_work)
 
 
-@router.delete("/story-works/{id}")
-async def delete_story_works(id: ObjectId, engine: AIOEngine = Depends(dep_engine)):
-    ...
+@router.delete("/story-works/{id}", response_model=StoryWorkSchema)
+async def delete_story_works(
+    *,
+    id: ObjectId,
+    engine: AIOEngine = Depends(dep_engine),
+    user: User = Depends(dep_user),
+):
+    story_work = await engine.find_one(StoryWork, StoryWork.id == id)
+    if story_work is None:
+        raise HTTPException(404)
+    await engine.delete(story_work)
+    return story_work
+    
