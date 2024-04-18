@@ -13,13 +13,10 @@ app.add_middleware(
 )
 
 # register routers
-app.include_router(__import__("app.services", fromlist=["router"]).router)
+app.include_router(__import__("app.api", fromlist=["router"]).router)
 # app.mount("/uploads", StaticFiles(directory="./uploads"))
 
 if __name__ == "__main__":
-    import os
-    from pathlib import Path
     from uvicorn import run
 
-    os.chdir(Path(__file__) / '..')
     run("app.main:app", reload=True)
