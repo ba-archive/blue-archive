@@ -29,12 +29,22 @@ const storySummary = {
 
 const playerVIf = ref(false)
 const player = ref<InstanceType<typeof BaStoryPlayer> | undefined>(undefined)
-function reloadPlayer() {
+function handleReloadPlayer() {
   playerVIf.value = false
   nextTick(() => {
     playerVIf.value = true
   })
 }
+
+const editPropertyShow = ref(false)
+function handleEditProperty() {
+  editPropertyShow.value = true
+}
+
+async function handleSaveStory() {
+  await store.saveStory()
+}
+
 const playerWidth = 740
 const playerHeight = 400
 
@@ -52,12 +62,11 @@ const dropPlaceholderOptions = {
 
 const characterSelectInstance = shallowRef<CharacterSelect>()
 provide('character-select', characterSelectInstance)
-
 </script>
 
 <template>
   <div class="visual-editor" flex="~ 1 col" h-full w-full of-x-hidden>
-    <HeaderToolbar @reload-player="reloadPlayer" />
+    <HeaderToolbar @reload-player="handleReloadPlayer" @edit-property="handleEditProperty" @save-story="handleSaveStory" />
     <div class="visual-editor-content" flex="~ 1" gap-2 of-hidden p-2>
       <div class="preview" flex="~ col" :style="{ minWidth: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview" bg-black>
@@ -102,6 +111,7 @@ provide('character-select', characterSelectInstance)
       </div>
     </div>
     <div class="modals">
+      <StoryProperty v-model:show="editPropertyShow" />
       <CharacterSelect ref="characterSelectInstance" />
     </div>
   </div>

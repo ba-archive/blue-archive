@@ -25,7 +25,7 @@ Object.values(
   import.meta.glob<{ install: any }>('./modules/*.ts', {
     eager: true,
   }),
-).forEach(i => i.install?.({ isClient: true, app }))
+).forEach(i => i.install?.({ app }))
 
 app.mount('#app')
 

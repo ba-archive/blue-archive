@@ -1,15 +1,12 @@
 import { createPinia } from 'pinia'
-import { type UserModule } from '~/types'
+import type { App } from 'vue'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 // Setup Pinia
 // https://pinia.vuejs.org/
-export const install: UserModule = ({ isClient, initialState, app }) => {
+export function install({ app }: { app: App<Element> }) {
   const pinia = createPinia()
+  // @ts-expect-error 依赖问题，提供 vue 3.3.11 的插件，但是项目安装的 vue 不是该版本
+  pinia.use(piniaPluginPersistedstate)
   app.use(pinia)
-  // Refer to
-  // https://github.com/antfu/vite-ssg/blob/main/README.md#state-serialization
-  // for other serialization strategies.
-  // if (isClient)
-  //   pinia.state.value = initialState.pinia || {}
-  // else initialState.pinia = pinia.state.value
 }

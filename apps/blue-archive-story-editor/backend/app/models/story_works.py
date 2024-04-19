@@ -24,3 +24,4 @@ class StoryWork(Model):
     loves: int = 0
     hits: int = 0
     story: dict
+    released: bool = False
