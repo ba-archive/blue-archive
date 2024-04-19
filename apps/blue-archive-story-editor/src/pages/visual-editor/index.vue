@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
-import type { DropResult } from 'vue3-smooth-dnd'
 import { Container, Draggable } from 'vue3-smooth-dnd'
-import type { CharacterSelect } from './CharacterSelect'
-import { buildNexonJSONStory } from '~/common/nexon-script/visual-editor'
-import type { Character, StoryNode } from '~/types/visual-editor'
+import type { DropResult } from 'vue3-smooth-dnd'
+import { buildNexonJSONStory } from '~/common/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
+import type { StoryNode } from '~/types/visual-editor'
+import type { CharacterSelect } from '~/components/VisualEditor/CharacterSelect'
 
 const store = useVisualEditorStore()
 
@@ -29,21 +29,22 @@ const storySummary = {
 
 const playerVIf = ref(false)
 const player = ref<InstanceType<typeof BaStoryPlayer> | undefined>(undefined)
-function handleReloadPlayer() {
+
+const emitter = useEmitter()
+const editPropertyShow = ref(false)
+
+emitter.on('editor.reload', () => {
   playerVIf.value = false
   nextTick(() => {
     playerVIf.value = true
   })
-}
-
-const editPropertyShow = ref(false)
-function handleEditProperty() {
+})
+emitter.on('editor.edit_story_property', () => {
   editPropertyShow.value = true
-}
-
-async function handleSaveStory() {
+})
+emitter.on('editor.save', async () => {
   await store.saveStory()
-}
+})
 
 const playerWidth = 740
 const playerHeight = 400
@@ -65,8 +66,7 @@ provide('character-select', characterSelectInstance)
 </script>
 
 <template>
-  <div class="visual-editor" flex="~ 1 col" h-full w-full of-x-hidden>
-    <HeaderToolbar @reload-player="handleReloadPlayer" @edit-property="handleEditProperty" @save-story="handleSaveStory" />
+  <div id="visual-editor-index" flex="~ col" of-hidden>
     <div class="visual-editor-content" flex="~ 1" gap-2 of-hidden p-2>
       <div class="preview" flex="~ col" :style="{ minWidth: `${playerWidth + 24}px` }" card h-full>
         <div class="player-preview" bg-black>
@@ -101,9 +101,7 @@ provide('character-select', characterSelectInstance)
             @drop="applyCardDrag"
           >
             <Draggable v-for="_, i in store.storyNodes" :key="store.storyNodes[i].id">
-              <StoryCardContainer
-                v-model="store.storyNodes[i]" @remove="handleRemoveCard(store.storyNodes[i])"
-              />
+              <StoryCardContainer v-model="store.storyNodes[i]" @remove="handleRemoveCard(store.storyNodes[i])" />
             </Draggable>
           </Container>
           <AddCard m3 @click="handleAddCard" />

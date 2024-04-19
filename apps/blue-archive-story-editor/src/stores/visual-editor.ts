@@ -204,11 +204,13 @@ export const useVisualEditorStore = defineStore(
     }
 
     return {
+      storyId,
       storyReleased,
       storyTitle,
       storyDescription,
       storyCover,
       storyNodes,
+      storyIndex,
       saveStory,
       newNode,
       removeNode,

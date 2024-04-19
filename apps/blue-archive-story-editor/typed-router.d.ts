@@ -22,6 +22,8 @@ declare module 'vue-router/auto-routes' {
     '/Editor': RouteRecordInfo<'/Editor', '/Editor', Record<never, never>, Record<never, never>>,
     '/Preview': RouteRecordInfo<'/Preview', '/Preview', Record<never, never>, Record<never, never>>,
     '/StoryGalleryPage': RouteRecordInfo<'/StoryGalleryPage', '/StoryGalleryPage', Record<never, never>, Record<never, never>>,
-    '/VisualEditorPage': RouteRecordInfo<'/VisualEditorPage', '/VisualEditorPage', Record<never, never>, Record<never, never>>,
+    '/visual-editor': RouteRecordInfo<'/visual-editor', '/visual-editor', Record<never, never>, Record<never, never>>,
+    '/visual-editor/': RouteRecordInfo<'/visual-editor/', '/visual-editor', Record<never, never>, Record<never, never>>,
+    '/visual-editor/my-works': RouteRecordInfo<'/visual-editor/my-works', '/visual-editor/my-works', Record<never, never>, Record<never, never>>,
   }
 }

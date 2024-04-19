@@ -8,7 +8,7 @@ const router = useRouter()
     <nav class="nav-header__fixed" border="~ b-1" fixed top-0 z-1 h3.05rem w-full flex="~ center" bg-white py1 shadow-sm>
       <div class="left" flex flex-1>
         <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px @click="router.push('/storygallerypage')">
-        <button border shadow-sm btn @click="router.push('/visualeditorpage')">
+        <button border shadow-sm btn @click="router.push('/visual-editor')">
           编辑器
         </button>
       </div>

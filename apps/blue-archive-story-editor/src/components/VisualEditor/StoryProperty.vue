@@ -9,6 +9,7 @@ const store = useVisualEditorStore()
   <TheModal v-model:show="show" title="故事属性">
     <template #content>
       <div class="story-property">
+        <TheInput label="id" v-model="store.storyId"/>
         <TheInput label="故事名" v-model="store.storyTitle"/>
         <TheInput label="故事描述" v-model="store.storyDescription"/>
         <TheInput label="封面" v-model="store.storyCover"/>

@@ -20,6 +20,17 @@ async def get_story_works(*, engine: AIOEngine = Depends(dep_engine)):
     return story_works
 
 
+@router.get("/story-works/my-works", response_model=List[StoryWork])
+async def get_story_works_my_works(
+    *,
+    engine: AIOEngine = Depends(dep_engine),
+    user: User = Depends(dep_user)
+
+):
+    story_works = await engine.find(StoryWork, StoryWork.author == user.id)
+    return story_works
+
+
 @router.get("/story-works/{id}", response_model=StoryWorkSchema)
 async def get_story_works_by_id(*, id: ObjectId, engine: AIOEngine = Depends(dep_engine)):
     story_work = await engine.find_one(StoryWork, StoryWork.id == id)
@@ -69,4 +80,3 @@ async def delete_story_works(
         raise HTTPException(404)
     await engine.delete(story_work)
     return story_work
-    

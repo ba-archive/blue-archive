@@ -6,7 +6,7 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 // https://pinia.vuejs.org/
 export function install({ app }: { app: App<Element> }) {
   const pinia = createPinia()
-  
+
   pinia.use(piniaPluginPersistedstate)
   app.use(pinia)
 }
