@@ -8,7 +8,7 @@ export async function getStoryWorks(): Promise<StoryWork[]> {
 }
 
 export async function getStoryWorksMyWork(): Promise<StoryWork[]> {
-  const resp = await instance.get('/story-works/my-work')
+  const resp = await instance.get('/story-works/my-works')
   return resp.data
 }
 
