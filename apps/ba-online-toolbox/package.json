@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "dev:with-player": "rush build --to-except ba-story-player & vite --host",
-    "check": "vue-tsc --noEmit; eslint --config ./.eslintrc.json ./src/ --ext .js,.ts,.vue",
-    "build:json": "eslint --config ./.eslintrc.json ./public/ && node ./CICD/build_json.mjs",
+    "check": "cross-env ESLINT_USE_FLAT_CONFIG=false vue-tsc --noEmit; eslint -c .eslintrc.json ./src/ --ext .js,.ts,.vue",
+    "build:json": "cross-env ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.json ./public/ && node ./CICD/build_json.mjs",
     "build": "pnpm build:json && vite build",
     "build:github": "pnpm build",
     "up": "taze major -I",
@@ -26,7 +26,8 @@
     "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.3.7",
     "vue-router": "~4.3.0",
-    "mitt": "^3.0.0"
+    "mitt": "^3.0.0",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "taze": "^0.13.3",
