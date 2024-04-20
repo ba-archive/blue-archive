@@ -27,8 +27,8 @@ class StoryWorkCreate(BaseModel):
     released: bool
 
 class StoryWorkUpdate(BaseModel):
-    title: Optional[str]
-    description: Optional[str]
-    cover: Optional[str]
-    story: Optional[dict]
-    released: Optional[bool]
+    title: Optional[str] = None
+    description: Optional[str] = None
+    cover: Optional[str] = None
+    story: Optional[dict] = None
+    released: Optional[bool] = None

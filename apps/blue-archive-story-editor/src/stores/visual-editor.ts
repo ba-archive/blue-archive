@@ -1,7 +1,7 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import type { BackgroundNode, BgmNode, CharacterNode, DialogNode, NaNode, StoryNode, StoryNodeT, WaitNode } from '~/types/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
-import { saveStoryWork, updateStoryWork } from '~/api/index'
+import { getStoryWork, saveStoryWork, updateStoryWork } from '~/api/index'
 import type { StoryWork } from '~/types/story-gallery'
 
 export const useVisualEditorStore = defineStore(
@@ -31,6 +31,27 @@ export const useVisualEditorStore = defineStore(
         story = await saveStoryWork(data)
 
       storyId.value = story.id
+    }
+
+    async function loadStory(id: string) {
+      storyTitle.value = ''
+      storyCover.value = ''
+      storyDescription.value = ''
+      storyNodes.value = []
+      storyReleased.value = false
+
+      const storyWork = await getStoryWork(id)
+      storyTitle.value = storyWork.title
+      storyCover.value = storyWork.cover
+      storyDescription.value = storyWork.description
+      storyNodes.value = storyWork.story?.content || []
+      storyReleased.value = storyWork.released
+
+      let maxIndex = Number.NEGATIVE_INFINITY
+      storyNodes.value.forEach((story) => {
+        maxIndex = Math.max(story.id, maxIndex)
+      })
+      storyIndex.value = maxIndex
     }
 
     function getLastCharacters() {
@@ -218,6 +239,7 @@ export const useVisualEditorStore = defineStore(
       addNode,
       moveNode,
       addNodeAfter,
+      loadStory,
     }
   },
   {

@@ -9,6 +9,7 @@ import type { StoryNode } from '~/types/visual-editor'
 import type { CharacterSelect } from '~/components/VisualEditor/CharacterSelect'
 
 const store = useVisualEditorStore()
+const route = useRoute<'/visual-editor/[[id]]'>()
 
 function handleAddCard() {
   store.newNode(StoryNodeType.CharacterNode)
@@ -60,6 +61,11 @@ const dropPlaceholderOptions = {
   animationDuration: '150',
   showOnTop: true,
 }
+
+onMounted(async () => {
+  if (route.params.id)
+    await store.loadStory(route.params.id)
+})
 
 const characterSelectInstance = shallowRef<CharacterSelect>()
 provide('character-select', characterSelectInstance)

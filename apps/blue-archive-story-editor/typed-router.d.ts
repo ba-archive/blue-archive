@@ -23,7 +23,7 @@ declare module 'vue-router/auto-routes' {
     '/Preview': RouteRecordInfo<'/Preview', '/Preview', Record<never, never>, Record<never, never>>,
     '/StoryGalleryPage': RouteRecordInfo<'/StoryGalleryPage', '/StoryGalleryPage', Record<never, never>, Record<never, never>>,
     '/visual-editor': RouteRecordInfo<'/visual-editor', '/visual-editor', Record<never, never>, Record<never, never>>,
-    '/visual-editor/': RouteRecordInfo<'/visual-editor/', '/visual-editor', Record<never, never>, Record<never, never>>,
+    '/visual-editor/[[id]]': RouteRecordInfo<'/visual-editor/[[id]]', '/visual-editor/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
     '/visual-editor/my-works': RouteRecordInfo<'/visual-editor/my-works', '/visual-editor/my-works', Record<never, never>, Record<never, never>>,
   }
 }

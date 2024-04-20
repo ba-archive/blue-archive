@@ -16,5 +16,6 @@ export interface StoryWork{
   }
   loves: number
   hits: number
-  story: object
+  released: boolean
+  story: any
 }

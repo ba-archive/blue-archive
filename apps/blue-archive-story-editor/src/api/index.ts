@@ -7,6 +7,11 @@ export async function getStoryWorks(): Promise<StoryWork[]> {
   return resp.data
 }
 
+export async function getStoryWork(id: string): Promise<StoryWork> {
+  const resp = await instance.get(`/story-works/${id}`)
+  return resp.data
+}
+
 export async function getStoryWorksMyWork(): Promise<StoryWork[]> {
   const resp = await instance.get('/story-works/my-works')
   return resp.data

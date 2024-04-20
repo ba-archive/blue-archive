@@ -19,6 +19,9 @@ onMounted(async () => {
     xl:grid="cols-4"
     xxl:grid="cols-5"
   >
-    <MyWorkCard v-for="storyWork in storyWorks" :key="storyWork.id" v-bind="storyWork" grid-justify-self-center />
+    <MyWorkCard
+      v-for="storyWork, i in storyWorks" :key="storyWork.id"
+      grid-justify-self-center v-model="storyWorks[i]"
+    />
   </div>
 </template>
