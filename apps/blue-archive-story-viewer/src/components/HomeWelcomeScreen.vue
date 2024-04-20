@@ -14,8 +14,8 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
-    jumpTo: 20024,
-    title: "桐藤 渚",
+    jumpTo: 10029,
+    title: "柚鸟 夏",
   },
   {
     type: "minigame",
