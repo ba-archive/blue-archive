@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 from odmantic import ObjectId
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from app.models.users import User
 
@@ -20,6 +20,7 @@ class StoryWorkSchema(BaseModel):
     released: bool
 
 class StoryWorkCreate(BaseModel):
+    id: Optional[ObjectId] = None
     title: str
     description: str
     cover: str 

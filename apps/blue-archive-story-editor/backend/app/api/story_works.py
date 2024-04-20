@@ -47,7 +47,7 @@ async def create_story_works(
     story_work_create: StoryWorkCreate
 ):
     story_work = StoryWork(
-        **story_work_create.model_dump(),
+        **story_work_create.model_dump(exclude_none=True),
         author=user,
     )
     return await engine.save(story_work)
