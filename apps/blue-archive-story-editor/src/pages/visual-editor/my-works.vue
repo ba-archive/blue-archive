@@ -2,7 +2,7 @@
 import { getStoryWorksMyWork } from '~/api'
 import type { StoryWork } from '~/types/story-gallery'
 
-const storyWorks = ref<StoryWork[]>()
+const storyWorks = ref<StoryWork[]>([])
 
 onMounted(async () => {
   storyWorks.value = await getStoryWorksMyWork()

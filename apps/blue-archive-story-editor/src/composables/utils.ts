@@ -17,3 +17,7 @@ export function jloads(text: string): any {
 export function jdumps(obj: any): string {
   return JSON.stringify(obj, null, 2) || ''
 }
+
+export async function dataURItoBlob(uri: string) {
+  return fetch(uri).then(res => res.blob())
+}

@@ -3,13 +3,16 @@ import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import type { DropResult } from 'vue3-smooth-dnd'
+import type { Application } from 'pixi.js'
 import { buildNexonJSONStory } from '~/common/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
 import type { StoryNode } from '~/types/visual-editor'
 import type { CharacterSelect } from '~/components/VisualEditor/CharacterSelect'
+import { createStoryWork, uploadFile } from '~/api'
 
 const store = useVisualEditorStore()
 const route = useRoute<'/visual-editor/[[id]]'>()
+const router = useRouter()
 
 function handleAddCard() {
   store.newNode(StoryNodeType.CharacterNode)
@@ -29,22 +32,48 @@ const storySummary = {
 }
 
 const playerVIf = ref(false)
-const player = ref<InstanceType<typeof BaStoryPlayer> | undefined>(undefined)
+const player = ref<{ app: Application } | undefined>(undefined)
+// watchEffect(() => {
+//   useAppStore().pixiApp = player.value?.app
+// })
 
 const emitter = useEmitter()
 const editPropertyShow = ref(false)
 
-emitter.on('editor.reload', () => {
+function handleEditorReload() {
   playerVIf.value = false
   nextTick(() => {
     playerVIf.value = true
   })
-})
-emitter.on('editor.edit_story_property', () => {
+}
+function handleEditorEditStoryProperty() {
   editPropertyShow.value = true
-})
-emitter.on('editor.save', async () => {
+}
+async function handleEditorSave() {
   await store.saveStory()
+
+  if (player.value) {
+    const app = player.value.app
+    // todo 截取部分图片
+    const image: HTMLImageElement = app.renderer.plugins.extract.image(app.stage, 'image/jpeg', 1)
+
+    const resp = await uploadFile(await dataURItoBlob(image.src), `${store.storyId}_cover.jpg`)
+    store.storyCover = resp.path
+  }
+
+  await store.saveStory()
+}
+
+onMounted(() => {
+  emitter.on('editor.reload', handleEditorReload)
+  emitter.on('editor.edit_story_property', handleEditorEditStoryProperty)
+  emitter.on('editor.save', handleEditorSave)
+})
+
+onUnmounted(() => {
+  emitter.off('editor.reload', handleEditorReload)
+  emitter.off('editor.edit_story_property', handleEditorEditStoryProperty)
+  emitter.off('editor.save', handleEditorSave)
 })
 
 const playerWidth = 740
@@ -62,10 +91,22 @@ const dropPlaceholderOptions = {
   showOnTop: true,
 }
 
-onMounted(async () => {
-  if (route.params.id)
+watch(() => route.params.id, async () => {
+  if (route.params.id) {
     await store.loadStory(route.params.id)
-})
+  }
+  else {
+    const data = {
+      title: 'untitled',
+      cover: 'https://sdfsdf.dev/400x300.jpg',
+      description: '',
+      story: { content: [] },
+      released: false,
+    }
+    const story = await createStoryWork(data)
+    router.replace(`/visual-editor/${story.id}`)
+  }
+}, { immediate: true })
 
 const characterSelectInstance = shallowRef<CharacterSelect>()
 provide('character-select', characterSelectInstance)

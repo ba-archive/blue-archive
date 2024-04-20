@@ -9,11 +9,15 @@ async function toggleReleaseStory(id: string) {
   const resp = await updateStoryWork(id, { released: !model.value.released })
   model.value = resp
 }
+
+function getUploadUrl(path: string) {
+  return path.startsWith('.') ? `//127.0.0.1:8000/uploads/${path}` : path
+}
 </script>
 
 <template>
   <div class="my-work-card" card w-full shadow-lg>
-    <img :src="model.cover" h-48 w-full object-cover>
+    <img :src="getUploadUrl(model.cover)" h-48 w-full object-cover>
     <div class="work-data" children:mt2>
       <div flex="~ center" gap-2>
         <h3 text="2xl" h1.5em flex-1 of-hidden>

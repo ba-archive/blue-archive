@@ -46,7 +46,7 @@ async function loadSpine(path: string) {
   // spine.value?.destroy()
   spine.value = new Spine(await loadSpineData(app, path, path))
   animations.value = spine.value.spineData.animations.map(item => item.name)
-  model.value.face = animations.value[0]
+  model.value.face = model.value.face || animations.value[0]
   // const spineDebugger = new SpineDebugRenderer()
   // spineDebugger.drawBoundingBoxes = true
   // spine.debug = spineDebugger

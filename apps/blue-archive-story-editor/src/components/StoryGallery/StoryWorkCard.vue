@@ -9,6 +9,10 @@ function toDate(dateString: string) {
   const date = new Date(dateString)
   return `${date.getMonth() + 1}-${date.getDate()}`
 }
+
+function getUploadUrl(path: string) {
+  return path.startsWith('.') ? `//127.0.0.1:8000/uploads/${path}` : path
+}
 </script>
 
 <template>
@@ -22,7 +26,7 @@ function toDate(dateString: string) {
       </span>
     </div>
     <div flex="~ 1" gap-2>
-      <img class="story-work-cover" h9rem w12rem b-rd-md object-cover :src="props.cover">
+      <img class="story-work-cover" h9rem w12rem b-rd-md object-cover :src="getUploadUrl(props.cover)">
       <div class="story-work-details" flex="~ 1 col">
         <!-- todo js 实现多行溢出省略号 -->
         <div line-clamp-5 flex-1 of-hidden>

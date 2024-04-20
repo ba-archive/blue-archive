@@ -23,6 +23,9 @@ const router = useRouter()
       <button border shadow-sm btn @click="router.push('/visual-editor/my-works')">
         我的作品
       </button>
+      <button border shadow-sm btn @click="router.push('/visual-editor/')">
+        新故事
+      </button>
     </div>
     <div class="right" flex="~ center">
       <a href="https://github.com/ba-archive/blue-archive/tree/dev-notype/apps/blue-archive-story-editor" target="_blank">

@@ -6,6 +6,7 @@ import type { CharacterData } from '~/types/app'
 const DEFAULT_AVATAR_URL = 'https://sdfsdf.dev/50x50.jpg'
 
 export const useAppStore = defineStore('app', () => {
+  // const pixiApp = shallowRef<Application | undefined>(undefined)
   const charactersData = ref<CharacterData[]>(student_data.students)
 
   // todo 优化

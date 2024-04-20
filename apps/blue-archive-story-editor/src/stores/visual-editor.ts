@@ -1,7 +1,8 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { ObjectId } from 'bson'
 import type { BackgroundNode, BgmNode, CharacterNode, DialogNode, NaNode, StoryNode, StoryNodeT, WaitNode } from '~/types/visual-editor'
 import { StoryNodeType } from '~/types/visual-editor'
-import { getStoryWork, saveStoryWork, updateStoryWork } from '~/api/index'
+import { createStoryWork, getStoryWork, updateStoryWork } from '~/api/index'
 import type { StoryWork } from '~/types/story-gallery'
 
 export const useVisualEditorStore = defineStore(
@@ -17,37 +18,41 @@ export const useVisualEditorStore = defineStore(
     const storyIndex = ref(0)
 
     async function saveStory() {
-      let story: StoryWork
+      if (!storyId.value)
+        return
+
       const data = {
+        id: storyId,
         title: storyTitle.value,
         cover: storyCover.value,
         description: storyDescription.value,
         story: { content: storyNodes.value },
         released: storyReleased.value,
       }
-      if (storyId.value)
-        story = await updateStoryWork(storyId.value, data)
-      else
-        story = await saveStoryWork(data)
-
-      storyId.value = story.id
+      await updateStoryWork(storyId.value, data)
     }
 
-    async function loadStory(id: string) {
+    function resetStory() {
       storyTitle.value = ''
       storyCover.value = ''
       storyDescription.value = ''
       storyNodes.value = []
       storyReleased.value = false
+      storyIndex.value = 0
+    }
 
+    async function loadStory(id: string) {
+      resetStory()
       const storyWork = await getStoryWork(id)
+      storyId.value = id
       storyTitle.value = storyWork.title
       storyCover.value = storyWork.cover
       storyDescription.value = storyWork.description
       storyNodes.value = storyWork.story?.content || []
       storyReleased.value = storyWork.released
 
-      let maxIndex = Number.NEGATIVE_INFINITY
+      // 设置故事初始 index
+      let maxIndex = 0
       storyNodes.value.forEach((story) => {
         maxIndex = Math.max(story.id, maxIndex)
       })
@@ -233,6 +238,7 @@ export const useVisualEditorStore = defineStore(
       storyNodes,
       storyIndex,
       saveStory,
+      resetStory,
       newNode,
       removeNode,
       getNode: getNodeIndex,
