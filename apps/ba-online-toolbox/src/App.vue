@@ -1,12 +1,29 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import HomepageNavigator from './HomepageNavigator.vue';
+import { computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import HomepageNavigator from "./HomepageNavigator.vue";
+import { useGlobalConfig } from "./tools/ScenarioEditor/store/configStore";
+import { getStudents } from "./tools/public/helper/getStudents";
+import { ElMessage } from "element-plus";
+
+const config = useGlobalConfig();
+
+onMounted(() => {
+  getStudents().then(students => {
+    if (!students || students.length === 0) {
+      ElMessage({
+        message: "No students found",
+        type: "warning",
+      });
+    }
+    config.setStudents(students);
+  });
+});
 
 const route = useRoute();
 
 const isMainPage = computed(() => {
-  return '/' === route.path;
+  return "/" === route.path;
 });
 </script>
 
@@ -45,7 +62,7 @@ const isMainPage = computed(() => {
   position: fixed;
   justify-content: center;
   align-items: center;
-  z-index: 114514;
+  z-index: 100;
   background-color: #fff;
   width: 100%;
   font-weight: bold;
@@ -80,7 +97,7 @@ const isMainPage = computed(() => {
         background-color: var(--color-arona-blue);
         width: 100%;
         height: 2px;
-        content: '';
+        content: "";
       }
     }
   }

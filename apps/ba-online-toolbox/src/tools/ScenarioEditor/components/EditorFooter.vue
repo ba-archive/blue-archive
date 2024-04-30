@@ -25,7 +25,7 @@
         文件名: {{ getFileName() }}
       </n-tooltip>
       <n-button type="info" @click="handlePreviewModeRequest">{{
-        isPreviewMode ? '取消预览' : '预览全文翻译'
+        isPreviewMode ? "取消预览" : "预览全文翻译"
       }}</n-button>
       <n-button
         v-if="!hasFileSaved"
@@ -41,10 +41,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { saveAs } from 'file-saver';
-import { computed, ref } from 'vue';
-import { useGlobalConfig } from '../store/configStore';
-import { useScenarioStore } from '../store/scenarioEditorStore';
+import { saveAs } from "file-saver";
+import { computed, ref } from "vue";
+import { useGlobalConfig } from "../store/configStore";
+import { useScenarioStore } from "../store/scenarioEditorStore";
 
 // import { Scenario } from '../types/content';
 
@@ -57,7 +57,7 @@ function normalizeFileId(fileId: string): string {
   const fileIdStr = fileId;
   const characterId = fileIdStr.slice(0, 5);
   const groupId = fileIdStr.slice(5);
-  if (groupId.startsWith('0')) {
+  if (groupId.startsWith("0")) {
     return `${characterId}${groupId.slice(1)}`;
   }
   return fileIdStr;
@@ -69,12 +69,12 @@ function getFileName() {
   if (groupId.length > 5) {
     fileId = normalizeFileId(groupId);
   }
-  return `[${config.isProofread ? '已校对' : '未校对'}]${fileId}.json`;
+  return `[${config.isProofread ? "已校对" : "未校对"}]${fileId}.json`;
 }
 
 const downloadHandle = () => {
   const blob = new Blob([JSON.stringify(mainStore.getScenario, null, 2)], {
-    type: 'text/plain;charset=utf-8',
+    type: "text/plain;charset=utf-8",
   });
   saveAs(blob, getFileName());
   hasFileSaved.value = true;
@@ -88,6 +88,7 @@ function handleClearAllRequest() {
   hasFileSaved.value = false;
   mainStore.clearAll();
   config.resetConfigState();
+  config.resetTmpTranslation();
 }
 
 function handlePreviewModeRequest() {

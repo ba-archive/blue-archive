@@ -305,6 +305,7 @@ export const stories: StoryBriefing[] = [
         },
         previous: 210,
         story_id: 211,
+        next: 901,
         summary: {
           TextKr: "쿠즈노하가 환량백물어, 묘귀 쿠로카게에 대해 설명한다.",
           TextJp: "クズノハは、幻魎百物語「猫鬼黒影」について語る。",
@@ -595,6 +596,43 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Rin and Ayumu from the General Student Council asks Sensei to utilize the operation room to solve various cases.",
           TextCn: "联邦学生会的凛和步梦希望老师能够利用作战室解决各种事件。",
+        },
+      },
+    ],
+  },
+  {
+    title: {
+      TextKr: "제약해제결전",
+      TextJp: "制約解除決戦",
+      TextCn: "制约解除决战",
+      TextEn: "Restriction Release Decisive Battle",
+      TextTw: "解除限制決戰",
+      TextTh: "การต่อสู้เพื่อเลิกข้อจำกัด",
+    },
+    avatar: "/image/story_cover/total_assault.webp",
+    sections: [
+      {
+        title: {
+          TextKr: "세트의 분노",
+          TextJp: "セトの憤怒",
+          TextCn: "赛特的愤怒",
+          TextEn: "Seth's Wrath",
+          TextTw: "賽特的憤怒",
+          TextTh: "ความโกรธของเซท",
+        },
+        story_id: 901,
+        previous: 211,
+        summary: {
+          TextKr:
+            "지하생활자가 선생님에게 만신의 성좌 중 하나인 세트의 분노에 대해 설명한다.",
+          TextJp:
+            "地下生活者が先生に神々の星座の一つであるセトの憤怒について説明する。",
+          TextCn: "地下生活者向老师介绍了众神的星座之一——赛特的愤怒。",
+          TextEn:
+            "An underground dweller explains Seth's Wrath - one of the constellations of pantheon - to Sensei.",
+          TextTw: "地下生活者向老師介紹了眾神的星座之一——賽特的憤怒。",
+          TextTh:
+            "ผู้อาศัยใต้ดินอธิบายถึงความโกรธของเซท หนึ่งในที่นั่งของเทพเจ้า",
         },
       },
     ],

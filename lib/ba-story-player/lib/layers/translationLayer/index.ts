@@ -126,7 +126,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
       return unit;
     },
   },
-  fontsize: { 
+  fontsize: {
     reg: /#fontsize;(\d+);?/i,
     fn(match: RegExpExecArray, unit: StoryUnit) {
       unit.textAbout.showText.text.forEach(it => {
@@ -243,7 +243,9 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
       } else {
         console.log(rawUnit);
         console.log(currentIndex);
-        throw new Error(`${CharacterName}在CharacterNameExcelTable中不存在`);
+        throw new Error(
+          `${CharacterName}(${match[2]})在CharacterNameExcelTable中不存在，index: ${currentIndex}`
+        );
       }
       return unit;
     },
@@ -328,7 +330,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
         getText(rawUnit, usePlayerStore().language)
       )
         .split("\n")
-        .filter((it) => it)
+        .filter(it => it)
         .map(it => {
           const parseResult = /\[n?s(\d{0,2})?](.+)/.exec(it);
           if (!parseResult) {
