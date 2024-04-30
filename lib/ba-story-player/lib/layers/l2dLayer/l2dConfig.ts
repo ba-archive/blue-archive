@@ -1095,18 +1095,69 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
-  placeholder: {
-    name: "placeholder",
+  CH0155_home: {
+    name: "CH0155_home",
     playQue: [
       {
-        name: "placeholder",
+        name: "CH0155_home",
         animation: "Start_Idle_01",
-        fadeTime: 4.9,
+        fadeTime: 4.2,
         fade: true,
       },
     ],
     spineSettings: {
-      placeholder: {
+      CH0155_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  Nagisa_home: {
+    name: "Nagisa_home",
+    playQue: [
+      {
+        name: "Nagisa_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Nagisa_home: {
+        scale: 3.0,
+      },
+    },
+    otherSpine: [],
+  },
+  Azusa_home: {
+    name: "Azusa_home",
+    playQue: [
+      {
+        name: "Azusa_home",
+        animation: "Start_Idle_01",
+        fadeTime: 0,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Azusa_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0095_home: {
+    name: "CH0095_home",
+    playQue: [
+      {
+        name: "CH0095_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0095_home: {
         scale: 1.0,
       },
     },

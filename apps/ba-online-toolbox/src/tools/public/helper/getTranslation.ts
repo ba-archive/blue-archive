@@ -1,16 +1,16 @@
-import axios from 'axios';
+import axios from "axios";
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 // import { appKey, appSecret } from './translationSecrets';
-import secrets from '../secrets.json';
-import sha256 from 'crypto-js/sha256';
+import secrets from "../secrets.json";
+import sha256 from "crypto-js/sha256";
 
-const { appKey, appSecret } = secrets;
+const { YOUDAO_APP_ID, YOUDAO_APP_SECRET } = secrets;
 
 const salt = crypto.randomUUID();
-const api = '/api';
-const signType = 'v3';
+const api = "/api";
+const signType = "v3";
 
 function getSign(input: string, currtime: number): string {
   // sign = sha256(应用ID + input + salt + currtime + 应用密钥)；
@@ -18,7 +18,8 @@ function getSign(input: string, currtime: number): string {
     input.length > 20
       ? input.slice(0, 10) + input.length.toString() + input.slice(-10)
       : input;
-  const signStr = appKey + querySign + salt + currtime + appSecret;
+  const signStr =
+    YOUDAO_APP_ID + querySign + salt + currtime + YOUDAO_APP_SECRET;
 
   return sha256(signStr).toString();
 }
@@ -30,14 +31,14 @@ function halfToFull(str: string) {
   );
 }
 
-function translate(text: string, from = 'ja', to = 'zh-CHS') {
+function translate(text: string, from = "ja", to = "zh-CHS") {
   const currtime = Math.round(new Date().getTime() / 1000);
   const sign = getSign(text, currtime);
   return axios
     .get(api, {
       params: {
         q: text,
-        appKey: appKey,
+        appKey: YOUDAO_APP_ID,
         salt: salt,
         from: from,
         to: to,
@@ -46,7 +47,7 @@ function translate(text: string, from = 'ja', to = 'zh-CHS') {
         curtime: currtime,
       },
       headers: {
-        'Access-Control-Allow-Origin': '*', // CORS
+        "Access-Control-Allow-Origin": "*", // CORS
       },
     })
     .then(res => res.data);
