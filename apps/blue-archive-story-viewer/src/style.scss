@@ -64,7 +64,8 @@ html {
   --color-tag-active-background: #2f2f2f;
   --color-tag-active: #ffffff;
   --color-tag-background: #ffffff;
-  --color-tag-fluent: #115ea3;
+  --color-tag-fluent-default: #115ea3;
+  --color-tag-fluent-warning: #fff7e8;
 
   --color-text-contrast: #fff;
   --color-text-decoration: #ededed;
@@ -78,6 +79,8 @@ html {
   --color-text-striker: #cc1a25;
   --color-text-unarmed: #216f9c;
   --color-text-fluent-white: #fff;
+  --color-text-fluent-default: #fff;
+  --color-text-fluent-warning: #ff7d00;
 
   --color-title-container: #fcfdfe;
 
@@ -140,6 +143,8 @@ html[data-theme="dark"] {
   --color-tag-active-background: #000;
   --color-tag-active: #eee;
   --color-tag-background: #494949;
+  --color-tag-fluent-default: #115ea3;
+  --color-tag-fluent-warning: #4d1b00;
 
   --color-text-decoration: #5c5c5c;
   --color-text-glass-panel: #eee;
@@ -150,6 +155,9 @@ html[data-theme="dark"] {
   --color-text-light-armor: #cd0e1e;
   --color-text-striker: #f11f2c;
   --color-text-unarmed: #2989c0;
+  --color-text-fluent-white: #eee;
+  --color-text-fluent-default: #eee;
+  --color-text-fluent-warning: #ff9626;
 
   --color-shadow-near: #2126311f;
   --color-shadow-far: #0c0e1219;

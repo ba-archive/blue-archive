@@ -11,7 +11,7 @@
     <div class="content-wrapper flex-vertical rounded-small">
       <div
         class="flex-vertical story-container"
-        v-if="consentFromConfirmed && ready && !fetchError"
+        v-if="ready && !fetchError"
       >
         <div class="story-info flex-horizontal" v-if="!playEnded">
           <svg
@@ -28,12 +28,15 @@
             />
             <!-- eslint-enable max-len -->
           </svg>
-          <div class="fluent-tag">
+          <neu-tag>
             {{ getI18nString(userLanguage, `storyType.${storyType}`) }}
-          </div>
+          </neu-tag>
           <div>
             {{ summary.chapterName }}
           </div>
+          <neu-tag type="warning" bordered v-if="isLLMTranslation">
+            AI 翻译
+          </neu-tag>
         </div>
         <story-player
           v-if="showPlayer && !playEnded"
@@ -127,7 +130,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosError } from "axios";
 import StoryPlayer from "ba-story-player";
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, nextTick, ref, watch, onUnmounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
 import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
@@ -147,12 +150,12 @@ import { useSettingsStore } from "@store/settings";
 import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
 import "ba-story-player/dist/style.css";
+import NeuTag from "./widgets/NeuUI/NeuTag.vue";
 
 const route = useRoute();
 const router = useRouter();
 const storyId = computed(() => route.params.id);
 const storyQueryType = computed(() => route.query.type ?? "main");
-const consentFromConfirmed = ref(true);
 const story = ref<StoryContent>({} as StoryContent);
 const storyIndex = ref<StoryIndex>({} as StoryIndex);
 
@@ -227,11 +230,17 @@ axios
   .then(res => {
     if (typeof res.data !== "object") throw new AxiosError("404", "404");
     story.value = res.data;
-    console.log(story.value);
   })
-  .catch(err => {
+  .catch(() => {
+    function getLLMTranslationPath() {
+      return `/story/ai/favor/${studentId.value}/${
+        favorGroupId.value.slice(0, 5) +
+        favorGroupId.value.slice(5).padStart(2, "0")
+      }.json`;
+    }
+    isLLMTranslation.value = true;
     return axios
-      .get(queryUrl.replace("favor", "ai/favor"), {
+      .get(getLLMTranslationPath(), {
         onDownloadProgress: progressEvent => {
           if (progressEvent.total) {
             initProgress.value = Math.floor(
@@ -320,12 +329,6 @@ watch(
   },
   { immediate: true }
 );
-
-/* eslint-enable indent */
-
-function handleConsentFormConfirm() {
-  consentFromConfirmed.value = true;
-}
 
 const showPlayer = ref(true);
 
