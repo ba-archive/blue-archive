@@ -359,6 +359,12 @@ function notifyWindowFocus() {
   tabActivated.value = false;
 }
 
+function forceSetWindowFocus() {
+  if (!tabActivated.value) {
+    notifyWindowFocus();
+  }
+}
+
 onUnmounted(() => {
   dispose();
   window.removeEventListener("resize", updateFullScreenState);
@@ -425,6 +431,7 @@ onDeactivated(() => {
           :player-height="playerHeight"
           :player-width="playerWidth"
           :style="{ width: `${playerWidth}px` }"
+          @click="forceSetWindowFocus"
         >
         </BaDialog>
       </div>
