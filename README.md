@@ -11,18 +11,17 @@
 - ba-story-player - 剧情播放器组件 ([/lib/ba-story-player](https://github.com/ba-archive/blue-archive/tree/main/lib/ba-story-player))
 
 
-
 ## 环境信息
 
 项目采用 `rush.js` 组织 monorepo, 统一各个项目的代码规范和依赖, 优化引入项目公用包形式
 
-- 当前 rush 版本：`5.112.1`
-- 推荐 node 版本：`20` （测试可用版本：`v20.7.0`）
-- 项目包管理器版本信息：`pnpm@latest` （测试可用版本：`8.10.5`）
+- 当前 rush 版本：`5.120.6`
+- 推荐 node 版本：`>=14 <=18` （测试可用版本：`v18.18.0`）
+- 项目包管理器版本信息：`pnpm@latest` （测试可用版本：`9.0.6`）
 
 ## 配置教程
 
-**安装 node20（推荐使用 [nvm](https://github.com/nvm-sh/nvm)）**
+**安装 node18（推荐使用 [nvm](https://github.com/nvm-sh/nvm)）**
 
 > linux 安装教程
 
@@ -32,8 +31,8 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # 安装 node
-nvm install 20
-nvm use 20
+nvm install 18
+nvm use 18
 ```
 
 > 对于 windows 系统推荐先安装 [scoop](https://scoop.sh/)，然后使用 scoop 安装 nvm，最后使用 nvm 安装 node
@@ -48,8 +47,8 @@ irm get.scoop.sh | iex
 scoop install nvm
 
 # 安装 node
-nvm install 20
-nvm use 20
+nvm install 18
+nvm use 18
 ```
 
 **安装 rush**
