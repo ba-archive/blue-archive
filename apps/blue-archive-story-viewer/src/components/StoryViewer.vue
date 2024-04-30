@@ -9,23 +9,6 @@
       <neu-progress-bar :show-percentage="true" :progress="initProgress" />
     </div>
     <div class="content-wrapper flex-vertical rounded-small">
-      <neu-dialog
-        v-if="!consentFromConfirmed && ready && !fetchError"
-        title="提示"
-        show-mask="false"
-        shadow
-        positive-text="明白"
-        negative-text="不明白"
-        @positiveClick="handleConsentFormConfirm"
-      >
-        <template #title-before>
-          <img src="@assets/info.svg" />
-        </template>
-        <template #content>
-          <dialog-content />
-        </template>
-      </neu-dialog>
-
       <div
         class="flex-vertical story-container"
         v-if="consentFromConfirmed && ready && !fetchError"
@@ -146,9 +129,7 @@ import axios, { AxiosError } from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import DialogContent from "./widgets/DialogContent.vue";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
-import NeuDialog from "./widgets/NeuUI/NeuDialog.vue";
 import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
 import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
 import {
@@ -192,6 +173,7 @@ const fetchError = ref(false);
 const fetchErrorMessage = ref({});
 
 const changeIndex = ref(0);
+const isLLMTranslation = ref(false);
 
 function handleInitiated() {
   if (route.query.changeIndex) {
@@ -243,50 +225,50 @@ axios
     },
   })
   .then(res => {
-    if (typeof res.data !== "object")
-      throw new AxiosError("404", "404")
+    if (typeof res.data !== "object") throw new AxiosError("404", "404");
     story.value = res.data;
-    console.log(story.value)
+    console.log(story.value);
   })
   .catch(err => {
-    return axios.get(queryUrl.replace("favor", "ai/favor"), {
-      onDownloadProgress: progressEvent => {
-        if (progressEvent.total) {
-          initProgress.value = Math.floor(
-            ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-          );
+    return axios
+      .get(queryUrl.replace("favor", "ai/favor"), {
+        onDownloadProgress: progressEvent => {
+          if (progressEvent.total) {
+            initProgress.value = Math.floor(
+              ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
+            );
+          } else {
+            initProgress.value = Math.floor(
+              ((progressEvent.loaded || 0) * 100) /
+                ((progressEvent.loaded || 0) + 100)
+            );
+          }
+        },
+      })
+      .then(res => {
+        story.value = res.data;
+      })
+      .catch(err => {
+        fetchError.value = true;
+        if (!isStuStory.value) {
+          fetchErrorMessage.value =
+            route.params.id.toString() === "11000"
+              ? err
+              : "该剧情目前尚未开放，敬请期待！";
         } else {
-          initProgress.value = Math.floor(
-            ((progressEvent.loaded || 0) * 100) /
-              ((progressEvent.loaded || 0) + 100)
-          );
+          /* eslint-disable indent */
+          fetchErrorMessage.value =
+            404 === err.response.status
+              ? {
+                  message: "Story not found",
+                  response: {
+                    status: 1919,
+                  },
+                }
+              : err;
+          /* eslint-enable indent */
         }
-      },
-    })
-    .then(res => {
-      story.value = res.data;
-    })
-    .catch(err => {
-      fetchError.value = true;
-      if (!isStuStory.value) {
-        fetchErrorMessage.value =
-          route.params.id.toString() === "11000"
-            ? err
-            : "该剧情目前尚未开放，敬请期待！";
-      } else {
-        /* eslint-disable indent */
-        fetchErrorMessage.value =
-          404 === err.response.status
-            ? {
-                message: "Story not found",
-                response: {
-                  status: 1919,
-                },
-              }
-            : err;
-        /* eslint-enable indent */
-      }
-    })
+      });
   })
   .finally(() => {
     ready.value = true;
