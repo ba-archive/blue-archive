@@ -8,9 +8,11 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "build": "pnpm docs:build && vite build",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "taze": "^0.13.3"
   },
   "dependencies": {
+    "taze": "^0.13.3",
     "@arco-design/web-vue": "~2.54.1",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vueuse/core": "^10.7.2",
@@ -20,13 +22,13 @@
     "postcss-preset-env": "^9.4.0",
     "radix-vue": "~1.2.5",
     "tailwindcss": "~3.4.1",
-    "typescript": "^5.3.3",
-    "unplugin-auto-import": "^0.16.7",
-    "unplugin-vue-components": "^0.25.2",
-    "vite": "5.1.3",
+    "typescript": "^5.4.3",
+    "unplugin-auto-import": "0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.2.7",
     "vitepress": "~1.0.0-rc.24",
     "vue": "^3.3.7",
-    "vue-router": "^4.2.5",
+    "vue-router": "~4.3.0",
     "@vitejs/plugin-legacy": "^5.3.0",
     "@vitejs/plugin-vue-jsx": "~3.1.0",
     "color-string": "~1.9.1",
@@ -35,9 +37,9 @@
     "prettier": "^2.8.8",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-sort-exports": "^0.9.1",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-vue": "^9.21.1"
+    "eslint-plugin-vue": "^9.24.0"
   }
 }

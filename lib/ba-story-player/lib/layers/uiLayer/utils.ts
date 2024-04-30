@@ -221,7 +221,7 @@ export function closestNumber(number: number, arr: number[]) {
 
 /* eslint-enable max-len */
 export function getUiI18n<key extends keyof (typeof dict)["cn"]>(
-  key: T,
+  key: string,
   language: Language
 ): string {
   return Reflect.get(Reflect.get(dict, language.toLowerCase()), key) || key;

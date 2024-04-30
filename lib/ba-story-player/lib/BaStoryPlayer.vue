@@ -17,6 +17,7 @@ import {
   onMounted,
   onUnmounted,
   ref,
+  toRef,
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
@@ -305,6 +306,7 @@ function resetLive2d() {
 defineExpose({
   hotReplaceStoryUnit,
   resetLive2d,
+  app: toRef(() => usePlayerStore().app) ,
 });
 
 /**

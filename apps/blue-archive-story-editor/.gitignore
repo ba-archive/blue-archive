@@ -1,7 +1,12 @@
-node_modules
 .DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
 dist
 dist-ssr
-*.local
-.idea
-dist.7z
+node_modules
+.idea/
+*.log
+
+.VSCodeCounter
+/public/SpineCharacters

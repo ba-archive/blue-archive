@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "rushVersion": "5.112.1",
-  "pnpmVersion": "6.7.1",
-  "nodeSupportedVersionRange": ">=14.15.0",
+  "rushVersion": "5.120.6",
+  "pnpmVersion": "9.0.6",
+  "nodeSupportedVersionRange": ">=14.15.0 <=22.*",
   "gitPolicy": {},
   "repository": {},
   "eventHooks": {
@@ -12,7 +12,6 @@
     "postRushBuild": []
   },
   "ensureConsistentVersions": true,
-  "variants": [],
   "projects": [
     {
       "packageName": "ba-story-player",
@@ -31,12 +30,12 @@
       "projectFolder": "apps/ba-online-toolbox"
     },
     {
-      "packageName": "ba-story-editor",
-      "projectFolder": "apps/ba-story-editor"
-    },
-    {
-      "packageName": "eden-design",
-      "projectFolder": "lib/eden-design"
+      "packageName": "blue-archive-story-editor",
+      "projectFolder": "apps/blue-archive-story-editor"
     }
+    // {
+    //   "packageName": "eden-design",
+    //   "projectFolder": "lib/eden-design"
+    // }
   ]
 }

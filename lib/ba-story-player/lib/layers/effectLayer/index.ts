@@ -4,7 +4,7 @@ import { usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
 import { Application, Sprite } from "pixi.js";
 import gsap from "gsap";
-import { Application, Sprite } from "pixijs";
+// import { Application, Sprite } from "pixijs";
 import { calcBackgroundImageSize } from "@/layers/bgLayer";
 import { ZmcArgs } from "@/types/common";
 import { playBGEffect, removeBGEffect } from "./bgEffectHandlers";
