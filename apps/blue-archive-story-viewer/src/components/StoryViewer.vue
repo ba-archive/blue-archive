@@ -142,7 +142,7 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
@@ -243,28 +243,50 @@ axios
     },
   })
   .then(res => {
+    if (typeof res.data !== "object")
+      throw new AxiosError("404", "404")
     story.value = res.data;
+    console.log(story.value)
   })
   .catch(err => {
-    fetchError.value = true;
-    if (!isStuStory.value) {
-      fetchErrorMessage.value =
-        route.params.id.toString() === "11000"
-          ? err
-          : "该剧情目前尚未开放，敬请期待！";
-    } else {
-      /* eslint-disable indent */
-      fetchErrorMessage.value =
-        404 === err.response.status
-          ? {
-              message: "Story not found",
-              response: {
-                status: 1919,
-              },
-            }
-          : err;
-      /* eslint-enable indent */
-    }
+    return axios.get(queryUrl.replace("favor", "ai/favor"), {
+      onDownloadProgress: progressEvent => {
+        if (progressEvent.total) {
+          initProgress.value = Math.floor(
+            ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
+          );
+        } else {
+          initProgress.value = Math.floor(
+            ((progressEvent.loaded || 0) * 100) /
+              ((progressEvent.loaded || 0) + 100)
+          );
+        }
+      },
+    })
+    .then(res => {
+      story.value = res.data;
+    })
+    .catch(err => {
+      fetchError.value = true;
+      if (!isStuStory.value) {
+        fetchErrorMessage.value =
+          route.params.id.toString() === "11000"
+            ? err
+            : "该剧情目前尚未开放，敬请期待！";
+      } else {
+        /* eslint-disable indent */
+        fetchErrorMessage.value =
+          404 === err.response.status
+            ? {
+                message: "Story not found",
+                response: {
+                  status: 1919,
+                },
+              }
+            : err;
+        /* eslint-enable indent */
+      }
+    })
   })
   .finally(() => {
     ready.value = true;
