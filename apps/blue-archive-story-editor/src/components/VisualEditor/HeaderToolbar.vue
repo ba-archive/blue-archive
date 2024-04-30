@@ -10,7 +10,7 @@ const router = useRouter()
 <template>
   <nav class="header-toolbar" flex="~ center" bg-white py1 border="~ b-1" shadow-sm>
     <div class="left" flex flex-1 gap-2>
-      <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px @click="router.push('/storygallerypage')">
+      <img src="/plana-studio.svg" alt="logo" class="logo" mx2 h-35px @click="router.push('/story-gallery')">
       <button border shadow-sm btn @click="emits('reloadPlayer')">
         运行
       </button>

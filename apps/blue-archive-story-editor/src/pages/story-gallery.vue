@@ -9,8 +9,10 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="story-gallery" flex="~ col" gap-2 of-x-hidden>
-    <NavHeader />
-    <StoryWorkList :story-works="storyWorks" />
+  <div class="story-gallery-page" flex="~ col" gap-2 of-x-hidden>
+    <div>
+      <NavHeader />
+      <StoryWorkList :story-works="storyWorks" />
+    </div>
   </div>
 </template>

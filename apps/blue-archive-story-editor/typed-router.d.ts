@@ -19,9 +19,10 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
-    '/Editor': RouteRecordInfo<'/Editor', '/Editor', Record<never, never>, Record<never, never>>,
-    '/Preview': RouteRecordInfo<'/Preview', '/Preview', Record<never, never>, Record<never, never>>,
-    '/StoryGalleryPage': RouteRecordInfo<'/StoryGalleryPage', '/StoryGalleryPage', Record<never, never>, Record<never, never>>,
+    '/editor': RouteRecordInfo<'/editor', '/editor', Record<never, never>, Record<never, never>>,
+    '/player/[[id]]': RouteRecordInfo<'/player/[[id]]', '/player/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
+    '/preview': RouteRecordInfo<'/preview', '/preview', Record<never, never>, Record<never, never>>,
+    '/story-gallery': RouteRecordInfo<'/story-gallery', '/story-gallery', Record<never, never>, Record<never, never>>,
     '/visual-editor': RouteRecordInfo<'/visual-editor', '/visual-editor', Record<never, never>, Record<never, never>>,
     '/visual-editor/[[id]]': RouteRecordInfo<'/visual-editor/[[id]]', '/visual-editor/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
     '/visual-editor/my-works': RouteRecordInfo<'/visual-editor/my-works', '/visual-editor/my-works', Record<never, never>, Record<never, never>>,

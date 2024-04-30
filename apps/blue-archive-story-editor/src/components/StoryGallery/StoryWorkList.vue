@@ -17,6 +17,7 @@ withDefaults(defineProps<{
     lg:grid="cols-2"
     xl:grid="cols-3"
     xxl:grid="cols-4"
+    of-hidden
   >
     <StoryWorkCard v-for="storyWork in storyWorks" :key="storyWork.id" v-bind="storyWork" grid-justify-self-center />
   </div>

@@ -26,7 +26,9 @@
     "@vueuse/head": "^1.1.26",
     "axios": "^1.6.7",
     "ba-story-player": "workspace:*",
+    "bson": "~6.6.0",
     "codemirror": "~6.0.1",
+    "mitt": "^3.0.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "pixi-spine": "~3.1.2",
@@ -35,9 +37,7 @@
     "vue-codemirror": "~6.1.1",
     "vue-lazyload": "3.x",
     "vue-router": "~4.3.0",
-    "vue3-smooth-dnd": "~0.0.6",
-    "mitt": "^3.0.0",
-    "bson": "~6.6.0"
+    "vue3-smooth-dnd": "~0.0.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.11.6",

@@ -1,4 +1,6 @@
-export interface StoryWork{
+import type { StoryNode } from './visual-editor'
+
+export interface StoryWork {
   created: string
   updated: string
   id: string
@@ -17,5 +19,5 @@ export interface StoryWork{
   loves: number
   hits: number
   released: boolean
-  story: any
+  story: { content: StoryNode[] }
 }

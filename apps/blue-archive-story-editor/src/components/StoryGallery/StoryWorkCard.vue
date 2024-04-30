@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { StoryWork } from '~/types/story-gallery'
 
+const router = useRouter()
+
 // todo 考虑把 sensei 当成一个宏
 const props = defineProps<StoryWork>()
 
@@ -16,7 +18,7 @@ function getUploadUrl(path: string) {
 </script>
 
 <template>
-  <div class="story-work-card" flex="~ col" card max-w-lg w-full gap-1 transition hover:scale-102 hover:shadow-xl>
+  <div class="story-work-card" flex="~ col" card max-w-lg w-full gap-1 transition hover:scale-102 hover:shadow-xl @click="router.push(`/player/${id}`)">
     <div class="title-and-name" flex="~ items-center">
       <h2 font="500" text="xl" flex-1 of-hidden text-ellipsis whitespace-nowrap>
         {{ props.title }}

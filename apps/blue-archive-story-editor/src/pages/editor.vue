@@ -2,7 +2,7 @@
 import 'ba-story-player/dist/style.css'
 import BaStoryPlayer from 'ba-story-player'
 import { ref } from 'vue'
-import { NexonScriptParser, buildNexonJSONStory, buildNexonScript } from './../common/nexon-script/parser'
+import { NexonScriptParser, buildNexonJSONStory, buildNexonScript } from '../common/nexon-script/parser'
 import type { JSONStory, NexonJSONStory } from '~/types/story'
 
 const editorStore = useEditorStore()

@@ -5,7 +5,7 @@
         404 NOT FOUND
       </h1>
       <h1 text="5xl">
-        <RouterLink to="/storygallerypage" class="text-blue underline underline-blue">
+        <RouterLink to="/story-gallery" class="text-blue underline underline-blue">
           返回首页
         </RouterLink>
       </h1>

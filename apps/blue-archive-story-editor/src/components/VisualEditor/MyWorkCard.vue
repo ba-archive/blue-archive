@@ -16,7 +16,7 @@ function getUploadUrl(path: string) {
 </script>
 
 <template>
-  <div class="my-work-card" card w-full shadow-lg>
+  <div class="my-work-card" card max-w-sm w-full shadow-lg>
     <img :src="getUploadUrl(model.cover)" h-48 w-full object-cover>
     <div class="work-data" children:mt2>
       <div flex="~ center" gap-2>
