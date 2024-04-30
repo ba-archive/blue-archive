@@ -125,22 +125,27 @@ function getLastDataFromIndex(index: number) {
 }
 
 export const changeStoryIndex = (index?: number | string) => {
-  if (!["string", "number"].includes(typeof index)) {
+  if (
+    !["string", "number"].includes(typeof index) ||
+    undefined === index ||
+    !Number.isInteger(Number(index))
+  ) {
     return;
   }
 
-  if ("string" === typeof index && Number.isInteger(Number(index))) {
-    index = Number(index);
-  }
+  index = Number(index);
 
   // 不允许跳到最后
   if (index >= usePlayerStore().allStoryUnit.length - 1) {
     return;
   }
+
   index -= 1;
+
   if (index < 0) {
     index = 0;
   }
+  
   const currentUnit = usePlayerStore().stackStoryUnit[index];
   eventBus.emit("removeEffect");
   eventBus.emit("hideCharacter");

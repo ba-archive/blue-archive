@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import { UiState } from "@/types/state";
+import type { UiState } from "@/types/state";
 import { watchDebounced } from "@vueuse/core";
 
 const VolumeKey = "volume";

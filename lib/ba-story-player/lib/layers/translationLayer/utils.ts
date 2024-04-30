@@ -212,8 +212,14 @@ export function generateTitleInfo(
 
 export function getBgm(BGMId: number): PlayAudio["bgm"] | undefined {
   const item = playerStore.BGMExcelTable.get(BGMId);
-  if (item) {
-    return { url: getResourcesUrl("bgm", item.Path), bgmArgs: item };
+  if (item && !!item.Path) {
+    return {
+      url: getResourcesUrl(
+        "bgm",
+        Array.isArray(item.Path) ? item.Path[0] : item.Path
+      ),
+      bgmArgs: item,
+    };
   }
 }
 
