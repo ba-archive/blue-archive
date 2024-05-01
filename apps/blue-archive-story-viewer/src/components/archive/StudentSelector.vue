@@ -87,6 +87,9 @@ const studentsNameList = computed<StudentNames[]>(() => {
     return {
       id: student.id,
       allNames: [
+        student.familyName.cn,
+        student.familyName.jp,
+        student.familyName.en,
         student.name.cn,
         student.name.jp,
         student.name.en,
