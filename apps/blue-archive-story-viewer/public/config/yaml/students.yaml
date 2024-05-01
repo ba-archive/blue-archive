@@ -2251,7 +2251,7 @@
     en: Nakamasa
     kr: 나카마사
     tw: 仲正
-    th: 仲正
+    th: นากามาสะ
   name:
     cn: 一花
     jp: イチカ
@@ -2280,7 +2280,7 @@
     en: Kinugawa
     kr: 키누가와
     tw: 鬼怒川
-    th: 鬼怒川
+    th: คินุกาวะ
   name:
     cn: 霞
     jp: カスミ
@@ -2308,7 +2308,7 @@
     en: Misaka
     kr: 미사카
     tw: 御坂
-    th: 御坂
+    th: มิซากะ
   name:
     cn: 御坂美琴
     jp: 御坂美琴
@@ -2336,7 +2336,7 @@
     en: Shokuhou
     kr: 쇼쿠호
     tw: 食蜂
-    th: 食蜂
+    th: โชคุโฮว
   name:
     cn: 食蜂操祈
     jp: 食蜂操祈
@@ -2370,7 +2370,7 @@
     jp: ユカリ
     en: Yukari
     kr: 유카리
-    tw: 紫草
+    tw: 紫
     th: ยูคาริ
   nickname: []
   birthday:
@@ -2452,9 +2452,9 @@
   name:
     cn: 小玉(露营)
     jp: コタマ（キャンプ）
-    en: Kotama (Camping)
+    en: Kotama (Camp)
     kr: 코타마(캠핑)
-    tw: 小玉（露營）
+    tw: 小玉(露營)
     th: โคทามะ (แคมป์)
   nickname: []
   birthday:
@@ -2480,9 +2480,9 @@
   name:
     cn: 晴(露营)
     jp: ハレ（キャンプ）
-    en: Hare (Camping)
+    en: Hare (Camp)
     kr: 하레(캠핑)
-    tw: 晴（露營）
+    tw: 晴(露營)
     th: ฮาเระ (แคมป์)
   nickname:
     - 红薯
@@ -2637,6 +2637,62 @@
   type: Striker
   armorType: Unarmed
   bulletType: Mystic
+  weapon: AR
+- id: 10091
+  familyName:
+    cn: 杏山
+    jp: 杏山
+    en: Kyouyama
+    kr: 쿄야마
+    tw: 杏山
+    th: 杏山
+  name:
+    cn: 和纱(乐队)
+    jp: カズサ（バンド）
+    en: Kazusa (Band)
+    kr: 카즈사(밴드)
+    tw: 千紗（樂隊）
+    th: คาซึสะ (วงดนตรี)
+  nickname: []
+  birthday:
+    month: 8
+    day: 5
+  club: 放课后甜点部
+  clubCode: HoukagoDessert
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Explosion
+  weapon: MG
+- id: 10092
+  familyName:
+    cn: 伊原木
+    jp: 伊原木
+    en: Ibaraki
+    kr: 이바라기
+    tw: 伊原木
+    th: 伊原木
+  name:
+    cn: 喜美(乐队)
+    jp: ヨシミ（バンド）
+    en: Yoshimi (Band)
+    kr: 요시미(밴드)
+    tw: 喜美（樂隊）
+    th: โยชิมิ (วงดนตรี)
+  nickname: []
+  birthday:
+    month: 8
+    day: 29
+  club: 放课后甜点部
+  clubCode: HoukagoDessert
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Explosion
   weapon: AR
 - id: 13000
   familyName:
@@ -3494,6 +3550,34 @@
   armorType: HeavyArmor
   bulletType: Mystic
   weapon: AR
+- id: 16015
+  familyName:
+    cn: 栗村
+    jp: 栗村
+    en: Kurimura
+    kr: 쿠리무라
+    tw: 栗村
+    th: 栗村
+  name:
+    cn: 爱莉(乐队)
+    jp: アイリ（バンド）
+    en: Airi (Band)
+    kr: 아이리(밴드)
+    tw: 愛莉（樂隊）
+    th: ไอริ (วงดนตรี)
+  nickname: []
+  birthday:
+    month: 1
+    day: 30
+  club: 放课后甜点部
+  clubCode: HoukagoDessert
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 1
+  type: Striker
+  armorType: Unarmed
+  bulletType: Explosion
+  weapon: SMG
 - id: 20000
   familyName:
     cn: 猫塚
@@ -4409,7 +4493,7 @@
     en: Mayoi
     kr: 마요이
     tw: 間宵
-    th: 間宵
+    th: มาโยอิ
   name:
     cn: 时雨(温泉)
     jp: シグレ（温泉）
@@ -4443,7 +4527,7 @@
     jp: エイミ（水着）
     en: Eimi (Swimsuit)
     kr: 에이미(수영복)
-    tw: 英美（泳裝）
+    tw: 英美(泳裝)
     th: เอมิ (ชุดว่ายน้ำ)
   nickname: []
   birthday:
@@ -5127,13 +5211,13 @@
     en: Saten
     kr: 사텐
     tw: 佐天
-    th: 佐天
+    th: ซาเต็น
   name:
     cn: 佐天泪子
     jp: 佐天涙子
     en: Saten Ruiko
     kr: 사텐 루이코
-    tw: 佐天淚子
+    tw: 佐天涙子
     th: ซาเต็น รุยโกะ
   nickname: []
   birthday:
