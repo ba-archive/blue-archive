@@ -108,12 +108,14 @@
               <span>{{
                 getI18nString(userLanguage, "settings.useMp3Title")
               }}</span>
+              <!-- @vue-expect-error Boolean not applicable to wider type range -->
               <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
             </div>
             <div class="flex-horizontal player-settings__settings--container">
               <span>{{
                 getI18nString(userLanguage, "settings.useSuperSamplingTitle")
               }}</span>
+              <!-- @vue-expect-error Boolean not applicable to wider type range -->
               <neu-switch
                 :checked="![undefined, false, ''].includes(useSuperSampling)"
                 @update:value="handleUseSuperSampling"
@@ -130,7 +132,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosError } from "axios";
 import StoryPlayer from "ba-story-player";
-import { computed, nextTick, ref, watch, onUnmounted } from "vue";
+import { computed, nextTick, ref, watch, onUnmounted, ComputedRef } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
 import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
@@ -167,7 +169,7 @@ const playerLanguage = computed(
   () =>
     settingsStore.getLang.charAt(0).toUpperCase() +
     settingsStore.getLang.slice(1)
-);
+) as ComputedRef<"Cn" | "Jp" | "En" | "Tw">;
 const playEnded = ref(false);
 
 const initProgress = ref(0);

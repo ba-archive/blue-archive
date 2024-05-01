@@ -15,7 +15,7 @@
         <span
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
-          >{{ getContentByLang(line, language) }}</span
+          >{{ getContentByLang(line, language as keyof ContentLine) }}</span
         >
       </div>
       <span v-if="!config.getShowAllLanguage">{{ line[targetLanguage] }}</span>

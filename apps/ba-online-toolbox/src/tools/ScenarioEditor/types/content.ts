@@ -24,7 +24,7 @@ export type Language =
   | 'TextTw'
   | 'TextJp'
   | 'TextEn'
-  | 'TextKr'
+  | 'ScriptKr'
   | 'TextTh';
 
 export interface Scenario {

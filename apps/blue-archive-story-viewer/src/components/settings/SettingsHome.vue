@@ -26,6 +26,7 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="disableMomotalkAnimationState"
             @update:value="handleDisableMomotalkAnimationSwitchChange"
@@ -47,6 +48,7 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="initWithFullscreenSwitchValue"
             @update:value="handleInitWithFullscreenSwitchChange"
@@ -61,6 +63,7 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="useMp3SwitchValue"
             @update:value="handleAppleCompatibleSwitchChange"
@@ -122,6 +125,7 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="useCheckForUpdatesSwitchValue"
             @update:value="handleCheckForUpdatesSwitchChange"

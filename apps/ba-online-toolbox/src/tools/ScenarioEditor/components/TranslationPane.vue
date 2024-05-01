@@ -213,7 +213,7 @@ const langHash = {
 const translateHash = {
   TextJp: "ja",
   TextEn: "en",
-  TextKr: "ko",
+  ScriptKr: "ko",
   TextTh: "th",
   TextCn: "zh-CHS",
   TextTw: "zh-CHT",

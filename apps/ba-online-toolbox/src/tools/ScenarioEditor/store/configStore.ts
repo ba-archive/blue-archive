@@ -31,9 +31,9 @@ export const useGlobalConfig = defineStore({
         );
         switch (objectType) {
           case "[object Object]":
-            return state.tmpMachineTranslate?.[query] || undefined;
+            return state.tmpMachineTranslate?.[query] || "";
           case "[object String]":
-            return state.tmpMachineTranslate;
+            return state.tmpMachineTranslate as unknown as string;
           default:
             return "";
         }

@@ -10,7 +10,9 @@ declare module "*.vue" {
   export default component;
 }
 
-declare interface Window {
-  webkitConvertPointFromNodeToPage?: (Node, WebkitPoint) => WebkitPoint;
-  quicklink?: (options: QuicklinkOptions) => void;
+declare global {
+  interface Window {
+    webkitConvertPointFromNodeToPage?: (Node, WebkitPoint) => WebkitPoint;
+    quicklink?: (options: QuicklinkOptions) => void;
+  }
 }

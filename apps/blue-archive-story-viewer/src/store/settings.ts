@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { Language } from "@/types/Settings";
 import { StudentAttributeFilters, StudentFilters } from "@/types/Student";
+import { AppliedFilter } from "@/types/AppliedFilter";
 
 export const useSettingsStore = defineStore({
   id: "ba-main-storage",
@@ -21,17 +22,12 @@ export const useSettingsStore = defineStore({
       },
       studentFilters: {
         searchString: "",
-        rarity: [] as number[],
-        club: [] as string[],
-        affiliation: [] as string[],
-        type: [] as ("Striker" | "Special")[],
-        armorType: [] as (
-          | "LightArmor"
-          | "HeavyArmor"
-          | "Unarmed"
-          | "ElasticArmor"
-        )[],
-        bulletType: [] as ("Pierce" | "Explode" | "Mystic" | "Sonic")[],
+        rarity: [] as AppliedFilter["rarity"],
+        club: [] as AppliedFilter["club"],
+        affiliation: [] as AppliedFilter["affiliation"],
+        type: [] as AppliedFilter["type"],
+        armorType: [] as AppliedFilter["armorType"],
+        bulletType: [] as AppliedFilter["bulletType"],
       },
       app: {
         width: 1920,
@@ -89,7 +85,7 @@ export const useSettingsStore = defineStore({
     setEnableCheckForUpdates(state: boolean) {
       this.settings.enableCheckForUpdates = state;
     },
-    setStudentFilters(filters: StudentFilters) {
+    setStudentFilters(filters: AppliedFilter) {
       this.studentFilters.searchString = filters.searchString;
       this.studentFilters.rarity = filters.rarity;
       this.studentFilters.club = filters.club;
