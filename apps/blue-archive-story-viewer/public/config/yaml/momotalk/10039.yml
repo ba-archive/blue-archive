@@ -1,5 +1,5 @@
 CharacterId: 10039
-translator: 今天早睡了吗
+translator: 今天早睡了吗&acetone
 title:
   - TextJp: RABBIT4、隠れます
     TextCn: RABBIT4，开始隐蔽
@@ -10,6 +10,7 @@ title:
     GroupId: 1003902
     FavorScheduleId: 100392
     CharacterId: 10039
+    unsure: false
   - TextJp: RABBIT4、出動します
     TextCn: RABBIT4，开始出动
     TextKr: RABBIT 4, 출동합니다.
@@ -37,6 +38,16 @@ title:
     GroupId: 1003906
     FavorScheduleId: 100396
     CharacterId: 10039
+  - TextJp: RABBIT4、思い出します
+    TextCn: RABBIT4，开始回忆
+    TextKr: RABBIT 4, 추억합니다.
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1003915
+    FavorScheduleId: 1003915
+    CharacterId: 10039
+    unsure: false
 content:
   - MessageKR: 저, 선생님
     MessageJP: あの
@@ -56,6 +67,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그
     MessageJP: 先生
     MessageCN: 老师
@@ -74,6 +86,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮으시다면
     MessageJP: よろしければ、なのですが……
     MessageCN: 如果老师方便的话……
@@ -94,11 +107,11 @@ content:
     ImagePath: ""
   - MessageKR: 이번 주말에 잠깐 시간을 내 주실 수 있으신가요?
     MessageJP: 今週末、少しお時間を……
-    MessageCN: 这个周末，能否抽出一点时间……
+    MessageCN: 这个周末，能不能抽出一点时间……
     MessageEN: C-Can you hang out with me this weekend?
-    MessageTH: "ฉันขอรบกวนเวลาวันหยุดสุดสัปดาห์นี้
-
-      หน่อยได้มั้ยคะ?"
+    MessageTH: |-
+      ฉันขอรบกวนเวลาวันหยุดสุดสัปดาห์นี้
+      หน่อยได้มั้ยคะ?
     MessageTW: 這個周末，可以占用你一點時間嗎……
     MessageGroupId: 100390040
     Id: 100390040
@@ -112,6 +125,7 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 괜찮아. 무슨 일이야?
     MessageJP: うん、良いよ。どうしたの？
     MessageCN: 嗯，可以呀。怎么了？
@@ -170,9 +184,9 @@ content:
     MessageJP: アウトドアショップに、行きたいのですが……
     MessageCN: 我想去一次户外用品店……
     MessageEN: I-I wanna buy some stuff at the c-camping store...
-    MessageTH: "สุดสัปดาห์นี้ ฉันว่าจะไปซื้ออุปกรณ์ใหม่ที่
-
-      ร้านขายอุปกรณ์ตั้งแคมป์ในเมืองค่ะ..."
+    MessageTH: |-
+      สุดสัปดาห์นี้ ฉันว่าจะไปซื้ออุปกรณ์ใหม่ที่
+      ร้านขายอุปกรณ์ตั้งแคมป์ในเมืองค่ะ...
     MessageTW: 我想要去戶外用品店……
     MessageGroupId: 100390070
     Id: 100390080
@@ -190,9 +204,9 @@ content:
     MessageJP: RABBIT小隊のみんなは、その……
     MessageCN: RABBIT小队的大家，那个……
     MessageEN: But no one in the squad is f-free...
-    MessageTH: "ตอนนี้ในกองทหารของเรา คนที่พอจะ
-
-      ว่าง ดันมีแค่ฉันคนเดียว..."
+    MessageTH: |-
+      ตอนนี้ในกองทหารของเรา คนที่พอจะ
+      ว่าง ดันมีแค่ฉันคนเดียว...
     MessageTW: 但是RABBIT小隊的大家都，那個……
     MessageGroupId: 100390080
     Id: 100390090
@@ -262,7 +276,7 @@ content:
     ImagePath: ""
   - MessageKR: 아마 저 혼자서 물건을 사러 가면……
     MessageJP: おそらく、私一人で行ったら……
-    MessageCN: 因为恐怕，我一个人去的话……
+    MessageCN: 因为我一个人去的话恐怕……
     MessageEN: If I go alone...
     MessageTH: แต่ถ้าฉันไปซื้อของคนเดียว...
     MessageTW: 如果一個人去的話……
@@ -278,9 +292,10 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 아무도 상대해 주지 않을 거예요……
     MessageJP: 誰も相手してくれないと、思うので……
-    MessageCN: 我觉得，可能没有人会搭理我……
+    MessageCN: 我觉得可能没有人会搭理我……
     MessageEN: I'll be invisible...
     MessageTH: อาจไม่มีใครยอมคุยด้วยเลยก็ได้ค่ะ...
     MessageTW: 我覺得可能沒有人會理我，所以……
@@ -296,10 +311,11 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: ……그게 무슨 소리야?
     MessageJP: ……？？？
     MessageCN: ……？？？
-    MessageEN: "...What do you mean?"
+    MessageEN: ...What do you mean?
     MessageTH: หมายความว่ายังไงน่ะ?
     MessageTW: ……？？？
     MessageGroupId: 100390120
@@ -336,9 +352,9 @@ content:
     MessageJP: 今日、RABBIT小隊の任務が早く終わったので
     MessageCN: 今天，RABBIT小队的任务提前结束了
     MessageEN: R-RABBIT Squad stuff ended early today.
-    MessageTH: "วันนี้ภารกิจของกองทหาร RABBIT
-
-      เสร็จเร็วกว่ากำหนด"
+    MessageTH: |-
+      วันนี้ภารกิจของกองทหาร RABBIT
+      เสร็จเร็วกว่ากำหนด
     MessageTW: 今天RABBIT小隊的任務結束得比較早
     MessageGroupId: 100390140
     Id: 100390170
@@ -392,9 +408,9 @@ content:
     MessageJP: 何か買い物とか、必要なものがあれば……
     MessageCN: 如果老师有什么需要买的，或者要我们带过去的东西的话……
     MessageEN: Do I needa do a-anything before I go?
-    MessageTH: "ก่อนที่จะไปชาเล่ต์ มีงานอื่นที่ต้องทำอีก
-
-      หรือเปล่าคะ?"
+    MessageTH: |-
+      ก่อนที่จะไปชาเล่ต์ มีงานอื่นที่ต้องทำอีก
+      หรือเปล่าคะ?
     MessageTW: 如果有什麼要買的東西，或是需要什麼的話……
     MessageGroupId: 100390150
     Id: 100390200
@@ -484,9 +500,9 @@ content:
     MessageJP: すみません……
     MessageCN: 对不起……
     MessageEN: I-I heard you got in trouble b-because of the necklace...
-    MessageTH: "ฉันได้ยินว่าคุณครูเจอปัญหาใหญ่เพราะ
-
-      ปลอกคอนั่น..."
+    MessageTH: |-
+      ฉันได้ยินว่าคุณครูเจอปัญหาใหญ่เพราะ
+      ปลอกคอนั่น...
     MessageTW: 不好意思……
     MessageGroupId: 100390190
     Id: 100390250
@@ -558,9 +574,9 @@ content:
     MessageJP: はい……
     MessageCN: 嗯……
     MessageEN: N-No one's ever noticed me like that before...
-    MessageTH: "ตั้งแต่เกิดมาฉันเพิ่งเคยได้รับความสนใจ
-
-      มากแบบนี้เป็นครั้งแรก..."
+    MessageTH: |-
+      ตั้งแต่เกิดมาฉันเพิ่งเคยได้รับความสนใจ
+      มากแบบนี้เป็นครั้งแรก...
     MessageTW: 好的……
     MessageGroupId: 100390220
     Id: 100390290
@@ -578,9 +594,9 @@ content:
     MessageJP: ですが、あんなに注目を受けたのは初めてなので、あの首輪はちょっと捨てがたく……
     MessageCN: 但是，我还是第一次受到那么多的关注，那个项圈还有点舍不得摘掉……
     MessageEN: So...I wanna keep the necklace...
-    MessageTH: "ฉันเลยรู้สึกเสียดายถ้าจะต้องปล่อย
-
-      มือจากปลอกคอนี้ไปค่ะ"
+    MessageTH: |-
+      ฉันเลยรู้สึกเสียดายถ้าจะต้องปล่อย
+      มือจากปลอกคอนี้ไปค่ะ
     MessageTW: 不過我還是第一次那樣受人注目，那個項圈有點難以割捨……
     MessageGroupId: 100390220
     Id: 100390300
@@ -596,7 +612,7 @@ content:
     ImagePath: ""
   - MessageKR: 혹시 괜찮으시다면
     MessageJP: 先生がよろしければ、ですが
-    MessageCN: 如果老师愿意的话
+    MessageCN: 如果老师不介意的话
     MessageEN: If it's okay...
     MessageTH: ถ้าคุณครูไม่ว่าอะไร...
     MessageTW: 如果老師願意的話
@@ -612,13 +628,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 최소한 샬레에 있을 때만 목걸이를 차고 있으면 안 될까요?
     MessageJP: シャーレにいる時だけ、首輪を付けるというのは……？
-    MessageCN: 要是只在夏莱活动的话，我可以戴着项圈吗……？
+    MessageCN: 我可以只在夏莱活动的时候戴着项圈吗……？
     MessageEN: C-Can...I at least wear it in Schale?
-    MessageTH: "อย่างน้อยขอแค่ตอนอยู่ที่ชาเล่ต์ ขอใส่
-
-      ปลอกคอนี่ได้รึเปล่าคะ?"
+    MessageTH: |-
+      อย่างน้อยขอแค่ตอนอยู่ที่ชาเล่ต์ ขอใส่
+      ปลอกคอนี่ได้รึเปล่าคะ?
     MessageTW: 只在夏萊戴著項圈可以嗎……？
     MessageGroupId: 100390240
     Id: 100390320
@@ -632,13 +649,14 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 그편이 더 큰 오해를 받을 것 같으니까 그만둬…….
     MessageJP: 色々と危ないから、申し訳ないけどそれは無しで……
-    MessageCN: 从各种意义上都很危险，所以虽然很对不住美游但还是别了吧……
+    MessageCN: 从各种意义上都很危险，所以虽然很对不住美游但还是算了吧……
     MessageEN: That'll make things even worse. Please don't.
-    MessageTH: "แบบนั้นจะยิ่งถูกเข้าใจผิดไปกันใหญ่
-
-      อย่าดีกว่านะ..."
+    MessageTH: |-
+      แบบนั้นจะยิ่งถูกเข้าใจผิดไปกันใหญ่
+      อย่าดีกว่านะ...
     MessageTW: 各種方面都很危險，雖然抱歉還是放棄吧……
     MessageGroupId: 100390250
     Id: 100390330
@@ -652,6 +670,7 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 어쩐지 최근
     MessageJP: その、先生
     MessageCN: 那个，老师
@@ -674,9 +693,9 @@ content:
     MessageJP: 何だか私、最近失敗ばっかりで……
     MessageCN: 总觉得，我最近总是失败……
     MessageEN: I've been making more m-mistakes than usual...
-    MessageTH: "ฉันรู้สึกว่าทำผิดบ่อยๆ ตอนอยู่ใน
-
-      กองทหารน่ะค่ะ..."
+    MessageTH: |-
+      ฉันรู้สึกว่าทำผิดบ่อยๆ ตอนอยู่ใน
+      กองทหารน่ะค่ะ...
     MessageTW: 總覺得最近我總是在失敗……
     MessageGroupId: 100390270
     Id: 100390350
@@ -694,9 +713,9 @@ content:
     MessageJP: やっぱり私はRABBIT小隊のお荷物です、役立たずなんです……
     MessageCN: 我果然是RABBIT小队的累赘，是没用的人……
     MessageEN: I'm d-done for...
-    MessageTH: "คิดแล้วเชียวว่าฉันเป็นคนที่ไร้ประโยชน์
-
-      จริงๆ ค่ะ..."
+    MessageTH: |-
+      คิดแล้วเชียวว่าฉันเป็นคนที่ไร้ประโยชน์
+      จริงๆ ค่ะ...
     MessageTW: 我果然是RABBIT小隊的負擔，是沒用隊員……
     MessageGroupId: 100390270
     Id: 100390360
@@ -768,9 +787,9 @@ content:
     MessageJP: 正式な訓練を受けてから、ずいぶん経ちますし……立派と言えるのかどうか……
     MessageCN: 距离上次正式受训，已经过去很长时间了……我到底还算不算得上优秀呢……
     MessageEN: I h-haven't actually trained in so long...
-    MessageTH: "ฉันได้รับการฝึกอย่างเป็นทางการเมื่อนาน
-
-      มาแล้ว..."
+    MessageTH: |-
+      ฉันได้รับการฝึกอย่างเป็นทางการเมื่อนาน
+      มาแล้ว...
     MessageTW: 距離上次接受正式的訓練已經過了很久了……還能稱得上是優秀嗎……
     MessageGroupId: 100390310
     Id: 100390400
@@ -788,9 +807,9 @@ content:
     MessageJP: 昔より技術が落ちてるかもしれません……
     MessageCN: 和以前相比，我的技术可能已经退步了……
     MessageEN: Wh-What if I'm n-no good now?
-    MessageTH: "ตอนนี้ไม่รู้เลยค่ะว่าจะยิงได้แม่นเหมือน
-
-      เมื่อก่อนรึเปล่า"
+    MessageTH: |-
+      ตอนนี้ไม่รู้เลยค่ะว่าจะยิงได้แม่นเหมือน
+      เมื่อก่อนรึเปล่า
     MessageTW: 技術可能已經退步很多了……
     MessageGroupId: 100390310
     Id: 100390410
@@ -842,7 +861,7 @@ content:
     ImagePath: ""
   - MessageKR: 지난번의 훈련으로
     MessageJP: 先日の訓練は、ありがとうございました。
-    MessageCN: 十分感谢老师前几天陪我训练。
+    MessageCN: 前几天的训练，十分感谢老师能陪我一起。
     MessageEN: Since w-we last trained...
     MessageTH: จากการฝึกครั้งที่แล้ว...
     MessageTW: 之前的訓練，非常感謝你
@@ -858,13 +877,14 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 사격 실력은 다소 좋아진 것 같지만……
     MessageJP: 少し、精度が良くなった気がします
     MessageCN: 我发现我的射击精度上升了一些
     MessageEN: I think I g-got a little better.
-    MessageTH: "ดูเหมือนทักษะการยิงของฉันจะดีขึ้นมา
-
-      นิดหน่อยค่ะ..."
+    MessageTH: |-
+      ดูเหมือนทักษะการยิงของฉันจะดีขึ้นมา
+      นิดหน่อยค่ะ...
     MessageTW: 感覺準度稍微提升了一點
     MessageGroupId: 100390340
     Id: 100390450
@@ -882,9 +902,9 @@ content:
     MessageJP: ですが……何だか最近は、色々と悪い方向に考えがちで……
     MessageCN: 但是……不知道为什么，最近我总是往不好的方向想……
     MessageEN: But I c-can't stop being negative...
-    MessageTH: "แต่ฉันกลับเจอปัญหาบ่อยๆ เพราะเอาแต่
-
-      คิดแง่ลบน่ะค่ะ..."
+    MessageTH: |-
+      แต่ฉันกลับเจอปัญหาบ่อยๆ เพราะเอาแต่
+      คิดแง่ลบน่ะค่ะ...
     MessageTW: 但是……總覺得最近，思考有點負面……
     MessageGroupId: 100390350
     Id: 100390460
@@ -900,7 +920,7 @@ content:
     ImagePath: ""
   - MessageKR: 자꾸 기분도 우울해지고……
     MessageJP: 気分も落ち込みがちなんです……
-    MessageCN: 心情也会低落……
+    MessageCN: 心情也变得消沉……
     MessageEN: I get r-really depressed...
     MessageTH: รู้สึกหดหู่บ่อยๆ...
     MessageTW: 情緒也有點低落……
@@ -916,6 +936,7 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
+    unsure: false
   - MessageKR: 취미 생활을 즐겨보는 게 어떨까?
     MessageJP: 趣味を思いっきり楽しんでみる、とか？
     MessageCN: 尽情享受自己的兴趣试试看吧？
@@ -1006,3 +1027,269 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+  - MessageKR: 선생님, 혹시 내일 시내에 가실 때
+    MessageJP: 先生、明日市内に向かわれるんですよね
+    MessageCN: 老师，您明天要去市里对吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390400
+    Id: 100390530
+    CharacterId: 10039
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100390390
+    PreConditionFavorScheduleId: 100396
+    FavorScheduleId: 0
+    NextGroupId: 100390410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 괜찮으시다면 저도 함께 데려가 주실래요……?
+    MessageJP: よろしければ、私も一緒に……
+    MessageCN: 如果可以的话，我也想一起……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390410
+    Id: 100390540
+    CharacterId: 10039
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 물론이지!
+    MessageJP: もちろん！
+    MessageCN: 当然可以！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390420
+    Id: 100390550
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그런데 갑자기 시내에 무슨 일이라도 있어?
+    MessageJP: 何か用事でもあるの？
+    MessageCN: 有什么事要办吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390430
+    Id: 100390560
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390440
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그게
+    MessageJP: その……
+    MessageCN: 那个……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390440
+    Id: 100390570
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390450
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: SRT의 임무로 시내에서 할 일이 있어서요……
+    MessageJP: SRTの任務が、ありまして……
+    MessageCN: 有一个，SRT的任务……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390440
+    Id: 100390580
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390450
+    FeedbackTimeMillisec: 2000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 설마 시내에서 전투라도 하려는 거야?!
+    MessageJP: 市内で戦闘とか……！？
+    MessageCN: 要在市里边战斗吗……！？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390450
+    Id: 100390590
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390460
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 아뇨, 그렇게 거창한 임무는 아니에요!
+    MessageJP: い、いえ……そんな大げさな任務ではなく……！
+    MessageCN: 不、不是的……不是这么夸张的任务……！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390460
+    Id: 100390600
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390470
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그게 그러니까
+    MessageJP: えっと……
+    MessageCN: 那个……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390470
+    Id: 100390610
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 가끔 남은 채소 등을 가져다주시는 근처의 주민들로부터
+    MessageJP: たまに野菜を分けてくださる方々から
+    MessageCN: 偶尔分给我们蔬菜的人们
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390470
+    Id: 100390620
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390480
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 해수 구제를 요청받아서요……
+    MessageJP: 害獣の駆除を、依頼されまして……
+    MessageCN: 委托了我们，驱除害兽……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390470
+    Id: 100390630
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그런 일이라면 나도 같이 갈게.
+    MessageJP: それなら私も一緒に行くよ
+    MessageCN: 这样的话我也一起去
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390480
+    Id: 100390640
+    CharacterId: 10039
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100390490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 괜찮으시겠어요?
+    MessageJP: 良いんですか？
+    MessageCN: 可以吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390490
+    Id: 100390650
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 꽤 오래 걸릴지도 모르는데……
+    MessageJP: よ、よろしくお願いします……！
+    MessageCN: 请、请多关照……！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100390490
+    Id: 100390660
+    CharacterId: 10039
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1003915
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
