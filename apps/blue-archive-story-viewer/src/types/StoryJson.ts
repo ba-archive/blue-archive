@@ -69,6 +69,7 @@ export interface StoryBriefing {
 export interface StoryContent {
   GroupId: number;
   translator: string;
+  proofreader?: string;
   content: RawStoryUnit[];
 }
 

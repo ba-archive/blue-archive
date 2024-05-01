@@ -37,6 +37,9 @@
           <neu-tag type="warning" bordered v-if="isLLMTranslation">
             AI 翻译
           </neu-tag>
+          <neu-tag type="warning" bordered v-if="!story.proofreader">
+            未校对
+          </neu-tag>
         </div>
         <story-player
           v-if="showPlayer && !playEnded"
@@ -100,6 +103,12 @@
               <div>翻译</div>
               <div class="translator">
                 {{ story.translator || "佚名" }}
+              </div>
+            </div>
+            <div>
+              <div>校对</div>
+              <div class="translator">
+                {{ story.proofreader || "未校对" }}
               </div>
             </div>
           </div>
@@ -258,6 +267,11 @@ axios
       })
       .then(res => {
         story.value = res.data;
+        console.log(story.value.content[0]);
+        summary.value = {
+          chapterName: story.value.content[0].TextJp || "标题",
+          summary: "这段剧情由AI翻译生成，可能存在翻译错误。"
+        };
       })
       .catch(err => {
         fetchError.value = true;
