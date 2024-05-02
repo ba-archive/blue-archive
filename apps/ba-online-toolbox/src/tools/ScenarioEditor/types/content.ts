@@ -30,5 +30,6 @@ export type Language =
 export interface Scenario {
   GroupId: number;
   translator: string;
+  proofreader?: string;
   content: ContentLine[];
 }

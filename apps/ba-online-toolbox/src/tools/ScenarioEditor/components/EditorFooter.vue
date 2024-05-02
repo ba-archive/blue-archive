@@ -12,10 +12,14 @@
             <template #unchecked> 否 </template>
           </n-switch>
         </n-space>
-        <span style="flex: 1">翻译: </span
+        <span style="flex: 1">{{ config.isProofread ? "校对" : "翻译" }}: </span
         ><n-input
-          :placeholder="mainStore.getScenario.translator || '请输入姓名'"
-          @input="mainStore.setTranslator($event)"
+          :value="
+            config.isProofread
+              ? config.getProofreader
+              : mainStore.getScenario.translator || '请输入姓名'
+          "
+          @input="handleStaffChange($event)"
         ></n-input
       ></n-space>
       <n-tooltip>
@@ -45,8 +49,6 @@ import { saveAs } from "file-saver";
 import { computed, ref } from "vue";
 import { useGlobalConfig } from "../store/configStore";
 import { useScenarioStore } from "../store/scenarioEditorStore";
-
-// import { Scenario } from '../types/content';
 
 const mainStore = useScenarioStore();
 const config = useGlobalConfig();
@@ -93,6 +95,14 @@ function handleClearAllRequest() {
 
 function handlePreviewModeRequest() {
   config.setPreviewMode(!isPreviewMode.value);
+}
+
+function handleStaffChange(event: Event) {
+  if (config.isProofread) {
+    mainStore.setProofreader(event);
+  } else {
+    mainStore.setTranslator(event);
+  }
 }
 </script>
 <style scoped lang="scss">
