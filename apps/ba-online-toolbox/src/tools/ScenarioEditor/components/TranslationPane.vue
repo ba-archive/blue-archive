@@ -90,7 +90,7 @@
             "
           >
             <n-button secondary type="info">
-              目标语言: {{ langHash[config.getTargetLang] }}
+              翻译成：{{ langHash[config.getTargetLang] }}
             </n-button>
           </n-dropdown>
           <n-button @click="acceptHandle" type="info">接受机翻</n-button>

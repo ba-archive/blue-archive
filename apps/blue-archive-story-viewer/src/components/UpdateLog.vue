@@ -3,6 +3,23 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-05-03",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "杏山 和纱（乐队）", id: 10091 },
+          { name: "栗村 爱莉（乐队）", id: 16015 },
+          { name: "伊原木 喜美（乐队）", id: 10092 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了剧情播放开始时有概率卡死的问题"
+      }
+    ],
+  },
+  {
     date: "2024-04-21",
     contents: [
       {
