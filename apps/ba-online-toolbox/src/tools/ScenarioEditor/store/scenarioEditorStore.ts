@@ -67,6 +67,9 @@ export const useScenarioStore = defineStore({
       this.scenario.translator = translator;
     },
     setProofreader(proofreader: string) {
+      if (!this.scenario.proofreader) {
+        this.scenario.proofreader = "";
+      }
       this.scenario.proofreader = proofreader;
     },
     setContentLine(content: ContentLine, line: number) {

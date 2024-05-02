@@ -14,11 +14,7 @@
         </n-space>
         <span style="flex: 1">{{ config.isProofread ? "校对" : "翻译" }}: </span
         ><n-input
-          :value="
-            config.isProofread
-              ? config.getProofreader
-              : mainStore.getScenario.translator || '请输入姓名'
-          "
+          v-model:value="staffName"
           @input="handleStaffChange($event)"
         ></n-input
       ></n-space>
@@ -96,6 +92,18 @@ function handleClearAllRequest() {
 function handlePreviewModeRequest() {
   config.setPreviewMode(!isPreviewMode.value);
 }
+
+const isProofreaderMode = computed(() => config.isProofread);
+
+const staffName = computed({
+  get: () =>
+    isProofreaderMode.value
+      ? mainStore.getProofreader
+      : mainStore.getScenario.translator || "",
+  set: (value: string) => {
+    handleStaffChange(value);
+  },
+});
 
 function handleStaffChange(event: Event) {
   if (config.isProofread) {
