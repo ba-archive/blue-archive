@@ -297,6 +297,14 @@ const replaceStrings = [
     from: "...",
     to: "…",
   },
+  {
+    from: "momotalk",
+    to: "MomoTalk",
+  },
+  {
+    from: "momo talk",
+    to: "MomoTalk",
+  },
 ];
 
 function handleFormalizePunctuation() {
