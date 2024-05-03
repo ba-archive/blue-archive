@@ -89,9 +89,14 @@
               }
             "
           >
-            <n-button secondary type="info">
-              翻译成：{{ langHash[config.getTargetLang] }}
-            </n-button>
+            <n-tooltip>
+              <template #trigger>
+                <n-button secondary type="info">
+                  {{ langHash[config.getTargetLang] }}
+                </n-button>
+              </template>
+              <span> 选择需要翻译的语言 </span>
+            </n-tooltip>
           </n-dropdown>
           <n-button @click="acceptHandle" type="info">接受机翻</n-button>
           <n-button @click="handleFormalizePunctuation" type="info">
