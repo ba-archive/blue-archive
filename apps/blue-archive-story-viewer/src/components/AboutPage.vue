@@ -378,13 +378,19 @@ const contributorList: any = h(
         <p>
           本站与ブルーアーカイブ、Yostar、Nexon 以及 Nexon Games
           没有任何形式关联。<br />
-          本网站中使用的所有游戏作品、信息和素材均为各自作者的财产和版权。
+          本网站中使用的所有游戏作品、信息和素材均为各自作者的财产和版权。<br />
+          本网站使用 Microsoft Clarity
+          收集匿名用户行为数据，以优化用户体验。我们不会收集任何可以用于识别用户的个人信息。
         </p>
         <p>
           This site is not affiliated in any forms with Blue Archive, Yostar,
-          Nexon and Nexon Games.<br />All game artwork, information and assets
-          used in this site are the property and copyright of the respective
-          authors.
+          Nexon and Nexon Games.<br />
+          All game artwork, information and assets used in this site are the
+          property and copyright of the respective authors.
+          <br />
+          This site uses Microsoft Clarity to collect anonymous user behavior
+          data for user experience optimization. We do not collect any personal
+          information that can be used to identify users.
         </p>
       </section>
       <section class="contributor flex-vertical">

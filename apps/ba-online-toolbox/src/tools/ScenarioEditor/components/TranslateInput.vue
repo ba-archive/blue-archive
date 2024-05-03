@@ -18,6 +18,7 @@
       @input="inputHandle"
       style="width: 95%; height: 120px"
       clearable
+      ref="textInputRef"
     ></n-input>
     <n-space
       v-if="translateStruct.translateType === TranslateType.select"
@@ -103,7 +104,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ComputedRef, Directive, computed } from 'vue';
+import { ComputedRef, Directive, computed, ref, onMounted } from 'vue';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine } from '../types/content';
@@ -119,6 +120,12 @@ enum TranslateType {
 const props = defineProps({
   handleGotoNextLineRequest: Function,
   handleGotoPrevLineRequest: Function,
+});
+
+const textInputRef = ref<HTMLInputElement | null>(null);
+
+onMounted(() => {
+  textInputRef.value?.focus();
 });
 
 const config = useGlobalConfig();

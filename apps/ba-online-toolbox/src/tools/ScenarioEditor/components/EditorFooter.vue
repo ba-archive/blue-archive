@@ -105,7 +105,7 @@ const staffName = computed({
   },
 });
 
-function handleStaffChange(event: Event) {
+function handleStaffChange(event: string) {
   if (config.isProofread) {
     mainStore.setProofreader(event);
   } else {
