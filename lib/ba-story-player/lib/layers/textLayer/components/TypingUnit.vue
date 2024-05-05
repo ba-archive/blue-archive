@@ -347,6 +347,9 @@ $tooltip-padding-t: 4px;
     text-align: center;
     white-space: nowrap;
   }
+  .body {
+    white-space: pre-line;
+  }
   @keyframes fade-in {
     0% {
       opacity: 0;
