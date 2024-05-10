@@ -3,6 +3,19 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-05-12",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "夜樱 绮罗罗", id: 10093 },
+          { name: "和乐 千世", id: 13001 },
+          { name: "生盐 诺亚", id: 10052 },
+        ],
+      },
+    ],
+  },
+  {
     date: "2024-05-03",
     contents: [
       {
@@ -15,8 +28,8 @@ const updateLogs: UpdateLog[] = [
       },
       {
         type: "fix",
-        content: "修复了剧情播放开始时有概率卡死的问题"
-      }
+        content: "修复了剧情播放开始时有概率卡死的问题",
+      },
     ],
   },
   {
