@@ -18,6 +18,7 @@ export const useScenarioStore = defineStore({
       title: "",
     };
   },
+  
   persist: true,
   getters: {
     isLoadFile: state => state.fileLoad,
@@ -68,7 +69,12 @@ export const useScenarioStore = defineStore({
     },
     setProofreader(proofreader: string) {
       if (!this.scenario.proofreader) {
-        this.scenario.proofreader = "";
+        this.scenario = {
+          GroupId: this.scenario.GroupId,
+          translator: this.scenario.translator,
+          proofreader,
+          content: this.scenario.content,
+        }
       }
       this.scenario.proofreader = proofreader;
     },
