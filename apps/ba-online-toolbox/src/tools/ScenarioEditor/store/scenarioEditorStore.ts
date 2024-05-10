@@ -18,6 +18,7 @@ export const useScenarioStore = defineStore({
       title: "",
     };
   },
+  
   persist: true,
   getters: {
     isLoadFile: state => state.fileLoad,

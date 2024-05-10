@@ -7,6 +7,13 @@ import AutoImport from "unplugin-auto-import/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
+import UnoCSS from "unocss/vite";
+import {
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+} from "unocss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -42,6 +49,19 @@ export default defineConfig({
       resolvers: [ElementPlusResolver(), NaiveUiResolver()],
     }),
     vue(),
+    UnoCSS({
+      presets: [
+        presetUno(),
+        presetIcons({
+          extraProperties: {
+            display: "inline-block",
+            "vertical-align": "middle",
+          },
+        }),
+        presetAttributify(),
+      ],
+      transformers: [transformerDirectives()],
+    }),
     legacy({
       targets: [
         "Android >= 39",
