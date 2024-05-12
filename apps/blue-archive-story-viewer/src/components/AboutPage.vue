@@ -236,6 +236,12 @@ const contributors: Contributor[] = [
     avatar: "/image/contributor/momomomo.webp",
   },
   {
+    name: "Machillka",
+    role: "Unity",
+    avatar: "/image/contributor/Machillka.webp",
+    link: "https://github.com/Machillka",
+  },
+  {
     name: "香蕉",
     role: "Unity",
     avatar: "/image/contributor/banana.webp",
@@ -313,7 +319,7 @@ const contributorList: any = h(
         {
           href: contributor?.link,
           class: "contributor__avatar",
-          target: "_blank",
+          target: contributor?.link ? "_blank" : null,
           rel: "noopener noreferrer",
         },
         [
