@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { StoryBriefing } from "@types/StoryJson";
+import { StoryBriefing } from "@/types/StoryJson";
 
 export const stories: StoryBriefing[] = [
   {
@@ -259,6 +259,7 @@ export const stories: StoryBriefing[] = [
         },
         previous: 208,
         story_id: 209,
+        next: 210,
         summary: {
           TextKr:
             "부서진 마에스트로가 선생님에게 찾아와 예술의 불멸성에 대해 이야기한다. 그리고 자신이 새롭게 만들어낸 작품, 그레고리오에 대해 설명한다.",
@@ -291,6 +292,347 @@ export const stories: StoryBriefing[] = [
           TextEn: "",
           TextCn:
             "桃香向老师说明关于逃离基沃托斯矫正局的囚犯和气垫船的骚动事件。",
+        },
+      },
+      {
+        title: {
+          TextKr: "매듭짓지 못한 괴담의 말로",
+          TextJp: "怪談の末路",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn: "怪谈的末路",
+        },
+        previous: 210,
+        story_id: 211,
+        next: 901,
+        summary: {
+          TextKr: "쿠즈노하가 환량백물어, 묘귀 쿠로카게에 대해 설명한다.",
+          TextJp: "クズノハは、幻魎百物語「猫鬼黒影」について語る。",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+          TextCn: "葛叶向老师说起幻魉百物语中的“猫鬼黑影”的事。",
+        },
+      },
+    ],
+  },
+  {
+    title: {
+      TextKr: "작업극",
+      TextJp: "お仕事ストーリー",
+      TextTh: "เนื้อเรื่องงาน",
+      TextTw: "工作劇情",
+      TextEn: "Work Stories",
+      TextCn: "工作剧情",
+    },
+    avatar: "/image/story_cover/total_assault.webp",
+    sections: [
+      {
+        title: {
+          TextKr: "특별의뢰, 시작합니다.",
+          TextJp: "特別依頼",
+          TextTh: "คำขอพิเศษ ได้เริ่มขึ้นแล้ว",
+          TextTw: "特殊任務",
+          TextEn: "Let the Commissions Begin",
+          TextCn: "特别委托",
+        },
+        story_id: 100,
+        next: 101,
+        summary: {
+          TextKr:
+            "총학생회의 간부, 모모카가 선생님에게 키보토스의 문젯거리들을 해결해 달라고 의뢰한다.",
+          TextJp:
+            "連邦生徒会の幹部であるモモカが、先生にキヴォトスで起きている種々の問題を解決してほしいと依頼する。",
+          TextTh:
+            "โมโมกะ สมาชิกบริหารองค์การนักเรียนได้ขอร้องให้คุณครูช่วยแก้ไขปัญหา\nของเหล่านักเรียนในคิโวทอส",
+          TextTw: "名叫桃香的聯邦學生會的幹部，委託老師解決奇普托斯的難題。",
+          TextEn:
+            "General Student Council officer Momoka asks Sensei to resolve issues in and around Kivotos.",
+          TextCn:
+            "联邦学生会的干部桃香给老师发布了委托，希望老师解决基沃托斯中正在发生的种种问题。",
+        },
+      },
+      {
+        title: {
+          TextKr: "현상수배, 시작합니다.",
+          TextJp: "特別依頼・指名手配",
+          TextTh: "ประกาศจับ ได้เริ่มขึ้นแล้ว",
+          TextTw: "特殊任務．懸賞通緝",
+          TextEn: "Let the Arrests Begin",
+          TextCn: "特别委托・悬赏通缉",
+        },
+        story_id: 101,
+        next: 102,
+        previous: 100,
+        summary: {
+          TextKr:
+            "총학생회의 간부, 모모카가 선생님에게 중범죄를 일으킨 키보토스의 현상수배범들을 잡아달라고 부탁한다.",
+          TextJp:
+            "連邦生徒会の幹部であるモモカが、先生に重犯罪を起こしたキヴォトスの指名手配犯たちを捕まえるよう頼む。",
+          TextTh:
+            "โมโมกะ ผู้บริหารขององค์การนักเรียนได้ขอให้คุณครูช่วยจับตัว\nอาชญากรที่เป็นที่ต้องการที่ก่อความไม่สงบขึ้นในคิโวทอส",
+          TextTw:
+            "聯邦學生會的幹部桃香，拜託老師捉住犯下重罪的奇普托斯的懸賞通緝犯。",
+          TextEn:
+            "General Student Council officer Momoka asks Sensei to catch wanted felons of Kivotos and take them into custody.",
+          TextCn:
+            "联邦学生会的干部桃香委托老师逮捕基沃托斯中犯下重罪的通缉犯。",
+        },
+      },
+      {
+        title: {
+          TextKr: "물건 회수 특별의뢰",
+          TextJp: "特別依頼・クレジット回収",
+          TextTh: "ภารกิจพิเศษ รับของขวัญ",
+          TextTw: "特殊任務．信用貨幣回收",
+          TextEn: "Commission: Item Retrieval",
+          TextCn: "特别委托・信用点回收",
+        },
+        story_id: 102,
+        next: 103,
+        previous: 101,
+        summary: {
+          TextKr:
+            "모모카가 학생들이 사라지는 폐쇄된 테마 파크, <슬럼피아>에 대해 설명한다.",
+          TextJp:
+            "生徒たちがそこで姿を消すと噂される、閉鎖されたテーマパーク「スランピア」について、モモカが説明をする。",
+          TextTh:
+            "โมโมกะได้เล่าเรื่องเด็กนักเรียนหายตัวไปที่ <สลัมเพีย> สวนสนุกร้าง\nที่ถูกปิดตายให้คุณครูฟัง",
+          TextTw: "桃香對據傳有學生消失的已封閉主題公園「史林皮亞」進行說明。",
+          TextEn:
+            "Momoka describes Slumpia in great detail—an abandoned theme park where students have been known to go missing.",
+          TextCn:
+            "桃香说明了据说有学生消失其中的已封闭的游乐园“史林匹亚”的信息。",
+        },
+      },
+      {
+        title: {
+          TextKr: "거점 방어 특별의뢰",
+          TextJp: "特別依頼・拠点防衛",
+          TextTh: "ภารกิจพิเศษ ป้องกันฐาน",
+          TextTw: "特殊任務．據點防禦",
+          TextEn: "Commission: Base Defense Complete",
+          TextCn: "特别委托・据点防御",
+        },
+        story_id: 103,
+        next: 300,
+        previous: 102,
+        summary: {
+          TextKr:
+            "모모카가 AI가 폭주하여 제어할 수 없게 된 군수공장에 대해 설명한다.",
+          TextJp:
+            "AIが暴走し制御できなくなった軍需工場について、モモカが説明をする。",
+          TextTh:
+            "โมโมกะอธิบายเกี่ยวกับเรื่องของโรงงานอาวุธที่ไม่สามารถควบคุมได้\nเนื่องจากเหล่า AI เกิดทำงานผิดปกติจนควบคุมไม่ได้",
+          TextTw: "桃香針對因AI暴走而無法控制的軍需工廠進行說明。",
+          TextEn:
+            "Momoka describes the story of a munitions factory that was shuttered due to its out-of-control AI.",
+          TextCn: "桃香针对由于AI失控而无法控制的军需工厂进行了说明。",
+        },
+      },
+      {
+        title: {
+          TextKr: "전술경연 대회!",
+          TextJp: "合同戦術対抗戦",
+          TextTh: "งานประกวดกลยุทธ์สหพันธ์!",
+          TextTw: "聯合戰術大賽",
+          TextEn: "The Allied Tournament!",
+          TextCn: "联合战术对抗战",
+        },
+        story_id: 300,
+        next: 400,
+        previous: 103,
+        summary: {
+          TextKr:
+            "크로노스 스쿨의 기자, 마이가 전술경연 대회를 앞두고 선생님과 인터뷰를 한다.",
+          TextJp:
+            "クロノスの記者であるマイが、合同戦術対抗戦を前に先生へインタビューをする。",
+          TextTh:
+            "นักข่าวประจำโรงเรียนโครโนส มาอิกับคุณครูให้สัมภาษณ์ร่วมกัน\nก่อนการแข่งขันประกวดกลยุทธ์สหพันธ์",
+          TextTw: "聯合戰術大賽在即，克洛盧斯的記者麻衣與老師進行訪談。",
+          TextEn:
+            "Mai, a reporter from Kronos, interviews Sensei ahead of the Allied Tournament.",
+          TextCn: "克洛诺斯的记者舞在联合战术对抗战举行前采访了老师。",
+        },
+      },
+      {
+        title: {
+          TextKr: "편의점 <엔젤 24>에 어서 오세요!",
+          TextJp: "コンビニ「エンジェル24」へようこそ！",
+          TextTh: "ร้าน <เอ็นเจล 24> ยะ...ยินดีต้อนรับค่ะ!",
+          TextTw: "歡迎光臨「天使 24」便利商店！",
+          TextEn: "Welcome to the Angel 24 Convenience Store!",
+          TextCn: "欢迎光临“天使24”便利店！",
+        },
+        story_id: 400,
+        next: 500,
+        previous: 300,
+        summary: {
+          TextKr: "상점 알바생인 소라가 샬레에 있는 상점에 대해 설명한다.",
+          TextJp: "アルバイトであるソラが、ショップについて説明する。",
+          TextTh:
+            "โซระที่ทำงานพาร์ทไทม์อยู่ที่ร้านค้าได้อธิบายเกี่ยวกับร้านค้าที่ชาเล่ต์ให้ฟัง",
+          TextTw: "商店工讀生空對夏萊的商店進行說明。",
+          TextEn:
+            "Sora, a part-time shop worker, explains the shops at Schale.",
+          TextCn: "在商店打工的学生空对商店进行了介绍。",
+        },
+      },
+      {
+        title: {
+          TextKr: "크래프트 챔버란?",
+          TextJp: "クラフトチェンバーとは",
+          TextTh: "คราฟต์แชมเบอร์คืออะไร?",
+          TextTw: "何謂工藝室",
+          TextEn: "What Is the Crafting Chamber?",
+          TextCn: "所谓制造室",
+        },
+        story_id: 500,
+        next: 600,
+        previous: 400,
+        summary: {
+          TextKr:
+            "총학생회의 간부, 린이 선생님에게 총학생회장이 남긴 <크래프트 챔버>를 소개한다.",
+          TextJp:
+            "連邦生徒会の幹部であるリンが、先生に連邦生徒会長が残した「クラフトチェンバー」を紹介する。",
+          TextTh:
+            "ริน สมาชิกบริหารองค์การนักเรียนได้แนะนำห้อง <คราฟต์แชมเบอร์>\nให้กับคุณครู",
+          TextTw: "聯邦學生會的幹部琳為老師介紹聯邦學生會長留下的「工藝室」。",
+          TextEn:
+            "Rin, an officer of the General Student Council, introduces Sensei to the Crafting Chamber left behind by the General Student Council president.",
+          TextCn: "联邦学生会的干部凛向老师介绍了联邦学生会长留下的“制造室”。",
+        },
+      },
+      {
+        title: {
+          TextKr: "종합전술시험",
+          TextJp: "合同火力演習",
+          TextTh: "สอบประมวล",
+          TextTw: "綜合戰術考試",
+          TextEn: "Joint Firing Drill",
+          TextCn: "联合火力演习",
+        },
+        story_id: 600,
+        next: 700,
+        previous: 500,
+        summary: {
+          TextKr: "모모카가 종합전술시험에 대해 설명한다.",
+          TextJp: "モモカが合同火力演習について説明する。",
+          TextTh: "โมโมกะอธิบายเกี่ยวกับการสอบประมวล",
+          TextTw: "桃香對綜合戰術考試進行說明。",
+          TextEn: "Momoka explains the Joint Firing Drill.",
+          TextCn: "桃香对联合火力演习进行了说明。",
+        },
+      },
+      {
+        title: {
+          TextKr: "백지장도 맞들면 낫다.",
+          TextJp: "共存共栄すれば書類もまた軽し？",
+          TextTh: "รวมพลังเพื่องานที่เสร็จเร็วขึ้น",
+          TextTw: "人多好辦事？",
+          TextEn: "Many a Mickle Makes a Muckle",
+          TextCn: "众人拾柴火焰高？",
+        },
+        story_id: 700,
+        next: 800,
+        previous: 600,
+        summary: {
+          TextKr: "총학생회의 아유무가 선생님에게 업무 도움을 요청한다.",
+          TextJp:
+            "連邦生徒会のアユムと出会った先生は、お互いに協力して手伝いをしていくことに。",
+          TextTh: "อายูมุจากองค์การนักเรียนขอให้คุณครูช่วยงาน",
+          TextTw: "聯邦學生會的步請求老師協助任務。",
+          TextEn:
+            "Ayumu of the General Student Council asks Sensei to help with some business.",
+          TextCn: "老师遇到了联邦学生会的步梦，决定两个人互相帮忙。",
+        },
+      },
+      {
+        title: {
+          TextKr: "아오이의 등장",
+          TextJp: "アオイ登場",
+          TextTh: "อาโออิปรากฏตัว",
+          TextTw: "碧的登場",
+          TextEn: "Aoi's Appearance",
+          TextCn: "葵的登场",
+        },
+        story_id: 800,
+        next: 801,
+        previous: 700,
+        summary: {
+          TextKr:
+            "총학생회의 재무실장, 아오이가 선생님에게 린의 업무를 함께 도울 것을 제안한다.",
+          TextJp:
+            "連邦生徒会の財務室長、アオイは先生と共にリンの負担を軽くすべく雑務を一緒にこなすことに――",
+          TextTh:
+            "หัวหน้าฝ่ายการเงิน อาโออิ ยื่นข้อเสนอให้คุณครูมาช่วยกันทำงานในส่วนของรินด้วยกัน",
+          TextTw: "聯邦學生會財務室長──碧向老師提議一起幫忙處理琳的工作。",
+          TextEn:
+            "Aoi, the General Student Council's chief of finance, asks Sensei to help Rin with her duties.",
+          TextCn:
+            "联邦学生会的财务室室长葵向老师提议两人一起处理杂务，减轻凛的工作负担——",
+        },
+      },
+      {
+        title: {
+          TextKr: "대결전 임무 브리핑",
+          TextJp: "大決戦",
+          TextTh: "สรุปภารกิจแกรนด์เรดบอส",
+          TextTw: "大決戰",
+          TextEn: "Grand Assault Mission Briefing",
+          TextCn: "大决战",
+        },
+        story_id: 801,
+        previous: 800,
+        summary: {
+          TextKr:
+            "총학생회의 린과 아유무는 선생님에게 작전실을 활용하여 여러 사건들을 해결할 것을 부탁한다.",
+          TextJp:
+            "連邦生徒会のリンとアユムは先生に作戦室を使って様々な事件を解決してくれないかとお願いするのだった。",
+          TextTh:
+            "รินและอายูมุจากองค์การนักเรียนขอร้องให้คุณครูใช้ห้องปฏิบัติการ\nเพื่อจำลองการไขเหตุการณ์ต่างๆ ที่เกิดขึ้น",
+          TextTw: "聯邦學生會的琳和步拜託老師活用作戰室，幫忙解決各種事件。",
+          TextEn:
+            "Rin and Ayumu from the General Student Council asks Sensei to utilize the operation room to solve various cases.",
+          TextCn: "联邦学生会的凛和步梦希望老师能够利用作战室解决各种事件。",
+        },
+      },
+    ],
+  },
+  {
+    title: {
+      TextKr: "제약해제결전",
+      TextJp: "制約解除決戦",
+      TextCn: "制约解除决战",
+      TextEn: "Restriction Release Decisive Battle",
+      TextTw: "解除限制決戰",
+      TextTh: "การต่อสู้เพื่อเลิกข้อจำกัด",
+    },
+    avatar: "/image/story_cover/total_assault.webp",
+    sections: [
+      {
+        title: {
+          TextKr: "세트의 분노",
+          TextJp: "セトの憤怒",
+          TextCn: "赛特的愤怒",
+          TextEn: "Seth's Wrath",
+          TextTw: "賽特的憤怒",
+          TextTh: "ความโกรธของเซท",
+        },
+        story_id: 901,
+        previous: 211,
+        summary: {
+          TextKr:
+            "지하생활자가 선생님에게 만신의 성좌 중 하나인 세트의 분노에 대해 설명한다.",
+          TextJp:
+            "地下生活者が先生に神々の星座の一つであるセトの憤怒について説明する。",
+          TextCn: "地下生活者向老师介绍了众神的星座之一——赛特的愤怒。",
+          TextEn:
+            "An underground dweller explains Seth's Wrath - one of the constellations of pantheon - to Sensei.",
+          TextTw: "地下生活者向老師介紹了眾神的星座之一——賽特的憤怒。",
+          TextTh:
+            "ผู้อาศัยใต้ดินอธิบายถึงความโกรธของเซท หนึ่งในที่นั่งของเทพเจ้า",
         },
       },
     ],

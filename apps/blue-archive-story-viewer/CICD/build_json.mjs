@@ -61,6 +61,8 @@ walk(path.resolve(__dirname, "..", "public"), pathname => {
             `[${chalk.yellowBright("SKIPPED")}] ${pathname} (empty file)`
           );
         }
+      } else if (/\.json$/i.test(pathname)) {
+        // do nothing
       } else {
         console.log(
           `[${chalk.gray("IGNORED")}] ${chalk.gray(pathname + " (not YAML)")}`

@@ -1,24 +1,26 @@
-<template>
-  <el-config-provider :locale="locale">
-    <router-view />
-  </el-config-provider>
-</template>
-
 <script setup lang="ts">
-// @ts-ignore
-import zhCn from "element-plus/dist/locale/zh-cn.mjs";
-
-const locale = zhCn;
+// https://github.com/vueuse/head
+// you can use this to manipulate the document head in any components,
+// they will be rendered correctly in the html results with vite-ssg
+useHead({
+  title: 'PlanaStudio',
+  meta: [
+    { name: 'description', content: 'Blue Archive Story Editor' },
+    {
+      name: 'theme-color',
+      content: () => (isDark.value ? '#00aba9' : '#ffffff'),
+    },
+  ],
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: () => (preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
+    },
+  ],
+})
 </script>
 
-<style lang="scss" scoped>
-.arona-container {
-  position: absolute;
-  top: 100px;
-  left: 300px;
-  height: 600px;
-  width: 300px;
-  background-color: black;
-  display: none;
-}
-</style>
+<template>
+  <RouterView />
+</template>

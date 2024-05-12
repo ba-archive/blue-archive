@@ -23,7 +23,7 @@ import { effectInit } from "@/layers/effectLayer";
 import { preloadSound, soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
-import { useUiState } from "@/stores/state";
+import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 
 Howler.autoSuspend = false;
@@ -59,13 +59,16 @@ export function continuePlay() {
  * 回收播放器资源, 让播放器回到初始状态
  */
 export function dispose() {
+  eventBus.emit("removeEffect");
+  eventBus.emit("dispose");
   initPrivateState().app?.destroy();
   initPrivateState().app = null;
-  eventBus.emit("dispose");
   eventBus.all.clear();
   usePlayerStore().logText.value = [];
   pixiUtils.clearTextureCache();
   storyHandler.isEnd = true;
+  usePlayerStore().dispose();
+  disposeUiState();
 }
 
 /**
@@ -153,7 +156,9 @@ export const eventEmitter = {
       () => autoMode.value,
       cur => {
         if (cur) {
-          storyHandler.startAuto();
+          setTimeout(() => {
+            storyHandler.startAuto();
+          }, 1500);
         } else {
           storyHandler.stopAuto();
         }
@@ -175,6 +180,7 @@ export const eventEmitter = {
         localStorage.getItem("storyIndex") || 0
       );
     }
+    storyHandler.unitPlaying = false;
     storyHandler.isEnd = false;
     storyHandler.storyPlay().then();
   },
@@ -342,7 +348,12 @@ export const eventEmitter = {
    */
   playAudio(currentStoryUnit?: StoryUnit) {
     currentStoryUnit = currentStoryUnit || storyHandler.currentStoryUnit;
-    if (currentStoryUnit.audio) {
+    if (
+      currentStoryUnit.audio &&
+      !Object.values(currentStoryUnit.audio).every(el =>
+        [undefined, null].includes(el)
+      )
+    ) {
       eventBus.emit("playAudio", currentStoryUnit.audio);
       if (currentStoryUnit.audio.voiceJPUrl) {
         this.VoiceJpDone = false;
@@ -495,7 +506,7 @@ export async function init(
     });
     eventBus.emit("oneResourceLoaded", {
       type: "fail",
-      resourceName: '剧情对象中的 "content" 不能为 undefined',
+      resourceName: `剧情对象中的 "content" 不能为 ${props.story.content}`,
     });
     errorCallback();
     return;
@@ -927,11 +938,13 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             storyHandler.currentStoryUnit,
             waitingKeys
           );
+
+          // TODO 重写逻辑解决莫名其妙的播放卡死?
+          // reject();
           // waitingKeys.forEach((key) => {
           //   Reflect.set(eventEmitter, key, true);
           // });
-          reject();
-          // resolve();
+          resolve();
         }
       });
     }

@@ -1,8 +1,343 @@
 <script setup lang="ts">
-import { h } from "vue";
-import { Contributor, UpdateLog } from "@types/UpdateNews";
+import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
+  {
+    date: "2024-05-12",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "夜樱 绮罗罗", id: 10093 },
+          { name: "和乐 千世", id: 13001 },
+          { name: "生盐 诺亚", id: 10052 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2024-05-03",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "杏山 和纱（乐队）", id: 10091 },
+          { name: "栗村 爱莉（乐队）", id: 16015 },
+          { name: "伊原木 喜美（乐队）", id: 10092 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了剧情播放开始时有概率卡死的问题",
+      },
+    ],
+  },
+  {
+    date: "2024-04-21",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "柚鸟 夏", id: 10029 }],
+      },
+    ],
+  },
+  {
+    date: "2024-04-14",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "桐藤 渚", id: 20024 }],
+      },
+    ],
+  },
+  {
+    date: "2024-04-04",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "里滨 海夏", id: 10090 },
+          { name: "春日 椿（向导）", id: 20035 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2024-03-16",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "鳄渊 明里（正月）", id: 20034 }],
+      },
+    ],
+  },
+  {
+    date: "2024-03-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "鬼方 佳代子（礼服）", id: 10088 },
+          { name: "陆八魔 阿露（礼服）", id: 10089 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2024-02-14",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "空崎 日奈（礼服）", id: 10086 },
+          { name: "天雨 亚子（礼服）", id: 10087 },
+          { name: "丹花 伊吹", id: 16014 },
+          { name: "羽沼 真琴", id: 20033 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-12-31",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "音濑 小玉（露营）", id: 10084 },
+          { name: "小钩 晴（露营）", id: 10085 },
+        ],
+      },
+      {
+        type: "feat",
+        content: "在移动端点击阿罗娜头像时，可以回到主页",
+      },
+    ],
+  },
+  {
+    date: "2023-12-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "和泉元 艾米（泳装）", id: 20032 },
+          { name: "小钩 晴", id: 23003 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分设备上注音会遮盖文字的问题",
+      },
+      {
+        type: "fix",
+        content: "修复了小屏幕设备上剧情信息排版异常的问题",
+      },
+      {
+        type: "feat",
+        content: "“设置”页面中新增“默认以全屏模式开始播放”选项",
+      },
+    ],
+  },
+  {
+    date: "2023-12-03",
+    contents: [
+      {
+        type: "feat",
+        content: "新增猫鬼黑影总力战介绍",
+      },
+    ],
+  },
+  {
+    date: "2023-11-26",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "不破 莲华", id: 10082 },
+          { name: "桐生 桔梗", id: 10083 },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-11-12",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "勘解由小路 紫蓠", id: 10081 }],
+      },
+    ],
+  },
+  {
+    date: "2023-10-29",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "御坂美琴", id: 10079 },
+          { name: "食蜂操祈", id: 10080 },
+          { name: "佐天泪子", id: 26011 },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分情况下播放无法继续的问题",
+      },
+      {
+        type: "fix",
+        content: "部分学生剧情 live2d 特效错误的问题",
+      },
+    ],
+  },
+  {
+    date: "2023-10-22",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "奥空 绫音（泳装）", id: 26007 },
+          { name: "阿慈谷 日富美（泳装）", id: 20005 },
+        ],
+      },
+      {
+        type: "feat",
+        content: "改善部分小型平板设备的观看体验",
+      },
+      {
+        type: "feat",
+        content: "在学生选择界面的键盘输入会被自动识别为搜索学生",
+      },
+      {
+        type: "fix",
+        content: "修复在部分条件下，亮色/暗色切换按钮状态错误的问题",
+      },
+      {
+        type: "fix",
+        content: "修复在部分条件下，前一个剧情的特效会保留到其他剧情中的问题",
+      },
+      {
+        type: "perf",
+        content: "优化了点击进入剧情时的加载速度",
+      },
+    ],
+  },
+  {
+    date: "2023-10-15",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "间宵 时雨（温泉）",
+            id: 20031,
+          },
+        ],
+      },
+      {
+        type: "feat",
+        content: "添加了自动检测更新的机制。",
+      },
+      {
+        type: "feat",
+        content: "在播放剧情时，可以自主调节文字展示速度。",
+      },
+      {
+        type: "feat",
+        content: "在播放剧情时，可以通过在播放器界面下滑滚轮的方式播放下一句",
+      },
+    ],
+  },
+  {
+    date: "2023-10-08",
+    contents: [
+      {
+        type: "feat",
+        content: "在播放剧情时，可以通过在播放器界面下滑滚轮的方式进入下一句。",
+      },
+      {
+        type: "fix",
+        content: "修复了水宫子 live2d 没有语音的问题",
+      },
+    ],
+  },
+  {
+    date: "2023-10-01",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "仲正 一花",
+            id: 10077,
+          },
+          {
+            name: "鬼怒川 霞",
+            id: 10078,
+          },
+        ],
+      },
+      {
+        type: "style",
+        content: "优化剧情播放界面",
+      },
+    ],
+  },
+  {
+    date: "2023-09-24",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "白石 咏叶",
+            id: 23004,
+          },
+          {
+            name: "古关 忧",
+            id: 10035,
+          },
+        ],
+      },
+      {
+        type: "fix",
+        content: "修复了部分情况下剧情播放黑屏的问题",
+      },
+    ],
+  },
+  {
+    date: "2023-09-17",
+    contents: [
+      {
+        type: "student",
+        students: [
+          {
+            name: "黑馆 晴奈（体操服）",
+            id: 20030,
+          },
+          {
+            name: "一之濑 明日奈（兔女郎）",
+            id: 10028,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2023-09-10",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "丰见 小鸟（应援团）", id: 10076 }],
+      },
+      {
+        type: "student",
+        students: [{ name: "狮子堂 泉", id: 10009 }],
+      },
+      {
+        type: "feat",
+        content: "新增小春幸存者游戏",
+      },
+    ],
+  },
   {
     date: "2023-08-27",
     contents: [
@@ -394,287 +729,65 @@ const updateLogs: UpdateLog[] = [
       },
     ],
   },
-];
-
-const contributors: Contributor[] = [
   {
-    name: "黑猫汐",
-    role: "校对",
-    avatar: "/image/contributor/amahashio.webp",
-    link: "https://github.com/AmahaShio",
+    date: "2023-02-11",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "歌住 樱子", id: 10061 }],
+      },
+    ],
   },
   {
-    name: "小陈菌",
-    role: "CI/CD",
-    avatar: "/image/contributor/ciisaichan.webp",
-    link: "https://github.com/ciisaichan",
+    date: "2022-02-03",
+    contents: [
+      {
+        type: "feat",
+        content: "momotalk 会自动定位到最后一条消息",
+      },
+      {
+        type: "fix",
+        content:
+          "修复了连续出现两个选项时，重新选择倒数第二个选项会让整段对话看起来卡死的问题",
+      },
+    ],
   },
   {
-    name: "Coya",
-    role: "UI",
-    avatar: "/image/contributor/coya.webp",
+    date: "2023-01-29",
+    contents: [
+      {
+        type: "feat",
+        content: "支持按攻击类型过滤",
+      },
+    ],
   },
   {
-    name: "第一个mt",
-    role: "前端",
-    avatar: "/image/contributor/diyigemt.webp",
-    link: "https://github.com/diyigemt",
+    date: "2023-01-26",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "圣园 未花", id: 10059 },
+          { name: "尾刃 康娜", id: 20023 },
+          { name: "下仓 惠", id: 10060 },
+        ],
+      },
+    ],
   },
   {
-    name: "发椿",
-    role: "翻译",
-    avatar: "/image/contributor/fachun.webp",
-  },
-  {
-    name: "飞龙project",
-    role: "CI/CD",
-    avatar: "/image/contributor/feilongproject.webp",
-    link: "https://github.com/feilongproject",
-  },
-  {
-    name: "Icarus",
-    role: "运维",
-    avatar: "/image/contributor/icarus.webp",
-  },
-  {
-    name: "海星xd",
-    role: "前端",
-    avatar: "/image/contributor/kaiseixd.webp",
-    link: "https://github.com/kaiseixd",
-  },
-  {
-    name: "吉光",
-    role: "前端",
-    avatar: "/image/contributor/luckyray-fan.webp",
-    link: "https://github.com/luckyray-fan",
-  },
-  {
-    name: "Mark Chen",
-    role: "前端/美术/CI/CD",
-    avatar: "/image/contributor/mark9804.webp",
-    link: "https://github.com/Mark9804",
-  },
-  {
-    name: "茗门",
-    role: "后端",
-    avatar: "/image/contributor/mingmen.webp",
-  },
-  {
-    name: "Misaka18655",
-    role: "翻译",
-    avatar: "/image/contributor/misaka18655.webp",
-  },
-  {
-    name: "Z_DK",
-    role: "前端",
-    avatar: "/image/contributor/nencao.webp",
-    link: "https://github.com/NENCAO",
-  },
-  {
-    name: "Notype",
-    role: "前端/CI/CD",
-    avatar: "/image/contributor/notnotype.webp",
-    link: "https://github.com/notnotype",
-  },
-  {
-    name: "偶然幻想",
-    role: "前端",
-    avatar: "/image/contributor/ourandream.webp",
-    link: "https://github.com/ourandream",
-  },
-  {
-    name: "HeartUnderBlade",
-    role: "CI/CD",
-    avatar: "/image/contributor/pfjhyyj.webp",
-    link: "https://github.com/pfjhyyj",
-  },
-  {
-    name: "scn",
-    role: "翻译",
-    avatar: "/image/contributor/scn.webp",
-  },
-  {
-    name: "Setsuna",
-    role: "前端",
-    avatar: "/image/contributor/shinonomesetsuna.webp",
-    link: "https://github.com/ShinonomeSetsuna",
-  },
-  {
-    name: "星空若曦",
-    role: "校对",
-    avatar: "/image/contributor/xingkongruoxi.webp",
-  },
-  {
-    name: "Tiramisu",
-    role: "翻译（繁中）",
-    avatar: "/image/contributor/tiramisu.webp",
-    link: "https://github.com/noddy55168",
-  },
-  {
-    name: "_Aisle",
-    role: "前端",
-    avatar: "/image/contributor/mizukiaaaaaisle.webp",
-    link: "https://github.com/MizukiAAAAAisle",
-  },
-  {
-    name: "たかなしち",
-    role: "翻译",
-    avatar: "/image/contributor/takanasichi.webp",
-  },
-  {
-    name: "flamingo",
-    role: "翻译",
-    avatar: "/image/contributor/flamingo.webp",
-  },
-  {
-    name: "碧蓝档案资讯站",
-    role: "制作协力",
-    avatar: "/image/contributor/zixunzhan.webp",
-    link: "https://space.bilibili.com/37507923",
-  },
-  {
-    name: "飞小RAN",
-    role: "制作协力",
-    avatar: "/image/contributor/xiaofeitm233.webp",
-    link: "https://github.com/xiaofeiTM233",
-  },
-  {
-    name: "J.K.伯爵",
-    role: "文案",
-    avatar: "/image/contributor/jkbojue.webp",
-  },
-  {
-    name: "mekliy",
-    role: "文案",
-    avatar: "/image/contributor/mekliy.webp",
-  },
-  {
-    name: "矮人",
-    role: "策划",
-    avatar: "/image/contributor/airen.webp",
-  },
-  {
-    name: "雷电",
-    role: "PM",
-    avatar: "/image/contributor/leidian.webp",
-  },
-  {
-    name: "Unique、",
-    role: "美术",
-    avatar: "/image/contributor/unique.webp",
-  },
-  {
-    name: "米袋",
-    role: "Unity",
-    avatar: "/image/contributor/giantricebag.webp",
-    link: "https://github.com/GiantRiceBag",
-  },
-  {
-    name: "Violenza",
-    role: "Unity",
-    avatar: "/image/contributor/violenza.webp",
-  },
-  {
-    name: "莫末陌寞",
-    role: "Unity",
-    avatar: "/image/contributor/momomomo.webp",
-  },
-  {
-    name: "香蕉",
-    role: "Unity",
-    avatar: "/image/contributor/banana.webp",
-  },
-  {
-    name: "PAoc",
-    role: "3D建模",
-    avatar: "/image/contributor/paoc.webp",
-  },
-  {
-    name: "电獭",
-    role: "后端、架构",
-    avatar: "/image/contributor/dianta.webp",
-  },
-  {
-    name: "星之韻律",
-    role: "后端",
-    avatar: "/image/contributor/xingzhiyunlv.webp",
-  },
-  {
-    name: "花奈",
-    role: "前端",
-    avatar: "/image/contributor/huanai.webp",
-  },
-  {
-    name: "奶油英雄",
-    role: "AI算法-NLP",
-    avatar: "/image/contributor/naiyouyingxiong.webp",
-  },
-  {
-    name: "Dyin",
-    role: "PV",
-    avatar: "/image/contributor/dyin.webp",
-  },
-  {
-    name: "阿彬",
-    role: "PV",
-    avatar: "/image/contributor/abin.webp",
-  },
-  {
-    name: "水哥不sd",
-    role: "PV",
-    avatar: "/image/contributor/shuigebusd.webp",
-  },
-  {
-    name: "En_Sound",
-    role: "音乐",
-    avatar: "/image/contributor/ensound.webp",
-  },
-  {
-    name: "小白",
-    role: "音乐",
-    avatar: "/image/contributor/xiaobai.webp",
-  },
-  {
-    name: "释逸",
-    role: "原画",
-    avatar: "/image/contributor/shiyi.webp",
+    date: "2023-01-22",
+    contents: [
+      {
+        type: "feat",
+        content: "网站上线，提供 MomoTalk 查看功能。",
+      },
+    ],
   },
 ];
-
-// make vue-tsc happy
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-const contributorList: any = h(
-  "div",
-  {
-    id: "update-log-contributor-wall",
-  },
-  contributors
-    .sort((a, b) =>
-      a.name.localeCompare(b.name, "zh-Hans-CN", { sensitivity: "accent" })
-    )
-    .map(contributor => {
-      return h(
-        contributor.link ? "a" : "div",
-        {
-          href: contributor?.link,
-          class: "contributor__avatar",
-          target: "_blank",
-          rel: "noopener noreferrer",
-        },
-        [
-          h("img", {
-            src: contributor.avatar,
-            alt: contributor.name,
-            title: `${contributor.name} - ${contributor.role}`,
-          }),
-        ]
-      );
-    })
-);
 </script>
 
 <template>
-  <div id="contributor-container" class="flex-vertical color-transition" v-once>
+  <div id="update-log-container" class="flex-vertical color-transition" v-once>
     <h2 class="update-log__title">更新日志</h2>
     <!-- eslint-disable vue/require-v-for-key -->
     <div class="update-log__block" v-for="log in updateLogs">
@@ -705,14 +818,11 @@ const contributorList: any = h(
       </ul>
     </div>
     <!--eslint-enable vue/require-v-for-key-->
-
-    <h3>贡献者：（以名称排序）</h3>
-    <contributor-list />
   </div>
 </template>
 
 <style scoped lang="scss">
-#contributor-container {
+#update-log-container {
   align-items: flex-start;
   align-self: center;
   padding-bottom: 2rem;
@@ -750,33 +860,12 @@ const contributorList: any = h(
 }
 
 @media screen and (max-width: 768px) {
-  #contributor-container {
+  #update-log-container {
     justify-content: flex-start;
   }
 
   .roadmap {
     max-width: 90%;
-  }
-}
-</style>
-
-<style lang="scss">
-#update-log-contributor-wall {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-
-  .contributor__avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      border-radius: 50%;
-      width: 4rem;
-      height: 4rem;
-    }
   }
 }
 </style>

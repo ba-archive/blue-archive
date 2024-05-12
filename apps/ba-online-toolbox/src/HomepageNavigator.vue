@@ -36,6 +36,7 @@ const mainRoutes = router
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: min-content;
   gap: 1rem;
+  user-select: none;
 
   .home-nav-link {
     display: flex;

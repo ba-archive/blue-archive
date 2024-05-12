@@ -36,30 +36,27 @@
         >
           查看已有翻译
         </router-link>
-        <a
-          class="user-action-button rounded-small"
-          href="https://www.bilibili.com/read/cv24128500"
-          target="_blank"
-          >我来组成翻译!</a
-        >
+        <router-link class="user-action-button rounded-small" to="/library">
+          来一局小游戏？
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { AxiosError } from "axios";
 import { computed } from "vue";
 
 const props = defineProps<{
-  errorMessage: AxiosError;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  errorMessage: any;
   routePath: string | undefined;
 }>();
 
 const baseUrl = window.location.origin;
 
 const isNotOpenError = computed(
-  () => 1919 === (props.errorMessage ?? {})?.response.status
+  () => 1919 === (props.errorMessage ?? {})?.response?.status
 );
 </script>
 

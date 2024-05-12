@@ -88,10 +88,22 @@ if (jsonName && jsonName !== "0") {
       }
       showPlayer.value = true;
     })
-    .catch(error => {
-      console.log(error);
-      console.log("fallback to yuuka");
-      showPlayer.value = true;
+    .catch(() => {
+      // 远程获取失败，尝试本地获取
+      axios
+        .get(`${jsonName}.json`)
+        .then(response => {
+          if (response.status === 200) {
+            story.value = response.data;
+            storyJsonName.value = jsonName;
+            showPlayer.value = true;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          console.log("fallback to yuuka");
+          showPlayer.value = true;
+        });
     });
 } else {
   showPlayer.value = true;
@@ -116,10 +128,14 @@ const languageList = ["Cn", "Jp", "Kr", "En", "Tw"];
 const language = ref<Language>(
   (localStorage.getItem(languageCacheKey) as never) ?? "Cn"
 );
+const useSuperSampling = ref<boolean>(
+  localStorage.getItem("useSuperSampling") === "true"
+);
 watch(
-  () => language.value,
+  () => [language.value, useSuperSampling.value],
   () => {
     localStorage.setItem(languageCacheKey, language.value);
+    localStorage.setItem("useSuperSampling", useSuperSampling.value.toString());
     location.reload();
   }
 );
@@ -138,6 +154,7 @@ watch(
         :story-summary="storySummary"
         style="resize: both; overflow: hidden"
         :exit-fullscreen-time-out="2000"
+        :use-super-sampling="useSuperSampling ? '2' : ''"
         ref="player"
       />
       <!--其实在左边的剧情json里填入11000就能测试序章, 不需要改动这里-->
@@ -167,7 +184,7 @@ watch(
         更换故事index
       </button>
       <label>故事json</label>
-      <input v-model="storyJsonName" />
+      <input v-model="storyJsonName" @keydown.enter="changeJSON" />
       <button @click="changeJSON">更换故事json</button>
       <button @click="showPlayer = !showPlayer">切换显示状态</button>
       <label>语言</label>
@@ -176,6 +193,10 @@ watch(
           {{ name }}
         </option>
       </select>
+      <label
+        >超分
+        <input type="checkbox" v-model="useSuperSampling" />
+      </label>
     </div>
     <div class="absolute-right-center">
       <ModifyEmotionOption v-if="toolType === 'emotion'" />
@@ -206,6 +227,7 @@ watch(
   overflow-y: auto;
   text-align: center;
 }
+
 .hidden {
   display: none;
 }

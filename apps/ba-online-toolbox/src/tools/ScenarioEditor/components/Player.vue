@@ -4,6 +4,7 @@
       <ba-story-player
         class="player-body rounded-small"
         v-if="showPlayer"
+        @initiated="handlePlayerInit"
         :story="mainStore.getScenario"
         :language="playerLanguage"
         :width="playerContainerWidth - 24"
@@ -83,10 +84,18 @@ watchDebounced(
   }
 );
 
+function handlePlayerInit() {
+  StoryPlayer.value &&
+    StoryPlayer.value.hotReplaceStoryUnit(
+      mainStore.getScenario.content[config.getSelectLine],
+      config.getSelectLine
+    );
+}
+
 const isPreviewMode = computed(() => config.getPreviewMode);
 const targetLanguage = computed(() => config.getTargetLang);
 const showPlayer = ref(true);
-const playerLanguage = ref('Jp');
+const playerLanguage = ref<"Cn" | "Jp" | "En" | "Tw">('Jp');
 
 const previewConfig = computed(() => {
   return {
@@ -96,7 +105,7 @@ const previewConfig = computed(() => {
 });
 
 function getFormattedTargetLanguage(language: Language) {
-  return language.slice(4);
+  return language.slice(4) as "Cn" | "Jp" | "En" | "Tw";
 }
 
 function refreshPlayer() {

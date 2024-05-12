@@ -1,4 +1,4 @@
-import { StoryBriefing } from "@types/StoryJson";
+import { StoryBriefing } from "@/types/StoryJson";
 
 /* eslint-disable max-len */
 export const stories: StoryBriefing[] = [

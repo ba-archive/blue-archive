@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite } from "pixi.js";
+import { Container, Sprite, filters } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -9,11 +9,13 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
+  const alphaFilter = new filters.AlphaFilter(0.6);
+  const blurFilter = new filters.BlurFilter(300);
   const backSprite = resources[2];
-  backSprite.x = -0.2 * appWidth;
-  backSprite.y = -0.2 * appHeight;
-  backSprite.width = appWidth * 1.4;
-  backSprite.height = appHeight * 1.4;
+  backSprite.tint = 0xd973b5;
+  backSprite.width = appWidth;
+  backSprite.height = appHeight;
+  backSprite.filters = [alphaFilter, blurFilter];
   backSprite.zIndex = -1;
   app.stage.addChild(backSprite);
   // 心心特效
@@ -48,7 +50,6 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   );
   getEmitterType(ringConfig, "spawnShape").config.data.w = appWidth;
   getEmitterType(ringConfig, "spawnShape").config.data.h = appHeight;
-  getEmitterType(ringConfig, "colorStatic").config.color = "#ffe7d8";
   const ringTextureWidth = resources[1].texture.width;
   const ringBaseRatio = (0.28 * appWidth) / ringTextureWidth;
   const ringScaleConfig = getEmitterType(ringConfig, "scale").config;

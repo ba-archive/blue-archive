@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import axios from "axios";
 import {
   computed,
   onBeforeMount,
@@ -8,11 +9,20 @@ import {
   watch,
 } from "vue";
 import { useRoute } from "vue-router";
+import HeadupBanner from "./components/HeadupBanner.vue";
 import HomeWelcomeScreen from "@components/HomeWelcomeScreen.vue";
 import DesktopMenu from "@components/menu/DesktopMenu.vue";
 import MobileMenu from "@components/menu/MobileMenu.vue";
 import { useSettingsStore } from "@store/settings";
 import { switchTheme } from "@util/userInterfaceUtils";
+import { useIntervalFn } from "@vueuse/core";
+
+// import dayjs from "dayjs";
+// import timezone from "dayjs/plugin/timezone.js";
+// import utc from "dayjs/plugin/utc.js";
+
+// dayjs.extend(utc);
+// dayjs.extend(timezone);
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
@@ -60,11 +70,80 @@ onBeforeMount(() => {
       : "light";
 
   switchTheme(initTheme);
+  settingsStore.setTheme(initTheme);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", handleSystemThemeChange);
 });
+
+const currentVersion = import.meta.env.__VERSION__ || {
+  build: "",
+  timezone: "Asia/Shanghai",
+};
+
+const hasUpdate = ref(false);
+
+const remoteVersion = ref({
+  build: "",
+  timezone: "Asia/Shanghai",
+});
+
+async function resolveBuild() {
+  if (!settingsStore.getEnableCheckForUpdates) {
+    return;
+  }
+  const currentTime = new Date().getTime();
+  const lastUpdated = settingsStore.getLastUpdated;
+  const diff = currentTime - lastUpdated;
+  if (!lastUpdated) {
+    settingsStore.setLastUpdated(currentTime);
+  }
+
+  if (diff < 1000 * 60 * 60 * 1) {
+    // 1 小时内只检查一次
+    return;
+  }
+
+  const { data, status } = await axios.get(`/version.json?t=${currentTime}`);
+  if (status !== 200) {
+    return;
+  }
+  const { build, timezone } = data as {
+    build: string;
+    timezone: string;
+  };
+  settingsStore.setLastUpdated(currentTime);
+  if (build && build !== currentVersion.build) {
+    hasUpdate.value = true;
+    remoteVersion.value = {
+      build,
+      timezone,
+    };
+  }
+}
+
+function handleDisableCheckForUpdates() {
+  hasUpdate.value = false;
+  settingsStore.setEnableCheckForUpdates(false);
+}
+
+function handleAppUpdate() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  location.reload(true); // 标准浏览器不支持，但是 Firefox 支持
+}
+
+const { pause, resume } = useIntervalFn(resolveBuild, 1000 * 60 * 60 * 1);
+
+function handleDocumentVisibilityChange() {
+  if ("hidden" === document.visibilityState) {
+    pause();
+  } else {
+    resolveBuild();
+    resume();
+  }
+}
 
 onMounted(() => {
   watch(
@@ -73,6 +152,8 @@ onMounted(() => {
       switchTheme(newValue);
     }
   );
+  resolveBuild();
+  document.addEventListener("visibilitychange", handleDocumentVisibilityChange);
 });
 
 onBeforeUnmount(() => {
@@ -84,6 +165,17 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <headup-banner
+    :show="hasUpdate"
+    @action-button-clicked="handleAppUpdate"
+    @close-button-clicked="hasUpdate = false"
+    @permanent-close-button-clicked="handleDisableCheckForUpdates"
+    show-permanent-close-button
+    close-button-text="关闭"
+    action-button-text="更新"
+    permanent-close-button-text="永久关闭提醒"
+    content="有新版本资源可用，点击以更新（当前的观看进度将丢失）"
+  />
   <mobile-menu v-if="showMobileMenu" />
   <desktop-menu v-else />
   <div

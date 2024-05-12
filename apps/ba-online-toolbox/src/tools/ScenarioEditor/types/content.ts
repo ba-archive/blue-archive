@@ -24,11 +24,12 @@ export type Language =
   | 'TextTw'
   | 'TextJp'
   | 'TextEn'
-  | 'TextKr'
+  | 'ScriptKr'
   | 'TextTh';
 
 export interface Scenario {
   GroupId: number;
   translator: string;
+  proofreader?: string;
   content: ContentLine[];
 }

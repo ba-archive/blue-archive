@@ -19,6 +19,8 @@ export interface UpdateContent {
     | "chore"
     | "test"
     | "student"
+    | "style"
+    | "perf"
     | "main";
   content?: string;
   students?: StudentObject[];

@@ -7,11 +7,13 @@ export const l2dConfig: IL2dConfig = {
       {
         name: "CH0184_home",
         animation: "Start_Idle_01",
+        fadeTime: 1.0,
         fade: true,
       },
       {
         name: "CH0184_home/CH0184_00/CH0184_00",
         animation: "Start_Idle_01",
+        fadeTime: 1.0,
         fade: true,
       },
       {
@@ -587,6 +589,627 @@ export const l2dConfig: IL2dConfig = {
     spineSettings: {
       CH0185_home: {
         scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0098_home: {
+    name: "CH0098_home",
+    playQue: [
+      {
+        name: "CH0098_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0098_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0193_home: {
+    name: "CH0193_home",
+    playQue: [
+      {
+        name: "CH0193_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0193_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0169_home: {
+    name: "CH0169_home",
+    playQue: [
+      {
+        name: "CH0169_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0169_home: {
+        scale: 1.4,
+      },
+    },
+    otherSpine: [],
+  },
+  Utaha_home: {
+    name: "Utaha_home",
+    playQue: [
+      {
+        name: "Utaha_home",
+        animation: "Start_Idle_01",
+        fadeTime: 7.6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Utaha_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0071_home: {
+    name: "CH0071_home",
+    playQue: [
+      {
+        name: "CH0071_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0071_home: {
+        scale: 1.1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0089_home: {
+    name: "CH0089_home",
+    playQue: [
+      {
+        name: "CH0089_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        customFade: [
+          {
+            customFadeTime: 8.2,
+            customFadeColor: "black",
+            toSolidDuration: 0.4,
+            solidStateDuration: 0.6,
+            toNormalDuration: 0.4,
+          },
+        ],
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0089_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  Azusa_swimsuit_home: {
+    name: "Azusa_swimsuit_home",
+    playQue: [
+      {
+        name: "Azusa_swimsuit_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Azusa_swimsuit_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0123_home: {
+    name: "CH0123_home",
+    playQue: [
+      {
+        name: "CH0123_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0123_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0176_home: {
+    name: "CH0176_home",
+    playQue: [
+      {
+        name: "CH0176_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.8,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0176_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0058_home: {
+    name: "CH0058_home",
+    playQue: [
+      {
+        name: "CH0058_home",
+        animation: "Start_Idle_01",
+        fadeTime: 3.4,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0058_home: {
+        scale: 1.2,
+      },
+    },
+    otherSpine: [],
+  },
+  CH9997_home: {
+    name: "CH9997_home",
+    playQue: [
+      {
+        name: "CH9997_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9997_home: {
+        scale: 1.7,
+      },
+    },
+    otherSpine: [],
+  },
+  CH9998_home: {
+    name: "CH9998_home",
+    playQue: [
+      {
+        name: "CH9998_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9998_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH9996_home: {
+    name: "CH9996_home",
+    playQue: [
+      {
+        name: "CH9996_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH9996_home: {
+        scale: 1.72,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0161_home: {
+    name: "CH0161_home",
+    playQue: [
+      {
+        name: "CH0161_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0161_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0224_home: {
+    name: "CH0224_home",
+    playQue: [
+      {
+        name: "CH0224_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0224_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0225_home: {
+    name: "CH0225_home",
+    playQue: [
+      {
+        name: "CH0225_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0225_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  Hare_home: {
+    name: "Hare_home",
+    playQue: [
+      {
+        name: "Hare_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Hare_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0219_home: {
+    name: "CH0219_home",
+    playQue: [
+      {
+        name: "CH0219_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0219_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0232_home: {
+    name: "CH0232_home",
+    playQue: [
+      {
+        name: "CH0232_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6.1,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0232_home: {
+        scale: 1.1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0233_home: {
+    name: "CH0233_home",
+    playQue: [
+      {
+        name: "CH0233_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.5,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0233_home: {
+        scale: 1.5,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0230_home: {
+    name: "CH0230_home",
+    playQue: [
+      {
+        name: "CH0230_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0230_home: {
+        scale: 1.5,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0231_home: {
+    name: "CH0231_home",
+    playQue: [
+      {
+        name: "CH0231_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0231_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  Ibuki_home: {
+    name: "Ibuki_home",
+    playQue: [
+      {
+        name: "Ibuki_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Ibuki_home: {
+        scale: 1.1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0079_home: {
+    name: "CH0079_home",
+    playQue: [
+      {
+        name: "CH0079_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0079_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0239_home: {
+    name: "CH0239_home",
+    playQue: [
+      {
+        name: "CH0239_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0239_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0240_home: {
+    name: "CH0240_home",
+    playQue: [
+      {
+        name: "CH0240_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0240_home: {
+        scale: 1,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0196_home: {
+    name: "CH0196_home",
+    playQue: [
+      {
+        name: "CH0196_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0196_home: {
+        scale: 1.4,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0110_home: {
+    name: "CH0110_home",
+    playQue: [
+      {
+        name: "CH0110_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.4,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0110_home: {
+        scale: 1.24,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0255_home: {
+    name: "CH0255_home",
+    playQue: [
+      {
+        name: "CH0255_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0255_home: {
+        scale: 1.2,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0155_home: {
+    name: "CH0155_home",
+    playQue: [
+      {
+        name: "CH0155_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0155_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  Nagisa_home: {
+    name: "Nagisa_home",
+    playQue: [
+      {
+        name: "Nagisa_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Nagisa_home: {
+        scale: 3.0,
+      },
+    },
+    otherSpine: [],
+  },
+  Azusa_home: {
+    name: "Azusa_home",
+    playQue: [
+      {
+        name: "Azusa_home",
+        animation: "Start_Idle_01",
+        fadeTime: 0,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Azusa_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0095_home: {
+    name: "CH0095_home",
+    playQue: [
+      {
+        name: "CH0095_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0095_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0220_home: {
+    name: "CH0220_home",
+    playQue: [
+      {
+        name: "CH0220_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0220_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0250_home: {
+    name: "CH0250_home",
+    playQue: [
+      {
+        name: "CH0250_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0250_home: {
+        scale: 1.3,
+      },
+    },
+    otherSpine: [],
+  },
+  CH0251_home: {
+    name: "CH0251_home",
+    playQue: [
+      {
+        name: "CH0251_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0251_home: {
+        scale: 1.4,
       },
     },
     otherSpine: [],

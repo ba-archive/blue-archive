@@ -2,7 +2,7 @@
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
 
 export interface HomeDisplayInfo {
-  type: "mainstory" | "student" | "minigame";
+  type: "mainstory" | "otherStory" | "student" | "minigame";
   icon?: string;
   jumpTo?: string | number;
   title: string;
@@ -13,22 +13,27 @@ export interface HomeDisplayInfo {
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
+    type: "student",
+    jumpTo: 10093,
+    title: "夜樱 绮罗罗",
+  },
+  {
+    type: "student",
+    jumpTo: 13001,
+    title: "和乐 千世",
+  },
+  {
+    type: "student",
+    jumpTo: 10052,
+    title: "生盐 诺亚",
+  },
+  {
     type: "minigame",
     title: "小春幸存者游戏",
     icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
     jumpTo: "https://games.blue-archive.io/koharu-dream/",
     startDate: "2023/09/01",
     style: "pixelize",
-  },
-  {
-    type: "student",
-    jumpTo: 10075,
-    title: "姫木 梅露",
-  },
-  {
-    type: "student",
-    jumpTo: 13013,
-    title: "秋泉 红叶",
   },
 ];
 </script>

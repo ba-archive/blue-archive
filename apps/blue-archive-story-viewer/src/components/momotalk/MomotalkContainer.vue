@@ -5,8 +5,8 @@ import { useRoute } from "vue-router";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import StudentArchiveTitle from "../widgets/StudentArchiveTitle.vue";
+import { Momotalk, Momotalks, SplitMomotalk } from "@/types/Chats";
 import { useSettingsStore } from "@store/settings";
-import { Momotalk, Momotalks, SplitMomotalk } from "@types/Chats";
 import MomotalkViewer from "./MomotalkViewer.vue";
 
 const settingsStore = useSettingsStore();

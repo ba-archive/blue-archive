@@ -1,19 +1,26 @@
 <script setup lang="ts">
 import axios from "axios";
-import { computed, onBeforeMount, onUnmounted, ref } from "vue";
+import {
+  computed,
+  onBeforeMount,
+  onMounted,
+  onUnmounted,
+  ref,
+  watch,
+} from "vue";
 import { useRoute } from "vue-router";
 import ErrorScreen from "../widgets/ErrorScreen.vue";
 import ProgressBar from "../widgets/NeuUI/NeuProgressBar.vue";
 import StudentShowbox from "../widgets/StudentShowbox.vue";
-import { useSettingsStore } from "@store/settings";
-import { useStudentStore } from "@store/students";
-import { AppliedFilter } from "@types/AppliedFilter";
+import { AppliedFilter } from "@/types/AppliedFilter";
 import {
   Student,
   StudentAttributeFilters,
   StudentAttributes,
   StudentNames,
-} from "@types/Student";
+} from "@/types/Student";
+import { useSettingsStore } from "@store/settings";
+import { useStudentStore } from "@store/students";
 import { filterStudents } from "@util/filterStudents";
 
 const route = useRoute();
@@ -80,6 +87,9 @@ const studentsNameList = computed<StudentNames[]>(() => {
     return {
       id: student.id,
       allNames: [
+        student.familyName.cn,
+        student.familyName.jp,
+        student.familyName.en,
         student.name.cn,
         student.name.jp,
         student.name.en,
@@ -188,7 +198,7 @@ const studentBulletTypes = computed(() =>
 
 const studentNameFilter = ref("");
 // 学生属性过滤器
-const appliedFilters = computed<AppliedFilter>(() => {
+const appliedFilters = computed(() => {
   return {
     searchString: studentNameFilter.value,
     rarity: settingsStore.getRarityFilter,
@@ -197,7 +207,7 @@ const appliedFilters = computed<AppliedFilter>(() => {
     type: settingsStore.getTypeFilter,
     armorType: settingsStore.getArmorTypeFilter,
     bulletType: settingsStore.getBulletTypeFilter,
-  };
+  } as AppliedFilter;
 });
 
 // 检测当前过滤器（不含搜索栏）是否为空
@@ -278,9 +288,47 @@ onBeforeMount(() => {
   window.addEventListener("resize", updateShowFilter);
 });
 
+onMounted(() => {
+  document.addEventListener("keydown", handleFilterFocusRequest);
+});
+
 onUnmounted(() => {
   window.removeEventListener("resize", updateShowFilter);
 });
+
+const nameFilterInput = ref<HTMLInputElement | null>(null);
+
+function handleFilterFocusRequest(event: KeyboardEvent) {
+  if (event.shiftKey || event.altKey || ["Tab", "Escape"].includes(event.key)) {
+    return;
+  }
+
+  if (event.metaKey || event.ctrlKey) {
+    if ("k" !== event.key) {
+      return;
+    }
+  }
+
+  if (
+    (event.key >= "a" && event.key <= "z") ||
+    (event.key >= "A" && event.key <= "Z") ||
+    (event.key >= "0" && event.key <= "9")
+  ) {
+    nameFilterInput.value?.focus();
+  }
+}
+
+watch(
+  () => studentSelected.value,
+  newValue => {
+    if (newValue) {
+      document.removeEventListener("keydown", handleFilterFocusRequest);
+    } else if (!newValue) {
+      // 不用担心重复添加，重复的事件监听会被浏览器丢弃
+      document.addEventListener("keydown", handleFilterFocusRequest);
+    }
+  }
+);
 </script>
 
 <template>
@@ -297,10 +345,12 @@ onUnmounted(() => {
       <input
         type="text"
         id="name-filter"
-        :placeholder="studentNameFilter ? '' : '在学生姓名/黑话内搜索…'"
+        :placeholder="studentNameFilter ? '' : '在学生姓名/昵称内搜索…'"
         v-model="studentNameFilter"
         @focus="handleFocus"
         autocomplete="off"
+        ref="nameFilterInput"
+        @keydown.escape="studentNameFilter = ''"
       />
       <div
         class="clear-filter-icon"
@@ -678,6 +728,7 @@ onUnmounted(() => {
       color: var(--color-text-contrast);
     }
   }
+
   &.heavyarmor,
   &.pierce {
     color: var(--color-text-heavy-armor);
@@ -687,6 +738,7 @@ onUnmounted(() => {
       color: var(--color-text-contrast);
     }
   }
+
   &.unarmed,
   &.mystic {
     color: var(--color-text-unarmed);
@@ -739,6 +791,7 @@ onUnmounted(() => {
   #student-selector-container {
     display: flex;
     flex-direction: column;
+    overflow-y: visible;
   }
 
   .filter-banner {
@@ -747,6 +800,7 @@ onUnmounted(() => {
     align-items: center;
     border-radius: 0;
     background-color: transparent;
+    overflow: visible;
     .clear-filter-icon {
       margin-right: 0.5rem;
       border-radius: 0.5rem;
@@ -790,10 +844,13 @@ onUnmounted(() => {
   .student-filter {
     grid-area: filter;
     padding-left: 0;
+    width: 100%;
+    overflow-y: visible;
   }
 
   #student-list {
     grid-template-columns: repeat(auto-fill, 5rem);
+    overflow-y: visible;
   }
 }
 </style>

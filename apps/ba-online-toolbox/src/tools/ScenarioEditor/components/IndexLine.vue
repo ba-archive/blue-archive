@@ -8,39 +8,41 @@
   >
     <n-image v-if="false"></n-image>
     <n-text>
-      <span>{{ line[mainLanguage] || '暂无参考文本' }}</span>
-      <!--      <br v-if="3 === config.isSwitchLanguage" />-->
-      <!--      <span v-if="config.isSwitchLanguage & 0b01">{{-->
-      <!--        line[config.getTargetLang] || '暂无翻译'-->
-      <!--      }}</span>-->
-      <div>
-        <div
-          v-show="config.getShowAllLanguage"
+      <span :class="getLineType(line)">{{
+        line[mainLanguage] || "暂无参考文本"
+      }}</span>
+      <div v-if="config.getShowAllLanguage">
+        <span
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
+          >{{ getContentByLang(line, language as keyof ContentLine) }}</span
         >
-          <span>{{ line[language as keyof ContentLine] }}</span>
-        </div>
-        <div v-show="!config.getShowAllLanguage">
-          <span>{{ line[targetLanguage] }}</span>
-        </div>
       </div>
+      <span v-if="!config.getShowAllLanguage">{{ line[targetLanguage] }}</span>
     </n-text>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
-import { useGlobalConfig } from '../store/configStore';
-// import { useScenarioStore } from '../store/scenarioEditorStore';
-import { ContentLine } from '../types/content';
+import { computed, onMounted, ref, watch } from "vue";
+import { useGlobalConfig } from "../store/configStore";
+import { ContentLine } from "../types/content";
 
-// const mainStore = useScenarioStore();
 const config = useGlobalConfig();
 const props = defineProps<{
   line: ContentLine;
   index: number;
 }>();
+
+onMounted(() => {
+  const activeElement = document.querySelector(".selected");
+  if (activeElement) {
+    activeElement.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+});
 
 const currentElement = ref<HTMLElement>();
 
@@ -57,10 +59,10 @@ function isInViewport(el: HTMLElement | undefined) {
 }
 
 const availableLanguages = [
-  'TextJp',
-  'TextTw',
-  'TextCn',
-  'TextEn',
+  "TextJp",
+  "TextTw",
+  "TextCn",
+  "TextEn",
   // 'TextKr',
   // 'TextTh',
 ];
@@ -74,13 +76,35 @@ watch(
     if (newVal === props.index) {
       if (!isInViewport(currentElement.value)) {
         currentElement.value?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
+          behavior: "smooth",
+          block: "center",
         });
       }
     }
   }
 );
+
+function getContentByLang(line: ContentLine, lang: keyof ContentLine) {
+  return line[lang];
+}
+
+enum LineType {
+  title = "type-title",
+  text = "type-text",
+  selection = "type-selection",
+}
+
+function getLineType(line: ContentLine) {
+  const lineScript = line.ScriptKr || "";
+  switch (true) {
+    case lineScript.includes("#title"):
+      return LineType.title;
+    case /\[n?s(\d{0,2})?]/.test(lineScript):
+      return LineType.selection;
+    default:
+      return LineType.text;
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -92,12 +116,41 @@ watch(
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0.5rem;
+  overflow: visible;
 }
 .selected {
   background-color: #b2cffa;
 }
 .unsure {
   background-color: #ffce80;
+}
+
+span {
+  :is(.type-title, .type-selection, .type-text) {
+    &::before {
+      display: inline-flex;
+      color: #165dff;
+      background: rgba(32, 128, 240, 0.12);
+      padding: 1px 4px;
+      margin-right: 6px;
+      border-radius: 2px;
+      align-items: center;
+      font-size: 0.75rem;
+      width: 24px;
+    }
+  }
+  div {
+    padding-left: 38px;
+  }
+  .type-title::before {
+    content: "标题";
+  }
+  .type-selection::before {
+    content: "选项";
+  }
+  .type-text::before {
+    content: "文本";
+  }
 }
 </style>

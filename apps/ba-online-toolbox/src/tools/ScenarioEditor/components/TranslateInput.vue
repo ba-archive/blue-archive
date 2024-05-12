@@ -18,6 +18,7 @@
       @input="inputHandle"
       style="width: 95%; height: 120px"
       clearable
+      ref="textInputRef"
     ></n-input>
     <n-space
       v-if="translateStruct.translateType === TranslateType.select"
@@ -34,6 +35,7 @@
           {{ selection.label }}
         </n-tag>
         <n-input
+          v-add-combo-key-listener
           :value="selection.translated"
           type="textarea"
           @input="(e: string) => selectInputHandle(e, idx)"
@@ -102,7 +104,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ComputedRef, Directive, computed } from 'vue';
+import { ComputedRef, Directive, computed, ref, onMounted } from 'vue';
 import { useGlobalConfig } from '../store/configStore';
 import { useScenarioStore } from '../store/scenarioEditorStore';
 import { ContentLine } from '../types/content';
@@ -118,6 +120,12 @@ enum TranslateType {
 const props = defineProps({
   handleGotoNextLineRequest: Function,
   handleGotoPrevLineRequest: Function,
+});
+
+const textInputRef = ref<HTMLInputElement | null>(null);
+
+onMounted(() => {
+  textInputRef.value?.focus();
 });
 
 const config = useGlobalConfig();
@@ -274,10 +282,10 @@ const vAddComboKeyListener: Directive = {
     el.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.shiftKey && e.key === 'Enter') {
         e.preventDefault();
-        props.handleGotoNextLineRequest?.();
+        props.handleGotoPrevLineRequest?.();
       } else if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
         e.preventDefault();
-        props.handleGotoPrevLineRequest?.();
+        props.handleGotoNextLineRequest?.();
       }
     });
     el.addEventListener('wheel', wheelEvent);

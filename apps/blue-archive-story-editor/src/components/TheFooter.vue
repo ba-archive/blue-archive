@@ -1,56 +1,44 @@
-<template>
-  <div class="text-center">
-    <el-tooltip :content="t('home')" placement="top">
-      <router-link class="icon-btn mx-2" to="/">
-        <i-mdi-home-search-outline class="icon-footer" />
-      </router-link>
-    </el-tooltip>
-
-    <el-tooltip :content="isDark ? t('change light') : t('change dark')" placement="top">
-      <button class="icon-btn mx-2 !outline-none" @click="toggleDark()">
-        <i-ph-cloud-moon-bold v-if="isDark" class="icon-footer" />
-        <i-ph-sun-horizon-bold v-else class="icon-footer" />
-      </button>
-    </el-tooltip>
-
-    <el-tooltip :content="t('change lang')" placement="top">
-      <button class="icon-btn mx-2" @click="toggleLocales()">
-        <i-la-language class="icon-footer" />
-      </button>
-    </el-tooltip>
-
-    <el-tooltip :content="t('method to using')" placement="top">
-      <router-link class="icon-btn mx-2" to="/process">
-        <i-ri-article-line class="icon-footer" />
-      </router-link>
-    </el-tooltip>
-
-    <el-tooltip :content="t('template process')" placement="top">
-      <a class="icon-btn mx-2" href="https://juejin.cn/post/7058201396113309703" target="_blank" title="JveJin">
-        <i-mdi-content-duplicate class="icon-footer" />
-      </a>
-    </el-tooltip>
-
-    <el-tooltip content="GitHub" placement="top">
-      <a class="icon-btn mx-2" href="https://github.com/nekobc1998923/vitecamp" target="_blank" title="GitHub">
-        <i-akar-icons-github-fill class="icon-footer" />
-      </a>
-    </el-tooltip>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { isDark, toggleDark } from "@/utils/dark";
+import { availableLocales, loadLanguageAsync } from '~/modules/i18n'
 
-const { t, availableLocales, locale } = useI18n();
-const toggleLocales = () => {
-  const locales = availableLocales;
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length];
-};
+const { t, locale } = useI18n()
+
+async function toggleLocales() {
+  // change to some real logic
+  const locales = availableLocales
+  const newLocale
+    = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+  await loadLanguageAsync(newLocale)
+  locale.value = newLocale
+}
 </script>
 
-<style lang="scss">
-.icon-footer {
-  font-size: 1.3em;
-}
-</style>
+<template>
+  <nav flex="~ gap-4" mt-6 justify-center text-xl>
+    <RouterLink icon-btn to="/" :title="t('button.home')">
+      <div i-carbon-campsite />
+    </RouterLink>
+
+    <button icon-btn :title="t('button.toggle_dark')" @click="toggleDark()">
+      <div i="carbon-sun dark:carbon-moon" />
+    </button>
+
+    <a icon-btn :title="t('button.toggle_langs')" @click="toggleLocales()">
+      <div i-carbon-language />
+    </a>
+
+    <RouterLink icon-btn to="/about" :title="t('button.about')">
+      <div i-carbon-dicom-overlay />
+    </RouterLink>
+
+    <a
+      icon-btn
+      rel="noreferrer"
+      href="https://github.com/antfu/vitesse"
+      target="_blank"
+      title="GitHub"
+    >
+      <div i-carbon-logo-github />
+    </a>
+  </nav>
+</template>

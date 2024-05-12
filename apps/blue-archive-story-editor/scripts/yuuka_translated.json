@@ -1,0 +1,3711 @@
+[
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "title",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "titleInfo": {
+        "title": [
+          {
+            "content": "晨跑",
+            "effects": []
+          }
+        ],
+        "translator": "碧蓝档案剧情站@MarkChen"
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "bgm": {
+        "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/BGM/Theme_04.ogg",
+        "bgmArgs": {
+          "Id": 4,
+          "ProductionStep": "Release",
+          "Path": "Audio/BGM/Theme_04",
+          "Volume": 1,
+          "LoopStartTime": 0,
+          "LoopEndTime": 0,
+          "LoopTranstionTime": 0.2,
+          "LoopOffsetTime": 0
+        }
+      }
+    },
+    "bg": {
+      "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_Park_Night.jpg"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "place",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "titleInfo": {
+        "title": [],
+        "subtitle": "清晨的公园・步道"
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "（散步时偶然遇到了优香）",
+            "effects": []
+          }
+        ]
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            0,
+            0
+          ],
+          "instant",
+          1
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1500
+        }
+      ]
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_Run_05.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "a",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"优香，早上好。\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "02",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Respond",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "诶，老师？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "01",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "竟然能在这里遇到老师，真是意外。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 1,
+          "text": [
+            {
+              "content": " \"我正想着稍微散散步来着。\"",
+              "effects": []
+            }
+          ]
+        },
+        {
+          "SelectionGroup": 2,
+          "text": [
+            {
+              "content": " \"优香在做什么？\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 1,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "14",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Shy",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "那个，就是……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 2,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "14",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Shy",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "那个，就是……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "08",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "我想在早上的日常里加入一些适当的运动。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "01",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "老师知道的吧，距离晄轮大祭已经没多久了。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "99",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Upset",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "当然，我当天有执行委员的工作，也就没有作为选手参加比赛的安排就是了……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "我作为晄轮大祭主办方千禧的干事，要是那天因为体力不足让别人看到一副不争气的样子也不太好吧？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "而且，我听说适当的运动还能提高工作效率……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "13",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "同时为了保持健康，就想试着在清晨跑跑步了。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "14",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "而且……最近，也有点在意体重……。",
+            "effects": [
+              {
+                "name": "fontsize",
+                "value": [
+                  "50"
+                ]
+              }
+            ]
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"优香保持现在这样就很好啊。\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "04",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Exclaim",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "jump",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "才、才不是……！",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "09",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "嗯，嗯……总之，暂时就决定先运动运动了！",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "嗯……首先全力快跑5公里左右……",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"一开始就全力跑5公里？\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "07",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Twinkle",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "哼哼，不用担心。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "13",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "速度先不提，体力方面我还是有自信的。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "03",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "区区5公里，根本不是问题！",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"我也跟着你一起跑可以吗？\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "15",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Surprise",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "shake",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "诶？\n老师也一起吗？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "15",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "那倒是没问题，但是……老师能跟上我的速度吗？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "07",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "哼哼，就算跟不上我也不会等老师的哦？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"还、还请手下留情……。\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "03",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Music",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "开玩笑啦。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "07",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "先稍微做一下拉伸运动再开始跑吧。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "transition": {
+      "Name": 2482233134,
+      "TransitionOut": "fade",
+      "TransitionOutDuration": 2000,
+      "TransitionOutResource": "",
+      "TransitionIn": "fade",
+      "TransitionInDuration": 2000,
+      "TransitionInResource": ""
+    },
+    "bg": {
+      "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_Black.jpg"
+    },
+    "hide": "all"
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "（之后，和优香一起开始了跑步）",
+            "effects": []
+          }
+        ]
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            0,
+            0
+          ],
+          "instant",
+          1
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1500
+        }
+      ]
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_Run_05.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "（……10分钟后）",
+            "effects": []
+          }
+        ]
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "transition": {
+      "Name": 2482233134,
+      "TransitionOut": "fade",
+      "TransitionOutDuration": 2000,
+      "TransitionOutResource": "",
+      "TransitionIn": "fade",
+      "TransitionInDuration": 2000,
+      "TransitionInResource": ""
+    },
+    "bg": {
+      "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_Park_Night.jpg"
+    },
+    "hide": "all"
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "12",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "al",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "哈、哈……哈啊……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_FootStep_03a.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            0,
+            0
+          ],
+          "instant",
+          1
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "12",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "12",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "m4",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "老、老师……哈、哈……等等……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_FootStep_03b.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 3,
+          "text": [
+            {
+              "content": " \"……没事吧？\"",
+              "effects": []
+            }
+          ]
+        },
+        {
+          "SelectionGroup": 4,
+          "text": [
+            {
+              "content": " \"……难道说，已经到极限了？\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 3,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "04",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "m3",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "hophop",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "怎么、可能……。\n哈、哈……才刚刚10分钟……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_Cartoon_01.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 4,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "04",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "m3",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "hophop",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "怎么、可能……。\n哈、哈……才刚刚10分钟……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "soundUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/Sound/SE_Cartoon_01.wav"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 5,
+        "face": "04",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "hide",
+            "async": false
+          }
+        ]
+      },
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "09",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "这种、只是准备运动程度的运动……就喘不上气什么的……怎么可能……",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            0,
+            0
+          ],
+          "instant",
+          1
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "09",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Dot",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 2500
+        }
+      ]
+    },
+    "audio": {
+      "bgm": {
+        "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/BGM/Mute.ogg",
+        "bgmArgs": {
+          "Id": 999,
+          "ProductionStep": "Release",
+          "Path": "Audio/BGM/Mute",
+          "Volume": 0,
+          "LoopStartTime": 0,
+          "LoopEndTime": 0,
+          "LoopTranstionTime": 0.2,
+          "LoopOffsetTime": 0
+        }
+      }
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "12",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Sweat",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "……还真是有可能呢。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 0,
+          "text": [
+            {
+              "content": " \"先在那边稍稍休息一下吧。\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {
+      "bgm": {
+        "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/Audio/BGM/Theme_09.ogg",
+        "bgmArgs": {
+          "Id": 9,
+          "ProductionStep": "Release",
+          "Path": "Audio/BGM/Theme_09",
+          "Volume": 1,
+          "LoopStartTime": 0,
+          "LoopEndTime": 0,
+          "LoopTranstionTime": 0.2,
+          "LoopOffsetTime": 0
+        }
+      }
+    },
+    "transition": {
+      "Name": 2482233134,
+      "TransitionOut": "fade",
+      "TransitionOutDuration": 2000,
+      "TransitionOutResource": "",
+      "TransitionIn": "fade",
+      "TransitionInDuration": 2000,
+      "TransitionInResource": ""
+    },
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Idle_01"
+    },
+    "hide": "all"
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 23000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 哈、",
+            "waitTime": 0,
+            "effects": []
+          },
+          {
+            "content": "哈……",
+            "waitTime": 1500,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Talk_01_M"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 没想到",
+            "waitTime": 1800,
+            "effects": []
+          },
+          {
+            "content": "只过了",
+            "waitTime": 500,
+            "effects": []
+          },
+          {
+            "content": "几个月",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "时间",
+            "waitTime": 600,
+            "effects": []
+          },
+          {
+            "content": "体力",
+            "waitTime": 1100,
+            "effects": []
+          },
+          {
+            "content": "就下降",
+            "waitTime": 500,
+            "effects": []
+          },
+          {
+            "content": "到了",
+            "waitTime": 500,
+            "effects": []
+          },
+          {
+            "content": "这种程度……",
+            "waitTime": 200,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -630
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 2300
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 为了",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "不在",
+            "waitTime": 1000,
+            "effects": []
+          },
+          {
+            "content": "「晄轮大祭」",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "上",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "出现",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "无能的",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "样子……",
+            "waitTime": 400,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 必须",
+            "waitTime": 1200,
+            "effects": []
+          },
+          {
+            "content": "更加努力地",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "锻炼才行。",
+            "waitTime": 800,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -630
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 3500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 啊，",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "老师",
+            "waitTime": 700,
+            "effects": []
+          },
+          {
+            "content": "需要",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "喝点水吗？",
+            "waitTime": 400,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Talk_02_M"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 3500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 好的，",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "请喝……",
+            "waitTime": 400,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Talk_03_M"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 等、",
+            "waitTime": 800,
+            "effects": []
+          },
+          {
+            "content": "等一下",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "老师！",
+            "waitTime": 300,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 现、",
+            "waitTime": 800,
+            "effects": []
+          },
+          {
+            "content": "现在",
+            "waitTime": 800,
+            "effects": []
+          },
+          {
+            "content": "果然还是",
+            "waitTime": 600,
+            "effects": []
+          },
+          {
+            "content": "不可以！",
+            "waitTime": 600,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -630
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 3500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― （要是",
+            "waitTime": 700,
+            "effects": []
+          },
+          {
+            "content": "老师",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "现在喝了",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "我",
+            "waitTime": 100,
+            "effects": []
+          },
+          {
+            "content": "对嘴喝的",
+            "waitTime": 700,
+            "effects": []
+          },
+          {
+            "content": "这瓶水的话……",
+            "waitTime": 1000,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Talk_04_M"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 不就是事实上的",
+            "waitTime": 2300,
+            "effects": []
+          },
+          {
+            "content": "间接",
+            "waitTime": 1500,
+            "effects": []
+          },
+          {
+            "content": "接……）",
+            "waitTime": 700,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -630
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 2000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― （不行",
+            "waitTime": 0,
+            "effects": []
+          },
+          {
+            "content": "不行，",
+            "waitTime": 200,
+            "effects": []
+          },
+          {
+            "content": "就算是",
+            "waitTime": 900,
+            "effects": []
+          },
+          {
+            "content": "现在这样的",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "情况",
+            "waitTime": 300,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 那样",
+            "waitTime": 1600,
+            "effects": []
+          },
+          {
+            "content": "不知羞耻的",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "事情",
+            "waitTime": 400,
+            "effects": []
+          },
+          {
+            "content": "也不",
+            "waitTime": 500,
+            "effects": []
+          },
+          {
+            "content": "可以……！）",
+            "waitTime": 400,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -630
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 4000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― （但是……",
+            "waitTime": 800,
+            "effects": []
+          },
+          {
+            "content": "如果是老师的话……）",
+            "waitTime": 2200,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "l2d": {
+      "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_home/CH0184_home.skel",
+      "animationName": "Talk_05_M"
+    }
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 2500
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "― 只能…… ",
+            "waitTime": 300,
+            "effects": []
+          },
+          {
+            "content": "喝一口哦……？",
+            "waitTime": 2000,
+            "effects": []
+          }
+        ]
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            -1200,
+            -530
+          ],
+          "serial",
+          60
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 5000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "transition": {
+      "Name": 2482233134,
+      "TransitionOut": "fade",
+      "TransitionOutDuration": 2000,
+      "TransitionOutResource": "",
+      "TransitionIn": "fade",
+      "TransitionInDuration": 2000,
+      "TransitionInResource": ""
+    },
+    "bg": {
+      "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_Park.jpg"
+    },
+    "hide": "all"
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "13",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "a",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "03",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Music",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "呼……跑完步之后的水真是好喝啊。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "15",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "虽然我自己也隐隐约约感觉到体力下降了，但没想到连老师都跟不上了……真受打击啊。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "99",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Upset",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "stiff",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "晄轮大祭开始之前，体力无论如何都要恢复到曾经的水平……",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "option",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {},
+      "options": [
+        {
+          "SelectionGroup": 5,
+          "text": [
+            {
+              "content": " \"最好先慢慢来，跟着自己的节奏走。\"",
+              "effects": []
+            }
+          ]
+        },
+        {
+          "SelectionGroup": 6,
+          "text": [
+            {
+              "content": " \"先从慢跑开始吧？\"",
+              "effects": []
+            }
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 5,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "01",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "……确实。慢跑也能提高基础体力，这里还是不要太逞强了……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 6,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "01",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "……确实。慢跑也能提高基础体力，这里还是不要太逞强了……。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": []
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "晄轮大祭开幕之前，每天早上都坚持慢跑试试吧。",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "st",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "middle": false,
+        "stArgs": [
+          [
+            0,
+            0
+          ],
+          "instant",
+          1
+        ]
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {
+        "clearSt": true
+      }
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "05",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "d",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "08",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "action",
+            "effect": "closeup",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "a",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": [
+        {
+          "type": "wait",
+          "args": 1000
+        }
+      ]
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [
+      {
+        "CharacterName": 3715128518,
+        "position": 3,
+        "face": "08",
+        "highlight": true,
+        "signal": false,
+        "spineUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/spine/CH0184_spr/CH0184_spr.skel",
+        "effects": [
+          {
+            "type": "emotion",
+            "effect": "Shy",
+            "async": false
+          },
+          {
+            "type": "action",
+            "effect": "closeup",
+            "async": false
+          }
+        ]
+      }
+    ],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "那、下次就慢点……老师能再陪我一会儿吗？",
+            "effects": []
+          }
+        ],
+        "speaker": {
+          "name": "优香",
+          "nickName": "研讨会"
+        },
+        "avatarUrl": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/01_Common/01_Character/Student_Portrait_CH0184.png"
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "effectOnly",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": []
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {},
+    "transition": {
+      "Name": 2482233134,
+      "TransitionOut": "fade",
+      "TransitionOutDuration": 2000,
+      "TransitionOutResource": "",
+      "TransitionIn": "fade",
+      "TransitionInDuration": 2000,
+      "TransitionInResource": ""
+    },
+    "bg": {
+      "url": "https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_Black.jpg"
+    },
+    "hide": "all"
+  },
+  {
+    "GroupId": 1005302,
+    "SelectionGroup": 0,
+    "PopupFileName": "",
+    "type": "text",
+    "characters": [],
+    "textAbout": {
+      "showText": {
+        "text": [
+          {
+            "content": "（之后和优香并排慢跑，结束后回到了Schale）",
+            "effects": []
+          }
+        ]
+      },
+      "st": {}
+    },
+    "effect": {
+      "otherEffect": []
+    },
+    "audio": {}
+  }
+]

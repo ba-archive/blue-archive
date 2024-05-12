@@ -23,6 +23,13 @@ const links: FriendLink[] = [
     description: "为玩家服务的民间组织，尊重官方设定",
   },
   {
+    title: "Gamekee wiki",
+    url: "https://www.gamekee.com/ba/",
+    logo: "/image/contributor/xwhlogo2.webp",
+    logoDescription: "校委会 logo",
+    description: "碧蓝档案中文Wiki站，提供攻略、资讯、图鉴等服务",
+  },
+  {
     title: "项目仓库",
     url: "https://github.com/ba-archive/blue-archive",
     logo: "/image/contributor/github-logo.svg",

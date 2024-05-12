@@ -1,37 +1,44 @@
 import { defineStore } from "pinia";
-import { Language } from "@types/Settings";
-import { StudentAttributeFilters, StudentFilters } from "@types/Student";
+import { Language } from "@/types/Settings";
+import { StudentAttributeFilters, StudentFilters } from "@/types/Student";
+import { AppliedFilter } from "@/types/AppliedFilter";
 
 export const useSettingsStore = defineStore({
   id: "ba-main-storage",
   state: () => {
     return {
+      currentVersion: {
+        lastUpdated: 0,
+      },
       settings: {
         disableMomotalkAnimation: false,
         lang: "cn" as Language,
+        enableCheckForUpdates: true,
         theme: "light" as "light" | "dark",
         username: "Sensei" as string,
         useMp3: false,
         useSuperSampling: "" as "" | "2" | "4",
+        initWithFullscreen: false,
       },
       studentFilters: {
         searchString: "",
-        rarity: [] as number[],
-        club: [] as string[],
-        affiliation: [] as string[],
-        type: [] as ("Striker" | "Special")[],
-        armorType: [] as (
-          | "LightArmor"
-          | "HeavyArmor"
-          | "Unarmed"
-          | "ElasticArmor"
-        )[],
-        bulletType: [] as ("Pierce" | "Explode" | "Mystic" | "Sonic")[],
+        rarity: [] as AppliedFilter["rarity"],
+        club: [] as AppliedFilter["club"],
+        affiliation: [] as AppliedFilter["affiliation"],
+        type: [] as AppliedFilter["type"],
+        armorType: [] as AppliedFilter["armorType"],
+        bulletType: [] as AppliedFilter["bulletType"],
+      },
+      app: {
+        width: 1920,
+        height: 1080,
       },
     };
   },
   persist: true,
   getters: {
+    getLastUpdated: state => state.currentVersion.lastUpdated,
+    getAppSize: state => state.app,
     getDisableMomotalkAnimationState: state =>
       state.settings.disableMomotalkAnimation ?? false,
     getLang: state => state.settings.lang,
@@ -44,6 +51,7 @@ export const useSettingsStore = defineStore({
     getTypeFilter: state => state.studentFilters.type,
     getArmorTypeFilter: state => state.studentFilters.armorType,
     getBulletTypeFilter: state => state.studentFilters.bulletType || [],
+    getEnableCheckForUpdates: state => state.settings.enableCheckForUpdates,
     getUseMp3: state => state.settings.useMp3,
     getUseSuperSampling: state => {
       const shouldUseSuperSampling = state.settings.useSuperSampling;
@@ -52,8 +60,16 @@ export const useSettingsStore = defineStore({
       }
       return shouldUseSuperSampling;
     },
+    getInitWithFullscreen: state => state.settings.initWithFullscreen,
   },
   actions: {
+    setLastUpdated(lastUpdated: number) {
+      this.currentVersion.lastUpdated = lastUpdated;
+    },
+    setAppSize(width: number, height: number) {
+      this.app.width = width;
+      this.app.height = height;
+    },
     setDisableMomotalkAnimationState(state: boolean) {
       this.settings.disableMomotalkAnimation = state;
     },
@@ -66,7 +82,10 @@ export const useSettingsStore = defineStore({
     setUsername(username: string) {
       this.settings.username = username;
     },
-    setStudentFilters(filters: StudentFilters) {
+    setEnableCheckForUpdates(state: boolean) {
+      this.settings.enableCheckForUpdates = state;
+    },
+    setStudentFilters(filters: AppliedFilter) {
       this.studentFilters.searchString = filters.searchString;
       this.studentFilters.rarity = filters.rarity;
       this.studentFilters.club = filters.club;
@@ -92,6 +111,9 @@ export const useSettingsStore = defineStore({
     },
     setUseSuperSampling(useSuperSampling: "" | "2" | "4") {
       this.settings.useSuperSampling = useSuperSampling;
+    },
+    setInitWithFullscreen(initWithFullscreen: boolean) {
+      this.settings.initWithFullscreen = initWithFullscreen;
     },
   },
 });

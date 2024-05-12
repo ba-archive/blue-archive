@@ -1,23 +1,24 @@
-import { defineStore } from 'pinia';
-import { ContentLine, Scenario } from '../types/content';
+import { defineStore } from "pinia";
+import { ContentLine, Scenario } from "../types/content";
 
 export type Language =
-  | 'TextCn'
-  | 'TextTw'
-  | 'TextJp'
-  | 'TextEn'
-  | 'TextKr'
-  | 'TextTh';
+  | "TextCn"
+  | "TextTw"
+  | "TextJp"
+  | "TextEn"
+  | "TextKr"
+  | "TextTh";
 
 export const useScenarioStore = defineStore({
-  id: 'scenarioStore',
+  id: "scenarioStore",
   state: () => {
     return {
       fileLoad: false,
       scenario: {} as Scenario,
-      title: '',
+      title: "",
     };
   },
+  
   persist: true,
   getters: {
     isLoadFile: state => state.fileLoad,
@@ -50,6 +51,7 @@ export const useScenarioStore = defineStore({
       }
       return prevLine + 1;
     },
+    getProofreader: state => state.scenario.proofreader || "",
   },
   actions: {
     loadFile() {
@@ -65,6 +67,17 @@ export const useScenarioStore = defineStore({
     setTranslator(translator: string) {
       this.scenario.translator = translator;
     },
+    setProofreader(proofreader: string) {
+      if (!this.scenario.proofreader) {
+        this.scenario = {
+          GroupId: this.scenario.GroupId,
+          translator: this.scenario.translator,
+          proofreader,
+          content: this.scenario.content,
+        }
+      }
+      this.scenario.proofreader = proofreader;
+    },
     setContentLine(content: ContentLine, line: number) {
       this.scenario.content[line] = content;
     },
@@ -73,7 +86,7 @@ export const useScenarioStore = defineStore({
     },
     clearAll() {
       this.scenario = {} as Scenario;
-      this.title = '';
+      this.title = "";
       this.fileLoad = false;
     },
   },

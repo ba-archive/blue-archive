@@ -371,15 +371,20 @@ export const CharacterLayerInstance: CharacterLayer = {
 
     // eslint-disable-next-line no-async-promise-executor
     return new Promise<void>(async (resolve, reject) => {
-      const effectListLength = data.effects.length;
+      // FIXME: 当前的版本中 highlight 是手扣的，并且 h 是 async 会导致出错
+      const effectList = data.effects.filter(
+        el => !("action" === el.type && "h" === el.effect)
+      );
+
+      const effectListLength = effectList.length;
       if (effectListLength === 0) {
         resolve();
       }
 
       const reasons: any[] = [];
       const effectPromise: Array<Promise<void>> = [];
-      for (const index in data.effects) {
-        const effect = data.effects[index];
+      for (const index in effectList) {
+        const effect = effectList[index];
         const effectPlayer = getEffectPlayer(effect.type);
         if (!effectPlayer) {
           // TODO error handle
@@ -387,12 +392,14 @@ export const CharacterLayerInstance: CharacterLayer = {
           return;
         }
         if (effect.async) {
-          await effectPlayer.processEffect(effect.effect as EffectsWord, data);
-          // .then(resolveHandler)
-          // .catch((err) => {
-          //   reason.push(err);
-          //   resolveHandler();
-          // })
+          // 这个版本的 async 会出问题，下版本见
+          // await effectPlayer
+          //   .processEffect(effect.effect as EffectsWord, data)
+          //   .then()
+          //   .catch(err => {
+          //     reasons.push(err);
+          //     reject(reasons);
+          //   });
         } else {
           effectPromise.push(
             effectPlayer.processEffect(effect.effect as EffectsWord, data)

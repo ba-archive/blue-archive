@@ -27,16 +27,16 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://ba-archive.github.io
+      url: https://ba-archive.github.io/blue-archive/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@main
         with:
           node-version: 18
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@master
         with:
           version: latest
 
@@ -50,15 +50,17 @@ jobs:
         env:
           YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
           YOUDAO_APP_SECRET: ${{ secrets.YOUDAO_APP_SECRET }}
+          ANTHROPIC_TIER1_SECRET: ${{ secrets.ANTHROPIC_TIER1_SECRET }}
         shell: python
         run: |
           import os
           YOUDAO_APP_ID = os.getenv("YOUDAO_APP_ID")
           YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
+          ANTHROPIC_TIER1_SECRET = os.getenv("ANTHROPIC_TIER1_SECRET")
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
-            f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
+              f.write(f'{{"YOUDAO_APP_ID": "{YOUDAO_APP_ID}", "YOUDAO_APP_SECRET": "{YOUDAO_APP_SECRET}", "ANTHROPIC_TIER1_SECRET": "{ANTHROPIC_TIER1_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --to blue-archive-story-viewer --verbose
+        run: node common/scripts/install-run-rush.js build:github --to blue-archive-story-viewer --verbose
 
       - name: Setup Pages
         uses: actions/configure-pages@main

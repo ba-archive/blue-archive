@@ -26,9 +26,32 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="disableMomotalkAnimationState"
             @update:value="handleDisableMomotalkAnimationSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
+          <p>
+            {{ getI18nString(userLanguage, "settings.initWithFullscreen") }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.initWithFullscreenDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
+          <neu-switch
+            :checked="initWithFullscreenSwitchValue"
+            @update:value="handleInitWithFullscreenSwitchChange"
           />
         </div>
       </div>
@@ -40,6 +63,7 @@
           </p>
         </div>
         <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
           <neu-switch
             :checked="useMp3SwitchValue"
             @update:value="handleAppleCompatibleSwitchChange"
@@ -86,6 +110,30 @@
       </div>
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
+          <p>
+            {{
+              getI18nString(userLanguage, "settings.allowCheckForUpdatesTitle")
+            }}
+          </p>
+          <p class="settings-panel__row__text__description">
+            {{
+              getI18nString(
+                userLanguage,
+                "settings.allowCheckForUpdatesDescription"
+              )
+            }}
+          </p>
+        </div>
+        <div class="settings-panel__row__action">
+          <!-- @vue-expect-error Boolean not applicable to wider type range -->
+          <neu-switch
+            :checked="useCheckForUpdatesSwitchValue"
+            @update:value="handleCheckForUpdatesSwitchChange"
+          />
+        </div>
+      </div>
+      <div class="settings-panel__row">
+        <div class="settings-panel__row__text">
           <p>{{ getI18nString(userLanguage, "settings.clearCacheTitle") }}</p>
           <p class="settings-panel__row__text__description">
             {{ getI18nString(userLanguage, "settings.clearCacheDescription") }}
@@ -120,6 +168,7 @@
           </div>
         </div>
       </div>
+      <div class="built-time fill-width flex-vertical">build {{ version }}</div>
     </div>
   </div>
 </template>
@@ -135,6 +184,8 @@ import LanguageSelector from "@widgets/LanguageSelector.vue";
 import NeuRadio from "@widgets/NeuUI/NeuRadio.vue";
 import NeuRadioGroup from "@widgets/NeuUI/NeuRadioGroup.vue";
 import NeuSwitch from "@widgets/NeuUI/NeuSwitch.vue";
+
+const version = import.meta.env.__VERSION__?.build;
 
 const settingsStore = useSettingsStore();
 const router = useRouter();
@@ -158,6 +209,21 @@ function handleAppleCompatibleSwitchChange(value: boolean) {
 
 function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
   settingsStore.setUseSuperSampling(value);
+}
+
+const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(
+  settingsStore.getEnableCheckForUpdates
+);
+function handleCheckForUpdatesSwitchChange(value: boolean) {
+  settingsStore.setEnableCheckForUpdates(value);
+}
+
+const initWithFullscreenSwitchValue: Ref<boolean> = ref(
+  settingsStore.getInitWithFullscreen
+);
+
+function handleInitWithFullscreenSwitchChange(value: boolean) {
+  settingsStore.setInitWithFullscreen(value);
 }
 
 function handleClearCache() {
@@ -238,6 +304,11 @@ function checkMobile() {
       align-items: center;
       width: fit-content;
     }
+  }
+
+  .built-time {
+    color: #999;
+    font-size: 12px;
   }
 }
 </style>

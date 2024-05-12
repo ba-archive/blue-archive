@@ -14,6 +14,14 @@
             >
           </n-radio-group>
         </span>
+        <n-space>
+          <n-text>显示全部语言</n-text>
+          <n-switch
+            @update:value="handleShowAllLanguageChange"
+            :value="config.getShowAllLanguage"
+          >
+          </n-switch>
+        </n-space>
       </div>
       <div class="referLang">
         <n-input
@@ -37,24 +45,13 @@
       </div>
       <div class="trans">
         <n-space>
-          <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+          <n-button type="info" @click="sendResetLive2dSignal"
+            >重置 Live2D 状态
+          </n-button>
           <n-button type="info" @click="sendRefreshPlayerSignal"
             >刷新播放器</n-button
           >
-          <n-dropdown
-            trigger="hover"
-            :options="langSelect"
-            @select="
-              {
-                config.setTargetLang($event as Language);
-              }
-            "
-          >
-            <n-button secondary type="info">
-              目标语言: {{ langHash[config.getTargetLang] }}
-            </n-button>
-          </n-dropdown>
-          <n-space :size="8">
+          <n-space :size="4">
             <n-tooltip>
               <template #trigger>
                 <n-button type="info" @click="addTag()"> 插入等待时长</n-button>
@@ -72,26 +69,51 @@
               size="medium"
               :default-value="0"
               :min="0"
-              :step="10"
-              style="width: 9rem"
+              :step="500"
+              style="width: 8.5rem"
+              @keydown.enter="addTag()"
             >
-              <template #suffix><span style="color: #999">毫秒</span></template>
+              <template #suffix
+                ><span style="color: #999; font-size: 0.8rem"
+                  >毫秒</span
+                ></template
+              >
             </n-input-number>
           </n-space>
-          <n-button type="info" @click="sendResetLive2dSignal"
-            >重置 Live2D 播放状态
+          <n-dropdown
+            trigger="hover"
+            :options="langSelect"
+            @select="
+              {
+                config.setTargetLang($event as Language);
+              }
+            "
+          >
+            <n-tooltip>
+              <template #trigger>
+                <n-button secondary type="info">
+                  {{ langHash[config.getTargetLang] }}
+                </n-button>
+              </template>
+              <span> 选择需要翻译的语言 </span>
+            </n-tooltip>
+          </n-dropdown>
+          <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+          <n-button @click="handleFormalizePunctuation" type="info">
+            规范符号
+          </n-button>
+          <n-button @click="translateHandle(true)" type="info"
+            >重新翻译</n-button
+          >
+          <n-button
+            @click="handleLLMTranslateRequest"
+            type="info"
+            quaternary
+            :loading="llmLoading"
+          >
+            帮帮我，GPT 先生
           </n-button>
         </n-space>
-        <span>
-          <n-space>
-            <n-text>显示全部语言</n-text>
-            <n-switch
-              @update:value="handleShowAllLanguageChange"
-              :value="config.getShowAllLanguage"
-            >
-            </n-switch>
-          </n-space>
-        </span>
       </div>
       <div class="textLine">
         <span style="flex: 2">
@@ -104,7 +126,7 @@
           <n-input
             type="textarea"
             placeholder="机翻结果"
-            :value="config.tmpMachineTranslate"
+            :value="config.getTmpMachineTranslate(currentText)"
             style="width: 100%; height: 120px"
           >
           </n-input>
@@ -114,9 +136,7 @@
         <n-checkbox
           :checked="
             config.getSelectLine !== -1
-              ? mainStore.getScenario.content[config.getSelectLine].Unsure
-                ? true
-                : false
+              ? !!mainStore.getScenario.content[config.getSelectLine].Unsure
               : false
           "
           @click="
@@ -166,60 +186,74 @@
     </n-space>
   </div>
 </template>
+
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
-import { halfToFull, translate } from '../../public/getTranslation';
-import eventBus from '../eventsSystem/eventBus';
-import { useGlobalConfig } from '../store/configStore';
-import { useScenarioStore } from '../store/scenarioEditorStore';
-import { ContentLine, Language } from '../types/content';
-import TranslateInput from './TranslateInput.vue';
+import { computed, ref, watch } from "vue";
+import { halfToFull, translate } from "../../public/helper/getTranslation";
+import { formalizeQuotation } from "../../public/helper/quotation";
+import eventBus from "../eventsSystem/eventBus";
+import { useGlobalConfig } from "../store/configStore";
+import { useScenarioStore } from "../store/scenarioEditorStore";
+import { ContentLine, Language } from "../types/content";
+import TranslateInput from "./TranslateInput.vue";
+import { ElMessage } from "element-plus";
+import {
+  ClaudeMessage,
+  getClaudeTranslation,
+} from "../../public/helper/AnthropicTranslationService";
+import { transformStudentName } from "../../public/helper/transformStudentName";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
 
 const langHash = {
-  TextJp: '日语',
-  TextEn: '英语',
-  TextKr: '韩语',
-  TextTh: '泰语',
-  TextCn: '简中',
-  TextTw: '繁中',
+  TextJp: "日语",
+  TextEn: "英语",
+  ScriptKr: "韩语",
+  TextTh: "泰语",
+  TextCn: "简中",
+  TextTw: "繁中",
 };
 
 const translateHash = {
-  TextJp: 'ja',
-  TextEn: 'en',
-  TextKr: 'ko',
-  TextTh: 'th',
-  TextCn: 'zh-CHS',
-  TextTw: 'zh-CHT',
+  TextJp: "ja",
+  TextEn: "en",
+  ScriptKr: "ko",
+  TextTh: "th",
+  TextCn: "zh-CHS",
+  TextTw: "zh-CHT",
 };
 
 const langSelect = [
-  { label: '简体中文', key: 'TextCn' },
-  { label: '繁体中文', key: 'TextTw' },
-  { label: '日语', key: 'TextJp' },
-  { label: '英语', key: 'TextEn' },
-  { label: '韩语', key: 'TextKr' },
-  { label: '泰语', key: 'TextTh' },
+  { label: "简体中文", key: "TextCn" },
+  { label: "繁体中文", key: "TextTw" },
+  { label: "日语", key: "TextJp" },
+  { label: "英语", key: "TextEn" },
+  { label: "韩语", key: "TextKr" },
+  { label: "泰语", key: "TextTh" },
 ];
 
-const translateHandle = () => {
+const currentText = computed(() => {
+  return mainStore.getScenario.content[config.getSelectLine]?.[
+    config.getLanguage
+  ];
+});
+
+const translateHandle = (force = false) => {
+  if (!force && config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
-    const text = mainStore.getScenario.content[config.getSelectLine][
-      config.getLanguage
-    ]
-      ?.replaceAll('#n', '[#n]')
-      ?.replaceAll(/\[.*?\]/g, '');
+    const text = currentText.value
+      ?.replaceAll("#n", "[#n]")
+      ?.replaceAll(/\[.*?\]/g, "");
     translate(
       text,
-      'auto' || translateHash[config.getLanguage],
+      translateHash[config.getLanguage],
       translateHash[config.getTargetLang]
     )
       .then(res => {
         config.setTmpMachineTranslate(
-          halfToFull((res.translation || [])[0] ?? '')
+          currentText.value,
+          halfToFull((res.translation || [])[0] ?? "")
         );
       })
       .catch(err => {
@@ -231,13 +265,99 @@ const translateHandle = () => {
 const acceptHandle = () => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    if (line[config.getLanguage].split(/(\[.*?\])/g).length > 1) {
-      alert('文本中有特殊标记, 请注意添加~');
-    }
-    line[config.getTargetLang] = config.tmpMachineTranslate;
+    line[config.getTargetLang] = config.getTmpMachineTranslate(
+      currentText.value
+    );
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
+
+const replaceStrings = [
+  {
+    from: "……。",
+    to: "……",
+  },
+  {
+    from: "~",
+    to: "～",
+  },
+  {
+    from: " ”",
+    to: "”",
+  },
+  {
+    from: "  ",
+    to: "，",
+  },
+  {
+    from: "·",
+    to: "・",
+  },
+  {
+    from: "...",
+    to: "…",
+  },
+  {
+    from: "momotalk",
+    to: "MomoTalk",
+  },
+  {
+    from: "momo talk",
+    to: "MomoTalk",
+  },
+];
+
+function handleFormalizePunctuation() {
+  const line = mainStore.getScenario.content[config.getSelectLine];
+  line[config.getTargetLang] = formalizeQuotation(line[config.getTargetLang]);
+  replaceStrings.forEach(item => {
+    line[config.getTargetLang] = line[config.getTargetLang].replaceAll(
+      item.from,
+      item.to
+    );
+  });
+}
+
+let llmLastCalled = 0;
+const llmLoading = ref(false);
+const studentNames = computed(() => config.getStudentList);
+
+function handleLLMTranslateRequest() {
+  if (config.getSelectLine !== -1) {
+    if (Date.now() - llmLastCalled < 5000) {
+      ElMessage({
+        message: "太……太快啦♡小小的接口♡要受不了啦♡",
+        type: "error",
+      });
+      return;
+    }
+    llmLastCalled = Date.now();
+    llmLoading.value = true;
+
+    const text =
+      mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
+
+    getClaudeTranslation(text)
+      .then((res: ClaudeMessage) => {
+        const rawText = res.content[0].text ?? "";
+        const fullWidthText = halfToFull(rawText);
+        const studentTransformed = transformStudentName(
+          fullWidthText,
+          studentNames.value
+        );
+        config.setTmpMachineTranslate(
+          currentText.value,
+          formalizeQuotation(studentTransformed)
+        );
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        llmLoading.value = false;
+      });
+  }
+}
 
 const commentHandle = (event: string) => {
   if (config.getSelectLine !== -1) {
@@ -295,7 +415,7 @@ const waitTime = ref(0);
 function addTag() {
   // 传统方法，如果加入了其他的textarea记得修改
   // TODO: 改成 ref
-  let textArea = document.getElementsByTagName('textarea')[1];
+  let textArea = document.getElementsByTagName("textarea")[1];
   let cursor = textArea.selectionStart;
   let sentence =
     mainStore.scenario.content[config.getSelectLine][config.getTargetLang];
@@ -308,11 +428,11 @@ function addTag() {
 }
 
 function sendResetLive2dSignal() {
-  eventBus.emit('resetLive2d');
+  eventBus.emit("resetLive2d");
 }
 
 function sendRefreshPlayerSignal() {
-  eventBus.emit('refreshPlayer');
+  eventBus.emit("refreshPlayer");
 }
 </script>
 <style scoped lang="scss">

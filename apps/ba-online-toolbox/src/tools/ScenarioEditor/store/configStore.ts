@@ -1,29 +1,49 @@
-import { defineStore } from 'pinia';
-import { Language } from '../types/content';
+import { defineStore } from "pinia";
+import { Language } from "../types/content";
+import { Student } from "../../../../../blue-archive-story-viewer/src/types/Student";
 
 export const useGlobalConfig = defineStore({
-  id: 'globalConfig',
+  id: "globalConfig",
+  persist: true,
   state: () => ({
     proofread: false,
     selectLine: 0,
-    language: 'TextJp' as Language,
-    targetLang: 'TextCn' as Language,
-    tmpMachineTranslate: '',
+    language: "TextJp" as Language,
+    targetLang: "TextCn" as Language,
+    tmpMachineTranslate: {} as { [key: string]: string },
     switchLanguage: 0b11,
     showAllLanguage: true,
-    selectTag: '[wa:]',
+    selectTag: "[wa:]",
     previewMode: false,
+    students: [] as Student[],
   }),
   getters: {
     isProofread: state => state.proofread,
     getSelectLine: state => state.selectLine,
     getLanguage: state => state.language,
     getTargetLang: state => state.targetLang,
-    getTmpMachineTranslate: state => state.tmpMachineTranslate,
+    /* eslint-disable indent */
+    getTmpMachineTranslate:
+      state =>
+      (query = "") => {
+        const objectType = Object.prototype.toString.call(
+          state.tmpMachineTranslate
+        );
+        switch (objectType) {
+          case "[object Object]":
+            return state.tmpMachineTranslate?.[query] || "";
+          case "[object String]":
+            return state.tmpMachineTranslate as unknown as string;
+          default:
+            return "";
+        }
+      },
+    /* eslint-enable indent */
     isSwitchLanguage: state => state.switchLanguage,
     getSelectTag: state => state.selectTag,
     getShowAllLanguage: state => state.showAllLanguage,
     getPreviewMode: state => state.previewMode,
+    getStudentList: state => state.students,
   },
   actions: {
     startProofread() {
@@ -47,10 +67,13 @@ export const useGlobalConfig = defineStore({
     },
     setSelectLine(line: number) {
       this.selectLine = line;
-      this.tmpMachineTranslate = '';
     },
-    setTmpMachineTranslate(text: string) {
-      this.tmpMachineTranslate = text;
+    setTmpMachineTranslate(origin: string, text: string) {
+      const mapType = Object.prototype.toString.call(this.tmpMachineTranslate);
+      if (mapType !== "[object Object]") {
+        this.tmpMachineTranslate = {};
+      }
+      this.tmpMachineTranslate[origin] = text;
     },
     setLanguage(language: Language) {
       this.language = language;
@@ -61,12 +84,11 @@ export const useGlobalConfig = defineStore({
     initialize_state() {
       this.proofread = false;
       this.selectLine = -1;
-      this.tmpMachineTranslate = '';
       this.previewMode = false;
     },
     initialize_config() {
-      this.language = 'TextJp';
-      this.targetLang = 'TextCn';
+      this.language = "TextJp";
+      this.targetLang = "TextCn";
     },
     setShowAllLanguage(showAllLanguage: boolean) {
       this.showAllLanguage = showAllLanguage;
@@ -77,6 +99,12 @@ export const useGlobalConfig = defineStore({
     resetConfigState() {
       this.initialize_config();
       this.initialize_state();
+    },
+    resetTmpTranslation() {
+      this.tmpMachineTranslate = {};
+    },
+    setStudents(students: Student[]) {
+      this.students = students;
     },
   },
 });

@@ -17,6 +17,7 @@ import {
   onMounted,
   onUnmounted,
   ref,
+  toRef,
   watch,
 } from "vue";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
@@ -28,6 +29,7 @@ import { useUiState } from "@/stores/state";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import { useElementSize } from "@vueuse/core";
+import "element-plus/dist/index.css";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
@@ -59,7 +61,7 @@ storySummary.value.summary = storySummary.value.summary.replaceAll(
   "[USERNAME]",
   props.userName
 );
-const emit = defineEmits(["end", "error"]);
+const emit = defineEmits(["end", "error", "initiated"]);
 
 const playerHeight = ref(props.height);
 const playerWidth = ref(props.width);
@@ -208,19 +210,34 @@ watch([playerWidth, playerHeight], () => {
   }
 });
 
-// const fontUrl = `${props.dataUrl}/assets/ResourceHanRoundedCN-Medium.woff2`;
-//加载字体
-onBeforeMount(() => {
-  const newStyle = document.createElement("style");
-  newStyle.appendChild(
-    document.createTextNode(`\
-  @font-face {
-    font-family: 'TJL';
-    src: url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff2) format('woff2'),
-         url(https://fonts.blue-archive.io/ResourceHanRoundedCN-Medium.woff) format('woff');`)
+function setPlayerFont(mode: "load" | "unload" = "load") {
+  const currentPlayerFont = document.querySelector(
+    'link[href="https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css"]'
   );
 
-  document.head.appendChild(newStyle);
+  if (currentPlayerFont) {
+    if ("unload" === mode) {
+      currentPlayerFont.remove();
+      return;
+    } else {
+      return;
+    }
+  }
+
+  if ("unload" === mode) return;
+
+  const playerFontStyle = document.createElement("link");
+  playerFontStyle.rel = "stylesheet";
+  playerFontStyle.type = "text/css";
+  playerFontStyle.href =
+    "https://fonts.blue-archive.io/resourceHanRoundedCN-webfont/resourceHanRoundedCN-medium.css";
+
+  document.head.appendChild(playerFontStyle);
+}
+
+//加载字体
+onBeforeMount(() => {
+  setPlayerFont();
 });
 
 const prefixes = ["", "moz", "webkit", "ms"];
@@ -259,13 +276,15 @@ function hotReplaceStoryUnit(
     );
     changeStoryIndex(index);
   } else {
+    /* eslint-disable indent */
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
-          GroupId: props.story.GroupId,
-          translator: props.story.translator,
-          content: unit,
-        }
+        GroupId: props.story.GroupId,
+        translator: props.story.translator,
+        content: unit,
+      }
       : (unit as TranslatedStoryUnit);
+    /* eslint-enable indent */
     privateStore.allStoryUnit = translate(newStory);
     privateStore.stackStoryUnit = buildStoryIndexStackRecord(
       privateStore.allStoryUnit
@@ -287,6 +306,7 @@ function resetLive2d() {
 defineExpose({
   hotReplaceStoryUnit,
   resetLive2d,
+  app: toRef(() => usePlayerStore().app) ,
 });
 
 /**
@@ -309,6 +329,9 @@ onMounted(() => {
       emit("error");
     }
   );
+  eventBus.on("loaded", () => {
+    emit("initiated");
+  });
   if (props.startFullScreen) {
     updateFullScreenState();
   }
@@ -324,7 +347,9 @@ onMounted(() => {
   window.addEventListener("focus", notifyWindowFocus);
 });
 
-const { tabActivated } = useUiState();
+const { tabActivated, autoMode } = useUiState();
+
+autoMode.value = false;
 
 function notifyWindowBlur() {
   tabActivated.value = true;
@@ -332,6 +357,12 @@ function notifyWindowBlur() {
 
 function notifyWindowFocus() {
   tabActivated.value = false;
+}
+
+function forceSetWindowFocus() {
+  if (!tabActivated.value) {
+    notifyWindowFocus();
+  }
 }
 
 onUnmounted(() => {
@@ -361,6 +392,7 @@ onBeforeUnmount(() => {
       handleFullScreenChange
     );
   });
+  setPlayerFont("unload");
 });
 
 onDeactivated(() => {
@@ -399,6 +431,7 @@ onDeactivated(() => {
           :player-height="playerHeight"
           :player-width="playerWidth"
           :style="{ width: `${playerWidth}px` }"
+          @click="forceSetWindowFocus"
         >
         </BaDialog>
       </div>

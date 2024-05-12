@@ -5,15 +5,15 @@ import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
 import { computed, onMounted, provide, ref, watch } from "vue";
 import BaChatLog from "./components/BaChatLog/BaChatLog.vue";
+import BaPlayerSetting from "./components/BaPlayerSetting/BaPlayerSetting.vue";
 import BaDialog from "./components/BaDialog.vue";
 import BaSelector from "./components/BaSelector.vue";
 import BaButton from "@/layers/uiLayer/components/BaButton.vue";
-import BaPlayerSetting from "@/layers/uiLayer/components/BaPlayerSetting/BaPlayerSetting.vue";
-import { useUiState } from "@/stores/state";
 import { ShowOption } from "@/types/events";
 import { Language, StorySummary } from "@/types/store";
 import { useThrottleFn } from "@vueuse/core";
 import "./userInteract";
+import { useUiState } from "@/stores/state";
 import { getUiI18n } from "./utils";
 
 const showSummary = ref(false);
@@ -400,9 +400,10 @@ function getI18n(key: string) {
   // top: 0;
   // overflow: hidden;
   z-index: $ui-layer-z-index;
-  font-family: "TJL", "Microsoft YaHei", "PingFang SC", -apple-system, system-ui,
-    "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
-    "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+  font-family: "Resource Han Rounded CN Medium", "Microsoft YaHei",
+    "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Sans GB", Arial, sans-serif;
 
   .v-enter-active,
   .v-leave-active {

@@ -41,7 +41,7 @@ export const SuperResolutionSetting: BaRadioData = {
 
 export const VolumeSetting: BaSliderData[] = [
   {
-    name: "背景",
+    name: "volume-bg",
     tip: "",
     min: 0,
     max: 100,
@@ -50,7 +50,7 @@ export const VolumeSetting: BaSliderData[] = [
     default: 100,
   },
   {
-    name: "音效",
+    name: "volume-fx",
     tip: "",
     min: 0,
     max: 100,
@@ -59,7 +59,7 @@ export const VolumeSetting: BaSliderData[] = [
     default: 100,
   },
   {
-    name: "语音",
+    name: "volume-voice",
     tip: "",
     min: 0,
     max: 100,

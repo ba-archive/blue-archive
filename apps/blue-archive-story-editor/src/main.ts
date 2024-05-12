@@ -1,32 +1,33 @@
-// i18n
-import { createI18n } from "vue-i18n";
-import messages from "@intlify/vite-plugin-vue-i18n/messages";
-// vue router
-import router from "@/router/index";
-// pinia
-import store from "@/store";
-import App from "./App.vue";
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router/auto'
+import VueLazyload from 'vue-lazyload'
+import App from './App.vue'
 
-import "virtual:windi.css";
-// Devtools: https://windicss.org/integrations/vite.html#design-in-devtools
-import "virtual:windi-devtools";
-import "@/assets/styles/index.scss";
-import "element-plus/dist/index.css";
-import "unfonts.css";
-import { setApp } from "@/utils/vueTools";
+import '@unocss/reset/tailwind.css'
+import './styles/main.css'
+import './styles/font.scss'
+import 'uno.css'
 
-const i18n = createI18n({
-  locale: "zh-cn",
-  fallbackLocale: "zh",
-  messages,
-});
+const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+})
+app.use(VueLazyload as any, {
+  preLoad: 1.3,
+  error: 'https://sdfsdf.dev/50x50.jpg',
+  loading: 'https://sdfsdf.dev/450x300.jpg',
+  attempt: 1,
+})
+app.use(router)
 
-const app = createApp(App);
+// install module
+Object.values(
+  import.meta.glob<{ install: any }>('./modules/*.ts', {
+    eager: true,
+  }),
+).forEach(i => i.install?.({ app }))
 
-app.use(router).use(store);
+app.mount('#app')
 
-app.use(i18n);
-
-app.mount("#app");
-
-setApp(app);
+// white theme
+isDark.value = false

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - dev
+      - feat/**
     paths:
       - "apps/ba-online-toolbox/**"
       - "lib/**"
@@ -15,13 +16,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@main
         with:
           node-version: "18"
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@master
         with:
           version: latest
       - name: Verify Change Logs
@@ -34,20 +35,22 @@ jobs:
         env:
           YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
           YOUDAO_APP_SECRET: ${{ secrets.YOUDAO_APP_SECRET }}
+          ANTHROPIC_TIER1_SECRET: ${{ secrets.ANTHROPIC_TIER1_SECRET }}
         shell: python
         run: |
           import os
           YOUDAO_APP_ID = os.getenv("YOUDAO_APP_ID")
           YOUDAO_APP_SECRET = os.getenv("YOUDAO_APP_SECRET")
+          ANTHROPIC_TIER1_SECRET = os.getenv("ANTHROPIC_TIER1_SECRET")
           with open("./apps/ba-online-toolbox/src/tools/public/secrets.json", "w") as f:
-            f.write(f'{{"appKey": "{YOUDAO_APP_ID}", "appSecret": "{YOUDAO_APP_SECRET}"}}')
+              f.write(f'{{"YOUDAO_APP_ID": "{YOUDAO_APP_ID}", "YOUDAO_APP_SECRET": "{YOUDAO_APP_SECRET}", "ANTHROPIC_TIER1_SECRET": "{ANTHROPIC_TIER1_SECRET}"}}')
       - name: Rush build
-        run: node common/scripts/install-run-rush.js build --verbose
+        run: node common/scripts/install-run-rush.js build --verbose --impacted-by-except blue-archive-story-viewer --to ba-online-toolbox
       - name: Toolbox rsync deploy
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
-          ARGS: "-rltgoDzvO --delete"
+          ARGS: "-rltgoDzvO"
           SOURCE: "./apps/ba-online-toolbox/dist/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
           REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}

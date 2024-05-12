@@ -17,7 +17,6 @@
   "rules": {
     "vue/no-multiple-template-root": "off",
     "indent": ["error", 2, { "SwitchCase": 1 }],
-    "eqeqeq": ["error", "always"],
     "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],
     "semi": ["warn", "always"],
@@ -41,12 +40,5 @@
         "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
       }
     ]
-  },
-  "overrides": [
-    {
-      "files": ["*.yaml", "*.yml"],
-      "plugins": ["yaml"],
-      "extends": ["plugin:yaml/recommended"]
-    }
-  ]
+  }
 }
