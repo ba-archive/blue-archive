@@ -84,6 +84,16 @@ const students = computed(() => studentStore.getAllStudents);
 // 包含每个学生所有名字的 array，用于根据名字过滤
 const studentsNameList = computed<StudentNames[]>(() => {
   return students.value.map(student => {
+    const aggregatedNickname = student?.nicknameFrom
+      ? Array.from(
+          new Set(
+            student.nickname.concat(
+              students.value.find(el => el.id === student.nicknameFrom)
+                ?.nickname || []
+            )
+          )
+        )
+      : student.nickname;
     return {
       id: student.id,
       allNames: [
@@ -93,7 +103,7 @@ const studentsNameList = computed<StudentNames[]>(() => {
         student.name.cn,
         student.name.jp,
         student.name.en,
-        ...student.nickname,
+        ...aggregatedNickname,
       ],
     };
   });

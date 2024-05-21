@@ -3,6 +3,7 @@ export interface Student {
   familyName: StudentName;
   name: StudentName;
   nickname: string[] | number[];
+  nicknameFrom?: number;
   club: string;
   affiliation: string;
   birthday?: {
