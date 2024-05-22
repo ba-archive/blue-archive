@@ -9,10 +9,7 @@
       <neu-progress-bar :show-percentage="true" :progress="initProgress" />
     </div>
     <div class="content-wrapper flex-vertical rounded-small">
-      <div
-        class="flex-vertical story-container"
-        v-if="ready && !fetchError"
-      >
+      <div class="flex-vertical story-container" v-if="ready && !fetchError">
         <div class="story-info flex-horizontal" v-if="!playEnded">
           <svg
             role="button"
@@ -200,9 +197,8 @@ function handleInitiated() {
 
 /* eslint-disable max-len */
 const summary = ref({
-  chapterName: "序章",
-  summary:
-    "从奇怪的梦中醒来之后的[USERNAME]老师从联邦学生会的干部七神凛那里听到学生会长失踪的消息。由于学生会长失踪，学园城市基沃托斯陷入了混乱。为了解决这场混乱，老师和学生会的干部一同前往夏莱办公室。",
+  chapterName: "",
+  summary: "",
 });
 /* eslint-enable max-len */
 const studentId = computed(() => route.params.id as string);
@@ -270,29 +266,20 @@ axios
         console.log(story.value.content[0]);
         summary.value = {
           chapterName: story.value.content[0].TextJp || "标题",
-          summary: "这段剧情由AI翻译生成，可能存在翻译错误。"
+          summary: "这段剧情由AI翻译生成，可能存在翻译错误。",
         };
       })
       .catch(err => {
         fetchError.value = true;
-        if (!isStuStory.value) {
-          fetchErrorMessage.value =
-            route.params.id.toString() === "11000"
-              ? err
-              : "该剧情目前尚未开放，敬请期待！";
-        } else {
-          /* eslint-disable indent */
-          fetchErrorMessage.value =
-            404 === err.response.status
-              ? {
-                  message: "Story not found",
-                  response: {
-                    status: 1919,
-                  },
-                }
-              : err;
-          /* eslint-enable indent */
-        }
+        fetchErrorMessage.value =
+          404 === err.response.status
+            ? {
+                message: "Story not found",
+                response: {
+                  status: 1919,
+                },
+              }
+            : err;
       });
   })
   .finally(() => {
