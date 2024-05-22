@@ -262,8 +262,18 @@ axios
         },
       })
       .then(res => {
+        if (!res.data.content || res.data.content.length === 0) {
+          fetchError.value = true;
+          fetchErrorMessage.value = {
+            message: "Story not found",
+            response: {
+              status: 1919,
+            },
+          };
+
+          return;
+        }
         story.value = res.data;
-        console.log(story.value.content[0]);
         summary.value = {
           chapterName: story.value.content[0].TextJp || "标题",
           summary: "这段剧情由AI翻译生成，可能存在翻译错误。",
@@ -271,15 +281,7 @@ axios
       })
       .catch(err => {
         fetchError.value = true;
-        fetchErrorMessage.value =
-          404 === err.response.status
-            ? {
-                message: "Story not found",
-                response: {
-                  status: 1919,
-                },
-              }
-            : err;
+        fetchErrorMessage.value = err;
       });
   })
   .finally(() => {
@@ -417,6 +419,9 @@ if (!isStuStory.value) {
   axios
     .get(`/story/favor/${studentId.value}/index.json`)
     .then(res => {
+      if (!res.data?.abstracts) {
+        return;
+      }
       storyIndex.value = res.data;
       handleSummaryDisplayLanguageChange();
     })
@@ -450,7 +455,6 @@ function findNextStoryId(): number | undefined {
 }
 
 function handleStoryEnd() {
-  console.log("剧情结束");
   if (isStuStory.value) {
     router.push(
       shouldReturnToMomotalk
