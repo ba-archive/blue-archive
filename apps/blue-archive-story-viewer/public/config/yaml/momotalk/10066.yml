@@ -29,14 +29,15 @@ title:
     FavorScheduleId: 100665
     CharacterId: 10066
   - TextJp: メイド勇者の装備
-    TextCn: ''
+    TextCn: 女仆勇者的装备
     TextKr: 메이드 용사의 장비
-    TextEn: ''
-    TextTh: ''
-    TextTw: ''
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
     GroupId: 1006615
     FavorScheduleId: 1006615
     CharacterId: 10066
+    unsure: false
 content:
   - MessageKR: 우우우…… 우우우……
     MessageJP: うう……先生……
@@ -436,10 +437,10 @@ content:
     ImagePath: ""
   - MessageKR: 선생님.
     MessageJP: 先生こんにちは
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 老师好
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660190
     Id: 100660230
     CharacterId: 10066
@@ -451,13 +452,14 @@ content:
     NextGroupId: 100660200
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 오늘은 바쁘신가요?
     MessageJP: 今日、忙しいですか？
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 今天忙吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660200
     Id: 100660240
     CharacterId: 10066
@@ -469,13 +471,14 @@ content:
     NextGroupId: 100660210
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 별다른 예정은 없는데?
     MessageJP: 特に予定はないよ
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 没什么安排哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660210
     Id: 100660250
     CharacterId: 10066
@@ -487,13 +490,14 @@ content:
     NextGroupId: 100660220
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 그렇군요!
     MessageJP: なるほど……今日はフリーなのですね！
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 原来如此……也就是说今天老师很空闲呢！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660220
     Id: 100660260
     CharacterId: 10066
@@ -505,13 +509,14 @@ content:
     NextGroupId: 100660230
     FeedbackTimeMillisec: 500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 큰 예정이 없는 날…….
     MessageJP: そういう日はお掃除にかぎるのだと
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 爱丽丝听说
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660230
     Id: 100660270
     CharacterId: 10066
@@ -523,13 +528,14 @@ content:
     NextGroupId: 100660240
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 그것은 청소를 하기 좋은 날이라고 배웠습니다!
     MessageJP: アリスは聞きました！
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 这种日子最适合做扫除了！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660230
     Id: 100660280
     CharacterId: 10066
@@ -541,13 +547,14 @@ content:
     NextGroupId: 100660240
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 청소라니~!
     MessageJP: 掃除？
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 扫除？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660240
     Id: 100660290
     CharacterId: 10066
@@ -559,13 +566,14 @@ content:
     NextGroupId: 100660250
     FeedbackTimeMillisec: 0
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 걱정 마세요, 선생님!
     MessageJP: はい！！
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 没错！！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660250
     Id: 100660300
     CharacterId: 10066
@@ -577,13 +585,14 @@ content:
     NextGroupId: 100660260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 견습 메이드 용사인 아리스가, 선생님을 돕겠습니다!
     MessageJP: 見習いメイドのアリスが、先生をお手伝いします！
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 就让见习女仆爱丽丝来帮老师吧！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660250
     Id: 100660310
     CharacterId: 10066
@@ -595,13 +604,14 @@ content:
     NextGroupId: 100660260
     FeedbackTimeMillisec: 1000
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false
   - MessageKR: 메이드 용사는 결코 도움이 필요한 사람을 저버리지 않으니까요!
     MessageJP: お掃除もメイド勇者のスキルですから！
-    MessageCN: ''
-    MessageEN: ''
-    MessageTH: ''
-    MessageTW: ''
+    MessageCN: 毕竟打扫也是女仆勇者的技能嘛！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
     MessageGroupId: 100660260
     Id: 100660320
     CharacterId: 10066
@@ -613,4 +623,5 @@ content:
     NextGroupId: 0
     FeedbackTimeMillisec: 1500
     MessageType: Text
-    ImagePath: ''
+    ImagePath: ""
+    unsure: false

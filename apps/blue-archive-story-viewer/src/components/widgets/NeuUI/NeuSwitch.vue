@@ -26,8 +26,9 @@ import { useElementSize } from "@vueuse/core";
 
 const switchTrackElement = ref<HTMLElement | null>(null);
 const switchThumbElement = ref<HTMLElement | null>(null);
-
+// @ts-ignore
 const { width: switchTrackWidth } = useElementSize(switchTrackElement);
+// @ts-ignore
 const { width: switchThumbWidth } = useElementSize(switchThumbElement);
 
 const props = withDefaults(
