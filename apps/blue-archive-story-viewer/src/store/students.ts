@@ -14,7 +14,7 @@ export const useStudentStore = defineStore({
       return state.students;
     },
     getStudentById: state => (id: number) =>
-      state.students.find(student => student.id === id),
+      state.students.find((student: Student) => student.id === id),
     getStudentAvatar: () => (CharacterId: number) =>
       `/image/avatar_students/${CharacterId}.webp`,
   },
