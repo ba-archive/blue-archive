@@ -2386,7 +2386,7 @@
   familyName:
     cn: 勘解由小路
     jp: 勘解由小路
-    en: Kadenokoji
+    en: Kadenokouji
     kr: 카데노코지
     tw: 勘解由小路
     th: คาเดโนะโคจิ
@@ -2417,7 +2417,7 @@
     en: Fuwa
     kr: 후와
     tw: 不破
-    th: 不破
+    th: ฟูวะ
   name:
     cn: 莲华
     jp: レンゲ
@@ -2445,7 +2445,7 @@
     en: Kiryuu
     kr: 키류
     tw: 桐生
-    th: 桐生
+    th: คิริว
   name:
     cn: 桔梗
     jp: キキョウ
@@ -2770,8 +2770,8 @@
     jp: モモイ（メイド）
     en: Momoi (Maid)
     kr: 모모이(메이드)
-    tw: モモイ（メイド）
-    th: モモイ（メイド）
+    tw: 桃井（女僕）
+    th: โมโมอิ (ชุดเมด)
   nickname: []
   nicknameFrom: 13011
   birthday:
@@ -2799,8 +2799,8 @@
     jp: ミドリ（メイド）
     en: Midori (Maid)
     kr: 미도리(메이드)
-    tw: ミドリ（メイド）
-    th: ミドリ（メイド）
+    tw: 綠（女僕）
+    th: มิโดริ (ชุดเมด)
   nickname: []
   nicknameFrom: 10016
   birthday:
@@ -4757,6 +4757,36 @@
   armorType: HeavyArmor
   bulletType: Pierce
   weapon: SMG
+- id: 20036
+  familyName:
+    cn: 黑见
+    jp: 黒見
+    en: Kuromi
+    kr: 쿠로미
+    tw: 黒見
+    th: 黒見
+  name:
+    cn: 芹香(泳装)
+    jp: セリカ（水着）
+    en: Serika (Swimsuit)
+    kr: 세리카(수영복)
+    tw: セリカ（水着）
+    th: セリカ（水着）
+  nickname:
+    - 水黑猫
+  nicknameFrom: 13008
+  birthday:
+    month: 6
+    day: 25
+  club: 对策委员会
+  clubCode: Countermeasure
+  affiliation: 阿比多斯
+  schoolCode: Abydos
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: AR
 - id: 23000
   familyName:
     cn: 栗村
