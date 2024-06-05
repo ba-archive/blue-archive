@@ -19,9 +19,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "天童 爱丽丝（女仆）", id: 10066 },
-        ],
+        students: [{ name: "天童 爱丽丝（女仆）", id: 10066 }],
       },
     ],
   },

@@ -333,7 +333,7 @@ content:
     ConditionValue: 5
     PreConditionGroupId: 100090110
     PreConditionFavorScheduleId: 100093
-    FavorScheduleId: 0
+    FavorScheduleId: 100093
     NextGroupId: 100090130
     FeedbackTimeMillisec: 0
     MessageType: Text
@@ -420,7 +420,7 @@ content:
     Id: 100090010
     CharacterId: 10009
     MessageCondition: FavorRankUp
-    ConditionValue: 20
+    ConditionValue: 15
     PreConditionGroupId: 100090150
     PreConditionFavorScheduleId: 100095
     FavorScheduleId: 0

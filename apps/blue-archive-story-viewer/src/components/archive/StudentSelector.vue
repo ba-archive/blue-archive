@@ -88,8 +88,9 @@ const studentsNameList = computed<StudentNames[]>(() => {
       ? Array.from(
           new Set(
             student.nickname.concat(
-              students.value.find((el: Student) => el.id === student.nicknameFrom)
-                ?.nickname || []
+              students.value.find(
+                (el: Student) => el.id === student.nicknameFrom
+              )?.nickname || []
             )
           )
         )

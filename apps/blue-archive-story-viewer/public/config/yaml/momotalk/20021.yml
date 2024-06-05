@@ -28,6 +28,15 @@ title:
     GroupId: 2002105
     FavorScheduleId: 200215
     CharacterId: 20021
+  - TextJp: ""
+    TextCn: ""
+    TextKr: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2002115
+    FavorScheduleId: 2002115
+    CharacterId: 20021
 content:
   - MessageKR: 최근 고민이 생겼어요, 선생님.
     MessageJP: 先生、実は悩みがあるんです
@@ -655,6 +664,240 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
+    NextGroupId: 200210260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 저, 선생님?
+    MessageJP: あの、先生……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210260
+    Id: 200210340
+    CharacterId: 20021
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 200210250
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 조금, 일이 생겼어요.
+    MessageJP: ちょっと大事な用があって
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210270
+    Id: 200210350
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그런데 이걸 선생님께 말씀드려도 되는지
+    MessageJP: 先生に助けていただきたいんですが
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210270
+    Id: 200210360
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그걸 잘 모르겠네요…….
+    MessageJP: 今って大丈夫ですか……？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210270
+    Id: 200210370
+    CharacterId: 20021
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 하나에? 괜찮은 거지?
+    MessageJP: もちろんだよ、どうしたの？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210280
+    Id: 200210380
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210290
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 네? 네. 물론이죠. 전 괜찮아요.
+    MessageJP: それが……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210290
+    Id: 200210390
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210300
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 끄덕없어요!
+    MessageJP: うーん、メッセージだとうまく伝えられるか自信が無くって
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210290
+    Id: 200210400
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 하지만…….
+    MessageJP: でも……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210300
+    Id: 200210410
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그건 하나에에게 중요한 일이야?
+    MessageJP: 大事な用なんだよね？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210310
+    Id: 200210420
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 네?
+    MessageJP: はい……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210320
+    Id: 200210430
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210330
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 네.
+    MessageJP: とっても大事な用です
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210330
+    Id: 200210440
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 저에게는 확실히 중요한 일이에요. 그렇지만…….
+    MessageJP: ただ、大事ではあるんですが……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210330
+    Id: 200210450
+    CharacterId: 20021
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200210340
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: "그래. 그러면 만나서 이야기하자. "
+    MessageJP: それじゃあ、会って話そうか
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200210340
+    Id: 200210460
+    CharacterId: 20021
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2002115
     NextGroupId: 0
     FeedbackTimeMillisec: 0
     MessageType: Text

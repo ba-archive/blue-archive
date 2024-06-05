@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const emit = defineEmits(['clicked']);
+const emit = defineEmits(["clicked"]);
 
 defineProps({
   title: { type: String, required: true },
-  avatar: { type: String, required: false, default: '' },
+  avatar: { type: String, required: false, default: "" },
   index: { type: [Number, String], required: false },
   isActive: { type: Boolean, required: true },
 });
 
 function handleClick() {
-  emit('clicked');
+  emit("clicked");
 }
 </script>
 
@@ -30,7 +30,7 @@ function handleClick() {
       />
       <span class="title">{{ title }}</span>
       <span class="ordered-list">{{
-        `${parseInt(index?.toString() || '0') + 1}`.padStart(2, '0')
+        `${parseInt(index?.toString() || "0") + 1}`.padStart(2, "0")
       }}</span>
     </div>
 
@@ -93,7 +93,7 @@ function handleClick() {
     color: var(--color-text-decoration);
 
     &::before {
-      content: '#';
+      content: "#";
     }
   }
 }

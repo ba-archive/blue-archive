@@ -1088,7 +1088,7 @@ content:
     Id: 100080010
     CharacterId: 10008
     MessageCondition: FavorRankUp
-    ConditionValue: 20
+    ConditionValue: 15
     PreConditionGroupId: 100080340
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
@@ -1418,7 +1418,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 100080490
+    NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""

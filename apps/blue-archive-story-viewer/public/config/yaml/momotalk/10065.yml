@@ -46,7 +46,6 @@ title:
     GroupId: 1006515
     FavorScheduleId: 1006515
     CharacterId: 10065
-    unsure: false
 content:
   - MessageKR: 안녕하십니까? 선생님.
     MessageJP: こんにちは、先生
@@ -836,7 +835,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100656
-    NextGroupId: 0
+    NextGroupId: 100650390
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -858,7 +857,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 내일 업무차 음양부에 들르신다는 소식을 들었습니다.
     MessageJP: 明日、仕事で陰陽部にいらっしゃると伺い、メッセージいたしました
     MessageCN: 我听说老师明天会因为工作的事情来阴阳部，就给老师发消息了
@@ -877,7 +875,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응, 맞아. 그렇게 됐네.
     MessageJP: うん、明日はよろしくね
     MessageCN: 嗯，明天就请多关照了
@@ -896,7 +893,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 후훗, 또 뵐 수 있게 되어 즐겁네요.
     MessageJP: はい、お会いできるのを楽しみにしておりますね
     MessageCN: 好的，我会很期待与您会面的
@@ -915,7 +911,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 업무가 끝나면 휴게실에서 차라도 한잔하고 가시는 건 어떠신가요?
     MessageJP: それとよろしければ、業務の後にお茶でもいかがでしょうか？
     MessageCN: 要是老师方便的话，业务处理完之后一起喝杯茶如何？
@@ -934,7 +929,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 청결하고 정돈된 분위기에서 휴식을 취하면 이후 업무의 능률도 오를 테니까요.
     MessageJP: 休憩は大事ですから
     MessageCN: 毕竟休息也很重要
@@ -953,7 +947,6 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 물론, 사양할 이유가 없지.
     MessageJP: ありがとう。それじゃあ、頂こうかな
     MessageCN: 谢谢。那就承蒙果穗好意了
@@ -972,7 +965,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 감사합니다.
     MessageJP: はい、心を込めて用意いたしますね
     MessageCN: 好的，我会用心准备的
@@ -991,7 +983,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼 기다리고 있겠습니다.
     MessageJP: それではお待ちしております
     MessageCN: 那我就等着老师
@@ -1010,4 +1001,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false

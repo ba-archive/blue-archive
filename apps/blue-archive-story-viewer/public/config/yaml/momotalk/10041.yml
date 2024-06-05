@@ -28,6 +28,15 @@ title:
     GroupId: 1004105
     FavorScheduleId: 100415
     CharacterId: 10041
+  - TextJp: ""
+    TextCn: ""
+    TextKr: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1004115
+    FavorScheduleId: 1004115
+    CharacterId: 10041
 content:
   - MessageKR: 누구냐, 넌?
     MessageJP: ……これ、誰？
@@ -513,7 +522,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 100410230
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -531,7 +540,115 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 100410230
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님
+    MessageJP: 先生
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410230
+    Id: 100410290
+    CharacterId: 10041
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100410220
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100410240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 혹시 샬레 건물 근처에서 주인 없는 가방 봤어?
+    MessageJP: シャーレで放置されてるカバンを見なかった？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410240
+    Id: 100410300
+    CharacterId: 10041
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100410250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아니, 없는데……?
+    MessageJP: 見てないよ？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410250
+    Id: 100410310
+    CharacterId: 10041
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100410260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그럼 됐어.
+    MessageJP: ならいい
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410260
+    Id: 100410320
+    CharacterId: 10041
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100410270
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 무슨 일이야, 미사키?
+    MessageJP: ミサキ、何かあったの？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410270
+    Id: 100410330
+    CharacterId: 10041
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1004115
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 무슨 가방인데?
+    MessageJP: どんなカバン？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100410270
+    Id: 100410340
+    CharacterId: 10041
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1004115
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""

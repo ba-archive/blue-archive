@@ -46,7 +46,6 @@ title:
     GroupId: 1001220
     FavorScheduleId: 1001220
     CharacterId: 10012
-    unsure: false
 content:
   - MessageKR: 안녕하세요. 트레이너.
     MessageJP: おはようございます、トレーナー
@@ -142,9 +141,9 @@ content:
     MessageJP: この前お話していた、トレーニングメニューができたんです
     MessageCN: 上次说的训练计划，我已经拟好了
     MessageEN: I've prepared the training schedule that I mentioned earlier.
-    MessageTH: |-
-      ฉันเตรียมตารางการเทรนที่เคยบอก
-      เทรนเนอร์เอาไว้เสร็จแล้วนะคะ
+    MessageTH: "ฉันเตรียมตารางการเทรนที่เคยบอก
+
+      เทรนเนอร์เอาไว้เสร็จแล้วนะคะ"
     MessageTW: 上次說的訓練菜單已經準備好了
     MessageGroupId: 100120040
     Id: 877
@@ -161,11 +160,14 @@ content:
   - MessageKR: 가능하다면 오늘 확인받고 싶은데, 헬스장으로 와주실 수 있을까요?
     MessageJP: よろしければ確認をしていただきたくて、ジムまで来ていただけませんか？
     MessageCN: 如果教练方便的话，能来健身房确认一下吗?
-    MessageEN: If possible, I'd like you to check it out today. Can you come to the gym?
-    MessageTH: |-
-      ถ้าเป็นไปได้ วันนี้ก็อยากให้เทรนเนอร์
+    MessageEN:
+      If possible, I'd like you to check it out today. Can you come to the
+      gym?
+    MessageTH: "ถ้าเป็นไปได้ วันนี้ก็อยากให้เทรนเนอร์
+
       ลองตรวจดูค่ะ ช่วยมาที่ห้องออกกำลัง
-      กายได้ไหมคะ?
+
+      กายได้ไหมคะ?"
     MessageTW: 如果可以的話，能請你來健身房確認一下嗎？
     MessageGroupId: 100120050
     Id: 878
@@ -219,9 +221,9 @@ content:
     MessageJP: よろしければ私と一緒に、ショッピングモールに行きませんか？
     MessageCN: 如果方便的话，能和我一起去趟购物中心吗？
     MessageEN: Would you mind coming to the mall with me?
-    MessageTH: |-
-      ถ้าไม่ยุ่งล่ะก็... ไปห้างสรรพสินค้ากับ
-      ฉันหน่อยได้ไหมคะ?
+    MessageTH: "ถ้าไม่ยุ่งล่ะก็... ไปห้างสรรพสินค้ากับ
+
+      ฉันหน่อยได้ไหมคะ?"
     MessageTW: 如果可以的話，要跟我一起去購物中心嗎？
     MessageGroupId: 100120070
     Id: 881
@@ -293,9 +295,9 @@ content:
     MessageJP: プロテインを買いたいので、トレーナーからアドバイスを頂ければと
     MessageCN: 我想买蛋白粉，所以想请教练给我点建议
     MessageEN: I need protein supplements, and I wanted your input.
-    MessageTH: |-
-      ฉันจะไปซื้อเวย์โปรตีนเลยอยากได้คำ
-      แนะนำจากเทรนเนอร์สักหน่อยค่ะ
+    MessageTH: "ฉันจะไปซื้อเวย์โปรตีนเลยอยากได้คำ
+
+      แนะนำจากเทรนเนอร์สักหน่อยค่ะ"
     MessageTW: 想買乳清蛋白，所以希望從指導員那裡得到一些建議
     MessageGroupId: 100120100
     Id: 885
@@ -331,9 +333,9 @@ content:
     MessageJP: トレーナー。今日はトレーニングのために、特別なものを準備しました
     MessageCN: 教练。我为今天的训练准备了点特别的东西
     MessageEN: Trainer, I've prepared something special for you today.
-    MessageTH: |-
-      เทรนเนอร์คะ วันนี้ฉันเตรียมบางอย่างที่
-      พิเศษมาให้เทรนเนอร์ด้วยค่ะ
+    MessageTH: "เทรนเนอร์คะ วันนี้ฉันเตรียมบางอย่างที่
+
+      พิเศษมาให้เทรนเนอร์ด้วยค่ะ"
     MessageTW: 指導員。為了今天的訓練，我準備了特別的東西
     MessageGroupId: 100120110
     Id: 887
@@ -477,9 +479,9 @@ content:
     MessageJP: 次にお会いした時に、ストレッチのお手伝いをしますね
     MessageCN: 下次见面的时候，我帮您拉伸吧
     MessageEN: Next time, I'll help you stretch.
-    MessageTH: |-
-      ถ้าเจอกันคราวหน้า ฉันจะช่วยคุณครูยืด
-      เส้นเองค่ะ
+    MessageTH: "ถ้าเจอกันคราวหน้า ฉันจะช่วยคุณครูยืด
+
+      เส้นเองค่ะ"
     MessageTW: 下次見面時，會幫你做伸展運動
     MessageGroupId: 100120160
     Id: 895
@@ -497,9 +499,9 @@ content:
     MessageJP: そうだ、おそらくそろそろトレーナーの事務所に、
     MessageCN: 对了，教练的事务所那边
     MessageEN: Oh yeah, by now, the protein supplements I sent you
-    MessageTH: |-
-      อ๊ะ ตอนนี้เวย์โปรตีนที่ฉันส่งไปให้ที่ห้อง
-      พักครู
+    MessageTH: "อ๊ะ ตอนนี้เวย์โปรตีนที่ฉันส่งไปให้ที่ห้อง
+
+      พักครู"
     MessageTW: 對了，指導員的辦公室
     MessageGroupId: 100120170
     Id: 896
@@ -553,9 +555,9 @@ content:
     MessageJP: 一日4回、忘れずに飲んでくださいね
     MessageCN: 一天四回，不要忘记喝哦
     MessageEN: Please don't forget to take them four times a day.
-    MessageTH: |-
-      ทานวันละ 4 ครั้ง ห้ามลืมเด็ดขาดเลย
-      นะคะ
+    MessageTH: "ทานวันละ 4 ครั้ง ห้ามลืมเด็ดขาดเลย
+
+      นะคะ"
     MessageTW: 一天4次，別忘了喝唷
     MessageGroupId: 100120190
     Id: 899
@@ -627,9 +629,9 @@ content:
     MessageJP: 運動してます！サボってません！
     MessageCN: 我有在运动！没有偷懒！
     MessageEN: I've been working out really hard!
-    MessageTH: |-
-      ครูเองก็ตั้งใจออกกำลังกายอยู่
-      เหมือนกันนะ!
+    MessageTH: "ครูเองก็ตั้งใจออกกำลังกายอยู่
+
+      เหมือนกันนะ!"
     MessageTW: 我有在運動！沒有偷懶！
     MessageGroupId: 100120220
     Id: 903
@@ -751,7 +753,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아직 안 가 봤어.
     MessageJP: まだないよ
     MessageCN: 还没有哦
@@ -770,7 +771,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그러시군요.
     MessageJP: そうでしたか
     MessageCN: 这样啊
@@ -789,7 +789,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 지난번 당번 활동이 끝나고 돌아가는 길에 잠깐 둘러봤는데
     MessageJP: 私はこの前、当番の帰りに寄ってみたのですが
     MessageCN: 前段时间我值班回来的时候顺路去过了一趟
@@ -808,7 +807,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 조깅용 트랙이 깨끗하게 정비되어 있어서 아침 조깅을 하기에 적합해 보이더군요.
     MessageJP: トラックも整備されていて、朝のジョギングによさそうでした
     MessageCN: 跑道修缮的也很完善，很适合早上慢跑
@@ -827,7 +825,6 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 혹시 괜찮으시다면
     MessageJP: ですので、もしよろしければ、ですが
     MessageCN: 所以，如果教练方便的话
@@ -846,7 +843,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 내일 아침에 그 공원에서 가볍게 조깅이라도 하지 않으시겠습니까?
     MessageJP: 明日の朝、その公園で軽くジョギングをしませんか？
     MessageCN: 明天早上我们去公园慢跑吧？
@@ -865,7 +861,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 가벼운 조깅이라면 괜찮겠지……
     MessageJP: 軽いジョギングなら……
     MessageCN: 如果只是轻松的慢跑的话……
@@ -884,7 +879,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 감사합니다, 트레이너.
     MessageJP: ありがとうございます
     MessageCN: 十分感谢
@@ -903,7 +897,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼, 내일 아침에 뵙겠습니다!
     MessageJP: では、明日の朝お会いしましょう！
     MessageCN: 那么，我们明天早上见吧！
@@ -922,4 +915,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false

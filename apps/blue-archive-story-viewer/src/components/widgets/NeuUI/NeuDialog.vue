@@ -52,19 +52,19 @@
 withDefaults(
   defineProps<{
     title?: string;
-    smallerTitle?: boolean | 'true' | 'false';
+    smallerTitle?: boolean | "true" | "false";
     content?: string;
-    showMask?: boolean | 'true' | 'false';
-    shadow?: boolean | 'true' | 'false';
+    showMask?: boolean | "true" | "false";
+    shadow?: boolean | "true" | "false";
     negativeText?: string;
     positiveText?: string;
   }>(),
   {
-    title: 'Dialog',
+    title: "Dialog",
     smallerTitle: false,
     showMask: true,
     shadow: false,
-    positiveText: 'OK',
+    positiveText: "OK",
   }
 );
 </script>

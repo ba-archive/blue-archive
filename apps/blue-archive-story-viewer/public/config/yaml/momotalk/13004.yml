@@ -46,6 +46,15 @@ title:
     GroupId: 1300408
     FavorScheduleId: 130048
     CharacterId: 13004
+  - TextJp: ""
+    TextCn: ""
+    TextKr: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1300415
+    FavorScheduleId: 1300415
+    CharacterId: 13004
 content:
   - MessageKR: 응, 어쩐지 즐거운 일이 생길 것 같은 하루예요.
     MessageJP: 今日はなんだか、良いことが起きそうな日です
@@ -917,7 +926,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 130040270
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
@@ -935,7 +944,205 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 130048
-    NextGroupId: 0
+    NextGroupId: 130040270
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 124. 위원회실에서 개교기념일 파티하기
+    MessageJP: 124.教室で開校記念日パーティー
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040270
+    Id: 130040010
+    CharacterId: 13004
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 130040260
+    PreConditionFavorScheduleId: 130048
+    FavorScheduleId: 0
+    NextGroupId: 130040280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 125. 운동장에서 미니 운동회 개최하기
+    MessageJP: 125.グラウンドでミニ運動会
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040280
+    Id: 130040020
+    CharacterId: 13004
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 노노미?
+    MessageJP: ノノミ？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040290
+    Id: 130040030
+    CharacterId: 13004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040300
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 앗
+    MessageJP: えっ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040300
+    Id: 130040040
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040310
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님?
+    MessageJP: 先生？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040300
+    Id: 130040050
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040310
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 파티랑 미니 운동회는 뭐야?
+    MessageJP: カレンダーにそんな予定は無かったような……？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040310
+    Id: 130040060
+    CharacterId: 13004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그게
+    MessageJP: その
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040320
+    Id: 130040070
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040330
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 저어, ‘나와의 대화’에 메모하다가 그만 선생님께 잘못 보낸 것 같아요.
+    MessageJP: えっと……自分用のメモを間違えて先生に送ってしまいました
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040320
+    Id: 130040080
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 착각해서 죄송해요.
+    MessageJP: ごめんなさい！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040330
+    Id: 130040090
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 내용은 신경 쓰지 말아주세요!
+    MessageJP: 気にしないでください！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040330
+    Id: 130040100
+    CharacterId: 13004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130040340
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇다면 다행이지만…….
+    MessageJP: それならいいんだけど……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130040340
+    Id: 130040110
+    CharacterId: 13004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1300415
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""

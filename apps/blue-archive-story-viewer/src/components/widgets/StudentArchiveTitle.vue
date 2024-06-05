@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 
-const emit = defineEmits(['clicked']);
+const emit = defineEmits(["clicked"]);
 const props = defineProps({
-  avatar: { type: String, required: false, default: '' },
+  avatar: { type: String, required: false, default: "" },
   title: { type: Object, required: true },
   index: { type: Number, required: false },
   language: { type: String, required: true },
@@ -11,24 +11,24 @@ const props = defineProps({
 });
 
 function handleClick() {
-  emit('clicked');
+  emit("clicked");
 }
 
 const languageMap = {
-  cn: 'TextCn',
-  zh: 'TextCn',
-  tw: 'TextTw',
-  en: 'TextEn',
-  jp: 'TextJp',
-  kr: 'TextKr',
-  th: 'TextTh',
+  cn: "TextCn",
+  zh: "TextCn",
+  tw: "TextTw",
+  en: "TextEn",
+  jp: "TextJp",
+  kr: "TextKr",
+  th: "TextTh",
 };
 
 function stripRubyContent(content: string | undefined): string {
   if (!content) {
-    return '';
+    return "";
   }
-  return content.replaceAll(/\[\/?ruby=?.*?]/gi, '');
+  return content.replaceAll(/\[\/?ruby=?.*?]/gi, "");
 }
 
 const selectedLangTitle = computed(() => {
@@ -47,7 +47,7 @@ function getFallbackTitle() {
       return stripRubyContent(text);
     }
   }
-  return 'NoFallbackText';
+  return "NoFallbackText";
 }
 </script>
 
@@ -65,7 +65,7 @@ function getFallbackTitle() {
         selectedLangTitle || `!!FallBack: ${getFallbackTitle()}`
       }}</span>
       <span class="ordered-list">{{
-        `${parseInt(index?.toString() || '0') + 1}`.padStart(2, '0')
+        `${parseInt(index?.toString() || "0") + 1}`.padStart(2, "0")
       }}</span>
     </div>
 
@@ -123,7 +123,7 @@ function getFallbackTitle() {
       color: var(--color-text-decoration);
 
       &::before {
-        content: '#';
+        content: "#";
       }
     }
 

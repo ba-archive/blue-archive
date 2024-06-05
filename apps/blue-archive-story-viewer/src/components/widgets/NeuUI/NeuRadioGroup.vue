@@ -16,10 +16,10 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    direction?: 'horizontal' | 'vertical';
+    direction?: "horizontal" | "vertical";
   }>(),
   {
-    direction: 'horizontal',
+    direction: "horizontal",
   }
 );
 </script>

@@ -83,43 +83,43 @@ axios
     },
   })
   .then(res => {
-    if (typeof res.data !== "object")
-      throw new AxiosError("404", "404")
+    if (typeof res.data !== "object") throw new AxiosError("404", "404");
     storyIndex.value = res.data;
   })
   .catch((err: AxiosError) => {
-    return axios.get(`/story/ai/favor/${studentId.value}/index.json`, {
-      onDownloadProgress: progressEvent => {
-        if (progressEvent.total) {
-          initProgress.value = Math.floor(
-            ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-          );
-        } else {
-          initProgress.value = Math.floor(
-            ((progressEvent.loaded || 0) * 100) /
-              ((progressEvent.loaded || 0) + 100)
-          );
-        }
-      },
-    })
-    .then(res => {
-      storyIndex.value = res.data;
-    })
-    .catch((err: AxiosError) => {
-      console.error(err);
-      fetchError.value = true;
-      /* eslint-disable indent */
-      fetchErrorMessage.value =
-        404 === err.response?.status
-          ? {
-              message: "Story not found",
-              response: {
-                status: 1919,
-              },
-            }
-          : err;
-      /* eslint-enable indent */
-    })
+    return axios
+      .get(`/story/ai/favor/${studentId.value}/index.json`, {
+        onDownloadProgress: progressEvent => {
+          if (progressEvent.total) {
+            initProgress.value = Math.floor(
+              ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
+            );
+          } else {
+            initProgress.value = Math.floor(
+              ((progressEvent.loaded || 0) * 100) /
+                ((progressEvent.loaded || 0) + 100)
+            );
+          }
+        },
+      })
+      .then(res => {
+        storyIndex.value = res.data;
+      })
+      .catch((err: AxiosError) => {
+        console.error(err);
+        fetchError.value = true;
+        /* eslint-disable indent */
+        fetchErrorMessage.value =
+          404 === err.response?.status
+            ? {
+                message: "Story not found",
+                response: {
+                  status: 1919,
+                },
+              }
+            : err;
+        /* eslint-enable indent */
+      });
   })
   .finally(() => {
     ready.value = true;

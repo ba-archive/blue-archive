@@ -46,7 +46,6 @@ title:
     GroupId: 2300720
     FavorScheduleId: 2300720
     CharacterId: 23007
-    unsure: false
 content:
   - MessageKR: 선생님. 하나코입니다.
     MessageJP: こんにちは、先生
@@ -70,9 +69,9 @@ content:
     MessageJP: ハナコです。こうやってメッセージ上でやり取りをするのは初めてですね
     MessageCN: 我是花子。这回还是初次和老师发信息呢
     MessageEN: I think this is the first time I'm texting you like this.
-    MessageTH: |-
-      ฉันเพิ่งเคยส่งข้อความหาคุณครู
-      เป็นครั้งแรกเลย
+    MessageTH: "ฉันเพิ่งเคยส่งข้อความหาคุณครู
+
+      เป็นครั้งแรกเลย"
     MessageTW: 我是花子。像這樣透過訊息交流還是第一次呢
     MessageGroupId: 230070020
     Id: 230070020
@@ -252,9 +251,9 @@ content:
     MessageJP: それは……お会いした時に、お話します
     MessageCN: 问题嘛……等见面的时候再说吧
     MessageEN: Um... I'll ask you when you get here.
-    MessageTH: |-
-      เรื่องนั้น... เดี๋ยวคุณครูมาถึง
-      ฉันจะบอกให้ฟังค่ะ
+    MessageTH: "เรื่องนั้น... เดี๋ยวคุณครูมาถึง
+
+      ฉันจะบอกให้ฟังค่ะ"
     MessageTW: 這部分……等見面的時候再告訴你
     MessageGroupId: 230070060
     Id: 230070120
@@ -308,9 +307,9 @@ content:
     MessageJP: 先生のおかげで、楽しかったです
     MessageCN: 拖老师的福，我很开心
     MessageEN: I had a great day thanks to you.
-    MessageTH: |-
-      วันนี้ได้ใช้เวลากับคุณครู
-      สนุกมากเลยค่ะ
+    MessageTH: "วันนี้ได้ใช้เวลากับคุณครู
+
+      สนุกมากเลยค่ะ"
     MessageTW: 託老師的福，我很開心
     MessageGroupId: 230070090
     Id: 230070150
@@ -363,8 +362,8 @@ content:
   - MessageKR: ……
     MessageJP: ……それはもう
     MessageCN: ……毕竟那可是
-    MessageEN: ...
-    MessageTH: ...
+    MessageEN: "..."
+    MessageTH: "..."
     MessageTW: ……是啊
     MessageGroupId: 230070120
     Id: 230070180
@@ -418,10 +417,11 @@ content:
     MessageJP: 少し困った状況になってしまいまして、助けていただきたく……
     MessageCN: 我稍微遇到了点麻烦，如果老师能帮忙的话就再好不过了……
     MessageEN: I'm in a bit of a pickle and was wondering if you could help me.
-    MessageTH: |-
-      ตอนนี้ฉันมีเรื่องลำบากนิดหน่อยค่ะ
+    MessageTH: "ตอนนี้ฉันมีเรื่องลำบากนิดหน่อยค่ะ
+
       ถ้าคุณครูว่างก็อยากจะขอให้ช่วย
-      หน่อยน่ะค่ะ...
+
+      หน่อยน่ะค่ะ..."
     MessageTW: 我遇到了有點麻煩的狀況，想請你幫幫我……
     MessageGroupId: 230070140
     Id: 230070210
@@ -493,10 +493,11 @@ content:
     MessageJP: ちょっと、体育倉庫から出られなくなってしまいまして……
     MessageCN: 我好像被关在体育仓库里面了……
     MessageEN: I guess so. I'm locked inside the gym...
-    MessageTH: |-
-      อืม...คือว่ามีเรื่องนิดหน่อยค่ะ
+    MessageTH: "อืม...คือว่ามีเรื่องนิดหน่อยค่ะ
+
       ไม่รู้ทำไมจู่ๆ ก็ถูกขังไว้ที่ห้อง
-      เรียนพละได้...
+
+      เรียนพละได้..."
     MessageTW: 我現在無法從體育倉庫出來……
     MessageGroupId: 230070160
     Id: 230070250
@@ -514,9 +515,9 @@ content:
     MessageJP: 外からしか開けられないタイプの扉なので、来ていただけますとありがたいです
     MessageCN: 因为仓库门只能从外面打开，所以我想请老师过来一趟
     MessageEN: The door opens from the outside, so you just have to come let me out.
-    MessageTH: |-
-      แล้วประตูเปิดได้จากข้างนอกเท่านั้นค่ะ
-      ช่วยมาเปิดประตูให้หน่อยได้ไหมคะ
+    MessageTH: "แล้วประตูเปิดได้จากข้างนอกเท่านั้นค่ะ
+
+      ช่วยมาเปิดประตูให้หน่อยได้ไหมคะ"
     MessageTW: 因為這扇門只能從外面打開，如果能來的話就太感謝了
     MessageGroupId: 230070170
     Id: 230070260
@@ -587,7 +588,7 @@ content:
   - MessageKR: ……후훗.
     MessageJP: ……ふふっ、はい
     MessageCN: ……呵呵，好的
-    MessageEN: ...Heehee.
+    MessageEN: "...Heehee."
     MessageTH: ฮิฮิ...
     MessageTW: ……呵呵，好的
     MessageGroupId: 230070190
@@ -660,10 +661,11 @@ content:
     MessageJP: とにかく、今日は本当にありがとうございました
     MessageCN: 总之，今天真是非常感谢老师
     MessageEN: Are you listening? Thank you so much for today. I feel so much better.
-    MessageTH: |-
-      อ่านข้อความอยู่รึเปล่าคะ?
+    MessageTH: "อ่านข้อความอยู่รึเปล่าคะ?
+
       วันนี้ขอบคุณมากค่ะ
-      ฉันรู้สึกดีขึ้นมากๆ แล้วค่ะ
+
+      ฉันรู้สึกดีขึ้นมากๆ แล้วค่ะ"
     MessageTW: 總之，今天真的非常感謝
     MessageGroupId: 230070210
     Id: 230070340
@@ -698,8 +700,8 @@ content:
   - MessageKR: ……
     MessageJP: ……
     MessageCN: ……
-    MessageEN: ...
-    MessageTH: ...
+    MessageEN: "..."
+    MessageTH: "..."
     MessageTW: ……
     MessageGroupId: 230070220
     Id: 230070360
@@ -753,9 +755,9 @@ content:
     MessageJP: 今日の放課後、
     MessageCN: 今天放学后
     MessageEN: "I'm going to buy stuff I need for "
-    MessageTH: |-
-      วันนี้หลังเลิกเรียน ฉันจะไปซื้ออุปกรณ์
-      ที่จำเป็น
+    MessageTH: "วันนี้หลังเลิกเรียน ฉันจะไปซื้ออุปกรณ์
+
+      ที่จำเป็น"
     MessageTW: 今天放學後
     MessageGroupId: 230070240
     Id: 230070390
@@ -773,9 +775,9 @@ content:
     MessageJP: 補習授業部の活動に必要なものを買いに行くのですが、
     MessageCN: 我打算去买补习部活动的必需品
     MessageEN: the Make-Up Work Club after school today.
-    MessageTH: |-
-      สำหรับเตรียมกิจกรรมของชั้นเรียน
-      เสริมค่ะ
+    MessageTH: "สำหรับเตรียมกิจกรรมของชั้นเรียน
+
+      เสริมค่ะ"
     MessageTW: 我要去買補課部活動需要的東西
     MessageGroupId: 230070240
     Id: 230070400
@@ -919,9 +921,9 @@ content:
     MessageJP: それでは放課後、第五校門の前でお待ちしておりますね
     MessageCN: 那么放学后，我在第五校门前面等老师哦
     MessageEN: I'll be waiting for you at Gate 5 after school.
-    MessageTH: |-
-      ถ้างั้นหลังเลิกเรียน ฉันจะรอที่ประตู
-      หน้าตึก 5 นะคะ
+    MessageTH: "ถ้างั้นหลังเลิกเรียน ฉันจะรอที่ประตู
+
+      หน้าตึก 5 นะคะ"
     MessageTW: 那麼放學後，我在第五校門前等你唷
     MessageGroupId: 230070300
     Id: 230070480
@@ -957,9 +959,9 @@ content:
     MessageJP: 靴下は、シャーレに送った方が良いですか？
     MessageCN: 我把袜子送到夏莱去可以吗？
     MessageEN: Can I send new socks to your office?
-    MessageTH: |-
-      ให้ฉันส่งถุงเท้าคู่ใหม่ไปที่ห้องทำงาน
-      ของคุณครูไหมคะ?
+    MessageTH: "ให้ฉันส่งถุงเท้าคู่ใหม่ไปที่ห้องทำงาน
+
+      ของคุณครูไหมคะ?"
     MessageTW: 需要我把襪子送去夏萊嗎？
     MessageGroupId: 230070320
     Id: 230070500
@@ -1030,8 +1032,8 @@ content:
   - MessageKR: ……
     MessageJP: その
     MessageCN: 那个
-    MessageEN: ...
-    MessageTH: ...
+    MessageEN: "..."
+    MessageTH: "..."
     MessageTW: 那個
     MessageGroupId: 230070360
     Id: 230070540
@@ -1048,8 +1050,8 @@ content:
   - MessageKR: ……?
     MessageJP: ……？
     MessageCN: ……？
-    MessageEN: ...?
-    MessageTH: ...?
+    MessageEN: "...?"
+    MessageTH: "...?"
     MessageTW: ……？
     MessageGroupId: 230070370
     Id: 230070550
@@ -1102,8 +1104,8 @@ content:
   - MessageKR: ……
     MessageJP: ふふっ
     MessageCN: 呵呵
-    MessageEN: ...
-    MessageTH: ...
+    MessageEN: "..."
+    MessageTH: "..."
     MessageTW: 呵呵
     MessageGroupId: 230070390
     Id: 230070580
@@ -1189,7 +1191,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 이야기는 들었어요.
     MessageJP: お話は伺いました
     MessageCN: 我听说
@@ -1208,7 +1209,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 트리니티에 오실 일이 있으시다고요?
     MessageJP: トリニティに用事があるそうですね？
     MessageCN: 您是要来圣三一办事对吧？
@@ -1227,7 +1227,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 일단 그렇긴 한데…….
     MessageJP: まあそうだけど……
     MessageCN: 话是这么说……
@@ -1246,7 +1245,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: ……어디서 들은 거야?
     MessageJP: ……どこで聞いたの？
     MessageCN: ……从哪里听说的？
@@ -1265,7 +1263,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 후후♡
     MessageJP: ふふっ、どこでしょう♡
     MessageCN: 呵呵，在哪里呢♡
@@ -1284,7 +1281,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 운이 좋다면
     MessageJP: ともかく、運がよければ
     MessageCN: 总之，要是运气正好不错
@@ -1303,7 +1299,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 오신 김에 한 번 뵐 수 있었으면 좋겠네요.
     MessageJP: お会いできるといいですね
     MessageCN: 能见上一面就太好了呢
@@ -1322,7 +1317,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아, 억지로 보자는 이야기는 아니었어요.
     MessageJP: あ、これは約束ではありませんよ？
     MessageCN: 啊，这不是我们之间的约定哦？
@@ -1341,7 +1335,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 우연히
     MessageJP: 偶然
     MessageCN: 毕竟
@@ -1360,7 +1353,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 기회가 닿는다면의 이야기니까요.
     MessageJP: 機会があればお会いしたいという話ですから
     MessageCN: 要是有机会的话我想和老师偶遇一次呢
@@ -1379,7 +1371,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생님, 잘 들어가셨나요?
     MessageJP: 先生、無事に帰れましたか？
     MessageCN: 老师平安回去了吗？
@@ -1398,7 +1389,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다음 번 오실 때에는
     MessageJP: 次回お越しになる時は
     MessageCN: 要是老师下次来的时候
@@ -1417,7 +1407,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 좀 더 시간적 여유가 있으셨으면 좋겠네요.
     MessageJP: もう少し時間的に余裕があったらいいですね
     MessageCN: 时间能再充裕一点就好了
@@ -1436,7 +1425,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그러면 그때
     MessageJP: その時は……
     MessageCN: 到那时候……
@@ -1455,7 +1443,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 늘 그렇듯 재미있게
     MessageJP: いつものような感じで
     MessageCN: 就和往常一样
@@ -1474,7 +1461,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 부탁드리겠습니다♡
     MessageJP: よろしくお願いします♡
     MessageCN: 请老师多多关照啦♡
@@ -1493,4 +1479,3 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false

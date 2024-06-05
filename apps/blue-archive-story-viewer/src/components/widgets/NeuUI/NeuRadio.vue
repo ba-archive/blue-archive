@@ -15,7 +15,7 @@ withDefaults(
     disabled?: boolean;
   }>(),
   {
-    value: '',
+    value: "",
     activated: false,
     disabled: false,
   }
@@ -59,7 +59,7 @@ withDefaults(
       border-radius: 50%;
       width: 0.5rem;
       height: 0.5rem;
-      content: '';
+      content: "";
     }
 
     &.activated {
