@@ -38,8 +38,7 @@ const instance = axios.create({
 });
 
 const rag_request = {
-  // model: "claude-3-haiku-20240307",
-  model: "claude-3-opus-20240229",
+  model: "",
   max_tokens: 1000,
   temperature: 0,
   system:
@@ -107,7 +106,25 @@ const rag_request = {
   ],
 };
 
-function getClaudeTranslation(input: string) {
+const models = [
+  {
+    modelName: "claude-3-haiku-20240307",
+    alias: [0, "haiku"],
+  },
+  {
+    modelName: "claude-3-haiku-20240307",
+    alias: [1, "sonnet"],
+  },
+  {
+    modelName: "claude-3-opus-20240229",
+    alias: [2, "opus"],
+  },
+];
+
+function getClaudeTranslation(
+  input: string,
+  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0
+) {
   // const test = {
   //   content: [
   //     {
@@ -119,6 +136,8 @@ function getClaudeTranslation(input: string) {
 
   // return new Promise(resolve => resolve(test));
 
+  rag_request.model = (models.find(el => el.alias.includes(model)) || models[0]).modelName
+
   const error_message = { content: [{ type: "text", text: "" }] };
 
   if (input && input.length < 10) {
@@ -128,7 +147,7 @@ function getClaudeTranslation(input: string) {
   }
 
   if (!ANTHROPIC_TIER1_SECRET || ANTHROPIC_TIER1_SECRET.length === 0) {
-    error_message.content[0].text = "找不到Anthropic API Key";
+    error_message.content[0].text = "找不到 Anthropic API Key";
     return new Promise(resolve => resolve(error_message));
   }
 

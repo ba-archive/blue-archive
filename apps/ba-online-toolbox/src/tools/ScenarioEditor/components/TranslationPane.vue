@@ -102,11 +102,11 @@
           <n-button @click="handleFormalizePunctuation" type="info">
             规范符号
           </n-button>
-          <n-button @click="translateHandle(true)" type="info"
+          <!-- <n-button @click="translateHandle(true)" type="info"
             >重新翻译</n-button
-          >
+          > -->
           <n-button
-            @click="handleLLMTranslateRequest"
+            @click="handleLLMTranslateRequest(2)"
             type="info"
             quaternary
             :loading="llmLoading"
@@ -245,20 +245,21 @@ const translateHandle = (force = false) => {
     const text = currentText.value
       ?.replaceAll("#n", "[#n]")
       ?.replaceAll(/\[.*?\]/g, "");
-    translate(
-      text,
-      translateHash[config.getLanguage],
-      translateHash[config.getTargetLang]
-    )
-      .then(res => {
-        config.setTmpMachineTranslate(
-          currentText.value,
-          halfToFull((res.translation || [])[0] ?? "")
-        );
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      handleLLMTranslateRequest(0)
+    // translate(
+    //   text,
+    //   translateHash[config.getLanguage],
+    //   translateHash[config.getTargetLang]
+    // )
+    //   .then(res => {
+    //     config.setTmpMachineTranslate(
+    //       currentText.value,
+    //       halfToFull((res.translation || [])[0] ?? "")
+    //     );
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
   }
 };
 
@@ -322,7 +323,9 @@ let llmLastCalled = 0;
 const llmLoading = ref(false);
 const studentNames = computed(() => config.getStudentList);
 
-function handleLLMTranslateRequest() {
+function handleLLMTranslateRequest(
+  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0
+) {
   if (config.getSelectLine !== -1) {
     if (Date.now() - llmLastCalled < 5000) {
       ElMessage({
@@ -337,7 +340,7 @@ function handleLLMTranslateRequest() {
     const text =
       mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
 
-    getClaudeTranslation(text)
+    getClaudeTranslation(text, model)
       .then((res: ClaudeMessage) => {
         const rawText = res.content[0].text ?? "";
         const fullWidthText = halfToFull(rawText);
