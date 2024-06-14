@@ -32,7 +32,7 @@ export default defineConfig({
     //   },
     // }),
 
-    VueRouter(),
+    VueRouter(),  
 
     Vue({
       script: {

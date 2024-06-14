@@ -28,15 +28,6 @@ export function buildNexonJSONStory(nodes: StoryNode[]) {
       TextEn: '',
       VoiceJp: '',
     }
-    // if (command.type === JSONStoryCommandType.Title) {
-    //   temp.ScriptKr = `#title;${AST2Text([command.title[Lang.kr]])};${AST2Text([command.subtitle?.[Lang.kr]])};`
-    // }
-    // else if (command.type === JSONStoryCommandType.Place) {
-    //   temp.ScriptKr = `#place;${command.place};`
-    // }
-    // else if (command.type === JSONStoryCommandType.Wait) {
-    //   temp.ScriptKr = `#wait;${command.millionSecond};`
-    // }
     if (node.type === StoryNodeType.DialogNode) {
       const dialog = node.dialog
       const characterIndex = node.dialog.speaker

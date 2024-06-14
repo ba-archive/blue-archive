@@ -21,7 +21,7 @@ declare module 'vue-router/auto-routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/editor': RouteRecordInfo<'/editor', '/editor', Record<never, never>, Record<never, never>>,
     '/player/[[id]]': RouteRecordInfo<'/player/[[id]]', '/player/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
-    '/Preview': RouteRecordInfo<'/Preview', '/Preview', Record<never, never>, Record<never, never>>,
+    '/preview': RouteRecordInfo<'/preview', '/preview', Record<never, never>, Record<never, never>>,
     '/story-gallery': RouteRecordInfo<'/story-gallery', '/story-gallery', Record<never, never>, Record<never, never>>,
     '/visual-editor': RouteRecordInfo<'/visual-editor', '/visual-editor', Record<never, never>, Record<never, never>>,
     '/visual-editor/[[id]]': RouteRecordInfo<'/visual-editor/[[id]]', '/visual-editor/:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
