@@ -7,18 +7,18 @@
     :class="{ selected: index === config.selectLine, unsure: line.Unsure }"
   >
     <n-image v-if="false"></n-image>
-    <n-text>
-      <span :class="getLineType(line)">{{
+    <n-text class="pl-4">
+      <div :class="getLineType(line)">{{
         line[mainLanguage] || "暂无参考文本"
-      }}</span>
-      <div v-if="config.getShowAllLanguage">
-        <span
+      }}</div>
+      <div class="pl-[38px]" v-if="config.getShowAllLanguage">
+        <div
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
-          >{{ getContentByLang(line, language as keyof ContentLine) }}</span
+          >{{ getContentByLang(line, language as keyof ContentLine) }}</div
         >
       </div>
-      <span v-if="!config.getShowAllLanguage">{{ line[targetLanguage] }}</span>
+      <div class="pl-[38px]" v-else>{{ line[targetLanguage] }}</div>
     </n-text>
   </div>
 </template>
@@ -126,7 +126,7 @@ function getLineType(line: ContentLine) {
   background-color: #ffce80;
 }
 
-span {
+div {
   :is(.type-title, .type-selection, .type-text) {
     &::before {
       display: inline-flex;
@@ -139,9 +139,6 @@ span {
       font-size: 0.75rem;
       width: 24px;
     }
-  }
-  div {
-    padding-left: 38px;
   }
   .type-title::before {
     content: "标题";

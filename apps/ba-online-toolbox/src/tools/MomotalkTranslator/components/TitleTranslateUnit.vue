@@ -91,7 +91,6 @@ import { halfToFull, translate } from '../../public/helper/getTranslation';
 import { useMainStore } from '../store/mainStore';
 import { Title } from '../types/FileContent';
 import { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';
-import { Key } from 'naive-ui/es/menu/src/interface';
 
 const props = defineProps({
   index: [Number, String],
@@ -209,7 +208,7 @@ function handleChangeLanguage(key: string) {
   referenceTitle.value = targetLanguage;
 }
 
-function getReferenceTextByKey(key: Key | undefined) {
+function getReferenceTextByKey(key: string | number | undefined) {
   if (key) {
     return Reflect.get(
       props.content as object,

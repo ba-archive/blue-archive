@@ -1,10 +1,10 @@
 <template>
-  <div class="translation-pane">
-    <n-space vertical class="translation-card rounded-medium">
-      <div class="reference">
+  <div class="translation-pane flex-1 rounded-4 pr-4 w-full h-full">
+    <n-space vertical class="bg-white p-4 rounded-medium">
+      <div class="flex justify-between items-center">
         <span>
           <n-tag secondary type="info" :bordered="false">参考文本语言</n-tag>
-          <n-radio-group style="margin-left: 1rem" :value="config.getLanguage">
+          <n-radio-group class="ml-4" :value="config.getLanguage">
             <n-radio
               v-for="lang in Object.keys(langHash)"
               :key="lang"
@@ -14,19 +14,18 @@
             >
           </n-radio-group>
         </span>
-        <n-space>
-          <n-text>显示全部语言</n-text>
-          <n-switch
-            @update:value="handleShowAllLanguageChange"
-            :value="config.getShowAllLanguage"
-          >
-          </n-switch>
-        </n-space>
+        <n-switch
+          @update:value="handleShowAllLanguageChange"
+          :value="config.getShowAllLanguage"
+        >
+          <template #checked> 所有语言 </template>
+          <template #unchecked> 当前语言 </template>
+        </n-switch>
       </div>
       <div class="referLang">
         <n-input
           type="textarea"
-          style="height: 80px; width: 100%"
+          class="h-[80px] w-full"
           :value="
             config.getSelectLine !== -1
               ? mainStore.getScenario.content[config.getSelectLine][
@@ -43,15 +42,12 @@
           "
         ></n-input>
       </div>
-      <div class="trans">
-        <n-space>
-          <n-button type="info" @click="sendResetLive2dSignal"
-            >重置 Live2D 状态
-          </n-button>
-          <n-button type="info" @click="sendRefreshPlayerSignal"
-            >刷新播放器</n-button
-          >
-          <n-space :size="4">
+      <div class="flex content-between gap-4">
+        <n-space vertical>
+          <n-space>
+            <n-button type="info" @click="sendRefreshPlayerSignal"
+              >刷新播放器</n-button
+            >
             <n-tooltip>
               <template #trigger>
                 <n-button type="info" @click="addTag()"> 插入等待时长</n-button>
@@ -79,43 +75,48 @@
                 ></template
               >
             </n-input-number>
+            <n-dropdown
+              trigger="hover"
+              :options="langSelect"
+              @select="
+                {
+                  config.setTargetLang($event as Language);
+                }
+              "
+            >
+              <n-tooltip>
+                <template #trigger>
+                  <n-button secondary type="info">
+                    {{
+                      (
+                        langSelect.find(
+                          el => el.key === config.getTargetLang
+                        ) || { label: "简中" }
+                      ).label
+                    }}
+                  </n-button>
+                </template>
+                <span> 选择需要翻译的语言 </span>
+              </n-tooltip>
+            </n-dropdown>
           </n-space>
-          <n-dropdown
-            trigger="hover"
-            :options="langSelect"
-            @select="
-              {
-                config.setTargetLang($event as Language);
-              }
-            "
-          >
-            <n-tooltip>
-              <template #trigger>
-                <n-button secondary type="info">
-                  {{ langHash[config.getTargetLang] }}
-                </n-button>
-              </template>
-              <span> 选择需要翻译的语言 </span>
-            </n-tooltip>
-          </n-dropdown>
-          <n-button @click="acceptHandle" type="info">接受机翻</n-button>
-          <n-button @click="handleFormalizePunctuation" type="info">
-            规范符号
-          </n-button>
-          <!-- <n-button @click="translateHandle(true)" type="info"
-            >重新翻译</n-button
-          > -->
-          <n-button
-            @click="handleLLMTranslateRequest(2)"
-            type="info"
-            quaternary
-            :loading="llmLoading"
-          >
-            帮帮我，GPT 先生
-          </n-button>
+          <n-space>
+            <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+            <n-button @click="handleFormalizePunctuation" type="info">
+              规范符号
+            </n-button>
+            <n-button
+              @click="handleLLMTranslateRequest(2)"
+              type="info"
+              quaternary
+              :loading="llmLoading"
+            >
+              帮帮我，GPT 先生
+            </n-button>
+          </n-space>
         </n-space>
       </div>
-      <div class="textLine">
+      <div class="flex justify-between gap-4">
         <span style="flex: 2">
           <translate-input
             :handleGotoNextLineRequest="handleGotoNextLineRequest"
@@ -151,7 +152,7 @@
           <span>这个翻译我不确定!</span>
         </n-checkbox>
         <n-input
-          class="commentInput"
+          class="flex"
           :value="
             config.getSelectLine !== -1
               ? mainStore.getScenario.content[config.getSelectLine].comment ||
@@ -178,7 +179,7 @@
           @click="handleGotoPrevLineRequest"
           >上一句
         </n-button>
-        <span style="color: lightgray"
+        <span class="text-gray-300"
           >当前位置： {{ completion.completed }} /
           {{ completion.fullLength }}</span
         >
@@ -189,7 +190,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
-import { halfToFull, translate } from "../../public/helper/getTranslation";
+import { halfToFull } from "../../public/helper/getTranslation";
 import { formalizeQuotation } from "../../public/helper/quotation";
 import eventBus from "../eventsSystem/eventBus";
 import { useGlobalConfig } from "../store/configStore";
@@ -202,6 +203,7 @@ import {
   getClaudeTranslation,
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
+import { el } from "date-fns/locale";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -210,23 +212,14 @@ const langHash = {
   TextJp: "日语",
   TextEn: "英语",
   ScriptKr: "韩语",
-  TextTh: "泰语",
-  TextCn: "简中",
+  // TextTh: "泰语",
+  // TextCn: "简中",
   TextTw: "繁中",
 };
 
-const translateHash = {
-  TextJp: "ja",
-  TextEn: "en",
-  ScriptKr: "ko",
-  TextTh: "th",
-  TextCn: "zh-CHS",
-  TextTw: "zh-CHT",
-};
-
 const langSelect = [
-  { label: "简体中文", key: "TextCn" },
-  { label: "繁体中文", key: "TextTw" },
+  { label: "简中", key: "TextCn" },
+  { label: "繁中", key: "TextTw" },
   { label: "日语", key: "TextJp" },
   { label: "英语", key: "TextEn" },
   { label: "韩语", key: "TextKr" },
@@ -245,7 +238,7 @@ const translateHandle = (force = false) => {
     const text = currentText.value
       ?.replaceAll("#n", "[#n]")
       ?.replaceAll(/\[.*?\]/g, "");
-      handleLLMTranslateRequest(0)
+    handleLLMTranslateRequest(0);
     // translate(
     //   text,
     //   translateHash[config.getLanguage],
@@ -430,10 +423,6 @@ function addTag() {
     sentence;
 }
 
-function sendResetLive2dSignal() {
-  eventBus.emit("resetLive2d");
-}
-
 function sendRefreshPlayerSignal() {
   eventBus.emit("refreshPlayer");
 }
@@ -446,32 +435,5 @@ function sendRefreshPlayerSignal() {
 
 .translation-pane {
   grid-area: translation-pane;
-  flex: 1;
-  border-radius: 1em;
-  padding-right: 1rem;
-  width: 100%;
-  height: 100%;
-
-  .translation-card {
-    background-color: white;
-    padding: 1rem;
-  }
-}
-
-.reference {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.trans,
-.textLine {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.commentInput {
-  flex: 1;
 }
 </style>
