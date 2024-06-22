@@ -44,10 +44,7 @@ const instance = axios.create({
 function distillText(text: string) {
   // replace all square brackets and contents inside, "\\"" with ""
   const regexp = /\[.*?\]|\\"|\s/g;
-  return text
-    .replaceAll(regexp, "")
-    .replaceAll("#n", "\n")
-    .replaceAll("＂", "");
+  return text.replaceAll(regexp, "").replaceAll("#n", "\n");
 }
 
 const rag_request = {
@@ -56,7 +53,7 @@ const rag_request = {
   temperature: 0,
   system:
     /* eslint-disable-next-line max-len */
-    "你是一名日语语言学专家。你需要解析用户给出的句子成分，并将句子成分以json格式返回。将原句中的'\n'解析为'未定義語'。",
+    "你是一名日语语言学专家。你需要解析用户给出的句子成分，并将句子成分以json格式返回。将原句中的'\n'解析为'未定義語'，并转义原文中的引号。",
   messages: [
     {
       role: "user",
@@ -81,7 +78,7 @@ const rag_request = {
       content: [
         {
           type: "text",
-          text: "\\n",
+          text: '"\\n',
         },
       ],
     },
@@ -90,7 +87,7 @@ const rag_request = {
       content: [
         {
           type: "text",
-          text: '[{"word": "\\n","furigana": "\\n","basic_form": "\\n","word_type": "未定義語","word_sub_type": "その他","conjungation_type": "*","conjungation_form": "*"}]',
+          text: '[{"word": "\\"","furigana": "\\"","basic_form": "\\"","word_type": "未定義語","word_sub_type": "その他","conjungation_type": "*","conjungation_form": "*"}{"word": "\\n","furigana": "\\n","basic_form": "\\n","word_type": "未定義語","word_sub_type": "その他","conjungation_type": "*","conjungation_form": "*"}]',
         },
       ],
     },
