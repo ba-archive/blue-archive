@@ -94,11 +94,11 @@ const html = computed(() => {
 
 <template>
   <div
-    class="p-4 pt-2 pb-2 rounded-sm border-solid border-1 border-[var(--color-arona-blue)] overflow-y-scroll select-auto"
+    class="p-4 pt-2 pb-2 rounded-sm border-solid border-1 border-[var(--color-arona-blue)] overflow-y-scroll select-auto max-w-[664px]"
   >
-    <div class="select-text" v-if="!props.preferSemantic || !searchSemanticDict()" v-html="html" />
-    <div v-else class="flex flex-col gap-1">
-      <div v-for="semanticLine in semantics" class="flex">
+    <div class="select-text w-full" v-if="!props.preferSemantic || !searchSemanticDict()" v-html="html" />
+    <div v-else class="flex flex-col gap-1 w-full flex-wrap">
+      <div v-for="semanticLine in semantics" class="flex flex-wrap">
         <semantic-unit
           v-for="(semantic, index) in semanticLine"
           :key="index"
