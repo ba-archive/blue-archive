@@ -14,6 +14,8 @@ import {
   presetUno,
   transformerDirectives,
 } from "unocss";
+import { viteMockServe } from "vite-plugin-mock";
+const isDevelopment = process.env.NODE_ENV === "development";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,9 +25,6 @@ export default defineConfig({
       "/api": {
         target: "https://openapi.youdao.com",
         changeOrigin: true,
-      },
-      "/messages": {
-        target: "https://api.anthropic.com/v1",
       },
     },
   },
@@ -42,6 +41,13 @@ export default defineConfig({
     },
   },
   plugins: [
+    isDevelopment &&
+      viteMockServe({
+        mockPath: "mock",
+        enable: true,
+        watchFiles: true,
+        logger: true,
+      }),
     AutoImport({
       resolvers: [ElementPlusResolver(), NaiveUiResolver()],
     }),

@@ -16,6 +16,7 @@ export const useGlobalConfig = defineStore({
     selectTag: "[wa:]",
     previewMode: false,
     students: [] as Student[],
+    preferSemanticsView: true,
   }),
   getters: {
     isProofread: state => state.proofread,
@@ -44,6 +45,7 @@ export const useGlobalConfig = defineStore({
     getShowAllLanguage: state => state.showAllLanguage,
     getPreviewMode: state => state.previewMode,
     getStudentList: state => state.students,
+    getSemanticPreference: state => state.preferSemanticsView ?? false,
   },
   actions: {
     startProofread() {
@@ -105,6 +107,9 @@ export const useGlobalConfig = defineStore({
     },
     setStudents(students: Student[]) {
       this.students = students;
+    },
+    setSemanticPreference(preference: boolean) {
+      this.preferSemanticsView = preference;
     },
   },
 });

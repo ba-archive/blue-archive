@@ -10,38 +10,32 @@
               :key="lang"
               :value="lang"
               @click="config.setLanguage(lang as Language)"
-              >{{ langHash[lang as Language] }}</n-radio
+              >{{
+                langHash[lang as "TextJp" | "TextEn" | "TextTw" | "ScriptKr"]
+              }}</n-radio
             >
           </n-radio-group>
         </span>
-        <n-switch
-          @update:value="handleShowAllLanguageChange"
-          :value="config.getShowAllLanguage"
-        >
-          <template #checked> 所有语言 </template>
-          <template #unchecked> 当前语言 </template>
-        </n-switch>
+        <n-space>
+          <n-checkbox
+            :checked="config.getSemanticPreference"
+            @update:checked="updateParseSemanticPref"
+            size="large"
+            label="解析语素"
+          />
+          <n-checkbox
+            :checked="config.getShowAllLanguage"
+            @update:checked="handleShowAllLanguageChange"
+            size="large"
+            label="显示所有语言"
+          />
+        </n-space>
       </div>
-      <div class="referLang">
-        <n-input
-          type="textarea"
-          class="h-[80px] w-full"
-          :value="
-            config.getSelectLine !== -1
-              ? mainStore.getScenario.content[config.getSelectLine][
-                  config.getLanguage
-                ]?.replaceAll('#n', '\n')
-              : '请选择一行'
-          "
-          :placeholder="
-            config.getSelectLine !== -1
-              ? mainStore.getScenario.content[config.getSelectLine][
-                  config.getLanguage
-                ] || '该语言暂无翻译'
-              : ''
-          "
-        ></n-input>
-      </div>
+      <original-text-disp
+        :text="mainStore.getScenario.content[config.getSelectLine]?.TextJp"
+        :prefer-semantic="config.getSemanticPreference"
+        :select-line="config.getSelectLine"
+      />
       <div class="flex content-between gap-4">
         <n-space vertical>
           <n-space>
@@ -203,7 +197,7 @@ import {
   getClaudeTranslation,
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
-import { el } from "date-fns/locale";
+import OriginalTextDisp from "./OriginalTextDisp.vue";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -226,6 +220,10 @@ const langSelect = [
   { label: "泰语", key: "TextTh" },
 ];
 
+function updateParseSemanticPref(value: boolean) {
+  config.setSemanticPreference(value);
+}
+
 const currentText = computed(() => {
   return mainStore.getScenario.content[config.getSelectLine]?.[
     config.getLanguage
@@ -235,24 +233,7 @@ const currentText = computed(() => {
 const translateHandle = (force = false) => {
   if (!force && config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
-    const text = currentText.value
-      ?.replaceAll("#n", "[#n]")
-      ?.replaceAll(/\[.*?\]/g, "");
     handleLLMTranslateRequest(0);
-    // translate(
-    //   text,
-    //   translateHash[config.getLanguage],
-    //   translateHash[config.getTargetLang]
-    // )
-    //   .then(res => {
-    //     config.setTmpMachineTranslate(
-    //       currentText.value,
-    //       halfToFull((res.translation || [])[0] ?? "")
-    //     );
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   });
   }
 };
 
