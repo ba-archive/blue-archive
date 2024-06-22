@@ -44,7 +44,10 @@ const instance = axios.create({
 function distillText(text: string) {
   // replace all square brackets and contents inside, "\\"" with ""
   const regexp = /\[.*?\]|\\"|\s/g;
-  return text.replaceAll(regexp, "").replaceAll("#n", "\n");
+  return text
+    .replaceAll(regexp, "")
+    .replaceAll("#n", "\n")
+    .replaceAll("＂", "");
 }
 
 const rag_request = {
