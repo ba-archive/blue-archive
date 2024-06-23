@@ -1,11 +1,9 @@
 export type SemanticUnit = {
   word: string;
-  furigana: string;
+  yomi: string;
   basic_form: string;
   word_type: string;
-  word_sub_type: string;
-  conjungation_type: string;
-  conjungation_form: string;
+  conjugation: string;
 };
 
 export enum AnthropicStatusCode {
@@ -21,4 +19,4 @@ export type SemanticParseResult = {
   status: AnthropicStatusCode;
   message: string;
   tokens: SemanticUnit[];
-}
+};

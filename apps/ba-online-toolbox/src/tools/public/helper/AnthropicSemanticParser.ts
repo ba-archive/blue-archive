@@ -53,14 +53,14 @@ const rag_request = {
   temperature: 0,
   system:
     /* eslint-disable-next-line max-len */
-    "你是一名日语语言学专家。你需要解析用户给出的句子成分，并将句子成分以json格式返回。将原句中的'\n'解析为'未定義語'，并转义原文中的引号。",
+    "你是一名日语语言学专家。你需要解析用户给出的句子语素，并将语素以JSON格式返回。单独解析换行符元素'\\n'，并转义原文中的引号。",
   messages: [
     {
       role: "user",
       content: [
         {
           type: "text",
-          text: "うちの庭には二羽鶏がいます",
+          text: 'うちの庭には\n二羽"鶏"がいます',
         },
       ],
     },
@@ -69,7 +69,7 @@ const rag_request = {
       content: [
         {
           type: "text",
-          text: '[{"word": "うち","furigana": "うち","basic_form": "うち","word_type": "名詞","word_sub_type": "普通名詞","conjungation_type": "*","conjungation_form": "*"},{"word": "の","furigana": "の","basic_form": "の","word_type": "助詞","word_sub_type": "接続助詞","conjungation_type": "*","conjungation_form": "*"},{"word": "庭","furigana": "にわ","basic_form": "庭","word_type": "名詞","word_sub_type": "普通名詞","conjungation_type": "*","conjungation_form": "*"},{"word": "に","furigana": "に","basic_form": "に","word_type": "助詞","word_sub_type": "格助詞","conjungation_type": "*","conjungation_form": "*"},{"word": "は","furigana": "は","basic_form": "は","word_type": "助詞","word_sub_type": "副助詞","conjungation_type": "*","conjungation_form": "*"},{"word": "二","furigana": "に","basic_form": "二","word_type": "名詞","word_sub_type": "数詞","conjungation_type": "*","conjungation_form": "*"},{"word": "羽","furigana": "わ","basic_form": "羽","word_type": "接尾辞","word_sub_type": "名詞性名詞助数辞","conjungation_type": "*","conjungation_form": "*"},{"word": "鶏","furigana": "にわとり","basic_form": "鶏","word_type": "名詞","word_sub_type": "普通名詞","conjungation_type": "*","conjungation_form": "*"},{"word": "が","furigana": "が","basic_form": "が","word_type": "助詞","word_sub_type": "格助詞","conjungation_type": "*","conjungation_form": "*"},{"word": "い","furigana": "い","basic_form": "いる","word_type": "動詞","word_sub_type": "非自立可能","conjungation_type": "母音動詞","conjungation_form": "基本形"},{"word": "ます","furigana": "ます","basic_form": "ます","word_type": "接尾辞","word_sub_type": "動詞性接尾辞","conjungation_type": "動詞性接尾辞ます型","conjungation_form": "基本形"}]',
+          text: '[{"word":"うち","yomi":"うち","basic_form":"うち","word_type":"名詞・普通名詞","conjugation":"*"},{"word":"の","yomi":"の","basic_form":"の","word_type":"助詞・接続助詞","conjugation":"*"},{"word":"庭","yomi":"にわ","basic_form":"庭","word_type":"名詞・普通名詞","conjugation":"*"},{"word":"に","yomi":"に","basic_form":"に","word_type":"助詞・格助詞","conjugation":"*"},{"word":"は","yomi":"は","basic_form":"は","word_type":"助詞・副助詞","conjugation":"*"},{"word":"\\\\n","yomi":"\\\\n","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"二","yomi":"に","basic_form":"二","word_type":"名詞・数詞","conjugation":"*"},{"word":"羽","yomi":"わ","basic_form":"羽","word_type":"接尾辞・名詞性名詞助数辞","conjugation":"*"},,{"word":"\\"","yomi":"\\"","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"鶏","yomi":"にわとり","basic_form":"鶏","word_type":"名詞・普通名詞","conjugation":"*"},,{"word":"\\"","yomi":"\\"","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"が","yomi":"が","basic_form":"が","word_type":"助詞・格助詞","conjugation":"*"},{"word":"い","yomi":"い","basic_form":"いる","word_type":"動詞・非自立可能","conjugation":"母音動詞+基本形"},{"word":"ます","yomi":"ます","basic_form":"ます","word_type":"接尾辞・動詞性接尾辞","conjugation":"動詞性接尾辞ます型+基本形"}]',
         },
       ],
     },
@@ -78,25 +78,7 @@ const rag_request = {
       content: [
         {
           type: "text",
-          text: '"\\n',
-        },
-      ],
-    },
-    {
-      role: "assistant",
-      content: [
-        {
-          type: "text",
-          text: '[{"word": "\\"","furigana": "\\"","basic_form": "\\"","word_type": "未定義語","word_sub_type": "その他","conjungation_type": "*","conjungation_form": "*"}{"word": "\\n","furigana": "\\n","basic_form": "\\n","word_type": "未定義語","word_sub_type": "その他","conjungation_type": "*","conjungation_form": "*"}]',
-        },
-      ],
-    },
-    {
-      role: "user",
-      content: [
-        {
-          type: "text",
-          text: "青空に\nたくさんの気球が\n浮かんでいた",
+          text: "青空に、\nたくさんの気球が、\n浮かんでいた。",
         },
       ],
     },
@@ -142,22 +124,27 @@ async function parseSemantics(
     result.message = "找不到 Anthropic API Key";
   }
 
-  rag_request.messages[4].content[0].text = distillText(input);
+  rag_request.messages[2].content[0].text = distillText(input);
   await instance
     .post("/v1/messages", rag_request)
     .then(res => {
       const data = res.data as ClaudeMessage;
       const response = data.content[0].text;
       if (!response) {
-        result.status = AnthropicStatusCode.JSON_PARSE_ERROR;
-        result.message = "解析模型返回失败，请告诉开发帕鲁哪一句出了问题";
+        result.status = AnthropicStatusCode.OTHER;
+        result.message = "模型未返回结果，请告诉开发帕鲁哪一句出了问题";
         return result;
       }
       result.tokens = JSON.parse(response) as SemanticUnit[];
     })
     .catch((e: AxiosError) => {
-      result.status = AnthropicStatusCode.API_ERROR;
-      result.message = "未知错误：" + e.message;
+      if (e.message.includes("property value in JSON at position")) {
+        result.status = AnthropicStatusCode.JSON_PARSE_ERROR;
+        result.message = "解析模型返回失败，请告诉开发帕鲁哪一句出了问题";
+      } else {
+        result.status = AnthropicStatusCode.API_ERROR;
+        result.message = "未知错误：" + e.message;
+      }
       return result;
     });
 

@@ -1265,4 +1265,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Hoshino_home: {
+    name: "Hoshino_home",
+    playQue: [
+      {
+        name: "Hoshino_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.7,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Hoshino_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
 };
