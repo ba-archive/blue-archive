@@ -114,6 +114,16 @@ async function parseSemantics(
     tokens: [] as SemanticUnit[],
   };
 
+  const CJKChars = new RegExp(
+    "[\u3040-\u309F\u30A0-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]"
+  );
+
+  if (!CJKChars.test(input)) {
+    result.status = AnthropicStatusCode.NO_CJK;
+    result.message =
+      "输入不包含有效日文字符";
+  }
+
   if (input && input.length < 10) {
     result.status = AnthropicStatusCode.TOO_SHORT;
     result.message = "输入过短，请在长度超过10个字符的文本中使用。";

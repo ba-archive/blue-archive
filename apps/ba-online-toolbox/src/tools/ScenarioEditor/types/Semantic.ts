@@ -9,6 +9,7 @@ export type SemanticUnit = {
 export enum AnthropicStatusCode {
   NORMAL,
   TOO_SHORT,
+  NO_CJK,
   NO_API_KEY,
   API_ERROR,
   JSON_PARSE_ERROR,

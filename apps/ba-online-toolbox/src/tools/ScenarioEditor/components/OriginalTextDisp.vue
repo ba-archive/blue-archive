@@ -39,6 +39,7 @@ async function getSemantics() {
         message: res.message,
         type: "error",
       });
+      return;
     }
     // @ts-ignore
     useTranslationCache.setSemantic(props.text, res.tokens);
