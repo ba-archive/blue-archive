@@ -111,6 +111,7 @@ async function parseSemantics(
   const result = {
     status: AnthropicStatusCode.NORMAL,
     message: "",
+    original: input,
     tokens: [] as SemanticUnit[],
   };
 

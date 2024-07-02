@@ -42,7 +42,7 @@ async function getSemantics() {
       return;
     }
     // @ts-ignore
-    useTranslationCache.setSemantic(props.text, res.tokens);
+    useTranslationCache.setSemantic(res.original, res.tokens);
   });
 }
 
