@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { deepCopyObject } from "@/utils";
-import { computed, ref } from "vue";
+import { computed, ref, Ref } from "vue";
 import { Text } from "@/types/common";
 import { ShowOption } from "@/types/events";
 import { useElementSize } from "@vueuse/core";
@@ -21,10 +21,10 @@ const selectorContainerElement = ref<HTMLElement | null>(null);
 const selectorElement = ref<HTMLElement | null>(null);
 
 const { height: selectorContainerHeight } = useElementSize(
-  selectorContainerElement
+  selectorContainerElement as Ref<HTMLElement>
 );
 
-const { height: selectorElementHeight } = useElementSize(selectorElement);
+const { height: selectorElementHeight } = useElementSize(selectorElement as Ref<HTMLElement>);
 
 const selectorMarginTop = computed(
   () =>
