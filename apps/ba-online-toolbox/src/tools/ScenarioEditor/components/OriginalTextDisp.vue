@@ -61,7 +61,7 @@ const semantics = computed(() => {
     return;
   }
   const indexOfAllCRLF = semanticUnits.reduce((acc, el, index) => {
-    if (el.word === "\n") {
+    if (el.word === "\n" || el.word === "\\n") {
       acc.push(index);
     }
     return acc;
@@ -89,7 +89,7 @@ const html = computed(() => {
   if (!props.text) {
     return "该语言暂无翻译";
   }
-  return props.text.replace("\n", "<br>");
+  return props.text.replaceAll("\n", "<br>").replaceAll("#n", "<br>");
 });
 </script>
 
