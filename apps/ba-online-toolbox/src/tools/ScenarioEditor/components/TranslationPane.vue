@@ -100,7 +100,7 @@
               规范符号
             </n-button>
             <n-button
-              @click="handleLLMTranslateRequest(2)"
+              @click="handleLLMTranslateRequest(1)"
               type="info"
               quaternary
               :loading="llmLoading"
