@@ -46,13 +46,23 @@ title:
     GroupId: 1000408
     FavorScheduleId: 100048
     CharacterId: 10004
+  - TextKr: 결코 가볍지 않은 무게
+    TextJp: 左腕にのしかかる腕章
+    TextCn: 戴于左臂的臂章
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1000415
+    FavorScheduleId: 1000415
+    CharacterId: 10004
+    unsure: false
 content:
   - MessageKR: 선생님. 급작스럽겠지만 당신과 논의할 일이 있어.
     MessageJP: 先生。急だけど話したいことがあるの
     MessageCN: 老师。虽然这么说很突然，但我有事想和您商量
-    MessageEN:
-      Sensei, I know this is sudden, but I have an urgent matter to discuss
-      with you.
+    MessageEN: >-
+      Sensei, I know this is sudden, but I have an urgent matter to discuss with
+      you.
     MessageTH: คุณครู ฉันมีเรื่องอยากคุยด้วยหน่อยน่ะ
     MessageTW: 老師。雖然有點突然，但我想和你談談
     MessageGroupId: 100040010
@@ -71,9 +81,9 @@ content:
     MessageJP: 私の仕事が終わった後、深夜だけど少し会える？
     MessageCN: 等今天深夜我结束工作以后，您可以和我见一面吗？
     MessageEN: Can I meet you tonight after my work is done?
-    MessageTH: "ฉันทำงานเสร็จตอนกลางคืน เรามาเจอ
-
-      กันตอนนั้นได้ไหม?"
+    MessageTH: |-
+      ฉันทำงานเสร็จตอนกลางคืน เรามาเจอ
+      กันตอนนั้นได้ไหม?
     MessageTW: 我工作結束後雖然是深夜，但能稍微見個面嗎？
     MessageGroupId: 100040011
     Id: 2
@@ -126,12 +136,12 @@ content:
   - MessageKR: 응. 늦은 시간에 미안하지만…… 약속 장소는 내가 알려줄게.
     MessageJP: 遅い時間にごめん、じゃあ場所は……
     MessageCN: 实在抱歉把时间定到这么晚，那见面地点在……
-    MessageEN:
-      Yes. I'm sorry to impose on you at such an hour... I'll let you know
-      where we can meet.
-    MessageTH: "ใช่ ขอโทษที่ให้มาตอนดึกนะ..แล้วฉัน
-
-      จะบอกว่าให้มาเจอที่ไหน"
+    MessageEN: >-
+      Yes. I'm sorry to impose on you at such an hour... I'll let you know where
+      we can meet.
+    MessageTH: |-
+      ใช่ ขอโทษที่ให้มาตอนดึกนะ..แล้วฉัน
+      จะบอกว่าให้มาเจอที่ไหน
     MessageTW: 這麼晚真是抱歉，那麼地點是……
     MessageGroupId: 100040030
     Id: 5
@@ -203,9 +213,9 @@ content:
     MessageJP: ヒナのためならいくらでも
     MessageCN: 为了日奈，多晚都行
     MessageEN: Feel free to inconvenience me anytime, Hina.
-    MessageTH: "ถ้าเป็นฮินะจังล่ะก็
-
-      รบกวนได้ตามต้องการเลย"
+    MessageTH: |-
+      ถ้าเป็นฮินะจังล่ะก็
+      รบกวนได้ตามต้องการเลย
     MessageTW: 我願意為陽奈做任何事
     MessageGroupId: 100040060
     Id: 9
@@ -240,7 +250,7 @@ content:
   - MessageKR: ……응. 고마워.
     MessageJP: ……ん、ありがとう
     MessageCN: ……嗯，谢谢
-    MessageEN: "...Okay. Thanks."
+    MessageEN: ...Okay. Thanks.
     MessageTH: อืม... ขอบคุณนะ
     MessageTW: ……嗯，謝謝
     MessageGroupId: 100040070
@@ -277,9 +287,9 @@ content:
     MessageJP: 先生。今度の休みの日の深夜、時間ある？
     MessageCN: 老师。您这次休息日的深夜有空吗？
     MessageEN: Sensei, will you be free in the evening this weekend?
-    MessageTH: "คุณครู วันหยุดนี้คุณครูมีเวลาว่างช่วง
-
-      ดึกบ้างไหม?"
+    MessageTH: |-
+      คุณครู วันหยุดนี้คุณครูมีเวลาว่างช่วง
+      ดึกบ้างไหม?
     MessageTW: 老師。這次休息日的深夜，有空嗎？
     MessageGroupId: 100040090
     Id: 13
@@ -350,12 +360,12 @@ content:
   - MessageKR: 생각해봤는데, 너무 주변 시선을 신경 쓰는 것도 좋지 않을 것 같아.
     MessageJP: あの後も少し考えてみたけど、周りの視線を気にしすぎるのも良くないかも
     MessageCN: 我后来也想了一下，确实没必要太在意周围人的目光
-    MessageEN:
-      I've been thinking that maybe I shouldn't worry so much about other
-      people seeing us.
-    MessageTH: "มาคิดดูแล้ว ฉันว่าเราไม่ควรใส่ใจ
-
-      สายตาคนรอบข้างให้มากเกินไป"
+    MessageEN: >-
+      I've been thinking that maybe I shouldn't worry so much about other people
+      seeing us.
+    MessageTH: |-
+      มาคิดดูแล้ว ฉันว่าเราไม่ควรใส่ใจ
+      สายตาคนรอบข้างให้มากเกินไป
     MessageTW: 在那之後我也稍微思考了一下，太過在意周圍的視線似乎也不太好
     MessageGroupId: 100040120
     Id: 17
@@ -391,11 +401,10 @@ content:
     MessageJP: 今度からは、もっと明るい昼間に時間を作って会うとか……
     MessageCN: 下次我在白天抽时间和您见面吧，环境会更明亮些……
     MessageEN: Maybe next time we should meet during the day...
-    MessageTH: "แต่ไว้คราวหน้าเราหาเวลามาเจอกัน
-
+    MessageTH: |-
+      แต่ไว้คราวหน้าเราหาเวลามาเจอกัน
       ตอนกลางวันได้บ้างก็น่าจะดีเหมือน
-
-      กัน..."
+      กัน...
     MessageTW: 從下次開始，在更明亮的白天抽空見面之類的……
     MessageGroupId: 100040130
     Id: 19
@@ -413,9 +422,9 @@ content:
     MessageJP: 明るい時間帯からヒナに会えるなんて……
     MessageCN: 居然从白天开始就能见到日奈……
     MessageEN: Going out in broad daylight with Hina. Lucky me.
-    MessageTH: "ไปเจอฮินะจังตอนกลางวันเหรอ...
-
-      ครูจะตั้งตารอเลย"
+    MessageTH: |-
+      ไปเจอฮินะจังตอนกลางวันเหรอ...
+      ครูจะตั้งตารอเลย
     MessageTW: 在明亮的時間就能見到陽奈……
     MessageGroupId: 100040140
     Id: 20
@@ -505,9 +514,9 @@ content:
     MessageJP: 明るい時間帯から始めるヒナとのお仕事……楽しみだなあ
     MessageCN: 居然从白天开始就能和日奈一起工作……真是期待啊
     MessageEN: Working with Hina in the middle of the day. Looking forward to it.
-    MessageTH: "ไปทำงานกับฮินะจังตอนกลางวัน
-
-      เหรอ... ครูจะตั้งตารอเลย"
+    MessageTH: |-
+      ไปทำงานกับฮินะจังตอนกลางวัน
+      เหรอ... ครูจะตั้งตารอเลย
     MessageTW: 在明亮的時間和陽奈一起工作……真期待吶
     MessageGroupId: 100040160
     Id: 25
@@ -524,8 +533,8 @@ content:
   - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: ……
     MessageGroupId: 100040170
     Id: 26
@@ -578,7 +587,7 @@ content:
   - MessageKR: 기대하고 있으니까.
     MessageJP: 少しは、楽しみにしてる
     MessageCN: 有点期待吧
-    MessageEN: "...looking forward to it."
+    MessageEN: ...looking forward to it.
     MessageTH: ตั้งตารออยู่เหมือนกัน
     MessageTW: 有點，期待
     MessageGroupId: 100040190
@@ -651,9 +660,9 @@ content:
     MessageJP: そんなことより、ヒナちゃん
     MessageCN: 先不管那些，小日奈
     MessageEN: Before that, Hina.
-    MessageTH: "รายงานนั่นไม่สำคัญเท่าสิ่งที่ครูจะ
-
-      บอกหรอก"
+    MessageTH: |-
+      รายงานนั่นไม่สำคัญเท่าสิ่งที่ครูจะ
+      บอกหรอก
     MessageTW: 比起這個，陽奈
     MessageGroupId: 100040220
     Id: 33
@@ -743,9 +752,9 @@ content:
     MessageJP: 一緒にショッピングにでも行こう
     MessageCN: 一起去购物吧
     MessageEN: I need you to go to the mall with me.
-    MessageTH: "ต้องไปห้างสรรพสินค้ากับครู
-
-      แล้วละ"
+    MessageTH: |-
+      ต้องไปห้างสรรพสินค้ากับครู
+      แล้วละ
     MessageTW: 一起去購物吧
     MessageGroupId: 100040250
     Id: 38
@@ -762,8 +771,8 @@ content:
   - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: ……
     MessageGroupId: 100040260
     Id: 39
@@ -780,7 +789,7 @@ content:
   - MessageKR: ……응?
     MessageJP: ……は？
     MessageCN: ……哈？
-    MessageEN: "...Huh?"
+    MessageEN: ...Huh?
     MessageTH: หา...?
     MessageTW: ……哈啊？
     MessageGroupId: 100040260
@@ -889,9 +898,9 @@ content:
     MessageJP: でも、ショッピングモールとか夜は閉まってるし……
     MessageCN: 但是，购物中心之类的地方晚上都关门了吧……
     MessageEN: But a mall would be closed at night...
-    MessageTH: "แต่ตอนกลางคืนห้างปิดหมดไม่ใช่เหรอ
-
-      ...?"
+    MessageTH: |-
+      แต่ตอนกลางคืนห้างปิดหมดไม่ใช่เหรอ
+      ...?
     MessageTW: 但是，購物中心和其他地方晚上都關門了……
     MessageGroupId: 100040280
     Id: 46
@@ -926,8 +935,8 @@ content:
   - MessageKR: …….
     MessageJP: 普通にお昼に
     MessageCN: 还是说就在平常白天
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: 或是一般中午
     MessageGroupId: 100040280
     Id: 48
@@ -1340,12 +1349,12 @@ content:
   - MessageKR: 며칠 전부터 철야 근무 중이라서 정신이 없어.
     MessageJP: ここ数日、徹夜でバタバタしっぱなし……ほんと面倒
     MessageCN: 最近这几天一直整夜整夜地工作，忙得团团转……真麻烦
-    MessageEN:
-      I've been pulling all-nighters for the past few days, so I'm really
-      out of it.
-    MessageTH: "ฉันทำงานโต้รุ่งมาหลายวันแล้ว ตอนนี้
-
-      ยุ่งมากเลย"
+    MessageEN: >-
+      I've been pulling all-nighters for the past few days, so I'm really out of
+      it.
+    MessageTH: |-
+      ฉันทำงานโต้รุ่งมาหลายวันแล้ว ตอนนี้
+      ยุ่งมากเลย
     MessageTW: 這幾天，都徹夜忙得不可開交…真是麻煩
     MessageGroupId: 100040370
     Id: 71
@@ -1362,12 +1371,12 @@ content:
   - MessageKR: 거기에 파견 임무까지 겹치고, 처리해야 하는 서류는 쌓여가고…….
     MessageJP: 遠出が必要な件も多くて、処理できてない書類は溜まっていく一方だし……
     MessageCN: 需要出远门处理的事情也很多，没处理完的文件都堆成山了……
-    MessageEN:
-      On top of that, the dispatch reports and documents I have to process
-      are piling up...
-    MessageTH: "เอกสารที่ต้องจัดการก็มีเยอะเป็นตั้งๆ
-
-      แถมยังถูกส่งตัวไปทำภารกิจอีก"
+    MessageEN: >-
+      On top of that, the dispatch reports and documents I have to process are
+      piling up...
+    MessageTH: |-
+      เอกสารที่ต้องจัดการก็มีเยอะเป็นตั้งๆ
+      แถมยังถูกส่งตัวไปทำภารกิจอีก
     MessageTW: 許多案件需要長途跋涉，未處理的檔案堆積如山……
     MessageGroupId: 100040371
     Id: 72
@@ -1385,9 +1394,9 @@ content:
     MessageJP: 何か起こるとみんな私の方ばっかり見るし……
     MessageCN: 不管发生什么事，大家都指望着我来解决……
     MessageEN: Whenever something happens, everyone turns to me...
-    MessageTH: "เวลาที่ทำอะไรพลาดก็มักจะโดนคนอื่น
-
-      จ้องหน้า"
+    MessageTH: |-
+      เวลาที่ทำอะไรพลาดก็มักจะโดนคนอื่น
+      จ้องหน้า
     MessageTW: 發生事情時大家都看向我……
     MessageGroupId: 100040371
     Id: 73
@@ -1404,8 +1413,8 @@ content:
   - MessageKR: …….
     MessageJP: ……ふう
     MessageCN: ……呼
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: ……呼
     MessageGroupId: 100040371
     Id: 74
@@ -1423,9 +1432,9 @@ content:
     MessageJP: そのせいで、みんなが休んでる日にもこうして一人で仕事……
     MessageCN: 这样一来，即使在其他人都休息的日子里，我也得这么一个人工作……
     MessageEN: Everyone else has the day off, and I'm the only person working today...
-    MessageTH: "แถมยังต้องออกมาทำงานคนเดียว
-
-      ในวันที่คนอื่นได้พักผ่อนอีก..."
+    MessageTH: |-
+      แถมยังต้องออกมาทำงานคนเดียว
+      ในวันที่คนอื่นได้พักผ่อนอีก...
     MessageTW: 因此，在大家休息的日子也像這樣一個人在工作……
     MessageGroupId: 100040380
     Id: 75
@@ -1514,8 +1523,8 @@ content:
   - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: ……
     MessageGroupId: 100040400
     Id: 80
@@ -1533,9 +1542,9 @@ content:
     MessageJP: ごめん、つい愚痴になった
     MessageCN: 抱歉……忍不住发牢骚了
     MessageEN: I'm sorry, I didn't mean to vent to you.
-    MessageTH: "ขอโทษนะ ฉันไม่ได้ตั้งใจจะมาบ่น
-
-      ให้คุณครูฟังหรอก"
+    MessageTH: |-
+      ขอโทษนะ ฉันไม่ได้ตั้งใจจะมาบ่น
+      ให้คุณครูฟังหรอก
     MessageTW: 對不起，不知不覺發起了牢騷
     MessageGroupId: 100040400
     Id: 81
@@ -1589,9 +1598,9 @@ content:
     MessageJP: 昨日の夜、私、何か変なこと言ったり……してない？
     MessageCN: 昨天晚上，我，没有说什么奇怪的话……吧？
     MessageEN: Did I say anything...weird yesterday?
-    MessageTH: "เมื่อคืนฉันไม่ได้... พูดอะไรแปลกๆ
-
-      ...ออกไปใช่ไหม?"
+    MessageTH: |-
+      เมื่อคืนฉันไม่ได้... พูดอะไรแปลกๆ
+      ...ออกไปใช่ไหม?
     MessageTW: 昨天晚上，我有沒有……說了什麼奇怪的話？
     MessageGroupId: 100040410
     Id: 84
@@ -1609,9 +1618,9 @@ content:
     MessageJP: 夢だったのかはっきりしなくて、あまり思い出せないけど……なんだか……
     MessageCN: 不知道是不是梦，想不起来了……总觉得……
     MessageEN: I don't remember if it was a dream or not...but I think...
-    MessageTH: "ฉันจำไม่ได้ว่ามันคือความฝันหรือเปล่า
-
-      ... คือว่ามัน..."
+    MessageTH: |-
+      ฉันจำไม่ได้ว่ามันคือความฝันหรือเปล่า
+      ... คือว่ามัน...
     MessageTW: 不知道是不是夢，想不太起來了……總覺得……
     MessageGroupId: 100040410
     Id: 85
@@ -1718,8 +1727,8 @@ content:
   - MessageKR: …….
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "......"
+    MessageEN: ...
+    MessageTH: ......
     MessageTW: ……
     MessageGroupId: 100040440
     Id: 91
@@ -1729,7 +1738,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 100040450
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
@@ -1747,14 +1756,14 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 100040450
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
   - MessageKR: ……고마워.
     MessageJP: ……ありがとう
     MessageCN: ……谢谢您
-    MessageEN: "...Thanks."
+    MessageEN: ...Thanks.
     MessageTH: ขอบคุณนะ
     MessageTW: ……謝謝
     MessageGroupId: 100040440
@@ -1765,7 +1774,273 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
+    NextGroupId: 100040450
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님…. 잠깐 괜찮을까?
+    MessageJP: 先生、ちょっと良い？
+    MessageCN: 老师，您有空吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040450
+    Id: 100040010
+    CharacterId: 10004
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100040440
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040460
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 어라, 히나. 무슨 일이야?
+    MessageJP: どうかしたの？
+    MessageCN: 怎么了？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040460
+    Id: 100040020
+    CharacterId: 10004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 아… 그게…. 으응….
+    MessageJP: あ、その……
+    MessageCN: 啊，那个……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040470
+    Id: 100040030
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040480
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 오늘은 연차를 낸 덕에…
+    MessageJP: 今日はお休みなんだけど……
+    MessageCN: 因为今天我休息……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040470
+    Id: 100040040
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 모처럼 그, 선도부 일을 쉬는 날이거든.
+    MessageJP: 先生さえよければ
+    MessageCN: 所以如果可以的话
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040470
+    Id: 100040050
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그러니 선생님만 괜찮다면 조금은 같이 휴일을 보내면 어떨까… 해서
+    MessageJP: 一緒に過ごしたいなと思って……
+    MessageCN: 想让老师过来陪我……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040480
+    Id: 100040060
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040490
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 아….
+    MessageJP: 良かったね、お休みが取れたんだ
+    MessageCN: 真好啊，你终于能有假期了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040490
+    Id: 100040070
+    CharacterId: 10004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040500
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 아, 물론, 어디까지나 내 개인의 바람이고.
+    MessageJP: 私が先生に会いたいだけだし……
+    MessageCN: 我只是想见见老师而已……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040500
+    Id: 100040080
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040510
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 선생님이 곤란하다면 결코 억지를 부리려는 건….
+    MessageJP: 忙しいなら、無理には……
+    MessageCN: 如果您没空的话，我也不会勉强您……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040500
+    Id: 100040090
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그런 거라면 오히려 억지를 부려줬으면 좋겠어.
+    MessageJP: むしろ、無理にでも誘って！
+    MessageCN: 不不不，倒不如说请尽情地勉强我！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040510
+    Id: 100040100
+    CharacterId: 10004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040520
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그럼 지금 바로 그쪽으로 갈게!
+    MessageJP: すぐそっちに行くね！
+    MessageCN: 我马上就过去！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040510
+    Id: 100040110
+    CharacterId: 10004
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040520
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 그…래?
+    MessageJP: ……えっ？
+    MessageCN: ……诶？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040520
+    Id: 100040120
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040530
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 어, 으응.
+    MessageJP: ふふっ
+    MessageCN: 呵呵
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040520
+    Id: 100040130
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100040530
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+    unsure: false
+  - MessageKR: 후후, 그럼 기다리고 있을게. 선생님.
+    MessageJP: じゃあ待ってるわ、先生
+    MessageCN: 那我等你哦，老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100040530
+    Id: 100040140
+    CharacterId: 10004
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1000415
     NextGroupId: 0
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
+    unsure: false
