@@ -2474,7 +2474,7 @@
     en: Otose
     kr: 오토세
     tw: 音瀬
-    th: 音瀬
+    th: โอโทเซะ
   name:
     cn: 小玉(露营)
     jp: コタマ（キャンプ）
@@ -2503,7 +2503,7 @@
     en: Omagari
     kr: 오마가리
     tw: 小鈎
-    th: 小鈎
+    th: โอมาการิ
   name:
     cn: 晴(露营)
     jp: ハレ（キャンプ）
@@ -2539,8 +2539,8 @@
     jp: ヒナ（ドレス）
     en: Hina (Dress)
     kr: 히나(드레스)
-    tw: 陽奈（禮服）
-    th: ฮินะ (ชุดเดรส)
+    tw: 陽奈(禮服)
+    th: ฮินะ (เดรส)
   nickname: []
   nicknameFrom: 10004
   birthday:
@@ -2562,14 +2562,14 @@
     en: Amau
     kr: 아마우
     tw: 天雨
-    th: 天雨
+    th: อามาอุ
   name:
     cn: 亚子(礼服)
     jp: アコ（ドレス）
     en: Ako (Dress)
     kr: 아코(드레스)
-    tw: 亞子（禮服）
-    th: อาโกะ (ชุดเดรส)
+    tw: 亞子(禮服)
+    th: อาโกะ (เดรส)
   nickname: []
   nicknameFrom: 20008
   birthday:
@@ -2597,8 +2597,8 @@
     jp: カヨコ（ドレス）
     en: Kayoko (Dress)
     kr: 카요코(드레스)
-    tw: 佳世子（禮服）
-    th: คาโยโกะ (ชุดเดรส)
+    tw: 佳世子(禮服)
+    th: คาโยโกะ (เดรส)
   nickname: []
   nicknameFrom: 13005
   birthday:
@@ -2626,8 +2626,8 @@
     jp: アル（ドレス）
     en: Aru (Dress)
     kr: 아루(드레스)
-    tw: 亞瑠（禮服）
-    th: อารุ (ชุดเดรส)
+    tw: 亞瑠(禮服)
+    th: อารุ (เดรส)
   nickname: []
   nicknameFrom: 10000
   birthday:
@@ -2814,6 +2814,209 @@
   type: Striker
   armorType: LightArmor
   bulletType: Sonic
+  weapon: SR
+- id: 10096
+  familyName:
+    cn: 尾刃
+    jp: 尾刃
+    en: Ogata
+    kr: 오가타
+    tw: 尾刃
+    th: 尾刃
+  name:
+    cn: 康娜(泳装)
+    jp: カンナ（水着）
+    en: Kanna (Swimsuit)
+    kr: 칸나(수영복)
+    tw: 環奈（泳裝）
+    th: คันนะ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 20023
+  birthday:
+    month: 9
+    day: 7
+  club: 公安局
+  clubCode: PublicPeaceBureau
+  affiliation: 瓦尔基里
+  schoolCode: Valkyrie
+  rarity: 3
+  type: Striker
+  armorType: LightArmor
+  bulletType: Explosion
+  weapon: HG
+- id: 10097
+  familyName:
+    cn: 风仓
+    jp: 風倉
+    en: Kazekura
+    kr: 카제쿠라
+    tw: 風倉
+    th: 風倉
+  name:
+    cn: 萌绘(泳装)
+    jp: モエ（水着）
+    en: Moe (Swimsuit)
+    kr: 모에(수영복)
+    tw: 萌（泳裝）
+    th: โมเอะ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 20018
+  birthday:
+    month: 9
+    day: 13
+  club: RABBIT小队
+  clubCode: RabbitPlatoon
+  affiliation: SRT
+  schoolCode: SRT
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Sonic
+  weapon: HG
+- id: 10098
+  familyName:
+    cn: 小鸟游
+    jp: 小鳥遊
+    en: Takanashi
+    kr: 타카나시
+    tw: 小鳥遊
+    th: 小鳥遊
+  name:
+    cn: 星野(临战)
+    jp: ホシノ（臨戦）
+    en: Hoshino (Battle)
+    kr: 호시노(무장)
+    tw: 星野（臨戰）
+    th: โฮชิโนะ (พร้อมรบ)
+  nickname: []
+  nicknameFrom: 10005
+  birthday:
+    month: 1
+    day: 2
+  club: 对策委员会
+  clubCode: Countermeasure
+  affiliation: 阿比多斯
+  schoolCode: Abydos
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: SG
+- id: 10099
+  familyName:
+    cn: 小鸟游
+    jp: 小鳥遊
+    en: Takanashi
+    kr: 타카나시
+    tw: 小鳥遊
+    th: 小鳥遊
+  name:
+    cn: 星野(临战)
+    jp: ホシノ（臨戦）
+    en: Hoshino (Battle)
+    kr: 호시노(무장)
+    tw: 星野（臨戰）
+    th: โฮชิโนะ (พร้อมรบ)
+  nickname: []
+  nicknameFrom: 10005
+  birthday:
+    month: 1
+    day: 2
+  club: 对策委员会
+  clubCode: Countermeasure
+  affiliation: 阿比多斯
+  schoolCode: Abydos
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: SG
+- id: 10100
+  familyName:
+    cn: 砂狼
+    jp: 砂狼
+    en: Sunaookami
+    kr: 스나오오카미
+    tw: 砂狼
+    th: 砂狼
+  name:
+    cn: 白子＊恐怖
+    jp: シロコ＊テラー
+    en: Shiroko Terror
+    kr: 시로코*테러
+    tw: 白子＊恐怖
+    th: ชิโรโกะ (เทอเรอร์)
+  nickname: []
+  nicknameFrom: 10010
+  birthday:
+    month: 5
+    day: 16
+  club: AbydosStudentCouncil
+  clubCode: AbydosStudentCouncil
+  affiliation: 阿比多斯
+  schoolCode: Abydos
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Mystic
+  weapon: AR
+- id: 10101
+  familyName:
+    cn: 锭前
+    jp: 錠前
+    en: Joumae
+    kr: 조마에
+    tw: 錠前
+    th: 錠前
+  name:
+    cn: 纱织(泳装)
+    jp: サオリ（水着）
+    en: Saori (Swimsuit)
+    kr: 사오리(수영복)
+    tw: 沙織（泳裝）
+    th: ซาโอริ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 10048
+  birthday:
+    month: 9
+    day: 3
+  club: 阿里乌斯小队
+  clubCode: AriusSqud
+  affiliation: 阿里乌斯
+  schoolCode: Arius
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: AR
+- id: 10102
+  familyName:
+    cn: 槌永
+    jp: 槌永
+    en: Tsuchinaga
+    kr: 츠치나가
+    tw: 槌永
+    th: 槌永
+  name:
+    cn: 日和(泳装)
+    jp: ヒヨリ（水着）
+    en: Hiyori (Swimsuit)
+    kr: 히요리(수영복)
+    tw: 日和（泳裝）
+    th: ฮิโยริ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 20017
+  birthday:
+    month: 1
+    day: 8
+  club: 阿里乌斯小队
+  clubCode: AriusSqud
+  affiliation: 阿里乌斯
+  schoolCode: Arius
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Pierce
   weapon: SR
 - id: 13000
   familyName:
@@ -3654,7 +3857,7 @@
     en: Tanga
     kr: 탄가
     tw: 丹花
-    th: 丹花
+    th: ทันกะ
   name:
     cn: 伊吹
     jp: イブキ
@@ -4648,7 +4851,7 @@
     en: Izumimoto
     kr: 이즈미모토
     tw: 和泉元
-    th: 和泉元
+    th: อิซุมิโมโตะ
   name:
     cn: 艾米(泳装)
     jp: エイミ（水着）
@@ -4678,7 +4881,7 @@
     en: Hanuma
     kr: 하누마
     tw: 羽沼
-    th: 羽沼
+    th: ฮานุมะ
   name:
     cn: 真琴
     jp: マコト
@@ -4712,7 +4915,7 @@
     jp: アカリ（正月）
     en: Akari (New Year)
     kr: 아카리(새해)
-    tw: 亞伽里（正月）
+    tw: 亞伽里(正月)
     th: อาคาริ (ปีใหม่)
   nickname: []
   nicknameFrom: 13004
@@ -4741,8 +4944,8 @@
     jp: ツバキ（ガイド）
     en: Tsubaki (Guide)
     kr: 츠바키(가이드)
-    tw: 椿（導游）
-    th: สึบากิ (ชุดไกด์)
+    tw: 椿(導覽員)
+    th: สึบากิ (ไกด์)
   nickname: []
   nicknameFrom: 13009
   birthday:
@@ -4763,15 +4966,15 @@
     jp: 黒見
     en: Kuromi
     kr: 쿠로미
-    tw: 黒見
+    tw: 黑見
     th: 黒見
   name:
     cn: 芹香(泳装)
     jp: セリカ（水着）
     en: Serika (Swimsuit)
     kr: 세리카(수영복)
-    tw: セリカ（水着）
-    th: セリカ（水着）
+    tw: 茜香（泳裝）
+    th: เซริกะ (ชุดว่ายน้ำ)
   nickname:
     - 水黑猫
   nicknameFrom: 13008
@@ -4787,6 +4990,35 @@
   armorType: HeavyArmor
   bulletType: Mystic
   weapon: AR
+- id: 20037
+  familyName:
+    cn: 合欢垣
+    jp: 合歓垣
+    en: Nemugaki
+    kr: 네무가키
+    tw: 合歡垣
+    th: 合歓垣
+  name:
+    cn: 吹雪(泳装)
+    jp: フブキ（水着）
+    en: Fubuki (Swimsuit)
+    kr: 후부키(수영복)
+    tw: 吹雪（泳裝）
+    th: ฟุบุกิ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 16008
+  birthday:
+    month: 10
+    day: 21
+  club: 生活安全局
+  clubCode: anzenkyoku
+  affiliation: 瓦尔基里
+  schoolCode: Valkyrie
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: SR
 - id: 23000
   familyName:
     cn: 栗村
@@ -5396,4 +5628,61 @@
   type: Special
   armorType: Unarmed
   bulletType: Pierce
+  weapon: SMG
+- id: 26012
+  familyName:
+    cn: 中务
+    jp: 中務
+    en: Nakatsukasa
+    kr: 나카츠카사
+    tw: 中務
+    th: 中務
+  name:
+    cn: 桐乃(泳装)
+    jp: キリノ（水着）
+    en: Kirino (Swimsuit)
+    kr: 키리노(수영복)
+    tw: 桐乃（泳裝）
+    th: คิริโนะ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 10
+    day: 22
+  club: 生活安全局
+  clubCode: anzenkyoku
+  affiliation: 瓦尔基里
+  schoolCode: Valkyrie
+  rarity: 1
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Mystic
+  weapon: HG
+- id: 26013
+  familyName:
+    cn: 秤
+    jp: 秤
+    en: Hakari
+    kr: 하카리
+    tw: 秤
+    th: 秤
+  name:
+    cn: 亚津子(泳装)
+    jp: アツコ（水着）
+    en: Atsuko (Swimsuit)
+    kr: 아츠코(수영복)
+    tw: 敦子（泳裝）
+    th: อาสึโกะ (ชุดว่ายน้ำ)
+  nickname: []
+  nicknameFrom: 10042
+  birthday:
+    month: 1
+    day: 20
+  club: 阿里乌斯小队
+  clubCode: AriusSqud
+  affiliation: 阿里乌斯
+  schoolCode: Arius
+  rarity: 1
+  type: Special
+  armorType: Unarmed
+  bulletType: Sonic
   weapon: SMG
