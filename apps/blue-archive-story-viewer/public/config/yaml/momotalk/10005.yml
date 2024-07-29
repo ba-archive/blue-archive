@@ -1,5 +1,5 @@
 CharacterId: 10005
-translator: 霉豆子
+translator: 霉豆子&Azenix
 title:
   - TextJp: 眠る鯨
     TextCn: 沉睡的鲸鱼
@@ -54,6 +54,15 @@ title:
     TextTw: 海生館！
     GroupId: 1000509
     FavorScheduleId: 100059
+    CharacterId: 10005
+  - TextJp: どこでも入場券
+    TextCn: 随处入梦券
+    TextKr: 어디서든 입장권
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1000515
+    FavorScheduleId: 1000515
     CharacterId: 10005
 content:
   - MessageKR: 음, 선생. 휴일에 대책위원회 동아리실로 와줄 수 있겠어?
@@ -1404,7 +1413,385 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100059
-    NextGroupId: 0
+    NextGroupId: 100050460
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 곤란하구만
+    MessageJP: 困ったものだねぇ
+    MessageCN: 真伤脑筋啊
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050460
+    Id: 100050010
+    CharacterId: 10005
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100050450
+    PreConditionFavorScheduleId: 100059
+    FavorScheduleId: 0
+    NextGroupId: 100050470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 어디로 숨어도
+    MessageJP: どこに隠れていても
+    MessageCN: 无论躲在哪里
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050470
+    Id: 100050020
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 귀여운 후배들의 무서운 잔소리라니
+    MessageJP: 可愛い後輩たちから小言が……
+    MessageCN: 可爱的后辈们都要唠叨……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050470
+    Id: 100050030
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아저씨는 서글퍼
+    MessageJP: おじさん、悲しいよ
+    MessageCN: 大叔我啊，好伤心哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050470
+    Id: 100050040
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 또 한 소리 들었구나
+    MessageJP: また小言を……
+    MessageCN: 又在发牢骚了……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050480
+    Id: 100050050
+    CharacterId: 10005
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 여전하네, 호시노는
+    MessageJP: 相変わらずだね、ホシノは
+    MessageCN: 星野果然还是老样子啊
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050480
+    Id: 100050060
+    CharacterId: 10005
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 뭐 그렇지
+    MessageJP: まあね
+    MessageCN: 算是吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050490
+    Id: 100050070
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050500
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그런 의미에서
+    MessageJP: ってことで
+    MessageCN: 总之就是这样
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050490
+    Id: 100050080
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050500
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아니
+    MessageJP: いや
+    MessageCN: 不过
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050500
+    Id: 100050100
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050510
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이건 그것과는 별개이긴 하지만
+    MessageJP: それとこれとは関係ないんだけど
+    MessageCN: 虽然和刚才说的事情没什么关系
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050500
+    Id: 100050110
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050510
+    Id: 100050120
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050520
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 언제 한 번, 시간 괜찮아?
+    MessageJP: 今から会えないかな？
+    MessageCN: 现在可以见一面吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050510
+    Id: 100050130
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1000515
+    NextGroupId: 100050520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050520
+    Id: 100050140
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 100050510
+    PreConditionFavorScheduleId: 1000515
+    FavorScheduleId: 0
+    NextGroupId: 100050530
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 사실 아저씨에게는 그런 아이템이 더 있어
+    MessageJP: 実はおじさん、いろんなお昼寝グッズを持ってるんだよね
+    MessageCN: 其实，大叔我还有很多午睡用品哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050530
+    Id: 100050150
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050540
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 궁금하지 않아?
+    MessageJP: 気にならない～？
+    MessageCN: 不想看看吗～？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050530
+    Id: 100050160
+    CharacterId: 10005
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050540
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇게 말하니 궁금한걸
+    MessageJP: そう言われると、気になってくるね
+    MessageCN: 你这么一说，我就有点在意了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050540
+    Id: 100050170
+    CharacterId: 10005
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050550
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 조건마다 해금되는 느낌인 거야?
+    MessageJP: 今度また遊びに行っても良い？
+    MessageCN: 我下次还可以去玩吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050540
+    Id: 100050180
+    CharacterId: 10005
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050550
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇지?
+    MessageJP: でしょ？
+    MessageCN: 对吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050550
+    Id: 100050190
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050560
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 좋아
+    MessageJP: それじゃ
+    MessageCN: 那么
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050550
+    Id: 100050200
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100050560
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 다음에는 또 다른 걸로 보여줄게.
+    MessageJP: 次は別の物を見せてあげるよ
+    MessageCN: 下次再给你看其他东西哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050560
+    Id: 100050210
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 기대하라고~.
+    MessageJP: 楽しみにしてて～
+    MessageCN: 好好期待吧～
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100050560
+    Id: 100050220
+    CharacterId: 10005
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
