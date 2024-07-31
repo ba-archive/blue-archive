@@ -28,6 +28,15 @@ title:
     GroupId: 1300105
     FavorScheduleId: 130015
     CharacterId: 13001
+  - TextJp: 風が来る音
+    TextCn: 风起的声音
+    TextKr: 바람이 오는 소리
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1300115
+    FavorScheduleId: 1300115
+    CharacterId: 13001
 content:
   - MessageKR: 선생님.
     MessageJP: 先生
@@ -549,7 +558,205 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 130015
-    NextGroupId: 0
+    NextGroupId: 130010230
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님.
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010230
+    Id: 130010010
+    CharacterId: 13001
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 130010220
+    PreConditionFavorScheduleId: 130015
+    FavorScheduleId: 0
+    NextGroupId: 130010240
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 여름이야.
+    MessageJP: 夏だよ
+    MessageCN: 到夏天了哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010240
+    Id: 130010020
+    CharacterId: 13001
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 더워~.
+    MessageJP: 暑いね～
+    MessageCN: 好热啊〜
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010240
+    Id: 130010030
+    CharacterId: 13001
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010250
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러게. 이번 여름은 유난히 더운걸.
+    MessageJP: 今年は特に暑いね
+    MessageCN: 今年夏天特别热呢
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010250
+    Id: 130010040
+    CharacterId: 13001
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010260
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그래도
+    MessageJP: でも
+    MessageCN: 但是
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010260
+    Id: 130010050
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 바람이 오는 소리를 들을 수 있으니까.
+    MessageJP: 風が来る音を聞けるから
+    MessageCN: 可以听到起风的声音
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010260
+    Id: 130010060
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010270
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 바람 소리?
+    MessageJP: 風の音？
+    MessageCN: 风的声音？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010270
+    Id: 130010070
+    CharacterId: 13001
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010280
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아니
+    MessageJP: ううん
+    MessageCN: 不是
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010280
+    Id: 130010080
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 바람이 오는 소리.
+    MessageJP: 風が来る音
+    MessageCN: 起风的声音
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010280
+    Id: 130010090
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 음
+    MessageJP: んー
+    MessageCN: 唔——
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010290
+    Id: 130010100
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130010300
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님한테도 들려줄게.
+    MessageJP: 先生にも聞かせてあげる
+    MessageCN: 我也会让老师听到的
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130010300
+    Id: 130010110
+    CharacterId: 13001
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1300115
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
