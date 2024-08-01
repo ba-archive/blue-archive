@@ -22,12 +22,6 @@ export const useDiffComparatorStore = defineStore({
     setFile(position: number, name: string, content: Scenario) {
       this.files[position] = { name, content };
     },
-    resetFileState() {
-      this.files = [
-        { name: "file1", content: {} as Scenario },
-        { name: "file2", content: {} as Scenario },
-      ];
-    },
     swapFiles() {
       const temp = this.files[0];
       this.files[0] = this.files[1];

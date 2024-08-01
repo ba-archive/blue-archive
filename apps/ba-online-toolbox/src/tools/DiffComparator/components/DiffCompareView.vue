@@ -8,8 +8,9 @@ import "highlight.js/styles/github.css";
 import "diff2html/bundles/css/diff2html.min.css";
 
 const diffCompareStore = useDiffComparatorStore();
-
+// @ts-ignore
 const file1 = diffCompareStore.getFile(0);
+// @ts-ignore
 const file2 = diffCompareStore.getFile(1);
 
 const diff = Diff.createTwoFilesPatch(
