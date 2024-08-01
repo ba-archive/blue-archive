@@ -95,7 +95,7 @@ function inputHandle(event: Event) {
     </div>
     <div
       v-if="!!isEmpty(props.file.content)"
-      class="file-upload gap-4 flex flex-col bg-white rounded-lg h-full w-[40dvw] justify-center items-center cursor-pointer"
+      class="file-upload gap-4 flex flex-col bg-white rounded-lg h-full w-[588px] max-w-[40dvw] justify-center items-center cursor-pointer"
       @dragover="dragOverHandler"
       @drop="dropHandler"
       @click="clickHandle"

@@ -21,7 +21,7 @@ const diff = Diff.createTwoFilesPatch(
 
 const outputHtml = Diff2Html.html(diff, {
   matching: "words",
-  outputFormat: "side-by-side",
+  outputFormat: "line-by-line",
 });
 
 function handleReturn() {
