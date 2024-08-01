@@ -5,7 +5,7 @@ import DiffCompareView from "./components/DiffCompareView.vue";
 import eventBus from "./events/events";
 import { useDiffComparatorStore } from "./store/DiffComparatorStore";
 
-const shouldStartCompare = ref(true);
+const shouldStartCompare = ref(false);
 
 eventBus.on("startCompare", () => {
   shouldStartCompare.value = true;
