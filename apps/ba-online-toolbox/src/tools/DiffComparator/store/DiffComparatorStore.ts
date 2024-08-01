@@ -12,6 +12,7 @@ export const useDiffComparatorStore = defineStore({
       ],
     };
   },
+  // @ts-ignore
   persist: true,
   getters: {
     getFileAll: state => state.files,
