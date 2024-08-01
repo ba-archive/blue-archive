@@ -13,21 +13,15 @@ export default defineConfig({
     ["align-self-center", { "align-self": "center" }],
     ["bg-arona-6", { "background-color": "#2773e1" }],
   ],
-  shortcuts: {
-    "card-float": "shadow-std rounded-lg gap-[24px] p-[24px]",
-  },
+  shortcuts: [
+    { "card-float": "shadow-std rounded-lg gap-[24px] p-[24px]" },
+  ],
   presets: [
     presetUno(),
     presetIcons({
       scale: 1.2,
       warn: true,
       unit: "em",
-    }),
-    presetWebFonts({
-      provider: "bunny",
-      fonts: {
-        sans: "Inter",
-      },
     }),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],

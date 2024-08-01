@@ -14,7 +14,10 @@ import {
   presetUno,
   transformerDirectives,
 } from "unocss";
+import vueDevTools from "vite-plugin-vue-devtools";
+
 import { viteMockServe } from "vite-plugin-mock";
+
 const isDevelopment = process.env.NODE_ENV === "development";
 
 // https://vitejs.dev/config/
@@ -41,6 +44,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    vueDevTools(),
     isDevelopment &&
       viteMockServe({
         mockPath: "mock",
@@ -49,6 +53,8 @@ export default defineConfig({
         logger: true,
       }),
     AutoImport({
+      include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
+      imports: ["vue", "vue-router"],
       resolvers: [ElementPlusResolver(), NaiveUiResolver()],
     }),
     Components({

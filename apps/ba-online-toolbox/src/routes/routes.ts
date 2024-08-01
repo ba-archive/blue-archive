@@ -24,19 +24,19 @@ const routes: RouteRecordRaw[] = [
       navOrder: 0,
     },
     children: [
-      {
-        path: 'aronaTalk',
-        name: 'AronaTalk',
-        meta: {
-          shouldShowInHomepageNav: false,
-          shouldShowInNavbar: false,
-          icon: '/image/arona_icon.webp',
-          title: 'AronaTalk',
-          description: 'BA 前端标准靶场',
-          navOrder: 1,
-        },
-        component: () => import('../tools/AronaTalk/AronaTalkHome.vue'),
-      },
+      // {
+      //   path: 'aronaTalk',
+      //   name: 'AronaTalk',
+      //   meta: {
+      //     shouldShowInHomepageNav: false,
+      //     shouldShowInNavbar: false,
+      //     icon: '/image/arona_icon.webp',
+      //     title: 'AronaTalk',
+      //     description: 'BA 前端标准靶场',
+      //     navOrder: 1,
+      //   },
+      //   component: () => import('../tools/AronaTalk/AronaTalkHome.vue'),
+      // },
       {
         path: '/momotalk',
         name: 'TranslateMomotalk',
@@ -65,6 +65,19 @@ const routes: RouteRecordRaw[] = [
         component: () =>
           import('../tools/ScenarioEditor/ScenarioEditorHome.vue'),
       },
+      {
+        path: '/diff-comparator',
+        name: 'DiffComparator',
+        meta: {
+          shouldShowInHomepageNav: true,
+          shouldShowInNavbar: false,
+          icon: '/image/diff.svg',
+          title: 'Diff 比较',
+          description: '比较两个文本的差异',
+          navOrder: 4,
+        },
+        component: () => import('../tools/DiffComparator/DiffCompareHome.vue'),
+      }
     ],
   },
 ];
