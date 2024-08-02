@@ -359,6 +359,9 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
   const playerStore = usePlayerStore();
   const parseResult: StoryUnit[] = [];
   for (const [index, rawStoryUnit] of deepCopyObject(content).entries()) {
+    if (!rawStoryUnit) {
+      continue;
+    }
     const { GroupId, SelectionGroup, PopupFileName } = rawStoryUnit;
     const unit: StoryUnit = {
       GroupId,
