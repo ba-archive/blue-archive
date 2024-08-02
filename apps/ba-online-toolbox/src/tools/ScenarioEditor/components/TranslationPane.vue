@@ -36,7 +36,7 @@
         :prefer-semantic="config.getSemanticPreference"
         :select-line="config.getSelectLine"
       />
-      <div class="flex content-between gap-4">
+      <div class="flex justify-between items-end">
         <n-space vertical>
           <n-space>
             <n-button type="info" @click="sendRefreshPlayerSignal"
@@ -109,6 +109,24 @@
             </n-button>
           </n-space>
         </n-space>
+        <n-tooltip :duration="300">
+          <template #trigger>
+            <div class="flex h-full flex-1 justify-end">
+              翻译风格：
+              <n-tag size="small" :type="modelStabilityLevel.type">{{
+                modelStabilityLevel.value
+              }}</n-tag>
+            </div>
+          </template>
+          <span>翻译结果随机性，值越小花活越多</span>
+          <n-slider
+            v-model:value="modelStability"
+            :max="1"
+            :min="0"
+            :step="0.1"
+            :tooltip="false"
+          ></n-slider>
+        </n-tooltip>
       </div>
       <div class="flex justify-between gap-4">
         <span style="flex: 2">
@@ -198,6 +216,7 @@ import {
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
 import OriginalTextDisp from "./OriginalTextDisp.vue";
+import { duration } from "html2canvas/dist/types/css/property-descriptors/duration";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -296,6 +315,33 @@ function handleFormalizePunctuation() {
 let llmLastCalled = 0;
 const llmLoading = ref(false);
 const studentNames = computed(() => config.getStudentList);
+const modelStability = ref(0.6);
+const temperature = computed(() => 1 - modelStability.value);
+
+enum ModelStability {
+  "Low" = 0.33,
+  "Medium" = 0.7,
+  "High" = 1.0,
+}
+
+const modelStabilityLevel = computed(() => {
+  if (temperature.value < ModelStability.Low) {
+    return {
+      type: "success",
+      value: "稳重",
+    };
+  } else if (temperature.value < ModelStability.Medium) {
+    return {
+      type: "warning",
+      value: "平衡",
+    };
+  } else {
+    return {
+      type: "error",
+      value: "整活",
+    };
+  }
+});
 
 function handleLLMTranslateRequest(
   model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0
@@ -314,7 +360,7 @@ function handleLLMTranslateRequest(
     const text =
       mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
 
-    getClaudeTranslation(text, model)
+    getClaudeTranslation(text, model, temperature.value)
       .then((res: ClaudeMessage) => {
         const rawText = res.content[0].text ?? "";
         const fullWidthText = halfToFull(rawText);

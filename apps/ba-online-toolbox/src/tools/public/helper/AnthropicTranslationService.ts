@@ -123,11 +123,20 @@ const models = [
 
 function getClaudeTranslation(
   input: string,
-  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0
+  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0,
+  temperature = 0
 ) {
   rag_request.model = (
     models.find(el => el.alias.includes(model)) || models[0]
   ).modelName;
+  rag_request.temperature = temperature;
+  if (temperature >= 0.33) {
+    rag_request.system += "可以改写大量原句结构以追求通顺和符合原文语气.";
+  } else if (temperature >= 0.66) {
+    rag_request.system += "可以改变些许原句结构以追求通顺和符合原文语气.";
+  } else {
+    rag_request.system += "在通顺的基础上尽最大可能保持原句结构.";
+  }
 
   const error_message = { content: [{ type: "text", text: "" }] };
 
