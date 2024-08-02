@@ -65,7 +65,7 @@ const { width: playerContainerWidth, height: playerContainerHeight } =
 let lastLine = config.getSelectLine;
 watchDebounced(
   () =>
-    mainStore.getScenario.content[config.getSelectLine][config.getTargetLang],
+    mainStore.getScenario.content[config.getSelectLine]?.[config.getTargetLang],
   () => {
     const currentLine = config.getSelectLine;
     let textOnly = lastLine === currentLine;
