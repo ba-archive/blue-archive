@@ -109,7 +109,7 @@
             </n-button>
           </n-space>
         </n-space>
-        <n-tooltip :duration="300">
+        <n-tooltip :duration="300" placement="top-end">
           <template #trigger>
             <div class="flex h-full flex-1 justify-end">
               翻译风格：
@@ -128,14 +128,12 @@
           ></n-slider>
         </n-tooltip>
       </div>
-      <div class="flex justify-between gap-4">
-        <span style="flex: 2">
-          <translate-input
-            :handleGotoNextLineRequest="handleGotoNextLineRequest"
-            :handleGotoPrevLineRequest="handleGotoPrevLineRequest"
-          ></translate-input>
-        </span>
-        <span style="flex: 1; width: 100%">
+      <div class="grid grid-cols-[3fr_2fr] gap-4">
+        <translate-input
+          :handleGotoNextLineRequest="handleGotoNextLineRequest"
+          :handleGotoPrevLineRequest="handleGotoPrevLineRequest"
+        ></translate-input>
+        <span class="flex flex-col flex-1 w-full gap-2">
           <n-input
             type="textarea"
             placeholder="机翻结果"
@@ -143,6 +141,30 @@
             style="width: 100%; height: 120px"
           >
           </n-input>
+          <div class="flex flex-1 gap-2">
+            <n-input
+              v-model:value="advice"
+              placeholder="指出机翻需要更正的地方……"
+              @keydown.enter="reTranslateHandle"
+            />
+            <n-button
+              secondary
+              :loading="llmLoading"
+              @click="handleLLMTranslateRequest(1, TranslationMode.amend)"
+            >
+              <svg
+                class="w-[20px] h-[20px]"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  d="M27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L7 16L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78zm-20.9 10L8.76 17H18v-2H8.76L6.55 6.89L24.76 16z"
+                  fill="#18A058"
+                ></path>
+              </svg>
+            </n-button>
+          </div>
         </span>
       </div>
       <div class="comment-container flex-horizontal fill-width">
@@ -178,19 +200,30 @@
         </n-input>
       </div>
       <n-space align="center">
-        <n-button
-          :disabled="isLastLine"
-          type="primary"
-          @click="handleGotoNextLineRequest"
-          >下一句
-        </n-button>
-        <n-button
-          :disabled="isLastLine"
-          quaternary
-          type="primary"
-          @click="handleGotoPrevLineRequest"
-          >上一句
-        </n-button>
+        <n-tooltip>
+          <template #trigger>
+            <div class="flex gap-3">
+              <n-button
+                :disabled="isLastLine"
+                type="primary"
+                @click="handleGotoNextLineRequest"
+                >下一句
+              </n-button>
+              <n-button
+                :disabled="isLastLine"
+                quaternary
+                type="primary"
+                @click="handleGotoPrevLineRequest"
+                >上一句
+              </n-button>
+            </div>
+          </template>
+          <span>
+            下一句：<kbd>Ctrl</kbd> + <kbd>Enter</kbd> <br />
+            上一句：<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> <br />
+            Mac 使用 <kbd>Cmd</kbd> 代替 <kbd>Ctrl</kbd>
+          </span>
+        </n-tooltip>
         <span class="text-gray-300"
           >当前位置： {{ completion.completed }} /
           {{ completion.fullLength }}</span
@@ -317,6 +350,7 @@ const llmLoading = ref(false);
 const studentNames = computed(() => config.getStudentList);
 const modelStability = ref(0.6);
 const temperature = computed(() => 1 - modelStability.value);
+const advice = ref("");
 
 enum ModelStability {
   "Low" = 0.33,
@@ -343,8 +377,14 @@ const modelStabilityLevel = computed(() => {
   }
 });
 
+enum TranslationMode {
+  "new",
+  "amend",
+}
+
 function handleLLMTranslateRequest(
-  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0
+  model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0,
+  mode: TranslationMode = TranslationMode.new
 ) {
   if (config.getSelectLine !== -1) {
     if (Date.now() - llmLastCalled < 5000) {
@@ -360,7 +400,35 @@ function handleLLMTranslateRequest(
     const text =
       mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
 
-    getClaudeTranslation(text, model, temperature.value)
+    if (!text) {
+      ElMessage({
+        message: "没有需要翻译的文本",
+        type: "error",
+      });
+      llmLoading.value = false;
+      return;
+    }
+
+    if (mode === TranslationMode.amend && !advice.value) {
+      ElMessage({
+        message: "用中文告诉模型你需要怎么更正",
+        type: "error",
+      });
+      llmLoading.value = false;
+      return;
+    }
+
+    const currentTranslation = config.getTmpMachineTranslate(currentText.value);
+
+    getClaudeTranslation(
+      text,
+      model,
+      temperature.value,
+      mode,
+      text,
+      currentTranslation,
+      advice.value
+    )
       .then((res: ClaudeMessage) => {
         const rawText = res.content[0].text ?? "";
         const fullWidthText = halfToFull(rawText);
@@ -372,6 +440,7 @@ function handleLLMTranslateRequest(
           currentText.value,
           formalizeQuotation(studentTransformed)
         );
+        advice.value = "";
       })
       .catch(err => {
         console.log(err);
@@ -379,6 +448,12 @@ function handleLLMTranslateRequest(
       .finally(() => {
         llmLoading.value = false;
       });
+  }
+}
+
+function reTranslateHandle(event: KeyboardEvent) {
+  if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
+    handleLLMTranslateRequest(1, TranslationMode.amend);
   }
 }
 
@@ -462,5 +537,11 @@ function sendRefreshPlayerSignal() {
 
 .translation-pane {
   grid-area: translation-pane;
+}
+
+kbd {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 4px;
 }
 </style>

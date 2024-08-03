@@ -1,9 +1,9 @@
 <template>
-  <div style="height: 100%">
+  <div class="h-full flex-1" >
     <n-input
       v-if="translateStruct.translateType === TranslateType.input"
       v-add-combo-key-listener
-      class="explicit-quotation-mark"
+      class="explicit-quotation-mark h-[162px]"
       placeholder="暂无翻译"
       type="textarea"
       :value="
@@ -16,7 +16,6 @@
           : ''
       "
       @input="inputHandle"
-      style="width: 95%; height: 120px"
       clearable
       ref="textInputRef"
     ></n-input>

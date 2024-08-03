@@ -27,6 +27,11 @@ interface ClaudeRoleplayContent {
   content: ClaudeContent[];
 }
 
+enum TranslationMode {
+  "new",
+  "amend",
+}
+
 // anthropic API 有问题，自己构建一个 axios 实例
 const instance = axios.create({
   // baseURL: "https://api.anthropic.com/v1",
@@ -37,7 +42,7 @@ const instance = axios.create({
   },
 });
 
-const rag_request = {
+const sft_request = {
   model: "",
   max_tokens: 1000,
   temperature: 0,
@@ -124,18 +129,22 @@ const models = [
 function getClaudeTranslation(
   input: string,
   model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0,
-  temperature = 0
+  temperature = 0,
+  mode = TranslationMode.new,
+  currentText = "",
+  currentTranslation = "",
+  advice = ""
 ) {
-  rag_request.model = (
+  sft_request.model = (
     models.find(el => el.alias.includes(model)) || models[0]
   ).modelName;
-  rag_request.temperature = temperature;
+  sft_request.temperature = temperature;
   if (temperature >= 0.33) {
-    rag_request.system += "可以改写大量原句结构以追求通顺和符合原文语气.";
+    sft_request.system += "可以改写大量原句结构以追求通顺和符合原文语气.";
   } else if (temperature >= 0.66) {
-    rag_request.system += "可以改变些许原句结构以追求通顺和符合原文语气.";
+    sft_request.system += "可以改变些许原句结构以追求通顺和符合原文语气.";
   } else {
-    rag_request.system += "在通顺的基础上尽最大可能保持原句结构.";
+    sft_request.system += "在通顺的基础上尽最大可能保持原句结构.";
   }
 
   const error_message = { content: [{ type: "text", text: "" }] };
@@ -151,10 +160,34 @@ function getClaudeTranslation(
     return new Promise(resolve => resolve(error_message));
   }
 
-  rag_request.messages[6].content[0].text = input;
+  // reset sft_request
+  sft_request.messages = sft_request.messages.slice(0, 7);
+
+  sft_request.messages[6].content[0].text = input;
+
+  if (mode === TranslationMode.amend) {
+    sft_request.messages.push({
+      role: "assistant",
+      content: [
+        {
+          type: "text",
+          text: currentTranslation,
+        },
+      ],
+    });
+    sft_request.messages.push({
+      role: "user",
+      content: [
+        {
+          type: "text",
+          text: "修改上一句翻译：" + advice,
+        },
+      ],
+    });
+  }
 
   return instance
-    .post("/v1/messages", rag_request)
+    .post("/v1/messages", sft_request)
     .then(res => res.data)
     .catch(e => {
       error_message.content[0].text = e.message;

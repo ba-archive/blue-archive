@@ -15,6 +15,9 @@ importers:
       '@arco-design/web-vue':
         specifier: ~2.55.2
         version: 2.55.2(vue@3.4.29(typescript@5.4.5))
+      '@icon-park/vue':
+        specifier: ~1.4.2
+        version: 1.4.2(vue@3.4.29(typescript@5.4.5))
       '@types/diff':
         specifier: ~5.2.1
         version: 5.2.1
@@ -2292,6 +2295,12 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
+  '@icon-park/vue@1.4.2':
+    resolution: {integrity: sha512-YXXC53R0hjM76B2M4ANRI0m2bQB1cifUW+YXxQfGofITP6gr+pSMafBz/vzECYSkW3zZklm2mVuqQj4RAZGR2Q==}
+    engines: {node: '>= 8.0.0', npm: '>= 5.0.0'}
+    peerDependencies:
+      vue: 2.x
+
   '@iconify-json/carbon@1.1.31':
     resolution: {integrity: sha512-CAvECFfiwGyZmlcuM2JLMRDEN3VsIEZv6lml7Xf+3giQ5oXloADm0b5wiVPFZmONKM5jXERmx+E7YSvAtFJIbw==}
 
@@ -3547,6 +3556,9 @@ packages:
     peerDependenciesMeta:
       vue-tsc:
         optional: true
+
+  '@vue/babel-helper-vue-jsx-merge-props@1.4.0':
+    resolution: {integrity: sha512-JkqXfCkUDp4PIlFdDQ0TdXoIejMtTHP67/pvxlgeY+u5k3LEdKuWZ3LK6xkxo52uDoABIVyRwqVkfLQJhk7VBA==}
 
   '@vue/babel-helper-vue-transform-on@1.2.2':
     resolution: {integrity: sha512-nOttamHUR3YzdEqdM/XXDyCSdxMA9VizUKoroLX6yTyRtggzQMHXcmwh8a7ZErcJttIBIc9s68a1B8GZ+Dmvsw==}
@@ -10338,6 +10350,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
+  '@icon-park/vue@1.4.2(vue@3.4.29(typescript@5.4.5))':
+    dependencies:
+      '@vue/babel-helper-vue-jsx-merge-props': 1.4.0
+      csstype: 3.1.3
+      vue: 3.4.29(typescript@5.4.5)
+
   '@iconify-json/carbon@1.1.31':
     dependencies:
       '@iconify/types': 2.0.0
@@ -11907,6 +11925,8 @@ snapshots:
       - rollup
       - typescript
       - vue
+
+  '@vue/babel-helper-vue-jsx-merge-props@1.4.0': {}
 
   '@vue/babel-helper-vue-transform-on@1.2.2': {}
 
