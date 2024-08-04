@@ -1,36 +1,33 @@
 CharacterId: 10100
 translator: ALKA
 title:
-  - TextKr: 전문가
-    TextJp: 専門家
+  - TextJp: 専門家
     TextCn: 内行
+    TextKr: 전문가
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010002
     FavorScheduleId: 101002
     CharacterId: 10100
-    unsure: false
-  - TextKr: 같은 것과 다른 것
-    TextJp: 変わったもの、変わらないもの
+  - TextJp: 変わったもの、変わらないもの
     TextCn: 潮汐流变，磐石不移
+    TextKr: 같은 것과 다른 것
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010003
     FavorScheduleId: 101003
     CharacterId: 10100
-    unsure: false
-  - TextKr: 복면 라이더
-    TextJp: 覆面ライダー
+  - TextJp: 覆面ライダー
     TextCn: 蒙面骑士
+    TextKr: 복면 라이더
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010005
     FavorScheduleId: 101005
     CharacterId: 10100
-    unsure: false
 content:
   - MessageKR: 테스트용 메시지야
     MessageJP: テスト
@@ -50,7 +47,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아
     MessageJP: あ
     MessageCN: 啊
@@ -69,7 +65,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아아
     MessageJP: あーあー
     MessageCN: 啊—啊—
@@ -88,7 +83,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 잘 보여? 전송은 잘 되고 있어?
     MessageJP: このメッセージ、見えてる？
     MessageCN: 能看到这条信息吗？
@@ -107,7 +101,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응. 잘되는 거 같아 시로코
     MessageJP: ちゃんと見えるよ、シロコ
     MessageCN: 每个字都能看到哦，白子
@@ -126,7 +119,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 음
     MessageJP: ん
     MessageCN: 嗯
@@ -145,7 +137,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그러네 다행이야
     MessageJP: 良かった
     MessageCN: 太好了
@@ -164,7 +155,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼 또 연락할게
     MessageJP: じゃあ、また連絡する
     MessageCN: 那么，之后再联系
@@ -183,7 +173,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 잠깐만. 시로코는 지금은 어디에 있는 거야?
     MessageJP: 待って、今どこにいるの？
     MessageCN: 等等，你现在在哪？
@@ -202,7 +191,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 나?
     MessageJP: 私？
     MessageCN: 我？
@@ -221,7 +209,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아비도스 자치구에 있어
     MessageJP: アビドス自治区だけど
     MessageCN: 我在阿比多斯自治区
@@ -240,7 +227,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럼 잠깐 만나자!!
     MessageJP: これから少し会えないかな？
     MessageCN: 之后能不能稍微见个面？
@@ -259,7 +245,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "……응. "
     MessageJP: ……ん
     MessageCN: ……嗯
@@ -278,7 +263,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 문제 없어
     MessageJP: 分かった
     MessageCN: 我知道了
@@ -297,7 +281,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 기다리고 있을게
     MessageJP: 待ってるね
     MessageCN: 我等你
@@ -316,7 +299,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그래, 기다려!
     MessageJP: すぐ行くよ！
     MessageCN: 我这就出发！
@@ -335,7 +317,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 세제, 우유 500ml, 계란 작은 팩, 티슈, 수건
     MessageJP: 卵、牛乳、洗剤、タオル、ティッシュ
     MessageCN: 鸡蛋、牛奶、洗涤剂、毛巾、纸巾
@@ -354,7 +335,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "바디클린저 < 꼭 살 것 "
     MessageJP: あと、ボディーソープも
     MessageCN: 还有沐浴露
@@ -373,7 +353,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: ……응?
     MessageJP: ……何の話？
     MessageCN: ……你在说什么？
@@ -392,7 +371,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "시로코? "
     MessageJP: シロコ？
     MessageCN: 白子？
@@ -411,7 +389,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아.
     MessageJP: あ
     MessageCN: 啊
@@ -430,7 +407,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 잘못 보냈어. 미안 선생님.
     MessageJP: ごめん、間違えた
     MessageCN: 抱歉，我搞错了
@@ -449,7 +425,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생님.
     MessageJP: 先生
     MessageCN: 老师
@@ -468,7 +443,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 나 엄청난 아이디어가 생각났어.
     MessageJP: 今、すごく良いアイデアが浮かんだ
     MessageCN: 我突然想到了个好主意
@@ -487,7 +461,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 당장 이쪽으로 와줘.
     MessageJP: ちょっと来てくれる？
     MessageCN: 老师能来一趟吗？
@@ -506,7 +479,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 뭔진 모르겠지만 당장 갈게!
     MessageJP: とりあえず、すぐ行くね！
     MessageCN: 总之，我马上就去！
@@ -525,7 +497,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아, 으응.
     MessageJP: あ
     MessageCN: 啊
@@ -544,7 +515,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "그러니까…… "
     MessageJP: ……ん
     MessageCN: ……嗯
@@ -563,7 +533,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 만나서 설명할게.
     MessageJP: 直接説明するね
     MessageCN: 我会当面解释的
@@ -582,7 +551,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생님 큰일났어…….
     MessageJP: 先生、大変
     MessageCN: 老师，不好了
@@ -601,7 +569,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 혹시 몰라 가지고 있던 라이딩 슈트를 입어봤는데
     MessageJP: 昔のサイクルジャージを着てみたら
     MessageCN: 我试着穿了下以前的骑行服
@@ -620,7 +587,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 지퍼가…….
     MessageJP: ファスナーが……
     MessageCN: 拉链拉不上了……
@@ -639,7 +605,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "저런……?! "
     MessageJP: まさか……！？
     MessageCN: 难道说……！？
@@ -658,7 +623,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아,
     MessageJP: あ
     MessageCN: 啊
@@ -677,7 +641,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "오해할까봐 말해두겠는데 "
     MessageJP: 念のため言っておくけど
     MessageCN: 我先说清楚
@@ -696,7 +659,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 살이 찐 건 아니야.
     MessageJP: 太ったわけじゃないから
     MessageCN: 没有变胖
@@ -715,7 +677,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 으음, 과연…….
     MessageJP: う、うん……
     MessageCN: 额、嗯……
@@ -734,7 +695,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: …….
     MessageJP: ん
     MessageCN: 嗯
@@ -753,7 +713,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "잘 자. 선생님. "
     MessageJP: おやすみ、先生
     MessageCN: 晚安，老师
@@ -772,7 +731,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생님
     MessageJP: 先生
     MessageCN: 老师
@@ -791,7 +749,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 괜찮다면
     MessageJP: 時間があれば
     MessageCN: 老师有空的话
@@ -810,7 +767,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 혹시 좀 만날 수 있을까?
     MessageJP: 今から会える？
     MessageCN: 现在能见个面吗？
@@ -829,7 +785,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 무슨 일이야, 시로코?
     MessageJP: 何かあったの？
     MessageCN: 发生什么事了？
@@ -848,7 +803,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응
     MessageJP: ん
     MessageCN: 嗯
@@ -867,7 +821,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 고민 상담이랄까…….
     MessageJP: 悩み事があって……
     MessageCN: 有烦恼的事……
@@ -886,7 +839,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "그런 거라면 알겠어! "
     MessageJP: 分かった、すぐ向かうね！
     MessageCN: 我知道了，马上动身！
@@ -905,7 +857,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응 고마워
     MessageJP: ん、ありがとう
     MessageCN: 嗯，谢谢
@@ -924,7 +875,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 승부는
     MessageJP: 勝負の決着がついた
     MessageCN: 胜负已定
@@ -943,7 +893,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 승부……?!
     MessageJP: 勝負したの！？
     MessageCN: 决出胜负了！？
@@ -962,7 +911,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아아.
     MessageJP: ん
     MessageCN: 嗯
@@ -981,7 +929,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "응. 어쩌다보니까 "
     MessageJP: その場の成り行きで
     MessageCN: 根据当时的情况
@@ -1000,7 +947,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 로드 레이싱 승부로 이어져버려서…….
     MessageJP: サイクルレースをすることになった
     MessageCN: 我们决定比自行车
@@ -1019,7 +965,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 로드 레이싱?!
     MessageJP: サイクルレース！？
     MessageCN: 自行车比赛！？
@@ -1038,7 +983,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 누가 이겼나요?!
     MessageJP: どっちが勝ったの！？
     MessageCN: 那么谁赢了！？
@@ -1057,7 +1001,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "승부 결과는…… "
     MessageJP: ん……
     MessageCN: 嗯……
@@ -1076,7 +1019,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 12전 4승 7패 1무승부
     MessageJP: 4勝7敗。1引き分け
     MessageCN: 4胜7败。还有1平局
@@ -1095,7 +1037,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 내 패배야
     MessageJP: 私の負け
     MessageCN: 我输了
@@ -1114,7 +1055,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 역시 현역이 강하네…….
     MessageJP: やっぱり、現役のほうが強かったんだ……
     MessageCN: 果然还是现役的比较强啊……
@@ -1133,7 +1073,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "하지만 괜찮아. "
     MessageJP: でも、今回は仕方ない
     MessageCN: 不过，这次没办法
@@ -1152,7 +1091,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그쪽은 라이딩 슈트까지 입고 왔으니까
     MessageJP: 相手はサイクルジャージを着ていたから
     MessageCN: 因为她穿着骑行服
@@ -1171,7 +1109,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 내 자전거가 완성되면
     MessageJP: 準備が整ったら
     MessageCN: 我打算等我准备好了
@@ -1190,7 +1127,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 리벤지 매치를 할 거니까
     MessageJP: リベンジするつもり
     MessageCN: 再去找她复仇
@@ -1209,7 +1145,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그땐 꼭 참관해줘, 선생님.
     MessageJP: その時は見に来てね、先生
     MessageCN: 到那时记得来看哦，老师
@@ -1228,7 +1163,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아아, 물론이야. 꼭 갈게.
     MessageJP: うん、もちろん。必ず行くね
     MessageCN: 嗯，那当然。我一定会去的
@@ -1247,7 +1181,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: "그땐 누구를 응원할 거야? "
     MessageJP: 先生は、どっちを応援する？
     MessageCN: 老师支持谁？
@@ -1266,7 +1199,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그건 비밀.
     MessageJP: それは内緒
     MessageCN: 这是秘密
@@ -1285,7 +1217,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 알려줄 수 없지.
     MessageJP: 二人とも応援してるよ
     MessageCN: 两个都支持哦
@@ -1304,7 +1235,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응.
     MessageJP: ん
     MessageCN: 嗯
@@ -1323,7 +1253,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그럴 거 같았어
     MessageJP: そう言うと思った
     MessageCN: 我就知道你会这么说
@@ -1342,7 +1271,6 @@ content:
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 고마워 선생님
     MessageJP: ありがとう、先生
     MessageCN: 谢谢你，老师
@@ -1361,7 +1289,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다음에 또 연락할게
     MessageJP: また連絡するね
     MessageCN: 之后再联系
@@ -1380,4 +1307,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
