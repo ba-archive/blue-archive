@@ -1316,4 +1316,63 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH0263_home: {
+    name: "CH0263_home",
+    playQue: [
+      {
+        name: "CH0263_home",
+        animation: "Start_Idle_01",
+        fadeTime: 8.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0263_home: {
+        scale: 1.0,
+        // customTransitions: [
+        //   {
+        //     transition: "Custom_Anamorphic", // 黑子的宽荧幕遮挡
+        //     startTime: 0.0, // 正算起始时间
+        //     startDuration: 0.0, // 起始过渡时间
+        //     keepDuration: 0.0, // 保持时间
+        //     endDuration: 0.0 // 结束过渡时间
+        //   }
+        // ]
+      },
+    },
+    otherSpine: [],
+  },
+  CH0267_home: {
+    name: "CH0267_home",
+    playQue: [
+      {
+        name: "CH0267_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+        customFade: [
+          {
+            customFadeTime: 8.0,
+            customFadeColor: "white",
+            toSolidDuration: 0.4,
+            solidStateDuration: 0.8,
+            toNormalDuration: 0.4,
+          },
+          {
+            customFadeTime: 11.2,
+            customFadeColor: "white",
+            toSolidDuration: 0.4,
+            solidStateDuration: 0.8,
+            toNormalDuration: 0.4,
+          },
+        ],
+      },
+    ],
+    spineSettings: {
+      CH0267_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
 };
