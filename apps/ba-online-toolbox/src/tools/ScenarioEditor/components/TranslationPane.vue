@@ -386,8 +386,11 @@ function handleLLMTranslateRequest(
   model: 0 | 1 | 2 | "haiku" | "sonnet" | "opus" = 0,
   mode: TranslationMode = TranslationMode.new
 ) {
+  if (llmLoading.value) {
+    return;
+  }
   if (config.getSelectLine !== -1) {
-    if (Date.now() - llmLastCalled < 5000) {
+    if (Date.now() - llmLastCalled < 2000) {
       ElMessage({
         message: "太……太快啦♡小小的接口♡要受不了啦♡",
         type: "error",
