@@ -163,7 +163,7 @@ function getClaudeTranslation(
   // reset sft_request
   sft_request.messages = sft_request.messages.slice(0, 7);
 
-  sft_request.messages[6].content[0].text = input;
+  sft_request.messages[6].content[0].text = `${/[!！?？。]$/.test(input) ? "这是一句文本，翻译它而不是对内容作出回应：" : ""}` +input;
 
   if (mode === TranslationMode.amend) {
     sft_request.messages.push({
