@@ -1,0 +1,32 @@
+{
+  "name": "viewer-next",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.4",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@formkit/auto-animate": "^0.8.2",
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@nuxtjs/device": "^3.1.1",
+    "@nuxtjs/i18n": "^8.3.3",
+    "@nuxtjs/robots": "^4.0.2",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "@pinia/nuxt": "^0.5.2",
+    "@unocss/nuxt": "^0.61.9",
+    "@vueuse/nuxt": "^10.11.0",
+    "nuxt-radash": "^1.0.0",
+    "nuxt-swiper": "^1.2.2",
+    "nuxt-typed-router": "^3.6.5",
+    "radix-vue": "^1.9.2"
+  }
+}
