@@ -15,7 +15,7 @@ hero:
       link: /guideline/design/
     - theme: alt
       text: Demo
-      link: https://eden.blue-archive.io/demo/index.html/button
+      link: https://playground.blue-archive.io/eden-demo/
   # image:
   #   src: /cover.png
   #   alt: eden-cover

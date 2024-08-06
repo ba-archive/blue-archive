@@ -8,11 +8,13 @@ import tailwindConfig from "./tailwind.config.js";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import { ArcoResolver } from "unplugin-vue-components/resolvers";
+import { vitePluginForArco } from "@arco-plugins/vite-vue";
 import legacy from "@vitejs/plugin-legacy";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig({
-  base: "/demo/",
+  base: "/eden-demo/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -21,14 +23,21 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    // AutoImport({
-    //   resolvers: [],
-    // }),
-    // Components({
-    //   dirs: ["components"],
-    //   include: [/\.vue$/, /\.md$/],
-    //   resolvers: [],
-    // }),
+    AutoImport({
+      resolvers: [ArcoResolver()],
+    }),
+    Components({
+      dirs: ["components"],
+      include: [/\.vue$/, /\.md$/],
+      resolvers: [
+        ArcoResolver({
+          sideEffect: true,
+        }),
+      ],
+    }),
+    vitePluginForArco({
+      style: "css",
+    }),
     legacy({
       targets: [
         "Android >= 39",

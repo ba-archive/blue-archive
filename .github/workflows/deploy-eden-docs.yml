@@ -64,5 +64,5 @@ jobs:
           SOURCE: "./lib/eden-design/dist/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
           REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
-          TARGET: "/var/www/eden-docs/demo"
+          TARGET: "/var/www/playground/eden-demo"
           EXCLUDE: ".git*"
