@@ -9,7 +9,6 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ArcoResolver } from "unplugin-vue-components/resolvers";
-import { vitePluginForArco } from "@arco-plugins/vite-vue";
 import legacy from "@vitejs/plugin-legacy";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
@@ -28,15 +27,12 @@ export default defineConfig({
     }),
     Components({
       dirs: ["components"],
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/, /\.tsx?$/],
       resolvers: [
         ArcoResolver({
           sideEffect: true,
         }),
       ],
-    }),
-    vitePluginForArco({
-      style: "css",
     }),
     legacy({
       targets: [
