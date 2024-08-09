@@ -3,7 +3,29 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
-    date: "2024-06-09",
+    date: "2024-08-07",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "空崎 日奈（爱用品）", id: 10004 },
+          { name: "尾刃 康娜（泳装）", id: 10096 },
+          { name: "风仓 萌绘（泳装）", id: 10097 },
+          { name: "小鸟游 星野（临战）", id: 10098 },
+          { name: "白子＊恐怖", id: 10100 },
+          { name: "锭前 纱织（泳装）", id: 10101 },
+          { name: "槌永 日和（泳装）", id: 10102 },
+          { name: "白洲 梓", id: 10019 },
+          { name: "和乐 千世（爱用品）", id: 13001 },
+          { name: "合欢垣 吹雪（泳装）", id: 20037 },
+          { name: "中务 桐乃（泳装）", id: 26012 },
+          { name: "秤 亚津子（泳装）", id: 26013 },
+        ],
+      },
+    ],
+  },
+  {
+  date: "2024-06-09",
     contents: [
       {
         type: "student",

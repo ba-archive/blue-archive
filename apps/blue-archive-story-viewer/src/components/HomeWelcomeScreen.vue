@@ -14,8 +14,63 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
-    jumpTo: 20036,
-    title: "黑见 芹香（泳装）",
+    jumpTo: 10004,
+    title: "空崎 日奈（爱用品）",
+  },
+  {
+    type: "student",
+    jumpTo: 10096,
+    title: "尾刃 康娜（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 10097,
+    title: "风仓 萌绘（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 10098,
+    title: "小鸟游 星野（临战）",
+  },
+  {
+    type: "student",
+    jumpTo: 10100,
+    title: "白子＊恐怖",
+  },
+  {
+    type: "student",
+    jumpTo: 10101,
+    title: "锭前 纱织（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 10102,
+    title: "槌永 日和（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 10019,
+    title: "白洲 梓",
+  },
+  {
+    type: "student",
+    jumpTo: 13001,
+    title: "和乐 千世（爱用品）",
+  },
+  {
+    type: "student",
+    jumpTo: 20037,
+    title: "合欢垣 吹雪（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 26012,
+    title: "中务 桐乃（泳装）",
+  },
+  {
+    type: "student",
+    jumpTo: 26013,
+    title: "秤 亚津子（泳装）",
   },
   {
     type: "minigame",
