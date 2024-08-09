@@ -1,36 +1,33 @@
 CharacterId: 10101
 translator: Soraの天空
 title:
-  - TextKr: 식당 아르바이트
-    TextJp: 食堂アルバイト
+  - TextJp: 食堂アルバイト
     TextCn: 食堂打工
+    TextKr: 식당 아르바이트
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010102
     FavorScheduleId: 101012
     CharacterId: 10101
-    unsure: false
-  - TextKr: 축제의 소리를 찾아서
-    TextJp: お祭りの音を探して
+  - TextJp: お祭りの音を探して
     TextCn: 寻找祭典的声音
+    TextKr: 축제의 소리를 찾아서
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010103
     FavorScheduleId: 101013
     CharacterId: 10101
-    unsure: false
-  - TextKr: 둘만의 뒷풀이
-    TextJp: 二人だけの打ち上げ
+  - TextJp: 二人だけの打ち上げ
     TextCn: 只属于两人的庆功宴
+    TextKr: 둘만의 뒷풀이
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 1010105
     FavorScheduleId: 101015
     CharacterId: 10101
-    unsure: false
 content:
   - MessageKR: 선생.
     MessageJP: 先生
@@ -50,7 +47,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 축제는 즐기고 있는지 모르겠군.
     MessageJP: お祭りは楽しんでいるか
     MessageCN: 祭典玩得开心吗
@@ -69,7 +65,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 앗, 사오리.
     MessageJP: もちろんだよ、サオリ
     MessageCN: 当然啦，沙织
@@ -88,7 +83,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 물론, 즐기고 있지.
     MessageJP: 楽しめてるよ
     MessageCN: 我十分享受哦
@@ -107,7 +101,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다행이군.
     MessageJP: それは良かった
     MessageCN: 那就太好了
@@ -126,7 +119,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 나는 해변 구역의 식당에서 업무를 시작한 참이다.
     MessageJP: 私は海辺の食堂でアルバイトを始めたところだ
     MessageCN: 我最近开始在海边的食堂打工
@@ -145,7 +137,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생도 배가 고프면 와도 괜찮다.
     MessageJP: お腹が空いたら、ぜひ先生も来てくれ
     MessageCN: 如果老师您肚子饿了，欢迎前来就餐
@@ -164,7 +155,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생, 저번 일은 고마웠다.
     MessageJP: 先生、この間は世話になった
     MessageCN: 老师，前段时间承蒙您关照了
@@ -183,7 +173,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 오늘은 다른 일이 생겨서, 축제장을 조금 둘러볼 생각이다.
     MessageJP: 今日は会場の見回りをするんだが、一人では手が足りなそうでな……
     MessageCN: 今天我要巡视会场，可一个人实在力不从心……
@@ -202,7 +191,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 혼자서는 조금 힘들 것 같아서, 도움을 요청하고 싶다만…….
     MessageJP: よければ先生の力を借りられないだろうか？
     MessageCN: 如果方便的话，能否请您前来搭把手呢？
@@ -221,7 +209,6 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 물론, 나는 환영이지.
     MessageJP: もちろん、手伝うよ
     MessageCN: 当然，我会来帮忙的
@@ -240,7 +227,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 고맙다. 그럼, 축제장 입구에서 기다리겠다.
     MessageJP: 感謝する。では、会場の入口で待ち合わせしよう
     MessageCN: 谢谢。那么我们在会场的入口会合吧
@@ -259,7 +245,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생, 오늘 수집한 소리 샘플들을 시험해 봤다.
     MessageJP: 先生、さっき録音した音を加工してみた
     MessageCN: 老师，我试着加工了下刚才录下的素材
@@ -278,7 +263,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 다행히 괜찮은 작품이 나올 것 같아.
     MessageJP: 中々良い出来かもしれない
     MessageCN: 感觉效果相当好
@@ -297,7 +281,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 그거 잘 됐네!
     MessageJP: 良かった！
     MessageCN: 太好了！
@@ -316,7 +299,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 어디
     MessageJP: 先生にもデータを送るから、聞いてみてくれ
     MessageCN: 我给您也发送了一份，请听听看
@@ -335,7 +317,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: (파일 전송에 실패하였습니다.)
     MessageJP: （ファイルの送信に失敗しました）
     MessageCN: （文件发送失败）
@@ -354,7 +335,6 @@ content:
     FeedbackTimeMillisec: 2000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 아
     MessageJP: あ
     MessageCN: 哎呀
@@ -373,7 +353,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 이런
     MessageJP: そうか
     MessageCN: 这样呀
@@ -392,7 +371,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 용량 문제인가…….
     MessageJP: 容量のせいで……
     MessageCN: 是文件大小的缘故……
@@ -411,7 +389,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 공연장에 직접 가서 듣는 것으로 할게.
     MessageJP: 会場で直接聞くね
     MessageCN: 我会直接在会场听的
@@ -430,7 +407,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 으음, 그래 주면 고맙겠다…….
     MessageJP: あぁ、分かった
     MessageCN: 好的，我知道了
@@ -449,7 +425,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 선생
     MessageJP: 先生
     MessageCN: 老师
@@ -468,7 +443,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 오늘 저녁에 DJ공연이 예정되어 있다.
     MessageJP: 今日の夕方からDJステージがあるんだが
     MessageCN: 今天从傍晚起会有DJ演出
@@ -487,7 +461,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 괜찮다면 보러 오지 않겠나?
     MessageJP: 良かったら見に来てくれないか？
     MessageCN: 方便的话可以来看看吗？
@@ -506,7 +479,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 응, 꼭 갈게.
     MessageJP: うん、絶対に行くよ
     MessageCN: 嗯，我一定会去的
@@ -525,7 +497,6 @@ content:
     FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 고맙다. 시간은 해가 진 뒤, 장소는 축제장 메인 스테이지다.
     MessageJP: 日が沈んでから、メインステージで始まる予定だ
     MessageCN: 演出应该会在太阳落山后在主舞台开始
@@ -544,7 +515,6 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
   - MessageKR: 기다리고 있겠다.
     MessageJP: では、待っている
     MessageCN: 那么，我等着您
@@ -563,4 +533,3 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-    unsure: false
