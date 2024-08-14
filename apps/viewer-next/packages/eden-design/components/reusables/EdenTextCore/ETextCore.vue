@@ -1,28 +1,12 @@
 <script lang="ts" setup>
 import type { TextProps } from "../../types/EdenTextCore/TextProps";
+import { getGradientStyle, parseColor } from "~/packages/eden-design/helpers/colorFunctions";
+
 const textCoreProps = defineProps<{ props: TextProps }>();
 
-function getGradientDegree(degree: number | string | undefined) {
-  switch (typeof degree) {
-    case "number":
-      return `${degree}deg`;
-    case "string":
-      return degree;
-    default:
-      return "0deg";
-  }
-}
-
 const gradientStyle = computed(() => {
-  if ("object" === typeof textCoreProps.props.color) {
-    return {
-      backgroundImage: `linear-gradient(${getGradientDegree(
-        textCoreProps.props.color.deg
-      )},${textCoreProps.props.color.from},${textCoreProps.props.color.to})`,
-      backgroundClip: "text",
-      WebkitBackgroundClip: "text",
-      color: "transparent !important",
-    };
+  if ("[object Object]" === Object.prototype.toString.call(textCoreProps.props.color)) {
+    return getGradientStyle(textCoreProps.props.color as { from: string; to: string, deg?: number | string });
   }
 });
 
@@ -42,14 +26,15 @@ const textClass = computed(() => [
     "align-super": textCoreProps.props.sup,
     "line-through": textCoreProps.props.delete,
     underline: textCoreProps.props.underline,
+    /* 颜色预设 */
+    "color-brand": textCoreProps.props.brand,
+    "color-danger": textCoreProps.props.error || textCoreProps.props.danger,
+    "color-secondary": textCoreProps.props.secondary,
+    "color-success": textCoreProps.props.success,
+    "color-tertiary": textCoreProps.props.tertiary,
+    "color-warning": textCoreProps.props.warning,
   },
 ]);
-
-function parseColor(color: string) {
-  return color.startsWith("#") || color.startsWith("rgb")
-    ? color
-    : `var(${color.startsWith("--") ? color : `--${color}`})`;
-}
 
 const textStyle = computed(() => [
   gradientStyle.value,
@@ -79,6 +64,32 @@ const textStyle = computed(() => [
   &__text {
     font-family: $eden-font-family;
     color: var(--color-text-5);
+
+    &.color- {
+      &brand {
+        color: var(--arona-blue-6);
+      }
+
+      &danger {
+        color: var(--danger-6);
+      }
+
+      &secondary {
+        color: var(--color-text-3);
+      }
+
+      &success {
+        color: var(--success-6);
+      }
+
+      &tertiary {
+        color: var(--color-text-2);
+      }
+
+      &warning {
+        color: var(--warning-6);
+      }
+    }
 
     &.align-left {
       text-align: left;

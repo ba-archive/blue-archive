@@ -2,7 +2,7 @@
 
 <template>
   <div>index</div>
-  <NuxtLink to="/tests/text">test text</NuxtLink>
+  <NuxtLink to="/tests/typography">test typography</NuxtLink>
 </template>
 
 <style lang="scss" scoped></style>
