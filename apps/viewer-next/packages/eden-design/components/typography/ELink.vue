@@ -4,7 +4,7 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 import type { NuxtLinkProps } from "nuxt/app";
 
 type EdenLinkProps = TextProps &
-  NuxtLinkProps & { nav: boolean; underline: boolean };
+  NuxtLinkProps & { nav?: boolean; underline?: boolean };
 
 const props = withDefaults(defineProps<EdenLinkProps>(), {
   to: "",
@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
 
 <template>
   <NuxtLink
-    class="eden-ui__link w-[fit-content]"
+    class="eden-ui__link w-[fit-content] flex items-center"
     :class="{
       'nav-link': props.nav,
     }"
@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
       :props="{
         ...props,
         underline: !props.nav,
-        brand: !props.nav
+        brand: !props.nav,
       }"
     >
       <template #prefix v-if="!!useSlots().prefix">
@@ -56,6 +56,25 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
 
   &.nav-link {
     color: var(--color-text-5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      width: 3px;
+      height: 16px;
+      border-radius: 4px;
+      transform: translate3d(-8px, 0, 0);
+      transition: background-color 0.175s ease-in-out;
+    }
+
+    &.router-link-active::before {
+      background-color: var(--arona-blue-6);
+    }
+
+    &:not(.router-link-active):hover::before {
+      background-color: var(--color-text-2);
+    }
   }
 
   &:visited {
