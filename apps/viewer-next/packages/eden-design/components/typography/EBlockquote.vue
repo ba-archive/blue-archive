@@ -4,8 +4,8 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
-  level: 1,
-  type: "blockquote",
+  level: 2,
+  type: "body",
 });
 </script>
 

@@ -5,7 +5,7 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
 
 <template>
   <e-h1 align="center" class="self-center mt-4">排版 / Typography</e-h1>
-  <div class="flex flex-col gap-4 pl-4 pr-4">
+  <div class="flex flex-col gap-4 pl-4 pr-4 items-start">
     <e-h1>一级标题 / Heading Level 1</e-h1>
     <e-h2>二级标题 / Heading Level 2</e-h2>
     <e-h3>三级标题 / Heading Level 3</e-h3>
@@ -43,8 +43,10 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
         from: 'var(--plana-pink-6)',
         to: 'var(--arona-blue-6)',
         deg: 'to right',
-      }">无序列表 4</n-li>
+      }">{{ placeholderText }}</n-li>
     </n-ul>
+    <e-link to="/tests/typography">链接 / Link</e-link>
+    <e-link to="/tests/typography" nav bold>导航链接 / Navigation Link</e-link>
   </div>
 </template>
 

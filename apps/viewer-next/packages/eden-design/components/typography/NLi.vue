@@ -9,7 +9,7 @@ import {
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
   level: 2,
-  type: "li",
+  type: "body",
 });
 
 const markerGradientStyle = computed(() => {
@@ -48,11 +48,11 @@ const liClass = computed(() => [
 <template>
   <li :class="liClass">
     <ETextCore :props="props">
-      <template #prefix>
+      <template #prefix v-if="!!useSlots().prefix">
         <slot name="prefix"></slot>
       </template>
       <slot></slot>
-      <template #suffix>
+      <template #suffix v-if="!!useSlots().suffix">
         <slot name="suffix"></slot>
       </template>
     </ETextCore>
@@ -67,7 +67,7 @@ const liClass = computed(() => [
     content: "•";
     margin-right: 4px;
     color: v-bind("markerColor");
-    vertical-align: text-top;
+    vertical-align: text-bottom;
     background-image: v-bind("markerGradientStyle.backgroundImage");
     background-clip: v-bind("markerGradientStyle.backgroundClip");
     -webkit-background-clip: v-bind("markerGradientStyle.WebkitBackgroundClip");

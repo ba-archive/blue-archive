@@ -1,12 +1,26 @@
 <script lang="ts" setup>
 import type { TextProps } from "../../types/EdenTextCore/TextProps";
-import { getGradientStyle, parseColor } from "~/packages/eden-design/helpers/colorFunctions";
+import {
+  getGradientStyle,
+  parseColor,
+} from "~/packages/eden-design/helpers/colorFunctions";
 
 const textCoreProps = defineProps<{ props: TextProps }>();
 
+const slots = useSlots();
+
 const gradientStyle = computed(() => {
-  if ("[object Object]" === Object.prototype.toString.call(textCoreProps.props.color)) {
-    return getGradientStyle(textCoreProps.props.color as { from: string; to: string, deg?: number | string });
+  if (
+    "[object Object]" ===
+    Object.prototype.toString.call(textCoreProps.props.color)
+  ) {
+    return getGradientStyle(
+      textCoreProps.props.color as {
+        from: string;
+        to: string;
+        deg?: number | string;
+      }
+    );
   }
 });
 
@@ -46,13 +60,13 @@ const textStyle = computed(() => [
 </script>
 
 <template>
-  <span :class="textClass" :style="textStyle">
+  <span :class="textClass" :style="textStyle" v-if="!!slots.prefix">
     <slot name="prefix"></slot>
   </span>
   <span :class="textClass" :style="textStyle">
     <slot></slot>
   </span>
-  <span :class="textClass" :style="textStyle">
+  <span :class="textClass" :style="textStyle" v-if="!!slots.suffix">
     <slot name="suffix"></slot>
   </span>
 </template>
@@ -64,6 +78,7 @@ const textStyle = computed(() => [
   &__text {
     font-family: $eden-font-family;
     color: var(--color-text-5);
+    transition: color 0.3s ease-in-out;
 
     &.color- {
       &brand {

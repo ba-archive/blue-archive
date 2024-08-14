@@ -5,18 +5,18 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
   level: 2,
-  type: "ol",
+  type: "body",
 });
 </script>
 
 <template>
   <ol>
     <ETextCore :props="props">
-      <template #prefix>
+      <template #prefix v-if="!!useSlots().prefix">
         <slot name="prefix"></slot>
       </template>
       <slot></slot>
-      <template #suffix>
+      <template #suffix v-if="!!useSlots().suffix">
         <slot name="suffix"></slot>
       </template>
     </ETextCore>

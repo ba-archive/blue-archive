@@ -12,11 +12,11 @@ const props = withDefaults(defineProps<TextProps>(), {
 <template>
   <h3>
     <ETextCore :props="props">
-      <template #prefix>
+      <template #prefix v-if="!!useSlots().prefix">
         <slot name="prefix"></slot>
       </template>
       <slot></slot>
-      <template #suffix>
+      <template #suffix v-if="!!useSlots().suffix">
         <slot name="suffix"></slot>
       </template>
     </ETextCore>
