@@ -122,6 +122,10 @@ function clickHandler() {
     &default {
       color: $text-5;
 
+      &.filled {
+        background: $fill-base;
+      }
+
       &.bordered {
         border: 1px solid $border-2;
       }
