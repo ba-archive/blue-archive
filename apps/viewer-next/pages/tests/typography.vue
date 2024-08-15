@@ -33,7 +33,7 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
       <n-li brand>Ordered List 1</n-li>
       <n-li tertiary>Ordered List 2</n-li>
       <n-li secondary>Ordered List 3</n-li>
-      <n-li>Ordered List 4</n-li>
+      <n-li bold>Ordered List 4</n-li>
     </n-ol>
     <n-ul>
       <n-li danger>无序列表 1</n-li>

@@ -11,4 +11,8 @@
 <style lang="scss">
 @import "./packages/eden-design/components/index.scss";
 @import "@unocss/reset/normalize.css";
+
+html {
+  background: $fill-base;
+}
 </style>

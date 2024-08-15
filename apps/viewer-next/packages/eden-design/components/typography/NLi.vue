@@ -60,6 +60,7 @@ const liClass = computed(() => [
 </template>
 
 <style lang="scss" scoped>
+@import "~/packages/eden-design/components/index.scss";
 .eden-ui__li {
   list-style-type: none;
 
@@ -75,22 +76,22 @@ const liClass = computed(() => [
 
   &.color- {
     &brand::before {
-      color: var(--arona-blue-6);
+      color: $brand-6;
     }
     &danger::before {
-      color: var(--danger-6);
+      color: $danger-6;
     }
     &secondary::before {
-      color: var(--color-text-3);
+      color: $text-3;
     }
     &success::before {
-      color: var(--success-6);
+      color: $success-6;
     }
     &tertiary::before {
-      color: var(--color-text-2);
+      color: $text-2;
     }
     &warning::before {
-      color: var(--warning-6);
+      color: $warning-6;
     }
   }
 }

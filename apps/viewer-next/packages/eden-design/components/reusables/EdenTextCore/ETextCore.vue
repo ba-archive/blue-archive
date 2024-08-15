@@ -77,32 +77,32 @@ const textStyle = computed(() => [
 .eden-ui {
   &__text {
     font-family: $eden-font-family;
-    color: var(--color-text-5);
+    color: $text-5;
     transition: color 0.3s ease-in-out;
 
     &.color- {
       &brand {
-        color: var(--arona-blue-6);
+        color: $brand-6;
       }
 
       &danger {
-        color: var(--danger-6);
+        color: $danger-6;
       }
 
       &secondary {
-        color: var(--color-text-3);
+        color: $text-3;
       }
 
       &success {
-        color: var(--success-6);
+        color: $success-6;
       }
 
       &tertiary {
-        color: var(--color-text-2);
+        color: $text-2;
       }
 
       &warning {
-        color: var(--warning-6);
+        color: $warning-6;
       }
     }
 
