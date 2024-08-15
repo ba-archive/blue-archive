@@ -18,7 +18,7 @@ const elementTag = computed(() => {
 
 const TextElement = () => {
   return (
-    <elementTag.value>
+    <elementTag.value class="eden-ui">
       <ETextCore props={props}>
         {{
           prefix: slots.prefix,

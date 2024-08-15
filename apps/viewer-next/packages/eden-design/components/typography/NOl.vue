@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<TextProps>(), {
 </script>
 
 <template>
-  <ol>
+  <ol class="eden-ui">
     <ETextCore :props="props">
       <template #prefix v-if="!!useSlots().prefix">
         <slot name="prefix"></slot>

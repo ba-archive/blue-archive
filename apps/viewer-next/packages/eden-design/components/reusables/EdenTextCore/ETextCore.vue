@@ -25,6 +25,7 @@ const gradientStyle = computed(() => {
 });
 
 const textClass = computed(() => [
+  "eden-ui",
   "eden-ui__text",
   `${textCoreProps.props.type}-${textCoreProps.props.level}`,
   `align-${textCoreProps.props.align}`,

@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<TextProps>(), {
 </script>
 
 <template>
-  <blockquote>
+  <blockquote class="eden-ui">
     <ETextCore :props="props">
       <template #prefix>
         <slot name="prefix"></slot>

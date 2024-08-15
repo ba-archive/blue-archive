@@ -12,7 +12,9 @@ function getGradientDegree(degree: number | string | undefined) {
 }
 
 export function parseColor(color: string) {
-  return color.startsWith("#") || color.startsWith("rgb")
+  return color.startsWith("#") ||
+    color.startsWith("rgb") ||
+    color.startsWith("hsl")
     ? color
     : `var(${color.startsWith("--") ? color : `--${color}`})`;
 }
@@ -28,9 +30,9 @@ export function getGradientStyle(color: {
   }
 
   return {
-    backgroundImage: `linear-gradient(${getGradientDegree(
-      color.deg
-    )}, ${color.from}, ${color.to})`,
+    backgroundImage: `linear-gradient(${getGradientDegree(color.deg)}, ${
+      color.from
+    }, ${color.to})`,
     backgroundClip: "text",
     WebkitBackgroundClip: "text",
     color: "transparent !important",

@@ -1,14 +1,10 @@
+import type { WithGradientBackground } from "~/packages/eden-design/components/types/WithGradientBackground";
+
 export type TextProps = {
   /* 文本属性 */
   align?: "left" | "center" | "right" | "justify";
   bold?: boolean;
-  color?:
-    | string
-    | {
-        from: string;
-        to: string;
-        deg?: number | string;
-      };
+  color?: WithGradientBackground;
   delete?: boolean;
   disabled?: boolean;
   inline?: boolean;

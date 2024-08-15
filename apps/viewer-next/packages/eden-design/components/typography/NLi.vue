@@ -32,6 +32,7 @@ const markerColor = computed(() => {
 });
 
 const liClass = computed(() => [
+  "eden-ui",
   "eden-ui__li",
   // FIXME: 从子组件暴露的 class 是 undefined，暂时没找到原因
   {

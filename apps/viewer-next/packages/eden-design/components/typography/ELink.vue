@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
 
 <template>
   <NuxtLink
-    class="eden-ui__link w-[fit-content] flex items-center"
+    class="eden-ui eden-ui__link w-[fit-content] flex items-center"
     :class="{
       'nav-link': props.nav,
     }"
