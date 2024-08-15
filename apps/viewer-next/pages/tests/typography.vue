@@ -46,7 +46,7 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
       }">{{ placeholderText }}</n-li>
     </n-ul>
     <e-link to="/tests/typography">链接 / Link</e-link>
-    <e-link to="/tests/label" nav>导航链接 / Navigation Link </e-link>
+    <e-link to="/tests/tags" nav>导航链接 / Navigation Link </e-link>
     <e-link to="/tests/typography" nav bold>活跃导航链接 / Navigation Link Active</e-link>
   </div>
 </template>

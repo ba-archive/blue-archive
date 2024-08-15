@@ -27,8 +27,8 @@ const gradientStyle = computed(() => {
 const textClass = computed(() => [
   "eden-ui",
   "eden-ui__text",
-  `${textCoreProps.props.type}-${textCoreProps.props.level}`,
-  `align-${textCoreProps.props.align}`,
+  `${textCoreProps.props.type || "body"}-${textCoreProps.props.level || 2}`,
+  `align-${textCoreProps.props.align || "left"}`,
   {
     "font-bold":
       textCoreProps.props.bold ||
@@ -54,9 +54,13 @@ const textClass = computed(() => [
 const textStyle = computed(() => [
   gradientStyle.value,
   textCoreProps.props.color &&
+    !textCoreProps.props.inheritTextColor &&
     "string" === typeof textCoreProps.props.color && {
       color: parseColor(textCoreProps.props.color),
     },
+  textCoreProps.props.inheritTextColor && {
+    color: "inherit !important",
+  },
 ]);
 </script>
 

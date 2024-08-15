@@ -7,6 +7,7 @@ export type TextProps = {
   color?: WithGradientBackground;
   delete?: boolean;
   disabled?: boolean;
+  inheritTextColor?: boolean;
   inline?: boolean;
   italic?: boolean;
   level?: 3 | 2 | 1 | "3" | "2" | "1";
