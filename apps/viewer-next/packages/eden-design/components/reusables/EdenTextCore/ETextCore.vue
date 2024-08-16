@@ -25,7 +25,7 @@ const gradientStyle = computed(() => {
 });
 
 const textClass = computed(() => [
-  "eden-ui eden-ui__text flex",
+  "eden-ui eden-ui__text",
   `${textCoreProps.props.type || "body"}-${textCoreProps.props.level || 2}`,
   `align-${textCoreProps.props.align || "left"}`,
   {
@@ -40,7 +40,7 @@ const textClass = computed(() => [
     "align-super": textCoreProps.props.sup,
     "line-through": textCoreProps.props.delete,
     underline: textCoreProps.props.underline,
-    "flex-nowrap whitespace-nowrap": textCoreProps.props.noWrap,
+    "whitespace-nowrap": textCoreProps.props.noWrap,
     /* 颜色预设 */
     "color-brand": textCoreProps.props.brand,
     "color-danger": textCoreProps.props.error || textCoreProps.props.danger,
