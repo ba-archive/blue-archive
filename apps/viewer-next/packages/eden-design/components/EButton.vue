@@ -325,10 +325,27 @@ function clickHandler() {
     &momotalk {
       background-color: #ffffff7f;
       color: $text-5;
+      padding: 6px 8px;
+
+      &:not(.disabled):hover {
+        background-color: #ffffffbf;
+      }
+
+      &.pressed {
+        background-color: #f2f2f27f !important;
+      }
 
       &.active {
         background-color: #2773e17f;
         color: #fff;
+
+        &:hover {
+          background-color: #4a91e77f;
+        }
+
+        &.pressed {
+          background-color: #1857bc7f !important;
+        }
       }
     }
   }
