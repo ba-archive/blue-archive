@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TagProps } from "~/packages/eden-design/components/types/ETag/TagProps";
+import type { TagProps } from "~/packages/eden-design/components/types/EdenTag/TagProps";
 import {
   getGradientStyle,
   parseColor,
@@ -89,7 +89,12 @@ function clickHandler() {
 </script>
 
 <template>
-  <span role="label" :class="tagClass" :style="tagStyle" @click="clickHandler">
+  <span
+    is="label"
+    :class="tagClass"
+    :style="tagStyle"
+    @click="clickHandler"
+  >
     <span class="eden-ui__tag--icon mr-1" v-if="useSlots().icon">
       <slot name="icon"></slot>
     </span>
@@ -101,6 +106,7 @@ function clickHandler() {
           type: textProps.type ?? 'body',
           noSelect: true,
           inheritTextColor: !textProps.color,
+          noWrap: true,
         }"
       >
         <slot></slot>
@@ -173,7 +179,6 @@ function clickHandler() {
     &striker {
       color: $danger-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $danger-6;
@@ -184,7 +189,6 @@ function clickHandler() {
     &special {
       color: $warning-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $warning-6;
@@ -195,7 +199,6 @@ function clickHandler() {
     &explosion {
       color: $explosion-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $explosion-6;
@@ -206,7 +209,6 @@ function clickHandler() {
     &pierce {
       color: $pierce-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $pierce-6;
@@ -217,7 +219,6 @@ function clickHandler() {
     &unarmed {
       color: $unarmed-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $unarmed-6;
@@ -228,7 +229,6 @@ function clickHandler() {
     &vibrate {
       color: $vibrate-6;
       background-color: $fill-base;
-      font-weight: 700 !important;
 
       &.active {
         background: $vibrate-6;
@@ -242,7 +242,7 @@ function clickHandler() {
   }
 
   &.disabled {
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     opacity: 0.5;
   }
 

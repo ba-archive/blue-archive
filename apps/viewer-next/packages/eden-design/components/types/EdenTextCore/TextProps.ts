@@ -12,6 +12,7 @@ export type TextProps = {
   italic?: boolean;
   level?: 3 | 2 | 1 | "3" | "2" | "1";
   noSelect?: boolean;
+  noWrap?: boolean;
   size?: number | string;
   strikethrough?: boolean;
   strong?: boolean;
