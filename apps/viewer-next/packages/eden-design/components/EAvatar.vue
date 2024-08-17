@@ -33,7 +33,7 @@ const customSize = computed(() => {
 const avatarClass = computed(() => [
   "eden-ui",
   "eden-ui__avatar",
-  "grid place-items-center",
+  "grid place-items-center select-none",
   avatarSizeType.value,
   {
     circle: !props.squared,
