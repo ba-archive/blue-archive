@@ -32,7 +32,7 @@ function handleClickReport($event: Event) {
         </e-button>
       </div>
 
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="mini" primary bordered>微型按钮</e-button>
         <e-button size="mini" primary danger bordered>微型按钮</e-button>
         <e-button size="mini" primary success bordered>微型按钮</e-button>
@@ -72,7 +72,7 @@ function handleClickReport($event: Event) {
           >微型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="mini" secondary bordered>微型按钮</e-button>
         <e-button size="mini" secondary danger bordered>微型按钮</e-button>
         <e-button size="mini" secondary success bordered>微型按钮</e-button>
@@ -117,7 +117,7 @@ function handleClickReport($event: Event) {
           >小型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="small" primary bordered>小型按钮</e-button>
         <e-button size="small" primary danger bordered>小型按钮</e-button>
         <e-button size="small" primary success bordered>小型按钮</e-button>
@@ -156,7 +156,7 @@ function handleClickReport($event: Event) {
           >小型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="small" secondary bordered>小型按钮</e-button>
         <e-button size="small" secondary danger bordered>小型按钮</e-button>
         <e-button size="small" secondary success bordered>小型按钮</e-button>
@@ -201,7 +201,7 @@ function handleClickReport($event: Event) {
           >中型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="medium" primary bordered>中型按钮</e-button>
         <e-button size="medium" primary danger bordered>中型按钮</e-button>
         <e-button size="medium" primary success bordered>中型按钮</e-button>
@@ -221,7 +221,7 @@ function handleClickReport($event: Event) {
         </e-button>
       </div>
       <e-h3>Secondary</e-h3>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="medium" secondary>中型按钮</e-button>
         <e-button size="medium" secondary danger>中型按钮</e-button>
         <e-button size="medium" secondary success>中型按钮</e-button>
@@ -240,7 +240,7 @@ function handleClickReport($event: Event) {
           >中型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="medium" secondary bordered>中型按钮</e-button>
         <e-button size="medium" secondary danger bordered>中型按钮</e-button>
         <e-button size="medium" secondary success bordered>中型按钮</e-button>
@@ -285,7 +285,7 @@ function handleClickReport($event: Event) {
           >大型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="large" primary bordered>大型按钮</e-button>
         <e-button size="large" primary danger bordered>大型按钮</e-button>
         <e-button size="large" primary success bordered>大型按钮</e-button>
@@ -324,7 +324,7 @@ function handleClickReport($event: Event) {
           >大型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="large" secondary bordered>大型按钮</e-button>
         <e-button size="large" secondary danger bordered>大型按钮</e-button>
         <e-button size="large" secondary success bordered>大型按钮</e-button>
@@ -382,7 +382,7 @@ function handleClickReport($event: Event) {
           >微型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="mini" primary bordered disabled>微型按钮</e-button>
         <e-button size="mini" primary danger bordered disabled
           >微型按钮
@@ -430,7 +430,7 @@ function handleClickReport($event: Event) {
           >微型按钮
         </e-button>
       </div>
-      <div flex gap-4>
+      <div class="flex gap-[14px]">
         <e-button size="mini" secondary bordered disabled>微型按钮</e-button>
         <e-button size="mini" secondary danger bordered disabled
           >微型按钮
