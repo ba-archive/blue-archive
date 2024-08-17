@@ -32,13 +32,14 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
     <n-ol>
       <n-li brand>Ordered List 1</n-li>
       <n-li tertiary>Ordered List 2</n-li>
-      <n-li secondary>Ordered List 3</n-li>
-      <n-li bold>Ordered List 4</n-li>
+    </n-ol>
+    <n-ol>
+      <n-li secondary>Ordered List 1</n-li>
+      <n-li bold success>Ordered List 2</n-li>
     </n-ol>
     <n-ul>
-      <n-li danger>无序列表 1</n-li>
+      <n-li danger bold>无序列表 1</n-li>
       <n-li warning>无序列表 2</n-li>
-      <n-li success>无序列表 3</n-li>
       <n-li :color="{
         from: 'var(--plana-pink-6)',
         to: 'var(--arona-blue-6)',

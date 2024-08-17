@@ -221,7 +221,7 @@ function handleClickReport($event: Event) {
         </e-button>
       </div>
       <e-h3>Secondary</e-h3>
-      <div class="flex gap-[14px]">
+      <div class="flex gap-4">
         <e-button size="medium" secondary>中型按钮</e-button>
         <e-button size="medium" secondary danger>中型按钮</e-button>
         <e-button size="medium" secondary success>中型按钮</e-button>

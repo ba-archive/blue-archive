@@ -17,13 +17,14 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         <e-avatar size="xlarge" background="plana-pink-6" :src="src" />
         <e-avatar
           :src="src"
+          size="large"
           :background="{
             from: 'var(--plana-pink-6)',
             to: 'var(--arona-blue-6)',
             deg: 45,
           }"
         >
-          <e-text color="#000" type="body" level="2">A</e-text>
+          <e-text color="arona-blue-6" type="body" level="2">Avatar</e-text>
         </e-avatar>
       </div>
       <div flex gap-4>
@@ -32,15 +33,9 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         <e-avatar size="medium" bordered :src="src" />
         <e-avatar size="large" bordered :src="src" />
         <e-avatar size="xlarge" bordered :src="src" />
-        <e-avatar
-          bordered
-          :src="src"
-          :background="{
-            from: 'var(--plana-pink-6)',
-            to: 'var(--arona-blue-6)',
-            deg: 45,
-          }"
-        />
+        <e-avatar bordered size="large" background="arona-blue-1">
+          <e-text color="arona-blue-6" type="body" level="2">Avatar</e-text>
+        </e-avatar>
       </div>
       <div flex gap-4>
         <e-avatar size="mini" background="plana-pink-6" squared :src="src" />
@@ -50,6 +45,7 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         <e-avatar size="xlarge" background="plana-pink-6" squared :src="src" />
         <e-avatar
           squared
+          size="large"
           :src="src"
           :background="{
             from: 'var(--plana-pink-6)',
@@ -95,6 +91,7 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         />
         <e-avatar
           squared
+          size="large"
           :src="src"
           :background="{
             from: 'var(--plana-pink-6)',
