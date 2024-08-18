@@ -7,6 +7,7 @@
     <e-link to="/tests/tags">test tags</e-link>
     <e-link to="/tests/buttons">test buttons</e-link>
     <e-link to="/tests/avatars">test avatars</e-link>
+    <e-link to="/tests/switches">test switches</e-link>
   </div>
 </template>
 
