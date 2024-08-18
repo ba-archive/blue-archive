@@ -115,22 +115,21 @@ function handleClick() {
 </script>
 
 <template>
-  <ClientOnly>
-    <SwitchRoot
-      ref="switchElement"
-      :disabled="props.disabled"
-      v-model:checked="switchState"
-      class="eden-ui__switch--track"
-      :class="switchClass"
-      @click="handleClick"
-      :style="borderStyle"
-    >
-      <SwitchThumb
-        class="eden-ui__switch--thumb flex rounded-full will-change-transform transition-all duration-300 ease-in-out"
-        :style="thumbStyle"
-      />
-    </SwitchRoot>
-  </ClientOnly>
+  <button
+    ref="switchElement"
+    :disabled="props.disabled"
+    class="eden-ui__switch--track"
+    :class="switchClass"
+    @click="handleClick"
+    :style="borderStyle"
+    :data-state="switchState ? 'checked' : ''"
+  >
+    <span
+      class="eden-ui__switch--thumb flex rounded-full will-change-transform transition-all duration-300 ease-in-out"
+      :style="thumbStyle"
+      :data-state="switchState ? 'checked' : ''"
+    />
+  </button>
 </template>
 
 <style lang="scss">
