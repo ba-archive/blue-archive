@@ -132,7 +132,7 @@ function handleClick() {
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/packages/eden-design/components/index.scss";
 
 .eden-ui__switch {
