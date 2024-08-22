@@ -123,7 +123,7 @@ function getClaudeTranslation(
     },
   ];
 
-  sft_request.messages[0].content[0].text = input;
+  sft_request.messages[0].content[0].text = "翻译这句话：" + input;
 
   if (mode === TranslationMode.amend) {
     sft_request.messages.push({
