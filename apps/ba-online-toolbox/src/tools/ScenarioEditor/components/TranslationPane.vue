@@ -249,7 +249,6 @@ import {
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
 import OriginalTextDisp from "./OriginalTextDisp.vue";
-import { duration } from "html2canvas/dist/types/css/property-descriptors/duration";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -331,6 +330,18 @@ const replaceStrings = [
   {
     from: "momo talk",
     to: "MomoTalk",
+  },
+  {
+    from: "log＝",
+    to: "log=",
+  },
+  {
+    from: "／log",
+    to: "/log",
+  },
+  {
+    from: "wa：",
+    to: "wa:",
   },
 ];
 
@@ -434,7 +445,10 @@ function handleLLMTranslateRequest(
     )
       .then((res: ClaudeMessage) => {
         const rawText = res.content[0].text ?? "";
-        const fullWidthText = halfToFull(rawText);
+        let fullWidthText = halfToFull(rawText);
+        replaceStrings.forEach(item => {
+          fullWidthText = fullWidthText.replaceAll(item.from, item.to);
+        });
         const studentTransformed = transformStudentName(
           fullWidthText,
           studentNames.value
