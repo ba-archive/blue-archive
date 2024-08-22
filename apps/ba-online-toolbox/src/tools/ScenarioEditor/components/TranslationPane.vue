@@ -343,6 +343,10 @@ const replaceStrings = [
     from: "wa：",
     to: "wa:",
   },
+  {
+    from: "\\n",
+    to: "\n",
+  },
 ];
 
 function handleFormalizePunctuation() {
