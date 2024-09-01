@@ -18,7 +18,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@vueuse/nuxt",
     "@nuxtjs/color-mode",
-    "radix-vue",
     "@nuxtjs/device",
     "@nuxtjs/robots",
     "@pinia-plugin-persistedstate/nuxt",
