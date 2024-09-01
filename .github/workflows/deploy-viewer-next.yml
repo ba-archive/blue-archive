@@ -1,0 +1,47 @@
+name: Deploy Viewer-Next
+on:
+  push:
+    branches:
+      - dev
+      - "dev/**"
+      - "feat/**"
+      - "translation/**"
+    paths:
+      - "apps/viewer-next/**"
+      - "lib/**"
+
+concurrency:
+  group: "preview-deploy-viewer-next"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@main
+        with:
+          node-version: 20
+      - uses: pnpm/action-setup@master
+        with:
+          version: 9
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
+      - name: Rush Update
+        run: node common/scripts/install-run-rush.js update
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
+      - name: Rush build
+        run: node common/scripts/install-run-rush.js build --to viewer-next --verbose
+      - name: Viewer rsync deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "./apps/viewer-next/.output/public/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
+          TARGET: "/var/www/viewer-next"
+          EXCLUDE: ".git*"
