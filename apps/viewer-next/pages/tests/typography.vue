@@ -5,7 +5,7 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
 
 <template>
   <e-h1 align="center" class="self-center mt-4">排版 / Typography</e-h1>
-  <div class="flex flex-col gap-4 pl-4 pr-4 items-start">
+  <e-space vertical :padding="[0, 16, 0, 16]" >
     <e-h1>一级标题 / Heading Level 1</e-h1>
     <e-h2>二级标题 / Heading Level 2</e-h2>
     <e-h3>三级标题 / Heading Level 3</e-h3>
@@ -49,7 +49,7 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
     <e-link to="/tests/typography">链接 / Link</e-link>
     <e-link to="/tests/tags" nav>导航链接 / Navigation Link </e-link>
     <e-link to="/tests/typography" nav bold>活跃导航链接 / Navigation Link Active</e-link>
-  </div>
+  </e-space>
 </template>
 
 <style lang="scss" scoped></style>

@@ -11,7 +11,7 @@ function handleClickReport($event: Event) {
     <div
       class="flex flex-col p-2 gap-4 bg-[var(--arona-blue-2)] rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
     >
-      <div flex gap-4>
+      <e-space>
         <e-tag size="mini" clickable fill bordered>微型标签</e-tag>
         <e-tag size="mini" clickable gray fill bordered>微型标签</e-tag>
         <e-tag size="mini" clickable brand fill bordered>微型标签</e-tag>
@@ -33,8 +33,8 @@ function handleClickReport($event: Event) {
           }"
           >微型标签
         </e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="small" clickable fill bordered>小号标签</e-tag>
         <e-tag size="small" clickable gray fill bordered>小号标签</e-tag>
         <e-tag size="small" clickable brand fill bordered>小号标签</e-tag>
@@ -56,8 +56,8 @@ function handleClickReport($event: Event) {
           }"
           >小号标签
         </e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="medium" clickable fill bordered>中号标签</e-tag>
         <e-tag size="medium" clickable gray fill bordered>中号标签</e-tag>
         <e-tag size="medium" clickable brand fill bordered>中号标签</e-tag>
@@ -79,8 +79,8 @@ function handleClickReport($event: Event) {
           }"
           >中号标签
         </e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="large" clickable fill bordered>大号标签</e-tag>
         <e-tag size="large" clickable gray fill bordered>大号标签</e-tag>
         <e-tag size="large" clickable brand fill bordered>大号标签</e-tag>
@@ -102,21 +102,21 @@ function handleClickReport($event: Event) {
           }"
           >大号标签
         </e-tag>
-      </div>
+      </e-space>
     </div>
     <e-h2>特殊标签</e-h2>
     <div
       class="flex flex-col p-2 gap-4 bg-[var(--arona-blue-2)] rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
     >
-      <div flex gap-4>
+      <e-space>
         <e-tag size="mini" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="mini" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="mini" clickable explosion :text-props="{ bold: true }">爆发</e-tag>
         <e-tag size="mini" clickable pierce :text-props="{ bold: true }">贯通</e-tag>
         <e-tag size="mini" clickable unarmed :text-props="{ bold: true }">神秘</e-tag>
         <e-tag size="mini" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="small" clickable striker :text-props="{ bold: true }"
           >STRIKER
         </e-tag>
@@ -125,23 +125,23 @@ function handleClickReport($event: Event) {
         <e-tag size="small" clickable pierce :text-props="{ bold: true }">贯通</e-tag>
         <e-tag size="small" clickable unarmed :text-props="{ bold: true }">神秘</e-tag>
         <e-tag size="small" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="medium" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="medium" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="medium" clickable explosion :text-props="{ bold: true }">爆发</e-tag>
         <e-tag size="medium" clickable pierce :text-props="{ bold: true }">贯通</e-tag>
         <e-tag size="medium" clickable unarmed :text-props="{ bold: true }">神秘</e-tag>
         <e-tag size="medium" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-tag size="large" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="large" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="large" clickable explosion :text-props="{ bold: true }">爆发</e-tag>
         <e-tag size="large" clickable pierce :text-props="{ bold: true }">贯通</e-tag>
         <e-tag size="large" clickable unarmed :text-props="{ bold: true }">神秘</e-tag>
         <e-tag size="large" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
-      </div>
+      </e-space>
     </div>
   </div>
 </template>

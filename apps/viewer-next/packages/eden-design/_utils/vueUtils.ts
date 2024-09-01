@@ -1,6 +1,5 @@
 import type {
   Component,
-  ComponentPublicInstance,
   Slots,
   VNode,
   VNodeTypes,
@@ -32,13 +31,6 @@ export const isComponent = (
   type?: VNodeTypes
 ): type is Component => {
   return Boolean(vn && vn.shapeFlag & ShapeFlags.COMPONENT);
-};
-
-export const isText = (
-  vn: VNode,
-  children: VNode["children"]
-): children is string => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.TEXT_CHILDREN);
 };
 
 export const isNamedComponent = (child: VNode, name: string) => {

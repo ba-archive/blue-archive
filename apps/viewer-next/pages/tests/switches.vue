@@ -13,16 +13,18 @@ watch(modelChecked, newVal => {
 
 <template>
   <e-h1 align="center" class="self-center mt-4">开关 / Switch</e-h1>
-  <div class="flex flex-col gap-4 pl-4 pr-4 items-start mt-4">
-    <div
-      class="flex flex-col justify-between p-2 gap-4 rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]"
+  <e-space :margin="[0, 16, 0, 16]" vertical class="mt-4">
+    <e-space
+      vertical
+      padding="8"
+      class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]"
     >
       <e-h2>默认</e-h2>
       <span>
         <e-text>checked(model): {{ modelChecked }}</e-text>
         <e-text>checked(event): {{ eventChecked }}</e-text>
       </span>
-      <div flex gap-4>
+      <e-space>
         <e-switch
           size="mini"
           v-model="modelChecked"
@@ -75,8 +77,8 @@ watch(modelChecked, newVal => {
           v-model="modelChecked"
           @update:checked="handleChange"
         />
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-switch
           size="mini"
           checked
@@ -136,8 +138,8 @@ watch(modelChecked, newVal => {
           v-model="modelChecked"
           @update:checked="handleChange"
         />
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-switch
           size="mini"
           disabled
@@ -191,9 +193,9 @@ watch(modelChecked, newVal => {
           v-model="modelChecked"
           @update:checked="handleChange"
         />
-      </div>
-    </div>
-  </div>
+      </e-space>
+    </e-space>
+  </e-space>
 </template>
 
 <style scoped lang="scss"></style>

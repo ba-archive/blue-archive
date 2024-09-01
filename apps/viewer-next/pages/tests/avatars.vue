@@ -9,7 +9,7 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
     <div
       class="flex flex-col justify-between p-2 gap-4 rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
     >
-      <div flex gap-4>
+      <e-space>
         <e-avatar size="mini" background="plana-pink-6" :src="src" />
         <e-avatar size="small" background="plana-pink-6" :src="src" />
         <e-avatar size="medium" background="plana-pink-6" :src="src" />
@@ -26,8 +26,8 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         >
           <e-text color="arona-blue-6" type="body" level="2">Avatar</e-text>
         </e-avatar>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-avatar size="mini" bordered :src="src" />
         <e-avatar size="small" bordered :src="src" />
         <e-avatar size="medium" bordered :src="src" />
@@ -36,8 +36,8 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
         <e-avatar bordered size="large" background="arona-blue-1">
           <e-text color="arona-blue-6" type="body" level="2">Avatar</e-text>
         </e-avatar>
-      </div>
-      <div flex gap-4>
+      </e-space>
+      <e-space>
         <e-avatar size="mini" background="plana-pink-6" squared :src="src" />
         <e-avatar size="small" background="plana-pink-6" squared :src="src" />
         <e-avatar size="medium" background="plana-pink-6" squared :src="src" />
@@ -53,9 +53,9 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
             deg: 45,
           }"
         />
-      </div>
+      </e-space>
       <e-h3>自定义border</e-h3>
-      <div flex gap-4>
+      <e-space>
         <e-avatar size="mini" bordered border-width="2px" squared :src="src" />
         <e-avatar
           size="small"
@@ -99,7 +99,7 @@ const fallbackSrc = "https://blue-archive.io/assets/arona_icon-FqVudqPo.webp";
             deg: 45,
           }"
         />
-      </div>
+      </e-space>
       <e-h3>Fallback</e-h3>
       <e-avatar
         size="medium"
