@@ -3,7 +3,7 @@ import type { TextProps } from "../../types/EdenTextCore/TextProps";
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/helpers/colorFunctions";
+} from "~/packages/eden-design/_utils/colorFunctions";
 
 const textCoreProps = defineProps<{ props: TextProps }>();
 

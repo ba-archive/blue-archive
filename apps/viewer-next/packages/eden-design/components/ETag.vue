@@ -3,7 +3,7 @@ import type { TagProps } from "~/packages/eden-design/components/types/EdenTag/T
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/helpers/colorFunctions";
+} from "~/packages/eden-design/_utils/colorFunctions";
 import ETextCore from "~/packages/eden-design/components/reusables/EdenTextCore/ETextCore.vue";
 
 const props = withDefaults(defineProps<TagProps>(), {
@@ -89,12 +89,7 @@ function clickHandler() {
 </script>
 
 <template>
-  <span
-    is="label"
-    :class="tagClass"
-    :style="tagStyle"
-    @click="clickHandler"
-  >
+  <span is="label" :class="tagClass" :style="tagStyle" @click="clickHandler">
     <span class="eden-ui__tag--icon mr-1" v-if="useSlots().icon">
       <slot name="icon"></slot>
     </span>

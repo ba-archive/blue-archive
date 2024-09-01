@@ -4,7 +4,7 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/helpers/colorFunctions";
+} from "~/packages/eden-design/_utils/colorFunctions";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
@@ -14,7 +14,9 @@ const props = withDefaults(defineProps<TextProps>(), {
 
 const markerGradientStyle = computed(() => {
   const { backgroundImage, backgroundClip, WebkitBackgroundClip, color } =
-    getGradientStyle(props.color as { from: string; to: string, deg?: number | string });
+    getGradientStyle(
+      props.color as { from: string; to: string; deg?: number | string }
+    );
 
   return {
     backgroundImage,
@@ -42,8 +44,8 @@ const liClass = computed(() => [
     "color-success": props.success,
     "color-tertiary": props.tertiary,
     "color-warning": props.warning,
-  }
-])
+  },
+]);
 </script>
 
 <template>
