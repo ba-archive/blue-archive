@@ -77,8 +77,8 @@ const spaceClass = computed(() => {
 const spaceStyles = computed(() => {
   return {
     gap: spaceSize.value,
-    margin: marginSize.value || "",
-    padding: paddingSize.value || "",
+    margin: marginSize.value,
+    padding: paddingSize.value,
   };
 });
 
@@ -112,6 +112,7 @@ const SpaceElement = () => {
 </script>
 
 <template>
+  <!-- @vue-ignore -->
   <div
     class="eden-ui eden-ui__space flex"
     :class="spaceClass"
