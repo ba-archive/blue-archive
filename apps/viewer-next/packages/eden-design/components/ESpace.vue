@@ -102,7 +102,7 @@ const SpaceElement = () => {
               ) : (
                 slots.divider?.()
               ))}
-            <div>{child}</div>
+            {child}
           </Fragment>
         );
       })}
