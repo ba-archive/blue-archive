@@ -4,6 +4,7 @@ import {
   getGradientStyle,
   parseColor,
 } from "~/packages/eden-design/_utils/colorFunctions";
+import { parseSize } from "~/packages/eden-design/_utils/styleFunctions";
 import type { Directive } from "vue";
 
 const props = withDefaults(defineProps<AvatarProps>(), {
@@ -24,11 +25,7 @@ const avatarSizeType = computed(
 );
 
 // noinspection JSUnusedGlobalSymbols
-const customSize = computed(() => {
-  return /^(\d+)(px|rem|em|d?vw|d?vh)$/.test(props.size + "")
-    ? props.size
-    : props.size + "px";
-});
+const customSize = computed(() => parseSize(props.size));
 
 const avatarClass = computed(() => [
   "eden-ui",
@@ -60,11 +57,9 @@ const avatarStyle = computed(() => [
       backgroundColor: parseColor(props.background),
     },
   (props.bordered || props.borderColor) && {
-    border: `${
-      /^(\d+)(px|rem|em|d?vw|d?vh)$/.test(props.borderWidth + "")
-        ? props.borderWidth
-        : props.borderWidth + "px"
-    } solid ${parseColor(props.borderColor ?? "arona-blue-6")}`,
+    border: `${parseSize(props.borderWidth)} solid ${parseColor(
+      props.borderColor ?? "arona-blue-6"
+    )}`,
   },
 ]);
 

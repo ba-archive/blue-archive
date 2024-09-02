@@ -2,7 +2,7 @@
 import type { SpaceProps } from "./types/EdenSpace/SpaceProps";
 import { computed, Fragment, useSlots } from "vue";
 import { getAllElements } from "../_utils/vueUtils";
-
+import { parseSize } from "../_utils/styleFunctions";
 const props = withDefaults(defineProps<SpaceProps>(), {
   align: "start",
   direction: "horizontal",
@@ -39,9 +39,7 @@ function getMarginOrPaddingSize(
 ) {
   if (!size) return null;
   if (typeof size === "string") {
-    return (
-      size + `${/^(\d+)(px|rem|em|d?vw|d?vh)$/.test(size + "") ? "" : "px"}`
-    );
+    return parseSize(size);
   }
 
   if (typeof size === "number") {
@@ -49,7 +47,7 @@ function getMarginOrPaddingSize(
   }
 
   if (Array.isArray(size)) {
-    return size.map(size => size + "px").join(" ");
+    return size.map(size => parseSize(size)).join(" ");
   }
 }
 
@@ -121,12 +119,6 @@ const SpaceElement = () => {
     <SpaceElement />
   </div>
 </template>
-
-<style scoped lang="scss">
-.eden-ui__space {
-  width: 100%;
-}
-</style>
 
 <style lang="scss">
 @import "~/packages/eden-design/components/index.scss";

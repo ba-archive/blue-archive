@@ -13,7 +13,6 @@ const props = withDefaults(defineProps<SwitchProps>(), {
 });
 
 const switchState = ref(props.checked);
-const switchElement = ref<HTMLDivElement | null>(null);
 
 watch(
   () => [props.checked, model.value],
@@ -116,7 +115,6 @@ function handleClick() {
 
 <template>
   <button
-    ref="switchElement"
     :disabled="props.disabled"
     class="eden-ui__switch--track"
     :class="switchClass"
