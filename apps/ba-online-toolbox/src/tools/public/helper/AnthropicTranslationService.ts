@@ -1,11 +1,13 @@
 import axios from "axios";
 import secrets from "../secrets.json";
+import { AxiosError } from "axios";
 
 const { ANTHROPIC_TIER1_SECRET } = secrets;
 
 interface ClaudeContent {
-  type: "text";
+  type: "text" | "error";
   text?: string;
+  error_code?: number;
 }
 
 interface ClaudeMessage {
@@ -93,7 +95,9 @@ function getClaudeTranslation(
   ).modelName;
   sft_request.temperature = temperature;
 
-  const error_message = { content: [{ type: "text", text: "" }] };
+  const error_message = {
+    content: [{ type: "text", text: "", error_code: 0 }],
+  };
 
   if (input && input.length < 10) {
     error_message.content[0].text =
@@ -110,7 +114,7 @@ function getClaudeTranslation(
   sft_request.messages = [
     {
       role: "user",
-      content: [{ type: "text", text: "" }],
+      content: [{ type: "error", text: "" }],
     },
   ];
 
@@ -142,8 +146,9 @@ function getClaudeTranslation(
   return instance
     .post("/v1/messages", sft_request)
     .then(res => res.data)
-    .catch(e => {
+    .catch((e: AxiosError) => {
       error_message.content[0].text = e.message;
+      error_message.content[0].error_code = e.response?.status ?? 500;
       return error_message;
     });
 }

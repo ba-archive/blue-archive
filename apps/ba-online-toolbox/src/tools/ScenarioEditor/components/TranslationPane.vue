@@ -448,7 +448,28 @@ function handleLLMTranslateRequest(
       advice.value
     )
       .then((res: ClaudeMessage) => {
-        const rawText = res.content[0].text ?? "";
+        const rawResponse = res.content[0];
+
+        if (rawResponse.type === "error") {
+          let additionalErrorInfo = "";
+
+          switch (rawResponse.error_code) {
+            case 529:
+              additionalErrorInfo = "模型服务器过载，请稍后再试";
+              break;
+            default:
+              additionalErrorInfo = "未知错误，请稍后再试";
+              break;
+          }
+
+          config.setTmpMachineTranslate(
+            currentText.value,
+            rawResponse.text + additionalErrorInfo
+          );
+          return;
+        }
+
+        const rawText = rawResponse.text ?? "";
         let fullWidthText = halfToFull(rawText);
         replaceStrings.forEach(item => {
           fullWidthText = fullWidthText.replaceAll(item.from, item.to);
