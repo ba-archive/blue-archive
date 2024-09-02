@@ -140,7 +140,7 @@ function clickHandler() {
 
   &.disabled {
     cursor: not-allowed !important;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   &.size- {

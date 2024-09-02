@@ -3,5 +3,5 @@ export function parseSize(size: string | number) {
     return size + "px";
   }
 
-  return /^(\d+)(px|rem|em|d?vw|d?vh)$/.test(size + "") ? size : size + "px";
+  return /^(\d+)(%|px|r?em|d?v[wh])$/.test(size + "") ? size : size + "px";
 }
