@@ -1,6 +1,12 @@
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-400.css");
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-700.css");
 
+@font-face {
+  font-family: "HarmonyOS Sans SC Bold";
+  src: local("HarmonyOS Sans SC Bold");
+  font-weight: 700;
+}
+
 /* @Author: Aaron-212
 *  @Date: 2024-08-11
 *  @Description: 把 Text + Display 放到一个 Optical Size 轴上

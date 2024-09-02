@@ -85,6 +85,10 @@ const textStyle = computed(() => [
     color: $text-5;
     transition: color 0.3s ease-in-out;
 
+    &.font-bold {
+      font-family: "Wix Madefor", "HarmonyOS Sans SC Bold", $eden-font-family;
+    }
+
     &.color- {
       &brand {
         color: $brand-6;
