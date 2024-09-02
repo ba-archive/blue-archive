@@ -26,6 +26,7 @@ function getPresetPaletteName() {
     "pierce",
     "unarmed",
     "vibrate",
+    "selector",
   ];
 
   return keys.find(key => props[key as keyof TagProps]) || "default";
@@ -150,6 +151,16 @@ function clickHandler() {
 
       &.active {
         background: $brand-6;
+        color: $fill-base;
+      }
+    }
+
+    &selector {
+      color: $text-5;
+      background-color: $fill-base;
+
+      &.active {
+        background: $arona-blue-6;
         color: $fill-base;
       }
     }

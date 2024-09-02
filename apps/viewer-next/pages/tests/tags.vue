@@ -109,6 +109,8 @@ function handleClickReport($event: Event) {
       class="flex flex-col p-2 gap-4 bg-[var(--arona-blue-2)] rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <e-space>
+        <e-tag size="mini" clickable selector disabled>学院选择</e-tag>
+        <e-tag size="mini" clickable selector>学院选择</e-tag>
         <e-tag size="mini" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="mini" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="mini" clickable explosion :text-props="{ bold: true }">爆发</e-tag>
@@ -117,6 +119,8 @@ function handleClickReport($event: Event) {
         <e-tag size="mini" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
       </e-space>
       <e-space>
+        <e-tag size="small" clickable selector disabled>学院选择</e-tag>
+        <e-tag size="small" clickable selector>学院选择</e-tag>
         <e-tag size="small" clickable striker :text-props="{ bold: true }"
           >STRIKER
         </e-tag>
@@ -127,6 +131,8 @@ function handleClickReport($event: Event) {
         <e-tag size="small" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
       </e-space>
       <e-space>
+        <e-tag size="medium" clickable selector disabled>学院选择</e-tag>
+        <e-tag size="medium" clickable selector>学院选择</e-tag>
         <e-tag size="medium" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="medium" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="medium" clickable explosion :text-props="{ bold: true }">爆发</e-tag>
@@ -135,6 +141,8 @@ function handleClickReport($event: Event) {
         <e-tag size="medium" clickable vibrate :text-props="{ bold: true }">振动</e-tag>
       </e-space>
       <e-space>
+        <e-tag size="large" clickable selector disabled>学院选择</e-tag>
+        <e-tag size="large" clickable selector>学院选择</e-tag>
         <e-tag size="large" clickable striker :text-props="{ bold: true }">STRIKER</e-tag>
         <e-tag size="large" clickable special :text-props="{ bold: true }">SPECIAL</e-tag>
         <e-tag size="large" clickable explosion :text-props="{ bold: true }">爆发</e-tag>

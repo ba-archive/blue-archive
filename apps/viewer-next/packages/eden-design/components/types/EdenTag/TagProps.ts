@@ -11,7 +11,10 @@ export type TagProps = {
   bordered?: boolean;
   background?: WithGradientBackground;
 
-  /* 颜色快捷方式 */
+  /* 文字样式 */
+  textProps?: TextProps;
+
+  /* 颜色快捷方式，以下所有快捷方式中只能使用一种 */
   default?: boolean; // 默认色 $text-5, transparent, $border-2
   brand?: boolean; // 品牌色 $arona-blue-6, $arona-blue-1, $arona-blue-6
   gray?: boolean; // 单色 $text-3, $fill-1, $border-2
@@ -24,6 +27,6 @@ export type TagProps = {
   unarmed?: boolean; // 神秘 $unarmed-6/$fill-base
   vibrate?: boolean; // 振动 $vibrate-6/$fill-base
 
-  /* 字体样式 */
-  textProps?: TextProps;
+  /* 学生、社团选择器样式 */
+  selector?: boolean;
 };
