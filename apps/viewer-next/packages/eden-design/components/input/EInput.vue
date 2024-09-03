@@ -111,6 +111,7 @@ const slots = useSlots();
 
     &::after {
       will-change: transform;
+      height: 2 * $border-width;
       background: $arona-blue-6;
       transform: rotate3d(0, 1, 0, 90deg);
     }
@@ -123,7 +124,7 @@ const slots = useSlots();
 
     &:focus,
     &:focus-within {
-      background: $fill-base;
+      background-color: $fill-base;
 
       &::after {
         transform: rotate3d(0, 1, 0, 0deg);
