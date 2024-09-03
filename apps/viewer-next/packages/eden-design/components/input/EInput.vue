@@ -10,6 +10,7 @@ const props = withDefaults(defineProps<InputProps>(), {
   min: undefined,
   max: undefined,
   step: undefined,
+  align: "left",
 });
 
 const model = defineModel<string | number>();
@@ -51,26 +52,33 @@ const inputStyle = computed(() => {
 
 <template>
   <span
-    class="eden-ui eden-ui__input rounded eden-ui__input--wrapper flex gap-2"
-    :class="inputClass"
-    :style="inputStyle"
+    class="eden-ui eden-ui__input--outline rounded overflow-clip border-1 border-solid border-transparent"
   >
-    <span class="eden-ui eden-ui__input--prefix flex">
-      <slot name="prefix" />
-    </span>
-    <input
-      :type="type"
-      class="eden-ui eden-ui__input--input flex flex-1 items-end"
-      v-model="model"
-      @input="handleInput"
-      :placeholder="placeholder"
-      :disabled="disabled"
-      :min="type === 'number' ? min : undefined"
-      :max="type === 'number' ? max : undefined"
-      :step="type === 'number' ? step : undefined"
-    />
-    <span class="eden-ui eden-ui__input--suffix flex">
-      <slot name="suffix" />
+    <span
+      class="eden-ui eden-ui__input eden-ui__input--wrapper rounded flex gap-1"
+      :class="inputClass"
+      :style="inputStyle"
+    >
+      <span class="eden-ui eden-ui__input--prefix flex">
+        <slot name="prefix" />
+      </span>
+      <input
+        :type="type"
+        class="eden-ui eden-ui__input--input flex flex-1 items-end"
+        :style="{
+          textAlign: align,
+        }"
+        v-model="model"
+        @input="handleInput"
+        :placeholder="placeholder"
+        :disabled="disabled"
+        :min="type === 'number' ? min : undefined"
+        :max="type === 'number' ? max : undefined"
+        :step="type === 'number' ? step : undefined"
+      />
+      <span class="eden-ui eden-ui__input--suffix flex">
+        <slot name="suffix" />
+      </span>
     </span>
   </span>
 </template>
@@ -80,14 +88,43 @@ const inputStyle = computed(() => {
 
 .eden-ui__input {
   &--wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
     border-left: 1px solid transparent;
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
-    border-bottom: 1px solid $border-3;
+    border-bottom: none;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 14px;
     line-height: 22px;
+    filter: blur(0); // stacking context
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1px;
+      bottom: 0;
+      width: calc(100% + 2px);
+      height: 1px;
+      background: $border-3;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-left-color: $border-3;
+      border-top-color: $border-3;
+      border-right-color: $border-3;
+
+      &::after {
+        background: $arona-blue-6;
+      }
+    }
+
+    &:focus,
+    &:focus-within {
+      background: $fill-base;
+    }
   }
 
   &.size- {
@@ -111,20 +148,6 @@ const inputStyle = computed(() => {
     font-size: inherit;
     white-space: nowrap;
     line-height: 22px;
-  }
-
-  &:hover,
-  &:focus,
-  &:focus-within {
-    border-left-color: $border-3;
-    border-top-color: $border-3;
-    border-right-color: $border-3;
-    border-bottom-color: $arona-blue-6;
-  }
-
-  &:focus,
-  &:focus-within {
-    background: $fill-base;
   }
 
   &--input {
