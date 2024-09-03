@@ -53,11 +53,8 @@ const slots = useSlots();
 </script>
 
 <template>
-  <span
-    class="eden-ui eden-ui__input--outline rounded overflow-clip border-1 border-solid border-transparent"
-  >
     <span
-      class="eden-ui eden-ui__input eden-ui__input--wrapper rounded flex gap-1"
+      class="eden-ui eden-ui__input eden-ui__input--wrapper rounded flex gap-1 overflow-clip"
       :class="inputClass"
       :style="inputStyle"
     >
@@ -82,17 +79,14 @@ const slots = useSlots();
         <slot name="suffix" />
       </span>
     </span>
-  </span>
 </template>
 
 <style scoped lang="scss">
 @import "~/packages/eden-design/components/index.scss";
 
 .eden-ui__input {
+  $border-width: 1px;
   &--wrapper {
-    border-left: 1px solid transparent;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
     border-bottom: none;
     padding-left: 10px;
     padding-right: 10px;
@@ -100,13 +94,15 @@ const slots = useSlots();
     line-height: 22px;
     filter: blur(0); // stacking context
 
+    box-shadow: inset 0 0 0 1px transparent;
+
     &::after {
       content: "";
       position: absolute;
-      left: -1px;
-      bottom: 0;
-      width: calc(100% + 2px);
-      height: 1px;
+      left: -$border-width;
+      bottom: 0px;
+      width: 100%;
+      height: $border-width;
       background: $border-3;
       transition: all 0.3s ease-in-out;
     }
@@ -114,9 +110,7 @@ const slots = useSlots();
     &:hover,
     &:focus,
     &:focus-within {
-      border-left-color: $border-3;
-      border-top-color: $border-3;
-      border-right-color: $border-3;
+      box-shadow: inset 0 0 0 1px $border-3;
 
       &::after {
         background: $arona-blue-6;
