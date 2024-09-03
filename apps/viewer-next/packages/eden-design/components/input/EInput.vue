@@ -181,6 +181,7 @@ const slots = useSlots();
 
     &:disabled {
       cursor: not-allowed;
+      user-select: none;
       color: $text-3;
 
       &::placeholder {
