@@ -95,7 +95,7 @@ const slots = useSlots();
     font-size: 14px;
     line-height: 22px;
     box-shadow: inset 0 0 0 1px transparent;
-    filter: blur(0); // stacking context
+    position: relative; // stacking context
 
     &::before,
     &::after {
