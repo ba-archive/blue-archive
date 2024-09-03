@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "~/packages/eden-design/components",
     "~/packages/eden-design/components/typography",
     "~/packages/eden-design/components/input",
+    "~/packages/eden-design/components/icon",
   ],
   css: ["@unocss/reset/normalize.css"],
   devtools: { enabled: true },

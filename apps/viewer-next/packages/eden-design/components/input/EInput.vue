@@ -7,6 +7,9 @@ const props = withDefaults(defineProps<InputProps>(), {
   size: "medium",
   value: "",
   placeholder: "Please Input...",
+  min: undefined,
+  max: undefined,
+  step: undefined,
 });
 
 const model = defineModel<string | number>();
@@ -48,22 +51,25 @@ const inputStyle = computed(() => {
 
 <template>
   <span
-    class="eden-ui eden-ui__input rounded eden-ui__input--wrapper"
+    class="eden-ui eden-ui__input rounded eden-ui__input--wrapper flex gap-2"
     :class="inputClass"
     :style="inputStyle"
   >
-    <span class="eden-ui eden-ui__input--prefix flex items-center">
+    <span class="eden-ui eden-ui__input--prefix flex">
       <slot name="prefix" />
     </span>
     <input
       :type="type"
-      class="eden-ui eden-ui__input--input flex flex-1 items-center"
+      class="eden-ui eden-ui__input--input flex flex-1 items-end"
       v-model="model"
       @input="handleInput"
       :placeholder="placeholder"
       :disabled="disabled"
+      :min="type === 'number' ? min : undefined"
+      :max="type === 'number' ? max : undefined"
+      :step="type === 'number' ? step : undefined"
     />
-    <span class="eden-ui eden-ui__input--suffix flex items-center">
+    <span class="eden-ui eden-ui__input--suffix flex">
       <slot name="suffix" />
     </span>
   </span>
@@ -81,6 +87,7 @@ const inputStyle = computed(() => {
     border-right: 1px solid transparent;
     border-bottom: 1px solid $border-3;
     font-size: 14px;
+    line-height: 22px;
   }
 
   &.size- {
@@ -103,21 +110,20 @@ const inputStyle = computed(() => {
     color: $text-2;
     font-size: inherit;
     white-space: nowrap;
+    line-height: 22px;
   }
 
-  &--prefix {
-    margin-right: 8px;
-  }
-  &--suffix {
-    margin-left: 8px;
-  }
-
+  &:hover,
+  &:focus,
   &:focus-within {
-    border-left: 1px solid $border-3;
-    border-top: 1px solid $border-3;
-    border-right: 1px solid $border-3;
-    border-bottom: 1px solid $arona-blue-6;
+    border-left-color: $border-3;
+    border-top-color: $border-3;
+    border-right-color: $border-3;
+    border-bottom-color: $arona-blue-6;
+  }
 
+  &:focus,
+  &:focus-within {
     background: $fill-base;
   }
 
@@ -129,6 +135,17 @@ const inputStyle = computed(() => {
     caret-color: $arona-blue-6;
     font-size: inherit;
     padding: 0 2px;
+    line-height: 22px;
+
+    &[type="number"] {
+      appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+    }
 
     &::placeholder {
       color: $text-3;

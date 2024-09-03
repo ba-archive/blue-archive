@@ -9,4 +9,9 @@ export type InputProps = {
   width?: string | number | "auto";
   type?: "text" | "number" | "password" | "email" | "tel" | "url";
   "update:value"?: (value: string) => void;
+
+  /* number */
+  min?: number;
+  max?: number;
+  step?: number;
 };
