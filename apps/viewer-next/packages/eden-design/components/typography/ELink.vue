@@ -29,7 +29,6 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
     :no-rel="props.noRel"
     :prefetched-class="props.prefetchedClass"
     :prefetch="props.prefetch"
-    :no-prefetch="props.noPrefetch"
   >
     <ETextCore
       :props="{

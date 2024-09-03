@@ -4,7 +4,7 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/_utils/colorFunctions";
+} from "~/packages/eden-design/_utils/colorUtils";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",

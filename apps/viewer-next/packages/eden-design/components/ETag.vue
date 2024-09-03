@@ -3,7 +3,7 @@ import type { TagProps } from "~/packages/eden-design/components/types/EdenTag/T
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/_utils/colorFunctions";
+} from "~/packages/eden-design/_utils/colorUtils";
 import ETextCore from "~/packages/eden-design/components/reusables/EdenTextCore/ETextCore.vue";
 
 const props = withDefaults(defineProps<TagProps>(), {

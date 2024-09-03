@@ -4,7 +4,7 @@ import type { ButtonProps } from "~/packages/eden-design/components/types/EdenBu
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/_utils/colorFunctions";
+} from "~/packages/eden-design/_utils/colorUtils";
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   size: "medium",

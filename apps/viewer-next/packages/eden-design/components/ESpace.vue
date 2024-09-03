@@ -2,7 +2,7 @@
 import type { SpaceProps } from "./types/EdenSpace/SpaceProps";
 import { computed, Fragment, useSlots } from "vue";
 import { getAllElements } from "../_utils/vueUtils";
-import { parseSize } from "../_utils/styleFunctions";
+import { parseSize } from "../_utils/styleUtils";
 const props = withDefaults(defineProps<SpaceProps>(), {
   align: "start",
   direction: "horizontal",
@@ -94,7 +94,10 @@ const SpaceElement = () => {
           <Fragment key={child.key ?? `item-${index}`}>
             {shouldRenderDivider &&
               (!!props.divider ? (
-                <span role="separator" class="eden-ui eden-ui__space--built-in-divider select-none">
+                <span
+                  role="separator"
+                  class="eden-ui eden-ui__space--built-in-divider select-none"
+                >
                   {props.divider}
                 </span>
               ) : (

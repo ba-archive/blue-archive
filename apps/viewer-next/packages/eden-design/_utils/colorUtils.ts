@@ -1,5 +1,3 @@
-import type { TextProps } from "../components/types/EdenTextCore/TextProps";
-
 function getGradientDegree(degree: number | string | undefined) {
   switch (typeof degree) {
     case "number":

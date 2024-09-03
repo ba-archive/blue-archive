@@ -3,8 +3,8 @@ import type { AvatarProps } from "~/packages/eden-design/components/types/EdenAv
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/_utils/colorFunctions";
-import { parseSize } from "~/packages/eden-design/_utils/styleFunctions";
+} from "~/packages/eden-design/_utils/colorUtils";
+import { parseSize } from "~/packages/eden-design/_utils/styleUtils";
 import type { Directive } from "vue";
 
 const props = withDefaults(defineProps<AvatarProps>(), {

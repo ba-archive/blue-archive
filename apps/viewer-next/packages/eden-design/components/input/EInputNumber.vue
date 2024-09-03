@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { InputNumberProps } from "../types/EdenInput/InputNumberProps";
-import { parseSize } from "../../_utils/styleFunctions";
+import { parseSize } from "../../_utils/styleUtils";
 import { isNumber } from "../../_utils/numberUtils";
 const props = withDefaults(defineProps<InputNumberProps>(), {
   align: "center",

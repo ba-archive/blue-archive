@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { InputProps } from "../types/EdenInput/InputProps";
-import { parseSize } from "../../_utils/styleFunctions";
+import { parseSize } from "../../_utils/styleUtils";
 const props = withDefaults(defineProps<InputProps>(), {
   type: "text",
   width: 200,

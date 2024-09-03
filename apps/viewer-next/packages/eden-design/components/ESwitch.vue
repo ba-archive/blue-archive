@@ -3,7 +3,7 @@ import type { SwitchProps } from "./types/EdenSwitch/SwitchProps";
 import {
   getGradientStyle,
   parseColor,
-} from "~/packages/eden-design/_utils/colorFunctions";
+} from "~/packages/eden-design/_utils/colorUtils";
 
 const model = defineModel<boolean>();
 
