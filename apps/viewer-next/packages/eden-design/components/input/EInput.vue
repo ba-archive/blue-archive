@@ -48,6 +48,8 @@ const inputStyle = computed(() => {
     width: props.width === "auto" ? "auto" : parseSize(props.width),
   };
 });
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -59,7 +61,7 @@ const inputStyle = computed(() => {
       :class="inputClass"
       :style="inputStyle"
     >
-      <span class="eden-ui eden-ui__input--prefix flex">
+      <span class="eden-ui eden-ui__input--prefix flex" v-if="slots.prefix">
         <slot name="prefix" />
       </span>
       <input
@@ -76,7 +78,7 @@ const inputStyle = computed(() => {
         :max="type === 'number' ? max : undefined"
         :step="type === 'number' ? step : undefined"
       />
-      <span class="eden-ui eden-ui__input--suffix flex">
+      <span class="eden-ui eden-ui__input--suffix flex" v-if="slots.suffix">
         <slot name="suffix" />
       </span>
     </span>
