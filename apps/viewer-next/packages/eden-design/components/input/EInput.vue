@@ -160,6 +160,7 @@ const slots = useSlots();
     background: transparent;
     width: 100%;
     caret-color: $arona-blue-6;
+    color: $text-5;
     font-size: inherit;
     padding: 0 2px;
     line-height: 22px;
