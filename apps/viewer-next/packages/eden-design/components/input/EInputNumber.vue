@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { InputNumberProps } from "../types/EdenInput/InputNumberProps";
 import { parseSize } from "../../_utils/styleUtils";
-import { isNumber } from "../../_utils/numberUtils";
+import { isNumber, toNumber } from "../../_utils/numberUtils";
 const props = withDefaults(defineProps<InputNumberProps>(), {
   align: "center",
   value: 0,
@@ -67,7 +67,7 @@ function handleAdd() {
   // @ts-ignore
   if (model.value + props.step <= props.max) {
     // @ts-ignore
-    model.value += props.step;
+    model.value = toNumber(model.value) + props.step;
   }
 }
 
@@ -76,7 +76,7 @@ function handleSubtract() {
   // @ts-ignore
   if (model.value - props.step >= props.min) {
     // @ts-ignore
-    model.value -= props.step;
+    model.value = toNumber(model.value) - props.step;
   }
 }
 </script>
