@@ -131,8 +131,6 @@ function handleClick() {
 </template>
 
 <style lang="scss" scoped>
-@import "~/packages/eden-design/components/index.scss";
-
 .eden-ui__switch {
   margin-left: 8px;
   margin-right: 8px;

@@ -112,8 +112,6 @@ function clickHandler() {
 </template>
 
 <style scoped lang="scss">
-@import "~/packages/eden-design/components/index.scss";
-
 .eden-ui__tag {
   padding-left: 8px;
   padding-right: 8px;

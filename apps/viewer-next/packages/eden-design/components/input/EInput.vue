@@ -82,8 +82,6 @@ const slots = useSlots();
 </template>
 
 <style scoped lang="scss">
-@import "~/packages/eden-design/components/index.scss";
-
 .eden-ui__input {
   $border-width: 1px;
 

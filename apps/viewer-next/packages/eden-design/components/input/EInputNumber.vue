@@ -15,7 +15,6 @@ const props = withDefaults(defineProps<InputNumberProps>(), {
 });
 
 const model = defineModel<number>();
-model.value = props.min;
 
 watch(
   () => props.value,

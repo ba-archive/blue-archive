@@ -77,8 +77,6 @@ const textStyle = computed(() => [
 </template>
 
 <style lang="scss" scoped>
-@import "../../index.scss";
-
 .eden-ui {
   &__text {
     font-family: $eden-font-family;

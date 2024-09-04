@@ -63,7 +63,6 @@ const liClass = computed(() => [
 </template>
 
 <style lang="scss" scoped>
-@import "~/packages/eden-design/components/index.scss";
 .eden-ui__li {
   list-style-type: none;
 

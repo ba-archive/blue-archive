@@ -124,8 +124,6 @@ const SpaceElement = () => {
 </template>
 
 <style lang="scss">
-@import "~/packages/eden-design/components/index.scss";
-
 .eden-ui__space--built-in-divider {
   display: inline-block;
   color: $border-3;

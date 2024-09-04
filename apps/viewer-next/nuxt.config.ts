@@ -11,7 +11,10 @@ export default defineNuxtConfig({
     "~/packages/eden-design/components/input",
     "~/packages/eden-design/components/icon",
   ],
-  css: ["@unocss/reset/normalize.css"],
+  css: [
+    "@unocss/reset/normalize.css",
+    "~/packages/eden-design/_styles/index.scss",
+  ],
   devtools: { enabled: true },
   modules: [
     "@pinia/nuxt",
@@ -27,4 +30,14 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "nuxt-radash",
   ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData:
+            '@import "~/packages/eden-design/_styles/variables.scss";',
+        },
+      },
+    },
+  },
 });

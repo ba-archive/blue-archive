@@ -9,8 +9,6 @@
 </template>
 
 <style lang="scss">
-@import "./packages/eden-design/components/index.scss";
-
 html {
   background: $fill-base;
 }

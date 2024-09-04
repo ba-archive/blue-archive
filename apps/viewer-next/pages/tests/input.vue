@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const valueString = ref("我能吞下玻璃而不伤身体");
-const valueNumber = ref(0);
+const valueNumber = ref(50);
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const valueNumber = ref(0);
       <e-input-number
         width="100"
         v-model="valueNumber"
-        :min="1"
+        :min="0"
         :max="100"
         :step="1"
       />
@@ -63,7 +63,7 @@ const valueNumber = ref(0);
         disabled
         width="100"
         v-model="valueNumber"
-        :min="1"
+        :min="0"
         :max="100"
         :step="1"
       />

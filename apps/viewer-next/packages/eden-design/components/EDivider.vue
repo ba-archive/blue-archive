@@ -20,12 +20,14 @@ const dividerClass = computed(() => [
 </script>
 
 <template>
-  <div role="separator" class="eden-ui eden-ui__divider select-none" :class="dividerClass"></div>
+  <div
+    role="separator"
+    class="eden-ui eden-ui__divider select-none"
+    :class="dividerClass"
+  ></div>
 </template>
 
 <style lang="scss" scoped>
-@import "~/packages/eden-design/components/index.scss";
-
 .eden-ui__divider {
   border-color: $border-3;
   border-width: 0.5px;
