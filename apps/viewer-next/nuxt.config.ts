@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "@nuxtjs/robots",
     "@pinia-plugin-persistedstate/nuxt",
-    "nuxt-swiper",
+    // "nuxt-swiper",
     "nuxt-typed-router",
     "nuxt-radash",
   ],
