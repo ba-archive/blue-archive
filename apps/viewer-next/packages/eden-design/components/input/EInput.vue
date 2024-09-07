@@ -53,6 +53,7 @@ const slots = useSlots();
 </script>
 
 <template>
+  <!-- @vue-ignore -->
   <span
     class="eden-ui eden-ui__input eden-ui__input--wrapper rounded flex gap-1 overflow-clip"
     :class="inputClass"

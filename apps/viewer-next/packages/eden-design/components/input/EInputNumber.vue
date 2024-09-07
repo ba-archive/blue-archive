@@ -28,9 +28,17 @@ watch(
 watch(
   () => model.value,
   (oldVal, newVal) => {
-    if (!isNumber(newVal)) {
+    if (!newVal || !isNumber(newVal) || isNaN(newVal)) {
       model.value = oldVal;
+      return;
     }
+    if (newVal > props.max) {
+      model.value = props.max;
+    }
+    if (newVal < props.min) {
+      model.value = props.min;
+    }
+    emits("update:value", newVal);
   }
 );
 
