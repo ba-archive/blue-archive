@@ -31,6 +31,7 @@ function getColorHex(color: string) {
       <EIconAdd :size="size" :color="getColorHex(color)" />
       <EIconError :size="size" :color="getColorHex(color)" />
       <EIconSubtract :size="size" :color="getColorHex(color)" />
+      <EIconClose :size="size" :color="getColorHex(color)" />
     </e-space>
   </e-space>
 </template>
