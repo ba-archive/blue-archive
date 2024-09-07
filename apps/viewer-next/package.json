@@ -11,10 +11,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.13.0",
-    "vue": "^3.4.29",
     "@unocss/reset": "^0.62.2",
-    "@vueuse/core": "^10.7.2"
+    "@vueuse/core": "^10.7.2",
+    "nuxt": "^3.13.0",
+    "vue": "^3.4.29"
   },
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.2",

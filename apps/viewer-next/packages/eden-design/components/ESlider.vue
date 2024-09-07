@@ -166,6 +166,7 @@ function handleMouseMove(event: MouseEvent) {
 </script>
 
 <template>
+  <!--@vue-ignore-->
   <span
     class="eden-ui eden-ui__slider"
     :class="sliderClass"

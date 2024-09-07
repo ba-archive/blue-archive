@@ -3,4 +3,5 @@ export type IconProps = {
   color?: string;
   strokeWidth?: string;
   fill?: boolean;
+  rotate?: number | string;
 };
