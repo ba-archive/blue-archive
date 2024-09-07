@@ -10,5 +10,6 @@
     <e-link to="/tests/input">test input</e-link>
     <e-link to="/tests/slider">test slider</e-link>
     <e-link to="/tests/icons">test icons</e-link>
+    <e-link to="/tests/images">test images</e-link>
   </div>
 </template>

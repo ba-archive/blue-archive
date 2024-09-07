@@ -4,6 +4,7 @@ import {
   getGradientStyle,
   parseColor,
 } from "~/packages/eden-design/_utils/colorUtils";
+import { parseSize } from "~/packages/eden-design/_utils/styleUtils";
 
 const textCoreProps = defineProps<{ props: TextProps }>();
 
@@ -61,16 +62,22 @@ const textStyle = computed(() => [
   textCoreProps.props.inheritTextColor && {
     color: "inherit !important",
   },
+  textCoreProps.props.size && {
+    fontSize: parseSize(textCoreProps.props.size),
+  },
 ]);
 </script>
 
 <template>
+  <!-- @vue-ignore -->
   <span :class="textClass" :style="textStyle" v-if="!!slots.prefix">
     <slot name="prefix"></slot>
   </span>
+  <!-- @vue-ignore -->
   <span :class="textClass" :style="textStyle">
     <slot></slot>
   </span>
+  <!-- @vue-ignore -->
   <span :class="textClass" :style="textStyle" v-if="!!slots.suffix">
     <slot name="suffix"></slot>
   </span>
