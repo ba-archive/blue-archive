@@ -32,11 +32,7 @@ const height = ref(100);
           :height="height"
           caption="错误状态"
         />
-        <e-image
-          :src="src"
-          :width="width"
-          :height="height"
-        >
+        <e-image :src="src" :width="width" :height="height">
           <template #caption>
             <e-text
               :color="{
@@ -59,6 +55,66 @@ const height = ref(100);
         :height="height"
         caption="点击预览"
       />
+    </e-space>
+    <e-space vertical>
+      <e-h2>Object Fit</e-h2>
+      <e-space>
+        <div
+          class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
+        >
+          <e-image
+            :src="src"
+            width="128"
+            :height="height"
+            fit="contain"
+            caption="contain"
+          />
+        </div>
+        <div
+          class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
+        >
+          <e-image
+            :src="src"
+            width="128"
+            :height="height"
+            fit="cover"
+            caption="cover"
+          />
+        </div>
+        <div
+          class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
+        >
+          <e-image
+            :src="src"
+            width="128"
+            :height="height"
+            fit="fill"
+            caption="fill"
+          />
+        </div>
+        <div
+          class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
+        >
+          <e-image
+            :src="src"
+            width="128"
+            :height="height"
+            fit="none"
+            caption="none"
+          />
+        </div>
+        <div
+          class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
+        >
+          <e-image
+            :src="src"
+            width="128"
+            :height="height"
+            fit="scale-down"
+            caption="scale-down"
+          />
+        </div>
+      </e-space>
     </e-space>
   </e-space>
 </template>

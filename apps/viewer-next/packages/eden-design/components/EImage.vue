@@ -24,7 +24,6 @@ const vDetectFailure: Directive = {
     img.src = el.getAttribute("src") || "";
     img.onerror = () => {
       imageLoadFailed.value = true;
-      console.log("imageLoadFailed", imageLoadFailed.value);
     };
   },
 };
@@ -40,9 +39,10 @@ const imageClass = computed(() => [
 
 const imageStyle = computed(() => {
   return {
-    width: !!props.width && parseSize(props.width),
-    height: !!props.height && parseSize(props.height),
-    borderRadius: !!props.borderRadius && parseSize(props.borderRadius),
+    width: parseSize(props.width),
+    height: parseSize(props.height),
+    borderRadius: parseSize(props.borderRadius),
+    objectFit: props.fit,
   };
 });
 
