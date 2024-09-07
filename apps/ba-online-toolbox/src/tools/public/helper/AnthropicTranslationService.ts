@@ -96,7 +96,7 @@ function getClaudeTranslation(
   sft_request.temperature = temperature;
 
   const error_message = {
-    content: [{ type: "text", text: "", error_code: 0 }],
+    content: [{ type: "error", text: "", error_code: 0 }],
   };
 
   if (input && input.length < 10) {
@@ -114,7 +114,7 @@ function getClaudeTranslation(
   sft_request.messages = [
     {
       role: "user",
-      content: [{ type: "error", text: "" }],
+      content: [{ type: "text", text: "" }],
     },
   ];
 
