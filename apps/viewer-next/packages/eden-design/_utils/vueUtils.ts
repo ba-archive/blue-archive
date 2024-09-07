@@ -1,9 +1,4 @@
-import type {
-  Component,
-  Slots,
-  VNode,
-  VNodeTypes,
-} from "vue";
+import type { Component, Slots, VNode, VNodeTypes } from "vue";
 
 // https://github.com/vuejs/vue-next/blob/main/packages/shared/src/shapeFlags.ts
 export enum ShapeFlags {
@@ -22,15 +17,21 @@ export enum ShapeFlags {
 
 // arco-design-vue
 // https://github.com/arco-design/arco-design-vue/blob/main/packages/web-vue/components/_utils/vue-utils.ts
-export const isElement = (vn: VNode) => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.ELEMENT);
-};
+export const isElement = (vn: string | Element | VNode | undefined): boolean =>
+  Boolean(
+    (typeof Element !== 'undefined' && vn instanceof Element) ||
+      (typeof vn === "object" &&
+        // @ts-ignore
+        vn?.shapeFlag &&
+        // @ts-ignore
+        vn.shapeFlag & ShapeFlags.ELEMENT)
+  );
 
 export const isComponent = (
-  vn: VNode,
+  vn: VNode | undefined,
   type?: VNodeTypes
 ): type is Component => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.COMPONENT);
+  return Boolean(vn && vn?.shapeFlag & ShapeFlags.COMPONENT);
 };
 
 export const isNamedComponent = (child: VNode, name: string) => {
