@@ -40,4 +40,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  ignore: ["packages/eden-design/docs/**"],
 });

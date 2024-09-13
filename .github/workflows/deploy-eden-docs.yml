@@ -1,17 +1,15 @@
-name: Deploy Viewer-Next
+name: Deploy Eden Docs To Preview Environment
 on:
   push:
     branches:
       - dev
       - "dev/**"
       - "feat/**"
-      - "translation/**"
     paths:
-      - "apps/viewer-next/**"
-      - "lib/**"
+      - "apps/viewer-next/packages/eden-design/**"
 
 concurrency:
-  group: "preview-deploy-viewer-next"
+  group: "eden-docs-deploy"
   cancel-in-progress: true
 
 jobs:
@@ -26,22 +24,24 @@ jobs:
           node-version: 22
       - uses: pnpm/action-setup@master
         with:
-          version: 9
+          version: latest
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Update
         run: node common/scripts/install-run-rush.js update
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
-      - name: Rush build
-        run: node common/scripts/install-run-rush.js build --to viewer-next --verbose
-      - name: Viewer rsync deploy
+      - name: pnpm build
+        run: |
+          cd apps/viewer-next/
+          pnpm docs:build
+      - name: Docs rsync deploy
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
           ARGS: "-rltgoDzvO -i --delete"
-          SOURCE: "./apps/viewer-next/.output/public/"
+          SOURCE: "./apps/viewer-next/packages/eden-design/docs/.vitepress/dist/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
           REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
-          TARGET: "/var/www/viewer-next"
+          TARGET: "/var/www/eden-docs"
           EXCLUDE: ".git*"

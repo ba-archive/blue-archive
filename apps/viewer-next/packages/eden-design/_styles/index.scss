@@ -1,3 +1,4 @@
+@import "./variables.scss";
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-400.css");
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-700.css");
 
@@ -119,7 +120,8 @@ html {
   --color-gray-1: #ffffff;
 }
 
-html.dark-mode {
+html.dark-mode,
+html.dark {
   --arona-blue-6: #4b91e7;
   --arona-blue-5: #397ee1;
   --arona-blue-7: #70aded;
