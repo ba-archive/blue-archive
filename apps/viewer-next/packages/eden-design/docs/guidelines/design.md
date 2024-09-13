@@ -665,7 +665,10 @@ Eden Design System 的栅格宽度为 32px。
 字体是体系化界面中最基本的构成之一。
 用户通过文本来理解内容和完成工作，科学的字体系统能提升用户的阅读体验及工作效率。
 
-本次设计中，我们对中文和英文进行了分别处理。中文段落使用 HarmonyOS Sans SC Regular，标题使用 HarmonyOS Sans SC Bold。英文段落使用 Wix Madefor Text Regular，标题使用 Wix Madefor Display SemiBold。
+本次设计中，我们对中文和英文进行了分别处理。中文段落使用 HarmonyOS Sans SC Regular，标题使用 HarmonyOS Sans SC Bold。英文使用自适应的 Wix Madefor 字体，对应规则如下：
+
+> 1. 字号 ≤ 16px: Wix Madefor Text
+> 2. 字号 ≥ 20px: Wix Madefor Display
 
 ### 中文段落 / CJK Paragraph
 
@@ -711,7 +714,7 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 中文标题 / CJK Title
 
-中文标题使用的字体为 HarmonyOS Sans SC，字重为 Bold (700)。
+中文标题使用的字体为 HarmonyOS Sans SC Bold，字重为 Bold (700)。当用户设备上安装有 HarmonyOS Sans SC 字体时，会优先使用该字体。
 
 <table class="w-full">
 <tr>
@@ -768,7 +771,7 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 英文段落 / English Paragraph
 
-英文段落使用的字体为 Wix Madefor Text，字重为 Regular。
+英文段落使用的字体为 Wix Madefor 自适应字体。
 
 <table class="w-full">
 <tr>
@@ -810,7 +813,7 @@ Eden Design System 的栅格宽度为 32px。
 
 ### 英文标题 / English Title
 
-英文标题使用的字体为 Wix Madefor Display，字重为 Bold。
+英文标题使用的字体为 Wix Madefor 自适应字体。
 
 <table class="w-full">
 <tr>

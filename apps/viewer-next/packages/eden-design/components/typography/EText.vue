@@ -1,6 +1,7 @@
 <script lang="tsx" setup>
 import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
 import type { TextProps } from "../types/EdenTextCore/TextProps";
+import { useSlots, computed } from "vue";
 
 const slots = useSlots();
 

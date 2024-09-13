@@ -5,6 +5,7 @@ import {
   getGradientStyle,
   parseColor,
 } from "~/packages/eden-design/_utils/colorUtils";
+import { computed, ref, useSlots } from "vue";
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   size: "medium",

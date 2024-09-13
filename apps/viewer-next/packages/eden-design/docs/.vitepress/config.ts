@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress";
 import UnoCSS from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import vueDevTools from "vite-plugin-vue-devtools";
+import { vitePluginForArco } from "@arco-plugins/vite-vue";
+import * as path from "path";
 
 const SPACE_OR_PUNCTUATION = new RegExp(
   // ts-ignore
@@ -22,6 +24,9 @@ export function tokenize(text: string): Array<string> {
   const uniqueSegs = Array.from(new Set(segs));
   return uniqueSegs.filter(w => !/^\s+$/.test(w));
 }
+
+const currentDir = path.resolve(__dirname, "..");
+const edenLibDir = path.resolve(currentDir, "../../../");
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -186,7 +191,7 @@ export default defineConfig({
       },
       {
         text: "设计语言",
-        link: "/guideline/design/design-language",
+        link: "/guidelines/design-language",
       },
     ],
     socialLinks: [
@@ -250,10 +255,22 @@ export default defineConfig({
     },
   },
   vite: {
+    resolve: {
+      alias: {
+        "~": edenLibDir,
+        "@eden-design/components": edenLibDir + "/packages/eden-design/components",
+      },
+    },
+    ssr: { noExternal: ["@arco-design/web-vue"] },
     plugins: [
       UnoCSS(),
       AutoImport({
         imports: ["vue", "vue-router"],
+        dirs: [edenLibDir + "/packages/eden-design/components"],
+      }),
+      vueDevTools(),
+      vitePluginForArco({
+        style: "css",
       }),
     ],
     css: {
