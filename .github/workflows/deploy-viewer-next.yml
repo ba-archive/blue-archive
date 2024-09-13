@@ -9,6 +9,8 @@ on:
     paths:
       - "apps/viewer-next/**"
       - "lib/**"
+    paths-ignore:
+      - "apps/viewer-next/packages/eden-design/docs/**"
 
 concurrency:
   group: "preview-deploy-viewer-next"
