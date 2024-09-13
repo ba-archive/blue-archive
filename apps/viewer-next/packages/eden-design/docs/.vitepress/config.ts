@@ -260,7 +260,7 @@ export default defineConfig({
         "@eden-design/components": edenLibDir + "/packages/eden-design/components",
       },
     },
-    ssr: { noExternal: ["@arco-design/web-vue"] },
+    ssr: { noExternal: ["element-plus"] },
     plugins: [
       UnoCSS(),
       AutoImport({
