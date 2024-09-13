@@ -8,48 +8,52 @@ outline: deep
 
 <script setup lang="ts">
   import EButton from "@eden-design/components/EButton.vue"
+  import ESpace from "@eden-design/components/ESpace.vue"
 </script>
 
 ## 基本用法
 
 如果它长得像按钮，点击起来像按钮，那它就是按钮。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
     <EButton size="mini">主要按钮</EButton>
     <EButton size="small">主要按钮</EButton>
     <EButton size="medium">主要按钮</EButton>
     <EButton size="large">主要按钮</EButton>
-  </div>
-  <div class="flex flex-row gap-2">
+  </ESpace>
+  <ESpace align="end">
     <EButton size="mini" secondary>次要按钮</EButton>
     <EButton size="small" secondary>次要按钮</EButton>
     <EButton size="medium" secondary>次要按钮</EButton>
     <EButton size="large" secondary>次要按钮</EButton>
-  </div>
-</div>
+  </ESpace>
+</ESpace>
 
 <details>
   <summary>查看代码</summary>
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <div class="flex flex-row gap-2">
+    <ESpace align="end">
       <EButton size="mini">主要按钮</EButton>
       <EButton size="small">主要按钮</EButton>
       <EButton size="medium">主要按钮</EButton>
       <EButton size="large">主要按钮</EButton>
-    </div>
-    <div class="flex flex-row gap-2">
+    </ESpace>
+    <ESpace align="end">
       <EButton size="mini" secondary>次要按钮</EButton>
       <EButton size="small" secondary>次要按钮</EButton>
       <EButton size="medium" secondary>次要按钮</EButton>
       <EButton size="large" secondary>次要按钮</EButton>
-    </div>
-  </div>
+    </ESpace>
+  </ESpace>
 </template>
 ```
 
@@ -59,24 +63,27 @@ outline: deep
 
 可以使用 `bordered` 属性来设置按钮的边框。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
     <EButton bordered>按钮</EButton>
-  </div>
-</div>
+  </ESpace>
+</ESpace>
 
 <details>
   <summary>查看代码</summary>
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <div class="flex flex-row gap-2">
+    <ESpace align="end">
       <EButton bordered>按钮</EButton>
-    </div>
-  </div>
+    </ESpace>
+  </ESpace>
 </template>
 ```
 
@@ -86,45 +93,49 @@ outline: deep
 
 按钮预设了 `brand`、`danger`、`success`、`warning`、`momotalk` 五种颜色样式。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]">
+  <ESpace align="end">
     <EButton brand>品牌色</EButton>
     <EButton danger>危险色</EButton>
     <EButton success>成功色</EButton>
     <EButton warning>警告色</EButton>
     <EButton momotalk>momotalk</EButton>
-  </div>
-  <div class="flex flex-row gap-2">
+  </ESpace>
+  <ESpace align="end">
     <EButton secondary brand>品牌色</EButton>
     <EButton secondary danger>危险色</EButton>
     <EButton secondary success>成功色</EButton>
     <EButton secondary warning>警告色</EButton>
     <EButton secondary momotalk>momotalk</EButton>
-  </div>
-</div>
+  </ESpace>
+</ESpace>
 
 <details>
 <summary>查看代码</summary>
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]"
   >
-    <div class="flex flex-row gap-2">
+    <ESpace align="end">
       <EButton brand>品牌色</EButton>
       <EButton danger>危险色</EButton>
       <EButton success>成功色</EButton>
       <EButton warning>警告色</EButton>
       <EButton momotalk>momotalk</EButton>
-    </div>
-    <div class="flex flex-row gap-2">
+    </ESpace>
+    <ESpace align="end">
       <EButton secondary brand>品牌色</EButton>
       <EButton secondary danger>危险色</EButton>
       <EButton secondary success>成功色</EButton>
       <EButton secondary warning>警告色</EButton>
       <EButton secondary momotalk>momotalk</EButton>
-  </div>
+    </ESpace>
+  </ESpace>
 </template>
 ```
 
@@ -134,11 +145,11 @@ outline: deep
 
 可以使用 `disabled` 属性来设置按钮的禁用状态。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
     <EButton disabled>我被沉默了</EButton>
-  </div>
-</div>
+  </ESpace>
+</ESpace>
 
 <details>
 
@@ -146,13 +157,16 @@ outline: deep
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <div class="flex flex-row gap-2">
+    <ESpace align="end">
       <EButton disabled>我被沉默了</EButton>
-    </div>
-  </div>
+    </ESpace>
+  </ESpace>
 </template>
 ```
 
@@ -162,26 +176,29 @@ outline: deep
 
 可以使用 `background` 属性来设置按钮的背景颜色，用 `textProps.color` 来设置按钮的文字颜色。支持渐变，语法为 `{ from: string, to: string, deg: number | string }`。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
     <EButton background="#B3F6EC" :textProps="{ color: '#00888F', bold: true }">
       世界で一番お姫様
     </EButton>
     <EButton :background="{ from: '#39C5BB', to: '#00888F', deg: 135 }" :textProps="{ color: { from: '#56D1C4', to: '#BFF3E9', deg: 135 }, bold: true }">
       世界で一番お姫様
     </EButton>
-  </div>
-</div>
+  </ESpace>
+</ESpace>
 
 <details>
 <summary>查看代码</summary>
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <div class="flex flex-row gap-2">
+    <ESpace align="end">
       <EButton
         background="#B3F6EC"
         :textProps="{ color: '#00888F', bold: true }"
@@ -197,8 +214,8 @@ outline: deep
       >
         世界で一番お姫様
       </EButton>
-    </div>
-  </div>
+    </ESpace>
+  </ESpace>
 </template>
 ```
 
@@ -208,24 +225,23 @@ outline: deep
 
 可以使用 `wide` 属性来让按钮占满宽度。
 
-<div class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]">
-  <div class="flex flex-row gap-2">
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <EButton wide>我膨胀了</EButton>
-  </div>
-</div>
+</ESpace>
 
 <details>
 <summary>查看代码</summary>
 
 ```vue
 <template>
-  <div
-    class="flex flex-col gap-2 rounded-md p-4 border-1 border-solid border-[var(--arona-blue-6)]"
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <div class="flex flex-row gap-2">
-      <EButton wide>按钮</EButton>
-    </div>
-  </div>
+    <EButton wide>我膨胀了</EButton>
+  </ESpace>
 </template>
 ```
 

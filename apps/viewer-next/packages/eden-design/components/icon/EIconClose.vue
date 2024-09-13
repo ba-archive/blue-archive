@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EIconAdd from "./EIconAdd.vue";
 import type { IconProps } from "../types/EdenIcon/IconProps";
 
 withDefaults(defineProps<IconProps>(), {

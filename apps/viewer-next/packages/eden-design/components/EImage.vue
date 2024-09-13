@@ -3,6 +3,11 @@ import type { ImageProps } from "./types/EdenImage/ImageProps";
 import { parseSize } from "~/packages/eden-design/_utils/styleUtils";
 import type { Directive } from "vue";
 import { clickOutside as vClickOutside } from "~/packages/eden-design/_directives/clickOutside";
+import { useSlots, computed, ref } from "vue";
+import EIconError from "./icon/EIconError.vue";
+import EIconClose from "./icon/EIconClose.vue";
+import EText from "./typography/EText.vue";
+import ESpace from "./ESpace.vue";
 
 const props = withDefaults(defineProps<ImageProps>(), {
   width: "200px",
@@ -32,7 +37,7 @@ const imageClass = computed(() => [
   "eden-ui",
   "eden-ui__image",
   {
-    circle: props.circle,
+    "!rounded-full": props.circle,
     "cursor-pointer": !imageLoadFailed.value && props.enablePreview,
   },
 ]);
@@ -101,7 +106,7 @@ function handleClosePreview() {
       <transition name="fade">
         <div
           v-if="showPreviewLayer"
-          class="eden-ui eden-ui__image eden-ui__image__preview-layer flex items-center justify-center absolute top-0 left-0 w-full h-full"
+          class="eden-ui eden-ui__image eden-ui__image__preview-layer flex items-center justify-center fixed top-0 left-0 w-full h-full"
         >
           <span
             class="eden-ui eden-ui__image-preview-layer--close absolute top-2 right-2 flex items-center p-2 bg-black/50 rounded-full cursor-pointer"

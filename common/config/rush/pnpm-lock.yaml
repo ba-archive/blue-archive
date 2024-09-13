@@ -717,6 +717,9 @@ importers:
       '@unocss/reset':
         specifier: ^0.62.2
         version: 0.62.2
+      '@vitejs/plugin-vue-jsx':
+        specifier: ~4.0.1
+        version: 4.0.1(vite@5.4.2(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))(vue@3.4.29(typescript@5.4.5))
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.9.0(vue@3.4.29(typescript@5.4.5))
@@ -16684,6 +16687,16 @@ snapshots:
       systemjs: 6.15.1
       terser: 5.31.0
       vite: 5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vitejs/plugin-vue-jsx@4.0.1(vite@5.4.2(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))(vue@3.4.29(typescript@5.4.5))':
+    dependencies:
+      '@babel/core': 7.25.2
+      '@babel/plugin-transform-typescript': 7.25.2(@babel/core@7.25.2)
+      '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.25.2)
+      vite: 5.4.2(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)
+      vue: 3.4.29(typescript@5.4.5)
     transitivePeerDependencies:
       - supports-color
 
