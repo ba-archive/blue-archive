@@ -2,7 +2,6 @@ import { defineConfig } from "vitepress";
 import UnoCSS from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import vueDevTools from "vite-plugin-vue-devtools";
-import { vitePluginForArco } from "@arco-plugins/vite-vue";
 import * as path from "path";
 
 const SPACE_OR_PUNCTUATION = new RegExp(
@@ -269,9 +268,6 @@ export default defineConfig({
         dirs: [edenLibDir + "/packages/eden-design/components"],
       }),
       vueDevTools(),
-      vitePluginForArco({
-        style: "css",
-      }),
     ],
     css: {
       preprocessorOptions: {

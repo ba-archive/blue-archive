@@ -711,12 +711,6 @@ importers:
 
   ../../apps/viewer-next:
     dependencies:
-      '@arco-design/web-vue':
-        specifier: ~2.55.2
-        version: 2.55.2(vue@3.4.29(typescript@5.4.5))
-      '@arco-plugins/vite-vue':
-        specifier: ~1.4.5
-        version: 1.4.5
       '@floating-ui/vue':
         specifier: ~1.1.4
         version: 1.1.4(vue@3.4.29(typescript@5.4.5))
@@ -726,6 +720,9 @@ importers:
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.9.0(vue@3.4.29(typescript@5.4.5))
+      element-plus:
+        specifier: ^2.7.3
+        version: 2.7.3(vue@3.4.29(typescript@5.4.5))
       nuxt:
         specifier: ^3.13.0
         version: 3.13.0(@parcel/watcher@2.4.1)(@types/node@20.12.12)(eslint@9.3.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.20.0)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)(vite@5.4.2(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))(vue-tsc@2.0.19(typescript@5.4.5))
@@ -1243,9 +1240,6 @@ packages:
     resolution: {integrity: sha512-aEuX0a7u1Qif5VYuCM/NFfbFfKA4GiOl3nOoaZEH/W6jhJh/RTmEVAYxJv8j6AYhPySj7ULfel4USVngP31E0Q==}
     peerDependencies:
       vue: ^3.1.0
-
-  '@arco-plugins/vite-vue@1.4.5':
-    resolution: {integrity: sha512-2pJ9mpZP9mRD7NGZwRsZTS9C/US5ilEBBUqxN5Qgnd3Td50u9apJVKAABCZjG2K2eHiyZg7Fd9XhgHJXVJJmsw==}
 
   '@asamuzakjp/dom-selector@2.0.2':
     resolution: {integrity: sha512-x1KXOatwofR6ZAYzXRBL5wrdV0vwNxlTCK9NCuLqAzQYARqGcvFwiJA6A1ERuh+dgeA4Dxm3JBYictIes+SqUQ==}
@@ -4249,9 +4243,6 @@ packages:
 
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
-
-  '@types/node@16.18.108':
-    resolution: {integrity: sha512-fj42LD82fSv6yN9C6Q4dzS+hujHj+pTv0IpRR3kI20fnYeS0ytBpjFO9OjmDowSPPt4lNKN46JLaKbCyP+BW2A==}
 
   '@types/node@20.12.12':
     resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
@@ -11366,17 +11357,6 @@ snapshots:
       scroll-into-view-if-needed: 2.2.31
       vue: 3.4.29(typescript@5.4.5)
 
-  '@arco-plugins/vite-vue@1.4.5':
-    dependencies:
-      '@babel/generator': 7.25.0
-      '@babel/helper-module-imports': 7.24.7
-      '@babel/parser': 7.25.3
-      '@babel/traverse': 7.25.3
-      '@babel/types': 7.25.2
-      '@types/node': 16.18.108
-    transitivePeerDependencies:
-      - supports-color
-
   '@asamuzakjp/dom-selector@2.0.2':
     dependencies:
       bidi-js: 1.0.3
@@ -15968,8 +15948,6 @@ snapshots:
   '@types/mdurl@1.0.5': {}
 
   '@types/mdurl@2.0.0': {}
-
-  '@types/node@16.18.108': {}
 
   '@types/node@20.12.12':
     dependencies:

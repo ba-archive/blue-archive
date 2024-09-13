@@ -36,7 +36,7 @@ import { useData } from "vitepress";
 import { computed } from "vue";
 import type { PaletteProps } from "../types/ColorPalette";
 import { useClipboard } from "@vueuse/core";
-import { Message } from "@arco-design/web-vue";
+import { ElMessage } from "element-plus";
 
 const { isDark } = useData();
 
@@ -49,10 +49,10 @@ const { copy } = useClipboard({ legacy: true });
 
 function handleCopyRequest(text: string) {
   copy(text).catch(() => {
-    Message.error("复制失败，请手动复制");
+    ElMessage.error("复制失败，请手动复制");
   });
 
-  Message.success(`已复制到剪贴板：${text}`);
+  ElMessage.success(`已复制到剪贴板：${text}`);
 }
 
 const displayColor = computed(() => {
