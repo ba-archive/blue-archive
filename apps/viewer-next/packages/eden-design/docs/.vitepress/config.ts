@@ -36,7 +36,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      {
+        text: "碧蓝档案剧情站",
+        items: [
+          { text: "首页", link: "https://blue-archive.io" },
+          { text: "Bilibili", link: "https://space.bilibili.com/1413213021" },
+        ],
+      },
     ],
     sidebar: [
       {
@@ -48,7 +54,7 @@ export default defineConfig({
             items: [
               {
                 text: "通用 / General",
-                link: "/components/#通用-general",
+                // link: "/components/#通用-general",
                 collapsed: true,
                 items: [
                   {
@@ -67,7 +73,7 @@ export default defineConfig({
               },
               {
                 text: "布局 / Layout",
-                link: "/components/#布局-layout",
+                // link: "/components/#布局-layout",
                 collapsed: true,
                 items: [
                   {
@@ -82,7 +88,7 @@ export default defineConfig({
               },
               {
                 text: "数据展示 / Data Display",
-                link: "/components/#数据展示-data-display",
+                // link: "/components/#数据展示-data-display",
                 collapsed: true,
                 items: [
                   {
@@ -109,7 +115,7 @@ export default defineConfig({
               },
               {
                 text: "数据录入 / Data Entry",
-                link: "/components/#数据录入-data-entry",
+                // link: "/components/#数据录入-data-entry",
                 collapsed: true,
                 items: [
                   {
@@ -136,7 +142,7 @@ export default defineConfig({
               },
               {
                 text: "导航 / Navigation",
-                link: "/components/#导航-navigation",
+                // link: "/components/#导航-navigation",
                 collapsed: true,
                 items: [
                   {
