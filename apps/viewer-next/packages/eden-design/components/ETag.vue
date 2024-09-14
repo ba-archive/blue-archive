@@ -17,6 +17,10 @@ const props = withDefaults(defineProps<TagProps>(), {
 });
 
 function getPresetPaletteName() {
+  if (props.type) {
+    return props.type;
+  }
+
   const keys = [
     "default",
     "brand",
@@ -38,6 +42,7 @@ const tagClass = computed(() => [
   "eden-ui__tag",
   `size-${props.size}`,
   `palette-${getPresetPaletteName()}`,
+  "flex items-center",
   {
     active: isActive.value && !props.disabled,
     "cursor-pointer": props.clickable,
@@ -76,7 +81,8 @@ watch(
   () => props.active,
   value => {
     isActive.value = value;
-  }
+  },
+  { immediate: true }
 );
 
 function clickHandler() {

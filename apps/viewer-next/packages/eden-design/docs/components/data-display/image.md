@@ -17,17 +17,38 @@ import ESpace from "@eden-design/components/ESpace.vue";
 import EText from "@eden-design/components/typography/EText.vue";
 </script>
 
+<ESpace
+  vertical
+  padding="10"
+  size="small"
+  class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  </ESpace>
+</template>
+```
+
+:::
+
+## 图片尺寸
+
+使用 `width` 和 `height` 属性设置图片的尺寸。属性值可以是 `number` 或 `string` 类型。`string` 类型支持纯数字以及 `px`、`%`、`em`、`rem`、`(d)vh`、`(d)vw` 单位。
+
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" />
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" border-radius="10" />
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" circle />
-    <EImage
-        src="https://example.com/image.jpg"
-        width="128"
-        height="128"
-        circle
-      />
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="64" height="64" />
   </ESpace>
 </ESpace>
 
@@ -43,23 +64,10 @@ import EText from "@eden-design/components/typography/EText.vue";
   >
     <ESpace align="end">
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
-        width="128"
-        height="128"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+        width="64"
+        height="64"
       />
-      <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
-        width="128"
-        height="128"
-        border-radius="10"
-      />
-      <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
-        width="128"
-        height="128"
-        circle
-      />
-      <EImage src="https://example.com/image.jpg" width="128" height="128" />
     </ESpace>
   </ESpace>
 </template>
@@ -67,14 +75,82 @@ import EText from "@eden-design/components/typography/EText.vue";
 
 :::
 
-## 标签
+## 自定义圆角
 
-使用 `caption` 属性展示图片描述。也支持使用 `caption` 插槽自定义描述内容。
+使用 `border-radius` 属性设置图片的圆角。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" caption="这是一张图片" />
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128">
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128" border-radius="10" />
+  </ESpace>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ESpace align="end">
+      <EImage
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+        width="128"
+        height="128"
+        border-radius="10"
+      />
+    </ESpace>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 圆形图片
+
+使用 `circle` 属性设置图片为圆形。
+
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128" circle />
+  </ESpace>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ESpace align="end">
+      <EImage
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+        width="128"
+        height="128"
+        circle
+      />
+    </ESpace>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 图片描述
+
+使用 `caption` 属性展示图片描述。也支持使用 `caption` 插槽自定义描述内容，具体请参考 [caption 插槽](#caption)。
+
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128" caption="这是一张图片" />
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128">
       <template #caption>
         <EText
           :color="{
@@ -102,13 +178,13 @@ import EText from "@eden-design/components/typography/EText.vue";
   >
     <ESpace align="end">
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         caption="这是一张图片"
       />
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
       >
@@ -137,7 +213,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" enable-preview />
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128" enable-preview />
   </ESpace>
 </ESpace>
 
@@ -153,7 +229,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   >
     <ESpace align="end">
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         enable-preview
@@ -172,7 +248,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 <ESpace>
   <div class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]">
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
       fit="contain"
@@ -181,7 +257,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </div>
   <div class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]">
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
       fit="cover"
@@ -190,7 +266,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </div>
   <div class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]">
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
       fit="fill"
@@ -199,7 +275,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </div>
   <div class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]">
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
       fit="none"
@@ -208,7 +284,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </div>
   <div class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]">
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
       fit="scale-down"
@@ -226,7 +302,7 @@ import EText from "@eden-design/components/typography/EText.vue";
       class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         fit="contain"
@@ -237,7 +313,7 @@ import EText from "@eden-design/components/typography/EText.vue";
       class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         fit="cover"
@@ -248,7 +324,7 @@ import EText from "@eden-design/components/typography/EText.vue";
       class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         fit="fill"
@@ -259,7 +335,7 @@ import EText from "@eden-design/components/typography/EText.vue";
       class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         fit="none"
@@ -270,7 +346,7 @@ import EText from "@eden-design/components/typography/EText.vue";
       class="flex flex-col rounded border border-1 border-solid border-[var(--arona-blue-6)]"
     >
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         fit="scale-down"
@@ -289,7 +365,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="128" height="128" lazy />
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="128" height="128" lazy />
   </ESpace>
 </ESpace>
 
@@ -305,7 +381,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   >
     <ESpace align="end">
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="128"
         height="128"
         lazy
@@ -334,7 +410,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 <div class="grid [grid-template-areas:image] place-items-center">
 <EImage
             class="[grid-area:image]"
-            src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+            src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
             width="128"
             height="128"
           />
@@ -362,7 +438,7 @@ import EText from "@eden-design/components/typography/EText.vue";
           <div class="grid [grid-template-areas:image] place-items-center">
             <EImage
               class="[grid-area:image]"
-              src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+              src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
               width="128"
               height="128"
             />
@@ -425,7 +501,7 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 
 ### caption
 
-使用 `caption` 插槽自定义图片描述内容。
+使用 `caption` 插槽自定义图片描述内容。也可以使用 `caption` 属性设置图片描述内容，具体请参考 [图片描述](#图片描述)。
 
 <ESpace
 vertical
@@ -433,7 +509,7 @@ padding="10"
 size="small"
 class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 <EImage
-  src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+  src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
   width="128"
   height="128">
 <template #caption>
@@ -461,7 +537,7 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
     <EImage
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
       width="128"
       height="128"
     >

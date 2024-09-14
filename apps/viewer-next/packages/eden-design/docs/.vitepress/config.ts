@@ -44,6 +44,10 @@ export default defineConfig({
         ],
       },
     ],
+    editLink: {
+      pattern: "https://github.com/ba-archive/blue-archive/tree/dev/apps/viewer-next/packages/eden-design/docs/:path",
+      text: "在 GitHub 上编辑此页面",
+    },
     sidebar: [
       {
         text: "开始使用",

@@ -13,27 +13,54 @@ outline: deep
   import ESpace from '@eden-design/components/ESpace.vue'
   import EText from '@eden-design/components/typography/EText.vue'
   import EImage from "@eden-design/components/EImage.vue"
+  import EDivider from "@eden-design/components/EDivider.vue"
 </script>
 
 指定头像 `src`，或者如果你喜欢全手动，也可以自己塞东西。
 
-默认尺寸是 `medium`。
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EAvatar src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar background="color-fill-3">
+    <EText color="#fff" level="3">Eden</EText>
+  </EAvatar>
+</ESpace>
 
-可以用 `squared` 属性控制是否为方形。
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    align="end"
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EAvatar src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+    <EAvatar background="color-fill-3">
+      <EText color="#fff" level="3">Eden</EText>
+    </EAvatar>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 头像尺寸
+
+Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设尺寸。
+
+可以通过给 `size` 属性传入 `number` 或 `string` 来设置自定义尺寸。数值支持 `px`、`rem`、`em`、`%` 等单位。
 
 <ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <EAvatar size="mini" src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
-  <EAvatar size="small">
-  <img src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
-  </EAvatar>
-  <EAvatar size="medium" src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
-  <EAvatar size="large" src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
-  <EAvatar size="xlarge" background="color-fill-3">
-    <EText color="#fff" level="3">Eden Design</EText>
-  </EAvatar>
-  <EAvatar size="xlarge" background="color-fill-3" squared>
-    <EText color="#fff" level="3">我是方形</EText>
-  </EAvatar>
+  <EAvatar size="mini" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="small" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="medium" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="large" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="xlarge" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="56px" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="48" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar :size="32" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar size="1.5rem" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
 </ESpace>
 
 :::details 查看代码
@@ -48,25 +75,64 @@ outline: deep
   >
     <EAvatar
       size="mini"
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
     />
-    <EAvatar size="small">
-      <img src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
-    </EAvatar>
+    <EAvatar
+      size="small"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
     <EAvatar
       size="medium"
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
     />
     <EAvatar
       size="large"
-      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
     />
-    <EAvatar size="xlarge" background="color-fill-3">
-      <EText color="#fff" level="3">Eden Design</EText>
-    </EAvatar>
-    <EAvatar size="xlarge" background="color-fill-3" squared>
-      <EText color="#fff" level="3">我是方形</EText>
-    </EAvatar>
+    <EAvatar
+      size="xlarge"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
+    <EAvatar
+      size="56px"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
+    <EAvatar
+      size="48"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
+    <EAvatar
+      :size="32"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
+    <EAvatar
+      size="1.5rem"
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    />
+  </ESpace>
+</template>
+```
+
+:::
+
+## 方形头像
+
+通过 `squared` 属性可以设置方形头像。
+
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EAvatar squared src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EAvatar squared src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
   </ESpace>
 </template>
 ```
@@ -170,7 +236,7 @@ outline: deep
 通过 `fallbackSrc` 属性可以设置加载错误时的回滚图片。
 
 <ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <EAvatar src="https://example.com/image.jpg" fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
+  <EAvatar src="https://example.com/image.jpg" fallbackSrc="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
 </ESpace>
 
 :::details 查看代码
@@ -184,7 +250,7 @@ outline: deep
   >
     <EAvatar
       src="https://example.com/image.jpg"
-      fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      fallbackSrc="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
     />
   </ESpace>
 </template>
@@ -203,7 +269,7 @@ outline: deep
     <EText color="#fff" level="3">Eden</EText>
   </EAvatar>
   <EAvatar size="large" background="color-fill-3">
-    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="56" height="56" />
+    <EImage src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" width="56" height="56" />
   </EAvatar>
 </ESpace>
 
@@ -221,7 +287,7 @@ outline: deep
     </EAvatar>
     <EAvatar size="large" background="color-fill-3">
       <EImage
-        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
         width="56"
         height="56"
       />

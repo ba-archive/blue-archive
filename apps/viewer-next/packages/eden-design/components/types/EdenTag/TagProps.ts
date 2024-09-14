@@ -14,6 +14,19 @@ export type TagProps = {
   /* 文字样式 */
   textProps?: TextProps;
 
+  /* 标签类型 */
+  type?:
+    | "default"
+    | "brand"
+    | "gray"
+    | "striker"
+    | "special"
+    | "explosion"
+    | "pierce"
+    | "unarmed"
+    | "vibrate"
+    | "selector";
+
   /* 颜色快捷方式，以下所有快捷方式中只能使用一种 */
   default?: boolean; // 默认色 $text-5, transparent, $border-2
   brand?: boolean; // 品牌色 $arona-blue-6, $arona-blue-1, $arona-blue-6

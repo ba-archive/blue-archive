@@ -8,6 +8,5 @@ export type InputNumberProps = {
   disabled?: boolean;
   readonly?: boolean;
   width?: string | number | "auto";
-  "update:value"?: (value: number) => void;
   size?: "mini" | "small" | "medium" | "large";
 };

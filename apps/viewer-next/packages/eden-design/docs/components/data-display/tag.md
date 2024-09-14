@@ -11,15 +11,36 @@ outline: deep
 <script setup lang="ts">
   import ETag from "@eden-design/components/ETag.vue"
   import ESpace from "@eden-design/components/ESpace.vue"
+  import EIconSubtract from "@eden-design/components/icon/EIconSubtract.vue"
+  import EDivider from "@eden-design/components/EDivider.vue"
+  import { ElMessage } from "element-plus";
+
+  function handleUpdateActive(ev: boolean | {id: string | number, active: boolean}) {
+    if ("[object Object]" === Object.prototype.toString.call(ev)) {
+      ElMessage.success(`Tag 激活事件：${JSON.stringify(ev)}`)
+    } else {
+      ElMessage.success(`Tag 激活: ${ev}`)
+    }
+  }
+
+  const types = [
+    "default",
+    "brand",
+    "gray",
+    "striker",
+    "special",
+    "explosion",
+    "pierce",
+    "unarmed",
+    "vibrate",
+    "selector",
+  ];
 </script>
 
-使用 `size` 属性来设置标签的尺寸。默认尺寸为 `medium`。
+最基础的标签没有颜色风格和边框。要是你喜欢的话，可以当成单行文本用。
 
 <ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ETag brand fill size="mini">标签</ETag>
-  <ETag brand fill size="small">标签</ETag>
-  <ETag brand fill size="medium">标签</ETag>
-  <ETag brand fill size="large">标签</ETag>
+  <ETag>标签</ETag>
 </ESpace>
 
 :::details 查看代码
@@ -32,40 +53,24 @@ outline: deep
     size="small"
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
-    <ETag brand fill size="mini">标签</ETag>
-    <ETag brand fill size="small">标签</ETag>
-    <ETag brand fill size="medium">标签</ETag>
-    <ETag brand fill size="large">标签</ETag>
+    <ETag>标签</ETag>
   </ESpace>
 </template>
 ```
 
 :::
 
-## 颜色风格
+## 标签尺寸
 
-Tag 组件提供了 `brand`、`gray`、`striker`、`special`、`explosion`、`pierce`、`unarmed`、`vibrate` 八种颜色风格。
+可以使用 `size` 属性来设置标签的尺寸。尺寸有 `mini`、`small`、`medium`、`large` 四种。
 
-Tag 额外提供了一个特殊的 `selector` 预设样式，用于主页的学生和社团筛选。
+默认尺寸为 `medium`。
 
-<ESpace
-align="end"
-padding="10"
-size="small"
-class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-2)]">
-<ESpace>
-<ETag brand fill>标签</ETag>
-<ETag gray fill>标签</ETag>
-<ETag striker fill>标签</ETag>
-<ETag special fill>标签</ETag>
-<ETag explosion fill>标签</ETag>
-<ETag pierce fill>标签</ETag>
-<ETag unarmed fill>标签</ETag>
-<ETag vibrate fill>标签</ETag>
-</ESpace>
-<ESpace>
-<ETag selector clickable>点击筛选稀有度/社团/学校</ETag>
-</ESpace>
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ETag brand fill size="mini">mini</ETag>
+  <ETag brand fill size="small">small</ETag>
+  <ETag brand fill size="medium">medium</ETag>
+  <ETag brand fill size="large">large</ETag>
 </ESpace>
 
 :::details 查看代码
@@ -76,23 +81,98 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--a
     align="end"
     padding="10"
     size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ETag brand fill size="mini">mini</ETag>
+    <ETag brand fill size="small">small</ETag>
+    <ETag brand fill size="medium">medium</ETag>
+    <ETag brand fill size="large">large</ETag>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 颜色风格
+
+Tag 组件提供了 `brand`、`gray`、`striker`、`special`、`explosion`、`pierce`、`unarmed`、`vibrate` 八种颜色风格。
+
+你可以使用 `type="属性名"` 属性设置，也可以使用 `default`、`brand`、`gray` 等快捷方式来设置颜色风格。为了避免冲突，`type` 优先级高于快捷方式。
+
+Tag 额外提供了一个特殊的 `selector` 预设样式，用于主页的学生和社团筛选。
+
+<ESpace
+wrap
+align="end"
+padding="10"
+size="small"
+class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-2)]">
+<template #divider>
+<EDivider />
+</template>
+<ESpace wrap>
+<ETag brand fill clickable>brand</ETag>
+<ETag gray fill clickable>gray</ETag>
+<ETag striker fill clickable>striker</ETag>
+<ETag special fill clickable>special</ETag>
+<ETag explosion fill clickable>explosion</ETag>
+<ETag pierce fill clickable>pierce</ETag>
+<ETag unarmed fill clickable>unarmed</ETag>
+<ETag vibrate fill clickable>vibrate</ETag>
+<ETag selector clickable>点击筛选稀有度/社团/学校</ETag>
+</ESpace>
+<ESpace wrap>
+<ETag v-for="type in types" :key="type" :type="type" fill clickable>{{ type }}</ETag>
+</ESpace>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    wrap
+    align="end"
+    padding="10"
+    size="small"
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-2)]"
   >
-    <ESpace>
-      <ETag brand fill>标签</ETag>
-      <ETag gray fill>标签</ETag>
-      <ETag striker fill>标签</ETag>
-      <ETag special fill>标签</ETag>
-      <ETag explosion fill>标签</ETag>
-      <ETag pierce fill>标签</ETag>
-      <ETag unarmed fill>标签</ETag>
-      <ETag vibrate fill>标签</ETag>
-    </ESpace>
-    <ESpace>
+    <template #divider>
+      <EDivider />
+    </template>
+    <ESpace wrap>
+      <ETag brand fill clickable>brand</ETag>
+      <ETag gray fill clickable>gray</ETag>
+      <ETag striker fill clickable>striker</ETag>
+      <ETag special fill clickable>special</ETag>
+      <ETag explosion fill clickable>explosion</ETag>
+      <ETag pierce fill clickable>pierce</ETag>
+      <ETag unarmed fill clickable>unarmed</ETag>
+      <ETag vibrate fill clickable>vibrate</ETag>
       <ETag selector clickable>点击筛选稀有度/社团/学校</ETag>
+    </ESpace>
+    <ESpace wrap>
+      <ETag v-for="type in types" :key="type" :type="type" fill clickable>{{
+        type
+      }}</ETag>
     </ESpace>
   </ESpace>
 </template>
+
+<script setup lang="ts">
+const types = [
+  "default",
+  "brand",
+  "gray",
+  "striker",
+  "special",
+  "explosion",
+  "pierce",
+  "unarmed",
+  "vibrate",
+  "selector",
+];
+</script>
 ```
 
 :::
@@ -193,6 +273,117 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--a
 
 :::
 
+## 插槽
+
+### icon
+
+使用 `icon` 插槽在文字前插入图标。
+
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ETag brand fill>
+    <template #icon>
+      <EIconSubtract color="var(--arona-blue-6)" />
+    </template>
+    标签
+  </ETag>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    align="end"
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ETag brand fill>
+      <template #icon>
+        <EIconSubtract color="var(--arona-blue-6)" />
+      </template>
+      标签
+    </ETag>
+  </ESpace>
+</template>
+```
+
+:::
+
+### 默认插槽
+
+使用默认插槽插入文字。
+
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ETag brand fill>标签</ETag>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    align="end"
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ETag brand fill>标签</ETag>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 事件
+
+### update:active
+
+当标签被点击时，会触发 `update:active` 事件，返回 `active` 状态。`active` 的类型为 `boolean`。
+
+**如果设置了 `id` 属性，则会返回一个包含 `id` 和 `active` 的对象。**
+
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ETag brand fill clickable @update:active="handleUpdateActive">我没有 id</ETag>
+  <ETag brand fill clickable @update:active="handleUpdateActive" id="1">我的 id 是 1</ETag>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    align="end"
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ETag brand fill clickable @update:active="handleUpdateActive"
+      >我没有 id</ETag
+    >
+    <ETag brand fill clickable @update:active="handleUpdateActive" id="1"
+      >我的 id 是 1</ETag
+    >
+  </ESpace>
+</template>
+
+<script setup lang="ts">
+import { ElMessage } from "element-plus";
+
+function handleUpdateActive(
+  ev: boolean | { id: string | number; active: boolean }
+) {
+  if ("[object Object]" === Object.prototype.toString.call(ev)) {
+    ElMessage.success(`Tag 激活事件：${JSON.stringify(ev)}`);
+  } else {
+    ElMessage.success(`Tag 激活: ${ev}`);
+  }
+}
+</script>
+```
+
+:::
+
 ## API
 
 :::code-group
@@ -213,6 +404,19 @@ export type TagProps = {
 
   /* 文字样式 */
   textProps?: TextProps;
+
+  /* 标签类型 */
+  type?:
+    | "default"
+    | "brand"
+    | "gray"
+    | "striker"
+    | "special"
+    | "explosion"
+    | "pierce"
+    | "unarmed"
+    | "vibrate"
+    | "selector";
 
   /* 颜色快捷方式，以下所有快捷方式中只能使用一种 */
   default?: boolean; // 默认色 $text-5, transparent, $border-2
