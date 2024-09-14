@@ -55,6 +55,7 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 边框
@@ -83,6 +84,7 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 预设颜色
@@ -133,6 +135,7 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 禁用状态
@@ -161,11 +164,14 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 自定义颜色
 
 可以使用 `background` 属性来设置按钮的背景颜色，用 `textProps.color` 来设置按钮的文字颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg: number | string }`。
+
+按钮的文字样式可以通过 `textProps` 属性来设置。完整配置项请参考 [排版 / Typography](/components/general/typography)。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
@@ -208,6 +214,7 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 长按钮
@@ -232,9 +239,10 @@ outline: deep
   </ESpace>
 </template>
 ```
+
 :::
 
-## 属性
+## API
 
 :::code-group
 

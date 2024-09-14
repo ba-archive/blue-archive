@@ -17,11 +17,11 @@ hero:
       link: /guidelines/design
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 实用
+    details: Eden Design 的每一个组件都从开发过程中抽象而来。
+  - title: 美观
+    details: Eden Design 参考了大量优秀的设计语言，并在此基础上发展出一套自己的审美。
+  - title: 友好
+    details: Eden Design 力争做到开发者友好和用户友好。
 ---
 

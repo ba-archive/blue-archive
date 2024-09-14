@@ -5,6 +5,7 @@ import {
   parseColor,
 } from "~/packages/eden-design/_utils/colorUtils";
 import ETextCore from "~/packages/eden-design/components/reusables/EdenTextCore/ETextCore.vue";
+import { useSlots, computed, ref } from "vue";
 
 const props = withDefaults(defineProps<TagProps>(), {
   size: "medium",
@@ -79,6 +80,7 @@ watch(
 );
 
 function clickHandler() {
+  if (props.disabled || !props.clickable) return;
   isActive.value = !isActive.value;
   if (props.clickable && !props.disabled) {
     emit(

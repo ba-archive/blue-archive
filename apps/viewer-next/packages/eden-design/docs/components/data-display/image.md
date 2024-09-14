@@ -64,6 +64,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 标签
@@ -81,6 +82,7 @@ import EText from "@eden-design/components/typography/EText.vue";
             to: 'var(--arona-blue-2)',
             deg: '45deg',
           }"
+          level="3"
           >自定义描述
         </EText>
       </template>
@@ -117,6 +119,7 @@ import EText from "@eden-design/components/typography/EText.vue";
               to: 'var(--arona-blue-2)',
               deg: '45deg',
             }"
+            level="3"
             >自定义描述
           </EText>
         </template>
@@ -125,6 +128,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 点击预览
@@ -158,6 +162,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
 ## object-fit
@@ -275,6 +280,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 懒加载
@@ -308,6 +314,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
 ## 错误回滚
@@ -318,24 +325,23 @@ import EText from "@eden-design/components/typography/EText.vue";
   vertical
   padding="10"
   size="small"
-  class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
->
-  <ESpace align="end">
-    <EImage src="https://example.com/image.jpg" width="128" height="128" />
-    <EImage src="https://example.com/image.jpg" width="128" height="128">
-      <template #error>
-        <div class="grid [grid-template-areas:image] place-items-center">
-          <EImage
+  class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<ESpace align="end">
+<EImage src="https://example.com/image.jpg" width="128" height="128" />
+<EImage src="https://example.com/image.jpg" width="128" height="128">
+<template #error>
+<div class="grid [grid-template-areas:image] place-items-center">
+<EImage
             class="[grid-area:image]"
             src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
             width="128"
             height="128"
           />
-          <EText class="[grid-area:image]">自定义回滚内容</EText>
-        </div>
-      </template>
-    </EImage>
-  </ESpace>
+<EText class="[grid-area:image]">自定义回滚内容</EText>
+</div>
+</template>
+</EImage>
+</ESpace>
 </ESpace>
 
 :::details 查看代码
@@ -367,9 +373,10 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+
 :::
 
-## 属性
+## API
 
 ```ts
 export type ImageProps = {

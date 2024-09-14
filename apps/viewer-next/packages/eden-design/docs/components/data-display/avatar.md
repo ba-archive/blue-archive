@@ -20,7 +20,7 @@ outline: deep
 
 可以用 `squared` 属性控制是否为方形。
 
-<ESpace align="end">
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EAvatar size="mini" src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
   <EAvatar size="small">
   <img src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
@@ -39,7 +39,12 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace align="end">
+  <ESpace
+    align="end"
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
     <EAvatar
       size="mini"
       src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
@@ -71,7 +76,7 @@ outline: deep
 
 通过 `background` 属性可以设置头像的背景颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg: number | string }`。
 
-<ESpace>
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EAvatar background="danger-6">
     <EText color="#fff">R</EText>
   </EAvatar>
@@ -94,7 +99,11 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace>
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
     <EAvatar background="danger-6">
       <EText color="#fff">R</EText>
     </EAvatar>
@@ -125,7 +134,7 @@ outline: deep
 
 `borderColor` 和 `borderWidth` 属性可以设置边框的颜色和宽度。
 
-<ESpace>
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EAvatar bordered size="large">
     <EText level="3" secondary>默认</EText>
   </EAvatar>
@@ -138,7 +147,11 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace>
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
     <EAvatar bordered size="large">
       <EText level="3" secondary>默认</EText>
     </EAvatar>
@@ -155,22 +168,30 @@ outline: deep
 
 通过 `fallbackSrc` 属性可以设置加载错误时的回滚图片。
 
-<EAvatar src="https://example.com/image.jpg" fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EAvatar src="https://example.com/image.jpg" fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" />
+</ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <EAvatar
-    src="https://example.com/image.jpg"
-    fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
-  />
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EAvatar
+      src="https://example.com/image.jpg"
+      fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+    />
+  </ESpace>
 </template>
 ```
 
 :::
 
-## 属性
+## API
 
 ::: code-group
 
@@ -208,4 +229,5 @@ export type WithGradientBackground =
       deg?: number | string;
     };
 ```
+
 :::
