@@ -8,6 +8,23 @@ outline: deep
 
 组件之间的间距以及内部元素的间距。
 
+| 间距 | 描述                                             | 例                                         |
+| ---- | ------------------------------------------------ | ------------------------------------------ |
+| 1px  | 小型组件中父元素的 padding                       | small 尺寸的 Tag 中，标签文字到边框的距离  |
+| 2px  | 小型组件中标题和辅助信息的间距                   | normal 尺寸的 Tag 中，标签文字到边框的距离 |
+| 4px  | 多层嵌套组件内部元素的间距                       | large 尺寸的 Tag 中，标签文字到边框的距离  |
+| 8px  | 组件内部元素的一般间距；互相关联的组件之间的间距 | MomoTalk 选项卡片中两个选项之间的间距      |
+| 10px |                                                  |                                            |
+| 12px |                                                  |                                            |
+| 16px | 组件间元素的一般间距                             |                                            |
+| 32px | 大型组件或布局间的间距，栅格单元格尺寸           |                                            |
+
+## 栅格 / Grid
+
+Eden Design System 的栅格宽度为 32px。
+
+## 颜色 / Color
+
 <script setup>
   import ColorPalette from "../assets/components/ColorPalette.vue";
   import ColorPaletteGroup from "../assets/components/ColorPaletteGroup.vue";
@@ -70,47 +87,47 @@ const grayGroup = {
     {
       color: "#000",
       description: "纯黑",
-      token: "color-gray-9",
+      token: "gray-9",
     },
     {
       color: "#141414",
       description: "8 度灰",
-      token: "color-gray-8",
+      token: "gray-8",
     },
     {
       color: "#242424",
       description: "14 度灰",
-      token: "color-gray-7",
+      token: "gray-7",
     },
     {
       color: "#404040",
       description: "25 度灰",
-      token: "color-gray-6",
+      token: "gray-6",
     },
     {
       color: "#7c7c7c",
       description: "49 度灰",
-      token: "color-gray-5",
+      token: "gray-5",
     },
     {
       color: "#c0c0c0",
       description: "75 度灰",
-      token: "color-gray-4",
+      token: "gray-4",
     },
     {
       color: "#dfdfdf",
       description: "87 度灰",
-      token: "color-gray-3",
+      token: "gray-3",
     },
     {
       color: "#f2f2f2",
       description: "95 度灰",
-      token: "color-gray-2",
+      token: "gray-2",
     },
     {
       color: "#fff",
       description: "纯白",
-      token: "color-gray-1",
+      token: "gray-1",
     },
   ]
 };
@@ -123,37 +140,37 @@ const fillGroup = {
       color: "#616161",
       darkColor: "#4B4B4B",
       description: "强调/图标/特殊场景",
-      token: "color-fill-5",
+      token: "fill-5",
     },
     {
       color: "#818181",
       darkColor: "#828284",
       description: "重/特殊场景",
-      token: "color-fill-4",
+      token: "fill-4",
     },
     {
       color: "#c0c0c0",
       darkColor: "#474749",
       description: "深/灰底悬浮",
-      token: "color-fill-3",
+      token: "fill-3",
     },
     {
       color: "#dfdfdf",
       darkColor: "#414144",
       description: "一般/常规/白底悬浮",
-      token: "color-fill-2",
+      token: "fill-2",
     },
     {
       color: "#f2f2f2",
       darkColor: "#37373A",
       description: "浅/禁用",
-      token: "color-fill-1",
+      token: "fill-1",
     },
     {
       color: "#fff",
       darkColor: "#242424",
       description: "白色",
-      token: "color-fill-base",
+      token: "fill-base",
     },
   ]
 };
@@ -166,31 +183,31 @@ const textGroup = {
       color: "#242424",
       darkColor: "#fff",
       description: "强调/正文标题",
-      token: "color-text-5",
+      token: "text-5",
     },
     {
       color: "#505050",
       darkColor: "#B8B8B8",
       description: "次强调/正文标题",
-      token: "color-text-4",
+      token: "text-4",
     },
     {
       color: "#7c7c7c",
       darkColor: "#8C8C8C",
       description: "次要信息",
-      token: "color-text-3",
+      token: "text-3",
     },
     {
       color: "#bdbdbd",
       darkColor: "#8C8C8C",
       description: "置灰信息",
-      token: "color-text-2",
+      token: "text-2",
     },
     {
       color: "#fff",
       darkColor: "#1C1C1E",
       description: "纯白文字",
-      token: "color-text-1",
+      token: "text-1",
     },
   ]
 };
@@ -203,25 +220,25 @@ const borderGroup = {
       color: "#a0a0a0",
       darkColor: "#6B6B6B",
       description: "重/按钮描边",
-      token: "color-border-4",
+      token: "border-4",
     },
     {
       color: "#b3b3b3",
       darkColor: "#575757",
       description: "深/悬浮",
-      token: "color-border-3",
+      token: "border-3",
     },
     {
       color: "#ececec",
       darkColor: "#474749",
       description: "一般",
-      token: "color-border-2",
+      token: "border-2",
     },
     {
       color: "#f2f2f2",
       darkColor: "#37373A",
       description: "浅",
-      token: "color-border-1",
+      token: "border-1",
     },
   ]
 };
@@ -597,23 +614,6 @@ const vibrateGroup = {
   const textEn = "Pragmatic, aesthetic, friendly";
 </script>
 
-| 间距 | 描述                                             | 例                                         |
-| ---- | ------------------------------------------------ | ------------------------------------------ |
-| 1px  | 小型组件中父元素的 padding                       | small 尺寸的 Tag 中，标签文字到边框的距离  |
-| 2px  | 小型组件中标题和辅助信息的间距                   | normal 尺寸的 Tag 中，标签文字到边框的距离 |
-| 4px  | 多层嵌套组件内部元素的间距                       | large 尺寸的 Tag 中，标签文字到边框的距离  |
-| 8px  | 组件内部元素的一般间距；互相关联的组件之间的间距 | MomoTalk 选项卡片中两个选项之间的间距      |
-| 10px |                                                  |                                            |
-| 12px |                                                  |                                            |
-| 16px | 组件间元素的一般间距                             |                                            |
-| 32px | 大型组件或布局间的间距，栅格单元格尺寸           |                                            |
-
-## 栅格 / Grid
-
-Eden Design System 的栅格宽度为 32px。
-
-## 颜色 / Color
-
 我们在不断尝试和调整的过程中总结出了一套适合 Eden Design System 的颜色体系，分为亮色和暗色两套色卡。你可以使用右上角的主题切换开关切换亮暗模式以对比两套色卡的差异。
 
 ::: tip
@@ -668,7 +668,8 @@ Eden Design System 的栅格宽度为 32px。
 本次设计中，我们对中文和英文进行了分别处理。中文段落使用 HarmonyOS Sans SC Regular，标题使用 HarmonyOS Sans SC Bold。英文使用自适应的 Wix Madefor 字体，对应规则如下：
 
 > 1. 字号 ≤ 16px: Wix Madefor Text
-> 2. 字号 ≥ 20px: Wix Madefor Display
+> 2. 16px < 字号 < 20px: 可变字体
+> 3. 字号 ≥ 20px: Wix Madefor Display
 
 ### 中文段落 / CJK Paragraph
 
