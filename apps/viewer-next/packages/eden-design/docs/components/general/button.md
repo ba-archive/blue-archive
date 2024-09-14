@@ -21,18 +21,39 @@ outline: deep
 
 如果它长得像按钮，点击起来像按钮，那它就是按钮。
 
+按钮有主要和次要两种类型。默认类型为主要，可以通过 `secondary` 属性来设置为次要按钮。
+
+<ESpace padding="10" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+    <EButton>主要按钮</EButton>
+    <EButton secondary>次要按钮</EButton>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    padding="10"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EButton>主要按钮</EButton>
+    <EButton secondary>次要按钮</EButton>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 按钮尺寸
+
+按钮有 `mini`、`small`、`medium`、`large` 四种尺寸。默认尺寸为 `medium`。
+
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
-    <EButton size="mini">主要按钮</EButton>
-    <EButton size="small">主要按钮</EButton>
-    <EButton size="medium">主要按钮</EButton>
-    <EButton size="large">主要按钮</EButton>
-  </ESpace>
-  <ESpace align="end">
-    <EButton size="mini" secondary>次要按钮</EButton>
-    <EButton size="small" secondary>次要按钮</EButton>
-    <EButton size="medium" secondary>次要按钮</EButton>
-    <EButton size="large" secondary>次要按钮</EButton>
+    <EButton size="mini">mini</EButton>
+    <EButton size="small">small</EButton>
+    <EButton size="medium">medium</EButton>
+    <EButton size="large">large</EButton>
   </ESpace>
 </ESpace>
 
@@ -47,16 +68,10 @@ outline: deep
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
   >
     <ESpace align="end">
-      <EButton size="mini">主要按钮</EButton>
-      <EButton size="small">主要按钮</EButton>
-      <EButton size="medium">主要按钮</EButton>
-      <EButton size="large">主要按钮</EButton>
-    </ESpace>
-    <ESpace align="end">
-      <EButton size="mini" secondary>次要按钮</EButton>
-      <EButton size="small" secondary>次要按钮</EButton>
-      <EButton size="medium" secondary>次要按钮</EButton>
-      <EButton size="large" secondary>次要按钮</EButton>
+      <EButton size="mini">mini</EButton>
+      <EButton size="small">small</EButton>
+      <EButton size="medium">medium</EButton>
+      <EButton size="large">large</EButton>
     </ESpace>
   </ESpace>
 </template>
@@ -66,7 +81,7 @@ outline: deep
 
 ## 边框
 
-可以使用 `bordered` 属性来设置按钮的边框。
+可以使用 `bordered` 属性来设置按钮的边框。边框按钮没有次要样式。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
@@ -95,7 +110,7 @@ outline: deep
 
 ## 预设颜色
 
-按钮预设了 `brand`、`danger`、`success`、`warning`、`momotalk` 五种颜色样式。
+按钮预设了 `brand`、`danger`、`success`、`warning`、`momotalk` 五种颜色样式。`momotalk` 作为 MomoTalk 页面中的按钮，不存在次要和边框样式。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]">
   <ESpace align="end">
@@ -110,7 +125,12 @@ outline: deep
     <EButton secondary danger>危险色</EButton>
     <EButton secondary success>成功色</EButton>
     <EButton secondary warning>警告色</EButton>
-    <EButton secondary momotalk>momotalk</EButton>
+  </ESpace>
+  <ESpace align="end" :size="14">
+    <EButton bordered brand>品牌色</EButton>
+    <EButton bordered danger>危险色</EButton>
+    <EButton bordered success>成功色</EButton>
+    <EButton bordered warning>警告色</EButton>
   </ESpace>
 </ESpace>
 
@@ -136,7 +156,12 @@ outline: deep
       <EButton secondary danger>危险色</EButton>
       <EButton secondary success>成功色</EButton>
       <EButton secondary warning>警告色</EButton>
-      <EButton secondary momotalk>momotalk</EButton>
+    </ESpace>
+    <ESpace align="end" :size="14">
+      <EButton bordered brand>品牌色</EButton>
+      <EButton bordered danger>危险色</EButton>
+      <EButton bordered success>成功色</EButton>
+      <EButton bordered warning>警告色</EButton>
     </ESpace>
   </ESpace>
 </template>
@@ -314,10 +339,10 @@ outline: deep
 </template>
 
 <script setup lang="ts">
-  import { ElMessage } from "element-plus";
-  function handleClick() {
-    ElMessage.success("clicked!");
-  }
+import { ElMessage } from "element-plus";
+function handleClick() {
+  ElMessage.success("clicked!");
+}
 </script>
 ```
 
