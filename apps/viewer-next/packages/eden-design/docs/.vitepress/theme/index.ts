@@ -6,11 +6,13 @@ import "./style.scss";
 import "uno.css";
 import VitepressCustomView from "./VitepressCustomView.vue";
 import "element-plus/es/components/message/style/css";
+import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 
 export default {
   extends: DefaultTheme,
   Layout: VitepressCustomView,
   enhanceApp({ app, router, siteData }) {
-    // ...
+    // @ts-ignore
+    app.use(autoAnimatePlugin)
   },
 } satisfies Theme;

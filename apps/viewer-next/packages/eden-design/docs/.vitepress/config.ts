@@ -253,6 +253,7 @@ export default defineConfig({
     headers: {
       level: [2, 6],
     },
+    lineNumbers: true,
   },
   vite: {
     resolve: {

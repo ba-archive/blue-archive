@@ -30,8 +30,7 @@ outline: deep
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -56,8 +55,7 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 边框
 
@@ -69,8 +67,7 @@ outline: deep
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -86,8 +83,7 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 预设颜色
 
@@ -110,8 +106,7 @@ outline: deep
   </ESpace>
 </ESpace>
 
-<details>
-<summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -138,8 +133,7 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 禁用状态
 
@@ -151,9 +145,7 @@ outline: deep
   </ESpace>
 </ESpace>
 
-<details>
-
-<summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -169,12 +161,11 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 自定义颜色
 
-可以使用 `background` 属性来设置按钮的背景颜色，用 `textProps.color` 来设置按钮的文字颜色。支持渐变，语法为 `{ from: string, to: string, deg: number | string }`。
+可以使用 `background` 属性来设置按钮的背景颜色，用 `textProps.color` 来设置按钮的文字颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg: number | string }`。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
@@ -187,8 +178,7 @@ outline: deep
   </ESpace>
 </ESpace>
 
-<details>
-<summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -218,8 +208,7 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 长按钮
 
@@ -229,8 +218,7 @@ outline: deep
     <EButton wide>我膨胀了</EButton>
 </ESpace>
 
-<details>
-<summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -244,8 +232,7 @@ outline: deep
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 属性
 

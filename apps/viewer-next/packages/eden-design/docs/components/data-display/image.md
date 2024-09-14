@@ -31,8 +31,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -65,8 +64,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 标签
 
@@ -90,8 +88,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -128,8 +125,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 点击预览
 
@@ -141,8 +137,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -163,8 +158,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## object-fit
 
@@ -218,8 +212,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </div>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -282,8 +275,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 懒加载
 
@@ -295,8 +287,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -317,12 +308,11 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
+:::
 
-</details>
+## 错误回滚
 
-## 失败回滚
-
-默认状态下，图片加载失败时会显示缺省错误样式。你也可以使用 `error` 插槽自定义失败回滚内容。
+默认状态下，图片加载错误时会显示缺省错误样式。你也可以使用 `error` 插槽自定义加载错误后应该显示的内容。
 
 <ESpace
   vertical
@@ -348,8 +338,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </ESpace>
 
-<details>
-  <summary>查看代码</summary>
+:::details 查看代码
 
 ```vue
 <template>
@@ -378,8 +367,7 @@ import EText from "@eden-design/components/typography/EText.vue";
   </ESpace>
 </template>
 ```
-
-</details>
+:::
 
 ## 属性
 
