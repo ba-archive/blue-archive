@@ -18,6 +18,14 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 });
 
 function getPresetPaletteName() {
+  if (
+    (props.background &&
+      "[object Object]" === Object.prototype.toString.call(props.background)) ||
+    typeof props.background === "string"
+  ) {
+    return "custom";
+  }
+
   const keys = ["default", "brand", "danger", "success", "warning", "momotalk"];
 
   return keys.find(key => props[key as keyof ButtonProps]) || "default";
