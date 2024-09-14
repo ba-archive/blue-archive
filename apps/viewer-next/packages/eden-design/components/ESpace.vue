@@ -64,10 +64,12 @@ const spaceClass = computed(() => {
     {
       "flex-col": props.direction === "vertical" || props.vertical,
       "flex-wrap": props.wrap,
+      "items-stretch": props.align === "stretch",
       "items-center": props.align === "center",
       "items-end": props.align === "end",
       "items-start": props.align === "start",
       "items-baseline": props.align === "baseline",
+      "w-full": !!props.wide,
     },
   ];
 });
