@@ -8,7 +8,10 @@ export type InputProps = {
   size?: "mini" | "small" | "medium" | "large";
   width?: string | number | "auto";
   type?: "text" | "number" | "password" | "email" | "tel" | "url";
-  "update:value"?: (value: string) => void;
+
+  /* methods */
+  focus?: () => void;
+  blur?: () => void;
 
   /* number */
   min?: number;

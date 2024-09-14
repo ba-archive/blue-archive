@@ -24,12 +24,25 @@ watch(
 
 const emits = defineEmits<{
   (e: "update:value", value: string | number): void;
+  (e: "input", value: string | number): void;
 }>();
+
+const handleValueUpdate = (value: string | number | undefined) => {
+  if (value === undefined) return;
+  emits("update:value", value);
+};
 
 const handleInput = (e: Event) => {
   const input = e.target as HTMLInputElement;
-  emits("update:value", input.value);
+  emits("input", input.value);
 };
+
+watch(
+  () => model.value,
+  newVal => {
+    handleValueUpdate(newVal);
+  }
+);
 
 const inputClass = computed(() => {
   return [
@@ -50,6 +63,22 @@ const inputStyle = computed(() => {
 });
 
 const slots = useSlots();
+
+// exposed methods
+const inputRef = ref<HTMLInputElement | null>(null);
+
+const focus = () => {
+  inputRef.value?.focus();
+};
+
+const blur = () => {
+  inputRef.value?.blur();
+};
+
+defineExpose({
+  focus,
+  blur,
+});
 </script>
 
 <template>
@@ -61,6 +90,12 @@ const slots = useSlots();
   >
     <span class="eden-ui eden-ui__input--prefix flex" v-if="slots.prefix">
       <slot name="prefix" />
+    </span>
+    <span
+      class="eden-ui eden-ui__input--prefix flex"
+      v-if="prefix && !slots.prefix"
+    >
+      {{ prefix }}
     </span>
     <input
       :type="type"
@@ -75,9 +110,16 @@ const slots = useSlots();
       :min="type === 'number' ? min : undefined"
       :max="type === 'number' ? max : undefined"
       :step="type === 'number' ? step : undefined"
+      ref="inputRef"
     />
     <span class="eden-ui eden-ui__input--suffix flex" v-if="slots.suffix">
       <slot name="suffix" />
+    </span>
+    <span
+      class="eden-ui eden-ui__input--suffix flex"
+      v-if="suffix && !slots.suffix"
+    >
+      {{ suffix }}
     </span>
   </span>
 </template>
