@@ -94,6 +94,10 @@ a.VPButton,
     font-weight: 700;
     font-family: "Wix Madefor", "HarmonyOS Sans SC Bold",
       var(--vp-font-family-base);
+
+    a {
+      font-family: var(--vp-font-family-base);
+    }
   }
 
   p {

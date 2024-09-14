@@ -183,15 +183,15 @@ export default defineConfig({
           },
           {
             text: "阴影 / Shadow",
-            link: "/guideline/design/#阴影-shadow",
+            link: "/guidelines/design#阴影-shadow",
           },
           {
             text: "动画 / Animation",
-            link: "/guideline/design/#动画-animation",
+            link: "/guidelines/design#动画-animation",
           },
           {
             text: "交互 / Interaction",
-            link: "/guideline/design/#交互-interaction",
+            link: "/guidelines/design#交互-interaction",
           },
         ],
       },
