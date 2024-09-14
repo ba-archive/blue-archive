@@ -12,6 +12,7 @@ outline: deep
   import EAvatar from '@eden-design/components/EAvatar.vue'
   import ESpace from '@eden-design/components/ESpace.vue'
   import EText from '@eden-design/components/typography/EText.vue'
+  import EImage from "@eden-design/components/EImage.vue"
 </script>
 
 指定头像 `src`，或者如果你喜欢全手动，也可以自己塞东西。
@@ -185,6 +186,46 @@ outline: deep
       src="https://example.com/image.jpg"
       fallbackSrc="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
     />
+  </ESpace>
+</template>
+```
+
+:::
+
+## 插槽
+
+### 默认插槽
+
+使用默认插槽显示内容。
+
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EAvatar size="large" background="color-fill-3">
+    <EText color="#fff" level="3">Eden</EText>
+  </EAvatar>
+  <EAvatar size="large" background="color-fill-3">
+    <EImage src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg" width="56" height="56" />
+  </EAvatar>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EAvatar size="large" background="color-fill-3">
+      <EText color="#fff" level="3">Eden</EText>
+    </EAvatar>
+    <EAvatar size="large" background="color-fill-3">
+      <EImage
+        src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+        width="56"
+        height="56"
+      />
+    </EAvatar>
   </ESpace>
 </template>
 ```

@@ -9,6 +9,12 @@ outline: deep
 <script setup lang="ts">
   import EButton from "@eden-design/components/EButton.vue"
   import ESpace from "@eden-design/components/ESpace.vue"
+  import EIconAdd from "@eden-design/components/icon/EIconAdd.vue"
+  import {ElMessage} from "element-plus"
+
+  function handleClick() {
+    ElMessage.success("clicked!")
+  }
 </script>
 
 ## 基本用法
@@ -238,6 +244,81 @@ outline: deep
     <EButton wide>我膨胀了</EButton>
   </ESpace>
 </template>
+```
+
+:::
+
+## 插槽
+
+### icon
+
+使用 `icon` 插槽在按钮左侧添加图标。
+
+<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace align="end">
+    <EButton>
+      <template #icon>
+        <EIconAdd name="home" color="#ffffff"/>
+      </template>
+      Button
+    </EButton>
+  </ESpace>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ESpace align="end">
+      <EButton>
+        <template #icon>
+          <EIconAdd />
+        </template>
+      </EButton>
+    </ESpace>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 事件
+
+### click
+
+`click` 事件在按钮点击时触发。如果按钮被禁用，不会触发 `click` 事件。
+
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EButton @click="handleClick">点我</EButton>
+  <EButton @click="handleClick" disabled>点我</EButton>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EButton @click="handleClick">点我</EButton>
+    <EButton @click="handleClick" disabled>点我</EButton>
+  </ESpace>
+</template>
+
+<script setup lang="ts">
+  import { ElMessage } from "element-plus";
+  function handleClick() {
+    ElMessage.success("clicked!");
+  }
+</script>
 ```
 
 :::

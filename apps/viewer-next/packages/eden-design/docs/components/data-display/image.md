@@ -330,6 +330,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 <EImage src="https://example.com/image.jpg" width="128" height="128" />
 <EImage src="https://example.com/image.jpg" width="128" height="128">
 <template #error>
+
 <div class="grid [grid-template-areas:image] place-items-center">
 <EImage
             class="[grid-area:image]"
@@ -370,6 +371,112 @@ import EText from "@eden-design/components/typography/EText.vue";
         </template>
       </EImage>
     </ESpace>
+  </ESpace>
+</template>
+```
+
+:::
+
+## 插槽
+
+### error
+
+使用 `error` 插槽自定义图片加载错误时的显示内容。
+
+<ESpace
+vertical
+padding="10"
+size="small"
+class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<EImage src="https://example.com/image.jpg" width="128" height="128">
+<template #error>
+
+<div class="grid [grid-template-areas:image] place-items-center">
+<EText class="[grid-area:image]" secondary level="3">自定义回滚内容</EText>
+</div>
+</template>
+</EImage>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EImage src="https://example.com/image.jpg" width="128" height="128">
+      <template #error>
+        <div class="grid [grid-template-areas:image] place-items-center">
+          <EText class="[grid-area:image]" secondary level="3"
+            >自定义回滚内容</EText
+          >
+        </div>
+      </template>
+    </EImage>
+  </ESpace>
+</template>
+```
+
+:::
+
+### caption
+
+使用 `caption` 插槽自定义图片描述内容。
+
+<ESpace
+vertical
+padding="10"
+size="small"
+class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<EImage
+  src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+  width="128"
+  height="128">
+<template #caption>
+<EText
+      :color="{
+        from: 'var(--arona-blue-6)',
+        to: 'var(--arona-blue-2)',
+        deg: '45deg',
+      }"
+      level="3"
+      >自定义描述
+</EText>
+</template>
+</EImage>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    vertical
+    padding="10"
+    size="small"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <EImage
+      src="https://s2.loli.net/2024/09/07/gvVuD6aqFNroPLe.jpg"
+      width="128"
+      height="128"
+    >
+      <template #caption>
+        <EText
+          :color="{
+            from: 'var(--arona-blue-6)',
+            to: 'var(--arona-blue-2)',
+            deg: '45deg',
+          }"
+          level="3"
+          >自定义描述
+        </EText>
+      </template>
+    </EImage>
   </ESpace>
 </template>
 ```
