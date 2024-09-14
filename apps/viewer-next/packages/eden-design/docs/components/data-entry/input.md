@@ -20,6 +20,7 @@ import { ElMessage } from 'element-plus';
 const modelString = ref('');
 
 const inputRef = ref<HTMLInputElement | null>(null);
+const inputRef2 = ref<HTMLInputElement | null>(null);
 
 function handleUpdateValue(value: string) {
   ElMessage.info(`输入内容：${value}`);
@@ -30,9 +31,9 @@ function handleFocus() {
 }
 
 function handleDelayedBlur() {
-  handleFocus();
+  inputRef2.value?.focus();
   setTimeout(() => {
-    inputRef.value?.blur();
+    inputRef2.value?.blur();
   }, 3000);
 }
 </script>
@@ -339,7 +340,7 @@ function handleInput(value: string) {
 
 将输入框设置为聚焦状态。
 
-<ESpace wrap padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<ESpace wrap align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EInput ref="inputRef" />
   <EButton @click="handleFocus">聚焦</EButton>
 </ESpace>
@@ -350,6 +351,7 @@ function handleInput(value: string) {
 <template>
   <ESpace
     wrap
+    align="end"
     padding="10"
     size="small"
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
@@ -374,8 +376,8 @@ function handleFocus() {
 
 将输入框设置为失焦状态。
 
-<ESpace wrap padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <EInput ref="inputRef" />
+<ESpace wrap align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <EInput ref="inputRef2" />
   <EButton @click="handleDelayedBlur">聚焦，三秒后失焦</EButton>
 </ESpace>
 
@@ -385,6 +387,7 @@ function handleFocus() {
 <template>
   <ESpace
     wrap
+    align="end"
     padding="10"
     size="small"
     class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
