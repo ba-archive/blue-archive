@@ -10,9 +10,20 @@ function getGradientDegree(degree: number | string | undefined) {
 }
 
 export function parseColor(color: string) {
-  return color.startsWith("#") ||
-    color.startsWith("rgb") ||
-    color.startsWith("hsl")
+  const validPrefixes = [
+    "#",
+    "rgb",
+    "hsl",
+    "linear-gradient",
+    "conic-gradient",
+    "radial-gradient",
+    "repeating-linear-gradient",
+    "repeating-conic-gradient",
+    "repeating-radial-gradient",
+    "var",
+  ];
+
+  return validPrefixes.some(prefix => color.startsWith(prefix))
     ? color
     : `var(${color.startsWith("--") ? color : `--${color}`})`;
 }
