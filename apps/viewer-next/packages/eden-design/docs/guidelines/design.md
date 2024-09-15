@@ -871,6 +871,117 @@ const vibrateGroup = {
 
 ## 阴影 / Shadow
 
+阴影分为外阴影与内阴影两种类型。
+
+### 外阴影 / Outer Shadow
+
+外阴影是最常见的阴影类型，用于表现元素的层叠关系。
+
+外阴影分为两级：一级阴影与二级阴影。每级阴影由两层 `box-shadow` 叠加而成。
+
+#### 一级阴影 / Primary Shadow
+
+一级阴影是最常见的阴影类型，用于 `card` 等元素。
+
+```css
+.shadow-primary {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+}
+```
+
+#### 二级阴影 / Secondary Shadow
+
+二级阴影表示元素在 Z 轴方向上离用户更近，用于 `dropdown` 等需要用户聚焦的场景。
+
+```css
+.shadow-secondary {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.14), 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+}
+```
+
+### 内阴影 / Inner Shadow
+
+内阴影用于表现元素的凹陷效果。内阴影只有一级，同样由两层 `box-shadow` 叠加而成。
+
+```css
+.shadow-inner {
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.08), inset 0px 0px 2px 0px
+      rgba(0, 0, 0, 0.04);
+}
+```
+
 ## 动画 / Animation
 
+### 持续时间 / Duration
+
+大型动画的持续时间建议为 300ms，小型动画的持续时间建议为 175ms。
+
+```css
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-175 {
+  transition-duration: 175ms;
+}
+```
+
+### 速度曲线 / Easing
+
+速度曲线建议使用浏览器预设 `ease-in-out`。
+
+```css
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+```
+
+#### 快速回弹效果的速度曲线 / Easing for Bouncing Animation
+
+快速回弹效果用于模拟现实物理世界中的弹性效果。该效果可以参考以下速度曲线：
+
+```css
+.bounce-animation {
+  transition-timing-function: cubic-bezier(0.85, -0.06, 0.22, 1.26);
+}
+```
+
 ## 交互 / Interaction
+
+### 点击 / Click
+
+点击是用户与界面操作最基本的交互方式。我们将点击行为分为三个状态：
+
+**1. 点按状态**
+
+用户点击元素后立即释放，完成一次完整的点击事件。元素会短暂地进入按下状态，然后恢复到初始状态。
+
+**2. 按下状态**
+
+用户点击元素后不立即释放，元素应该进入按下 (`pressed`) 状态。此状态可派生出“按住”、“拖动”和“释放”三种状态。
+
+**3. 释放状态**
+
+用户完成一次完整的点击事件，或放弃点击事件。元素应该恢复到初始状态。
+
+### 拖拽 / Drag
+
+拖拽是移动端用户与界面操作的主要方式。在一些特定组件（如 [Slider](../components/data-entry/slider.md)）中，拖拽也是用户与组件操作的主要方式。
+
+拖拽行为有三个状态：
+
+**1. 按下状态**
+
+用户按下元素后，元素应该进入按下 (`pressed`) 或聚焦 (`focused`) 状态。
+
+**2. 拖动状态**
+
+用户在拖拽元素时，元素应该处理拖拽事件（允许或拒绝拖拽）。元素应该保持按下 (`pressed`) 或聚焦 (`focused`) 状态。
+
+**3. 释放状态**
+
+用户完成一次完整的拖拽事件，或放弃拖拽。元素应该恢复到初始状态。
+
+### 悬停 / Hover
+
+悬停交互常见于 PC 端和带有外接鼠标或触控板的平板设备。我们鼓励通过 css 原生状态选择器 `:hover` 来实现悬停效果。
