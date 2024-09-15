@@ -7,7 +7,9 @@ export type SliderProps = {
   step?: number;
   disabled?: boolean;
   traveledBackground?: WithGradientBackground;
+  thumbBorderColor?: string;
   width?: number | string;
+  controlled?: boolean; // 受控状态
 
   /* 颜色快捷方式 */
   brand?: boolean; // 品牌色 $arona-blue-6/text-1

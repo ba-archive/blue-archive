@@ -2,6 +2,10 @@
 import type { InputNumberProps } from "../types/EdenInput/InputNumberProps";
 import { parseSize } from "../../_utils/styleUtils";
 import { isNumber, toNumber } from "../../_utils/numberUtils";
+import EInput from "./EInput.vue";
+import EIconSubtract from "../icon/EIconSubtract.vue";
+import EIconAdd from "../icon/EIconAdd.vue";
+
 const props = withDefaults(defineProps<InputNumberProps>(), {
   align: "center",
   value: 0,
@@ -39,16 +43,16 @@ watch(
       model.value = props.min;
     }
     emits("update:value", newVal);
-  }
+  },
+  { immediate: true }
 );
 
 const emits = defineEmits<{
   (e: "update:value", value: number): void;
 }>();
 
-const handleInput = (e: Event) => {
-  const input = e.target as HTMLInputElement;
-  emits("update:value", Number(input.value));
+const handleInput = () => {
+  emits("update:value", toNumber(model.value));
 };
 
 const inputClass = computed(() => {

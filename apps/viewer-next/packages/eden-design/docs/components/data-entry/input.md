@@ -4,9 +4,7 @@ outline: deep
 
 # 输入框 / Input
 
-> 输入：阿罗娜阿罗娜，谁是基沃托斯性能最强的 OS？ 谁是基沃托斯最优秀的 AI 助手？
->
-> 输出：是我，是我，都是我。
+> 阿罗娜阿罗娜，谁是基沃托斯性能最强的 OS？
 
 ## 基础用法
 
@@ -162,7 +160,7 @@ function handleDelayedBlur() {
 
 ## 事件
 
-### update:value
+### `update:value`
 
 当输入框内容发生变化时，会触发 `update:value` 事件。
 
@@ -186,7 +184,7 @@ function handleUpdateValue(value: string) {
 
 :::
 
-### input
+### `input`
 
 `input` 事件与 `update:value` 事件类似，但是 `input` 事件在输入框拼字时也会触发。
 
@@ -210,7 +208,7 @@ function handleInput(value: string) {
 
 ## 插槽
 
-### prefix
+### `prefix`
 
 使用 `prefix` 插槽为输入框插入前缀。也可以用 `prefix` 属性快速插入字符串。
 
@@ -236,7 +234,7 @@ function handleInput(value: string) {
 
 :::
 
-### suffix
+### `suffix`
 
 使用 `suffix` 插槽为输入框插入后缀。也可以用 `suffix` 属性快速插入字符串。
 
@@ -264,7 +262,7 @@ function handleInput(value: string) {
 
 ## 方法
 
-### focus()
+### `focus()`
 
 将输入框设置为聚焦状态。
 
@@ -292,7 +290,7 @@ function handleFocus() {
 
 :::
 
-### blur()
+### `blur()`
 
 将输入框设置为失焦状态。
 

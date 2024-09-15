@@ -14,6 +14,9 @@ import EText from '@eden-design/components/typography/EText.vue';
 import EButton from '@eden-design/components/EButton.vue';
 import EDivider from '@eden-design/components/EDivider.vue';
 import EIconSubtract from '@eden-design/components/icon/EIconSubtract.vue';
+import ETag from '@eden-design/components/ETag.vue';
+
+const texts = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit sagittis risus, eget luctus felis elementum at.".split(' ');
 </script>
 
 可以设置 `size` 为 `mini`、`small`、`medium`、`large` 或具体数值（单位为 px）。默认尺寸为 `medium`。
@@ -116,6 +119,26 @@ import EIconSubtract from '@eden-design/components/icon/EIconSubtract.vue';
 
 :::
 
+## 换行
+
+设置 `wrap` 为 `true` 可换行。
+
+<ESpace wrap padding="10" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ETag brand fill v-for="text in texts" :key="text">{{ text }}</ETag>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace wrap>
+    <ETag brand fill v-for="text in texts" :key="text">{{ text }}</ETag>
+  </ESpace>
+</template>
+```
+
+:::
+
 ## 对齐方式
 
 设置 `align` 为 `start`、`end`、`center`、`baseline` 或 `stretch` 可设置对齐方式。
@@ -194,6 +217,37 @@ import EIconSubtract from '@eden-design/components/icon/EIconSubtract.vue';
 
 :::
 
+## 撑满父容器
+
+设置 `wide` 为 `true` 可撑满父容器。
+
+<ESpace wide wrap align="center" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <ESpace wide class="bg-[var(--arona-blue-1)] rounded-md" padding="10">
+    <EButton>上色部分</EButton>
+    <EButton>就是被 Space 撑满的部分</EButton>
+  </ESpace>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    wide
+    wrap
+    align="center"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <ESpace wide class="bg-[var(--arona-blue-1)] rounded-md" padding="10">
+      <EButton>上色部分</EButton>
+      <EButton>就是被 Space 撑满的部分</EButton>
+    </ESpace>
+  </ESpace>
+</template>
+```
+
+:::
+
 ## 分隔线
 
 使用 `divider` 插槽插入自定义分隔线，或者设置 `divider` 属性为你希望插入的字符串。
@@ -228,6 +282,43 @@ import EIconSubtract from '@eden-design/components/icon/EIconSubtract.vue';
     </ESpace>
     <EText>白毛浮绿水</EText>
     <EText>红掌拨清波</EText>
+  </ESpace>
+</template>
+```
+
+:::
+
+## margin 和 padding
+
+使用 `margin` 和 `padding` 属性设置 Space 组件自身的 margin 和 padding。支持 `string`、`number`、`[number, number]`、`[number, number, number, number]` 四种类型。
+
+<ESpace align="center" padding="10" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+  <div class="bg-[var(--arona-blue-1)]">
+    <ESpace margin="10" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+      <EButton>按钮1</EButton>
+      <EButton>按钮2</EButton>
+    </ESpace>
+  </div>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <ESpace
+    align="center"
+    padding="10"
+    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  >
+    <div class="bg-[var(--arona-blue-1)]">
+      <ESpace
+        margin="10"
+        class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+      >
+        <EButton>按钮1</EButton>
+        <EButton>按钮2</EButton>
+      </ESpace>
+    </div>
   </ESpace>
 </template>
 ```

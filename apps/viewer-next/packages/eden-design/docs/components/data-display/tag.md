@@ -260,7 +260,7 @@ const types = [
 
 :::
 
-### 默认插槽
+### `default`
 
 使用默认插槽插入文字。
 
@@ -280,7 +280,7 @@ const types = [
 
 ## 事件
 
-### update:active
+### `update:active`
 
 当标签被点击时，会触发 `update:active` 事件，返回 `active` 状态。`active` 的类型为 `boolean`。
 

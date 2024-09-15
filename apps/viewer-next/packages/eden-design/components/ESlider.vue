@@ -3,9 +3,10 @@ import type { SliderProps } from "./types/EdenSlider/SliderProps";
 import { toNumber } from "../_utils/numberUtils";
 import { parseSize } from "../_utils/styleUtils";
 import { parseColor, getGradientStyle } from "../_utils/colorUtils";
+import { useElementBounding } from "@vueuse/core";
+import { onMounted } from "vue";
 
 const props = withDefaults(defineProps<SliderProps>(), {
-  value: 0,
   min: 0,
   max: 100,
   step: 1,
@@ -80,7 +81,10 @@ const sliderClass = computed(() => {
   return [
     "eden-ui eden-ui__slider select-none",
     `palette-${getPresetPaletteName()}`,
-    props.disabled ? "cursor-not-allowed" : "cursor-pointer",
+    "ml-[10px] mr-[10px] mt-[10px] mb-[10px]",
+    props.disabled || props.controlled
+      ? "cursor-not-allowed"
+      : "cursor-pointer",
     {
       disabled: props.disabled,
     },
@@ -127,6 +131,13 @@ const sliderBackgroundTraveledStyle = computed(() => [
   },
 ]);
 
+const sliderThumbStyle = computed(() => [
+  {
+    left: `${traveledDistancePercentage.value}%`,
+  },
+  !!props.thumbBorderColor && { borderColor: parseColor(props.thumbBorderColor) },
+]);
+
 const triggered = ref(false);
 
 function edenSliderGlobalMouseUpTrigger() {
@@ -138,7 +149,7 @@ function edenSliderGlobalMouseMoveTrigger(event: MouseEvent) {
 }
 
 function handleMouseDown(event: MouseEvent) {
-  if (props.disabled) return;
+  if (props.disabled || props.controlled) return;
 
   triggered.value = true;
   updateValue(left.value, right.value, event.clientX);
@@ -149,7 +160,7 @@ function handleMouseDown(event: MouseEvent) {
 }
 
 function handleMouseUp() {
-  if (props.disabled) return;
+  if (props.disabled || props.controlled) return;
   triggered.value = false;
 
   // ssr compatible - window is not defined on server side
@@ -158,11 +169,17 @@ function handleMouseUp() {
 }
 
 function handleMouseMove(event: MouseEvent) {
-  if (props.disabled) return;
+  if (props.disabled || props.controlled) return;
   if (triggered.value) {
     updateValue(left.value, right.value, event.clientX);
   }
 }
+
+onMounted(() => {
+  if (props.value) {
+    model.value = props.value;
+  }
+});
 </script>
 
 <template>
@@ -187,7 +204,7 @@ function handleMouseMove(event: MouseEvent) {
       />
       <span
         class="eden-ui eden-ui__slider--thumb h-5 w-5 rounded-full border-2 border-solid absolute translate-x-[-50%]"
-        :style="{ left: `${traveledDistancePercentage}%` }"
+        :style="sliderThumbStyle"
       />
     </span>
     <span v-if="slots.suffix" class="eden-ui eden-ui__slider--suffix">

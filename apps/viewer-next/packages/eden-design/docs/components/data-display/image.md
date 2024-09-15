@@ -383,7 +383,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 
 ## 插槽
 
-### error
+### `error`
 
 使用 `error` 插槽自定义图片加载错误时的显示内容。
 
@@ -420,7 +420,7 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 
 :::
 
-### caption
+### `caption`
 
 使用 `caption` 插槽自定义图片描述内容。也可以使用 `caption` 属性设置图片描述内容，具体请参考 [图片描述](#图片描述)。
 
