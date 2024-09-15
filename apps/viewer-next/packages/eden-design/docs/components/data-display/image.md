@@ -209,7 +209,7 @@ import EText from "@eden-design/components/typography/EText.vue";
 
 ## 点击预览
 
-使用 `enable-preview` 属性开启点击预览。
+使用 `enable-preview` 属性开启点击预览。在预览界面点击图片以外的区域可关闭预览。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace align="end">
@@ -240,6 +240,8 @@ import EText from "@eden-design/components/typography/EText.vue";
 ```
 
 :::
+
+`EImagePreview` 组件也可单独抽离使用，具体请参考 [图片预览 / ImagePreview](./image-preview.md)。
 
 ## object-fit
 

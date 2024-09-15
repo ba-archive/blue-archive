@@ -2,12 +2,11 @@
 import type { ImageProps } from "./types/EdenImage/ImageProps";
 import { parseSize } from "~/packages/eden-design/_utils/styleUtils";
 import type { Directive } from "vue";
-import { clickOutside as vClickOutside } from "~/packages/eden-design/_directives/clickOutside";
 import { useSlots, computed, ref } from "vue";
 import EIconError from "./icon/EIconError.vue";
-import EIconClose from "./icon/EIconClose.vue";
 import EText from "./typography/EText.vue";
 import ESpace from "./ESpace.vue";
+import EImagePreview from "./EImagePreview.vue";
 
 const props = withDefaults(defineProps<ImageProps>(), {
   width: "200px",
@@ -36,6 +35,7 @@ const vDetectFailure: Directive = {
 const imageClass = computed(() => [
   "eden-ui",
   "eden-ui__image",
+  "flex-none",
   {
     "!rounded-full": props.circle,
     "cursor-pointer": !imageLoadFailed.value && props.enablePreview,
@@ -102,27 +102,11 @@ function handleClosePreview() {
       <slot v-else name="caption" />
     </span>
 
-    <Teleport to="body">
-      <transition name="fade">
-        <div
-          v-if="showPreviewLayer"
-          class="eden-ui eden-ui__image eden-ui__image__preview-layer flex items-center justify-center fixed top-0 left-0 w-full h-full"
-        >
-          <span
-            class="eden-ui eden-ui__image-preview-layer--close absolute top-2 right-2 flex items-center p-2 bg-black/50 rounded-full cursor-pointer"
-            @click="handleClosePreview"
-          >
-            <e-icon-close size="24" color="white" />
-          </span>
-          <img
-            class="eden-ui eden-ui__image eden-ui__image__preview-layer--img"
-            :src="src"
-            v-bind="$attrs"
-            v-click-outside="handleClosePreview"
-          />
-        </div>
-      </transition>
-    </Teleport>
+    <e-image-preview
+      v-if="showPreviewLayer"
+      :src="src"
+      @close="handleClosePreview"
+    />
   </span>
 </template>
 
@@ -141,32 +125,5 @@ span.eden-ui__image {
   &__fallback {
     background-color: $fill-1;
   }
-
-  &__preview-layer {
-    z-index: 1000;
-    background-color: #24242480;
-
-    &--img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      max-width: 90dvw;
-      max-height: 90dvh;
-      transform: translate(-50%, -50%);
-      display: block;
-    }
-  }
-}
-</style>
-
-<style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

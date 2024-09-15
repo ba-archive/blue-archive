@@ -108,6 +108,10 @@ export default defineConfig({
                     link: "/components/data-display/image",
                   },
                   {
+                    text: "图片预览 / ImagePreview",
+                    link: "/components/data-display/image-preview",
+                  },
+                  {
                     text: "标签页 / Tabs",
                     link: "/components/data-display/tabs",
                   },

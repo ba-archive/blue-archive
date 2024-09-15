@@ -26,6 +26,8 @@ outline: deep
 
 ### [图片 / Image](./data-display/image.md)
 
+### [图片预览 / ImagePreview](./data-display/image-preview.md)
+
 ### [标签页 / Tabs](./data-display/tabs.md)
 
 ### [标签 / Tag](./data-display/tag.md)
