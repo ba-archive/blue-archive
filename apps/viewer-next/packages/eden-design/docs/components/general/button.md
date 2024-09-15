@@ -32,13 +32,8 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EButton>主要按钮</EButton>
-    <EButton secondary>次要按钮</EButton>
-  </ESpace>
+  <EButton>主要按钮</EButton>
+  <EButton secondary>次要按钮</EButton>
 </template>
 ```
 
@@ -48,32 +43,21 @@ outline: deep
 
 按钮有 `mini`、`small`、`medium`、`large` 四种尺寸。默认尺寸为 `medium`。
 
-<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
+<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <EButton size="mini">mini</EButton>
     <EButton size="small">small</EButton>
-    <EButton size="medium">medium</EButton>
+    <EButton>medium</EButton>
     <EButton size="large">large</EButton>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ESpace align="end">
-      <EButton size="mini">mini</EButton>
-      <EButton size="small">small</EButton>
-      <EButton size="medium">medium</EButton>
-      <EButton size="large">large</EButton>
-    </ESpace>
-  </ESpace>
+  <EButton size="mini">mini</EButton>
+  <EButton size="small">small</EButton>
+  <EButton>medium</EButton>
+  <EButton size="large">large</EButton>
 </template>
 ```
 
@@ -84,25 +68,14 @@ outline: deep
 可以使用 `bordered` 属性来设置按钮的边框。边框按钮没有次要样式。
 
 <ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
     <EButton bordered>按钮</EButton>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ESpace align="end">
-      <EButton bordered>按钮</EButton>
-    </ESpace>
-  </ESpace>
+  <EButton bordered>按钮</EButton>
 </template>
 ```
 
@@ -118,7 +91,6 @@ outline: deep
     <EButton danger>危险色</EButton>
     <EButton success>成功色</EButton>
     <EButton warning>警告色</EButton>
-    <EButton momotalk>momotalk</EButton>
   </ESpace>
   <ESpace align="end">
     <EButton secondary brand>品牌色</EButton>
@@ -132,38 +104,32 @@ outline: deep
     <EButton bordered success>成功色</EButton>
     <EButton bordered warning>警告色</EButton>
   </ESpace>
+  <EButton momotalk>momotalk</EButton>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-1)]"
-  >
-    <ESpace align="end">
-      <EButton brand>品牌色</EButton>
-      <EButton danger>危险色</EButton>
-      <EButton success>成功色</EButton>
-      <EButton warning>警告色</EButton>
-      <EButton momotalk>momotalk</EButton>
-    </ESpace>
-    <ESpace align="end">
-      <EButton secondary brand>品牌色</EButton>
-      <EButton secondary danger>危险色</EButton>
-      <EButton secondary success>成功色</EButton>
-      <EButton secondary warning>警告色</EButton>
-    </ESpace>
-    <ESpace align="end" :size="14">
-      <EButton bordered brand>品牌色</EButton>
-      <EButton bordered danger>危险色</EButton>
-      <EButton bordered success>成功色</EButton>
-      <EButton bordered warning>警告色</EButton>
-    </ESpace>
+  <ESpace align="end">
+    <EButton brand>品牌色</EButton>
+    <EButton danger>危险色</EButton>
+    <EButton success>成功色</EButton>
+    <EButton warning>警告色</EButton>
   </ESpace>
+  <ESpace align="end">
+    <EButton secondary brand>品牌色</EButton>
+    <EButton secondary danger>危险色</EButton>
+    <EButton secondary success>成功色</EButton>
+    <EButton secondary warning>警告色</EButton>
+  </ESpace>
+  <ESpace align="end" :size="14">
+    <EButton bordered brand>品牌色</EButton>
+    <EButton bordered danger>危险色</EButton>
+    <EButton bordered success>成功色</EButton>
+    <EButton bordered warning>警告色</EButton>
+  </ESpace>
+  <EButton momotalk>momotalk</EButton>
 </template>
 ```
 
@@ -173,26 +139,15 @@ outline: deep
 
 可以使用 `disabled` 属性来设置按钮的禁用状态。
 
-<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <EButton disabled>我被沉默了</EButton>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ESpace align="end">
-      <EButton disabled>我被沉默了</EButton>
-    </ESpace>
-  </ESpace>
+  <EButton disabled>我被沉默了</EButton>
 </template>
 ```
 
@@ -204,45 +159,35 @@ outline: deep
 
 按钮的文字样式可以通过 `textProps` 属性来设置。完整配置项请参考 [排版 / Typography](/components/general/typography)。
 
-<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <EButton background="#B3F6EC" :textProps="{ color: '#00888F', bold: true }">
       世界で一番お姫様
     </EButton>
     <EButton :background="{ from: '#39C5BB', to: '#00888F', deg: 135 }" :textProps="{ color: { from: '#56D1C4', to: '#BFF3E9', deg: 135 }, bold: true }">
       世界で一番お姫様
     </EButton>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  <EButton
+    background="#B3F6EC"
+    :textProps="{ color: '#00888F', bold: true }"
   >
-    <ESpace align="end">
-      <EButton
-        background="#B3F6EC"
-        :textProps="{ color: '#00888F', bold: true }"
-      >
-        世界で一番お姫様
-      </EButton>
-      <EButton
-        :background="{ from: '#39C5BB', to: '#00888F', deg: 135 }"
-        :textProps="{
+    世界で一番お姫様
+  </EButton>
+  
+  <EButton
+    :background="{ from: '#39C5BB', to: '#00888F', deg: 135 }"
+    :textProps="{
           color: { from: '#56D1C4', to: '#BFF3E9', deg: 135 },
           bold: true,
         }"
-      >
-        世界で一番お姫様
-      </EButton>
-    </ESpace>
-  </ESpace>
+  >
+    世界で一番お姫様
+  </EButton>
 </template>
 ```
 
@@ -260,14 +205,7 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EButton wide>我膨胀了</EButton>
-  </ESpace>
+  <EButton wide>我膨胀了</EButton>
 </template>
 ```
 
@@ -279,35 +217,24 @@ outline: deep
 
 使用 `icon` 插槽在按钮左侧添加图标。
 
-<ESpace vertical padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <EButton>
       <template #icon>
         <EIconAdd name="home" color="#ffffff"/>
       </template>
       Button
     </EButton>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ESpace align="end">
-      <EButton>
-        <template #icon>
-          <EIconAdd />
-        </template>
-      </EButton>
-    </ESpace>
-  </ESpace>
+  <EButton>
+    <template #icon>
+      <EIconAdd />
+    </template>
+  </EButton>
 </template>
 ```
 
@@ -328,14 +255,8 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EButton @click="handleClick">点我</EButton>
-    <EButton @click="handleClick" disabled>点我</EButton>
-  </ESpace>
+  <EButton @click="handleClick">点我</EButton>
+  <EButton @click="handleClick" disabled>点我</EButton>
 </template>
 
 <script setup lang="ts">

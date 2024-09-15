@@ -17,9 +17,9 @@ outline: deep
 
   function handleUpdateActive(ev: boolean | {id: string | number, active: boolean}) {
     if ("[object Object]" === Object.prototype.toString.call(ev)) {
-      ElMessage.success(`Tag 激活事件：${JSON.stringify(ev)}`)
+      ElMessage.success(`Tag 激活事件：${JSON.stringify(ev)}`);
     } else {
-      ElMessage.success(`Tag 激活: ${ev}`)
+      ElMessage.success(`Tag 激活: ${ev}`);
     }
   }
 
@@ -47,14 +47,7 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ETag>标签</ETag>
-  </ESpace>
+  <ETag>标签</ETag>
 </template>
 ```
 
@@ -77,17 +70,10 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ETag brand fill size="mini">mini</ETag>
-    <ETag brand fill size="small">small</ETag>
-    <ETag brand fill size="medium">medium</ETag>
-    <ETag brand fill size="large">large</ETag>
-  </ESpace>
+  <ETag brand fill size="mini">mini</ETag>
+  <ETag brand fill size="small">small</ETag>
+  <ETag brand fill size="medium">medium</ETag>
+  <ETag brand fill size="large">large</ETag>
 </template>
 ```
 
@@ -103,6 +89,7 @@ Tag 额外提供了一个特殊的 `selector` 预设样式，用于主页的学�
 
 <ESpace
 wrap
+vertical
 align="end"
 padding="10"
 size="small"
@@ -130,13 +117,7 @@ class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--a
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)] bg-[var(--arona-blue-2)]"
-  >
+  <ESpace wrap vertical>
     <template #divider>
       <EDivider />
     </template>
@@ -183,31 +164,19 @@ const types = [
 
 `fill` 属性只有在选择了颜色风格后才会生效。
 
-<ESpace vertical align="start" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <ESpace align="end">
+<ESpace align="start" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
     <ETag brand fill>标签</ETag>
     <ETag brand bordered>标签</ETag>
     <ETag brand fill bordered>标签</ETag>
-  </ESpace>
 </ESpace>
 
 :::details 查看代码
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    align="start"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ESpace align="end">
-      <ETag brand fill>标签</ETag>
-      <ETag brand bordered>标签</ETag>
-      <ETag brand fill bordered>标签</ETag>
-    </ESpace>
-  </ESpace>
+  <ETag brand fill>标签</ETag>
+  <ETag brand bordered>标签</ETag>
+  <ETag brand fill bordered>标签</ETag>
 </template>
 ```
 
@@ -228,15 +197,8 @@ const types = [
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ETag brand fill clickable>标签</ETag>
-    <ETag brand fill clickable disabled>标签</ETag>
-  </ESpace>
+  <ETag brand fill clickable>标签</ETag>
+  <ETag brand fill clickable disabled>标签</ETag>
 </template>
 ```
 
@@ -258,17 +220,12 @@ const types = [
 :::details 查看代码
 
 ```vue
-<ESpace
-  align="end"
-  padding="10"
-  size="small"
-  class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
->
+<template>
   <ETag brand fill :textProps="{ bold: true }">标签</ETag>
   <ETag brand fill :textProps="{ italic: true }">标签</ETag>
   <ETag brand fill :textProps="{ underline: true }">标签</ETag>
   <ETag brand fill :textProps="{ strikethrough: true }">标签</ETag>
-</ESpace>
+</template>
 ```
 
 :::
@@ -292,19 +249,12 @@ const types = [
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ETag brand fill>
-      <template #icon>
-        <EIconSubtract color="var(--arona-blue-6)" />
-      </template>
-      标签
-    </ETag>
-  </ESpace>
+  <ETag brand fill>
+    <template #icon>
+      <EIconSubtract color="var(--arona-blue-6)" />
+    </template>
+    标签
+  </ETag>
 </template>
 ```
 
@@ -322,14 +272,7 @@ const types = [
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <ETag brand fill>标签</ETag>
-  </ESpace>
+  <ETag brand fill>标签</ETag>
 </template>
 ```
 
@@ -352,19 +295,12 @@ const types = [
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  <ETag brand fill clickable @update:active="handleUpdateActive"
+    >我没有 id</ETag
   >
-    <ETag brand fill clickable @update:active="handleUpdateActive"
-      >我没有 id</ETag
-    >
-    <ETag brand fill clickable @update:active="handleUpdateActive" id="1"
-      >我的 id 是 1</ETag
-    >
-  </ESpace>
+  <ETag brand fill clickable @update:active="handleUpdateActive" id="1"
+    >我的 id 是 1</ETag
+  >
 </template>
 
 <script setup lang="ts">

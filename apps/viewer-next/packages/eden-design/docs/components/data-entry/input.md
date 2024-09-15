@@ -5,7 +5,7 @@ outline: deep
 # 输入框 / Input
 
 > 输入：阿罗娜阿罗娜，谁是基沃托斯性能最强的 OS？ 谁是基沃托斯最优秀的 AI 助手？
-> 
+>
 > 输出：是我，是我，都是我。
 
 ## 基础用法
@@ -49,15 +49,8 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput v-model="modelString" placeholder="我能吞下玻璃而不伤身体" />
-    <EText>输入内容：{{ modelString }}</EText>
-  </ESpace>
+  <EInput v-model="modelString" placeholder="我能吞下玻璃而不伤身体" />
+  <EText>输入内容：{{ modelString }}</EText>
 </template>
 ```
 
@@ -78,17 +71,10 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput size="mini" placeholder="mini" />
-    <EInput size="small" placeholder="small" />
-    <EInput size="medium" placeholder="medium" />
-    <EInput size="large" placeholder="large" />
-  </ESpace>
+  <EInput size="mini" placeholder="mini" />
+  <EInput size="small" placeholder="small" />
+  <EInput size="medium" placeholder="medium" />
+  <EInput size="large" placeholder="large" />
 </template>
 ```
 
@@ -104,14 +90,7 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput disabled placeholder="不吃了不吃了" />
-  </ESpace>
+  <EInput disabled placeholder="不吃了不吃了" />
 </template>
 ```
 
@@ -130,15 +109,8 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput width="100" placeholder="我能吞下玻璃而不伤身体" />
-    <EInput width="100%" placeholder="我能吞下玻璃而不伤身体" />
-  </ESpace>
+  <EInput width="100" placeholder="我能吞下玻璃而不伤身体" />
+  <EInput width="100%" placeholder="我能吞下玻璃而不伤身体" />
 </template>
 ```
 
@@ -159,16 +131,8 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput prefix="￥" />
-    <EInput suffix="￥" />
-  </ESpace>
+  <EInput prefix="￥" />
+  <EInput suffix="￥" />
 </template>
 ```
 
@@ -188,17 +152,9 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    vertical
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput align="left" placeholder="左对齐" />
-    <EInput align="center" placeholder="居中对齐" />
-    <EInput align="right" placeholder="右对齐" />
-  </ESpace>
+  <EInput align="left" placeholder="左对齐" />
+  <EInput align="center" placeholder="居中对齐" />
+  <EInput align="right" placeholder="右对齐" />
 </template>
 ```
 
@@ -218,14 +174,7 @@ function handleDelayedBlur() {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput @update:value="handleUpdateValue" />
-  </ESpace>
+  <EInput @update:value="handleUpdateValue" />
 </template>
 
 <script setup lang="ts">
@@ -249,14 +198,7 @@ function handleUpdateValue(value: string) {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput @input="handleInput" />
-  </ESpace>
+  <EInput @input="handleInput" />
 </template>
 
 <script setup lang="ts">
@@ -284,18 +226,11 @@ function handleInput(value: string) {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput>
-      <template #prefix>
-        <EText secondary>￥</EText>
-      </template>
-    </EInput>
-  </ESpace>
+  <EInput>
+    <template #prefix>
+      <EText secondary>￥</EText>
+    </template>
+  </EInput>
 </template>
 ```
 
@@ -317,18 +252,11 @@ function handleInput(value: string) {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput suffix="￥">
-      <template #suffix>
-        <EText secondary>￥</EText>
-      </template>
-    </EInput>
-  </ESpace>
+  <EInput suffix="￥">
+    <template #suffix>
+      <EText secondary>￥</EText>
+    </template>
+  </EInput>
 </template>
 ```
 
@@ -349,16 +277,8 @@ function handleInput(value: string) {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput ref="inputRef" />
-    <EButton @click="handleFocus">聚焦</EButton>
-  </ESpace>
+  <EInput ref="inputRef" />
+  <EButton @click="handleFocus">聚焦</EButton>
 </template>
 
 <script setup lang="ts">
@@ -385,16 +305,8 @@ function handleFocus() {
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EInput ref="inputRef" />
-    <EButton @click="handleDelayedBlur">聚焦，三秒后失焦</EButton>
-  </ESpace>
+  <EInput ref="inputRef" />
+  <EButton @click="handleDelayedBlur">聚焦，三秒后失焦</EButton>
 </template>
 
 <script setup lang="ts">

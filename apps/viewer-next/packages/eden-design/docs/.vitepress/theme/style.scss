@@ -91,7 +91,8 @@ a.VPButton,
   h5,
   h6,
   .title,
-  strong {
+  strong,
+  summary {
     font-weight: 700;
     font-family: "Wix Madefor", "HarmonyOS Sans SC Bold",
       var(--vp-font-family-base);
@@ -127,9 +128,9 @@ a.VPButton,
 }
 
 :root {
-  --vp-font-family-base: "Wix Madefor", "HarmonyOS Sans SC",
-    "Microsoft YaHei", "PingFang SC", -apple-system, system-ui, "Segoe UI",
-    Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
+  --vp-font-family-base: "Wix Madefor", "HarmonyOS Sans SC", "Microsoft YaHei",
+    "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
     "Hiragino Sans GB", Arial, sans-serif;
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     "Menlo", "Courier", "monospace";
@@ -189,7 +190,7 @@ a.VPButton,
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -287,4 +288,3 @@ a.VPButton,
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
-

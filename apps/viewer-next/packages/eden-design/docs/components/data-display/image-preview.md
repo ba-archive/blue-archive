@@ -36,18 +36,12 @@ function handleClosePreview() {
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EImagePreview
-      v-if="showPreview"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-      @close="handleClosePreview"
-    />
-    <EButton @click="handleShowPreview">展示图片预览</EButton>
-  </ESpace>
+  <EImagePreview
+    v-if="showPreview"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+    @close="handleClosePreview"
+  />
+  <EButton @click="handleShowPreview">展示图片预览</EButton>
 </template>
 
 <script setup lang="ts">

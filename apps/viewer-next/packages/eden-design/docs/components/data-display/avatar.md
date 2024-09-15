@@ -29,17 +29,10 @@ outline: deep
 
 ```vue
 <template>
-  <ESpace
-    align="end"
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
-    <EAvatar background="color-fill-3">
-      <EText color="#fff" level="3">Eden</EText>
-    </EAvatar>
-  </ESpace>
+  <EAvatar src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar background="color-fill-3">
+    <EText color="#fff" level="3">Eden</EText>
+  </EAvatar>
 </template>
 ```
 
@@ -67,50 +60,36 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    wrap
-    align="end"
-    padding="10"
+  <EAvatar
+    size="mini"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar
     size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar
-      size="mini"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="small"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="medium"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="large"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="xlarge"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="56px"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="48"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      :size="32"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-    <EAvatar
-      size="1.5rem"
-      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-  </ESpace>
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar
+    size="medium"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar
+    size="large"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar
+    size="xlarge"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar
+    size="56px"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
+  <EAvatar size="48" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar :size="32" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
+  <EAvatar
+    size="1.5rem"
+    src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
 </template>
 ```
 
@@ -128,13 +107,7 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar squared src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
-  </ESpace>
+  <EAvatar squared src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
 </template>
 ```
 
@@ -167,30 +140,24 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
+  <EAvatar background="danger-6">
+    <EText color="#fff">R</EText>
+  </EAvatar>
+  <EAvatar background="success-6">
+    <EText color="#fff">G</EText>
+  </EAvatar>
+  <EAvatar background="arona-blue-6">
+    <EText color="#fff">B</EText>
+  </EAvatar>
+  <EAvatar
+    :background="{
+      from: 'var(--danger-6)',
+      to: 'var(--arona-blue-6)',
+      deg: 135,
+    }"
   >
-    <EAvatar background="danger-6">
-      <EText color="#fff">R</EText>
-    </EAvatar>
-    <EAvatar background="success-6">
-      <EText color="#fff">G</EText>
-    </EAvatar>
-    <EAvatar background="arona-blue-6">
-      <EText color="#fff">B</EText>
-    </EAvatar>
-    <EAvatar
-      :background="{
-        from: 'var(--danger-6)',
-        to: 'var(--arona-blue-6)',
-        deg: 135,
-      }"
-    >
-      <EText color="#fff" level="3">炫彩</EText>
-    </EAvatar>
-  </ESpace>
+    <EText color="#fff" level="3">炫彩</EText>
+  </EAvatar>
 </template>
 ```
 
@@ -215,18 +182,12 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar bordered size="large">
-      <EText level="3" secondary>默认</EText>
-    </EAvatar>
-    <EAvatar bordered borderColor="success-6" borderWidth="2" size="large">
-      <EText level="3" secondary>自定义</EText>
-    </EAvatar>
-  </ESpace>
+  <EAvatar bordered size="large">
+    <EText level="3" secondary>默认</EText>
+  </EAvatar>
+  <EAvatar bordered borderColor="success-6" borderWidth="2" size="large">
+    <EText level="3" secondary>自定义</EText>
+  </EAvatar>
 </template>
 ```
 
@@ -244,16 +205,10 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar
-      src="https://example.com/image.jpg"
-      fallbackSrc="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-    />
-  </ESpace>
+  <EAvatar
+    src="https://example.com/image.jpg"
+    fallbackSrc="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+  />
 </template>
 ```
 
@@ -278,22 +233,16 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ```vue
 <template>
-  <ESpace
-    padding="10"
-    size="small"
-    class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]"
-  >
-    <EAvatar size="large" background="color-fill-3">
-      <EText color="#fff" level="3">Eden</EText>
-    </EAvatar>
-    <EAvatar size="large" background="color-fill-3">
-      <EImage
-        src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
-        width="56"
-        height="56"
-      />
-    </EAvatar>
-  </ESpace>
+  <EAvatar size="large" background="color-fill-3">
+    <EText color="#fff" level="3">Eden</EText>
+  </EAvatar>
+  <EAvatar size="large" background="color-fill-3">
+    <EImage
+      src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg"
+      width="56"
+      height="56"
+    />
+  </EAvatar>
 </template>
 ```
 
