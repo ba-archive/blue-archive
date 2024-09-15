@@ -19,8 +19,6 @@ outline: deep
 
 ## 基本用法
 
-如果它长得像按钮，点击起来像按钮，那它就是按钮。
-
 按钮有主要和次要两种类型。默认类型为主要，可以通过 `secondary` 属性来设置为次要按钮。
 
 <ESpace padding="10" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">

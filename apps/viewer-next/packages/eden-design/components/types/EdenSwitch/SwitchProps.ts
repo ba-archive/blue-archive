@@ -4,10 +4,10 @@ export type SwitchProps = {
   checked?: boolean;
   thumbColor?: WithGradientBackground;
   backgroundColor?: WithGradientBackground;
-  borderColor?: WithGradientBackground;
+  borderColor?: string;
   disabled?: boolean;
-  "update:checked"?: (checked: boolean) => void;
   size?: "mini" | "small" | "medium" | "large";
+  controlled?: boolean; // 受控状态
 
   /* 颜色快捷方式 */
   brand?: boolean;

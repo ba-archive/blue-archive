@@ -42,19 +42,6 @@ const thumbStyle = computed(() => [
     },
 ]);
 
-const borderGradientStyle = computed(() => {
-  if ("[object Object]" === Object.prototype.toString.call(props.borderColor)) {
-    const { backgroundImage } = getGradientStyle(
-      props.borderColor as {
-        from: string;
-        to: string;
-        deg?: number | string;
-      }
-    );
-    return { borderImage: backgroundImage };
-  }
-});
-
 const backgroundGradientStyle = computed(() => {
   if (
     "[object Object]" === Object.prototype.toString.call(props.backgroundColor)
@@ -71,7 +58,6 @@ const backgroundGradientStyle = computed(() => {
 });
 
 const borderStyle = computed(() => [
-  borderGradientStyle.value,
   backgroundGradientStyle.value,
   props.borderColor &&
     "string" === typeof props.borderColor && {
@@ -99,14 +85,14 @@ const switchClass = computed(() => [
   "transition-all duration-300 ease-in-out",
   {
     disabled: props.disabled,
-    "!cursor-not-allowed": props.disabled,
+    "!cursor-not-allowed": props.disabled || props.controlled,
   },
 ]);
 
 const emits = defineEmits(["update:checked"]);
 
 function handleClick() {
-  if (props.disabled) return;
+  if (props.disabled || props.controlled) return;
   switchState.value = !switchState.value;
   model.value = switchState.value;
   emits("update:checked", switchState.value);
