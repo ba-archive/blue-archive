@@ -51,7 +51,7 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 可以通过给 `size` 属性传入 `number` 或 `string` 来设置自定义尺寸。数值支持 `px`、`rem`、`em`、`%` 等单位。
 
-<ESpace align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+<ESpace wrap align="end" padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EAvatar size="mini" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
   <EAvatar size="small" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
   <EAvatar size="medium" src="https://cdn.sa.net/2024/09/15/HfLgdKCBeP2SbVW.jpg" />
@@ -68,6 +68,7 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 ```vue
 <template>
   <ESpace
+    wrap
     align="end"
     padding="10"
     size="small"
