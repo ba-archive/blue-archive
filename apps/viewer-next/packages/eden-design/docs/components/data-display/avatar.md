@@ -115,7 +115,7 @@ Avatar 组件有 `mini`，`small`，`medium`，`large`和`xlarge` 五种预设�
 
 ## 背景颜色
 
-通过 `background` 属性可以设置头像的背景颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg: number | string }`。
+通过 `background` 属性可以设置头像的背景颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg?: number | string }`。
 
 <ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EAvatar background="danger-6">
