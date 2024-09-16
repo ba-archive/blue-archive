@@ -206,6 +206,8 @@ function handleInput(value: string) {
 </script>
 ```
 
+:::
+
 ## 插槽
 
 ### `prefix`
@@ -213,9 +215,9 @@ function handleInput(value: string) {
 使用 `prefix` 插槽为输入框插入前缀。也可以用 `prefix` 属性快速插入字符串。
 
 <ESpace wrap padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
-  <EInput prefix="￥">
+  <EInput>
     <template #prefix>
-      <EText secondary>￥</EText>
+      <EText tertiary>￥</EText>
     </template>
   </EInput>
 </ESpace>
@@ -226,7 +228,7 @@ function handleInput(value: string) {
 <template>
   <EInput>
     <template #prefix>
-      <EText secondary>￥</EText>
+      <EText tertiary>￥</EText>
     </template>
   </EInput>
 </template>
@@ -241,7 +243,7 @@ function handleInput(value: string) {
 <ESpace wrap padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EInput>
     <template #suffix>
-      <EText secondary>￥</EText>
+      <EText tertiary>￥</EText>
     </template>
   </EInput>
 </ESpace>
@@ -252,7 +254,7 @@ function handleInput(value: string) {
 <template>
   <EInput suffix="￥">
     <template #suffix>
-      <EText secondary>￥</EText>
+      <EText tertiary>￥</EText>
     </template>
   </EInput>
 </template>
