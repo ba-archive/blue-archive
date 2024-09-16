@@ -11,5 +11,6 @@
     <e-link to="/tests/slider">test slider</e-link>
     <e-link to="/tests/icons">test icons</e-link>
     <e-link to="/tests/images">test images</e-link>
+    <e-link to="/tests/spinner">test spinner</e-link>
   </div>
 </template>
