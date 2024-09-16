@@ -149,6 +149,17 @@ export default defineConfig({
                 ],
               },
               {
+                text: "反馈 / Feedback",
+                // link: "/components/#反馈-feedback",
+                collapsed: true,
+                items: [
+                  {
+                    text: "加载中 / Spinner",
+                    link: "/components/feedback/spinner",
+                  },
+                ],
+              },
+              {
                 text: "导航 / Navigation",
                 // link: "/components/#导航-navigation",
                 collapsed: true,

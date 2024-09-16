@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<SpinnerProps>(), {
   baseColor: "#E8F5FF",
   primaryColor: "#2773E1",
   secondaryColor: "#96C6F3",
-  strokeWidth: "3",
+  strokeWidth: "2",
 });
 
 const presetColors = {

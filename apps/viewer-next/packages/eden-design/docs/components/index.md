@@ -44,6 +44,10 @@ outline: deep
 
 ### [开关 / Switch](./data-entry/switch.md)
 
+## 反馈 / Feedback
+
+### [加载中 / Spinner](./feedback/spinner.md)
+
 ## 导航 / Navigation
 
 ### [菜单 / Menu](./navigation/menu.md)
