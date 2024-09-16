@@ -13,7 +13,7 @@ function handleClickReport($event: Event) {
       <e-h2>微型按钮 / Button Size: mini</e-h2>
       <e-h3>Primary</e-h3>
       <e-space>
-        <e-button size="mini" primary>微型按钮</e-button>
+        <e-button size="mini" primary loading>微型按钮</e-button>
         <e-button size="mini" primary danger>微型按钮</e-button>
         <e-button size="mini" primary success>微型按钮</e-button>
         <e-button size="mini" primary warning>微型按钮</e-button>

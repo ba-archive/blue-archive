@@ -8,6 +8,7 @@ export type ButtonProps = {
   background?: WithGradientBackground;
   bordered?: boolean;
   wide?: boolean;
+  loading?: boolean;
 
   /* 按钮类型 */
   primary?: boolean;

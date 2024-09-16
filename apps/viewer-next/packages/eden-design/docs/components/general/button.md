@@ -10,10 +10,17 @@ outline: deep
   import EButton from "@eden-design/components/EButton.vue"
   import ESpace from "@eden-design/components/ESpace.vue"
   import EIconAdd from "@eden-design/components/icon/EIconAdd.vue"
+  import {ref} from "vue"
   import {ElMessage} from "element-plus"
 
   function handleClick() {
     ElMessage.success("clicked!")
+  }
+
+  const loading = ref(false)
+
+  function handleLoading() {
+    loading.value = !loading.value
   }
 </script>
 
@@ -151,6 +158,34 @@ outline: deep
 
 :::
 
+## 加载状态
+
+可以使用 `loading` 属性来设置按钮的加载状态。处于加载状态时的按钮不可点击。
+
+<ESpace padding="10" size="small" class="rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
+    <EButton @click="handleLoading">点我</EButton>
+    <EButton :loading="loading">
+      <template #icon>
+        <EIconAdd name="home" color="#ffffff"/>
+      </template>
+      看我
+    </EButton>
+    <EButton :loading="loading">
+      看我
+    </EButton>
+</ESpace>
+
+:::details 查看代码
+
+```vue
+<template>
+  <EButton @click="handleLoading">点我</EButton>
+  <EButton :loading="loading">看我</EButton>
+</template>
+```
+
+:::
+
 ## 自定义颜色
 
 可以使用 `background` 属性来设置按钮的背景颜色，用 `textProps.color` 来设置按钮的文字颜色。`background` 支持设置线性渐变，语法为 `{ from: string, to: string, deg: number | string }`。
@@ -170,19 +205,16 @@ outline: deep
 
 ```vue
 <template>
-  <EButton
-    background="#B3F6EC"
-    :textProps="{ color: '#00888F', bold: true }"
-  >
+  <EButton background="#B3F6EC" :textProps="{ color: '#00888F', bold: true }">
     世界で一番お姫様
   </EButton>
-  
+
   <EButton
     :background="{ from: '#39C5BB', to: '#00888F', deg: 135 }"
     :textProps="{
-          color: { from: '#56D1C4', to: '#BFF3E9', deg: 135 },
-          bold: true,
-        }"
+      color: { from: '#56D1C4', to: '#BFF3E9', deg: 135 },
+      bold: true,
+    }"
   >
     世界で一番お姫様
   </EButton>

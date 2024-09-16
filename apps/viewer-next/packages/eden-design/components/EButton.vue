@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ETextCore from "~/packages/eden-design/components/reusables/EdenTextCore/ETextCore.vue";
+import ESpinner from "~/packages/eden-design/components/ESpinner.vue";
 import type { ButtonProps } from "~/packages/eden-design/components/types/EdenButton/ButtonProps";
 import {
   getGradientStyle,
@@ -34,7 +35,7 @@ function getPresetPaletteName() {
 const buttonClass = computed(() => [
   "eden-ui",
   "eden-ui__button",
-  "flex items-center justify-center cursor-pointer transition-all duration-300",
+  "pl-3 pr-3 rounded border-none outline-none appearance-none bg-transparent flex items-center justify-center cursor-pointer transition-all duration-300",
   `size-${props.size}`,
   `palette-${getPresetPaletteName()}`,
   {
@@ -42,6 +43,7 @@ const buttonClass = computed(() => [
     secondary: props.secondary,
     bordered: props.bordered,
     disabled: props.disabled,
+    loading: props.loading,
     pressed: !props.disabled && pressed.value,
     "w-full": props.wide,
   },
@@ -76,6 +78,7 @@ function handleMouseAction(
 ) {
   switch (action) {
     case "mousedown":
+      if (props.disabled || props.loading) return;
       pressed.value = true;
       released.value = false;
       break;
@@ -100,9 +103,8 @@ function handleMouseAction(
 const emits = defineEmits(["click"]);
 
 function clickHandler() {
-  if (!props.disabled) {
-    emits("click");
-  }
+  if (props.disabled || props.loading) return;
+  emits("click");
 }
 </script>
 
@@ -115,10 +117,17 @@ function clickHandler() {
     @mouseup="handleMouseAction('mouseup')"
     @mouseenter="handleMouseAction('mouseenter')"
     @click.prevent="clickHandler"
+    ref="buttonRef"
   >
-    <span class="eden-ui__button--icon mr-1" v-if="useSlots().icon">
-      <slot name="icon"></slot>
-    </span>
+    <transition name="zoom">
+      <span
+        class="eden-ui__button--icon mr-1"
+        v-if="useSlots().icon || loading"
+      >
+        <slot name="icon" v-if="!loading" />
+        <ESpinner class="!m-0 !mr-[2px]" v-else :size="14" white />
+      </span>
+    </transition>
     <ETextCore
       :props="{
         ...textProps,
@@ -136,16 +145,8 @@ function clickHandler() {
 
 <style scoped lang="scss">
 .eden-ui__button {
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 4px;
-  /* reset */
-  appearance: none;
-  border: none;
-  outline: none;
-  background-color: transparent;
-
-  &.disabled {
+  &.disabled,
+  &.loading {
     cursor: not-allowed !important;
     opacity: 0.7;
   }
@@ -173,11 +174,11 @@ function clickHandler() {
       background-color: $arona-blue-6;
       color: $fill-base;
 
-      &:not(.disabled, .bordered):hover {
+      &:not(.disabled, .bordered, .loading):hover {
         background-color: $arona-blue-5;
       }
 
-      &:not(.disabled, .bordered).pressed {
+      &:not(.disabled, .bordered, .loading).pressed {
         background-color: $arona-blue-7 !important;
       }
 
@@ -199,11 +200,11 @@ function clickHandler() {
         background-color: transparent;
         color: $arona-blue-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           border-color: $arona-blue-5;
         }
 
-        &:not(.disabled).pressed {
+        &:not(.disabled, .loading).pressed {
           border-color: $arona-blue-7;
         }
       }
@@ -213,11 +214,11 @@ function clickHandler() {
       background-color: $danger-6;
       color: $fill-base;
 
-      &:not(.disabled, .bordered):hover {
+      &:not(.disabled, .bordered, .loading):hover {
         background-color: $danger-5;
       }
 
-      &:not(.disabled, .bordered).pressed {
+      &:not(.disabled, .bordered, .loading).pressed {
         background-color: $danger-7 !important;
       }
 
@@ -225,7 +226,7 @@ function clickHandler() {
         background-color: $danger-2;
         color: $danger-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           background-color: $danger-1;
         }
 
@@ -239,11 +240,11 @@ function clickHandler() {
         background-color: transparent;
         color: $danger-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           border-color: $danger-5;
         }
 
-        &:not(.disabled).pressed {
+        &:not(.disabled, .loading).pressed {
           border-color: $danger-7;
         }
       }
@@ -253,11 +254,11 @@ function clickHandler() {
       background-color: $success-6;
       color: $fill-base;
 
-      &:not(.disabled, .bordered):hover {
+      &:not(.disabled, .bordered, .loading):hover {
         background-color: $success-5;
       }
 
-      &:not(.disabled, .bordered).pressed {
+      &:not(.disabled, .bordered, .loading).pressed {
         background-color: $success-7 !important;
       }
 
@@ -265,7 +266,7 @@ function clickHandler() {
         background-color: $success-2;
         color: $success-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           background-color: $success-1;
         }
 
@@ -279,11 +280,11 @@ function clickHandler() {
         background-color: transparent;
         color: $success-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           border-color: $success-5;
         }
 
-        &:not(.disabled).pressed {
+        &:not(.disabled, .loading).pressed {
           border-color: $success-7;
         }
       }
@@ -293,11 +294,11 @@ function clickHandler() {
       background-color: $warning-6;
       color: $fill-base;
 
-      &:not(.disabled, .bordered):hover {
+      &:not(.disabled, .bordered, .loading):hover {
         background-color: $warning-5;
       }
 
-      &:not(.disabled, .bordered).pressed {
+      &:not(.disabled, .bordered, .loading).pressed {
         background-color: $warning-7 !important;
       }
 
@@ -305,7 +306,7 @@ function clickHandler() {
         background-color: $warning-2;
         color: $warning-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           background-color: $warning-1;
         }
 
@@ -319,11 +320,11 @@ function clickHandler() {
         background-color: transparent;
         color: $warning-6;
 
-        &:not(.disabled):hover {
+        &:not(.disabled, .loading):hover {
           border-color: $warning-5;
         }
 
-        &:not(.disabled).pressed {
+        &:not(.disabled, .loading).pressed {
           border-color: $warning-7;
         }
       }
@@ -356,6 +357,16 @@ function clickHandler() {
       }
     }
   }
+}
+
+.zoom-enter-active,
+.zoom-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.zoom-enter-from,
+.zoom-leave-to {
+  transform: scale(0);
 }
 
 html.dark-mode {
