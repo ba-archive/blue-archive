@@ -366,6 +366,10 @@ outline: deep
 
 使用 `inline` 属性可以设置文本为内联文本。
 
+:::warning
+当属性为 `inline` 时，`align` 属性会失效。
+:::
+
 <ESpace vertical padding="10" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 <template #divider>
   <EDivider />

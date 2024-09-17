@@ -40,6 +40,7 @@ const textClass = computed(() => [
     "line-through": textCoreProps.props.delete,
     underline: textCoreProps.props.underline,
     "whitespace-nowrap": textCoreProps.props.noWrap,
+    "!inline": textCoreProps.props.inline,
     /* 颜色预设 */
     "color-brand": textCoreProps.props.brand,
     "color-danger": textCoreProps.props.error || textCoreProps.props.danger,
