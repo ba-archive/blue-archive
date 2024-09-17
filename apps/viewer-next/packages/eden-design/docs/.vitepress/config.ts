@@ -4,6 +4,8 @@ import AutoImport from "unplugin-auto-import/vite";
 import vueDevTools from "vite-plugin-vue-devtools";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import * as path from "path";
+import implicitFigures from "markdown-it-implicit-figures";
+import { imgSize } from "@mdit/plugin-img-size";
 
 const SPACE_OR_PUNCTUATION = new RegExp(
   // ts-ignore
@@ -45,7 +47,8 @@ export default defineConfig({
       },
     ],
     editLink: {
-      pattern: "https://github.com/ba-archive/blue-archive/tree/dev/apps/viewer-next/packages/eden-design/docs/:path",
+      pattern:
+        "https://github.com/ba-archive/blue-archive/tree/dev/apps/viewer-next/packages/eden-design/docs/:path",
       text: "在 GitHub 上编辑此页面",
     },
     sidebar: [
@@ -279,6 +282,13 @@ export default defineConfig({
       level: [2, 6],
     },
     lineNumbers: true,
+    config: md => {
+      md.use(implicitFigures, {
+        figcaption: true,
+        copyAttrs: "^class$",
+      })
+      .use(imgSize);
+    },
   },
   vite: {
     resolve: {

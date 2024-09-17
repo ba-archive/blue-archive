@@ -714,6 +714,9 @@ importers:
       '@floating-ui/vue':
         specifier: ~1.1.4
         version: 1.1.4(vue@3.4.29(typescript@5.4.5))
+      '@mdit/plugin-img-size':
+        specifier: ~0.13.1
+        version: 0.13.1(markdown-it@14.1.0)
       '@unocss/reset':
         specifier: ^0.62.2
         version: 0.62.2
@@ -726,6 +729,9 @@ importers:
       element-plus:
         specifier: ^2.7.3
         version: 2.7.3(vue@3.4.29(typescript@5.4.5))
+      markdown-it-implicit-figures:
+        specifier: ~0.12.0
+        version: 0.12.0
       nuxt:
         specifier: ^3.13.0
         version: 3.13.0(@parcel/watcher@2.4.1)(@types/node@20.12.12)(eslint@9.3.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.20.0)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)(vite@5.4.2(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))(vue-tsc@2.0.19(typescript@5.4.5))
@@ -3218,6 +3224,15 @@ packages:
 
   '@mdit-vue/types@2.1.0':
     resolution: {integrity: sha512-TMBB/BQWVvwtpBdWD75rkZx4ZphQ6MN0O4QB2Bc0oI5PC2uE57QerhNxdRZ7cvBHE2iY2C+BUNUziCfJbjIRRA==}
+
+  '@mdit/plugin-img-size@0.13.1':
+    resolution: {integrity: sha512-cgihl72BNzij7GXjrqcKhl2eOqAlqWHiImOgblJPghDFNFKnnynty/Bf9nwbj8hTnhVWznFeuwawzXBfKYNbkg==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
 
   '@microsoft/api-extractor-model@7.28.13':
     resolution: {integrity: sha512-39v/JyldX4MS9uzHcdfmjjfS6cYGAoXV+io8B5a338pkHiSt+gy2eXQ0Q7cGFJ7quSa1VqqlMdlPrB6sLR/cAw==}
@@ -8040,6 +8055,10 @@ packages:
 
   mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
+
+  markdown-it-implicit-figures@0.12.0:
+    resolution: {integrity: sha512-IeD2V74f3ZBYrZ+bz/9uEGii0S61BYoD2731qsHTgYLlENUrTevlgODScScS1CK44/TV9ddlufGHCYCQueh1rw==}
+    engines: {node: '>=0.10.0'}
 
   markdown-it-link-attributes@4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
@@ -14579,17 +14598,23 @@ snapshots:
 
   '@mdit-vue/plugin-component@2.1.2':
     dependencies:
-      '@types/markdown-it': 14.0.1
+      '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0
 
   '@mdit-vue/plugin-frontmatter@2.1.2':
     dependencies:
       '@mdit-vue/types': 2.1.0
-      '@types/markdown-it': 14.0.1
+      '@types/markdown-it': 14.1.2
       gray-matter: 4.0.3
       markdown-it: 14.1.0
 
   '@mdit-vue/types@2.1.0': {}
+
+  '@mdit/plugin-img-size@0.13.1(markdown-it@14.1.0)':
+    dependencies:
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 14.1.0
 
   '@microsoft/api-extractor-model@7.28.13(@types/node@20.12.12)':
     dependencies:
@@ -21069,6 +21094,8 @@ snapshots:
       semver: 6.3.1
 
   mark.js@8.11.1: {}
+
+  markdown-it-implicit-figures@0.12.0: {}
 
   markdown-it-link-attributes@4.0.1: {}
 

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
 import type { TextProps } from "../types/EdenTextCore/TextProps";
+import { useSlots } from "vue";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
@@ -10,7 +11,7 @@ const props = withDefaults(defineProps<TextProps>(), {
 </script>
 
 <template>
-  <ul class="eden-ui">
+  <ol class="eden-ui eden-ui--ol">
     <ETextCore :props="props">
       <template #prefix v-if="!!useSlots().prefix">
         <slot name="prefix"></slot>
@@ -20,5 +21,21 @@ const props = withDefaults(defineProps<TextProps>(), {
         <slot name="suffix"></slot>
       </template>
     </ETextCore>
-  </ul>
+  </ol>
 </template>
+
+<style lang="scss">
+.eden-ui--ol {
+  counter-reset: counter;
+
+  .eden-ui__li {
+    counter-increment: counter !important;
+    list-style-type: none !important;
+
+    &::before {
+      content: counter(counter) "." !important;
+      margin-right: 0.5rem !important;
+    }
+  }
+}
+</style>

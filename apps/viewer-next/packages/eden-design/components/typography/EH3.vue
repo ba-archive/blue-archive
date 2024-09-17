@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
 import type { TextProps } from "../types/EdenTextCore/TextProps";
+import { useSlots } from "vue";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",

@@ -6,14 +6,12 @@ import { useSlots, computed } from "vue";
 const slots = useSlots();
 
 const props = withDefaults(defineProps<TextProps>(), {
-  align: "left",
+  align: "start",
   level: 2,
   type: "body",
 });
 
 const elementTag = computed(() => {
-  if (props.sub) return "sub";
-  if (props.sup) return "sup";
   return props.inline ? "span" : "p";
 });
 

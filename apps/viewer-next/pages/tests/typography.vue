@@ -29,23 +29,23 @@ const placeholderEn = `I really went mad about Mika🤤I lie in bed and think of
     </span>
     <EText brand sub> 自定义颜色 {{ placeholderEn }} </EText>
     <EBlockquote delete color="success-6"> blockquote {{ placeholderText }} </EBlockquote>
-    <n-ol>
-      <n-li brand>Ordered List 1</n-li>
-      <n-li tertiary>Ordered List 2</n-li>
-    </n-ol>
-    <n-ol>
-      <n-li secondary>Ordered List 1</n-li>
-      <n-li bold success>Ordered List 2</n-li>
-    </n-ol>
-    <n-ul>
-      <n-li danger bold>无序列表 1</n-li>
-      <n-li warning>无序列表 2</n-li>
-      <n-li :color="{
+    <e-ol>
+      <e-li brand>Ordered List 1</e-li>
+      <e-li tertiary>Ordered List 2</e-li>
+    </e-ol>
+    <e-ol>
+      <e-li secondary>Ordered List 1</e-li>
+      <e-li bold success>Ordered List 2</e-li>
+    </e-ol>
+    <e-ul>
+      <e-li danger bold>无序列表 1</e-li>
+      <e-li warning>无序列表 2</e-li>
+      <e-li :color="{
         from: 'var(--plana-pink-6)',
         to: 'var(--arona-blue-6)',
         deg: 'to right',
-      }">{{ placeholderText }}</n-li>
-    </n-ul>
+      }">{{ placeholderText }}</e-li>
+    </e-ul>
     <e-link to="/tests/typography">链接 / Link</e-link>
     <e-link to="/tests/tags" nav>导航链接 / Navigation Link </e-link>
     <e-link to="/tests/typography" nav bold>活跃导航链接 / Navigation Link Active</e-link>

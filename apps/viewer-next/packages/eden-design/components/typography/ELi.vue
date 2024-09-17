@@ -5,6 +5,7 @@ import {
   getGradientStyle,
   parseColor,
 } from "~/packages/eden-design/_utils/colorUtils";
+import { useSlots, computed } from "vue";
 
 const props = withDefaults(defineProps<TextProps>(), {
   align: "left",
@@ -35,7 +36,7 @@ const markerColor = computed(() => {
 
 const liClass = computed(() => [
   "eden-ui",
-  "eden-ui__li",
+  "eden-ui__li flex items-start",
   // FIXME: 从子组件暴露的 class 是 undefined，暂时没找到原因
   {
     "color-brand": props.brand,

@@ -40,8 +40,8 @@ export function getGradientStyle(color: {
 
   return {
     backgroundImage: `linear-gradient(${getGradientDegree(color.deg)}, ${
-      color.from
-    }, ${color.to})`,
+      parseColor(color.from)
+    }, ${parseColor(color.to)})`,
     backgroundClip: "text",
     WebkitBackgroundClip: "text",
     color: "transparent !important",

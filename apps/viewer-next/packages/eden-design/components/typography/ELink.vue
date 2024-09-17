@@ -2,6 +2,7 @@
 import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
 import type { TextProps } from "../types/EdenTextCore/TextProps";
 import type { NuxtLinkProps } from "nuxt/app";
+import { useSlots } from "vue";
 
 type EdenLinkProps = TextProps &
   NuxtLinkProps & { nav?: boolean; underline?: boolean };

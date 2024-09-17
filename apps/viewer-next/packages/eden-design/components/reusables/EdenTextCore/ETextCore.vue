@@ -28,7 +28,7 @@ const gradientStyle = computed(() => {
 const textClass = computed(() => [
   "eden-ui eden-ui__text",
   `${textCoreProps.props.type || "body"}-${textCoreProps.props.level || 2}`,
-  `align-${textCoreProps.props.align || "left"}`,
+  `align-${textCoreProps.props.align || "start"}`,
   {
     "font-bold":
       textCoreProps.props.bold ||
@@ -37,8 +37,6 @@ const textClass = computed(() => [
     "select-none": textCoreProps.props.noSelect,
     italic: textCoreProps.props.italic,
     disabled: textCoreProps.props.disabled,
-    "align-sub": textCoreProps.props.sub,
-    "align-super": textCoreProps.props.sup,
     "line-through": textCoreProps.props.delete,
     underline: textCoreProps.props.underline,
     "whitespace-nowrap": textCoreProps.props.noWrap,
@@ -70,16 +68,14 @@ const textStyle = computed(() => [
 
 <template>
   <!-- @vue-ignore -->
-  <span :class="textClass" :style="textStyle" v-if="!!slots.prefix">
-    <slot name="prefix"></slot>
-  </span>
-  <!-- @vue-ignore -->
   <span :class="textClass" :style="textStyle">
+    <span v-if="!!slots.prefix" class="inline-flex">
+      <slot name="prefix" ></slot>
+    </span>
     <slot></slot>
-  </span>
-  <!-- @vue-ignore -->
-  <span :class="textClass" :style="textStyle" v-if="!!slots.suffix">
-    <slot name="suffix"></slot>
+    <span v-if="!!slots.suffix" class="inline-flex">
+      <slot name="suffix"></slot>
+    </span>
   </span>
 </template>
 
@@ -120,19 +116,23 @@ const textStyle = computed(() => [
       }
     }
 
-    &.align-left {
-      text-align: left;
+    &.align-start {
+      display: inline-block;
+      text-align: start;
     }
 
     &.align-center {
+      display: inline-block;
       text-align: center;
     }
 
-    &.align-right {
-      text-align: right;
+    &.align-end {
+      display: inline-block;
+      text-align: end;
     }
 
     &.align-justify {
+      display: inline-block;
       text-align: justify;
     }
 
