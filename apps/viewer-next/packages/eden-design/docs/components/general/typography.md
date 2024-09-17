@@ -543,6 +543,19 @@ outline: deep
   <EText success> {{ Array(6).fill("成功色").join("") }} </EText>
 </ESpace>
 
+:::details 查看代码
+
+```vue
+<template>
+  <EText brand> {{ Array(6).fill("品牌色").join("") }} </EText>
+  <EText danger> {{ Array(6).fill("危险色").join("") }} </EText>
+  <EText secondary> {{ Array(6).fill("次要色").join("") }} </EText>
+  <EText success> {{ Array(6).fill("成功色").join("") }} </EText>
+</template>
+```
+
+:::
+
 ## 处理显示异常的可变字体
 
 现代浏览器使用 `font-synthesis` 控制字体合成的行为。它允许浏览器在某些情况下选择替代字体，以确保文本的显示效果最佳。然而 Safari 浏览器对可变字体的支持策略会导致英文字体 Wix Madefor 显示粗体时异常。
@@ -555,7 +568,7 @@ outline: deep
 
 </div>
 
-理论上 `<EText>` 组件已经处理了这个问题，但是如果你发现某些字体在 Safari 浏览器中显示异常，可以尝试设置 `font-synthesis` 属性为 `none`。
+理论上 `<EText>` 组件已经通过指定 `font-weight` 的范围 （例如本例中的 `400 800`）处理了这个问题，但是如果你仍然发现某些字体在 Safari 浏览器中显示异常，可以尝试继续设置 `font-synthesis` 属性为 `none`。
 
 ```css
 .font-synthesis-none {
