@@ -1,6 +1,11 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@eden-design/*": ["packages/eden-design/*"],
+    //   "~": ["./"]
+    // },
     "lib": ["esnext", "esnext.asynciterable", "dom"],
   }
 }

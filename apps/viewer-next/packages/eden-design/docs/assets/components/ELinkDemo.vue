@@ -17,6 +17,7 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
 </script>
 
 <template>
+  <!-- @vue-ignore -->
   <a
     class="eden-ui eden-ui__link w-[fit-content] flex items-center"
     :class="{

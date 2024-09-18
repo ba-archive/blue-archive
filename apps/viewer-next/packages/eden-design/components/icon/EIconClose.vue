@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import EIconAdd from "./EIconAdd.vue";
 import type { IconProps } from "../types/EdenIcon/IconProps";
+import { parseColor } from "../../_utils/colorUtils";
 
 withDefaults(defineProps<IconProps>(), {
   size: "16",
@@ -15,7 +16,7 @@ withDefaults(defineProps<IconProps>(), {
   <e-icon-add
     :rotate="rotate"
     :size="size"
-    :color="color"
+    :color="parseColor(color)"
     :stroke-width="strokeWidth"
     :fill="fill"
   />

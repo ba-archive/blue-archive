@@ -11,7 +11,7 @@
   >
     <path
       d="M3.997 13H20a1 1 0 1 0 0-2H3.997a1 1 0 1 0 0 2Z"
-      :fill="color"
+      :fill="parseColor(color)"
       :stroke-width="strokeWidth"
     />
   </svg>
@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 import type { IconProps } from "../types/EdenIcon/IconProps";
+import { parseColor } from "../../_utils/colorUtils";
 
 withDefaults(defineProps<IconProps>(), {
   size: "16",
