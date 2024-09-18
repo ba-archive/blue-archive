@@ -73,6 +73,10 @@ export default defineConfig({
                     link: "/components/general/icon",
                   },
                   {
+                    text: "链接 / Link",
+                    link: "/components/general/link",
+                  },
+                  {
                     text: "排版 / Typography",
                     link: "/components/general/typography",
                   },

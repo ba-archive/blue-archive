@@ -10,6 +10,8 @@ outline: deep
 
 ### [图标 / Icon](./general/icon.md)
 
+### [链接 / Link](./general/link.md)
+
 ### [排版 / Typography](./general/typography.md)
 
 ## 布局 / Layout

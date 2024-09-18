@@ -1,6 +1,6 @@
 <script lang="tsx" setup>
-import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
-import type { TextProps } from "../types/EdenTextCore/TextProps";
+import ETextCore from "@eden-design/components/reusables/EdenTextCore/ETextCore.vue";
+import type { TextProps } from "../../../components/types/EdenTextCore/TextProps";
 import type { NuxtLinkProps } from "nuxt/app";
 import { useSlots } from "vue";
 
@@ -17,13 +17,13 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
 </script>
 
 <template>
-  <NuxtLink
+  <a
     class="eden-ui eden-ui__link w-[fit-content] flex items-center"
     :class="{
       'nav-link': props.nav,
     }"
     :to="props.to"
-    :href="props.href"
+    :href="props.href || props.to"
     :external="props.external"
     :target="props.target"
     :rel="props.rel"
@@ -46,7 +46,7 @@ const props = withDefaults(defineProps<EdenLinkProps>(), {
         <slot name="suffix"></slot>
       </template>
     </ETextCore>
-  </NuxtLink>
+  </a>
 </template>
 
 <style lang="scss" scoped>
