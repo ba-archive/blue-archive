@@ -88,23 +88,7 @@ async function next(NextGroupId: number, id: number) {
     // 不需要玩家选择（即学生发给玩家的信息）
     messageList.value.push({
       avatar: true,
-      MessageGroupId: firstMessageGroupElement.MessageGroupId,
-      Id: firstMessageGroupElement.Id,
-      CharacterId: firstMessageGroupElement.CharacterId,
-      ConditionValue: firstMessageGroupElement.ConditionValue,
-      PreConditionGroupId: firstMessageGroupElement.PreConditionGroupId,
-      FavorScheduleId: firstMessageGroupElement.FavorScheduleId,
-      NextGroupId: firstMessageGroupElement.NextGroupId,
-      FeedbackTimeMillisec: firstMessageGroupElement.FeedbackTimeMillisec,
-      MessageCondition: firstMessageGroupElement.MessageCondition,
-      MessageType: firstMessageGroupElement.MessageType,
-      ImagePath: firstMessageGroupElement.ImagePath,
-      MessageJP: firstMessageGroupElement.MessageJP,
-      MessageCN: firstMessageGroupElement.MessageCN,
-      MessageEN: firstMessageGroupElement.MessageEN,
-      MessageKR: firstMessageGroupElement.MessageKR,
-      MessageTH: firstMessageGroupElement.MessageTH,
-      MessageTW: firstMessageGroupElement.MessageTW,
+      ...firstMessageGroupElement,
     });
     await wait(firstMessageGroupElement.FeedbackTimeMillisec || 1500);
     if (firstMessageGroupElement.FavorScheduleId !== 0) {
