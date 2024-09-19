@@ -42,6 +42,7 @@ const instance = axios.create({
     "anthropic-version": "2023-06-01",
     "x-api-key": ANTHROPIC_TIER1_SECRET || "",
     "anthropic-beta": "prompt-caching-2024-07-31",
+    "anthropic-dangerous-direct-browser-access": "true",
   },
 });
 
