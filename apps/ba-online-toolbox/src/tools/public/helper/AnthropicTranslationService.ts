@@ -1,6 +1,6 @@
-import axios from "axios";
 import secrets from "../secrets.json";
-import { AxiosError } from "axios";
+import type { AxiosError } from "axios";
+import { createAnthropicInstance } from "./AnthropicUtils";
 
 const { ANTHROPIC_TIER1_SECRET } = secrets;
 
@@ -34,17 +34,7 @@ enum TranslationMode {
   "amend",
 }
 
-// anthropic API 有问题，自己构建一个 axios 实例
-const instance = axios.create({
-  // baseURL: "https://api.anthropic.com/v1",
-  headers: {
-    "Content-Type": "application/json",
-    "anthropic-version": "2023-06-01",
-    "x-api-key": ANTHROPIC_TIER1_SECRET || "",
-    "anthropic-beta": "prompt-caching-2024-07-31",
-    "anthropic-dangerous-direct-browser-access": "true",
-  },
-});
+const instance = createAnthropicInstance();
 
 const sft_request = {
   model: "",

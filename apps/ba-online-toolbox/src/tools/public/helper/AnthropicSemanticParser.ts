@@ -1,9 +1,10 @@
-import axios, { AxiosError } from "axios";
+import type { AxiosError } from "axios";
 import secrets from "../secrets.json";
 import {
   AnthropicStatusCode,
   SemanticUnit,
 } from "../../ScenarioEditor/types/Semantic";
+import { createAnthropicInstance } from "./AnthropicUtils";
 
 const { ANTHROPIC_TIER1_SECRET } = secrets;
 
@@ -31,15 +32,7 @@ interface ClaudeRoleplayContent {
   content: ClaudeContent[];
 }
 
-// anthropic API 有问题，自己构建一个 axios 实例
-const instance = axios.create({
-  // baseURL: "https://api.anthropic.com",
-  headers: {
-    "Content-Type": "application/json",
-    "anthropic-version": "2023-06-01",
-    "x-api-key": ANTHROPIC_TIER1_SECRET || "",
-  },
-});
+const instance = createAnthropicInstance();
 
 function distillText(text: string) {
   // replace all square brackets and contents inside, "\\"" with ""
