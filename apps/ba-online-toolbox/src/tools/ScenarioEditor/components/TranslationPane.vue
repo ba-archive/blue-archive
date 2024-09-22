@@ -347,6 +347,14 @@ const replaceStrings = [
     from: "\\n",
     to: "\n",
   },
+  {
+    from: "！ ！",
+    to: "！！",
+  },
+  {
+    from: "〜。",
+    to: "〜",
+  },
 ];
 
 function handleFormalizePunctuation() {
