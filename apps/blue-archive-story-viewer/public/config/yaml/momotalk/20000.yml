@@ -55,6 +55,15 @@ title:
     GroupId: 2000009
     FavorScheduleId: 200009
     CharacterId: 20000
+  - TextJp: 愛着のかたち
+    TextCn: 依恋的形状
+    TextKr: 애착의 형태
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2000015
+    FavorScheduleId: 2000015
+    CharacterId: 20000
 content:
   - MessageKR: 안녕. 선생님. 지난번에 연락 준 이후로 답장이 없는데.
     MessageJP: おはよう、先生。この前連絡して以来、返事がなかったけど……
@@ -1622,7 +1631,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 200000510
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -1640,7 +1649,115 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 200000510
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님. 저번에 맡겨둔 자전거 수리 완료했어.
+    MessageJP: 先生、頼まれた自転車の修理、終わったよ
+    MessageCN: 老师，您之前拜托我们修理的自行车修好了哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000510
+    Id: 2000010
+    CharacterId: 20000
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 200000500
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200000520
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 별일 없으면 찾으러 와.
+    MessageJP: 後で取りに来て
+    MessageCN: 之后来拿吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000520
+    Id: 2000020
+    CharacterId: 20000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200000530
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 벌써? 역시 빠르네.
+    MessageJP: もう？さすがだね
+    MessageCN: 这么快？不愧是响啊
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000530
+    Id: 2000030
+    CharacterId: 20000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200000540
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그럼 지금 갈게.
+    MessageJP: 今から行くよ
+    MessageCN: 我这就过去哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000530
+    Id: 2000040
+    CharacterId: 20000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200000540
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 응. 나는 다른 작업을 하고 있을 테니
+    MessageJP: 私は他の作業してるから
+    MessageCN: 我有其他工作要做
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000540
+    Id: 2000050
+    CharacterId: 20000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오면 말해줘.
+    MessageJP: 着いたら教えて
+    MessageCN: 所以老师到的时候说一声
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200000540
+    Id: 2000060
+    CharacterId: 20000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2000015
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""

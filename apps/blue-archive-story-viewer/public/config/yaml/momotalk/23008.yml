@@ -1,5 +1,5 @@
 CharacterId: 23008
-translator: Lepra
+translator: Lepra,6e609a
 title:
   - TextJp: 立派なシスター
     TextCn: 优秀的修女
@@ -36,6 +36,15 @@ title:
     TextTw: 我的願望
     GroupId: 2300806
     FavorScheduleId: 230086
+    CharacterId: 23008
+  - TextJp: 本当の気持ち
+    TextCn: 真正的感情
+    TextKr: 솔직한 마음
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2300815
+    FavorScheduleId: 2300815
     CharacterId: 23008
 content:
   - MessageKR: 오늘도 평화와 안녕이 그대와 함께하기를.
@@ -1377,6 +1386,330 @@ content:
     Id: 230080730
     CharacterId: 23008
     MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080460
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님, 안녕하세요.
+    MessageJP: おはようございます、先生
+    MessageCN: 早上好，老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080460
+    Id: 230080740
+    CharacterId: 23008
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 230080450
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 혹시 시간이 괜찮으시다면……
+    MessageJP: その……もし、お時間よろしければ……
+    MessageCN: 那个……如果，您现在方便的话……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080470
+    Id: 230080750
+    CharacterId: 23008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080480
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 당연히 괜찮아.
+    MessageJP: 大丈夫だよ。どうしたの？
+    MessageCN: 没关系哦。怎么了？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080480
+    Id: 230080760
+    CharacterId: 23008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 어디로 갈까?
+    MessageJP: 私にできることがあれば何でも言って
+    MessageCN: 如果有什么我能做的，尽管告诉我
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080480
+    Id: 230080770
+    CharacterId: 23008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그, 그렇게나 빠른 반응을……
+    MessageJP: ありがとうございます……！
+    MessageCN: 谢谢您……！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080490
+    Id: 230080780
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080500
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 다름이 아니라 이번에 시스터후드의 비품을 구매해야 하는데요.
+    MessageJP: シスターフッドの備品を買いに行くのですが
+    MessageCN: 我要去买修女会的备用品
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080500
+    Id: 230080790
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080510
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 저 혼자서는 손이 모자랄 것 같아서
+    MessageJP: 私一人ではちょっと手が足りなくて……
+    MessageCN: 但是就我一个人去的话人手不够……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080510
+    Id: 230080800
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 면목 없지만 선생님께 도움을……
+    MessageJP: もし大丈夫でしたら、お付き合いいただけないでしょうか……？
+    MessageCN: 如果可以的话，您能跟我一起来吗……?
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080510
+    Id: 230080810
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그거야 내 전문이지.
+    MessageJP: うん、任せて
+    MessageCN: 嗯，交给我吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080520
+    Id: 230080820
+    CharacterId: 23008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080530
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 어디로 갈까?
+    MessageJP: どこに向かえばいいかな？
+    MessageCN: 去哪里集合呢？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080520
+    Id: 230080830
+    CharacterId: 23008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080530
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 항상 감사합니다, 선생님……
+    MessageJP: ありがとうございます！場所、今送りますね
+    MessageCN: 谢谢！我现在就发给您集合地点
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080530
+    Id: 230080840
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2300815
+    NextGroupId: 230080540
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님, 오늘은 정말 여러모로 감사했습니다.
+    MessageJP: 今日は本当にありがとうございました
+    MessageCN: 今天真的非常感谢
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080540
+    Id: 230080850
+    CharacterId: 23008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 230080550
+    PreConditionFavorScheduleId: 2300815
+    FavorScheduleId: 0
+    NextGroupId: 230080550
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 데려다주신 것도, 식사도……
+    MessageJP: お食事の後、学園まで送って下さって……
+    MessageCN: 吃完饭后，还送我回学校……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080550
+    Id: 230080860
+    CharacterId: 23008
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080560
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 액세서리 선물을 못 해서 조금 아쉬운데.
+    MessageJP: 本当にアクセサリー、買わなくて良かったの？
+    MessageCN: 不买下首饰真的好吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080560
+    Id: 230080870
+    CharacterId: 23008
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080570
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후, 저는 하나도 아쉽지 않아요.
+    MessageJP: ふふ、もう大丈夫ですよ
+    MessageCN: 呵呵，已经没事了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080570
+    Id: 230080880
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080580
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오늘 선생님께서 괜찮다고 말해주신 덕분에
+    MessageJP: 先生と今日お話できたことで
+    MessageCN: 今天有幸和老师交谈过后
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080580
+    Id: 230080890
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080590
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이 코사지에 담긴 마음이 더 소중해졌거든요.
+    MessageJP: コサージュを、もっと大切にすると決めましたので
+    MessageCN: 我决定更加珍惜现在这个胸花，
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080580
+    Id: 230080900
+    CharacterId: 23008
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 230080590
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그거면…… 충분해요.
+    MessageJP: ……今はそれで、充分なんです
+    MessageCN: ……现在这样就足够了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 230080590
+    Id: 230080910
+    CharacterId: 23008
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0

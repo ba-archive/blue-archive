@@ -37,6 +37,15 @@ title:
     GroupId: 1002306
     FavorScheduleId: 100236
     CharacterId: 10023
+  - TextJp: 夕暮れの海辺
+    TextCn: 黄昏的海边
+    TextKr: 노을 지는 해변
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1002315
+    FavorScheduleId: 1002315
+    CharacterId: 10023
 content:
   - MessageKR: 선생님, 부탁 하나만 해도 될까?
     MessageJP: 先生、ひとつお願いしても良い？
@@ -804,6 +813,114 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100236
+    NextGroupId: 100230310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님, 긴급 상황이야.
+    MessageJP: 先生、緊急事態だ
+    MessageCN: 老师，紧急情况
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230310
+    Id: 100230420
+    CharacterId: 10023
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100230300
+    PreConditionFavorScheduleId: 100236
+    FavorScheduleId: 0
+    NextGroupId: 100230320
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 응? 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230320
+    Id: 100230430
+    CharacterId: 10023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 해변가의 식당에서 불량배들이 난동을 부리고 있다고 해.
+    MessageJP: 浜辺の食堂で不良生徒が暴れてて……
+    MessageCN: 海边的食堂里有不良学生在闹事……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230330
+    Id: 100230440
+    CharacterId: 10023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 분명 저번에 싹 쓸었을 텐데, 또 어디선가 나타나서……
+    MessageJP: 一度取り締まったのに……はぁ……
+    MessageCN: 明明之前取缔过一次了……唉
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230330
+    Id: 100230450
+    CharacterId: 10023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아무튼, 선생님이 지휘해 줬으면 좋겠어.
+    MessageJP: ちょっと手が足りないから、先生に指揮をお願いしたいんだ
+    MessageCN: 这边人手有点不够，我想请老师来指挥
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230340
+    Id: 100230460
+    CharacterId: 10023
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100230350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 알겠어. 어디로 가면 될까?
+    MessageJP: 分かった、どこに向かえばいいかな？
+    MessageCN: 明白了，我要去哪里？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100230350
+    Id: 100230470
+    CharacterId: 10023
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1002315
     NextGroupId: 0
     FeedbackTimeMillisec: 0
     MessageType: Text

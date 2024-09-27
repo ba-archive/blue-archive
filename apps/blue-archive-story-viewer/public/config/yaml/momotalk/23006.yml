@@ -1,5 +1,5 @@
 CharacterId: 23006
-translator: 胡桃桃
+translator: 胡桃桃,6e609a
 title:
   - TextJp: 百夜堂の看板娘！
     TextCn: 百夜堂的看板娘！
@@ -36,6 +36,15 @@ title:
     TextTw: 元氣再充電中
     GroupId: 2300606
     FavorScheduleId: 230066
+    CharacterId: 23006
+  - TextJp: 百夜堂の看板娘はアンティークがお好き！
+    TextCn: 百夜堂的看板娘喜欢古董！
+    TextKr: 백야당의 간판 아가씨는 엔틱!
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2300615
+    FavorScheduleId: 2300615
     CharacterId: 23006
 content:
   - MessageKR: 「~백야당 x 키보토스 딸기천국~ 캠페인 개최!」
@@ -1120,7 +1129,151 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 230066
-    NextGroupId: 0
+    NextGroupId: 2300600400
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님! 선생님!
+    MessageJP: 先生！先生！
+    MessageCN: 老师！老师！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600400
+    Id: 23006010
+    CharacterId: 23006
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 2300600390
+    PreConditionFavorScheduleId: 230066
+    FavorScheduleId: 0
+    NextGroupId: 2300600410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오늘부터 백야당 특별 시즌 이벤트가 시작돼요!
+    MessageJP: 今日から百夜堂の期間限定イベントが始まりますよ！
+    MessageCN: 从今天起百夜堂的期间限定活动开始了哟！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600410
+    Id: 23006020
+    CharacterId: 23006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 바로바로, [사과 페어]!!
+    MessageJP: 今回は「林檎フェス」！！
+    MessageCN: 这次是“苹果节”！ ！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600410
+    Id: 23006030
+    CharacterId: 23006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 산뜻한 사과 향 차와 각종 상큼달달한 디저트의 향연이라구요!
+    MessageJP: 爽やかなアップルティーに、林檎を使った各種デザートをたくさんご用意しております！
+    MessageCN: 除了清爽的苹果茶，静子还准备了很多用苹果做的甜点！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600420
+    Id: 23006040
+    CharacterId: 23006
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600430
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이거 안 갈 수가 없겠군!
+    MessageJP: これは行かなくちゃだね！
+    MessageCN: 这下非去不可了啊！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600430
+    Id: 23006050
+    CharacterId: 23006
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600440
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후후후후
+    MessageJP: ふふふ
+    MessageCN: 哼哼哼
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600440
+    Id: 23006060
+    CharacterId: 23006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 한번 놀러 오세요!
+    MessageJP: お待ちしております！
+    MessageCN: 恭候老师的光临！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600440
+    Id: 23006070
+    CharacterId: 23006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 2300600450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 항상 그랬던 것처럼, 최고의 접대를 선사해 드릴 테니!!
+    MessageJP: 最高のおもてなしをお約束します！！
+    MessageCN: 保证给您最好的款待！ ！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 2300600450
+    Id: 23006080
+    CharacterId: 23006
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2300615
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
