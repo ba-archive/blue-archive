@@ -279,10 +279,10 @@ function hotReplaceStoryUnit(
     /* eslint-disable indent */
     const newStory: TranslatedStoryUnit = Array.isArray(unit)
       ? {
-        GroupId: props.story.GroupId,
-        translator: props.story.translator,
-        content: unit,
-      }
+          GroupId: props.story.GroupId,
+          translator: props.story.translator,
+          content: unit,
+        }
       : (unit as TranslatedStoryUnit);
     /* eslint-enable indent */
     privateStore.allStoryUnit = translate(newStory);
@@ -306,7 +306,7 @@ function resetLive2d() {
 defineExpose({
   hotReplaceStoryUnit,
   resetLive2d,
-  app: toRef(() => usePlayerStore().app) ,
+  app: toRef(() => usePlayerStore().app),
 });
 
 /**

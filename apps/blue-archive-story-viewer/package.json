@@ -9,7 +9,7 @@
     "build": "pnpm build:json && vite build && cp ./dist/index.html ./dist/404.html",
     "build:github": "pnpm build:json && vite build --base=/blue-archive/ && cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite preview --host",
-    "check": "eslint --fix --config ./.eslintrc.json ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck",
+    "check": "eslint --fix ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck",
     "up": "taze major -I"
   },
   "dependencies": {
@@ -43,15 +43,13 @@
     "@types/node": "^20.12.12",
     "@types/toastify-js": "^1.12.3",
     "@types/xxhashjs": "^0.2.2",
-    "@typescript-eslint/eslint-plugin": "^7.10.0",
-    "@typescript-eslint/parser": "^7.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "@vitejs/plugin-legacy": "^5.4.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/eslint-config-typescript": "^13.0.0",
     "chalk": "^5.3.0",
-    "eslint": "9.3.0",
+    "eslint": "9.11.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-sort-exports": "^0.9.1",
     "eslint-plugin-vue": "^9.26.0",
     "eslint-plugin-yaml": "^0.5.0",
@@ -67,7 +65,7 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-pwa": "^0.20.0",
     "vue-eslint-parser": "^9.4.2",
-    "vue-tsc": "^2.0.19",
+    "vue-tsc": "^2.1.6",
     "workbox-window": "^7.1.0",
     "ba-rig": "workspace:*"
   }
