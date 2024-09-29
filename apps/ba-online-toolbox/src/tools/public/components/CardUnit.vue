@@ -15,7 +15,7 @@
           v-model:checked="isUnsure"
           @update:checked="handleUnsureChange"
         ></n-checkbox>
-        <span>这个翻译我不确定！</span>
+        <span>校对救救！</span>
       </div>
     </div>
     <slot></slot>

@@ -183,7 +183,7 @@
             }
           "
         >
-          <span>这个翻译我不确定!</span>
+          <span>校对救救!</span>
         </n-checkbox>
         <n-input
           class="flex"
