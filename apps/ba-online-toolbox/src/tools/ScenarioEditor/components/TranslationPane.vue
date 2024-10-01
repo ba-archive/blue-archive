@@ -284,7 +284,7 @@ const currentText = computed(() => {
 const translateHandle = (force = false) => {
   if (!force && config.getTmpMachineTranslate(currentText.value)) return;
   if (config.getSelectLine !== -1) {
-    handleLLMTranslateRequest(0);
+    handleLLMTranslateRequest(1);
   }
 };
 
