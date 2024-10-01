@@ -336,8 +336,8 @@ const replaceStrings = [
     to: "log=",
   },
   {
-    from: "／log",
-    to: "/log",
+    from: "[／",
+    to: "[/",
   },
   {
     from: "wa：",
