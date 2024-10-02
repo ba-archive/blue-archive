@@ -32,7 +32,7 @@
         </n-space>
       </div>
       <original-text-disp
-        :text="mainStore.getScenario.content[config.getSelectLine]?.TextJp"
+        :text="mainStore.getScenario.content[config.getSelectLine]?.[config.getLanguage]"
         :prefer-semantic="config.getSemanticPreference"
         :select-line="config.getSelectLine"
       />
