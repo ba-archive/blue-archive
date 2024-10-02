@@ -3,6 +3,17 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-10-03",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "龙华 妃咲", id: 20039 },
+        ],
+      },
+    ],
+  },
+  {
     date: "2024-09-21",
     contents: [
       {
