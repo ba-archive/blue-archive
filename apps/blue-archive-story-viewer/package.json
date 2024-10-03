@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite --host --open",
     "build:json": "node ./CICD/build_json.mjs",
     "build": "pnpm build:json && vite build && cp ./dist/index.html ./dist/404.html",
     "build:github": "pnpm build:json && vite build --base=/blue-archive/ && cp ./dist/index.html ./dist/404.html",

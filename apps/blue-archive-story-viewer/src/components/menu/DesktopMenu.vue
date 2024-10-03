@@ -18,6 +18,28 @@
         class="nav-link rounded-small color-transition"
         >{{ getRouteTranslation(mainRoute, selectedLanguage) }}</router-link
       >
+      <a
+        href="https://status.blue-archive.io"
+        target="_blank"
+        class="nav-link rounded-small color-transition"
+        >{{
+          getRouteTranslation(
+            {
+              meta: {
+                m17n: [
+                  { lang: "cn", title: "系统状态" },
+                  { lang: "tw", title: "系統狀態" },
+                  { lang: "jp", title: "システムステータス" },
+                  { lang: "en", title: "System Status" },
+                  { lang: "kr", title: "시스템 상태" },
+                  { lang: "th", title: "สถานะระบบ" },
+                ],
+              },
+            },
+            selectedLanguage
+          )
+        }}</a
+      >
     </div>
 
     <div id="settings">

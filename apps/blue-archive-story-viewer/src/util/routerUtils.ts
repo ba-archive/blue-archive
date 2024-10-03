@@ -2,7 +2,7 @@ import { RouteRecordRaw } from "vue-router";
 import { RouteMeta } from "../types/Routes";
 
 export function getRouteTranslation(
-  route: RouteRecordRaw,
+  route: Partial<RouteRecordRaw>,
   lang: string
 ): string {
   const routeMeta = route.meta as RouteMeta | undefined;
