@@ -32,43 +32,32 @@
         </n-space>
       </div>
       <original-text-disp
-        :text="mainStore.getScenario.content[config.getSelectLine]?.[config.getLanguage]"
+        :text="
+          mainStore.getScenario.content[config.getSelectLine]?.[
+            config.getLanguage
+          ]
+        "
         :prefer-semantic="config.getSemanticPreference"
         :select-line="config.getSelectLine"
       />
       <div class="flex justify-between items-end">
         <n-space vertical>
           <n-space>
+            <n-button @click="acceptHandle" type="info">接受机翻</n-button>
+            <n-button @click="handleFormalizePunctuation" type="info">
+              规范符号
+            </n-button>
             <n-button type="info" @click="sendRefreshPlayerSignal"
               >刷新播放器</n-button
             >
-            <n-tooltip>
-              <template #trigger>
-                <n-button type="info" @click="addTag()"> 插入等待时长</n-button>
-              </template>
-              <div>
-                在Live2D剧情中会看到 [wa:xxxx]
-                的标签，这些标签用于控制文字出现的等待时间。
-              </div>
-              <div>
-                在右边的输入框中输入数字，点击“插入等待时长”，即可在相应位置插入一个同样的标签。
-              </div>
-            </n-tooltip>
-            <n-input-number
-              v-model:value="waitTime"
-              size="medium"
-              :default-value="0"
-              :min="0"
-              :step="500"
-              style="width: 8.5rem"
-              @keydown.enter="addTag()"
+            <n-button
+              @click="handleLLMTranslateRequest(1)"
+              type="info"
+              quaternary
+              :loading="llmLoading"
             >
-              <template #suffix
-                ><span style="color: #999; font-size: 0.8rem"
-                  >毫秒</span
-                ></template
-              >
-            </n-input-number>
+              帮帮我，GPT 先生
+            </n-button>
             <n-dropdown
               trigger="hover"
               :options="langSelect"
@@ -93,20 +82,6 @@
                 <span> 选择需要翻译的语言 </span>
               </n-tooltip>
             </n-dropdown>
-          </n-space>
-          <n-space>
-            <n-button @click="acceptHandle" type="info">接受机翻</n-button>
-            <n-button @click="handleFormalizePunctuation" type="info">
-              规范符号
-            </n-button>
-            <n-button
-              @click="handleLLMTranslateRequest(1)"
-              type="info"
-              quaternary
-              :loading="llmLoading"
-            >
-              帮帮我，GPT 先生
-            </n-button>
           </n-space>
         </n-space>
         <n-tooltip :duration="300" placement="top-end">
@@ -183,7 +158,7 @@
             }
           "
         >
-          <span>校对救救!</span>
+          <span class="whitespace-nowrap">校对救救!</span>
         </n-checkbox>
         <n-input
           class="flex"
@@ -257,14 +232,12 @@ const langHash = {
   TextJp: "日语",
   TextEn: "英语",
   ScriptKr: "韩语",
-  // TextTh: "泰语",
-  // TextCn: "简中",
   TextTw: "繁中",
 };
 
 const langSelect = [
-  { label: "简中", key: "TextCn" },
-  { label: "繁中", key: "TextTw" },
+  { label: "简体中文", key: "TextCn" },
+  { label: "繁体中文", key: "TextTw" },
   { label: "日语", key: "TextJp" },
   { label: "英语", key: "TextEn" },
   { label: "韩语", key: "TextKr" },

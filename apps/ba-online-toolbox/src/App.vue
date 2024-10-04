@@ -29,24 +29,6 @@ const isMainPage = computed(() => {
 </script>
 
 <template>
-  <transition name="menu">
-    <div class="nav-bar shadow-far flex fixed justify-center items-center z-100 bg-white w-full font-bold select-none" id="nav-bar" v-if="!isMainPage">
-      <router-link to="/"
-        ><svg
-          class="navigation-arrow"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 451.8 451.8"
-        >
-          <!-- eslint-disable max-len -->
-          <path
-            fill="#3f88f2"
-            d="M225.9 354.7c-8.1 0-16.2-3.1-22.4-9.3L9.3 151.2c-12.4-12.4-12.4-32.4 0-44.8C21.7 94 41.7 94 54 106.4l171.9 171.9 171.9-171.9c12.4-12.4 32.4-12.4 44.7 0 12.4 12.4 12.4 32.4 0 44.8L248.3 345.4c-6.2 6.2-14.3 9.3-22.4 9.3z"
-          />
-          <!-- eslint-enable max-len --></svg
-        ><span>Home</span></router-link
-      >
-    </div>
-  </transition>
   <homepage-navigator v-if="isMainPage" />
   <div id="main-router-view">
     <router-view v-slot="{ Component }">
@@ -56,9 +38,44 @@ const isMainPage = computed(() => {
     </router-view>
   </div>
   <FAB />
+  <router-link
+    to="/"
+    class="button-back absolute grid place-items-center text-white rounded-full"
+    ><svg
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      class="w-6 h-6"
+      stroke-width="4"
+      stroke-linecap="butt"
+      stroke-linejoin="miter"
+      filter=""
+      data-v-2bc6460e=""
+      style="font-size: 24px"
+    >
+      <path
+        d="M20.272 11.27 7.544 23.998l12.728 12.728M43 24H8.705"
+      ></path></svg
+  ></router-link>
 </template>
 
 <style scoped lang="scss">
+.button-back {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-arona-blue);
+  color: #fff;
+  left: 0;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 114514;
+  transition: all 0.375s ease-in-out;
+  &:hover {
+    translate: 0 -50%;
+  }
+}
+
 .nav-bar {
   font-size: 16px;
 
@@ -94,10 +111,6 @@ const isMainPage = computed(() => {
       }
     }
   }
-}
-
-#main-router-view {
-  padding-top: 48px;
 }
 
 @media (max-width: 768px) {

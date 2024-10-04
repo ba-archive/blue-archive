@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite --host --open",
     "dev:with-player": "rush build --to-except ba-story-player & vite --host",
     "check": "cross-env vue-tsc --noEmit; eslint ./src/ --ext .js,.ts,.vue",
     "build:json": "cross-env && node ./CICD/build_json.mjs",

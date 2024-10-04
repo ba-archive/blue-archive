@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer absolute bottom-0 shadow-xl">
     <div class="content">
       <n-space class="translator">
         <n-space class="flex-horizontal">
@@ -115,8 +115,14 @@ function handleStaffChange(event: string) {
 </script>
 <style scoped lang="scss">
 .footer {
-  grid-area: footer;
-  width: 100%;
+  width: 100vw;
+  width: 100dvw;
+  max-width: 1440px;
+  opacity: 0.6;
+  transition: opacity 0.175s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
 
   .content {
     display: flex;
