@@ -2,20 +2,54 @@
   <div class="translation-pane flex-1 rounded-4 pr-4 w-full h-full">
     <n-space vertical class="bg-white p-4 rounded-medium">
       <div class="flex justify-between items-center">
-        <span>
-          <n-tag secondary type="info" :bordered="false">参考文本语言</n-tag>
-          <n-radio-group class="ml-4" :value="config.getLanguage">
-            <n-radio
-              v-for="lang in Object.keys(langHash)"
-              :key="lang"
-              :value="lang"
-              @click="config.setLanguage(lang as Language)"
-              >{{
-                langHash[lang as "TextJp" | "TextEn" | "TextTw" | "ScriptKr"]
-              }}</n-radio
-            >
-          </n-radio-group>
-        </span>
+        <n-space>
+          <n-dropdown
+            :options="referenceLanguages"
+            @select="handleReferenceLanguageChange"
+          >
+            <n-tooltip>
+              <template #trigger>
+                <n-tag size="small" type="info">
+                  {{
+                    (
+                      referenceLanguages.find(
+                        el => el.key === config.getLanguage
+                      ) || { label: "简中" }
+                    ).label
+                  }}
+                </n-tag>
+              </template>
+              <span> 选择需要参考的语言 </span>
+            </n-tooltip>
+          </n-dropdown>
+          →
+          <n-dropdown
+            trigger="hover"
+            :options="langSelect"
+            @select="
+              {
+                config.setTargetLang($event as Language);
+              }
+            "
+          >
+            <n-tooltip>
+              <template #trigger>
+                <n-tag size="small" type="info">
+                  {{
+                    (
+                      langSelect.find(
+                        el => el.key === config.getTargetLang
+                      ) || {
+                        label: "简体中文",
+                      }
+                    ).label
+                  }}
+                </n-tag>
+              </template>
+              <span> 选择需要翻译的语言 </span>
+            </n-tooltip>
+          </n-dropdown>
+        </n-space>
         <n-space>
           <n-checkbox
             :checked="config.getSemanticPreference"
@@ -40,60 +74,38 @@
         :prefer-semantic="config.getSemanticPreference"
         :select-line="config.getSelectLine"
       />
-      <div class="flex justify-between items-end">
-        <n-space vertical>
-          <n-space>
-            <n-button @click="acceptHandle" type="info">接受机翻</n-button>
-            <n-button @click="handleFormalizePunctuation" type="info">
-              规范符号
-            </n-button>
-            <n-button type="info" @click="sendRefreshPlayerSignal"
-              >刷新播放器</n-button
-            >
-            <n-button
-              @click="handleLLMTranslateRequest(1)"
-              type="info"
-              quaternary
-              :loading="llmLoading"
-            >
-              帮帮我，GPT 先生
-            </n-button>
-            <n-dropdown
-              trigger="hover"
-              :options="langSelect"
-              @select="
-                {
-                  config.setTargetLang($event as Language);
-                }
-              "
-            >
-              <n-tooltip>
-                <template #trigger>
-                  <n-button secondary type="info">
-                    {{
-                      (
-                        langSelect.find(
-                          el => el.key === config.getTargetLang
-                        ) || { label: "简中" }
-                      ).label
-                    }}
-                  </n-button>
-                </template>
-                <span> 选择需要翻译的语言 </span>
-              </n-tooltip>
-            </n-dropdown>
-          </n-space>
+      <n-space justify="space-between" align="end">
+        <n-space>
+          <n-button size="medium" @click="acceptHandle" type="info"
+            >接受机翻</n-button
+          >
+          <n-button
+            size="medium"
+            @click="handleFormalizePunctuation"
+            type="info"
+          >
+            规范符号
+          </n-button>
+          <n-button size="medium" type="info" @click="sendRefreshPlayerSignal"
+            >刷新播放器</n-button
+          >
+          <n-button
+            size="medium"
+            @click="handleLLMTranslateRequest(1)"
+            type="info"
+            quaternary
+            :loading="llmLoading"
+          >
+            帮帮我，GPT 先生
+          </n-button>
         </n-space>
         <n-tooltip :duration="300" placement="top-end">
           <template #trigger>
-            <div class="flex h-full flex-1 justify-end">
-              翻译风格：
-              <n-tag size="small" :type="modelStabilityLevel.type">{{
-                modelStabilityLevel.value
-              }}</n-tag>
-            </div>
+            <n-tag size="small" :type="modelStabilityLevel.type"
+              >风格：{{ modelStabilityLevel.value }}</n-tag
+            >
           </template>
-          <span>翻译结果随机性，值越小花活越多</span>
+          <span>翻译结果自由度，值越小花活越多</span>
           <n-slider
             v-model:value="modelStability"
             :max="1"
@@ -102,7 +114,7 @@
             :tooltip="false"
           ></n-slider>
         </n-tooltip>
-      </div>
+      </n-space>
       <div class="grid grid-cols-[3fr_2fr] gap-4">
         <translate-input
           :handleGotoNextLineRequest="handleGotoNextLineRequest"
@@ -228,12 +240,16 @@ import OriginalTextDisp from "./OriginalTextDisp.vue";
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
 
-const langHash = {
-  TextJp: "日语",
-  TextEn: "英语",
-  ScriptKr: "韩语",
-  TextTw: "繁中",
-};
+const referenceLanguages = [
+  { label: "日语", key: "TextJp" },
+  { label: "英语", key: "TextEn" },
+  { label: "韩语", key: "ScriptKr" },
+  { label: "繁体中文", key: "TextTw" },
+];
+
+function handleReferenceLanguageChange(value: Language) {
+  config.setLanguage(value);
+}
 
 const langSelect = [
   { label: "简体中文", key: "TextCn" },
