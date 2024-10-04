@@ -4,7 +4,7 @@
     <player-part></player-part>
     <translation-part></translation-part>
     <transition name="fly-in">
-      <footer-div v-if="showFooter" ref="footerRef" />
+      <footer-div v-show="showFooter" ref="footerRef" />
     </transition>
   </div>
 </template>

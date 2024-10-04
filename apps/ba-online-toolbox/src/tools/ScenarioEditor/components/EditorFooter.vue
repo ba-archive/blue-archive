@@ -1,5 +1,5 @@
 <template>
-  <div class="footer absolute bottom-0 shadow-xl">
+  <div class="footer fixed bottom-0 shadow-xl">
     <div class="content">
       <n-space class="translator">
         <n-space class="flex-horizontal">
