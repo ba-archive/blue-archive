@@ -241,10 +241,10 @@ const config = useGlobalConfig();
 const mainStore = useScenarioStore();
 
 const referenceLanguages = [
-  { label: "日语", key: "TextJp" },
-  { label: "英语", key: "TextEn" },
-  { label: "韩语", key: "ScriptKr" },
-  { label: "繁体中文", key: "TextTw" },
+  { label: "日本語", key: "TextJp" },
+  { label: "English", key: "TextEn" },
+  { label: "한국어", key: "ScriptKr" },
+  { label: "繁體中文", key: "TextTw" },
 ];
 
 function handleReferenceLanguageChange(value: Language) {
@@ -253,11 +253,9 @@ function handleReferenceLanguageChange(value: Language) {
 
 const langSelect = [
   { label: "简体中文", key: "TextCn" },
-  { label: "繁体中文", key: "TextTw" },
-  { label: "日语", key: "TextJp" },
-  { label: "英语", key: "TextEn" },
-  { label: "韩语", key: "TextKr" },
-  { label: "泰语", key: "TextTh" },
+  { label: "繁體中文", key: "TextTw" },
+  { label: "English", key: "TextEn" },
+  { label: "ภาษาไทย", key: "TextTh" },
 ];
 
 function updateParseSemanticPref(value: boolean) {
