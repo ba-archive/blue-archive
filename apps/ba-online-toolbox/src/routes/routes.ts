@@ -1,6 +1,6 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
 
-declare module 'vue-router' {
+declare module "vue-router" {
   interface RouteMeta {
     title: string;
     icon: string;
@@ -13,14 +13,14 @@ declare module 'vue-router' {
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     meta: {
       shouldShowInHomepageNav: false,
       shouldShowInNavbar: true,
-      title: 'Home',
-      icon: '/image/home.svg',
-      description: '传送回主页',
+      title: "Home",
+      icon: "/image/home.svg",
+      description: "传送回主页",
       navOrder: 0,
     },
     children: [
@@ -38,46 +38,50 @@ const routes: RouteRecordRaw[] = [
       //   component: () => import('../tools/AronaTalk/AronaTalkHome.vue'),
       // },
       {
-        path: '/momotalk',
-        name: 'TranslateMomotalk',
+        path: "/momotalk",
+        name: "TranslateMomotalk",
         meta: {
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
-          icon: '/image/translation.svg',
-          title: 'Momotalk 翻译',
-          description: '开发人员用的 Momotalk 翻译工具',
+          icon: "/image/translation.svg",
+          title: "Momotalk 翻译",
+          description: "开发人员用的 Momotalk 翻译工具",
           navOrder: 2,
         },
         component: () =>
-          import('../tools/MomotalkTranslator/MomotalkTranslatorHome.vue'),
+          import("../tools/MomotalkTranslator/MomotalkTranslatorHome.vue"),
       },
       {
-        path: '/editor',
-        name: 'ScenarioEditor',
+        path: "/editor",
+        name: "ScenarioEditor",
         meta: {
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
-          icon: '/image/translation.svg',
-          title: '剧情翻译（新）',
-          description: '剧情翻译器（新）',
+          icon: "/image/translation.svg",
+          title: "剧情翻译（新）",
+          description: "剧情翻译器（新）",
           navOrder: 3,
         },
         component: () =>
-          import('../tools/ScenarioEditor/ScenarioEditorHome.vue'),
+          import("../tools/ScenarioEditor/ScenarioEditorHome.vue"),
       },
       {
-        path: '/diff-comparator',
-        name: 'DiffComparator',
+        path: "/diff",
+        name: "DiffComparator",
         meta: {
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
-          icon: '/image/diff.svg',
-          title: 'Diff 比较',
-          description: '比较两个文本的差异',
+          icon: "/image/diff.svg",
+          title: "Diff 比较",
+          description: "比较两个文本的差异",
           navOrder: 4,
         },
-        component: () => import('../tools/DiffComparator/DiffCompareHome.vue'),
-      }
+        component: () => import("../tools/DiffComparator/DiffCompareHome.vue"),
+      },
+      {
+        path: "/diff-comparator",
+        redirect: "/diff",
+      },
     ],
   },
 ];
