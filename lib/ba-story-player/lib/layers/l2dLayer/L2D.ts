@@ -74,7 +74,8 @@ export function L2DInit() {
   });
   // 播放live2D
   eventBus.on("playL2D", () => {
-    const { l2dSpineData, curL2dConfig, characterSpineData } = usePlayerStore();
+    const { curL2dConfig, characterSpineData } = usePlayerStore();
+    let { l2dSpineData } = usePlayerStore();
     // 动画是否已经播放, true 代表播放完成
     const hasPlayedAnimation = {} as { [key: string]: boolean };
     currentIndex = 0;
@@ -238,6 +239,24 @@ export function L2DInit() {
         },
       });
     }
+    // 如果 customizeBones 存在，则覆盖 l2dSpineData 的对应骨骼属性
+    const currName = curL2dConfig?.name;
+    const { customizeBones } = curL2dConfig?.spineSettings[currName] || {};
+    if (
+      !!customizeBones &&
+      Array.isArray(customizeBones) &&
+      customizeBones.length > 0
+    ) {
+      l2dSpineData.bones = l2dSpineData.bones.map(i => {
+        // FIXME: O(N^2) 性能问题
+        for (const customizeBone of customizeBones) {
+          if (i.name === customizeBone.name) {
+            Object.assign(i, customizeBone.props);
+          }
+        }
+        return i;
+      });
+    }
     mainItem = new Spine(l2dSpineData!);
     function playL2dVoice(entry: ITrackEntry, event: IEvent) {
       const eventName = event.data.name;
@@ -258,8 +277,7 @@ export function L2DInit() {
           currentVoice.endsWith(event.stringValue) ||
           (currentVoice !== "" &&
             typeof event.stringValue === "string" &&
-            event.stringValue.endsWith(currentVoice)
-          )
+            event.stringValue.endsWith(currentVoice))
         )
       ) {
         eventBus.emit("playAudio", {

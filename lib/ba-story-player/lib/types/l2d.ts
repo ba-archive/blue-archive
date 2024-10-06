@@ -5,6 +5,12 @@ export type IL2dConfig = {
     spineSettings?: {
       [key: string]: {
         scale?: number; // 对单个 spine 文件进行设置
+        customizeBones?: {
+          name: string;
+          props: {
+            [key: string]: number;
+          };
+        }[];
       };
     };
     /** 实际上是请求的路径 */
