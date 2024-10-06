@@ -1511,4 +1511,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Reizyo_home: {
+    name: "Reizyo_home",
+    playQue: [
+      {
+        name: "Reizyo_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Reizyo_home: {
+        scale: 1.0,
+      },
+    },
+    otherSpine: [],
+  },
 };
