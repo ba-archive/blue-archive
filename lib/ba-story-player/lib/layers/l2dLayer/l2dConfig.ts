@@ -1523,7 +1523,16 @@ export const l2dConfig: IL2dConfig = {
     ],
     spineSettings: {
       Reizyo_home: {
-        scale: 1.0,
+        scale: 1.1,
+        customizeBones: [
+          {
+            name: "Fx",
+            props: {
+              scaleX: 0,
+              scaleY: 0,
+            },
+          },
+        ],
       },
     },
     otherSpine: [],
