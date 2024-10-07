@@ -247,15 +247,19 @@ export function L2DInit() {
       Array.isArray(customizeBones) &&
       customizeBones.length > 0
     ) {
-      l2dSpineData.bones = l2dSpineData.bones.map(i => {
-        // FIXME: O(N^2) 性能问题
-        for (const customizeBone of customizeBones) {
-          if (i.name === customizeBone.name) {
-            Object.assign(i, customizeBone.props);
-          }
+      const customizeBoneMap = new Map(
+        customizeBones.map(bone => [bone.name, bone.props])
+      );
+
+      for (const bone of customizeBones) {
+        const index = l2dSpineData.bones.findIndex(b => b.name === bone.name);
+        if (index !== -1) {
+          l2dSpineData.bones[index] = {
+            ...l2dSpineData.bones[index],
+            ...bone.props,
+          };
         }
-        return i;
-      });
+      }
     }
     mainItem = new Spine(l2dSpineData!);
     function playL2dVoice(entry: ITrackEntry, event: IEvent) {
