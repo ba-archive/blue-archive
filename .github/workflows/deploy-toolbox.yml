@@ -50,7 +50,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_PASS_PRODUCTION }}
-          ARGS: "-rltgoDzvO"
+          ARGS: "-rltgoDzvO -i --delete"
           SOURCE: "./apps/ba-online-toolbox/dist/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST_PRODUCTION }}
           REMOTE_USER: ${{ secrets.SERVER_USER_PRODUCTION }}
