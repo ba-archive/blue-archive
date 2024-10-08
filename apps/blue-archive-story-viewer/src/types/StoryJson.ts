@@ -25,25 +25,13 @@ export interface RawStoryUnit {
 }
 
 export interface Section {
-  title: {
-    TextCn?: string;
-    TextJp: string;
-    TextKr?: string;
-    TextTh?: string;
-    TextEn?: string;
-    TextTw?: string;
-  };
+  title: CommonStoryTextObject;
   story_id: number;
-  summary: {
-    TextKr?: string;
-    TextJp: string;
-    TextTh?: string;
-    TextCn?: string;
-    TextTw?: string;
-    TextEn?: string;
-  };
+  summary: CommonStoryTextObject;
   next?: number;
   previous?: number;
+  is_before_battle?: boolean;
+  is_after_battle?: boolean;
 }
 
 export interface StoryAbstract {
@@ -54,17 +42,15 @@ export interface StoryAbstract {
 
 export interface StoryBriefing {
   released?: boolean;
-  title: {
-    TextCn?: string;
-    TextJp: string;
-    TextKr?: string;
-    TextTh?: string;
-    TextEn?: string;
-    TextTw?: string;
-  };
+  title: CommonStoryTextObject;
+  summary?: CommonStoryTextObject;
   avatar: string;
   sections: Section[];
 }
+
+export type Place = "shanhaijing" | "millennium" | "trinity";
+
+export type DistrictEventStoryList = Array<StoryBriefing & { place: Place }>;
 
 export interface StoryContent {
   GroupId: number;
