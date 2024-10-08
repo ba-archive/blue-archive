@@ -73,6 +73,8 @@ onMounted(() => import("@/components/StoryViewer.vue"));
         :title="getTitleText(section.title, language)"
         :avatar="avatar"
         :description="section.summary"
+        :is-before-battle="section.is_before_battle"
+        :is-after-battle="section.is_after_battle"
       />
     </router-link>
   </div>

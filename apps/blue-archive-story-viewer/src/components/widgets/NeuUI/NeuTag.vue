@@ -3,11 +3,13 @@ import { computed } from "vue";
 const props = withDefaults(
   defineProps<{
     type?: "default" | "warning" | "error" | "success";
+    size?: "small" | "medium" | "large";
     bordered?: boolean;
   }>(),
   {
     type: "default",
     bordered: false,
+    size: "medium",
   }
 );
 
@@ -20,6 +22,7 @@ const textColor = computed(() => `var(--color-text-fluent-${props.type})`);
     class="fluent-tag"
     :class="[
       type,
+      `size-${size}`,
       {
         bordered: props.bordered,
       },
@@ -38,9 +41,15 @@ const textColor = computed(() => `var(--color-text-fluent-${props.type})`);
   padding: 0 8px;
   color: v-bind(textColor);
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 
   &.bordered {
     border: 1px solid v-bind(textColor);
+  }
+
+  &.size-small {
+    padding: 0 4px;
+    font-size: 14px;
   }
 }
 </style>

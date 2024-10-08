@@ -1,31 +1,35 @@
 //noinspection CssUnknownTarget
 @font-face {
-  src: url("/font/bender-bold.woff2") format("woff2"),
-    url("/font/bender-bold.woff") format("woff");
+  src: url("https://fonts.blue-archive.io/bender-bold.woff2") format("woff2"),
+    url("https://fonts.blue-archive.io/bender-bold.woff") format("woff");
   font-family: "Bender";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url("/font/AsapCondensed-BoldItalic.woff2") format("woff2"),
-    url("/font/AsapCondensed-BoldItalic.woff") format("woff");
+  src: url("https://fonts.blue-archive.io/AsapCondensed-BoldItalic.woff2")
+      format("woff2"),
+    url("https://fonts.blue-archive.io/AsapCondensed-BoldItalic.woff")
+      format("woff");
   font-family: "Asap Condensed Bold Italic";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url("/font/AsapCondensed-Medium.woff2") format("woff2"),
-    url("/font/AsapCondensed-Medium.woff") format("woff");
+  src: url("https://fonts.blue-archive.io/AsapCondensed-Medium.woff2")
+      format("woff2"),
+    url("https://fonts.blue-archive.io/AsapCondensed-Medium.woff")
+      format("woff");
   font-family: "Asap Condensed Medium";
   font-display: swap;
 }
 
 //noinspection CssUnknownTarget
 @font-face {
-  src: url("/font/fusion-pixel.woff2") format("woff2"),
-    url("/font/fusion-pixel.woff") format("woff");
+  src: url("https://fonts.blue-archive.io/fusion-pixel.woff2") format("woff2"),
+    url("https://fonts.blue-archive.io/fusion-pixel.woff") format("woff");
   font-family: "Fusion Pixel";
   font-display: swap;
 }

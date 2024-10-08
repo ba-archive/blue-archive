@@ -13,6 +13,15 @@ export interface HomeDisplayInfo {
 
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
+    type: "mainstory",
+    title: "伊甸条约第三章剧情",
+  },
+  {
+    type: "student",
+    jumpTo: 20039,
+    title: "龙华 妃咲",
+  },
+  {
     type: "student",
     jumpTo: 10104,
     title: "鹿山 俪舒",

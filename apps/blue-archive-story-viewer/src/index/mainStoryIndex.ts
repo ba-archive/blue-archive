@@ -660,8 +660,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_before_battle: true,
         title: {
-          TextCn: "深夜的大骚动（2）（战斗前）",
+          TextCn: "深夜的大骚动（2）",
           TextKr: "한밤중의 대소동 2",
           TextJp: "真夜中の大騒ぎ（２）",
           TextTh: "โกลาหลกลางดึก (2)",
@@ -687,8 +688,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_after_battle: true,
         title: {
-          TextCn: "深夜的大骚动（2）（战斗后）",
+          TextCn: "深夜的大骚动（2）",
           TextKr: "한밤중의 대소동 2",
           TextJp: "真夜中の大騒ぎ（２）",
           TextTh: "โกลาหลกลางดึก (2)",
@@ -795,8 +797,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_before_battle: true,
         title: {
-          TextCn: "第2次特别学力考试（1）（战斗前）",
+          TextCn: "第2次特别学力考试（1）",
           TextKr: "제2차 평가 시험 1",
           TextJp: "第2次特別学力試験（１）",
           TextTh: "การสอบประเมินครั้งที่ 2 (1)",
@@ -822,8 +825,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_after_battle: true,
         title: {
-          TextCn: "第2次特别学力考试（1）（战斗后）",
+          TextCn: "第2次特别学力考试（1）",
           TextKr: "제2차 평가 시험 1",
           TextJp: "第2次特別学力試験（１）",
           TextTh: "การสอบประเมินครั้งที่ 2 (1)",
@@ -983,8 +987,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_before_battle: true,
         title: {
-          TextCn: "激战（战斗前）",
+          TextCn: "激战",
           TextKr: "격전",
           TextJp: "激戦",
           TextTh: "การทะเลาะอย่างรุนแรง",
@@ -1010,8 +1015,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_after_battle: true,
         title: {
-          TextCn: "激战（战斗后）",
+          TextCn: "激战",
           TextKr: "격전",
           TextJp: "激戦",
           TextTh: "การทะเลาะอย่างรุนแรง",
@@ -1037,8 +1043,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_before_battle: true,
         title: {
-          TextCn: "就算是这样的世界（1）（战斗前）",
+          TextCn: "就算是这样的世界（1）",
           TextKr: "그런 세계 1",
           TextJp: "そんな世界も（１）",
           TextTh: "โลกแบบนั้น (1)",
@@ -1064,8 +1071,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_after_battle: true,
         title: {
-          TextCn: "就算是这样的世界（1）（战斗后）",
+          TextCn: "就算是这样的世界（1）",
           TextKr: "그런 세계 1",
           TextJp: "そんな世界も（１）",
           TextTh: "โลกแบบนั้น (1)",
@@ -1091,8 +1099,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_before_battle: true,
         title: {
-          TextCn: "就算是这样的世界（2）（战斗前）",
+          TextCn: "就算是这样的世界（2）",
           TextKr: "그런 세계 2",
           TextJp: "そんな世界も（２）",
           TextTh: "โลกแบบนั้น (2)",
@@ -1118,8 +1127,9 @@ export const stories: StoryBriefing[] = [
         },
       },
       {
+        is_after_battle: true,
         title: {
-          TextCn: "就算是这样的世界（2）（战斗后）",
+          TextCn: "就算是这样的世界（2）",
           TextKr: "그런 세계 2",
           TextJp: "そんな世界も（２）",
           TextTh: "โลกแบบนั้น (2)",
@@ -1182,6 +1192,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 32200,
         previous: 32190,
+        next: 33010,
         summary: {
           TextKr:
             "세이아는 위험을 이겨낸 선생님을 칭찬하지만, 결국 모든 것은 파국으로 수렴할 것이라 경고한다. 그리고 마침내 아리우스 스쿼드가 움직이기 시작한다.",
@@ -1194,7 +1205,913 @@ export const stories: StoryBriefing[] = [
           TextEn:
             "Seia praises Sensei for overcoming the dangers, but warns that everything will eventually end in catastrophe. Finally, the Arius Squad goes on the move.",
           TextCn:
-            "圣娅称赞了老师和补习部到现在为止的努力，但也告诉老师事件还没有结束。与此同时，阿里乌斯小队也开始行动了。",
+            "圣娅称赞了老师和补习部到现在为止的努力，但告诉老师事件还没有结束。与此同时，阿里乌斯小队也开始行动……",
+        },
+      },
+    ],
+  },
+  {
+    released: true,
+    title: {
+      TextJp: "Vol.3 エデン条約編 3章",
+      TextCn: "Vol.3 伊甸条约篇 第3章",
+      TextKr: "Vol.3 에덴 조약편 3장",
+      TextTh: "Vol.3 สนธิสัญญาเอเดน ตอนที่ 3",
+      TextEn: "Vol.3 Eden Treaty Chapter 3",
+      TextTw: "Vol.3 伊甸條約篇 第3章",
+    },
+    avatar: "/image/story_cover/eden_treaty_chapter3.webp",
+    sections: [
+      {
+        title: {
+          TextCn: "事后分析（1）",
+          TextKr: "포스트모템 1",
+          TextJp: "ポストモーテム（１）",
+          TextTh: "หาความจริง (1)",
+          TextTw: "事後分析（１）",
+          TextEn: "Postmortem Part 1",
+        },
+        story_id: 33010,
+        previous: 32200,
+        next: 33020,
+        summary: {
+          TextCn:
+            "圣娅静静地与袭击自己的对手交谈。当她询问对方接下来的打算时，老师醒了过来。之后，老师从樱子那里了解了圣娅遭袭的详细经过……",
+          TextKr:
+            "자신을 습격하러 온 상대에게 조용히 말을 건네는 세이아. 그녀가 상대에게 말을 거는 것을 보며 선생님은 잠에서 깨어난다. 그 뒤 사쿠라코로부터 세이아가 습격당했던 건과 그 전말에 관해 전해 듣는다.",
+          TextJp:
+            "自分を襲撃しに来た相手に対し、静かに語りかけるセイア。彼女がこの先のことについて問いかけたところで、先生は目を覚ます。その後先生は、サクラコからセイアが襲撃された件の顛末について話を聞かせてもらい……",
+          TextTh:
+            "ในความฝันของคุณครู เซอาตั้งคำถามเกี่ยวกับความจริงของโลกกับคนที่\nบุกเข้ามาโจมตีตัวเอง เมื่อคุณครูตื่นขึ้นก็ได้ฟังเรื่องราวทั้งหมดของการ\nโจมตีเซอาจากซากุระโกะ",
+          TextTw:
+            "安靜地對襲擊自己的對方搭話的聖亞。看着她跟對方搭話的同時，老師從睡夢中醒來。在這之後老師從櫻子那裡聽說了聖亞遭遇襲擊的事情和始末。",
+          TextEn:
+            "In Sensei's dream, Seia poses a question about the truth of the world to her assailant. After waking from a short nap, Sensei hears the full story of the attack on Seia from Sakurako.",
+        },
+      },
+      {
+        title: {
+          TextCn: "事后分析（２）",
+          TextKr: "포스트모템 2",
+          TextJp: "ポストモーテム（２）",
+          TextTh: "หาความจริง (2)",
+          TextTw: "事後分析（２）",
+          TextEn: "Postmortem Part 2",
+        },
+        story_id: 33020,
+        previous: 33010,
+        next: 33030,
+        summary: {
+          TextCn:
+            "修女会的樱子认可了梓的成果。在修女会的担保下，梓正式成为了圣三一的学生。花子和老师安下心来，将话题转向了渚和未花的事情。",
+          TextKr:
+            "선생님은 하나코에게 그 동안 벌어진 일들을 전해듣는다. 또한 나기사가 보충수업부의 모두에게 사과를 하고, 미카를 만나러 갔다는 소식을 듣는다.\r",
+          TextJp:
+            "シスターフッドのサクラコはアズサの結果について認め、シスターフッドの保証の元、彼女は正式にトリニティの生徒になることに。ハナコと先生はそのことに安堵しつつ、話の内容はナギサとミカの件へと移っていく。",
+          TextTh:
+            "ฮานาโกะบอกเรื่องทั้งหมดที่เกิดขึ้นที่ผ่านมาให้คุณครูฟัง\nคุณครูยังได้รู้อีกว่านางิสะไปขอโทษทุกคนในชมรมชั้นเรียนเสริม\nและไปพบกับมิกะมา",
+          TextTw:
+            "老師從花子口中聽說了這段期間發生的事。此外，他也聽說渚向補課部的大家道歉，並且特地去找彌香見面的消息。",
+          TextEn:
+            "Sensei hears about everything that's happened so far from Hanako. They also hear how Nagisa apologized to the entire Make-Up Work Club and went to meet with Mika.",
+        },
+      },
+      {
+        title: {
+          TextCn: "事后分析（３）",
+          TextKr: "포스트모템 3",
+          TextJp: "ポストモーテム（３）",
+          TextTh: "หาความจริง (3)",
+          TextTw: "事後分析（３）",
+          TextEn: "Postmortem Part 3",
+        },
+        story_id: 33030,
+        previous: 33020,
+        next: 33040,
+        summary: {
+          TextCn:
+            "继渚之后，花子也造访了关押未花的监狱。花子在未花面前说出了自己对她动机的推测，然而……",
+          TextKr:
+            "미카와 나기사는 많은 이야기를 나누지만 결국 서로를 이해하지 못한다. 하나코 역시 미카의 동기에 대해서 추측하려고 노력하지만, 미카의 싸늘한 태도에 결국 돌아서고 만다.",
+          TextJp:
+            "ナギサに続き、ハナコもまた監獄にいるミカの元へと訪れていた。ハナコはミカの前で、彼女の動機に関する推測を口にするものの……",
+          TextTh:
+            "มิกะและนางิสะเล่าเรื่องมากมายเกี่ยวกับพวกเธอทั้งสอง แต่สุดท้ายก็ไม่\nสามารถเข้าใจกันได้ ฮานาโกะพยายามที่จะถามแรงจูงใจของมิกะ\nแต่มิกะก็ปฏิเสธเธอไป",
+          TextTw:
+            "雖然彌香和渚聊了許多，但她們最終還是無法完全理解對方。儘管花子想嘗試了解彌香的動機，但最終因為彌香冷淡的態度而轉身離去。",
+          TextEn:
+            "Mika and Nagisa have a discussion but ultimately fail to understand one another. Hanako tries to understand Mika's motivations as well, but Mika rejects her.",
+        },
+      },
+      {
+        title: {
+          TextCn: "在那之后",
+          TextKr: "그 후의 이야기들",
+          TextJp: "それから",
+          TextTh: "เรื่องราวหลังจากนั้น",
+          TextTw: "在那之後",
+          TextEn: "What Comes Next",
+        },
+        story_id: 33040,
+        previous: 33030,
+        next: 33050,
+        summary: {
+          TextCn:
+            "虽然还有许多问题亟待解决，但圣三一依然度过着平静而祥和的日常。与此同时，老师来到了格黑娜，前去拜访真琴和日奈等人……？",
+          TextKr:
+            "트리니티에는 당분간 조용하고 평화로운 일상이 이어진다. 선생님은 게헨나 학원을 방문해 마코토를 만난 뒤, 이어서 히나를 만나 에덴조약 조인식에서 보기로 하고 헤어진다.",
+          TextJp:
+            "まだ問題は幾つもあるものの、トリニティでは静かで平和な日常が繰り広げられていた。その頃先生はゲヘナの方を訪れ、マコトやヒナたちに会いに来ており……？",
+          TextTh:
+            "หลังจากนั้นสันติภาพก็มาเยือนทรีนิตี้ คุณครูไปที่เกเฮนน่าเพื่อพบ\nกับมาโคโตะ และได้พบกับฮินะในภายหลัง ทั้งสองตกลงกันว่าจะ\nพบกันอีกครั้งที่พิธีลงนามสนธิสัญญาเอเดน",
+          TextTw:
+            "三一學園持續了一段安靜、和平的日常。老師拜訪格黑娜學園見了真琴後，接著也遇見陽奈，並和她約定在伊甸園條約的簽約儀式上見面後就與對方分開了。",
+          TextEn:
+            "A quiet peace follows in Trinity. Sensei goes to Gehenna to meet with Makoto and then Hina. They agree to meet again at the signing of the Eden Treaty and part ways.",
+        },
+      },
+      {
+        title: {
+          TextCn: "伊甸条约签订仪式（1）",
+          TextJp: "エデン条約調印式（１）",
+          TextTh: "พิธีลงนามสนธิสัญญาเอเดน (1)",
+          TextTw: "伊甸園條約簽約儀式（１）",
+          TextEn: "Eden Treaty Signing Ceremony Part 1",
+        },
+        story_id: 33050,
+        previous: 33040,
+        next: 33060,
+        summary: {
+          TextCn:
+            "时间终于来到伊甸条约的签订仪式当天。在克洛诺斯的诗乃进行现场报道并渲染着现场热烈气氛的同时，补习部的全体成员正在家庭餐厅举办小型派对，庆祝考试通过。",
+          TextKr:
+            "크로노스 스쿨의 시논이 에덴조약 조인식 현장을 중계하며 에덴조약이 두 학원에 끼치는 영향에 관해 설명한다. 한편 히후미와 보충수업부 부원들은 패밀리 레스토랑에서 보충부 해산을 기념하며 다과를 즐긴다.",
+          TextJp:
+            "ついにエデン条約の調印式当日。クロノスのシノンがその状況を中継しつつ盛り上がる空気の中、補習授業部一同は合格を祝してファミレスでちょっとしたパーティーを開いていた。",
+          TextTh:
+            "ชิน่อนจากโรงเรียนโครโนสกำลังถ่ายทอดสดบรรยากาศของพิธี\nลงนามสนธิสัญญาเอเดน ส่วนฮิฟุมิกับชมรมชั้นเรียนเสริมก็ไปนั่ง\nกินของว่างกันที่ร้านอาหารสำหรับครอบครัวในโอกาสยุบชมรม",
+          TextTw:
+            "克洛盧斯學校的詩音負責轉播伊甸園條約簽約儀式以及說明伊甸園條約對兩個學園的影響。另一邊，日步美和補課部的部員們在家庭式餐廳一邊享用茶點，一邊紀念補課部解散。",
+          TextEn:
+            "Kronos' Shinon comments on the Eden Treaty signing ceremony. Meanwhile, Hifumi and the Make-Up Work Club gather at a diner to celebrate the club's dissolution.",
+        },
+      },
+      {
+        title: {
+          TextCn: "伊甸条约签订仪式（2）",
+          TextKr: "에덴조약 조인식 2",
+          TextJp: "エデン条約調印式（２）",
+          TextTh: "พิธีลงนามสนธิสัญญาเอเดน (2)",
+          TextTw: "伊甸園條約簽約儀式（２）",
+          TextEn: "Eden Treaty Signing Ceremony Part 2",
+        },
+        story_id: 33060,
+        previous: 33050,
+        next: 33070,
+        summary: {
+          TextCn:
+            "在修女会的日向引导下，老师踏入了“通功之古圣堂”，听她讲述圣三一的历史。与此同时，阿里乌斯小队开始了他们的行动，导弹划出的轨迹撕裂了圣三一的天空——",
+          TextKr:
+            "츠루기의 도움으로 <통공의 고성당>을 방문한 선생님은, 히나타로부터 트리니티의 역사에 대한 설명을 듣는다. 한편, 그 무렵 아리우스 스쿼드는 작전을 개시하고 트리니티의 상공에 그들이 쏘아 올린 순항미사일이 날아간다.",
+          TextJp:
+            "先生はシスターフッドのヒナタに案内してもらいながら「通功の古聖堂」へと足を踏み入れ、トリニティの歴史に関する話を聞いていた。時を同じくして、アリウススクワッドが作戦を開始。トリニティの上空で、ミサイルが軌道を描き――",
+          TextTh:
+            "คุณครูมาที่ <วิหารปันบุญโบราณ> ด้วยความช่วยเหลือของซึรุกิ\nและได้ฟังเรื่องราวประวัติศาสตร์ของทรีนิตี้จากฮินาตะ\nส่วนสควอดของอาเรียสก็ยิงมิสไซล์ใส่แพนเดโมเนียม โซไซตี้\nและคณะกรรมการวินัยที่เดินทางออกจากเกเฮนน่า",
+          TextTw:
+            "在弦生的幫助之下，拜訪「諸聖相通的古教堂」的老師從日向的口中得知三一的歷史。另一邊，奧利斯小隊點燃了戰火，在三一的上空發射飛彈。",
+          TextEn:
+            "With Tsurugi's help, Sensei visits the Cathedral of Communion and Hinata explains Trinity's history. Meanwhile, the Arius Squad launches missiles at the Pandemonium Society and Prefect Team as they set forth from Gehenna.",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "染上战火与灰烬之日（１）",
+          TextKr: "불과 재의 날 1",
+          TextJp: "火と灰に染まる日（１）",
+          TextTh: "วันแห่งการมอดไหม้และเถ้าถ่าน (1)",
+          TextTw: "染上火與灰燼之日（１）",
+          TextEn: "Day of Fire and Ash Part 1",
+        },
+        story_id: 33070,
+        previous: 33060,
+        next: 33075,
+        summary: {
+          TextCn:
+            "导弹的爆炸让古圣堂四周陷入了严重混乱，阿里乌斯小队趁机潜入了古圣堂地下。面对突如其来的状况，正义实现委员会的鹤城、莲见以及日向等人奋起应战。",
+          TextKr:
+            "폭격으로 인해 장외가 혼란스러워진 틈을 타 아리우스 스쿼드가 고성당의 지하로 진입한다. 잠입한 아리우스 학생들을 상대로 정의실현부 학생들이 나선다.",
+          TextJp:
+            "ミサイルの爆撃によって周辺一帯は大混乱。その隙を狙い、古聖堂の地下へと侵入していくアリウススクワッドたち。突然の状況に対し、正義実現委員会のツルギとハスミ、そしてヒナタたちが応戦する。",
+          TextTh:
+            "สควอดของอาเรียสใช้โอกาสที่ข้างนอกกำลังตื่นตระหนกกับระเบิด\nลักลอบเข้าชั้นใต้ดินของวิหารโบราณ สมาชิกชมรมทวงความยุติธรรม\nจึงไปขวางนักเรียนอาเรียสที่บุกเข้ามา",
+          TextTw:
+            "趁著場外因砲擊而陷入混亂的時候，奧利斯小隊溜進了古教堂的地底下。實現正義部的學生們現身阻擋擅自闖入的奧利斯學生們。",
+          TextEn:
+            "The Arius Squad takes advantage of the chaos and infiltrates the basement of the old cathedral. The Justice Task Force heads out to face the invading Arius students.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "染上战火与灰烬之日（１）",
+          TextKr: "불과 재의 날 1",
+          TextJp: "火と灰に染まる日（１）",
+          TextTh: "วันแห่งการมอดไหม้และเถ้าถ่าน (1)",
+          TextTw: "染上火與灰燼之日（１）",
+          TextEn: "Day of Fire and Ash Part 1",
+        },
+        story_id: 33075,
+        previous: 33070,
+        next: 33080,
+        summary: {
+          TextCn:
+            "应战期间，鹤城和莲见等人隐约感到对方的举动有些异常。看着这一幕，日向告诉大家那是“尤斯缇娜圣徒会”。",
+          TextKr:
+            "전투중 히나타와 정의실현부 학생들은 유스티나 성도회의 부활을 목도한다.",
+          TextJp:
+            "応戦する中で、どこか相手の様子に違和感を覚えるツルギやハスミたち。ヒナタはその姿を見て、あれは「ユスティナ聖徒会」だと口にする。",
+          TextTh:
+            "ในระหว่างการต่อสู้ ฮินาตะและสมาชิกชมรมทวงความยุติธรรม\nได้เห็นการกลับมาอีกครั้งของสาวกยูสตาร์",
+          TextTw:
+            "在戰鬥的過程中，日向和實現正義部的學生們目睹了優斯提娜聖徒會的復活場景。",
+          TextEn:
+            "During the battle, Hinata and the Justice Task Force witness the resurrection of the Saint Justina Council.",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "染上战火与灰烬之日（２）",
+          TextKr: "불과 재의 날 2",
+          TextJp: "火と灰に染まる日（２）",
+          TextTh: "วันแห่งการมอดไหม้และเถ้าถ่าน (2)",
+          TextTw: "染上火與灰燼之日（２）",
+          TextEn: "Day of Fire and Ash Part 2",
+        },
+        story_id: 33080,
+        previous: 33075,
+        next: 33085,
+        summary: {
+          TextCn:
+            "修女会的日向、正义实现委员会的鹤城与莲见，以及格黑娜风纪委员会的日奈一行人一边保护老师，一边继续与尤斯蒂娜圣徒会展开战斗。",
+          TextKr:
+            "선생님을 지키기 위해 정의실현부 학생들과 히나는 유스티나 성도회를 상대로 분투한다.",
+          TextJp:
+            "シスターフッドのヒナタ、正義実現委員会のツルギとハスミ、そしてゲヘナ風紀委員会のヒナ。一同は先生を守りつつ、ユスティナ聖徒会を相手に戦い続ける。",
+          TextTh:
+            "สมาชิกชมรมทวงความยุติธรรมและฮินะต่อสู้กับสาวกยูสตาร์\nอย่างสุดความสามารถเพื่อปกป้องคุณครู",
+          TextTw: "為了保護老師，實現正義部和陽奈努力與優斯提娜聖徒會奮戰。",
+          TextEn:
+            "The Justice Task Force and Hina battle against the Saint Justina Council to protect Sensei.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "染上战火与灰烬之日（２）",
+          TextKr: "불과 재의 날 2",
+          TextJp: "火と灰に染まる日（２）",
+          TextTh: "วันแห่งการมอดไหม้และเถ้าถ่าน (2)",
+          TextTw: "染上火與灰燼之日（２）",
+          TextEn: "Day of Fire and Ash Part 2",
+        },
+        story_id: 33085,
+        previous: 33080,
+        next: 33090,
+        summary: {
+          TextCn: "过渡剧情",
+          TextKr: "",
+          TextJp: "",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "憎恶的见证",
+          TextKr: "증오의 확인",
+          TextJp: "憎悪の確認",
+          TextTh: "ความเกลียดชังที่ได้เห็น",
+          TextTw: "憎惡的見證",
+          TextEn: "Bearing Witness to Hatred",
+        },
+        story_id: 33090,
+        previous: 33085,
+        next: 33095,
+        summary: {
+          TextCn:
+            "尽管莲见等人成功掩护日奈和老师撤退，但面对数量众多的敌人，几人依然寸步难行。此时，阿里乌斯小队的日和也加入了战斗，战斗愈演愈烈。",
+          TextKr: "성도회의 공격은 멈추지 않고 계속 이어진다.",
+          TextJp:
+            "ハスミたちから送り出されたヒナと先生だったが、立ち塞がる相手の数も多い中、アリウススクワッドのヒヨリまでも参戦し、戦闘が続いていく。",
+          TextTh: "สาวกยูสตาร์โจมตีต่อเนื่องอย่างไม่หยุดยั้ง",
+          TextTw: "然而，聖徒會的攻擊卻沒有因此停下。",
+          TextEn: "The Council's relentless attacks persist.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "憎恶的见证",
+          TextKr: "증오의 확인",
+          TextJp: "憎悪の確認",
+          TextTh: "ความเกลียดชังที่ได้เห็น",
+          TextTw: "憎惡的見證",
+          TextEn: "Bearing Witness to Hatred",
+        },
+        story_id: 33095,
+        previous: 33090,
+        next: 33100,
+        summary: {
+          TextCn:
+            "纱织告诉众人阿里乌斯已完成伊甸条约的签署，并提及了积累至今的仇恨，随后将枪口对准了老师。尽管老师被直接击中，但在风纪委员会的日奈和急救医学部的濑名帮助下勉强脱离了险境。昏迷中的老师，在梦中与圣娅相遇……",
+          TextKr:
+            "사오리는 과거로부터 이어져 온 아리우스의 증오를 설명하며 선생님을 공격하지만, 히나와 세나의 도움으로 겨우 탈출한다. 이후, 정신을 잃은 선생님은 꿈 속에서 세이아를 만나게 된다.",
+          TextJp:
+            "アリウスがエデン条約に調印したと告げるサオリは、これまで積み上げられてきた憎悪について口にしながら、先生へと銃口を向ける。そのまま撃ち抜かれてしまう先生だったが、風紀委員会のヒナと応急医学部のセナの手によって何とかその場を脱出。気を失った先生は、夢の中でセイアと出会い……",
+          TextTh:
+            "ซาโอริอธิบายเรื่องความเกลียดชังของอาเรียสที่มีมาตั้งแต่ในอดีตและโจมตีคุณครู แต่คุณครูก็หนีออกมาได้อย่างหวุดหวิดด้วยความช่วยเหลือของฮินะและเซนะ หลังจากนั้นคุณครูก็หมดสติไปและได้พบกับเซอาในความฝัน",
+          TextTw:
+            "沙織一邊解釋奧利斯長久以來的憎恨，一邊攻擊老師。幸好在陽奈和瀬奈的幫助下，老師才得以勉強脫身。後來，失去意識的老師在夢中見到了聖亞。",
+          TextEn:
+            "Saori attacks Sensei while explaining Arius' long-standing hatred from the past, but Sensei manages to narrowly escape thanks to Hina and Sena. Afterwards, Sensei loses consciousness and dreams of Seia.",
+        },
+      },
+      {
+        title: {
+          TextCn: "甜蜜的谎言",
+          TextKr: "달콤한 거짓",
+          TextJp: "甘い嘘",
+          TextTh: "คำโกหกแสนหวาน",
+          TextTw: "甜蜜的謊言",
+          TextEn: "Sweet Lies",
+        },
+        story_id: 33100,
+        previous: 33095,
+        next: 33110,
+        summary: {
+          TextCn:
+            "在梦中，老师再次遇见了圣娅，并从圣娅口中得知关于伊甸条约与数秘术的事情。另一方面，梓也陷入了与阿里乌斯的苦战，但无法在正面交锋中取胜。梓设法逃离了战场。",
+          TextKr:
+            "선생님은 다시 한번 꿈속에서 세이아와 만나게 되며, 그녀로부터 에덴조약과 게마트리아가 연관성이 있음을 듣게 된다. 아리우스에 붙잡힌 아즈사는 극적으로 탈출하고, 게헨나와 티파티의 예비 병력 간의 전면전이 시작된다.",
+          TextJp:
+            "夢の中で再びセイアと出会った先生。セイアの口からは、エデン条約とゲマトリアに関する話が紡がれる。一方アリウスとの戦闘へと突入したアズサだったが正面からは太刀打ちできず、どうにかしてその場を脱出するのだった。",
+          TextTh:
+            "คุณครูพบกับเซอาอีกครั้งในความฝัน เซอาเล่าเรื่องความเกี่ยวข้องระหว่าง\nสนธิสัญญาเอเดนกับเกมาเทรียให้คุณครูฟัง อาซึสะถูกอาเรียสคุมตัวไว้\nแต่ก็หนีออกมาได้ ส่วนกองกำลังสำรองของเกเฮนน่าและสภาน้ำชาก็เริ่ม\nสงครามเบ็ดเสร็จกัน",
+          TextTw:
+            "老師在夢中再次見到聖亞，並從她那裏得知伊甸園條約和蓋瑪特利亞之間的關聯。被奧利斯抓住的梓使盡渾身解數逃出他們的控制後，格黑娜和茶會預備兵力展開了正面對決。",
+          TextEn:
+            "Sensei again meets Seia in their dreams and hears about the connection between the Eden Treaty and Gematria. Azusa is captured by Arius but makes a miraculous escape, and an all-out battle between Gehenna and the Tea Party's reserve forces unfolds.",
+        },
+      },
+      {
+        title: {
+          TextCn: "加速的混乱（1）",
+          TextKr: "가중되는 혼란 1",
+          TextJp: "加速する混乱（１）",
+          TextTh: "ความสับสนที่เพิ่มขึ้น (1)",
+          TextTw: "加速的混亂（１）",
+          TextEn: "Aggravated Confusion Part 1",
+        },
+        story_id: 33110,
+        previous: 33100,
+        next: 33120,
+        summary: {
+          TextCn:
+            "花子代替樱子前往平息修女会的混乱，小春在手忙脚乱中被紧急召集至正义实现委员会。补习部的成员虽然分散各地，但各自开始了自己应尽的任务。几乎在同一时间，载着负伤老师的格黑娜救护车也抵达了圣三一……？",
+          TextKr:
+            "뒤늦게 현장에 도착한 구 보충수업부 멤버들은 뿔뿔이 흩어진다. 대성당으로 간 하나코는 사쿠라코를 대신해 시스터후드의 혼란을 바로잡는다. 정의실현부 부실에 긴급 소집된 코하루는 자신이 해야 할 일이 무엇인지 혼란스러워한다. 한편, 부상당한 선생님을 실은 게헨나의 앰뷸런스가 계엄령이 막 떨어진 트리니티 정문에 도착한다.",
+          TextJp:
+            "ハナコはサクラコに代わってシスターフッドの混乱を収めに向かい、コハルはあたふたしつつも正義実現委員会に緊急招集されることに。補習授業部一同はバラバラになりながらも各地で己の為すべきことを始めた。ほぼ同時刻、負傷した先生を乗せたゲヘナの救急車が、トリニティへと到着し……？",
+          TextTh:
+            "สมาชิกเก่าของชมรมชั้นเรียนเสริมมาถึงที่มาถึงทีหลังก็แยกย้ายกันไป\nคนละทิศคนละทาง  ฮานาโกะเข้าไปในมหาวิหารเพื่อแก้ไขความสับสน\nของชมรมซิสเตอร์แทนซากุระโกะ โคฮารุถูกเรียกตัวฉุกเฉินมาที่ห้องชมรม\nทวงความยุติธรรม เธอสับสนในสิ่งที่ต้องทำ ในอีกฝั่งหนึ่ง รถฉุกเฉินของ\nเกเฮนน่าที่คุณครูที่บาดเจ็บนั่งมาก็มาถึงประตูหน้าของทรีนิตี้ในตอนที่\nประกาศกฎอัยการศึก",
+          TextTw:
+            "而晚了一步才抵達現場的前補課部成員們則決定分頭行動。前往大教堂的花子代替櫻子平息了修女會的混亂。被緊急召集到實現正義部部室的小春不知道自己究竟該做些什麼。另一邊，載著受傷的老師的格黑娜學園救護車，抵達了剛發布戒嚴令沒多久的三一學園正門。",
+          TextEn:
+            "The former Make-Up Work Club are scattered after arriving late. Hanako heads to the cathedral. Koharu is summoned to the Justice Task Force and grapples with what to do. A Gehenna ambulance with an injured Sensei arrives at Trinity's main gate as martial law is declared.",
+        },
+      },
+      {
+        title: {
+          TextCn: "加速的混乱（2）",
+          TextKr: "가중되는 혼란 2",
+          TextJp: "加速する混乱（２）",
+          TextTh: "ความสับสนที่เพิ่มขึ้น (2)",
+          TextTw: "加速的混亂（２）",
+          TextEn: "Aggravated Confusion Part 2",
+        },
+        story_id: 33120,
+        previous: 33110,
+        next: 33130,
+        summary: {
+          TextCn:
+            "分析结果显示射向古圣堂的导弹并非来自格黑娜，而是从圣三一发射的。看到“尤斯缇娜圣徒会”的影像后，花子意识到，若事态继续恶化，最坏的情况下圣三一与格黑娜将从基沃托斯一起消失。",
+          TextKr:
+            "발사체 분석 결과, 발사체가 발사된 위치는 게헨나가 아니라 트리니티라는 사실이 밝혀진다. 하나코는 폭발 당시 현장에 <유스티나 성도회>가 있었다는 사실을 알고, 최악의 경우 트리니티와 게헨나가 키보토스에서 사라지게 될 것이라고 경고한다.",
+          TextJp:
+            "分析の結果、古聖堂へと放たれたミサイルはゲヘナではなくトリニティから発射されていたことが明らかに。「ユスティナ聖徒会」の映像を見たハナコは、このままでは最悪の場合トリニティとゲヘナがキヴォトスから消えることになると悟ってしまう。",
+          TextTh:
+            "การวิเคราะห์วิถีกระสุนพบว่าถูกยิงมาจากทรีนิตี้ ไม่ใช่เกเฮนน่าแต่อย่างใด ฮานาโกะได้รู้ความจริงว่าในตอนที่เกิดระเบิด <สาวกยูสตาร์> อยู่ที่ที่เกิดเหตุด้วย และได้เตือนว่า หากสถานการณ์เลวร้ายที่สุด ทรีนิตี้กับเกเฮนน่าอาจจะหายไปจากคิโวทอส",
+          TextTw:
+            "根據拋體分析結果，眾人得知拋體的發射位置不在格黑娜自治區，而是在三一學園。花子得知<優斯提娜聖徒會>一事後，她警告大家在最糟糕的情況下，三一和格黑娜有可能會消失在奇普托斯之中。",
+          TextEn:
+            "Analysis reveals the projectiles were launched from Trinity, not Gehenna. Knowing the Saint Justina Council was present at the time of the explosion, Hanako warns that if worst comes to worst, both Trinity and Gehenna may be wiped from the face of Kivotos.",
+        },
+      },
+      {
+        title: {
+          TextCn: "遥不可及的彼岸",
+          TextKr: "닿을 수 없는 저쪽",
+          TextJp: "届かない向こう側",
+          TextTh: "สิ่งที่ไม่อาจไขว่คว้า",
+          TextTw: "遙不可及的另一側",
+          TextEn: "A Side Beyond Reach",
+        },
+        story_id: 33130,
+        previous: 33120,
+        next: 33140,
+        summary: {
+          TextCn:
+            "日富美终于找到了梓，但梓拒绝让她继续前进。梓满怀决心地告诉日富美：“因为我，大家都受伤了。我接下来要摧毁纱织的光环，成为杀人凶手……”说完这番话后，梓怀着对日富美的感激之情消失了。尽管日富美试图挽留梓，但她的声音却无法传达……",
+          TextKr:
+            "히후미는 자신들 앞에서 모습을 감춘 아즈사를 가까스로 찾아낸다. 하지만 아즈사는 히후미를 밀어내며, 자신 때문에 모두가 다쳤다며 괴로워한다. 결의에 찬 눈빛으로 사오리의 헤일로를 파괴하러 가겠다는 아즈사. 히후미에게 감사의 말을 남긴 아즈사는 결국 떠나고, 히후미는 아즈사의 이름을 외치며 홀로 남겨진다.",
+          TextJp:
+            "ヒフミはようやくアズサのもとへと辿り着くが、アズサはここから先には来てはいけないと拒絶する。自分のせいでみんなが怪我をした、私はこれからサオリのヘイローを破壊して人殺しになる……決意に満ちた眼差しでそう告げるアズサは、ヒフミへの感謝の言葉を残して消えてしまう。ヒフミはアズサを引き留めようとするが、その声は届くことなく……。",
+          TextTh:
+            "ฮิฟุมิตามหาอาซึสะจนพบในที่สุด แต่อาซึสะก็ผลักไสฮิฟุมิ แล้วบอกว่า\nไม่สบายใจที่ทุกคนต้องมาบาดเจ็บเพราะตัวเอง อาซึสะพูดด้วยแววตาที่\nตัดสินใจแน่วแน่ว่าจะไปทำลายฮาโลของซาโอริ เธอขอบคุณฮิฟุมิแล้ว\nจากไป ฮิฟุมิได้แต่ตะโกนเรียกชื่ออาซึสะอยู่คนเดียว",
+          TextTw:
+            "日步美花了許多功夫才找到刻意不在他們面前現身的梓。但是梓卻推開了日步美，並且表示自己因為讓大家受傷的事感到相當自責。梓以堅定的眼神發誓自己一定要破壞沙織頭上的光環。在對日步美道完謝後，梓最終還是選擇離去，不停呼喊著梓的日步美獨自一人被孤零零地留下原地。",
+          TextEn:
+            "Azusa conceals her whereabouts, but Hifumi manages to find her. Azusa pushes Hifumi away, blaming herself for causing everyone to suffer, and is determined to destroy Saori's halo. Azusa thanks Hifumi and departs, leaving Hifumi to call out Azusa's name.",
+        },
+      },
+      {
+        title: {
+          TextCn: "于黑暗中",
+          TextKr: "어둠 속의 빛",
+          TextJp: "暗闇の中で",
+          TextTh: "แสงสว่างท่ามกลางความมืดมิด",
+          TextTw: "於黑暗之中",
+          TextEn: "A Light in the Darkness",
+        },
+        story_id: 33140,
+        previous: 33130,
+        next: 33150,
+        summary: {
+          TextCn:
+            "阿里乌斯小队手握“战术兵器”，准备与尤斯缇娜一同向圣三一发起进攻。然而，她们被梓事先布置的陷阱缠上了。尽管如此，梓仍被纱织逼入绝境。情急之下，梓利用“某种炸弹”成功脱离险境。然而，尽管是为了出其不意，梓却将与日富美友情的象征用作杀人工具，内心充满了罪恶感。她在痛苦中哽咽，觉得自己再也无法回到日富美她们身边。",
+          TextKr:
+            "전술 병기까지 준비해 성도회와 함께 트리니티로 진격하려던 아리우스 스쿼드는, 아즈사의 게릴라 전술에 허를 찔려 뜻밖의 피해를 입는다. 결국 붙잡히고야 만 아즈사지만, 히후미가 준 <우정>의 증거를 이용해 간신히 도주하는 데 성공한다. 하지만 히후미의 소중한 선물을 폭탄으로 쓴 죄책감에 괴로워한다.",
+          TextJp:
+            "「戦術兵器」を手にし、ユスティナと共にトリニティへの進撃を開始しようとしたアリウススクワッドだったが、いつの間に仕込まれていたアズサのトラップに翻弄される。それでもサオリに追い詰められる中、アズサは「とある爆弾」を使ってその場から離脱することに成功。しかし不意を突くためだとしても、ヒフミとの友情の証を人殺しの道具に使ってしまったアズサは、罪悪感に苦しみながらもう二度とヒフミたちの元には戻れないと嗚咽を漏らすのだった。",
+          TextTh:
+            "สควอดของอาเรียสเตรียมอาวุธยุทธวิธีและไปบุกทรีนิตี้พร้อมกับ\nสาวกยูสตาร์ แต่ก็ได้รับบาดเจ็บจากเทคนิคซุ่มโจมตีของอาซึสะ\nอาซึสะถูกจับตัวได้แต่ก็ใช้หลักฐาน <มิตรภาพ> ที่ฮิฟุมิให้มาแล้วหนี\nออกมาได้อย่างหวุดหวิด แต่เธอกลับรู้สึกผิดเพราะของขวัญอันมีค่า\nของฮิฟุมิถูกระเบิดไป",
+          TextTw:
+            "奧利斯小隊準備好戰術兵器，打算和聖徒會一起進攻三一學園，然而由於梓的游擊戰術，來勢洶洶的他們意外地受到了嚴重的打擊。雖然梓最終還是被抓住了，但是多虧日步美送她的<友情>信物，她最終還是成功脫身。然而她對於自己將日步美送她的珍貴禮物當作砲彈投射的事情，仍舊感到相當自責。",
+          TextEn:
+            "The Arius Squad and Council are blindsided by Azusa as they're about to advance on Trinity. Azusa is captured, but manages to use the token Hifumi gave her to escape. She struggles with feelings of guilt over having used Hifumi's precious gift as an explosive.",
+        },
+      },
+      {
+        title: {
+          TextCn: "对第五条古则的回答",
+          TextKr: "다섯 번째 화두의 대답",
+          TextJp: "五つ目の古則への答え",
+          TextTh: "คำตอบของกฎโบราณข้อที่ 5",
+          TextTw: "對第五項古則的回答",
+          TextEn: "In Response to the Fifth Topic",
+        },
+        story_id: 33150,
+        previous: 33140,
+        next: 33160,
+        summary: {
+          TextCn:
+            "圣娅对老师说，即使选择相信，一切也注定在这里结束。然而，老师则表示，为了“未来”，为了学生们，自己还有必须要做的事情，随后便离开了。",
+          TextKr:
+            "세이아는 선생님에게 에덴조약은 우울하고 슬픈 결말만이 남아 있으니, 더 이상의 기대는 그저 고통일 뿐이라고 말한다. 또한 다섯 번째 화두는 여전히 증명 불가능한 명제이며, 그것이 에덴조약이라는 아이러니한 이름으로 완결되는 데에 쓴웃음을 짓는다. 하지만 선생님은 불확실한 명제와 미확정된 미래에 좌절하기보다는 지금은 학생들을 위해 노력하겠다며 세이아에게서 떠난다.",
+          TextJp:
+            "セイアは先生に対したとえ信じたところで、どう足掻いてもこれが終着地点だと口にする。しかし先生は「この先」のため、生徒たちのため、やらなきゃいけないことがあるからとその場を後にする。",
+          TextTh:
+            "เซอาบอกคุณครูว่าสนธิสัญญาเอเดนมีเพียงตอนจบที่หดหู่และน่าเศร้า\nการคาดหวังอะไรเพิ่มน่าจะนำมาแต่ความเจ็บปวด กฎโบราณข้อที่ 5\nยังคงเป็นประโยคที่พิสูจน์ไม่ได้เหมือนเดิม สิ่งนี้ให้เสียงหัวเราะขมขื่น\nในการทำตัวเองสมบูรณ์ในนามของสนธิสัญญาเอเดนที่ชื่อมีความขัด\nแย้งในตัว แต่คุณครูบอกว่าตอนนี้จะพยายามเพื่อนักเรียนดีกว่าจะไป\nท้อแท้กับกฎที่ไม่ชัดเจนและอนาคตที่ไม่แน่นอน จากนั้นก็จากเซอามา",
+          TextTw:
+            "聖亞告訴老師，伊甸園條約簽訂一事最終以悲傷又令人鬱悶的結局收尾，對於此事繼續抱有期待只會徒增自己的痛苦。另外她也表示第五個議題依舊是一個無法證明的難題，她對於它以伊甸園條約這個諷刺的名字落幕的事，不禁露出了一抹苦笑。然而老師認為比起為了不確定的難題和未知的未來而感到挫折，不如繼續努力為了學生們而努力，因此老師便離開了聖亞的身邊。",
+          TextEn:
+            "Seia tells Sensei the Eden Treaty will lead to desolation and the fifth koan remains impossible to substantiate. Sensei leaves, determined to help the students in the present rather than despair over the proposition's ambiguity or the uncertainty of the future.",
+        },
+      },
+      {
+        title: {
+          TextCn: "碎片零落",
+          TextKr: "편린들",
+          TextJp: "いくつかの欠片たち",
+          TextTh: "ส่วนเล็กๆ น้อยๆ",
+          TextTw: "數個碎片",
+          TextEn: "Bits and Pieces",
+        },
+        story_id: 33160,
+        previous: 33150,
+        next: 33170,
+        summary: {
+          TextCn:
+            "梓的炸弹本应该威胁纱织的安全，然而亚津子及时挡下了那次袭击。与此同时，风纪委员长日奈不知去向，花子即将被捕，而未花也从监狱中被释放出来。此时，老师终于醒转——",
+          TextKr:
+            "세이아의 시선은 본인의 의지로, 또는 의지가 아님에도 에덴조약에 얽혀버린 편린들을 훑는다. 사오리는 아츠코의 도움으로 살아남았고, 선도부장 히나는 자취를 감췄다. 티파티는 시스터후드와 관계가 있을 것으로 의심되는 하나코를 체포하며, 미카는 감옥에서 풀려난다. 아즈사는 사오리를 막기 위해 다시 일어서며, 히후미는 굳센 각오로 트리니티 교문으로 들어간다. 그리고 병실에서 정신을 차린 선생님은, 학생들을 구하기 위해 다시 일어선다.",
+          TextJp:
+            "アズサの爆弾をその身に受けたと思われたサオリだったが、その直撃をアツコが咄嗟にかばっていた。姿を消した風紀委員長のヒナ、逮捕されようとしているハナコ、そして檻から解放されるミカ。その時、先生がようやく目を覚まし――",
+          TextTh:
+            "เซอาพิจารณาถึงส่วนเล็กๆ น้อยๆ ที่มาพัวพันกับสนธิสัญญาเอเดน\nซาโอริยังมีชีวิตอยู่ได้ด้วยความช่วยเหลือของอาสึโกะ ส่วนประธาน\nกรรมการฮินะก็หายตัวไป สภาน้ำชาสงสัยว่าฮานาโกะจะเกี่ยวข้องกับ\nชมรมซิสเตอร์จึงจับกุมเธอมา ส่วนมิกะก็ได้รับการปล่อยตัวจากคุก\nอาซึสะออกโรงอีกครั้งเพื่อขัดขวางซาโอริ ส่วนคุณครูก็ตื่นขึ้นมาใน\nห้องพยาบาลและลุกขึ้นมาอีกครั้งเพื่อช่วยนักเรียน",
+          TextTw:
+            "或許是不經意，也或許是刻意為之，總之聖亞開始檢視與伊甸園條約有關的片段。沙織在敦子的幫助之下撿回了一命，而風紀委員長陽奈則消失得無影無蹤。茶會逮捕了她們懷疑與修女會有來往的花子，而彌香則被從監獄裡放了出來。為了阻止沙織，梓再次重新振作起來，而日步美則帶著堅定的覺悟走進了三一學園的校門內。在病房內清醒過來後，為了拯救自己的學生們，老師再次撐起了身體。",
+          TextEn:
+            "Seia considers everything entangled in the Eden Treaty. Saori survives with Atsuko's help, and Hina vanishes. The Tea Party arrests Hanako, and Mika is released. Azusa resolves to stop Saori, and Hifumi enters Trinity's gates. Sensei wakes up in the hospital.",
+        },
+      },
+      {
+        title: {
+          TextCn: "憎恨的真面目",
+          TextKr: "증오의 정체",
+          TextJp: "憎しみの正体",
+          TextTh: "ตัวตนของความเกลียดชัง",
+          TextTw: "憎恨的真相",
+          TextEn: "The Embodiment of Hate",
+        },
+        story_id: 33170,
+        previous: 33160,
+        next: 33180,
+        summary: {
+          TextCn:
+            "未花冷淡地拒绝了茶会中主战派的要求，并在毫无抵抗的情况下被殴打。就在此时，小春赶到未花身边。即使受到威胁，小春依然坚定地拒绝离开。就在这种剑拔弩张的紧张局势中，老师也赶到了。未花一边困惑于自己所说的话，一边断断续续地开口自白。",
+          TextKr:
+            "티파티를 지휘하라는 요청을 거부한 대가로 무자비하게 구타당한 미카를 감싼 코하루. 점점 분위기가 험악해지려는 그때, 선생님이 등장해서 코하루와 미카를 감싸고 티파티 주전파는 흩어지게 된다. 감옥에 있을 때 미카는 자신이 왜 세이아를 해치려고 했는지 그 일을 후회하며 눈물을 흘리고, 세이아는 미카의 진심을 알고 미카를 용서하기로 한다.",
+          TextJp:
+            "ティーパーティー傘下の主戦派たちの要望を素っ気なく拒絶し、無抵抗のまま殴られ続けていたミカのもとにコハルが駆けつける。脅されても、断固としてそれを拒否するコハル。そんな一触即発の状況で先生も到着。ミカは自身が発した言葉に戸惑いながらも、ぽつぽつと言葉を口にしていく。",
+          TextTh:
+            "โคฮารุปกป้องมิกะที่ปฏิเสธการเรียกร้องให้สั่งการสภาน้ำชาจนโดน\nทารุณอย่างโหดร้าย เมื่อบรรยากาศรุนแรงขึ้นเรื่อยๆ คุณครูก็ปรากฏตัว\nเพื่อปกป้องโคฮารุและมิกะ ส่วนพวกที่สนับสนุนสงครามของสภาน้ำชา\nก็หนีไป ในขณะที่ถูกขังอยู่ มิกะร้องไห้เสียใจในเรื่องที่ตัวเองพยายาม\nจะทำร้ายเซอา เซอารับรู้ถึงความจริงใจของมิกะและตัดสินใจจะยกโทษ\nให้กับมิกะ",
+          TextTw:
+            "因為拒絕了指揮茶會的命令，彌香遭人殘酷毆打，然而小春則想辦法保護她。就在情況漸漸變得危險的時候，由於老師及時現身保護小春和彌香，茶會的鷹派紛紛四散。在監獄裡的時候，彌香相當後悔自己當初為何想要傷害聖亞，並且還為此留下了眼淚，在得知了彌香的真心後，聖亞決定要原諒她。",
+          TextEn:
+            "Koharu defends Mika, who has been beaten mercilessly by the Tea Party. Sensei appears to protect Koharu and Mika, causing the Tea Party jingoists to scatter. Mika weeps in regret over her attempt to harm Seia. Seia is moved by her sincerity and forgives her.",
+        },
+      },
+      {
+        title: {
+          TextCn: "不再迷惘",
+          TextKr: "흔들리지 않고",
+          TextJp: "迷わずに",
+          TextTh: "ไม่หวั่นไหว",
+          TextTw: "毫無迷惘",
+          TextEn: "Without a Moment's Hesitation",
+        },
+        story_id: 33180,
+        previous: 33170,
+        next: 33190,
+        summary: {
+          TextCn:
+            "老师逐一拜访那些逐渐恢复意识的学生们。小春、日富美和花子也终于聚集在一起，她们决定前往梓的所在地——朝着古圣堂的废墟进发。",
+          TextKr:
+            "부상당한 학생들과 만난 선생님. 학생들의 바람대로, 선생님은 또 다른 학생들을 구하기 위해 양호실을 떠난다. 히후미와 코하루, 그리고 하나코가 만나 아즈사를 구하기 위한 보충수업부가 다시 결성되어, 아리우스와 아즈사가 있는 고성당 폐허로 향한다.",
+          TextJp:
+            "徐々に目を覚まし始める生徒たちの元へと、一人ずつ訪れていく先生。コハルとヒフミ、ハナコもようやく集まり、彼女たちはアズサのもとへ向かうべく古聖堂の廃墟を目指すのだった。",
+          TextTh:
+            "คุณครูได้พบกับเหล่านักเรียนที่ได้รับบาดเจ็บ คุณครูมุ่งหน้าไปยัง\nห้องพยาบาลเพื่อช่วยเหลือนักเรียนคนอื่นๆ ตามคำขอของนักเรียน\nฮิฟุมิ โคฮารุ และฮานาโกะได้พบกันและจัดตั้งชมรมชั้นเรียนเสริม\nขึ้นอีกครั้งเพื่อช่วยอาซึสะ ทุกคนมุ่งหน้าไปยังเศษซากวิหารโบราณ\nที่อาเรียสและอาซึสะอยู่",
+          TextTw:
+            "老師與受傷的學生們碰面，由於學生們的請求，老師便離開保健室去救其他的學生。日步美、小春和花子三人碰頭，並再次組成目標為拯救梓的補課部，他們一同前往奧利斯和梓所在的古教堂廢墟。",
+          TextEn:
+            "Sensei meets with the injured students and then departs the infirmary to rescue the others. Hifumi, Koharu, and Hanako reassemble the Make-Up Work Club to rescue Azusa and head to the ruins of the old cathedral where the Arius forces and Azusa are located.",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "我们的故事",
+          TextKr: "우리들의 이야기를",
+          TextJp: "私たちの物語",
+          TextTh: "เรื่องราวของพวกเรา",
+          TextTw: "我們的故事",
+          TextEn: "Our Stories",
+        },
+        story_id: 33190,
+        previous: 33180,
+        next: 33195,
+        summary: {
+          TextCn:
+            "老师来到了日奈身边。经历了这些变故之后，疲惫不堪的日奈终于稍微吐露了些许内心，能够稍稍依赖他人，随即再次缓缓站起。与此同时，日富美再次前往梓的身边，并在她面前揭示了自己的真实身份——“蒙面泳装团的领袖”，并告诉梓“我们之间并没有什么不同”。伴随着日富美坚定的宣言，伊甸条约开始被扭曲，另一个伊甸条约机构随之成立。",
+          TextKr:
+            "히나는 은퇴를 선언하며 선생님에게 자신의 약한 모습을 보여주지만, 선생님의 인정을 받은 뒤 게헨나 선도부로 복귀한다. 마침내 아즈사를 발견한 히후미는, 리더 파우스트가 되어 수영복 복면단과 함께 아리우스 스쿼드에게 대적하기로 결의한다. 에덴조약에 새 계율이 체결되고 샬레의 선생님을 중심으로 한 또 다른 에덴조약기구군이 출범한다.",
+          TextJp:
+            "ヒナの元を訪れた先生。これまでの事態を経て弱り切った彼女は、ようやく自身の内面を少し吐露する。やっと少しだけ甘えられた彼女は再び、ゆっくりと立ち上がろうとしていた。ヒフミはあらためてアズサの元へと向かい、彼女の前で自身の本当の姿が「覆面水着団のリーダー」であると明かし、だから私たちは違うなんてことは無いのだと口にする。ヒフミの高らかな宣言と共にエデン条約は捻じ曲げられ、もうひとつのエデン条約機構が発足するのだった。",
+          TextTh:
+            "คุณครูได้เห็นมุมที่อ่อนแอของฮินะที่บอกว่าจะออกจากตำแหน่งหลัง\nจากได้รับการยอมรับจากคุณครู ฮินะก็กลับไปที่คณะกรรมการวินัย\nเกเฮนน่า ฮิฟุมิหาตัวอาซึสะเจอพอดี เธอตัดสินใจเด็ดขาดว่าจะไป\nเผชิญหน้ากับสควอดของอาเรียสพร้อมกับกลุ่มหน้ากากมิสึกิ มีการทำ\nข้อตกลงบรรทัดฐานใหม่ในสนธิสัญญาเอเดน โดยมีคุณครูจากชาเล่ต์\nเป็นศูนย์กลาง",
+          TextTw:
+            "陽奈一邊表示自己要退位，一邊將自己脆弱的一面展現在老師面前，但是在得到了老師的認可後，她便再次回到了格黑娜風紀委員會。終於找到梓的身影後，日步美成為浮士德隊長，並且下定決心和泳裝蒙面團一起與奧利斯小隊對抗。隨著新的伊甸園條約戒律簽訂，以夏萊的老師為首的另一支伊甸園條約祈禱軍正式成立。",
+          TextEn:
+            "Hina comes out of her brief retirement after being visited by Sensei. Hifumi finds Azusa and decides to assume her identity as Faust to battle against the Arius Squad. A new ETO is formed after Sensei's declaration and interpretation of the Eden Treaty.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "我们的故事",
+          TextKr: "우리들의 이야기를",
+          TextJp: "私たちの物語",
+          TextTh: "เรื่องราวของพวกเรา",
+          TextTw: "我們的故事",
+          TextEn: "Our Stories",
+        },
+        story_id: 33195,
+        previous: 33190,
+        next: 33200,
+        summary: {
+          TextCn: "过渡剧情",
+          TextKr: "",
+          TextJp: "",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "乐园之名为（1）",
+          TextKr: "낙원의 이름 1",
+          TextJp: "楽園の名前は（１）",
+          TextTh: "นามแห่งสวรรค์ (1)",
+          TextTw: "樂園之名為（１）",
+          TextEn: "The Name of Paradise Part 1",
+        },
+        story_id: 33200,
+        previous: 33195,
+        next: 33205,
+        summary: {
+          TextCn:
+            "格黑娜的风纪委员会、圣三一的正义实现委员会以及阿比多斯共同携手对抗阿里乌斯小队。",
+          TextKr:
+            "게헨나의 선도부, 트리니티의 정의실현부, 거기에 아비도스까지 합세해 아리우스 스쿼드를 상대한다.",
+          TextJp:
+            "ゲヘナの風紀委員会、トリニティの正義実現委員会、それにアビドスが加わり、アリウススクワッドへと立ち向かっていく。",
+          TextTh:
+            "คณะกรรมการวินัยของเกเฮนน่า ชมรมทวงความยุติธรรมของทรีนิตี้\nและนักเรียนอะบิดอสที่อยู่ที่นั่นผนึกกำลังกันเพื่อเผชิญหน้ากับสควอด\nของอาเรียส",
+          TextTw:
+            "格黑娜的風紀委員會、三一的實現正義部和阿拜多斯聯手對抗奧利斯小隊。",
+          TextEn:
+            "Gehenna's Prefect Team, Trinity's Justice Task Force, and Abydos join forces to face the Arius Squad.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "乐园之名为（1）",
+          TextKr: "낙원의 이름 1",
+          TextJp: "楽園の名前は（１）",
+          TextTh: "นามแห่งสวรรค์ (1)",
+          TextTw: "樂園之名為（１）",
+          TextEn: "The Name of Paradise Part 1",
+        },
+        story_id: 33205,
+        previous: 33200,
+        next: 33210,
+        summary: {
+          TextCn: "过渡剧情",
+          TextKr: "",
+          TextJp: "",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "乐园之名为（2）",
+          TextKr: "낙원의 이름 2",
+          TextJp: "楽園の名前は（２）",
+          TextTh: "นามแห่งสวรรค์ (2)",
+          TextTw: "樂園之名為（２）",
+          TextEn: "The Name of Paradise Part 2",
+        },
+        story_id: 33210,
+        previous: 33205,
+        next: 33215,
+        summary: {
+          TextCn: "熟悉的面孔陆续重逢，学校之间的力量也不断汇聚……",
+          TextKr:
+            "싸움은 계속되고, 처음에는 서로 섞일 수 없을 것만 같았던 학교들이 서로 힘을 합치기 시작한다.",
+          TextJp:
+            "懐かしい面々が再開しつつ、学校同士の力が次々に合わさっていき……。",
+          TextTh:
+            "การต่อสู้ยังคงดำเนินต่อไป โรงเรียนต่างๆ ที่ตอนแรกดูเหมือนจะเข้ากัน\nไม่ได้ กลับรวมพลังกันในการต่อสู้ครั้งนี้",
+          TextTw:
+            "隨著戰鬥不斷延長，原以為無法融洽相處的三所學校開始成為一體。",
+          TextEn:
+            "The fight continues, and all of the schools that at first seemed completely at odds which each other slowly begin to work together.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "乐园之名为（2）",
+          TextKr: "낙원의 이름 2",
+          TextJp: "楽園の名前は（２）",
+          TextTh: "นามแห่งสวรรค์ (2)",
+          TextTw: "樂園之名為（２）",
+          TextEn: "The Name of Paradise Part 2",
+        },
+        story_id: 33215,
+        previous: 33210,
+        next: 33220,
+        summary: {
+          TextCn: "圣娅静静地看着这场ETO之间的战斗，轻声承认自己输了。",
+          TextKr:
+            "세이아는 ETO 대 ETO의 싸움을 지켜보며, 낙원의 존재를 증명하고자 했던 자신의 생각이 틀렸음을 인정한다.",
+          TextJp:
+            "ETO同士の戦いを見守りながら、セイアは自分の負けだと静かに口にする。",
+          TextTh:
+            "เซอาเฝ้าดูการต่อสู้ระหว่าง ETO กับ ETO และยอมรับว่าตัวเองคิดผิดที่จะ\nพิสูจน์การมีอยู่ของสวรรค์",
+          TextTw:
+            "聖亞注視著這場ETO和ETO之間的對決，她終於承認以前一直想證明樂園存在的自己錯了。",
+          TextEn:
+            "Watching the war of ETO against ETO unfold, Seia admits it was wrong of her to try to prove the existence of paradise.",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "乐园之名为（3）",
+          TextKr: "낙원의 이름 3",
+          TextJp: "楽園の名前は（３）",
+          TextTh: "นามแห่งสวรรค์ (3)",
+          TextTw: "樂園之名為（３）",
+          TextEn: "The Name of Paradise Part 3",
+        },
+        story_id: 33220,
+        previous: 33215,
+        next: 33225,
+        summary: {
+          TextCn:
+            "随着戒律逐渐失去意义，阿里乌斯小队的形势也越来越不利。队员们逐渐开始放弃，但纱织依然坚守自己的信念。",
+          TextKr:
+            "계율이 힘을 잃자 점점 패색이 짙어가는 아리우스 스쿼드. 패배를 인정하자는 멤버들의 이야기에도, 사오리는 여전히 모든 것이 헛되다는 믿음을 버리지 않으며 싸움을 지속한다.",
+          TextJp:
+            "戒律が徐々に意味を失い、旗色が悪くなっていくアリウススクワッド。メンバーたちは諦めつつある中で、それでもサオリは信念を捨てようとはしない。",
+          TextTh:
+            "เมื่อสูญเสียพลังแห่งบรรทัดฐาน สควอดของอาเรียสก็ค่อยๆ พ่ายแพ้\nถึงสมาชิกคนอื่นจะยอมรับความพ่ายแพ้ แต่ซาโอริก็ยังเชื่อมั่นว่าทุกอย่าง\nจะเปล่าประโยชน์เหมือนเคยและตั้งหน้าสู้ต่อ",
+          TextTw:
+            "隨著戒律失去力量，奧利斯小隊也漸漸失去先前的優勢。即使成員們要她承認戰敗，沙織依舊堅信他們所做的一切都只是徒勞無功，並且堅持繼續戰鬥下去。",
+          TextEn:
+            "The Arius Squad seems destined for defeat as the precept loses its power. Saori is adamant in her will to fight and doesn't believe everything is in vain despite the members' talk of throwing in the towel.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "乐园之名为（3）",
+          TextKr: "낙원의 이름 3",
+          TextJp: "楽園の名前は（３）",
+          TextTh: "นามแห่งสวรรค์ (3)",
+          TextTw: "樂園之名為（３）",
+          TextEn: "The Name of Paradise Part 3",
+        },
+        story_id: 33225,
+        previous: 33220,
+        next: 33230,
+        summary: {
+          TextCn: "过渡剧情",
+          TextKr: "",
+          TextJp: "",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "在古圣堂地下",
+          TextKr: "고성당의 지하",
+          TextJp: "古聖堂の地下に",
+          TextTh: "ชั้นใต้ดินของวิหารโบราณ",
+          TextTw: "於古教堂的地下",
+          TextEn: "Below the Old Cathedral",
+        },
+        story_id: 33230,
+        previous: 33225,
+        next: 33235,
+        summary: {
+          TextCn: "纱织朝着古圣堂的地下进发。为了结束这场骚乱，梓和老师紧随其后。",
+          TextKr:
+            "항복한 멤버들을 뒤로하고 고성당 지하로 향하는 사오리. 아즈사와 선생님은 이 싸움의 매듭을 짓기 위해 사오리의 뒤를 쫓는다.",
+          TextJp:
+            "古聖堂の地下へと向かうサオリ。アズサと先生は決着をつけるっため、彼女の後を追っていく。",
+          TextTh:
+            "ซาโอริทิ้งสมาชิกสควอดที่ยอมจำนนแล้วมุ่งหน้าไปยังชั้นใต้ดินของวิหารโบราณ อาซึสะและคุณครูไล่ตามซาโอริไปเพื่อยุติการต่อสู้ครั้งนี้",
+          TextTw:
+            "沙織拋下了投降的成員們，並且逕自前往古教堂地底下。老師和梓為了了結這場戰鬥，並追隨著沙織的腳步前往古教堂。",
+          TextEn:
+            "Saori leaves the surrendered members behind and heads down to the basement of the old cathedral. Azusa and Sensei follow after her to finish the fight.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "在古圣堂地下",
+          TextKr: "고성당의 지하",
+          TextJp: "古聖堂の地下に",
+          TextTh: "ชั้นใต้ดินของวิหารโบราณ",
+          TextTw: "於古教堂的地下",
+          TextEn: "Below the Old Cathedral",
+        },
+        story_id: 33235,
+        previous: 33230,
+        next: 33240,
+        summary: {
+          TextCn: "过渡剧情",
+          TextKr: "",
+          TextJp: "",
+          TextTh: "",
+          TextTw: "",
+          TextEn: "",
+        },
+      },
+      {
+        is_before_battle: true,
+        title: {
+          TextCn: "谁的憎恨",
+          TextKr: "우리의 것이 아닌 증오",
+          TextJp: "誰の憎しみ",
+          TextTh: "ความเกลียดชังที่เราไม่ได้เป็นเจ้าของ",
+          TextTw: "誰的憎恨",
+          TextEn: "Hatred That Is Not Our Own",
+        },
+        story_id: 33240,
+        previous: 33235,
+        next: 33245,
+        summary: {
+          TextCn: "亚津子出现在倒下的纱织身边。从不言语的她打破沉默，告诉纱织“到此为止”。众人已是满身伤痕，巨匠却在此时出现。为了对抗巨匠，老师拿出了“大人的卡片”。",
+          TextKr:
+            "사오리의 패배, 그러나 지친 아즈사마저 결국 쓰러진다. 그때 아츠코가 나타나 본인의 입으로 자신들이 졌다고 인정한다. 기다렸다는 듯이 마에스트로가 나타나 트리니티의 지하에 숨겨둔 교의를 현현하게 하고, 선생님은 그에 대적하기 위해 어른의 카드를 꺼내 든다.",
+          TextJp:
+            "倒れたサオリのもとにアツコが現れ、彼女は沈黙を破って「もうやめよう」と口にする。各位が満身創痍の中、そこに訪れたマエストロに対抗するべく、先生は「大人のカード」を取り出す。",
+          TextTh:
+            "ซาโอริพ่ายแพ้ในการต่อสู้ ส่วนอาซึสะก็เหนื่อยล้าจนล้มพับไป อาสึโกะ\nปรากฏตัวออกมาตอนนั้นพอดีแล้วบอกว่ายอมรับในความพ่ายแพ้ของ\nพวกตน เมสโตรโผล่ออกมาเหมือนรอจังหวะอยู่ และทำให้หลักคำสอนที่\nซ่อนอยู่ชั้นใต้ดินของทรีนิตี้เป็นที่ประจักษ์ คุณครูจึงหยิบบัตรประจำตัว\nผู้ใหญ่ออกมาสู้",
+          TextTw:
+            "隨著沙織戰敗，疲憊不堪的梓也就此倒地不起。就在此時，敦子忽然現身，並且親口承認他們在這場戰鬥中戰敗了。就像是一直在等待這一刻，瑪艾斯托洛忽然現身，並且宣揚隱藏在三一地底下的教義。為了招待瑪艾斯托洛，老師只好拿出大人的卡片。",
+          TextEn:
+            "Saori is defeated, and Azusa finally collapses from exhaustion. Atsuko then appears to personally admit defeat. Then, as if he had been waiting to strike, Maestro emerges and demands the doctrines hidden within Trinity's depths. Sensei pulls out their card to retaliate.",
+        },
+      },
+      {
+        is_after_battle: true,
+        title: {
+          TextCn: "谁的憎恨",
+          TextKr: "우리의 것이 아닌 증오",
+          TextJp: "誰の憎しみ",
+          TextTh: "ความเกลียดชังที่เราไม่ได้เป็นเจ้าของ",
+          TextTw: "誰的憎恨",
+          TextEn: "Hatred That Is Not Our Own",
+        },
+        story_id: 33245,
+        previous: 33240,
+        next: 33250,
+        summary: {
+          TextCn: "战斗结束后，阿里乌斯小队悄然消失，不知去向，身影逐渐隐没在黑暗之中。",
+          TextKr:
+            "전투가 끝나자 아리우스 스쿼드는 모두의 앞에서 자취를 감추고 쓸쓸히 어둠 속으로 사라진다.",
+          TextJp:
+            "戦闘を終えるとアリウススクワッドはどこかへと姿を消し、そのまま暗闇の中へと消えていってしまうのだった。",
+          TextTh:
+            "เมื่อการต่อสู้จบลง สควอดของอาเรียสก็อันตรธานไปในความมืดต่อหน้า\nทุกคน",
+          TextTw: "戰鬥結束後，奧利斯小隊神不知鬼不覺地消失在了眾人的眼前。",
+          TextEn:
+            "Once the battle is over, the Arius Squad vanishes before everyone's eyes and disappears into the darkness.",
+        },
+      },
+      {
+        title: {
+          TextCn: "尾声",
+          TextKr: "에필로그",
+          TextJp: "エピローグ",
+          TextTh: "บทส่งท้าย",
+          TextTw: "尾聲",
+          TextEn: "Epilogue",
+        },
+        story_id: 33250,
+        previous: 33245,
+        summary: {
+          TextCn: "万魔殿的成员转醒，茶会成员再次聚集，补习部的众人也重新汇合。虽然仍有一些损失未能挽回，但日常的色彩正在逐渐回归。与此同时，一股神秘的力量在幕后开始行动，目标直指阿里乌斯小队……？",
+          TextKr:
+            "만마전은 게헨나의 병실에서 회복하고 있고, 티파티도 나기사를 중심으로 다시 질서가 회복되어 간다. 에덴조약에 얽혀 있던 많은 사람들이 다시 일상을 되찾고, 티파티에 세이아가 돌아와 다시 세 명이 극적인 재회를 한다. 새 보충수업부에는 익숙한 얼굴들이 모여 있고, 평화로운 일상이 다시 시작된다. 한편, 어딘가에서 패배하고 자취를 감춘 아리우스 스쿼드를 노리는 어떤 존재가 움직이기 시작한다.",
+          TextJp:
+            "目を覚ました万魔殿、再び集まったティーパーティー、そして補習授業部一同。取りこぼしてしまったものもある中で、日常は徐々にその色を取り戻していく。一方、裏側ではアリウススクワッドを狙って謎の存在が動き始め……？",
+          TextTh:
+            "แพนเดโมเนียม โซไซตี้พักฟื้นอยู่ในห้องพยาบาลของเกเฮนน่า\nส่วนสภาน้ำชาก็ฟื้นฟูระเบียบอีกครั้งโดยมีนางิสะเป็นศูนย์กลาง\nเซอากลับมายังสภาน้ำชา ทำให้เกิดการรวมตัวของทั้งสามคนอีกครั้ง\nทุกคนได้เริ่มใช้ชีวิตประจำวันที่สงบสุข ส่วนสควอดของอาเรียสที่พ่ายแพ้\nและหลบซ่อนอยู่ก็กำลังถูกเพ่งเล็งจากบางคน",
+          TextTw:
+            "萬魔殿在格黑娜學園的病房內休養，而以渚為首的茶會則努力重新恢復世界秩序。和伊甸園條約相關得眾人努力找回原本平靜的日常，聖亞回到茶會後，再次與三人來了一場戲劇性的重逢。一張張熟悉的臉孔齊聚在新的補課部辦公室內，平靜的日常也就此再度重新展開。另一邊，一個神祕的人物開始蠢蠢欲動，而他的目標正是戰敗後就消失蹤影的奧利斯小隊。",
+          TextEn:
+            "The Pandemonium Society recovers in the hospital, and order is restored to the Tea Party. Normalcy returns to life. Seia returns to the Tea Party, and the members have a dramatic reunion. Familiar faces gather at the new Make-Up Work Club. Meanwhile, an unknown presence targeting the Arius Squad goes on the move.",
         },
       },
     ],

@@ -2,6 +2,7 @@
 import { computed, onMounted } from "vue";
 import { CommonStoryTextObject } from "@/types/StoryJson";
 import { useSettingsStore } from "@store/settings";
+import NeuTag from "@widgets/NeuUI/NeuTag.vue";
 
 const settingsStore = useSettingsStore();
 
@@ -11,6 +12,8 @@ const props = withDefaults(
     avatar?: string;
     description: CommonStoryTextObject;
     storyOrder?: number;
+    isBeforeBattle?: boolean;
+    isAfterBattle?: boolean;
   }>(),
   {
     avatar: "",
@@ -74,7 +77,11 @@ onMounted(() => import("@/components/StoryViewer.vue"));
       alt="avatar"
     />
     <div class="text-wrapper">
-      <div class="title">{{ storyOrder }}{{ title }}</div>
+      <div class="title">
+        <span>{{ storyOrder }}{{ title }}</span>
+        <neu-tag v-if="isBeforeBattle" size="small">战斗前</neu-tag>
+        <neu-tag v-if="isAfterBattle" size="small">战斗后</neu-tag>
+      </div>
       <div class="description">
         {{ selectedLangDescription || `${getFallbackDescription()}` }}
       </div>
@@ -120,6 +127,9 @@ onMounted(() => import("@/components/StoryViewer.vue"));
       width: 100%;
       font-weight: bold;
       font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .description {

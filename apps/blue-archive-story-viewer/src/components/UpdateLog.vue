@@ -3,6 +3,15 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-10-09",
+    contents: [
+      {
+        type: "main",
+        content: "Vol.3 伊甸条约 第三章",
+      },
+    ],
+  },
+  {
     date: "2024-10-07",
     contents: [
       {
