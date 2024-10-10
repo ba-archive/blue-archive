@@ -24,9 +24,9 @@
         </template>
         文件名: {{ getFileName() }}
       </n-tooltip>
-      <n-button type="info" @click="handlePreviewModeRequest">{{
+      <!-- <n-button type="info" @click="handlePreviewModeRequest">{{
         isPreviewMode ? "取消预览" : "预览全文翻译"
-      }}</n-button>
+      }}</n-button> -->
       <n-button
         v-if="!hasFileSaved"
         secondary
