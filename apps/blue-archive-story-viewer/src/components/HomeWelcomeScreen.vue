@@ -43,11 +43,13 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
       <img class="mika-sticker" src="@assets/mika_sticker.webp" alt="mika" />
       <p class="color-transition">先从<span id="choice"></span>选择项目哦</p>
       <div class="update-info-container">
-        <updated-portal-card
-          v-for="info in homepageDisplayInfoList"
-          :info="info"
-          :key="info.title"
-        />
+        <transition-group name="update-portal-card">
+          <updated-portal-card
+            v-for="info in homepageDisplayInfoList"
+            :info="info"
+            :key="info.title"
+          />
+        </transition-group>
       </div>
     </div>
   </div>
@@ -92,6 +94,20 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
   margin-top: 0.5rem;
   color: #808080;
   font-size: 0.8rem;
+}
+
+// FIXME: 没能让vue大人做到平滑过渡，十分抱歉
+
+.update-portal-card-move,
+.update-portal-card-enter-active,
+.update-portal-card-leave-active {
+  transition: all 0.375s ease-in-out;
+}
+
+.update-portal-card-enter-from,
+.update-portal-card-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
 }
 
 @media screen and (max-width: 768px) {
