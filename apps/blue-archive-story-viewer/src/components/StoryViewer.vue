@@ -175,7 +175,7 @@ const initProgress = ref(0);
 const ready = ref(false);
 const fetchError = ref(false);
 const fetchErrorMessage = ref({});
-const showPlayer = ref(true);
+const showPlayer = ref(false);
 
 const changeIndex = ref(0);
 const isLLMTranslation = ref(false);
@@ -224,6 +224,7 @@ getStoryJson(
   .then(res => {
     story.value = res.story as StoryContent;
     isLLMTranslation.value = res.isAiTranslated;
+    showPlayer.value = true;
   })
   .catch(err => {
     fetchError.value = true;
