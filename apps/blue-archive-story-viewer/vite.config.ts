@@ -14,6 +14,8 @@ import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
 import timezone from "dayjs/plugin/timezone.js";
 import utc from "dayjs/plugin/utc.js";
+import vueDevTools from "vite-plugin-vue-devtools";
+import UnoCSS from 'unocss/vite'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -139,6 +141,8 @@ export default defineConfig({
       // uncomment to unregister service worker
       selfDestroying: true,
     }),
+    vueDevTools(),
+    UnoCSS(),
     // viteCompression(),
     //@ts-ignore
     // visualizer(),

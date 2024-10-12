@@ -7,6 +7,7 @@ import { useSettingsStore } from "./store/settings";
 import { routerConvert } from "@route/routes";
 import App from "./App.vue";
 import "./style.scss";
+import "virtual:uno.css";
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
