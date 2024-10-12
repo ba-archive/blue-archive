@@ -145,6 +145,7 @@ function handleClose() {
         padding: 0;
         font-weight: bold;
         font-size: 1.5em;
+        cursor: pointer;
       }
     }
 

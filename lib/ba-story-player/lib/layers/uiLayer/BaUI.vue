@@ -381,6 +381,7 @@ function getI18n(key: string) {
   border: none;
   background-color: initial;
   padding: 0;
+  cursor: pointer;
 }
 
 .right-top {
@@ -421,6 +422,7 @@ function getI18n(key: string) {
     justify-content: right;
 
     .ba-button {
+      cursor: pointer;
       &:hover:enabled {
         background-color: #c7c8c9;
       }
@@ -521,6 +523,7 @@ function getI18n(key: string) {
 
       .button-close-summary {
         width: 50%;
+        cursor: pointer;
       }
     }
   }
