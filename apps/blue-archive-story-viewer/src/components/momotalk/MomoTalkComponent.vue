@@ -9,7 +9,7 @@
     <div class="student-reply" v-if="'Answer' !== messageCondition">
       <img
         class="student-avatar"
-        :class="{ hidden: !message?.avatar }"
+        :class="{ 'avatar-hidden': !message?.avatar }"
         :src="studentAvatar"
         :alt="studentName"
       />
@@ -331,7 +331,7 @@ function handleContinueReadingButtonPressed() {
   height: 3rem;
   object-fit: cover;
 
-  &.hidden {
+  &.avatar-hidden {
     visibility: hidden;
     height: 0;
   }
