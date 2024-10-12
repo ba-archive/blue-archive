@@ -132,6 +132,23 @@ const routes: Array<RouteRecordRaw> = [
           },
         ],
       },
+      {
+        path: "/eventStory",
+        name: "EventStory",
+        meta: {
+          shouldShowInNav: false,
+          navOrder: 4,
+          m17n: [
+            { lang: "cn", title: "活动剧情" },
+            { lang: "tw", title: "活動劇情" },
+            { lang: "jp", title: "イベントストーリー" },
+            { lang: "en", title: "Event Story" },
+            { lang: "kr", title: "이벤트 스토리" },
+            { lang: "th", title: "เรื่องกิจกรรม" },
+          ],
+        },
+        component: () => import("../components/EventStoryHome.vue"),
+      },
       // {
       //   path: '/miniStory',
       //   name: 'MiniStory',
