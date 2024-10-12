@@ -1,5 +1,8 @@
 <template>
-  <div class="fill-screen center player-container" ref="playerContainerElement">
+  <div
+    class="flex flex-col flex-1 items-center justify-center w-full"
+    ref="playerContainerElement"
+  >
     <error-screen
       :route-path="route.path"
       :error-message="fetchErrorMessage"
@@ -57,11 +60,7 @@
           @end="handleStoryEnd"
           @error="handleError()"
         />
-        <img
-          :src="useSuperSamplingImgPath"
-          alt=""
-          style="opacity: 0; position: absolute"
-        />
+        <img :src="useSuperSamplingImgPath" alt="" class="h-0 w-0 absolute" />
         <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
@@ -136,45 +135,39 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios, { AxiosError } from "axios";
 import StoryPlayer from "ba-story-player";
 import { computed, nextTick, ref, watch, ComputedRef } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import ErrorScreen from "./widgets/ErrorScreen.vue";
 import NeuProgressBar from "./widgets/NeuUI/NeuProgressBar.vue";
 import NeuSwitch from "./widgets/NeuUI/NeuSwitch.vue";
-import {
-  CommonStoryTextObject,
-  Section,
-  StoryAbstract,
-  StoryContent,
-  StoryIndex,
-} from "@/types/StoryJson";
+import { Section, StoryContent } from "@/types/StoryJson";
 import { ElMessage } from "element-plus";
 import { getI18nString } from "@i18n/getI18nString";
-import { stories } from "@index/mainStoryIndex";
-import { stories as OtherStories } from "@index/otherStoryIndex";
 import { useSettingsStore } from "@store/settings";
-import { getAllFlattenedStoryIndex } from "@util/getAllFlattenedStoryIndex";
 import { useElementSize } from "@vueuse/core";
+import { capitalize } from "radash";
 import "ba-story-player/dist/style.css";
 import NeuTag from "./widgets/NeuUI/NeuTag.vue";
+import {
+  getStoryJson,
+  getStorySummary,
+  type QueryType,
+} from "@/util/playerUtils";
 
 const route = useRoute();
 const router = useRouter();
-const storyId = computed(() => route.params.id);
+const storyId = computed(() => route.params.id as string);
 const storyQueryType = computed(() => route.query.type ?? "main");
 const story = ref<StoryContent>({} as StoryContent);
-const storyIndex = ref<StoryIndex>({} as StoryIndex);
+const storySummaryRaw = ref<Section | undefined>();
 
 const settingsStore = useSettingsStore();
 const userName = computed(() => settingsStore.getUsername);
 const playerContainerElement = ref<HTMLElement>();
 const userLanguage = computed(() => settingsStore.getLang);
-const playerLanguage = computed(
-  () =>
-    settingsStore.getLang.charAt(0).toUpperCase() +
-    settingsStore.getLang.slice(1)
+const playerLanguage = computed(() =>
+  capitalize(settingsStore.getLang)
 ) as ComputedRef<"Cn" | "Jp" | "En" | "Tw">;
 const playEnded = ref(false);
 
@@ -182,6 +175,7 @@ const initProgress = ref(0);
 const ready = ref(false);
 const fetchError = ref(false);
 const fetchErrorMessage = ref({});
+const showPlayer = ref(true);
 
 const changeIndex = ref(0);
 const isLLMTranslation = ref(false);
@@ -204,7 +198,8 @@ const summary = ref({
 const studentId = computed(() => route.params.id as string);
 const favorGroupId = computed(() => (route.params.groupId as string) ?? "");
 const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
-// 存储故事类型并以此生成请求url
+
+// 判断是不是学生好感剧情
 const isStuStory = computed(() =>
   route.name === "StudentStoryViewer" ? true : false
 );
@@ -216,77 +211,54 @@ const storyType = computed(() => {
   return storyQueryType.value;
 });
 
-const queryUrl = isStuStory.value
-  ? `/story/favor/${studentId.value}/${favorGroupId.value}.json`
-  : `/story/${storyQueryType.value}/${storyId.value}.json`;
-axios
-  .get(queryUrl, {
-    onDownloadProgress: progressEvent => {
-      if (progressEvent.total) {
-        initProgress.value = Math.floor(
-          ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-        );
-      } else {
-        initProgress.value = Math.floor(
-          ((progressEvent.loaded || 0) * 100) /
-            ((progressEvent.loaded || 0) + 100)
-        );
-      }
-    },
-  })
+getStoryJson(
+  storyType.value as QueryType,
+  {
+    storyId: favorGroupId.value || storyId.value,
+  },
+  progressEvent => {
+    const total = progressEvent.total || progressEvent.loaded + 100;
+    initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
+  }
+)
   .then(res => {
-    if (typeof res.data !== "object") throw new AxiosError("404", "404");
-    story.value = res.data;
+    story.value = res.story as StoryContent;
+    isLLMTranslation.value = res.isAiTranslated;
   })
-  .catch(() => {
-    function getLLMTranslationPath() {
-      return `/story/ai/favor/${studentId.value}/${
-        favorGroupId.value.slice(0, 5) +
-        favorGroupId.value.slice(5).padStart(2, "0")
-      }.json`;
-    }
-    isLLMTranslation.value = true;
-    return axios
-      .get(getLLMTranslationPath(), {
-        onDownloadProgress: progressEvent => {
-          if (progressEvent.total) {
-            initProgress.value = Math.floor(
-              ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-            );
-          } else {
-            initProgress.value = Math.floor(
-              ((progressEvent.loaded || 0) * 100) /
-                ((progressEvent.loaded || 0) + 100)
-            );
-          }
-        },
-      })
-      .then(res => {
-        if (!res.data.content || res.data.content.length === 0) {
-          fetchError.value = true;
-          fetchErrorMessage.value = {
-            message: "Story not found",
-            response: {
-              status: 1919,
-            },
-          };
-
-          return;
-        }
-        story.value = res.data;
-        summary.value = {
-          chapterName: story.value.content[0].TextJp || "标题",
-          summary: "这段剧情由AI翻译生成，可能存在翻译错误。",
-        };
-      })
-      .catch(err => {
-        fetchError.value = true;
-        fetchErrorMessage.value = err;
-      });
+  .catch(err => {
+    fetchError.value = true;
+    fetchErrorMessage.value = err;
   })
   .finally(() => {
     ready.value = true;
   });
+
+getStorySummary(storyType.value as QueryType, {
+  directoryId: studentId.value,
+  storyId: isStuStory.value ? favorGroupId.value : storyId.value,
+}).then(res => {
+  if (res) {
+    storySummaryRaw.value = res as Section;
+    updateSummary();
+  }
+});
+
+function getSummaryTextByKey(summary: Section, key: string) {
+  return Reflect.get(Reflect.get(summary, key), "Text" + playerLanguage.value);
+}
+
+function updateSummary() {
+  if (storySummaryRaw.value) {
+    summary.value.chapterName = getSummaryTextByKey(
+      storySummaryRaw.value,
+      "title"
+    );
+    summary.value.summary = getSummaryTextByKey(
+      storySummaryRaw.value,
+      "abstract"
+    );
+  }
+}
 
 const { width: containerWidth, height: containerHeight } = useElementSize(
   playerContainerElement
@@ -334,9 +306,6 @@ watch(
   },
   { immediate: true }
 );
-
-const showPlayer = ref(true);
-
 async function reloadPlayer(forceReload = false) {
   if (!forceReload) {
     showPlayer.value = false;
@@ -349,86 +318,13 @@ async function reloadPlayer(forceReload = false) {
   }, 375);
 }
 
-const allStoryIndex = getAllFlattenedStoryIndex(stories).concat(
-  getAllFlattenedStoryIndex(OtherStories)
-);
-
-const currentStoryIndexUnit: Section | undefined = allStoryIndex.find(
-  story => story.story_id === parseInt(storyId.value as string)
-);
-
-function getTextByLanguage(textObject: CommonStoryTextObject | undefined) {
-  if (!textObject) {
-    return "No corresponding text found / 未找到对应文本";
-  }
-  return (
-    Reflect.get(
-      textObject,
-      `Text${
-        userLanguage.value.slice(0, 1).toUpperCase() +
-        userLanguage.value.slice(1)
-      }`
-    ) || "No corresponding text found / 未找到对应文本"
-  );
-}
-
-// 学生故事模式下获取 summary 的方法
-function getSummaryTextByKey(summary: StoryAbstract, key: string) {
-  return Reflect.get(Reflect.get(summary, key), "Text" + playerLanguage.value);
-}
-
-function handleSummaryDisplayLanguageChange() {
-  if (isStuStory.value) {
-    const currentChapterAbstract = storyIndex.value.abstracts.find(
-      abstract => abstract.groupId.toString() === favorGroupId.value
-    );
-    if (currentChapterAbstract) {
-      const tempChapterName = getSummaryTextByKey(
-        currentChapterAbstract,
-        "title"
-      );
-      const tempSummary = getSummaryTextByKey(
-        currentChapterAbstract,
-        "abstract"
-      );
-      summary.value = {
-        chapterName: "string" === typeof tempChapterName ? tempChapterName : "",
-        summary: "string" === typeof tempSummary ? tempSummary : "",
-      };
-    }
-  } else {
-    summary.value = {
-      chapterName: getTextByLanguage(currentStoryIndexUnit?.title),
-      summary: getTextByLanguage(currentStoryIndexUnit?.summary),
-    };
-  }
-}
-
 watch(
-  () => userLanguage.value,
-  async () => {
-    handleSummaryDisplayLanguageChange();
-    await reloadPlayer();
+  () => playerLanguage.value,
+  () => {
+    updateSummary();
+    reloadPlayer();
   }
 );
-
-// 在学生故事模式下通过 axios 获取 summary
-if (!isStuStory.value) {
-  handleSummaryDisplayLanguageChange();
-} else {
-  axios
-    .get(`/story/favor/${studentId.value}/index.json`)
-    .then(res => {
-      if (!res.data?.abstracts) {
-        return;
-      }
-      storyIndex.value = res.data;
-      handleSummaryDisplayLanguageChange();
-    })
-    .catch(err => {
-      console.error(err);
-    });
-}
 
 async function handleUseMp3(value: boolean) {
   settingsStore.setUseMp3(value);
@@ -441,15 +337,15 @@ async function handleUseSuperSampling(value: boolean) {
 }
 
 function findPreviousStoryId(): number | undefined {
-  if (currentStoryIndexUnit?.previous) {
-    return currentStoryIndexUnit.previous;
+  if (storySummaryRaw.value?.previous) {
+    return storySummaryRaw.value.previous;
   }
   return undefined;
 }
 
 function findNextStoryId(): number | undefined {
-  if (currentStoryIndexUnit?.next) {
-    return currentStoryIndexUnit.next;
+  if (storySummaryRaw.value?.next) {
+    return storySummaryRaw.value.next;
   }
   return undefined;
 }
@@ -545,14 +441,6 @@ function handleError(message = "播放可能失败，请刷新页面重试") {
     color: var(--color-text-ingame);
     text-decoration: none;
   }
-}
-
-.player-container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
 }
 
 .story-player {

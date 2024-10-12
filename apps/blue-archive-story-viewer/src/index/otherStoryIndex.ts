@@ -24,7 +24,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 200,
         next: 201,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 간부, 린이 선생님에게 키보토스 곳곳에서 일어나고 있는 기이한 현상에 대해 설명한다.",
           TextJp:
@@ -50,7 +50,7 @@ export const stories: StoryBriefing[] = [
         previous: 200,
         story_id: 201,
         next: 202,
-        summary: {
+        abstract: {
           TextKr:
             "검은 양복을 입은 수상한 사내가 선생님에게 데카그라마톤과 비나에 대해 설명한다.",
           TextJp:
@@ -75,7 +75,7 @@ export const stories: StoryBriefing[] = [
         previous: 201,
         story_id: 202,
         next: 203,
-        summary: {
+        abstract: {
           TextKr:
             "검은 양복을 입은 수상한 사내가 선생님에게 데카그라마톤과 연관된 폐허의 군수 공장에 대해 설명한다.",
           TextJp:
@@ -102,7 +102,7 @@ export const stories: StoryBriefing[] = [
         previous: 202,
         story_id: 203,
         next: 204,
-        summary: {
+        abstract: {
           TextKr:
             "마에스트로가 선생님에게 폐쇄된 유원지에서 일어나는 기이한 현상에 대해 설명한다.",
           TextJp:
@@ -127,7 +127,7 @@ export const stories: StoryBriefing[] = [
         previous: 203,
         story_id: 204,
         next: 205,
-        summary: {
+        abstract: {
           TextKr:
             "마에스트로가 선생님에게 게마트리아가 이룬 위업과 예로니무스에 대해 설명한다.",
           TextJp:
@@ -153,7 +153,7 @@ export const stories: StoryBriefing[] = [
         previous: 204,
         story_id: 205,
         next: 206,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 간부, 모모카가 선생님에게 키보토스의 지명수배 악당 카이텐져의 음모를 분쇄해달라고 의뢰한다.",
           TextJp:
@@ -180,7 +180,7 @@ export const stories: StoryBriefing[] = [
         previous: 205,
         story_id: 206,
         next: 207,
-        summary: {
+        abstract: {
           TextKr:
             "데칼코마니와 골콩트가 도시에서 일어나는 기이한 현상과 <괴담의 무한도서관>에 대해 설명한다.",
           TextJp:
@@ -207,7 +207,7 @@ export const stories: StoryBriefing[] = [
         previous: 206,
         story_id: 207,
         next: 208,
-        summary: {
+        abstract: {
           TextKr:
             "검은 양복이 데카그라마톤의 8번째 예언자 호드에 대해 설명한다.",
           TextJp:
@@ -233,7 +233,7 @@ export const stories: StoryBriefing[] = [
         previous: 207,
         story_id: 208,
         next: 209,
-        summary: {
+        abstract: {
           TextKr:
             "데칼코마니와 골콩트가 관객이 없는 곳에서 퍼포먼스를 벌이는 폐쇄된 유원지의 마술사, 고즈를 설명한다.",
           TextJp:
@@ -260,7 +260,7 @@ export const stories: StoryBriefing[] = [
         previous: 208,
         story_id: 209,
         next: 210,
-        summary: {
+        abstract: {
           TextKr:
             "부서진 마에스트로가 선생님에게 찾아와 예술의 불멸성에 대해 이야기한다. 그리고 자신이 새롭게 만들어낸 작품, 그레고리오에 대해 설명한다.",
           TextJp:
@@ -282,7 +282,7 @@ export const stories: StoryBriefing[] = [
         },
         previous: 209,
         story_id: 210,
-        summary: {
+        abstract: {
           TextKr:
             "모모카는 선생님에게 키보토스의 교정국을 탈출한 죄수와 호버크래프트 소동에 대해 설명한다.",
           TextJp:
@@ -306,7 +306,7 @@ export const stories: StoryBriefing[] = [
         previous: 210,
         story_id: 211,
         next: 901,
-        summary: {
+        abstract: {
           TextKr: "쿠즈노하가 환량백물어, 묘귀 쿠로카게에 대해 설명한다.",
           TextJp: "クズノハは、幻魎百物語「猫鬼黒影」について語る。",
           TextTh: "",
@@ -339,7 +339,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 100,
         next: 101,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 간부, 모모카가 선생님에게 키보토스의 문젯거리들을 해결해 달라고 의뢰한다.",
           TextJp:
@@ -365,7 +365,7 @@ export const stories: StoryBriefing[] = [
         story_id: 101,
         next: 102,
         previous: 100,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 간부, 모모카가 선생님에게 중범죄를 일으킨 키보토스의 현상수배범들을 잡아달라고 부탁한다.",
           TextJp:
@@ -392,7 +392,7 @@ export const stories: StoryBriefing[] = [
         story_id: 102,
         next: 103,
         previous: 101,
-        summary: {
+        abstract: {
           TextKr:
             "모모카가 학생들이 사라지는 폐쇄된 테마 파크, <슬럼피아>에 대해 설명한다.",
           TextJp:
@@ -418,7 +418,7 @@ export const stories: StoryBriefing[] = [
         story_id: 103,
         next: 300,
         previous: 102,
-        summary: {
+        abstract: {
           TextKr:
             "모모카가 AI가 폭주하여 제어할 수 없게 된 군수공장에 대해 설명한다.",
           TextJp:
@@ -443,7 +443,7 @@ export const stories: StoryBriefing[] = [
         story_id: 300,
         next: 400,
         previous: 103,
-        summary: {
+        abstract: {
           TextKr:
             "크로노스 스쿨의 기자, 마이가 전술경연 대회를 앞두고 선생님과 인터뷰를 한다.",
           TextJp:
@@ -468,7 +468,7 @@ export const stories: StoryBriefing[] = [
         story_id: 400,
         next: 500,
         previous: 300,
-        summary: {
+        abstract: {
           TextKr: "상점 알바생인 소라가 샬레에 있는 상점에 대해 설명한다.",
           TextJp: "アルバイトであるソラが、ショップについて説明する。",
           TextTh:
@@ -491,7 +491,7 @@ export const stories: StoryBriefing[] = [
         story_id: 500,
         next: 600,
         previous: 400,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 간부, 린이 선생님에게 총학생회장이 남긴 <크래프트 챔버>를 소개한다.",
           TextJp:
@@ -516,7 +516,7 @@ export const stories: StoryBriefing[] = [
         story_id: 600,
         next: 700,
         previous: 500,
-        summary: {
+        abstract: {
           TextKr: "모모카가 종합전술시험에 대해 설명한다.",
           TextJp: "モモカが合同火力演習について説明する。",
           TextTh: "โมโมกะอธิบายเกี่ยวกับการสอบประมวล",
@@ -537,7 +537,7 @@ export const stories: StoryBriefing[] = [
         story_id: 700,
         next: 800,
         previous: 600,
-        summary: {
+        abstract: {
           TextKr: "총학생회의 아유무가 선생님에게 업무 도움을 요청한다.",
           TextJp:
             "連邦生徒会のアユムと出会った先生は、お互いに協力して手伝いをしていくことに。",
@@ -560,7 +560,7 @@ export const stories: StoryBriefing[] = [
         story_id: 800,
         next: 801,
         previous: 700,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 재무실장, 아오이가 선생님에게 린의 업무를 함께 도울 것을 제안한다.",
           TextJp:
@@ -585,7 +585,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 801,
         previous: 800,
-        summary: {
+        abstract: {
           TextKr:
             "총학생회의 린과 아유무는 선생님에게 작전실을 활용하여 여러 사건들을 해결할 것을 부탁한다.",
           TextJp:
@@ -622,7 +622,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 901,
         previous: 211,
-        summary: {
+        abstract: {
           TextKr:
             "지하생활자가 선생님에게 만신의 성좌 중 하나인 세트의 분노에 대해 설명한다.",
           TextJp:

@@ -12,6 +12,7 @@ function similarity(s1: string, s2: string): number {
 }
 
 function findPinyin(searchString: string, studentName: string) {
+  // @ts-ignore ts2550
   const studentNameWithoutSpecialCharacters = studentName.replaceAll(
     specialCharacters,
     ""
@@ -43,8 +44,10 @@ function isPossibleName(
   let found = false;
   const lowerCaseSearchString = searchString
     .toLowerCase()
+    // @ts-ignore ts2550
     .replaceAll(specialCharacters, "");
   const lowercaseStudentNamesList = filteredNameList?.map(name => {
+    // @ts-ignore ts2550
     return name.toString().toLowerCase().replaceAll(specialCharacters, "");
   });
   lowercaseStudentNamesList?.forEach(studentName => {

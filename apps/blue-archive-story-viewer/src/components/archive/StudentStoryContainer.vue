@@ -70,16 +70,8 @@ const userLanguage = computed(() => settingsStore.getLang);
 axios
   .get(`/story/favor/${studentId.value}/index.json`, {
     onDownloadProgress: progressEvent => {
-      if (progressEvent.total) {
-        initProgress.value = Math.floor(
-          ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-        );
-      } else {
-        initProgress.value = Math.floor(
-          ((progressEvent.loaded || 0) * 100) /
-            ((progressEvent.loaded || 0) + 100)
-        );
-      }
+      const total = progressEvent.total || progressEvent.loaded + 100;
+      initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
     },
   })
   .then(res => {
@@ -90,16 +82,8 @@ axios
     return axios
       .get(`/story/ai/favor/${studentId.value}/index.json`, {
         onDownloadProgress: progressEvent => {
-          if (progressEvent.total) {
-            initProgress.value = Math.floor(
-              ((progressEvent.loaded || 0) * 100) / (progressEvent.total || 1)
-            );
-          } else {
-            initProgress.value = Math.floor(
-              ((progressEvent.loaded || 0) * 100) /
-                ((progressEvent.loaded || 0) + 100)
-            );
-          }
+          const total = progressEvent.total || progressEvent.loaded + 100;
+    initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
         },
       })
       .then(res => {

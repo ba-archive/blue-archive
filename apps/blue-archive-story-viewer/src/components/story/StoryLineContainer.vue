@@ -14,7 +14,7 @@ const props = withDefaults(
     avatar: StoryBriefing["avatar"];
     index: number;
     sections: StoryBriefing["sections"];
-    type?: "mainStory" | "otherStory";
+    type?: "mainStory" | "otherStory" | "eventStory";
     totalLength?: number;
   }>(),
   {
@@ -59,24 +59,26 @@ onMounted(() => import("@/components/StoryViewer.vue"));
       :is-active="openChapters.includes(index)"
       @clicked="handleOpenChapters(index)"
     />
-    <router-link
-      v-for="section in sections"
-      :to="{
-        name: `${'mainStory' === type ? 'Main' : 'Other'}StoryDetails`,
-        params: { id: section.story_id },
-        query: { type: 'mainStory' === type ? 'main' : 'other' },
-      }"
-      v-show="openChapters.includes(index)"
-      :key="section.story_id"
-    >
-      <story-brief-block
-        :title="getTitleText(section.title, language)"
-        :avatar="avatar"
-        :description="section.summary"
-        :is-before-battle="section.is_before_battle"
-        :is-after-battle="section.is_after_battle"
-      />
-    </router-link>
+    <div class="story-line-container__content flex flex-col w-full">
+      <router-link
+        v-for="section in sections"
+        :to="{
+          name: `${'mainStory' === type ? 'Main' : 'Other'}StoryDetails`,
+          params: { id: section.story_id },
+          query: { type: 'mainStory' === type ? 'main' : 'other' },
+        }"
+        v-show="openChapters.includes(index)"
+        :key="section.story_id"
+      >
+        <story-brief-block
+          :title="getTitleText(section.title, language)"
+          :avatar="avatar"
+          :description="section.abstract"
+          :is-before-battle="section.is_before_battle"
+          :is-after-battle="section.is_after_battle"
+        />
+      </router-link>
+    </div>
   </div>
   <router-view></router-view>
 </template>
@@ -84,11 +86,17 @@ onMounted(() => import("@/components/StoryViewer.vue"));
 <style scoped lang="scss">
 .story-line-container {
   display: grid;
-  grid-auto-flow: row;
+  grid-template-areas: "title" "content";
+  grid-auto-flow: auto 1fr;
   width: 30rem;
+
+  &__content {
+    grid-area: content;
+  }
 }
 
 .title-bar {
+  grid-area: title;
   position: sticky;
   top: 0;
 }

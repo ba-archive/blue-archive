@@ -24,7 +24,7 @@ export const stories: StoryBriefing[] = [
           TextTw: "序章 1.1",
         },
         story_id: 11000,
-        summary: {
+        abstract: {
           TextKr:
             "기묘한 내용의 꿈으로부터 깨어난 직후, 선생님은 총학생회의 간부인 나나가미 린으로부터 총학생회장이 사라졌다는 소식을 전해 듣는다. 총학생회장의 실종으로 인해 학원도시 키보토스는 혼란에 휩싸이게 되고, 이 혼란을 해결하기 위해 선생님은 학생회 임원들과 함께 샬레 동아리실로 향한다.",
           TextJp:
@@ -64,7 +64,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 31010,
         next: 31020,
-        summary: {
+        abstract: {
           TextKr:
             "에덴조약이 가지는 의미와 일곱 화두, 그리고 낙원에 대해 이야기하는 세이아. 그녀는 선생님을 향해 지금부터 시작될 이야기는 당신의 의무이며, 부디 외면하지 말고 끝까지 확인해달라며 부탁한다.",
           TextJp:
@@ -91,7 +91,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31020,
         previous: 31010,
         next: 31030,
-        summary: {
+        abstract: {
           TextKr:
             "코하루, 하나코, 아즈사, 그리고 히후미까지. 교실에 선생님과 네 명의 소녀들이 모였다. 퇴학 위기에 처했다며 소란을 피우는 코하루를 히후미가 진정시키는 사이, 이게 어찌 된 일인지. 선생님은 몇 주 전에 있던 일을 떠올린다.",
           TextJp:
@@ -118,7 +118,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31030,
         previous: 31020,
         next: 31040,
-        summary: {
+        abstract: {
           TextKr:
             "트리니티의 학생회장들인 나기사와 미카의 초대를 받고 티파티에 출석한 선생님. 낙제 위기에 처한 보충수업부 학생들을 맡기고 싶다는 나기사의 제안에 선생님은 승낙한다. 그렇게 해서 찾은 곳에서 선생님은 보충수업부의 부장인 히후미와 재회한다.",
           TextJp:
@@ -145,7 +145,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31040,
         previous: 31030,
         next: 31050,
-        summary: {
+        abstract: {
           TextKr:
             "히후미를 따라 우선 보충수업부의 학생들을 만나기로 결정한 선생님은 미풍양속을 어긴 끝에 정의실현부에게 구금된 하나코와 정의실현부와 교전 끝에 잡혀 온 아즈사와 만난다.",
           TextJp:
@@ -172,7 +172,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31050,
         previous: 31040,
         next: 31060,
-        summary: {
+        abstract: {
           TextKr:
             "하나코와 아즈사의 신병을 넘겨받고자 하는 선생님에게 코하루는 보충수업부라니 부끄럽고 불쌍하다며 야유하지만, 실은 코하루도 유급 위기로 인해 보충수업부로 소속이 옮겨진 상태였다. 좌절하는 코하루를 끝으로 모든 보충수업부 학생들이 한자리에 모인다.",
           TextJp:
@@ -199,7 +199,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31060,
         previous: 31050,
         next: 31070,
-        summary: {
+        abstract: {
           TextKr:
             "보충수업부에 모인 학생들은 각자 이 자리에 모인 이유와 앞으로의 목표를 이야기한다. 시험에서 낙제하여 유급되지 않도록 협력하자는 말에, 코하루는 어차피 금방 끝날 관계이니 협력 같은 건 필요 없다며 먼저 자리를 떠나버린다.",
           TextJp:
@@ -226,7 +226,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31070,
         previous: 31060,
         next: 31080,
-        summary: {
+        abstract: {
           TextKr:
             "선생님의 감독 아래, 1차 시험을 준비하는 보충수업부의 학생들. 하나코의 해박한 지식 덕분에 준비는 좋은 분위기로 흐르지만, 히후미가 혹시라도 1차부터 한 명이라도 낙제생이 생기면 합숙에 들어가야 한다며 앞일을 걱정하는 사이, 그렇게 첫 번째 시험이 시작된다.",
           TextJp:
@@ -253,7 +253,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31080,
         previous: 31070,
         next: 31090,
-        summary: {
+        abstract: {
           TextKr:
             "시험을 치르며, 다행히도 시험 준비 때 공부했던 문제가 나온 걸 확인한 히후미는 안심한다. 그러나 제1차 평가 시험 결과, 히후미를 뺀 보충수업부의 남은 세 명이 전부 낙제해버리며, 보충수업부의 합숙이 결정된다.",
           TextJp:
@@ -280,7 +280,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31090,
         previous: 31080,
         next: 31100,
-        summary: {
+        abstract: {
           TextKr:
             "선생님은 나기사에게 보충수업부의 학생들이 낙제하게 되면 어떻게 될지 묻는다. 그러면 퇴학 조치가 될 것이며, 보충수업부는 원래부터 그러기 위한 동아리라고 충격적인 대답을 하는 나기사. 이는 전부 트리니티의 배신자를 찾기 위해 꾸민 일이었으며, 나기사는 보충수업부에 배신자가 있을 것이라 경고한다.",
           TextJp:
@@ -307,7 +307,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31100,
         previous: 31090,
         next: 31110,
-        summary: {
+        abstract: {
           TextKr:
             "시험 합숙을 위해 보충수업부는 트리니티 외곽의 별관을 찾는다. 본격적인 합숙을 시작하기 전부터 여러 기행을 벌이는 보충수업부 멤버들이었지만, 여러 해프닝 끝에 우선 보충수업부는 별관을 청소하기로 결정한다.",
           TextJp:
@@ -334,7 +334,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31110,
         previous: 31100,
         next: 31120,
-        summary: {
+        abstract: {
           TextKr:
             "대청소를 하던 중, 하나코는 본격적으로 공부하기 전에 함께 물놀이를 하자며 야외수영장도 청소할 것을 제안한다. 그렇게 청소를 하며 모두들 흠뻑 물에 젖는다.",
           TextJp:
@@ -361,7 +361,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31120,
         previous: 31110,
         next: 31130,
-        summary: {
+        abstract: {
           TextKr:
             "늦은 밤. 히후미는 상담을 위해 선생님을 찾는다. 트리니티의 배신자를 찾으라는 나기사의 말에 괴로워하는 히후미지만, 선생님은 걱정 말고 자신에게 맡겨달라 말한다. 그러는 사이 불침번을 자청해 서는 아즈사와 하나코가 잠시 이야기를 나누며, 합숙 첫날 밤이 지나간다.",
           TextJp:
@@ -388,7 +388,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31130,
         previous: 31120,
         next: 31140,
-        summary: {
+        abstract: {
           TextKr:
             "합숙 첫 모의시험의 결과는 또다시 히후미를 뺀 전원의 낙제였다. 그러나 히후미는 좌절하지 않고 모두를 합격시키겠다고 선언하며, 좋은 성적을 거둔 이에겐 모모프렌즈 굿즈를 상품으로 주겠다고 말한다. 시큰둥해하는 하나코나 코하루와 달리, 아즈사는 귀엽다며 눈을 빛낸다.",
           TextJp:
@@ -415,7 +415,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31140,
         previous: 31130,
         next: 31150,
-        summary: {
+        abstract: {
           TextKr:
             "자율학습 도중 다른 학생들에게 야한 책을 들킨 코하루, 그녀는 당황하며 이건 어디까지나 자기도 모르게 가져온 압류품이라고 변명한다. 이걸 되돌려놓기 위해 코하루는 선생님과 함께 정의실현부 부실로 향한다.",
           TextJp:
@@ -442,7 +442,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31150,
         previous: 31140,
         next: 31160,
-        summary: {
+        abstract: {
           TextKr:
             "코하루의 필사적인 변명에, 선생님은 코하루는 코하루다운 걸로 괜찮다 말해준다. 그 배려에 코하루는 보답으로 자신이 정의실현부의 첩보원이라는 비밀을 알려준다. 이후 정의실현부에서 하스미와 비밀 대화를 나눈 코하루는 선생님과 함께 합숙소로 복귀한다.",
           TextJp:
@@ -469,7 +469,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31160,
         previous: 31150,
         next: 31170,
-        summary: {
+        abstract: {
           TextKr:
             "수영복과 속옷은 구분할 수 없다는 하나코의 말에, 아즈사는 그건 다섯 번째 화두라며 알은체를 한다. 그 말에 깜짝 놀라 동요하는 하나코. 히후미는 하나코가 원래는 뛰어난 수재였으나, 일부러 시험을 망치고 있다는 사실을 알고 혼란스러워하는 사이, 다음날, 갑작스레 미카가 선생님을 찾아온다.",
           TextJp:
@@ -496,7 +496,7 @@ export const stories: StoryBriefing[] = [
         story_id: 31170,
         previous: 31160,
         next: 32010,
-        summary: {
+        abstract: {
           TextKr:
             "미카는 선생님에게 이미 나기사와 선생님 사이에 어떤 이야기가 오갔는지 알고 있으니 트리니티의 배신자를 알려주겠다며 거래를 제안한다. 배신자는 다름 아닌 아즈사이며, 거래의 조건으로 미카는 바로 그 아즈사를 지켜달라 말한다.",
           TextJp:
@@ -536,7 +536,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 32010,
         next: 32020,
-        summary: {
+        abstract: {
           TextKr:
             "나기사가 에덴조약을 통해 노리는 바가 있다고 말하는 미카. 그런 나기사를 막기 위해서는 아즈사를 지켜야 한다며, 미카는 선생님에게 자신을 믿을지 나기사를 믿을지 선택해달라고 한다.",
           TextJp:
@@ -563,7 +563,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32020,
         previous: 32010,
         next: 32030,
-        summary: {
+        abstract: {
           TextKr:
             "보충수업부가 있는 곳으로 마리가 찾아온다. 그녀는 얼마 전 아즈사가 구해준 학생을 대신하여 감사 인사를 전하러 온 것이었다. 그 후 찾아온 심야. 앞으로의 일을 의논하기 위해 히후미를 기다리던 선생님 앞에 하나코가 찾아오며, 상황은 예상치 못한 방향으로 흐른다.",
           TextJp:
@@ -590,7 +590,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32030,
         previous: 32020,
         next: 32040,
-        summary: {
+        abstract: {
           TextKr:
             "아즈사에 대해 상담하고자 찾아온 하나코는 뒤늦게 히후미에게서 낙제하면 전원 학교에서 퇴학당하게 된다는 사실을 듣게 된다. 이 모든 것이 나기사의 노림수였다는 걸 추리해낸 하나코는, 앞으로는 제대로 협력하겠다 선언하고는 세 사람만의 비밀 모임을 만들었다며 좋아한다.",
           TextJp:
@@ -617,7 +617,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32040,
         previous: 32030,
         next: 32050,
-        summary: {
+        abstract: {
           TextKr:
             "갑자기 내린 비로 인해 빨래가 전부 젖어버린 보충수업부는 하는 수 없이 오늘 하루만큼은 공부를 쉬고 수영복 좌담회를 열기로 한다. 평범하지만, 오랜만에 맛보는 즐거운 일상 시간을 보낸 끝에 이번엔 다 함께 밤 산책을 나가기로 결정한다.",
           TextJp:
@@ -644,7 +644,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32050,
         previous: 32040,
         next: 32060,
-        summary: {
+        abstract: {
           TextKr:
             "밤 산책을 나온 보충수업부는 우연히 디저트 가게에서 하스미와 마주친다. 서로의 사정으로 인해 여기서 만난 걸 비밀로 하자고 말하는 하스미였지만 그때 미식연구회가 소동을 벌이고 있다는 연락이 온다.",
           TextJp:
@@ -672,7 +672,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32060,
         previous: 32050,
         next: 32065,
-        summary: {
+        abstract: {
           TextKr:
             "하스미는 에덴조약을 앞둔 상황에서 게헨나와 트리니티의 충돌은 문제가 될 수 있다며, 보충수업부와 샬레의 선생님에게 도움을 요청한다. 그렇게 다 함께 사건을 막기 위해 출동한다.",
           TextJp:
@@ -700,7 +700,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32065,
         previous: 32060,
         next: 32070,
-        summary: {
+        abstract: {
           TextKr:
             "선생님과 보충수업부의 활약으로 미식연구회의 난동을 막는데 성공했다. 그러자 제각기 도주를 하는 미식연구회 멤버들. 그 뒤를 정의실현부가 추격한다.",
           TextJp:
@@ -727,7 +727,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32070,
         previous: 32065,
         next: 32080,
-        summary: {
+        abstract: {
           TextKr:
             "미식연구회의 신병을 넘겨받기 위해 선도부의 히나와 응급의학부의 세나가 현장에 도착한다. 마침 찾아온 히나에게 선생님은 이번 에덴조약에 대해 어찌 생각하는지 물어보며, 선생님은 히나의 관점에서 바라본 현 상황에 대해 듣게 된다.",
           TextJp:
@@ -754,7 +754,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32080,
         previous: 32070,
         next: 32090,
-        summary: {
+        abstract: {
           TextKr:
             "모의시험에서 마침내 합격점을 얻어낸 보충수업부 학생들, 히후미는 이를 축하하며 모두에게 모모프렌즈 굿즈를 선물한다. 사양하는 하나코나 코하루와 달리 아즈사는 히후미에게 받은 굿즈를 소중히 여기겠다고 말하고, 그렇게 2차 평가 시험을 앞둔 그때, 나기사는 선생님을 호출하여 미카와 만난 것을 추궁한다.",
           TextJp:
@@ -781,7 +781,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32090,
         previous: 32080,
         next: 32100,
-        summary: {
+        abstract: {
           TextKr:
             "나기사의 추궁에도 선생님은 누군가를 의심하고 배신자를 찾는 일 따윈 하지 않겠다고 말한다. 대신 의심암귀에 빠져 있는 나기사를 막고, 보충수업부 전원을 합격시키겠다고 선언하며 선생님은 나기사의 부탁을 거절한다.",
           TextJp:
@@ -809,7 +809,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32100,
         previous: 32090,
         next: 32105,
-        summary: {
+        abstract: {
           TextKr:
             "제2차 평가 시험의 변경사항이 공지된다. 시험 범위가 확대되고, 합격 커트라인이 오르고, 시험장소 또한 게헨나 학원으로 변경되었다는 충격적인 이야기에 모두가 당황하지만. 포기하긴 이르다는 아즈사의 말에 따라 보충수업부는 시험 장소로 향한다.",
           TextJp:
@@ -837,7 +837,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32105,
         previous: 32100,
         next: 32110,
-        summary: {
+        abstract: {
           TextKr:
             "시험 장소로 향하는 길을 가로막는 게헨나의 불량배들을 쓰러트리며, 보충수업부는 나아간다.",
           TextJp:
@@ -863,7 +863,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32110,
         previous: 32105,
         next: 32120,
-        summary: {
+        abstract: {
           TextKr:
             "게헨나에 도착한 보충수업부를 정의실현부로 오해한 선도부원들이 가로막는다. 하지만 바로 그때, 다행히 미식연구회의 도움으로 위기에서 빠져나와 무사히 시험 장소에 도착한 보충수업부지만, 나기사의 방해로 전원 시험에서 낙제하고야 만다.",
           TextJp:
@@ -890,7 +890,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32120,
         previous: 32110,
         next: 32130,
-        summary: {
+        abstract: {
           TextKr:
             "티파티의 높으신 분이 보충수업부를 퇴학시키려고 한다는 사실을 알고 충격에 빠진 학생들. 일주일 앞으로 다가온 마지막 평가 시험의 타개책이 보이지 않는 가운데. 우선 쉬기 위해 학생들은 각자 방을 돌아간다. 그 후 늦은 밤. 홀로 일어난 아즈사의 뒤를 하나코가 조용히 미행한다.",
           TextJp:
@@ -917,7 +917,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32130,
         previous: 32120,
         next: 32140,
-        summary: {
+        abstract: {
           TextKr:
             "궁지에 몰렸지만 보충수업부는 포기하지 않고 마지막 평가 시험을 준비하게 된다. 그렇게 마지막 시험을 하루 앞에 둔 늦은 밤. 사오리와 몰래 밀회를 하는 아즈사를 하나코가 조용히 지켜본다.",
           TextJp:
@@ -944,7 +944,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32140,
         previous: 32130,
         next: 32150,
-        summary: {
+        abstract: {
           TextKr:
             "늦은 밤, 한자리에 모인 학생들. 마지막 시험까지 나기사의 방해를 받게 된 걸 안 그때, 아즈사가 자신이 「트리니티의 배신자」라고 고백한다. 아즈사는 모든 게 자기 때문이라고 말하지만. 선생님은 이게 아즈사 탓이 아니라고 말한다. 또한 하나코는 어떤 방해 공작이 있든 다 같이 힘을 합쳐 시험에 합격하자고 선언한다.",
           TextJp:
@@ -971,7 +971,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32150,
         previous: 32140,
         next: 32160,
-        summary: {
+        abstract: {
           TextKr:
             "아리우스가 나기사를 습격하러온 그때, 아즈사와 하나코가 먼저 선수를 쳐서 나기사를 납치하는 데 성공한다. 뒤이어 들이닥친 아리우스의 학생들에 맞서 아즈사는 교전을 시작한다.",
           TextJp:
@@ -999,7 +999,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32160,
         previous: 32150,
         next: 32165,
-        summary: {
+        abstract: {
           TextKr:
             "습격해오는 아리우스 학생들. 아즈사가 설치한 부비트랩에 피해를 입는 것도 개의치 않고 아리우스는 마침내 보충수업부를 궁지로 모는 데 성공한다. 그러나 그곳에서 보충수업부 학생들은 샬레의 선생님과 함께 반격을 개시한다.",
           TextJp:
@@ -1027,7 +1027,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32165,
         previous: 32160,
         next: 32170,
-        summary: {
+        abstract: {
           TextKr:
             "습격해오는 아리우스 학생들. 아즈사가 설치한 부비트랩에 피해를 입는 것도 개의치 않고 아리우스는 마침내 보충수업부를 궁지로 모는 데 성공한다. 그러나 그곳에서 보충수업부 학생들은 샬레의 선생님과 함께 반격을 개시한다.",
           TextJp:
@@ -1055,7 +1055,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32170,
         previous: 32165,
         next: 32175,
-        summary: {
+        abstract: {
           TextKr:
             "선생님과 힘을 합쳐 아리우스 학생을 쓰러트리는 데 성공한 보충수업부였지만, 곧바로 더 많은 아리우스 학생들이 들이닥친다. 이들이 들키지 않고 트리니티에 잠입했단 것에 모두가 놀라워하는 그때, 미카가 등장해 자신이야말로 「트리니티의 진짜 배신자」라고 소개한 뒤, 그녀는 아리우스에게 보충수업부를 제압하라 지시한다.",
           TextJp:
@@ -1083,7 +1083,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32175,
         previous: 32170,
         next: 32180,
-        summary: {
+        abstract: {
           TextKr:
             "미카는 이어진 교전에도 쉽사리 쓰러지지 않는 선생님을 보고 감탄한다. 그리고는 과거 아즈사가 세이아를 습격한 이야기를 꺼내 들며 미카가 보충수업부를 뒤흔들려는 그때, 시스터후드가 참전한다.",
           TextJp:
@@ -1111,7 +1111,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32180,
         previous: 32175,
         next: 32185,
-        summary: {
+        abstract: {
           TextKr:
             "시스터후드를 이 자리에 부른 건 다름 아닌 하나코였다. 그렇게 나타난 사쿠라코는 사태를 해결하고 수습하기 위해 미카와 교전을 시작한다.",
           TextJp:
@@ -1139,7 +1139,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32185,
         previous: 32180,
         next: 32190,
-        summary: {
+        abstract: {
           TextKr:
             "힘을 합친 끝에 결국 미카는 궁지에 모는 데 성공한 보충수업부와 시스터후드. 그 앞에서 미카는 끝내 자신의 패배를 인정하고 항복한다. 그런 미카에게 선생님은 필요하다면 자신이 미카의 편이 되어줄 거라 말하고, 그 말에 미카는 기뻐하며 작별 인사를 남긴다.",
           TextJp:
@@ -1166,7 +1166,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32190,
         previous: 32185,
         next: 32200,
-        summary: {
+        abstract: {
           TextKr:
             "수많은 해프닝이 있었지만 이를 전부 이겨낸 보충수업부는 마지막 제3차 평가 시험을 치르기 위해 시험장소로 향한다. 그리고 전원 시험에 합격한다.",
           TextJp:
@@ -1193,7 +1193,7 @@ export const stories: StoryBriefing[] = [
         story_id: 32200,
         previous: 32190,
         next: 33010,
-        summary: {
+        abstract: {
           TextKr:
             "세이아는 위험을 이겨낸 선생님을 칭찬하지만, 결국 모든 것은 파국으로 수렴할 것이라 경고한다. 그리고 마침내 아리우스 스쿼드가 움직이기 시작한다.",
           TextJp:
@@ -1234,7 +1234,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33010,
         previous: 32200,
         next: 33020,
-        summary: {
+        abstract: {
           TextCn:
             "圣娅静静地与袭击自己的对手交谈。当她询问对方接下来的打算时，老师醒了过来。之后，老师从樱子那里了解了圣娅遭袭的详细经过……",
           TextKr:
@@ -1261,7 +1261,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33020,
         previous: 33010,
         next: 33030,
-        summary: {
+        abstract: {
           TextCn:
             "修女会的樱子认可了梓的成果。在修女会的担保下，梓正式成为了圣三一的学生。花子和老师安下心来，将话题转向了渚和未花的事情。",
           TextKr:
@@ -1288,7 +1288,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33030,
         previous: 33020,
         next: 33040,
-        summary: {
+        abstract: {
           TextCn:
             "继渚之后，花子也造访了关押未花的监狱。花子在未花面前说出了自己对她动机的推测，然而……",
           TextKr:
@@ -1315,7 +1315,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33040,
         previous: 33030,
         next: 33050,
-        summary: {
+        abstract: {
           TextCn:
             "虽然还有许多问题亟待解决，但圣三一依然度过着平静而祥和的日常。与此同时，老师来到了格黑娜，前去拜访真琴和日奈等人……？",
           TextKr:
@@ -1341,7 +1341,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33050,
         previous: 33040,
         next: 33060,
-        summary: {
+        abstract: {
           TextCn:
             "时间终于来到伊甸条约的签订仪式当天。在克洛诺斯的诗乃进行现场报道并渲染着现场热烈气氛的同时，补习部的全体成员正在家庭餐厅举办小型派对，庆祝考试通过。",
           TextKr:
@@ -1368,7 +1368,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33060,
         previous: 33050,
         next: 33070,
-        summary: {
+        abstract: {
           TextCn:
             "在修女会的日向引导下，老师踏入了“通功之古圣堂”，听她讲述圣三一的历史。与此同时，阿里乌斯小队开始了他们的行动，导弹划出的轨迹撕裂了圣三一的天空——",
           TextKr:
@@ -1396,7 +1396,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33070,
         previous: 33060,
         next: 33075,
-        summary: {
+        abstract: {
           TextCn:
             "导弹的爆炸让古圣堂四周陷入了严重混乱，阿里乌斯小队趁机潜入了古圣堂地下。面对突如其来的状况，正义实现委员会的鹤城、莲见以及日向等人奋起应战。",
           TextKr:
@@ -1424,7 +1424,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33075,
         previous: 33070,
         next: 33080,
-        summary: {
+        abstract: {
           TextCn:
             "应战期间，鹤城和莲见等人隐约感到对方的举动有些异常。看着这一幕，日向告诉大家那是“尤斯缇娜圣徒会”。",
           TextKr:
@@ -1452,7 +1452,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33080,
         previous: 33075,
         next: 33085,
-        summary: {
+        abstract: {
           TextCn:
             "修女会的日向、正义实现委员会的鹤城与莲见，以及格黑娜风纪委员会的日奈一行人一边保护老师，一边继续与尤斯蒂娜圣徒会展开战斗。",
           TextKr:
@@ -1479,7 +1479,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33085,
         previous: 33080,
         next: 33090,
-        summary: {
+        abstract: {
           TextCn: "过渡剧情",
           TextKr: "",
           TextJp: "",
@@ -1501,7 +1501,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33090,
         previous: 33085,
         next: 33095,
-        summary: {
+        abstract: {
           TextCn:
             "尽管莲见等人成功掩护日奈和老师撤退，但面对数量众多的敌人，几人依然寸步难行。此时，阿里乌斯小队的日和也加入了战斗，战斗愈演愈烈。",
           TextKr: "성도회의 공격은 멈추지 않고 계속 이어진다.",
@@ -1525,7 +1525,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33095,
         previous: 33090,
         next: 33100,
-        summary: {
+        abstract: {
           TextCn:
             "纱织告诉众人阿里乌斯已完成伊甸条约的签署，并提及了积累至今的仇恨，随后将枪口对准了老师。尽管老师被直接击中，但在风纪委员会的日奈和急救医学部的濑名帮助下勉强脱离了险境。昏迷中的老师，在梦中与圣娅相遇……",
           TextKr:
@@ -1552,7 +1552,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33100,
         previous: 33095,
         next: 33110,
-        summary: {
+        abstract: {
           TextCn:
             "在梦中，老师再次遇见了圣娅，并从圣娅口中得知关于伊甸条约与数秘术的事情。另一方面，梓也陷入了与阿里乌斯的苦战，但无法在正面交锋中取胜。梓设法逃离了战场。",
           TextKr:
@@ -1579,7 +1579,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33110,
         previous: 33100,
         next: 33120,
-        summary: {
+        abstract: {
           TextCn:
             "花子代替樱子前往平息修女会的混乱，小春在手忙脚乱中被紧急召集至正义实现委员会。补习部的成员虽然分散各地，但各自开始了自己应尽的任务。几乎在同一时间，载着负伤老师的格黑娜救护车也抵达了圣三一……？",
           TextKr:
@@ -1606,7 +1606,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33120,
         previous: 33110,
         next: 33130,
-        summary: {
+        abstract: {
           TextCn:
             "分析结果显示射向古圣堂的导弹并非来自格黑娜，而是从圣三一发射的。看到“尤斯缇娜圣徒会”的影像后，花子意识到，若事态继续恶化，最坏的情况下圣三一与格黑娜将从基沃托斯一起消失。",
           TextKr:
@@ -1633,7 +1633,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33130,
         previous: 33120,
         next: 33140,
-        summary: {
+        abstract: {
           TextCn:
             "日富美终于找到了梓，但梓拒绝让她继续前进。梓满怀决心地告诉日富美：“因为我，大家都受伤了。我接下来要摧毁纱织的光环，成为杀人凶手……”说完这番话后，梓怀着对日富美的感激之情消失了。尽管日富美试图挽留梓，但她的声音却无法传达……",
           TextKr:
@@ -1660,7 +1660,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33140,
         previous: 33130,
         next: 33150,
-        summary: {
+        abstract: {
           TextCn:
             "阿里乌斯小队手握“战术兵器”，准备与尤斯缇娜一同向圣三一发起进攻。然而，她们被梓事先布置的陷阱缠上了。尽管如此，梓仍被纱织逼入绝境。情急之下，梓利用“某种炸弹”成功脱离险境。然而，尽管是为了出其不意，梓却将与日富美友情的象征用作杀人工具，内心充满了罪恶感。她在痛苦中哽咽，觉得自己再也无法回到日富美她们身边。",
           TextKr:
@@ -1687,7 +1687,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33150,
         previous: 33140,
         next: 33160,
-        summary: {
+        abstract: {
           TextCn:
             "圣娅对老师说，即使选择相信，一切也注定在这里结束。然而，老师则表示，为了“未来”，为了学生们，自己还有必须要做的事情，随后便离开了。",
           TextKr:
@@ -1714,7 +1714,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33160,
         previous: 33150,
         next: 33170,
-        summary: {
+        abstract: {
           TextCn:
             "梓的炸弹本应该威胁纱织的安全，然而亚津子及时挡下了那次袭击。与此同时，风纪委员长日奈不知去向，花子即将被捕，而未花也从监狱中被释放出来。此时，老师终于醒转——",
           TextKr:
@@ -1741,7 +1741,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33170,
         previous: 33160,
         next: 33180,
-        summary: {
+        abstract: {
           TextCn:
             "未花冷淡地拒绝了茶会中主战派的要求，并在毫无抵抗的情况下被殴打。就在此时，小春赶到未花身边。即使受到威胁，小春依然坚定地拒绝离开。就在这种剑拔弩张的紧张局势中，老师也赶到了。未花一边困惑于自己所说的话，一边断断续续地开口自白。",
           TextKr:
@@ -1768,7 +1768,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33180,
         previous: 33170,
         next: 33190,
-        summary: {
+        abstract: {
           TextCn:
             "老师逐一拜访那些逐渐恢复意识的学生们。小春、日富美和花子也终于聚集在一起，她们决定前往梓的所在地——朝着古圣堂的废墟进发。",
           TextKr:
@@ -1796,7 +1796,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33190,
         previous: 33180,
         next: 33195,
-        summary: {
+        abstract: {
           TextCn:
             "老师来到了日奈身边。经历了这些变故之后，疲惫不堪的日奈终于稍微吐露了些许内心，能够稍稍依赖他人，随即再次缓缓站起。与此同时，日富美再次前往梓的身边，并在她面前揭示了自己的真实身份——“蒙面泳装团的领袖”，并告诉梓“我们之间并没有什么不同”。伴随着日富美坚定的宣言，伊甸条约开始被扭曲，另一个伊甸条约机构随之成立。",
           TextKr:
@@ -1824,7 +1824,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33195,
         previous: 33190,
         next: 33200,
-        summary: {
+        abstract: {
           TextCn: "过渡剧情",
           TextKr: "",
           TextJp: "",
@@ -1846,7 +1846,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33200,
         previous: 33195,
         next: 33205,
-        summary: {
+        abstract: {
           TextCn:
             "格黑娜的风纪委员会、圣三一的正义实现委员会以及阿比多斯共同携手对抗阿里乌斯小队。",
           TextKr:
@@ -1874,7 +1874,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33205,
         previous: 33200,
         next: 33210,
-        summary: {
+        abstract: {
           TextCn: "过渡剧情",
           TextKr: "",
           TextJp: "",
@@ -1896,7 +1896,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33210,
         previous: 33205,
         next: 33215,
-        summary: {
+        abstract: {
           TextCn: "熟悉的面孔陆续重逢，学校之间的力量也不断汇聚……",
           TextKr:
             "싸움은 계속되고, 처음에는 서로 섞일 수 없을 것만 같았던 학교들이 서로 힘을 합치기 시작한다.",
@@ -1923,7 +1923,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33215,
         previous: 33210,
         next: 33220,
-        summary: {
+        abstract: {
           TextCn: "圣娅静静地看着这场ETO之间的战斗，轻声承认自己输了。",
           TextKr:
             "세이아는 ETO 대 ETO의 싸움을 지켜보며, 낙원의 존재를 증명하고자 했던 자신의 생각이 틀렸음을 인정한다.",
@@ -1950,7 +1950,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33220,
         previous: 33215,
         next: 33225,
-        summary: {
+        abstract: {
           TextCn:
             "随着戒律逐渐失去意义，阿里乌斯小队的形势也越来越不利。队员们逐渐开始放弃，但纱织依然坚守自己的信念。",
           TextKr:
@@ -1978,7 +1978,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33225,
         previous: 33220,
         next: 33230,
-        summary: {
+        abstract: {
           TextCn: "过渡剧情",
           TextKr: "",
           TextJp: "",
@@ -2000,7 +2000,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33230,
         previous: 33225,
         next: 33235,
-        summary: {
+        abstract: {
           TextCn: "纱织朝着古圣堂的地下进发。为了结束这场骚乱，梓和老师紧随其后。",
           TextKr:
             "항복한 멤버들을 뒤로하고 고성당 지하로 향하는 사오리. 아즈사와 선생님은 이 싸움의 매듭을 짓기 위해 사오리의 뒤를 쫓는다.",
@@ -2027,7 +2027,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33235,
         previous: 33230,
         next: 33240,
-        summary: {
+        abstract: {
           TextCn: "过渡剧情",
           TextKr: "",
           TextJp: "",
@@ -2049,7 +2049,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33240,
         previous: 33235,
         next: 33245,
-        summary: {
+        abstract: {
           TextCn: "亚津子出现在倒下的纱织身边。从不言语的她打破沉默，告诉纱织“到此为止”。众人已是满身伤痕，巨匠却在此时出现。为了对抗巨匠，老师拿出了“大人的卡片”。",
           TextKr:
             "사오리의 패배, 그러나 지친 아즈사마저 결국 쓰러진다. 그때 아츠코가 나타나 본인의 입으로 자신들이 졌다고 인정한다. 기다렸다는 듯이 마에스트로가 나타나 트리니티의 지하에 숨겨둔 교의를 현현하게 하고, 선생님은 그에 대적하기 위해 어른의 카드를 꺼내 든다.",
@@ -2076,7 +2076,7 @@ export const stories: StoryBriefing[] = [
         story_id: 33245,
         previous: 33240,
         next: 33250,
-        summary: {
+        abstract: {
           TextCn: "战斗结束后，阿里乌斯小队悄然消失，不知去向，身影逐渐隐没在黑暗之中。",
           TextKr:
             "전투가 끝나자 아리우스 스쿼드는 모두의 앞에서 자취를 감추고 쓸쓸히 어둠 속으로 사라진다.",
@@ -2100,7 +2100,7 @@ export const stories: StoryBriefing[] = [
         },
         story_id: 33250,
         previous: 33245,
-        summary: {
+        abstract: {
           TextCn: "万魔殿的成员转醒，茶会成员再次聚集，补习部的众人也重新汇合。虽然仍有一些损失未能挽回，但日常的色彩正在逐渐回归。与此同时，一股神秘的力量在幕后开始行动，目标直指阿里乌斯小队……？",
           TextKr:
             "만마전은 게헨나의 병실에서 회복하고 있고, 티파티도 나기사를 중심으로 다시 질서가 회복되어 간다. 에덴조약에 얽혀 있던 많은 사람들이 다시 일상을 되찾고, 티파티에 세이아가 돌아와 다시 세 명이 극적인 재회를 한다. 새 보충수업부에는 익숙한 얼굴들이 모여 있고, 평화로운 일상이 다시 시작된다. 한편, 어딘가에서 패배하고 자취를 감춘 아리우스 스쿼드를 노리는 어떤 존재가 움직이기 시작한다.",

@@ -27,7 +27,7 @@ export interface RawStoryUnit {
 export interface Section {
   title: CommonStoryTextObject;
   story_id: number;
-  summary: CommonStoryTextObject;
+  abstract: CommonStoryTextObject;
   next?: number;
   previous?: number;
   is_before_battle?: boolean;
@@ -43,8 +43,8 @@ export interface StoryAbstract {
 export interface StoryBriefing {
   released?: boolean;
   title: CommonStoryTextObject;
-  summary?: CommonStoryTextObject;
-  avatar: string;
+  abstract?: CommonStoryTextObject;
+  avatar?: string;
   sections: Section[];
 }
 
