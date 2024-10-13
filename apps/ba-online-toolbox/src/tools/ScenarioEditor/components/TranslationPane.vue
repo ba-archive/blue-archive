@@ -392,7 +392,6 @@ watch(selectedText.text, () => {
 });
 
 function handleCopyPaste(event: KeyboardEvent) {
-  console.log(event);
   if (isMac) {
     if (event.metaKey && event.altKey && event.code === "KeyV") {
       mainStore.getScenario.content[config.getSelectLine][
