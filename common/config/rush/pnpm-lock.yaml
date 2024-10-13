@@ -28,6 +28,9 @@ importers:
       '@types/xxhashjs':
         specifier: ^0.2.2
         version: 0.2.4
+      '@vueuse/components':
+        specifier: ~11.1.0
+        version: 11.1.0(vue@3.4.29(typescript@5.4.5))
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.9.0(vue@3.4.29(typescript@5.4.5))
@@ -5021,6 +5024,9 @@ packages:
 
   '@vue/test-utils@2.4.5':
     resolution: {integrity: sha512-oo2u7vktOyKUked36R93NB7mg2B+N7Plr8lxp2JBGwr18ch6EggFjixSCdIVVLkT6Qr0z359Xvnafc9dcKyDUg==}
+
+  '@vueuse/components@11.1.0':
+    resolution: {integrity: sha512-8CTbvH1rHfAlqsMdMg6G2OiIvHiHn8HRx0yyJ+Ri/C8J6cLylXAd7VESawoCAkRdAXT4ucPnj/uYHZqEb0JbBQ==}
 
   '@vueuse/core@10.9.0':
     resolution: {integrity: sha512-/1vjTol8SXnx6xewDEKfS0Ra//ncg4Hb0DaZiwKf7drgfMsKFExQ+FnnENcN6efPen+1kIzhLQoGSy0eDUVOMg==}
@@ -17484,6 +17490,15 @@ snapshots:
     dependencies:
       js-beautify: 1.15.1
       vue-component-type-helpers: 2.0.13
+
+  '@vueuse/components@11.1.0(vue@3.4.29(typescript@5.4.5))':
+    dependencies:
+      '@vueuse/core': 11.1.0(vue@3.4.29(typescript@5.4.5))
+      '@vueuse/shared': 11.1.0(vue@3.4.29(typescript@5.4.5))
+      vue-demi: 0.14.10(vue@3.4.29(typescript@5.4.5))
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
 
   '@vueuse/core@10.9.0(vue@3.4.23(typescript@5.4.5))':
     dependencies:

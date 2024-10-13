@@ -65,15 +65,25 @@
           />
         </n-space>
       </div>
-      <original-text-disp
-        :text="
-          mainStore.getScenario.content[config.getSelectLine]?.[
-            config.getLanguage
-          ]
-        "
-        :prefer-semantic="config.getSemanticPreference"
-        :select-line="config.getSelectLine"
-      />
+      <n-tooltip :show="showCopyPasteTooltip" placement="top-start">
+        <template #trigger>
+          <original-text-disp
+            :text="
+              mainStore.getScenario.content[config.getSelectLine]?.[
+                config.getLanguage
+              ]
+            "
+            :prefer-semantic="config.getSemanticPreference"
+            :select-line="config.getSelectLine"
+            v-on-click-outside="handleCloseCopyPasteTooltip"
+          />
+        </template>
+        <div>想把整句原文复制到译文框？</div>
+        <div>
+          试试 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+          <kbd>{{ isMac ? "⌥" : "Shift" }}</kbd> + <kbd>V</kbd>
+        </div>
+      </n-tooltip>
       <n-space justify="space-between" align="end">
         <n-space>
           <n-button size="medium" @click="acceptHandle" type="info"
@@ -206,9 +216,12 @@
             </div>
           </template>
           <span>
-            下一句：<kbd>Ctrl</kbd> + <kbd>Enter</kbd> <br />
-            上一句：<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> <br />
-            Mac 使用 <kbd>Cmd</kbd> 代替 <kbd>Ctrl</kbd>
+            下一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+            <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
+            <br />
+            上一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+            <kbd>{{ isMac ? "⇧" : "Shift" }}</kbd> +
+            <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
           </span>
         </n-tooltip>
         <span class="text-gray-300"
@@ -221,7 +234,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, onMounted, onBeforeUnmount } from "vue";
 import { halfToFull } from "../../public/helper/getTranslation";
 import { formalizeQuotation } from "../../public/helper/quotation";
 import eventBus from "../eventsSystem/eventBus";
@@ -230,12 +243,16 @@ import { useScenarioStore } from "../store/scenarioEditorStore";
 import { ContentLine, Language } from "../types/content";
 import TranslateInput from "./TranslateInput.vue";
 import { ElMessage } from "element-plus";
+import { useTextSelection } from "@vueuse/core";
+import { vOnClickOutside } from "@vueuse/components";
 import {
   ClaudeMessage,
   getClaudeTranslation,
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
 import OriginalTextDisp from "./OriginalTextDisp.vue";
+
+const isMac = window.navigator.userAgent.includes("Mac");
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
@@ -355,6 +372,51 @@ function handleFormalizePunctuation() {
   });
 }
 
+// 检测全文复制 intent
+const selectedText = useTextSelection();
+const showCopyPasteTooltip = ref(false);
+
+function handleCloseCopyPasteTooltip() {
+  showCopyPasteTooltip.value = false;
+}
+
+watch(selectedText.text, () => {
+  if (
+    currentText.value.includes(selectedText.text.value) &&
+    selectedText.text.value.length / currentText.value.length > 0.5
+  ) {
+    showCopyPasteTooltip.value = true;
+  } else {
+    showCopyPasteTooltip.value = false;
+  }
+});
+
+function handleCopyPaste(event: KeyboardEvent) {
+  console.log(event);
+  if (isMac) {
+    if (event.metaKey && event.altKey && event.code === "KeyV") {
+      mainStore.getScenario.content[config.getSelectLine][
+        config.getTargetLang
+      ] = currentText.value;
+    }
+  } else {
+    if (event.ctrlKey && event.shiftKey && event.code === "KeyV") {
+      mainStore.getScenario.content[config.getSelectLine][
+        config.getTargetLang
+      ] = currentText.value;
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("keydown", handleCopyPaste);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", handleCopyPaste);
+});
+
+// 处理机翻
 let llmLastCalled = 0;
 const llmLoading = ref(false);
 const studentNames = computed(() => config.getStudentList);
@@ -544,23 +606,6 @@ const completion = computed(() => {
     fullLength,
   };
 });
-
-const waitTime = ref(0);
-
-function addTag() {
-  // 传统方法，如果加入了其他的textarea记得修改
-  // TODO: 改成 ref
-  let textArea = document.getElementsByTagName("textarea")[1];
-  let cursor = textArea.selectionStart;
-  let sentence =
-    mainStore.scenario.content[config.getSelectLine][config.getTargetLang];
-  sentence =
-    sentence.substring(0, cursor) +
-    `[wa:${waitTime.value}]` +
-    sentence.substring(cursor);
-  mainStore.scenario.content[config.getSelectLine][config.getTargetLang] =
-    sentence;
-}
 
 function sendRefreshPlayerSignal() {
   eventBus.emit("refreshPlayer");
