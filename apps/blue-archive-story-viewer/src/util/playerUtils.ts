@@ -55,7 +55,6 @@ export function getQueryUrl(
       queryUrl = `${baseUrl}/favor/${defaultDirectoryId}/index.json`;
       break;
   }
-  console.log(queryUrl);
   return queryUrl;
 }
 
