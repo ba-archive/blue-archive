@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import vueDevTools from "vite-plugin-vue-devtools";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -11,7 +12,7 @@ export default defineConfig(({ mode }) => {
         "@": resolve(__dirname, "./lib"),
       },
     },
-    plugins: [vue(), dts()],
+    plugins: [vue(), dts(), vueDevTools()],
     esbuild: {
       drop: mode === "production" ? ["debugger"] : [],
       pure: mode === "production" ? ["console.log"] : [],

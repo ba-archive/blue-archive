@@ -111,6 +111,8 @@ const bgEffectImgTable: BGEffectImgTable = {
   BG_Snow_L: [],
   BG_Fireworks_L_BGOff_01: [],
   "BG_ScrollR_1.0": [],
+  BG_TvNoise_Sound: [],
+  BG_Filter_Gray_BG: ["Gacha/FX_TEX_GT_Circle_Blur_inv.png"],
 };
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
