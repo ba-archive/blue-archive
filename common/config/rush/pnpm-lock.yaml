@@ -971,6 +971,9 @@ importers:
       '@pixi/filter-motion-blur':
         specifier: ~4.2.0
         version: 4.2.0(@pixi/constants@6.5.10)(@pixi/core@6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))))(@pixi/math@6.5.10)
+      '@pixi/filter-old-film':
+        specifier: '>=4.0.0 <5.0.0'
+        version: 4.2.0(@pixi/constants@6.5.10)(@pixi/core@6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))))
       '@pixi/particle-emitter':
         specifier: ~5.0.8
         version: 5.0.8(ijunv2opv7fqvwpofoqiqolwai)
@@ -3655,6 +3658,12 @@ packages:
     resolution: {integrity: sha512-CX+/06NVaw3HsjipZVb7aemkca0TC8I6qfKI4lx2ugxS/6G6zkY5zqd8+nVSXW4DpUXB6eT0emwfRv6N00NvuA==}
     peerDependencies:
       '@pixi/core': 6.5.10
+
+  '@pixi/filter-old-film@4.2.0':
+    resolution: {integrity: sha512-bHZgID3pUgAQXgg6ZJHardZYRcWchTIE5oc6I5KSqpXoOOaS2HRk89XMCgF2LG1Y+4UPbYkKOy1Twds+I3dNng==}
+    peerDependencies:
+      '@pixi/constants': ^6.0.0
+      '@pixi/core': ^6.0.0
 
   '@pixi/graphics@6.5.10':
     resolution: {integrity: sha512-KPHGJ910fi8bRQQ+VcTIgrK+bKIm8yAQaZKPqMtm14HzHPGcES6HkgeNY1sd7m8J4aS9btm5wOSyFu0p5IzTpA==}
@@ -15546,6 +15555,11 @@ snapshots:
 
   '@pixi/filter-noise@6.5.10(@pixi/core@6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))))':
     dependencies:
+      '@pixi/core': 6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))
+
+  '@pixi/filter-old-film@4.2.0(@pixi/constants@6.5.10)(@pixi/core@6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))))':
+    dependencies:
+      '@pixi/constants': 6.5.10
       '@pixi/core': 6.5.10(@pixi/constants@6.5.10)(@pixi/extensions@6.5.10)(@pixi/math@6.5.10)(@pixi/runner@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10))(@pixi/ticker@6.5.10(@pixi/extensions@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))(@pixi/utils@6.5.10(@pixi/constants@6.5.10)(@pixi/settings@6.5.10(@pixi/constants@6.5.10)))
 
   '@pixi/graphics@6.5.10(vnjw7qx4yf6lp5siigycla6i5q)':
