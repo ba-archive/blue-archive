@@ -16,6 +16,11 @@ const BG_TvNoise_Sound: BGEffectHandlerFunction<'BG_TvNoise_Sound'> = async () =
   screen.tint = 0x000000; // 白色开局会爆闪一下
   screen.width = appWidth;
   screen.height = appHeight;
+  screen.filters = [
+    new filters.NoiseFilter(5),
+    new filters.BlurFilter(0.5),
+    new filters.FXAAFilter(),
+  ];
   container.addChild(screen);
 
   // 第二层，渐变效果
