@@ -43,7 +43,8 @@ export type BGEffectType =
   | "BG_ScrollR_0.5"
   | "BG_Snow_L"
   | "BG_Fireworks_L_BGOff_01"
-  | "BG_ScrollR_1.0";
+  | "BG_ScrollR_1.0"
+  | "BG_TvNoise_Sound";
 
 export enum Nation {
   None = 0,

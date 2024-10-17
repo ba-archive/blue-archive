@@ -67,6 +67,7 @@ export const bgEffectHandlerOptions: BGEffectHandlerOptions = {
   BG_Snow_L: {},
   BG_Fireworks_L_BGOff_01: {},
   "BG_ScrollR_1.0": {},
+  BG_TvNoise_Sound: {},
 };
 
 export const bgEffectHandlers: Record<
@@ -110,6 +111,7 @@ const bgEffects = [
   "BG_Snow_L",
   "BG_Fireworks_L_BGOff_01",
   "BG_ScrollR_1.0",
+  "BG_TvNoise_Sound",
 ];
 
 /**
@@ -125,29 +127,27 @@ export async function playBGEffect(bgEffectItem: BGEffectExcelTableItem) {
   //   return
   // }
   await removeBGEffect();
-  const resources = usePlayerStore().bgEffectImgMap.get(effect);
-  if (resources) {
-    const imgs: Sprite[] = [];
-    for (const resource of resources) {
-      imgs.push(Sprite.from(resource));
-    }
-    const handler = bgEffectHandlers[effect];
-    let removeFunction: any;
-    try {
-      removeFunction = await Reflect.apply(handler, undefined, [
-        imgs,
-        bgEffectItem,
-        bgEffectHandlerOptions[effect],
-      ]);
-    } catch (e) {
-      console.error(`执行 ${effect} 时发生错误`, e);
-    }
-    currentBGEffect = {
-      effect,
-      removeFunction,
-      resources: imgs,
-    };
+  const resources = usePlayerStore().bgEffectImgMap.get(effect) ?? [];
+  const imgs: Sprite[] = [];
+  for (const resource of resources) {
+    imgs.push(Sprite.from(resource));
   }
+  const handler = bgEffectHandlers[effect];
+  let removeFunction: any;
+  try {
+    removeFunction = await Reflect.apply(handler, undefined, [
+      imgs,
+      bgEffectItem,
+      bgEffectHandlerOptions[effect],
+    ]);
+  } catch (e) {
+    console.error(`执行 ${effect} 时发生错误`, e);
+  }
+  currentBGEffect = {
+    effect,
+    removeFunction,
+    resources: imgs,
+  };
 }
 for (const effect of bgEffects) {
   const handler = getEffectFunctions(effect);
