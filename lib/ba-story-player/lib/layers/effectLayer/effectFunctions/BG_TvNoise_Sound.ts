@@ -13,6 +13,7 @@ const BG_TvNoise_Sound: BGEffectHandlerFunction<'BG_TvNoise_Sound'> = async () =
 
   // 第一层，电视雪花效果
   const screen = new Sprite(Texture.WHITE);
+  screen.tint = 0x000000; // 白色开局会爆闪一下
   screen.width = appWidth;
   screen.height = appHeight;
   container.addChild(screen);
