@@ -8,7 +8,9 @@ export type IL2dConfig = {
         customizeBones?: {
           name: string;
           props: {
-            [key: string]: number;
+            [key: string]: number | string | {
+              [key: string]: number | string;
+            };
           };
         }[];
       };
