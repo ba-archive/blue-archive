@@ -97,7 +97,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
     },
   },
   stm: {
-    reg: /#stm;(\[0,-?\d+]);(serial|instant|smooth);(\d+);([^;\n]+);?/i,
+    reg: /#stm;(\[0,-?\d+]);(serial|int?st[an]{2}t|smooth);(\d+);([^;\n]+);?/i,
     fn(match: RegExpExecArray, unit: StoryUnit, rawUnit: StoryRawUnit) {
       unit.type = "st";
       unit.textAbout.st = { middle: true };
@@ -162,7 +162,7 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
     },
   },
   zmc: {
-    reg: /#zmc;(instant|instnat|intstant|move);(-?\d+,-?\d+);(\d+);?(\d+)?;?/i,
+    reg: /#zmc;(int?st[an]{2}t|move);(-?\d+,-?\d+);(\d+);?(\d+)?;?/i,
     fn(match: RegExpExecArray, unit: StoryUnit) {
       const args: ZmcArgs = {
         type: match[1] as "instant",
