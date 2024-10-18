@@ -334,13 +334,24 @@ export const CharacterLayerInstance: CharacterLayer = {
       tl.repeatDelay(3);
     }
 
+    // 处理人物高光和剪影，剪影分为黑色和白色两种
+    // 初始化 color filter
     const colorFilter = new ColorOverlayFilter([0, 0, 0], 0);
-    // TODO highlight
-    //处理人物高光
+    // 高光和剪影是互斥的, 所以只取一个
+    const highlightEffect = data.effects.find(effect =>
+      ["black", "white"].includes(effect.effect)
+    );
+
     if (!data.highlight) {
+      colorFilter.color = [0, 0, 0];
       colorFilter.alpha = 0.3;
-    } else if (data.effects.some(effect => effect.effect === "black")) {
-      data.effects = data.effects.filter(effect => effect.effect !== "black");
+    } else if (!!highlightEffect) {
+      // 黑色剪影与白色剪影的唯一区别是 filter 颜色不同
+      data.effects = data.effects.filter(
+        effect => effect.effect !== highlightEffect.effect
+      );
+      colorFilter.color =
+        highlightEffect.effect === "black" ? [0, 0, 0] : [1, 1, 1];
       colorFilter.alpha = 1;
     }
     if (
