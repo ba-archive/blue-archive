@@ -13,8 +13,11 @@ function download(b64: string) {
   const a = document.createElement("a");
   a.href = b64;
   a.download = "result.png"; //设定下载名称
-  const evt = document.createEvent("MouseEvents");
-  evt.initEvent("click", true, true);
+  const evt = new MouseEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
   a.dispatchEvent(evt);
 }
 
