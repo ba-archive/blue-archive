@@ -45,7 +45,8 @@ export type BGEffectType =
   | "BG_Fireworks_L_BGOff_01"
   | "BG_ScrollR_1.0"
   | "BG_TvNoise_Sound"
-  | "BG_Filter_Gray_BG";
+  | "BG_Filter_Gray_BG"
+  | "BG_Cherryblossom_Fly_Sound";
 
 export enum Nation {
   None = 0,

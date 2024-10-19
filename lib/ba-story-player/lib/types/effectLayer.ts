@@ -50,6 +50,7 @@ export interface BGEffectHandlerOptions {
   "BG_ScrollR_1.0": {};
   BG_TvNoise_Sound: {};
   BG_Filter_Gray_BG: {};
+  BG_Cherryblossom_Fly_Sound: {};
 }
 
 /**
