@@ -1,19 +1,16 @@
 import { usePlayerStore } from "@/stores";
 import { Sprite } from "pixi.js";
-import {
-  BGEffectHandlerFunction,
-  BGEffectHandlerOptions,
-  CurrentBGEffect,
-} from "@/types/effectLayer";
+import { BGEffectHandlerFunction, BGEffectHandlerOptions, CurrentBGEffect } from "@/types/effectLayer";
 import { BGEffectExcelTableItem, BGEffectType } from "@/types/excels";
 
 const effectFunctionsRaw = import.meta.glob<{
   default: BGEffectHandlerFunction<BGEffectType>;
 }>("./effectFunctions/*", { eager: true });
+
 function getEffectFunctions(functionName: string) {
   const effectFunction = Reflect.get(
     effectFunctionsRaw,
-    `./effectFunctions/${functionName}.ts`
+    `./effectFunctions/${functionName}.ts`,
   );
   if (!effectFunction) {
     return undefined;
@@ -69,6 +66,7 @@ export const bgEffectHandlerOptions: BGEffectHandlerOptions = {
   "BG_ScrollR_1.0": {},
   BG_TvNoise_Sound: {},
   BG_Filter_Gray_BG: {},
+  BG_Cherryblossom_Fly_Sound: {},
 };
 
 export const bgEffectHandlers: Record<
@@ -114,6 +112,7 @@ const bgEffects = [
   "BG_ScrollR_1.0",
   "BG_TvNoise_Sound",
   "BG_Filter_Gray_BG",
+  "BG_Cherryblossom_Fly_Sound",
 ];
 
 /**
@@ -151,6 +150,7 @@ export async function playBGEffect(bgEffectItem: BGEffectExcelTableItem) {
     resources: imgs,
   };
 }
+
 for (const effect of bgEffects) {
   const handler = getEffectFunctions(effect);
   if (handler) {
