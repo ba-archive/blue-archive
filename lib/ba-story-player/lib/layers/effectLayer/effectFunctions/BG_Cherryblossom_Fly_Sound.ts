@@ -1,12 +1,22 @@
 import { usePlayerStore } from "@/stores";
 import { AnimatedSprite, Container, Sprite } from "pixi.js";
+import { loadSpriteSheet } from "../resourcesUtils";
 
 export default async function BG_Cherryblossom_Fly_Sound(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const sakuraContainer = new Container();
   app.stage.addChild(sakuraContainer);
 
-  const textures = resources.map(sprite => sprite.texture);
+  // 从雪碧图生成 spritesheet
+  const animationName = "cherryblossom"; // 设置唯一动画名
+  const spritesheet = await loadSpriteSheet(
+    resources[0],
+    { x: 6, y: 5 }, // 横向有6个精灵贴图，纵向有5个精灵贴图
+    animationName
+  );
+  // 获取动画帧序列
+  const textures = Reflect.get(spritesheet.animations, animationName);
+
   const maxParticles = 15;
   const initialParticles = 10;
   let activeParticles = 0;
@@ -41,13 +51,18 @@ export default async function BG_Cherryblossom_Fly_Sound(resources: Sprite[]) {
   };
   // 初始化粒子
   for (let i = 0; i < initialParticles; i++) {
-    createSakuraAnimation(Math.random() * app.view.width, Math.random() * app.view.height);
+    createSakuraAnimation(
+      Math.random() * app.view.width,
+      Math.random() * app.view.height
+    );
   }
   // 动态创建粒子
   const createParticleInterval = setInterval(() => {
     if (activeParticles < maxParticles) {
-      const randomX = Math.random() < 0.5 ? app.view.width : Math.random() * app.view.width;
-      const randomY = randomX === app.view.width ? Math.random() * (app.view.height / 5) : 0;
+      const randomX =
+        Math.random() < 0.5 ? app.view.width : Math.random() * app.view.width;
+      const randomY =
+        randomX === app.view.width ? Math.random() * (app.view.height / 5) : 0;
       createSakuraAnimation(randomX, randomY);
     }
   }, Math.random() * 250 + 250);
