@@ -88,7 +88,7 @@ function inputHandle(event: Event) {
       @change="inputHandle($event)"
     />
     <div
-      class="w-full bg-white border-solid border-1 border-blue p-4 pt-2 pb-2 rounded-lg cursor-pointer"
+      class="w-full bg-white @dark:bg-slate-800 border-solid border-1 border-blue p-4 pt-2 pb-2 rounded-lg cursor-pointer text-dark @dark:text-gray-200"
       @click="clickHandle"
     >
       {{ props.file.name }} [拖动文件至此或点击上传]

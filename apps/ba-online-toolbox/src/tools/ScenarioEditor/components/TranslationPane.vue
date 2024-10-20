@@ -1,6 +1,6 @@
 <template>
   <div class="translation-pane flex-1 rounded-4 pr-4 w-full h-full">
-    <n-space vertical class="bg-white p-4 rounded-medium">
+    <n-space vertical class="bg-white @dark:bg-slate-800 p-4 rounded-medium">
       <div class="flex justify-between items-center">
         <n-space>
           <n-dropdown
@@ -19,10 +19,10 @@
                   }}
                 </n-tag>
               </template>
-              <span> 选择需要参考的语言 </span>
+              <n-text> 选择需要参考的语言 </n-text>
             </n-tooltip>
           </n-dropdown>
-          →
+          <n-text>→</n-text>
           <n-dropdown
             trigger="hover"
             :options="langSelect"
@@ -46,7 +46,7 @@
                   }}
                 </n-tag>
               </template>
-              <span> 选择需要翻译的语言 </span>
+              <n-text> 选择需要翻译的语言 </n-text>
             </n-tooltip>
           </n-dropdown>
           <span class="text-gray-300 text-sm"

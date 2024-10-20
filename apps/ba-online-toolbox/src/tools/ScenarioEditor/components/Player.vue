@@ -1,6 +1,9 @@
 <template>
   <div class="player-pane">
-    <div class="player-container rounded-medium" ref="playerContainerElement">
+    <div
+      class="player-container bg-white @dark:bg-slate-800 rounded-medium"
+      ref="playerContainerElement"
+    >
       <ba-story-player
         class="player-body rounded-small"
         v-if="showPlayer"
@@ -134,7 +137,6 @@ watch(
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 100%;
   height: 100%;
 

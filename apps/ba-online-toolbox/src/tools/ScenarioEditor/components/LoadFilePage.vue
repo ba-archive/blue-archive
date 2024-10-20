@@ -20,7 +20,10 @@
     @drop="dragHandle"
     @dragover="dragOver"
   >
-    <div class="upload-pane" @click="clickHandle">
+    <div
+      class="upload-pane bg-white @dark:bg-slate-800 border-1 border-solid border-gray-200 @dark:border-slate-700 hover:bg-gray-100 @dark:hover:bg-slate-700 text-gray-800 @dark:text-slate-200"
+      @click="clickHandle"
+    >
       <svg
         class="uploadIMG"
         width="56"
@@ -155,9 +158,7 @@ const readFile = (file: File): Promise<string> => {
   transition: all 0.375s ease-in-out;
   cursor: pointer;
   box-sizing: border-box;
-  border: 1px dashed #e4e7ed;
   border-radius: 4px;
-  background: #ffffff;
   width: 30vw;
   height: 15vw;
   text-align: center;
@@ -169,8 +170,6 @@ const readFile = (file: File): Promise<string> => {
 
   &:hover {
     border: 2px dashed var(--color-arona-blue);
-    background-color: #ecf5ff;
-    color: #909399;
 
     .pseudo-link {
       color: #909399;

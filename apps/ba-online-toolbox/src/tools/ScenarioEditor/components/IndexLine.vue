@@ -3,20 +3,21 @@
     v-if="'' !== line.TextJp"
     style="cursor: pointer"
     ref="currentElement"
-    class="card"
+    class="card bg-white @dark:bg-slate-800 border-solid border-gray-300 @dark:border-gray-700"
     :class="{ selected: index === config.selectLine, unsure: line.Unsure }"
   >
     <n-image v-if="false"></n-image>
     <n-text class="pl-4">
-      <div :class="getLineType(line)">{{
+      <n-text :class="getLineType(line)">{{
         line[mainLanguage] || "暂无参考文本"
-      }}</div>
+      }}</n-text>
       <div class="pl-[38px]" v-if="config.getShowAllLanguage">
         <div
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
-          >{{ getContentByLang(line, language as keyof ContentLine) }}</div
         >
+          {{ getContentByLang(line, language as keyof ContentLine) }}
+        </div>
       </div>
       <div class="pl-[38px]" v-else>{{ line[targetLanguage] }}</div>
     </n-text>
@@ -113,9 +114,7 @@ function getLineType(line: ContentLine) {
   flex-direction: column;
   gap: 0.5rem;
   transition: all 0.375s ease-in-out;
-  border: 1px solid #e5e5e5;
   border-radius: 4px;
-  background-color: #fff;
   padding: 1rem 1rem 1rem 0.5rem;
   overflow: visible;
 }
@@ -124,6 +123,15 @@ function getLineType(line: ContentLine) {
 }
 .unsure {
   background-color: #ffce80;
+}
+
+@media (prefers-color-scheme: dark) {
+  .selected {
+    background-color: #113078;
+  }
+  .unsure {
+    background-color: #79440b;
+  }
 }
 
 div {

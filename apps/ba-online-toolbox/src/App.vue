@@ -6,7 +6,10 @@ import FAB from "./tools/public/components/FAB.vue";
 import { useGlobalConfig } from "./tools/ScenarioEditor/store/configStore";
 import { getStudents } from "./tools/public/helper/getStudents";
 import { ElMessage } from "element-plus";
+import { useColorMode } from "@vueuse/core";
+import { darkTheme } from "naive-ui";
 
+const mode = useColorMode();
 const config = useGlobalConfig();
 
 onMounted(() => {
@@ -31,11 +34,13 @@ const isMainPage = computed(() => {
 <template>
   <homepage-navigator v-if="isMainPage" />
   <div id="main-router-view">
-    <router-view v-slot="{ Component }">
-      <keep-alive :max="2">
-        <component :is="Component" />
-      </keep-alive>
-    </router-view>
+    <n-config-provider :theme="mode === 'dark' ? darkTheme : undefined">
+      <router-view v-slot="{ Component }">
+        <keep-alive :max="2">
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
+    </n-config-provider>
   </div>
   <FAB />
   <router-link
@@ -45,14 +50,9 @@ const isMainPage = computed(() => {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      stroke="currentColor"
-      class="w-6 h-6"
+      stroke="white"
+      class="w-6 h-6 stroke-white @dark:stroke-slate-800"
       stroke-width="4"
-      stroke-linecap="butt"
-      stroke-linejoin="miter"
-      filter=""
-      data-v-2bc6460e=""
-      style="font-size: 24px"
     >
       <path d="M20.272 11.27 7.544 23.998l12.728 12.728M43 24H8.705" />
     </svg>
@@ -64,7 +64,6 @@ const isMainPage = computed(() => {
   width: 48px;
   height: 48px;
   background-color: var(--color-arona-blue);
-  color: #fff;
   left: 0;
   top: 50%;
   translate: -50% -50%;

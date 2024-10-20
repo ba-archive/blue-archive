@@ -15,7 +15,7 @@ const mainRoutes = router
   <div class="main-page-screen fill-screen center">
     <div class="main-page-navigation">
       <router-link
-        class="home-nav-link rounded-small shadow-far"
+        class="home-nav-link rounded-small shadow-far bg-white @dark:bg-slate-800 text-dark @dark:text-gray-200"
         v-for="mainRoute in mainRoutes"
         :key="mainRoute.path"
         :to="mainRoute.path"
@@ -23,7 +23,9 @@ const mainRoutes = router
         <img :src="mainRoute.meta?.icon" alt="" />
         <div>
           <div class="title">{{ mainRoute.meta.title }}</div>
-          <div class="description">{{ mainRoute.meta.description }}</div>
+          <div class="description text-gray-500 @dark:text-gray-400">
+            {{ mainRoute.meta.description }}
+          </div>
         </div>
       </router-link>
     </div>
@@ -43,9 +45,7 @@ const mainRoutes = router
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #ffffff;
     padding: 16px;
-    color: #333;
     font-weight: bold;
     text-decoration: none;
 
@@ -61,7 +61,6 @@ const mainRoutes = router
     }
 
     .description {
-      color: lightgrey;
       font-weight: normal;
     }
   }

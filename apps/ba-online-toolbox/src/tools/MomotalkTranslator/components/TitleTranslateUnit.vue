@@ -10,14 +10,14 @@
       <div class="vertical-grid grid-auto-resize">
         <div class="origin-title">
           <n-tag :bordered="false">日语</n-tag>
-          <div class="origin-text">{{ titleJp }}</div>
+          <n-text class="origin-text">{{ titleJp }}</n-text>
         </div>
         <n-input-group>
           <n-tag type="info" :bordered="false">中译</n-tag>
           <textarea
             rows="3"
             cols="30"
-            class="translation-area"
+            class="translation-area bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
             v-model="titleCn"
             @change="updateTitle"
             @keydown.enter.prevent
@@ -55,7 +55,7 @@
               referenceLanguageLabel
             }}</n-tag>
           </n-dropdown>
-          <div class="origin-text">{{ referenceTitle }}</div>
+          <n-text class="origin-text">{{ referenceTitle }}</n-text>
         </div>
         <n-input-group>
           <n-tag :bordered="false">预览</n-tag>
@@ -63,7 +63,7 @@
             rows="3"
             cols="30"
             v-model="translateCn"
-            class="translation-area"
+            class="translation-area bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
             tabindex="-1"
           ></textarea>
         </n-input-group>

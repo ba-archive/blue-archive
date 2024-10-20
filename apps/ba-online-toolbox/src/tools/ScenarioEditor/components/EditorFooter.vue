@@ -1,6 +1,6 @@
 <template>
   <div class="footer fixed bottom-0 shadow-xl">
-    <div class="content">
+    <div class="content bg-white @dark:bg-slate-800">
       <n-space class="translator">
         <n-space class="flex-horizontal">
           <n-text>我是校对</n-text>
@@ -12,7 +12,7 @@
             <template #unchecked> 否 </template>
           </n-switch>
         </n-space>
-        <span style="flex: 1">{{ config.isProofread ? "校对" : "翻译" }}: </span
+        <n-text style="flex: 1">{{ config.isProofread ? "校对" : "翻译" }}: </n-text
         ><n-input
           v-model:value="staffName"
           @input="handleStaffChange($event)"
@@ -130,7 +130,6 @@ function handleStaffChange(event: string) {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: #fff;
     height: 7.5vh;
 
     .translator {

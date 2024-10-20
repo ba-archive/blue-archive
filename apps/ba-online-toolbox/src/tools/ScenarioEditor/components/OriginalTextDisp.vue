@@ -98,7 +98,7 @@ const html = computed(() => {
     class="p-4 pt-2 pb-2 rounded-sm border-solid border-1 border-[var(--color-arona-blue)] overflow-y-scroll select-auto max-w-[664px]"
   >
     <div
-      class="select-text w-full"
+      class="select-text w-full text-dark @dark:text-gray-200"
       v-if="!props.preferSemantic || !searchSemanticDict()"
       v-html="html"
     />

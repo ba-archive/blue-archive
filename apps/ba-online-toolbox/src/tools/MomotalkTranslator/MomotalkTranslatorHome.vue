@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { saveAs } from 'file-saver';
-import jsYaml from 'js-yaml';
+import { saveAs } from "file-saver";
+import jsYaml from "js-yaml";
 import {
   NButton,
   NInputGroup,
@@ -8,13 +8,13 @@ import {
   NSwitch,
   NTag,
   NTooltip,
-} from 'naive-ui';
-import { Ref, computed, ref, watch } from 'vue';
-import TranslateUnit from './components/MessageTranslateUnit.vue';
-import TitleTranslateUnit from './components/TitleTranslateUnit.vue';
-import { useMainStore } from './store/mainStore';
-import { FileContent } from './types/FileContent';
-import { Student } from './types/Student';
+} from "naive-ui";
+import { Ref, computed, ref, watch } from "vue";
+import TranslateUnit from "./components/MessageTranslateUnit.vue";
+import TitleTranslateUnit from "./components/TitleTranslateUnit.vue";
+import { useMainStore } from "./store/mainStore";
+import { FileContent } from "./types/FileContent";
+import { Student } from "./types/Student";
 
 const mainStore = useMainStore();
 const studentName = computed(() => mainStore.getStudentName);
@@ -44,7 +44,7 @@ function updateTranslator(translator: string) {
 
 function updateStudentName(studentId: number) {
   return new Promise<void>((resolve, reject) => {
-    fetch('https://preview.blue-archive.io/config/json/students.json')
+    fetch("https://preview.blue-archive.io/config/json/students.json")
       .then(response => response.json())
       .then(data => {
         const student = data.find(
@@ -86,17 +86,17 @@ function handleFileChange(event: Event) {
 }
 
 function clearAll() {
-  const inputButton = document.getElementById('file-input') as HTMLInputElement;
-  inputButton.value = '';
+  const inputButton = document.getElementById("file-input") as HTMLInputElement;
+  inputButton.value = "";
   fileDownloaded.value = false;
   mainStore.clearAll();
-  document.title = 'Rosetta';
+  document.title = "Rosetta";
 }
 
 function getStudentName() {
   const name = mainStore.getStudentName;
-  if ([undefined, '暂无信息', '学生暂未录入', ''].includes(name)) {
-    return '新增学生';
+  if ([undefined, "暂无信息", "学生暂未录入", ""].includes(name)) {
+    return "新增学生";
   }
   return name;
 }
@@ -106,8 +106,8 @@ function getCurrentTime() {
   const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
-  return `${hour < 10 ? '0' + hour : hour}${
-    minute < 10 ? '0' + minute : minute
+  return `${hour < 10 ? "0" + hour : hour}${
+    minute < 10 ? "0" + minute : minute
   }`;
 }
 
@@ -115,10 +115,10 @@ function handleDownload() {
   updateTranslator(translator.value);
   const fileContent = mainStore.getFileContent;
   const blob = new Blob([jsYaml.dump(fileContent, { quotingType: '"' })], {
-    type: 'text/plain;charset=utf-8',
+    type: "text/plain;charset=utf-8",
   });
   const proofreader = mainStore.getProofreader;
-  const fileStatus = proofreadMode.value ? `已校-${proofreader}` : '待校';
+  const fileStatus = proofreadMode.value ? `已校-${proofreader}` : "待校";
   saveAs(
     blob,
     `${fileStatus}-${getCurrentTime()}-${getStudentName()}_${
@@ -150,7 +150,7 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
   <div id="proofread-container">
     <n-space vertical align="center">
       <n-space vertical align="center">
-        <h3>参考模式</h3>
+        <n-h3>参考模式</n-h3>
         <n-switch
           v-model:value="globalReferenceMode"
           @update:value="handleUpdateGlobalReferenceMode"
@@ -160,7 +160,7 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
         </n-switch>
       </n-space>
       <n-space vertical align="center">
-        <h3>我是校对</h3>
+        <n-h3>我是校对</n-h3>
         <n-space vertical :align="'center'">
           <n-switch
             @update:value="handleUpdateProofreadMode"
@@ -174,7 +174,7 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
             <input
               type="text"
               id="proofreader"
-              class="translator-name"
+              class="translator-name bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
               v-model="proofreader"
             />
           </n-input-group>
@@ -183,20 +183,28 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
     </n-space>
   </div>
   <n-space class="translate-app-main" vertical align="center">
-    <input id="file-input" type="file" @change="handleFileChange" />
-    <p>学生姓名：{{ studentName }}</p>
-    <p>学生 ID：{{ studentId }}</p>
+    <input
+      id="file-input"
+      class="bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
+      type="file"
+      @change="handleFileChange"
+    />
+    <n-text>学生姓名：{{ studentName }}</n-text>
+    <n-text>学生 ID：{{ studentId }}</n-text>
     <n-tooltip trigger="hover">
       <template #trigger>
         <n-button type="error" @click="clearAll">清除</n-button>
       </template>
-      选择该选项将会清空所有信息，请谨慎使用！
+      <n-text>选择该选项将会清空所有信息，请谨慎使用！</n-text>
     </n-tooltip>
     <n-input-group class="translator-container">
       <n-tag :bordered="false" type="info">译者</n-tag>
-      <input class="translator-name" v-model="translator" />
+      <input
+        class="translator-name bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
+        v-model="translator"
+      />
     </n-input-group>
-    <h3>标题</h3>
+    <n-h3>标题</n-h3>
     <div class="vertical-grid">
       <title-translate-unit
         v-for="(content, index) in mainStore.getMomotalkTitles"
@@ -217,7 +225,10 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
     <h3>输出</h3>
     <n-input-group class="translator-container">
       <n-tag :bordered="false" type="info">译者</n-tag>
-      <input class="translator-name" v-model="translator" />
+      <input
+        class="translator-name bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
+        v-model="translator"
+      />
     </n-input-group>
     <n-space>
       <n-button type="info" @click="handleDownload">下载文件至本地</n-button>

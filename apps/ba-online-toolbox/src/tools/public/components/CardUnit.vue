@@ -1,21 +1,21 @@
 <template>
   <div
-    class="card-unit shadow-near"
+    class="card-unit shadow-near bg-white @dark:bg-slate-800"
     :class="[props.type.toLowerCase(), { unsure: props.unsure }]"
     :id="props?.id"
   >
     <div class="card-title">
-      <span
+      <n-text
         @click="handleClickToJump"
         :class="{ isJumpAvailable: props.jumpTo }"
-        >{{ title }}</span
+        >{{ title }}</n-text
       >
       <div class="unsure-flag-checkbox">
         <n-checkbox
           v-model:checked="isUnsure"
           @update:checked="handleUnsureChange"
         ></n-checkbox>
-        <span>校对救救！</span>
+        <n-text>校对救救！</n-text>
       </div>
     </div>
     <slot></slot>
@@ -81,11 +81,13 @@ function handleUnsureChange(value: boolean) {
   padding: 20px 24px;
   height: 100%;
 
-  &.title,
-  &.feedback,
-  &.none {
-    background-color: #fff;
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   &.title,
+  //   &.feedback,
+  //   &.none {
+  //     background-color: #fff;
+  //   }
+  // }
 
   &.favorrankup {
     background-color: var(--color-background-error);

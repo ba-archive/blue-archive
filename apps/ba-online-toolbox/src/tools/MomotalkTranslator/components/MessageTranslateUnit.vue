@@ -17,14 +17,14 @@
       <div class="vertical-grid grid-auto-resize">
         <div class="origin-title">
           <n-tag :bordered="false">日语</n-tag>
-          <div class="origin-text">{{ messageJp }}</div>
+          <n-text class="origin-text">{{ messageJp }}</n-text>
         </div>
         <n-input-group>
           <n-tag :bordered="false" type="info">中译</n-tag>
           <textarea
             rows="3"
             cols="30"
-            class="translation-area"
+            class="translation-area bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
             v-model="messageCn"
             @change="updateMessage"
             @keydown.enter.prevent
@@ -62,14 +62,14 @@
               referenceLanguageLabel
             }}</n-tag>
           </n-dropdown>
-          <div class="origin-text">{{ referenceTitle }}</div>
+          <n-text class="origin-text">{{ referenceTitle }}</n-text>
         </div>
         <n-input-group>
           <n-tag :bordered="false">预览</n-tag>
           <textarea
             rows="3"
             cols="30"
-            class="translation-area"
+            class="translation-area bg-white @dark:bg-slate-800 text-black @dark:text-slate-200 focus:bg-gray-100 @dark:focus:bg-slate-700"
             tabindex="-1"
             v-model="translateCn"
           ></textarea>
@@ -83,9 +83,9 @@
           :key="index"
         >
           <n-tag :bordered="false" type="info">{{ reference.label }}</n-tag>
-          <div class="origin-text">
+          <n-text class="origin-text">
             {{ getReferenceTextByKey(reference.key) }}
-          </div>
+          </n-text>
         </div>
       </div>
     </div>

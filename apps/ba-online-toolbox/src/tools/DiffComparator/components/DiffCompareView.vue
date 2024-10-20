@@ -7,6 +7,9 @@ import eventBus from "../events/events";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
 import { ElMessage } from "element-plus";
+import { useColorMode } from '@vueuse/core'
+
+const mode = useColorMode();
 
 import "highlight.js/styles/github.css";
 import "diff2html/bundles/css/diff2html.min.css";
@@ -44,6 +47,8 @@ onMounted(() => {
     fileContentToggle: false,
     matching: "words",
     outputFormat: "line-by-line",
+    // @ts-ignore
+    colorScheme: "auto",
   });
 
   diff2htmlUi.draw();
