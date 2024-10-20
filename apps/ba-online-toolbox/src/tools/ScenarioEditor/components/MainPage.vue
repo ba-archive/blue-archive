@@ -27,7 +27,8 @@ const { height: windowHeight } = useWindowSize();
 
 const showFooter = ref(false);
 
-const pixelsToShowFooter = 36;
+const pixelsToShowFooter = 24;
+const pixelDeltasToShowFooter = 360;
 const previousPointerY = ref(0);
 
 watch(
@@ -37,7 +38,7 @@ watch(
       showFooter.value = true;
       return;
     }
-    if (pointerY > previousPointerY.value + pixelsToShowFooter) {
+    if (pointerY > previousPointerY.value + pixelDeltasToShowFooter) {
       showFooter.value = true;
       previousPointerY.value = pointerY;
       return;
