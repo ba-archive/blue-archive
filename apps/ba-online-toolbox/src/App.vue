@@ -40,7 +40,7 @@ const isMainPage = computed(() => {
   <FAB />
   <router-link
     to="/"
-    class="button-back absolute grid place-items-center text-white rounded-full"
+    class="button-back fixed grid place-items-center text-white rounded-full"
     ><svg
       viewBox="0 0 48 48"
       fill="none"
@@ -54,10 +54,9 @@ const isMainPage = computed(() => {
       data-v-2bc6460e=""
       style="font-size: 24px"
     >
-      <path
-        d="M20.272 11.27 7.544 23.998l12.728 12.728M43 24H8.705"
-      ></path></svg
-  ></router-link>
+      <path d="M20.272 11.27 7.544 23.998l12.728 12.728M43 24H8.705" />
+    </svg>
+  </router-link>
 </template>
 
 <style scoped lang="scss">
