@@ -49,6 +49,42 @@
               <span> 选择需要翻译的语言 </span>
             </n-tooltip>
           </n-dropdown>
+          <span class="text-gray-300 text-sm"
+            >第 {{ completion.completed }} /
+            {{ completion.fullLength }} 句</span
+          >
+          <n-space size="small">
+            <n-tooltip>
+              <template #trigger>
+                <div class="flex gap-3">
+                  <n-button
+                    size="tiny"
+                    :disabled="isLastLine"
+                    type="primary"
+                    quaternary
+                    @click="handleGotoNextLineRequest"
+                    >下一句
+                  </n-button>
+                  <n-button
+                    size="tiny"
+                    :disabled="isLastLine"
+                    quaternary
+                    type="primary"
+                    @click="handleGotoPrevLineRequest"
+                    >上一句
+                  </n-button>
+                </div>
+              </template>
+              <span>
+                下一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+                <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
+                <br />
+                上一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+                <kbd>{{ isMac ? "⇧" : "Shift" }}</kbd> +
+                <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
+              </span>
+            </n-tooltip>
+          </n-space>
         </n-space>
         <n-space>
           <n-checkbox
@@ -129,15 +165,25 @@
         <translate-input
           :handleGotoNextLineRequest="handleGotoNextLineRequest"
           :handleGotoPrevLineRequest="handleGotoPrevLineRequest"
-        ></translate-input>
+        />
         <span class="flex flex-col flex-1 w-full gap-2">
+          <n-tooltip placement="top-start">
+            <template #trigger>
+              <n-input
+                v-model:value="systemPromptDelta"
+                placeholder="追加全局提示词"
+                @keydown.enter="reTranslateHandle"
+                />
+            </template>
+            <div>系统提示词会对每一句话生效。</div>
+            <div>例如：「把トリニティ翻译成圣三一」</div>
+          </n-tooltip>
           <n-input
             type="textarea"
             placeholder="机翻结果"
             :value="config.getTmpMachineTranslate(currentText)"
             style="width: 100%; height: 120px"
-          >
-          </n-input>
+          />
           <div class="flex flex-1 gap-2">
             <n-input
               v-model:value="advice"
@@ -196,39 +242,6 @@
         >
         </n-input>
       </div>
-      <n-space align="center">
-        <n-tooltip>
-          <template #trigger>
-            <div class="flex gap-3">
-              <n-button
-                :disabled="isLastLine"
-                type="primary"
-                @click="handleGotoNextLineRequest"
-                >下一句
-              </n-button>
-              <n-button
-                :disabled="isLastLine"
-                quaternary
-                type="primary"
-                @click="handleGotoPrevLineRequest"
-                >上一句
-              </n-button>
-            </div>
-          </template>
-          <span>
-            下一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
-            <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
-            <br />
-            上一句：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
-            <kbd>{{ isMac ? "⇧" : "Shift" }}</kbd> +
-            <kbd>{{ isMac ? "⏎" : "Enter" }}</kbd>
-          </span>
-        </n-tooltip>
-        <span class="text-gray-300"
-          >当前位置： {{ completion.completed }} /
-          {{ completion.fullLength }}</span
-        >
-      </n-space>
     </n-space>
   </div>
 </template>
@@ -422,6 +435,7 @@ const studentNames = computed(() => config.getStudentList);
 const modelStability = ref(0.6);
 const temperature = computed(() => 1 - modelStability.value);
 const advice = ref("");
+const systemPromptDelta = ref("");
 
 enum ModelStability {
   "Low" = 0.33,
@@ -501,7 +515,8 @@ function handleLLMTranslateRequest(
       mode,
       text,
       currentTranslation,
-      advice.value
+      advice.value,
+      systemPromptDelta.value
     )
       .then((res: ClaudeMessage) => {
         const rawResponse = res.content[0];

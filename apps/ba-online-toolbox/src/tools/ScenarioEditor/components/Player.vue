@@ -12,8 +12,7 @@
         :story-summary="{ chapterName: '', summary: '' }"
         data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
         ref="StoryPlayer"
-      >
-      </ba-story-player>
+      />
     </div>
   </div>
 </template>

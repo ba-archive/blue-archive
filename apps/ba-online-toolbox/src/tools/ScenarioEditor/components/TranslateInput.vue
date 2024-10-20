@@ -3,7 +3,7 @@
     <n-input
       v-if="translateStruct.translateType === TranslateType.input"
       v-add-combo-key-listener
-      class="explicit-quotation-mark h-[162px]"
+      class="explicit-quotation-mark h-[204px]"
       placeholder="暂无翻译"
       type="textarea"
       :value="
