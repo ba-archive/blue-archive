@@ -20,6 +20,7 @@ import {
   toRef,
   watch,
 } from "vue";
+import { useDocumentVisibility } from "@vueuse/core";
 import { changeStoryIndex } from "./layers/uiLayer/userInteract";
 import BaDialog from "@/layers/textLayer/BaDialog.vue";
 import { translate } from "@/layers/translationLayer";
@@ -343,27 +344,27 @@ onMounted(() => {
     );
   });
   firstMount = true;
-  window.addEventListener("blur", notifyWindowBlur);
-  window.addEventListener("focus", notifyWindowFocus);
 });
 
 const { tabActivated, autoMode } = useUiState();
 
 autoMode.value = false;
 
-function notifyWindowBlur() {
-  tabActivated.value = true;
-}
+const visibility = useDocumentVisibility();
 
-function notifyWindowFocus() {
-  tabActivated.value = false;
-}
-
-function forceSetWindowFocus() {
-  if (!tabActivated.value) {
-    notifyWindowFocus();
+watch(
+  () => visibility.value,
+  (newVal: DocumentVisibilityState) => {
+    switch (newVal) {
+      case "hidden":
+        tabActivated.value = true;
+        break;
+      case "visible":
+        tabActivated.value = false;
+        break;
+    }
   }
-}
+);
 
 onUnmounted(() => {
   dispose();
