@@ -3,7 +3,7 @@
     v-if="'' !== line.TextJp"
     style="cursor: pointer"
     ref="currentElement"
-    class="card bg-white @dark:bg-slate-800 border-solid border-gray-300 @dark:border-gray-700"
+    class="card bg-white @dark:bg-slate-800 border-solid border-1 border-gray-300 @dark:border-gray-700"
     :class="{ selected: index === config.selectLine, unsure: line.Unsure }"
   >
     <n-image v-if="false"></n-image>
@@ -139,7 +139,7 @@ div {
     &::before {
       display: inline-flex;
       color: #165dff;
-      background: rgba(32, 128, 240, 0.12);
+      background: #e8f3ff;
       padding: 1px 4px;
       margin-right: 6px;
       border-radius: 2px;
@@ -156,6 +156,17 @@ div {
   }
   .type-text::before {
     content: "文本";
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  div {
+    :is(.type-title, .type-selection, .type-text) {
+      &::before {
+        color: #3c7eff;
+        background: #000d4d;
+      }
+    }
   }
 }
 </style>
