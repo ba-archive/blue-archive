@@ -63,7 +63,7 @@ const models = [
     alias: [0, "haiku"],
   },
   {
-    modelName: "claude-3-5-sonnet-20240620",
+    modelName: "claude-3-5-sonnet-20241022",
     alias: [1, "sonnet"],
   },
   {
