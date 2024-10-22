@@ -7,7 +7,7 @@ import { BGEffectExcelTableItem, BGEffectType } from "./excels";
 export type BGEffectHandlerFunction<type extends BGEffectType> = (
   resources: Sprite[],
   setting: BGEffectExcelTableItem,
-  options: BGEffectHandlerOptions[type]
+  options: BGEffectHandlerOptions[keyof BGEffectHandlerOptions]
 ) => Promise<EffectRemoveFunction>;
 
 export interface BGEffectHandlerOptions {

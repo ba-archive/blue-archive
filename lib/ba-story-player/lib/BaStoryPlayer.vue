@@ -430,7 +430,6 @@ onDeactivated(() => {
           :player-height="playerHeight"
           :player-width="playerWidth"
           :style="{ width: `${playerWidth}px` }"
-          @click="forceSetWindowFocus"
         >
         </BaDialog>
       </div>

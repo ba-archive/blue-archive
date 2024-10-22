@@ -139,7 +139,7 @@ export async function playBGEffect(bgEffectItem: BGEffectExcelTableItem) {
     removeFunction = await Reflect.apply(handler, undefined, [
       imgs,
       bgEffectItem,
-      bgEffectHandlerOptions[effect],
+      bgEffectHandlerOptions[effect as keyof BGEffectHandlerOptions],
     ]);
   } catch (e) {
     console.error(`执行 ${effect} 时发生错误`, e);
