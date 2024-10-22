@@ -404,8 +404,6 @@ onDeactivated(() => {
     );
   });
   stop();
-  window.removeEventListener("blur", notifyWindowBlur);
-  window.removeEventListener("focus", notifyWindowFocus);
 });
 </script>
 
