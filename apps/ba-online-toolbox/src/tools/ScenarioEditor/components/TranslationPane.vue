@@ -407,12 +407,14 @@ watch(selectedText.text, () => {
 function handleCopyPaste(event: KeyboardEvent) {
   if (isMac) {
     if (event.metaKey && event.altKey && event.code === "KeyV") {
+      event.preventDefault();
       mainStore.getScenario.content[config.getSelectLine][
         config.getTargetLang
       ] = currentText.value;
     }
   } else {
     if (event.ctrlKey && event.shiftKey && event.code === "KeyV") {
+      event.preventDefault();
       mainStore.getScenario.content[config.getSelectLine][
         config.getTargetLang
       ] = currentText.value;
