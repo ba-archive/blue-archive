@@ -4,17 +4,27 @@
     <player-part></player-part>
     <translation-part></translation-part>
     <transition name="fly-in">
+      <div
+        class="button-footer-trigger p-3 rounded-full fixed bg-[var(--color-arona-blue)] bottom-0 left-1/2 line-height-0 cursor-pointer"
+        @click="showFooter = true"
+        v-show="!showFooter"
+      >
+        <arrow-icon direction="up" :size="24" />
+      </div>
+    </transition>
+    <transition name="fly-in">
       <footer-div v-show="showFooter" ref="footerRef" />
     </transition>
   </div>
 </template>
 <script setup lang="ts">
-import { usePointer, useWindowSize, onClickOutside } from "@vueuse/core";
-import { ref, watch } from "vue";
+import { onClickOutside } from "@vueuse/core";
+import { ref } from "vue";
 import FooterDiv from "./EditorFooter.vue";
 import IndexPage from "./IndexPage.vue";
 import PlayerPart from "./Player.vue";
 import TranslationPart from "./TranslationPane.vue";
+import ArrowIcon from "../../public/components/ArrowIcon.vue";
 
 const footerRef = ref(null);
 
@@ -22,39 +32,17 @@ onClickOutside(footerRef, () => {
   showFooter.value = false;
 });
 
-const { y: pointerY } = usePointer();
-const { height: windowHeight } = useWindowSize();
-
 const showFooter = ref(false);
-
-const pixelsToShowFooter = 24;
-const pixelDeltasToShowFooter = 360;
-const previousPointerY = ref(0);
-
-watch(
-  () => [pointerY.value, windowHeight.value],
-  ([pointerY, windowHeight]) => {
-    if (pointerY > windowHeight - pixelsToShowFooter) {
-      showFooter.value = true;
-      return;
-    }
-    if (pointerY > previousPointerY.value + pixelDeltasToShowFooter) {
-      showFooter.value = true;
-      previousPointerY.value = pointerY;
-      return;
-    }
-    if (pointerY < previousPointerY.value) {
-      showFooter.value = false;
-      previousPointerY.value = pointerY;
-      return;
-    }
-  },
-  {
-    immediate: false,
-  }
-);
 </script>
 <style scoped lang="scss">
+.button-footer-trigger {
+  translate: -50% 50%;
+  transition: all 0.375s ease-in-out;
+
+  &:hover {
+    translate: -50% 0;
+  }
+}
 //noinspection CssOverwrittenProperties
 .main-page {
   display: grid;

@@ -8,6 +8,7 @@ import { getStudents } from "./tools/public/helper/getStudents";
 import { ElMessage } from "element-plus";
 import { useColorMode } from "@vueuse/core";
 import { darkTheme } from "naive-ui";
+import ArrowIcon from "./tools/public/components/ArrowIcon.vue";
 
 const mode = useColorMode();
 const config = useGlobalConfig();
@@ -46,16 +47,8 @@ const isMainPage = computed(() => {
   <router-link
     to="/"
     class="button-back fixed grid place-items-center text-white rounded-full"
-    ><svg
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      stroke="white"
-      class="w-6 h-6 stroke-white @dark:stroke-slate-800"
-      stroke-width="4"
-    >
-      <path d="M20.272 11.27 7.544 23.998l12.728 12.728M43 24H8.705" />
-    </svg>
+  >
+    <arrow-icon direction="left" :size="24" />
   </router-link>
 </template>
 
