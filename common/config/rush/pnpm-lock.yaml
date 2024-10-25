@@ -953,6 +953,9 @@ importers:
 
   ../../lib/ba-story-player:
     dependencies:
+      '@esotericsoftware/spine-pixi':
+        specifier: ~4.2.61
+        version: 4.2.61(@pixi/assets@7.4.2)
       '@pixi-spine/base':
         specifier: ~4.0.3
         version: 4.0.3
@@ -3050,6 +3053,19 @@ packages:
   '@eslint/plugin-kit@0.2.0':
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@esotericsoftware/spine-core@4.2.61':
+    resolution: {integrity: sha512-dz3diru64rGQNKohgIlN6Mp5brpvEn1MuOOETiOvKu7zPOT5oI/sTLjRhtgBrqNUMWrFXhac9vh++vV0MCuvPA==}
+
+  '@esotericsoftware/spine-pixi@4.2.61':
+    resolution: {integrity: sha512-Es8vXX26PUc077VIr0mY52xDYs2Pdl3lrhTo+67rMFxfI7WOIlDA+Ky2M3Eidms7LD5Tjber7f6JkmJM3YAnoQ==}
+    peerDependencies:
+      '@pixi/assets': ^7.2.4
+      '@pixi/core': ^7.2.4
+      '@pixi/display': ^7.2.4
+      '@pixi/graphics': ^7.2.4
+      '@pixi/mesh': ^7.2.4
+      '@pixi/text': ^7.2.4
 
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
@@ -14096,6 +14112,13 @@ snapshots:
   '@eslint/plugin-kit@0.2.0':
     dependencies:
       levn: 0.4.1
+
+  '@esotericsoftware/spine-core@4.2.61': {}
+
+  '@esotericsoftware/spine-pixi@4.2.61(@pixi/assets@7.4.2)':
+    dependencies:
+      '@esotericsoftware/spine-core': 4.2.61
+      '@pixi/assets': 7.4.2
 
   '@fastify/busboy@2.1.1': {}
 
