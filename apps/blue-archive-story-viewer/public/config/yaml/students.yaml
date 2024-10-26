@@ -2681,13 +2681,13 @@
     en: Kyoyama
     kr: 쿄야마
     tw: 杏山
-    th: 杏山
+    th: เคียวยามะ
   name:
     cn: 和纱(乐队)
     jp: カズサ（バンド）
     en: Kazusa (Band)
     kr: 카즈사(밴드)
-    tw: 千紗（樂隊）
+    tw: 千紗(樂團)
     th: คาซึสะ (วงดนตรี)
   nickname: []
   nicknameFrom: 10049
@@ -2710,13 +2710,13 @@
     en: Ibaragi
     kr: 이바라기
     tw: 伊原木
-    th: 伊原木
+    th: อิบารากิ
   name:
     cn: 喜美(乐队)
     jp: ヨシミ（バンド）
     en: Yoshimi (Band)
     kr: 요시미(밴드)
-    tw: 喜美（樂隊）
+    tw: 喜美(樂團)
     th: โยชิมิ (วงดนตรี)
   nickname: []
   nicknameFrom: 26005
@@ -2774,7 +2774,7 @@
     jp: モモイ（メイド）
     en: Momoi (Maid)
     kr: 모모이(메이드)
-    tw: 桃井（女僕）
+    tw: 桃井(女僕)
     th: โมโมอิ (ชุดเมด)
   nickname: []
   nicknameFrom: 13011
@@ -2803,7 +2803,7 @@
     jp: ミドリ（メイド）
     en: Midori (Maid)
     kr: 미도리(메이드)
-    tw: 綠（女僕）
+    tw: 綠(女僕)
     th: มิโดริ (ชุดเมด)
   nickname: []
   nicknameFrom: 10016
@@ -2832,7 +2832,7 @@
     jp: カンナ（水着）
     en: Kanna (Swimsuit)
     kr: 칸나(수영복)
-    tw: 環奈（泳裝）
+    tw: 環奈(泳裝)
     th: คันนะ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 20023
@@ -2861,7 +2861,7 @@
     jp: モエ（水着）
     en: Moe (Swimsuit)
     kr: 모에(수영복)
-    tw: 萌（泳裝）
+    tw: 萌(泳裝)
     th: โมเอะ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 20018
@@ -3049,6 +3049,64 @@
   type: Striker
   armorType: HeavyArmor
   bulletType: Mystic
+  weapon: AR
+- id: 10105
+  familyName:
+    cn: 伊落
+    jp: 伊落
+    en: Iochi
+    kr: 이오치
+    tw: 伊落
+    th: 伊落
+  name:
+    cn: 玛丽(偶像)
+    jp: マリー（アイドル）
+    en: Mari (Idol)
+    kr: 마리(아이돌)
+    tw: 瑪麗（偶像）
+    th: マリー（アイドル）
+  nickname: []
+  nicknameFrom: 23008
+  birthday:
+    month: 9
+    day: 12
+  club: 修女会
+  clubCode: SisterHood
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: HG
+- id: 10106
+  familyName:
+    cn: 歌住
+    jp: 歌住
+    en: Utazumi
+    kr: 우타즈미
+    tw: 歌住
+    th: 歌住
+  name:
+    cn: 樱子(偶像)
+    jp: サクラコ（アイドル）
+    en: Sakurako (Idol)
+    kr: 사쿠라코(아이돌)
+    tw: 櫻子（偶像）
+    th: サクラコ（アイドル）
+  nickname: []
+  nicknameFrom: 10061
+  birthday:
+    month: 10
+    day: 4
+  club: 修女会
+  clubCode: SisterHood
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Explosion
   weapon: AR
 - id: 13000
   familyName:
@@ -3917,13 +3975,13 @@
     en: Kurimura
     kr: 쿠리무라
     tw: 栗村
-    th: 栗村
+    th: คุริมูระ
   name:
     cn: 爱莉(乐队)
     jp: アイリ（バンド）
     en: Airi (Band)
     kr: 아이리(밴드)
-    tw: 愛莉（樂隊）
+    tw: 愛莉(樂團)
     th: ไอริ (วงดนตรี)
   nickname: []
   nicknameFrom: 23000
@@ -3939,6 +3997,35 @@
   armorType: Unarmed
   bulletType: Explosion
   weapon: SMG
+- id: 16016
+  familyName:
+    cn: 苍森
+    jp: 蒼森
+    en: Aomori
+    kr: 아오모리
+    tw: 蒼森
+    th: 蒼森
+  name:
+    cn: 美弥(偶像)
+    jp: ミネ（アイドル）
+    en: Mine (Idol)
+    kr: 미네(아이돌)
+    tw: 美禰（偶像）
+    th: ミネ（アイドル）
+  nickname: []
+  nicknameFrom: 10058
+  birthday:
+    month: 11
+    day: 23
+  club: 救护骑士团
+  clubCode: KnightsHospitaller
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 1
+  type: Striker
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: SG
 - id: 20000
   familyName:
     cn: 猫塚
@@ -5005,7 +5092,7 @@
     jp: セリカ（水着）
     en: Serika (Swimsuit)
     kr: 세리카(수영복)
-    tw: 茜香（泳裝）
+    tw: 茜香(泳裝)
     th: เซริกะ (ชุดว่ายน้ำ)
   nickname:
     - 水黑猫
@@ -5035,7 +5122,7 @@
     jp: フブキ（水着）
     en: Fubuki (Swimsuit)
     kr: 후부키(수영복)
-    tw: 吹雪（泳裝）
+    tw: 吹雪(泳裝)
     th: ฟุบุกิ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 16008
@@ -5732,7 +5819,7 @@
     jp: キリノ（水着）
     en: Kirino (Swimsuit)
     kr: 키리노(수영복)
-    tw: 桐乃（泳裝）
+    tw: 桐乃(泳裝)
     th: คิริโนะ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 13012
