@@ -1,48 +1,59 @@
 <script setup lang="ts">
-import BaStoryPlayer from 'ba-story-player'
-import 'ba-story-player/dist/style.css'
-import type { NexonJSONStory } from '~/types/story'
+import BaStoryPlayer from "ba-story-player";
+import "ba-story-player/dist/style.css";
+import type { NexonJSONStory } from "~/types/story";
 
 const props = defineProps<{
-  story: NexonJSONStory
+  story: NexonJSONStory;
   summary: {
-    chapterName: string
-    summary: string
-  }
-}>()
-const playerVIf = defineModel('vif', { required: false, default: false })
+    chapterName: string;
+    summary: string;
+  };
+}>();
+const playerVIf = defineModel("vif", { required: false, default: false });
 
-const storyPlayer = ref<HTMLDivElement>()
-const { width, height } = useElementSize(storyPlayer)
+const storyPlayer = ref<HTMLDivElement>();
+const { width, height } = useElementSize(storyPlayer);
 
 function reloadPlayer() {
-  playerVIf.value = false
+  playerVIf.value = false;
   nextTick(() => {
-    playerVIf.value = true
-  })
+    playerVIf.value = true;
+  });
 }
 
-watch(() => [props.story, props.summary], () => {
-  reloadPlayer()
-})
+watch(
+  () => [props.story, props.summary],
+  () => {
+    reloadPlayer();
+  }
+);
 
 watchDebounced(
   () => [width.value, height.value],
   () => {
-    reloadPlayer()
+    reloadPlayer();
   },
-  { debounce: 1000 },
-)
+  { debounce: 1000 }
+);
 
 defineExpose({
   reload: reloadPlayer,
-  play: () => playerVIf.value = true,
-  destroy: () => playerVIf.value = false,
-})
+  play: () => (playerVIf.value = true),
+  destroy: () => (playerVIf.value = false),
+});
 </script>
 
 <template>
-  <div ref="storyPlayer" class="story-player" inline-block h630px w1120px of-hidden bg-gray-8>
+  <div
+    ref="storyPlayer"
+    class="story-player"
+    inline-block
+    h630px
+    w1120px
+    of-hidden
+    bg-gray-8
+  >
     <BaStoryPlayer
       v-if="playerVIf"
       class="player-container"

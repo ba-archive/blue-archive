@@ -11,8 +11,42 @@
     <div class="loading-container" v-if="!ready">
       <neu-progress-bar :show-percentage="true" :progress="initProgress" />
     </div>
+    <neu-dialog
+      title="哎呀，暂时不能播放这段剧情"
+      :show-mask="false"
+      positive-text="返回"
+      @positive-click="handleStoryEnd"
+      shadow
+      v-if="notImplementedError"
+    >
+      <template #content>
+        <p>
+          由于一些技术问题，玛丽（偶像）、樱子（偶像）、美弥（偶像）的剧情暂时无法播放。
+        </p>
+        <p>
+          我们正在努力解决，问题解决后我们会第一时间在
+          <a
+            class="text-blue-500"
+            href="https://space.bilibili.com/1413213021/dynamic"
+            target="_blank"
+          >
+            Bilibili 动态
+          </a>
+          通知大家。
+        </p>
+        <p>很抱歉给老师们带来了不便！≦(._.)≧</p>
+        <img
+          class="w-full h-auto max-w-32 max-h-32"
+          src="@assets/404_white_stroke_512px.webp"
+          alt="Network Error"
+        />
+      </template>
+    </neu-dialog>
     <div class="content-wrapper flex-vertical rounded-small">
-      <div class="flex-vertical story-container" v-if="ready && !fetchError">
+      <div
+        class="flex-vertical story-container"
+        v-if="ready && !fetchError && !notImplementedError"
+      >
         <div class="story-info flex-horizontal" v-if="!playEnded">
           <svg
             role="button"
@@ -149,6 +183,7 @@ import { useElementSize } from "@vueuse/core";
 import { capitalize } from "radash";
 import "ba-story-player/dist/style.css";
 import NeuTag from "./widgets/NeuUI/NeuTag.vue";
+import NeuDialog from "./widgets/NeuUI/NeuDialog.vue";
 import {
   getStoryJson,
   getStorySummary,
@@ -174,7 +209,12 @@ const playEnded = ref(false);
 const initProgress = ref(0);
 const ready = ref(false);
 const fetchError = ref(false);
-const fetchErrorMessage = ref({});
+const fetchErrorMessage = ref({
+  message: "",
+  response: {
+    status: 0,
+  },
+});
 const showPlayer = ref(false);
 
 const changeIndex = ref(0);
@@ -198,6 +238,9 @@ const summary = ref({
 const studentId = computed(() => route.params.id as string);
 const favorGroupId = computed(() => (route.params.groupId as string) ?? "");
 const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
+const notImplementedError = computed(() =>
+  [10105, 10106, 16016].includes(parseInt(studentId.value))
+);
 
 // 判断是不是学生好感剧情
 const isStuStory = computed(() =>

@@ -61,7 +61,15 @@ const ready = ref(false);
 const initProgress = ref(0);
 // get 请求是否出错
 const fetchError = ref(false);
-const fetchErrorMessage = ref({});
+const fetchErrorMessage = ref<{
+  message: string;
+  response: { status: number };
+}>({
+  message: "",
+  response: {
+    status: 0,
+  },
+});
 
 const studentId = computed(() => parseInt(route.params.id as string));
 const studentAvatar = studentStore.getStudentAvatar(studentId.value);
@@ -83,7 +91,7 @@ axios
       .get(`/story/ai/favor/${studentId.value}/index.json`, {
         onDownloadProgress: progressEvent => {
           const total = progressEvent.total || progressEvent.loaded + 100;
-    initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
+          initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
         },
       })
       .then(res => {
@@ -107,6 +115,15 @@ axios
   })
   .finally(() => {
     ready.value = true;
+    if ([10105, 10106, 16016].includes(studentId.value)) {
+      fetchErrorMessage.value = {
+        message:
+          "由于技术问题，玛丽（偶像）、樱子（偶像）以及美弥（偶像）的剧情暂时无法播放。我们正在修复该问题。",
+        response: {
+          status: 1919,
+        },
+      };
+    }
   });
 
 function handleOpenIndex(index: number) {

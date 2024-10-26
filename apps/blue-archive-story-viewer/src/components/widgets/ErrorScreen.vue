@@ -49,7 +49,12 @@ import { computed } from "vue";
 
 const props = defineProps<{
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  errorMessage: any;
+  errorMessage: {
+    message: string;
+    response: {
+      status: number;
+    };
+  };
   routePath: string | undefined;
 }>();
 
