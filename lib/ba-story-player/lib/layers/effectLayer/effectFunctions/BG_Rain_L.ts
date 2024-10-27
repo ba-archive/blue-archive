@@ -20,7 +20,8 @@ const handler: BGEffectHandlerFunction<"BG_Rain_L"> = async function (
   const app = usePlayerStore().app;
   newRainConfig.spawnRect!.w = app.view.width;
   newRainConfig.spawnRect!.h = app.view.height;
-  newRainConfig.frequency = options.frequency;
+  // @ts-ignore
+  newRainConfig.frequency = options.frequency ?? 0.02;
   const emitter = new Emitter(
     emitterContainer,
     upgradeConfig(newRainConfig, [resources[0].texture])

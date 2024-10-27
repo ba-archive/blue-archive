@@ -3,6 +3,19 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2024-10-27",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "伊落 玛丽（偶像）", id: 10105 },
+          { name: "歌住 樱子（偶像）", id: 10106 },
+          { name: "苍森 美弥（偶像）", id: 16016 },
+        ],
+      },
+    ],
+  },
+  {
     date: "2024-10-09",
     contents: [
       {
@@ -16,9 +29,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "鹿山 俪舒", id: 10104 },
-        ],
+        students: [{ name: "鹿山 俪舒", id: 10104 }],
       },
     ],
   },
@@ -27,9 +38,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "龙华 妃咲", id: 20039 },
-        ],
+        students: [{ name: "龙华 妃咲", id: 20039 }],
       },
     ],
   },
@@ -38,9 +47,7 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [
-          { name: "和乐 千世（泳装）", id: 10047 },
-        ],
+        students: [{ name: "和乐 千世（泳装）", id: 10047 }],
       },
     ],
   },
@@ -79,13 +86,11 @@ const updateLogs: UpdateLog[] = [
     ],
   },
   {
-  date: "2024-06-09",
+    date: "2024-06-09",
     contents: [
       {
         type: "student",
-        students: [
-          { name: "黑见 芹香（泳装）", id: 20036 },
-        ],
+        students: [{ name: "黑见 芹香（泳装）", id: 20036 }],
       },
     ],
   },
