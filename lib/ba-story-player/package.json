@@ -46,7 +46,9 @@
     "element-plus": "^2.8.6",
     "vite-plugin-vue-devtools": "^7.5.4",
     "@pixi/filter-old-film": "5.1.1",
-    "@esotericsoftware/spine-pixi": "~4.2.61"
+    "@esotericsoftware/spine-pixi": "~4.2.61",
+    "@pixi/core": ">=7 <8",
+    "radash": "~12.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.8.1",

@@ -1,20 +1,19 @@
 import * as utils from "@/utils";
-import * as PIXI from "pixi.js";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
+import axios from "axios";
+import "pixi-spine";
+import { IEventData, ISkeletonData } from "pixi-spine";
 import {
   Application,
-  IAddOptions,
-  Loader,
-  LoaderResource,
+  Assets,
+  BaseTexture,
+  extensions,
   utils as pixiUtils,
+  settings,
 } from "pixi.js";
-import axios from "axios";
 import { Howler } from "howler";
-import "pixi-spine";
-import { IEventData, SpineParser } from "pixi-spine";
-import { watch } from "vue";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
 import { bgInit } from "@/layers/bgLayer";
@@ -25,27 +24,31 @@ import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
+import { watch } from "vue";
+import { retry } from "radash";
 
 Howler.autoSuspend = false;
+// FIXME: 这是在做什么
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+// extensions.add(window.spineLoader);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+// extensions.add(window.spineTextureAtlasLoader);
 
-Loader.registerPlugin(SpineParser);
-let playerStore: ReturnType<typeof usePlayerStore>;
-let privateState: ReturnType<typeof initPrivateState>;
+let playerStore = usePlayerStore();
+let privateState = initPrivateState();
 /**
  * 多余的不能识别出l2d音频的事件名
  */
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
-export function checkloadAssetAlias<T = any>(alias: string, url: string) {
-  const {
-    app: { loader },
-  } = usePlayerStore();
-  const asset = loader.resources[url] ?? loader.resources[alias];
-  if (!asset) {
-    loadAssetAlias(alias, url);
-  } else {
-    return asset;
+export async function checkloadAssetAlias<T = any>(alias: string, url: string) {
+  if (!resourcesLoader.loadedList.includes(alias)) {
+    resourcesLoader.loadedList.push(alias);
+    return await loadAssetAlias(alias, url);
   }
+  return Promise.resolve();
 }
 
 /**
@@ -156,6 +159,7 @@ export const eventEmitter = {
       () => autoMode.value,
       cur => {
         if (cur) {
+          // 等待一会再开始 auto，避免跳句带来的体验下降
           setTimeout(() => {
             storyHandler.startAuto();
           }, 1500);
@@ -487,7 +491,7 @@ export async function init(
   errorCallback: () => void
 ) {
   //缓解图片缩放失真
-  PIXI.settings.MIPMAP_TEXTURES = 2;
+  BaseTexture.defaultOptions.mipmap = 2;
   console.log(
     `%c ba-bug-player %c ${version} %c`,
     "background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff",
@@ -517,8 +521,8 @@ export async function init(
   useSuperSampling && utils.setSuperSampling(useSuperSampling);
   storyHandler.endCallback = endCallback;
   storyHandler.errorCallback = errorCallback;
-  playerStore = usePlayerStore();
-  privateState = initPrivateState();
+  // playerStore = usePlayerStore();
+  // privateState = initPrivateState();
   utils.setDataUrl(props.dataUrl);
   privateState.dataUrl = props.dataUrl;
   privateState.language = props.language;
@@ -538,16 +542,17 @@ export async function init(
   globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
   document.querySelector(`#${elementID}`)?.appendChild(app.view);
-  app.loader.onError.add(
-    (error: Error, _: unknown, resource: LoaderResource) => {
-      console.error(error);
-      eventBus.emit("oneResourceLoaded", {
-        type: "fail",
-        resourceName: resource.name ?? resource.url,
-      });
-    }
-  );
-  // 记录加载开始时间 优化光速加载的体验
+  // FIXME: 需要一个错误提示
+  // app.loader.onError.add(
+  //   (error: Error, _: unknown, resource: LoaderResource) => {
+  //     console.error(error);
+  //     eventBus.emit("oneResourceLoaded", {
+  //       type: "fail",
+  //       resourceName: resource.name ?? resource.url,
+  //     });
+  //   }
+  // );
+  // 记录加载开始时间，用于优化加载过快黑屏一闪而过的体验
   const startLoadTime = Date.now();
   eventBus.emit("startLoading", { url: props.dataUrl });
   //加载初始化资源以便翻译层进行翻译
@@ -562,9 +567,10 @@ export async function init(
   effectInit();
   L2DInit();
   //加载剩余资源
-  resourcesLoader.addLoadResources(app.loader);
+  resourcesLoader.addLoadResources();
   resourcesLoader.load(async () => {
-    // 加载live2d音频
+    // FIXME: 预加载其他剧情播放用到的音频
+    // 预加载live2d音频，优化用户体验
     const spineData = usePlayerStore().l2dSpineData;
     if (spineData) {
       resourcesLoader.loadL2dVoice(spineData.events);
@@ -592,6 +598,8 @@ export async function init(
  * 资源加载处理对象
  */
 export const resourcesLoader = {
+  loadTaskList: [] as Promise<unknown>[],
+  loadedList: [] as string[],
   /**
    * 初始化, 预先加载表资源供翻译层使用
    */
@@ -601,7 +609,7 @@ export const resourcesLoader = {
   /**
    * 添加所有资源, 有些pixi loader不能处理的资源则会调用资源处理函数, 故会返回promise
    */
-  addLoadResources(loader: PIXI.Loader) {
+  addLoadResources() {
     // this.loader.add('https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg',
     //   'https://yuuka.cdn.diyigemt.com/image/ba-all-data/UIs/03_Scenario/01_Background/BG_CS_PR_16.jpg'
     // )
@@ -670,10 +678,16 @@ export const resourcesLoader = {
    * @param callback
    */
   load(callback: () => void) {
-    const {
-      app: { loader },
-    } = usePlayerStore();
-    loader.load(callback);
+    let hasLoad = false;
+    Promise.allSettled(this.loadTaskList).then(() => {
+      //当chrome webgl inspector打开时可能导致callback被执行两次
+      if (!hasLoad) {
+        this.loadTaskList.splice(0, this.loadTaskList.length);
+        this.loadedList.splice(0, this.loadedList.length);
+        hasLoad = true;
+        callback();
+      }
+    });
   },
 
   /**
@@ -707,7 +721,7 @@ export const resourcesLoader = {
     }
     // for (const emotionName of playerStore.emotionResourcesTable.keys()) {
     //   const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-    // eslint-disable-next-line max-len, max-len
+    // eslint-disable-next-line max-len
     //   this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
     // }
   },
@@ -785,7 +799,8 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("ScenarioBGNameExcelTable");
         })
-        .catch(() => {
+        .catch((e) => {
+          console.error(e);
           notifyExcelError("ScenarioBGNameExcelTable");
         })
     );
@@ -891,6 +906,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
 
   return new Promise<void>((resolve, reject) => {
     const { tabActivated } = useUiState();
+    // FIXME: 是不是这里导致的开局播放卡死？
     const watchSideEffect = watch(
       () => tabActivated.value,
       cur => {
@@ -939,7 +955,7 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
             waitingKeys
           );
 
-          // TODO 重写逻辑解决莫名其妙的播放卡死?
+          // FIXME: 重写逻辑解决莫名其妙的播放卡死?
           // reject();
           // waitingKeys.forEach((key) => {
           //   Reflect.set(eventEmitter, key, true);
@@ -1155,14 +1171,20 @@ export const storyHandler = {
   },
 };
 
-function loadAssetAlias<T = any>(alias: string, url: string) {
-  return loadAsset<T>({
-    url: url,
-    name: alias,
+async function loadAssetAlias<T = any>(alias: string, src: string) {
+  return await loadAsset<T>({
+    src: src,
+    alias: alias,
   });
 }
 
-function loadAsset<T = any>(param: IAddOptions) {
+type IAddOptions = { src: string; alias: string };
+
+async function loadAsset<T = any>(param: IAddOptions) {
+  // param: {
+  //   "src": "xxx/Emoticon_Balloon_N.png",
+  //   "alias": "Emoticon_Balloon_N.png"
+  // }
   function getResourceName(): string[] {
     if (typeof param === "string") {
       return [lastName(param as string)];
@@ -1172,24 +1194,32 @@ function loadAsset<T = any>(param: IAddOptions) {
           return param as string[];
         } else {
           const tmp: IAddOptions[] = param as IAddOptions[];
-          return tmp.map(it => it.name ?? it.key ?? lastName(it.url ?? ""));
+          return tmp.map(it => it.alias ?? lastName(it.src ?? ""));
         }
       } else {
-        return [param.name ?? param.key ?? lastName(param.url ?? "")];
+        return [param.alias ?? lastName(param.src ?? "")];
       }
     }
   }
   function lastName(source: string) {
     return source.substring(source.lastIndexOf("/") + 1);
   }
-  const {
-    app: { loader },
-  } = usePlayerStore();
-  loader.add(param, _ => {
-    eventBus.emit("oneResourceLoaded", {
-      type: "success",
-      resourceName: getResourceName(),
+
+  Assets.add({ alias: param.alias, src: param.src });
+
+  return Assets.load<T>(param as never)
+    .then(_ => {
+      eventBus.emit("oneResourceLoaded", {
+        type: "success",
+        resourceName: getResourceName(),
+      });
+      return _;
+    })
+    .catch(err => {
+      console.error(err);
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: getResourceName(),
+      });
     });
-    return _;
-  });
 }
