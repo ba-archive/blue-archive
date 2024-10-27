@@ -541,7 +541,9 @@ export async function init(
   // @ts-ignore
   globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
-  document.querySelector(`#${elementID}`)?.appendChild(app.view);
+  document
+    .querySelector(`#${elementID}`)
+    ?.appendChild(app.view as HTMLCanvasElement);
   // FIXME: 需要一个错误提示
   // app.loader.onError.add(
   //   (error: Error, _: unknown, resource: LoaderResource) => {
@@ -790,6 +792,7 @@ export const resourcesLoader = {
         resourceName: name,
       });
     }
+    // TODO: 封装请求
     excelPromiseArray.push(
       axios
         .get(utils.getResourcesUrl("excel", "ScenarioBGNameExcelTable.json"))
@@ -799,7 +802,7 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("ScenarioBGNameExcelTable");
         })
-        .catch((e) => {
+        .catch(e => {
           console.error(e);
           notifyExcelError("ScenarioBGNameExcelTable");
         })
@@ -815,7 +818,8 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("ScenarioCharacterNameExcelTable");
         })
-        .catch(() => {
+        .catch(e => {
+          console.error(e);
           notifyExcelError("ScenarioCharacterNameExcelTable");
         })
     );
@@ -828,7 +832,8 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("BGMExcelTable");
         })
-        .catch(() => {
+        .catch(e => {
+          console.error(e);
           notifyExcelError("BGMExcelTable");
         })
     );
@@ -843,7 +848,8 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("ScenarioTransitionExcelTable");
         })
-        .catch(() => {
+        .catch(e => {
+          console.error(e);
           notifyExcelError("ScenarioTransitionExcelTable");
         })
     );
@@ -856,7 +862,8 @@ export const resourcesLoader = {
           }
           notifyExcelSuccess("ScenarioBGEffectExcelTable");
         })
-        .catch(() => {
+        .catch(e => {
+          console.error(e);
           notifyExcelError("ScenarioBGEffectExcelTable");
         })
     );
@@ -1186,20 +1193,7 @@ async function loadAsset<T = any>(param: IAddOptions) {
   //   "alias": "Emoticon_Balloon_N.png"
   // }
   function getResourceName(): string[] {
-    if (typeof param === "string") {
-      return [lastName(param as string)];
-    } else {
-      if (Array.isArray(param)) {
-        if (typeof param[0] === "string") {
-          return param as string[];
-        } else {
-          const tmp: IAddOptions[] = param as IAddOptions[];
-          return tmp.map(it => it.alias ?? lastName(it.src ?? ""));
-        }
-      } else {
-        return [param.alias ?? lastName(param.src ?? "")];
-      }
-    }
+    return [param.alias ?? lastName(param.src ?? "")];
   }
   function lastName(source: string) {
     return source.substring(source.lastIndexOf("/") + 1);
