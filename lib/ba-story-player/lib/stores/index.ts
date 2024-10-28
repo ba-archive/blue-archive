@@ -106,7 +106,7 @@ const bgEffectImgTable: BGEffectImgTable = {
   "BG_ScrollB_1.5": [],
   BG_Filter_Red_BG: [],
   BG_Ash_Red: [],
-  BG_Fireworks_L_BGOff_02: [],
+  BG_Fireworks_L_BGOff_02: ["firework_spark.png"],
   "BG_ScrollR_0.5": [],
   BG_Snow_L: [],
   BG_Fireworks_L_BGOff_01: [],
