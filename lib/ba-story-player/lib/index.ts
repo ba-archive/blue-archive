@@ -2,16 +2,12 @@ import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
-import axios from "axios";
-import "pixi-spine";
-import { IEventData, ISkeletonData } from "pixi-spine";
+import { IEventData } from "pixi-spine";
 import {
   Application,
   Assets,
   BaseTexture,
-  extensions,
   utils as pixiUtils,
-  settings,
 } from "pixi.js";
 import { Howler } from "howler";
 import { version } from "../package.json";
@@ -25,19 +21,13 @@ import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
-import { retry } from "radash";
+import { excelApi } from "@/api";
 
 Howler.autoSuspend = false;
-// FIXME: 这是在做什么
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// extensions.add(window.spineLoader);
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// extensions.add(window.spineTextureAtlasLoader);
 
 let playerStore = usePlayerStore();
 let privateState = initPrivateState();
+
 /**
  * 多余的不能识别出l2d音频的事件名
  */
@@ -779,121 +769,94 @@ export const resourcesLoader = {
    * 加载原始数据资源
    */
   async loadExcels() {
-    const excelPromiseArray: Array<Promise<void>> = [];
-    function notifyExcelSuccess(name: string) {
-      eventBus.emit("oneResourceLoaded", {
-        type: "success",
-        resourceName: name,
-      });
-    }
-    function notifyExcelError(name: string) {
-      eventBus.emit("oneResourceLoaded", {
-        type: "fail",
-        resourceName: name,
-      });
-    }
-    // TODO: 封装请求
-    excelPromiseArray.push(
-      axios
-        .get(utils.getResourcesUrl("excel", "ScenarioBGNameExcelTable.json"))
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+    const excelLoaders = [
+      {
+        name: "ScenarioBGNameExcelTable",
+        loader: excelApi.getBGNameExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.BGNameExcelTable.set(i["Name"], i);
           }
-          notifyExcelSuccess("ScenarioBGNameExcelTable");
-        })
-        .catch(e => {
-          console.error(e);
-          notifyExcelError("ScenarioBGNameExcelTable");
-        })
-    );
-    excelPromiseArray.push(
-      axios
-        .get(
-          utils.getResourcesUrl("excel", "ScenarioCharacterNameExcelTable.json")
-        )
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+        },
+      },
+      {
+        name: "ScenarioCharacterNameExcelTable",
+        loader: excelApi.getCharacterNameExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.CharacterNameExcelTable.set(i["CharacterName"], i);
           }
-          notifyExcelSuccess("ScenarioCharacterNameExcelTable");
-        })
-        .catch(e => {
-          console.error(e);
-          notifyExcelError("ScenarioCharacterNameExcelTable");
-        })
-    );
-    excelPromiseArray.push(
-      axios
-        .get(utils.getResourcesUrl("excel", "BGMExcelTable.json"))
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+        },
+      },
+      {
+        name: "BGMExcelTable",
+        loader: excelApi.getBGMExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.BGMExcelTable.set(i["Id"], i);
           }
-          notifyExcelSuccess("BGMExcelTable");
-        })
-        .catch(e => {
-          console.error(e);
-          notifyExcelError("BGMExcelTable");
-        })
-    );
-    excelPromiseArray.push(
-      axios
-        .get(
-          utils.getResourcesUrl("excel", "ScenarioTransitionExcelTable.json")
-        )
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+        },
+      },
+      {
+        name: "ScenarioTransitionExcelTable",
+        loader: excelApi.getTransitionExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.TransitionExcelTable.set(i["Name"], i);
           }
-          notifyExcelSuccess("ScenarioTransitionExcelTable");
-        })
-        .catch(e => {
-          console.error(e);
-          notifyExcelError("ScenarioTransitionExcelTable");
-        })
-    );
-    excelPromiseArray.push(
-      axios
-        .get(utils.getResourcesUrl("excel", "ScenarioBGEffectExcelTable.json"))
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+        },
+      },
+      {
+        name: "ScenarioBGEffectExcelTable",
+        loader: excelApi.getBGEffectExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.BGEffectExcelTable.set(i["Name"], i);
           }
-          notifyExcelSuccess("ScenarioBGEffectExcelTable");
-        })
-        .catch(e => {
-          console.error(e);
-          notifyExcelError("ScenarioBGEffectExcelTable");
-        })
-    );
-    excelPromiseArray.push(
-      axios
-        .get(
-          utils.getResourcesUrl(
-            "excel",
-            "ScenarioCharacterEmotionExcelTable.json"
-          )
-        )
-        .then(res => {
-          for (const i of res.data["DataList"]) {
+        },
+      },
+      {
+        name: "ScenarioCharacterEmotionExcelTable",
+        loader: excelApi.getEmotionExcel,
+        setter: (data: any) => {
+          for (const i of data) {
             privateState.EmotionExcelTable.set(i["Name"], i["EmoticonName"]);
           }
-          notifyExcelSuccess("ScenarioCharacterEmotionExcelTable");
+        },
+      },
+    ];
+
+    function notifyExcelResult(name: string, success: boolean, error?: any) {
+      eventBus.emit("oneResourceLoaded", {
+        type: success ? "success" : "fail",
+        resourceName: name,
+      });
+
+      if (!success) {
+        console.error(`Failed to load resource map: ${name}`, error);
+      }
+    }
+
+    const excelPromiseArray = excelLoaders.map(({ name, loader, setter }) =>
+      loader()
+        .then(data => {
+          setter(data);
+          notifyExcelResult(name, true);
         })
-        .catch(() => {
-          notifyExcelError("ScenarioCharacterEmotionExcelTable");
+        .catch(error => {
+          notifyExcelResult(name, false, error);
         })
     );
 
     const results = await Promise.allSettled(excelPromiseArray);
-    const reasons = [];
-    for (const result of results) {
-      if (result.status === "rejected") {
-        reasons.push(result.reason);
-      }
-    }
-    if (reasons.length !== 0) {
+    const reasons = results
+      .filter(
+        (result): result is PromiseRejectedResult =>
+          result.status === "rejected"
+      )
+      .map(result => result.reason);
+
+    if (reasons.length > 0) {
       throw new Error(reasons.toString());
     }
   },
