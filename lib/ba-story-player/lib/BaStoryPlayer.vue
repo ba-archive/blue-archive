@@ -30,7 +30,6 @@ import { useUiState } from "@/stores/state";
 import { StoryRawUnit, TranslatedStoryUnit } from "@/types/common";
 import { Language, StorySummary } from "@/types/store";
 import { useElementSize } from "@vueuse/core";
-import "element-plus/dist/index.css";
 import eventBus from "./eventBus";
 import { initPrivateState, usePlayerStore } from "./stores";
 
