@@ -3,12 +3,7 @@ import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait } from "@/utils";
 import { IEventData } from "pixi-spine";
-import {
-  Application,
-  Assets,
-  BaseTexture,
-  utils as pixiUtils,
-} from "pixi.js";
+import { Application, Assets, BaseTexture, utils as pixiUtils } from "pixi.js";
 import { Howler } from "howler";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
@@ -22,7 +17,8 @@ import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
-import { retry } from "radash";
+import { retry, tryit } from "radash";
+import { Spine } from "@esotericsoftware/spine-pixi";
 
 Howler.autoSuspend = false;
 
@@ -1156,8 +1152,8 @@ async function loadAsset<T = any>(param: IAddOptions) {
   //   "src": "xxx/Emoticon_Balloon_N.png",
   //   "alias": "Emoticon_Balloon_N.png"
   // }
-  function getResourceName(): string[] {
-    return [param.alias ?? lastName(param.src ?? "")];
+  function getResourceName(): string {
+    return lastName(param.alias ?? param.src ?? "");
   }
   function lastName(source: string) {
     return source.substring(source.lastIndexOf("/") + 1);
@@ -1171,21 +1167,33 @@ async function loadAsset<T = any>(param: IAddOptions) {
       delay: 1000,
     },
     async () => {
-      try {
-        const result = await Assets.load<T>(param as never);
-        eventBus.emit("oneResourceLoaded", {
-          type: "success",
-          resourceName: getResourceName(),
+      // console.log(Assets)
+      const [err, result] = await tryit(() => {
+        return Assets.load(param).catch((err: ErrorEvent) => {
+          if (err.message?.includes("404")) {
+            // 资源不存在，可以直接返回了
+            console.error(`资源不存在: ${param.alias}`);
+            throw err;
+          }
+          if (err.message.includes("[Loader.load] Failed to load")) {
+            // FIXME: 从私库构建 pixi-spine 来支持 spine v4.2+
+            console.error("暂时不支持 spine v4.2+");
+          }
         });
-        return result;
-      } catch (err) {
-        console.error(`Failed to load asset: ${param.alias || param.src}`, err);
+      })();
+      if (err) {
         eventBus.emit("oneResourceLoaded", {
           type: "fail",
           resourceName: getResourceName(),
         });
+        console.error(err);
         throw err; // 重新抛出错误以触发重试
       }
+      eventBus.emit("oneResourceLoaded", {
+        type: "success",
+        resourceName: getResourceName(),
+      });
+      return result;
     }
   );
 }
