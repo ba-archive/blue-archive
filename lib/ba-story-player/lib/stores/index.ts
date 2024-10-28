@@ -160,8 +160,9 @@ const getterFunctions: GetterFunctions = {
     return privateState.app!;
   },
 
-  characterSpineData: () => (CharacterName: number) => {
-    return Assets.get(String(CharacterName)).spineData;
+  characterSpineData: () => (CharacterName: number, url: string) => {
+    // eslint-disable-next-line max-len
+    return (Assets.cache.has(String(CharacterName)) ? Assets.get(String(CharacterName)) : (Assets.get(url) || {})).spineData;
   },
 
   /**
