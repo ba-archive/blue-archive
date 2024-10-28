@@ -22,6 +22,7 @@ import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
+import { retry } from "radash";
 
 Howler.autoSuspend = false;
 
@@ -1164,19 +1165,27 @@ async function loadAsset<T = any>(param: IAddOptions) {
 
   Assets.add({ alias: param.alias, src: param.src });
 
-  return Assets.load<T>(param as never)
-    .then(_ => {
-      eventBus.emit("oneResourceLoaded", {
-        type: "success",
-        resourceName: getResourceName(),
-      });
-      return _;
-    })
-    .catch(err => {
-      console.error(err);
-      eventBus.emit("oneResourceLoaded", {
-        type: "fail",
-        resourceName: getResourceName(),
-      });
-    });
+  return retry(
+    {
+      times: 3,
+      delay: 1000,
+    },
+    async () => {
+      try {
+        const result = await Assets.load<T>(param as never);
+        eventBus.emit("oneResourceLoaded", {
+          type: "success",
+          resourceName: getResourceName(),
+        });
+        return result;
+      } catch (err) {
+        console.error(`Failed to load asset: ${param.alias || param.src}`, err);
+        eventBus.emit("oneResourceLoaded", {
+          type: "fail",
+          resourceName: getResourceName(),
+        });
+        throw err; // 重新抛出错误以触发重试
+      }
+    }
+  );
 }

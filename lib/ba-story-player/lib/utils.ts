@@ -55,8 +55,8 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
     case "otherL2dSpine":
       return `${dataUrl}/spine/${arg}.skel`;
     case "excel":
-      return `${dataUrl}/data/${arg}`; // FIXME: 临时禁用缓存
-      // return `${dataUrl}/data/${arg}?t=${Math.floor(Date.now() / 3600000)}`;
+      // return `${dataUrl}/data/${arg}`; // FIXME: 临时禁用缓存
+      return `${dataUrl}/data/${arg}?t=${Math.floor(Date.now() / 3600000)}`;
     case "bgm":
       return `${dataUrl}/${arg}.${oggAudioType}`;
     case "sound":
