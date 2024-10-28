@@ -314,8 +314,8 @@ defineExpose({
  * 是否经历过setup onMounted
  */
 let firstMount = false;
-onMounted(() => {
-  init(
+onMounted(async () => {
+  await init(
     "player__main__canvas",
     pixiConfig,
     () => {

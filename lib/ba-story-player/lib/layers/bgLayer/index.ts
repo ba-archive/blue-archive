@@ -4,8 +4,8 @@
 import eventBus from "@/eventBus";
 import { checkloadAssetAlias } from "@/index";
 import { usePlayerStore } from "@/stores";
-import { Application, Sprite } from "pixi.js";
 import gsap from "gsap";
+import { Application, Sprite, Assets, Texture } from "pixi.js";
 import { BgLayer } from "@/types/bgLayer";
 
 export function bgInit() {
@@ -40,17 +40,7 @@ const BgLayerInstance: BgLayer = {
    * 事件监听处理函数
    */
   handleShowBg({ url, overlap }) {
-    const {
-      app: { loader },
-    } = usePlayerStore();
-    const resource = checkloadAssetAlias(url, url);
-    new Promise<void>(resolve => {
-      if (resource) {
-        resolve();
-      } else {
-        loader.add(url).load(() => resolve());
-      }
-    }).then(() => {
+    Assets.load(url).then(() => {
       const instance = this.getBgSpriteFromResource(url);
       if (instance) {
         if (overlap) {
@@ -77,12 +67,12 @@ const BgLayerInstance: BgLayer = {
   getBgSpriteFromResource(name: string) {
     const { app } = usePlayerStore();
     let sprite: Sprite | null = null;
-    const asset = app.loader.resources[name];
+    const asset = Assets.get<Texture>(name);
     if (!asset) {
       console.error(`can't find resource: ${name}`);
       return;
     }
-    sprite = new Sprite(asset.texture);
+    sprite = new Sprite(asset);
     const { x, y, scale } = calcBackgroundImageSize(sprite, app);
     sprite.position.set(x, y);
     sprite.scale.set(scale);

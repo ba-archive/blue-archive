@@ -6,7 +6,6 @@ import path from "path";
 import px2rem from "postcss-plugin-px2rem";
 import postcssPresetEnv from "postcss-preset-env";
 import { visualizer } from "rollup-plugin-visualizer";
-import tailwind from "tailwindcss";
 import { defineConfig } from "vite";
 import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
@@ -70,7 +69,6 @@ export default defineConfig({
           propBlackList: ["font-size", "border", "border-width"],
           exclude: /(node_module)/,
         }),
-        // tailwind(tailwindConfig),
       ],
     },
   },
