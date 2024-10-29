@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "./variables.scss" as *;
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-400.css");
 @import url("https://fonts.blue-archive.io/harmonyos-sans-webfont/harmonyos-sans-sc-700.css");
 

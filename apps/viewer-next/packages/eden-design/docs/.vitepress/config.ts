@@ -316,7 +316,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData:
-            '@import "../packages/eden-design/_styles/variables.scss";',
+            '@use "../packages/eden-design/_styles/variables.scss" as *;',
         },
       },
     },
