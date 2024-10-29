@@ -1,9 +1,15 @@
 import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
-import { wait } from "@/utils";
+import { wait, getOtherSoundUrls } from "@/utils";
 import { IEventData } from "pixi-spine";
-import { Application, Assets, BaseTexture, utils as pixiUtils } from "pixi.js";
+import {
+  Application,
+  Assets,
+  BaseTexture,
+  utils as pixiUtils,
+  extensions,
+} from "pixi.js";
 import { Howler } from "howler";
 import { version } from "../package.json";
 import { L2DInit } from "./layers/l2dLayer/L2D";
@@ -18,11 +24,17 @@ import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
 import { retry, tryit } from "radash";
+
 // 注册全局 PIXI
 import * as PIXI from "pixi.js";
 // 注册全局 gsap pixi 插件
 import gsap from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
+
+// 注册 howler 中间件
+// @ts-ignore
+import { HowlerLoader } from "@/middlewares/howlerPixiLoader";
+extensions.add(HowlerLoader);
 
 // 注册
 PixiPlugin.registerPIXI(PIXI);
@@ -647,11 +659,11 @@ export const resourcesLoader = {
         if (unit.audio.voiceJPUrl) {
           audioUrls.push(unit.audio.voiceJPUrl);
         }
-        // this.checkAndAdd(unit.audio.bgm?.url)
+        this.checkAndAdd(unit.audio.bgm?.url)
 
-        // //添加sound
-        // this.checkAndAdd(unit.audio.soundUrl)
-        // this.checkAndAdd(unit.audio.voiceJPUrl)
+        //添加sound
+        this.checkAndAdd(unit.audio.soundUrl)
+        this.checkAndAdd(unit.audio.voiceJPUrl)
       }
       //添加背景图片
       this.checkAndAdd(unit.bg, "url");
@@ -753,10 +765,10 @@ export const resourcesLoader = {
    * 添加其他特效音
    */
   addOtherSounds() {
-    // const otherSoundUrls = getOtherSoundUrls();
-    // for (const url of otherSoundUrls) {
-    //   this.loadTaskList.push(checkloadAssetAlias(url, url));
-    // }
+    const otherSoundUrls = getOtherSoundUrls();
+    for (const url of otherSoundUrls) {
+      this.loadTaskList.push(checkloadAssetAlias(url, url));
+    }
   },
 
   /**
@@ -1146,8 +1158,8 @@ export const storyHandler = {
   },
 };
 
-async function loadAssetAlias<T = any>(alias: string, src: string) {
-  return await loadAsset<T>({
+async function loadAssetAlias(alias: string, src: string) {
+  return await loadAsset({
     src: src,
     alias: alias,
   });
