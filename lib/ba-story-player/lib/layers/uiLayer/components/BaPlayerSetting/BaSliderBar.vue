@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, ref } from "vue";
 import { getUiI18n } from "../../utils";
-import ElSlider from "./slider/src/slider.vue";
+import { ElSlider } from "element-plus";
 import { Language } from "@/types/store";
 import { watchThrottled } from "@vueuse/core";
 import { BaSliderData } from "./BaPlayerSetting";
@@ -51,6 +51,7 @@ watchThrottled(
         :max="data.max"
         :min="data.min"
         :step="data.step"
+        :show-tooltip="false"
       />
     </div>
     <div class="suffix">

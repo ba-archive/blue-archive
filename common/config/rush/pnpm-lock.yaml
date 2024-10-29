@@ -488,7 +488,7 @@ importers:
         version: 0.26.0(@babel/parser@7.26.1)(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       unplugin-vue-macros:
         specifier: ^2.9.0
-        version: 2.9.1(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(esbuild@0.23.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))
+        version: 2.9.1(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(esbuild@0.23.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       unplugin-vue-markdown:
         specifier: ^0.26.0
         version: 0.26.2(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))
@@ -1025,6 +1025,9 @@ importers:
       unplugin-auto-import:
         specifier: 0.17.5
         version: 0.17.5(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3))(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(webpack-sources@3.2.3)
+      unplugin-element-plus:
+        specifier: ~0.8.0
+        version: 0.8.0(rollup@4.24.0)(webpack-sources@3.2.3)
       unplugin-vue-components:
         specifier: ^0.26.0
         version: 0.26.0(@babel/parser@7.26.1)(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
@@ -10217,6 +10220,10 @@ packages:
       webpack:
         optional: true
 
+  unplugin-element-plus@0.8.0:
+    resolution: {integrity: sha512-jByUGY3FG2B8RJKFryqxx4eNtSTj+Hjlo8edcOdJymewndDQjThZ1pRUQHRjQsbKhTV2jEctJV7t7RJ405UL4g==}
+    engines: {node: '>=14.19.0'}
+
   unplugin-vue-components@0.26.0:
     resolution: {integrity: sha512-s7IdPDlnOvPamjunVxw8kNgKNK8A5KM1YpK5j/p97jEKTjlPNrA0nZBiSfAKKlK1gWZuyWXlKL5dk3EDw874LQ==}
     engines: {node: '>=14'}
@@ -13583,7 +13590,7 @@ snapshots:
       escodegen: 2.1.0
       estree-walker: 2.0.2
       jsonc-eslint-parser: 2.4.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mlly: 1.7.1
       source-map-js: 1.2.1
       yaml-eslint-parser: 1.2.2
@@ -13633,11 +13640,11 @@ snapshots:
 
   '@intlify/shared@9.13.1': {}
 
-  '@intlify/unplugin-vue-i18n@3.0.1(rollup@4.24.0)(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))':
+  '@intlify/unplugin-vue-i18n@3.0.1(rollup@4.24.0)(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))(webpack-sources@3.2.3)':
     dependencies:
       '@intlify/bundle-utils': 7.5.1(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))
       '@intlify/shared': 9.13.1
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@vue/compiler-sfc': 3.5.12
       debug: 4.3.7(supports-color@8.1.1)
       fast-glob: 3.3.2
@@ -13646,12 +13653,13 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.0
       source-map-js: 1.2.1
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     optionalDependencies:
       vue-i18n: 9.13.1(vue@3.5.12(typescript@5.6.3))
     transitivePeerDependencies:
       - rollup
       - supports-color
+      - webpack-sources
 
   '@intlify/unplugin-vue-i18n@4.0.0(rollup@4.24.0)(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
@@ -13812,7 +13820,7 @@ snapshots:
 
   '@miyaneee/rollup-plugin-json5@1.2.0(rollup@4.24.0)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       json5: 2.2.3
       rollup: 4.24.0
 
@@ -13916,7 +13924,7 @@ snapshots:
 
   '@nuxt/kit@3.12.4(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)':
     dependencies:
-      '@nuxt/schema': 3.12.4(rollup@4.24.0)
+      '@nuxt/schema': 3.12.4(rollup@4.24.0)(webpack-sources@3.2.3)
       c12: 1.11.1(magicast@0.3.5)
       consola: 3.2.3
       defu: 6.1.4
@@ -13934,7 +13942,7 @@ snapshots:
       semver: 7.6.3
       ufo: 1.5.4
       unctx: 2.3.1(webpack-sources@3.2.3)
-      unimport: 3.11.0(rollup@4.24.0)
+      unimport: 3.11.0(rollup@4.24.0)(webpack-sources@3.2.3)
       untyped: 1.4.2
     transitivePeerDependencies:
       - magicast
@@ -13998,7 +14006,7 @@ snapshots:
       - supports-color
       - webpack-sources
 
-  '@nuxt/schema@3.12.4(rollup@4.24.0)':
+  '@nuxt/schema@3.12.4(rollup@4.24.0)(webpack-sources@3.2.3)':
     dependencies:
       compatx: 0.1.8
       consola: 3.2.3
@@ -14010,11 +14018,12 @@ snapshots:
       std-env: 3.7.0
       ufo: 1.5.4
       uncrypto: 0.1.3
-      unimport: 3.11.0(rollup@4.24.0)
+      unimport: 3.11.0(rollup@4.24.0)(webpack-sources@3.2.3)
       untyped: 1.4.2
     transitivePeerDependencies:
       - rollup
       - supports-color
+      - webpack-sources
 
   '@nuxt/schema@3.13.0(rollup@4.24.0)(webpack-sources@3.2.3)':
     dependencies:
@@ -14098,7 +14107,7 @@ snapshots:
       get-port-please: 3.1.2
       h3: 1.12.0
       knitwork: 1.1.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mlly: 1.7.1
       ohash: 1.1.4
       pathe: 1.1.2
@@ -14161,7 +14170,7 @@ snapshots:
     dependencies:
       '@intlify/h3': 0.5.0
       '@intlify/shared': 9.13.1
-      '@intlify/unplugin-vue-i18n': 3.0.1(rollup@4.24.0)(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))
+      '@intlify/unplugin-vue-i18n': 3.0.1(rollup@4.24.0)(vue-i18n@9.13.1(vue@3.5.12(typescript@5.6.3)))(webpack-sources@3.2.3)
       '@intlify/utils': 0.12.0
       '@miyaneee/rollup-plugin-json5': 1.2.0(rollup@4.24.0)
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
@@ -14613,7 +14622,7 @@ snapshots:
       estree-walker: 2.0.2
       glob: 8.1.0
       is-reference: 1.2.1
-      magic-string: 0.30.11
+      magic-string: 0.30.12
     optionalDependencies:
       rollup: 4.24.0
 
@@ -14621,7 +14630,7 @@ snapshots:
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       estree-walker: 2.0.2
-      magic-string: 0.30.11
+      magic-string: 0.30.12
     optionalDependencies:
       rollup: 4.24.0
 
@@ -14633,7 +14642,7 @@ snapshots:
 
   '@rollup/plugin-node-resolve@15.2.3(rollup@4.24.0)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-builtin-module: 3.2.1
@@ -14651,7 +14660,7 @@ snapshots:
   '@rollup/plugin-replace@5.0.7(rollup@4.24.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
-      magic-string: 0.30.11
+      magic-string: 0.30.12
     optionalDependencies:
       rollup: 4.24.0
 
@@ -14665,7 +14674,7 @@ snapshots:
 
   '@rollup/plugin-yaml@4.1.2(rollup@4.24.0)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       js-yaml: 4.1.0
       tosource: 2.0.0-alpha.3
     optionalDependencies:
@@ -15173,7 +15182,7 @@ snapshots:
   '@unocss/cli@0.62.2(rollup@4.24.0)':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@unocss/config': 0.62.2
       '@unocss/core': 0.62.2
       '@unocss/preset-uno': 0.62.2
@@ -15181,7 +15190,7 @@ snapshots:
       chokidar: 3.6.0
       colorette: 2.0.20
       consola: 3.2.3
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       pathe: 1.1.2
       perfect-debounce: 1.0.0
       tinyglobby: 0.2.6
@@ -15302,7 +15311,7 @@ snapshots:
       '@unocss/core': 0.62.2
       '@unocss/rule-utils': 0.62.2
       css-tree: 2.3.1
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       postcss: 8.4.47
       tinyglobby: 0.2.6
     transitivePeerDependencies:
@@ -15416,12 +15425,12 @@ snapshots:
   '@unocss/rule-utils@0.62.2':
     dependencies:
       '@unocss/core': 0.62.2
-      magic-string: 0.30.11
+      magic-string: 0.30.12
 
   '@unocss/rule-utils@0.63.6':
     dependencies:
       '@unocss/core': 0.63.6
-      magic-string: 0.30.11
+      magic-string: 0.30.12
 
   '@unocss/scope@0.62.2': {}
 
@@ -15473,14 +15482,14 @@ snapshots:
   '@unocss/vite@0.62.2(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@unocss/config': 0.62.2
       '@unocss/core': 0.62.2
       '@unocss/inspector': 0.62.2
       '@unocss/scope': 0.62.2
       '@unocss/transformer-directives': 0.62.2
       chokidar: 3.6.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       tinyglobby: 0.2.2
       vite: 5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)
     transitivePeerDependencies:
@@ -15506,13 +15515,13 @@ snapshots:
   '@unocss/webpack@0.62.2(rollup@4.24.0)':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@unocss/config': 0.62.2
       '@unocss/core': 0.62.2
       chokidar: 3.6.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       tinyglobby: 0.2.2
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - rollup
@@ -15588,7 +15597,7 @@ snapshots:
 
   '@vitest/snapshot@1.5.0':
     dependencies:
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       pathe: 1.1.2
       pretty-format: 29.7.0
 
@@ -15624,14 +15633,15 @@ snapshots:
       - rollup
       - vue
 
-  '@vue-macros/better-define@1.7.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/better-define@1.7.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/api': 0.9.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
   '@vue-macros/boolean-prop@0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
     dependencies:
@@ -15649,18 +15659,19 @@ snapshots:
       - rollup
       - vue
 
-  '@vue-macros/chain-call@0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/chain-call@0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
   '@vue-macros/common@1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
     dependencies:
       '@babel/types': 7.24.0
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@vue/compiler-sfc': 3.5.12
       ast-kit: 0.12.1
       local-pkg: 0.5.0
@@ -15706,67 +15717,74 @@ snapshots:
       - supports-color
       - vue
 
-  '@vue-macros/define-emit@0.2.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-emit@0.2.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/api': 0.9.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/define-models@1.2.3(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-models@1.2.3(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       ast-walker-scope: 0.6.1
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     optionalDependencies:
       '@vueuse/core': 11.1.0(vue@3.5.12(typescript@5.6.3))
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/define-prop@0.3.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-prop@0.3.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/api': 0.9.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/define-props-refs@1.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-props-refs@1.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/define-props@2.0.4(@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-props@2.0.4(@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/reactivity-transform': 0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      '@vue-macros/reactivity-transform': 0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/define-render@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-render@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/define-slots@1.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/define-slots@1.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
   '@vue-macros/devtools@0.2.0(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))':
     dependencies:
@@ -15777,93 +15795,103 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vue-macros/export-expose@0.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/export-expose@0.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue/compiler-sfc': 3.5.12
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/export-props@0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/export-props@0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/export-render@0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/export-render@0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue/compiler-sfc': 3.5.12
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/hoist-static@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/hoist-static@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/jsx-directive@0.8.12(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/jsx-directive@0.8.12(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/named-template@0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/named-template@0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue/compiler-dom': 3.5.12
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@babel/parser': 7.25.6
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue/compiler-core': 3.5.12
       '@vue/shared': 3.5.12
-      magic-string: 0.30.11
-      unplugin: 1.12.2
+      magic-string: 0.30.12
+      unplugin: 1.14.1(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
-  '@vue-macros/setup-block@0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/setup-block@0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       '@vue/compiler-dom': 3.5.12
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/setup-component@0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/setup-component@0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  '@vue-macros/setup-sfc@0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/setup-sfc@0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
   '@vue-macros/short-bind@0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
     dependencies:
@@ -15881,13 +15909,14 @@ snapshots:
       - rollup
       - vue
 
-  '@vue-macros/short-emits@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
+  '@vue-macros/short-emits@1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)':
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
   '@vue-macros/short-vmodel@1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))':
     dependencies:
@@ -19678,11 +19707,11 @@ snapshots:
 
   magic-string-ast@0.3.0:
     dependencies:
-      magic-string: 0.30.11
+      magic-string: 0.30.12
 
   magic-string-ast@0.6.2:
     dependencies:
-      magic-string: 0.30.11
+      magic-string: 0.30.12
 
   magic-string@0.25.9:
     dependencies:
@@ -20258,7 +20287,7 @@ snapshots:
       klona: 2.0.6
       knitwork: 1.1.0
       listhen: 1.7.2
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mime: 4.0.4
       mlly: 1.7.1
       mri: 1.2.0
@@ -22481,7 +22510,7 @@ snapshots:
     dependencies:
       acorn: 8.12.1
       estree-walker: 3.0.3
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - webpack-sources
@@ -22530,23 +22559,24 @@ snapshots:
 
   unicorn-magic@0.1.0: {}
 
-  unimport@3.11.0(rollup@4.24.0):
+  unimport@3.11.0(rollup@4.24.0)(webpack-sources@3.2.3):
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       acorn: 8.12.1
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       fast-glob: 3.3.2
       local-pkg: 0.5.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mlly: 1.7.1
       pathe: 1.1.2
       pkg-types: 1.1.3
       scule: 1.3.0
       strip-literal: 2.1.0
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
+      - webpack-sources
 
   unimport@3.13.1(rollup@4.24.0)(webpack-sources@3.2.3):
     dependencies:
@@ -22679,14 +22709,26 @@ snapshots:
       - rollup
       - webpack-sources
 
-  unplugin-combine@0.9.0(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)):
+  unplugin-combine@0.9.0(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(webpack-sources@3.2.3):
     dependencies:
       '@antfu/utils': 0.7.7
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     optionalDependencies:
       esbuild: 0.23.1
       rollup: 4.24.0
       vite: 5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)
+    transitivePeerDependencies:
+      - webpack-sources
+
+  unplugin-element-plus@0.8.0(rollup@4.24.0)(webpack-sources@3.2.3):
+    dependencies:
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
+      es-module-lexer: 1.5.4
+      magic-string: 0.30.12
+      unplugin: 1.14.1(webpack-sources@3.2.3)
+    transitivePeerDependencies:
+      - rollup
+      - webpack-sources
 
   unplugin-vue-components@0.26.0(@babel/parser@7.26.1)(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3)):
     dependencies:
@@ -22708,45 +22750,46 @@ snapshots:
       - rollup
       - supports-color
 
-  unplugin-vue-define-options@1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3)):
+  unplugin-vue-define-options@1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3):
     dependencies:
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       ast-walker-scope: 0.6.1
-      unplugin: 1.12.2
+      unplugin: 1.14.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - vue
+      - webpack-sources
 
-  unplugin-vue-macros@2.9.1(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(esbuild@0.23.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3)):
+  unplugin-vue-macros@2.9.1(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(esbuild@0.23.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3):
     dependencies:
-      '@vue-macros/better-define': 1.7.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      '@vue-macros/better-define': 1.7.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@vue-macros/boolean-prop': 0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/chain-call': 0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      '@vue-macros/chain-call': 0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@vue-macros/common': 1.10.2(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-emit': 0.2.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-models': 1.2.3(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-prop': 0.3.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-props': 2.0.4(@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-props-refs': 1.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-render': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/define-slots': 1.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      '@vue-macros/define-emit': 0.2.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-models': 1.2.3(@vueuse/core@11.1.0(vue@3.5.12(typescript@5.6.3)))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-prop': 0.3.5(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-props': 2.0.4(@vue-macros/reactivity-transform@0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3))(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-props-refs': 1.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-render': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/define-slots': 1.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@vue-macros/devtools': 0.2.0(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))
-      '@vue-macros/export-expose': 0.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/export-props': 0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/export-render': 0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/hoist-static': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/jsx-directive': 0.8.12(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/named-template': 0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/reactivity-transform': 0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/setup-block': 0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/setup-component': 0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/setup-sfc': 0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      '@vue-macros/export-expose': 0.1.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/export-props': 0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/export-render': 0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/hoist-static': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/jsx-directive': 0.8.12(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/named-template': 0.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/reactivity-transform': 0.4.4(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/setup-block': 0.3.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/setup-component': 0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@vue-macros/setup-sfc': 0.17.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@vue-macros/short-bind': 0.2.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
-      '@vue-macros/short-emits': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      '@vue-macros/short-emits': 1.5.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@vue-macros/short-vmodel': 1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
       unplugin: 1.10.1
-      unplugin-combine: 0.9.0(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))
-      unplugin-vue-define-options: 1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      unplugin-combine: 0.9.0(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(webpack-sources@3.2.3)
+      unplugin-vue-define-options: 1.4.3(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - '@vueuse/core'
@@ -22755,6 +22798,7 @@ snapshots:
       - typescript
       - vite
       - webpack
+      - webpack-sources
 
   unplugin-vue-markdown@0.26.2(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)):
     dependencies:
@@ -22779,7 +22823,7 @@ snapshots:
       fast-glob: 3.3.2
       json5: 2.2.3
       local-pkg: 0.5.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mlly: 1.7.1
       pathe: 1.1.2
       scule: 1.3.0
@@ -22874,7 +22918,7 @@ snapshots:
   unwasm@0.3.9(webpack-sources@3.2.3):
     dependencies:
       knitwork: 1.1.0
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       mlly: 1.7.1
       pathe: 1.1.2
       pkg-types: 1.2.0

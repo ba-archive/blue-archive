@@ -5,6 +5,7 @@ import dts from "vite-plugin-dts";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import ElementPlus from 'unplugin-element-plus/vite'
 import vueDevTools from "vite-plugin-vue-devtools";
 
 // https://vitejs.dev/config/
@@ -23,6 +24,9 @@ export default defineConfig(({ mode }) => {
       }),
       Components({
         resolvers: [ElementPlusResolver()],
+      }),
+      ElementPlus({
+        // options
       }),
       vueDevTools(),
     ],
@@ -49,7 +53,7 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "./src/assets/scss/index.scss";',
+          additionalData: '@use "./src/assets/scss/index.scss" as *;',
         },
       },
     },
