@@ -86,7 +86,7 @@ export function sprite2TransParent(img: Sprite) {
   canvas.setAttribute("width", realWidth + "");
   canvas.setAttribute("height", realHeight + "");
   const ctx = canvas.getContext("2d")!;
-  ctx.drawImage(imgSource, 0, 0);
+  ctx.drawImage(imgSource as CanvasImageSource, 0, 0);
 
   const pixel = ctx.getImageData(0, 0, realWidth, realHeight);
   const data = pixel.data;
