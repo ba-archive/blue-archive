@@ -659,11 +659,11 @@ export const resourcesLoader = {
         if (unit.audio.voiceJPUrl) {
           audioUrls.push(unit.audio.voiceJPUrl);
         }
-        this.checkAndAdd(unit.audio.bgm?.url)
+        this.checkAndAdd(unit.audio.bgm?.url);
 
         //添加sound
-        this.checkAndAdd(unit.audio.soundUrl)
-        this.checkAndAdd(unit.audio.voiceJPUrl)
+        this.checkAndAdd(unit.audio.soundUrl);
+        this.checkAndAdd(unit.audio.voiceJPUrl);
       }
       //添加背景图片
       this.checkAndAdd(unit.bg, "url");
@@ -1185,7 +1185,11 @@ async function loadAsset(param: IAddOptions) {
       delay: 1000,
     },
     async () => {
-      const [err, result] = await tryit(() => Assets.load(param))();
+      const [err, result] = await tryit(() => {
+        /\.(ogg|mp3|wav|mpeg)$/i.test(param.src)
+          ? Assets.backgroundLoad(param.src)
+          : Assets.load(param);
+      })();
       if (err) {
         if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
           console.error(`网络连接错误(${param.alias})：${err.message}`);
