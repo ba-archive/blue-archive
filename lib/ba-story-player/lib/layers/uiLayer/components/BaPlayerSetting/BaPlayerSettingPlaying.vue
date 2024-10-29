@@ -40,13 +40,13 @@ watch(
       <span class="slider">
         <span v-if="!customSetting">
           <ElRadioGroup v-model="typingSpeed">
-            <ElRadio :label="60">{{
+            <ElRadio :value="60">{{
               getUiI18n("playing-speed-slow", language)
             }}</ElRadio>
-            <ElRadio :label="40">{{
+            <ElRadio :value="40">{{
               getUiI18n("playing-speed-normal", language)
             }}</ElRadio>
-            <ElRadio :label="20">{{
+            <ElRadio :value="20">{{
               getUiI18n("playing-speed-fast", language)
             }}</ElRadio>
           </ElRadioGroup>
