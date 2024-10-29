@@ -198,8 +198,9 @@ const getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    const resource = Assets.get(privateState.l2dSpineUrl);
-    if (resource) return resource.spineData;
+    return Assets.cache.has(privateState.l2dSpineUrl) 
+      ? Assets.get(privateState.l2dSpineUrl)?.spineData 
+      : null;
   },
 };
 
