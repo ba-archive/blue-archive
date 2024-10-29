@@ -1155,7 +1155,7 @@ async function loadAssetAlias<T = any>(alias: string, src: string) {
 
 type IAddOptions = { src: string; alias: string };
 
-async function loadAsset<T = any>(param: IAddOptions) {
+async function loadAsset(param: IAddOptions) {
   // param: {
   //   "src": "xxx/Emoticon_Balloon_N.png",
   //   "alias": "Emoticon_Balloon_N.png"
@@ -1167,29 +1167,28 @@ async function loadAsset<T = any>(param: IAddOptions) {
     return source.substring(source.lastIndexOf("/") + 1);
   }
 
-  Assets.add({ alias: param.alias, src: param.src });
-
   return retry(
     {
       times: 3,
       delay: 1000,
     },
     async () => {
-      // console.log(Assets)
-      const [err, result] = await tryit(() => {
-        return Assets.load(param).catch((err: ErrorEvent) => {
-          if (err.message?.includes("404")) {
-            // 资源不存在，可以直接返回了
-            console.error(`资源不存在: ${param.alias}`);
-            throw err;
-          }
-          if (err.message.includes("[Loader.load] Failed to load")) {
-            // FIXME: 从私库构建 pixi-spine 来支持 spine v4.2+
-            console.error("暂时不支持 spine v4.2+");
-          }
-        });
-      })();
+      const [err, result] = await tryit(() => Assets.load(param))();
       if (err) {
+        if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
+          console.error(`网络连接错误(${param.alias})：${err.message}`);
+        }
+        if (err.message?.includes("404")) {
+          // 资源不存在，可以直接返回了
+          console.error(`资源不存在: ${param.alias}`);
+          return null;
+        }
+        if (err.message.includes("[Loader.load] Failed to load")) {
+          // FIXME: 从私库构建 pixi-spine 来支持 spine v4.2+
+          console.error("暂时不支持 spine v4.2+");
+          // throw err;
+        }
+
         eventBus.emit("oneResourceLoaded", {
           type: "fail",
           resourceName: getResourceName(),
@@ -1197,6 +1196,7 @@ async function loadAsset<T = any>(param: IAddOptions) {
         console.error(err);
         throw err; // 重新抛出错误以触发重试
       }
+
       eventBus.emit("oneResourceLoaded", {
         type: "success",
         resourceName: getResourceName(),
