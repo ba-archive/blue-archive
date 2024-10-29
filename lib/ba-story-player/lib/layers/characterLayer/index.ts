@@ -1,4 +1,3 @@
-import * as PIXI from "pixi.js";
 import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
@@ -32,9 +31,6 @@ import CharacterEffectPlayerInstance, {
 } from "./actionPlayer";
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import PixiPlugin from "./gsapPixiPlugin";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
@@ -451,9 +447,6 @@ const Standard_Width_Relative = 0.3;
  * 角色初始的pivot相对与长宽的比例, 当前值代表左上角
  */
 export const Character_Initial_Pivot_Proportion = { x: 0, y: -1 / 2 };
-
-PixiPlugin.registerPIXI(PIXI);
-gsap.registerPlugin(PixiPlugin);
 
 export function calcCharacterYAndScale(spine: Spine) {
   const { screenHeight } = getStageSize();

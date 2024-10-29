@@ -18,7 +18,15 @@ import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
 import { retry, tryit } from "radash";
-import { Spine } from "@esotericsoftware/spine-pixi";
+// 注册全局 PIXI
+import * as PIXI from "pixi.js";
+// 注册全局 gsap pixi 插件
+import gsap from "gsap";
+import { PixiPlugin } from "gsap/PixiPlugin";
+
+// 注册
+PixiPlugin.registerPIXI(PIXI);
+gsap.registerPlugin(PixiPlugin);
 
 Howler.autoSuspend = false;
 
