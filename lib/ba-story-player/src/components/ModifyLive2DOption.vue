@@ -8,6 +8,7 @@ import { changeStoryIndex } from "../../lib/layers/uiLayer/userInteract";
 import { initPrivateState, usePlayerStore } from "../../lib/stores";
 import { StoryUnit } from "../../lib/types/common";
 import { IL2dConfig } from "../../lib/types/l2d";
+import { Assets } from "pixi.js";
 
 const message = ref("等待资源加载...");
 const messageType = ref<"info" | "error">("info");
@@ -113,10 +114,11 @@ eventBus.on("loaded", () => {
   }
 });
 function loadAnimationNames(url: string) {
+  return;
   const {
     app: { loader },
   } = usePlayerStore();
-  const resource = loader.resources[url];
+  const resource = loader?.resources[url];
   if (resource) {
     availableAnimationName.value = resource.spineData.animations.map(
       it => `${it.name}(${it.duration}s)`

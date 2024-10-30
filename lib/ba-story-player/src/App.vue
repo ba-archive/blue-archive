@@ -9,7 +9,7 @@ import { usePlayerStore } from "../lib/stores";
 import { TranslatedStoryUnit } from "../lib/types/common";
 import { Language } from "../lib/types/store";
 import ModifyEmotionOption from "./components/ModifyEmotionOption.vue";
-// import ModifyLive2DOption from "./components/ModifyLive2DOption.vue";
+import ModifyLive2DOption from "./components/ModifyLive2DOption.vue";
 import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
 import yuuka from "./data/yuuka.json";
@@ -215,9 +215,9 @@ watch(
         />
       </Suspense>
       <UnitTest class="absolute-right-center" v-if="toolType === 'test'" />
-      <!-- <KeepAlive>
+      <KeepAlive>
         <ModifyLive2DOption :class="{ hidden: toolType !== 'live2d' }" />
-      </KeepAlive> -->
+      </KeepAlive>
     </div>
   </div>
 </template>
