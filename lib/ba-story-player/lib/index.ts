@@ -1186,9 +1186,18 @@ async function loadAsset(param: IAddOptions) {
     },
     async () => {
       const [err, result] = await tryit(() => {
-        /\.(ogg|mp3|wav|mpeg)$/i.test(param.src)
-          ? Assets.backgroundLoad(param.src)
-          : Assets.load(param);
+        if (/\.(ogg|mp3|wav|mpeg)$/i.test(param.src)) {
+          return Assets.backgroundLoad(param.src);
+        } else if (/\.skel$/.test(param.src)) {
+          // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
+          const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
+          // 添加 spine 和 atlas 资源
+          Assets.add(param);
+          Assets.add({ src: atlasUrl, alias: atlasUrl });
+          return Assets.load([param.src, atlasUrl]);
+        }
+        // 其他资源
+        return Assets.load(param);
       })();
       if (err) {
         if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
