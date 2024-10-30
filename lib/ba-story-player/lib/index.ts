@@ -16,7 +16,7 @@ import { L2DInit } from "./layers/l2dLayer/L2D";
 import { bgInit } from "@/layers/bgLayer";
 import { characterInit } from "@/layers/characterLayer";
 import { effectInit } from "@/layers/effectLayer";
-import { preloadSound, soundInit } from "@/layers/soundLayer";
+import { soundInit } from "@/layers/soundLayer";
 import { translate } from "@/layers/translationLayer";
 import { buildStoryIndexStackRecord } from "@/layers/translationLayer/utils";
 import { disposeUiState, useUiState } from "@/stores/state";
@@ -50,7 +50,7 @@ let privateState = initPrivateState();
  */
 const unexistL2dSoundEvent = ["sound/Nonomi_MemorialLobby_3_3"];
 
-export async function checkloadAssetAlias<T = any>(alias: string, url: string) {
+export async function checkloadAssetAlias(alias: string, url: string) {
   if (!resourcesLoader.loadedList.includes(alias)) {
     resourcesLoader.loadedList.push(alias);
     return await loadAssetAlias(alias, url);
@@ -551,16 +551,6 @@ export async function init(
   document
     .querySelector(`#${elementID}`)
     ?.appendChild(app.view as HTMLCanvasElement);
-  // FIXME: 需要一个错误提示
-  // app.loader.onError.add(
-  //   (error: Error, _: unknown, resource: LoaderResource) => {
-  //     console.error(error);
-  //     eventBus.emit("oneResourceLoaded", {
-  //       type: "fail",
-  //       resourceName: resource.name ?? resource.url,
-  //     });
-  //   }
-  // );
   // 记录加载开始时间，用于优化加载过快黑屏一闪而过的体验
   const startLoadTime = Date.now();
   eventBus.emit("startLoading", { url: props.dataUrl });
@@ -578,12 +568,6 @@ export async function init(
   //加载剩余资源
   resourcesLoader.addLoadResources();
   resourcesLoader.load(async () => {
-    // FIXME: 预加载其他剧情播放用到的音频
-    // 预加载live2d音频，优化用户体验
-    const spineData = usePlayerStore().l2dSpineData;
-    if (spineData) {
-      resourcesLoader.loadL2dVoice(spineData.events);
-    }
     // 加载时间少于1秒, 延迟一下再开始
     const loadedTime = Date.now() - startLoadTime;
     new Promise<void>(resolve => {
@@ -640,12 +624,6 @@ export const resourcesLoader = {
         for (const character of unit.characters) {
           const spineUrl = character.spineUrl;
           checkloadAssetAlias(String(character.CharacterName), spineUrl);
-          // TODO ? 为什么要在这里加载
-          // loadAssetAlias(String(character.CharacterName), spineUrl).then((res: ISkeletonData) => {
-          //   if (res) {
-          //     this.loadL2dVoice(res.events);
-          //   }
-          // });
         }
       }
       if (unit.audio) {
@@ -720,6 +698,7 @@ export const resourcesLoader = {
    * 添加人物情绪相关资源(图片和声音)
    */
   async addEmotionResources() {
+    // 添加情绪图片资源
     for (const emotionResources of playerStore.emotionResourcesTable.values()) {
       for (const emotionResource of emotionResources) {
         checkloadAssetAlias(
@@ -728,11 +707,17 @@ export const resourcesLoader = {
         );
       }
     }
-    // for (const emotionName of playerStore.emotionResourcesTable.keys()) {
-    //   const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-    // eslint-disable-next-line max-len
-    //   this.loadTaskList.push(checkloadAssetAlias(emotionSoundName, utils.getResourcesUrl("emotionSound", emotionSoundName)));
-    // }
+    // 添加情绪声音资源
+    for (const emotionName of playerStore.emotionResourcesTable.keys()) {
+      const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
+      // eslint-disable-next-line max-len
+      this.loadTaskList.push(
+        checkloadAssetAlias(
+          emotionSoundName,
+          utils.getResourcesUrl("emotionSound", emotionSoundName)
+        )
+      );
+    }
   },
 
   /**
@@ -758,7 +743,10 @@ export const resourcesLoader = {
         );
       })
       .map(it => utils.getResourcesUrl("l2dVoice", it.name));
-    preloadSound(audios);
+    // 预载 L2D 语音资源
+    for (const audio of audios) {
+      this.loadTaskList.push(checkloadAssetAlias(audio, audio));
+    }
   },
 
   /**
@@ -1192,9 +1180,16 @@ async function loadAsset(param: IAddOptions) {
           // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
           const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
           // 添加 spine 和 atlas 资源
-          Assets.add(param);
-          Assets.add({ src: atlasUrl, alias: atlasUrl });
-          return Assets.load([param.src, atlasUrl]);
+          Assets.load({ src: atlasUrl, alias: atlasUrl });
+          Assets.load(param).then(res => {
+            // 预载 L2D 语音
+            console.warn(res.spineData?.events);
+            const eventsList = res.spineData?.events;
+            if (eventsList && Array.isArray(eventsList) && eventsList.length) {
+              resourcesLoader.loadL2dVoice(eventsList);
+            }
+            return res;
+          });
         }
         // 其他资源
         return Assets.load(param);

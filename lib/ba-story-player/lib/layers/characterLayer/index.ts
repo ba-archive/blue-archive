@@ -138,11 +138,12 @@ export const CharacterLayerInstance: CharacterLayer = {
       console.warn("Spine-Pixi:", instance);
       return instance as unknown as Spine;
     }
-    const instance = spineData.version.startsWith("4.2")
+    const isSpine42 = spineData.version.startsWith("4.2");
+    const instance = isSpine42
       ? // ? createSpineFromAlias(alias)
         new Spine(spineData)
       : new Spine(spineData);
-    console.warn(instance);
+    if (isSpine42) console.warn(instance);
     createSpineFromAlias(alias); // FIXME: 解析出来总是空的
     instance.sortableChildren = true;
     const id = character.CharacterName;

@@ -26,41 +26,6 @@ function getAudio(url: string): Howl {
   }
 }
 
-/**
- * 预加载与解析声音资源
- * @param audioUrls 声音地址数组
- */
-export function preloadSound(audioUrls: string[]) {
-  const audioLoadPromises: Promise<void>[] = [];
-  for (const audioUrl of audioUrls) {
-    audioLoadPromises.push(
-      new Promise<void>(resolve => {
-        const newAudio = new Howl({
-          src: audioUrl,
-          preload: false,
-          autoplay: false,
-        });
-        newAudio.once("load", () => {
-          eventBus.emit("oneResourceLoaded", {
-            type: "success",
-            resourceName: audioUrl,
-          });
-          resolve();
-        });
-        newAudio.once("loaderror", () => {
-          eventBus.emit("oneResourceLoaded", {
-            type: "fail",
-            resourceName: audioUrl,
-          });
-          resolve();
-        });
-        audioMap.set(audioUrl, newAudio);
-        newAudio.load();
-      })
-    );
-  }
-}
-
 export function soundDispose() {
   for (const sound of audioMap.values()) {
     sound.stop();
