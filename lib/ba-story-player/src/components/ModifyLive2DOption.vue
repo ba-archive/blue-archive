@@ -114,18 +114,14 @@ eventBus.on("loaded", () => {
   }
 });
 function loadAnimationNames(url: string) {
-  return;
-  const {
-    app: { loader },
-  } = usePlayerStore();
-  const resource = loader?.resources[url];
+  const resource = usePlayerStore().l2dSpineData;
   if (resource) {
-    availableAnimationName.value = resource.spineData.animations.map(
+    availableAnimationName.value = resource.animations.map(
       it => `${it.name}(${it.duration}s)`
     );
     selectedAnimationName.value = "";
   } else {
-    loader.add(url).load(resource => {
+    Assets.load({ src: url, alias: url }).then(resource => {
       availableAnimationName.value = resource.spineData.animations.map(
         it => `${it.name}(${it.duration}s)`
       );
