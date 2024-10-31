@@ -2,7 +2,7 @@ import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait, getOtherSoundUrls } from "@/utils";
-import { IEventData } from "pixi-spine";
+import type { IEventData } from "pixi-spine";
 import {
   Application,
   Assets,
@@ -1183,7 +1183,6 @@ async function loadAsset(param: IAddOptions) {
           Assets.load({ src: atlasUrl, alias: atlasUrl });
           Assets.load(param).then(res => {
             // 预载 L2D 语音
-            console.warn(res.spineData?.events);
             const eventsList = res.spineData?.events;
             if (eventsList && Array.isArray(eventsList) && eventsList.length) {
               resourcesLoader.loadL2dVoice(eventsList);

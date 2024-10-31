@@ -134,16 +134,20 @@ export const CharacterLayerInstance: CharacterLayer = {
       // console.warn("使用@esotericsoftware/spine-pixi加载");
       const skelAlias = alias;
       const atlasAlias = alias.replace(/\.skel$/, ".atlas");
+      console.warn("alias:", skelAlias, atlasAlias);
+      console.warn("store:", Assets.cache.get(skelAlias), Assets.cache.get(atlasAlias));
       const instance = SpinePixi.from(skelAlias, atlasAlias);
       console.warn("Spine-Pixi:", instance);
       return instance as unknown as Spine;
     }
     const isSpine42 = spineData.version.startsWith("4.2");
-    const instance = isSpine42
-      ? // ? createSpineFromAlias(alias)
-        new Spine(spineData)
-      : new Spine(spineData);
-    if (isSpine42) console.warn(instance);
+    // const instance = isSpine42
+    //   ? createSpineFromAlias(alias)
+    //   : new Spine(spineData);
+    const instance = new Spine(spineData);
+    if (isSpine42) {
+      console.warn(instance);
+    }
     createSpineFromAlias(alias); // FIXME: 解析出来总是空的
     instance.sortableChildren = true;
     const id = character.CharacterName;
