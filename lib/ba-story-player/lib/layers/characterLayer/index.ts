@@ -32,8 +32,8 @@ import CharacterEffectPlayerInstance, {
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
 import { Spine as SpinePixi } from "@esotericsoftware/spine-pixi";
-import { tryit } from "radash";
-import { Assets } from "pixi.js";
+import { Assets, extensions } from "pixi.js";
+import { spineTextureAtlasLoader, spineLoaderExtension } from "@/middlewares/pixiSpineLoader";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
@@ -132,14 +132,22 @@ export const CharacterLayerInstance: CharacterLayer = {
   ): Spine {
     function createSpineFromAlias(alias: string) {
       // console.warn("使用@esotericsoftware/spine-pixi加载");
+      // 注册 spine-pixi 中间件
+      // extensions.add(spineTextureAtlasLoader);
+      // extensions.add(spineLoaderExtension);
       const skelAlias = alias;
       const atlasAlias = alias.replace(/\.skel$/, ".atlas");
       console.warn("alias:", skelAlias, atlasAlias);
-      console.warn("store:", Assets.cache.get(skelAlias), Assets.cache.get(atlasAlias));
+      console.warn(
+        "store:",
+        Assets.cache.get(skelAlias),
+        Assets.cache.get(atlasAlias)
+      );
       const instance = SpinePixi.from(skelAlias, atlasAlias);
       console.warn("Spine-Pixi:", instance);
       return instance as unknown as Spine;
     }
+    createSpineFromAlias(alias); // FIXME: 解析出来总是空的
     const isSpine42 = spineData.version.startsWith("4.2");
     // const instance = isSpine42
     //   ? createSpineFromAlias(alias)
@@ -148,7 +156,6 @@ export const CharacterLayerInstance: CharacterLayer = {
     if (isSpine42) {
       console.warn(instance);
     }
-    createSpineFromAlias(alias); // FIXME: 解析出来总是空的
     instance.sortableChildren = true;
     const id = character.CharacterName;
     const { currentCharacterMap } = usePlayerStore();

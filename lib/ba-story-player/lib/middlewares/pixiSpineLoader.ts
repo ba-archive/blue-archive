@@ -16,8 +16,9 @@ import {
 } from "@esotericsoftware/spine-pixi";
 import type { Texture } from "@pixi/core";
 
-type RawAtlas = string;
+const loaderPriority = LoaderParserPriority.High;
 
+type RawAtlas = string;
 const spineTextureAtlasLoader: AssetExtension<
   RawAtlas | TextureAtlas,
   ISpineAtlasMetadata
@@ -39,7 +40,7 @@ const spineTextureAtlasLoader: AssetExtension<
   loader: {
     extension: {
       type: ExtensionType.LoadParser,
-      priority: LoaderParserPriority.High,
+      priority: loaderPriority,
       name: "spineTextureAtlasLoader",
     },
 
@@ -165,7 +166,7 @@ const spineLoaderExtension: AssetExtension<
   loader: {
     extension: {
       type: ExtensionType.LoadParser,
-      priority: LoaderParserPriority.High,
+      priority: loaderPriority,
     },
 
     test(url) {

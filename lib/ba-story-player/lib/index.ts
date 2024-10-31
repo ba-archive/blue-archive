@@ -24,19 +24,17 @@ import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
 import { retry, tryit } from "radash";
-
 // 注册全局 PIXI
 import * as PIXI from "pixi.js";
 // 注册全局 gsap pixi 插件
 import gsap from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
-
-// 注册 howler 中间件
-// @ts-ignore
+// Howler 中间件
 import { HowlerLoader } from "@/middlewares/howlerPixiLoader";
+
 extensions.add(HowlerLoader);
 
-// 注册
+// 注册 gsap-pixi 插件
 PixiPlugin.registerPIXI(PIXI);
 gsap.registerPlugin(PixiPlugin);
 
@@ -1189,6 +1187,7 @@ async function loadAsset(param: IAddOptions) {
             }
             return res;
           });
+          console.warn(Assets.cache);
         }
         // 其他资源
         return Assets.load(param);
