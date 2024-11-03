@@ -528,8 +528,10 @@ export async function init(
   useSuperSampling && utils.setSuperSampling(useSuperSampling);
   storyHandler.endCallback = endCallback;
   storyHandler.errorCallback = errorCallback;
-  // playerStore = usePlayerStore();
-  // privateState = initPrivateState();
+  /* 用于 dispose 后的重新加载 */
+  playerStore = usePlayerStore();
+  privateState = initPrivateState();
+  /*  */
   utils.setDataUrl(props.dataUrl);
   privateState.dataUrl = props.dataUrl;
   privateState.language = props.language;
@@ -1183,7 +1185,6 @@ async function loadAsset(param: IAddOptions) {
           Assets.load({ src: atlasUrl, alias: atlasUrl });
           Assets.load(param).then(res => {
             // 预载 L2D 语音
-            console.warn(res.spineData?.events);
             const eventsList = res.spineData?.events;
             if (eventsList && Array.isArray(eventsList) && eventsList.length) {
               resourcesLoader.loadL2dVoice(eventsList);
