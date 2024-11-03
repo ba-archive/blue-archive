@@ -1,6 +1,14 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite, Texture, Graphics, filters } from "pixi.js";
+import {
+  Container,
+  Sprite,
+  Texture,
+  Graphics,
+  BlurFilter,
+  NoiseFilter,
+  AlphaFilter,
+} from "pixi.js";
 import { BGEffectHandlerFunction } from "@/types/effectLayer";
 import { OldFilmFilter } from "@pixi/filter-old-film";
 
@@ -26,9 +34,10 @@ const BG_TvNoise_Sound: BGEffectHandlerFunction<
   mask.width = appWidth;
   mask.height = appHeight;
   mask.alpha = 0.8;
+  const noiseFilter = new NoiseFilter(8);
   mask.filters = [
-    new filters.NoiseFilter(8),
-    new filters.BlurFilter(0.5),
+    noiseFilter,
+    new BlurFilter(0.5),
     new OldFilmFilter({
       noise: 0.47, // 不知道为什么不生效，可能 pixi 6 兼容问题？
       sepia: 0,
@@ -49,7 +58,7 @@ const BG_TvNoise_Sound: BGEffectHandlerFunction<
   bar.drawRect(0, (-appHeight * 3) / 2, appWidth, appHeight / 12);
   bar.drawRect(0, (-appHeight * 5) / 2, appWidth, appHeight / 3);
   bar.endFill();
-  bar.filters = [new filters.AlphaFilter(0.3), new filters.BlurFilter(5)];
+  bar.filters = [new AlphaFilter(0.3), new BlurFilter(5)];
   container.addChild(bar);
 
   let count = 0;
@@ -59,7 +68,7 @@ const BG_TvNoise_Sound: BGEffectHandlerFunction<
     // 每隔一段时间添加噪点滤镜
     count += delta;
     if (count > tvNoiseSpeed && !!mask.filters) {
-      (mask.filters[0] as any).seed = Math.random(); // 仅更新噪点滤镜
+      noiseFilter.seed = Math.random(); // 仅更新噪点滤镜
       count %= tvNoiseSpeed;
     }
     // 黑色条纹纵向移动
