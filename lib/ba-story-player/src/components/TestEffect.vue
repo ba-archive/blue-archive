@@ -92,7 +92,7 @@ import { bgEffectHandlerOptions } from "../../lib/layers/effectLayer/bgEffectHan
 import { usePlayerStore } from "../../lib/stores/index";
 import { Effect, ZmcArgs } from "../../lib/types/common";
 import { BGEffectType } from "../../lib/types/excels";
-import { wait } from "../../lib/utils";
+import { getEffectArray, wait } from "../../lib/utils";
 import { setDataUrl } from "../../lib/utils";
 import { resizeTextareas } from "../utils";
 
@@ -113,7 +113,10 @@ async function playEffect() {
     case "bgeffect":
       if (currentBGEffectItem.value) {
         eventBus.emit("playEffect", {
-          BGEffect: currentBGEffectItem.value,
+          BGEffect: {
+            ...currentBGEffectItem.value,
+            Effect: getEffectArray(currentBGEffectItem.value),
+          },
           otherEffect: [],
         });
       }
@@ -148,16 +151,17 @@ let currentTransitionItem = ref(
 //bgEffect
 let effectNamesTable: Record<string, number[]> = {};
 for (let [key, item] of stores.BGEffectExcelTable.entries()) {
-  if (Reflect.get(effectNamesTable, item.Effect)) {
-    effectNamesTable[item.Effect].push(key);
+  const finalKey = getEffectArray(item).join(" ");
+  if (Reflect.get(effectNamesTable, finalKey)) {
+    effectNamesTable[finalKey].push(key);
   } else {
-    effectNamesTable[item.Effect] = [key];
+    effectNamesTable[finalKey] = [key];
   }
 }
 let currentBGEffect = ref(0);
 let currentBGEffectType = ref<BGEffectType>("BG_Rain_L");
 let currentBGEffectItem = ref(
-  stores.BGEffectExcelTable.get(effectNamesTable["BG_Rain_L"][0])
+  stores.BGEffectExcelTable.get(effectNamesTable["BG_Rain_L "][0])
 );
 let currentBGEffectNames = computed(() => {
   if (effectNamesTable[currentBGEffectType.value]) {
