@@ -28,24 +28,24 @@ function firework_constructor(
   const mr_container = new Container();
   const or_container = new Container();
   const main_angles = [
-    Math.PI / 9,
-    Math.PI / 3,
-    (Math.PI * 2) / 3,
-    Math.PI,
-    (Math.PI * 25) / 18,
-    -Math.PI / 6,
+    0.35 + Math.random() * 0.1, // Math.PI / 9 + 随机量
+    1.05 + Math.random() * 0.1, // Math.PI / 3 + 随机量
+    2.09 + Math.random() * 0.1, // (Math.PI * 2) / 3 + 随机量
+    3.14 + Math.random() * 0.1, // Math.PI + 随机量
+    4.36 + Math.random() * 0.1, // (Math.PI * 25) / 18 + 随机量
+    -0.52 + Math.random() * 0.1, // -Math.PI / 6 + 随机量
   ];
   let inter = 0;
   const other_angles = new Array(60).fill(0).map(() => {
     inter += 6;
-    return (Math.PI * inter) / 180;
+    return (Math.PI * inter) / 180 + Math.random() * 0.1;
   });
   // 为main和other随机开始和消失的时间
   const random_start_o: number[] = [];
   const random_start_m: number[] = [];
   const random_fade_o: number[] = [];
   const random_fade_m: number[] = [];
-  main_angles.forEach(item => {
+  main_angles.forEach(_ => {
     const points = [];
     for (let i = 0; i < 30; i++) {
       points.push(new Point(startx, starty));
@@ -70,17 +70,18 @@ function firework_constructor(
   emitterContainer.addChild(mr_container, or_container);
   // 给texture着色并设置发光效果
   emitterContainer.filters = [new ColorOverlayFilter(0xff0a00)];
-  or_container.filters = [
-    new AdvancedBloomFilter({
-      blur: 1,
-    }),
-  ];
-  mr_container.filters = [new AdvancedBloomFilter()];
+
+  const orBloomFilter = new AdvancedBloomFilter({ blur: 1 });
+  or_container.filters = [orBloomFilter];
+
+  const mrBloomFilter = new AdvancedBloomFilter();
+  mr_container.filters = [mrBloomFilter];
 
   // main rope的迭代函数，原理是抛物线，count用于计数，控制点依次动
   // x += vx0, y += vy0 + at -a/2, t为从开始运动到现在的时间
   const mr_step = (time: number, count: number) => {
-    main_points.forEach((item, index) => {
+    main_points.forEach((_, index) => {
+      const initSpeed = 1.5 + Math.random() * 0.5;
       main_points[index].map((p, i) => {
         if (time <= random_start_m[index]) return;
         if (time >= random_fade_m[index]) {
@@ -88,16 +89,14 @@ function firework_constructor(
             1 - (1 / random_fade_m[index]) * (time - random_fade_m[index]);
         }
         if (time >= 4.5) {
-          mr_container.filters = [
-            new AdvancedBloomFilter({
-              bloomScale: 1 - (1 / 4.5) * (time - 4.5),
-            }),
-          ];
+          mrBloomFilter.bloomScale = 0.1 - 0.2 * time;
         }
         if (i <= count) {
-          p.x += 2 * Math.cos(main_angles[index]);
+          p.x += initSpeed * Math.cos(main_angles[index]);
           p.y +=
-            2 * Math.sin(main_angles[index]) + (time - i * 0.1) * 0.25 - 0.125;
+            initSpeed * Math.sin(main_angles[index]) +
+            (time - i * 0.1) * 0.25 -
+            0.125;
         }
       });
     });
@@ -105,7 +104,8 @@ function firework_constructor(
   // other rope的迭代函数，原理同上，加入了对角度的判断，向上发射的线增加了
   // y轴上速度的补偿，避免顶部太快塌陷
   const or_step = (time: number, count: number) => {
-    other_points.map((item, index) => {
+    other_points.map((_, index) => {
+      const initSpeed = 1.5 + Math.random() * 0.5;
       other_points[index].map((p, i) => {
         if (time <= random_start_o[index]) return;
         if (time >= random_fade_o[index]) {
@@ -113,19 +113,17 @@ function firework_constructor(
             1 - (1 / random_fade_o[index]) * (time - random_fade_o[index]);
         }
         if (time >= 2.5) {
-          or_container.filters = [
-            new AdvancedBloomFilter({
-              bloomScale: 1 - (1 / 2.5) * (time - 2.5),
-            }),
-          ];
+          orBloomFilter.bloomScale = 0.4 * time;
         }
         if (i <= count) {
-          p.x += 2 * Math.cos(other_angles[index]);
+          p.x += initSpeed * Math.cos(other_angles[index]);
           if (other_angles[index] > Math.PI && time < 3) {
-            p.y += 2 * Math.sin(other_angles[index]) * 0.05;
+            p.y += initSpeed * Math.sin(other_angles[index]) * 0.05;
           }
           p.y +=
-            2 * Math.sin(other_angles[index]) + (time - i * 0.1) * 0.25 - 0.125;
+            initSpeed * Math.sin(other_angles[index]) +
+            (time - i * 0.1) * 0.25 -
+            0.125;
         }
       });
     });
