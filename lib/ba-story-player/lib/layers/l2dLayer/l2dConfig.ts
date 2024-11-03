@@ -1358,20 +1358,20 @@ export const l2dConfig: IL2dConfig = {
         animation: "Start_Idle_01",
         fadeTime: 8.2,
         fade: true,
+        customTransitions: [
+          {
+            type: "film_aspect_transition", // 黑子的宽荧幕遮挡
+            startTime: 0.0, // 正算起始时间
+            startDuration: 0, // 起始过渡时间
+            keepDuration: 4.44, // 保持时间
+            endDuration: 1.5, // 结束过渡时间
+          },
+        ],
       },
     ],
     spineSettings: {
       CH0263_home: {
         scale: 1.0,
-        // customTransitions: [
-        //   {
-        //     transition: "Custom_Anamorphic", // 黑子的宽荧幕遮挡
-        //     startTime: 0.0, // 正算起始时间
-        //     startDuration: 0.0, // 起始过渡时间
-        //     keepDuration: 0.0, // 保持时间
-        //     endDuration: 0.0 // 结束过渡时间
-        //   }
-        // ]
       },
     },
     otherSpine: [],
