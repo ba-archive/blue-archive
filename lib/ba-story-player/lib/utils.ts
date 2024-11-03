@@ -1,4 +1,5 @@
 import { OtherSoundsUrls, ResourcesTypes } from "@/types/resources";
+import { BGEffectExcelTableItem } from "./types/excels";
 
 let dataUrl = "";
 let otherSoundMap: OtherSoundsUrls;
@@ -133,4 +134,18 @@ export function setSuperSampling(type: string) {
  */
 export function wait(milliseconds: number) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+export function getEffectArray(effect: BGEffectExcelTableItem): string[] {
+  const effectArray: string[] = [];
+  for (const key of Object.keys(effect) as Array<
+    keyof BGEffectExcelTableItem
+  >) {
+    const value = effect[key];
+    if (key.startsWith("Effect") && typeof value === "string") {
+      effectArray.push(effect[key] as string);
+    }
+  }
+
+  return effectArray;
 }

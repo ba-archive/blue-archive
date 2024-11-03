@@ -261,8 +261,11 @@ export interface PlayAudio {
   voiceJPUrl?: string;
 }
 
+export type BGEffectItem = Omit<BGEffectExcelTableItem, "Effect"> & {
+  Effect: BGEffectType[];
+};
 export interface PlayEffect {
-  BGEffect?: BGEffectExcelTableItem;
+  BGEffect?: BGEffectItem;
   otherEffect: Effect[];
 }
 

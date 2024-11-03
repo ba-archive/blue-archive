@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { deepCopyObject, getResourcesUrl } from "@/utils";
+import { deepCopyObject, getEffectArray, getResourcesUrl } from "@/utils";
 import { l2dConfig } from "../l2dLayer/l2dConfig";
 import {
   StoryRawUnit,
@@ -410,9 +410,15 @@ export function translate(rawStory: TranslatedStoryUnit): StoryUnit[] {
         }
       }
     }
-    unit.effect.BGEffect = playerStore.BGEffectExcelTable.get(
+    const rawBgEffect = playerStore.BGEffectExcelTable.get(
       rawStoryUnit.BGEffect
     );
+    if (rawBgEffect) {
+      unit.effect.BGEffect = {
+        ...rawBgEffect,
+        Effect: getEffectArray(rawBgEffect),
+      };
+    }
     // 如果TextJp中有脚本, 也识别成effectOnly类型
     const scriptInTextJp = Object.keys(StoryRawUnitParserUnit).some(key => {
       const parseConfig = Reflect.get(
