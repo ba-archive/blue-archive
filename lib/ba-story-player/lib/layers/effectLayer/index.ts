@@ -86,8 +86,13 @@ export function effectInit() {
           break;
       }
     }
-    if (effects.BGEffect) {
-      promiseArray.push(playBGEffect(effects.BGEffect));
+    const bgEffect = effects.BGEffect;
+    if (bgEffect) {
+      promiseArray.concat(
+        bgEffect.Effect.map(effectName =>
+          playBGEffect({ ...bgEffect, Effect: effectName })
+        )
+      );
     }
     await Promise.allSettled(promiseArray);
     eventBus.emit("effectDone");

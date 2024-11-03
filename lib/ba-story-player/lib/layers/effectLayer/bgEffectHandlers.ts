@@ -1,6 +1,10 @@
 import { usePlayerStore } from "@/stores";
 import { Sprite } from "pixi.js";
-import { BGEffectHandlerFunction, BGEffectHandlerOptions, CurrentBGEffect } from "@/types/effectLayer";
+import {
+  BGEffectHandlerFunction,
+  BGEffectHandlerOptions,
+  CurrentBGEffect,
+} from "@/types/effectLayer";
 import { BGEffectExcelTableItem, BGEffectType } from "@/types/excels";
 
 const effectFunctionsRaw = import.meta.glob<{
@@ -10,7 +14,7 @@ const effectFunctionsRaw = import.meta.glob<{
 function getEffectFunctions(functionName: string) {
   const effectFunction = Reflect.get(
     effectFunctionsRaw,
-    `./effectFunctions/${functionName}.ts`,
+    `./effectFunctions/${functionName}.ts`
   );
   if (!effectFunction) {
     return undefined;
@@ -21,7 +25,7 @@ function getEffectFunctions(functionName: string) {
 /**
  * 当前播放的BGEffect
  */
-let currentBGEffect: CurrentBGEffect;
+let currentBGEffects: CurrentBGEffect[] = [];
 
 /**
  * 处理函数的对应参数
@@ -144,11 +148,11 @@ export async function playBGEffect(bgEffectItem: BGEffectExcelTableItem) {
   } catch (e) {
     console.error(`执行 ${effect} 时发生错误`, e);
   }
-  currentBGEffect = {
+  currentBGEffects.push({
     effect,
     removeFunction,
     resources: imgs,
-  };
+  });
 }
 
 for (const effect of bgEffects) {
@@ -166,11 +170,16 @@ for (const effect of bgEffects) {
  * 移除当前的BGEffect
  */
 export async function removeBGEffect() {
-  if (currentBGEffect && "function" === typeof currentBGEffect.removeFunction) {
-    await currentBGEffect.removeFunction();
-    for (const resource of currentBGEffect.resources) {
-      resource.destroy();
+  for (const currentBGEffect of currentBGEffects) {
+    if (
+      currentBGEffect &&
+      "function" === typeof currentBGEffect.removeFunction
+    ) {
+      await currentBGEffect.removeFunction();
+      for (const resource of currentBGEffect.resources) {
+        resource.destroy();
+      }
     }
-    currentBGEffect = undefined;
   }
+  currentBGEffects = [];
 }
