@@ -1,3 +1,13 @@
+export interface IFilmAspectTransition {
+  type: "film_aspect_transition";
+  startTime: number;
+  startDuration: number;
+  keepDuration: number;
+  endDuration: number;
+}
+
+export type TCustomTransition = IFilmAspectTransition;
+
 export type IL2dConfig = {
   [key: string]: {
     name: string;
@@ -8,9 +18,12 @@ export type IL2dConfig = {
         customizeBones?: {
           name: string;
           props: {
-            [key: string]: number | string | {
-              [key: string]: number | string;
-            };
+            [key: string]:
+              | number
+              | string
+              | {
+                  [key: string]: number | string;
+                };
           };
         }[];
       };
@@ -41,4 +54,5 @@ export type IL2dPlayQue = {
   }[];
   /** 和后一个动画是否fade */
   fade?: boolean;
+  customTransitions?: TCustomTransition[];
 };
