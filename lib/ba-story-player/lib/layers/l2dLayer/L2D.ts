@@ -6,7 +6,7 @@ import { getResourcesUrl } from "@/utils";
 import { Container } from "pixi.js";
 import gsap from "gsap";
 import { IEvent, ITrackEntry, Spine } from "pixi-spine";
-import { IL2dPlayQue } from "@/types/l2d";
+import { IL2dPlayQue, IFilmAspectTransition } from "@/types/l2d";
 
 let disposed = true;
 const IDLE_TRACK = 1;
@@ -113,6 +113,7 @@ export function L2DInit() {
             secondFadeTime,
             customFade,
             sounds,
+            customTransitions,
           } = startAnimations[currentIndex - 1] || {};
           if (fade) {
             // 在快结束的时候触发 fade
@@ -167,6 +168,17 @@ export function L2DInit() {
                     sound.time
                   )
                 );
+              }
+            }
+          }
+          if (customTransitions) {
+            for (const transition of customTransitions) {
+              switch (transition.type) {
+                case "film_aspect_transition":
+                  filmAspectTransition(transition);
+                  break;
+                default:
+                  console.warn(`unsupport transition type: ${transition.type}`);
               }
             }
           }
@@ -382,4 +394,44 @@ function fadeEffect(
       }
     }, solidStateDuration * 1000);
   }
+}
+
+function filmAspectTransition(transition: IFilmAspectTransition) {
+  const { startDuration, startTime, endDuration, keepDuration } = transition;
+
+  // Create black bars at the top and bottom
+  const topBar = document.createElement("div");
+  const bottomBar = document.createElement("div");
+  topBar.style.position = bottomBar.style.position = "absolute";
+  topBar.style.width = bottomBar.style.width = "100%";
+  topBar.style.height = bottomBar.style.height = "50%";
+  topBar.style.backgroundColor = bottomBar.style.backgroundColor = "black";
+  topBar.style.top = "0";
+  bottomBar.style.bottom = "0";
+
+  const player = document.querySelector("#player__main") as HTMLDivElement;
+  player.appendChild(topBar);
+  player.appendChild(bottomBar);
+
+  // Animate the black bars to create the cinematic effect
+  gsap.to([topBar, bottomBar], {
+    height: "20%",
+    duration: startDuration,
+    delay: startTime,
+    onComplete: () => {
+      // Keep the bars hidden for the specified duration
+      setTimeout(() => {
+        // Restore the original aspect ratio
+        gsap.to([topBar, bottomBar], {
+          height: "0%",
+          duration: endDuration,
+          onComplete: () => {
+            // Remove the bars after the animation
+            player.removeChild(topBar);
+            player.removeChild(bottomBar);
+          },
+        });
+      }, keepDuration * 1000);
+    },
+  });
 }
