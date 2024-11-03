@@ -127,6 +127,7 @@ const bgEffects = [
 export async function playBGEffect(bgEffectItem: BGEffectExcelTableItem) {
   console.log(bgEffectHandlers);
   const effect = bgEffectItem.Effect;
+  if (!effect || effect.trim() === '') return; // 处理空 effect
   //此特效正在播放, 无需处理, 先移除保证开发便利
   // if (effect === currentBGEffect?.effect) {
   //   return
@@ -161,7 +162,7 @@ for (const effect of bgEffects) {
     Reflect.set(bgEffectHandlers, effect, handler);
   } else {
     Reflect.set(bgEffectHandlers, effect, async () => {
-      throw new Error("未找到该bgEffect实现");
+      throw new Error(`未找到该bgEffect实现: ${effect}`);
     });
   }
 }
