@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Container, Sprite, filters } from "pixi.js";
+import { Container, Sprite, AlphaFilter, BlurFilter } from "pixi.js";
 import { emitterConfigs, emitterStarter } from "../emitterUtils";
 import { getEmitterType, sprite2TransParent } from "../resourcesUtils";
 import { Emitter, EmitterConfigV3 } from "@pixi/particle-emitter";
@@ -9,8 +9,8 @@ export default async function BG_Love_L_BGOff(resources: Sprite[]) {
   const { app } = usePlayerStore();
   const appWidth = app.view.width;
   const appHeight = app.view.height;
-  const alphaFilter = new filters.AlphaFilter(0.6);
-  const blurFilter = new filters.BlurFilter(300);
+  const alphaFilter = new AlphaFilter(0.6);
+  const blurFilter = new BlurFilter(300);
   const backSprite = resources[2];
   backSprite.tint = 0xd973b5;
   backSprite.width = appWidth;
