@@ -1,5 +1,5 @@
 import { usePlayerStore } from "@/stores";
-import { Sprite, TilingSprite, filters } from "pixi.js";
+import { Sprite, TilingSprite, BlurFilter } from "pixi.js";
 import { emitterStarter } from "../emitterUtils";
 import { loadSpriteSheet } from "../resourcesUtils";
 
@@ -21,7 +21,7 @@ export default async function BG_SandStorm_L(resources: Sprite[]) {
   const width = Math.sqrt(appWidth * appWidth + appHeight * appHeight);
   const height = texture.height;
   const scale = appHeight / height;
-  const blurFilter = new filters.BlurFilter();
+  const blurFilter = new BlurFilter();
   [TextureTilingBack, TextureTilingFront].forEach(i => {
     // 避免 tiling 产生的像素
     i.clampMargin = 1.5;
