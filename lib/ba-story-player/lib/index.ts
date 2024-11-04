@@ -1175,54 +1175,48 @@ async function loadAsset(param: IAddOptions) {
       delay: 1000,
     },
     async () => {
-      const [err, result] = await tryit(() => {
-        if (/\.(ogg|mp3|wav|mpeg)$/i.test(param.src)) {
-          return Assets.backgroundLoad(param.src);
-        } else if (/\.skel$/.test(param.src)) {
-          // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
-          const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
-          // 添加 spine 和 atlas 资源
-          Assets.load({ src: atlasUrl, alias: atlasUrl });
-          Assets.load(param).then(res => {
-            // 预载 L2D 语音
-            const eventsList = res.spineData?.events;
-            if (eventsList && Array.isArray(eventsList) && eventsList.length) {
-              resourcesLoader.loadL2dVoice(eventsList);
-            }
-            return res;
-          });
-        }
-        // 其他资源
-        return Assets.load(param);
-      })();
-      if (err) {
-        if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
-          console.error(`网络连接错误(${param.alias})：${err.message}`);
-        }
-        if (err.message?.includes("404")) {
-          // 资源不存在，可以直接返回了
-          console.error(`资源不存在: ${param.alias}`);
-          return null;
-        }
-        if (err.message.includes("[Loader.load] Failed to load")) {
-          // FIXME: 从私库构建 pixi-spine 来支持 spine v4.2+
-          console.error("暂时不支持 spine v4.2+");
-          // throw err;
-        }
-
-        eventBus.emit("oneResourceLoaded", {
-          type: "fail",
-          resourceName: getResourceName(),
+      if (/\.(ogg|mp3|wav|mpeg)$/i.test(param.src)) {
+        return Assets.backgroundLoad(param.src);
+      } else if (/\.skel$/.test(param.src)) {
+        // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
+        const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
+        // 添加 spine 和 atlas 资源
+        Assets.load({ src: atlasUrl, alias: atlasUrl });
+        Assets.load(param).then(res => {
+          // 预载 L2D 语音
+          const eventsList = res.spineData?.events;
+          if (eventsList && Array.isArray(eventsList) && eventsList.length) {
+            resourcesLoader.loadL2dVoice(eventsList);
+          }
+          return res;
         });
-        console.error(err);
-        throw err; // 重新抛出错误以触发重试
       }
-
+      // 其他资源
+      return Assets.load(param);
+    }
+  )
+    .then(res => {
       eventBus.emit("oneResourceLoaded", {
         type: "success",
         resourceName: getResourceName(),
       });
-      return result;
-    }
-  );
+      return res;
+    })
+    .catch(err => {
+      if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
+        console.error(`网络连接错误(${param.alias})：${err.message}`);
+      }
+      if (err.message?.includes("404")) {
+        // 资源不存在，可以直接返回了
+        console.error(`资源不存在: ${param.alias}`);
+        return null;
+      }
+
+      eventBus.emit("oneResourceLoaded", {
+        type: "fail",
+        resourceName: getResourceName(),
+      });
+      console.error(err);
+      throw err;
+    });
 }
