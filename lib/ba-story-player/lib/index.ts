@@ -1176,7 +1176,7 @@ async function loadAsset(param: IAddOptions) {
     },
     async () => {
       if (/\.(ogg|mp3|wav|mpeg)$/i.test(param.src)) {
-        return Assets.backgroundLoad(param.src);
+        return Assets.backgroundLoad(param.src); // 后台加载声音资源，不要阻塞真正重要的视觉资源加载
       } else if (/\.skel$/.test(param.src)) {
         // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
         const atlasUrl = param.src.replace(/\.skel$/, ".atlas");

@@ -17,6 +17,8 @@ export const useGlobalConfig = defineStore({
     previewMode: false,
     students: [] as Student[],
     preferSemanticsView: true,
+    modelStability: 0.6,
+    systemPromptDelta: "",
   }),
   getters: {
     isProofread: state => state.proofread,
@@ -46,6 +48,8 @@ export const useGlobalConfig = defineStore({
     getPreviewMode: state => state.previewMode,
     getStudentList: state => state.students,
     getSemanticPreference: state => state.preferSemanticsView ?? false,
+    getModelStability: state => state.modelStability ?? 0.6,
+    getSystemPromptDelta: state => state.systemPromptDelta ?? "",
   },
   actions: {
     startProofread() {
@@ -110,6 +114,12 @@ export const useGlobalConfig = defineStore({
     },
     setSemanticPreference(preference: boolean) {
       this.preferSemanticsView = preference;
+    },
+    setModelStability(modelStability: number) {
+      this.modelStability = modelStability;
+    },
+    setSystemPromptDelta(systemPromptDelta: string) {
+      this.systemPromptDelta = systemPromptDelta;
     },
   },
 });
