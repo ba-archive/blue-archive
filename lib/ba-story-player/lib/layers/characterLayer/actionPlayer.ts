@@ -1,6 +1,6 @@
 import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
-import { Spine } from "pixi-spine";
+import type { Spine } from "pixi-spine";
 import actionOptions from "./options/actionOptions";
 import {
   CharacterEffectInstance,
