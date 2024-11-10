@@ -1,0 +1,52 @@
+@import './shared.scss';
+
+// Simplified button palettes using the shared color-levels mixin
+$button-palettes: (
+  "default": color-levels("arona-blue"),
+  "danger": color-levels("danger"),
+  "success": color-levels("success"),
+  "warning": color-levels("warning")
+);
+
+@mixin button-hover-state($color-hover) {
+  &:not(.disabled, .bordered, .loading):hover {
+    background-color: $color-hover;
+  }
+}
+
+@mixin button-pressed-state($color) {
+  &:not(.disabled, .bordered, .loading).pressed {
+    background-color: $color !important;
+  }
+}
+
+@mixin button-secondary-variant($color-base, $bg-light, $hover-lighter, $pressed-darker) {
+  &.secondary {
+    background-color: $bg-light;
+    color: $color-base;
+
+    &:not(.disabled):hover {
+      background-color: $hover-lighter;
+    }
+
+    &.pressed {
+      background-color: $pressed-darker !important;
+    }
+  }
+}
+
+@mixin button-bordered-variant($color-base, $color-hover, $color-pressed) {
+  &.bordered {
+    border: 1px solid $color-base;
+    background-color: transparent;
+    color: $color-base;
+
+    &:not(.disabled, .loading):hover {
+      border-color: $color-hover;
+    }
+
+    &:not(.disabled, .loading).pressed {
+      border-color: $color-pressed;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// Common size variants used across components
+$common-sizes: (
+  "small": 1px,
+  "medium": 2px,
+  "large": 3px
+);
+
+// Common color levels used across components
+@function color-levels($base-name) {
+  @return (
+    base: var(--#{$base-name}-6),
+    hover: var(--#{$base-name}-5),
+    pressed: var(--#{$base-name}-7),
+    light: var(--#{$base-name}-1),
+    lighter: var(--#{$base-name}-2),
+    darker: var(--#{$base-name}-3)
+  );
+}
+
+// Common state handling
+@mixin disabled-state {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+@mixin active-state($bg-color, $text-color: $fill-base) {
+  background: $bg-color;
+  color: $text-color;
+} 

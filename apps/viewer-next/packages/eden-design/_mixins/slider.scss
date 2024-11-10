@@ -1,0 +1,16 @@
+@mixin slider-palette-variant($color) {
+  .eden-ui__slider--track-traveled {
+    background-color: $color;
+  }
+
+  .eden-ui__slider--thumb {
+    border-color: $color;
+  }
+}
+
+$slider-palettes: (
+  "default": $arona-blue-6,
+  "danger": $danger-6,
+  "success": $success-6,
+  "warning": $warning-6,
+); 

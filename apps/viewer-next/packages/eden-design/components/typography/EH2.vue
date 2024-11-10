@@ -4,7 +4,7 @@ import type { TextProps } from "../types/EdenTextCore/TextProps";
 import { useSlots } from "vue";
 
 const props = withDefaults(defineProps<TextProps>(), {
-  align: "left",
+  align: "start",
   level: 2,
   type: "title",
 });
