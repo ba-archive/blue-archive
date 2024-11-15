@@ -144,7 +144,8 @@ function clickHandler() {
 </template>
 
 <style scoped lang="scss">
-@import '../_mixins/button.scss';
+@use "sass:map";
+@import "../_mixins/button.scss";
 
 .eden-ui__button {
   &.disabled,
@@ -164,21 +165,21 @@ function clickHandler() {
   &.palette- {
     @each $name, $colors in $button-palettes {
       &#{$name} {
-        background-color: map-get($colors, 'base');
+        background-color: map.get($colors, "base");
         color: $fill-base;
 
-        @include button-hover-state(map-get($colors, 'hover'));
-        @include button-pressed-state(map-get($colors, 'pressed'));
+        @include button-hover-state(map.get($colors, "hover"));
+        @include button-pressed-state(map.get($colors, "pressed"));
         @include button-secondary-variant(
-          map-get($colors, 'base'),
-          map-get($colors, 'light'),
-          map-get($colors, 'lighter'),
-          map-get($colors, 'darker')
+          map.get($colors, "base"),
+          map.get($colors, "light"),
+          map.get($colors, "lighter"),
+          map.get($colors, "darker")
         );
         @include button-bordered-variant(
-          map-get($colors, 'base'),
-          map-get($colors, 'hover'),
-          map-get($colors, 'pressed')
+          map.get($colors, "base"),
+          map.get($colors, "hover"),
+          map.get($colors, "pressed")
         );
       }
     }

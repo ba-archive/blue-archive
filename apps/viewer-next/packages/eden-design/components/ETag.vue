@@ -120,7 +120,8 @@ function clickHandler() {
 </template>
 
 <style scoped lang="scss">
-@import '../_mixins/tag.scss';
+@use "sass:map";
+@import "../_mixins/tag.scss";
 
 .eden-ui__tag {
   @include tag-base-styles;
@@ -130,9 +131,9 @@ function clickHandler() {
     @each $name, $values in $tag-complex-palettes {
       &#{$name} {
         @include tag-palette-variant(
-          map-get($values, "color"),
-          map-get($values, "bg"),
-          map-get($values, "border")
+          map.get($values, "color"),
+          map.get($values, "bg"),
+          map.get($values, "border")
         );
       }
     }

@@ -1,11 +1,11 @@
-@import './shared.scss';
+@import "./shared.scss";
 
 // Simplified button palettes using the shared color-levels mixin
 $button-palettes: (
   "default": color-levels("arona-blue"),
   "danger": color-levels("danger"),
   "success": color-levels("success"),
-  "warning": color-levels("warning")
+  "warning": color-levels("warning"),
 );
 
 @mixin button-hover-state($color-hover) {
@@ -20,7 +20,12 @@ $button-palettes: (
   }
 }
 
-@mixin button-secondary-variant($color-base, $bg-light, $hover-lighter, $pressed-darker) {
+@mixin button-secondary-variant(
+  $color-base,
+  $bg-light,
+  $hover-lighter,
+  $pressed-darker
+) {
   &.secondary {
     background-color: $bg-light;
     color: $color-base;

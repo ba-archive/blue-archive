@@ -1,4 +1,4 @@
-@import './shared.scss';
+@import "./shared.scss";
 
 @mixin tag-base-styles {
   padding-left: 8px;
@@ -11,7 +11,11 @@
   padding-bottom: $padding-y;
 }
 
-@mixin tag-palette-variant($color, $bg-color: $fill-base, $border-color: $border-2) {
+@mixin tag-palette-variant(
+  $color,
+  $bg-color: $fill-base,
+  $border-color: $border-2
+) {
   color: $color;
 
   &.bordered {
@@ -43,18 +47,18 @@ $tag-complex-palettes: (
   "default": (
     color: $text-5,
     bg: $fill-base,
-    border: $border-2
+    border: $border-2,
   ),
   "brand": (
     color: $brand-6,
     bg: $brand-1,
-    border: $brand-6
+    border: $brand-6,
   ),
   "gray": (
     color: $text-3,
     bg: $fill-1,
-    border: $border-2
-  )
+    border: $border-2,
+  ),
 );
 
 // Simple palettes with direct color values
@@ -65,5 +69,5 @@ $tag-simple-palettes: (
   "explosion": $explosion-6,
   "pierce": $pierce-6,
   "unarmed": $unarmed-6,
-  "vibrate": $vibrate-6
-); 
+  "vibrate": $vibrate-6,
+);

@@ -117,7 +117,7 @@ function handleClick() {
 </template>
 
 <style lang="scss" scoped>
-@import '../_mixins/switch.scss';
+@import "../_mixins/switch.scss";
 
 .eden-ui__switch {
   margin-left: 8px;
@@ -135,11 +135,11 @@ function handleClick() {
     @each $size, $values in $switch-sizes {
       &#{$size} {
         @include switch-size-variant(
-          map-get($values, 'width'),
-          map-get($values, 'height'),
-          map-get($values, 'thumb-size'),
-          map-get($values, 'thumb-translate'),
-          map-get($values, 'padding')
+          map-get($values, "width"),
+          map-get($values, "height"),
+          map-get($values, "thumb-size"),
+          map-get($values, "thumb-translate"),
+          map-get($values, "padding")
         );
       }
     }
@@ -149,11 +149,17 @@ function handleClick() {
     &default {
       &.eden-ui__switch {
         &--track[data-state="checked"] {
-          background-color: map-get(map-get($switch-palettes, "default"), "track");
+          background-color: map-get(
+            map-get($switch-palettes, "default"),
+            "track"
+          );
         }
 
         .eden-ui__switch--thumb[data-state="checked"] {
-          background-color: map-get(map-get($switch-palettes, "default"), "thumb");
+          background-color: map-get(
+            map-get($switch-palettes, "default"),
+            "thumb"
+          );
         }
       }
     }

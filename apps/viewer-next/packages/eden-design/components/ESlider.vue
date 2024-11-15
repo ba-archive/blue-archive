@@ -135,7 +135,9 @@ const sliderThumbStyle = computed(() => [
   {
     left: `${traveledDistancePercentage.value}%`,
   },
-  !!props.thumbBorderColor && { borderColor: parseColor(props.thumbBorderColor) },
+  !!props.thumbBorderColor && {
+    borderColor: parseColor(props.thumbBorderColor),
+  },
 ]);
 
 const triggered = ref(false);
@@ -214,7 +216,8 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../_mixins/slider.scss';
+@use "sass:map";
+@import "../_mixins/slider.scss";
 
 .eden-ui__slider {
   &--track {
