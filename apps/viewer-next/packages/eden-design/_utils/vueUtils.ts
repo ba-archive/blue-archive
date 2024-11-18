@@ -1,4 +1,5 @@
 import type { Component, Slots, VNode, VNodeTypes } from "vue";
+import { Comment } from "vue";
 
 // https://github.com/vuejs/vue-next/blob/main/packages/shared/src/shapeFlags.ts
 export enum ShapeFlags {
@@ -19,7 +20,7 @@ export enum ShapeFlags {
 // https://github.com/arco-design/arco-design-vue/blob/main/packages/web-vue/components/_utils/vue-utils.ts
 export const isElement = (vn: string | Element | VNode | undefined): boolean =>
   Boolean(
-    (typeof Element !== 'undefined' && vn instanceof Element) ||
+    (typeof Element !== "undefined" && vn instanceof Element) ||
       (typeof vn === "object" &&
         // @ts-ignore
         vn?.shapeFlag &&
@@ -65,6 +66,7 @@ export function getAllElements(
 ) {
   const results: VNode[] = [];
   for (const item of children ?? []) {
+    if (item.type === Comment) continue;
     if (
       isElement(item) ||
       isComponent(item) ||
