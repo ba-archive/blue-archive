@@ -2739,7 +2739,7 @@
     en: Yozakura
     kr: 요자쿠라
     tw: 夜櫻
-    th: 夜桜
+    th: โยซากุระ
   name:
     cn: 绮罗罗
     jp: キララ
@@ -2768,7 +2768,7 @@
     en: Saiba
     kr: 사이바
     tw: 才羽
-    th: 才羽
+    th: ไซบะ
   name:
     cn: 桃井(女仆装)
     jp: モモイ（メイド）
@@ -2797,7 +2797,7 @@
     en: Saiba
     kr: 사이바
     tw: 才羽
-    th: 才羽
+    th: ไซบะ
   name:
     cn: 绿(女仆装)
     jp: ミドリ（メイド）
@@ -3064,7 +3064,7 @@
     en: Mari (Idol)
     kr: 마리(아이돌)
     tw: 瑪麗（偶像）
-    th: マリー（アイドル）
+    th: มารี (ไอดอล)
   nickname: []
   nicknameFrom: 23008
   birthday:
@@ -3093,7 +3093,7 @@
     en: Sakurako (Idol)
     kr: 사쿠라코(아이돌)
     tw: 櫻子（偶像）
-    th: サクラコ（アイドル）
+    th: ซากุระโกะ (ไอดอล)
   nickname: []
   nicknameFrom: 10061
   birthday:
@@ -3107,6 +3107,34 @@
   type: Striker
   armorType: HeavyArmor
   bulletType: Explosion
+  weapon: AR
+- id: 10107
+  familyName:
+    cn: 元宫
+    jp: 元宮
+    en: Motomiya
+    kr: 모토미야
+    tw: 元宮
+    th: 元宮
+  name:
+    cn: 千秋
+    jp: チアキ
+    en: Chiaki
+    kr: 치아키
+    tw: 千秋
+    th: จิอากิ
+  nickname: []
+  birthday:
+    month: 9
+    day: 22
+  club: 万魔殿
+  clubCode: PandemoniumSociety
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Sonic
   weapon: AR
 - id: 13000
   familyName:
@@ -4011,7 +4039,7 @@
     en: Mine (Idol)
     kr: 미네(아이돌)
     tw: 美禰（偶像）
-    th: ミネ（アイドル）
+    th: มิเนะ (ไอดอล)
   nickname: []
   nicknameFrom: 10058
   birthday:
@@ -5196,6 +5224,34 @@
   armorType: ElasticArmor
   bulletType: Sonic
   weapon: SMG
+- id: 20040
+  familyName:
+    cn: 京极
+    jp: 京極
+    en: Kyougoku
+    kr: 쿄고쿠
+    tw: 京極
+    th: 京極
+  name:
+    cn: 皋月
+    jp: サツキ
+    en: Satsuki
+    kr: 사츠키
+    tw: 皋月
+    th: ซัตสึกิ
+  nickname: []
+  birthday:
+    month: 4
+    day: 10
+  club: 万魔殿
+  clubCode: PandemoniumSociety
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: HG
 - id: 23000
   familyName:
     cn: 栗村
