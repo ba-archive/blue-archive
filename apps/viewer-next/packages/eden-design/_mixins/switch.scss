@@ -1,0 +1,79 @@
+@mixin switch-size-variant(
+  $width,
+  $height,
+  $thumb-size,
+  $thumb-translate,
+  $padding: 2px
+) {
+  width: $width;
+  height: $height;
+
+  &.eden-ui__switch--track {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+
+  .eden-ui__switch--thumb {
+    width: $thumb-size;
+    height: $thumb-size;
+
+    &[data-state="checked"] {
+      transform: translate3d($thumb-translate, 0, 0);
+    }
+  }
+}
+
+@mixin switch-palette-variant($color) {
+  &.eden-ui__switch {
+    &--track[data-state="checked"] {
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+
+  .eden-ui__switch--thumb[data-state="checked"] {
+    background-color: $fill-base;
+  }
+}
+
+$switch-sizes: (
+  "mini": (
+    width: 24px,
+    height: 12px,
+    thumb-size: 8px,
+    thumb-translate: 12px,
+    padding: 1px,
+  ),
+  "small": (
+    width: 32px,
+    height: 16px,
+    thumb-size: 11px,
+    thumb-translate: 16px,
+    padding: 2px,
+  ),
+  "medium": (
+    width: 40px,
+    height: 20px,
+    thumb-size: 14px,
+    thumb-translate: 20px,
+    padding: 2px,
+  ),
+  "large": (
+    width: 48px,
+    height: 24px,
+    thumb-size: 18px,
+    thumb-translate: 24px,
+    padding: 2px,
+  ),
+);
+
+$switch-palettes: (
+  "default": (
+    track: $fill-4,
+    thumb: $fill-base,
+  ),
+  "brand": $brand-6,
+  "danger": $danger-6,
+  "success": $success-6,
+  "warning": $warning-6,
+);

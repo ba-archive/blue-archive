@@ -135,7 +135,9 @@ const sliderThumbStyle = computed(() => [
   {
     left: `${traveledDistancePercentage.value}%`,
   },
-  !!props.thumbBorderColor && { borderColor: parseColor(props.thumbBorderColor) },
+  !!props.thumbBorderColor && {
+    borderColor: parseColor(props.thumbBorderColor),
+  },
 ]);
 
 const triggered = ref(false);
@@ -214,6 +216,9 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+@use "sass:map";
+@import "../_mixins/slider.scss";
+
 .eden-ui__slider {
   &--track {
     background-color: $fill-2;
@@ -224,45 +229,15 @@ onMounted(() => {
   }
 
   &.palette- {
-    &brand,
-    &default {
-      .eden-ui__slider--track-traveled {
-        background-color: $arona-blue-6;
-      }
-
-      .eden-ui__slider--thumb {
-        border-color: $arona-blue-6;
+    @each $name, $color in $slider-palettes {
+      &#{$name} {
+        @include slider-palette-variant($color);
       }
     }
 
-    &danger {
-      .eden-ui__slider--track-traveled {
-        background-color: $danger-6;
-      }
-
-      .eden-ui__slider--thumb {
-        border-color: $danger-6;
-      }
-    }
-
-    &success {
-      .eden-ui__slider--track-traveled {
-        background-color: $success-6;
-      }
-
-      .eden-ui__slider--thumb {
-        border-color: $success-6;
-      }
-    }
-
-    &warning {
-      .eden-ui__slider--track-traveled {
-        background-color: $warning-6;
-      }
-
-      .eden-ui__slider--thumb {
-        border-color: $warning-6;
-      }
+    // Handle brand variant which uses default colors
+    &brand {
+      @extend .palette-default;
     }
   }
 

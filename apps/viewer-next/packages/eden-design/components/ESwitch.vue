@@ -117,6 +117,8 @@ function handleClick() {
 </template>
 
 <style lang="scss" scoped>
+@import "../_mixins/switch.scss";
+
 .eden-ui__switch {
   margin-left: 8px;
   margin-right: 8px;
@@ -130,79 +132,15 @@ function handleClick() {
   }
 
   &.size- {
-    &mini {
-      width: 24px;
-      height: 12px;
-
-      &.eden-ui__switch--track {
-        padding-left: 1px;
-        padding-right: 1px;
-      }
-
-      .eden-ui__switch--thumb {
-        width: 8px;
-        height: 8px;
-
-        &[data-state="checked"] {
-          transform: translate3d(12px, 0, 0);
-        }
-      }
-    }
-
-    &small {
-      width: 32px;
-      height: 16px;
-
-      &.eden-ui__switch--track {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      .eden-ui__switch--thumb {
-        width: 11px;
-        height: 11px;
-
-        &[data-state="checked"] {
-          transform: translate3d(15px, 0, 0);
-        }
-      }
-    }
-
-    &medium {
-      width: 40px;
-      height: 20px;
-
-      &.eden-ui__switch--track {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      .eden-ui__switch--thumb {
-        width: 14px;
-        height: 14px;
-
-        &[data-state="checked"] {
-          transform: translate3d(20px, 0, 0);
-        }
-      }
-    }
-
-    &large {
-      width: 48px;
-      height: 24px;
-
-      &.eden-ui__switch--track {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      .eden-ui__switch--thumb {
-        width: 18px;
-        height: 18px;
-
-        &[data-state="checked"] {
-          transform: translate3d(24px, 0, 0);
-        }
+    @each $size, $values in $switch-sizes {
+      &#{$size} {
+        @include switch-size-variant(
+          map-get($values, "width"),
+          map-get($values, "height"),
+          map-get($values, "thumb-size"),
+          map-get($values, "thumb-translate"),
+          map-get($values, "padding")
+        );
       }
     }
   }
@@ -211,65 +149,31 @@ function handleClick() {
     &default {
       &.eden-ui__switch {
         &--track[data-state="checked"] {
-          background-color: $fill-4;
+          background-color: map-get(
+            map-get($switch-palettes, "default"),
+            "track"
+          );
         }
 
         .eden-ui__switch--thumb[data-state="checked"] {
-          background-color: $fill-base;
+          background-color: map-get(
+            map-get($switch-palettes, "default"),
+            "thumb"
+          );
+        }
+      }
+    }
+
+    @each $name, $color in $switch-palettes {
+      @if $name != "default" {
+        &#{$name} {
+          @include switch-palette-variant($color);
         }
       }
     }
 
     &brand {
-      &.eden-ui__switch {
-        &--track[data-state="checked"] {
-          background-color: $brand-6;
-          border-color: $brand-6;
-        }
-      }
-
-      .eden-ui__switch--thumb[data-state="checked"] {
-        background-color: $fill-base;
-      }
-    }
-
-    &danger {
-      &.eden-ui__switch {
-        &--track[data-state="checked"] {
-          background-color: $danger-6;
-          border-color: $danger-6;
-        }
-      }
-
-      .eden-ui__switch--thumb[data-state="checked"] {
-        background-color: $fill-base;
-      }
-    }
-
-    &success {
-      &.eden-ui__switch {
-        &--track[data-state="checked"] {
-          background-color: $success-6;
-          border-color: $success-6;
-        }
-      }
-
-      .eden-ui__switch--thumb[data-state="checked"] {
-        background-color: $fill-base;
-      }
-    }
-
-    &warning {
-      &.eden-ui__switch {
-        &--track[data-state="checked"] {
-          background-color: $warning-6;
-          border-color: $warning-6;
-        }
-      }
-
-      .eden-ui__switch--thumb[data-state="checked"] {
-        background-color: $fill-base;
-      }
+      @include switch-palette-variant($brand-6);
     }
   }
 

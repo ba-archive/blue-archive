@@ -91,9 +91,6 @@ importers:
       uuid:
         specifier: ~10.0.0
         version: 10.0.0
-      vite-plugin-mock:
-        specifier: ~3.0.2
-        version: 3.0.2(esbuild@0.23.1)(mockjs@1.1.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))
       vite-plugin-vue-devtools:
         specifier: ^7.5.4
         version: 7.5.4(@nuxt/kit@3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3))(rollup@4.24.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))
@@ -956,51 +953,6 @@ importers:
       '@esotericsoftware/spine-pixi':
         specifier: ~4.2.61
         version: 4.2.61(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/text@7.4.2(@pixi/core@7.4.2)(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))
-      '@pixi-spine/all-3.8':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/all-4.0':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/all-4.1':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/base':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/loader-3.8':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/loader-4.0':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/loader-4.1':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/loader-4.2':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/loader-base':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)
-      '@pixi-spine/loader-uni':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/runtime-3.7':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/runtime-3.8':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/runtime-4.0':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/runtime-4.1':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
-      '@pixi-spine/runtime-4.2':
-        specifier: 4.2.24-ba
-        version: 4.2.24-ba
       '@pixi/core':
         specifier: '>=7 <8'
         version: 7.4.2
@@ -3474,15 +3426,6 @@ packages:
   '@pinia/nuxt@0.5.4':
     resolution: {integrity: sha512-nNEs2pq6+Ji5qIyRwmeD9LUdctL8aJ8QMVLTYxUc16cXEOcIIN+MSA8Xudsd0lVETYgEAROT5HiBHnOYRDY3yQ==}
 
-  '@pixi-spine/all-3.8@4.2.24-ba':
-    resolution: {integrity: sha512-4ImAebJGTAqMHpX7zuLR9wwSV0sr5n4gADbxCZhwK8DeT/g7KD2yei8+sM/LqaDLKKQypUGuyHWOAxJ5RZuJDA==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/all-3.8/-/@pixi-spine/all-3.8-4.2.24-ba.tgz}
-
-  '@pixi-spine/all-4.0@4.2.24-ba':
-    resolution: {integrity: sha512-KXFfSUUGeiSovJ8bPyebNisJE9mBllIkhwLQzNQl2cO/gPtHBu6wCifFy5Iwp/pNqyjAfbZpFg+/14nUOwCfjQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/all-4.0/-/@pixi-spine/all-4.0-4.2.24-ba.tgz}
-
-  '@pixi-spine/all-4.1@4.2.24-ba':
-    resolution: {integrity: sha512-ac0ddtUsxQnx1VCRBAzm7FcqSX9tp2GSQsyp1p2NzfDzdyrER37Vak+0g1E9dz281FCQ7Cncw1rITeOj6VEHTQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/all-4.1/-/@pixi-spine/all-4.1-4.2.24-ba.tgz}
-
   '@pixi-spine/base@4.2.24-ba':
     resolution: {integrity: sha512-Auz4ELXMN+s62eRFiSAXT/kjTryYhGrRktTG0wOFgXKVshzIzjzbYEufhv9uw5nsRYQwXDTahYtkHZrP8nWZbw==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/base/-/@pixi-spine/base-4.2.24-ba.tgz}
     peerDependencies:
@@ -3493,44 +3436,14 @@ packages:
       '@pixi/mesh-extras': ^7.4.2
       '@pixi/sprite': ^7.4.2
 
-  '@pixi-spine/loader-3.8@4.2.24-ba':
-    resolution: {integrity: sha512-FLjoTf8+uCexzUDmMxvDOmqbJBnUptAQPNkSIA0Of8Xjb+ZI1TpLs6WnbvniOfPrtC1/IkcsVtlQiArm400sEQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-3.8/-/@pixi-spine/loader-3.8-4.2.24-ba.tgz}
-
-  '@pixi-spine/loader-4.0@4.2.24-ba':
-    resolution: {integrity: sha512-jW2+bOoe2tPfbYp9S3uUimB0df1AbrkodcNgleQZBHG9ZvH/Y8aFJ+8piZA/Rsx5CkD4K0mlouA0KcUprBHuOA==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-4.0/-/@pixi-spine/loader-4.0-4.2.24-ba.tgz}
-
-  '@pixi-spine/loader-4.1@4.2.24-ba':
-    resolution: {integrity: sha512-hKa7QTHEFhIeJ5GtkDnL10IyApc6uSHB1WF3aZtsXRpMUV5erjT2675Ux8Ga316gMidkm7KRuAOCw2K43CXxXA==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-4.1/-/@pixi-spine/loader-4.1-4.2.24-ba.tgz}
-
-  '@pixi-spine/loader-4.2@4.2.24-ba':
-    resolution: {integrity: sha512-C6ZAWn2HTaXUL2By5wEFWBomcGhgroKeZrFEk3PdUisfCc1vSZYHj70Bk92/6JKq9fy8/aJI/HrdYK0rQqIwqw==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-4.2/-/@pixi-spine/loader-4.2-4.2.24-ba.tgz}
-
-  '@pixi-spine/loader-base@4.2.24-ba':
-    resolution: {integrity: sha512-LWRblWoIzqbaKNy+J+A/u8nzm2aN8wRJX0H8w8kHs9aKU3ngCmz4AhWY2nL9PV56y8fOD0LU1TfmYDh48J5c8Q==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-base/-/@pixi-spine/loader-base-4.2.24-ba.tgz}
-    peerDependencies:
-      '@pixi/assets': ' ^7.4.2'
-      '@pixi/core': ^7.4.2
-
   '@pixi-spine/loader-base@4.2.25-ba':
     resolution: {integrity: sha512-icEUSa8ZtcykM1pWwPRC9DWpyQJAsfhJA2+GR2rqNOvlVQuRr7QJYdK7b/4GqJCu6bCkYjUCztGsQDy2RFJEpQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-base/-/@pixi-spine/loader-base-4.2.25-ba.tgz}
     peerDependencies:
       '@pixi/assets': ' ^7.4.2'
       '@pixi/core': ^7.4.2
 
-  '@pixi-spine/loader-uni@4.2.24-ba':
-    resolution: {integrity: sha512-IEj9NZMOCmeCOODI+zlBsF3J+4X44E1jShgmsxnwgSDekT8ubfswkoKsCgpuCqS6fvZvp2oU3110OwZbz+NW7Q==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-uni/-/@pixi-spine/loader-uni-4.2.24-ba.tgz}
-
   '@pixi-spine/loader-uni@4.2.25-ba':
     resolution: {integrity: sha512-PX2CJWkUh9usLaLRC2aBT2LDdRNO1Hm9Wwf5KAwz2TB17wilP8vKeKvfo2je+JV+VzdIVnqd8LfRGl0nrGyEWw==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/loader-uni/-/@pixi-spine/loader-uni-4.2.25-ba.tgz}
-
-  '@pixi-spine/runtime-3.7@4.2.24-ba':
-    resolution: {integrity: sha512-JIfQlzPJ6Ja501gv/fWeBzKmLBtsbdi1UGKetF7PRgqD1Xa4+35HrEnvFCH+JT971wZUoXctX3jkevyPEZJyLQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/runtime-3.7/-/@pixi-spine/runtime-3.7-4.2.24-ba.tgz}
-
-  '@pixi-spine/runtime-3.8@4.2.24-ba':
-    resolution: {integrity: sha512-Kl20njrs2K8SpE/GNmOmiF60192UxIDZixJkzMlo/uW+PtcUEs+OJzD0qNK2UB/JLOuW18lD+maKbH2TUyTBRg==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/runtime-3.8/-/@pixi-spine/runtime-3.8-4.2.24-ba.tgz}
-
-  '@pixi-spine/runtime-4.0@4.2.24-ba':
-    resolution: {integrity: sha512-BAqS5jmuog/8X/1RHIoUnKNfhPK5FNMWLqllMoOpen2ZhOd3gEqqr03Yul1Iz9xHKkTtQE68Wfgz5StSEcvaFQ==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/runtime-4.0/-/@pixi-spine/runtime-4.0-4.2.24-ba.tgz}
 
   '@pixi-spine/runtime-4.1@4.2.24-ba':
     resolution: {integrity: sha512-s7inVzuOTqYCjqi/ZCH9uIZ4EvUSxLGqb6D17mLJyBIt0euyhE09a6rQsDWAkI3idgmPWQdkkAR4I7NHdBDm8w==, tarball: https://ba-archive-npm.pkg.coding.net/blue-archive/ba/@pixi-spine/runtime-4.1/-/@pixi-spine/runtime-4.1-4.2.24-ba.tgz}
@@ -5365,12 +5278,6 @@ packages:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
 
-  bundle-require@4.2.1:
-    resolution: {integrity: sha512-7Q/6vkyYAwOmQNRw75x+4yRtZCZJXUDmHHlFdkiV0wgv/reNjtJwpu1jPJ0w2kbEpIM0uoKI3S4/f39dU7AjSA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.17'
-
   bundle-require@5.0.0:
     resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -5678,10 +5585,6 @@ packages:
 
   config-chain@1.1.13:
     resolution: {integrity: sha512-qj+f8APARXHrM0hraqXYb2/bOVSV4PvJQlNZ/DVj0QrmNM2q2euizkeuVckQ57J+W0mRH6Hvi+k50M4Jul2VRQ==}
-
-  connect@3.7.0:
-    resolution: {integrity: sha512-ZqRXc+tZukToSNmh5C2iWMSoV3X1YUcPbqEM4DkEG5tNQXrQUZCNVGGv3IuicnkMtPfGf3Xtp8WCXs295iQ1pQ==}
-    engines: {node: '>= 0.10.0'}
 
   consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
@@ -6767,10 +6670,6 @@ packages:
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
-
-  finalhandler@1.1.2:
-    resolution: {integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==}
-    engines: {node: '>= 0.8'}
 
   finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
@@ -8418,10 +8317,6 @@ packages:
   ohash@1.1.4:
     resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
 
-  on-finished@2.3.0:
-    resolution: {integrity: sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==}
-    engines: {node: '>= 0.8'}
-
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -9678,10 +9573,6 @@ packages:
   standard-as-callback@2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
 
-  statuses@1.5.0:
-    resolution: {integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==}
-    engines: {node: '>= 0.6'}
-
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
@@ -10571,14 +10462,6 @@ packages:
     peerDependenciesMeta:
       '@nuxt/kit':
         optional: true
-
-  vite-plugin-mock@3.0.2:
-    resolution: {integrity: sha512-bD//HvkTygGmk+LsIAdf0jGNlCv4iWv0kZlH9UEgWT6QYoUwfjQAE4SKxHRw2tfLgVhbPQVv/+X3YlNWvueGUA==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      esbuild: '>=0.17'
-      mockjs: '>=1.1.0'
-      vite: '>=4.0.0'
 
   vite-plugin-pwa@0.20.5:
     resolution: {integrity: sha512-aweuI/6G6n4C5Inn0vwHumElU/UEpNuO+9iZzwPZGTCH87TeZ6YFMrEY6ZUBQdIHHlhTsbMDryFARcSuOdsz9Q==}
@@ -14364,51 +14247,6 @@ snapshots:
       - vue
       - webpack-sources
 
-  '@pixi-spine/all-3.8@4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))':
-    dependencies:
-      '@pixi-spine/base': 4.2.24-ba(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/loader-3.8': 4.2.24-ba
-      '@pixi-spine/loader-base': 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)
-      '@pixi-spine/runtime-3.8': 4.2.24-ba
-    transitivePeerDependencies:
-      - '@pixi/assets'
-      - '@pixi/core'
-      - '@pixi/display'
-      - '@pixi/graphics'
-      - '@pixi/mesh'
-      - '@pixi/mesh-extras'
-      - '@pixi/sprite'
-
-  '@pixi-spine/all-4.0@4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))':
-    dependencies:
-      '@pixi-spine/base': 4.2.24-ba(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/loader-4.0': 4.2.24-ba
-      '@pixi-spine/loader-base': 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)
-      '@pixi-spine/runtime-4.0': 4.2.24-ba
-    transitivePeerDependencies:
-      - '@pixi/assets'
-      - '@pixi/core'
-      - '@pixi/display'
-      - '@pixi/graphics'
-      - '@pixi/mesh'
-      - '@pixi/mesh-extras'
-      - '@pixi/sprite'
-
-  '@pixi-spine/all-4.1@4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))':
-    dependencies:
-      '@pixi-spine/base': 4.2.24-ba(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
-      '@pixi-spine/loader-4.1': 4.2.24-ba
-      '@pixi-spine/loader-base': 4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)
-      '@pixi-spine/runtime-4.1': 4.2.24-ba
-    transitivePeerDependencies:
-      - '@pixi/assets'
-      - '@pixi/core'
-      - '@pixi/display'
-      - '@pixi/graphics'
-      - '@pixi/mesh'
-      - '@pixi/mesh-extras'
-      - '@pixi/sprite'
-
   '@pixi-spine/base@4.2.24-ba(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh-extras@7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))':
     dependencies:
       '@pixi/core': 7.4.2
@@ -14418,33 +14256,12 @@ snapshots:
       '@pixi/mesh-extras': 7.4.2(@pixi/core@7.4.2)(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))
       '@pixi/sprite': 7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))
 
-  '@pixi-spine/loader-3.8@4.2.24-ba': {}
-
-  '@pixi-spine/loader-4.0@4.2.24-ba': {}
-
-  '@pixi-spine/loader-4.1@4.2.24-ba': {}
-
-  '@pixi-spine/loader-4.2@4.2.24-ba': {}
-
-  '@pixi-spine/loader-base@4.2.24-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)':
-    dependencies:
-      '@pixi/assets': 7.4.2(@pixi/core@7.4.2)
-      '@pixi/core': 7.4.2
-
   '@pixi-spine/loader-base@4.2.25-ba(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)':
     dependencies:
       '@pixi/assets': 7.4.2(@pixi/core@7.4.2)
       '@pixi/core': 7.4.2
 
-  '@pixi-spine/loader-uni@4.2.24-ba': {}
-
   '@pixi-spine/loader-uni@4.2.25-ba': {}
-
-  '@pixi-spine/runtime-3.7@4.2.24-ba': {}
-
-  '@pixi-spine/runtime-3.8@4.2.24-ba': {}
-
-  '@pixi-spine/runtime-4.0@4.2.24-ba': {}
 
   '@pixi-spine/runtime-4.1@4.2.24-ba': {}
 
@@ -16852,11 +16669,6 @@ snapshots:
     dependencies:
       run-applescript: 7.0.0
 
-  bundle-require@4.2.1(esbuild@0.23.1):
-    dependencies:
-      esbuild: 0.23.1
-      load-tsconfig: 0.2.5
-
   bundle-require@5.0.0(esbuild@0.23.0):
     dependencies:
       esbuild: 0.23.0
@@ -17198,13 +17010,6 @@ snapshots:
     dependencies:
       ini: 1.3.8
       proto-list: 1.2.4
-
-  connect@3.7.0:
-    dependencies:
-      debug: 2.6.9
-      finalhandler: 1.1.2
-      parseurl: 1.3.3
-      utils-merge: 1.0.1
 
   consola@3.2.3: {}
 
@@ -18617,16 +18422,6 @@ snapshots:
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
-
-  finalhandler@1.1.2:
-    dependencies:
-      debug: 2.6.9
-      encodeurl: 1.0.2
-      escape-html: 1.0.3
-      on-finished: 2.3.0
-      parseurl: 1.3.3
-      statuses: 1.5.0
-      unpipe: 1.0.0
 
   finalhandler@1.2.0:
     dependencies:
@@ -20737,10 +20532,6 @@ snapshots:
 
   ohash@1.1.4: {}
 
-  on-finished@2.3.0:
-    dependencies:
-      ee-first: 1.1.1
-
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
@@ -22112,8 +21903,6 @@ snapshots:
 
   standard-as-callback@2.1.0: {}
 
-  statuses@1.5.0: {}
-
   statuses@2.0.1: {}
 
   std-env@3.7.0: {}
@@ -23224,21 +23013,6 @@ snapshots:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
-      - supports-color
-
-  vite-plugin-mock@3.0.2(esbuild@0.23.1)(mockjs@1.1.0)(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)):
-    dependencies:
-      bundle-require: 4.2.1(esbuild@0.23.1)
-      chokidar: 3.6.0
-      connect: 3.7.0
-      debug: 4.3.4(supports-color@8.1.1)
-      esbuild: 0.23.1
-      fast-glob: 3.3.2
-      mockjs: 1.1.0
-      path-to-regexp: 8.2.0
-      picocolors: 1.0.0
-      vite: 5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0)
-    transitivePeerDependencies:
       - supports-color
 
   vite-plugin-pwa@0.20.5(vite@5.4.10(@types/node@22.8.1)(sass@1.80.4)(terser@5.36.0))(workbox-window@7.1.0):

@@ -36,6 +36,7 @@ export default defineNuxtConfig({
         scss: {
           additionalData:
             '@use "~/packages/eden-design/_styles/variables.scss" as *;',
+          api: "modern-compiler",
         },
       },
     },

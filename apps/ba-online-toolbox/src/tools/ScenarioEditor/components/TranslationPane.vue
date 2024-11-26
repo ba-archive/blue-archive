@@ -434,10 +434,16 @@ onBeforeUnmount(() => {
 let llmLastCalled = 0;
 const llmLoading = ref(false);
 const studentNames = computed(() => config.getStudentList);
-const modelStability = ref(0.6);
+const modelStability = computed({
+  get: () => config.getModelStability,
+  set: value => config.setModelStability(value),
+});
 const temperature = computed(() => 1 - modelStability.value);
 const advice = ref("");
-const systemPromptDelta = ref("");
+const systemPromptDelta = computed({
+  get: () => config.getSystemPromptDelta,
+  set: value => config.setSystemPromptDelta(value),
+});
 
 enum ModelStability {
   "Low" = 0.33,

@@ -1,0 +1,73 @@
+@import "./shared.scss";
+
+@mixin tag-base-styles {
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+}
+
+@mixin tag-size-variant($padding-y) {
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+}
+
+@mixin tag-palette-variant(
+  $color,
+  $bg-color: $fill-base,
+  $border-color: $border-2
+) {
+  color: $color;
+
+  &.bordered {
+    border: 1px solid $border-color;
+  }
+
+  &.filled {
+    background: $bg-color;
+  }
+
+  &.active {
+    @include active-state($color);
+  }
+}
+
+@mixin tag-simple-palette-variant($color) {
+  color: $color;
+  background-color: $fill-base;
+
+  &.active {
+    @include active-state($color);
+  }
+}
+
+$tag-sizes: $common-sizes;
+
+// Complex palettes
+$tag-complex-palettes: (
+  "default": (
+    color: $text-5,
+    bg: $fill-base,
+    border: $border-2,
+  ),
+  "brand": (
+    color: $brand-6,
+    bg: $brand-1,
+    border: $brand-6,
+  ),
+  "gray": (
+    color: $text-3,
+    bg: $fill-1,
+    border: $border-2,
+  ),
+);
+
+// Simple palettes with direct color values
+$tag-simple-palettes: (
+  "selector": $arona-blue-6,
+  "striker": $danger-6,
+  "special": $warning-6,
+  "explosion": $explosion-6,
+  "pierce": $pierce-6,
+  "unarmed": $unarmed-6,
+  "vibrate": $vibrate-6,
+);

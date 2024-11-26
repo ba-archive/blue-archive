@@ -3,7 +3,7 @@ import ETextCore from "../reusables/EdenTextCore/ETextCore.vue";
 import type { TextProps } from "../types/EdenTextCore/TextProps";
 
 const props = withDefaults(defineProps<TextProps>(), {
-  align: "left",
+  align: "start",
   level: 2,
   type: "body",
 });

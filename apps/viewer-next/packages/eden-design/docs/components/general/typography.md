@@ -53,8 +53,7 @@ outline: deep
 
 :::tip
 
-1. 为了说明清晰，下文所有示例代码均省略占位符文本。
-2. 虽然此页面中的 demo 尽可能避免了 VitePress 的样式影响，但仍可能存在部分样式被覆盖的情况，请以实际效果为准。
+为了说明清晰，下文所有示例代码均省略占位符文本。
 
 :::
 
@@ -62,9 +61,11 @@ outline: deep
 
 使用 `<EText>` 包裹正文内容。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -80,9 +81,11 @@ outline: deep
 
 在 `<EText>` 组件上添加 `secondary` 属性，可以展示次要文本。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText secondary> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -98,9 +101,11 @@ outline: deep
 
 在 `<EText>` 组件上添加 `tertiary` 属性，可以展示次次要文本。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText tertiary> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -128,11 +133,13 @@ outline: deep
 
 请注意，虽然 `title` 看似功能与标题组件 `<EH1>`、`<EH2>`、`<EH3>` 重合，但是这里的 `title` 可以理解为 “不重要的小标题”。对于真正的标题，请使用 `<EH1>`、`<EH2>`、`<EH3>` 组件。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText type="body"> body </EText>
   <EText type="display"> display </EText>
   <EText type="title"> title </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -150,11 +157,13 @@ outline: deep
 
 使用 `<EH1>`、`<EH2>`、`<EH3>` 组件展示标题。
 
+:::raw
 <ESpace vertical :padding="[20, 10]" :size="20" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EH1> 一级标题 / Heading Level 1 </EH1>
   <EH2> 二级标题 / Heading Level 2 </EH2>
   <EH3> 三级标题 / Heading Level 3 </EH3>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -172,6 +181,7 @@ outline: deep
 
 使用 `<EUl>` 和 `<EOl>` 组件展示有序和无序列表。
 
+:::raw
 <ESpace vertical padding="10" :size="0" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EUl>
     <ELi> 无序列表项</ELi>
@@ -184,6 +194,7 @@ outline: deep
     <ELi> 有序列表项 3 </ELi>
   </EOl>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -208,9 +219,11 @@ outline: deep
 
 使用 `<EBlockquote>` 组件展示块引用。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EBlockquote> {{ placeholderText }} </EBlockquote>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -228,6 +241,7 @@ outline: deep
 
 使用 `align` 属性可以设置文本的对齐方式。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 <template #divider>
   <EDivider />
@@ -250,6 +264,7 @@ outline: deep
     <EText align="justify" class="bg-[var(--arona-blue-1)]"> {{ placeholderText }} </EText>
   </ESpace>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -288,9 +303,11 @@ outline: deep
 
 使用 `bold` 或者 `strong` 属性可以设置文本的加粗样式。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText bold> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -306,9 +323,11 @@ outline: deep
 
 使用 `delete` 或者 `strikethrough` 属性可以设置文本的删除线样式。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText delete> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -324,9 +343,11 @@ outline: deep
 
 使用 `disabled` 属性可以设置文本的禁用样式。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText disabled> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -342,12 +363,14 @@ outline: deep
 
 使用 `inheritTextColor` 属性可以设置文本的颜色继承自父元素。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <div class="flex flex-col gap-2 text-red-500">
     <EText> 我不继承 </EText>
     <EText inheritTextColor> {{ placeholderText }} </EText>
   </div>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -370,6 +393,7 @@ outline: deep
 当属性为 `inline` 时，`align` 属性会失效。
 :::
 
+:::raw
 <ESpace vertical padding="10" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
 <template #divider>
   <EDivider />
@@ -381,6 +405,7 @@ outline: deep
     你说得对，但是<EText> {{ placeholderText }} </EText>
   </span>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -401,9 +426,11 @@ outline: deep
 
 使用 `italic` 属性可以设置文本的斜体样式。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText italic> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -421,11 +448,13 @@ outline: deep
 
 字号级别一般与 `<EText>` 组件的 `type` 属性配合使用。详细说明请参照 [基础用法 / 一般文本的基础类型](#一般文本的基础类型)。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText level="1"> 一级字号 / Font Size Level 1 </EText>
   <EText level="2"> 二级字号 / Font Size Level 2 </EText>
   <EText level="3"> 三级字号 / Font Size Level 3 </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -443,9 +472,11 @@ outline: deep
 
 使用 `noSelect` 属性可以禁止文本被选中。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText noSelect> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -461,12 +492,14 @@ outline: deep
 
 使用 `noWrap` 属性可以禁止文本换行。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <ESpace vertical class="w-[200px] bg-[var(--arona-blue-1)]">
     <EText> 我允许换行我允许换行我允许换行 </EText>
     <EText noWrap> 我不允许换行我不允许换行我不允许换行 </EText>
   </ESpace>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -485,9 +518,11 @@ outline: deep
 
 使用 `underline` 属性可以设置文本的下划线样式。
 
+:::raw
 <ESpace padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText underline> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -503,10 +538,12 @@ outline: deep
 
 颜色可以使用 `color` 属性自定义。`color` 属性原生支持线性渐变，参数为 `{ from: string, to: string, deg?: number | string }`。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText color="plana-pink-6"> {{ placeholderText }} </EText>
   <EText :color="{ from: 'arona-blue-6', to: 'arona-blue-1', deg: 135 }"> {{ placeholderText }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -536,12 +573,14 @@ outline: deep
 - `secondary`：次要色
 - `success`：成功色
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText brand> {{ Array(6).fill("品牌色").join("") }} </EText>
   <EText danger> {{ Array(6).fill("危险色").join("") }} </EText>
   <EText secondary> {{ Array(6).fill("次要色").join("") }} </EText>
   <EText success> {{ Array(6).fill("成功色").join("") }} </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -560,13 +599,14 @@ outline: deep
 
 现代浏览器使用 `font-synthesis` 控制字体合成的行为。它允许浏览器在某些情况下选择替代字体，以确保文本的显示效果最佳。然而 Safari 浏览器对可变字体的支持策略会导致英文字体 Wix Madefor 显示粗体时异常。
 
+:::raw
 <div class="grid grid-cols-2 gap-4">
 
 ![错误的 Wix Madefor 字体](https://cdn.sa.net/2024/09/17/iR2qmX79CS6DQhf.png)
 
 ![正确的 Wix Madefor 字体](https://cdn.sa.net/2024/09/17/dnwvaureW3JOk1R.png)
-
 </div>
+:::
 
 理论上 `<EText>` 组件已经通过指定 `font-weight` 的范围 （例如本例中的 `400 800`）处理了这个问题，但是如果你仍然发现某些字体在 Safari 浏览器中显示异常，可以尝试继续设置 `font-synthesis` 属性为 `none`。
 
@@ -583,6 +623,7 @@ outline: deep
 
 使用 `prefix` 插槽在文本前面插入内容。可以是文本，也可以是组件或者其他什么东西。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText>
     <template #prefix>
@@ -591,6 +632,7 @@ outline: deep
     {{ placeholderText }}
   </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 
@@ -614,16 +656,19 @@ outline: deep
 
 使用 `default` 插槽在文本中间插入内容。可以是文本，也可以是组件或者其他什么东西。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText>
     终于要写完了
   </EText>
 </ESpace>
+:::
 
 ### `suffix`
 
 使用 `suffix` 插槽在文本后面插入内容。可以是文本，也可以是组件或者其他什么东西。
 
+:::raw
 <ESpace vertical padding="10" size="small" class="demo-container rounded-md border-1 border-solid border-[var(--arona-blue-6)]">
   <EText>
     {{ placeholderText }}
@@ -632,6 +677,7 @@ outline: deep
     </template>
   </EText>
 </ESpace>
+:::
 
 :::details 查看代码
 

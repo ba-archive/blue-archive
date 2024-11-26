@@ -91,7 +91,7 @@ const SpaceElement = () => {
     <Fragment>
       {children.map((child, index) => {
         const shouldRenderDivider =
-          (slots.divider || props.divider) && index > 0;
+          !!(slots.divider || props.divider) && index > 0;
         return (
           <Fragment key={child.key ?? `item-${index}`}>
             {shouldRenderDivider &&

@@ -8,7 +8,7 @@ import {
 import { useSlots, computed } from "vue";
 
 const props = withDefaults(defineProps<TextProps>(), {
-  align: "left",
+  align: "start",
   level: 2,
   type: "body",
 });
