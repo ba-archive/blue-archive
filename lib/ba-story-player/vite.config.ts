@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         "@": resolve(__dirname, "./lib"),
+        "@assets": resolve(__dirname, "./src/assets"),
       },
     },
     plugins: [
@@ -53,7 +54,7 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "./src/assets/scss/index.scss" as *;',
+          additionalData: '@use "@assets/scss/index.scss" as *;',
           api: "modern-compiler",
         },
       },
