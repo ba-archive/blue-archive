@@ -55,6 +55,15 @@ title:
     GroupId: 2000309
     FavorScheduleId: 200039
     CharacterId: 20003
+  - TextKr: 과거에서 배우는 진리
+    TextJp: 過去から学ぶ真理
+    TextCn: 从过去学到的真理
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2000315
+    FavorScheduleId: 2000315
+    CharacterId: 20003
 content:
   - MessageKR: 오늘도 수고 많으셨습니다.
     MessageJP: 今日もお疲れ様でした
@@ -1158,7 +1167,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 200030410
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -1176,7 +1185,133 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200039
-    NextGroupId: 0
+    NextGroupId: 200030410
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 조금 뜬금없는 질문이지만
+    MessageJP: 少しお尋ねしたいのですが……
+    MessageCN: 我想问老师一件事……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030410
+    Id: 200030010
+    CharacterId: 20003
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 200030400
+    PreConditionFavorScheduleId: 200039
+    FavorScheduleId: 0
+    NextGroupId: 200030420
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님은 독서를 좋아하시나요?
+    MessageJP: 読書はお好きですか？
+    MessageCN: 老师喜欢读书吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030420
+    Id: 200030020
+    CharacterId: 20003
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200030430
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그럭저럭일까……
+    MessageJP: まあまあかな……
+    MessageCN: 一般般吧……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030430
+    Id: 200030030
+    CharacterId: 20003
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200030440
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇군요
+    MessageJP: なるほど
+    MessageCN: 原来如此
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030440
+    Id: 200030040
+    CharacterId: 20003
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200030450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 또 정의에 관한 책을 읽고 있는 거야?
+    MessageJP: 正義に関する本を読んでいるの？
+    MessageCN: 真白在读关于正义的书吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030450
+    Id: 200030050
+    CharacterId: 20003
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200030460
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아뇨;; 그런 건 아니고
+    MessageJP: いえ、そうではなく
+    MessageCN: 不，不是那样的
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030460
+    Id: 200030060
+    CharacterId: 20003
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그냥 궁금해져서 여쭤보았습니다
+    MessageJP: ただ気になって
+    MessageCN: 只是有点好奇
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200030460
+    Id: 200030070
+    CharacterId: 20003
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2000315
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
