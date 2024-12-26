@@ -37,6 +37,15 @@ title:
     GroupId: 1006206
     FavorScheduleId: 100626
     CharacterId: 10062
+  - TextKr: 연결의 증표
+    TextJp: 繋がりの証
+    TextCn: 连结的证明
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1006215
+    FavorScheduleId: 1006215
+    CharacterId: 10062
 content:
   - MessageKR: 선생님께서는 오늘도 어김없이 출근이라고 들었습니다.
     MessageJP: 先生、今日もお仕事だと聞きました
@@ -576,7 +585,133 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100626
-    NextGroupId: 0
+    NextGroupId: 100620240
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 슬슬 저희 사이의 '증표'가
+    MessageJP: "先生。そろそろ私たちの間に "
+    MessageCN: 老师。我觉得我们之间
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620240
+    Id: 100620300
+    CharacterId: 10062
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100620230
+    PreConditionFavorScheduleId: 100626
+    FavorScheduleId: 0
+    NextGroupId: 100620250
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 필요해진 시점이라고 보여지기에
+    MessageJP: 「証」が必要な頃だと思いますので
+    MessageCN: 是时候需要一个“证明”了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620250
+    Id: 100620310
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오늘은 그에 관련된 말씀을 드리고자 합니다.
+    MessageJP: お話をさせていただきたく
+    MessageCN: 所以我想和老师谈谈
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620250
+    Id: 100620320
+    CharacterId: 10062
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620260
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 여전히 영문을 모르겠어!
+    MessageJP: ど、どういうこと！？「証」って何！？
+    MessageCN: 什、什么意思！？什么“证明”！？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620260
+    Id: 100620330
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620270
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 괜찮습니다.
+    MessageJP: 大丈夫です
+    MessageCN: 没关系的
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620270
+    Id: 100620340
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님께서 모르셔도, 제가 알고 있기에.
+    MessageJP: 私がわかっていれば良いので
+    MessageCN: 只要我知道就好
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620270
+    Id: 100620350
+    CharacterId: 10062
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100620280
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 토키야……?
+    MessageJP: トキさん……？
+    MessageCN: 时同学……？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100620280
+    Id: 100620360
+    CharacterId: 10062
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1006215
+    NextGroupId: 0
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""

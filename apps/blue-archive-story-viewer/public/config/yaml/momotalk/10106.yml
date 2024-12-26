@@ -182,14 +182,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 죄송합니다. 선생님.
-    MessageJP: 申し訳ありませんでした、先生
-    MessageCN: 非常抱歉，老师
+  - MessageKR: 음
+    MessageJP: その
+    MessageCN: 那个
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060080
-    Id: 101060100
+    Id: 101060090
     CharacterId: 10106
     MessageCondition: None
     ConditionValue: 0
@@ -197,6 +197,24 @@ content:
     PreConditionFavorScheduleId: 101062
     FavorScheduleId: 0
     NextGroupId: 101060090
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 죄송합니다. 선생님.
+    MessageJP: 申し訳ありませんでした、先生
+    MessageCN: 非常抱歉，老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060090
+    Id: 101060100
+    CharacterId: 10106
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060100
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -224,7 +242,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060090
+    MessageGroupId: 101060100
     Id: 101060120
     CharacterId: 10106
     MessageCondition: None
@@ -232,7 +250,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060100
+    NextGroupId: 101060110
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -242,16 +260,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060100
+    MessageGroupId: 101060110
     Id: 101060130
     CharacterId: 10106
-    MessageCondition: None
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060110
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060120
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 개인 자격으로 가끔은 괜찮을 거야.
@@ -278,16 +296,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060110
+    MessageGroupId: 101060120
     Id: 101060150
     CharacterId: 10106
-    MessageCondition: Answer
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060120
-    FeedbackTimeMillisec: 0
+    NextGroupId: 101060130
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 그리고 저 또한
@@ -296,7 +314,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060120
+    MessageGroupId: 101060130
     Id: 101060160
     CharacterId: 10106
     MessageCondition: Feedback
@@ -304,7 +322,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060130
+    NextGroupId: 101060140
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -350,7 +368,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060130
+    MessageGroupId: 101060140
     Id: 101060190
     CharacterId: 10106
     MessageCondition: Feedback
@@ -358,7 +376,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060140
+    NextGroupId: 101060150
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -386,16 +404,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060140
+    MessageGroupId: 101060150
     Id: 101060210
     CharacterId: 10106
-    MessageCondition: Feedback
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060150
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060160
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 모두의 의견이 같을 순 없지…….
@@ -422,16 +440,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060150
+    MessageGroupId: 101060160
     Id: 101060230
     CharacterId: 10106
-    MessageCondition: Answer
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060160
-    FeedbackTimeMillisec: 0
+    NextGroupId: 101060170
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 네. 알겠습니다.
@@ -440,7 +458,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060160
+    MessageGroupId: 101060170
     Id: 101060240
     CharacterId: 10106
     MessageCondition: Feedback
@@ -448,7 +466,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060170
+    NextGroupId: 101060180
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -476,26 +494,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060170
-    Id: 101060260
-    CharacterId: 10106
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060180
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 선생님 혹시 계실까요?
-    MessageJP: 今お時間よろしいでしょうか？
-    MessageCN: 您现在有时间吗？
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060180
-    Id: 101060270
+    Id: 101060260
     CharacterId: 10106
     MessageCondition: FavorRankUp
     ConditionValue: 3
@@ -504,6 +504,24 @@ content:
     FavorScheduleId: 0
     NextGroupId: 101060190
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님 혹시 계실까요?
+    MessageJP: 今お時間よろしいでしょうか？
+    MessageCN: 您现在有时间吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060190
+    Id: 101060270
+    CharacterId: 10106
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060200
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 긴히 드릴 말씀이 있습니다만
@@ -530,16 +548,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060190
+    MessageGroupId: 101060200
     Id: 101060290
     CharacterId: 10106
-    MessageCondition: None
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060200
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060210
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 무슨 일 있어?
@@ -566,16 +584,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060200
+    MessageGroupId: 101060210
     Id: 101060310
     CharacterId: 10106
-    MessageCondition: Answer
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060210
-    FeedbackTimeMillisec: 0
+    NextGroupId: 101060220
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 있다고도 없다고도 할 수 있습니다
@@ -602,7 +620,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060210
+    MessageGroupId: 101060220
     Id: 101060330
     CharacterId: 10106
     MessageCondition: Feedback
@@ -610,7 +628,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060220
+    NextGroupId: 101060230
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -627,7 +645,7 @@ content:
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
+    FavorScheduleId: 101063
     NextGroupId: 101060230
     FeedbackTimeMillisec: 1000
     MessageType: Text
@@ -638,15 +656,15 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060220
+    MessageGroupId: 101060230
     Id: 101060350
     CharacterId: 10106
-    MessageCondition: Feedback
+    MessageCondition: None
     ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 101063
-    NextGroupId: 101060230
+    PreConditionGroupId: 101060220
+    PreConditionFavorScheduleId: 101063
+    FavorScheduleId: 0
+    NextGroupId: 101060240
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -656,15 +674,15 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060230
+    MessageGroupId: 101060240
     Id: 101060360
     CharacterId: 10106
     MessageCondition: None
     ConditionValue: 0
-    PreConditionGroupId: 101060220
-    PreConditionFavorScheduleId: 101063
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060240
+    NextGroupId: 101060250
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -692,16 +710,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060240
+    MessageGroupId: 101060250
     Id: 101060380
     CharacterId: 10106
-    MessageCondition: None
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060250
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060260
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 그럴 줄 알았어.
@@ -728,26 +746,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060250
-    Id: 101060400
-    CharacterId: 10106
-    MessageCondition: Answer
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060260
-    FeedbackTimeMillisec: 0
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 후후
-    MessageJP: ふふっ
-    MessageCN: ""
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060260
-    Id: 101060410
+    Id: 101060400
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -758,14 +758,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 아르바이트생 분이 찍어주셨습니다.
-    MessageJP: お店の方に撮影していただきました
-    MessageCN: 店员给我们拍了照片
+  - MessageKR: 후후
+    MessageJP: ふふっ
+    MessageCN: ""
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060270
-    Id: 101060420
+    Id: 101060410
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -776,6 +776,24 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Image
     ImagePath: UIs/03_Scenario/04_ScenarioImage/Mo_CH0274_01
+  - MessageKR: 아르바이트생 분이 찍어주셨습니다.
+    MessageJP: お店の方に撮影していただきました
+    MessageCN: 店员给我们拍了照片
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060280
+    Id: 101060420
+    CharacterId: 10106
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060290
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
   - MessageKR: 두 분 모두, 공연에도 꼭 와 주시기로 했답니다.
     MessageJP: 皆様、ライブにも来てくださるそうです
     MessageCN: 听说大家也会来听演唱会
@@ -800,26 +818,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060280
-    Id: 101060440
-    CharacterId: 10106
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060290
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 그러고 보니 계속해서 ‘사쿠라 쨩’이라 불러 주셔도 좋다고 했습니다만,
-    MessageJP: 今後も「サクラちゃん」と呼んでもらいたいとお伝えしたのですが
-    MessageCN: 我希望她以后也能叫我「樱酱」
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060290
-    Id: 101060450
+    Id: 101060440
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -830,14 +830,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 다른 자매님들께서 그건 안 된다고 못 박아 버리셔서…….
-    MessageJP: シスターフッドの皆様に止められてしまいまして……
-    MessageCN: 但是被修女会的各位阻止了……
+  - MessageKR: 그러고 보니 계속해서 ‘사쿠라 쨩’이라 불러 주셔도 좋다고 했습니다만,
+    MessageJP: 今後も「サクラちゃん」と呼んでもらいたいとお伝えしたのですが
+    MessageCN: 我希望她以后也能叫我「樱酱」
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060300
-    Id: 101060460
+    Id: 101060450
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -848,14 +848,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 그건…… 그렇겠죠…….
-    MessageJP: そうだったんだ……
-    MessageCN: 这样吗……
+  - MessageKR: 다른 자매님들께서 그건 안 된다고 못 박아 버리셔서…….
+    MessageJP: シスターフッドの皆様に止められてしまいまして……
+    MessageCN: 但是被修女会的各位阻止了……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060310
-    Id: 101060470
+    Id: 101060460
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -864,6 +864,24 @@ content:
     FavorScheduleId: 0
     NextGroupId: 101060320
     FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그건…… 그렇겠죠…….
+    MessageJP: そうだったんだ……
+    MessageCN: 这样吗……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060320
+    Id: 101060470
+    CharacterId: 10106
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060330
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 그걸 또 공석에서 말했군요, 사쿠라코 씨…….
@@ -890,26 +908,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060320
-    Id: 101060490
-    CharacterId: 10106
-    MessageCondition: Answer
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060330
-    FeedbackTimeMillisec: 0
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 그렇게 됐습니다.
-    MessageJP: 少し残念ですが、うまくいって良かったです
-    MessageCN: 虽然有点遗憾，但是能顺利结束真是太好了
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060330
-    Id: 101060500
+    Id: 101060490
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -920,14 +920,14 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 생각했던 것보다도 훨씬 바쁘군요, 아이돌 활동이란.
-    MessageJP: アイドル活動とは、こうも大変なのですね
-    MessageCN: 偶像活动真是辛苦啊
+  - MessageKR: 그렇게 됐습니다.
+    MessageJP: 少し残念ですが、うまくいって良かったです
+    MessageCN: 虽然有点遗憾，但是能顺利结束真是太好了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060340
-    Id: 101060510
+    Id: 101060500
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -938,14 +938,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 직업인 분들이라면 당연히 그러실 거라 생각했지만,
-    MessageJP: プロの方ならともかく
-    MessageCN: 如果是职业偶像还好说
+  - MessageKR: 생각했던 것보다도 훨씬 바쁘군요, 아이돌 활동이란.
+    MessageJP: アイドル活動とは、こうも大変なのですね
+    MessageCN: 偶像活动真是辛苦啊
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060350
-    Id: 101060520
+    Id: 101060510
     CharacterId: 10106
     MessageCondition: FavorRankUp
     ConditionValue: 5
@@ -954,6 +954,24 @@ content:
     FavorScheduleId: 0
     NextGroupId: 101060360
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 직업인 분들이라면 당연히 그러실 거라 생각했지만,
+    MessageJP: プロの方ならともかく
+    MessageCN: 如果是职业偶像还好说
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060360
+    Id: 101060520
+    CharacterId: 10106
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060370
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 한정적인 교내 이벤트성인 것인데도 이정도라니
@@ -980,16 +998,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060360
+    MessageGroupId: 101060370
     Id: 101060540
     CharacterId: 10106
-    MessageCondition: None
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060370
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060380
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 지금도 뭔가 하는 중이야?
@@ -1016,16 +1034,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060370
+    MessageGroupId: 101060380
     Id: 101060560
     CharacterId: 10106
-    MessageCondition: Answer
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060380
-    FeedbackTimeMillisec: 0
+    NextGroupId: 101060390
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 하지만 순간이나마 피곤하다고 생각하다니,
@@ -1034,7 +1052,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060380
+    MessageGroupId: 101060390
     Id: 101060570
     CharacterId: 10106
     MessageCondition: Feedback
@@ -1042,7 +1060,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060390
+    NextGroupId: 101060400
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -1070,7 +1088,7 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060390
+    MessageGroupId: 101060400
     Id: 101060590
     CharacterId: 10106
     MessageCondition: Feedback
@@ -1078,7 +1096,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060400
+    NextGroupId: 101060410
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -1088,16 +1106,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060400
+    MessageGroupId: 101060410
     Id: 101060600
     CharacterId: 10106
-    MessageCondition: Feedback
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060410
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060420
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 잠깐 나와줄 수 있을까?
@@ -1124,26 +1142,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060410
-    Id: 101060620
-    CharacterId: 10106
-    MessageCondition: Answer
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060420
-    FeedbackTimeMillisec: 0
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 선생님?
-    MessageJP: それは、構いませんが……
-    MessageCN: 倒是没问题……
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060420
-    Id: 101060630
+    Id: 101060620
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -1154,14 +1154,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 오늘 일 정말로 감사했습니다, 선생님.
-    MessageJP: 今日は本当にありがとうございました、先生
-    MessageCN: 今天真的非常感谢您，老师
+  - MessageKR: 선생님?
+    MessageJP: それは、構いませんが……
+    MessageCN: 倒是没问题……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060430
-    Id: 101060640
+    Id: 101060630
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -1172,14 +1172,14 @@ content:
     FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 정말 잊을 수 없는 기억이 될 것 같습니다.
-    MessageJP: 忘れられない思い出になりそうです
-    MessageCN: 应该会成为难忘的回忆呢
+  - MessageKR: 오늘 일 정말로 감사했습니다, 선생님.
+    MessageJP: 今日は本当にありがとうございました、先生
+    MessageCN: 今天真的非常感谢您，老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060440
-    Id: 101060650
+    Id: 101060640
     CharacterId: 10106
     MessageCondition: None
     ConditionValue: 0
@@ -1190,14 +1190,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 사쿠라코가 기뻐하니 다행이야.
-    MessageJP: 喜んでもらえて良かった
-    MessageCN: 樱子能开心就好了
+  - MessageKR: 정말 잊을 수 없는 기억이 될 것 같습니다.
+    MessageJP: 忘れられない思い出になりそうです
+    MessageCN: 应该会成为难忘的回忆呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060450
-    Id: 101060660
+    Id: 101060650
     CharacterId: 10106
     MessageCondition: None
     ConditionValue: 0
@@ -1206,6 +1206,24 @@ content:
     FavorScheduleId: 0
     NextGroupId: 101060460
     FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 사쿠라코가 기뻐하니 다행이야.
+    MessageJP: 喜んでもらえて良かった
+    MessageCN: 樱子能开心就好了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060460
+    Id: 101060660
+    CharacterId: 10106
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060470
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 모두들 좋아할 거야.
@@ -1232,26 +1250,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060460
-    Id: 101060680
-    CharacterId: 10106
-    MessageCondition: Answer
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060470
-    FeedbackTimeMillisec: 0
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: 사실 그러잖아도 돌아가서
-    MessageJP: 皆様にもらった大切なプレゼントですから
-    MessageCN: 毕竟，这是大家送给我的珍贵礼物
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060470
-    Id: 101060690
+    Id: 101060680
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -1262,14 +1262,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 모두의 소중한 선물이니 나중에 회수해서,
-    MessageJP: 後ほど
-    MessageCN: 我就说
+  - MessageKR: 사실 그러잖아도 돌아가서
+    MessageJP: 皆様にもらった大切なプレゼントですから
+    MessageCN: 毕竟，这是大家送给我的珍贵礼物
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060480
-    Id: 101060700
+    Id: 101060690
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -1277,6 +1277,24 @@ content:
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 101060490
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 모두의 소중한 선물이니 나중에 회수해서,
+    MessageJP: 後ほど
+    MessageCN: 我就说
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 101060490
+    Id: 101060700
+    CharacterId: 10106
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 101060500
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
@@ -1304,16 +1322,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060490
+    MessageGroupId: 101060500
     Id: 101060720
     CharacterId: 10106
-    MessageCondition: Feedback
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060500
-    FeedbackTimeMillisec: 1000
+    NextGroupId: 101060510
+    FeedbackTimeMillisec: 0
     MessageType: Text
     ImagePath: ""
   - MessageKR: 응. 뭐, 그럴 거라 생각했어.
@@ -1340,16 +1358,16 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060500
+    MessageGroupId: 101060510
     Id: 101060740
     CharacterId: 10106
-    MessageCondition: Answer
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 101060510
-    FeedbackTimeMillisec: 0
+    NextGroupId: 101060520
+    FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
   - MessageKR: 예상하셨군요.
@@ -1367,7 +1385,7 @@ content:
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 101060520
-    FeedbackTimeMillisec: 1500
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 아쉽게도 안 될 것 같습니다…….
@@ -1376,26 +1394,8 @@ content:
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
-    MessageGroupId: 101060510
-    Id: 101060760
-    CharacterId: 10106
-    MessageCondition: Feedback
-    ConditionValue: 0
-    PreConditionGroupId: 0
-    PreConditionFavorScheduleId: 0
-    FavorScheduleId: 0
-    NextGroupId: 101060520
-    FeedbackTimeMillisec: 1000
-    MessageType: Text
-    ImagePath: ""
-  - MessageKR: "그럼 다음에 또 말씀드리겠습니다. "
-    MessageJP: ひとまず、大切に保管しておこうと思います
-    MessageCN: 我还是先把它好好保管起来吧
-    MessageEN: ""
-    MessageTH: ""
-    MessageTW: ""
     MessageGroupId: 101060520
-    Id: 101060770
+    Id: 101060760
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0
@@ -1406,14 +1406,14 @@ content:
     FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
-  - MessageKR: 그럼 다음에 또 말씀드리겠습니다.
+  - MessageKR: "그럼 다음에 또 말씀드리겠습니다. "
     MessageJP: ひとまず、大切に保管しておこうと思います
     MessageCN: 我还是先把它好好保管起来吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 101060530
-    Id: 101060780
+    Id: 101060770
     CharacterId: 10106
     MessageCondition: Feedback
     ConditionValue: 0

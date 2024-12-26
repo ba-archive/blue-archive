@@ -25,6 +25,9 @@ jobs:
       - uses: pnpm/action-setup@master
         with:
           version: latest
+      - name: Configure npmrc
+        run: |
+          cp common/config/rush/.npmrc.github common/config/rush/.npmrc
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Update

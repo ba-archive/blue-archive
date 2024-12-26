@@ -37,6 +37,15 @@ title:
     GroupId: 1600206
     FavorScheduleId: 160026
     CharacterId: 16002
+  - TextKr: 특이한 안경
+    TextJp: 変わった形のメガネ
+    TextCn: 变了形的眼镜
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1600215
+    FavorScheduleId: 1600215
+    CharacterId: 16002
 content:
   - MessageKR: 궁금한 게 생기면 언제든 무엇이든!
     MessageJP: 気になることがあったら、いつでも何でも何度でも！
@@ -1362,7 +1371,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 160020380
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
@@ -1380,6 +1389,150 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
+    NextGroupId: 160020380
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후우!
+    MessageJP: ふぅ！
+    MessageCN: 呼！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020380
+    Id: 160020250
+    CharacterId: 16002
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 160020370
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020390
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 하마터면 큰일 날 뻔했네요!
+    MessageJP: 危ないところでした！
+    MessageCN: 差一点就出大事了！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020390
+    Id: 160020260
+    CharacterId: 16002
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020400
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 코토리?
+    MessageJP: コトリ？
+    MessageCN: 小鸟？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020400
+    Id: 160020270
+    CharacterId: 16002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020400
+    Id: 160020280
+    CharacterId: 16002
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아, 별일은 아니었습니다!
+    MessageJP: あ、大したことではありません！
+    MessageCN: 啊，不是什么大事！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020410
+    Id: 160020290
+    CharacterId: 16002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그저 안경이 조금 부러져서, 수리를 맡겼었거든요.
+    MessageJP: 実はメガネが壊れてしまい、修理をお願いしていたんです
+    MessageCN: 其实就是我的眼镜坏了，所以拿去修理了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020410
+    Id: 160020300
+    CharacterId: 16002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 160020420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 하루 정도는 없어도 괜찮겠지 싶었는데
+    MessageJP: 一日ぐらいはなくても大丈夫だろうと思っていたのですが
+    MessageCN: 我还以为一天不戴也没关系呢
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020420
+    Id: 160020310
+    CharacterId: 16002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 제 시력으로는 어림도 없었네요! 하하!!
+    MessageJP: 私の視力では無理でしたね！あはは！！
+    MessageCN: 不过按我的视力做不到！啊哈哈！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 160020420
+    Id: 160020320
+    CharacterId: 16002
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1600215
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
