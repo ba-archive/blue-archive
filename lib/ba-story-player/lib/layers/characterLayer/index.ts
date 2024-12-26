@@ -31,7 +31,7 @@ import CharacterEffectPlayerInstance, {
 } from "./actionPlayer";
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
-import { Spine as SpinePixi } from "@esotericsoftware/spine-pixi";
+import { Spine as SpinePixi } from "@esotericsoftware/spine-pixi-v7";
 import { Assets, extensions } from "pixi.js";
 import { spineTextureAtlasLoader, spineLoaderExtension } from "@/middlewares/pixiSpineLoader";
 

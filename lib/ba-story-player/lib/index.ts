@@ -2,7 +2,7 @@ import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait, getOtherSoundUrls } from "@/utils";
-import type { IEventData } from "pixi-spine";
+import { EventData } from "@esotericsoftware/spine-pixi-v7";
 import {
   Application,
   Assets,
@@ -734,7 +734,7 @@ export const resourcesLoader = {
   /**
    * 添加l2d语音
    */
-  loadL2dVoice(audioEvents: IEventData[]) {
+  loadL2dVoice(audioEvents: EventData[]) {
     const audios = audioEvents
       .filter(it => {
         return (

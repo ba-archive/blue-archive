@@ -947,12 +947,9 @@ importers:
 
   ../../lib/ba-story-player:
     dependencies:
-      '@esotericsoftware/spine-core':
-        specifier: ~4.2.61
-        version: 4.2.61
-      '@esotericsoftware/spine-pixi':
-        specifier: ~4.2.61
-        version: 4.2.61(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/text@7.4.2(@pixi/core@7.4.2)(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))
+      '@esotericsoftware/spine-pixi-v7':
+        specifier: ~4.2.70
+        version: 4.2.70(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/text@7.4.2(@pixi/core@7.4.2)(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))
       '@pixi/core':
         specifier: '>=7 <8'
         version: 7.4.2
@@ -2991,11 +2988,11 @@ packages:
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@esotericsoftware/spine-core@4.2.61':
-    resolution: {integrity: sha512-dz3diru64rGQNKohgIlN6Mp5brpvEn1MuOOETiOvKu7zPOT5oI/sTLjRhtgBrqNUMWrFXhac9vh++vV0MCuvPA==}
+  '@esotericsoftware/spine-core@4.2.70':
+    resolution: {integrity: sha512-J7DS6Z5tlZTOyqio1naY8K8OeRByE62AtBix/4aNUgrIFSHjPj0yDrp87UjOPKc5V5cJPasoqpmFO8By0N9egw==}
 
-  '@esotericsoftware/spine-pixi@4.2.61':
-    resolution: {integrity: sha512-Es8vXX26PUc077VIr0mY52xDYs2Pdl3lrhTo+67rMFxfI7WOIlDA+Ky2M3Eidms7LD5Tjber7f6JkmJM3YAnoQ==}
+  '@esotericsoftware/spine-pixi-v7@4.2.70':
+    resolution: {integrity: sha512-X0bA6T4AF7+hkz1FVvFrV4YHusVb4PiPPQyHcXM5Z1ShBz2GlrOAxbdGsoopZ/1sNkQiz7Ct92mywbbt3gwpag==}
     peerDependencies:
       '@pixi/assets': ^7.2.4
       '@pixi/core': ^7.2.4
@@ -13436,11 +13433,11 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@esotericsoftware/spine-core@4.2.61': {}
+  '@esotericsoftware/spine-core@4.2.70': {}
 
-  '@esotericsoftware/spine-pixi@4.2.61(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/text@7.4.2(@pixi/core@7.4.2)(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))':
+  '@esotericsoftware/spine-pixi-v7@4.2.70(@pixi/assets@7.4.2(@pixi/core@7.4.2))(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/graphics@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))(@pixi/mesh@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2)))(@pixi/text@7.4.2(@pixi/core@7.4.2)(@pixi/sprite@7.4.2(@pixi/core@7.4.2)(@pixi/display@7.4.2(@pixi/core@7.4.2))))':
     dependencies:
-      '@esotericsoftware/spine-core': 4.2.61
+      '@esotericsoftware/spine-core': 4.2.70
       '@pixi/assets': 7.4.2(@pixi/core@7.4.2)
       '@pixi/core': 7.4.2
       '@pixi/display': 7.4.2(@pixi/core@7.4.2)

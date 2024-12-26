@@ -9,11 +9,11 @@ import {
   checkExtension,
 } from "pixi.js";
 import type { AssetExtension, Loader, UnresolvedAsset } from "pixi.js"
-import { TextureAtlas } from "@esotericsoftware/spine-core";
+import { TextureAtlas } from "@esotericsoftware/spine-pixi-v7";
 import {
   SpineTexture,
   ISpineAtlasMetadata,
-} from "@esotericsoftware/spine-pixi";
+} from "@esotericsoftware/spine-pixi-v7";
 import type { Texture } from "@pixi/core";
 
 const loaderPriority = LoaderParserPriority.High;
