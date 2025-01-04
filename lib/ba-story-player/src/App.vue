@@ -14,6 +14,7 @@ import TestEffect from "./components/TestEffect.vue";
 import UnitTest from "./components/UnitTest.vue";
 import yuuka from "./data/yuuka.json";
 import { useResizeObserver, useThrottleFn } from "@vueuse/core";
+import { Assets } from "pixi.js";
 
 console.log("资源加载: ", resourcesLoader);
 console.log("资源调用: ", usePlayerStore());
@@ -50,6 +51,7 @@ Reflect.set(window, "baStory", storyHandler);
 Reflect.set(window, "baStore", usePlayerStore());
 Reflect.set(window, "eventBus", eventBus);
 Reflect.set(window, "baEvent", eventEmitter);
+Reflect.set(window, "Assets", Assets);
 Reflect.set(window, "next", () => {
   eventBus.emit("characterDone");
   eventBus.emit("effectDone");

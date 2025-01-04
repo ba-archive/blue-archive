@@ -1,5 +1,9 @@
 import { Sprite } from "pixi.js";
-import type { IAnimationStateListener, ISkeletonData, Spine } from "pixi-spine";
+import type {
+  AnimationStateListener as IAnimationStateListener,
+  SkeletonData as ISkeletonData,
+  Spine,
+} from "@esotericsoftware/spine-pixi-v7";
 import { Character, CharacterInstance } from "@/types/common";
 import { ShowCharacter } from "@/types/events";
 

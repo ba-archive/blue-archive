@@ -1,5 +1,6 @@
 import { OtherSoundsUrls, ResourcesTypes } from "@/types/resources";
 import { BGEffectExcelTableItem } from "./types/excels";
+import { Spine } from "@esotericsoftware/spine-pixi-v7";
 
 let dataUrl = "";
 let otherSoundMap: OtherSoundsUrls;
@@ -28,6 +29,24 @@ export function getOtherSoundUrls(): string[] {
 }
 
 /**
+ * 获取 spine v4.2 资源地址
+ * @param url
+ * @returns
+ */
+function getSpine42Url(url: string) {
+  return rewritePath(url.replaceAll("ba-all-data", "ba-all-data-spine42"));
+}
+
+/**
+ * 重写路径，把所有大写转小写
+ * @param path
+ * @returns
+ */
+function rewritePath(path: string) {
+  return path.toLowerCase();
+}
+
+/**
  * 根据资源类型和参数获取资源地址, 可根据服务器实际情况修改
  * @param type
  * @param arg
@@ -52,9 +71,9 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       const voiceFilename = arg.split("/").pop();
       return `${dataUrl}/Audio/VoiceJp/Character_voice/${voiceDirectory}/${voiceFilename}.${oggAudioType}`;
     case "l2dSpine":
-      return `${dataUrl}/spine/${arg}/${arg}.skel`;
+      return getSpine42Url(`${dataUrl}/spine/${arg}/${arg}.skel`);
     case "otherL2dSpine":
-      return `${dataUrl}/spine/${arg}.skel`;
+      return getSpine42Url(`${dataUrl}/spine/${arg}.skel`);
     case "excel":
       // return `${dataUrl}/data/${arg}`; // FIXME: 临时禁用缓存
       return `${dataUrl}/data/${arg}?t=${Math.floor(Date.now() / 3600000)}`;
@@ -77,9 +96,11 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       // eslint-disable-next-line no-case-declarations
       const filename = `${id}_spr`; //hasumi_spr
       if (superSampling) {
-        return `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`;
+        return getSpine42Url(
+          `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`
+        );
       }
-      return `${dataUrl}/spine/${filename}/${filename}.skel`;
+      return getSpine42Url(`${dataUrl}/spine/${filename}/${filename}.skel`);
     case "bg":
       // UIs/03_Scenario/01_Background/BG_WinterRoad.jpg
       if (superSampling && /01_Background/.test(arg)) {
@@ -148,4 +169,10 @@ export function getEffectArray(effect: BGEffectExcelTableItem): string[] {
   }
 
   return effectArray;
+}
+
+export function hasAnimation(instance: Spine, animationName: string) {
+  return instance.skeleton.data.animations.some(
+    animation => animation.name === animationName
+  );
 }

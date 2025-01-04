@@ -13,6 +13,7 @@ import {
 } from "./excels";
 import { IL2dConfig } from "./l2d";
 import { OtherSounds } from "./resources";
+import { SkeletonData } from "@esotericsoftware/spine-pixi-v7";
 
 export interface Actions {
   setBgInstance: (sprite: Sprite) => void;
@@ -57,7 +58,7 @@ export interface BasicGetters {
   characterSpineData: (
     CharacterName: number,
     url: string
-  ) => import("pixi-spine").ISkeletonData | undefined;
+  ) => SkeletonData | undefined;
   /**
    * 获取情绪图像资源
    * @param emotionName 情绪名
@@ -82,7 +83,7 @@ export interface BasicGetters {
   /**
    * 获取L2D资源
    */
-  l2dSpineData: import("pixi-spine").ISkeletonData | undefined;
+  l2dSpineData: SkeletonData | undefined;
 }
 
 export type GetterFunctions = {

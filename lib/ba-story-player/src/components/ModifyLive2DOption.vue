@@ -122,7 +122,7 @@ function loadAnimationNames(url: string) {
     selectedAnimationName.value = "";
   } else {
     Assets.load({ src: url, alias: url }).then(resource => {
-      availableAnimationName.value = resource.spineData.animations.map(
+      availableAnimationName.value = resource.spineData?.animations.map(
         it => `${it.name}(${it.duration}s)`
       );
       selectedAnimationName.value = "";

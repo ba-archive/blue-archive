@@ -5,7 +5,7 @@ import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
 import { Container } from "pixi.js";
 import gsap from "gsap";
-import { IEvent, ITrackEntry, Spine } from "pixi-spine";
+import { Spine, Event, TrackEntry } from "@esotericsoftware/spine-pixi-v7";
 import { IL2dPlayQue, IFilmAspectTransition } from "@/types/l2d";
 
 let disposed = true;
@@ -54,7 +54,7 @@ export function L2DInit() {
   // 接收动画消息
   eventBus.on("changeAnimation", e => {
     const temAnimation = e.replace(/_(A|M)/, "");
-    let talkAnimations = mainItem.spineData.animations.filter(i =>
+    let talkAnimations = mainItem.skeleton.data.animations.filter(i =>
       i.name.includes(temAnimation)
     );
     const devAnimation = talkAnimations.find(i => /dev/i.test(i.name));
@@ -253,7 +253,7 @@ export function L2DInit() {
     }
     // 如果 customizeBones 存在，则覆盖 l2dSpineData 的对应骨骼属性
     const currName = curL2dConfig?.name;
-    const { customizeBones } = curL2dConfig?.spineSettings[currName] || {};
+    const { customizeBones } = curL2dConfig?.spineSettings?.[currName] || {};
     if (
       !!customizeBones &&
       Array.isArray(customizeBones) &&
@@ -274,7 +274,7 @@ export function L2DInit() {
       }
     }
     mainItem = new Spine(l2dSpineData!);
-    function playL2dVoice(entry: ITrackEntry, event: IEvent) {
+    function playL2dVoice(entry: TrackEntry, event: Event) {
       const eventName = event.data.name;
       if (
         // 正常情况下 spine 会 emit 声音事件，但是注意不要让 enableObject, disableObject 等开发事件干扰声音播放
@@ -310,7 +310,7 @@ export function L2DInit() {
     if (curL2dConfig?.otherSpine) {
       otherItems = curL2dConfig.otherSpine.map((i, idx) => {
         const temItem = new Spine(
-          characterSpineData(getResourcesUrl("otherL2dSpine", i))
+          characterSpineData(undefined, getResourcesUrl("otherL2dSpine", i))
         );
         temItem.name = i;
         setSpinePlayInfo({ item: temItem, zIndex: 100 + idx + 1 });
@@ -319,7 +319,7 @@ export function L2DInit() {
     }
     setSpinePlayInfo({ item: mainItem, zIndex: 100 });
     // 注意!!! 起始动画中最后一个动作是塞入的待机动作
-    startAnimations = mainItem.spineData.animations
+    startAnimations = mainItem.skeleton.data.animations
       .map(i => i.name)
       .filter(i => i.startsWith("Start_Idle"))
       .sort()
