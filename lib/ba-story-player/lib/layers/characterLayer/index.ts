@@ -2,7 +2,12 @@ import eventBus from "@/eventBus";
 import { storyHandler } from "@/index";
 import { usePlayerStore } from "@/stores";
 import gsap, { Power0 } from "gsap";
-import { IAnimationState, ISkeletonData, ITrackEntry, Spine } from "pixi-spine";
+import {
+  AnimationState as IAnimationState,
+  SkeletonData as ISkeletonData,
+  TrackEntry as ITrackEntry,
+  Spine,
+} from "@esotericsoftware/spine-pixi-v7";
 import {
   CharacterEffectInstance,
   CharacterEffectPlayerInterface,
@@ -33,7 +38,11 @@ import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
 import { Spine as SpinePixi } from "@esotericsoftware/spine-pixi-v7";
 import { Assets, extensions } from "pixi.js";
-import { spineTextureAtlasLoader, spineLoaderExtension } from "@/middlewares/pixiSpineLoader";
+import {
+  spineTextureAtlasLoader,
+  spineLoaderExtension,
+} from "@/middlewares/pixiSpineLoader";
+import { hasAnimation } from "@/utils";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
@@ -130,25 +139,7 @@ export const CharacterLayerInstance: CharacterLayer = {
     spineData: ISkeletonData,
     alias: string
   ): Spine {
-    function createSpineFromAlias(alias: string) {
-      // console.warn("使用@esotericsoftware/spine-pixi加载");
-      // 注册 spine-pixi 中间件
-      // extensions.add(spineTextureAtlasLoader);
-      // extensions.add(spineLoaderExtension);
-      const skelAlias = alias;
-      const atlasAlias = alias.replace(/\.skel$/, ".atlas");
-      console.warn("alias:", skelAlias, atlasAlias);
-      console.warn(
-        "store:",
-        Assets.cache.get(skelAlias),
-        Assets.cache.get(atlasAlias)
-      );
-      const instance = SpinePixi.from(skelAlias, atlasAlias);
-      console.warn("Spine-Pixi:", instance);
-      return instance as unknown as Spine;
-    }
-    createSpineFromAlias(alias); // FIXME: 解析出来总是空的
-    const isSpine42 = spineData.version.startsWith("4.2");
+    const isSpine42 = spineData.version?.startsWith("4.2");
     // const instance = isSpine42
     //   ? createSpineFromAlias(alias)
     //   : new Spine(spineData);
@@ -322,7 +313,10 @@ export const CharacterLayerInstance: CharacterLayer = {
     }
 
     // 表情
-    if (data.instance.state.hasAnimation(data.face))
+    const animationExists = data.instance.skeleton.data.animations.some(
+      animation => animation.name === data.face
+    );
+    if (hasAnimation(data.instance, data.face))
       data.instance.state.setAnimation(AnimationFaceTrack, data.face, true);
     data.instance.filters = [];
 
@@ -394,7 +388,7 @@ export const CharacterLayerInstance: CharacterLayer = {
         const { x } = calcSpineStagePosition(chara, data.position);
         chara.x = x;
         chara.zIndex = Reflect.get(POS_INDEX_MAP, data.position);
-        if (chara.state.hasAnimation("Idle_01")) {
+        if (hasAnimation(chara, "Idle_01")) {
           chara.state.setAnimation(AnimationIdleTrack, "Idle_01", true);
         }
       }
@@ -515,7 +509,7 @@ function getEffectPlayer(type: CharacterEffectType) {
  */
 function wink(instance: CharacterInstance, first = true) {
   //只在有眨眼动画时起作用
-  if (!instance.instance.state.hasAnimation("Eye_Close_01")) {
+  if (!hasAnimation(instance.instance, "Eye_Close_01")) {
     return;
   }
   const face = instance.currentFace;

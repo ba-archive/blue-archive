@@ -11,6 +11,7 @@ import {
   PublicStates,
 } from "@/types/store";
 import { storyHandler } from "..";
+import { Spine } from "@esotericsoftware/spine-pixi-v7";
 
 // let characterNameTable = {
 //   '유우카 체육복ND': 3715128518,
@@ -152,6 +153,38 @@ let privateState: PrivateStates = {
   bgEffectImgMap: new Map(Object.entries(bgEffectImgTable)),
 };
 
+function createSpineFromAlias(alias: string) {
+  // console.warn("使用@esotericsoftware/spine-pixi加载");
+  // 注册 spine-pixi 中间件
+  // extensions.add(spineTextureAtlasLoader);
+  // extensions.add(spineLoaderExtension);
+  const skelAlias = alias;
+  const atlasAlias = alias.replace(/\.skel$/, ".atlas");
+  console.warn("alias:", skelAlias, atlasAlias);
+  console.warn(
+    "store:",
+    Assets.cache.get(skelAlias),
+    Assets.cache.get(atlasAlias)
+  );
+  const instance = Spine.from({
+    skeleton: skelAlias,
+    atlas: atlasAlias,
+  });
+  console.warn("Spine-Pixi:", instance);
+  return instance as unknown as Spine;
+}
+
+function getSketDataFromUrl(url: string) {
+  const cache = Spine.skeletonCache;
+  const skelAlias = url;
+  const atlasAlias = url.replace(/\.skel$/, ".atlas");
+  const key = `${skelAlias}-${atlasAlias}-1`;
+  if (!(key in cache)) {
+    createSpineFromAlias(url);
+  }
+  return cache[key];
+}
+
 const getterFunctions: GetterFunctions = {
   app() {
     if (privateState === null) {
@@ -160,10 +193,8 @@ const getterFunctions: GetterFunctions = {
     return privateState.app!;
   },
 
-  characterSpineData: () => (CharacterName: number, url: string) => {
-    // eslint-disable-next-line max-len
-    return (Assets.cache.has(String(CharacterName)) ? Assets.get(String(CharacterName)) : (Assets.get(url) || {})).spineData;
-  },
+  characterSpineData: () => (CharacterName: number, url: string) =>
+    getSketDataFromUrl(url),
 
   /**
    * 获取情绪动画的图片url, 按从底部到顶部, 从左到右排列资源.
@@ -198,9 +229,7 @@ const getterFunctions: GetterFunctions = {
   },
 
   l2dSpineData() {
-    return Assets.cache.has(privateState.l2dSpineUrl) 
-      ? Assets.get(privateState.l2dSpineUrl)?.spineData 
-      : null;
+    return getSketDataFromUrl(privateState.l2dSpineUrl);
   },
 };
 

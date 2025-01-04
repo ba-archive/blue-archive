@@ -1,7 +1,7 @@
 import eventBus from "@/eventBus";
 import { usePlayerStore } from "@/stores";
 import gsap, { Power4 } from "gsap";
-import type { Spine } from "pixi-spine";
+import { Spine } from "@esotericsoftware/spine-pixi-v7";
 import { Container, Sprite } from "pixi.js";
 import emotionOptions from "./options/emotionOptions";
 import {
@@ -327,7 +327,7 @@ const CharacterEmotionPlayerInstance: CharacterEmotionPlayer = {
     const scale = getRelativeScale(sprites[0], options);
 
     for (let i = 0; i < 3; ++i) {
-      const respondImg = spine.newSprite(sprites[0].texture);
+      const respondImg = new Sprite(sprites[0].texture);
       respondImg.angle = options.perImgSetting[i].angle;
       respondImg.anchor.set(
         options.perImgSetting[i].anchor.x,

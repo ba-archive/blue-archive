@@ -1,4 +1,4 @@
-import type { Spine } from "pixi-spine";
+import type { Spine } from "@esotericsoftware/spine-pixi-v7";
 import {
   PlayAudio,
   PlayEffect,

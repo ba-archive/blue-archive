@@ -1,6 +1,6 @@
 import { usePlayerStore } from "@/stores";
 import gsap from "gsap";
-import type { Spine } from "pixi-spine";
+import type { Spine } from "@esotericsoftware/spine-pixi-v7";
 import actionOptions from "./options/actionOptions";
 import {
   CharacterEffectInstance,
@@ -10,6 +10,7 @@ import {
 } from "@/types/characterLayer";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import { calcCharacterYAndScale, getStageSize } from "./index";
+import { hasAnimation } from "@/utils";
 
 const AnimationIdleTrack = 0; // 光环动画track index
 const AnimationFaceTrack = 1; // 差分切换
@@ -39,7 +40,7 @@ const CharacterEffectPlayerInstance: CharacterEffectPlayer = {
     const { x } = calcSpineStagePosition(characterInstance, instance.position);
     characterInstance.x = x;
     characterInstance.zIndex = Reflect.get(POS_INDEX_MAP, instance.position);
-    if (characterInstance.state.hasAnimation("Idle_01")) {
+    if (hasAnimation(characterInstance, "Idle_01")) {
       characterInstance.state.setAnimation(AnimationIdleTrack, "Idle_01", true);
     }
     characterInstance.alpha = 1;
@@ -442,7 +443,7 @@ function initCharacter(instance: CharacterEffectInstance) {
   characterInstance.x = x;
   characterInstance.y = y;
   characterInstance.zIndex = Reflect.get(POS_INDEX_MAP, instance.position);
-  if (characterInstance.state.hasAnimation("Idle_01")) {
+  if (hasAnimation(characterInstance, "Idle_01")) {
     characterInstance.state.setAnimation(AnimationIdleTrack, "Idle_01", true);
   }
   characterInstance.visible = true;

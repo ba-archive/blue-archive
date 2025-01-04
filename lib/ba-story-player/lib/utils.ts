@@ -1,5 +1,6 @@
 import { OtherSoundsUrls, ResourcesTypes } from "@/types/resources";
 import { BGEffectExcelTableItem } from "./types/excels";
+import { Spine } from "@esotericsoftware/spine-pixi-v7";
 
 let dataUrl = "";
 let otherSoundMap: OtherSoundsUrls;
@@ -72,7 +73,7 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
     case "l2dSpine":
       return getSpine42Url(`${dataUrl}/spine/${arg}/${arg}.skel`);
     case "otherL2dSpine":
-      return getSpine42Url(`${dataUrl}/spine42/${arg}.skel`);
+      return getSpine42Url(`${dataUrl}/spine/${arg}.skel`);
     case "excel":
       // return `${dataUrl}/data/${arg}`; // FIXME: 临时禁用缓存
       return `${dataUrl}/data/${arg}?t=${Math.floor(Date.now() / 3600000)}`;
@@ -95,7 +96,9 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       // eslint-disable-next-line no-case-declarations
       const filename = `${id}_spr`; //hasumi_spr
       if (superSampling) {
-        return getSpine42Url(`${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`);
+        return getSpine42Url(
+          `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`
+        );
       }
       return getSpine42Url(`${dataUrl}/spine/${filename}/${filename}.skel`);
     case "bg":
@@ -166,4 +169,10 @@ export function getEffectArray(effect: BGEffectExcelTableItem): string[] {
   }
 
   return effectArray;
+}
+
+export function hasAnimation(instance: Spine, animationName: string) {
+  return instance.skeleton.data.animations.some(
+    animation => animation.name === animationName
+  );
 }
