@@ -36,12 +36,6 @@ import CharacterEffectPlayerInstance, {
 } from "./actionPlayer";
 import CharacterEmotionPlayerInstance from "./emotionPlayer";
 import CharacterFXPlayerInstance from "./fxPlayer";
-import { Spine as SpinePixi } from "@esotericsoftware/spine-pixi-v7";
-import { Assets, extensions } from "pixi.js";
-import {
-  spineTextureAtlasLoader,
-  spineLoaderExtension,
-} from "@/middlewares/pixiSpineLoader";
 import { hasAnimation } from "@/utils";
 
 const AnimationIdleTrack = 0; // 光环动画track index
@@ -145,7 +139,7 @@ export const CharacterLayerInstance: CharacterLayer = {
     //   : new Spine(spineData);
     const instance = new Spine(spineData);
     if (isSpine42) {
-      console.warn(instance);
+      console.warn("Spine v4.2 asset:",instance);
     }
     instance.sortableChildren = true;
     const id = character.CharacterName;
@@ -296,8 +290,9 @@ export const CharacterLayerInstance: CharacterLayer = {
     Promise.all(mapList.map(character => this.showOneCharacter(character)))
       .then(this.characterDone)
       .catch(reason => {
+        // FIXME: 1005302 体香播完表情之后有个错误，不影响播放，待查
         if (reason.some((it: unknown) => it)) {
-          console.log(reason);
+          console.error(reason);
         }
         this.characterDone();
       });

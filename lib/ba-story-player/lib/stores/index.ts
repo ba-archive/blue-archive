@@ -154,23 +154,19 @@ let privateState: PrivateStates = {
 };
 
 function createSpineFromAlias(alias: string) {
-  // console.warn("使用@esotericsoftware/spine-pixi加载");
-  // 注册 spine-pixi 中间件
-  // extensions.add(spineTextureAtlasLoader);
-  // extensions.add(spineLoaderExtension);
   const skelAlias = alias;
   const atlasAlias = alias.replace(/\.skel$/, ".atlas");
-  console.warn("alias:", skelAlias, atlasAlias);
-  console.warn(
-    "store:",
-    Assets.cache.get(skelAlias),
-    Assets.cache.get(atlasAlias)
-  );
+  // console.warn("alias:", skelAlias, atlasAlias);
+  // console.warn(
+  //   "store:",
+  //   Assets.cache.get(skelAlias),
+  //   Assets.cache.get(atlasAlias)
+  // );
   const instance = Spine.from({
     skeleton: skelAlias,
     atlas: atlasAlias,
   });
-  console.warn("Spine-Pixi:", instance);
+  // console.warn("Spine-Pixi:", instance);
   return instance as unknown as Spine;
 }
 

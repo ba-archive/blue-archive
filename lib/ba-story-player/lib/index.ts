@@ -23,7 +23,7 @@ import { disposeUiState, useUiState } from "@/stores/state";
 import { PlayerConfigs, StoryUnit } from "@/types/common";
 import { watch } from "vue";
 import { excelApi } from "@/api";
-import { retry, tryit } from "radash";
+import { retry } from "radash";
 // 注册全局 PIXI
 import * as PIXI from "pixi.js";
 // 注册全局 gsap pixi 插件

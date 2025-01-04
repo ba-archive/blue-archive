@@ -5,11 +5,7 @@ import { usePlayerStore } from "@/stores";
 import { getResourcesUrl } from "@/utils";
 import { Container } from "pixi.js";
 import gsap from "gsap";
-import {
-  Event as IEvent,
-  TrackEntry as ITrackEntry,
-  Spine,
-} from "@esotericsoftware/spine-pixi-v7";
+import { Spine, Event, TrackEntry } from "@esotericsoftware/spine-pixi-v7";
 import { IL2dPlayQue, IFilmAspectTransition } from "@/types/l2d";
 
 let disposed = true;
@@ -278,7 +274,7 @@ export function L2DInit() {
       }
     }
     mainItem = new Spine(l2dSpineData!);
-    function playL2dVoice(entry: ITrackEntry, event: IEvent) {
+    function playL2dVoice(entry: TrackEntry, event: Event) {
       const eventName = event.data.name;
       if (
         // 正常情况下 spine 会 emit 声音事件，但是注意不要让 enableObject, disableObject 等开发事件干扰声音播放
