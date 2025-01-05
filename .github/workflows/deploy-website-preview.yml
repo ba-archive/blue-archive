@@ -5,6 +5,9 @@ on:
       - dev
       - "dev/**"
       - "feat/**"
+      - "res/**"
+      - "resource/**"
+      - "resources/**"
       - "translation/**"
     paths:
       - "apps/blue-archive-story-viewer/**"
