@@ -10,7 +10,8 @@
     "build:github": "pnpm build:json && vite build --base=/blue-archive/ && cp ./dist/index.html ./dist/404.html",
     "preview": "pnpm build:json && vite preview --host",
     "check": "eslint --fix ./src/ ./CICD/ ./public/config/yaml/ --ext .js,.ts,.vue,.yml,.yaml && vue-tsc --noEmit --skipLibCheck",
-    "up": "taze major -I"
+    "up": "taze major -I",
+    "create-story": "node ./CICD/create-story/create-favor.mjs"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.5.12",
