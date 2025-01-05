@@ -19,7 +19,7 @@ const Distribution = {
 
 const args = process.argv.slice(2);
 const studentId = args[0];
-const distribution = args[1] ?? Distribution.Normal;
+const distribution = args[1] && args[1] * 1 ? args[1] * 1 : Distribution.Normal;
 let distPattern = [];
 
 if (distribution == Distribution.Custom) {
@@ -35,7 +35,7 @@ const groupIdMap = {
 const distributionMap = {
   [Distribution.Normal]: groupIdMap[Distribution.Normal].map((_, idx) => {
     return {
-      groupId: studentId * 100 + groupIdMap[Distribution.Normal][idx],
+      groupId: (studentId + "" + groupIdMap[Distribution.Normal][idx]) * 1,
       title: abstractUnit.title,
       abstract: abstractUnit.abstract,
     };
@@ -43,7 +43,8 @@ const distributionMap = {
   [Distribution.HasUniqueItem]: groupIdMap[Distribution.HasUniqueItem].map(
     (_, idx) => {
       return {
-        groupId: studentId * 100 + groupIdMap[Distribution.HasUniqueItem][idx],
+        groupId:
+          (studentId + "" + groupIdMap[Distribution.HasUniqueItem][idx]) * 1,
         title: abstractUnit.title,
         abstract: abstractUnit.abstract,
       };
@@ -52,7 +53,7 @@ const distributionMap = {
   [Distribution.Custom]: distPattern
     ? distPattern.map((_, idx) => {
         return {
-          groupId: studentId * 100 + groupIdMap[Distribution.Custom][idx],
+          groupId: (studentId + "" + groupIdMap[Distribution.Custom][idx]) * 1,
           title: abstractUnit.title,
           abstract: abstractUnit.abstract,
         };
