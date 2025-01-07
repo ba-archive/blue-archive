@@ -12,7 +12,8 @@
             <template #unchecked> 否 </template>
           </n-switch>
         </n-space>
-        <n-text style="flex: 1">{{ config.isProofread ? "校对" : "翻译" }}: </n-text
+        <n-text style="flex: 1"
+          >{{ config.isProofread ? "校对" : "翻译" }}: </n-text
         ><n-input
           v-model:value="staffName"
           @input="handleStaffChange($event)"
@@ -20,9 +21,14 @@
       ></n-space>
       <n-tooltip>
         <template #trigger>
-          <n-button type="primary" @click="downloadHandle">保存内容</n-button>
+          <n-button type="primary" @click="downloadHandle"
+            >下载内容到本地</n-button
+          >
         </template>
         文件名: {{ getFileName() }}
+        <br />
+        快捷键: <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+        <kbd>{{ isMac ? "S" : "S" }}</kbd>
       </n-tooltip>
       <!-- <n-button type="info" @click="handlePreviewModeRequest">{{
         isPreviewMode ? "取消预览" : "预览全文翻译"
@@ -42,9 +48,10 @@
 </template>
 <script setup lang="ts">
 import { saveAs } from "file-saver";
-import { computed, ref } from "vue";
+import { computed, ref, onMounted, onUnmounted } from "vue";
 import { useGlobalConfig } from "../store/configStore";
 import { useScenarioStore } from "../store/scenarioEditorStore";
+import { isMac } from "../../public/helper/isMac";
 
 const mainStore = useScenarioStore();
 const config = useGlobalConfig();
@@ -77,6 +84,21 @@ const downloadHandle = () => {
   saveAs(blob, getFileName());
   hasFileSaved.value = true;
 };
+
+function handleKeyDown(event: KeyboardEvent) {
+  if (event.key === "s" && (event.ctrlKey || event.metaKey)) {
+    event.preventDefault();
+    downloadHandle();
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("keydown", handleKeyDown);
+});
+
+onUnmounted(() => {
+  document.removeEventListener("keydown", handleKeyDown);
+});
 
 function handleShowClearAllButtonRequest() {
   hasFileSaved.value = true;
@@ -137,5 +159,11 @@ function handleStaffChange(event: string) {
       align-items: center;
     }
   }
+}
+
+kbd {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 4px;
 }
 </style>
