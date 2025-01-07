@@ -264,8 +264,7 @@ import {
 } from "../../public/helper/AnthropicTranslationService";
 import { transformStudentName } from "../../public/helper/transformStudentName";
 import OriginalTextDisp from "./OriginalTextDisp.vue";
-
-const isMac = window.navigator.userAgent.includes("Mac");
+import { isMac } from "../../public/helper/isMac";
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
