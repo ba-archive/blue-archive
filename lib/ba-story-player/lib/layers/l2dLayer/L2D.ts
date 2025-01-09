@@ -178,7 +178,7 @@ export function L2DInit() {
                   filmAspectTransition(transition);
                   break;
                 default:
-                  console.warn(`unsupport transition type: ${transition.type}`);
+                  console.warn(`unsupported transition type: ${transition.type}`);
               }
             }
           }
