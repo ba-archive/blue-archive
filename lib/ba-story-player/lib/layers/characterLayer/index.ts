@@ -138,9 +138,9 @@ export const CharacterLayerInstance: CharacterLayer = {
     //   ? createSpineFromAlias(alias)
     //   : new Spine(spineData);
     const instance = new Spine(spineData);
-    if (isSpine42) {
-      console.warn("Spine v4.2 asset:",instance);
-    }
+    // if (isSpine42) {
+    //   console.warn("Spine v4.2 asset:",instance);
+    // }
     instance.sortableChildren = true;
     const id = character.CharacterName;
     const { currentCharacterMap } = usePlayerStore();
