@@ -1537,4 +1537,76 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  CH0238_home: {
+    name: "CH0238_home",
+    playQue: [
+      {
+        name: "CH0238_home",
+        animation: "Start_Idle_01",
+        fadeTime: 12.4,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0238_home: {
+        scale: 1.2,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0284_home: {
+    name: "CH0284_home",
+    playQue: [
+      {
+        name: "CH0284_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0284_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0285_home: {
+    name: "CH0285_home",
+    playQue: [
+      {
+        name: "CH0285_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0285_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0080_home: {
+    name: "CH0080_home",
+    playQue: [
+      {
+        name: "CH0080_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0080_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };

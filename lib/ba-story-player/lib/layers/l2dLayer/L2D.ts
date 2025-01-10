@@ -207,7 +207,7 @@ export function L2DInit() {
           ) {
             const curStartAnimations = startAnimations[currentIndex]!;
             currentIndex += 1;
-            app.stage.addChild(curStartAnimations.spine);
+            app.stage?.addChild(curStartAnimations.spine);
             // 待机动画 Idle 循环播放, 为空时代表起始动画播放完成, 开始播放待机动画
             // 必须要先加入 app 才能播放
             timeOutArray.push(
