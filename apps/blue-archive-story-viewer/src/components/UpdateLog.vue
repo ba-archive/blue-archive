@@ -3,6 +3,27 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2025-01-10",
+    contents: [
+      {
+        type: "student",
+        students: [
+          { name: "伊落 玛丽（偶像）", id: 10105 },
+          { name: "歌住 樱子（偶像）", id: 10106 },
+          { name: "元宫 千秋", id: 10107 },
+          { name: "早濑 优香（睡衣）", id: 10108 },
+          { name: "生盐 诺亚（睡衣）", id: 10109 },
+          { name: "苍森 美弥（偶像）", id: 16016 },
+          { name: "京极 皋月", id: 20040 },
+        ],
+      },
+      {
+        type: "refact",
+        content: "重构了播放器部分逻辑，暂时下线超分播放功能。",
+      },
+    ],
+  },
+  {
     date: "2024-10-27",
     contents: [
       {

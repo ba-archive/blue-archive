@@ -14,6 +14,26 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList: HomeDisplayInfo[] = [
   {
     type: "student",
+    jumpTo: 10108,
+    title: "早濑 优香（睡衣）",
+  },
+  {
+    type: "student",
+    jumpTo: 10109,
+    title: "生盐 诺亚（睡衣）",
+  },
+  {
+    type: "student",
+    jumpTo: 10107,
+    title: "元宫 千秋",
+  },
+  {
+    type: "student",
+    jumpTo: 20040,
+    title: "京极 皋月",
+  },
+  {
+    type: "student",
     jumpTo: 10105,
     title: "伊落 玛丽（偶像）",
   },
@@ -26,10 +46,6 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
     type: "student",
     jumpTo: 16016,
     title: "苍森 美弥（偶像）",
-  },
-  {
-    type: "mainstory",
-    title: "伊甸条约第三章剧情",
   },
   {
     type: "minigame",
