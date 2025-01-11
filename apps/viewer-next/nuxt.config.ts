@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@formkit/auto-animate",
     "@unocss/nuxt",
-    "@nuxtjs/i18n",
+    // "@nuxtjs/i18n",  // 启用会报错
     "@vueuse/nuxt",
     "@nuxtjs/color-mode",
     "@nuxtjs/device",

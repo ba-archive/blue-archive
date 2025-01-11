@@ -72,7 +72,7 @@ watch(
 );
 function calculatePanel() {
   if (slots.default) {
-    const panels = (slots.default() as VNode[])
+    const panels = (slots.default({}) as VNode[])
       .filter(it => it.type && (it.type as Component).name === "BaTabPanel")
       .map(it => it.props)
       .filter((it: any) => it && it.name && it.label)

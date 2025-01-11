@@ -82,7 +82,7 @@ const spaceStyles = computed(() => {
   };
 });
 
-const slots = useSlots();
+const slots = useSlots() as any;
 
 const SpaceElement = () => {
   const children = getAllElements(slots.default?.(), true);
