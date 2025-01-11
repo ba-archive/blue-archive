@@ -58,12 +58,10 @@
           :story-summary="summary"
           :start-full-screen="startFullScreen"
           :use-mp3="useMp3"
-          :use-super-sampling="useSuperSampling"
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
           @error="handleError()"
         />
-        <img :src="useSuperSamplingImgPath" alt="" class="h-0 w-0 absolute" />
         <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
@@ -118,16 +116,6 @@
               }}</span>
               <!-- @vue-expect-error Boolean not applicable to wider type range -->
               <neu-switch :checked="useMp3" @update:value="handleUseMp3" />
-            </div>
-            <div class="flex-horizontal player-settings__settings--container">
-              <span>{{
-                getI18nString(userLanguage, "settings.useSuperSamplingTitle")
-              }}</span>
-              <!-- @vue-expect-error Boolean not applicable to wider type range -->
-              <neu-switch
-                :checked="![undefined, false, ''].includes(useSuperSampling)"
-                @update:value="handleUseSuperSampling"
-              />
             </div>
           </div>
         </div>
@@ -281,14 +269,14 @@ const startFullScreen = ref(
   document.body.clientWidth < 425 || settingsStore.getInitWithFullscreen
 );
 const useMp3 = computed(() => settingsStore.getUseMp3);
-const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
+// const useSuperSampling = computed(() => settingsStore.getUseSuperSampling);
 // 超分埋点
-const useSuperSamplingImgPath = computed(
-  () =>
-    `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${
-      useSuperSampling.value ? "use" : "noUse"
-    }SuperSampling.gif`
-);
+// const superSamplingImgPath = computed(
+//   () =>
+//     `https://yuuka.cdn.diyigemt.com/image/ba-all-data/${
+//       useSuperSampling.value ? "use" : "noUse"
+//     }SuperSampling.gif`
+// );
 
 // 检测浏览器是否为 webkit，如果是则使用 mp3
 if (typeof window.webkitConvertPointFromNodeToPage === "function") {
@@ -342,10 +330,10 @@ async function handleUseMp3(value: boolean) {
   await reloadPlayer();
 }
 
-async function handleUseSuperSampling(value: boolean) {
-  settingsStore.setUseSuperSampling(value ? "2" : "");
-  await reloadPlayer();
-}
+// async function handleUseSuperSampling(value: boolean) {
+//   settingsStore.setUseSuperSampling(value ? "2" : "");
+//   await reloadPlayer();
+// }
 
 function findPreviousStoryId(): number | undefined {
   if (storySummaryRaw.value?.previous) {

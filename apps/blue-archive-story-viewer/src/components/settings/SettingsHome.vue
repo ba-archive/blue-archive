@@ -70,44 +70,7 @@
           />
         </div>
       </div>
-      <div class="settings-panel__row">
-        <div class="settings-panel__row__text">
-          <p>
-            {{ getI18nString(userLanguage, "settings.useSuperSamplingTitle") }}
-          </p>
-          <p class="settings-panel__row__text__description">
-            {{
-              getI18nString(
-                userLanguage,
-                "settings.useSuperSamplingDescription"
-              )
-            }}
-          </p>
-        </div>
-        <div class="settings-panel__row__action">
-          <neu-radio-group>
-            <neu-radio
-              :value="false"
-              :activated="!useSuperSamplingValue"
-              @click="handleSuperSamplingSwitchChange('')"
-              >off</neu-radio
-            >
-            <neu-radio
-              value="2x"
-              :activated="'2' === useSuperSamplingValue"
-              @click="handleSuperSamplingSwitchChange('2')"
-              >2x</neu-radio
-            >
-            <neu-radio
-              value="4x"
-              v-if="!checkMobile() && false"
-              :activated="'4' === useSuperSamplingValue"
-              @click="handleSuperSamplingSwitchChange('4')"
-              >4x</neu-radio
-            >
-          </neu-radio-group>
-        </div>
-      </div>
+
       <div class="settings-panel__row">
         <div class="settings-panel__row__text">
           <p>
@@ -192,9 +155,7 @@ const router = useRouter();
 const userLanguage = computed(() => settingsStore.getLang);
 
 const useMp3SwitchValue: Ref<boolean> = ref(settingsStore.getUseMp3);
-const useSuperSamplingValue = computed<"" | "2" | "4" | undefined>(
-  () => settingsStore.getUseSuperSampling
-);
+
 const disableMomotalkAnimationState: Ref<boolean> = ref(
   settingsStore.getDisableMomotalkAnimationState
 );
@@ -205,10 +166,6 @@ function handleDisableMomotalkAnimationSwitchChange(value: boolean) {
 
 function handleAppleCompatibleSwitchChange(value: boolean) {
   settingsStore.setUseMp3(value);
-}
-
-function handleSuperSamplingSwitchChange(value: "" | "2" | "4") {
-  settingsStore.setUseSuperSampling(value);
 }
 
 const useCheckForUpdatesSwitchValue: Ref<boolean> = ref(

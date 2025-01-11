@@ -17,7 +17,7 @@ export const useSettingsStore = defineStore({
         theme: "light" as "light" | "dark",
         username: "Sensei" as string,
         useMp3: false,
-        useSuperSampling: "" as "" | "2" | "4",
+        useSuperSampling: "" as "" | "2" | "4" | boolean,
         initWithFullscreen: false,
       },
       studentFilters: {
@@ -55,7 +55,7 @@ export const useSettingsStore = defineStore({
     getUseMp3: state => state.settings.useMp3,
     getUseSuperSampling: state => {
       const shouldUseSuperSampling = state.settings.useSuperSampling;
-      if (!["", "2", "4"].includes(shouldUseSuperSampling)) {
+      if (!["", "2", "4", false].includes(shouldUseSuperSampling)) {
         return "";
       }
       return shouldUseSuperSampling;
