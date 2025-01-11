@@ -115,15 +115,6 @@ axios
   })
   .finally(() => {
     ready.value = true;
-    if ([10105, 10106, 16016].includes(studentId.value)) {
-      fetchErrorMessage.value = {
-        message:
-          "由于技术问题，玛丽（偶像）、樱子（偶像）以及美弥（偶像）的剧情暂时无法播放。我们正在修复该问题。",
-        response: {
-          status: 1919,
-        },
-      };
-    }
   });
 
 function handleOpenIndex(index: number) {
