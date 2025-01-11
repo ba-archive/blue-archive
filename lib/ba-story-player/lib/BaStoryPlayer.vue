@@ -43,7 +43,7 @@ export type PlayerProps = {
   storySummary: StorySummary;
   startFullScreen?: boolean;
   useMp3?: boolean;
-  useSuperSampling?: "2" | "4" | "";
+  useSuperSampling?: "2" | "4" | "" | boolean;
   /** 跳转至传入的 index */
   changeIndex?: number;
   /**

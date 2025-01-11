@@ -146,8 +146,12 @@ export function setOggAudioType(audioType: "mp3") {
   oggAudioType = audioType;
 }
 
-export function setSuperSampling(type: string) {
-  superSampling = `-${type}x`;
+export function setSuperSampling(type: "2" | "4" | "" | boolean) {
+  if (type === true) {
+    superSampling = "-2x";
+  } else {
+    superSampling = `-${type}x`;
+  }
 }
 
 /*

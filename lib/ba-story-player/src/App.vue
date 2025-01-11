@@ -164,7 +164,7 @@ watch(
         :story-summary="storySummary"
         style="resize: both; overflow: hidden"
         :exit-fullscreen-time-out="2000"
-        :use-super-sampling="useSuperSampling ? '2' : ''"
+        :use-super-sampling="useSuperSampling ? '2' : false"
         ref="player"
       />
       <!--其实在左边的剧情json里填入11000就能测试序章, 不需要改动这里-->

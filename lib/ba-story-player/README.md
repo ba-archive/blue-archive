@@ -75,9 +75,11 @@ type: `boolean`
 
 ## useSuperSampling
 
-type: `'' | '2' | '4'`
+type: `'' | '2' | '4' | boolean`
 
 是否使用超分素材。请注意目前 '4' 配置项无效果，仅支持 2 倍超分。
+
+当设置为 `true` 时，使用 2 倍超分。
 
 # event
 
