@@ -290,8 +290,9 @@ export const CharacterLayerInstance: CharacterLayer = {
     Promise.all(mapList.map(character => this.showOneCharacter(character)))
       .then(this.characterDone)
       .catch(reason => {
-        // FIXME: 1005302 体香播完表情之后有个错误，不影响播放，待查
         if (reason.some((it: unknown) => it)) {
+          // TODO: pixi 7 destroy() 不检查 _texture 是否有 off 方法，会报错
+          // 不影响播放，有空的可以水一个 pr
           console.error(reason);
         }
         this.characterDone();

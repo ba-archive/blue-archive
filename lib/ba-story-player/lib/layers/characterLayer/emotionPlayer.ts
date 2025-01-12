@@ -899,6 +899,7 @@ function prepareEmotionContainer(
   const offsetX = (options.startPositionOffset.x - 0.8) * 540;
   const offsetY = (options.startPositionOffset.y - 1.2) * 1012;
   container.position.set(offsetX, offsetY);
+  container.zIndex = 10;
   spine.addChild(container);
   return {
     offsetX,
