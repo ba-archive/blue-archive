@@ -13,7 +13,7 @@
       </div>
     </transition>
     <transition name="fly-in">
-      <footer-div v-show="showFooter" ref="footerRef" />
+      <footer-div @downloaded="showFooter = true" v-show="showFooter" ref="footerRef" />
     </transition>
   </div>
 </template>

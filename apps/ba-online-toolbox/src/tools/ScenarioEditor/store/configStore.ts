@@ -19,6 +19,8 @@ export const useGlobalConfig = defineStore({
     preferSemanticsView: true,
     modelStability: 0.6,
     systemPromptDelta: "",
+    defaultTranslatorName: "",
+    defaultProofreaderName: "",
   }),
   getters: {
     isProofread: state => state.proofread,
@@ -50,6 +52,8 @@ export const useGlobalConfig = defineStore({
     getSemanticPreference: state => state.preferSemanticsView ?? false,
     getModelStability: state => state.modelStability ?? 0.6,
     getSystemPromptDelta: state => state.systemPromptDelta ?? "",
+    getDefaultTranslatorName: state => state.defaultTranslatorName ?? "",
+    getDefaultProofreaderName: state => state.defaultProofreaderName ?? "",
   },
   actions: {
     startProofread() {
@@ -120,6 +124,12 @@ export const useGlobalConfig = defineStore({
     },
     setSystemPromptDelta(systemPromptDelta: string) {
       this.systemPromptDelta = systemPromptDelta;
+    },
+    setDefaultTranslatorName(defaultTranslatorName: string) {
+      this.defaultTranslatorName = defaultTranslatorName;
+    },
+    setDefaultProofreaderName(defaultProofreaderName: string) {
+      this.defaultProofreaderName = defaultProofreaderName;
     },
   },
 });
