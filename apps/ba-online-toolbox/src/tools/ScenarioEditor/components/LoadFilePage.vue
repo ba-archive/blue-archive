@@ -56,6 +56,7 @@
 <script setup lang="ts">
 import jsYaml from "js-yaml";
 import { useScenarioStore } from "../store/scenarioEditorStore";
+import { useGlobalConfig } from "../store/configStore";
 import { Scenario } from "../types/content";
 import { ref } from "vue";
 import { FileContent as MomotalkFileContent } from "../../MomotalkTranslator/types/FileContent";
@@ -64,6 +65,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const mainStore = useScenarioStore();
+const useConfigStore = useGlobalConfig();
 
 const dragHandle = (event: DragEvent) => {
   event.preventDefault();
@@ -95,6 +97,25 @@ function handlePositiveClick() {
   });
 }
 
+function inferProofread(content: Scenario, fileName: string): boolean {
+  // 根据内容，推断是否进入校对模式
+  // 去除后缀后的文件名包含“未校对”，返回 true
+  // Unit 中某一条目的 unsure flag 为 true，返回 true
+  // Unit 中 TextCn 有内容的条目占比超过 95%，返回 true
+  // 否则返回 false
+  const fileNameWithoutSuffix = fileName.replace(/\.[^/.]+$/, "");
+  if (fileNameWithoutSuffix.includes("未校对")) {
+    return true;
+  }
+  const scenarioUnits = content.content;
+  const unsureCount = scenarioUnits.filter(unit => unit.Unsure).length;
+  const textCnCount = scenarioUnits.filter(unit => unit.TextCn).length;
+  if (unsureCount > 0 || textCnCount / scenarioUnits.length > 0.95) {
+    return true;
+  }
+  return false;
+}
+
 const fileHandle = (file: File): void => {
   mainStore.setTitle(file.name);
   readFile(file).then(data => {
@@ -103,6 +124,7 @@ const fileHandle = (file: File): void => {
       if (file.name.endsWith(".json")) {
         parsed = JSON.parse(data) as Scenario;
         mainStore.setScenario(parsed);
+        useConfigStore.setProofread(inferProofread(parsed, file.name));
       } else if (file.name.endsWith(".yaml") || file.name.endsWith(".yml")) {
         showModal.value = true;
         tempMomotalkData.value = jsYaml.load(data) as MomotalkFileContent;

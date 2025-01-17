@@ -19,7 +19,7 @@
 </template>
 <script setup lang="ts">
 import { onClickOutside } from "@vueuse/core";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import FooterDiv from "./EditorFooter.vue";
 import IndexPage from "./IndexPage.vue";
 import PlayerPart from "./Player.vue";
@@ -33,6 +33,15 @@ onClickOutside(footerRef, () => {
 });
 
 const showFooter = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    showFooter.value = true;
+  }, 8);
+  setTimeout(() => {
+    showFooter.value = false;
+  }, 3 * 1000);
+});
 </script>
 <style scoped lang="scss">
 .button-footer-trigger {
