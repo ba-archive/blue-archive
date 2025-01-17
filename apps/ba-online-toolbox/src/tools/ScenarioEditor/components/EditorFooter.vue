@@ -77,12 +77,28 @@ function getFileName() {
   return `[${config.isProofread ? "已校对" : "未校对"}]${fileId}.json`;
 }
 
-const downloadHandle = () => {
+const emit = defineEmits(["downloaded"]);
+
+function createDownload() {
   const blob = new Blob([JSON.stringify(mainStore.getScenario, null, 2)], {
     type: "text/plain;charset=utf-8",
   });
   saveAs(blob, getFileName());
   hasFileSaved.value = true;
+  emit("downloaded");
+}
+
+const downloadHandle = () => {
+  const defaultName = staffName.value;
+  if (defaultName) {
+    handleStaffChange(defaultName);
+    createDownload();
+    return;
+  }
+  const newStaffName =
+    prompt(`请输入${config.isProofread ? "校对" : "翻译"}昵称`) ?? "";
+  handleStaffChange(newStaffName);
+  createDownload();
 };
 
 function handleKeyDown(event: KeyboardEvent) {
@@ -118,10 +134,12 @@ function handlePreviewModeRequest() {
 const isProofreaderMode = computed(() => config.isProofread);
 
 const staffName = computed({
-  get: () =>
-    isProofreaderMode.value
-      ? mainStore.getProofreader
-      : mainStore.getScenario.translator || "",
+  get: () => {
+    const isProofreader = isProofreaderMode.value;
+    return isProofreader
+      ? mainStore.getProofreader || config.getDefaultProofreaderName
+      : mainStore.getScenario.translator || config.getDefaultTranslatorName;
+  },
   set: (value: string) => {
     handleStaffChange(value);
   },
@@ -130,8 +148,10 @@ const staffName = computed({
 function handleStaffChange(event: string) {
   if (config.isProofread) {
     mainStore.setProofreader(event);
+    config.setDefaultProofreaderName(event);
   } else {
     mainStore.setTranslator(event);
+    config.setDefaultTranslatorName(event);
   }
 }
 </script>
