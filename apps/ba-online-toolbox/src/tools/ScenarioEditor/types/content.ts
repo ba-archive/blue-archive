@@ -15,8 +15,8 @@ export interface ContentLine {
   PopupFileName: string;
   ScriptKr: string;
   VoiceJp: string;
-  Unsure: boolean | undefined;
-  comment: string | undefined;
+  Unsure?: boolean;
+  comment?: string;
 }
 
 export type Language =
