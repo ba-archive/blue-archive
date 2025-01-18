@@ -173,7 +173,7 @@
                 v-model:value="systemPromptDelta"
                 placeholder="追加全局提示词"
                 @keydown.enter="reTranslateHandle"
-                />
+              />
             </template>
             <div>系统提示词会对每一句话生效。</div>
             <div>例如：「把トリニティ翻译成圣三一」</div>
@@ -249,7 +249,7 @@
 <script setup lang="ts">
 import { computed, ref, watch, onMounted, onBeforeUnmount } from "vue";
 import { halfToFull } from "../../public/helper/getTranslation";
-import { formalizeQuotation } from "../../public/helper/quotation";
+import { formalizeStrings } from "../../public/helper/formatterService";
 import eventBus from "../eventsSystem/eventBus";
 import { useGlobalConfig } from "../store/configStore";
 import { useScenarioStore } from "../store/scenarioEditorStore";
@@ -314,74 +314,10 @@ const acceptHandle = () => {
   }
 };
 
-const replaceStrings = [
-  {
-    from: "……。",
-    to: "……",
-  },
-  {
-    from: "~",
-    to: "～",
-  },
-  {
-    from: " ”",
-    to: "”",
-  },
-  {
-    from: "  ",
-    to: "，",
-  },
-  {
-    from: "·",
-    to: "・",
-  },
-  {
-    from: "...",
-    to: "…",
-  },
-  {
-    from: "momotalk",
-    to: "MomoTalk",
-  },
-  {
-    from: "momo talk",
-    to: "MomoTalk",
-  },
-  {
-    from: "log＝",
-    to: "log=",
-  },
-  {
-    from: "[／",
-    to: "[/",
-  },
-  {
-    from: "wa：",
-    to: "wa:",
-  },
-  {
-    from: "\\n",
-    to: "\n",
-  },
-  {
-    from: "！ ！",
-    to: "！！",
-  },
-  {
-    from: "〜。",
-    to: "〜",
-  },
-];
-
 function handleFormalizePunctuation() {
   const line = mainStore.getScenario.content[config.getSelectLine];
-  line[config.getTargetLang] = formalizeQuotation(line[config.getTargetLang]);
-  replaceStrings.forEach(item => {
-    line[config.getTargetLang] = line[config.getTargetLang].replaceAll(
-      item.from,
-      item.to
-    );
-  });
+  line[config.getTargetLang] = formalizeStrings(line[config.getTargetLang]);
+  // mainStore.setContentLine(line as ContentLine, config.getSelectLine);
 }
 
 // 检测全文复制 intent
@@ -403,13 +339,16 @@ watch(selectedText.text, () => {
   }
 });
 
-function handleCopyPaste(event: KeyboardEvent) {
+function handleKeydown(event: KeyboardEvent) {
   if (isMac) {
     if (event.metaKey && event.altKey && event.code === "KeyV") {
       event.preventDefault();
       mainStore.getScenario.content[config.getSelectLine][
         config.getTargetLang
       ] = currentText.value;
+    }
+    if (event.metaKey && event.altKey && event.code === "KeyL") {
+      handleFormalizePunctuation();
     }
   } else {
     if (event.ctrlKey && event.shiftKey && event.code === "KeyV") {
@@ -418,15 +357,18 @@ function handleCopyPaste(event: KeyboardEvent) {
         config.getTargetLang
       ] = currentText.value;
     }
+    if (event.ctrlKey && event.shiftKey && event.code === "KeyL") {
+      handleFormalizePunctuation();
+    }
   }
 }
 
 onMounted(() => {
-  window.addEventListener("keydown", handleCopyPaste);
+  window.addEventListener("keydown", handleKeydown);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener("keydown", handleCopyPaste);
+  window.removeEventListener("keydown", handleKeydown);
 });
 
 // 处理机翻
@@ -548,17 +490,14 @@ function handleLLMTranslateRequest(
         }
 
         const rawText = rawResponse.text ?? "";
-        let fullWidthText = halfToFull(rawText);
-        replaceStrings.forEach(item => {
-          fullWidthText = fullWidthText.replaceAll(item.from, item.to);
-        });
+        let fullWidthText = formalizeStrings(halfToFull(rawText));
         const studentTransformed = transformStudentName(
           fullWidthText,
           studentNames.value
         );
         config.setTmpMachineTranslate(
           currentText.value,
-          formalizeQuotation(studentTransformed)
+          formalizePunctuation(studentTransformed)
         );
         advice.value = "";
       })
