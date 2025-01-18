@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import UpdatedPortalCard from "@widgets/UpdatedPortalCard.vue";
+import { ref } from "vue";
 
 export interface HomeDisplayInfo {
   type: "mainstory" | "otherStory" | "student" | "minigame";
@@ -11,7 +12,7 @@ export interface HomeDisplayInfo {
   style?: "pixelize";
 }
 
-const homepageDisplayInfoList: HomeDisplayInfo[] = [
+const homepageDisplayInfoList = ref<HomeDisplayInfo[]>([
   {
     type: "student",
     jumpTo: 10038,
@@ -35,7 +36,7 @@ const homepageDisplayInfoList: HomeDisplayInfo[] = [
     startDate: "2023/09/01",
     style: "pixelize",
   },
-];
+]);
 </script>
 
 <template>
