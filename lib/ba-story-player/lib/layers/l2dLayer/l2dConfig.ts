@@ -1609,4 +1609,58 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  Kazusa_home: {
+    name: "Kazusa_home",
+    playQue: [
+      {
+        name: "Kazusa_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.7,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Kazusa_home: {
+        scale: 1.3,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  Serika_home: {
+    name: "Serika_home",
+    playQue: [
+      {
+        name: "Serika_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Serika_home: {
+        scale: 1.3,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  Miyako_home: {
+    name: "Miyako_home",
+    playQue: [
+      {
+        name: "Miyako_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.2,
+        fade: false,
+      },
+    ],
+    spineSettings: {
+      Miyako_home: {
+        scale: 2.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
