@@ -125,13 +125,24 @@
           <n-button size="medium" @click="acceptHandle" type="info"
             >接受机翻</n-button
           >
-          <n-button
-            size="medium"
-            @click="handleFormalizePunctuation"
-            type="info"
-          >
-            规范符号
-          </n-button>
+          <n-tooltip>
+            <template #trigger>
+              <n-button
+                size="medium"
+                @click="handleFormalizePunctuation"
+                type="info"
+              >
+                规范符号
+              </n-button>
+            </template>
+            <div>
+              <span>规范译文中的符号。</span><br />
+              <span
+                >快捷键：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+                <kbd>{{ isMac ? "⌥" : "Shift" }}</kbd> + <kbd>L</kbd></span
+              >
+            </div>
+          </n-tooltip>
           <n-button size="medium" type="info" @click="sendRefreshPlayerSignal"
             >刷新播放器</n-button
           >
@@ -348,6 +359,7 @@ function handleKeydown(event: KeyboardEvent) {
       ] = currentText.value;
     }
     if (event.metaKey && event.altKey && event.code === "KeyL") {
+      event.preventDefault();
       handleFormalizePunctuation();
     }
   } else {
@@ -358,6 +370,7 @@ function handleKeydown(event: KeyboardEvent) {
       ] = currentText.value;
     }
     if (event.ctrlKey && event.shiftKey && event.code === "KeyL") {
+      event.preventDefault();
       handleFormalizePunctuation();
     }
   }
