@@ -497,7 +497,7 @@ function handleLLMTranslateRequest(
         );
         config.setTmpMachineTranslate(
           currentText.value,
-          formalizePunctuation(studentTransformed)
+          formalizeStrings(studentTransformed)
         );
         advice.value = "";
       })
