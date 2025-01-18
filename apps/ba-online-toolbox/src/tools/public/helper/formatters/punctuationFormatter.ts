@@ -77,9 +77,7 @@ function quotationFormalizer(content: ContentToken[]) {
   return contentString;
 }
 
-function formalizeQuotation(content: string) {
+export function formalizePunctuation(content: string) {
   const contentToken = contentTokenizer(content);
   return quotationFormalizer(contentToken);
 }
-
-export { formalizeQuotation };
