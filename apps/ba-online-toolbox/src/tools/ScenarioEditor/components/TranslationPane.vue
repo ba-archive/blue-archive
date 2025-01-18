@@ -348,6 +348,7 @@ function handleKeydown(event: KeyboardEvent) {
       ] = currentText.value;
     }
     if (event.metaKey && event.altKey && event.code === "KeyL") {
+      event.preventDefault();
       handleFormalizePunctuation();
     }
   } else {
@@ -358,6 +359,7 @@ function handleKeydown(event: KeyboardEvent) {
       ] = currentText.value;
     }
     if (event.ctrlKey && event.shiftKey && event.code === "KeyL") {
+      event.preventDefault();
       handleFormalizePunctuation();
     }
   }
