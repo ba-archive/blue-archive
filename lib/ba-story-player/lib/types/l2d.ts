@@ -12,6 +12,7 @@ export type IL2dConfig = {
   [key: string]: {
     name: string;
     playQue: IL2dPlayQue[];
+    playQueAsync?: IL2dPlayQue[];
     spineSettings?: {
       [key: string]: {
         scale?: number; // 对单个 spine 文件进行设置
@@ -35,6 +36,7 @@ export type IL2dConfig = {
 export type IL2dPlayQue = {
   name: string;
   animation: string;
+  pushDelay?: number;
   fadeTime?: number;
   secondFadeTime?: number;
   customFade?: Array<{

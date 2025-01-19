@@ -1265,23 +1265,6 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
-  Hoshino_home: {
-    name: "Hoshino_home",
-    playQue: [
-      {
-        name: "Hoshino_home",
-        animation: "Start_Idle_01",
-        fadeTime: 4.7,
-        fade: true,
-      },
-    ],
-    spineSettings: {
-      Hoshino_home: {
-        scale: 1.0,
-      },
-    },
-    otherSpine: [],
-  },
   CH0258_home: {
     name: "CH0258_home",
     playQue: [
@@ -1662,5 +1645,30 @@ export const l2dConfig: IL2dConfig = {
       },
     },
     otherSpine: [],
+  },
+  Hoshino_home: {
+    name: "Hoshino_home",
+    playQue: [
+      {
+        name: "Hoshino_home",
+        animation: "Start_Idle_01",
+        pushDelay: 1.2,
+      },
+    ],
+    playQueAsync: [
+      {
+        name: "hoshino_home/hoshino_home_background/hoshino_home_background",
+        animation: "Start_WhaleMove_01_R",
+      },
+    ],
+    spineSettings: {
+      Hoshino_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [
+      "hoshino_home/hoshino_home_background/hoshino_home_background",
+    ],
   },
 };
