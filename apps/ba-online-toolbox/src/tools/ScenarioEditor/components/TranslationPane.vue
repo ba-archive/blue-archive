@@ -387,11 +387,11 @@ function handleKeydown(event: KeyboardEvent) {
         ] = currentText.value),
     },
     KeyL: {
-      modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "shiftKey"],
+      modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "altKey"],
       action: handleFormalizePunctuation,
     },
     KeyA: {
-      modifiers: isMac ? ["metaKey", "shiftKey"] : ["ctrlKey"],
+      modifiers: isMac ? ["metaKey", "shiftKey"] : ["ctrlKey", "shiftKey"],
       action: acceptHandle,
     },
     KeyD: {
