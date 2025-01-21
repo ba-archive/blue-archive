@@ -82,38 +82,31 @@ const storyCacheKey = "storyJson";
 const jsonName = localStorage.getItem(storyCacheKey);
 
 if (jsonName && jsonName !== "0") {
+  // 从预览部署获取
+  // 200362 → https://preview.blue-archive.io/story/favor/20036/200362.json
   axios
-    .get(`https://yuuka.cdn.diyigemt.com/image/story/${jsonName}.json`)
+    .get(
+      `https://preview.blue-archive.io/story/favor/${jsonName.slice(
+        0,
+        5
+      )}/${jsonName}.json`
+    )
     .then(response => {
       if (response.status === 200) {
         story.value = response.data;
         storyJsonName.value = jsonName;
+        showPlayer.value = true;
       }
-      showPlayer.value = true;
     })
     .catch(() => {
-      // 从预览部署获取
-      // 200362 → https://preview.blue-archive.io/story/favor/20036/200362.json
-      // prettier-ignore
-      axios
-        .get(`https://preview.blue-archive.io/story/favor/${jsonName.slice(0, 5)}/${jsonName}.json`)
-        .then(response => {
-          if (response.status === 200) {
-            story.value = response.data;
-            storyJsonName.value = jsonName;
-            showPlayer.value = true;
-          }
-        })
-        .catch(() => {
-          // 远程获取失败，尝试本地获取
-          axios.get(`${jsonName}.json`).then(response => {
-            if (response.status === 200) {
-              story.value = response.data;
-              storyJsonName.value = jsonName;
-              showPlayer.value = true;
-            }
-          });
-        });
+      // 远程获取失败，尝试本地获取
+      axios.get(`${jsonName}.json`).then(response => {
+        if (response.status === 200) {
+          story.value = response.data;
+          storyJsonName.value = jsonName;
+          showPlayer.value = true;
+        }
+      });
     });
 } else {
   showPlayer.value = true;

@@ -1671,4 +1671,94 @@ export const l2dConfig: IL2dConfig = {
       "hoshino_home/hoshino_home_background/hoshino_home_background",
     ],
   },
+  CH0280_home: {
+    name: "CH0280_home",
+    playQue: [
+      {
+        name: "CH0280_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0280_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0070_home: {
+    name: "CH0070_home",
+    playQue: [
+      {
+        name: "CH0070_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0070_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0281_home: {
+    name: "CH0281_home",
+    playQue: [
+      {
+        name: "CH0281_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0281_home: {
+        scale: 1.3,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0282_home: {
+    name: "CH0282_home",
+    playQue: [
+      {
+        name: "CH0282_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0282_home: {
+        scale: 1.2,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  CH0158_home: {
+    name: "CH0158_home",
+    playQue: [
+      {
+        name: "CH0158_home",
+        animation: "Start_Idle_01",
+        fadeTime: 6.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0158_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
