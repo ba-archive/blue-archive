@@ -101,7 +101,7 @@
           />
         </n-space>
       </div>
-      <n-tooltip :show="showCopyPasteTooltip" placement="top-start">
+      <n-tooltip :show="showCopyPasteTooltip || isDuplicateLine" placement="top-start">
         <template #trigger>
           <original-text-disp
             :text="
@@ -114,17 +114,35 @@
             v-on-click-outside="handleCloseCopyPasteTooltip"
           />
         </template>
-        <div>想把整句原文复制到译文框？</div>
-        <div>
-          试试 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
-          <kbd>{{ isMac ? "⌥" : "Shift" }}</kbd> + <kbd>V</kbd>
+        <div v-if="showCopyPasteTooltip">
+          <div>想把整句原文复制到译文框？</div>
+          <div>
+            试试 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+            <kbd>{{ isMac ? "⌥" : "Shift" }}</kbd> + <kbd>V</kbd>
+          </div>
+        </div>
+        <div v-if="isDuplicateLine">
+          <div>这句话与上一句似乎相同，可能分别对应着两个选项的回答。</div>
+          <div>
+            可以使用 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> + <kbd>D</kbd> 复制上一句的译文。
+          </div>
         </div>
       </n-tooltip>
       <n-space justify="space-between" align="end">
         <n-space>
-          <n-button size="medium" @click="acceptHandle" type="info"
-            >接受机翻</n-button
-          >
+          <n-tooltip>
+            <template #trigger>
+              <n-button size="medium" @click="acceptHandle" type="info"
+                >接受机翻</n-button
+              >
+            </template>
+            <div>
+              <span
+                >快捷键：<kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+                <kbd>{{ isMac ? "⇧" : "Shift" }}</kbd> + <kbd>A</kbd></span
+              >
+            </div>
+          </n-tooltip>
           <n-tooltip>
             <template #trigger>
               <n-button
@@ -351,28 +369,41 @@ watch(selectedText.text, () => {
 });
 
 function handleKeydown(event: KeyboardEvent) {
-  if (isMac) {
-    if (event.metaKey && event.altKey && event.code === "KeyV") {
-      event.preventDefault();
-      mainStore.getScenario.content[config.getSelectLine][
-        config.getTargetLang
-      ] = currentText.value;
+  type ModifierKey = "metaKey" | "altKey" | "ctrlKey" | "shiftKey";
+  type ShortcutKey = "KeyV" | "KeyL" | "KeyA" | "KeyD";
+
+  const shortcuts: Record<
+    ShortcutKey,
+    {
+      modifiers: ModifierKey[];
+      action: () => void;
     }
-    if (event.metaKey && event.altKey && event.code === "KeyL") {
-      event.preventDefault();
-      handleFormalizePunctuation();
-    }
-  } else {
-    if (event.ctrlKey && event.shiftKey && event.code === "KeyV") {
-      event.preventDefault();
-      mainStore.getScenario.content[config.getSelectLine][
-        config.getTargetLang
-      ] = currentText.value;
-    }
-    if (event.ctrlKey && event.shiftKey && event.code === "KeyL") {
-      event.preventDefault();
-      handleFormalizePunctuation();
-    }
+  > = {
+    KeyV: {
+      modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "shiftKey"],
+      action: () =>
+        (mainStore.getScenario.content[config.getSelectLine][
+          config.getTargetLang
+        ] = currentText.value),
+    },
+    KeyL: {
+      modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "altKey"],
+      action: handleFormalizePunctuation,
+    },
+    KeyA: {
+      modifiers: isMac ? ["metaKey", "shiftKey"] : ["ctrlKey", "shiftKey"],
+      action: acceptHandle,
+    },
+    KeyD: {
+      modifiers: isMac ? ["metaKey"] : ["ctrlKey"],
+      action: handleDuplicateLine,
+    },
+  };
+
+  const shortcut = shortcuts[event.code as ShortcutKey];
+  if (shortcut && shortcut.modifiers.every(mod => event[mod])) {
+    event.preventDefault();
+    shortcut.action();
   }
 }
 
@@ -562,6 +593,29 @@ function handleGotoPrevLineRequest() {
   const currentLine = config.getSelectLine;
   const targetLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
   config.setSelectLine(targetLine);
+}
+
+const isDuplicateLine = computed(() => {
+  const currentLine = config.getSelectLine;
+  const prevLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
+  if (prevLine === -1) return false;
+
+  const currentLineContent = mainStore.getScenario.content[currentLine][config.getLanguage];
+  const prevLineContent = mainStore.getScenario.content[prevLine][config.getLanguage];
+
+  return currentLineContent === prevLineContent;
+});
+
+function handleDuplicateLine() {
+  const currentLine = config.getSelectLine;
+  const prevLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
+  if (prevLine === -1) return;
+  const prevLineContent = mainStore.getScenario.content[prevLine];
+  
+  const currentLineContent = mainStore.getScenario.content[currentLine];
+
+  currentLineContent[config.getTargetLang] = prevLineContent[config.getTargetLang];
+  mainStore.setContentLine(currentLineContent as ContentLine, currentLine);
 }
 
 const completion = computed(() => {
