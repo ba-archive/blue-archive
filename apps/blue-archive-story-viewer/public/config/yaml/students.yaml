@@ -2855,7 +2855,7 @@
     en: Kazekura
     kr: 카제쿠라
     tw: 風倉
-    th: 風倉
+    th: คาเซะคุระ
   name:
     cn: 萌绘(泳装)
     jp: モエ（水着）
@@ -2884,13 +2884,13 @@
     en: Takanashi
     kr: 타카나시
     tw: 小鳥遊
-    th: 小鳥遊
+    th: ทาคานาชิ
   name:
     cn: 星野(临战)
     jp: ホシノ（臨戦）
     en: Hoshino (Armed)
     kr: 호시노(무장)
-    tw: 星野（臨戰）
+    tw: 星野(武裝)
     th: โฮชิโนะ (คอมแบต)
   nickname: []
   nicknameFrom: 10005
@@ -2913,14 +2913,14 @@
     en: Sunaookami
     kr: 스나오오카미
     tw: 砂狼
-    th: 砂狼
+    th: สึนาโอกามิ
   name:
     cn: 白子＊恐怖
     jp: シロコ＊テラー
-    en: Shiroko Terror
+    en: Shiroko*Terror
     kr: 시로코*테러
-    tw: 白子＊恐怖
-    th: ชิโรโกะ (เทอเรอร์)
+    tw: 白子＊TERROR
+    th: ชิโรโกะ*เทอเรอร์
   nickname: []
   nicknameFrom: 10010
   birthday:
@@ -2948,7 +2948,7 @@
     jp: サオリ（水着）
     en: Saori (Swimsuit)
     kr: 사오리(수영복)
-    tw: 沙織（泳裝）
+    tw: 沙織(泳裝)
     th: ซาโอริ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 10048
@@ -2977,7 +2977,7 @@
     jp: ヒヨリ（水着）
     en: Hiyori (Swimsuit)
     kr: 히요리(수영복)
-    tw: 日和（泳裝）
+    tw: 日和(泳裝)
     th: ฮิโยริ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 20017
@@ -3006,8 +3006,8 @@
     jp: マリナ（チーパオ）
     en: Marina (Qipao)
     kr: 마리나(치파오)
-    tw: 瑪麗娜（旗袍）
-    th: มารินะ (กี่เผ้า)
+    tw: 瑪麗娜(旗袍)
+    th: มารินะ (กี่เพ้า)
   nickname: []
   nicknameFrom: 10037
   birthday:
@@ -3036,7 +3036,7 @@
     en: Reijo
     kr: 레이죠
     tw: 令女
-    th: เรย์โจ
+    th: เรย์โจว
   nickname: []
   birthday:
     month: 3
@@ -3063,7 +3063,7 @@
     jp: マリー（アイドル）
     en: Mari (Idol)
     kr: 마리(아이돌)
-    tw: 瑪麗（偶像）
+    tw: 瑪麗(偶像)
     th: มารี (ไอดอล)
   nickname: []
   nicknameFrom: 23008
@@ -3092,7 +3092,7 @@
     jp: サクラコ（アイドル）
     en: Sakurako (Idol)
     kr: 사쿠라코(아이돌)
-    tw: 櫻子（偶像）
+    tw: 櫻子(偶像)
     th: ซากุระโกะ (ไอดอล)
   nickname: []
   nicknameFrom: 10061
@@ -3194,6 +3194,90 @@
   armorType: LightArmor
   bulletType: Pierce
   weapon: HG
+# - id: 10110
+#   familyName:
+#     cn: 百合园
+#     jp: 百合園
+#     en: Yurizono
+#     kr: 유리조노
+#     tw: 百合園
+#     th: 百合園
+#   name:
+#     cn: 圣娅
+#     jp: セイア
+#     en: Seia
+#     kr: 세이아
+#     tw: 聖亞
+#     th: เซอา
+#   nickname: []
+#   birthday:
+#     month: 9
+#     day: 29
+#   club: 茶会
+#   clubCode: TeaParty
+#   affiliation: 圣三一
+#   schoolCode: Trinity
+#   rarity: 3
+#   type: Striker
+#   armorType: ElasticArmor
+#   bulletType: Pierce
+#   weapon: HG
+- id: 10111
+  familyName:
+    cn: 美甘
+    jp: 美甘
+    en: Mikamo
+    kr: 미카모
+    tw: 美甘
+    th: 美甘
+  name:
+    cn: 尼禄(制服)
+    jp: ネル（制服）
+    en: Neru (Uniform)
+    kr: 네루(교복)
+    tw: 寧瑠（制服）
+    th: เนรุ (ชุดนักเรียน)
+  nickname: []
+  birthday:
+    month: 8
+    day: 17
+  club: C&C
+  clubCode: CleanNClearing
+  affiliation: 千年
+  schoolCode: Millennium
+  rarity: 3
+  type: Striker
+  armorType: ElasticArmor
+  bulletType: Pierce
+  weapon: SMG
+# - id: 10112
+#   familyName:
+#     cn: 一之濑
+#     jp: 一之瀬
+#     en: Ichinose
+#     kr: 이치노세
+#     tw: 一之瀬
+#     th: 一之瀬
+#   name:
+#     cn: 明日奈(制服)
+#     jp: アスナ（制服）
+#     en: Asuna (Uniform)
+#     kr: 아스나(교복)
+#     tw: 明日奈（制服）
+#     th: อาสึนะ (ชุดนักเรียน)
+#   nickname: []
+#   birthday:
+#     month: 3
+#     day: 24
+#   club: C&C
+#   clubCode: CleanNClearing
+#   affiliation: 千年
+#   schoolCode: Millennium
+#   rarity: 3
+#   type: Striker
+#   armorType: HeavyArmor
+#   bulletType: Explosion
+#   weapon: AR
 - id: 13000
   familyName:
     cn: 室笠
@@ -4097,7 +4181,7 @@
     jp: ミネ（アイドル）
     en: Mine (Idol)
     kr: 미네(아이돌)
-    tw: 美禰（偶像）
+    tw: 美禰(偶像)
     th: มิเนะ (ไอดอล)
   nickname: []
   nicknameFrom: 10058
@@ -5238,8 +5322,8 @@
     jp: トモエ（チーパオ）
     en: Tomoe (Qipao)
     kr: 토모에(치파오)
-    tw: 智惠（旗袍）
-    th: โทโมเอะ (กี่เผ้า)
+    tw: 智惠(旗袍)
+    th: โทโมเอะ (กี่เพ้า)
   nickname: []
   nicknameFrom: 16007
   birthday:
@@ -5311,6 +5395,34 @@
   armorType: HeavyArmor
   bulletType: Explosion
   weapon: HG
+# - id: 20041
+#   familyName:
+#     cn: 調月
+#     jp: 調月
+#     en: Tsukatsuki
+#     kr: 츠카츠키
+#     tw: 調月
+#     th: 調月
+#   name:
+#     cn: リオ
+#     jp: リオ
+#     en: Rio
+#     kr: 리오
+#     tw: 莉央
+#     th: ริโอะ
+#   nickname: []
+#   birthday:
+#     month: 6
+#     day: 6
+#   club: 研讨会
+#   clubCode: TheSeminar
+#   affiliation: 千年
+#   schoolCode: Millennium
+#   rarity: 3
+#   type: Special
+#   armorType: ElasticArmor
+#   bulletType: Mystic
+#   weapon: HG
 - id: 23000
   familyName:
     cn: 栗村
@@ -5957,13 +6069,13 @@
     en: Hakari
     kr: 하카리
     tw: 秤
-    th: 秤
+    th: ฮาคาริ
   name:
     cn: 亚津子(泳装)
     jp: アツコ（水着）
     en: Atsuko (Swimsuit)
     kr: 아츠코(수영복)
-    tw: 敦子（泳裝）
+    tw: 敦子(泳裝)
     th: อาสึโกะ (ชุดว่ายน้ำ)
   nickname: []
   nicknameFrom: 10042
@@ -5979,3 +6091,31 @@
   armorType: Unarmed
   bulletType: Sonic
   weapon: SMG
+- id: 26014
+  familyName:
+    cn: 角楯
+    jp: 角楯
+    en: Kakudate
+    kr: 카쿠다테
+    tw: 角楯
+    th: 角楯
+  name:
+    cn: 花凛(制服)
+    jp: カリン（制服）
+    en: Karin (Uniform)
+    kr: 카린(교복)
+    tw: 花凛（制服）
+    th: คาริน (ชุดนักเรียน)
+  nickname: []
+  birthday:
+    month: 2
+    day: 2
+  club: C&C
+  clubCode: CleanNClearing
+  affiliation: 千年
+  schoolCode: Millennium
+  rarity: 1
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: SR
