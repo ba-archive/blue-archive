@@ -1,6 +1,7 @@
 import { IL2dConfig } from "@/types/l2d";
 
 export const l2dConfig: IL2dConfig = {
+  /** 体操服优香 */ 
   CH0184_home: {
     name: "CH0184_home",
     playQue: [
@@ -171,6 +172,7 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  // 野宫
   Nonomi_home: {
     name: "Nonomi_home",
     playQue: [
@@ -266,6 +268,7 @@ export const l2dConfig: IL2dConfig = {
       },
     },
   },
+  // 日奈
   Hina_home: {
     name: "Hina_home",
     playQue: [
@@ -474,6 +477,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 泉奈
   Izuna_home: {
     name: "Izuna_home",
     playQue: [
@@ -508,6 +512,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 优香
   Yuuka_home: {
     name: "Yuuka_home",
     playQue: [
@@ -542,6 +547,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 红叶
   Momiji_home: {
     name: "Momiji_home",
     playQue: [
@@ -644,6 +650,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 咏叶（歌原）
   Utaha_home: {
     name: "Utaha_home",
     playQue: [
@@ -704,6 +711,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 水梓
   Azusa_swimsuit_home: {
     name: "Azusa_swimsuit_home",
     playQue: [
@@ -874,6 +882,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 晴
   Hare_home: {
     name: "Hare_home",
     playQue: [
@@ -976,6 +985,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 伊吹
   Ibuki_home: {
     name: "Ibuki_home",
     playQue: [
@@ -1112,6 +1122,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 渚
   Nagisa_home: {
     name: "Nagisa_home",
     playQue: [
@@ -1494,6 +1505,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 丽情（俪舒）
   Reizyo_home: {
     name: "Reizyo_home",
     playQue: [
@@ -1592,6 +1604,7 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 和纱
   Kazusa_home: {
     name: "Kazusa_home",
     playQue: [
