@@ -33,7 +33,7 @@ const mmtkGroup = computed(() =>
       :idx="idx"
       :total="total"
     />
-    <div flex flex-col gap-4 mb-5 pt-4 class="bg-[#f2f2f2] @dark:bg-slate-900">
+    <div flex flex-col gap-4 mb-5 pt-4 px-4 class="bg-[#f2f2f2] @dark:bg-slate-900">
       <MmtkUnit v-for="msg in mmtkGroup" :key="msg.Id" :msg="msg" />
     </div>
   </div>
