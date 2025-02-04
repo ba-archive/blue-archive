@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { ElMessage } from "element-plus";
 import { useDiffComparatorStore } from "../store/DiffComparatorStore";
 import { Scenario } from "../../ScenarioEditor/types/content";
-import { isEmpty } from "radash";
+import { isEmpty } from "radashi";
 import ContentPreview from "./ContentPreview.vue";
 
 const props = defineProps<{
