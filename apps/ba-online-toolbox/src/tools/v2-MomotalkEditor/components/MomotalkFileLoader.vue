@@ -54,6 +54,9 @@
         />
       </div>
     </div>
+    <a-button type="primary" mt-5 @click="handleImportData"
+      >导入旧版翻译数据</a-button
+    >
   </div>
 </template>
 <script setup lang="ts">
@@ -97,7 +100,9 @@ const dragOver = (e: DragEvent): void => {
 const inputHandle = (event: Event): void => {
   const target = event.target as HTMLInputElement;
   const file = (target.files as FileList)[0];
-  // fileHandle(file);
+  if (file) {
+    handleFile(file);
+  }
 };
 
 enum FileType {
@@ -185,5 +190,18 @@ function readFile(file: File): Promise<string> {
     };
     reader.readAsText(file);
   });
+}
+
+function handleImportData() {
+  const oldData = localStorage.getItem("translation");
+
+  if (oldData) {
+    try {
+      const newData = JSON.parse(oldData);
+      useMomotalkEditorStore.setMomotalkFileData(newData.fileContent);
+    } catch (e) {
+      alert("错误：" + e);
+    }
+  }
 }
 </script>
