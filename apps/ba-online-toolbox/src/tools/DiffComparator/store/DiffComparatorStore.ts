@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { Scenario } from "../../ScenarioEditor/types/content";
-import { isEmpty } from "radash";
+import { isEmpty } from "radashi";
 
 export const useDiffComparatorStore = defineStore({
   id: "diffComparatorStore",

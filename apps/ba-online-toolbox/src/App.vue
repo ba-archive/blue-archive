@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import HomepageNavigator from "./HomepageNavigator.vue";
 import FAB from "./tools/public/components/FAB.vue";
@@ -23,6 +23,17 @@ onMounted(() => {
     }
     config.setStudents(students);
   });
+});
+
+watch(mode, () => {
+  switch (mode.value) {
+    case "dark":
+      document.body.setAttribute("arco-theme", "dark");
+      break;
+    case "light":
+      document.body.removeAttribute("arco-theme");
+      break;
+  }
 });
 
 const route = useRoute();

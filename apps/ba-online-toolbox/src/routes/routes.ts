@@ -24,32 +24,19 @@ const routes: RouteRecordRaw[] = [
       navOrder: 0,
     },
     children: [
-      // {
-      //   path: 'aronaTalk',
-      //   name: 'AronaTalk',
-      //   meta: {
-      //     shouldShowInHomepageNav: false,
-      //     shouldShowInNavbar: false,
-      //     icon: '/image/arona_icon.webp',
-      //     title: 'AronaTalk',
-      //     description: 'BA 前端标准靶场',
-      //     navOrder: 1,
-      //   },
-      //   component: () => import('../tools/AronaTalk/AronaTalkHome.vue'),
-      // },
       {
-        path: "/momotalk",
-        name: "TranslateMomotalk",
+        path: "/editor-momotalk",
+        name: "MomotalkEditor",
         meta: {
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
-          icon: "/image/translation.svg",
-          title: "Momotalk 翻译",
-          description: "开发人员用的 Momotalk 翻译工具",
-          navOrder: 2,
+          icon: "/image/momotalk.svg",
+          title: "Momotalk V2",
+          description: "Momotalk V2",
+          navOrder: 3,
         },
         component: () =>
-          import("../tools/MomotalkTranslator/MomotalkTranslatorHome.vue"),
+          import("../tools/v2-MomotalkEditor/MomotalkEditorHome.vue"),
       },
       {
         path: "/editor",
@@ -77,6 +64,21 @@ const routes: RouteRecordRaw[] = [
           navOrder: 4,
         },
         component: () => import("../tools/DiffComparator/DiffCompareHome.vue"),
+      },
+
+      {
+        path: "/momotalk",
+        name: "TranslateMomotalk",
+        meta: {
+          shouldShowInHomepageNav: true,
+          shouldShowInNavbar: false,
+          icon: "/image/translation.svg",
+          title: "Momotalk 翻译",
+          description: "开发人员用的 Momotalk 翻译工具",
+          navOrder: 999,
+        },
+        component: () =>
+          import("../tools/MomotalkTranslator/MomotalkTranslatorHome.vue"),
       },
       {
         path: "/diff-comparator",
