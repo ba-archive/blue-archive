@@ -1,21 +1,16 @@
 <template>
-  <n-modal
-    v-model:show="showModal"
-    preset="dialog"
-    :style="{ width: '600px' }"
-    size="huge"
-    :bordered="false"
-    to="body"
-    positive-text="确定"
-    negative-text="取消"
-    @positive-click="handlePositiveClick"
+  <a-modal
+    @ok="handlePositiveClick"
+    @cancel="readAsMomotalk"
+    v-model:visible="showModal"
   >
-    <template #header> 检测到剧情翻译文件 </template>
-
-    您正在尝试上传一个剧情翻译文件。<br />
-    点击"确定"跳转到剧情翻译编辑器。 点击"取消"，我们将会尝试将文件作为 MomoTalk
-    文件处理。
-  </n-modal>
+    <template #title> 检测到剧情翻译文件 </template>
+    <div>
+      您正在尝试上传一个剧情翻译文件。<br />
+      点击"确定"跳转到剧情翻译编辑器。 <br />
+      点击"取消"，我们将会尝试将文件作为 MomoTalk 文件处理。<br />
+    </div>
+  </a-modal>
   <div
     class="flex flex-col items-center justify-center relative flex-1 w-screen h-screen select-none"
     @drop="handleFileDrop"
@@ -66,6 +61,7 @@ import { Scenario } from "../../ScenarioEditor/types/content";
 import type { FileContent } from "../types/Momotalks";
 import { momotalkEditorStore } from "../store/momotalkEditorStore";
 import { useRouter } from "vue-router";
+import { Message } from "@arco-design/web-vue";
 
 const router = useRouter();
 
@@ -110,6 +106,29 @@ enum FileType {
   Momotalk = 1,
 }
 
+function checkMomotalkFileValidity(content: any) {
+  if (
+    content.title &&
+    content.title?.length > 0 &&
+    content.content &&
+    content.content?.length > 0
+  ) {
+    return true;
+  }
+  return false;
+}
+
+function readAsMomotalk() {
+  // 检测是否有 title，content 键
+  if (checkMomotalkFileValidity(tempScenarioData.value)) {
+    useMomotalkEditorStore.setMomotalkFileData(
+      tempScenarioData.value as unknown as FileContent
+    );
+  } else {
+    Message.error("文件不是有效的 MomoTalk 数据文件");
+  }
+}
+
 function handleFile(file: File) {
   filePreProcessor(file).then(result => {
     if (result.type === FileType.Scenario) {
@@ -117,7 +136,11 @@ function handleFile(file: File) {
       showModal.value = true;
     } else {
       tempMomotalkData.value = result.content as FileContent;
-      useMomotalkEditorStore.setMomotalkFileData(tempMomotalkData.value);
+      if (checkMomotalkFileValidity(tempMomotalkData.value)) {
+        useMomotalkEditorStore.setMomotalkFileData(tempMomotalkData.value);
+      } else {
+        Message.error("文件不是有效的 MomoTalk 数据文件");
+      }
     }
   });
 }
@@ -137,7 +160,7 @@ function filePreProcessor(file: File): Promise<{
           content: parsed,
         };
       } catch (e) {
-        throw new Error("文件已损坏");
+        throw new Error("文件已损坏，请联系管理员处理");
       }
     });
   } else {
@@ -149,7 +172,7 @@ function filePreProcessor(file: File): Promise<{
           content: parsed,
         };
       } catch (e) {
-        throw new Error("文件已损坏");
+        throw new Error("文件已损坏，请联系管理员处理");
       }
     });
   }
