@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
           shouldShowInNavbar: false,
           icon: "/image/momotalk.svg",
           title: "Momotalk V2",
-          description: "Momotalk V2",
+          description: "新版 MomoTalk 翻译工具",
           navOrder: 3,
         },
         component: () =>
@@ -45,8 +45,8 @@ const routes: RouteRecordRaw[] = [
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
           icon: "/image/translation.svg",
-          title: "剧情翻译（新）",
-          description: "剧情翻译器（新）",
+          title: "剧情翻译",
+          description: "剧情翻译工具",
           navOrder: 3,
         },
         component: () =>
@@ -60,7 +60,7 @@ const routes: RouteRecordRaw[] = [
           shouldShowInNavbar: false,
           icon: "/image/diff.svg",
           title: "Diff 比较",
-          description: "比较两个文本的差异",
+          description: "比较两个剧情文本的差异",
           navOrder: 4,
         },
         component: () => import("../tools/DiffComparator/DiffCompareHome.vue"),
