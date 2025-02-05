@@ -48,7 +48,7 @@ const isMainPage = computed(() => {
   <div id="main-router-view">
     <n-config-provider :theme="mode === 'dark' ? darkTheme : undefined">
       <router-view v-slot="{ Component }">
-        <keep-alive :max="2">
+        <keep-alive exclude="ScenarioEditorHome">
           <component :is="Component" />
         </keep-alive>
       </router-view>
