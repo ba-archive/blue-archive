@@ -1,16 +1,11 @@
 import { defineStore } from "pinia";
-import type {
-  FileContent,
-  Language,
-  Title,
-  Content,
-  ContentTranslation,
-} from "../types/Momotalks";
+import type { FileContent, Language, Title, Content } from "../types/Momotalks";
 
 // composition API 会导致 persistedstate 不能持久化存储
 export const momotalkEditorStore = defineStore("momotalk-editor", {
   state: () => ({
     momotalkFileData: null as FileContent | null,
+    filename: "",
     defaultTranslator: "",
     defaultProofreader: "",
     selectedTranslation: "Jp" as Language,
@@ -21,6 +16,7 @@ export const momotalkEditorStore = defineStore("momotalk-editor", {
 
   getters: {
     getMomotalkFileData: state => state.momotalkFileData,
+    getFilename: state => state.filename,
     getTranslator: state =>
       state.momotalkFileData?.translator || state.defaultTranslator,
     getProofreader: state =>
@@ -68,6 +64,9 @@ export const momotalkEditorStore = defineStore("momotalk-editor", {
     setMomotalkFileData(data: FileContent) {
       this.momotalkFileData = data;
     },
+    setFilename(filename: string) {
+      this.filename = filename;
+    },
     setTranslator(translator: string) {
       this.defaultTranslator = translator;
       this.momotalkFileData!.translator = translator;
@@ -96,6 +95,8 @@ export const momotalkEditorStore = defineStore("momotalk-editor", {
     },
     reset() {
       this.momotalkFileData = null;
+      this.filename = "";
+      this.isProofreaderMode = false;
     },
     setIsDownloaded(isDownloaded: boolean) {
       this.isDownloaded = isDownloaded;
@@ -105,6 +106,7 @@ export const momotalkEditorStore = defineStore("momotalk-editor", {
     storage: localStorage,
     pick: [
       "momotalkFileData",
+      "filename",
       "defaultTranslator",
       "defaultProofreader",
       "selectedTranslation",

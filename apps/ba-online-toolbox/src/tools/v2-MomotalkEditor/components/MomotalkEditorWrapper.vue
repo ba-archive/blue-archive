@@ -16,7 +16,7 @@ import { isMac } from "../../public/helper/isMac";
 import { saveAs } from "file-saver";
 import { dump } from "js-yaml";
 import { useRouter } from "vue-router";
-import "@arco-design/web-vue/es/button/style/css.js"
+import "@arco-design/web-vue/es/button/style/css.js";
 
 const router = useRouter();
 const useMomotalkEditorStore = momotalkEditorStore();
