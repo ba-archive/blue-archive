@@ -53,12 +53,7 @@ async function next(NextGroupId: number, id: number) {
         ?.FavorScheduleId || 0;
     for (const answerElement of answerElements) {
       options.push({
-        MessageCN: answerElement.MessageCN,
-        MessageJP: answerElement.MessageJP,
-        MessageEN: answerElement.MessageEN,
-        MessageKR: answerElement.MessageKR,
-        MessageTH: answerElement.MessageTH,
-        MessageTW: answerElement.MessageTW,
+        ...answerElement,
         NextGroupId: answerElement.NextGroupId,
       });
     }
@@ -67,9 +62,7 @@ async function next(NextGroupId: number, id: number) {
     }
     messageList.value.push({
       avatar: false,
-      MessageGroupId: firstMessageGroupElement.MessageGroupId,
-      Id: firstMessageGroupElement.Id,
-      CharacterId: firstMessageGroupElement.CharacterId,
+      ...firstMessageGroupElement,
       ConditionValue: 0,
       PreConditionGroupId: 0,
       FavorScheduleId: favorScheduleId,
@@ -100,23 +93,7 @@ async function next(NextGroupId: number, id: number) {
       }
       messageList.value.push({
         avatar: false,
-        MessageGroupId: currentMessageItem.MessageGroupId,
-        Id: currentMessageItem.Id,
-        CharacterId: currentMessageItem.CharacterId,
-        ConditionValue: currentMessageItem.ConditionValue,
-        PreConditionGroupId: currentMessageItem.PreConditionGroupId,
-        FavorScheduleId: currentMessageItem.FavorScheduleId,
-        NextGroupId: currentMessageItem.NextGroupId,
-        FeedbackTimeMillisec: currentMessageItem.FeedbackTimeMillisec,
-        MessageCondition: currentMessageItem.MessageCondition,
-        MessageType: currentMessageItem.MessageType,
-        ImagePath: currentMessageItem.ImagePath,
-        MessageJP: currentMessageItem.MessageJP,
-        MessageCN: currentMessageItem.MessageCN,
-        MessageEN: currentMessageItem.MessageEN,
-        MessageKR: currentMessageItem.MessageKR,
-        MessageTH: currentMessageItem.MessageTH,
-        MessageTW: currentMessageItem.MessageTW,
+        ...currentMessageItem,
       });
       await wait(currentMessageItem.FeedbackTimeMillisec || 1500);
       if (currentMessageItem.FavorScheduleId !== 0) {
@@ -191,7 +168,6 @@ onActivated(() => {
       <!-- eslint-disable max-len -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_2_00000033347787382183846980000016369978894466167968_"
         x="0"
         y="0"
         viewBox="0 0 512 477.9"
