@@ -15,8 +15,10 @@ import TitleTranslateUnit from "./components/TitleTranslateUnit.vue";
 import { useMainStore } from "./store/mainStore";
 import { FileContent } from "./types/FileContent";
 import { Student } from "./types/Student";
+import { useRouter } from "vue-router";
 
 const mainStore = useMainStore();
+const router = useRouter();
 const studentName = computed(() => mainStore.getStudentName);
 const studentId = computed(() => mainStore.getStudentId);
 const translator = ref(mainStore.getTranslator);
@@ -144,6 +146,10 @@ function handleUpdateProofreadMode(value: boolean) {
 function handleUpdateGlobalReferenceMode(value: boolean) {
   mainStore.updateGlobalReferenceMode(value);
 }
+
+function handleNewTool() {
+  router.push("/editor-momotalk");
+}
 </script>
 
 <template>
@@ -180,6 +186,7 @@ function handleUpdateGlobalReferenceMode(value: boolean) {
           </n-input-group>
         </n-space>
       </n-space>
+      <n-button type="info" @click="handleNewTool">转到新版工具</n-button>
     </n-space>
   </div>
   <n-space class="translate-app-main" vertical align="center">
