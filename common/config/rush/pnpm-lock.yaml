@@ -24,6 +24,12 @@ importers:
       '@arco-design/web-vue':
         specifier: ~2.56.3
         version: 2.56.3(vue@3.5.13(typescript@5.7.3))
+      '@iconify-json/icon-park':
+        specifier: ~1.2.2
+        version: 1.2.2
+      '@iconify/json':
+        specifier: ~2.2.196
+        version: 2.2.202
       '@types/diff':
         specifier: ~7.0.0
         version: 7.0.0
@@ -90,6 +96,9 @@ importers:
       unocss:
         specifier: ^65.4.0
         version: 65.4.0(@unocss/webpack@65.4.0(rollup@4.24.0))(postcss@8.4.49)(rollup@4.24.0)(vite@5.4.10(@types/node@22.10.5)(sass@1.83.1)(terser@5.37.0))(vue@3.5.13(typescript@5.7.3))
+      unplugin-icons:
+        specifier: ~22.0.0
+        version: 22.0.0(@vue/compiler-sfc@3.5.13)
       uuid:
         specifier: ~11.0.5
         version: 11.0.5
@@ -1234,6 +1243,9 @@ packages:
 
   '@antfu/install-pkg@0.4.1':
     resolution: {integrity: sha512-T7yB5QNG29afhWVkVq7XeIMBa5U/vs9mX69YqayXypPRmYzUmzwnYltplHmPtZ4HPCn+sQKeXW8I47wCbuBOjw==}
+
+  '@antfu/install-pkg@0.5.0':
+    resolution: {integrity: sha512-dKnk2xlAyC7rvTkpkHmu+Qy/2Zc3Vm/l8PtNyIOGDBtXPY3kThfU4ORNEp3V7SXw5XSOb+tOJaUYpfquPzL/Tg==}
 
   '@antfu/ni@0.23.2':
     resolution: {integrity: sha512-FSEVWXvwroExDXUu8qV6Wqp2X3D1nJ0Li4LFymCyvCVrm7I3lNfG0zZWSWvGU1RE7891eTnFTyh31L3igOwNKQ==}
@@ -3090,6 +3102,9 @@ packages:
 
   '@iconify-json/carbon@1.1.31':
     resolution: {integrity: sha512-CAvECFfiwGyZmlcuM2JLMRDEN3VsIEZv6lml7Xf+3giQ5oXloADm0b5wiVPFZmONKM5jXERmx+E7YSvAtFJIbw==}
+
+  '@iconify-json/icon-park@1.2.2':
+    resolution: {integrity: sha512-MdC180Mfz0h9RLTCcT49uKdllynCcG2V0nmggAkTn9pEJig9bOvQzC+05otNSlMjloAPzryj/RCf2P/nHiEeHg==}
 
   '@iconify-json/simple-icons@1.2.19':
     resolution: {integrity: sha512-5ntmhLBUEKiakX3quPPXft+WfXIVfDINzTm3djZzzewah9ACxsCVaxoa4QVxlW8PMoF8jndXOqyHYZGCxwxoZw==}
@@ -10289,6 +10304,29 @@ packages:
     resolution: {integrity: sha512-xzxU+Ri16EtHsow5uJCYLOx6vbKKNC3ts1+EyqKdmPjBA6iRCpyrc7bv7o0RhGSbNc7viquepO2GgIvSL5K8TA==}
     engines: {node: '>=18.12.0'}
 
+  unplugin-icons@22.0.0:
+    resolution: {integrity: sha512-+1jIt2wynxL+GISehNok8MIb9RaCufIZCHJs0HKbxOljJL9m4NtOhva+dZhNtSKtfQ62Hwd/RRbniSVuuD4Xow==}
+    peerDependencies:
+      '@svgr/core': '>=7.0.0'
+      '@svgx/core': ^1.0.1
+      '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
+      svelte: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vue-template-compiler: ^2.6.12
+      vue-template-es2015-compiler: ^1.9.0
+    peerDependenciesMeta:
+      '@svgr/core':
+        optional: true
+      '@svgx/core':
+        optional: true
+      '@vue/compiler-sfc':
+        optional: true
+      svelte:
+        optional: true
+      vue-template-compiler:
+        optional: true
+      vue-template-es2015-compiler:
+        optional: true
+
   unplugin-vue-components@28.0.0:
     resolution: {integrity: sha512-vYe0wSyqTVhyNFIad1iiGyQGhG++tDOMgohqenMDOAooMJP9vvzCdXTqCVx20A0rCQXFNjgoRbSeDAioLPH36Q==}
     engines: {node: '>=14'}
@@ -11296,6 +11334,11 @@ snapshots:
     dependencies:
       package-manager-detector: 0.2.0
       tinyexec: 0.3.0
+
+  '@antfu/install-pkg@0.5.0':
+    dependencies:
+      package-manager-detector: 0.2.8
+      tinyexec: 0.3.2
 
   '@antfu/ni@0.23.2': {}
 
@@ -13159,6 +13202,10 @@ snapshots:
   '@humanwhocodes/retry@0.4.1': {}
 
   '@iconify-json/carbon@1.1.31':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/icon-park@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -22254,6 +22301,20 @@ snapshots:
       unplugin: 2.1.2
     transitivePeerDependencies:
       - rollup
+
+  unplugin-icons@22.0.0(@vue/compiler-sfc@3.5.13):
+    dependencies:
+      '@antfu/install-pkg': 0.5.0
+      '@antfu/utils': 0.7.10
+      '@iconify/utils': 2.2.1
+      debug: 4.4.0(supports-color@9.4.0)
+      kolorist: 1.8.0
+      local-pkg: 0.5.1
+      unplugin: 2.1.2
+    optionalDependencies:
+      '@vue/compiler-sfc': 3.5.13
+    transitivePeerDependencies:
+      - supports-color
 
   unplugin-vue-components@28.0.0(@babel/parser@7.26.5)(@nuxt/kit@3.15.1(magicast@0.3.5)(rollup@4.24.0))(rollup@4.24.0)(vue@3.5.13(typescript@5.7.3)):
     dependencies:

@@ -3,6 +3,8 @@ import type { Content } from "../../types/Momotalks";
 import { momotalkEditorStore } from "../../store/momotalkEditorStore";
 import { computed } from "vue";
 import EInput from "../widgets/EInput.vue";
+import EActionButton from "../widgets/EActionButton.vue";
+import { Message } from "@arco-design/web-vue";
 const props = defineProps<{ msg: Content }>();
 
 const useMomotalkEditorStore = momotalkEditorStore();
@@ -18,13 +20,28 @@ const to = computed(
 );
 
 const isImage = computed(() => props.msg.ImagePath);
+
+function handleFlagUnsure() {
+  props.msg.unsure = !props.msg.unsure;
+}
+
+function handleTranslate() {
+  Message.info("deepseek 还没法用，你先别急");
+}
 </script>
 
 <template>
   <div
     flex
+    items-end
+    gap-1
+    px-4
+    py-2
+    transition-colors
+    duration-300
     :class="{
-      'justify-end': 'Answer' === msg.MessageCondition,
+      'justify-start flex-row-reverse': 'Answer' === msg.MessageCondition,
+      'bg-yellow-100': msg.unsure,
     }"
   >
     <div
@@ -40,7 +57,7 @@ const isImage = computed(() => props.msg.ImagePath);
         class="orininal-msg"
         :class="{
           'pl-[2px]': !isImage,
-          'lh-0': isImage
+          'lh-0': isImage,
         }"
       >
         <span v-if="!isImage">{{ props.msg[from] }}</span>
@@ -66,6 +83,11 @@ const isImage = computed(() => props.msg.ImagePath);
         />
       </div>
     </div>
+    <EActionButton icon="translate" @click="handleTranslate" />
+    <EActionButton
+      :icon="msg.unsure ? 'flag-filled' : 'flag'"
+      @click="handleFlagUnsure"
+    />
   </div>
 </template>
 

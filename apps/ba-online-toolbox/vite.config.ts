@@ -18,6 +18,8 @@ import {
   transformerDirectives,
 } from "unocss";
 import vueDevTools from "vite-plugin-vue-devtools";
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -63,9 +65,16 @@ export default defineConfig({
         ArcoResolver({
           sideEffect: true,
         }),
+        IconsResolver({
+          enabledCollections: ["icon-park", "icon-park-outline"],
+        }),
       ],
     }),
     vue(),
+    Icons({
+      compiler: "vue3",
+      autoInstall: true,
+    }),
     UnoCSS({
       presets: [
         presetUno(),
