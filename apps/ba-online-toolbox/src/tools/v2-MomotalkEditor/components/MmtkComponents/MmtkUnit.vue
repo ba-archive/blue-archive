@@ -83,10 +83,11 @@ function handleTranslate() {
         />
       </div>
     </div>
-    <EActionButton icon="translate" @click="handleTranslate" />
+    <EActionButton icon="translate" @click="handleTranslate" :tab-selectable="false"/>
     <EActionButton
       :icon="msg.unsure ? 'flag-filled' : 'flag'"
       @click="handleFlagUnsure"
+      :tab-selectable="false"
     />
   </div>
 </template>

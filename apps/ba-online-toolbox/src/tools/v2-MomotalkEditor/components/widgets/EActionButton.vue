@@ -5,10 +5,12 @@ const props = withDefaults(
     icon: "flag" | "flag-filled" | "translate";
     size?: "mini" | "default";
     disabled?: boolean;
+    tabSelectable?: boolean;
   }>(),
   {
     size: "default",
     disabled: false,
+    tabSelectable: true,
   }
 );
 
@@ -49,6 +51,7 @@ function handleMouseLeave() {
     transition-colors
     duration-300
     cursor-pointer
+    :tabindex="tabSelectable ? 0 : -1"
     class="@hover:bg-gray-200 @dark:@hover:bg-gray-800"
     :class="{
       'opacity-50 cursor-not-allowed': disabled,
