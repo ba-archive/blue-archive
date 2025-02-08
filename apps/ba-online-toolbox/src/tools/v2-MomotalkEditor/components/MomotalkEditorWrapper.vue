@@ -121,7 +121,7 @@ function handleDownload() {
   const blob = new Blob([dump(readyData)], {
     type: "application/yaml",
   });
-  saveAs(blob, `已${isProofreaderMode.value ? "校" : "翻"}-${studentId}.yaml`);
+  saveAs(blob, `已${isProofreaderMode.value ? "校" : "翻"}-${studentId}.yml`);
   useMomotalkEditorStore.setIsDownloaded(true);
 }
 
