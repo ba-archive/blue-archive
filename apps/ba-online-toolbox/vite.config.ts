@@ -4,8 +4,11 @@ import { defineConfig } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
+import {
+  ElementPlusResolver,
+  NaiveUiResolver,
+  ArcoResolver,
+} from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
 import UnoCSS from "unocss/vite";
 import {
@@ -15,6 +18,8 @@ import {
   transformerDirectives,
 } from "unocss";
 import vueDevTools from "vite-plugin-vue-devtools";
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -51,12 +56,25 @@ export default defineConfig({
     AutoImport({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
       imports: ["vue", "vue-router"],
-      resolvers: [ElementPlusResolver(), NaiveUiResolver()],
+      resolvers: [ElementPlusResolver(), NaiveUiResolver(), ArcoResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver(), NaiveUiResolver()],
+      resolvers: [
+        ElementPlusResolver(),
+        NaiveUiResolver(),
+        ArcoResolver({
+          sideEffect: true,
+        }),
+        IconsResolver({
+          enabledCollections: ["icon-park", "icon-park-outline"],
+        }),
+      ],
     }),
     vue(),
+    Icons({
+      compiler: "vue3",
+      autoInstall: true,
+    }),
     UnoCSS({
       presets: [
         presetUno(),

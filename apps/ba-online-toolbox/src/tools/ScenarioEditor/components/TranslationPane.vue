@@ -101,7 +101,10 @@
           />
         </n-space>
       </div>
-      <n-tooltip :show="showCopyPasteTooltip || isDuplicateLine" placement="top-start">
+      <n-tooltip
+        :show="showCopyPasteTooltip || isDuplicateLine"
+        placement="top-start"
+      >
         <template #trigger>
           <original-text-disp
             :text="
@@ -124,7 +127,8 @@
         <div v-if="isDuplicateLine">
           <div>这句话与上一句似乎相同，可能分别对应着两个选项的回答。</div>
           <div>
-            可以使用 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> + <kbd>D</kbd> 复制上一句的译文。
+            可以使用 <kbd>{{ isMac ? "⌘" : "Ctrl" }}</kbd> +
+            <kbd>D</kbd> 复制上一句的译文。
           </div>
         </div>
       </n-tooltip>
@@ -597,11 +601,14 @@ function handleGotoPrevLineRequest() {
 
 const isDuplicateLine = computed(() => {
   const currentLine = config.getSelectLine;
+  if (currentLine <= 0) return false;
   const prevLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
   if (prevLine === -1) return false;
 
-  const currentLineContent = mainStore.getScenario.content[currentLine][config.getLanguage];
-  const prevLineContent = mainStore.getScenario.content[prevLine][config.getLanguage];
+  const currentLineContent =
+    mainStore.getScenario.content[currentLine][config.getLanguage];
+  const prevLineContent =
+    mainStore.getScenario.content[prevLine][config.getLanguage];
 
   return currentLineContent === prevLineContent;
 });
@@ -611,10 +618,11 @@ function handleDuplicateLine() {
   const prevLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
   if (prevLine === -1) return;
   const prevLineContent = mainStore.getScenario.content[prevLine];
-  
+
   const currentLineContent = mainStore.getScenario.content[currentLine];
 
-  currentLineContent[config.getTargetLang] = prevLineContent[config.getTargetLang];
+  currentLineContent[config.getTargetLang] =
+    prevLineContent[config.getTargetLang];
   mainStore.setContentLine(currentLineContent as ContentLine, currentLine);
 }
 

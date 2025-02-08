@@ -24,32 +24,19 @@ const routes: RouteRecordRaw[] = [
       navOrder: 0,
     },
     children: [
-      // {
-      //   path: 'aronaTalk',
-      //   name: 'AronaTalk',
-      //   meta: {
-      //     shouldShowInHomepageNav: false,
-      //     shouldShowInNavbar: false,
-      //     icon: '/image/arona_icon.webp',
-      //     title: 'AronaTalk',
-      //     description: 'BA 前端标准靶场',
-      //     navOrder: 1,
-      //   },
-      //   component: () => import('../tools/AronaTalk/AronaTalkHome.vue'),
-      // },
       {
-        path: "/momotalk",
-        name: "TranslateMomotalk",
+        path: "/editor-momotalk",
+        name: "MomotalkEditor",
         meta: {
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
-          icon: "/image/translation.svg",
-          title: "Momotalk 翻译",
-          description: "开发人员用的 Momotalk 翻译工具",
-          navOrder: 2,
+          icon: "/image/momotalk.svg",
+          title: "Momotalk V2",
+          description: "新版 MomoTalk 翻译工具",
+          navOrder: 3,
         },
         component: () =>
-          import("../tools/MomotalkTranslator/MomotalkTranslatorHome.vue"),
+          import("../tools/v2-MomotalkEditor/MomotalkEditorHome.vue"),
       },
       {
         path: "/editor",
@@ -58,8 +45,8 @@ const routes: RouteRecordRaw[] = [
           shouldShowInHomepageNav: true,
           shouldShowInNavbar: false,
           icon: "/image/translation.svg",
-          title: "剧情翻译（新）",
-          description: "剧情翻译器（新）",
+          title: "剧情翻译",
+          description: "剧情翻译工具",
           navOrder: 3,
         },
         component: () =>
@@ -73,10 +60,25 @@ const routes: RouteRecordRaw[] = [
           shouldShowInNavbar: false,
           icon: "/image/diff.svg",
           title: "Diff 比较",
-          description: "比较两个文本的差异",
+          description: "比较两个剧情文本的差异",
           navOrder: 4,
         },
         component: () => import("../tools/DiffComparator/DiffCompareHome.vue"),
+      },
+
+      {
+        path: "/momotalk",
+        name: "TranslateMomotalk",
+        meta: {
+          shouldShowInHomepageNav: true,
+          shouldShowInNavbar: false,
+          icon: "/image/translation.svg",
+          title: "Momotalk 翻译",
+          description: "开发人员用的 Momotalk 翻译工具",
+          navOrder: 999,
+        },
+        component: () =>
+          import("../tools/MomotalkTranslator/MomotalkTranslatorHome.vue"),
       },
       {
         path: "/diff-comparator",

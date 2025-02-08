@@ -28,7 +28,6 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     // "nuxt-swiper",
     "nuxt-typed-router",
-    "nuxt-radash",
   ],
   vite: {
     css: {
