@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import type { FileContent, Language, Title, Content } from "../types/Momotalks";
+import { omit } from "radashi";
 
 // composition API 会导致 persistedstate 不能持久化存储
 export const momotalkEditorStore = defineStore("momotalk-editor", {
@@ -48,11 +49,11 @@ export const momotalkEditorStore = defineStore("momotalk-editor", {
       const { momotalkFileData: preparedData } = state;
       if (isProofreaded) {
         // 过滤掉 unsure flag
-        preparedData!.title = preparedData!.title.map(
-          el => ({ ...el }) as Omit<Title, "unsure">
+        preparedData!.title = preparedData!.title.map(el =>
+          omit(el, ["unsure"])
         );
-        preparedData!.content = preparedData!.content.map(
-          el => ({ ...el }) as Omit<Content, "unsure">
+        preparedData!.content = preparedData!.content.map(el =>
+          omit(el, ["unsure"])
         );
       }
       return preparedData;
