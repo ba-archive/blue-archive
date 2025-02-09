@@ -192,6 +192,7 @@ function inferProofread(): boolean {
   // 否则返回 false
   const fileNameWithoutSuffix = fileName.replace(/\.[^/.]+$/, "");
   if (fileNameWithoutSuffix.includes("已翻")) {
+    console.log("文件名带有已翻字样");
     return true;
   }
   // @ts-expect-error
@@ -203,15 +204,23 @@ function inferProofread(): boolean {
   // @ts-ignore
   const messageUnits = (content as FileContent).content;
   const merged = [...titleUnits, ...messageUnits];
-  const unsureCount = merged.filter((unit) => unit.unsure).length;
+  const unsureCount = merged.filter(unit => unit.unsure).length;
   if (unsureCount > 0) {
+    console.log("文件中含有unsure flag");
     return true;
   }
-  
-  const textCnCount = titleUnits.filter(unit => unit.TextCn).length;
-  const messageCnCount = messageUnits.filter(unit => unit.MessageCN || !unit.ImagePath).length;
 
+  const textCnCount = titleUnits.filter(
+    unit => unit.TextCn && unit.TextCn.length > 0
+  ).length;
+  const messageCnCount = messageUnits.filter(
+    unit =>
+      (unit.ImagePath && unit.ImagePath.length > 0) ||
+      (unit.MessageCN && unit.MessageCN.length > 0)
+  ).length;
+  console.log("textCnCount", textCnCount);
   if (textCnCount + messageCnCount > merged.length * 0.9) {
+    console.log("文本翻译条目占比超过90%");
     return true;
   }
   return false;
