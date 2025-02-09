@@ -199,11 +199,11 @@ function inferProofread(): boolean {
     return false;
   }
   // @ts-ignore
-  const titleUnits = content.title;
+  const titleUnits = (content as FileContent).title;
   // @ts-ignore
-  const messageUnits = content.content;
+  const messageUnits = (content as FileContent).content;
   const merged = [...titleUnits, ...messageUnits];
-  const unsureCount = merged.filter((unit: any) => unit.unsure).length;
+  const unsureCount = merged.filter((unit) => unit.unsure).length;
   if (unsureCount > 0) {
     return true;
   }
