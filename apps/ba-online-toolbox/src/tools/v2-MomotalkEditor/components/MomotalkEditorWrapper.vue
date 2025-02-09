@@ -145,9 +145,12 @@ function handleDownload() {
       break;
   }
   const studentId = readyData?.CharacterId ?? 0;
-  const blob = new Blob([dump(readyData)], {
-    type: "application/yaml",
-  });
+  const blob = new Blob(
+    [dump(readyData, { quotingType: '"', forceQuotes: true })],
+    {
+      type: "application/yaml",
+    }
+  );
   saveAs(blob, `已${isProofreaderMode.value ? "校" : "翻"}-${studentId}.yml`);
   useMomotalkEditorStore.setIsDownloaded(true);
 }
