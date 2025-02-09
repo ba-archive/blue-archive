@@ -1,7 +1,7 @@
 {
   "GroupId": 1011202,
   "translator": "今天早睡了吗",
-  "proofreader": "",
+  "proofreader": "月光",
   "content": [
     {
       "TextJp": "バスの中で",
@@ -257,7 +257,7 @@
     },
     {
       "TextJp": "[ns] \"うっ、人が多い……。\"",
-      "TextCn": "[ns]“唔，人太多了……”",
+      "TextCn": "[ns]“唔，人好多……”",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -329,7 +329,7 @@
     },
     {
       "TextJp": "（奥に移動していると……）",
-      "TextCn": "（往公交后面挤过去之后……）",
+      "TextCn": "（往公交后面挤的时候……）",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -343,7 +343,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "#na;(안쪽으로 들어가려고 조금씩 움직이던 때……)",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "",
@@ -649,7 +650,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "3;아스나 교복;08;아, 주인님에게는 이 옷이 오히려 낯설겠구나?",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "[s] \"珍しいね。\"",
@@ -833,7 +835,7 @@
     },
     {
       "TextJp": "え、何あの人……こわ……",
-      "TextCn": "诶，那人在干什么……好可怕……",
+      "TextCn": "诶，那人怎么回事……好可怕……",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -847,7 +849,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "4;참새 승객;00;뭐, 뭐지…… 저 사람……\n#4;stiff",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "",
@@ -905,7 +908,7 @@
     },
     {
       "TextJp": "[ns3] \"う、うん。似合ってるけど、アスナ……！\"\n[ns4] \"ここで「ご主人様」は、ちょっと……。\"",
-      "TextCn": "[ns3] “嗯、嗯。虽然很合适，但是明日奈……！”\n[ns4] “在这里‘主人主人’的叫，有点……”",
+      "TextCn": "[ns3] “嗯、嗯。虽然是很好看，但是明日奈……！”\n[ns4] “在这里‘主人主人’地叫，是不是有点……”",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -919,7 +922,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "[ns3] \"으, 으응! 잘 어울려, 아스나……!”\n[ns4] \"그런데 그 주인님이라는 명칭이 조금……”",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "",
@@ -1013,7 +1017,7 @@
     },
     {
       "TextJp": "あ、そっか。",
-      "TextCn": "啊，这样呀。",
+      "TextCn": "啊，对哦。",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -1049,7 +1053,7 @@
     },
     {
       "TextJp": "じゃあ、先生って呼べば良い？",
-      "TextCn": "那，我就叫您“老师”了？",
+      "TextCn": "那，我就叫你“老师”了？",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -1373,7 +1377,7 @@
     },
     {
       "TextJp": "えー、お客様にお知らせです。",
-      "TextCn": "呃，各位乘客请注意。",
+      "TextCn": "呃——，各位乘客请注意。",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -1387,7 +1391,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "#na;나레이션 버스기사;아, 아. 승객 여러분께 알려드립니다.",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "",
@@ -1463,7 +1468,7 @@
     },
     {
       "TextJp": "まもなく見えます連続ヘアピンは、ダイヤが押しているため限界速度で慣性ドリフトを行ないます。",
-      "TextCn": "前方即将进入连续发卡弯，由于时刻表要求，本车将以极限速度进行惯性漂移。",
+      "TextCn": "前方即将进入连续发卡弯，由于时间紧张，本车将以极限速度进行惯性漂移。",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -1553,7 +1558,7 @@
     },
     {
       "TextJp": "しっかりと手すりに掴まり、安全にご注意ください。",
-      "TextCn": "请抓紧扶手，注意安全。",
+      "TextCn": "请握紧扶手，注意安全。",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -1625,7 +1630,7 @@
     },
     {
       "TextJp": "あははっ。#n先生、掴まらないと危ないよ！",
-      "TextCn": "啊哈哈。\n老师，不抓紧可就有危险了哦！",
+      "TextCn": "啊哈哈。\n老师，不握紧可就有危险了哦！",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2003,7 +2008,7 @@
     },
     {
       "TextJp": "[s] \"何とか……。\"",
-      "TextCn": "[s]“也算吧……”",
+      "TextCn": "[s]“还算可以……”",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2017,7 +2022,8 @@
       "BGEffect": 0,
       "PopupFileName": "",
       "ScriptKr": "[s] \"으, 응! 버텨냈어……”",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "あははっ、楽しかったね～！#nみんな右に左に行ったり来たり！",
@@ -2147,7 +2153,7 @@
     },
     {
       "TextJp": "（車内で揉みくちゃになり、アスナとかなり密着してしまった）",
-      "TextCn": "（在车厢里被挤得东倒西歪，和明日奈贴在了一起）",
+      "TextCn": "（在车厢里被挤得东倒西歪，结果和明日奈贴到了一起）",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2273,7 +2279,7 @@
     },
     {
       "TextJp": "えへへっ、こんなピッタリくっついて顔を見るのも久しぶりだね！",
-      "TextCn": "诶嘿嘿，好久没有在贴这么近的距离上看着老师的脸了呢！",
+      "TextCn": "诶嘿嘿，好久没有在贴这么近的时候看着老师的脸了呢！",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2287,7 +2293,8 @@
       "BGEffect": 1870781268,
       "PopupFileName": "",
       "ScriptKr": "3;아스나 교복;03;선생님을 이렇게 가까이에서 보는 건 오랜만이네! 후후.\n#3;em;[음표]\n#3;closeup",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "[s] \"さすがにこれは、いけないような……。\"",
@@ -2363,7 +2370,7 @@
     },
     {
       "TextJp": "[ns7] （体をもぞもぞ動かす）\n[ns8] \"ふんっ！\"",
-      "TextCn": "[ns7]（扭动身体）\n[ns8]“哼……！”",
+      "TextCn": "[ns7]（慢慢挪动身体）\n[ns8]“哼！”",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2467,7 +2474,8 @@
       "BGEffect": 1870781268,
       "PopupFileName": "",
       "ScriptKr": "[s] “선생으로서 최선을 다하는 중이야.”",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "狭いから気を使ってくれたの？",
@@ -2489,7 +2497,7 @@
     },
     {
       "TextJp": "むしろ、先生に体重を預けられて楽ちんだよ？",
-      "TextCn": "要是老师直接压到我身上反而会更轻松哦？",
+      "TextCn": "能靠在老师身上，我其实很轻松的哦？",
       "TextKr": "",
       "TextEn": "",
       "TextTh": "",
@@ -2503,7 +2511,8 @@
       "BGEffect": 1870781268,
       "PopupFileName": "",
       "ScriptKr": "3;아스나 교복;00;나는 지금도 괜찮은데. 선생님한테 기대 있으니까 편해. 하핫.\n#3;closeup",
-      "VoiceId": 0
+      "VoiceId": 0,
+      "Unsure": false
     },
     {
       "TextJp": "[s] \"それが問題なんだ……。\"",
