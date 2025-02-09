@@ -28,7 +28,7 @@ const props = defineProps<{
   >
     <h3 flex items-center content-between gap-2 class="@dark:text-gray-100">
       {{ props.title[`Text${props.from}`] }}
-      <a-tag size="mini">{{ props.idx + 1 }}/{{ props.total }}</a-tag>
+      <a-tag size="small">{{ props.idx + 1 }}/{{ props.total }}</a-tag>
     </h3>
     <div w-full gap-1 flex flex-1 justify-between items-end>
       <EInput

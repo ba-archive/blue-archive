@@ -16,6 +16,7 @@ import { isMac } from "../../public/helper/isMac";
 import { saveAs } from "file-saver";
 import { dump } from "js-yaml";
 import { useRouter } from "vue-router";
+import { Message } from "@arco-design/web-vue";
 import "@arco-design/web-vue/es/button/style/css.js";
 
 const router = useRouter();
@@ -117,6 +118,32 @@ function handleDownload() {
   const readyData = useMomotalkEditorStore.getDownloadReadyFileData(
     isProofreaderMode.value
   );
+  if (!readyData) {
+    Message.error("无法获取文件内容，请联系管理员");
+    return;
+  }
+  switch (isProofreaderMode.value) {
+    case true:
+      if (!readyData?.proofreader || !readyData?.proofreader.length) {
+        if (useMomotalkEditorStore.getProofreader) {
+          readyData.proofreader = useMomotalkEditorStore.getProofreader;
+        } else {
+          Message.error("请先填写校对名称");
+          return;
+        }
+      }
+      break;
+    case false:
+      if (!readyData?.translator || !readyData?.translator.length) {
+        if (useMomotalkEditorStore.getTranslator) {
+          readyData.translator = useMomotalkEditorStore.getTranslator;
+        } else {
+          Message.error("请先填写翻译名称");
+          return;
+        }
+      }
+      break;
+  }
   const studentId = readyData?.CharacterId ?? 0;
   const blob = new Blob([dump(readyData)], {
     type: "application/yaml",
