@@ -605,12 +605,15 @@ const isDuplicateLine = computed(() => {
   const prevLine = mainStore.getPrevLineWhereTextJpIsNotEmpty(currentLine);
   if (prevLine === -1) return false;
 
-  const currentLineContent =
-    mainStore.getScenario.content[currentLine][config.getLanguage];
-  const prevLineContent =
-    mainStore.getScenario.content[prevLine][config.getLanguage];
+  const content = mainStore.getScenario.content;
+  const currentText = content[currentLine]?.[config.getLanguage];
+  const prevText = content[prevLine]?.[config.getLanguage];
 
-  return currentLineContent === prevLineContent;
+  return (
+    currentText?.length > 0 &&
+    prevText?.length > 0 &&
+    currentText === prevText
+  );
 });
 
 function handleDuplicateLine() {
