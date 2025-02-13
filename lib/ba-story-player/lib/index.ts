@@ -2,7 +2,7 @@ import * as utils from "@/utils";
 import eventBus from "@/eventBus";
 import { initPrivateState, usePlayerStore } from "@/stores";
 import { wait, getOtherSoundUrls } from "@/utils";
-import { EventData } from "@esotericsoftware/spine-pixi-v7";
+import { EventData, Spine } from "@esotericsoftware/spine-pixi-v7";
 import {
   Application,
   Assets,
@@ -1180,14 +1180,15 @@ async function loadAsset(param: IAddOptions) {
         const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
         // 添加 spine 和 atlas 资源
         Assets.load({ src: atlasUrl, alias: atlasUrl });
-        Assets.load(param).then(res => {
-          // 预载 L2D 语音
-          const eventsList = res.spineData?.events;
-          if (eventsList && Array.isArray(eventsList) && eventsList.length) {
-            resourcesLoader.loadL2dVoice(eventsList);
-          }
-          return res;
-        });
+
+        await Assets.load(param); // 需要 await 完成后才能加载出东西
+
+        // 创建 Spine 实例，从实例中读取出 L2D 音频资源进行预载
+        const spine = Spine.from({ skeleton: param.src, atlas: atlasUrl }); // 会报 warning，无伤大雅
+        const eventsList = spine.state.data.skeletonData.events;
+        if (eventsList && Array.isArray(eventsList)) {
+          resourcesLoader.loadL2dVoice(eventsList);
+        }
       }
       // 其他资源
       return Assets.load(param);
