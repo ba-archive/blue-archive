@@ -43,7 +43,11 @@ function getSpine42Url(url: string) {
  * @returns
  */
 function rewritePath(path: string) {
-  return path.toLowerCase();
+  const rewritten = path.toLocaleLowerCase();
+  if (rewritten !== path) {
+    console.log("redirected:\n" + path + " -> " + rewritten);
+  }
+  return rewritten;
 }
 
 /**

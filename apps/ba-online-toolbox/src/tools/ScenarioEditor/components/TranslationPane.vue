@@ -374,40 +374,50 @@ watch(selectedText.text, () => {
 
 function handleKeydown(event: KeyboardEvent) {
   type ModifierKey = "metaKey" | "altKey" | "ctrlKey" | "shiftKey";
-  type ShortcutKey = "KeyV" | "KeyL" | "KeyA" | "KeyD";
+  type ShortcutKey = "KeyV" | "KeyL" | "KeyA" | "KeyD" | "Enter";
 
   const shortcuts: Record<
     ShortcutKey,
     {
       modifiers: ModifierKey[];
-      action: () => void;
+      action: (event: KeyboardEvent) => void;
     }
   > = {
     KeyV: {
       modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "shiftKey"],
-      action: () =>
+      action: (event: KeyboardEvent) =>
         (mainStore.getScenario.content[config.getSelectLine][
           config.getTargetLang
         ] = currentText.value),
     },
     KeyL: {
       modifiers: isMac ? ["metaKey", "altKey"] : ["ctrlKey", "altKey"],
-      action: handleFormalizePunctuation,
+      action: (event: KeyboardEvent) => handleFormalizePunctuation(),
     },
     KeyA: {
       modifiers: isMac ? ["metaKey", "shiftKey"] : ["ctrlKey", "shiftKey"],
-      action: acceptHandle,
+      action: (event: KeyboardEvent) => acceptHandle(),
     },
     KeyD: {
       modifiers: isMac ? ["metaKey"] : ["ctrlKey"],
-      action: handleDuplicateLine,
+      action: (event: KeyboardEvent) => handleDuplicateLine(),
+    },
+    Enter: {
+      modifiers: isMac ? ["metaKey"] : ["ctrlKey"],
+      action: (event: KeyboardEvent) => {
+        if (event.shiftKey) {
+          handleGotoPrevLineRequest();
+        } else {
+          handleGotoNextLineRequest();
+        }
+      },
     },
   };
 
   const shortcut = shortcuts[event.code as ShortcutKey];
   if (shortcut && shortcut.modifiers.every(mod => event[mod])) {
     event.preventDefault();
-    shortcut.action();
+    shortcut.action(event);
   }
 }
 
@@ -610,9 +620,7 @@ const isDuplicateLine = computed(() => {
   const prevText = content[prevLine]?.[config.getLanguage];
 
   return (
-    currentText?.length > 0 &&
-    prevText?.length > 0 &&
-    currentText === prevText
+    currentText?.length > 0 && prevText?.length > 0 && currentText === prevText
   );
 });
 

@@ -1,8 +1,7 @@
 <template>
-  <div class="h-full flex-1" >
+  <div class="h-full flex-1">
     <n-input
       v-if="translateStruct.translateType === TranslateType.input"
-      v-add-combo-key-listener
       class="explicit-quotation-mark h-[204px]"
       placeholder="暂无翻译"
       type="textarea"
@@ -34,7 +33,6 @@
           {{ selection.label }}
         </n-tag>
         <n-input
-          v-add-combo-key-listener
           :value="selection.translated"
           type="textarea"
           @input="(e: string) => selectInputHandle(e, idx)"
@@ -67,7 +65,6 @@
           </template>
         </n-input>
         <n-input
-          v-add-combo-key-listener
           class="explicit-quotation-mark"
           placeholder="暂无翻译"
           :value="translateStruct.content[0].translated"
@@ -87,7 +84,6 @@
       </n-tag>
       <n-input-group>
         <n-input
-          v-add-combo-key-listener
           class="explicit-quotation-mark"
           placeholder="暂无翻译"
           :value="translateStruct.content[0].translated"
@@ -103,11 +99,11 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ComputedRef, Directive, computed, ref, onMounted } from 'vue';
-import { useGlobalConfig } from '../store/configStore';
-import { useScenarioStore } from '../store/scenarioEditorStore';
-import { ContentLine } from '../types/content';
-import { useThrottleFn } from '@vueuse/core';
+import { ComputedRef, computed, ref, onMounted } from "vue";
+import { useGlobalConfig } from "../store/configStore";
+import { useScenarioStore } from "../store/scenarioEditorStore";
+import { ContentLine } from "../types/content";
+import { useThrottleFn } from "@vueuse/core";
 
 enum TranslateType {
   input,
@@ -155,16 +151,16 @@ const translateStruct: ComputedRef<{
   if (parseArr?.length) {
     let translatedArr = [] as string[];
     if (curTranslated.value) {
-      translatedArr = curTranslated.value.split('\n').map(i => {
-        return i.replace(searchReg, '');
+      translatedArr = curTranslated.value.split("\n").map(i => {
+        return i.replace(searchReg, "");
       });
     }
 
     return {
       translateType: TranslateType.select,
       content: parseArr.map((i, idx) => {
-        const curIndex = i.match(/\d+/g)?.[0] || '';
-        let label = '选项';
+        const curIndex = i.match(/\d+/g)?.[0] || "";
+        let label = "选项";
         if (/ns|s/.test(i)) {
           label = label + curIndex;
         }
@@ -189,8 +185,8 @@ const translateStruct: ComputedRef<{
           label:
             curTranslated.value.match(/[\d一二三四五六七八九十]+/)?.[0] ||
             translateText.value.match(/[\d一二三四五六七八九十]+/)?.[0] ||
-            '',
-          translated: curTranslated.value.replace(titleRegex, ''),
+            "",
+          translated: curTranslated.value.replace(titleRegex, ""),
         },
       ],
     };
@@ -203,8 +199,8 @@ const translateStruct: ComputedRef<{
       translateType: TranslateType.nextEpisode,
       content: [
         {
-          label: '',
-          translated: curTranslated.value.replace(nextEpisodeRegex, ''),
+          label: "",
+          translated: curTranslated.value.replace(nextEpisodeRegex, ""),
         },
       ],
     };
@@ -224,47 +220,46 @@ const selectInputHandle = (e: string, idx: number) => {
     }
     return i.tag + i.translated;
   });
-  const parseTranslated = temArr?.join('\n');
-  inputHandle(parseTranslated || '');
+  const parseTranslated = temArr?.join("\n");
+  inputHandle(parseTranslated || "");
 };
 
-function titleInputHandle(position: 'label' | 'content', text: string) {
+function titleInputHandle(position: "label" | "content", text: string) {
   const line = mainStore.getScenario.content[config.getSelectLine];
   const targetLang = config.getTargetLang;
   const type = translateStruct.value.translateType;
-  let titlePrefix = '';
+  let titlePrefix = "";
   if (TranslateType.title === type) {
     const label =
-      'label' === position ? text : translateStruct.value.content[0].label;
+      "label" === position ? text : translateStruct.value.content[0].label;
 
-    titlePrefix = '第' + label;
+    titlePrefix = "第" + label;
   } else if (TranslateType.nextEpisode === type) {
-    titlePrefix = '下一';
+    titlePrefix = "下一";
   }
 
-  titlePrefix += 'TextCn' === targetLang ? '话;' : '話;';
+  titlePrefix += "TextCn" === targetLang ? "话;" : "話;";
 
   line[targetLang] =
-    'label' === position
+    "label" === position
       ? titlePrefix + translateStruct.value.content[0].translated
       : titlePrefix + text;
-  console.log(line[targetLang], 'label' === position);
+  console.log(line[targetLang], "label" === position);
   mainStore.setContentLine(line as ContentLine, config.getSelectLine);
 }
 
 const inputHandle = (event: string) => {
   if (config.getSelectLine !== -1) {
     const line = mainStore.getScenario.content[config.getSelectLine];
-    line[config.getTargetLang] = event.replaceAll('[#n]', '#n');
+    line[config.getTargetLang] = event.replaceAll("[#n]", "#n");
     mainStore.setContentLine(line as ContentLine, config.getSelectLine);
   }
 };
 
 const textPrefab = (text: string) => {
-  return text ? text.replaceAll('#n', '[#n]') : '';
+  return text ? text.replaceAll("#n", "[#n]") : "";
 };
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const wheelEvent = useThrottleFn((e: WheelEvent & { [key: string]: any }) => {
   const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
   // 触控板会有 -0 的情况
@@ -275,21 +270,6 @@ const wheelEvent = useThrottleFn((e: WheelEvent & { [key: string]: any }) => {
     props.handleGotoPrevLineRequest?.();
   }
 }, 400);
-
-const vAddComboKeyListener: Directive = {
-  mounted(el) {
-    el.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.shiftKey && e.key === 'Enter') {
-        e.preventDefault();
-        props.handleGotoPrevLineRequest?.();
-      } else if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-        e.preventDefault();
-        props.handleGotoNextLineRequest?.();
-      }
-    });
-    el.addEventListener('wheel', wheelEvent);
-  },
-};
 </script>
 <style scoped lang="scss">
 .select {
