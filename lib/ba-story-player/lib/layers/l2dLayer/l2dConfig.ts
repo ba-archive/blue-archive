@@ -1774,4 +1774,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 正月芹香
+  Serika_newyear_home: {
+    name: "Serika_newyear_home",
+    playQue: [
+      {
+        name: "Serika_newyear_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Serika_newyear_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
