@@ -3,6 +3,20 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2025-02-16",
+    contents: [
+      {
+        type: "student",
+        students:[
+          { name: "百合园 圣娅", id: 10110 },
+          { name: "一之濑 明日奈（制服）", id: 10112 },
+          { name: "调月 莉音", id: 20041 },
+          { name: "黑见 芹香（正月）", id: 20011 },
+        ]
+      },
+    ],
+  },
+  {
     date: "2025-01-29",
     contents: [
       {
