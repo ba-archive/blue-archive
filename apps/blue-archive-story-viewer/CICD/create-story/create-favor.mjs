@@ -95,7 +95,9 @@ function constructIndex(studentId, distribution, distPattern) {
 
   fs.writeFileSync(
     favorIndexPath,
-    jsYaml.dump(JSON.parse(JSON.stringify(res, null, 2)))
+    jsYaml.dump(JSON.parse(JSON.stringify(res, null, 2)), {
+      quotingType: '"',
+    })
   );
 }
 
