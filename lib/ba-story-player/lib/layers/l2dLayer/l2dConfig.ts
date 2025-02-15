@@ -1812,4 +1812,22 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 伊织
+  Iori_home: {
+    name: "Iori_home",
+    playQue: [
+      {
+        name: "Iori_home",
+        animation: "Start_Idle_01",
+        // 早期角色不用 fade
+      },
+    ],
+    spineSettings: {
+      Iori_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
