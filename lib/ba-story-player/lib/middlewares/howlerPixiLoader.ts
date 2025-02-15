@@ -15,6 +15,7 @@ export const HowlerLoader = {
     return new globalThis.Promise((resolve, reject) => {
       const howl = new Howl({
         src: [url],
+        preload: true,
         onload: () => resolve(howl),
         onloaderror: (_, message) => reject(message),
       });
