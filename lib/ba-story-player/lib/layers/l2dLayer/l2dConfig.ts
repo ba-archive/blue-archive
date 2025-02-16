@@ -1849,4 +1849,21 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 阿露（正月）
+  Aru_newyear_home: {
+    name: "Aru_newyear_home",
+    playQue: [
+      {
+        name: "Aru_newyear_home",
+        animation: "Start_Idle_01",
+      },
+    ],
+    spineSettings: {
+      Aru_newyear_home: {
+        scale: 1.4,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
