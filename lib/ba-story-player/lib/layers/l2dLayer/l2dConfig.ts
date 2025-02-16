@@ -1830,4 +1830,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 心奈
+  CH0137_home: {
+    name: "CH0137_home",
+    playQue: [
+      {
+        name: "CH0137_home",
+        animation: "Start_Idle_01",
+        fadeTime: 4.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0137_home: {
+        scale: 1.2,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
