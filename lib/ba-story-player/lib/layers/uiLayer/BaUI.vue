@@ -404,7 +404,7 @@ function getI18n(key: string) {
   font-family: "Resource Han Rounded CN Medium", "Microsoft YaHei",
     "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
     Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Sans GB", Arial, sans-serif;
+    "Hiragino Sans GB", Arial, sans-serif !important;
 
   .v-enter-active,
   .v-leave-active {
@@ -499,7 +499,7 @@ function getI18n(key: string) {
     .ba-story-summary-title {
       margin: 0.4em 0;
       color: #32363c;
-      font-weight: bold;
+      font-weight: bold !important;
       font-size: 1.5em;
       text-align: center;
     }

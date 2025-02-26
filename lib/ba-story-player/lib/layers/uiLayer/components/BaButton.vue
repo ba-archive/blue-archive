@@ -52,7 +52,7 @@ onMounted(() => {
   background-color: #f3f5f6;
   padding: 0.375em 1em;
   color: #2d4665;
-  font-weight: bold;
+  font-weight: bold !important;
   font-size: 1.2em;
 
   &.large {
