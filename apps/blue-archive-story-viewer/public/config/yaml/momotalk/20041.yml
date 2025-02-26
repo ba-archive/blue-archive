@@ -1,36 +1,36 @@
 CharacterId: 20041
-translator: "Sino"
+translator: Sino
 title:
-  - TextKr: "합리적인 생활"
-    TextJp: "合理的な食生活"
-    TextCn: "合理的饮食习惯"
+  - TextJp: 合理的な食生活
+    TextCn: 合理的饮食习惯
+    TextKr: 합리적인 생활
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 2004102
     FavorScheduleId: 200412
     CharacterId: 20041
-  - TextKr: "배송 대행지"
-    TextJp: "受取代行"
-    TextCn: "快递代收"
+  - TextJp: 受取代行
+    TextCn: 快递代收
+    TextKr: 배송 대행지
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 2004103
     FavorScheduleId: 200413
     CharacterId: 20041
-  - TextKr: "디자인"
-    TextJp: "デザイン"
-    TextCn: "设计"
+  - TextJp: デザイン
+    TextCn: 设计
+    TextKr: 디자인
     TextEn: ""
     TextTh: ""
     TextTw: ""
     GroupId: 2004105
     FavorScheduleId: 200415
     CharacterId: 20041
-  - TextKr: "비밀의 장소"
-    TextJp: "秘密の場所"
-    TextCn: "秘密的场所"
+  - TextJp: 秘密の場所
+    TextCn: 秘密的场所
+    TextKr: 비밀의 장소
     TextEn: ""
     TextTh: ""
     TextTw: ""
@@ -38,1696 +38,1695 @@ title:
     FavorScheduleId: 200416
     CharacterId: 20041
 content:
-  - MessageKR: "선생."
-    MessageJP: "先生、届いているかしら"
-    MessageCN: "老师，您看得到这条消息吗？"
+  - MessageKR: 선생.
+    MessageJP: 先生、届いているかしら
+    MessageCN: 老师，您看得到这条消息吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410010
     Id: 200410010
     CharacterId: 20041
-    MessageCondition: "FavorRankUp"
+    MessageCondition: FavorRankUp
     ConditionValue: 2
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410020
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "어? 누구?"
-    MessageJP: "リオ！？"
-    MessageCN: "莉音！？"
+  - MessageKR: 어? 누구?
+    MessageJP: リオ！？
+    MessageCN: 莉音！？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410020
     Id: 200410020
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410030
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "아."
-    MessageJP: "ええ、そうよ"
-    MessageCN: "嗯，是我"
+  - MessageKR: 아.
+    MessageJP: ええ、そうよ
+    MessageCN: 嗯，是我
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410030
     Id: 200410030
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410040
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "당장은 모르겠구나."
-    MessageJP: "というか…"
-    MessageCN: "话说……"
+  - MessageKR: 당장은 모르겠구나.
+    MessageJP: というか…
+    MessageCN: 话说……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410030
     Id: 200410040
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410040
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "나야, 선생. 리오."
-    MessageJP: "少し驚きすぎではなくて？"
-    MessageCN: "您会不会有点太惊讶了？"
+  - MessageKR: 나야, 선생. 리오.
+    MessageJP: 少し驚きすぎではなくて？
+    MessageCN: 您会不会有点太惊讶了？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410040
     Id: 200410050
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410050
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "리오?! 지금 어디야??"
-    MessageJP: "リオから連絡もらえるとは思わなくて"
-    MessageCN: "我没想到会收到莉音的消息"
+  - MessageKR: 리오?! 지금 어디야??
+    MessageJP: リオから連絡もらえるとは思わなくて
+    MessageCN: 我没想到会收到莉音的消息
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410050
     Id: 200410060
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410060
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "이 번호는 임시로 만든 거야."
-    MessageJP: "先に伝えておくのだけれど、これはサブ端末よ"
-    MessageCN: "先告诉您一声，这是我的备用账号"
+  - MessageKR: 이 번호는 임시로 만든 거야.
+    MessageJP: 先に伝えておくのだけれど、これはサブ端末よ
+    MessageCN: 先告诉您一声，这是我的备用账号
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410060
     Id: 200410070
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410070
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "다음에는 바뀔 테니 저장은 하지 마."
-    MessageJP: "連絡先を登録する必要はないわ"
-    MessageCN: "没必要把它放进您的通讯录哦"
+  - MessageKR: 다음에는 바뀔 테니 저장은 하지 마.
+    MessageJP: 連絡先を登録する必要はないわ
+    MessageCN: 没必要把它放进您的通讯录哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410060
     Id: 200410080
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410070
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도 되는 거야……?"
-    MessageJP: "サブ端末を使うほどの事態なの……？"
-    MessageCN: "发生了什么让你需要用到备用账号的事情吗……？"
+  - MessageKR: 그래도 되는 거야……?
+    MessageJP: サブ端末を使うほどの事態なの……？
+    MessageCN: 发生了什么让你需要用到备用账号的事情吗……？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410070
     Id: 200410090
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410080
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "무슨 문제라도 있어?"
-    MessageJP: "何か問題でもあったかしら"
-    MessageCN: "有什么奇怪的吗"
+  - MessageKR: 무슨 문제라도 있어?
+    MessageJP: 何か問題でもあったかしら
+    MessageCN: 有什么奇怪的吗
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410080
     Id: 200410100
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410090
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "이게 합리적이야. 추적당하면 안 되잖아."
-    MessageJP: "通信を追跡されたら困るでしょう？"
-    MessageCN: "您也不想通话记录被追踪到吧？"
+  - MessageKR: 이게 합리적이야. 추적당하면 안 되잖아.
+    MessageJP: 通信を追跡されたら困るでしょう？
+    MessageCN: 您也不想通话记录被追踪到吧？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410090
     Id: 200410110
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410100
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "통신사 입장도 생각해 줘……"
-    MessageJP: "……通信会社も大変だなぁって"
-    MessageCN: "……就觉得通信公司也挺辛苦的呢"
+  - MessageKR: 통신사 입장도 생각해 줘……
+    MessageJP: ……通信会社も大変だなぁって
+    MessageCN: ……就觉得通信公司也挺辛苦的呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410100
     Id: 200410120
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410110
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "음."
-    MessageJP: "……"
-    MessageCN: "……"
+  - MessageKR: 음.
+    MessageJP: ……
+    MessageCN: ……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410110
     Id: 200410130
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410120
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "거기까지는 생각 못 해봤네."
-    MessageJP: "その視点はなかったわ"
-    MessageCN: "我没这样想过呢"
+  - MessageKR: 거기까지는 생각 못 해봤네.
+    MessageJP: その視点はなかったわ
+    MessageCN: 我没这样想过呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410110
     Id: 200410140
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410120
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도 달리 방법이 없었어."
-    MessageJP: "でも、これが一番合理的なの"
-    MessageCN: "但是，这样做是最合理的"
+  - MessageKR: 그래도 달리 방법이 없었어.
+    MessageJP: でも、これが一番合理的なの
+    MessageCN: 但是，这样做是最合理的
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410120
     Id: 200410150
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410130
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "아무튼 무슨 일이라도 있어?"
-    MessageJP: "それで、一体どうしたの？"
-    MessageCN: "那么，有什么事情吗？"
+  - MessageKR: 아무튼 무슨 일이라도 있어?
+    MessageJP: それで、一体どうしたの？
+    MessageCN: 那么，有什么事情吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410130
     Id: 200410160
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410140
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "저녁 세일 도시락을 사러 나왔는데……"
-    MessageJP: "スーパーにお弁当を買いに来たのだけれど……"
-    MessageCN: "我刚才去超市买便当……"
+  - MessageKR: 저녁 세일 도시락을 사러 나왔는데……
+    MessageJP: スーパーにお弁当を買いに来たのだけれど……
+    MessageCN: 我刚才去超市买便当……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410140
     Id: 200410170
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410150
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "갑자기, 마트가 당일 휴무라고 해서……"
-    MessageJP: "臨時休業中で……少し来てくれないかしら"
-    MessageCN: "但是超市好像临时休业了……您能过来一趟吗？"
+  - MessageKR: 갑자기, 마트가 당일 휴무라고 해서……
+    MessageJP: 臨時休業中で……少し来てくれないかしら
+    MessageCN: 但是超市好像临时休业了……您能过来一趟吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410150
     Id: 200410180
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200412
     NextGroupId: 200410160
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생? 아직 깨어 있어?"
-    MessageJP: "まだ起きているかしら？"
-    MessageCN: "您还醒着吗？"
+  - MessageKR: 선생? 아직 깨어 있어?
+    MessageJP: まだ起きているかしら？
+    MessageCN: 您还醒着吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410160
     Id: 200410190
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 200410150
     PreConditionFavorScheduleId: 200412
     FavorScheduleId: 0
     NextGroupId: 200410170
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "무슨 일이야?"
-    MessageJP: "どうしたの？"
-    MessageCN: "怎么了？"
+  - MessageKR: 무슨 일이야?
+    MessageJP: どうしたの？
+    MessageCN: 怎么了？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410170
     Id: 200410200
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410180
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생 말대로, 요리하는 아방가르드 군을 만들었는데……."
-    MessageJP: "貴方に言われた料理機能搭載アバンギャルド君を完成させてみたの"
-    MessageCN: "我做出来您说的搭载了料理功能的前卫君了"
+  - MessageKR: 선생 말대로, 요리하는 아방가르드 군을 만들었는데…….
+    MessageJP: 貴方に言われた料理機能搭載アバンギャルド君を完成させてみたの
+    MessageCN: 我做出来您说的搭载了料理功能的前卫君了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410180
     Id: 200410210
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410190
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "잘 작동해?"
-    MessageJP: "おお、ちゃんと動いてる？"
-    MessageCN: "喔喔，能正常工作吗？"
+  - MessageKR: 잘 작동해?
+    MessageJP: おお、ちゃんと動いてる？
+    MessageCN: 喔喔，能正常工作吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410190
     Id: 200410220
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410200
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "잘 작동하긴 하는데."
-    MessageJP: "ええ、一応"
-    MessageCN: "嗯，姑且是能动的"
+  - MessageKR: 잘 작동하긴 하는데.
+    MessageJP: ええ、一応
+    MessageCN: 嗯，姑且是能动的
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410200
     Id: 200410230
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410210
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "뭔가, 선생이 만들어준 것 같은 요리가 나왔어."
-    MessageJP: "ただ、先生の手料理と違って"
-    MessageCN: "不过，做出来的饭菜与老师做的不同"
+  - MessageKR: 뭔가, 선생이 만들어준 것 같은 요리가 나왔어.
+    MessageJP: ただ、先生の手料理と違って
+    MessageCN: 不过，做出来的饭菜与老师做的不同
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410200
     Id: 200410240
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410210
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "맛없지는 않지만, 맛있지도 않은 그런 거……"
-    MessageJP: "……味の感想が出てこなくて"
-    MessageCN: "……我说不出感想"
+  - MessageKR: 맛없지는 않지만, 맛있지도 않은 그런 거……
+    MessageJP: ……味の感想が出てこなくて
+    MessageCN: ……我说不出感想
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410210
     Id: 200410250
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410220
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "몸에 좋으니까, 먹어 두자……"
-    MessageJP: "また作ってあげるから、一人でもちゃんと食べてね"
-    MessageCN: "我会再做给你吃的，不过一个人也要好好吃饭哦"
+  - MessageKR: 몸에 좋으니까, 먹어 두자……
+    MessageJP: また作ってあげるから、一人でもちゃんと食べてね
+    MessageCN: 我会再做给你吃的，不过一个人也要好好吃饭哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410220
     Id: 200410260
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410230
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "알았어……"
-    MessageJP: "ありがとう"
-    MessageCN: "谢谢您"
+  - MessageKR: 알았어……
+    MessageJP: ありがとう
+    MessageCN: 谢谢您
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410230
     Id: 200410270
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410240
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도 이틀에 한 번 정도는, 도시락 먹으면 안 될까?"
-    MessageJP: "二日に一回くらい、お弁当でも良いかしら？"
-    MessageCN: "那我可以两天吃一次便当吗？"
+  - MessageKR: 그래도 이틀에 한 번 정도는, 도시락 먹으면 안 될까?
+    MessageJP: 二日に一回くらい、お弁当でも良いかしら？
+    MessageCN: 那我可以两天吃一次便当吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410240
     Id: 200410280
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410250
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "3일"
-    MessageJP: "せめて三日に一回で……"
-    MessageCN: "起码隔三天吃一次吧……"
+  - MessageKR: 3일
+    MessageJP: せめて三日に一回で……
+    MessageCN: 起码隔三天吃一次吧……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410250
     Id: 200410290
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410260
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "알았어……"
-    MessageJP: "……分かったわ"
-    MessageCN: "……我知道了"
+  - MessageKR: 알았어……
+    MessageJP: ……分かったわ
+    MessageCN: ……我知道了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410260
     Id: 200410300
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410270
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생, 있어?"
-    MessageJP: "先生、少し困った事態になってしまったの"
-    MessageCN: "老师，事情有点麻烦起来了"
+  - MessageKR: 선생, 있어?
+    MessageJP: 先生、少し困った事態になってしまったの
+    MessageCN: 老师，事情有点麻烦起来了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410270
     Id: 200410310
     CharacterId: 20041
-    MessageCondition: "FavorRankUp"
+    MessageCondition: FavorRankUp
     ConditionValue: 3
     PreConditionGroupId: 200410260
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410280
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "알았다, 이 패턴…… 리오로군!"
-    MessageJP: "リオ！"
-    MessageCN: "莉音！"
+  - MessageKR: 알았다, 이 패턴…… 리오로군!
+    MessageJP: リオ！
+    MessageCN: 莉音！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410280
     Id: 200410320
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410290
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "응…… 맞아."
-    MessageJP: "私が対応できれば良いのだけれど……"
-    MessageCN: "要是我能自己处理就好了……"
+  - MessageKR: 응…… 맞아.
+    MessageJP: 私が対応できれば良いのだけれど……
+    MessageCN: 要是我能自己处理就好了……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410290
     Id: 200410330
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410300
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "조금 부탁하고 싶은 것이 있는데, 괜찮을까?"
-    MessageJP: "それも難しくて……"
-    MessageCN: "不过有些困难……"
+  - MessageKR: 조금 부탁하고 싶은 것이 있는데, 괜찮을까?
+    MessageJP: それも難しくて……
+    MessageCN: 不过有些困难……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410300
     Id: 200410340
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410310
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "학생의 부탁이라면야, 얼마든지."
-    MessageJP: "リオの頼みなら、何でも聞くよ"
-    MessageCN: "只要是莉音的请求，不管是什么我都会听哦"
+  - MessageKR: 학생의 부탁이라면야, 얼마든지.
+    MessageJP: リオの頼みなら、何でも聞くよ
+    MessageCN: 只要是莉音的请求，不管是什么我都会听哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410310
     Id: 200410350
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410320
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그러면."
-    MessageJP: "ありがとう、先生"
-    MessageCN: "谢谢您，老师"
+  - MessageKR: 그러면.
+    MessageJP: ありがとう、先生
+    MessageCN: 谢谢您，老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410320
     Id: 200410360
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410330
     FeedbackTimeMillisec: 500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "나 대신 물건 좀 받아 줘."
-    MessageJP: "では、荷物の受取先をシャーレにしておくわね"
-    MessageCN: "那么，收货地址我就写夏莱了"
+  - MessageKR: 나 대신 물건 좀 받아 줘.
+    MessageJP: では、荷物の受取先をシャーレにしておくわね
+    MessageCN: 那么，收货地址我就写夏莱了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410320
     Id: 200410370
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410330
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "……뭐?"
-    MessageJP: "……え？"
-    MessageCN: "……欸？"
+  - MessageKR: ……뭐?
+    MessageJP: ……え？
+    MessageCN: ……欸？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410330
     Id: 200410380
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200413
     NextGroupId: 200410340
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생."
-    MessageJP: "先生"
-    MessageCN: "老师"
+  - MessageKR: 선생.
+    MessageJP: 先生
+    MessageCN: 老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410340
     Id: 200410390
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 200410330
     PreConditionFavorScheduleId: 200413
     FavorScheduleId: 0
     NextGroupId: 200410350
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "부품이 도착한 김에."
-    MessageJP: "この間のパーツを使って"
-    MessageCN: "我用上次收到的零件"
+  - MessageKR: 부품이 도착한 김에.
+    MessageJP: この間のパーツを使って
+    MessageCN: 我用上次收到的零件
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410350
     Id: 200410400
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410360
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "요리하는 아방가르드군을 개선해 봤는데."
-    MessageJP: "料理機能搭載アバンギャルド君を改造したら"
-    MessageCN: "改造了搭载料理机能的前卫君"
+  - MessageKR: 요리하는 아방가르드군을 개선해 봤는데.
+    MessageJP: 料理機能搭載アバンギャルド君を改造したら
+    MessageCN: 改造了搭载料理机能的前卫君
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410360
     Id: 200410410
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410370
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "예전보다 좀 더, 깊은 맛이 나게 된 것 같아."
-    MessageJP: "前より味にコクが出た気がするの"
-    MessageCN: "感觉味道比之前更浓郁了呢"
+  - MessageKR: 예전보다 좀 더, 깊은 맛이 나게 된 것 같아.
+    MessageJP: 前より味にコクが出た気がするの
+    MessageCN: 感觉味道比之前更浓郁了呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410360
     Id: 200410420
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410370
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그건 잘 된 일이네."
-    MessageJP: "良かったね、リオ！"
-    MessageCN: "那太好了，莉音！"
+  - MessageKR: 그건 잘 된 일이네.
+    MessageJP: 良かったね、リオ！
+    MessageCN: 那太好了，莉音！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410370
     Id: 200410430
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410380
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "응."
-    MessageJP: "ええ"
-    MessageCN: "嗯"
+  - MessageKR: 응.
+    MessageJP: ええ
+    MessageCN: 嗯
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410380
     Id: 200410440
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410390
     FeedbackTimeMillisec: 500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "고마워. 선생."
-    MessageJP: "感謝するわ"
-    MessageCN: "也得感谢您呢"
+  - MessageKR: 고마워. 선생.
+    MessageJP: 感謝するわ
+    MessageCN: 也得感谢您呢
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410380
     Id: 200410450
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410390
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "여러 가지 사정으로."
-    MessageJP: "色々あったけれど"
-    MessageCN: "虽然发生了很多事情"
+  - MessageKR: 여러 가지 사정으로.
+    MessageJP: 色々あったけれど
+    MessageCN: 虽然发生了很多事情
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410390
     Id: 200410460
     CharacterId: 20041
-    MessageCondition: "FavorRankUp"
+    MessageCondition: FavorRankUp
     ConditionValue: 5
     PreConditionGroupId: 200410380
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410400
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "요즘은 그렇게 바쁘지 않아져서."
-    MessageJP: "ようやく落ち着いてきたわ"
-    MessageCN: "但现在终于告一段落了"
+  - MessageKR: 요즘은 그렇게 바쁘지 않아져서.
+    MessageJP: ようやく落ち着いてきたわ
+    MessageCN: 但现在终于告一段落了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410400
     Id: 200410470
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410410
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "예전에 하던 걸 계속하면 어떨까, 하고"
-    MessageJP: "それで、前にしていたことを"
-    MessageCN: "然后我就想着"
+  - MessageKR: 예전에 하던 걸 계속하면 어떨까, 하고
+    MessageJP: それで、前にしていたことを
+    MessageCN: 然后我就想着
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410410
     Id: 200410480
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410420
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "생각하고 있어."
-    MessageJP: "再開しようと思っているのだけれど"
-    MessageCN: "重新开始做之前在做的事情"
+  - MessageKR: 생각하고 있어.
+    MessageJP: 再開しようと思っているのだけれど
+    MessageCN: 重新开始做之前在做的事情
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410410
     Id: 200410490
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410420
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "예전에 하던 거?"
-    MessageJP: "前にしていたこと？"
-    MessageCN: "之前在做的事情？"
+  - MessageKR: 예전에 하던 거?
+    MessageJP: 前にしていたこと？
+    MessageCN: 之前在做的事情？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410420
     Id: 200410500
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410430
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "조형물 같은 걸 만드는 거."
-    MessageJP: "オブジェクトの制作よ"
-    MessageCN: "物件的制作哦"
+  - MessageKR: 조형물 같은 걸 만드는 거.
+    MessageJP: オブジェクトの制作よ
+    MessageCN: 物件的制作哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410430
     Id: 200410510
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410440
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "산업 디자인이라든가."
-    MessageJP: "インダストリアルデザイン、と言った方が分かりやすいかしら"
-    MessageCN: "说成工业设计应该更好懂吧"
+  - MessageKR: 산업 디자인이라든가.
+    MessageJP: インダストリアルデザイン、と言った方が分かりやすいかしら
+    MessageCN: 说成工业设计应该更好懂吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410440
     Id: 200410520
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410450
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
   - MessageKR: "그렇지만 여기는 아무래도 "
-    MessageJP: "でもアジトだと"
-    MessageCN: "但是在据点的话"
+    MessageJP: でもアジトだと
+    MessageCN: 但是在据点的话
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410450
     Id: 200410530
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410460
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "아지트 공간이 넉넉하지 못해서 말이지."
-    MessageJP: "スペースの確保が難しいわね"
-    MessageCN: "空间应该不够用吧"
+  - MessageKR: 아지트 공간이 넉넉하지 못해서 말이지.
+    MessageJP: スペースの確保が難しいわね
+    MessageCN: 空间应该不够用吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410460
     Id: 200410540
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410470
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "환기 문제도 있고."
-    MessageJP: "換気の問題も……"
-    MessageCN: "还有换气的问题……"
+  - MessageKR: 환기 문제도 있고.
+    MessageJP: 換気の問題も……
+    MessageCN: 还有换气的问题……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410460
     Id: 200410550
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410470
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그럼 샬레로 올래?"
-    MessageJP: "じゃあ、シャーレに来る？"
-    MessageCN: "那，要不要来夏莱做？"
+  - MessageKR: 그럼 샬레로 올래?
+    MessageJP: じゃあ、シャーレに来る？
+    MessageCN: 那，要不要来夏莱做？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410470
     Id: 200410560
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410480
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "어?"
-    MessageJP: "……"
-    MessageCN: "……"
+  - MessageKR: 어?
+    MessageJP: ……
+    MessageCN: ……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410480
     Id: 200410570
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410490
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도, 돼?"
-    MessageJP: "迷惑ではなくて？"
-    MessageCN: "不会给您添麻烦吗？"
+  - MessageKR: 그래도, 돼?
+    MessageJP: 迷惑ではなくて？
+    MessageCN: 不会给您添麻烦吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410490
     Id: 200410580
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410500
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "나는 괜찮은데."
-    MessageJP: "大丈夫だよ！"
-    MessageCN: "没问题的！"
+  - MessageKR: 나는 괜찮은데.
+    MessageJP: 大丈夫だよ！
+    MessageCN: 没问题的！
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410500
     Id: 200410590
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410510
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그."
-    MessageJP: "その……ありがとう"
-    MessageCN: "那就……承蒙您的好意了"
+  - MessageKR: 그.
+    MessageJP: その……ありがとう
+    MessageCN: 那就……承蒙您的好意了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410510
     Id: 200410600
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410520
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "고마워."
-    MessageJP: "前回と同じように"
-    MessageCN: "如果能和上次一样"
+  - MessageKR: 고마워.
+    MessageJP: 前回と同じように
+    MessageCN: 如果能和上次一样
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410510
     Id: 200410610
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410520
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그러면 예전처럼."
-    MessageJP: "荷物の受取もお願いできると"
-    MessageCN: "帮忙代收我的货物"
+  - MessageKR: 그러면 예전처럼.
+    MessageJP: 荷物の受取もお願いできると
+    MessageCN: 帮忙代收我的货物
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410520
     Id: 200410620
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410530
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "배달 대행, 부탁할게."
-    MessageJP: "助かるのだけれど"
-    MessageCN: "就好了"
+  - MessageKR: 배달 대행, 부탁할게.
+    MessageJP: 助かるのだけれど
+    MessageCN: 就好了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410530
     Id: 200410630
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200415
     NextGroupId: 200410540
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "저, 선생?"
-    MessageJP: "今さらなのだけれど……"
-    MessageCN: "虽然现在才说有点晚了……"
+  - MessageKR: 저, 선생?
+    MessageJP: 今さらなのだけれど……
+    MessageCN: 虽然现在才说有点晚了……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410540
     Id: 200410640
     CharacterId: 20041
-    MessageCondition: "FavorRankUp"
+    MessageCondition: FavorRankUp
     ConditionValue: 6
     PreConditionGroupId: 200410530
     PreConditionFavorScheduleId: 200415
     FavorScheduleId: 0
     NextGroupId: 200410550
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "생각해 보니까."
-    MessageJP: "貴方に"
-    MessageCN: "但我想"
+  - MessageKR: 생각해 보니까.
+    MessageJP: 貴方に
+    MessageCN: 但我想
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410550
     Id: 200410650
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410560
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "여러 가지로, 은혜를 갚아야 할 것 같아."
-    MessageJP: "恩返しをさせてほしい"
-    MessageCN: "报答您对我的恩情"
+  - MessageKR: 여러 가지로, 은혜를 갚아야 할 것 같아.
+    MessageJP: 恩返しをさせてほしい
+    MessageCN: 报答您对我的恩情
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410560
     Id: 200410660
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410570
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "안 그래도 되는데?"
-    MessageJP: "気にしなくていいよ"
-    MessageCN: "不用那么客气哦"
+  - MessageKR: 안 그래도 되는데?
+    MessageJP: 気にしなくていいよ
+    MessageCN: 不用那么客气哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410570
     Id: 200410670
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410580
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "물론 선생이라면 그렇게 말할 것 같았지만."
-    MessageJP: "先生なら、そう言うと思っていたわ"
-    MessageCN: "我就知道老师您会这么说"
+  - MessageKR: 물론 선생이라면 그렇게 말할 것 같았지만.
+    MessageJP: 先生なら、そう言うと思っていたわ
+    MessageCN: 我就知道老师您会这么说
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410580
     Id: 200410680
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410590
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도 이른바 세간의 상식이란 것과."
-    MessageJP: "でも、社会的な規約意識や"
-    MessageCN: "不过，基于社会规范意识"
+  - MessageKR: 그래도 이른바 세간의 상식이란 것과.
+    MessageJP: でも、社会的な規約意識や
+    MessageCN: 不过，基于社会规范意识
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410580
     Id: 200410690
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410590
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그리고 무엇보다 확률과 통계에 의거해."
-    MessageJP: "確率、統計に基づき"
-    MessageCN: "以及概率和统计学上的考量"
+  - MessageKR: 그리고 무엇보다 확률과 통계에 의거해.
+    MessageJP: 確率、統計に基づき
+    MessageCN: 以及概率和统计学上的考量
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410590
     Id: 200410700
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410600
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "이건, 그래야 하는 일인 것 같아."
-    MessageJP: "そうするべきだと判断したの"
-    MessageCN: "我认为应该这样做"
+  - MessageKR: 이건, 그래야 하는 일인 것 같아.
+    MessageJP: そうするべきだと判断したの
+    MessageCN: 我认为应该这样做
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410590
     Id: 200410710
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410600
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "리오의 확률과 통계란 건 대체 뭘까……"
-    MessageJP: "確率と統計って……"
-    MessageCN: "概率和统计学……"
+  - MessageKR: 리오의 확률과 통계란 건 대체 뭘까……
+    MessageJP: 確率と統計って……
+    MessageCN: 概率和统计学……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410600
     Id: 200410720
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410610
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "아무튼."
-    MessageJP: "とにかく"
-    MessageCN: "总之"
+  - MessageKR: 아무튼.
+    MessageJP: とにかく
+    MessageCN: 总之
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410610
     Id: 200410730
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410620
     FeedbackTimeMillisec: 500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생을 내 아지트에 초대해야 할 것 같아."
-    MessageJP: "貴方を私のアジトに招待するわ"
-    MessageCN: "我想招待您来我的据点"
+  - MessageKR: 선생을 내 아지트에 초대해야 할 것 같아.
+    MessageJP: 貴方を私のアジトに招待するわ
+    MessageCN: 我想招待您来我的据点
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410610
     Id: 200410740
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410620
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "물론 선생이 괜찮다면, 이지만."
-    MessageJP: "……もし、よければ来てちょうだい"
-    MessageCN: "……如果您不介意的话请过来一趟吧"
+  - MessageKR: 물론 선생이 괜찮다면, 이지만.
+    MessageJP: ……もし、よければ来てちょうだい
+    MessageCN: ……如果您不介意的话请过来一趟吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410620
     Id: 200410750
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200416
     NextGroupId: 200410630
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "잘 들어갔어, 선생?"
-    MessageJP: "無事に帰れたかしら？"
-    MessageCN: "您平安到家了吗？"
+  - MessageKR: 잘 들어갔어, 선생?
+    MessageJP: 無事に帰れたかしら？
+    MessageCN: 您平安到家了吗？
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410630
     Id: 200410760
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 200410620
     PreConditionFavorScheduleId: 200416
     FavorScheduleId: 0
     NextGroupId: 200410640
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "저기."
-    MessageJP: "……先生"
-    MessageCN: "……老师"
+  - MessageKR: 저기.
+    MessageJP: ……先生
+    MessageCN: ……老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410640
     Id: 200410770
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410650
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "내가 이런 말을 해도 되는지 모르겠지만."
-    MessageJP: "今日は本当にありがとう"
-    MessageCN: "今天真的谢谢您了"
+  - MessageKR: 내가 이런 말을 해도 되는지 모르겠지만.
+    MessageJP: 今日は本当にありがとう
+    MessageCN: 今天真的谢谢您了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410640
     Id: 200410780
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410650
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그리고 가능하면."
-    MessageJP: "それと……"
-    MessageCN: "然后……"
+  - MessageKR: 그리고 가능하면.
+    MessageJP: それと……
+    MessageCN: 然后……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410650
     Id: 200410790
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410660
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생이 이 메시지를 지워 주면 좋겠지만."
-    MessageJP: "今から伝えるメッセージに深い意味はないわ"
-    MessageCN: "接下来我发给您的消息没有什么特别的含义哦"
+  - MessageKR: 선생이 이 메시지를 지워 주면 좋겠지만.
+    MessageJP: 今から伝えるメッセージに深い意味はないわ
+    MessageCN: 接下来我发给您的消息没有什么特别的含义哦
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410650
     Id: 200410800
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410660
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "모르겠어, 선생."
-    MessageJP: "けれど、読んだら削除してほしいの"
-    MessageCN: "不过，希望您读完消息后能删掉它们"
+  - MessageKR: 모르겠어, 선생.
+    MessageJP: けれど、読んだら削除してほしいの
+    MessageCN: 不过，希望您读完消息后能删掉它们
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410660
     Id: 200410810
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410670
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "이런 기분을 느끼는 건 처음이야."
-    MessageJP: "こんな風に、整えられた部屋で過ごせるのはいつぶりかしら"
-    MessageCN: "我上次在这么整洁的房间里生活，已经是不知道多久以前的事了"
+  - MessageKR: 이런 기분을 느끼는 건 처음이야.
+    MessageJP: こんな風に、整えられた部屋で過ごせるのはいつぶりかしら
+    MessageCN: 我上次在这么整洁的房间里生活，已经是不知道多久以前的事了
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410660
     Id: 200410820
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410670
     FeedbackTimeMillisec: 1500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "이걸, 뭐라고 정의할 수 있을지도 모르겠고."
-    MessageJP: "それに……"
-    MessageCN: "还有……"
+  - MessageKR: 이걸, 뭐라고 정의할 수 있을지도 모르겠고.
+    MessageJP: それに……
+    MessageCN: 还有……
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410660
     Id: 200410830
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410670
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생은 지금 내가 어떤 상태인지, 알고 있을까."
-    MessageJP: "先生と過ごすようになってから"
-    MessageCN: "和老师您接触以后"
+  - MessageKR: 선생은 지금 내가 어떤 상태인지, 알고 있을까.
+    MessageJP: 先生と過ごすようになってから
+    MessageCN: 和老师您接触以后
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410670
     Id: 200410840
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410680
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
   - MessageKR: "그러네. "
-    MessageJP: "少しずつ私の中で変化が起きているように感じているわ"
-    MessageCN: "我感觉自己的内心在一点一点发生变化"
+    MessageJP: 少しずつ私の中で変化が起きているように感じているわ
+    MessageCN: 我感觉自己的内心在一点一点发生变化
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410680
     Id: 200410850
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410690
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "근본적으로는 선생이 알든 모르든."
-    MessageJP: "今まで私の中になかった感情ともいえる"
-    MessageCN: "也可以说体验到了过去不曾体会过的感情吧"
+  - MessageKR: 근본적으로는 선생이 알든 모르든.
+    MessageJP: 今まで私の中になかった感情ともいえる
+    MessageCN: 也可以说体验到了过去不曾体会过的感情吧
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410690
     Id: 200410860
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410700
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "크게 상관없는 일이겠지만."
-    MessageJP: "私の考えが完璧である必要はないのだとも気づかせてくれたし"
-    MessageCN: "您让我意识到其实不需要去追求面面俱到"
+  - MessageKR: 크게 상관없는 일이겠지만.
+    MessageJP: 私の考えが完璧である必要はないのだとも気づかせてくれたし
+    MessageCN: 您让我意识到其实不需要去追求面面俱到
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410690
     Id: 200410870
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410700
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그래도 지금은, 왠지 모르게."
-    MessageJP: "貴方と話していると新しい視点を得られるの"
-    MessageCN: "与您交谈也让我获得了新的观点"
+  - MessageKR: 그래도 지금은, 왠지 모르게.
+    MessageJP: 貴方と話していると新しい視点を得られるの
+    MessageCN: 与您交谈也让我获得了新的观点
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410700
     Id: 200410880
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410710
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "선생을 한 번 더 만나고 싶어."
-    MessageJP: "その……色々と面倒ごとが多いとは思うのだけれど"
-    MessageCN: "那个……虽然也许会有很多麻烦的事"
+  - MessageKR: 선생을 한 번 더 만나고 싶어.
+    MessageJP: その……色々と面倒ごとが多いとは思うのだけれど
+    MessageCN: 那个……虽然也许会有很多麻烦的事
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410710
     Id: 200410890
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410720
     FeedbackTimeMillisec: 2500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "그것 뿐이야."
-    MessageJP: "それでも……先生さえよかったら"
-    MessageCN: "但是……如果您不介意的话"
+  - MessageKR: 그것 뿐이야.
+    MessageJP: それでも……先生さえよかったら
+    MessageCN: 但是……如果您不介意的话
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410720
     Id: 200410900
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410730
     FeedbackTimeMillisec: 500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "잘 자."
-    MessageJP: "また時間を作ってくれると嬉しいわ"
-    MessageCN: "希望您还能继续抽时间陪陪我"
+  - MessageKR: 잘 자.
+    MessageJP: また時間を作ってくれると嬉しいわ
+    MessageCN: 希望您还能继续抽时间陪陪我
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410720
     Id: 200410910
     CharacterId: 20041
-    MessageCondition: "None"
+    MessageCondition: None
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410730
     FeedbackTimeMillisec: 500
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "잘 자, 리오."
-    MessageJP: "おやすみ、リオ"
-    MessageCN: "晚安，莉音"
+  - MessageKR: 잘 자, 리오.
+    MessageJP: おやすみ、リオ
+    MessageCN: 晚安，莉音
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410730
     Id: 200410920
     CharacterId: 20041
-    MessageCondition: "Answer"
+    MessageCondition: Answer
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 200410740
     FeedbackTimeMillisec: 0
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "응."
-    MessageJP: "ええ"
-    MessageCN: "嗯"
+  - MessageKR: 응.
+    MessageJP: ええ
+    MessageCN: 嗯
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410740
     Id: 200410930
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 0
     FeedbackTimeMillisec: 2000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-  - MessageKR: "언제나, 고마워."
-    MessageJP: "おやすみなさい、先生"
-    MessageCN: "晚安，老师"
+  - MessageKR: 언제나, 고마워.
+    MessageJP: おやすみなさい、先生
+    MessageCN: 晚安，老师
     MessageEN: ""
     MessageTH: ""
     MessageTW: ""
     MessageGroupId: 200410740
     Id: 200410940
     CharacterId: 20041
-    MessageCondition: "Feedback"
+    MessageCondition: Feedback
     ConditionValue: 0
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
-    MessageType: "Text"
+    MessageType: Text
     ImagePath: ""
-proofreader: "今天早睡了吗"
