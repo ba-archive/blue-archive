@@ -1,0 +1,10 @@
+---
+description: These rules apply restrictions on writing Vue components.
+globs: *.vue
+---
+# Rules on Writing Vue Components
+
+- Always use composition APIs unless user explicitedly asks you to use options APIs.
+- Avoid embedding complex logic directly in templates; instead, use computed properties or methods.
+- Use watchers to handle side effects due to data changes, while avoiding excessive reliance on them.
+- Use lifecycle methods appropriately to handle asynchronous data, subscriptions, or side effects.

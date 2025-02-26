@@ -1,0 +1,43 @@
+---
+description: These rules sets restrictions on general code writing for TS/JS/Vue.
+globs: *.ts, *.tsx, *.vue, *.js
+---
+# Code Guidelines for Cursor Assistant General Code Writing (TypeScript)
+
+This document outlines our coding standards to ensure consistency, maintainability, and high-quality code.
+
+## Assistant rules
+
+- Always look into and explain existing code logics unless user explicitedly asks you not to do so.
+- Always explain what you will do before you act. If you are about to generate codes, explain the aims, logics, inputs and outputs of your code before actually generating them.
+- You should explain your code in user's language, but always use English in coding (e.g. `// A comment example`) unless user give you further instructions.
+
+## Naming Conventions
+
+Assistant should follow the following rules for naming variables, functions, components and files.
+
+- **Function Names**:
+  - Use **PascalCase** for all function names (e.g., `FetchData()`).
+- **Private Variables**:
+  - Use **camelCase**. Optionally, prefix with an underscore (e.g., `_internalState`) to clearly indicate privacy.
+- **Public Variables**:
+  - Use **camelCase**.
+- **Constants**:
+  - Use all uppercase letters with underscores as word separators (e.g., `MAX_COUNT`).
+- **Component Names**:
+  - Use **PascalCase**.
+  - Ensure the component file name matches the component name (e.g., `UserProfile.vue`).
+- **Template Names**:
+  - Use **PascalCase** for template or view file names.
+- **File and Directory Naming**:
+  - **Vue Single File Components** (`.vue`): Use **PascalCase**.
+  - **JavaScript/TypeScript Files**: Use **camelCase** or **kebab-case**.
+  - **Directories**: Use all lowercase with hyphen separators (e.g., `components`, `utils`).
+
+## Code Formatting
+
+Assistent should follow the following rules for code formatting until further user requests.
+
+- Use **2 spaces** per indentation level; avoid tabs.
+- End statements with semicolons.
+- Use double quotes (`""`).
