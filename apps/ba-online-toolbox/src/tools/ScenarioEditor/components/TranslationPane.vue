@@ -280,7 +280,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch, onMounted, onBeforeUnmount } from "vue";
+import { computed, ref, watch, onMounted, onBeforeUnmount, unref } from "vue";
 import { halfToFull } from "../../public/helper/getTranslation";
 import { formalizeStrings } from "../../public/helper/formatterService";
 import eventBus from "../eventsSystem/eventBus";
@@ -489,8 +489,10 @@ function handleLLMTranslateRequest(
     llmLastCalled = Date.now();
     llmLoading.value = true;
 
-    const text =
-      mainStore.getScenario.content[config.getSelectLine][config.getLanguage];
+    const text = unref(
+      mainStore.getScenario.content[config.getSelectLine][config.getLanguage]
+    );
+    const targetText = unref(currentText);
 
     if (!text) {
       ElMessage({
@@ -510,7 +512,7 @@ function handleLLMTranslateRequest(
       return;
     }
 
-    const currentTranslation = config.getTmpMachineTranslate(currentText.value);
+    const currentTranslation = config.getTmpMachineTranslate(targetText);
 
     getClaudeTranslation(
       text,
@@ -538,7 +540,7 @@ function handleLLMTranslateRequest(
           }
 
           config.setTmpMachineTranslate(
-            currentText.value,
+            targetText,
             rawResponse.text + additionalErrorInfo
           );
           return;
@@ -551,7 +553,7 @@ function handleLLMTranslateRequest(
           studentNames.value
         );
         config.setTmpMachineTranslate(
-          currentText.value,
+          targetText,
           formalizeStrings(studentTransformed)
         );
         advice.value = "";
