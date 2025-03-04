@@ -113,7 +113,7 @@ function handleClose() {
 
       .ba-dialog-title {
         margin: 0.2em 0.5em 0 0.5em;
-        font-weight: bold !important;
+        font-weight: bold;
         font-size: 1.6em;
         user-select: none;
         text-align: center;
@@ -143,7 +143,7 @@ function handleClose() {
         border: none;
         background-color: initial;
         padding: 0;
-        font-weight: bold !important;
+        font-weight: bold;
         font-size: 1.5em;
         cursor: pointer;
       }

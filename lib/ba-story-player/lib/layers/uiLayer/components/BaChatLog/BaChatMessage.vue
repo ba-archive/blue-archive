@@ -140,7 +140,7 @@ switch (props.chatMessage?.type) {
       .ba-chat-message-text {
         min-height: 1em;
         color: #fefefe;
-        font-weight: bold !important;
+        font-weight: bold;
         text-align: center;
       }
     }

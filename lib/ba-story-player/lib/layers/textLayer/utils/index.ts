@@ -17,7 +17,7 @@ const EffectToCSSMap: IEffectToCSSMap = {
   },
   b() {
     return {
-      "font-weight": "bold !important",
+      "font-weight": "bold",
     };
   },
 };

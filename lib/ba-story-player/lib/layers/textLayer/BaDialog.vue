@@ -928,7 +928,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: "Resource Han Rounded CN Medium", "Microsoft YaHei",
     "PingFang SC", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
     Cantarell, "Noto Sans", BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Sans GB", Arial, sans-serif !important;
+    "Hiragino Sans GB", Arial, sans-serif;
   user-select: none;
   hr {
     border: 0.1px rgba(255, 255, 255, 0.666) solid;
@@ -1018,7 +1018,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         padding: var(--font-size) 0;
         width: 100%;
         color: black;
-        font-weight: bold !important;
+        font-weight: 700;
         font-size: var(--font-size);
         line-height: 1;
         .sub-title {
@@ -1046,7 +1046,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
           width: 100%;
           content: attr(data-translator);
           color: white;
-          font-weight: normal !important;
+          font-weight: 400;
           font-size: min(var(--font-size), 16px);
           text-shadow: $text-outline;
         }
