@@ -1866,4 +1866,42 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 茱莉（打工）
+  CH0286_home: {
+    name: "CH0286_home",
+    playQue: [
+      {
+        name: "CH0286_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0286_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 濑名（常服）
+  CH0082_home: {
+    name: "CH0082_home",
+    playQue: [
+      {
+        name: "CH0082_home",
+        animation: "Start_Idle_01",
+        fadeTime: 5.9,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0082_home: {
+        scale: 1.4,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
