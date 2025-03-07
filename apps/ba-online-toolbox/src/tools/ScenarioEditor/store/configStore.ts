@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { Language } from "../types/content";
 import { Student } from "../../../../../blue-archive-story-viewer/src/types/Student";
+import { toHash } from "../../public/helper/xxhashUtils";
 
 export const useGlobalConfig = defineStore({
   id: "globalConfig",
@@ -31,12 +32,14 @@ export const useGlobalConfig = defineStore({
     getTmpMachineTranslate:
       state =>
       (query = "") => {
+        const hash = toHash(query);
         const objectType = Object.prototype.toString.call(
           state.tmpMachineTranslate
         );
+        if (!hash) return "";
         switch (objectType) {
           case "[object Object]":
-            return state.tmpMachineTranslate?.[query] || "";
+            return state.tmpMachineTranslate?.[hash] || "";
           case "[object String]":
             return state.tmpMachineTranslate as unknown as string;
           default:
@@ -79,11 +82,13 @@ export const useGlobalConfig = defineStore({
       this.selectLine = line;
     },
     setTmpMachineTranslate(origin: string, text: string) {
+      const hash = toHash(origin);
+      if (!hash) return;
       const mapType = Object.prototype.toString.call(this.tmpMachineTranslate);
       if (mapType !== "[object Object]") {
         this.tmpMachineTranslate = {};
       }
-      this.tmpMachineTranslate[origin] = text;
+      this.tmpMachineTranslate[hash] = text;
     },
     setLanguage(language: Language) {
       this.language = language;
