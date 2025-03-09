@@ -1,0 +1,47 @@
+diff --git a/lib/Sprite.js b/lib/Sprite.js
+index 5a05fafad384d609f226da4ab3daf0a6a9a5f688..17f14b389e9d4d63c1ff361eb98c9a0735386a34 100644
+--- a/lib/Sprite.js
++++ b/lib/Sprite.js
+@@ -93,7 +93,7 @@ class Sprite extends display.Container {
+    * @param [options.baseTexture=false] - Should it destroy the base texture of the sprite as well
+    */
+   destroy(options) {
+-    if (super.destroy(options), this._texture.off("update", this._onTextureUpdate, this), this._anchor = null, typeof options == "boolean" ? options : options?.texture) {
++    if (super.destroy(options), this._texture?.off("update", this._onTextureUpdate, this), this._anchor = null, typeof options == "boolean" ? options : options?.texture) {
+       const destroyBaseTexture = typeof options == "boolean" ? options : options?.baseTexture;
+       this._texture.destroy(!!destroyBaseTexture);
+     }
+@@ -190,7 +190,7 @@ class Sprite extends display.Container {
+     return this._texture;
+   }
+   set texture(value) {
+-    this._texture !== value && (this._texture && this._texture.off("update", this._onTextureUpdate, this), this._texture = value || core.Texture.EMPTY, this._cachedTint = 16777215, this._textureID = -1, this._textureTrimmedID = -1, value && (value.baseTexture.valid ? this._onTextureUpdate() : value.once("update", this._onTextureUpdate, this)));
++    this._texture !== value && (this._texture && this._texture?.off("update", this._onTextureUpdate, this), this._texture = value || core.Texture.EMPTY, this._cachedTint = 16777215, this._textureID = -1, this._textureTrimmedID = -1, value && (value.baseTexture.valid ? this._onTextureUpdate() : value.once("update", this._onTextureUpdate, this)));
+   }
+ }
+ exports.Sprite = Sprite;
+diff --git a/lib/Sprite.mjs b/lib/Sprite.mjs
+index d9c6f40b32b4229ab12c914fcd9ced1502bf4e68..825d17ebf643b47df3b9b73812a130540c179be2 100644
+--- a/lib/Sprite.mjs
++++ b/lib/Sprite.mjs
+@@ -93,9 +93,9 @@ class Sprite extends Container {
+    * @param [options.baseTexture=false] - Should it destroy the base texture of the sprite as well
+    */
+   destroy(options) {
+-    if (super.destroy(options), this._texture.off("update", this._onTextureUpdate, this), this._anchor = null, typeof options == "boolean" ? options : options?.texture) {
++    if (super.destroy(options), this._texture?.off("update", this._onTextureUpdate, this), this._anchor = null, typeof options == "boolean" ? options : options?.texture) {
+       const destroyBaseTexture = typeof options == "boolean" ? options : options?.baseTexture;
+-      this._texture.destroy(!!destroyBaseTexture);
++      this._texture?.destroy(!!destroyBaseTexture);
+     }
+     this._texture = null;
+   }
+@@ -190,7 +190,7 @@ class Sprite extends Container {
+     return this._texture;
+   }
+   set texture(value) {
+-    this._texture !== value && (this._texture && this._texture.off("update", this._onTextureUpdate, this), this._texture = value || Texture.EMPTY, this._cachedTint = 16777215, this._textureID = -1, this._textureTrimmedID = -1, value && (value.baseTexture.valid ? this._onTextureUpdate() : value.once("update", this._onTextureUpdate, this)));
++    this._texture !== value && (this._texture && this._texture?.off("update", this._onTextureUpdate, this), this._texture = value || Texture.EMPTY, this._cachedTint = 16777215, this._textureID = -1, this._textureTrimmedID = -1, value && (value.baseTexture.valid ? this._onTextureUpdate() : value.once("update", this._onTextureUpdate, this)));
+   }
+ }
+ export {
