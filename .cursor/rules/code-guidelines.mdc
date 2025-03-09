@@ -1,6 +1,7 @@
 ---
-description: These rules sets restrictions on general code writing for TS/JS/Vue.
+description: These rules sets restrictions on general code writing for TS/JS/Vue.js
 globs: *.ts, *.tsx, *.vue, *.js
+alwaysApply: false
 ---
 # Code Guidelines for Cursor Assistant General Code Writing (TypeScript)
 
@@ -10,7 +11,7 @@ This document outlines our coding standards to ensure consistency, maintainabili
 
 - Always look into and explain existing code logics unless user explicitedly asks you not to do so.
 - Always explain what you will do before you act. If you are about to generate codes, explain the aims, logics, inputs and outputs of your code before actually generating them.
-- You should explain your code in user's language, but always use English in coding (e.g. `// A comment example`) unless user give you further instructions.
+- You should explain your code and logic in user's language (default is Chinese). For better code readability, always use English in coding (e.g. `// A comment example`) unless further instructions are given.
 
 ## Naming Conventions
 
