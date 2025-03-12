@@ -1904,4 +1904,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 静子
+  Shizuko_home: {
+    name: "Shizuko_home",
+    playQue: [
+      {
+        name: "Shizuko_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Shizuko_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
