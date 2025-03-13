@@ -1942,4 +1942,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 玛丽
+  Mari_home: {
+    name: "Mari_home",
+    playQue: [
+      {
+        name: "Mari_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Mari_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
