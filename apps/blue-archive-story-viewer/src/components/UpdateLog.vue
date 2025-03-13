@@ -3,6 +3,19 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2025-03-16",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "河和 静子", id: 23006 }],
+      },
+      {
+        type: "fix",
+        content: "修复了一部分可能导致播放失败的问题。",
+      }
+    ],
+  },
+  {
     date: "2025-03-09",
     contents: [
       {

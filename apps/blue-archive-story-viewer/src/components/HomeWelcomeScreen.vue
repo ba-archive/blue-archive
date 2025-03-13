@@ -24,6 +24,11 @@ const homepageDisplayInfoList = ref<HomeDisplayInfo[]>([
     title: "牛牧 茱莉（打工）",
   },
   {
+    type: "student",
+    jumpTo: 23006,
+    title: "河和 静子",
+  },
+  {
     type: "minigame",
     title: "小春幸存者游戏",
     icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
