@@ -7,12 +7,15 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students: [{ name: "河和 静子", id: 23006 }],
+        students: [
+          { name: "河和 静子", id: 23006 },
+          { name: "栗村 爱莉", id: 23000 },
+        ],
       },
       {
         type: "fix",
         content: "修复了一部分可能导致播放失败的问题。",
-      }
+      },
     ],
   },
   {
@@ -20,10 +23,10 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students:[
+        students: [
           { name: "冰室 濑名（常服）", id: 10113 },
           { name: "牛牧 茱莉（打工）", id: 10114 },
-        ]
+        ],
       },
     ],
   },
@@ -32,12 +35,12 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students:[
+        students: [
           { name: "银镜 伊织", id: 10006 },
           { name: "陆八魔 阿露（正月）", id: 10031 },
           { name: "春原 心奈", id: 10050 },
           { name: "小涂 真纪（露营）", id: 20042 },
-        ]
+        ],
       },
     ],
   },
@@ -46,12 +49,12 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students:[
+        students: [
           { name: "百合园 圣娅", id: 10110 },
           { name: "一之濑 明日奈（制服）", id: 10112 },
           { name: "调月 莉音", id: 20041 },
           { name: "黑见 芹香（正月）", id: 20011 },
-        ]
+        ],
       },
     ],
   },
@@ -60,11 +63,11 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students:[
+        students: [
           { name: "美甘 尼禄（制服）", id: 10111 },
           { name: "角楯 花凛（制服）", id: 26014 },
           { name: "水羽 三森", id: 10034 },
-        ]
+        ],
       },
     ],
   },
@@ -73,11 +76,11 @@ const updateLogs: UpdateLog[] = [
     contents: [
       {
         type: "student",
-        students:[
+        students: [
           { name: "月雪 宫子", id: 10038 },
           { name: "杏山 和纱", id: 10049 },
           { name: "黑见 芹香", id: 13008 },
-        ]
+        ],
       },
     ],
   },
