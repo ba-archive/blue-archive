@@ -29,6 +29,11 @@ const homepageDisplayInfoList = ref<HomeDisplayInfo[]>([
     title: "河和 静子",
   },
   {
+    type: "student",
+    jumpTo: 23000,
+    title: "栗村 爱莉",
+  },
+  {
     type: "minigame",
     title: "小春幸存者游戏",
     icon: "https://games.blue-archive.io/koharu-dream/image/favicon.png",
