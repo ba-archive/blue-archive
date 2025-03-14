@@ -1961,4 +1961,42 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 芹奈
+  Serina_home: {
+    name: "Serina_home",
+    playQue: [
+      {
+        name: "Serina_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Serina_home: {
+        scale: 1.2,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 芹奈（圣诞）
+  CH0194_home: {
+    name: "CH0194_home",
+    playQue: [
+      {
+        name: "CH0194_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0194_home: {
+        scale: 1.4,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
