@@ -1999,4 +1999,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 爱丽丝
+  Aris_home: {
+    name: "Aris_home",
+    playQue: [
+      {
+        name: "Aris_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Aris_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
