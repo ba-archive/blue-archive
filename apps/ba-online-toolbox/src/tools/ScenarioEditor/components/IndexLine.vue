@@ -1,12 +1,10 @@
 <template>
   <div
-    v-if="'' !== line.TextJp"
-    style="cursor: pointer"
+    v-if="line.TextJp?.trim().length > 0"
     ref="currentElement"
-    class="card bg-white @dark:bg-slate-800 border-solid border-1 border-gray-300 @dark:border-gray-700"
+    class="card bg-white @dark:bg-slate-800 border-solid border-1 border-gray-300 @dark:border-gray-700 cursor-pointer"
     :class="{ selected: index === config.selectLine, unsure: line.Unsure }"
   >
-    <n-image v-if="false"></n-image>
     <n-text class="pl-4">
       <n-text class="line-type" :class="getLineType(line)">{{
         line[mainLanguage] || "暂无参考文本"
