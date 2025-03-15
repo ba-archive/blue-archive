@@ -8,6 +8,7 @@ const updateLogs: UpdateLog[] = [
       {
         type: "student",
         students: [
+          { name: "天童 爱丽丝", id: 10015 },
           { name: "栗村 爱莉", id: 23000 },
           { name: "河和 静子", id: 23006 },
           { name: "伊落 玛丽", id: 23008 },
