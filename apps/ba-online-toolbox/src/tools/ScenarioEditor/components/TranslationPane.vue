@@ -222,6 +222,8 @@
               v-model:value="advice"
               placeholder="指出机翻需要更正的地方……"
               @keydown.enter="reTranslateHandle"
+              @focus="handleShiftEnterDisable(true)"
+              @blur="handleShiftEnterDisable(false)"
             />
             <n-button
               secondary
@@ -372,6 +374,13 @@ watch(selectedText.text, () => {
   }
 });
 
+// 避免快捷键冲突
+const shouldShiftEnterDisable = ref(false);
+
+function handleShiftEnterDisable(value: boolean) {
+  shouldShiftEnterDisable.value = value;
+}
+
 function handleKeydown(event: KeyboardEvent) {
   type ModifierKey = "metaKey" | "altKey" | "ctrlKey" | "shiftKey";
   type ShortcutKey = "KeyV" | "KeyL" | "KeyA" | "KeyD" | "Enter";
@@ -405,6 +414,10 @@ function handleKeydown(event: KeyboardEvent) {
     Enter: {
       modifiers: isMac ? ["metaKey"] : ["ctrlKey"],
       action: (event: KeyboardEvent) => {
+        if (shouldShiftEnterDisable.value) {
+          event.preventDefault();
+          return;
+        }
         if (event.shiftKey) {
           handleGotoPrevLineRequest();
         } else {
