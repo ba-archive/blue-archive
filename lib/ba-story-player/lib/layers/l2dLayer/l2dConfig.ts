@@ -2018,4 +2018,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 艾米
+  Eimi_home: {
+    name: "Eimi_home",
+    playQue: [
+      {
+        name: "Eimi_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Eimi_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
