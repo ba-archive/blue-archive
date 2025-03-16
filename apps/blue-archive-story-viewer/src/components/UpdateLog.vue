@@ -3,6 +3,19 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2025-03-17",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "和泉元 艾米", id: 10001 }],
+      },
+      {
+        type: "fix",
+        content: "修复了系统版本在 iOS 18.3 以下的 iPhone 在特殊情况下无法打开设置菜单的问题。",
+      },
+    ],
+  },
+  {
     date: "2025-03-16",
     contents: [
       {
