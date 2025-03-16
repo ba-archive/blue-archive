@@ -15,6 +15,11 @@ export interface HomeDisplayInfo {
 const homepageDisplayInfoList = ref<HomeDisplayInfo[]>([
   {
     type: "student",
+    jumpTo: 10001,
+    title: "和泉元 艾米",
+  },
+  {
+    type: "student",
     jumpTo: 10015,
     title: "天童 爱丽丝",
   },
