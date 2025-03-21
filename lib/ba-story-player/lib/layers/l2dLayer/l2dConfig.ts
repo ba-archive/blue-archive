@@ -2037,4 +2037,23 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 白子（骑行）
+  Shiroko_ridingsuit_home: {
+    name: "Shiroko_ridingsuit_home",
+    playQue: [
+      {
+        name: "Shiroko_ridingsuit_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Shiroko_ridingsuit_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };
