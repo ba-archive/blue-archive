@@ -20,23 +20,8 @@ const homepageDisplayInfoList = ref<HomeDisplayInfo[]>([
   },
   {
     type: "student",
-    jumpTo: 10015,
-    title: "天童 爱丽丝",
-  },
-  {
-    type: "student",
-    jumpTo: 23000,
-    title: "栗村 爱莉",
-  },
-  {
-    type: "student",
-    jumpTo: 23006,
-    title: "河和 静子",
-  },
-  {
-    type: "student",
-    jumpTo: 23008,
-    title: "伊落 玛丽",
+    jumpTo: 10024,
+    title: "砂狼 白子（骑行）",
   },
   {
     type: "minigame",
