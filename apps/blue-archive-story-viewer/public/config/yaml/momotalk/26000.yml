@@ -1,5 +1,5 @@
 CharacterId: 26000
-translator: Lepra
+translator: Lepra，今天早睡了吗
 title:
   - TextJp: 誰かがやるべきこと
     TextCn: 应当有人做的事
@@ -37,6 +37,15 @@ title:
     GroupId: 2600006
     FavorScheduleId: 260006
     CharacterId: 26000
+  - TextJp: 私にできること
+    TextCn: 我能做的事情
+    TextKr: 누군가는 해야 할 일
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2600015
+    FavorScheduleId: 2600015
+    CharacterId: 26000
 content:
   - MessageKR: 치나츠입니다. 기억하고 계실는지요.
     MessageJP: お久しぶりです、チナツです。私のこと覚えていますか
@@ -60,9 +69,9 @@ content:
     MessageJP: この前はバタバタしていて、きちんとご挨拶ができませんでしたので
     MessageCN: 由于之前事务繁忙，没能正式问候老师，甚感遗憾
     MessageEN: I didn't have a chance to introduce myself properly last time.
-    MessageTH: "ตอนคราวที่แล้วไม่มีเวลา ฉันเลยไม่ได้
-
-      ทักทายคุณครู"
+    MessageTH: |-
+      ตอนคราวที่แล้วไม่มีเวลา ฉันเลยไม่ได้
+      ทักทายคุณครู
     MessageTW: 上次因為匆忙，沒能好好地和您打聲招呼
     MessageGroupId: 260000020
     Id: 1883
@@ -80,9 +89,9 @@ content:
     MessageJP: そのうち、あらためてご挨拶をする機会がありましたら嬉しいです
     MessageCN: 如果之后能有正式与老师寒暄的机会，我将不胜感激
     MessageEN: I hope to have that chance soon.
-    MessageTH: "คราวนี้เลยอยากจะมาทักทายอย่างเป็น
-
-      ทางการค่ะ"
+    MessageTH: |-
+      คราวนี้เลยอยากจะมาทักทายอย่างเป็น
+      ทางการค่ะ
     MessageTW: 之後如果有機會能再次打招呼的話，我會很高興的
     MessageGroupId: 260000020
     Id: 1884
@@ -118,9 +127,9 @@ content:
     MessageJP: 今日は本当にありがとうございました、先生
     MessageCN: 今天的事情真的非常感谢，老师
     MessageEN: Thank you so much for today, Sensei.
-    MessageTH: "เรื่องในวันนี้... ขอบคุณมากเลยค่ะ
-
-      คุณครู"
+    MessageTH: |-
+      เรื่องในวันนี้... ขอบคุณมากเลยค่ะ
+      คุณครู
     MessageTW: 今天真的非常感謝，老師
     MessageGroupId: 260000040
     Id: 1886
@@ -173,8 +182,8 @@ content:
   - MessageKR: ……
     MessageJP: ……で、では
     MessageCN: ……那、那么
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: ……那，那麼
     MessageGroupId: 260000040
     Id: 1889
@@ -354,9 +363,9 @@ content:
     MessageJP: いえその、嫌ということではないのですが……
     MessageCN: 不是，那个，并不是讨厌老师这么说的意思……
     MessageEN: Sorry. It's not that I don't like it.
-    MessageTH: "ขอโทษด้วยค่ะ ฉันไม่ได้หมายความว่า
-
-      ฉันเกลียดหรืออะไรนะคะ"
+    MessageTH: |-
+      ขอโทษด้วยค่ะ ฉันไม่ได้หมายความว่า
+      ฉันเกลียดหรืออะไรนะคะ
     MessageTW: 不是那個，並不是討厭的意思……
     MessageGroupId: 260000100
     Id: 1899
@@ -373,8 +382,8 @@ content:
   - MessageKR: ……
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: ……
     MessageGroupId: 260000100
     Id: 1900
@@ -392,9 +401,9 @@ content:
     MessageJP: えっと、後ほど場所をお伝えしますので。そこでお待ちしております
     MessageCN: 那个，见面地址我稍后发送给老师。我在那边等您
     MessageEN: I'll give you an address. I'll be waiting for you there.
-    MessageTH: "ฉันจะบอกสถานที่นัดพบให้นะคะ
-
-      แล้วฉันจะไปรอคุณครูที่นั่นค่ะ"
+    MessageTH: |-
+      ฉันจะบอกสถานที่นัดพบให้นะคะ
+      แล้วฉันจะไปรอคุณครูที่นั่นค่ะ
     MessageTW: 那個，我稍後會告訴您地點。我會在那裡等著
     MessageGroupId: 260000110
     Id: 1901
@@ -483,8 +492,8 @@ content:
   - MessageKR: ……
     MessageJP: ……いえ
     MessageCN: ……不
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: ……不
     MessageGroupId: 260000140
     Id: 1906
@@ -520,9 +529,9 @@ content:
     MessageJP: ありがとうございました、ではまた　～チナツ～
     MessageCN: 非常感谢老师，那么我们下次见。～千夏～
     MessageEN: Thank you. Have a nice day. - Chinatsu
-    MessageTH: "ขอบคุณมากนะคะ ขอให้วันนี้เป็น
-
-      วันที่ดีค่ะ -ชินัตสึ"
+    MessageTH: |-
+      ขอบคุณมากนะคะ ขอให้วันนี้เป็น
+      วันที่ดีค่ะ -ชินัตสึ
     MessageTW: 非常感謝，下次見　～千夏～
     MessageGroupId: 260000150
     Id: 1908
@@ -558,9 +567,9 @@ content:
     MessageJP: もしよかったら、先生のご都合が良いお時間帯を教えていただけませんか？
     MessageCN: 如果老师方便的话，可以告诉我您哪些时间有空吗？
     MessageEN: Can you let me know when you're free?
-    MessageTH: "ถ้าคุณครูสะดวก รบกวนบอกเวลาที่
-
-      คุณครูว่างให้ฉันทราบหน่อยได้ไหมคะ?"
+    MessageTH: |-
+      ถ้าคุณครูสะดวก รบกวนบอกเวลาที่
+      คุณครูว่างให้ฉันทราบหน่อยได้ไหมคะ?
     MessageTW: 如果可以的話，能告訴我老師方便的時間嗎？
     MessageGroupId: 260000170
     Id: 1910
@@ -686,9 +695,9 @@ content:
     MessageJP: 疲れたと感じた時には、いつでも連絡してください
     MessageCN: 当老师感觉疲惫的时候，随时也可以联系我哦
     MessageEN: Just let me know if you ever need anything, Sensei.
-    MessageTH: "ถ้ามีเรื่องที่คุณครูลำบากล่ะก็บอกฉันได้
-
-      เลยนะคะ"
+    MessageTH: |-
+      ถ้ามีเรื่องที่คุณครูลำบากล่ะก็บอกฉันได้
+      เลยนะคะ
     MessageTW: 感到疲累的時候，請隨時聯絡我
     MessageGroupId: 260000210
     Id: 1917
@@ -723,12 +732,11 @@ content:
   - MessageKR: 피곤할 것 같은 일이 생기시면, 미리 연락주시길 바랍니다.
     MessageJP: これは疲れそうだなと思うようなことがありましたら、私を呼んでください
     MessageCN: 如果老师觉得接下去会发生让您感到费心的事情的时候，也请联系我
-    MessageEN:
-      If you think something exhausting is coming up, just let me know in
+    MessageEN: If you think something exhausting is coming up, just let me know in
       advance.
-    MessageTH: "ถ้ามีงานที่จะทำให้คุณครูเหนื่อยขึ้นล่ะก็
-
-      บอกฉันล่วงหน้าได้เลยนะคะ"
+    MessageTH: |-
+      ถ้ามีงานที่จะทำให้คุณครูเหนื่อยขึ้นล่ะก็
+      บอกฉันล่วงหน้าได้เลยนะคะ
     MessageTW: 如果覺得有事情會讓老師感到疲憊，請通知我一聲
     MessageGroupId: 260000210
     Id: 1919
@@ -746,9 +754,9 @@ content:
     MessageJP: また疲労が溜まってしまわないよう、私もお手伝いしますので
     MessageCN: 为了让老师不再积累疲劳，我也会祝您一臂之力的
     MessageEN: I'll help you so that you don't ever feel tired.
-    MessageTH: "ฉันจะไปคอยช่วยดูแลคุณครูอยู่ข้างๆ
-
-      ไม่ให้เหนื่อยเลยค่ะ"
+    MessageTH: |-
+      ฉันจะไปคอยช่วยดูแลคุณครูอยู่ข้างๆ
+      ไม่ให้เหนื่อยเลยค่ะ
     MessageTW: 為了不再讓您累積疲勞，我會去幫忙的
     MessageGroupId: 260000210
     Id: 1920
@@ -964,9 +972,9 @@ content:
     MessageJP: お仕事のご相談、です。書類作業のお手伝いをお願いできればと思いまして
     MessageCN: 是关于我工作的事情。不知道我能不能麻烦老师协助我做一些文书工作呢
     MessageEN: It's for work, Sensei. Just a lot of paperwork.
-    MessageTH: "เรื่องงานค่ะ คุณครู เรื่องเขียนเอกสาร
-
-      น่ะค่ะ"
+    MessageTH: |-
+      เรื่องงานค่ะ คุณครู เรื่องเขียนเอกสาร
+      น่ะค่ะ
     MessageTW: 是商量工作相關的事。希望能幫我處理文件類的工作
     MessageGroupId: 260000290
     Id: 260000110
@@ -984,11 +992,10 @@ content:
     MessageJP: ちょっとひとりで行うには量が多くて……
     MessageCN: 光靠我一个人做的话，量有点太多了……
     MessageEN: But it's a bit much for just me... I could really use an extra hand.
-    MessageTH: "จำนวนเอกสารที่ต้องเขียนมันเยอะเกิน
-
+    MessageTH: |-
+      จำนวนเอกสารที่ต้องเขียนมันเยอะเกิน
       ไปที่จะทำคนเดียว ถ้าคุณครูมีเวลา
-
-      ฉันเลยจะขอรบกวนคุณครูค่ะ"
+      ฉันเลยจะขอรบกวนคุณครูค่ะ
     MessageTW: 一個人做的話，量實在有點多……
     MessageGroupId: 260000290
     Id: 260000120
@@ -1059,7 +1066,7 @@ content:
   - MessageKR: ……네?
     MessageJP: えっと、それほど急がなくても大丈夫ですので
     MessageCN: 那个，老师不用那么急的
-    MessageEN: "...Huh?"
+    MessageEN: ...Huh?
     MessageTH: คะ...?
     MessageTW: 那個，不用那麼急也沒關係
     MessageGroupId: 260000330
@@ -1096,9 +1103,9 @@ content:
     MessageJP: 今日は本当にありがとうございました
     MessageCN: 今天真的非常感谢老师
     MessageEN: Thank you again for today, Sensei.
-    MessageTH: "เรื่องงานวันนี้ ฉันต้องขอขอบคุณ
-
-      อีกครั้งนะคะ คุณครู"
+    MessageTH: |-
+      เรื่องงานวันนี้ ฉันต้องขอขอบคุณ
+      อีกครั้งนะคะ คุณครู
     MessageTW: 今天真的非常感謝老師
     MessageGroupId: 260000340
     Id: 260000180
@@ -1116,9 +1123,9 @@ content:
     MessageJP: 先生に来ていただけてなかったら、終わってなかったと思います
     MessageCN: 要不是老师来帮忙，我觉得我应该做不完了
     MessageEN: It would have been a lot without you.
-    MessageTH: "ถ้าไม่ได้คุณครูมาช่วย คงเกิดเรื่องใหญ่
-
-      แน่ๆ เลยค่ะ"
+    MessageTH: |-
+      ถ้าไม่ได้คุณครูมาช่วย คงเกิดเรื่องใหญ่
+      แน่ๆ เลยค่ะ
     MessageTW: 如果老師沒來的話，我想可能結束不了
     MessageGroupId: 260000350
     Id: 260000190
@@ -1135,8 +1142,8 @@ content:
   - MessageKR: ……
     MessageJP: その
     MessageCN: 那个
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: 那個
     MessageGroupId: 260000360
     Id: 260000200
@@ -1189,10 +1196,10 @@ content:
   - MessageKR: 다음 번에도 비슷하게 부탁드려도 될까요?
     MessageJP: また何かあれば、お願いをしてもよろしいでしょうか？
     MessageCN: 如果之后还有什么事的话，我也可以再拜托老师吗？
-    MessageEN: "...can I ask for your help again next time?"
-    MessageTH: "คราวหน้าฉันจะขอรบกวนคุณครูอีก
-
-      ได้มั้ยคะ?"
+    MessageEN: ...can I ask for your help again next time?
+    MessageTH: |-
+      คราวหน้าฉันจะขอรบกวนคุณครูอีก
+      ได้มั้ยคะ?
     MessageTW: 之後如果還有其他事，可以再拜託老師嗎？
     MessageGroupId: 260000370
     Id: 260000230
@@ -1246,9 +1253,9 @@ content:
     MessageJP: その時は、きちんと別の場所を
     MessageCN: 到那时，我一定好好找一个别的地方
     MessageEN: I'll make sure to choose somewhere else...
-    MessageTH: "คราวหน้า ฉันจะระวังไม่ให้ทำพลาด
-
-      เหมือนครั้งนี้ ฉันเลือกสถานที่ใหม่ไว้แล้ว..."
+    MessageTH: |-
+      คราวหน้า ฉันจะระวังไม่ให้ทำพลาด
+      เหมือนครั้งนี้ ฉันเลือกสถานที่ใหม่ไว้แล้ว...
     MessageTW: 到那時候，好好地在別的地方
     MessageGroupId: 260000400
     Id: 260000260
@@ -1265,8 +1272,8 @@ content:
   - MessageKR: ……
     MessageJP: あ
     MessageCN: 啊
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: 啊
     MessageGroupId: 260000410
     Id: 260000270
@@ -1355,8 +1362,8 @@ content:
   - MessageKR: ……
     MessageJP: ……
     MessageCN: ……
-    MessageEN: "..."
-    MessageTH: "..."
+    MessageEN: ...
+    MessageTH: ...
     MessageTW: ……
     MessageGroupId: 260000440
     Id: 260000320
@@ -1384,7 +1391,331 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 260000460
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 모처럼의 휴일이네요.
+    MessageJP: 先生、いかがお過ごしですか？
+    MessageCN: 老师，您过得如何？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000460
+    Id: 260000340
+    CharacterId: 26000
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 260000450
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님께서는 어떠신가요, 시간?
+    MessageJP: 私は今日、久しぶりのお休みでして……
+    MessageCN: 我今天，难得休息……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000470
+    Id: 260000350
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000480
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 우연인걸, 나도 오늘은 쉬어.
+    MessageJP: 私も休み！
+    MessageCN: 我今天也休息！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000480
+    Id: 260000360
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그럼 나도 땡땡이 좀 쳐볼까!
+    MessageJP: 今日は羽目を外すんだ……！
+    MessageCN: 今天就放纵一下吧……！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000480
+    Id: 260000370
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000500
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후
+    MessageJP: ふふ
+    MessageCN: 呵呵
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000490
+    Id: 260000380
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 듣기 좋은 이야기네요.
+    MessageJP: それはよかったです
+    MessageCN: 那就太好了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000490
+    Id: 260000390
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ;;;;
+    MessageJP: ……
+    MessageCN: ……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000500
+    Id: 260000400
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그건 좀……
+    MessageJP: ……ほどほどにしてくださいね
+    MessageCN: ……请把握好度哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000500
+    Id: 260000410
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아무튼 잠시 실례했습니다.
+    MessageJP: 突然のメッセージ、失礼しました
+    MessageCN: 唐突联络，实属冒昧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000510
+    Id: 260000420
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 좋은 하루 되시길 바랍니다. -치나츠
+    MessageJP: 良い一日を　～チナツ～
+    MessageCN: 祝您今天过得愉快 ～千夏～
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000520
+    Id: 260000430
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2600015
+    NextGroupId: 260000530
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 고생 많으셨습니다, 선생님.
+    MessageJP: お疲れ様でした、先生
+    MessageCN: 辛苦了，老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000530
+    Id: 260000440
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260000520
+    PreConditionFavorScheduleId: 2600015
+    FavorScheduleId: 0
+    NextGroupId: 260000540
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 모처럼 내신 시간인데 결국 일만 시켜 드린 셈이 됐네요.
+    MessageJP: お休みの日なのに、お仕事をさせてしまいましたね……
+    MessageCN: 明明是休息日，还让您继续工作……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000540
+    Id: 260000450
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000550
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇지 않아. 기력 쪽은 오히려 회복됐어.
+    MessageJP: おかげで、充実した休日になったよ
+    MessageCN: 多亏有你，我这个休息日过得很充实哦
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000550
+    Id: 260000460
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000560
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 체력은 썼어도 마음이 회복됐달까.
+    MessageJP: 体力は使ったけど、気力が回復した！
+    MessageCN: 消耗了体力，恢复了精力！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000550
+    Id: 260000470
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000560
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇습니까.
+    MessageJP: そうでしたか
+    MessageCN: 是这样吗
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000560
+    Id: 260000480
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000570
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러면 이제 체력을 회복해야 할 시간이네요.
+    MessageJP: では、次の休日は体力の回復に当てましょう
+    MessageCN: 那么，下个休息日就恢复一下体力吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000560
+    Id: 260000490
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000570
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후. 마침 잘 됐습니다.
+    MessageJP: ふふっ
+    MessageCN: 呵呵
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000570
+    Id: 260000500
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 금방 찾아뵙도록 하겠습니다. -치나츠
+    MessageJP: 近いうちに、お伺いします　～チナツ～
+    MessageCN: 我不久就去看老师 ～千夏～
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000570
+    Id: 260000510
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
