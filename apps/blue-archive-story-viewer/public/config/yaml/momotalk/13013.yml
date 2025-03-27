@@ -1,5 +1,5 @@
 CharacterId: 13013
-translator: 罐子
+translator: 罐子，今天早睡了吗
 title:
   - TextJp: 本を探す旅路
     TextCn: 寻找书本的旅程
@@ -36,6 +36,15 @@ title:
     TextTw: ""
     GroupId: 1301306
     FavorScheduleId: 130136
+    CharacterId: 13013
+  - TextKr: 기억되지 않는 것들에 대하여
+    TextJp: 忘れがちなものについて
+    TextCn: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1301315
+    FavorScheduleId: 1301315
     CharacterId: 13013
 content:
   - MessageKR: 저…… 선생님?
@@ -1006,7 +1015,205 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 130136
-    NextGroupId: 0
+    NextGroupId: 130130400
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님
+    MessageJP: 先生
+    MessageCN: 老师
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130400
+    Id: 130130550
+    CharacterId: 13013
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 130130390
+    PreConditionFavorScheduleId: 130136
+    FavorScheduleId: 0
+    NextGroupId: 130130410
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 죄송한데요
+    MessageJP: ごめんなさい
+    MessageCN: 对不起
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130410
+    Id: 130130560
+    CharacterId: 13013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오늘 찾아뵙기로 한 약속, 못 지킬 것 같아요
+    MessageJP: 今日はお会いできません
+    MessageCN: 今天不能去见您了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130410
+    Id: 130130570
+    CharacterId: 13013
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130420
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 갑자기 왜?
+    MessageJP: ど、どうしたの！？
+    MessageCN: 怎、怎么了！？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130420
+    Id: 130130580
+    CharacterId: 13013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130430
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 도서관에서 중요한
+    MessageJP: 図書館で大切な……
+    MessageCN: 我在图书馆丢了重要的……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130430
+    Id: 130130590
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130440
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아니
+    MessageJP: いやちょっとした……
+    MessageCN: 不对有点重要的……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130440
+    Id: 130130600
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130450
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 사소한 걸 잃어버려서
+    MessageJP: 落とし物を……
+    MessageCN: 一件东西……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130440
+    Id: 130130610
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130450
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그걸 우선 찾아야 할 것 같아요
+    MessageJP: ……探さないと
+    MessageCN: ……我得找到它
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130450
+    Id: 130130620
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130460
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러면 나도 도와줄게
+    MessageJP: 私も手伝うよ
+    MessageCN: 我也去帮忙吧
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130460
+    Id: 130130630
+    CharacterId: 13013
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 130130470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 네?
+    MessageJP: えっ？
+    MessageCN: 诶？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130470
+    Id: 130130640
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님이 직접요?
+    MessageJP: 先生が、ですか？
+    MessageCN: 老师，也要来帮忙吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 130130470
+    Id: 130130650
+    CharacterId: 13013
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1301315
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1500
     MessageType: Text
     ImagePath: ""
