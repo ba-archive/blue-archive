@@ -1,5 +1,5 @@
 CharacterId: 20014
-translator: 瓜豆GUARDOU
+translator: 瓜豆GUARDOU，今天早睡了吗
 title:
   - TextJp: 北風と太陽
     TextCn: 北风与太阳
@@ -37,14 +37,23 @@ title:
     GroupId: 2001406
     FavorScheduleId: 200146
     CharacterId: 20014
+  - TextJp: ウサギと聖＜軍事＞書
+    TextCn: 兔子与军事圣经
+    TextKr: 토끼와 병기서
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2001415
+    FavorScheduleId: 2001415
+    CharacterId: 20014
 content:
   - MessageKR: 선생님, 혹시 샬레에 반짇고리 있어?
     MessageJP: 先生、シャーレに裁縫箱はあるか？
     MessageCN: 老师，夏莱有针线盒吗？
     MessageEN: Sensei, is there a sewing box at Schale?
-    MessageTH: "คุณครู ที่ชาเล่ต์มีกล่องอุปกรณ์เย็บผ้าบ้าง
-
-      หรือเปล่า?"
+    MessageTH: |-
+      คุณครู ที่ชาเล่ต์มีกล่องอุปกรณ์เย็บผ้าบ้าง
+      หรือเปล่า?
     MessageTW: 老師，夏萊有針線盒嗎？
     MessageGroupId: 200140010
     Id: 200140010
@@ -98,9 +107,9 @@ content:
     MessageJP: 鉄帽のバンドが切れそうになってて
     MessageCN: 钢盔的带子快要断了
     MessageEN: Um, the lining of my helmet is really worn out.
-    MessageTH: "คือว่าผ้าที่บุอยู่ด้านในหมวกเหล็กที่ใส่อยู่
-
-      มันหลุดหมดแล้วน่ะ"
+    MessageTH: |-
+      คือว่าผ้าที่บุอยู่ด้านในหมวกเหล็กที่ใส่อยู่
+      มันหลุดหมดแล้วน่ะ
     MessageTW: 因為鋼盔帶好像快斷掉了
     MessageGroupId: 200140040
     Id: 200140040
@@ -118,9 +127,9 @@ content:
     MessageJP: こんな状況だし、自分で直すしか……
     MessageCN: 毕竟现在是这种状况，也只能自己修了……
     MessageEN: I obviously can't expect a replacement, so I'm trying to fix it myself.
-    MessageTH: "สถานการณ์ตอนนี้จะขออุปกรณ์เพิ่ม
-
-      ก็คงยาก เพราะงั้นซ่อมเองคงจะง่ายกว่าน่ะ"
+    MessageTH: |-
+      สถานการณ์ตอนนี้จะขออุปกรณ์เพิ่ม
+      ก็คงยาก เพราะงั้นซ่อมเองคงจะง่ายกว่าน่ะ
     MessageTW: 現在又是這種狀況，只好自己修了……
     MessageGroupId: 200140040
     Id: 200140050
@@ -156,9 +165,9 @@ content:
     MessageJP: まあ、それは当然
     MessageCN: 啊，那是当然啦
     MessageEN: Huh? Of course I can. It's just equipment.
-    MessageTH: "หืม? ก็เป็นอุปกรณ์นี่นา ต้องถอดออกได้อยู่
-
-      แล้วสิ"
+    MessageTH: |-
+      หืม? ก็เป็นอุปกรณ์นี่นา ต้องถอดออกได้อยู่
+      แล้วสิ
     MessageTW: 嘛，那是當然的。
     MessageGroupId: 200140060
     Id: 200140070
@@ -176,9 +185,9 @@ content:
     MessageJP: ……何で「絶対に脱がない」みたいに思われてるんだ
     MessageCN: ……为什么老师会觉得这是什么“咲永远不会摘下来的东西”一样
     MessageEN: Do you think I'm some kind of a weirdo that sleeps in my helmet?
-    MessageTH: "ทำไมทำเหมือนฉันเป็นพวกสัตว์ประหลาด
-
-      ที่ตัวติดอยู่กับหมวกเลยล่ะ..."
+    MessageTH: |-
+      ทำไมทำเหมือนฉันเป็นพวกสัตว์ประหลาด
+      ที่ตัวติดอยู่กับหมวกเลยล่ะ...
     MessageTW: ……為什麼會被認為是「絕對不會脫下來」的那種人呢
     MessageGroupId: 200140060
     Id: 200140080
@@ -196,9 +205,9 @@ content:
     MessageJP: 先生、念のため
     MessageCN: 老师，以防万一
     MessageEN: Sensei, don't touch the basket in front of the Schale office.
-    MessageTH: "คุณครู อย่าเพิ่งทิ้งตะกร้าที่วางอยู่ด้านหน้า
-
-      ชาเล่ต์นะ"
+    MessageTH: |-
+      คุณครู อย่าเพิ่งทิ้งตะกร้าที่วางอยู่ด้านหน้า
+      ชาเล่ต์นะ
     MessageTW: 老師，為了保險起見
     MessageGroupId: 200140070
     Id: 200140090
@@ -252,9 +261,9 @@ content:
     MessageJP: ああ。っていうか草って……先生は「タラボ」を知らないのか？
     MessageCN: 是。什么草啊……老师不知道“楤木芽”吗？
     MessageEN: Grass? Don't you know what fatsia sprouts look like?
-    MessageTH: "หญ้าที่ไหนกันล่ะ คุณครูไม่รู้จักผักทาระ
-
-      รึไง?"
+    MessageTH: |-
+      หญ้าที่ไหนกันล่ะ คุณครูไม่รู้จักผักทาระ
+      รึไง?
     MessageTW: 沒錯。不過竟然說是草……老師不知道「楤木」嗎？
     MessageGroupId: 200140100
     Id: 200140120
@@ -272,9 +281,9 @@ content:
     MessageJP: 生え立てのタラの芽だ、その辺でも簡単に手に入る珍味のひとつ
     MessageCN: 楤木芽就是新长出来的楤木的芽，即使在夏莱附近也是唾手可得的美味之一
     MessageEN: Fresh fatsia sprout is a delicacy readily available in the wild.
-    MessageTH: "ยอดผักทาระสดๆ แบบนี้เป็นอาหารชั้นดี
-
-      จากธรรมชาติเลยนะ"
+    MessageTH: |-
+      ยอดผักทาระสดๆ แบบนี้เป็นอาหารชั้นดี
+      จากธรรมชาติเลยนะ
     MessageTW: 那是剛長出來的楤木芽，是在這附近也能輕鬆入手的珍味之一
     MessageGroupId: 200140100
     Id: 200140130
@@ -291,14 +300,12 @@ content:
   - MessageKR: 물에 살짝 데쳐서 먹어도 맛있고, 튀기면 밥 위에 얹어 덴푸라처럼 먹을 수도 있다고!
     MessageJP: 軽くゆがいただけでも美味しいし、天ぷらにも良い。ご飯にピッタリのおかずだ！
     MessageCN: 楤木芽只要简单焯一下就很好吃，还可以做天妇罗。总之就是种非常下饭的菜！
-    MessageEN:
-      You can lightly blanch it in water or deep fry it and put it on top
+    MessageEN: You can lightly blanch it in water or deep fry it and put it on top
       of rice and eat it like tempura!
-    MessageTH: "เอาไปลวกในน้ำร้อนกิน มันอร่อย
-
+    MessageTH: |-
+      เอาไปลวกในน้ำร้อนกิน มันอร่อย
       มากนะ หรือจะเอาไปทอดกินกับข้าว
-
-      แบบเทมปุระก็ได้"
+      แบบเทมปุระก็ได้
     MessageTW: 就算只是稍微燙一下就已經很美味了，做成天婦羅也不錯。很下飯的哦
     MessageGroupId: 200140110
     Id: 200140140
@@ -316,9 +323,9 @@ content:
     MessageJP: ……まぁもちろん、小麦粉も油もロクに手に入らない今の状況で、天ぷらなんて夢のまた夢なんだが
     MessageCN: ……不过当然，现在我们这种情况连面粉和油都很难弄到，还想着天妇罗就是痴人说梦了
     MessageEN: Of course, it'd be difficult to fry without flour or oil.
-    MessageTH: "ถึงตอนนี้พวกเราจะไม่มีน้ำมันกับแป้ง
-
-      มาทำเทมปุระก็เถอะ..."
+    MessageTH: |-
+      ถึงตอนนี้พวกเราจะไม่มีน้ำมันกับแป้ง
+      มาทำเทมปุระก็เถอะ...
     MessageTW: ……不過，現在這種麵粉和油都無法輕鬆取得的狀況，要做天婦羅簡直是癡人說夢
     MessageGroupId: 200140120
     Id: 200140150
@@ -354,9 +361,9 @@ content:
     MessageJP: 同じようなやつが、西の山道にたくさん生えてた気がする
     MessageCN: 但是西边的山道上好像长着很多你说的这种楤木芽
     MessageEN: I saw a bunch of it on a mountain path in the western suburbs.
-    MessageTH: "มันขึ้นอยู่แถวๆ ทางเดินเขาแถบชานเมือง
-
-      ด้านตะวันตกนี่นา"
+    MessageTH: |-
+      มันขึ้นอยู่แถวๆ ทางเดินเขาแถบชานเมือง
+      ด้านตะวันตกนี่นา
     MessageTW: 不過在西邊的山路上好像長著很多類似的東西
     MessageGroupId: 200140140
     Id: 200140170
@@ -409,12 +416,10 @@ content:
   - MessageKR: 선생님, 혹시 휴게실에 있는 TV의 예약 녹화 기능 쓰는 법 알아?
     MessageJP: 先生。シャーレにあるTVって、録画機能は付いてるのか？
     MessageCN: 老师。夏莱的电视机有录像功能吗？
-    MessageEN:
-      Sensei, do you know how to schedule recordings on the TV in the break
-      room?
-    MessageTH: "คุณครู รู้วิธีอัดวิดีโอของทีวีในห้องพักผ่อน
-
-      รึเปล่า?"
+    MessageEN: Sensei, do you know how to schedule recordings on the TV in the break room?
+    MessageTH: |-
+      คุณครู รู้วิธีอัดวิดีโอของทีวีในห้องพักผ่อน
+      รึเปล่า?
     MessageTW: 老師，夏萊的電視有錄影功能嗎？
     MessageGroupId: 200140160
     Id: 200140200
@@ -431,12 +436,11 @@ content:
   - MessageKR: 오늘 밤 크로노스 채널에서 흥미로운 심야 다큐멘터리가 나온다고 해서…….
     MessageJP: 今夜「クロノスチャンネル」で、気になるドキュメンタリーがあって……
     MessageCN: 今晚的克罗诺斯频道有一个我感兴趣的纪录片……
-    MessageEN:
-      There's an interesting late-night documentary coming out tonight on
+    MessageEN: There's an interesting late-night documentary coming out tonight on
       the Kronos Channel...
-    MessageTH: "คืนนี้จะมีสารคดีที่น่าสนใจฉายที่ช่อง
-
-      โครโนสน่ะ..."
+    MessageTH: |-
+      คืนนี้จะมีสารคดีที่น่าสนใจฉายที่ช่อง
+      โครโนสน่ะ...
     MessageTW: 今晚在「克洛盧斯頻道」有個我想看的紀錄片……
     MessageGroupId: 200140170
     Id: 200140210
@@ -490,11 +494,10 @@ content:
     MessageJP: 助かる、ありがとう
     MessageCN: 帮大忙了，谢谢
     MessageEN: Electronics nowadays have so many functions that it's almost inconvenient.
-    MessageTH: "สมัยนี้อุปกรณ์เครื่องใช้ไฟฟ้ามีฟังก์ชัน
-
+    MessageTH: |-
+      สมัยนี้อุปกรณ์เครื่องใช้ไฟฟ้ามีฟังก์ชัน
       เยอะเกินไปจนบางครั้งก็ใช้งานยากกว่า
-
-      เดิมมากเลย"
+      เดิมมากเลย
     MessageTW: 幫大忙了，謝謝你
     MessageGroupId: 200140190
     Id: 200140240
@@ -512,9 +515,9 @@ content:
     MessageJP: 最近はやたらと機能が多い機器ばっかりで、マニュアルもどんどんデジタル化されて読みづらいし……
     MessageCN: 最近市场上都净卖些功能特别多的机器，而且说明书还逐渐无纸化了，读起来好不方便……
     MessageEN: Not only that, digital manuals are kinda hard to read...
-    MessageTH: "แถมคู่มือก็ยังปรับเป็นรูปแบบดิจิทัลอีกด้วย
-
-      เลยอ่านยากขึ้น..."
+    MessageTH: |-
+      แถมคู่มือก็ยังปรับเป็นรูปแบบดิจิทัลอีกด้วย
+      เลยอ่านยากขึ้น...
     MessageTW: 最近到處都是有各種功能的機器，說明書也漸漸都電子化，讀起來很不方便……
     MessageGroupId: 200140200
     Id: 200140250
@@ -532,9 +535,9 @@ content:
     MessageJP: シンプルな機能で使いやすかった、昔の製品が恋しい……
     MessageCN: 真怀念以前那些功能简单实用方便的老型号啊……
     MessageEN: I miss the regular products with basic functions...
-    MessageTH: "ฉันคิดถึงพวกเครื่องใช้ไฟฟ้าแบบเก่าที่มี
-
-      แค่ฟังก์ชันพื้นฐานจัง"
+    MessageTH: |-
+      ฉันคิดถึงพวกเครื่องใช้ไฟฟ้าแบบเก่าที่มี
+      แค่ฟังก์ชันพื้นฐานจัง
     MessageTW: 好懷念功能單純又好上手的老產品啊……
     MessageGroupId: 200140200
     Id: 200140260
@@ -623,12 +626,11 @@ content:
   - MessageKR: 선생님. 방금 발키리 경찰학교의 지인에게 들었는데.
     MessageJP: さっきヴァルキューレの知り合いから聞いたんだけど
     MessageCN: 刚刚我从瓦尔基里的熟人那里听说
-    MessageEN:
-      Sensei, I heard something from my acquaintance at the Valkyrie Police
+    MessageEN: Sensei, I heard something from my acquaintance at the Valkyrie Police
       School.
-    MessageTH: "คุณครู เมื่อกี้ฉันได้ข่าวมาจากคนรู้จัก
-
-      ที่อยู่ที่สถาบันฝึกตำรวจวัลคิรี่น่ะ"
+    MessageTH: |-
+      คุณครู เมื่อกี้ฉันได้ข่าวมาจากคนรู้จัก
+      ที่อยู่ที่สถาบันฝึกตำรวจวัลคิรี่น่ะ
     MessageTW: 剛剛我從女武神警察學校裡認識的人聽說
     MessageGroupId: 200140240
     Id: 200140310
@@ -646,11 +648,10 @@ content:
     MessageJP: 公園の裏手にある山に、キャンプ用品が色々捨てられてたらしい
     MessageCN: 公园后面的山上，好像有很多被扔掉的露营用品
     MessageEN: Some unused camping stuff was left on the hillside behind the park.
-    MessageTH: "เธอบอกว่าที่เนินเขาที่อยู่ด้านหลังสวน
-
+    MessageTH: |-
+      เธอบอกว่าที่เนินเขาที่อยู่ด้านหลังสวน
       สาธารณะมีอุปกรณ์ตั้งแคมป์ที่ไม่ได้ใช้งาน
-
-      ถูกทิ้งอยู่ที่นั่นด้วย"
+      ถูกทิ้งอยู่ที่นั่นด้วย
     MessageTW: 有很多露營用品被丟在公園的後山裡
     MessageGroupId: 200140250
     Id: 200140320
@@ -667,12 +668,11 @@ content:
   - MessageKR: 그 근처에 초소가 있었을 때, 치장물자로 쌓아 둔 걸 버려두고 왔다나.
     MessageJP: 昔ちょっとした基地みたいなのがあったらしくて、そこが無くなる時に放置されたんだとか
     MessageCN: 那边过去好像有个基地之类的地方，后来被废弃之后，那些用品也就被遗弃在那边了
-    MessageEN:
-      When they evacuated a guard post nearby, they left behind the their
+    MessageEN: When they evacuated a guard post nearby, they left behind the their
       equipment.
-    MessageTH: "แถวๆ นั้นมีจุดตรวจอยู่และมีอุปกรณ์ต่างๆ
-
-      ถูกทิ้งไว้เยอะมาก"
+    MessageTH: |-
+      แถวๆ นั้นมีจุดตรวจอยู่และมีอุปกรณ์ต่างๆ
+      ถูกทิ้งไว้เยอะมาก
     MessageTW: 以前似乎有個像基地一樣的據點在那裡，或許是放棄據點的時候就被丟棄在那裡了
     MessageGroupId: 200140250
     Id: 200140330
@@ -690,9 +690,9 @@ content:
     MessageJP: たとえ古いものだとしても、今の私たちにとっては無いよりマシだろうし
     MessageCN: 不过哪怕旧了，对现在这种情况的我们来说也是聊胜于无嘛
     MessageEN: They're all kind of old, but we could probably use it.
-    MessageTH: "ถึงส่วนใหญ่จะเป็นของเก่า แต่สำหรับพวก
-
-      เราที่ไม่มีอะไรเลยก็นับว่าเป็นประโยชน์มาก"
+    MessageTH: |-
+      ถึงส่วนใหญ่จะเป็นของเก่า แต่สำหรับพวก
+      เราที่ไม่มีอะไรเลยก็นับว่าเป็นประโยชน์มาก
     MessageTW: 就算是老舊的東西，對現在的我們來說也比沒有還好
     MessageGroupId: 200140260
     Id: 200140340
@@ -710,9 +710,9 @@ content:
     MessageJP: ちょっと今週末に行こうかと思ってるんだけど……
     MessageCN: 所以我想这周末去那边看看……
     MessageEN: I'm gonna pick up the stuff when I go hiking this weekend.
-    MessageTH: "วันหยุดนี้ฉันจะไปเดินป่าแล้วก็แวะไปดูของ
-
-      สักหน่อย"
+    MessageTH: |-
+      วันหยุดนี้ฉันจะไปเดินป่าแล้วก็แวะไปดูของ
+      สักหน่อย
     MessageTW: 我在想這個周末要不要過去看看……
     MessageGroupId: 200140260
     Id: 200140350
@@ -730,9 +730,9 @@ content:
     MessageJP: その、聞いた感じ多分量が多くて
     MessageCN: 不过，听上去可能数量比较多
     MessageEN: But I don't think I'll be able to get it all myself.
-    MessageTH: "แต่ถ้าจะหอบกลับมาคนเดียวก็คงจะ
-
-      ไม่ไหว..."
+    MessageTH: |-
+      แต่ถ้าจะหอบกลับมาคนเดียวก็คงจะ
+      ไม่ไหว...
     MessageTW: 那個，從聽到的消息來看，量大概不少
     MessageGroupId: 200140270
     Id: 200140360
@@ -749,7 +749,7 @@ content:
   - MessageKR: 선생님이 좀 도와줄 수는 없을까?
     MessageJP: 手伝ってくれたら助かる
     MessageCN: 要是老师愿意帮忙的话就再好不过了
-    MessageEN: "...Can you help me?"
+    MessageEN: ...Can you help me?
     MessageTH: คุณครูไปช่วยฉันหน่อยได้มั้ย?
     MessageTW: 你能一起來的話就幫大忙了
     MessageGroupId: 200140270
@@ -785,7 +785,7 @@ content:
   - MessageKR: 선뜻 도와줘서 고마워.
     MessageJP: ありがと
     MessageCN: 谢谢
-    MessageEN: "...Thanks for your help."
+    MessageEN: ...Thanks for your help.
     MessageTH: ขอบคุณที่ช่วยนะ
     MessageTW: 謝謝
     MessageGroupId: 200140290
@@ -803,12 +803,11 @@ content:
   - MessageKR: 다른 대원들도 바쁜 것 같고, 혼자서 왕복하는 것도 어려워서 곤란하던 참이었거든.
     MessageJP: 何かみんな忙しいらしくて、でもひとりで往復するのもアレだし……
     MessageCN: 虽然大家看起来都挺忙的，但是让我一个人来回搬东西还是有点那个……
-    MessageEN:
-      Everyone else seemed busy, and I was worried I wouldn't be able to
+    MessageEN: Everyone else seemed busy, and I was worried I wouldn't be able to
       carry everything myself.
-    MessageTH: "สมาชิกคนอื่นก็เหมือนจะยุ่งๆ กัน
-
-      แต่ถ้าไปกลับคนเดียวคงลำบากมากแน่ๆ"
+    MessageTH: |-
+      สมาชิกคนอื่นก็เหมือนจะยุ่งๆ กัน
+      แต่ถ้าไปกลับคนเดียวคงลำบากมากแน่ๆ
     MessageTW: 其他隊員好像都在忙，不過一個人來回搬又有點……
     MessageGroupId: 200140290
     Id: 200140400
@@ -826,9 +825,9 @@ content:
     MessageJP: そういえばその山、結構登山道が険しいみたいだから
     MessageCN: 这么说来，那座山的登山道好像挺陡的
     MessageEN: Oh, just so you know, the hiking trail is supposed to be pretty hard...
-    MessageTH: "อ๊ะ จริงสิ พอมานึกๆ ดูแล้ว ภูเขานั่นก็ขึ้นชื่อ
-
-      เรื่องทางเดินที่ชันมากนะ"
+    MessageTH: |-
+      อ๊ะ จริงสิ พอมานึกๆ ดูแล้ว ภูเขานั่นก็ขึ้นชื่อ
+      เรื่องทางเดินที่ชันมากนะ
     MessageTW: 話說回來，那座山的山路好像挺險峻的
     MessageGroupId: 200140300
     Id: 200140410
@@ -856,6 +855,240 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200146
+    NextGroupId: 200140320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님. 미안한데 말이지.
+    MessageJP: 先生、悪いんだが……
+    MessageCN: 老师，打扰一下……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140320
+    Id: 200140430
+    CharacterId: 20014
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 200140310
+    PreConditionFavorScheduleId: 200146
+    FavorScheduleId: 0
+    NextGroupId: 200140330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 혹시 휴게실에 책 하나 있나 찾아봐 줄 수 있어?
+    MessageJP: ちょっとシャーレの休憩室を見てくれないか？
+    MessageCN: 能帮我去夏莱休息室看看吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140330
+    Id: 200140440
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아마도 테이블 위에 있을 텐데, 있으면 보관해 줘.
+    MessageJP: テーブルの上に本があると思うんだが
+    MessageCN: 桌子上应该有本书
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140340
+    Id: 200140450
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ‘소라이’ 라고 이름 적혀있어서 한눈에 알아볼 수 있을 거야.
+    MessageJP: 「空井」と書いてあるから、すぐにわかるはずだ
+    MessageCN: 书上写着“空井”，看到应该马上就知道了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140350
+    Id: 200140460
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 알았지? 이따가 샬레에 들릴 때 받아 갈게!
+    MessageJP: あったら保管しておいてくれ。取りに行く！
+    MessageCN: 要是有的话我帮你保管一下。我去找找！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140360
+    Id: 200140470
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2001415
+    NextGroupId: 200140370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님, 오늘은 아무것도 못 본 거야.
+    MessageJP: 今日のことは忘れろ
+    MessageCN: 把今天的事给我忘了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140370
+    Id: 200140480
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200140360
+    PreConditionFavorScheduleId: 2001415
+    FavorScheduleId: 0
+    NextGroupId: 200140380
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 정보 누설하면, 무력행사도 불사할 거야!
+    MessageJP: もし情報が漏れたら、武力行使も辞さない
+    MessageCN: 要是情报泄露了，我不介意使用武力
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140380
+    Id: 200140490
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이거 유성펜이라서 잘 안 지워지더라.
+    MessageJP: 油性ペン、落ちないね……
+    MessageCN: 油性笔，洗不掉呀……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140390
+    Id: 200140500
+    CharacterId: 20014
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140400
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 쌤통이네!
+    MessageJP: いい気味だ！
+    MessageCN: 那是你活该！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140400
+    Id: 200140510
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140410
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 사키가 글씨를 써주니까 교범이 된 것 같네.
+    MessageJP: サキが書き込んだなら、私も大事な教範かな？
+    MessageCN: 既然咲写在我脸上，就是说我也是重要的教科书对吧？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140410
+    Id: 200140520
+    CharacterId: 20014
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140420
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ㄹㄴㅇ
+    MessageJP: なっに　を
+    MessageCN: 你 说
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140420
+    Id: 200140530
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140430
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ㄴㅇㄹ
+    MessageJP: い言っ
+    MessageCN: 什 么
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140420
+    Id: 200140540
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140430
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 박격포 들고 갈 테니까 기다려.
+    MessageJP: ……迫撃砲の味を体験したいのか！？
+    MessageCN: ……想吃迫击炮了是吧！？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140430
+    Id: 200140550
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
