@@ -37,6 +37,15 @@ title:
     GroupId: 2600006
     FavorScheduleId: 260006
     CharacterId: 26000
+  - TextJp: ""
+    TextCn: ""
+    TextKr: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2600015
+    FavorScheduleId: 2600015
+    CharacterId: 26000
 content:
   - MessageKR: 치나츠입니다. 기억하고 계실는지요.
     MessageJP: お久しぶりです、チナツです。私のこと覚えていますか
@@ -1384,7 +1393,331 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 260000460
     FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 모처럼의 휴일이네요.
+    MessageJP: 先生、いかがお過ごしですか？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000460
+    Id: 260000340
+    CharacterId: 26000
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 260000450
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000470
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님께서는 어떠신가요, 시간?
+    MessageJP: 私は今日、久しぶりのお休みでして……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000470
+    Id: 260000350
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000480
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 우연인걸, 나도 오늘은 쉬어.
+    MessageJP: 私も休み！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000480
+    Id: 260000360
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000490
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그럼 나도 땡땡이 좀 쳐볼까!
+    MessageJP: 今日は羽目を外すんだ……！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000480
+    Id: 260000370
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000500
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후
+    MessageJP: ふふ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000490
+    Id: 260000380
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 듣기 좋은 이야기네요.
+    MessageJP: それはよかったです
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000490
+    Id: 260000390
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ;;;;
+    MessageJP: ……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000500
+    Id: 260000400
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그건 좀……
+    MessageJP: ……ほどほどにしてくださいね
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000500
+    Id: 260000410
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000510
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아무튼 잠시 실례했습니다.
+    MessageJP: 突然のメッセージ、失礼しました
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000510
+    Id: 260000420
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000520
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 좋은 하루 되시길 바랍니다. -치나츠
+    MessageJP: 良い一日を　～チナツ～
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000520
+    Id: 260000430
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2600015
+    NextGroupId: 260000530
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 고생 많으셨습니다, 선생님.
+    MessageJP: お疲れ様でした、先生
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000530
+    Id: 260000440
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 260000520
+    PreConditionFavorScheduleId: 2600015
+    FavorScheduleId: 0
+    NextGroupId: 260000540
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 모처럼 내신 시간인데 결국 일만 시켜 드린 셈이 됐네요.
+    MessageJP: お休みの日なのに、お仕事をさせてしまいましたね……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000540
+    Id: 260000450
+    CharacterId: 26000
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000550
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇지 않아. 기력 쪽은 오히려 회복됐어.
+    MessageJP: おかげで、充実した休日になったよ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000550
+    Id: 260000460
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000560
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 체력은 썼어도 마음이 회복됐달까.
+    MessageJP: 体力は使ったけど、気力が回復した！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000550
+    Id: 260000470
+    CharacterId: 26000
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000560
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그렇습니까.
+    MessageJP: そうでしたか
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000560
+    Id: 260000480
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000570
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러면 이제 체력을 회복해야 할 시간이네요.
+    MessageJP: では、次の休日は体力の回復に当てましょう
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000560
+    Id: 260000490
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 260000570
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 후후. 마침 잘 됐습니다.
+    MessageJP: ふふっ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000570
+    Id: 260000500
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 금방 찾아뵙도록 하겠습니다. -치나츠
+    MessageJP: 近いうちに、お伺いします　～チナツ～
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 260000570
+    Id: 260000510
+    CharacterId: 26000
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""

@@ -37,6 +37,15 @@ title:
     GroupId: 2001406
     FavorScheduleId: 200146
     CharacterId: 20014
+  - TextJp: ""
+    TextCn: ""
+    TextKr: ""
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 2001415
+    FavorScheduleId: 2001415
+    CharacterId: 20014
 content:
   - MessageKR: 선생님, 혹시 샬레에 반짇고리 있어?
     MessageJP: 先生、シャーレに裁縫箱はあるか？
@@ -856,6 +865,240 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 200146
+    NextGroupId: 200140320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님. 미안한데 말이지.
+    MessageJP: 先生、悪いんだが……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140320
+    Id: 200140430
+    CharacterId: 20014
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 200140310
+    PreConditionFavorScheduleId: 200146
+    FavorScheduleId: 0
+    NextGroupId: 200140330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 혹시 휴게실에 책 하나 있나 찾아봐 줄 수 있어?
+    MessageJP: ちょっとシャーレの休憩室を見てくれないか？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140330
+    Id: 200140440
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 아마도 테이블 위에 있을 텐데, 있으면 보관해 줘.
+    MessageJP: テーブルの上に本があると思うんだが
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140340
+    Id: 200140450
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ‘소라이’ 라고 이름 적혀있어서 한눈에 알아볼 수 있을 거야.
+    MessageJP: 「空井」と書いてあるから、すぐにわかるはずだ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140350
+    Id: 200140460
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 알았지? 이따가 샬레에 들릴 때 받아 갈게!
+    MessageJP: あったら保管しておいてくれ。取りに行く！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140360
+    Id: 200140470
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 2001415
+    NextGroupId: 200140370
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님, 오늘은 아무것도 못 본 거야.
+    MessageJP: 今日のことは忘れろ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140370
+    Id: 200140480
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 200140360
+    PreConditionFavorScheduleId: 2001415
+    FavorScheduleId: 0
+    NextGroupId: 200140380
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 정보 누설하면, 무력행사도 불사할 거야!
+    MessageJP: もし情報が漏れたら、武力行使も辞さない
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140380
+    Id: 200140490
+    CharacterId: 20014
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140390
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 이거 유성펜이라서 잘 안 지워지더라.
+    MessageJP: 油性ペン、落ちないね……
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140390
+    Id: 200140500
+    CharacterId: 20014
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140400
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 쌤통이네!
+    MessageJP: いい気味だ！
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140400
+    Id: 200140510
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140410
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 사키가 글씨를 써주니까 교범이 된 것 같네.
+    MessageJP: サキが書き込んだなら、私も大事な教範かな？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140410
+    Id: 200140520
+    CharacterId: 20014
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140420
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ㄹㄴㅇ
+    MessageJP: なっに　を
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140420
+    Id: 200140530
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140430
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: ㄴㅇㄹ
+    MessageJP: い言っ
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140420
+    Id: 200140540
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 200140430
+    FeedbackTimeMillisec: 500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 박격포 들고 갈 테니까 기다려.
+    MessageJP: ……迫撃砲の味を体験したいのか！？
+    MessageCN: ""
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 200140430
+    Id: 200140550
+    CharacterId: 20014
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
