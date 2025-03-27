@@ -3,13 +3,39 @@ import { UpdateLog } from "@/types/UpdateNews";
 
 const updateLogs: UpdateLog[] = [
   {
+    date: "2025-03-23",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "砂狼 白子（骑行）", id: 10024 }],
+      },
+    ],
+  },
+  {
+    date: "2025-03-17",
+    contents: [
+      {
+        type: "student",
+        students: [{ name: "和泉元 艾米", id: 10001 }],
+      },
+      {
+        type: "fix",
+        content:
+          "修复了系统版本在 iOS 18.3 以下的 iPhone 在特殊情况下无法打开设置菜单的问题。",
+      },
+    ],
+  },
+  {
     date: "2025-03-16",
     contents: [
       {
         type: "student",
         students: [
-          { name: "河和 静子", id: 23006 },
+          { name: "和泉元 艾米", id: 10001 },
+          { name: "天童 爱丽丝", id: 10015 },
           { name: "栗村 爱莉", id: 23000 },
+          { name: "河和 静子", id: 23006 },
+          { name: "伊落 玛丽", id: 23008 },
         ],
       },
       {

@@ -103,6 +103,10 @@ export type Events = {
    */
   playVoiceJPDone: string;
   /**
+   * 播放sfx结束提示
+   */
+  playSFXDone: string;
+  /**
    * 根据指定的设置播放sound
    */
   playAudioWithConfig: {

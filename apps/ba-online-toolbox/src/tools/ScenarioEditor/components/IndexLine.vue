@@ -1,14 +1,12 @@
 <template>
   <div
-    v-if="'' !== line.TextJp"
-    style="cursor: pointer"
+    v-if="line.TextJp?.trim().length > 0"
     ref="currentElement"
-    class="card bg-white @dark:bg-slate-800 border-solid border-1 border-gray-300 @dark:border-gray-700"
+    class="card bg-white @dark:bg-slate-800 border-solid border-1 border-gray-300 @dark:border-gray-700 cursor-pointer"
     :class="{ selected: index === config.selectLine, unsure: line.Unsure }"
   >
-    <n-image v-if="false"></n-image>
     <n-text class="pl-4">
-      <n-text :class="getLineType(line)">{{
+      <n-text class="line-type" :class="getLineType(line)">{{
         line[mainLanguage] || "暂无参考文本"
       }}</n-text>
       <div class="pl-[38px]" v-if="config.getShowAllLanguage">
@@ -93,15 +91,22 @@ enum LineType {
   title = "type-title",
   text = "type-text",
   selection = "type-selection",
+  reply = "type-reply",
+  place = "type-place",
 }
 
 function getLineType(line: ContentLine) {
   const lineScript = line.ScriptKr || "";
+  const selectionGroup = line.SelectionGroup;
   switch (true) {
     case lineScript.includes("#title"):
       return LineType.title;
     case /\[n?s(\d{0,2})?]/.test(lineScript):
       return LineType.selection;
+    case lineScript.includes("#place"):
+      return LineType.place;
+    case selectionGroup > 0:
+      return LineType.reply;
     default:
       return LineType.text;
   }
@@ -135,7 +140,7 @@ function getLineType(line: ContentLine) {
 }
 
 div {
-  :is(.type-title, .type-selection, .type-text) {
+  .line-type {
     &::before {
       display: inline-flex;
       color: #165dff;
@@ -157,11 +162,17 @@ div {
   .type-text::before {
     content: "文本";
   }
+  .type-place::before {
+    content: "地点";
+  }
+  .type-reply::before {
+    content: "回复";
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   div {
-    :is(.type-title, .type-selection, .type-text) {
+    .line-type {
       &::before {
         color: #3c7eff;
         background: #000d4d;

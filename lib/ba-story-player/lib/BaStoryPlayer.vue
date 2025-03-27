@@ -500,9 +500,18 @@ onDeactivated(() => {
 </style>
 <style lang="scss">
 .pseudo-fullscreen {
-  .text-container,
-  .baui {
+  .text-container {
     animation: fuck-safari 999999s alternate infinite;
+  }
+
+  // iOS Safari version 18.3-：
+  // 在 Canvas 上层的元素会触发 Composition engine bug，
+  // 表现为元素不能正常显示，添加任意动画触发 repaint 即可显示
+  // 但是添加动画后，元素会无法点击导致按钮无法使用
+  // Safari 18.4 beta 已修复该问题，
+  // 但是暂时想不到兼容方案，也没有更低版本的测试设备，就先这样吧
+  .baui {
+    visibility: visible !important;
   }
   // 给 Safari 一鞭子，让渲染引擎别睡死
   @keyframes fuck-safari {

@@ -1961,4 +1961,99 @@ export const l2dConfig: IL2dConfig = {
     },
     otherSpine: [],
   },
+  // 芹奈
+  Serina_home: {
+    name: "Serina_home",
+    playQue: [
+      {
+        name: "Serina_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Serina_home: {
+        scale: 1.2,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 芹奈（圣诞）
+  CH0194_home: {
+    name: "CH0194_home",
+    playQue: [
+      {
+        name: "CH0194_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      CH0194_home: {
+        scale: 1.4,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 爱丽丝
+  Aris_home: {
+    name: "Aris_home",
+    playQue: [
+      {
+        name: "Aris_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Aris_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 艾米
+  Eimi_home: {
+    name: "Eimi_home",
+    playQue: [
+      {
+        name: "Eimi_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Eimi_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
+  // 白子（骑行）
+  Shiroko_ridingsuit_home: {
+    name: "Shiroko_ridingsuit_home",
+    playQue: [
+      {
+        name: "Shiroko_ridingsuit_home",
+        animation: "Start_Idle_01",
+        fadeTime:  4.2,
+        fade: true,
+      },
+    ],
+    spineSettings: {
+      Shiroko_ridingsuit_home: {
+        scale: 1.0,
+        customizeBones: [],
+      },
+    },
+    otherSpine: [],
+  },
 };

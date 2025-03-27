@@ -1,5 +1,5 @@
 CharacterId: 10048
-translator: Lepra
+translator: Lepra，今天早睡了吗
 title:
   - TextJp: 独り立ち
     TextCn: 自力更生
@@ -27,6 +27,15 @@ title:
     TextTw: 內疚
     GroupId: 1004805
     FavorScheduleId: 100485
+    CharacterId: 10048
+  - TextJp: 虚しいものなどない
+    TextCn: 再无虚妄
+    TextKr: 헛되지 않음의 증거
+    TextEn: ""
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1004815
+    FavorScheduleId: 1004815
     CharacterId: 10048
 content:
   - MessageKR: 선생.
@@ -103,7 +112,7 @@ content:
     ImagePath: ""
   - MessageKR: 나도 선생에게 연락할 생각까진 없었지만….
     MessageJP: 私としても連絡するつもりは無かったのだが
-    MessageCN: 我本来也不打算联系您的
+    MessageCN: 我本来也不打算联系你的
     MessageEN: I wasn't gonna contact you, but...
     MessageTH: ที่จริงฉันไม่ได้คิดจะติดต่อหาครูหรอก...
     MessageTW: 我本來也沒打算要聯絡你
@@ -231,7 +240,7 @@ content:
     ImagePath: ""
   - MessageKR: …그럼, 기다리고 있겠다.
     MessageJP: では、待っている
-    MessageCN: 那么，我等老师
+    MessageCN: 那我等老师
     MessageEN: Then I'll be waiting.
     MessageTH: ถ้างั้น ฉันจะรอแล้วกัน
     MessageTW: 那麼，我等著
@@ -513,7 +522,7 @@ content:
     ImagePath: ""
   - MessageKR: 그럼 다음에 또 기회가 되면 연락하겠어. 이만.
     MessageJP: また何かあったら連絡する
-    MessageCN: 有什么事的话我再联系您
+    MessageCN: 有什么事的话我再联系
     MessageEN: Maybe I'll talk to you again later, Sensei.
     MessageTH: เอาไว้ถ้ามีโอกาสจะติดต่อมาใหม่นะ
     MessageTW: 有事的話會再聯絡
@@ -695,7 +704,151 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 100485
-    NextGroupId: 0
+    NextGroupId: 100480320
     FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생. 혹시나 알고 있다면 말인데.
+    MessageJP: 先生、知っていたらでいいんだが
+    MessageCN: 老师，如果你知道的话最好
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480320
+    Id: 100480370
+    CharacterId: 10048
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100480310
+    PreConditionFavorScheduleId: 100485
+    FavorScheduleId: 0
+    NextGroupId: 100480330
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 좋은 수리공을 알고 있나?
+    MessageJP: 腕の立つ修理工はいるか？
+    MessageCN: 你认不认识厉害的修理工？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480330
+    Id: 100480380
+    CharacterId: 10048
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100480340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 꼭 고치고 싶은 장비가 있다.
+    MessageJP: 装備が壊れてしまってな
+    MessageCN: 我装备坏了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480330
+    Id: 100480390
+    CharacterId: 10048
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100480340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 응? 어떤 종류의 장비야?
+    MessageJP: どのタイプの装備？
+    MessageCN: 什么类型的装备？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480340
+    Id: 100480400
+    CharacterId: 10048
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100480350
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그건…….
+    MessageJP: それは……
+    MessageCN: 这个……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480350
+    Id: 100480410
+    CharacterId: 10048
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100480360
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 여기서 말하긴 좀 복잡하군.
+    MessageJP: ……説明が難しいな
+    MessageCN: ……有点难解释啊
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480360
+    Id: 100480420
+    CharacterId: 10048
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100480370
+    FeedbackTimeMillisec: 1500
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 내가 그쪽으로 가겠다.
+    MessageJP: 話したほうが早い
+    MessageCN: 当面说可能更方便
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480370
+    Id: 100480430
+    CharacterId: 10048
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 만나서 이야기하지.
+    MessageJP: シャーレに向かう
+    MessageCN: 我去夏莱好了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100480370
+    Id: 100480440
+    CharacterId: 10048
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1004815
+    NextGroupId: 0
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""

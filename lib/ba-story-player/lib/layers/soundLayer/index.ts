@@ -152,7 +152,7 @@ export function soundInit() {
       sfx = getAudio(playAudioInfo.soundUrl);
       sfx.volume(UiState.volume.value.sfxVolume);
       sfx.once("end", () => {
-        console.log("Finish Playing Sound!");
+        eventBus.emit("playSFXDone", playAudioInfo.soundUrl || "");
       });
       sfx.play();
     }
