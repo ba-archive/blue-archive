@@ -75,6 +75,9 @@ importers:
       file-saver:
         specifier: ^2.0.5
         version: 2.0.5
+      globals:
+        specifier: ^15.0.0
+        version: 15.14.0
       highlight.js:
         specifier: ~11.11.1
         version: 11.11.1
@@ -437,9 +440,6 @@ importers:
       eslint-processor-vue-blocks:
         specifier: ^0.1.1
         version: 0.1.2(@vue/compiler-sfc@3.5.13)(eslint@9.18.0(jiti@2.4.2))
-      globals:
-        specifier: ^15.0.0
-        version: 15.0.0
       https-localhost:
         specifier: ^4.7.1
         version: 4.7.1
@@ -578,6 +578,9 @@ importers:
       fastest-levenshtein:
         specifier: ^1.0.16
         version: 1.0.16
+      globals:
+        specifier: ^15.0.0
+        version: 15.14.0
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
@@ -738,6 +741,9 @@ importers:
       element-plus:
         specifier: ^2.9.3
         version: 2.9.3(vue@3.5.13(typescript@5.7.3))
+      globals:
+        specifier: ^15.0.0
+        version: 15.14.0
       markdown-it-implicit-figures:
         specifier: ~0.12.0
         version: 0.12.0
@@ -1009,6 +1015,9 @@ importers:
       element-plus:
         specifier: ^2.9.3
         version: 2.9.3(vue@3.5.13(typescript@5.7.3))
+      globals:
+        specifier: ^15.0.0
+        version: 15.14.0
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
@@ -7193,10 +7202,6 @@ packages:
     resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
     engines: {node: '>=18'}
 
-  globals@15.9.0:
-    resolution: {integrity: sha512-SmSKyLLKFbSr6rptvP8izbyxJL4ILwqO9Jg23UA0sDlGlu58V59D1//I3vlc0KJphVdUR7vMjHIplYnzBxorQA==}
-    engines: {node: '>=18'}
-
   globalthis@1.0.3:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
     engines: {node: '>= 0.4'}
@@ -11649,7 +11654,7 @@ snapshots:
       eslint-plugin-vue: 9.32.0(eslint@9.18.0(jiti@2.4.2))
       eslint-plugin-yml: 1.14.0(eslint@9.18.0(jiti@2.4.2))
       eslint-processor-vue-blocks: 0.1.2(@vue/compiler-sfc@3.5.13)(eslint@9.18.0(jiti@2.4.2))
-      globals: 15.9.0
+      globals: 15.14.0
       jsonc-eslint-parser: 2.4.0
       local-pkg: 0.5.0
       parse-gitignore: 2.0.0
@@ -18633,7 +18638,7 @@ snapshots:
       astro-eslint-parser: 1.0.3(typescript@5.7.3)
       eslint: 9.18.0(jiti@2.4.2)
       eslint-compat-utils: 0.5.0(eslint@9.18.0(jiti@2.4.2))
-      globals: 15.9.0
+      globals: 15.14.0
       postcss: 8.4.49
       postcss-selector-parser: 6.1.2
     transitivePeerDependencies:
@@ -18748,7 +18753,7 @@ snapshots:
       eslint: 9.18.0(jiti@2.4.2)
       eslint-plugin-es-x: 7.6.0(eslint@9.18.0(jiti@2.4.2))
       get-tsconfig: 4.7.6
-      globals: 15.9.0
+      globals: 15.14.0
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.6.3
@@ -18866,7 +18871,7 @@ snapshots:
       core-js-compat: 3.37.0
       eslint: 9.18.0(jiti@2.4.2)
       esquery: 1.5.0
-      globals: 15.9.0
+      globals: 15.14.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.0.2
@@ -19493,8 +19498,6 @@ snapshots:
   globals@15.0.0: {}
 
   globals@15.14.0: {}
-
-  globals@15.9.0: {}
 
   globalthis@1.0.3:
     dependencies:
