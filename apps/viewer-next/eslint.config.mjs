@@ -54,17 +54,12 @@ export default [
         extraFileExtensions: [".vue"],
       },
     },
+    processor: vuePlugin.processors[".vue"],
     rules: {
       ...vuePlugin.configs.base.rules,
       ...vuePlugin.configs["vue3-recommended"].rules,
       "vue/no-multiple-template-root": "off",
       "vue/multi-word-component-names": "off",
-      "vue/component-tags-order": [
-        "error",
-        {
-          order: ["script", "template", "style"],
-        },
-      ],
       "vue/block-lang": [
         "error",
         {
@@ -75,6 +70,15 @@ export default [
     },
   },
   {
-    ignores: [],
+    ignores: [
+      "node_modules",
+      ".DS_Store",
+      "dist",
+      "dist-ssr",
+      "*.local",
+      "presets",
+      "*.d.ts",
+      "gstc.wasm.esm.min.js",
+    ],
   },
 ];
