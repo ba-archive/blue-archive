@@ -5,7 +5,7 @@ import {
   SemanticUnit,
 } from "../../ScenarioEditor/types/Semantic";
 import { createAnthropicInstance } from "./AnthropicUtils";
-
+import { anthropicModels as models } from "./config/anthropicModels";
 const { ANTHROPIC_TIER1_SECRET } = secrets;
 
 interface ClaudeContent {
@@ -45,7 +45,6 @@ const rag_request = {
   max_tokens: 4096,
   temperature: 0,
   system:
-    /* eslint-disable-next-line max-len */
     "你是一名日语语言学专家。你需要解析用户给出的句子语素，并将语素以JSON格式返回。单独解析换行符元素'\\n'，并转义原文中的引号。",
   messages: [
     {
@@ -62,6 +61,7 @@ const rag_request = {
       content: [
         {
           type: "text",
+          /* eslint-disable-next-line max-len */
           text: '[{"word":"うち","yomi":"うち","basic_form":"うち","word_type":"名詞・普通名詞","conjugation":"*"},{"word":"の","yomi":"の","basic_form":"の","word_type":"助詞・接続助詞","conjugation":"*"},{"word":"庭","yomi":"にわ","basic_form":"庭","word_type":"名詞・普通名詞","conjugation":"*"},{"word":"に","yomi":"に","basic_form":"に","word_type":"助詞・格助詞","conjugation":"*"},{"word":"は","yomi":"は","basic_form":"は","word_type":"助詞・副助詞","conjugation":"*"},{"word":"\\\\n","yomi":"\\\\n","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"二","yomi":"に","basic_form":"二","word_type":"名詞・数詞","conjugation":"*"},{"word":"羽","yomi":"わ","basic_form":"羽","word_type":"接尾辞・名詞性名詞助数辞","conjugation":"*"},,{"word":"\\"","yomi":"\\"","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"鶏","yomi":"にわとり","basic_form":"鶏","word_type":"名詞・普通名詞","conjugation":"*"},,{"word":"\\"","yomi":"\\"","basic_form":"*","word_type":"補助記号","conjugation":"*"},{"word":"が","yomi":"が","basic_form":"が","word_type":"助詞・格助詞","conjugation":"*"},{"word":"い","yomi":"い","basic_form":"いる","word_type":"動詞・非自立可能","conjugation":"母音動詞+基本形"},{"word":"ます","yomi":"ます","basic_form":"ます","word_type":"接尾辞・動詞性接尾辞","conjugation":"動詞性接尾辞ます型+基本形"}]',
         },
       ],
@@ -77,21 +77,6 @@ const rag_request = {
     },
   ],
 };
-
-const models = [
-  {
-    modelName: "claude-3-haiku-20240307",
-    alias: [0, "haiku"],
-  },
-  {
-    modelName: "claude-3-7-sonnet-20250219",
-    alias: [1, "sonnet"],
-  },
-  {
-    modelName: "claude-3-opus-20240229",
-    alias: [2, "opus"],
-  },
-];
 
 async function parseSemantics(
   input: string,
