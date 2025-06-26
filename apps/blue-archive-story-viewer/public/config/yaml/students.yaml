@@ -3030,14 +3030,14 @@
     en: Kayama
     kr: 카야마
     tw: 鹿山
-    th: 鹿山
+    th: คายามะ
   name:
     cn: 俪舒
     jp: レイジョ
     en: Reijo
     kr: 레이죠
     tw: 令女
-    th: เรย์โจ
+    th: เรย์โจว
   nickname: []
   birthday:
     month: 3
@@ -3058,13 +3058,13 @@
     en: Iochi
     kr: 이오치
     tw: 伊落
-    th: 伊落
+    th: อิโอจิ
   name:
     cn: 玛丽(偶像)
     jp: マリー（アイドル）
-    en: Mari (Idol)
+    en: Mari (Pop Idol)
     kr: 마리(아이돌)
-    tw: 瑪麗（偶像）
+    tw: 瑪麗(偶像)
     th: มารี (ไอดอล)
   nickname: []
   nicknameFrom: 23008
@@ -3087,13 +3087,13 @@
     en: Utazumi
     kr: 우타즈미
     tw: 歌住
-    th: 歌住
+    th: อุทะซุมิ
   name:
     cn: 樱子(偶像)
     jp: サクラコ（アイドル）
-    en: Sakurako (Idol)
+    en: Sakurako (Pop Idol)
     kr: 사쿠라코(아이돌)
-    tw: 櫻子（偶像）
+    tw: 櫻子(偶像)
     th: ซากุระโกะ (ไอดอล)
   nickname: []
   nicknameFrom: 10061
@@ -3116,7 +3116,7 @@
     en: Motomiya
     kr: 모토미야
     tw: 元宮
-    th: 元宮
+    th: โมโตมิยะ
   name:
     cn: 千秋
     jp: チアキ
@@ -3144,13 +3144,13 @@
     en: Hayase
     kr: 하야세
     tw: 早瀬
-    th: 早瀬
+    th: ฮายาเสะ
   name:
     cn: 优香(睡衣)
     jp: ユウカ（パジャマ）
     en: Yuuka (Pajamas)
     kr: 유우카(파자마)
-    tw: 優香（睡衣）
+    tw: 優香(睡衣)
     th: ยูกะ (ชุดนอน)
   nickname: []
   nicknameFrom: 13010
@@ -3173,13 +3173,13 @@
     en: Ushio
     kr: 우시오
     tw: 生塩
-    th: 生塩
+    th: อุชิโอะ
   name:
     cn: 诺亚(睡衣)
     jp: ノア（パジャマ）
     en: Noa (Pajamas)
     kr: 노아(파자마)
-    tw: 乃愛（睡衣）
+    tw: 乃愛(睡衣)
     th: โนอา (ชุดนอน)
   nickname: []
   nicknameFrom: 10052
@@ -3288,12 +3288,12 @@
     tw: 氷室
     th: 氷室
   name:
-    cn: 濑名(常服)
+    cn: 濑名(私服)
     jp: セナ（私服）
     en: Sena (Casual)
     kr: 세나(사복)
     tw: 瀬奈（私服）
-    th: セナ（私服）
+    th: เซนะ (ชุดลำลอง)
   nickname: []
   nicknameFrom: 20012
   birthday:
@@ -3322,7 +3322,7 @@
     en: Juri (Part-time Job)
     kr: 주리(아르바이트)
     tw: 茱莉（打工）
-    th: ジュリ（アルバイト）
+    th: จูริ (พาร์ทไทม์)
   nickname: []
   nicknameFrom: 26002
   birthday:
@@ -3337,6 +3337,174 @@
   armorType: LightArmor
   bulletType: Mystic
   weapon: SG
+- id: 10115
+  familyName:
+    cn: 野正
+    jp: 野正
+    en: Nomasa
+    kr: 노마사
+    tw: 野正
+    th: 野正
+  name:
+    cn: 丽
+    jp: レイ
+    en: Rei
+    kr: 레이
+    tw: 莉
+    th: เรย์
+  nickname: []
+  birthday:
+    month: 8
+    day: 9
+  club: 训练部
+  clubCode: TrainingClub
+  affiliation: 千年
+  schoolCode: Millennium
+  rarity: 3
+  type: Striker
+  armorType: LightArmor
+  bulletType: Sonic
+  weapon: RL
+- id: 10116
+  familyName:
+    cn: 锭前
+    jp: 錠前
+    en: Joumae
+    kr: 조마에
+    tw: 錠前
+    th: 錠前
+  name:
+    cn: 纱织(礼服)
+    jp: サオリ（ドレス）
+    en: Saori (Dress)
+    kr: 사오리(드레스)
+    tw: 沙織（禮服）
+    th: ซาโอริ (เดรส)
+  nickname: []
+  birthday:
+    month: 9
+    day: 3
+  club: 阿里乌斯小队
+  clubCode: AriusSqud
+  affiliation: 阿里乌斯
+  schoolCode: Arius
+  rarity: 3
+  type: Striker
+  armorType: LightArmor
+  bulletType: Sonic
+  weapon: AR
+- id: 10117
+  familyName:
+    cn: 橘
+    jp: 橘
+    en: Tachibana
+    kr: 타치바나
+    tw: 橘
+    th: 橘
+  name:
+    cn: 光
+    jp: ヒカリ
+    en: Hikari
+    kr: 히카리
+    tw: 光
+    th: ฮิคาริ
+  nickname: []
+  birthday:
+    month: 6
+    day: 14
+  club: CentralControlCenter
+  clubCode: CentralControlCenter
+  affiliation: 海兰德铁道学园
+  schoolCode: Highlander
+  rarity: 3
+  type: Striker
+  armorType: LightArmor
+  bulletType: Sonic
+  weapon: HG
+- id: 10118
+  familyName:
+    cn: 橘
+    jp: 橘
+    en: Tachibana
+    kr: 타치바나
+    tw: 橘
+    th: ทาจิบานะ
+  name:
+    cn: 望
+    jp: ノゾミ
+    en: Nozomi
+    kr: 노조미
+    tw: 希望
+    th: โนโซมิ
+  nickname: []
+  birthday:
+    month: 6
+    day: 14
+  club: CentralControlCenter
+  clubCode: CentralControlCenter
+  affiliation: 海兰德铁道学园
+  schoolCode: Highlander
+  rarity: 3
+  type: Striker
+  armorType: LightArmor
+  bulletType: Sonic
+  weapon: HG
+- id: 10119
+  familyName:
+    cn: 御棱
+    jp: 御稜
+    en: Goryou
+    kr: 고료
+    tw: 御稜
+    th: 御稜
+  name:
+    cn: 名草
+    jp: ナグサ
+    en: Nagusa
+    kr: 나구사
+    tw: 名草
+    th: นางุสะ
+  nickname: []
+  birthday:
+    month: 12
+    day: 7
+  club: 百花缭乱
+  clubCode: Hyakkayouran
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Striker
+  armorType: ElasticArmor
+  bulletType: Sonic
+  weapon: SR
+- id: 10120
+  familyName:
+    cn: 柚鸟
+    jp: 柚鳥
+    en: Yutori
+    kr: 유토리
+    tw: 柚鳥
+    th: 柚鳥
+  name:
+    cn: 夏(乐队)
+    jp: ナツ（バンド）
+    en: Natsu (Band)
+    kr: 나츠(밴드)
+    tw: 夏（樂團）
+    th: นัตสึ (วงดนตรี)
+  nickname: []
+  birthday:
+    month: 12
+    day: 4
+  club: 放学后甜点部
+  clubCode: HoukagoDessert
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Explosion
+  weapon: SMG
 - id: 13000
   familyName:
     cn: 室笠
@@ -4234,13 +4402,13 @@
     en: Aomori
     kr: 아오모리
     tw: 蒼森
-    th: 蒼森
+    th: อาโอโมริ
   name:
     cn: 美弥(偶像)
     jp: ミネ（アイドル）
-    en: Mine (Idol)
+    en: Mine (Pop Idol)
     kr: 미네(아이돌)
-    tw: 美禰（偶像）
+    tw: 美禰(偶像)
     th: มิเนะ (ไอดอล)
   nickname: []
   nicknameFrom: 10058
@@ -4255,6 +4423,34 @@
   type: Striker
   armorType: HeavyArmor
   bulletType: Explosion
+  weapon: SG
+- id: 16017
+  familyName:
+    cn: 内海
+    jp: 内海
+    en: Utsumi
+    kr: 우츠미
+    tw: 內海
+    th: อุสึมิ
+  name:
+    cn: 青叶
+    jp: アオバ
+    en: Aoba
+    kr: 아오바
+    tw: 青葉
+    th: อาโอบะ
+  nickname: []
+  birthday:
+    month: 7
+    day: 19
+  club: FreightLogisticsDepartment
+  clubCode: FreightLogisticsDepartment
+  affiliation: 海兰德铁道学园
+  schoolCode: Highlander
+  rarity: 1
+  type: Striker
+  armorType: LightArmor
+  bulletType: Sonic
   weapon: SG
 - id: 20000
   familyName:
@@ -4445,7 +4641,7 @@
     tw: 藥子
     th: ยาคูชิ
   name:
-    cn: 沙耶(常服)
+    cn: 沙耶(私服)
     jp: サヤ（私服）
     en: Saya (Casual)
     kr: 사야(사복)
@@ -5404,7 +5600,7 @@
     en: Ryuuge
     kr: 류우게
     tw: 龍華
-    th: 竜華
+    th: ริวเกะ
   name:
     cn: 妃咲
     jp: キサキ
@@ -5433,7 +5629,7 @@
     en: Kyougoku
     kr: 쿄고쿠
     tw: 京極
-    th: 京極
+    th: เคียวโงคุ
   name:
     cn: 皋月
     jp: サツキ
@@ -5511,6 +5707,118 @@
   armorType: HeavyArmor
   bulletType: Explosion
   weapon: MG
+- id: 20043
+  familyName:
+    cn: 狮子堂
+    jp: 獅子堂
+    en: Shishidou
+    kr: 시시도우
+    tw: 獅子堂
+    th: 獅子堂
+  name:
+    cn: 泉(正月)
+    jp: イズミ（正月）
+    en: Izumi (New Year)
+    kr: 이즈미(새해)
+    tw: 泉（正月）
+    th: อิซุมิ (ปีใหม่)
+  nickname: []
+  birthday:
+    month: 5
+    day: 11
+  club: 美食研究会
+  clubCode: GourmetClub
+  affiliation: 格黑娜
+  schoolCode: Gehenna
+  rarity: 3
+  type: Special
+  armorType: LightArmor
+  bulletType: Explosion
+  weapon: MG
+- id: 20044
+  familyName:
+    cn: 乙花
+    jp: 乙花
+    en: Otohana
+    kr: 오토하나
+    tw: 乙花
+    th: 乙花
+  name:
+    cn: 堇(打工)
+    jp: スミレ（アルバイト）
+    en: Sumire (Part-time Job)
+    kr: 스미레(아르바이트)
+    tw: 堇（打工）
+    th: สึมิเระ (พาร์ทไทม์)
+  nickname: []
+  birthday:
+    month: 8
+    day: 20
+  club: 训练部
+  clubCode: TrainingClub
+  affiliation: 千年
+  schoolCode: Millennium
+  rarity: 3
+  type: Special
+  armorType: LightArmor
+  bulletType: Pierce
+  weapon: SG
+- id: 20045
+  familyName:
+    cn: 朝比奈
+    jp: 朝比奈
+    en: Asahina
+    kr: 아사히나
+    tw: 朝比奈
+    th: 朝比奈
+  name:
+    cn: 菲娜(向导)
+    jp: フィーナ（ガイド）
+    en: Pina (Guide)
+    kr: 피나(가이드)
+    tw: 菲娜（導覽員）
+    th: พีน่า (ไกด์)
+  nickname: []
+  birthday:
+    month: 11
+    day: 3
+  club: 祭典运营委员会
+  clubCode: MatsuriOffice
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Explosion
+  weapon: MG
+- id: 20046
+  familyName:
+    cn: 天地
+    jp: 天地
+    en: Amachi
+    kr: 아마치
+    tw: 天地
+    th: 天地
+  name:
+    cn: 妮娅
+    jp: ニヤ
+    en: Niya
+    kr: 니야
+    tw: 仁耶
+    th: นิยะ
+  nickname: []
+  birthday:
+    month: 1
+    day: 1
+  club: 阴阳部
+  clubCode: Onmyobu
+  affiliation: 百鬼夜行
+  schoolCode: Hyakkiyako
+  rarity: 3
+  type: Special
+  armorType: HeavyArmor
+  bulletType: Sonic
+  weapon: HG
 - id: 23000
   familyName:
     cn: 栗村
