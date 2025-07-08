@@ -16,161 +16,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 832286:
-/*!************************************************!*\
-  !*** ./lib-esnext/utilities/npmrcUtilities.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   isVariableSetInNpmrcFile: () => (/* binding */ isVariableSetInNpmrcFile),
-/* harmony export */   syncNpmrc: () => (/* binding */ syncNpmrc)
-/* harmony export */ });
-/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ 179896);
-/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! path */ 16928);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);
-// Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
-// See LICENSE in the project root for license information.
-// IMPORTANT - do not use any non-built-in libraries in this file
-
-
-/**
- * This function reads the content for given .npmrc file path, and also trims
- * unusable lines from the .npmrc file.
- *
- * @returns
- * The text of the the .npmrc.
- */
-// create a global _combinedNpmrc for cache purpose
-const _combinedNpmrcMap = new Map();
-function _trimNpmrcFile(options) {
-    const { sourceNpmrcPath, linesToPrepend, linesToAppend } = options;
-    const combinedNpmrcFromCache = _combinedNpmrcMap.get(sourceNpmrcPath);
-    if (combinedNpmrcFromCache !== undefined) {
-        return combinedNpmrcFromCache;
-    }
-    let npmrcFileLines = [];
-    if (linesToPrepend) {
-        npmrcFileLines.push(...linesToPrepend);
-    }
-    if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath)) {
-        npmrcFileLines.push(...fs__WEBPACK_IMPORTED_MODULE_0__.readFileSync(sourceNpmrcPath).toString().split('\n'));
-    }
-    if (linesToAppend) {
-        npmrcFileLines.push(...linesToAppend);
-    }
-    npmrcFileLines = npmrcFileLines.map((line) => (line || '').trim());
-    const resultLines = [];
-    // This finds environment variable tokens that look like "${VAR_NAME}"
-    const expansionRegExp = /\$\{([^\}]+)\}/g;
-    // Comment lines start with "#" or ";"
-    const commentRegExp = /^\s*[#;]/;
-    // Trim out lines that reference environment variables that aren't defined
-    for (let line of npmrcFileLines) {
-        let lineShouldBeTrimmed = false;
-        //remove spaces before or after key and value
-        line = line
-            .split('=')
-            .map((lineToTrim) => lineToTrim.trim())
-            .join('=');
-        // Ignore comment lines
-        if (!commentRegExp.test(line)) {
-            const environmentVariables = line.match(expansionRegExp);
-            if (environmentVariables) {
-                for (const token of environmentVariables) {
-                    // Remove the leading "${" and the trailing "}" from the token
-                    const environmentVariableName = token.substring(2, token.length - 1);
-                    // Is the environment variable defined?
-                    if (!process.env[environmentVariableName]) {
-                        // No, so trim this line
-                        lineShouldBeTrimmed = true;
-                        break;
-                    }
-                }
-            }
-        }
-        if (lineShouldBeTrimmed) {
-            // Example output:
-            // "; MISSING ENVIRONMENT VARIABLE: //my-registry.com/npm/:_authToken=${MY_AUTH_TOKEN}"
-            resultLines.push('; MISSING ENVIRONMENT VARIABLE: ' + line);
-        }
-        else {
-            resultLines.push(line);
-        }
-    }
-    const combinedNpmrc = resultLines.join('\n');
-    //save the cache
-    _combinedNpmrcMap.set(sourceNpmrcPath, combinedNpmrc);
-    return combinedNpmrc;
-}
-function _copyAndTrimNpmrcFile(options) {
-    const { logger, sourceNpmrcPath, targetNpmrcPath, linesToPrepend, linesToAppend } = options;
-    logger.info(`Transforming ${sourceNpmrcPath}`); // Verbose
-    logger.info(`  --> "${targetNpmrcPath}"`);
-    const combinedNpmrc = _trimNpmrcFile({
-        sourceNpmrcPath,
-        linesToPrepend,
-        linesToAppend
-    });
-    fs__WEBPACK_IMPORTED_MODULE_0__.writeFileSync(targetNpmrcPath, combinedNpmrc);
-    return combinedNpmrc;
-}
-function syncNpmrc(options) {
-    const { sourceNpmrcFolder, targetNpmrcFolder, useNpmrcPublish, logger = {
-        // eslint-disable-next-line no-console
-        info: console.log,
-        // eslint-disable-next-line no-console
-        error: console.error
-    }, createIfMissing = false, linesToAppend, linesToPrepend } = options;
-    const sourceNpmrcPath = path__WEBPACK_IMPORTED_MODULE_1__.join(sourceNpmrcFolder, !useNpmrcPublish ? '.npmrc' : '.npmrc-publish');
-    const targetNpmrcPath = path__WEBPACK_IMPORTED_MODULE_1__.join(targetNpmrcFolder, '.npmrc');
-    try {
-        if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath) || createIfMissing) {
-            // Ensure the target folder exists
-            if (!fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(targetNpmrcFolder)) {
-                fs__WEBPACK_IMPORTED_MODULE_0__.mkdirSync(targetNpmrcFolder, { recursive: true });
-            }
-            return _copyAndTrimNpmrcFile({
-                sourceNpmrcPath,
-                targetNpmrcPath,
-                logger,
-                linesToAppend,
-                linesToPrepend
-            });
-        }
-        else if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(targetNpmrcPath)) {
-            // If the source .npmrc doesn't exist and there is one in the target, delete the one in the target
-            logger.info(`Deleting ${targetNpmrcPath}`); // Verbose
-            fs__WEBPACK_IMPORTED_MODULE_0__.unlinkSync(targetNpmrcPath);
-        }
-    }
-    catch (e) {
-        throw new Error(`Error syncing .npmrc file: ${e}`);
-    }
-}
-function isVariableSetInNpmrcFile(sourceNpmrcFolder, variableKey) {
-    const sourceNpmrcPath = `${sourceNpmrcFolder}/.npmrc`;
-    //if .npmrc file does not exist, return false directly
-    if (!fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath)) {
-        return false;
-    }
-    const trimmedNpmrcFile = _trimNpmrcFile({ sourceNpmrcPath });
-    const variableKeyRegExp = new RegExp(`^${variableKey}=`, 'm');
-    return trimmedNpmrcFile.match(variableKeyRegExp) !== null;
-}
-//# sourceMappingURL=npmrcUtilities.js.map
-
-/***/ }),
-
-/***/ 535317:
-/*!********************************!*\
-  !*** external "child_process" ***!
-  \********************************/
+/***/ 16928:
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
 /***/ ((module) => {
 
-module.exports = require("child_process");
+module.exports = require("path");
 
 /***/ }),
 
@@ -194,13 +46,194 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 16928:
-/*!***********************!*\
-  !*** external "path" ***!
-  \***********************/
+/***/ 535317:
+/*!********************************!*\
+  !*** external "child_process" ***!
+  \********************************/
 /***/ ((module) => {
 
-module.exports = require("path");
+module.exports = require("child_process");
+
+/***/ }),
+
+/***/ 832286:
+/*!************************************************!*\
+  !*** ./lib-esnext/utilities/npmrcUtilities.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isVariableSetInNpmrcFile: () => (/* binding */ isVariableSetInNpmrcFile),
+/* harmony export */   syncNpmrc: () => (/* binding */ syncNpmrc),
+/* harmony export */   trimNpmrcFileLines: () => (/* binding */ trimNpmrcFileLines)
+/* harmony export */ });
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ 179896);
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! path */ 16928);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);
+// Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+// See LICENSE in the project root for license information.
+// IMPORTANT - do not use any non-built-in libraries in this file
+
+
+/**
+ * This function reads the content for given .npmrc file path, and also trims
+ * unusable lines from the .npmrc file.
+ *
+ * @returns
+ * The text of the the .npmrc.
+ */
+// create a global _combinedNpmrc for cache purpose
+const _combinedNpmrcMap = new Map();
+function _trimNpmrcFile(options) {
+    const { sourceNpmrcPath, linesToPrepend, linesToAppend, supportEnvVarFallbackSyntax } = options;
+    const combinedNpmrcFromCache = _combinedNpmrcMap.get(sourceNpmrcPath);
+    if (combinedNpmrcFromCache !== undefined) {
+        return combinedNpmrcFromCache;
+    }
+    let npmrcFileLines = [];
+    if (linesToPrepend) {
+        npmrcFileLines.push(...linesToPrepend);
+    }
+    if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath)) {
+        npmrcFileLines.push(...fs__WEBPACK_IMPORTED_MODULE_0__.readFileSync(sourceNpmrcPath).toString().split('\n'));
+    }
+    if (linesToAppend) {
+        npmrcFileLines.push(...linesToAppend);
+    }
+    npmrcFileLines = npmrcFileLines.map((line) => (line || '').trim());
+    const resultLines = trimNpmrcFileLines(npmrcFileLines, process.env, supportEnvVarFallbackSyntax);
+    const combinedNpmrc = resultLines.join('\n');
+    //save the cache
+    _combinedNpmrcMap.set(sourceNpmrcPath, combinedNpmrc);
+    return combinedNpmrc;
+}
+/**
+ *
+ * @param npmrcFileLines The npmrc file's lines
+ * @param env The environment variables object
+ * @param supportEnvVarFallbackSyntax Whether to support fallback values in the form of `${VAR_NAME:-fallback}`
+ * @returns
+ */
+function trimNpmrcFileLines(npmrcFileLines, env, supportEnvVarFallbackSyntax) {
+    var _a;
+    const resultLines = [];
+    // This finds environment variable tokens that look like "${VAR_NAME}"
+    const expansionRegExp = /\$\{([^\}]+)\}/g;
+    // Comment lines start with "#" or ";"
+    const commentRegExp = /^\s*[#;]/;
+    // Trim out lines that reference environment variables that aren't defined
+    for (let line of npmrcFileLines) {
+        let lineShouldBeTrimmed = false;
+        //remove spaces before or after key and value
+        line = line
+            .split('=')
+            .map((lineToTrim) => lineToTrim.trim())
+            .join('=');
+        // Ignore comment lines
+        if (!commentRegExp.test(line)) {
+            const environmentVariables = line.match(expansionRegExp);
+            if (environmentVariables) {
+                for (const token of environmentVariables) {
+                    /**
+                     * Remove the leading "${" and the trailing "}" from the token
+                     *
+                     * ${nameString}                  -> nameString
+                     * ${nameString-fallbackString}   -> name-fallbackString
+                     * ${nameString:-fallbackString}  -> name:-fallbackString
+                     */
+                    const nameWithFallback = token.substring(2, token.length - 1);
+                    let environmentVariableName;
+                    let fallback;
+                    if (supportEnvVarFallbackSyntax) {
+                        /**
+                         * Get the environment variable name and fallback value.
+                         *
+                         *                                name          fallback
+                         * nameString                 ->  nameString    undefined
+                         * nameString-fallbackString  ->  nameString    fallbackString
+                         * nameString:-fallbackString ->  nameString    fallbackString
+                         */
+                        const matched = nameWithFallback.match(/^([^:-]+)(?:\:?-(.+))?$/);
+                        // matched: [originStr, variableName, fallback]
+                        environmentVariableName = (_a = matched === null || matched === void 0 ? void 0 : matched[1]) !== null && _a !== void 0 ? _a : nameWithFallback;
+                        fallback = matched === null || matched === void 0 ? void 0 : matched[2];
+                    }
+                    else {
+                        environmentVariableName = nameWithFallback;
+                    }
+                    // Is the environment variable and fallback value defined.
+                    if (!env[environmentVariableName] && !fallback) {
+                        // No, so trim this line
+                        lineShouldBeTrimmed = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (lineShouldBeTrimmed) {
+            // Example output:
+            // "; MISSING ENVIRONMENT VARIABLE: //my-registry.com/npm/:_authToken=${MY_AUTH_TOKEN}"
+            resultLines.push('; MISSING ENVIRONMENT VARIABLE: ' + line);
+        }
+        else {
+            resultLines.push(line);
+        }
+    }
+    return resultLines;
+}
+function _copyAndTrimNpmrcFile(options) {
+    const { logger, sourceNpmrcPath, targetNpmrcPath } = options;
+    logger.info(`Transforming ${sourceNpmrcPath}`); // Verbose
+    logger.info(`  --> "${targetNpmrcPath}"`);
+    const combinedNpmrc = _trimNpmrcFile(options);
+    fs__WEBPACK_IMPORTED_MODULE_0__.writeFileSync(targetNpmrcPath, combinedNpmrc);
+    return combinedNpmrc;
+}
+function syncNpmrc(options) {
+    const { sourceNpmrcFolder, targetNpmrcFolder, useNpmrcPublish, logger = {
+        // eslint-disable-next-line no-console
+        info: console.log,
+        // eslint-disable-next-line no-console
+        error: console.error
+    }, createIfMissing = false } = options;
+    const sourceNpmrcPath = path__WEBPACK_IMPORTED_MODULE_1__.join(sourceNpmrcFolder, !useNpmrcPublish ? '.npmrc' : '.npmrc-publish');
+    const targetNpmrcPath = path__WEBPACK_IMPORTED_MODULE_1__.join(targetNpmrcFolder, '.npmrc');
+    try {
+        if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath) || createIfMissing) {
+            // Ensure the target folder exists
+            if (!fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(targetNpmrcFolder)) {
+                fs__WEBPACK_IMPORTED_MODULE_0__.mkdirSync(targetNpmrcFolder, { recursive: true });
+            }
+            return _copyAndTrimNpmrcFile({
+                sourceNpmrcPath,
+                targetNpmrcPath,
+                logger,
+                ...options
+            });
+        }
+        else if (fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(targetNpmrcPath)) {
+            // If the source .npmrc doesn't exist and there is one in the target, delete the one in the target
+            logger.info(`Deleting ${targetNpmrcPath}`); // Verbose
+            fs__WEBPACK_IMPORTED_MODULE_0__.unlinkSync(targetNpmrcPath);
+        }
+    }
+    catch (e) {
+        throw new Error(`Error syncing .npmrc file: ${e}`);
+    }
+}
+function isVariableSetInNpmrcFile(sourceNpmrcFolder, variableKey, supportEnvVarFallbackSyntax) {
+    const sourceNpmrcPath = `${sourceNpmrcFolder}/.npmrc`;
+    //if .npmrc file does not exist, return false directly
+    if (!fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(sourceNpmrcPath)) {
+        return false;
+    }
+    const trimmedNpmrcFile = _trimNpmrcFile({ sourceNpmrcPath, supportEnvVarFallbackSyntax });
+    const variableKeyRegExp = new RegExp(`^${variableKey}=`, 'm');
+    return trimmedNpmrcFile.match(variableKeyRegExp) !== null;
+}
+//# sourceMappingURL=npmrcUtilities.js.map
 
 /***/ })
 
@@ -273,7 +306,7 @@ module.exports = require("path");
 /******/
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 /*!*******************************************!*\
   !*** ./lib-esnext/scripts/install-run.js ***!
@@ -440,7 +473,8 @@ function _resolvePackageVersion(logger, rushCommonFolder, { name, version }) {
             (0,_utilities_npmrcUtilities__WEBPACK_IMPORTED_MODULE_4__.syncNpmrc)({
                 sourceNpmrcFolder,
                 targetNpmrcFolder: rushTempFolder,
-                logger
+                logger,
+                supportEnvVarFallbackSyntax: false
             });
             const npmPath = getNpmPath();
             // This returns something that looks like:
@@ -656,7 +690,8 @@ function installAndRun(logger, packageName, packageVersion, packageBinName, pack
         (0,_utilities_npmrcUtilities__WEBPACK_IMPORTED_MODULE_4__.syncNpmrc)({
             sourceNpmrcFolder,
             targetNpmrcFolder: packageInstallFolder,
-            logger
+            logger,
+            supportEnvVarFallbackSyntax: false
         });
         _createPackageJson(packageInstallFolder, packageName, packageVersion);
         const command = lockFilePath ? 'ci' : 'install';
