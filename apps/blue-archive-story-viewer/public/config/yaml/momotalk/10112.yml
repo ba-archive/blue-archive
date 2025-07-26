@@ -215,7 +215,7 @@ content:
     PreConditionFavorScheduleId: 101122
     FavorScheduleId: 0
     NextGroupId: 101120070
-    FeedbackTimeMillisec: 1500
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 내릴 때 깜빡하고 말을 못했는데
@@ -413,8 +413,8 @@ content:
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
     NextGroupId: 101120130
-    FeedbackTimeMillisec: 1000
-    MessageType: None
+    FeedbackTimeMillisec: 0
+    MessageType: Text
     ImagePath: ""
   - MessageKR: 곧 점심 시간이네
     MessageJP: そろそろお昼休みだね
@@ -863,7 +863,7 @@ content:
     PreConditionFavorScheduleId: 101126
     FavorScheduleId: 0
     NextGroupId: 101120310
-    FeedbackTimeMillisec: 1500
+    FeedbackTimeMillisec: 1000
     MessageType: Text
     ImagePath: ""
   - MessageKR: 오늘 아스나 찾으러 와줘서 고마워
