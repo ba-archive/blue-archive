@@ -1,12 +1,13 @@
 <template>
   <div class="player-pane">
     <div
-      class="player-container bg-white @dark:bg-slate-800 rounded-medium"
       ref="playerContainerElement"
+      class="player-container bg-white @dark:bg-slate-800 rounded-medium"
     >
       <ba-story-player
-        class="player-body rounded-small"
         v-if="showPlayer"
+        ref="StoryPlayer"
+        class="player-body rounded-small"
         :story="mainStore.getScenario"
         :language="playerLanguage"
         :width="playerContainerWidth - 24"
@@ -14,7 +15,6 @@
         :user-name="mainStore.getScenario.translator ?? 'Sensei'"
         :story-summary="{ chapterName: '', summary: '' }"
         data-url="https://yuuka.cdn.diyigemt.com/image/ba-all-data"
-        ref="StoryPlayer"
       />
     </div>
   </div>

@@ -5,15 +5,15 @@
     <translation-part></translation-part>
     <transition name="fly-in">
       <div
+        v-show="!showFooter"
         class="button-footer-trigger p-3 rounded-full fixed bg-[var(--color-arona-blue)] bottom-0 left-1/2 line-height-0 cursor-pointer"
         @click="showFooter = true"
-        v-show="!showFooter"
       >
         <arrow-icon direction="up" :size="24" />
       </div>
     </transition>
     <transition name="fly-in">
-      <footer-div @downloaded="showFooter = true" v-show="showFooter" ref="footerRef" />
+      <footer-div v-show="showFooter" ref="footerRef" @downloaded="showFooter = true" />
     </transition>
   </div>
 </template>

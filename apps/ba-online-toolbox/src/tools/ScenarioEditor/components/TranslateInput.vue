@@ -2,6 +2,7 @@
   <div class="h-full flex-1">
     <n-input
       v-if="translateStruct.translateType === TranslateType.input"
+      ref="textInputRef"
       class="explicit-quotation-mark h-[204px]"
       placeholder="暂无翻译"
       type="textarea"
@@ -14,9 +15,8 @@
             )
           : ''
       "
-      @input="inputHandle"
       clearable
-      ref="textInputRef"
+      @input="inputHandle"
     ></n-input>
     <n-space
       v-if="translateStruct.translateType === TranslateType.select"
@@ -26,8 +26,8 @@
     >
       <div
         v-for="(selection, idx) in translateStruct.content"
-        class="select-item"
         :key="idx"
+        class="select-item"
       >
         <n-tag :bordered="false" type="info" style="margin-right: 8px">
           {{ selection.label }}
@@ -35,10 +35,10 @@
         <n-input
           :value="selection.translated"
           type="textarea"
-          @input="(e: string) => selectInputHandle(e, idx)"
           :autosize="{ minRows: 2 }"
           placeholder="请输入"
           clearable
+          @input="(e: string) => selectInputHandle(e, idx)"
         />
       </div>
     </n-space>
@@ -68,8 +68,8 @@
           class="explicit-quotation-mark"
           placeholder="暂无翻译"
           :value="translateStruct.content[0].translated"
-          @input="titleInputHandle('content', $event)"
           clearable
+          @input="titleInputHandle('content', $event)"
         ></n-input>
       </n-input-group>
     </n-space>
@@ -87,8 +87,8 @@
           class="explicit-quotation-mark"
           placeholder="暂无翻译"
           :value="translateStruct.content[0].translated"
-          @input="titleInputHandle('content', $event)"
           clearable
+          @input="titleInputHandle('content', $event)"
         >
           <template #prefix>
             <span style="color: #999">下一话</span>
@@ -125,7 +125,7 @@ onMounted(() => {
 
 const config = useGlobalConfig();
 const mainStore = useScenarioStore();
-// eslint-disable-next-line
+ 
 // @ts-ignore
 const translateStruct: ComputedRef<{
   translateType: TranslateType;

@@ -9,7 +9,7 @@
       <n-text class="line-type" :class="getLineType(line)">{{
         line[mainLanguage] || "暂无参考文本"
       }}</n-text>
-      <div class="pl-[38px]" v-if="config.getShowAllLanguage">
+      <div v-if="config.getShowAllLanguage" class="pl-[38px]">
         <div
           v-for="language in availableLanguages.filter(l => l !== mainLanguage)"
           :key="language"
@@ -17,7 +17,7 @@
           {{ getContentByLang(line, language as keyof ContentLine) }}
         </div>
       </div>
-      <div class="pl-[38px]" v-else>{{ line[targetLanguage] }}</div>
+      <div v-else class="pl-[38px]">{{ line[targetLanguage] }}</div>
     </n-text>
   </div>
 </template>

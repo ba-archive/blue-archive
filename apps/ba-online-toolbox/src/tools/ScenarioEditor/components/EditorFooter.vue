@@ -5,8 +5,8 @@
         <n-space class="flex-horizontal">
           <n-text>我是校对</n-text>
           <n-switch
-            @click="config.setProofread(!config.isProofread)"
             :value="config.isProofread"
+            @click="config.setProofread(!config.isProofread)"
           >
             <template #checked> 是 </template>
             <template #unchecked> 否 </template>

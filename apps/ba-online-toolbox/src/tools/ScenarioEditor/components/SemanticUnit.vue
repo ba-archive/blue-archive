@@ -10,7 +10,7 @@ const shouldShowKana = computed(() => {
 
 <template>
   <div class="flex flex-col justify-end items-center">
-    <span class="text-[8px]" v-if="shouldShowKana">{{ semantic.yomi }}</span>
+    <span v-if="shouldShowKana" class="text-[8px]">{{ semantic.yomi }}</span>
     <n-tooltip placement="bottom">
       <template #trigger>
         <n-tag size="medium">{{ semantic.word }}</n-tag>

@@ -3,6 +3,7 @@
     <!-- 确实找不到一个唯一的 key 作为优化手段，考虑 index？-->
     <!-- eslint-disable vue/valid-v-for -->
     <index-line
+      v-for="(line, index) in mainStore.getScenario.content"
       :line="line"
       :index="index"
       @click="
@@ -10,7 +11,6 @@
           config.setSelectLine(index);
         }
       "
-      v-for="(line, index) in mainStore.getScenario.content"
     />
     <!-- eslint-enable vue/valid-v-for -->
   </div>

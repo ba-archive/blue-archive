@@ -89,15 +89,15 @@
         <n-space>
           <n-checkbox
             :checked="config.getSemanticPreference"
-            @update:checked="updateParseSemanticPref"
             size="large"
             label="解析语素"
+            @update:checked="updateParseSemanticPref"
           />
           <n-checkbox
             :checked="config.getShowAllLanguage"
-            @update:checked="handleShowAllLanguageChange"
             size="large"
             label="显示所有语言"
+            @update:checked="handleShowAllLanguageChange"
           />
         </n-space>
       </div>
@@ -107,6 +107,7 @@
       >
         <template #trigger>
           <original-text-disp
+            v-on-click-outside="handleCloseCopyPasteTooltip"
             :text="
               mainStore.getScenario.content[config.getSelectLine]?.[
                 config.getLanguage
@@ -114,7 +115,6 @@
             "
             :prefer-semantic="config.getSemanticPreference"
             :select-line="config.getSelectLine"
-            v-on-click-outside="handleCloseCopyPasteTooltip"
           />
         </template>
         <div v-if="showCopyPasteTooltip">
@@ -136,7 +136,7 @@
         <n-space>
           <n-tooltip>
             <template #trigger>
-              <n-button size="medium" @click="acceptHandle" type="info"
+              <n-button size="medium" type="info" @click="acceptHandle"
                 >接受机翻</n-button
               >
             </template>
@@ -151,8 +151,8 @@
             <template #trigger>
               <n-button
                 size="medium"
-                @click="handleFormalizePunctuation"
                 type="info"
+                @click="handleFormalizePunctuation"
               >
                 规范符号
               </n-button>
@@ -170,10 +170,10 @@
           >
           <n-button
             size="medium"
-            @click="handleLLMTranslateRequest(1)"
             type="info"
             quaternary
             :loading="llmLoading"
+            @click="handleLLMTranslateRequest(1)"
           >
             帮帮我，GPT 先生
           </n-button>
@@ -272,8 +272,8 @@
               : ''
           "
           :placeholder="config.getSelectLine !== -1 ? '请输入备注' : ''"
-          @input="commentHandle"
           style="width: 100%"
+          @input="commentHandle"
         >
         </n-input>
       </div>

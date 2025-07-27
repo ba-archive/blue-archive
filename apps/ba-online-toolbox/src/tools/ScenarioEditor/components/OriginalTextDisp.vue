@@ -97,11 +97,13 @@ const html = computed(() => {
   <div
     class="p-4 pt-2 pb-2 rounded-sm border-solid border-1 border-[var(--color-arona-blue)] overflow-y-scroll select-auto max-w-[664px]"
   >
+    <!-- eslint-disable vue/no-v-html -->
     <div
-      class="select-text w-full text-dark @dark:text-gray-200"
       v-if="!props.preferSemantic || !searchSemanticDict()"
+      class="select-text w-full text-dark @dark:text-gray-200"
       v-html="html"
     />
+    <!-- eslint-enable vue/no-v-html -->
     <div v-else class="flex flex-col gap-1 w-full flex-wrap">
       <div v-for="semanticLine in semantics" class="flex flex-wrap">
         <semantic-unit
