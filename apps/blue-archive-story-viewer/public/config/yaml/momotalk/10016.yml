@@ -1,5 +1,5 @@
 CharacterId: 10016
-translator: 罐子
+translator: 罐子, 今天早睡了吗
 title:
   - TextJp: 締め切りですよ、先生
     TextCn: 是截止时间哦，老师
@@ -36,6 +36,15 @@ title:
     TextTw: 是重要的回憶，老師
     GroupId: 1001606
     FavorScheduleId: 100166
+    CharacterId: 10016
+  - TextJp: 思い出は続くものですよ、先生
+    TextCn: 回忆会一直延续下去哦，老师
+    TextKr: ……떨어지지 않는 추억이네요, 선생님.
+    TextEn: It's a Memory that Never Fades, Sensei
+    TextTh: ""
+    TextTw: ""
+    GroupId: 1001615
+    FavorScheduleId: 1001615
     CharacterId: 10016
 content:
   - MessageKR: 선생님, 혹시 시간 있으신가요?
@@ -804,7 +813,7 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
-    NextGroupId: 0
+    NextGroupId: 100160300
     FeedbackTimeMillisec: 500
     MessageType: Text
     ImagePath: ""
@@ -822,6 +831,132 @@ content:
     PreConditionGroupId: 0
     PreConditionFavorScheduleId: 0
     FavorScheduleId: 0
+    NextGroupId: 100160300
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 선생님!
+    MessageJP: 先生！
+    MessageCN: 老师！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160300
+    Id: 100160430
+    CharacterId: 10016
+    MessageCondition: FavorRankUp
+    ConditionValue: 15
+    PreConditionGroupId: 100160290
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160310
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 약속 기억하고 계시죠?
+    MessageJP: 今日の約束、覚えてますか？
+    MessageCN: 还记得我们今天的约定吗？
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160310
+    Id: 100160440
+    CharacterId: 10016
+    MessageCondition: None
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160320
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 헌터의 시간이다…….
+    MessageJP: 狩りの時間だ……
+    MessageCN: 狩猎时间到了……
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160320
+    Id: 100160450
+    CharacterId: 10016
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 오늘 낮, 선생님이 사냥에 참가한다…….
+    MessageJP: 今日は先生も参戦しちゃうよ！
+    MessageCN: 老师今天也要参加战斗！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160320
+    Id: 100160460
+    CharacterId: 10016
+    MessageCondition: Answer
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160330
+    FeedbackTimeMillisec: 0
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 역시 기억하고 계셨네요.
+    MessageJP: よかった！
+    MessageCN: 太好了！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160330
+    Id: 100160470
+    CharacterId: 10016
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160340
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 기뻐요!
+    MessageJP: 嬉しいです！
+    MessageCN: 我好开心！
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160340
+    Id: 100160480
+    CharacterId: 10016
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 0
+    NextGroupId: 100160350
+    FeedbackTimeMillisec: 1000
+    MessageType: Text
+    ImagePath: ""
+  - MessageKR: 그러면 부실에서 기다릴게요!
+    MessageJP: それでは、部室で待っていますね
+    MessageCN: 那，我就在活动室等你了
+    MessageEN: ""
+    MessageTH: ""
+    MessageTW: ""
+    MessageGroupId: 100160350
+    Id: 100160490
+    CharacterId: 10016
+    MessageCondition: Feedback
+    ConditionValue: 0
+    PreConditionGroupId: 0
+    PreConditionFavorScheduleId: 0
+    FavorScheduleId: 1001615
     NextGroupId: 0
     FeedbackTimeMillisec: 1000
     MessageType: Text
