@@ -44,7 +44,7 @@ const sft_request = {
     {
       type: "text",
       text: "",
-      cache_control: { type: "ephemeral" },
+      cache_control: { type: "ephemeral", ttl: "1h" },
     },
   ],
   messages: [
