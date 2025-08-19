@@ -1,11 +1,12 @@
 import { OtherSoundsUrls, ResourcesTypes } from "@/types/resources";
 import { BGEffectExcelTableItem } from "./types/excels";
 import { Spine } from "@esotericsoftware/spine-pixi-v7";
-import structuredClone from "@ungap/structured-clone";
+// import structuredClone from "@ungap/structured-clone";
 
-if (!("structuredClone" in globalThis)) {
-  globalThis.structuredClone = structuredClone as any;
-}
+// if (!("structuredClone" in globalThis)) {
+//   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+//   globalThis.structuredClone = structuredClone as any;
+// }
 
 let dataUrl = "";
 let otherSoundMap: OtherSoundsUrls;
@@ -22,7 +23,9 @@ export function deepCopyObject<T>(object: T): T {
   if (typeof object !== "object") {
     return object;
   }
-  return structuredClone(object);
+  // DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Array] could not be cloned.
+  // return structuredClone(object); 
+  return JSON.parse(JSON.stringify(object));
 }
 
 /**
