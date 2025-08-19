@@ -861,6 +861,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     position: relative;
     width: 100%;
     height: 100%;
+    text-shadow: 0 0 3px rgba(42, 55, 78, 1); /* FIXME: text outer stroke */
     .name {
       align-self: flex-end;
       color: white;
@@ -868,7 +869,7 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     .department {
       margin-left: 10px;
-      color: rgb(156, 218, 240);
+      color: rgb(124, 208, 255);
       font-size: var(--fs);
     }
   }
