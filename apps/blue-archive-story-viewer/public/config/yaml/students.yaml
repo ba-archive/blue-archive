@@ -3202,7 +3202,7 @@
     en: Yurizono
     kr: 유리조노
     tw: 百合園
-    th: 百合園
+    th: ยูริโซโนะ
   name:
     cn: 圣娅
     jp: セイア
@@ -3230,13 +3230,13 @@
     en: Mikamo
     kr: 미카모
     tw: 美甘
-    th: 美甘
+    th: มิคาโมะ
   name:
     cn: 尼禄(制服)
     jp: ネル（制服）
-    en: Neru (Uniform)
+    en: Neru (School)
     kr: 네루(교복)
-    tw: 寧瑠（制服）
+    tw: 寧瑠(制服)
     th: เนรุ (ชุดนักเรียน)
   nickname: []
   birthday:
@@ -3258,13 +3258,13 @@
     en: Ichinose
     kr: 이치노세
     tw: 一之瀬
-    th: 一之瀬
+    th: อิชิโนเสะ
   name:
     cn: 明日奈(制服)
     jp: アスナ（制服）
-    en: Asuna (Uniform)
+    en: Asuna (School)
     kr: 아스나(교복)
-    tw: 明日奈（制服）
+    tw: 明日奈(制服)
     th: อาสึนะ (ชุดนักเรียน)
   nickname: []
   birthday:
@@ -3286,13 +3286,13 @@
     en: Himuro
     kr: 히무로
     tw: 氷室
-    th: 氷室
+    th: ฮิมูโระ
   name:
     cn: 濑名(私服)
     jp: セナ（私服）
     en: Sena (Casual)
     kr: 세나(사복)
-    tw: 瀬奈（私服）
+    tw: 瀬奈(私服)
     th: เซนะ (ชุดลำลอง)
   nickname: []
   nicknameFrom: 20012
@@ -3315,13 +3315,13 @@
     en: Ushimaki
     kr: 우시마키
     tw: 牛牧
-    th: 牛牧
+    th: อุชิมากิ
   name:
     cn: 茱莉(打工)
     jp: ジュリ（アルバイト）
-    en: Juri (Part-time Job)
+    en: Juri (Part-Timer)
     kr: 주리(아르바이트)
-    tw: 茱莉（打工）
+    tw: 茱莉(打工)
     th: จูริ (พาร์ทไทม์)
   nickname: []
   nicknameFrom: 26002
@@ -3504,6 +3504,34 @@
   type: Striker
   armorType: Unarmed
   bulletType: Explosion
+  weapon: SMG
+- id: 10122
+  familyName:
+    cn: 圣园
+    jp: 聖園
+    en: Misono
+    kr: 미소노
+    tw: 聖園
+    th: 聖園
+  name:
+    cn: 未花(泳装)
+    jp: ミカ（水着）
+    en: Mika (Swimsuit)
+    kr: 미카(수영복)
+    tw: 彌香（泳裝）
+    th: มิกะ (ชุดว่ายน้ำ)
+  nickname: []
+  birthday:
+    month: 5
+    day: 8
+  club: 茶会
+  clubCode: TeaParty
+  affiliation: 圣三一
+  schoolCode: Trinity
+  rarity: 3
+  type: Striker
+  armorType: Unarmed
+  bulletType: Sonic
   weapon: SMG
 - id: 13000
   familyName:
@@ -5657,7 +5685,7 @@
     en: Tsukatsuki
     kr: 츠카츠키
     tw: 調月
-    th: 調月
+    th: สึคัตสึกิ
   name:
     cn: 莉音
     jp: リオ
@@ -5685,13 +5713,13 @@
     en: Konuri
     kr: 코누리
     tw: 小塗
-    th: 小塗
+    th: โคนูริ
   name:
     cn: 真纪(露营)
     jp: マキ（キャンプ）
     en: Maki (Camp)
     kr: 마키(캠핑)
-    tw: 真紀（露營）
+    tw: 真紀(露營)
     th: มากิ (แคมป์)
   nickname: []
   nicknameFrom: 10007
@@ -5746,7 +5774,7 @@
   name:
     cn: 堇(打工)
     jp: スミレ（アルバイト）
-    en: Sumire (Part-time Job)
+    en: Sumire (Part-Timer)
     kr: 스미레(아르바이트)
     tw: 堇（打工）
     th: สึมิเระ (พาร์ทไทม์)
@@ -6494,13 +6522,13 @@
     en: Kakudate
     kr: 카쿠다테
     tw: 角楯
-    th: 角楯
+    th: คาคุดาเตะ
   name:
     cn: 花凛(制服)
     jp: カリン（制服）
-    en: Karin (Uniform)
+    en: Karin (School)
     kr: 카린(교복)
-    tw: 花凛（制服）
+    tw: 花凛(制服)
     th: คาริน (ชุดนักเรียน)
   nickname: []
   birthday:
