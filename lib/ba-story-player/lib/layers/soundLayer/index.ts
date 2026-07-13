@@ -42,17 +42,26 @@ export function soundInit() {
   let voice: Howl | undefined = undefined;
   let emotionSound: Howl | undefined = undefined;
   const UiState = useUiState();
+  function channelVolume(
+    channel: "bgmVolume" | "sfxVolume" | "voiceVolume"
+  ): number {
+    const vol = UiState.volume.value;
+    return (vol.masterVolume ?? 1) * vol[channel];
+  }
   watch(
     () => UiState.volume.value,
-    cur => {
+    () => {
       if (bgm) {
-        bgm.volume(cur.bgmVolume);
+        bgm.volume(channelVolume("bgmVolume"));
       }
       if (sfx) {
-        sfx.volume(cur.sfxVolume);
+        sfx.volume(channelVolume("sfxVolume"));
       }
       if (voice) {
-        voice.volume(cur.voiceVolume);
+        voice.volume(channelVolume("voiceVolume"));
+      }
+      if (emotionSound) {
+        emotionSound.volume(channelVolume("sfxVolume"));
       }
     },
     { deep: true }
@@ -136,7 +145,7 @@ export function soundInit() {
           }
           bgm.seek(0);
           bgm.once("end", endCb);
-          bgm.volume(UiState.volume.value.bgmVolume);
+          bgm.volume(channelVolume("bgmVolume"));
           bgm.play();
         })
         .catch(err => {
@@ -150,7 +159,7 @@ export function soundInit() {
         sfx.stop();
       }
       sfx = getAudio(playAudioInfo.soundUrl);
-      sfx.volume(UiState.volume.value.sfxVolume);
+      sfx.volume(channelVolume("sfxVolume"));
       sfx.once("end", () => {
         eventBus.emit("playSFXDone", playAudioInfo.soundUrl || "");
       });
@@ -162,7 +171,7 @@ export function soundInit() {
         voice.stop();
       }
       voice = getAudio(playAudioInfo.voiceJPUrl);
-      voice.volume(UiState.volume.value.voiceVolume);
+      voice.volume(channelVolume("voiceVolume"));
       voice.once("end", () => {
         eventBus.emit("playVoiceJPDone", playAudioInfo.voiceJPUrl || "");
       });
@@ -197,7 +206,7 @@ export function soundInit() {
       emotionSound.stop();
     }
     emotionSound = getAudio(usePlayerStore().emotionSoundUrl(emotype));
-    emotionSound.volume(UiState.volume.value.sfxVolume);
+    emotionSound.volume(channelVolume("sfxVolume"));
     emotionSound.play();
   });
 

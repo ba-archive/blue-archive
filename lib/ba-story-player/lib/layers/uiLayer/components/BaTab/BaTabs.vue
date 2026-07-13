@@ -113,9 +113,12 @@ onMounted(() => {
       position: relative;
       transition: all 0.15s ease-in-out;
       padding: 8px 16px;
+      color: #055f84;
+      font-weight: bold;
       text-align: center;
       &.active {
         background-color: white;
+        color: #000;
         &::after {
           display: none;
         }

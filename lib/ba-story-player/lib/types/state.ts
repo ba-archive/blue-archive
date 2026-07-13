@@ -1,6 +1,7 @@
 import { ComputedRef, Ref } from "vue";
 
 type Volume = {
+  masterVolume: number; // 总音量
   bgmVolume: number; // bgm音量大小
   sfxVolume: number; // sfx音量大小
   voiceVolume: number; // 语音音量大小
