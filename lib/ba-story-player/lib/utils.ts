@@ -107,12 +107,16 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       }
       // eslint-disable-next-line no-case-declarations
       const filename = `${id}_spr`; //hasumi_spr
-      if (superSampling) {
-        return getSpine42Url(
-          `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`
-        );
+      // eslint-disable-next-line no-case-declarations
+      const skelPath = superSampling
+        ? `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`
+        : `${dataUrl}/spine/${filename}/${filename}.skel`;
+      // ch* — only on ba-all-data-spine42 (Spine 4.2)
+      // named sprites — on ba-all-data (Spine 4.2); spine42 has stale 3.8 copies
+      if (/^ch\d+/i.test(id ?? "")) {
+        return getSpine42Url(skelPath);
       }
-      return getSpine42Url(`${dataUrl}/spine/${filename}/${filename}.skel`);
+      return rewritePath(skelPath);
     case "bg":
       // UIs/03_Scenario/01_Background/BG_WinterRoad.jpg
       if (superSampling && /01_Background/.test(arg)) {
