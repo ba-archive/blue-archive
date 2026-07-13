@@ -29,7 +29,7 @@ jobs:
           node-version: 22
       - uses: pnpm/action-setup@master
         with:
-          version: latest
+          version: 10.12.4
       - name: Configure npmrc
         run: |
           cp common/config/rush/.npmrc.github common/config/rush/.npmrc
