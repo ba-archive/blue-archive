@@ -12,6 +12,7 @@ const UiState: UiState = {
   autoMode: ref(false),
   tabActivated: ref(false),
   volume: ref({
+    masterVolume: saveVolume.masterVolume ?? 1,
     bgmVolume: saveVolume.bgmVolume || 0.3,
     sfxVolume: saveVolume.sfxVolume || 1,
     voiceVolume: saveVolume.voiceVolume || 1,
@@ -32,7 +33,12 @@ export function disposeUiState() {
   const saveVolume = JSON.parse(localStorage.getItem(VolumeKey) || "{}");
   const savePlayingSetting = JSON.parse(localStorage.getItem(PlayingSettingKey) || "{}");
   UiState.playing.value = savePlayingSetting;
-  UiState.volume.value = saveVolume;
+  UiState.volume.value = {
+    masterVolume: saveVolume.masterVolume ?? 1,
+    bgmVolume: saveVolume.bgmVolume || 0.3,
+    sfxVolume: saveVolume.sfxVolume || 1,
+    voiceVolume: saveVolume.voiceVolume || 1,
+  };
   UiState.autoMode.value = false;
   UiState.tabActivated.value = false;
 }

@@ -57,55 +57,127 @@ watchThrottled(
     <div class="suffix">
       <slot name="suffix" />
     </div>
-    <div class="value">
-      <slot name="value" :value="value">
-        {{ internalValue.toFixed(accurcy) }}{{ unit }}
+    <div class="mute">
+      <slot name="mute">
+        <span class="value">
+          {{ internalValue.toFixed(accurcy) }}{{ unit }}
+        </span>
       </slot>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+$track: #c8c8c8;
+$thumb-size: 16px;
+
 .slider {
+  :deep(.el-slider) {
+    overflow: visible;
+    height: $thumb-size;
+    --el-slider-height: 2px;
+    --el-slider-button-size: #{$thumb-size};
+    --el-slider-button-wrapper-size: #{$thumb-size};
+    --el-slider-button-wrapper-offset: -7px;
+  }
+  :deep(.el-slider__runway) {
+    overflow: visible;
+    position: relative;
+    margin: 0;
+    border-radius: 1px;
+    background-color: $track;
+    height: 2px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      z-index: 0;
+      border-radius: 50%;
+      background: $track;
+      width: $thumb-size;
+      height: $thumb-size;
+      content: "";
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &::before {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+  :deep(.el-slider__bar) {
+    background-color: transparent;
+  }
+  :deep(.el-slider__button-wrapper) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    width: $thumb-size;
+    height: $thumb-size;
+    transform: translate(-50%, -50%);
+    line-height: 0;
+    font-size: 0;
+  }
   :deep(.el-slider__button) {
+    display: block;
     opacity: 1;
-    border: 1px solid #629bed;
-    background: linear-gradient(135deg, #b2cffa 14%, #65a0f5 85%);
+    border: none;
+    box-shadow: none;
+    background: url("../../assets/slider_point.png") center / contain no-repeat;
+    background-color: transparent;
+    width: $thumb-size;
+    height: $thumb-size;
   }
 }
 .ba-slider {
   display: flex;
   flex-direction: row;
-  border-radius: 3px;
-  background: white;
-  padding: 16px 32px 16px 16px;
+  align-items: center;
+  padding: 10px 16px;
   font-size: 14px;
-  line-height: 32px;
-  & + .ba-slider {
-    margin-top: 4px;
-  }
+  line-height: 24px;
   .slider {
     flex: 1;
-    margin-right: 16px;
+    margin-right: 8px;
     margin-left: 8px;
   }
   .prefix,
-  .suffix,
-  .name {
-    margin: 0 8px;
+  .suffix {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    margin: 0;
   }
   .name {
+    flex-shrink: 0;
     position: relative;
+    margin: 0 8px 0 8px;
+    width: 72px;
     &::after {
       position: absolute;
-      top: 8.5px;
+      top: 4px;
       left: -8px;
       border-radius: 1.5px;
-      background: #95b7f2;
+      background: #5ed2ff;
       width: 3px;
       height: 16px;
       content: "";
     }
+  }
+  .mute {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 8px;
+    min-width: 72px;
   }
   .value {
     min-width: 40px;

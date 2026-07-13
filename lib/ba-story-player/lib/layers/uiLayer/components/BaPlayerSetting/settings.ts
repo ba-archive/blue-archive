@@ -39,6 +39,16 @@ export const SuperResolutionSetting: BaRadioData = {
   ],
 };
 
+export const MasterVolumeSetting: BaSliderData = {
+  name: "volume-master",
+  tip: "",
+  min: 0,
+  max: 100,
+  step: 1,
+  fator: 100,
+  default: 100,
+};
+
 export const VolumeSetting: BaSliderData[] = [
   {
     name: "volume-bg",
