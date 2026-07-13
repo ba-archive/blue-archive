@@ -113,6 +113,7 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
         : `${dataUrl}/spine/${filename}/${filename}.skel`;
       // ch*/np* sprites exist only on ba-all-data-spine42 (Spine 4.2).
       // named sprites — on ba-all-data (Spine 4.2); spine42 has stale 3.8 copies
+      // FIXME: CI intervention needed
       if (/^(ch|np)\d+/i.test(id ?? "")) {
         return getSpine42Url(skelPath);
       }
