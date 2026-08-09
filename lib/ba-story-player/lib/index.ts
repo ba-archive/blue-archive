@@ -31,6 +31,10 @@ import gsap from "gsap";
 import { PixiPlugin } from "gsap/PixiPlugin";
 // Howler 中间件
 import { HowlerLoader } from "@/middlewares/howlerPixiLoader";
+import {
+  needsNamedSpineResolve,
+  resolveNamedSpineSkelUrl,
+} from "@/namedSpineResolver";
 
 extensions.add(HowlerLoader);
 
@@ -1155,6 +1159,47 @@ async function loadAssetAlias(alias: string, src: string) {
 
 type IAddOptions = { src: string; alias: string };
 
+function isNotFoundError(err: unknown): boolean {
+  const message =
+    err instanceof Error
+      ? err.message
+      : typeof err === "string"
+        ? err
+        : String(err ?? "");
+  return message.includes("404");
+}
+
+/**
+ * Load spine skel+atlas.
+ * Named character sprites are probed on both CDNs for a non-404 Spine 4.2 copy.
+ * Assets are registered under the original (story) urls so Spine.from lookups keep working.
+ */
+async function loadSpineAsset(param: IAddOptions) {
+  const aliasSkel = param.src;
+  const aliasAtlas = aliasSkel.replace(/\.skel$/, ".atlas");
+  const skelAlias =
+    param.alias && param.alias !== aliasSkel
+      ? [param.alias, aliasSkel]
+      : aliasSkel;
+
+  let actualSkel = aliasSkel;
+  if (needsNamedSpineResolve(aliasSkel)) {
+    actualSkel = await resolveNamedSpineSkelUrl(aliasSkel);
+  }
+  const actualAtlas = actualSkel.replace(/\.skel$/, ".atlas");
+
+  await Assets.load({ src: actualAtlas, alias: aliasAtlas });
+  const loaded = await Assets.load({ src: actualSkel, alias: skelAlias });
+
+  // 创建 Spine 实例，从实例中读取出 L2D 音频资源进行预载
+  const spine = Spine.from({ skeleton: aliasSkel, atlas: aliasAtlas }); // 会报 warning，无伤大雅
+  const eventsList = spine.state.data.skeletonData.events;
+  if (eventsList && Array.isArray(eventsList)) {
+    resourcesLoader.loadL2dVoice(eventsList);
+  }
+  return loaded;
+}
+
 async function loadAsset(param: IAddOptions) {
   // param: {
   //   "src": "xxx/Emoticon_Balloon_N.png",
@@ -1176,19 +1221,7 @@ async function loadAsset(param: IAddOptions) {
       if (/\.(ogg|mp3|wav|mpeg)$/i.test(param.src)) {
         return Assets.backgroundLoad(param.src); // 后台加载声音资源，不要阻塞真正重要的视觉资源加载
       } else if (/\.skel$/.test(param.src)) {
-        // 是 spine 资源，显式猜测 atlas 路径并创建 bundle
-        const atlasUrl = param.src.replace(/\.skel$/, ".atlas");
-        // 添加 spine 和 atlas 资源
-        Assets.load({ src: atlasUrl, alias: atlasUrl });
-
-        await Assets.load(param); // 需要 await 完成后才能加载出东西
-
-        // 创建 Spine 实例，从实例中读取出 L2D 音频资源进行预载
-        const spine = Spine.from({ skeleton: param.src, atlas: atlasUrl }); // 会报 warning，无伤大雅
-        const eventsList = spine.state.data.skeletonData.events;
-        if (eventsList && Array.isArray(eventsList)) {
-          resourcesLoader.loadL2dVoice(eventsList);
-        }
+        return loadSpineAsset(param);
       }
       // 其他资源
       return Assets.load(param);
@@ -1205,7 +1238,7 @@ async function loadAsset(param: IAddOptions) {
       if (err.message?.includes("ERR_HTTP2_PROTOCOL_ERROR")) {
         console.error(`网络连接错误(${param.alias})：${err.message}`);
       }
-      if (err.message?.includes("404")) {
+      if (isNotFoundError(err)) {
         // 资源不存在，可以直接返回了
         console.error(`资源不存在: ${param.alias}`);
         return null;

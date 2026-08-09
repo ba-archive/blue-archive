@@ -42,6 +42,9 @@ export function getOtherSoundUrls(): string[] {
  * @returns
  */
 function getSpine42Url(url: string) {
+  if (url.includes("ba-all-data-spine42")) {
+    return rewritePath(url);
+  }
   return rewritePath(url.replaceAll("ba-all-data", "ba-all-data-spine42"));
 }
 
@@ -111,9 +114,8 @@ export function getResourcesUrl(type: ResourcesTypes, arg: string): string {
       const skelPath = superSampling
         ? `${dataUrl}/spine/${filename}/${filename}${superSampling}/${filename}.skel`
         : `${dataUrl}/spine/${filename}/${filename}.skel`;
-      // ch*/np* sprites exist only on ba-all-data-spine42 (Spine 4.2).
-      // named sprites — on ba-all-data (Spine 4.2); spine42 has stale 3.8 copies
-      // FIXME: CI intervention needed
+      // ch*/np* generic sprites live on ba-all-data-spine42 (Spine 4.2).
+      // Named sprites may be on either CDN as 3.8 or 4.2 — resolved at load time.
       if (/^(ch|np)\d+/i.test(id ?? "")) {
         return getSpine42Url(skelPath);
       }
