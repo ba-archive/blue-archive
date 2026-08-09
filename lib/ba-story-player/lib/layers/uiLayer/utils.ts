@@ -105,6 +105,7 @@ const dict = {
     "playing-custom-setting-millisecond": "每个字停顿\n毫秒",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "战斗结束后…",
   },
   en: {
     log: "LOG",
@@ -130,6 +131,7 @@ const dict = {
       "Each word pauses for \n milliseconds",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "After the battle…",
   },
   jp: {
     log: "ログ",
@@ -153,6 +155,7 @@ const dict = {
     "playing-custom-setting-millisecond": "次の文字まで待ち時間は\nミリ秒",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "戦闘の後…",
   },
   kr: {
     log: "로그",
@@ -176,6 +179,7 @@ const dict = {
     "playing-custom-setting-millisecond": "단어당 \n ms 중지",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "전투 후…",
   },
   tw: {
     log: "對話記錄",
@@ -199,6 +203,7 @@ const dict = {
     "playing-custom-setting-millisecond": "每個字停頓 \n 毫秒",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "戰鬥結束後…",
   },
   th: {
     log: "บันทึกการสนทนา",
@@ -223,6 +228,7 @@ const dict = {
     "playing-custom-setting-millisecond": "หยุดชั่วคราว \n มิลลิวินาทีต่อคำ",
     "about-inside":
       "Blue Archive unofficial WebGL story player<br><a href='https://github.com/ba-archive/blue-archive' target='_blank'>https://github.com/ba-archive/blue-archive</a>",
+    "after-battle": "หลังการต่อสู้…",
   },
 };
 

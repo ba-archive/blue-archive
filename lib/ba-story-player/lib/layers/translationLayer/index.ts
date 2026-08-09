@@ -67,6 +67,14 @@ const StoryRawUnitParserUnit: IStoryRawUnitParserUnit = {
       return unit;
     },
   },
+  afterBattle: {
+    reg: /#afterbattle;?/i,
+    fn(match: RegExpExecArray, unit: StoryUnit) {
+      unit.type = "afterBattle";
+      unit.hide = "all";
+      return unit;
+    },
+  },
   na: {
     reg: /#na;([^;\n]+);?([^;\n]+)?;?/i,
     fn(match: RegExpExecArray, unit: StoryUnit, rawUnit: StoryRawUnit) {

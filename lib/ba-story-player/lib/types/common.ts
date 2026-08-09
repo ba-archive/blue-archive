@@ -158,7 +158,8 @@ export type StoryType =
   | "st"
   | "effectOnly"
   | "continue"
-  | "nextEpisode";
+  | "nextEpisode"
+  | "afterBattle";
 export interface StoryUnit {
   //rawUnit中的属性
   GroupId: number;

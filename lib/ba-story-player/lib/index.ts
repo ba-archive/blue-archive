@@ -94,6 +94,7 @@ export const eventEmitter = {
   isStoryLogShow: false,
   toBeContinueDone: true,
   nextEpisodeDone: true,
+  afterBattleDone: true,
   /** 当前l2d动画是否播放完成 */
   l2dAnimationDone: true,
   VoiceJpDone: true,
@@ -181,6 +182,7 @@ export const eventEmitter = {
       this.VoiceJpDone = true;
     });
     eventBus.on("nextEpisodeDone", () => (this.nextEpisodeDone = true));
+    eventBus.on("afterBattleDone", () => (this.afterBattleDone = true));
     eventBus.on("toBeContinueDone", () => (this.toBeContinueDone = true));
 
     storyHandler.currentStoryIndex = 0;
@@ -295,6 +297,11 @@ export const eventEmitter = {
           throw new Error("没有标题信息提供");
         }
         break;
+      case "afterBattle":
+        this.afterBattleDone = false;
+        eventBus.emit("fadeBgm", { duration: 1800 });
+        eventBus.emit("afterBattle");
+        break;
       default:
         console.log(`本体中尚未处理${currentStoryUnit.type}类型故事节点`);
     }
@@ -406,7 +413,8 @@ export const eventEmitter = {
     if (
       storyHandler.currentStoryUnit.bg?.overlap ||
       storyHandler.currentStoryUnit.transition ||
-      storyHandler.currentStoryUnit.type === "continue"
+      storyHandler.currentStoryUnit.type === "continue" ||
+      storyHandler.currentStoryUnit.type === "afterBattle"
     ) {
       eventBus.emit("hide");
     }
@@ -544,7 +552,6 @@ export async function init(
   }
   // TODO debug用 线上环境删掉 而且会导致HMR出问题 慎用
   // https://chrome.google.com/webstore/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon/related?hl=en
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   globalThis.__PIXI_APP__ = privateState.app;
   const app = playerStore.app;
@@ -710,7 +717,6 @@ export const resourcesLoader = {
     // 添加情绪声音资源
     for (const emotionName of playerStore.emotionResourcesTable.keys()) {
       const emotionSoundName = `SFX_Emoticon_Motion_${emotionName}`;
-      // eslint-disable-next-line max-len
       this.loadTaskList.push(
         checkloadAssetAlias(
           emotionSoundName,
@@ -920,7 +926,6 @@ function waitForStoryUnitPlayComplete(currentIndex: number) {
           resolve();
         } else if (Date.now() - startTime >= leftTime) {
           end();
-          // eslint-disable-next-line max-len
           const waitingKeys = Object.keys(eventEmitter)
             .filter(it => it.endsWith("Done") && it !== "unitDone")
             .filter(it => !eventEmitter[it as keyof typeof eventEmitter]);

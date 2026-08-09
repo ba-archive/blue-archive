@@ -86,9 +86,18 @@ export type Events = {
   bgOverLapDone: undefined;
 
   /**
+   * 背景已立即切换完成（无 overlap）
+   */
+  bgShown: undefined;
+
+  /**
    * 播放bgm, sound或voiceJP
    */
   playAudio: PlayAudio;
+  /**
+   * 淡出当前 BGM
+   */
+  fadeBgm: { duration?: number } | undefined;
   /**
    * 播放人物情绪动作特效音
    */
@@ -205,6 +214,11 @@ export type Events = {
    */
   nextEpisode: ShowTitleOption;
   nextEpisodeDone: undefined;
+  /**
+   * 战斗后过渡
+   */
+  afterBattle: undefined;
+  afterBattleDone: undefined;
 
   //L2D层
   /**

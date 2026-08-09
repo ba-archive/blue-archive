@@ -1,29 +1,29 @@
 <template>
   <div
-    class="flex flex-col flex-1 items-center justify-center w-full"
     ref="playerContainerElement"
+    class="flex flex-col flex-1 items-center justify-center w-full"
   >
     <error-screen
+      v-if="fetchError"
       :route-path="route.path"
       :error-message="fetchErrorMessage"
-      v-if="fetchError"
     />
-    <div class="loading-container" v-if="!ready">
+    <div v-if="!ready" class="loading-container">
       <neu-progress-bar :show-percentage="true" :progress="initProgress" />
     </div>
     <div class="content-wrapper flex-vertical rounded-small">
       <div
-        class="flex-vertical story-container"
         v-if="ready && !fetchError && !notImplementedError"
+        class="flex-vertical story-container"
       >
-        <div class="story-info flex-horizontal" v-if="!playEnded">
+        <div v-if="!playEnded" class="story-info flex-horizontal">
           <svg
             role="button"
             class="icon-back"
-            @click="handleGoBack"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            @click="handleGoBack"
           >
             <!-- eslint-disable max-len -->
             <path
@@ -37,17 +37,16 @@
           <div>
             {{ summary.chapterName }}
           </div>
-          <neu-tag type="warning" bordered v-if="isLLMTranslation">
+          <neu-tag v-if="isLLMTranslation" type="warning" bordered>
             AI 翻译
           </neu-tag>
-          <neu-tag type="warning" bordered v-if="!story.proofreader">
+          <neu-tag v-if="!story.proofreader" type="warning" bordered>
             未校对
           </neu-tag>
         </div>
         <story-player
           v-if="showPlayer && !playEnded"
           class="story-player"
-          @initiated="handleInitiated"
           :change-index="changeIndex"
           :story="story"
           :width="playerWidth"
@@ -61,13 +60,14 @@
           :exit-fullscreen-time-out="5000"
           @end="handleStoryEnd"
           @error="handleError()"
+          @initiated="handleInitiated"
         />
         <div v-if="!isStuStory && playEnded" class="flex-vertical">
           <div>播放已完成</div>
           <div class="flex-horizontal jump-container">
             <div
-              @click="handleReplay"
               class="user-button shadow-near rounded-small"
+              @click="handleReplay"
             >
               {{ getI18nString(userLanguage, "playerControl.replay") }}
             </div>
@@ -125,7 +125,6 @@
 </template>
 
 <script setup lang="ts">
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import StoryPlayer from "ba-story-player";
 import { computed, nextTick, ref, watch, ComputedRef } from "vue";
 import { useRoute, useRouter } from "vue-router";
@@ -142,8 +141,9 @@ import "ba-story-player/dist/style.css";
 import NeuTag from "./widgets/NeuUI/NeuTag.vue";
 import NeuDialog from "./widgets/NeuUI/NeuDialog.vue";
 import {
-  getStoryJson,
+  getLogicalNextSection,
   getStorySummary,
+  loadPreparedStory,
   type QueryType,
 } from "@/util/playerUtils";
 
@@ -186,12 +186,10 @@ function handleInitiated() {
   }
 }
 
-/* eslint-disable max-len */
 const summary = ref({
   chapterName: "",
   summary: "",
 });
-/* eslint-enable max-len */
 const studentId = computed(() => route.params.id as string);
 const favorGroupId = computed(() => (route.params.groupId as string) ?? "");
 const shouldReturnToMomotalk = "true" === route.query?.returnToMomotalk;
@@ -209,38 +207,78 @@ const storyType = computed(() => {
   return storyQueryType.value;
 });
 
-getStoryJson(
-  storyType.value as QueryType,
-  {
-    storyId: favorGroupId.value || storyId.value,
-  },
-  progressEvent => {
-    const total = progressEvent.total || progressEvent.loaded + 100;
-    initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
-  }
-)
-  .then(res => {
-    story.value = res.story as StoryContent;
+async function loadStory() {
+  ready.value = false;
+  fetchError.value = false;
+  showPlayer.value = false;
+  playEnded.value = false;
+  initProgress.value = 0;
+
+  const queryType = storyType.value as QueryType;
+  const activeStoryId = isStuStory.value ? favorGroupId.value : storyId.value;
+
+  try {
+    try {
+      const sectionOrSummary = await getStorySummary(queryType, {
+        directoryId: studentId.value,
+        storyId: activeStoryId,
+      });
+      if (sectionOrSummary && "story_id" in sectionOrSummary) {
+        const section = sectionOrSummary as Section;
+        if (section.is_after_battle && section.previous) {
+          await router.replace({
+            path: `/${storyQueryType.value}Story/${section.previous}`,
+            query: { type: String(storyQueryType.value) },
+          });
+          return;
+        }
+        storySummaryRaw.value = section;
+        updateSummary();
+      } else if (sectionOrSummary) {
+        storySummaryRaw.value = undefined;
+        summary.value.chapterName = Reflect.get(
+          Reflect.get(sectionOrSummary, "title"),
+          "Text" + playerLanguage.value
+        );
+        summary.value.summary = Reflect.get(
+          Reflect.get(sectionOrSummary, "abstract"),
+          "Text" + playerLanguage.value
+        );
+      }
+    } catch {
+      // summary is optional for playback
+    }
+
+    const res = await loadPreparedStory(
+      queryType,
+      {
+        directoryId: studentId.value,
+        storyId: activeStoryId,
+      },
+      progressEvent => {
+        const total = progressEvent.total || progressEvent.loaded + 100;
+        initProgress.value = Math.floor((progressEvent.loaded * 100) / total);
+      }
+    );
+    story.value = res.story;
     isLLMTranslation.value = res.isAiTranslated;
     showPlayer.value = true;
-  })
-  .catch(err => {
+  } catch (err) {
     fetchError.value = true;
-    fetchErrorMessage.value = err;
-  })
-  .finally(() => {
+    fetchErrorMessage.value = err as typeof fetchErrorMessage.value;
+  } finally {
     ready.value = true;
-  });
-
-getStorySummary(storyType.value as QueryType, {
-  directoryId: studentId.value,
-  storyId: isStuStory.value ? favorGroupId.value : storyId.value,
-}).then(res => {
-  if (res) {
-    storySummaryRaw.value = res as Section;
-    updateSummary();
   }
-});
+}
+
+loadStory();
+
+watch(
+  () => [storyId.value, favorGroupId.value, storyType.value] as const,
+  () => {
+    loadStory();
+  }
+);
 
 function getSummaryTextByKey(summary: Section, key: string) {
   return Reflect.get(Reflect.get(summary, key), "Text" + playerLanguage.value);
@@ -285,8 +323,7 @@ if (typeof window.webkitConvertPointFromNodeToPage === "function") {
 
 const appHeight = computed(() => settingsStore.getAppSize.height);
 const appWidth = computed(() => settingsStore.getAppSize.width);
-
-/* eslint-disable indent */
+ 
 watch(
   () => [containerWidth.value, containerHeight.value],
   () => {
@@ -343,10 +380,11 @@ function findPreviousStoryId(): number | undefined {
 }
 
 function findNextStoryId(): number | undefined {
-  if (storySummaryRaw.value?.next) {
-    return storySummaryRaw.value.next;
-  }
-  return undefined;
+  const next = getLogicalNextSection(
+    storySummaryRaw.value,
+    storyType.value as QueryType
+  );
+  return next?.story_id;
 }
 
 function handleStoryEnd() {
@@ -365,8 +403,21 @@ function handleStoryEnd() {
 }
 
 async function handleReplay() {
-  playEnded.value = false;
-  await reloadPlayer();
+  showPlayer.value = false;
+  await nextTick();
+  try {
+    const res = await loadPreparedStory(storyType.value as QueryType, {
+      directoryId: studentId.value,
+      storyId: isStuStory.value ? favorGroupId.value : storyId.value,
+    });
+    story.value = res.story;
+    isLLMTranslation.value = res.isAiTranslated;
+    playEnded.value = false;
+    showPlayer.value = true;
+  } catch (err) {
+    fetchError.value = true;
+    fetchErrorMessage.value = err as typeof fetchErrorMessage.value;
+  }
 }
 
 function handleGoBack() {
