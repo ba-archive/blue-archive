@@ -43,6 +43,34 @@
         <div class="next-episode-cover" />
       </div>
       <div
+        v-if="showEnding"
+        ref="endingRoot"
+        class="ending-container absolute-container"
+      >
+        <div ref="endingBlur" class="ending-blur" />
+        <div
+          ref="endingTitle"
+          class="ending-title"
+          :style="{ fontSize: `${endingTitleFontSize}rem` }"
+        >
+          {{ endingTitleText }}
+        </div>
+        <div class="ending-stamp-wrap">
+          <div ref="endingRing" class="ending-ring" />
+          <img
+            ref="endingStamp"
+            class="ending-stamp"
+            :src="endingStampSrc"
+            alt=""
+          />
+        </div>
+        <div ref="endingLetterTop" class="ending-letterbox ending-letterbox-top" />
+        <div
+          ref="endingLetterBottom"
+          class="ending-letterbox ending-letterbox-bottom"
+        />
+      </div>
+      <div
         class="to-be-continued-container absolute-container"
         v-if="showToBeContinue"
       >
@@ -217,6 +245,7 @@ import {
 import VideoBackground from "vue-responsive-video-background-player";
 import TypingUnit from "./components/TypingUnit.vue";
 import TypingEmitter from "./utils/typingEmitter";
+import { calcEndingTitleFontSizeRem } from "./utils/endingTitleFont";
 import StUnit from "@/layers/textLayer/components/StUnit.vue";
 import { useUiState } from "@/stores/state";
 import { Text } from "@/types/common";
@@ -230,6 +259,8 @@ import {
 import { useThrottleFn } from "@vueuse/core";
 
 const state = useUiState();
+const endingStampSrc = "/stamp.svg";
+const endingSoundSrc = "/stamp.ogg";
 const textDialogWidth = ref(0);
 const TextDialog = ref<HTMLElement>() as Ref<HTMLElement>; // 文本框长度, 用于计算tooltip最大位置
 const toBeContinuedBg0 = ref<HTMLElement>(); // to be continued的背景
@@ -294,6 +325,17 @@ const showLoading = ref<boolean>(false);
 const showToBeContinue = ref<boolean>(false);
 // 显示next episode
 const showNextEpisode = ref<boolean>(false);
+const showEnding = ref<boolean>(false);
+const endingTitleText = ref("");
+const endingTitleFontSize = ref(1.85);
+const endingRoot = ref<HTMLElement>();
+const endingBlur = ref<HTMLElement>();
+const endingTitle = ref<HTMLElement>();
+const endingStamp = ref<HTMLImageElement>();
+const endingRing = ref<HTMLElement>();
+const endingLetterTop = ref<HTMLElement>();
+const endingLetterBottom = ref<HTMLElement>();
+let endingTimeline: gsap.core.Timeline | null = null;
 const popupSrc = reactive({
   // image: "https://yuuka.diyigemt.com/image/full-extra/output/media/UIs/03_Scenario/04_ScenarioImage/popup49.png",
   // video: "https://yuuka.diyigemt.com/image/full-extra/output/media/Video/pv-v.mp4"
@@ -624,6 +666,151 @@ function handleNextEpisode(e: ShowTitleOption) {
       });
   });
 }
+
+/**
+ * Ending stamp: blur → title → stamp/ring impact → letterbox.
+ * Timings from stamp-animation.txt (t=0 at sequence start).
+ */
+function handleEnding(e: ShowTitleOption) {
+  hideMenu();
+  endingTimeline?.kill();
+  endingTitleText.value =
+    (e.title || []).map(unit => unit.content).join("") || e.subtitle || "";
+  endingTitleFontSize.value = calcEndingTitleFontSizeRem(endingTitleText.value);
+  showEnding.value = true;
+
+  nextTick(() => {
+    const blur = endingBlur.value;
+    const title = endingTitle.value;
+    const stamp = endingStamp.value;
+    const ring = endingRing.value;
+    const topBar = endingLetterTop.value;
+    const bottomBar = endingLetterBottom.value;
+    if (!blur || !title || !stamp || !ring || !topBar || !bottomBar) {
+      eventBus.emit("endingDone");
+      return;
+    }
+
+    gsap.set([blur, title, stamp, ring], { opacity: 0 });
+    gsap.set(stamp, { scale: 2 });
+    gsap.set(ring, { scale: 2.15 });
+    gsap.set(topBar, { translateY: "-100%" });
+    gsap.set(bottomBar, { translateY: "100%" });
+
+    endingTimeline = gsap
+      .timeline({
+        onComplete: () => eventBus.emit("endingDone"),
+      })
+      // 0. Blur 0–0.5s
+      .to(
+        blur,
+        {
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        0
+      )
+      // 1. Title ~0.8s
+      .to(
+        title,
+        {
+          opacity: 1,
+          duration: 0.25,
+          ease: "power2.out",
+        },
+        0.8
+      )
+      // stamp sound
+      .call(
+        () => {
+          eventBus.emit("playAudio", { soundUrl: endingSoundSrc });
+        },
+        undefined,
+        0.8
+      )
+      // Ring starts slightly before stamp, finishes after stamp settles
+      .to(
+        ring,
+        {
+          scale: 1,
+          opacity: 0.85,
+          duration: 0.4,
+          ease: "power2.out",
+        },
+        1.48
+      )
+      // Stamp 1.50–1.82
+      .to(
+        stamp,
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.32,
+          ease: "power3.out",
+        },
+        1.5
+      )
+      // Impact squash 1.70–1.88
+      .to(
+        stamp,
+        {
+          scale: 1.07,
+          duration: 0.1,
+          ease: "power2.out",
+        },
+        1.7
+      )
+      .to(
+        stamp,
+        {
+          scale: 1,
+          duration: 0.08,
+          ease: "power2.out",
+        },
+        1.8
+      )
+      // Ring briefly follows the squash so it stays glued to the outer ring
+      .to(
+        ring,
+        {
+          scale: 1.07,
+          duration: 0.1,
+          ease: "power2.out",
+        },
+        1.74
+      )
+      .to(
+        ring,
+        {
+          scale: 1,
+          duration: 0.08,
+          ease: "power2.out",
+        },
+        1.84
+      )
+      // Letterbox 3.75–4.0
+      .to(
+        topBar,
+        {
+          translateY: 0,
+          duration: 0.25,
+          ease: "power2.inOut",
+        },
+        3.75
+      )
+      .to(
+        bottomBar,
+        {
+          translateY: 0,
+          duration: 0.25,
+          ease: "power2.inOut",
+        },
+        3.75
+      );
+  });
+}
+
 function handlePopupImage(url: string) {
   popupSrc.image = url;
 }
@@ -781,6 +968,7 @@ onMounted(() => {
   eventBus.on("click", moveToNext);
   eventBus.on("toBeContinue", handleToBeContinued);
   eventBus.on("nextEpisode", handleNextEpisode);
+  eventBus.on("ending", handleEnding);
   eventBus.on("popupImage", handlePopupImage);
   eventBus.on("popupVideo", handlePopupVideo);
   eventBus.on("hidePopup", handlePopupClose);
@@ -789,6 +977,8 @@ onMounted(() => {
   eventBus.on("loaded", handleEndLoading);
 });
 onUnmounted(() => {
+  endingTimeline?.kill();
+  endingTimeline = null;
   eventBus.off("option", doPreventInteract);
   eventBus.off("select", exitPreventInteract);
   eventBus.off("resize", updateTextDialogWidth);
@@ -803,6 +993,7 @@ onUnmounted(() => {
   eventBus.off("click", moveToNext);
   eventBus.off("toBeContinue", handleToBeContinued);
   eventBus.off("nextEpisode", handleNextEpisode);
+  eventBus.off("ending", handleEnding);
   eventBus.off("popupImage", handlePopupImage);
   eventBus.off("popupVideo", handlePopupVideo);
   eventBus.off("hidePopup", handlePopupClose);
@@ -835,7 +1026,8 @@ $select-z-index: 10;
 $image-video-z-index: 10;
 $to-be-continue-z-index: 200;
 $next-episode-z-index: 201;
-$loading-z-index: 202;
+$ending-z-index: 202;
+$loading-z-index: 203;
 $st-z-index: 10;
 $st-tooltip-z-index: 10;
 $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -1175,6 +1367,96 @@ $text-outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     &:last-child {
       transform: translateY(100%);
     }
+  }
+}
+
+.ending-container {
+  z-index: $text-layer-z-index + $ending-z-index;
+  pointer-events: none;
+  overflow: hidden;
+
+  .ending-blur {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: rgb(0 0 0 / 28%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .ending-title {
+    position: absolute;
+    right: calc(5% + clamp(60px, 15.5%, 147px) + 0.5rem);
+    left: 4%;
+    bottom: calc(8% + clamp(60px, 15.5%, 147px) * 0.5);
+    top: auto;
+    z-index: 2;
+    width: auto;
+    max-width: none;
+    opacity: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    white-space: nowrap;
+    text-align: right;
+    text-shadow: $text-outline;
+  }
+
+  .ending-stamp-wrap {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    z-index: 2;
+    width: clamp(60px, 15.5%, 147px);
+    aspect-ratio: 1;
+    container-type: size;
+  }
+
+  .ending-ring,
+  .ending-stamp {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+
+  /* SVG outer stroke: r=180, stroke-width=16 in 512 viewBox. */
+  .ending-ring {
+    width: 70.3125%;
+    height: 70.3125%;
+    border: 3.125cqw solid #b40000; // 16/512 of stamp
+    border-radius: 50%;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+
+  .ending-stamp {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+  }
+
+  .ending-letterbox {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 50%;
+    background: #000;
+  }
+
+  .ending-letterbox-top {
+    top: 0;
+    transform: translateY(-100%);
+  }
+
+  .ending-letterbox-bottom {
+    bottom: 0;
+    transform: translateY(100%);
   }
 }
 

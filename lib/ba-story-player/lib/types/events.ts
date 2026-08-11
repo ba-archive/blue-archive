@@ -205,6 +205,11 @@ export type Events = {
    */
   nextEpisode: ShowTitleOption;
   nextEpisodeDone: undefined;
+  /**
+   * Ending stamp sequence (blur → title → stamp → letterbox).
+   */
+  ending: ShowTitleOption;
+  endingDone: undefined;
 
   //L2D层
   /**
