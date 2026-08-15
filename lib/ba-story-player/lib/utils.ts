@@ -42,6 +42,9 @@ export function getOtherSoundUrls(): string[] {
  * @returns
  */
 function getSpine42Url(url: string) {
+  if (url.includes("ba-all-data-spine42")) {
+    return rewritePath(url);
+  }
   return rewritePath(url.replaceAll("ba-all-data", "ba-all-data-spine42"));
 }
 
