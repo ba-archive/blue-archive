@@ -98,6 +98,7 @@ export const eventEmitter = {
   isStoryLogShow: false,
   toBeContinueDone: true,
   nextEpisodeDone: true,
+  endingDone: true,
   /** 当前l2d动画是否播放完成 */
   l2dAnimationDone: true,
   VoiceJpDone: true,
@@ -185,6 +186,7 @@ export const eventEmitter = {
       this.VoiceJpDone = true;
     });
     eventBus.on("nextEpisodeDone", () => (this.nextEpisodeDone = true));
+    eventBus.on("endingDone", () => (this.endingDone = true));
     eventBus.on("toBeContinueDone", () => (this.toBeContinueDone = true));
 
     storyHandler.currentStoryIndex = 0;
@@ -297,6 +299,15 @@ export const eventEmitter = {
           eventBus.emit("nextEpisode", currentStoryUnit.textAbout.titleInfo);
         } else {
           throw new Error("没有标题信息提供");
+        }
+        break;
+      case "ending":
+        this.endingDone = false;
+        eventBus.emit("hideDialog");
+        if (currentStoryUnit.textAbout.titleInfo) {
+          eventBus.emit("ending", currentStoryUnit.textAbout.titleInfo);
+        } else {
+          eventBus.emit("ending", { title: [] });
         }
         break;
       default:

@@ -3,6 +3,7 @@ import { TextEffect } from "@/types/common";
 import { StText } from "@/types/events";
 
 export * from "./typingEmitter";
+export * from "./endingTitleFont";
 
 const EffectToCSSMap: IEffectToCSSMap = {
   color(param) {
