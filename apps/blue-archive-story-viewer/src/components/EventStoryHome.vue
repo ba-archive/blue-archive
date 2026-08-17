@@ -34,19 +34,27 @@ import { stories, placeMap, type PlaceMap } from "@index/eventStoryIndex";
 import { group, capitalize } from "radash";
 import { useSettingsStore } from "@store/settings";
 import { Language } from "@/types/Settings";
+import { filterVisibleSections } from "@/util/playerUtils";
 const settingsStore = useSettingsStore();
 const userLanguage = computed(() => settingsStore.getLang);
 const route = useRoute();
 // TODO：整理路由
 const isStorySelected = computed(() => !/\/eventStory\/?$/.test(route.path));
 
+const storiesWithVisibleSections = stories.map(story => ({
+  ...story,
+  sections: filterVisibleSections(story.sections),
+}));
+
 // volar类型推断失败
 // @ts-ignore
 const groupedStories = computed(() =>
-  Object.entries(group(stories, el => el.place)).map(([key, value]) => ({
-    place: key,
-    stories: value,
-  }))
+  Object.entries(group(storiesWithVisibleSections, el => el.place)).map(
+    ([key, value]) => ({
+      place: key,
+      stories: value,
+    })
+  )
 );
 
 function getPlaceName(place: string, language: Language) {

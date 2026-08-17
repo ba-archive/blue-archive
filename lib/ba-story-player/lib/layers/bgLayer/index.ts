@@ -86,6 +86,7 @@ const BgLayerInstance: BgLayer = {
     setBgInstance(instance);
 
     oldInstance && app.stage.removeChild(oldInstance);
+    eventBus.emit("bgShown");
   },
   async loadBgOverlap(instance: Sprite, overlap: number) {
     const { app, bgInstance: oldInstance, setBgInstance } = usePlayerStore();

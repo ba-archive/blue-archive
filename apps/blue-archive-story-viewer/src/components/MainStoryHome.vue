@@ -1,15 +1,15 @@
 <template>
   <div
-    class="main-story-container fill-screen flex-vertical"
     v-if="!isStorySelected"
+    class="main-story-container fill-screen flex-vertical"
   >
     <story-line-container
       v-for="(story, index) in releasedStories"
+      :key="index"
       :title="story.title"
       :avatar="story.avatar"
       :index="index"
       :sections="story.sections"
-      :key="index"
       :total-length="releasedStories.length"
     />
   </div>
@@ -20,14 +20,10 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import StoryLineContainer from "./story/StoryLineContainer.vue";
-import { stories } from "@index/mainStoryIndex";
+import { getReleasedStories } from "@/util/playerUtils";
 
 const route = useRoute();
-
-const releasedStories = stories.filter(story =>
-  [undefined, true].includes(story?.released)
-);
-
+const releasedStories = getReleasedStories("main");
 const isStorySelected = computed(() => !/\/mainStory\/?$/.test(route.path));
 </script>
 

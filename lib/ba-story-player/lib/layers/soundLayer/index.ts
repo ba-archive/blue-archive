@@ -75,7 +75,7 @@ export function soundInit() {
       // 如果有正在播放的BGM则停止当前播放, 替换为下一个BGM
       const cfg = playAudioInfo.bgm;
       const self = getAudio(cfg.url);
-      // eslint-disable-next-line no-inner-declarations
+
       function endCb() {
         bgm?.off("end", endCb);
         if (Reflect.get(bgm || {}, "_src") === cfg.url) {
@@ -119,14 +119,12 @@ export function soundInit() {
             }
 
             if (sprite) {
-              // eslint-disable-next-line max-len
               Reflect.set(sprite, "loop", [
                 (loopStartTime[0] ?? 0) * 1000,
                 (loopEndTime[0] || self.duration()) * 1000,
                 true,
               ]);
             } else {
-              // eslint-disable-next-line max-len
               Reflect.set(sprite, "_sprite", {
                 loop: [
                   (loopStartTime[0] ?? 0) * 1000,
@@ -225,19 +223,26 @@ export function soundInit() {
     soundDispose();
   });
   eventBus.on("continue", () => bgm?.play());
-  eventBus.on(
-    "playAudioWithConfig",
-    ({
-      url,
-      config: {
-        config: { volume },
-      },
-    }) => {
-      const howl = getAudio(url);
-      howl.volume(volume > 1 ? volume / 100 : volume);
-      howl.play();
+  eventBus.on("fadeBgm", payload => {
+    const duration = payload?.duration ?? 1500;
+    if (!bgm) return;
+    const current = bgm.volume();
+    if (current <= 0) {
+      bgm.stop();
+      bgm = undefined;
+      return;
     }
-  );
+    bgm.fade(current, 0, duration);
+    window.setTimeout(() => {
+      bgm?.stop();
+      bgm = undefined;
+    }, duration);
+  });
+  eventBus.on("playAudioWithConfig", ({ url, config: { config: { volume } }}) => {
+    const howl = getAudio(url);
+    howl.volume(volume > 1 ? volume / 100 : volume);
+    howl.play();
+  });
   eventBus.on("end", () => {
     soundDispose();
   });
