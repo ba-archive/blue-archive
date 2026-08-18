@@ -20,9 +20,15 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import StoryLineContainer from "./story/StoryLineContainer.vue";
-import { stories } from "@index/otherStoryIndex";
+import { stories as otherStories } from "@index/otherStoryIndex";
+import { filterVisibleSections } from "@/util/playerUtils";
 
 const route = useRoute();
+
+const stories = otherStories.map(story => ({
+  ...story,
+  sections: filterVisibleSections(story.sections),
+}));
 
 const storySelected = computed(() => !/\/otherStory\/?$/.test(route.path));
 </script>
